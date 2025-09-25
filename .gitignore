@@ -1,0 +1,75 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+
+# Flutter/Dart
+.packages
+
+# Firebase
+google-services.json
+**/google-services.json
+
+# Android
+android/local.properties
+android/.gradle/
+android/app/src/main/res/values/google_maps_api.xml
+
+# iOS
+ios/Pods/
+ios/Podfile.lock
+ios/.symlinks/
+ios/Flutter/ephemeral/
+ios/Runner/GoogleService-Info.plist
+
+# macOS
+macos/Flutter/ephemeral/
+
+# Windows
+windows/flutter/ephemeral/
+
+# Linux
+linux/flutter/ephemeral/
+
+# Other
+pubspec.lock
+.metadata
+storage.rules
+firestore.rules
+firestore.indexes.json
+firebase.json
+functions/lib/
+functions/node_modules/
+uriel-backend-api/node_modules/
+uriel-backend-api/dist/
+*.log
