@@ -201,110 +201,162 @@ class _SignUpPageState extends State<SignUpPage> {
         centerTitle: true,
       ),
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
-            child: Column(
-              children: [
-                // Progress indicator
-                Container(
-                  margin: const EdgeInsets.only(bottom: 32),
-                  child: Row(
-                    children: List.generate(totalSteps, (index) {
-                      return Expanded(
-                        child: Container(
-                          margin: EdgeInsets.only(
-                            right: index < totalSteps - 1 ? 8 : 0,
+        child: Column(
+          children: [
+            // Progress indicator
+            Container(
+              margin: const EdgeInsets.all(16),
+              child: Row(
+                children: List.generate(totalSteps, (index) {
+                  return Expanded(
+                    child: Container(
+                      margin: EdgeInsets.only(
+                        right: index < totalSteps - 1 ? 8 : 0,
+                      ),
+                      height: 4,
+                      decoration: BoxDecoration(
+                        color: index <= currentStep
+                            ? const Color(0xFF1A1E3F)
+                            : const Color(0xFFE5E7EB),
+                        borderRadius: BorderRadius.circular(2),
+                      ),
+                    ),
+                  );
+                }),
+              ),
+            ),
+
+            // Main content - takes remaining space
+            Expanded(
+              child: SingleChildScrollView(
+                padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
+                child: Column(
+                  children: [
+                    // Main card
+                    Container(
+                      width: double.infinity,
+                      constraints: BoxConstraints(
+                        maxWidth: isSmallScreen ? double.infinity : 500,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(16),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.08),
+                            blurRadius: 20,
+                            offset: const Offset(0, 4),
                           ),
-                          height: 4,
-                          decoration: BoxDecoration(
-                            color: index <= currentStep
-                                ? const Color(0xFF1A1E3F)
-                                : const Color(0xFFE5E7EB),
-                            borderRadius: BorderRadius.circular(2),
+                        ],
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.all(isSmallScreen ? 24 : 32),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            // Step content
+                            Container(
+                              constraints: BoxConstraints(
+                                minHeight: screenHeight * 0.4,
+                              ),
+                              child: IndexedStack(
+                                index: currentStep,
+                                children: [
+                                  _buildUserTypeStep(),
+                                  _buildDetailsStep(),
+                                  _buildAuthStep(),
+                                ],
+                              ),
+                            ),
+
+                            const SizedBox(height: 32),
+                            
+                            // Google Sign Up Button (only on first step)
+                            if (currentStep == 0) ...[
+                              _buildGoogleSignUpButton(),
+                              const SizedBox(height: 16),
+                              Row(
+                                children: [
+                                  Expanded(child: Divider(color: Colors.grey[300])),
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                                    child: Text(
+                                      'or',
+                                      style: GoogleFonts.montserrat(
+                                        fontSize: 14,
+                                        color: const Color(0xFF6B7280),
+                                      ),
+                                    ),
+                                  ),
+                                  Expanded(child: Divider(color: Colors.grey[300])),
+                                ],
+                              ),
+                              const SizedBox(height: 16),
+                            ],
+
+                            // Navigation buttons
+                            _buildNavigationButtons(isSmallScreen),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            // Fixed Footer
+            Container(
+              padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                border: Border(
+                  top: BorderSide(color: Colors.grey[200]!),
+                ),
+              ),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  // Sign in link
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Already have an account? ',
+                        style: GoogleFonts.montserrat(
+                          fontSize: 14,
+                          color: const Color(0xFF6B7280),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pushReplacementNamed(context, '/signin');
+                        },
+                        child: Text(
+                          'Sign In',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
+                            color: const Color(0xFF1A1E3F),
                           ),
                         ),
-                      );
-                    }),
-                  ),
-                ),
-
-                // Main card
-                Container(
-                  width: double.infinity,
-                  constraints: BoxConstraints(
-                    maxWidth: isSmallScreen ? double.infinity : 500,
-                    minHeight: screenHeight * 0.6,
-                  ),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(16),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(0.08),
-                        blurRadius: 20,
-                        offset: const Offset(0, 4),
                       ),
                     ],
                   ),
-                  child: Padding(
-                    padding: EdgeInsets.all(isSmallScreen ? 24 : 32),
-                    child: Column(
-                      children: [
-                        // Step content
-                        Expanded(
-                          flex: 1,
-                          child: PageView(
-                            controller: _pageController,
-                            physics: const NeverScrollableScrollPhysics(),
-                            children: [
-                              _buildUserTypeStep(),
-                              _buildDetailsStep(),
-                              _buildAuthStep(),
-                            ],
-                          ),
-                        ),
-
-                        // Navigation buttons
-                        const SizedBox(height: 32),
-                        if (currentStep == 0) _buildGoogleSignUpButton(),
-                        const SizedBox(height: 16),
-                        _buildNavigationButtons(isSmallScreen),
-                        
-                        // Sign in link
-                        const SizedBox(height: 24),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              'Already have an account? ',
-                              style: GoogleFonts.montserrat(
-                                fontSize: 14,
-                                color: const Color(0xFF6B7280),
-                              ),
-                            ),
-                            GestureDetector(
-                              onTap: () {
-                                Navigator.pushReplacementNamed(context, '/signin');
-                              },
-                              child: Text(
-                                'Sign In',
-                                style: GoogleFonts.montserrat(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w600,
-                                  color: const Color(0xFF1A1E3F),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
+                  const SizedBox(height: 16),
+                  // Support information
+                  Text(
+                    'Need help? Contact support@uriel.academy',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 12,
+                      color: const Color(0xFF9CA3AF),
                     ),
+                    textAlign: TextAlign.center,
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
+          ],
         ),
       ),
     );
@@ -312,49 +364,52 @@ class _SignUpPageState extends State<SignUpPage> {
 
   // Step 1: User Type Selection
   Widget _buildUserTypeStep() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          'Choose Your Account Type',
-          style: GoogleFonts.playfairDisplay(
-            fontSize: 28,
-            fontWeight: FontWeight.w700,
-            color: const Color(0xFF1A1E3F),
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(
+            'Choose Your Account Type',
+            style: GoogleFonts.playfairDisplay(
+              fontSize: 28,
+              fontWeight: FontWeight.w700,
+              color: const Color(0xFF1A1E3F),
+            ),
           ),
-        ),
-        const SizedBox(height: 8),
-        Text(
-          'Select the option that best describes you',
-          style: GoogleFonts.montserrat(
-            fontSize: 16,
-            color: const Color(0xFF6B7280),
+          const SizedBox(height: 8),
+          Text(
+            'Select the option that best describes you',
+            style: GoogleFonts.montserrat(
+              fontSize: 16,
+              color: const Color(0xFF6B7280),
+            ),
           ),
-        ),
-        const SizedBox(height: 40),
-        
-        // User type cards
-        _buildUserTypeCard(
-          type: UserType.student,
-          title: 'Student',
-          subtitle: 'Learn with personalized courses and tracking',
-          icon: Icons.school_outlined,
-        ),
-        const SizedBox(height: 16),
-        _buildUserTypeCard(
-          type: UserType.teacher,
-          title: 'Teacher',
-          subtitle: 'Create courses and manage student progress',
-          icon: Icons.person_outline,
-        ),
-        const SizedBox(height: 16),
-        _buildUserTypeCard(
-          type: UserType.school,
-          title: 'School/Institution',
-          subtitle: 'Manage multiple teachers and students',
-          icon: Icons.business_outlined,
-        ),
-      ],
+          const SizedBox(height: 40),
+          
+          // User type cards
+          _buildUserTypeCard(
+            type: UserType.student,
+            title: 'Student',
+            subtitle: 'Learn with personalized courses and tracking',
+            icon: Icons.school_outlined,
+          ),
+          const SizedBox(height: 16),
+          _buildUserTypeCard(
+            type: UserType.teacher,
+            title: 'Teacher',
+            subtitle: 'Create courses and manage student progress',
+            icon: Icons.person_outline,
+          ),
+          const SizedBox(height: 16),
+          _buildUserTypeCard(
+            type: UserType.school,
+            title: 'School/Institution',
+            subtitle: 'Manage multiple teachers and students',
+            icon: Icons.business_outlined,
+          ),
+        ],
+      ),
     );
   }
 
@@ -436,31 +491,34 @@ class _SignUpPageState extends State<SignUpPage> {
   Widget _buildDetailsStep() {
     if (selectedUserType == null) return Container();
 
-    return Form(
-      key: _detailsFormKey,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            _getDetailsTitle(),
-            style: GoogleFonts.playfairDisplay(
-              fontSize: 28,
-              fontWeight: FontWeight.w700,
-              color: const Color(0xFF1A1E3F),
+    return SingleChildScrollView(
+      child: Form(
+        key: _detailsFormKey,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              _getDetailsTitle(),
+              style: GoogleFonts.playfairDisplay(
+                fontSize: 28,
+                fontWeight: FontWeight.w700,
+                color: const Color(0xFF1A1E3F),
+              ),
             ),
-          ),
-          const SizedBox(height: 8),
-          Text(
-            'Please provide your details',
-            style: GoogleFonts.montserrat(
-              fontSize: 16,
-              color: const Color(0xFF6B7280),
+            const SizedBox(height: 8),
+            Text(
+              'Please provide your details',
+              style: GoogleFonts.montserrat(
+                fontSize: 16,
+                color: const Color(0xFF6B7280),
+              ),
             ),
-          ),
-          const SizedBox(height: 32),
-          
-          ..._buildDetailsFields(),
-        ],
+            const SizedBox(height: 32),
+            
+            ..._buildDetailsFields(),
+          ],
+        ),
       ),
     );
   }
@@ -753,28 +811,30 @@ class _SignUpPageState extends State<SignUpPage> {
 
   // Step 3: Authentication Setup
   Widget _buildAuthStep() {
-    return Form(
-      key: _authFormKey,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            'Account Setup',
-            style: GoogleFonts.playfairDisplay(
-              fontSize: 28,
-              fontWeight: FontWeight.w700,
-              color: const Color(0xFF1A1E3F),
+    return SingleChildScrollView(
+      child: Form(
+        key: _authFormKey,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              'Account Setup',
+              style: GoogleFonts.playfairDisplay(
+                fontSize: 28,
+                fontWeight: FontWeight.w700,
+                color: const Color(0xFF1A1E3F),
+              ),
             ),
-          ),
-          const SizedBox(height: 8),
-          Text(
-            'Create your login credentials',
-            style: GoogleFonts.montserrat(
-              fontSize: 16,
-              color: const Color(0xFF6B7280),
+            const SizedBox(height: 8),
+            Text(
+              'Create your login credentials',
+              style: GoogleFonts.montserrat(
+                fontSize: 16,
+                color: const Color(0xFF6B7280),
+              ),
             ),
-          ),
-          const SizedBox(height: 32),
+            const SizedBox(height: 32),
 
           _buildTextField(
             controller: emailController,
@@ -962,6 +1022,7 @@ class _SignUpPageState extends State<SignUpPage> {
           ),
         ],
       ),
+    ),
     );
   }
 
@@ -1131,6 +1192,8 @@ class _SignUpPageState extends State<SignUpPage> {
 
   // Navigation buttons
   Widget _buildNavigationButtons(bool isSmallScreen) {
+    final canProceed = _validateCurrentStep();
+    
     return Row(
       children: [
         if (currentStep > 0)
@@ -1158,10 +1221,10 @@ class _SignUpPageState extends State<SignUpPage> {
         Expanded(
           flex: currentStep == 0 ? 1 : 2,
           child: ElevatedButton(
-            onPressed: isLoading ? null : _handleNextOrSubmit,
+            onPressed: (isLoading || !canProceed) ? null : _handleNextOrSubmit,
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFF1A1E3F),
-              foregroundColor: Colors.white,
+              backgroundColor: canProceed ? const Color(0xFF1A1E3F) : Colors.grey[300],
+              foregroundColor: canProceed ? Colors.white : Colors.grey[600],
               elevation: 0,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8),
