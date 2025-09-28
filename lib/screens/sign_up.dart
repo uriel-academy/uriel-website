@@ -161,9 +161,10 @@ class _SignUpPageState extends State<SignUpPage> {
       case 0:
         return selectedUserType != null;
       case 1:
-        return _detailsFormKey.currentState?.validate() ?? false;
+        // Don't validate form until user tries to proceed
+        return true; // Allow proceeding, validation happens on submit
       case 2:
-        return (_authFormKey.currentState?.validate() ?? false) && agreeTerms && agreePrivacy;
+        return agreeTerms && agreePrivacy;
       default:
         return false;
     }
@@ -271,9 +272,11 @@ class _SignUpPageState extends State<SignUpPage> {
 
                             const SizedBox(height: 32),
                             
+                            // Navigation buttons
+                            _buildNavigationButtons(isSmallScreen),
+                            
                             // Google Sign Up Button (only on first step)
                             if (currentStep == 0) ...[
-                              _buildGoogleSignUpButton(),
                               const SizedBox(height: 16),
                               Row(
                                 children: [
@@ -292,10 +295,8 @@ class _SignUpPageState extends State<SignUpPage> {
                                 ],
                               ),
                               const SizedBox(height: 16),
+                              _buildGoogleSignUpButton(),
                             ],
-
-                            // Navigation buttons
-                            _buildNavigationButtons(isSmallScreen),
                           ],
                         ),
                       ),
@@ -583,15 +584,27 @@ class _SignUpPageState extends State<SignUpPage> {
         label: 'Grade/Class',
         hint: 'Select your grade',
         icon: Icons.school_outlined,
-        items: ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 
-                'Grade 6', 'Grade 7', 'Grade 8', 'Grade 9', 'Grade 10',
-                'Grade 11', 'Grade 12', 'College/University'],
+        items: ['JHS 1', 'JHS 2', 'JHS 3', 'SHS 1', 'SHS 2', 'SHS 3'],
         onChanged: (value) {
           setState(() {
             selectedGrade = value;
           });
         },
         validator: (value) => value == null ? 'Grade is required' : null,
+      ),
+      const SizedBox(height: 20),
+      _buildTextField(
+        controller: phoneController,
+        label: 'Student Phone Number',
+        hint: 'Enter your phone number',
+        icon: Icons.phone_outlined,
+        keyboardType: TextInputType.phone,
+        validator: (value) {
+          if (value == null || value.isEmpty) {
+            return 'Phone number is required';
+          }
+          return null;
+        },
       ),
       const SizedBox(height: 20),
       _buildTextField(
@@ -678,10 +691,50 @@ class _SignUpPageState extends State<SignUpPage> {
       ),
       const SizedBox(height: 20),
       _buildTextField(
-        controller: teacherIdController,
-        label: 'Teacher ID (Optional)',
-        hint: 'Enter your teacher ID',
-        icon: Icons.badge_outlined,
+        controller: emailController,
+        label: 'Email Address',
+        hint: 'Enter your email',
+        icon: Icons.email_outlined,
+        keyboardType: TextInputType.emailAddress,
+        validator: (value) {
+          if (value == null || value.isEmpty) {
+            return 'Email is required';
+          }
+          if (!RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$').hasMatch(value)) {
+            return 'Please enter a valid email';
+          }
+          return null;
+        },
+      ),
+      const SizedBox(height: 20),
+      _buildTextField(
+        controller: phoneController,
+        label: 'Phone Number',
+        hint: 'Enter your phone number',
+        icon: Icons.phone_outlined,
+        keyboardType: TextInputType.phone,
+        validator: (value) {
+          if (value == null || value.isEmpty) {
+            return 'Phone number is required';
+          }
+          return null;
+        },
+      ),
+      const SizedBox(height: 20),
+      _buildDropdownField(
+        value: selectedTeachingClasses.isNotEmpty ? selectedTeachingClasses.first : null,
+        label: 'Grade/Class You Teach',
+        hint: 'Select grade you teach',
+        icon: Icons.class_outlined,
+        items: ['JHS 1', 'JHS 2', 'JHS 3', 'SHS 1', 'SHS 2', 'SHS 3'],
+        onChanged: (value) {
+          setState(() {
+            if (value != null) {
+              selectedTeachingClasses = [value];
+            }
+          });
+        },
+        validator: (value) => value == null ? 'Teaching grade is required' : null,
       ),
       const SizedBox(height: 20),
       _buildTextField(
@@ -696,24 +749,6 @@ class _SignUpPageState extends State<SignUpPage> {
           return null;
         },
       ),
-      const SizedBox(height: 20),
-      _buildTextField(
-        controller: yearsExperienceController,
-        label: 'Years of Experience',
-        hint: 'Enter years of teaching experience',
-        icon: Icons.work_outline,
-        keyboardType: TextInputType.number,
-        validator: (value) {
-          if (value == null || value.isEmpty) {
-            return 'Experience is required';
-          }
-          final years = int.tryParse(value);
-          if (years == null || years < 0 || years > 50) {
-            return 'Please enter valid years';
-          }
-          return null;
-        },
-      ),
     ];
   }
 
@@ -721,12 +756,29 @@ class _SignUpPageState extends State<SignUpPage> {
     return [
       _buildTextField(
         controller: nameController,
-        label: 'School/Institution Name',
+        label: 'Institution Name',
         hint: 'Enter institution name',
         icon: Icons.business_outlined,
         validator: (value) {
           if (value == null || value.isEmpty) {
             return 'Institution name is required';
+          }
+          return null;
+        },
+      ),
+      const SizedBox(height: 20),
+      _buildTextField(
+        controller: emailController,
+        label: 'School Email',
+        hint: 'Enter school email',
+        icon: Icons.email_outlined,
+        keyboardType: TextInputType.emailAddress,
+        validator: (value) {
+          if (value == null || value.isEmpty) {
+            return 'School email is required';
+          }
+          if (!RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$').hasMatch(value)) {
+            return 'Please enter a valid email';
           }
           return null;
         },
@@ -745,63 +797,46 @@ class _SignUpPageState extends State<SignUpPage> {
         },
       ),
       const SizedBox(height: 20),
-      _buildTextField(
-        controller: positionController,
-        label: 'Position/Title',
-        hint: 'e.g., Principal, Administrator',
-        icon: Icons.work_outline,
-        validator: (value) {
-          if (value == null || value.isEmpty) {
-            return 'Position is required';
-          }
-          return null;
-        },
-      ),
-      const SizedBox(height: 20),
-      _buildTextField(
-        controller: schoolAddressController,
-        label: 'School Address',
-        hint: 'Enter school address',
+      _buildDropdownField(
+        value: selectedRegion,
+        label: 'Region',
+        hint: 'Select school region',
         icon: Icons.location_on_outlined,
-        validator: (value) {
-          if (value == null || value.isEmpty) {
-            return 'Address is required';
-          }
-          return null;
+        items: [
+          'Greater Accra',
+          'Ashanti',
+          'Western',
+          'Eastern',
+          'Central',
+          'Northern',
+          'Upper East',
+          'Upper West',
+          'Volta',
+          'Brong-Ahafo',
+          'Western North',
+          'Ahafo',
+          'Bono East',
+          'Oti',
+          'North East',
+          'Savannah'
+        ],
+        onChanged: (value) {
+          setState(() {
+            selectedRegion = value;
+          });
         },
+        validator: (value) => value == null ? 'Region is required' : null,
       ),
       const SizedBox(height: 20),
       _buildTextField(
-        controller: studentCountController,
-        label: 'Number of Students',
-        hint: 'Approximate student count',
-        icon: Icons.groups_outlined,
-        keyboardType: TextInputType.number,
+        controller: phoneController,
+        label: 'Contact Phone Number',
+        hint: 'Enter contact phone number',
+        icon: Icons.phone_outlined,
+        keyboardType: TextInputType.phone,
         validator: (value) {
           if (value == null || value.isEmpty) {
-            return 'Student count is required';
-          }
-          final count = int.tryParse(value);
-          if (count == null || count <= 0) {
-            return 'Please enter a valid number';
-          }
-          return null;
-        },
-      ),
-      const SizedBox(height: 20),
-      _buildTextField(
-        controller: teacherCountController,
-        label: 'Number of Teachers',
-        hint: 'Approximate teacher count',
-        icon: Icons.group_outlined,
-        keyboardType: TextInputType.number,
-        validator: (value) {
-          if (value == null || value.isEmpty) {
-            return 'Teacher count is required';
-          }
-          final count = int.tryParse(value);
-          if (count == null || count <= 0) {
-            return 'Please enter a valid number';
+            return 'Contact phone number is required';
           }
           return null;
         },
@@ -836,43 +871,33 @@ class _SignUpPageState extends State<SignUpPage> {
             ),
             const SizedBox(height: 32),
 
-          _buildTextField(
-            controller: emailController,
-            label: 'Email Address',
-            hint: 'Enter your email',
-            icon: Icons.email_outlined,
-            keyboardType: TextInputType.emailAddress,
-            validator: (value) {
-              if (value == null || value.isEmpty) {
-                return 'Email is required';
-              }
-              if (!RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$').hasMatch(value)) {
-                return 'Please enter a valid email';
-              }
-              return null;
-            },
-          ),
-          const SizedBox(height: 20),
-          _buildTextField(
-            controller: phoneController,
-            label: 'Phone Number',
-            hint: 'Enter your phone number',
-            icon: Icons.phone_outlined,
-            keyboardType: TextInputType.phone,
-            validator: (value) {
-              if (value == null || value.isEmpty) {
-                return 'Phone number is required';
-              }
-              return null;
-            },
-          ),
-          const SizedBox(height: 20),
-          _buildTextField(
-            controller: passwordController,
-            label: 'Password',
-            hint: 'Create a strong password',
-            icon: Icons.lock_outlined,
-            obscureText: obscurePassword,
+            // Only show email for students since teachers/schools already provided them
+            if (selectedUserType == UserType.student) ...[
+              _buildTextField(
+                controller: emailController,
+                label: 'Email Address',
+                hint: 'Enter your email',
+                icon: Icons.email_outlined,
+                keyboardType: TextInputType.emailAddress,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'Email is required';
+                  }
+                  if (!RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$').hasMatch(value)) {
+                    return 'Please enter a valid email';
+                  }
+                  return null;
+                },
+              ),
+              const SizedBox(height: 20),
+            ],
+            
+            _buildTextField(
+              controller: passwordController,
+              label: 'Password',
+              hint: 'Create a strong password',
+              icon: Icons.lock_outlined,
+              obscureText: obscurePassword,
             suffixIcon: IconButton(
               icon: Icon(
                 obscurePassword ? Icons.visibility : Icons.visibility_off,
@@ -1267,11 +1292,22 @@ class _SignUpPageState extends State<SignUpPage> {
   }
 
   void _handleNextOrSubmit() {
-    if (!_validateCurrentStep()) {
+    if (currentStep == 1) {
+      // Validate details form before proceeding
+      if (!(_detailsFormKey.currentState?.validate() ?? false)) {
+        return;
+      }
+    } else if (currentStep == 2) {
+      // Validate auth form and agreements before submitting
+      if (!(_authFormKey.currentState?.validate() ?? false) || !agreeTerms || !agreePrivacy) {
+        if (!agreeTerms || !agreePrivacy) {
+          _showError('Please agree to the terms and privacy policy');
+        }
+        return;
+      }
+    } else if (!_validateCurrentStep()) {
       if (currentStep == 0 && selectedUserType == null) {
         _showError('Please select an account type');
-      } else if (currentStep == 2 && (!agreeTerms || !agreePrivacy)) {
-        _showError('Please agree to the terms and privacy policy');
       }
       return;
     }
