@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../services/auth_service.dart';
 import 'sign_in.dart' as sign_in;
-import 'home.dart';
+import 'home_page.dart'; // Import StudentHomePage instead of home.dart
 
 class AuthGate extends StatelessWidget {
   const AuthGate({super.key});
@@ -17,7 +17,7 @@ class AuthGate extends StatelessWidget {
           );
         }
         return snapshot.hasData
-            ? const HomePage()
+            ? const StudentHomePage() // Use StudentHomePage directly
             : const sign_in.SignInPage();
       },
     );
