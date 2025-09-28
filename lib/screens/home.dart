@@ -2,12 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'landing_page.dart';
 import 'home_page.dart';
-import 'parent_dashboard.dart';
-import 'school_dashboard.dart';
-import 'gamification.dart';
-import 'trivia.dart';
 
 class NotificationsPage extends StatelessWidget {
   const NotificationsPage({super.key});
@@ -67,184 +62,16 @@ class AuthGate extends StatelessWidget {
         if (!snapshot.hasData) {
           return const SignInPage();
         }
-        return const HomePage();
+        return const StudentHomePage(); // Main student homepage after login
       },
     );
   }
 }
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
-  @override
-  _HomePageState createState() => _HomePageState();
-}
+// Note: The old multi-role HomePage has been replaced with StudentHomePage
+// School and Teacher dashboards will be separate pages with role-based routing
 
-class _HomePageState extends State<HomePage> {
-  int _selectedIndex = 0;
-  final List<String> _labels = [
-    'Home',
-    'Student',
-    'Parent',
-    'School',
-    'Gamification',
-    'Trivia',
-  ];
-  final List<Widget> _pages = [
-    const LandingPage(),
-    const StudentHomePage(),
-    const ParentDashboardPage(),
-    const SchoolDashboardPage(),
-    const GamificationPage(
-      quizzesCompleted: 5,
-      textbooksRead: 2,
-      aiToolsUsed: 1,
-      calmModeActivated: 0,
-    ),
-    const TriviaPage(),
-  ];
-
-  void _onItemTapped(int idx) {
-    setState(() => _selectedIndex = idx);
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return LayoutBuilder(builder: (context, bc) {
-      final bool isWide = bc.maxWidth >= 600;
-      return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.white,
-          elevation: 0,
-          leading: const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Icon(
-              Icons.school_outlined,
-              size: 32,
-              color: Color(0xFF667eea),
-            ),
-          ),
-          title: const Text(
-            'Uriel Academy',
-            style: TextStyle(
-              color: Color(0xFF2D3748),
-              fontWeight: FontWeight.w700,
-            ),
-          ),
-          centerTitle: false,
-          actions: [
-            const _HoverButton(label: 'About', route: '/about'),
-            const _HoverButton(label: 'Pricing', route: '/pricing'),
-            PopupMenuButton<String>(
-              icon: const CircleAvatar(child: Icon(Icons.person)),
-              onSelected: (v) async {
-                if (v == 'signout') {
-                  await FirebaseAuth.instance.signOut();
-                  if (mounted) {
-                    Navigator.of(context).pushNamedAndRemoveUntil('/', (route) => false);
-                  }
-                }
-              },
-              itemBuilder: (_) => [
-                const PopupMenuItem(value: 'signout', child: Text('Sign Out')),
-              ],
-            ),
-            const SizedBox(width: 12),
-          ],
-        ),
-        body: isWide
-            ? Column(
-                children: [
-                  Expanded(
-                    child: Row(
-                      children: [
-                        NavigationRail(
-                          selectedIndex: _selectedIndex,
-                          onDestinationSelected: _onItemTapped,
-                          labelType: NavigationRailLabelType.all,
-                          backgroundColor: const Color(0xFF004866),
-                          destinations: _labels
-                              .map((label) => NavigationRailDestination(
-                                    icon: const SizedBox.shrink(),
-                                    label: Text(label, style: const TextStyle(color: Colors.white)),
-                                  ))
-                              .toList(),
-                        ),
-                        const VerticalDivider(width: 1),
-                        Expanded(
-                          child: _pages[_selectedIndex],
-                        ),
-                      ],
-                    ),
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(vertical: 16),
-                    child: Text(
-                      '© 2025 Uriel Academy',
-                      style: TextStyle(fontSize: 14),
-                    ),
-                  ),
-                ],
-              )
-            : Column(
-                children: [
-                  Expanded(
-                    child: _pages[_selectedIndex],
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(vertical: 16),
-                    child: Text(
-                      '© 2025 Uriel Academy',
-                      style: TextStyle(fontSize: 14),
-                    ),
-                  ),
-                ],
-              ),
-        bottomNavigationBar: isWide
-            ? null
-            : BottomNavigationBar(
-                currentIndex: _selectedIndex,
-                onTap: _onItemTapped,
-                items: _labels
-                    .map((label) => BottomNavigationBarItem(
-                          icon: const Icon(Icons.circle_outlined),
-                          label: label,
-                        ))
-                    .toList(),
-                type: BottomNavigationBarType.fixed,
-                selectedItemColor: const Color.fromARGB(255, 136, 130, 133),
-              ),
-      );
-    });
-  }
-}
-
-/// A little hoverable text button for desktop
-class _HoverButton extends StatefulWidget {
-  final String label;
-  final String route;
-  const _HoverButton({required this.label, required this.route});
-  @override
-  __HoverButtonState createState() => __HoverButtonState();
-}
-class __HoverButtonState extends State<_HoverButton> {
-  bool _hover = false;
-  @override
-  Widget build(BuildContext context) {
-    return MouseRegion(
-      onEnter: (_) => setState(() => _hover = true),
-      onExit: (_) => setState(() => _hover = false),
-      child: TextButton(
-        onPressed: () => Navigator.pushNamed(context, widget.route),
-        style: TextButton.styleFrom(
-          foregroundColor: _hover ? const Color(0xFFD62828) : Colors.black,
-        ),
-        child: Text(widget.label),
-      ),
-    );
-  }
-}
-
-/// Below are skeleton pages — hook them up to your Firestore schema:
+/// Placeholder pages for About, Pricing, SignIn
 class ProgressPage extends StatelessWidget {
   const ProgressPage({super.key});
 

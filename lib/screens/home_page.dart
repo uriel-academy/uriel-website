@@ -26,6 +26,12 @@ class _StudentHomePageState extends State<StudentHomePage> with SingleTickerProv
   void initState() {
     super.initState();
     _tabController = TabController(length: 5, vsync: this);
+    // Listen to tab changes to sync with NavigationRail
+    _tabController.addListener(() {
+      if (_tabController.indexIsChanging) {
+        setState(() {}); // Rebuild to update NavigationRail selectedIndex
+      }
+    });
   }
 
   @override
@@ -48,30 +54,105 @@ class _StudentHomePageState extends State<StudentHomePage> with SingleTickerProv
             onPressed: () => _showProfileMenu(context),
           ),
         ],
-        bottom: TabBar(
-          controller: _tabController,
-          indicatorColor: Colors.white,
-          labelColor: Colors.white,
-          unselectedLabelColor: Colors.white70,
-          isScrollable: true,
-          tabs: const [
-            Tab(icon: Icon(Icons.dashboard), text: 'Dashboard'),
-            Tab(icon: Icon(Icons.quiz), text: 'Questions'),
-            Tab(icon: Icon(Icons.menu_book), text: 'Textbooks'),
-            Tab(icon: Icon(Icons.psychology), text: 'Trivia'),
-            Tab(icon: Icon(Icons.assessment), text: 'Mock'),
-          ],
-        ),
       ),
-      body: TabBarView(
-        controller: _tabController,
-        children: [
-          _buildDashboardTab(),
-          _buildQuestionsTab(),
-          _buildTextbooksTab(),
-          _buildTriviaTab(),
-          _buildMockTab(),
-        ],
+      body: LayoutBuilder(
+        builder: (context, constraints) {
+          // Use left-side tabs for wider screens, bottom tabs for mobile
+          final bool useLeftTabs = constraints.maxWidth > 800;
+          
+          if (useLeftTabs) {
+            return Row(
+              children: [
+                // Left navigation rail
+                NavigationRail(
+                  selectedIndex: _tabController.index,
+                  onDestinationSelected: (index) {
+                    _tabController.animateTo(index);
+                  },
+                  labelType: NavigationRailLabelType.all,
+                  backgroundColor: const Color(0xFF1A1E3F),
+                  selectedIconTheme: const IconThemeData(color: Colors.white),
+                  unselectedIconTheme: const IconThemeData(color: Colors.white70),
+                  selectedLabelTextStyle: const TextStyle(color: Colors.white),
+                  unselectedLabelTextStyle: const TextStyle(color: Colors.white70),
+                  destinations: const [
+                    NavigationRailDestination(
+                      icon: Icon(Icons.dashboard),
+                      label: Text('Dashboard'),
+                    ),
+                    NavigationRailDestination(
+                      icon: Icon(Icons.quiz),
+                      label: Text('Questions'),
+                    ),
+                    NavigationRailDestination(
+                      icon: Icon(Icons.menu_book),
+                      label: Text('Textbooks'),
+                    ),
+                    NavigationRailDestination(
+                      icon: Icon(Icons.psychology),
+                      label: Text('Trivia'),
+                    ),
+                    NavigationRailDestination(
+                      icon: Icon(Icons.assessment),
+                      label: Text('Mock'),
+                    ),
+                  ],
+                ),
+                const VerticalDivider(thickness: 1, width: 1),
+                // Main content area
+                Expanded(
+                  child: TabBarView(
+                    controller: _tabController,
+                    children: [
+                      _buildDashboardTab(),
+                      _buildQuestionsTab(),
+                      _buildTextbooksTab(),
+                      _buildTriviaTab(),
+                      _buildMockTab(),
+                    ],
+                  ),
+                ),
+              ],
+            );
+          } else {
+            // Mobile layout with bottom tabs
+            return Column(
+              children: [
+                // Tab bar at top for mobile
+                Container(
+                  color: const Color(0xFF1A1E3F),
+                  child: TabBar(
+                    controller: _tabController,
+                    indicatorColor: Colors.white,
+                    labelColor: Colors.white,
+                    unselectedLabelColor: Colors.white70,
+                    isScrollable: true,
+                    tabs: const [
+                      Tab(icon: Icon(Icons.dashboard), text: 'Dashboard'),
+                      Tab(icon: Icon(Icons.quiz), text: 'Questions'),
+                      Tab(icon: Icon(Icons.menu_book), text: 'Textbooks'),
+                      Tab(icon: Icon(Icons.psychology), text: 'Trivia'),
+                      Tab(icon: Icon(Icons.assessment), text: 'Mock'),
+                    ],
+                  ),
+                ),
+                // Content area
+                Expanded(
+                  child: TabBarView(
+                    controller: _tabController,
+                    children: [
+                      _buildDashboardTab(),
+                      _buildQuestionsTab(),
+                      _buildTextbooksTab(),
+                      _buildTriviaTab(),
+                      _buildMockTab(),
+                    ],
+                  ),
+                ),
+              ],
+            );
+          }
+        },
       ),
     );
   }
