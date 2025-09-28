@@ -273,7 +273,7 @@ class _SignUpPageState extends State<SignUpPage> {
                               ),
                             ),
 
-                            const SizedBox(height: 32),
+                            const SizedBox(height: 24),
                             
                             // Navigation buttons
                             _buildNavigationButtons(isSmallScreen),
@@ -334,7 +334,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          Navigator.pushReplacementNamed(context, '/signin');
+                          Navigator.pushReplacementNamed(context, '/login');
                         },
                         child: Text(
                           'Sign In',
@@ -389,7 +389,7 @@ class _SignUpPageState extends State<SignUpPage> {
               color: const Color(0xFF6B7280),
             ),
           ),
-          const SizedBox(height: 40),
+          const SizedBox(height: 32),
           
           // User type cards
           _buildUserTypeCard(
@@ -398,14 +398,14 @@ class _SignUpPageState extends State<SignUpPage> {
             subtitle: 'Learn with personalized courses and tracking',
             icon: Icons.school_outlined,
           ),
-          const SizedBox(height: 16),
+          const SizedBox(height: 12),
           _buildUserTypeCard(
             type: UserType.teacher,
             title: 'Teacher',
-            subtitle: 'Create courses and manage student progress',
+            subtitle: 'Manage student progress and create courses',
             icon: Icons.person_outline,
           ),
-          const SizedBox(height: 16),
+          const SizedBox(height: 12),
           _buildUserTypeCard(
             type: UserType.school,
             title: 'School/Institution',
