@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:uriel_mainapp/screens/otp_verification.dart';
 import 'package:uriel_mainapp/services/auth_service.dart';
 
 enum UserType { student, teacher, school }
@@ -131,7 +130,11 @@ class _SignUpPageState extends State<SignUpPage> {
       if (user == null) {
         _showError('Google sign-up failed. Please try again.');
       } else {
-        Navigator.pushReplacementNamed(context, '/home');
+        Navigator.pushNamedAndRemoveUntil(
+          context,
+          '/home',
+          (route) => false,
+        );
       }
     } catch (e) {
       _showError('An error occurred during sign-up.');
@@ -1329,14 +1332,11 @@ class _SignUpPageState extends State<SignUpPage> {
       // For now, we'll simulate the signup process
       await Future.delayed(const Duration(seconds: 2));
       
-      // Navigate to OTP verification or home page
-      Navigator.pushReplacement(
+      // Navigate directly to home page (skip OTP verification)
+      Navigator.pushNamedAndRemoveUntil(
         context,
-        MaterialPageRoute(
-          builder: (context) => OTPVerificationPage(
-            email: emailController.text,
-          ),
-        ),
+        '/home',
+        (route) => false,
       );
     } catch (e) {
       _showError('Sign up failed. Please try again.');
