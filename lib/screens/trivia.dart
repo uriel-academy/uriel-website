@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class TriviaPage extends StatefulWidget {
-  const TriviaPage({super.key});
+  final int questionCount;
+  const TriviaPage({super.key, this.questionCount = 20});
 
   @override
   State<TriviaPage> createState() => _TriviaPageState();

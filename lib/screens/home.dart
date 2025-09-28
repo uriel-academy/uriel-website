@@ -3,7 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'landing_page.dart';
-import 'student_dashboard.dart';
+import 'home_page.dart';
 import 'parent_dashboard.dart';
 import 'school_dashboard.dart';
 import 'gamification.dart';
@@ -91,7 +91,7 @@ class _HomePageState extends State<HomePage> {
   ];
   final List<Widget> _pages = [
     const LandingPage(),
-    const StudentDashboardPage(),
+    const StudentHomePage(),
     const ParentDashboardPage(),
     const SchoolDashboardPage(),
     const GamificationPage(
