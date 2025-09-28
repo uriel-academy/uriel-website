@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'sign_up.dart';
 import 'sign_in.dart';
 
@@ -42,36 +43,14 @@ class LandingPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             // Logo
-            Row(
-              children: [
-                Container(
-                  width: 32,
-                  height: 32,
-                  decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      colors: [Color(0xFF1A1E3F), Color(0xFFD62828)],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                    ),
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: const Icon(
-                    Icons.school,
-                    color: Colors.white,
-                    size: 20,
-                  ),
-                ),
-                const SizedBox(width: 12),
-                const Text(
-                  'Uriel Academy',
-                  style: TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xFF1A1E3F),
-                    letterSpacing: -0.5,
-                  ),
-                ),
-              ],
+            const Text(
+              'Uriel Academy',
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+                color: Color(0xFF1A1E3F),
+                letterSpacing: -0.5,
+              ),
             ),
             // Auth Buttons
             Row(
@@ -138,7 +117,7 @@ class LandingPage extends StatelessWidget {
               Text(
                 'LEARN. PRACTICE. SUCCEED.',
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: GoogleFonts.montserrat(
                   fontSize: isDesktop ? 48 : 32,
                   fontWeight: FontWeight.w900,
                   color: const Color(0xFF1A1E3F),
@@ -151,7 +130,7 @@ class LandingPage extends StatelessWidget {
               Text(
                 'Ace BECE & WASSCE with Uriel.',
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: GoogleFonts.playfairDisplay(
                   fontSize: isDesktop ? 24 : 20,
                   fontWeight: FontWeight.w600,
                   color: const Color(0xFFD62828),
@@ -159,34 +138,17 @@ class LandingPage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 32),
-              // Value Proposition
+              // Simplified value proposition
               Container(
-                constraints: const BoxConstraints(maxWidth: 600),
+                constraints: const BoxConstraints(maxWidth: 500),
                 child: Text(
-                  'Get instant access to 10,000+ past questions, curated NACCA approved textbooks, and smart AI tools including personalized quizzes, revision plans, and progress tracking.',
+                  'Master BECE & WASSCE with 10,000+ past questions, approved textbooks, and smart AI tools.',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 18,
                     color: Colors.grey[700],
                     height: 1.5,
                     fontWeight: FontWeight.w400,
-                  ),
-                ),
-              ),
-              const SizedBox(height: 24),
-              // Positioning Statement
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                decoration: BoxDecoration(
-                  color: const Color(0xFF1A1E3F).withOpacity(0.05),
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: const Text(
-                  'Built for Ghanaian students. Study smarter, not harder.',
-                  style: TextStyle(
-                    fontSize: 16,
-                    color: Color(0xFF1A1E3F),
-                    fontWeight: FontWeight.w600,
                   ),
                 ),
               ),
@@ -243,12 +205,12 @@ class LandingPage extends StatelessWidget {
       child: Column(
         children: [
           const SizedBox(height: 40),
-          const Text(
+          Text(
             'Everything you need to excel',
-            style: TextStyle(
+            style: GoogleFonts.montserrat(
               fontSize: 28,
               fontWeight: FontWeight.w800,
-              color: Color(0xFF1A1E3F),
+              color: const Color(0xFF1A1E3F),
             ),
           ),
           const SizedBox(height: 40),
@@ -261,19 +223,16 @@ class LandingPage extends StatelessWidget {
                 runSpacing: 20,
                 children: [
                   _buildFeatureCard(
-                    icon: Icons.quiz_outlined,
                     title: '10,000+ Past Questions',
                     description: 'Comprehensive collection of BECE and WASSCE questions with detailed answers',
                     width: isDesktop ? (constraints.maxWidth - 40) / 3 : constraints.maxWidth,
                   ),
                   _buildFeatureCard(
-                    icon: Icons.menu_book_outlined,
                     title: 'NACCA Approved Textbooks',
                     description: 'Curated digital textbooks aligned with Ghana Education Service curriculum',
                     width: isDesktop ? (constraints.maxWidth - 40) / 3 : constraints.maxWidth,
                   ),
                   _buildFeatureCard(
-                    icon: Icons.psychology_outlined,
                     title: 'Smart AI Tools',
                     description: 'Personalized quizzes, revision plans, and intelligent progress tracking',
                     width: isDesktop ? (constraints.maxWidth - 40) / 3 : constraints.maxWidth,
@@ -289,7 +248,6 @@ class LandingPage extends StatelessWidget {
   }
 
   Widget _buildFeatureCard({
-    required IconData icon,
     required String title,
     required String description,
     required double width,
@@ -311,24 +269,6 @@ class LandingPage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            width: 48,
-            height: 48,
-            decoration: BoxDecoration(
-              gradient: const LinearGradient(
-                colors: [Color(0xFF1A1E3F), Color(0xFFD62828)],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-              ),
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Icon(
-              icon,
-              color: Colors.white,
-              size: 24,
-            ),
-          ),
-          const SizedBox(height: 16),
           Text(
             title,
             style: const TextStyle(
@@ -357,12 +297,12 @@ class LandingPage extends StatelessWidget {
       child: Column(
         children: [
           const SizedBox(height: 40),
-          const Text(
+          Text(
             'Choose your plan',
-            style: TextStyle(
+            style: GoogleFonts.montserrat(
               fontSize: 28,
               fontWeight: FontWeight.w800,
-              color: Color(0xFF1A1E3F),
+              color: const Color(0xFF1A1E3F),
             ),
           ),
           const SizedBox(height: 8),
@@ -698,38 +638,15 @@ class LandingPage extends StatelessWidget {
       child: Column(
         children: [
           const SizedBox(height: 40),
-          // Logo
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                width: 32,
-                height: 32,
-                decoration: BoxDecoration(
-                  gradient: const LinearGradient(
-                    colors: [Colors.white, Color(0xFFD62828)],
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                  ),
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: const Icon(
-                  Icons.school,
-                  color: Color(0xFF1A1E3F),
-                  size: 20,
-                ),
-              ),
-              const SizedBox(width: 12),
-              const Text(
-                'Uriel Academy',
-                style: TextStyle(
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                  letterSpacing: -0.5,
-                ),
-              ),
-            ],
+          // Centered title without logo
+          const Text(
+            'Uriel Academy',
+            style: TextStyle(
+              fontSize: 22,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+              letterSpacing: -0.5,
+            ),
           ),
           const SizedBox(height: 24),
           Text(
