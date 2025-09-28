@@ -8,115 +8,115 @@ class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFFAFAFA),
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
           children: [
-            // Modern Hero Section
-            Container(
-              padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 24),
-              decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [
-                    Color(0xFF667eea),
-                    Color(0xFF764ba2),
-                  ],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                ),
-              ),
-              child: LayoutBuilder(builder: (context, constraints) {
-                final bool isSmall = constraints.maxWidth < 800;
-                return Column(
-                  children: [
-                    // Modern Brand Header
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-                      decoration: BoxDecoration(
-                        color: Colors.white.withOpacity(0.1),
-                        borderRadius: BorderRadius.circular(50),
-                        border: Border.all(color: Colors.white.withOpacity(0.3)),
-                      ),
-                      child: const Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Icon(Icons.school_outlined, color: Colors.white, size: 24),
-                          SizedBox(width: 12),
-                          Text(
-                            'URIEL ACADEMY',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600,
-                              letterSpacing: 1.2,
-                            ),
-                          ),
-                        ],
-                      ),
+            _buildHeader(context),
+            _buildHeroSection(context),
+            _buildValueProposition(context),
+            _buildPricingSection(context),
+            _buildTestimonialsSection(context),
+            _buildFooter(),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildHeader(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.05),
+            blurRadius: 10,
+            offset: const Offset(0, 2),
+          ),
+        ],
+      ),
+      child: SafeArea(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            // Logo
+            Row(
+              children: [
+                Container(
+                  width: 32,
+                  height: 32,
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      colors: [Color(0xFF1A1E3F), Color(0xFFD62828)],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
                     ),
-                    const SizedBox(height: 40),
-                    
-                    // Hero Content
-                    if (isSmall) ...[
-                      _buildMobileHero(context),
-                    ] else ...[
-                      _buildDesktopHero(context),
-                    ],
-                  ],
-                );
-              }),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: const Icon(
+                    Icons.school,
+                    color: Colors.white,
+                    size: 20,
+                  ),
+                ),
+                const SizedBox(width: 12),
+                const Text(
+                  'Uriel Academy',
+                  style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFF1A1E3F),
+                    letterSpacing: -0.5,
+                  ),
+                ),
+              ],
             ),
-
-            // Feature cards
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 28),
-              child: Wrap(
-                spacing: 16,
-                runSpacing: 16,
-                alignment: WrapAlignment.center,
-                children: [
-                  _FeatureCard(icon: Icons.library_books, title: 'Past Questions', subtitle: 'BECE & WASSCE'),
-                  _FeatureCard(icon: Icons.menu_book, title: 'Textbooks', subtitle: 'NACCA-approved'),
-                  _FeatureCard(icon: Icons.smart_toy, title: 'AI Tutor', subtitle: 'Instant help & summaries'),
-                  _FeatureCard(icon: Icons.bar_chart, title: 'Progress', subtitle: 'Track performance'),
-                ],
-              ),
-            ),
-
-            // Testimonials + FAQ section (kept but with lighter styling)
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
-                  Text('Testimonials', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                  SizedBox(height: 12),
-                  Card(elevation: 2, child: ListTile(leading: CircleAvatar(child: Icon(Icons.person)), title: Text('“Uriel helped me pass my BECE with confidence!”'), subtitle: Text('- Student'))),
-                  SizedBox(height: 8),
-                  Card(elevation: 2, child: ListTile(leading: CircleAvatar(child: Icon(Icons.family_restroom)), title: Text('“The weekly reports keep me updated on my child’s progress.”'), subtitle: Text('- Parent'))),
-                  SizedBox(height: 8),
-                  Card(elevation: 2, child: ListTile(leading: CircleAvatar(child: Icon(Icons.school)), title: Text('“Managing our students and tracking performance is so easy now.”'), subtitle: Text('- School Admin'))),
-                ],
-              ),
-            ),
-
-            // FAQ + Footer
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
-                  Text('FAQ', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                  SizedBox(height: 12),
-                  ExpansionTile(title: Text('What exams does Uriel Academy cover?'), children: [Padding(padding: EdgeInsets.all(8.0), child: Text('BECE and WASSCE for Ghanaian students.'))]),
-                  ExpansionTile(title: Text('How does the AI assistant work?'), children: [Padding(padding: EdgeInsets.all(8.0), child: Text('It helps with instant question solving, revision plans, summaries, and more.'))]),
-                  ExpansionTile(title: Text('Is there a free trial?'), children: [Padding(padding: EdgeInsets.all(8.0), child: Text('Yes, you can try Uriel Academy for free for 7 days.'))]),
-                  SizedBox(height: 24),
-                  Center(child: Text('Privacy Policy | Terms of Use | Copyright © 2025 Uriel Academy', style: TextStyle(fontSize: 13, color: Colors.black54))),
-                  SizedBox(height: 8),
-                  Center(child: Text('Disclaimer: Uriel Academy is not affiliated with WAEC or NACCA.', style: TextStyle(fontSize: 12, color: Colors.black45))),
-                ],
-              ),
+            // Auth Buttons
+            Row(
+              children: [
+                TextButton(
+                  onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => const SignInPage()),
+                  ),
+                  style: TextButton.styleFrom(
+                    foregroundColor: const Color(0xFF1A1E3F),
+                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  ),
+                  child: const Text(
+                    'Sign In',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 8),
+                ElevatedButton(
+                  onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => const SignUpPage()),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFFD62828),
+                    foregroundColor: Colors.white,
+                    elevation: 0,
+                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                  ),
+                  child: const Text(
+                    'Sign Up',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
@@ -124,292 +124,662 @@ class LandingPage extends StatelessWidget {
     );
   }
 
-  Widget _buildMobileHero(BuildContext context) {
-    return Column(
-      children: [
-        const Text(
-          'Excel in BECE & WASSCE',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            fontSize: 32,
-            fontWeight: FontWeight.w800,
-            color: Colors.white,
-            height: 1.2,
-          ),
-        ),
-        const SizedBox(height: 16),
-        const Text(
-          'Join thousands of Ghanaian students achieving academic excellence with AI-powered learning',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Colors.white70,
-            fontSize: 18,
-            height: 1.5,
-            fontWeight: FontWeight.w400,
-          ),
-        ),
-        const SizedBox(height: 32),
-        
-        // Modern CTA Buttons
-        Column(
-          children: [
-            Container(
-              width: double.infinity,
-              height: 56,
-              margin: const EdgeInsets.symmetric(horizontal: 24),
-              child: ElevatedButton(
-                onPressed: () => Navigator.of(context).push(
-                  MaterialPageRoute(builder: (c) => const SignUpPage()),
-                ),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white,
-                  foregroundColor: const Color(0xFF667eea),
-                  elevation: 0,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                ),
-                child: const Text(
-                  'Start Learning Free',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+  Widget _buildHeroSection(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(20),
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          final isDesktop = constraints.maxWidth > 768;
+          
+          return Column(
+            children: [
+              const SizedBox(height: 60),
+              // Main Headline
+              Text(
+                'LEARN. PRACTICE. SUCCEED.',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: isDesktop ? 48 : 32,
+                  fontWeight: FontWeight.w900,
+                  color: const Color(0xFF1A1E3F),
+                  height: 1.1,
+                  letterSpacing: -1,
                 ),
               ),
-            ),
-            const SizedBox(height: 12),
-            Container(
-              width: double.infinity,
-              height: 56,
-              margin: const EdgeInsets.symmetric(horizontal: 24),
-              child: OutlinedButton(
-                onPressed: () => Navigator.of(context).push(
-                  MaterialPageRoute(builder: (c) => const SignInPage()),
+              const SizedBox(height: 16),
+              // Subheadline
+              Text(
+                'Ace BECE & WASSCE with Uriel.',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: isDesktop ? 24 : 20,
+                  fontWeight: FontWeight.w600,
+                  color: const Color(0xFFD62828),
+                  letterSpacing: -0.5,
                 ),
-                style: OutlinedButton.styleFrom(
-                  side: const BorderSide(color: Colors.white70, width: 1.5),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                ),
-                child: const Text(
-                  'Sign In',
+              ),
+              const SizedBox(height: 32),
+              // Value Proposition
+              Container(
+                constraints: const BoxConstraints(maxWidth: 600),
+                child: Text(
+                  'Get instant access to 10,000+ past questions, curated NACCA approved textbooks, and smart AI tools including personalized quizzes, revision plans, and progress tracking.',
+                  textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: Colors.white,
                     fontSize: 18,
+                    color: Colors.grey[700],
+                    height: 1.5,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 24),
+              // Positioning Statement
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                decoration: BoxDecoration(
+                  color: const Color(0xFF1A1E3F).withOpacity(0.05),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: const Text(
+                  'Built for Ghanaian students. Study smarter, not harder.',
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Color(0xFF1A1E3F),
                     fontWeight: FontWeight.w600,
                   ),
                 ),
               ),
-            ),
-          ],
-        ),
-        const SizedBox(height: 40),
-        
-        // Modern Illustration Replacement (No PNG)
-        Container(
-          height: 200,
-          width: double.infinity,
-          margin: const EdgeInsets.symmetric(horizontal: 24),
-          decoration: BoxDecoration(
-            color: Colors.white.withOpacity(0.1),
-            borderRadius: BorderRadius.circular(24),
-            border: Border.all(color: Colors.white.withOpacity(0.2)),
-          ),
-          child: const Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(
-                  Icons.psychology_outlined,
-                  size: 64,
-                  color: Colors.white70,
+              const SizedBox(height: 48),
+              // CTA Buttons
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                    onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => const SignUpPage()),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFFD62828),
+                      foregroundColor: Colors.white,
+                      elevation: 0,
+                      padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
+                    child: const Text(
+                      'Start preparing today!',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 20),
+              Text(
+                'Join 10,000+ students already using Uriel Academy',
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Colors.grey[600],
+                  fontWeight: FontWeight.w500,
                 ),
-                SizedBox(height: 16),
+              ),
+              const SizedBox(height: 60),
+            ],
+          );
+        },
+      ),
+    );
+  }
+
+  Widget _buildValueProposition(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(20),
+      color: const Color(0xFFFAFAFA),
+      child: Column(
+        children: [
+          const SizedBox(height: 40),
+          const Text(
+            'Everything you need to excel',
+            style: TextStyle(
+              fontSize: 28,
+              fontWeight: FontWeight.w800,
+              color: Color(0xFF1A1E3F),
+            ),
+          ),
+          const SizedBox(height: 40),
+          LayoutBuilder(
+            builder: (context, constraints) {
+              final isDesktop = constraints.maxWidth > 768;
+              
+              return Wrap(
+                spacing: 20,
+                runSpacing: 20,
+                children: [
+                  _buildFeatureCard(
+                    icon: Icons.quiz_outlined,
+                    title: '10,000+ Past Questions',
+                    description: 'Comprehensive collection of BECE and WASSCE questions with detailed answers',
+                    width: isDesktop ? (constraints.maxWidth - 40) / 3 : constraints.maxWidth,
+                  ),
+                  _buildFeatureCard(
+                    icon: Icons.menu_book_outlined,
+                    title: 'NACCA Approved Textbooks',
+                    description: 'Curated digital textbooks aligned with Ghana Education Service curriculum',
+                    width: isDesktop ? (constraints.maxWidth - 40) / 3 : constraints.maxWidth,
+                  ),
+                  _buildFeatureCard(
+                    icon: Icons.psychology_outlined,
+                    title: 'Smart AI Tools',
+                    description: 'Personalized quizzes, revision plans, and intelligent progress tracking',
+                    width: isDesktop ? (constraints.maxWidth - 40) / 3 : constraints.maxWidth,
+                  ),
+                ],
+              );
+            },
+          ),
+          const SizedBox(height: 60),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildFeatureCard({
+    required IconData icon,
+    required String title,
+    required String description,
+    required double width,
+  }) {
+    return Container(
+      width: width,
+      padding: const EdgeInsets.all(24),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.05),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            width: 48,
+            height: 48,
+            decoration: BoxDecoration(
+              gradient: const LinearGradient(
+                colors: [Color(0xFF1A1E3F), Color(0xFFD62828)],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Icon(
+              icon,
+              color: Colors.white,
+              size: 24,
+            ),
+          ),
+          const SizedBox(height: 16),
+          Text(
+            title,
+            style: const TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w700,
+              color: Color(0xFF1A1E3F),
+            ),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            description,
+            style: TextStyle(
+              fontSize: 16,
+              color: Colors.grey[600],
+              height: 1.5,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildPricingSection(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(20),
+      child: Column(
+        children: [
+          const SizedBox(height: 40),
+          const Text(
+            'Choose your plan',
+            style: TextStyle(
+              fontSize: 28,
+              fontWeight: FontWeight.w800,
+              color: Color(0xFF1A1E3F),
+            ),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            'Affordable pricing designed for Ghanaian students',
+            style: TextStyle(
+              fontSize: 16,
+              color: Colors.grey[600],
+            ),
+          ),
+          const SizedBox(height: 40),
+          LayoutBuilder(
+            builder: (context, constraints) {
+              final isDesktop = constraints.maxWidth > 768;
+              
+              return Wrap(
+                spacing: 16,
+                runSpacing: 16,
+                children: [
+                  _buildPricingCard(
+                    title: 'Weekly',
+                    price: '₵2.99',
+                    period: '/week',
+                    features: [
+                      'Access to past questions',
+                      'Basic textbooks',
+                      'Progress tracking',
+                    ],
+                    isPopular: false,
+                    width: isDesktop ? (constraints.maxWidth - 48) / 4 : (constraints.maxWidth - 16) / 2,
+                  ),
+                  _buildPricingCard(
+                    title: 'Bi-weekly',
+                    price: '₵4.99',
+                    period: '/2 weeks',
+                    features: [
+                      'Everything in Weekly',
+                      'AI study plans',
+                      'Mock exams',
+                    ],
+                    isPopular: false,
+                    width: isDesktop ? (constraints.maxWidth - 48) / 4 : (constraints.maxWidth - 16) / 2,
+                  ),
+                  _buildPricingCard(
+                    title: 'Monthly',
+                    price: '₵9.99',
+                    period: '/month',
+                    features: [
+                      'Everything in Bi-weekly',
+                      'Priority support',
+                      'Offline downloads',
+                    ],
+                    isPopular: true,
+                    width: isDesktop ? (constraints.maxWidth - 48) / 4 : (constraints.maxWidth - 16) / 2,
+                  ),
+                  _buildPricingCard(
+                    title: 'Yearly',
+                    price: '₵109.89',
+                    period: '/year',
+                    features: [
+                      'Everything included',
+                      'Save ₵9.99',
+                      'Premium features',
+                    ],
+                    isPopular: false,
+                    width: isDesktop ? (constraints.maxWidth - 48) / 4 : (constraints.maxWidth - 16) / 2,
+                  ),
+                ],
+              );
+            },
+          ),
+          const SizedBox(height: 60),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildPricingCard({
+    required String title,
+    required String price,
+    required String period,
+    required List<String> features,
+    required bool isPopular,
+    required double width,
+  }) {
+    return Container(
+      width: width,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(
+          color: isPopular ? const Color(0xFFD62828) : Colors.grey.shade200,
+          width: isPopular ? 2 : 1,
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.05),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          if (isPopular)
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.all(8),
+              decoration: const BoxDecoration(
+                color: Color(0xFFD62828),
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(15),
+                  topRight: Radius.circular(15),
+                ),
+              ),
+              child: const Text(
+                'Most Popular',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 12,
+                ),
+              ),
+            ),
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
                 Text(
-                  'AI-Powered Learning',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
+                  title,
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w700,
+                    color: Color(0xFF1A1E3F),
                   ),
                 ),
-                Text(
-                  'Smart Study Plans • Past Questions • Mock Exams',
-                  style: TextStyle(
-                    color: Colors.white70,
-                    fontSize: 12,
+                const SizedBox(height: 8),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Text(
+                      price,
+                      style: const TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.w900,
+                        color: Color(0xFF1A1E3F),
+                      ),
+                    ),
+                    Text(
+                      period,
+                      style: TextStyle(
+                        fontSize: 14,
+                        color: Colors.grey[600],
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 20),
+                ...features.map((feature) => Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 4),
+                  child: Row(
+                    children: [
+                      const Icon(
+                        Icons.check_circle,
+                        color: Color(0xFF4CAF50),
+                        size: 16,
+                      ),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: Text(
+                          feature,
+                          style: const TextStyle(
+                            fontSize: 14,
+                            color: Color(0xFF1A1E3F),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                )),
+                const SizedBox(height: 20),
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      // TODO: Implement subscription logic
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: isPopular ? const Color(0xFFD62828) : const Color(0xFF1A1E3F),
+                      foregroundColor: Colors.white,
+                      elevation: 0,
+                      padding: const EdgeInsets.symmetric(vertical: 12),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                    ),
+                    child: const Text(
+                      'Get Started',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
                   ),
                 ),
               ],
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 
-  Widget _buildDesktopHero(BuildContext context) {
-    return Row(
-      children: [
-        // Left Content
-        Expanded(
-          flex: 6,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text(
-                'Excel in BECE & WASSCE with AI-Powered Learning',
-                style: TextStyle(
-                  fontSize: 48,
-                  fontWeight: FontWeight.w800,
-                  color: Colors.white,
-                  height: 1.2,
-                ),
-              ),
-              const SizedBox(height: 24),
-              const Text(
-                'Join thousands of Ghanaian students achieving academic excellence with personalized study plans, 10,000+ past questions, and intelligent AI tutoring.',
-                style: TextStyle(
-                  color: Colors.white70,
-                  fontSize: 20,
-                  height: 1.6,
-                  fontWeight: FontWeight.w400,
-                ),
-              ),
-              const SizedBox(height: 40),
+  Widget _buildTestimonialsSection(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(20),
+      color: const Color(0xFFFAFAFA),
+      child: Column(
+        children: [
+          const SizedBox(height: 40),
+          const Text(
+            'Trusted by students across Ghana',
+            style: TextStyle(
+              fontSize: 28,
+              fontWeight: FontWeight.w800,
+              color: Color(0xFF1A1E3F),
+            ),
+          ),
+          const SizedBox(height: 40),
+          LayoutBuilder(
+            builder: (context, constraints) {
+              final isDesktop = constraints.maxWidth > 768;
               
-              // CTA Buttons Row
-              Row(
+              return Wrap(
+                spacing: 20,
+                runSpacing: 20,
                 children: [
-                  SizedBox(
-                    height: 56,
-                    child: ElevatedButton(
-                      onPressed: () => Navigator.of(context).push(
-                        MaterialPageRoute(builder: (c) => const SignUpPage()),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                        foregroundColor: const Color(0xFF667eea),
-                        elevation: 0,
-                        padding: const EdgeInsets.symmetric(horizontal: 32),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(16),
-                        ),
-                      ),
-                      child: const Text(
-                        'Start Learning Free',
-                        style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
-                      ),
-                    ),
+                  _buildTestimonialCard(
+                    name: 'Akosua Mensah',
+                    school: 'Achimota School',
+                    quote: 'Uriel Academy helped me improve my WASSCE grades by 2 points. The past questions are exactly what came in the real exams!',
+                    width: isDesktop ? (constraints.maxWidth - 40) / 3 : constraints.maxWidth,
                   ),
-                  const SizedBox(width: 16),
-                  SizedBox(
-                    height: 56,
-                    child: OutlinedButton(
-                      onPressed: () => Navigator.of(context).push(
-                        MaterialPageRoute(builder: (c) => const SignInPage()),
-                      ),
-                      style: OutlinedButton.styleFrom(
-                        side: const BorderSide(color: Colors.white70, width: 1.5),
-                        padding: const EdgeInsets.symmetric(horizontal: 32),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(16),
-                        ),
-                      ),
-                      child: const Text(
-                        'Sign In',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                    ),
+                  _buildTestimonialCard(
+                    name: 'Kwame Asante',
+                    school: 'Presbyterian Boys\' Senior High',
+                    quote: 'The AI study plans are incredible. I never knew I was weak in certain topics until Uriel showed me.',
+                    width: isDesktop ? (constraints.maxWidth - 40) / 3 : constraints.maxWidth,
+                  ),
+                  _buildTestimonialCard(
+                    name: 'Ama Osei',
+                    school: 'Wesley Girls\' High School',
+                    quote: 'Best educational app for Ghanaian students. The textbooks are exactly what we use in school.',
+                    width: isDesktop ? (constraints.maxWidth - 40) / 3 : constraints.maxWidth,
                   ),
                 ],
-              ),
-            ],
+              );
+            },
           ),
-        ),
-        const SizedBox(width: 40),
-        
-        // Right Illustration (No PNG)
-        Expanded(
-          flex: 4,
-          child: Container(
-            height: 400,
-            decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.1),
-              borderRadius: BorderRadius.circular(24),
-              border: Border.all(color: Colors.white.withOpacity(0.2)),
-            ),
-            child: const Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    Icons.psychology_outlined,
-                    size: 80,
-                    color: Colors.white70,
-                  ),
-                  SizedBox(height: 24),
-                  Text(
-                    'AI-Powered Learning',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 24,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                  SizedBox(height: 8),
-                  Text(
-                    'Smart Study Plans • Past Questions • Mock Exams',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white70,
-                      fontSize: 16,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-        ),
-      ],
+          const SizedBox(height: 60),
+        ],
+      ),
     );
   }
-}
 
-class _FeatureCard extends StatelessWidget {
-  final IconData icon;
-  final String title;
-  final String subtitle;
-  const _FeatureCard({required this.icon, required this.title, required this.subtitle});
+  Widget _buildTestimonialCard({
+    required String name,
+    required String school,
+    required String quote,
+    required double width,
+  }) {
+    return Container(
+      width: width,
+      padding: const EdgeInsets.all(24),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.05),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: List.generate(5, (index) => const Icon(
+              Icons.star,
+              color: Color(0xFFFFC107),
+              size: 16,
+            )),
+          ),
+          const SizedBox(height: 16),
+          Text(
+            '"$quote"',
+            style: TextStyle(
+              fontSize: 16,
+              color: Colors.grey[700],
+              height: 1.5,
+              fontStyle: FontStyle.italic,
+            ),
+          ),
+          const SizedBox(height: 16),
+          Text(
+            name,
+            style: const TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w700,
+              color: Color(0xFF1A1E3F),
+            ),
+          ),
+          Text(
+            school,
+            style: TextStyle(
+              fontSize: 14,
+              color: Colors.grey[600],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: 260,
-      child: Card(
-        elevation: 3,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-        child: Padding(
-          padding: const EdgeInsets.all(16),
-          child: Row(
+  Widget _buildFooter() {
+    return Container(
+      padding: const EdgeInsets.all(20),
+      color: const Color(0xFF1A1E3F),
+      child: Column(
+        children: [
+          const SizedBox(height: 40),
+          // Logo
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              CircleAvatar(backgroundColor: const Color(0xFFD62828), child: Icon(icon, color: Colors.white)),
+              Container(
+                width: 32,
+                height: 32,
+                decoration: BoxDecoration(
+                  gradient: const LinearGradient(
+                    colors: [Colors.white, Color(0xFFD62828)],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: const Icon(
+                  Icons.school,
+                  color: Color(0xFF1A1E3F),
+                  size: 20,
+                ),
+              ),
               const SizedBox(width: 12),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
-                    const SizedBox(height: 6),
-                    Text(subtitle, style: const TextStyle(color: Colors.black54)),
-                  ],
+              const Text(
+                'Uriel Academy',
+                style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  letterSpacing: -0.5,
                 ),
               ),
             ],
           ),
+          const SizedBox(height: 24),
+          Text(
+            'Empowering Ghanaian students to excel in BECE & WASSCE',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 16,
+              color: Colors.white.withOpacity(0.8),
+            ),
+          ),
+          const SizedBox(height: 32),
+          // Contact Info
+          Wrap(
+            spacing: 32,
+            runSpacing: 16,
+            alignment: WrapAlignment.center,
+            children: [
+              _buildFooterLink('About Us', () {}),
+              _buildFooterLink('Contact', () {}),
+              _buildFooterLink('Privacy Policy', () {}),
+              _buildFooterLink('Terms of Service', () {}),
+              _buildFooterLink('Support', () {}),
+            ],
+          ),
+          const SizedBox(height: 32),
+          Divider(color: Colors.white.withOpacity(0.2)),
+          const SizedBox(height: 16),
+          Text(
+            '© 2025 Uriel Academy. Built with ❤️ for Ghanaian students.',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 14,
+              color: Colors.white.withOpacity(0.6),
+            ),
+          ),
+          const SizedBox(height: 20),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildFooterLink(String text, VoidCallback onTap) {
+    return InkWell(
+      onTap: onTap,
+      child: Text(
+        text,
+        style: TextStyle(
+          fontSize: 14,
+          color: Colors.white.withOpacity(0.8),
+          fontWeight: FontWeight.w500,
         ),
       ),
     );
