@@ -175,7 +175,6 @@ class _SignUpPageState extends State<SignUpPage> {
 
   @override
   Widget build(BuildContext context) {
-    final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
     final isSmallScreen = screenWidth < 768;
 
@@ -259,18 +258,13 @@ class _SignUpPageState extends State<SignUpPage> {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             // Step content
-                            Container(
-                              constraints: BoxConstraints(
-                                minHeight: screenHeight * 0.4,
-                              ),
-                              child: IndexedStack(
-                                index: currentStep,
-                                children: [
-                                  _buildUserTypeStep(),
-                                  _buildDetailsStep(),
-                                  _buildAuthStep(),
-                                ],
-                              ),
+                            IndexedStack(
+                              index: currentStep,
+                              children: [
+                                _buildUserTypeStep(),
+                                _buildDetailsStep(),
+                                _buildAuthStep(),
+                              ],
                             ),
 
                             const SizedBox(height: 24),
