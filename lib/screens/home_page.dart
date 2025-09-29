@@ -38,7 +38,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   @override
   void initState() {
     super.initState();
-    _mainTabController = TabController(length: 6, vsync: this);
+    _mainTabController = TabController(length: 5, vsync: this);
     _animationController = AnimationController(
       duration: const Duration(milliseconds: 800),
       vsync: this,
@@ -90,19 +90,13 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         return Scaffold(
           backgroundColor: _isDarkMode ? const Color(0xFF0D1117) : const Color(0xFFF8FAFE),
           body: SafeArea(
-            child: Row(
-              children: [
-                // Sidebar Navigation (Desktop)
-                if (!isSmallScreen) _buildSideNavigation(),
-                
-                // Main Content
-                Expanded(
-                  child: Column(
+            child: isSmallScreen 
+                ? Column(
                     children: [
-                      // Header
-                      _buildHeader(context),
+                      // Mobile Header
+                      _buildMobileHeader(),
                       
-                      // Content Area
+                      // Mobile Content
                       Expanded(
                         child: IndexedStack(
                           index: _selectedIndex,
@@ -112,21 +106,151 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                             _buildTextbooksPage(),
                             _buildMockExamsPage(),
                             _buildTriviaPage(),
-                            _buildAITutorPage(),
+                          ],
+                        ),
+                      ),
+                    ],
+                  )
+                : Row(
+                    children: [
+                      // Desktop Sidebar Navigation
+                      _buildSideNavigation(),
+                      
+                      // Desktop Main Content
+                      Expanded(
+                        child: Column(
+                          children: [
+                            // Desktop Header
+                            _buildHeader(context),
+                            
+                            // Desktop Content Area
+                            Expanded(
+                              child: IndexedStack(
+                                index: _selectedIndex,
+                                children: [
+                                  _buildDashboard(),
+                                  _buildQuestionsPage(),
+                                  _buildTextbooksPage(),
+                                  _buildMockExamsPage(),
+                                  _buildTriviaPage(),
+                                ],
+                              ),
+                            ),
                           ],
                         ),
                       ),
                     ],
                   ),
-                ),
-              ],
-            ),
           ),
           
-          // Bottom Navigation (Mobile)
+          // Bottom Navigation (Mobile Only)
           bottomNavigationBar: isSmallScreen ? _buildBottomNavigation() : null,
         );
       },
+    );
+  }
+
+  Widget _buildMobileHeader() {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      decoration: BoxDecoration(
+        color: _isDarkMode ? const Color(0xFF161B22) : Colors.white,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.05),
+            blurRadius: 10,
+            offset: const Offset(0, 2),
+          ),
+        ],
+      ),
+      child: Row(
+        children: [
+          // Logo and Title
+          Row(
+            children: [
+              Container(
+                width: 32,
+                height: 32,
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [Color(0xFF1A1E3F), Color(0xFF2D3561)],
+                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(8)),
+                ),
+                child: const Icon(Icons.school, color: Colors.white, size: 20),
+              ),
+              const SizedBox(width: 12),
+              Text(
+                'Uriel Academy',
+                style: GoogleFonts.playfairDisplay(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: _isDarkMode ? Colors.white : const Color(0xFF1A1E3F),
+                ),
+              ),
+            ],
+          ),
+          
+          const Spacer(),
+          
+          // Search Icon for mobile
+          Container(
+            decoration: BoxDecoration(
+              color: (_isDarkMode ? Colors.grey[800] : Colors.grey[100]),
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: IconButton(
+              icon: Icon(Icons.search, color: Colors.grey[600]),
+              onPressed: () => _showMobileSearch(),
+            ),
+          ),
+          
+          const SizedBox(width: 8),
+          
+          // Notifications
+          Container(
+            decoration: BoxDecoration(
+              color: const Color(0xFFD62828).withOpacity(0.1),
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: IconButton(
+              icon: Stack(
+                children: [
+                  Icon(Icons.notifications_outlined, color: const Color(0xFFD62828), size: 20),
+                  Positioned(
+                    right: 0,
+                    top: 0,
+                    child: Container(
+                      width: 6,
+                      height: 6,
+                      decoration: const BoxDecoration(
+                        color: Color(0xFFD62828),
+                        shape: BoxShape.circle,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              onPressed: () => _showNotifications(),
+            ),
+          ),
+          
+          const SizedBox(width: 8),
+          
+          // Profile Avatar
+          GestureDetector(
+            onTap: () => _showProfileMenu(),
+            child: CircleAvatar(
+              radius: 16,
+              backgroundColor: const Color(0xFF1A1E3F),
+              child: Text(
+                userName[0].toUpperCase(),
+                style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 
@@ -228,22 +352,21 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  _buildNavItem(0, Icons.dashboard_outlined, Icons.dashboard, 'Dashboard'),
-                  _buildNavItem(1, Icons.quiz_outlined, Icons.quiz, 'Questions'),
-                  _buildNavItem(2, Icons.menu_book_outlined, Icons.menu_book, 'Textbooks'),
-                  _buildNavItem(3, Icons.assessment_outlined, Icons.assessment, 'Mock Exams'),
-                  _buildNavItem(4, Icons.psychology_outlined, Icons.psychology, 'Trivia'),
-                  _buildNavItem(5, Icons.smart_toy_outlined, Icons.smart_toy, 'AI Tutor'),
+                  _buildNavItem(0, 'Dashboard'),
+                  _buildNavItem(1, 'Questions'),
+                  _buildNavItem(2, 'Textbooks'),
+                  _buildNavItem(3, 'Mock Exams'),
+                  _buildNavItem(4, 'Trivia'),
                   
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                     child: Divider(),
                   ),
                   
-                  _buildNavItem(-1, Icons.analytics_outlined, Icons.analytics, 'Analytics'),
-                  _buildNavItem(-2, Icons.leaderboard_outlined, Icons.leaderboard, 'Leaderboard'),
-                  _buildNavItem(-3, Icons.group_outlined, Icons.group, 'Study Groups'),
-                  _buildNavItem(-4, Icons.folder_outlined, Icons.folder, 'Resources'),
+                  _buildNavItem(-1, 'Analytics'),
+                  _buildNavItem(-2, 'Leaderboard'),
+                  _buildNavItem(-3, 'Study Groups'),
+                  _buildNavItem(-4, 'Resources'),
                 ],
               ),
             ),
@@ -291,19 +414,13 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     );
   }
 
-  Widget _buildNavItem(int index, IconData outlinedIcon, IconData filledIcon, String title) {
+  Widget _buildNavItem(int index, String title) {
     final isSelected = _selectedIndex == index;
     final isMainNav = index >= 0;
     
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 2),
       child: ListTile(
-        leading: Icon(
-          isSelected ? filledIcon : outlinedIcon,
-          color: isSelected 
-              ? const Color(0xFFD62828)
-              : (_isDarkMode ? Colors.grey[400] : Colors.grey[600]),
-        ),
         title: Text(
           title,
           style: GoogleFonts.montserrat(
@@ -323,6 +440,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   }
 
   Widget _buildBottomNavigation() {
+    final tabs = ['Dashboard', 'Questions', 'Books', 'Mock', 'Trivia'];
+    
     return Container(
       decoration: BoxDecoration(
         color: _isDarkMode ? const Color(0xFF161B22) : Colors.white,
@@ -334,24 +453,34 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           ),
         ],
       ),
-      child: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        currentIndex: _selectedIndex,
-        selectedItemColor: const Color(0xFFD62828),
-        unselectedItemColor: Colors.grey[600],
-        selectedLabelStyle: GoogleFonts.montserrat(fontSize: 12, fontWeight: FontWeight.w600),
-        unselectedLabelStyle: GoogleFonts.montserrat(fontSize: 12),
-        onTap: (index) => setState(() => _selectedIndex = index),
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.dashboard), label: 'Dashboard'),
-          BottomNavigationBarItem(icon: Icon(Icons.quiz), label: 'Questions'),
-          BottomNavigationBarItem(icon: Icon(Icons.menu_book), label: 'Books'),
-          BottomNavigationBarItem(icon: Icon(Icons.assessment), label: 'Mock'),
-          BottomNavigationBarItem(icon: Icon(Icons.psychology), label: 'Trivia'),
-          BottomNavigationBarItem(icon: Icon(Icons.smart_toy), label: 'AI Tutor'),
-        ],
+      padding: const EdgeInsets.symmetric(vertical: 8),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: List.generate(tabs.length, (index) {
+          final isSelected = _selectedIndex == index;
+          return GestureDetector(
+            onTap: () => setState(() => _selectedIndex = index),
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+              decoration: BoxDecoration(
+                color: isSelected 
+                    ? const Color(0xFFD62828).withOpacity(0.1)
+                    : Colors.transparent,
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Text(
+                tabs[index],
+                style: GoogleFonts.montserrat(
+                  fontSize: 12,
+                  fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
+                  color: isSelected 
+                      ? const Color(0xFFD62828)
+                      : (_isDarkMode ? Colors.grey[400] : Colors.grey[600]),
+                ),
+              ),
+            ),
+          );
+        }),
       ),
     );
   }
@@ -459,8 +588,11 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   }
 
   Widget _buildDashboard() {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isSmallScreen = screenWidth < 768;
+    
     return SingleChildScrollView(
-      padding: const EdgeInsets.all(24),
+      padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -473,7 +605,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                 Text(
                   'Welcome back, $userName! 👋',
                   style: GoogleFonts.playfairDisplay(
-                    fontSize: 28,
+                    fontSize: isSmallScreen ? 22 : 28,
                     fontWeight: FontWeight.bold,
                     color: _isDarkMode ? Colors.white : const Color(0xFF1A1E3F),
                   ),
@@ -482,7 +614,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                 Text(
                   'Ready to continue your learning journey?',
                   style: GoogleFonts.montserrat(
-                    fontSize: 16,
+                    fontSize: isSmallScreen ? 14 : 16,
                     color: Colors.grey[600],
                   ),
                 ),
@@ -490,191 +622,318 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             ),
           ),
           
-          const SizedBox(height: 32),
+          SizedBox(height: isSmallScreen ? 24 : 32),
           
           // Progress Overview Hero Card
           _buildProgressOverviewCard(),
           
-          const SizedBox(height: 24),
+          SizedBox(height: isSmallScreen ? 16 : 24),
           
-          // Performance Metrics & Subject Progress
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Expanded(
-                flex: 2,
-                child: Column(
-                  children: [
-                    _buildSubjectProgressCard(),
-                    const SizedBox(height: 16),
-                    _buildRecentActivityCard(),
-                  ],
+          // Performance Metrics & Subject Progress - Mobile Layout
+          if (isSmallScreen) ...[
+            _buildSubjectProgressCard(),
+            const SizedBox(height: 16),
+            _buildQuickStatsCard(),
+            const SizedBox(height: 16),
+            _buildUpcomingDeadlines(),
+            const SizedBox(height: 16),
+            _buildRecentActivityCard(),
+            const SizedBox(height: 16),
+            _buildQuickActionsCard(),
+          ] else ...[
+            // Desktop Layout
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(
+                  flex: 2,
+                  child: Column(
+                    children: [
+                      _buildSubjectProgressCard(),
+                      const SizedBox(height: 16),
+                      _buildRecentActivityCard(),
+                    ],
+                  ),
                 ),
-              ),
-              const SizedBox(width: 16),
-              Expanded(
-                child: Column(
-                  children: [
-                    _buildQuickStatsCard(),
-                    const SizedBox(height: 16),
-                    _buildUpcomingDeadlines(),
-                    const SizedBox(height: 16),
-                    _buildQuickActionsCard(),
-                  ],
+                const SizedBox(width: 16),
+                Expanded(
+                  child: Column(
+                    children: [
+                      _buildQuickStatsCard(),
+                      const SizedBox(height: 16),
+                      _buildUpcomingDeadlines(),
+                      const SizedBox(height: 16),
+                      _buildQuickActionsCard(),
+                    ],
+                  ),
                 ),
-              ),
-            ],
-          ),
+              ],
+            ),
+          ],
           
-          const SizedBox(height: 24),
+          SizedBox(height: isSmallScreen ? 16 : 24),
           
           // Recent Achievements
           _buildRecentAchievements(),
           
-          const SizedBox(height: 24),
+          SizedBox(height: isSmallScreen ? 16 : 24),
           
           // AI Recommendations
           _buildAIRecommendations(),
+          
+          // Add extra bottom padding for mobile to account for bottom navigation
+          if (isSmallScreen) const SizedBox(height: 80),
         ],
       ),
     );
   }
 
   Widget _buildProgressOverviewCard() {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isSmallScreen = screenWidth < 768;
+    
     return Container(
-      padding: const EdgeInsets.all(24),
+      padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
       decoration: BoxDecoration(
         gradient: const LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [Color(0xFF1A1E3F), Color(0xFF2D3561)],
         ),
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(isSmallScreen ? 16 : 20),
         boxShadow: [
           BoxShadow(
             color: const Color(0xFF1A1E3F).withOpacity(0.3),
-            blurRadius: 20,
-            offset: const Offset(0, 10),
+            blurRadius: isSmallScreen ? 15 : 20,
+            offset: Offset(0, isSmallScreen ? 6 : 10),
           ),
         ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'Your Progress Overview',
-                style: GoogleFonts.playfairDisplay(
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
+          // Header Row - Stack on mobile if needed
+          if (isSmallScreen) ...[
+            Text(
+              'Your Progress Overview',
+              style: GoogleFonts.playfairDisplay(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            const SizedBox(height: 8),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+              decoration: BoxDecoration(
+                color: Colors.white.withOpacity(0.2),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Text(
+                'This Week',
+                style: GoogleFonts.montserrat(
+                  fontSize: 12,
                   color: Colors.white,
+                  fontWeight: FontWeight.w500,
                 ),
               ),
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.2),
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Text(
-                  'This Week',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 12,
+            ),
+          ] else ...[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Your Progress Overview',
+                  style: GoogleFonts.playfairDisplay(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
                     color: Colors.white,
-                    fontWeight: FontWeight.w500,
                   ),
                 ),
-              ),
-            ],
-          ),
-          
-          const SizedBox(height: 24),
-          
-          // Progress metrics row
-          Row(
-            children: [
-              Expanded(
-                child: _buildProgressMetric(
-                  'Overall Completion',
-                  '${overallProgress.toStringAsFixed(1)}%',
-                  Icons.trending_up,
-                  overallProgress / 100,
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.2),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Text(
+                    'This Week',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 12,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
                 ),
-              ),
-              const SizedBox(width: 16),
-              Expanded(
-                child: _buildProgressMetric(
-                  'Study Streak',
-                  '$currentStreak days',
-                  Icons.local_fire_department,
-                  currentStreak / 30,
-                ),
-              ),
-              const SizedBox(width: 16),
-              Expanded(
-                child: _buildProgressMetric(
-                  'Study Hours',
-                  '${weeklyStudyHours}h this week',
-                  Icons.access_time,
-                  weeklyStudyHours / 20,
-                ),
-              ),
-            ],
-          ),
+              ],
+            ),
+          ],
           
-          const SizedBox(height: 20),
+          SizedBox(height: isSmallScreen ? 16 : 24),
           
-          // Exam countdown
+          // Progress metrics - Stack on mobile, row on desktop
+          if (isSmallScreen) ...[
+            // Mobile: Stack metrics vertically with 2 columns
+            Row(
+              children: [
+                Expanded(
+                  child: _buildProgressMetric(
+                    'Overall Completion',
+                    '${overallProgress.toStringAsFixed(1)}%',
+                    Icons.trending_up,
+                    overallProgress / 100,
+                  ),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: _buildProgressMetric(
+                    'Study Streak',
+                    '$currentStreak days',
+                    Icons.local_fire_department,
+                    currentStreak / 30,
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 16),
+            _buildProgressMetric(
+              'Study Hours',
+              '${weeklyStudyHours}h this week',
+              Icons.access_time,
+              weeklyStudyHours / 20,
+            ),
+          ] else ...[
+            // Desktop: All metrics in one row
+            Row(
+              children: [
+                Expanded(
+                  child: _buildProgressMetric(
+                    'Overall Completion',
+                    '${overallProgress.toStringAsFixed(1)}%',
+                    Icons.trending_up,
+                    overallProgress / 100,
+                  ),
+                ),
+                const SizedBox(width: 16),
+                Expanded(
+                  child: _buildProgressMetric(
+                    'Study Streak',
+                    '$currentStreak days',
+                    Icons.local_fire_department,
+                    currentStreak / 30,
+                  ),
+                ),
+                const SizedBox(width: 16),
+                Expanded(
+                  child: _buildProgressMetric(
+                    'Study Hours',
+                    '${weeklyStudyHours}h this week',
+                    Icons.access_time,
+                    weeklyStudyHours / 20,
+                  ),
+                ),
+              ],
+            ),
+          ],
+          
+          SizedBox(height: isSmallScreen ? 16 : 20),
+          
+          // Exam countdown - Responsive layout
           Container(
-            padding: const EdgeInsets.all(16),
+            padding: EdgeInsets.all(isSmallScreen ? 12 : 16),
             decoration: BoxDecoration(
               color: Colors.white.withOpacity(0.1),
               borderRadius: BorderRadius.circular(12),
               border: Border.all(color: Colors.white.withOpacity(0.2)),
             ),
-            child: Row(
-              children: [
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFD62828),
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: const Icon(Icons.event, color: Colors.white, size: 20),
-                ),
-                const SizedBox(width: 12),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'BECE 2025',
-                      style: GoogleFonts.montserrat(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
+            child: isSmallScreen 
+                ? Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.all(6),
+                            decoration: BoxDecoration(
+                              color: const Color(0xFFD62828),
+                              borderRadius: BorderRadius.circular(6),
+                            ),
+                            child: const Icon(Icons.event, color: Colors.white, size: 16),
+                          ),
+                          const SizedBox(width: 8),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'BECE 2025',
+                                style: GoogleFonts.montserrat(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              Text(
+                                '$upcomingExamDays days remaining',
+                                style: GoogleFonts.montserrat(
+                                  fontSize: 12,
+                                  color: Colors.white70,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
-                    ),
-                    Text(
-                      '$upcomingExamDays days remaining',
-                      style: GoogleFonts.montserrat(
-                        fontSize: 14,
-                        color: Colors.white70,
+                      const SizedBox(height: 8),
+                      Text(
+                        'You\'re on track! 🎯',
+                        style: GoogleFonts.montserrat(
+                          fontSize: 12,
+                          color: Colors.white70,
+                        ),
                       ),
-                    ),
-                  ],
-                ),
-                const Spacer(),
-                Text(
-                  'You\'re on track! 🎯',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 14,
-                    color: Colors.white70,
+                    ],
+                  )
+                : Row(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFFD62828),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        child: const Icon(Icons.event, color: Colors.white, size: 20),
+                      ),
+                      const SizedBox(width: 12),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'BECE 2025',
+                            style: GoogleFonts.montserrat(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Text(
+                            '$upcomingExamDays days remaining',
+                            style: GoogleFonts.montserrat(
+                              fontSize: 14,
+                              color: Colors.white70,
+                            ),
+                          ),
+                        ],
+                      ),
+                      const Spacer(),
+                      Text(
+                        'You\'re on track! 🎯',
+                        style: GoogleFonts.montserrat(
+                          fontSize: 14,
+                          color: Colors.white70,
+                        ),
+                      ),
+                    ],
                   ),
-                ),
-              ],
-            ),
           ),
         ],
       ),
@@ -1055,7 +1314,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           const SizedBox(height: 8),
           _buildQuickActionButton('Take Quiz', Icons.quiz, () => setState(() => _selectedIndex = 1)),
           const SizedBox(height: 8),
-          _buildQuickActionButton('Ask AI Tutor', Icons.smart_toy, () => setState(() => _selectedIndex = 5)),
+          _buildQuickActionButton('Read Books', Icons.menu_book, () => setState(() => _selectedIndex = 2)),
         ],
       ),
     );
@@ -1194,10 +1453,10 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         children: [
           Row(
             children: [
-              Icon(Icons.smart_toy, color: Colors.white, size: 24),
+              Icon(Icons.psychology, color: Colors.white, size: 24),
               const SizedBox(width: 12),
               Text(
-                'AI Tutor Recommendations',
+                'Study Recommendations',
                 style: GoogleFonts.playfairDisplay(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
@@ -1219,7 +1478,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           _buildRecommendationItem('Great progress in English! Keep up the reading streak'),
           const SizedBox(height: 16),
           ElevatedButton(
-            onPressed: () => setState(() => _selectedIndex = 5),
+            onPressed: () => setState(() => _selectedIndex = 4),
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.white,
               foregroundColor: const Color(0xFFD62828),
@@ -1229,7 +1488,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               ),
             ),
             child: Text(
-              'Chat with AI Tutor',
+              'Start Learning',
               style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
             ),
           ),
@@ -1321,34 +1580,24 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     );
   }
 
-  Widget _buildAITutorPage() {
-    return _buildFeaturePage(
-      'AI Tutor Assistant',
-      'Get personalized help and explanations from our AI tutor',
-      Icons.smart_toy_outlined,
-      [
-        _buildFeatureCard('Ask Questions', 'Get instant answers to your questions', Icons.help_outline, () => _showComingSoon('AI Chat')),
-        _buildFeatureCard('Study Plan', 'AI-generated personalized study plans', Icons.calendar_today, () => _showComingSoon('Study Plan')),
-        _buildFeatureCard('Performance Analysis', 'Detailed insights into your learning', Icons.analytics, () => _showComingSoon('Performance Analysis')),
-      ],
-    );
-  }
-
   Widget _buildFeaturePage(String title, String subtitle, IconData icon, List<Widget> features) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isSmallScreen = screenWidth < 768;
+    
     return SingleChildScrollView(
-      padding: const EdgeInsets.all(24),
+      padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
               Container(
-                padding: const EdgeInsets.all(12),
+                padding: EdgeInsets.all(isSmallScreen ? 8 : 12),
                 decoration: BoxDecoration(
                   color: const Color(0xFFD62828).withOpacity(0.1),
                   borderRadius: BorderRadius.circular(12),
                 ),
-                child: Icon(icon, color: const Color(0xFFD62828), size: 24),
+                child: Icon(icon, color: const Color(0xFFD62828), size: isSmallScreen ? 20 : 24),
               ),
               const SizedBox(width: 16),
               Expanded(
@@ -1358,7 +1607,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                     Text(
                       title,
                       style: GoogleFonts.playfairDisplay(
-                        fontSize: 24,
+                        fontSize: isSmallScreen ? 20 : 24,
                         fontWeight: FontWeight.bold,
                         color: _isDarkMode ? Colors.white : const Color(0xFF1A1E3F),
                       ),
@@ -1366,6 +1615,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                     Text(
                       subtitle,
                       style: GoogleFonts.montserrat(
+                        fontSize: isSmallScreen ? 14 : 16,
                         color: Colors.grey[600],
                       ),
                     ),
@@ -1374,8 +1624,10 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               ),
             ],
           ),
-          const SizedBox(height: 32),
+          SizedBox(height: isSmallScreen ? 24 : 32),
           ...features,
+          // Add extra bottom padding for mobile
+          if (isSmallScreen) const SizedBox(height: 80),
         ],
       ),
     );
@@ -1442,6 +1694,46 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   }
 
   // Helper methods
+  void _showMobileSearch() {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(
+          'Search',
+          style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),
+        ),
+        content: TextField(
+          decoration: InputDecoration(
+            hintText: 'Search questions, textbooks, topics...',
+            hintStyle: GoogleFonts.montserrat(color: Colors.grey[600]),
+            border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+            prefixIcon: Icon(Icons.search, color: Colors.grey[600]),
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: Text(
+              'Cancel',
+              style: GoogleFonts.montserrat(color: Colors.grey[600]),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pop(context);
+              _showComingSoon('Search');
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color(0xFFD62828),
+              foregroundColor: Colors.white,
+            ),
+            child: Text('Search', style: GoogleFonts.montserrat()),
+          ),
+        ],
+      ),
+    );
+  }
+
   void _showMobileMenu() {
     showModalBottomSheet(
       context: context,
