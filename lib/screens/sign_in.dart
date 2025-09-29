@@ -59,24 +59,20 @@ class _SignInPageState extends State<SignInPage> {
         return;
       }
       
-      // Show immediate success feedback while checking role in background
-      if (mounted) {
-        setState(() {
-          isLoading = false;
-        });
-      }
-      
       // Check if it's the admin email - bypass database lookup for admin
       if (user.email == 'studywithuriel@gmail.com') {
-        Navigator.pushReplacementNamed(context, '/admin');
+        if (mounted) {
+          Navigator.pushReplacementNamed(context, '/admin');
+        }
         return;
       }
       
-      // For non-admin users, check role asynchronously
-      _checkUserRoleAndRoute(user);
+      // For non-admin users, check role and route
+      await _checkUserRoleAndRoute(user);
       
     } catch (e) {
-      _showError('An error occurred during sign-in.');
+      print('Google Sign-In Error: $e');
+      _showError('An error occurred during sign-in: ${e.toString()}');
     } finally {
       if (mounted) {
         setState(() {
@@ -88,8 +84,14 @@ class _SignInPageState extends State<SignInPage> {
   
   Future<void> _checkUserRoleAndRoute(user) async {
     try {
-      // Check user role in background
-      final userRole = await UserService().getUserRoleByEmail(user.email!);
+      print('Checking user role for: ${user.email}');
+      
+      // Check user role with timeout
+      final userRole = await UserService()
+          .getUserRoleByEmail(user.email!)
+          .timeout(const Duration(seconds: 10));
+      
+      print('User role found: $userRole');
       
       if (userRole != null) {
         // Update last login time asynchronously (don't wait for it)
@@ -98,8 +100,12 @@ class _SignInPageState extends State<SignInPage> {
         });
         
         // Route based on role
-        _routeUserBasedOnRole(userRole);
+        if (mounted) {
+          _routeUserBasedOnRole(userRole);
+        }
       } else {
+        print('No user role found, creating new student profile');
+        
         // New user - create default student profile asynchronously
         UserService().createUserProfile(
           userId: user.uid,
@@ -111,27 +117,42 @@ class _SignInPageState extends State<SignInPage> {
         });
         
         // Route to student home immediately
-        Navigator.pushReplacementNamed(context, '/home');
+        if (mounted) {
+          Navigator.pushReplacementNamed(context, '/home');
+        }
       }
     } catch (e) {
       // If role check fails, default to student dashboard
       print('Role check failed: $e');
-      Navigator.pushReplacementNamed(context, '/home');
+      if (mounted) {
+        Navigator.pushReplacementNamed(context, '/home');
+      }
     }
   }
 
   void _routeUserBasedOnRole(UserRole role) {
-    switch (role) {
-      case UserRole.teacher:
-        Navigator.pushReplacementNamed(context, '/teacher');
-        break;
-      case UserRole.school:
-        Navigator.pushReplacementNamed(context, '/school');
-        break;
-      case UserRole.student:
-      default:
-        Navigator.pushReplacementNamed(context, '/home');
-        break;
+    if (!mounted) return;
+    
+    try {
+      switch (role) {
+        case UserRole.teacher:
+          print('Routing to teacher dashboard');
+          Navigator.pushReplacementNamed(context, '/teacher');
+          break;
+        case UserRole.school:
+          print('Routing to school dashboard');
+          Navigator.pushReplacementNamed(context, '/school');
+          break;
+        case UserRole.student:
+        default:
+          print('Routing to student dashboard');
+          Navigator.pushReplacementNamed(context, '/home');
+          break;
+      }
+    } catch (e) {
+      print('Navigation error: $e');
+      // Fallback navigation
+      Navigator.pushReplacementNamed(context, '/home');
     }
   }
 

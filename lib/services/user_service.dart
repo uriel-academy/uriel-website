@@ -22,9 +22,11 @@ class UserService {
     Map<String, dynamic>? additionalData,
   }) async {
     try {
+      print('UserService: Creating profile for user: $userId, email: $email, role: $role');
+      
       final userData = {
         'userId': userId,
-        'email': email,
+        'email': email.toLowerCase(),
         'role': role.name,
         'name': name,
         'schoolName': schoolName,
@@ -34,9 +36,12 @@ class UserService {
         ...?additionalData,
       };
 
-      await _usersCollection.doc(userId).set(userData, SetOptions(merge: true));
+      await _usersCollection.doc(userId).set(userData, SetOptions(merge: true))
+          .timeout(const Duration(seconds: 10));
+          
+      print('UserService: Profile created successfully');
     } catch (e) {
-      print('Error creating user profile: $e');
+      print('UserService Error creating user profile: $e');
       rethrow;
     }
   }
@@ -76,24 +81,36 @@ class UserService {
   /// Get user role by email (for Google sign-in routing)
   Future<UserRole?> getUserRoleByEmail(String email) async {
     try {
+      print('UserService: Looking up role for email: $email');
+      
       final querySnapshot = await _usersCollection
           .where('email', isEqualTo: email.toLowerCase())
           .limit(1)
-          .get();
+          .get()
+          .timeout(const Duration(seconds: 10));
+
+      print('UserService: Query returned ${querySnapshot.docs.length} documents');
 
       if (querySnapshot.docs.isNotEmpty) {
         final userData = querySnapshot.docs.first.data() as Map<String, dynamic>;
         final roleString = userData['role'] as String?;
+        
+        print('UserService: Found role string: $roleString');
+        
         if (roleString != null) {
-          return UserRole.values.firstWhere(
+          final role = UserRole.values.firstWhere(
             (role) => role.name == roleString,
             orElse: () => UserRole.student,
           );
+          print('UserService: Parsed role: $role');
+          return role;
         }
+      } else {
+        print('UserService: No user found with email: $email');
       }
       return null;
     } catch (e) {
-      print('Error getting user role by email: $e');
+      print('UserService Error getting user role by email: $e');
       return null;
     }
   }
