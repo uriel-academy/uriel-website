@@ -56,28 +56,25 @@ class _SignInPageState extends State<SignInPage> {
       final user = await AuthService().signInWithGoogle();
       if (user == null) {
         _showError('Google sign-in failed. Please try again.');
-      } else {
-        // Check user role and route accordingly
-        final userRole = await UserService().getUserRoleByEmail(user.email!);
-        
-        if (userRole != null) {
-          // Update last login time
-          await UserService().updateLastLogin(user.uid);
-          
-          // Route based on role
-          _routeUserBasedOnRole(userRole);
-        } else {
-          // New user - create default student profile and go to student home
-          await UserService().createUserProfile(
-            userId: user.uid,
-            email: user.email!,
-            role: UserRole.student,
-            name: user.displayName,
-          );
-          
-          Navigator.pushReplacementNamed(context, '/home');
-        }
+        return;
       }
+      
+      // Show immediate success feedback while checking role in background
+      if (mounted) {
+        setState(() {
+          isLoading = false;
+        });
+      }
+      
+      // Check if it's the admin email - bypass database lookup for admin
+      if (user.email == 'studywithuriel@gmail.com') {
+        Navigator.pushReplacementNamed(context, '/admin');
+        return;
+      }
+      
+      // For non-admin users, check role asynchronously
+      _checkUserRoleAndRoute(user);
+      
     } catch (e) {
       _showError('An error occurred during sign-in.');
     } finally {
@@ -86,6 +83,40 @@ class _SignInPageState extends State<SignInPage> {
           isLoading = false;
         });
       }
+    }
+  }
+  
+  Future<void> _checkUserRoleAndRoute(user) async {
+    try {
+      // Check user role in background
+      final userRole = await UserService().getUserRoleByEmail(user.email!);
+      
+      if (userRole != null) {
+        // Update last login time asynchronously (don't wait for it)
+        UserService().updateLastLogin(user.uid).catchError((e) {
+          print('Failed to update last login: $e');
+        });
+        
+        // Route based on role
+        _routeUserBasedOnRole(userRole);
+      } else {
+        // New user - create default student profile asynchronously
+        UserService().createUserProfile(
+          userId: user.uid,
+          email: user.email!,
+          role: UserRole.student,
+          name: user.displayName,
+        ).catchError((e) {
+          print('Failed to create user profile: $e');
+        });
+        
+        // Route to student home immediately
+        Navigator.pushReplacementNamed(context, '/home');
+      }
+    } catch (e) {
+      // If role check fails, default to student dashboard
+      print('Role check failed: $e');
+      Navigator.pushReplacementNamed(context, '/home');
     }
   }
 
