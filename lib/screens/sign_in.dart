@@ -175,6 +175,9 @@ class _SignInPageState extends State<SignInPage> {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isSmallScreen = screenWidth < 768;
+    
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -185,17 +188,18 @@ class _SignInPageState extends State<SignInPage> {
             ),
             child: Column(
               children: [
-                _buildHeader(context),
+                _buildHeader(context, isSmallScreen),
                 Expanded(
                   child: Center(
                     child: Container(
-                      constraints: const BoxConstraints(maxWidth: 400),
-                      padding: const EdgeInsets.all(24),
-                      child: _buildSignInCard(context),
+                      constraints: BoxConstraints(maxWidth: isSmallScreen ? double.infinity : 400),
+                      padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
+                      margin: EdgeInsets.symmetric(horizontal: isSmallScreen ? 16 : 0),
+                      child: _buildSignInCard(context, isSmallScreen),
                     ),
                   ),
                 ),
-                _buildFooter(context),
+                _buildFooter(context, isSmallScreen),
               ],
             ),
           ),
@@ -204,9 +208,12 @@ class _SignInPageState extends State<SignInPage> {
     );
   }
 
-  Widget _buildHeader(BuildContext context) {
+  Widget _buildHeader(BuildContext context, bool isSmallScreen) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+      padding: EdgeInsets.symmetric(
+        horizontal: isSmallScreen ? 16 : 20, 
+        vertical: 16
+      ),
       child: Row(
         children: [
           // Logo/Brand
@@ -218,7 +225,7 @@ class _SignInPageState extends State<SignInPage> {
             child: Text(
               'Uriel Academy',
               style: GoogleFonts.montserrat(
-                fontSize: 20,
+                fontSize: isSmallScreen ? 18 : 20,
                 fontWeight: FontWeight.w700,
                 color: const Color(0xFF1A1E3F),
                 letterSpacing: -0.5,
@@ -227,7 +234,7 @@ class _SignInPageState extends State<SignInPage> {
           ),
           const Spacer(),
           // Back to landing link (subtle)
-          TextButton(
+          if (!isSmallScreen) TextButton(
             onPressed: () => Navigator.pushReplacement(
               context,
               MaterialPageRoute(builder: (_) => const LandingPage()),
@@ -246,12 +253,12 @@ class _SignInPageState extends State<SignInPage> {
     );
   }
 
-  Widget _buildSignInCard(BuildContext context) {
+  Widget _buildSignInCard(BuildContext context, bool isSmallScreen) {
     return Container(
-      padding: const EdgeInsets.all(32),
+      padding: EdgeInsets.all(isSmallScreen ? 24 : 32),
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(isSmallScreen ? 12 : 16),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.05),
@@ -272,37 +279,37 @@ class _SignInPageState extends State<SignInPage> {
           Text(
             'Welcome back',
             style: GoogleFonts.montserrat(
-              fontSize: 24,
+              fontSize: isSmallScreen ? 20 : 24,
               fontWeight: FontWeight.w700,
               color: const Color(0xFF1A1E3F),
             ),
           ),
-          const SizedBox(height: 8),
+          SizedBox(height: isSmallScreen ? 6 : 8),
           Text(
             'Continue your learning journey',
             style: GoogleFonts.montserrat(
-              fontSize: 14,
+              fontSize: isSmallScreen ? 12 : 14,
               color: Colors.grey[600],
               fontWeight: FontWeight.w400,
             ),
           ),
-          const SizedBox(height: 32),
+          SizedBox(height: isSmallScreen ? 24 : 32),
 
           // Google Sign In Button (Prominent)
           _buildGoogleSignInButton(),
           
-          const SizedBox(height: 24),
+          SizedBox(height: isSmallScreen ? 16 : 24),
 
           // Divider with "or" text
           Row(
             children: [
               Expanded(child: Divider(color: Colors.grey[300])),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
+                padding: EdgeInsets.symmetric(horizontal: isSmallScreen ? 12 : 16),
                 child: Text(
                   'or',
                   style: GoogleFonts.montserrat(
-                    fontSize: 14,
+                    fontSize: isSmallScreen ? 12 : 14,
                     color: Colors.grey[500],
                     fontWeight: FontWeight.w500,
                   ),
@@ -312,7 +319,7 @@ class _SignInPageState extends State<SignInPage> {
             ],
           ),
 
-          const SizedBox(height: 24),
+          SizedBox(height: isSmallScreen ? 16 : 24),
 
           // Email/Password option
           if (!showEmailForm) _buildEmailToggleButton(),
@@ -573,9 +580,9 @@ class _SignInPageState extends State<SignInPage> {
     );
   }
 
-  Widget _buildFooter(BuildContext context) {
+  Widget _buildFooter(BuildContext context, bool isSmallScreen) {
     return Container(
-      padding: const EdgeInsets.all(20),
+      padding: EdgeInsets.all(isSmallScreen ? 16 : 20),
       child: Column(
         children: [
           // Sign up link
@@ -585,7 +592,7 @@ class _SignInPageState extends State<SignInPage> {
               Text(
                 "Don't have an account? ",
                 style: GoogleFonts.montserrat(
-                  fontSize: 14,
+                  fontSize: isSmallScreen ? 13 : 14,
                   color: Colors.grey[600],
                 ),
               ),
@@ -597,7 +604,7 @@ class _SignInPageState extends State<SignInPage> {
                 child: Text(
                   'Sign up',
                   style: GoogleFonts.montserrat(
-                    fontSize: 14,
+                    fontSize: isSmallScreen ? 13 : 14,
                     color: const Color(0xFFD62828),
                     fontWeight: FontWeight.w600,
                   ),
@@ -605,7 +612,7 @@ class _SignInPageState extends State<SignInPage> {
               ),
             ],
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: isSmallScreen ? 12 : 16),
           
           // Legal links
           Row(
@@ -618,13 +625,13 @@ class _SignInPageState extends State<SignInPage> {
                 child: Text(
                   'Terms of Service',
                   style: GoogleFonts.montserrat(
-                    fontSize: 12,
+                    fontSize: isSmallScreen ? 11 : 12,
                     color: Colors.grey[500],
                   ),
                 ),
               ),
               Container(
-                margin: const EdgeInsets.symmetric(horizontal: 12),
+                margin: EdgeInsets.symmetric(horizontal: isSmallScreen ? 8 : 12),
                 width: 1,
                 height: 12,
                 color: Colors.grey[400],
@@ -636,7 +643,7 @@ class _SignInPageState extends State<SignInPage> {
                 child: Text(
                   'Privacy Policy',
                   style: GoogleFonts.montserrat(
-                    fontSize: 12,
+                    fontSize: isSmallScreen ? 11 : 12,
                     color: Colors.grey[500],
                   ),
                 ),

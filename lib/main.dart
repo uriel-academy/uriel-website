@@ -7,6 +7,8 @@ import 'screens/auth_gate.dart'; // Import AuthGate from dedicated file
 import 'screens/home_page.dart'; // Import StudentHomePage
 import 'screens/school_dashboard.dart'; // Import SchoolDashboardPage
 import 'screens/teacher_dashboard.dart'; // Import TeacherDashboardPage
+import 'screens/parent_dashboard.dart'; // Import ParentDashboardPage
+import 'screens/comprehensive_admin_dashboard.dart'; // Import ComprehensiveAdminDashboard
 import 'screens/about_us.dart'; // Import About Us page
 import 'screens/privacy_policy.dart'; // Import Privacy Policy page
 import 'screens/terms_of_service.dart'; // Import Terms of Service page
@@ -43,6 +45,8 @@ class MyApp extends StatelessWidget {
         '/dashboard': (_) => const StudentHomePage(),
         '/school': (_) => const SchoolDashboardPage(), // Add school dashboard route
         '/teacher': (_) => const TeacherDashboardPage(), // Add teacher dashboard route
+        '/parent': (_) => const ParentDashboardPage(), // Add parent dashboard route
+        '/admin': (_) => const ComprehensiveAdminDashboard(), // Add comprehensive admin dashboard route
       },
     );
   }
