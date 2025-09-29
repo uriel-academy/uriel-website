@@ -503,21 +503,38 @@ class _FAQPageState extends State<FAQPage> with TickerProviderStateMixin {
           
           SizedBox(height: isSmallScreen ? 20 : 24),
           
-          GridView.builder(
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: isSmallScreen ? 1 : 2,
-              childAspectRatio: isSmallScreen ? 3 : 2.5,
-              crossAxisSpacing: 16,
-              mainAxisSpacing: 16,
+          if (isSmallScreen) ...[
+            // Mobile: Use ListView instead of GridView for better content display
+            ListView.builder(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              itemCount: _popularFAQs.length,
+              itemBuilder: (context, index) {
+                final faq = _popularFAQs[index];
+                return Padding(
+                  padding: const EdgeInsets.only(bottom: 16),
+                  child: _buildPopularFAQCard(faq, isSmallScreen),
+                );
+              },
             ),
-            itemCount: _popularFAQs.length,
-            itemBuilder: (context, index) {
-              final faq = _popularFAQs[index];
-              return _buildPopularFAQCard(faq, isSmallScreen);
-            },
-          ),
+          ] else ...[
+            // Desktop: Keep GridView
+            GridView.builder(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                childAspectRatio: 2.5,
+                crossAxisSpacing: 16,
+                mainAxisSpacing: 16,
+              ),
+              itemCount: _popularFAQs.length,
+              itemBuilder: (context, index) {
+                final faq = _popularFAQs[index];
+                return _buildPopularFAQCard(faq, isSmallScreen);
+              },
+            ),
+          ],
         ],
       ),
     );
@@ -568,7 +585,7 @@ class _FAQPageState extends State<FAQPage> with TickerProviderStateMixin {
               fontWeight: FontWeight.bold,
               color: const Color(0xFF1A1E3F),
             ),
-            maxLines: 2,
+            maxLines: isSmallScreen ? 3 : 2,
             overflow: TextOverflow.ellipsis,
           ),
           const SizedBox(height: 8),
@@ -579,7 +596,7 @@ class _FAQPageState extends State<FAQPage> with TickerProviderStateMixin {
               color: Colors.grey[600],
               height: 1.4,
             ),
-            maxLines: 3,
+            maxLines: isSmallScreen ? 4 : 3,
             overflow: TextOverflow.ellipsis,
           ),
         ],
