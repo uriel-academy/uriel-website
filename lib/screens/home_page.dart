@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import '../constants/app_styles.dart';
 
 class StudentHomePage extends StatefulWidget {
   const StudentHomePage({super.key});
@@ -166,29 +167,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       child: Row(
         children: [
           // Logo and Title
-          Row(
-            children: [
-              Container(
-                width: 32,
-                height: 32,
-                decoration: const BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [Color(0xFF1A1E3F), Color(0xFF2D3561)],
-                  ),
-                  borderRadius: BorderRadius.all(Radius.circular(8)),
-                ),
-                child: const Icon(Icons.school, color: Colors.white, size: 20),
-              ),
-              const SizedBox(width: 12),
-              Text(
-                'Uriel Academy',
-                style: GoogleFonts.playfairDisplay(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: _isDarkMode ? Colors.white : const Color(0xFF1A1E3F),
-                ),
-              ),
-            ],
+          Text(
+            'Uriel Academy',
+            style: AppStyles.brandNameLight(fontSize: 18),
           ),
           
           const Spacer(),
@@ -272,29 +253,12 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           // Logo Section
           Container(
             padding: const EdgeInsets.all(24),
-            child: Row(
-              children: [
-                Container(
-                  width: 40,
-                  height: 40,
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [Color(0xFF1A1E3F), Color(0xFF2D3561)],
-                    ),
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                  ),
-                  child: const Icon(Icons.school, color: Colors.white, size: 24),
-                ),
-                const SizedBox(width: 12),
-                Text(
-                  'Uriel Academy',
-                  style: GoogleFonts.playfairDisplay(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: _isDarkMode ? Colors.white : const Color(0xFF1A1E3F),
-                  ),
-                ),
-              ],
+            child: Text(
+              'Uriel Academy',
+              style: AppStyles.brandNameStyle(
+                fontSize: 20,
+                isDark: _isDarkMode,
+              ),
             ),
           ),
           
@@ -1822,6 +1786,30 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               onTap: () => _showComingSoon('Profile Settings'),
             ),
             ListTile(
+              leading: const Icon(Icons.info_outline),
+              title: const Text('About Uriel Academy'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushNamed(context, '/about');
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.privacy_tip_outlined),
+              title: const Text('Privacy Policy'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushNamed(context, '/privacy');
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.gavel_outlined),
+              title: const Text('Terms of Service'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushNamed(context, '/terms');
+              },
+            ),
+            ListTile(
               leading: const Icon(Icons.notifications),
               title: const Text('Notification Settings'),
               onTap: () => _showComingSoon('Notification Settings'),
@@ -1829,7 +1817,10 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             ListTile(
               leading: const Icon(Icons.help),
               title: const Text('Help & Support'),
-              onTap: () => _showComingSoon('Help & Support'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushNamed(context, '/contact');
+              },
             ),
             ListTile(
               leading: const Icon(Icons.logout, color: Color(0xFFD62828)),

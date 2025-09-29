@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../constants/app_styles.dart';
 import 'sign_up.dart';
 import 'sign_in.dart';
 
@@ -18,7 +19,7 @@ class LandingPage extends StatelessWidget {
             _buildValueProposition(context),
             _buildPricingSection(context),
             _buildTestimonialsSection(context),
-            _buildFooter(),
+            _buildFooter(context),
           ],
         ),
       ),
@@ -39,65 +40,72 @@ class LandingPage extends StatelessWidget {
         ],
       ),
       child: SafeArea(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            // Logo
-            const Text(
-              'Uriel Academy',
-              style: TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
-                color: Color(0xFF1A1E3F),
-                letterSpacing: -0.5,
-              ),
-            ),
-            // Auth Buttons
-            Row(
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            final isDesktop = constraints.maxWidth > 768;
+            
+            return Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                TextButton(
-                  onPressed: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (_) => const SignInPage()),
-                  ),
-                  style: TextButton.styleFrom(
-                    foregroundColor: const Color(0xFF1A1E3F),
-                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                  ),
-                  child: const Text(
-                    'Sign In',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 16,
-                    ),
-                  ),
+                // Logo
+                Text(
+                  'Uriel Academy',
+                  style: AppStyles.brandNameLight(fontSize: 22),
                 ),
-                const SizedBox(width: 8),
-                ElevatedButton(
-                  onPressed: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (_) => const SignUpPage()),
-                  ),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFFD62828),
-                    foregroundColor: Colors.white,
-                    elevation: 0,
-                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8),
+                
+                // Desktop Navigation - removed for cleaner look
+                if (isDesktop) ...[
+                  const SizedBox(width: 32),
+                ],
+                
+                // Auth Buttons
+                Row(
+                  children: [
+                    TextButton(
+                      onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (_) => const SignInPage()),
+                      ),
+                      style: TextButton.styleFrom(
+                        foregroundColor: const Color(0xFF1A1E3F),
+                        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                      ),
+                      child: const Text(
+                        'Sign In',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 16,
+                        ),
+                      ),
                     ),
-                  ),
-                  child: const Text(
-                    'Sign Up',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 16,
+                    const SizedBox(width: 8),
+                    ElevatedButton(
+                      onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (_) => const SignUpPage()),
+                      ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFFD62828),
+                        foregroundColor: Colors.white,
+                        elevation: 0,
+                        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                      ),
+                      child: const Text(
+                        'Sign Up',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 16,
+                        ),
+                      ),
                     ),
-                  ),
+                  ],
                 ),
               ],
-            ),
-          ],
+            );
+          }
         ),
       ),
     );
@@ -631,22 +639,18 @@ class LandingPage extends StatelessWidget {
     );
   }
 
-  Widget _buildFooter() {
+  Widget _buildFooter(BuildContext context) {
     return Container(
+      width: double.infinity,
       padding: const EdgeInsets.all(20),
       color: const Color(0xFF1A1E3F),
       child: Column(
         children: [
           const SizedBox(height: 40),
           // Centered title without logo
-          const Text(
+          Text(
             'Uriel Academy',
-            style: TextStyle(
-              fontSize: 22,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-              letterSpacing: -0.5,
-            ),
+            style: AppStyles.brandNameDark(fontSize: 22),
           ),
           const SizedBox(height: 24),
           Text(
@@ -664,11 +668,11 @@ class LandingPage extends StatelessWidget {
             runSpacing: 16,
             alignment: WrapAlignment.center,
             children: [
-              _buildFooterLink('About Us', () {}),
-              _buildFooterLink('Contact', () {}),
-              _buildFooterLink('Privacy Policy', () {}),
-              _buildFooterLink('Terms of Service', () {}),
-              _buildFooterLink('Support', () {}),
+              _buildFooterLink('About Us', () => Navigator.pushNamed(context, '/about')),
+              _buildFooterLink('Contact', () => Navigator.pushNamed(context, '/contact')),
+              _buildFooterLink('Privacy Policy', () => Navigator.pushNamed(context, '/privacy')),
+              _buildFooterLink('Terms of Service', () => Navigator.pushNamed(context, '/terms')),
+              _buildFooterLink('FAQ', () => Navigator.pushNamed(context, '/faq')),
             ],
           ),
           const SizedBox(height: 32),
