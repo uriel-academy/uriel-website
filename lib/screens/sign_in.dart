@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:uriel_mainapp/services/auth_service.dart';
-import 'package:uriel_mainapp/screens/otp_verification.dart';
+import 'package:uriel_mainapp/services/user_service.dart';
 import 'package:uriel_mainapp/screens/landing_page.dart';
 import 'package:uriel_mainapp/screens/sign_up.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -57,7 +57,26 @@ class _SignInPageState extends State<SignInPage> {
       if (user == null) {
         _showError('Google sign-in failed. Please try again.');
       } else {
-        Navigator.pushReplacementNamed(context, '/home');
+        // Check user role and route accordingly
+        final userRole = await UserService().getUserRoleByEmail(user.email!);
+        
+        if (userRole != null) {
+          // Update last login time
+          await UserService().updateLastLogin(user.uid);
+          
+          // Route based on role
+          _routeUserBasedOnRole(userRole);
+        } else {
+          // New user - create default student profile and go to student home
+          await UserService().createUserProfile(
+            userId: user.uid,
+            email: user.email!,
+            role: UserRole.student,
+            name: user.displayName,
+          );
+          
+          Navigator.pushReplacementNamed(context, '/home');
+        }
       }
     } catch (e) {
       _showError('An error occurred during sign-in.');
@@ -67,6 +86,21 @@ class _SignInPageState extends State<SignInPage> {
           isLoading = false;
         });
       }
+    }
+  }
+
+  void _routeUserBasedOnRole(UserRole role) {
+    switch (role) {
+      case UserRole.teacher:
+        Navigator.pushReplacementNamed(context, '/teacher');
+        break;
+      case UserRole.school:
+        Navigator.pushReplacementNamed(context, '/school');
+        break;
+      case UserRole.student:
+      default:
+        Navigator.pushReplacementNamed(context, '/home');
+        break;
     }
   }
 
@@ -86,12 +120,19 @@ class _SignInPageState extends State<SignInPage> {
       if (user == null) {
         _showError('Invalid email or password. Please try again.');
       } else {
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => OTPVerificationPage(email: emailController.text.trim()),
-          ),
-        );
+        // Skip OTP verification and route based on user role
+        final userRole = await UserService().getUserRoleByEmail(user.email!);
+        
+        if (userRole != null) {
+          // Update last login time
+          await UserService().updateLastLogin(user.uid);
+          
+          // Route based on role
+          _routeUserBasedOnRole(userRole);
+        } else {
+          // Fallback to student home if no role found
+          Navigator.pushReplacementNamed(context, '/home');
+        }
       }
     } catch (e) {
       _showError('An error occurred during sign-in.');

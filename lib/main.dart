@@ -5,6 +5,8 @@ import 'screens/landing_page.dart'; // Import LandingPage for first load
 import 'screens/sign_in.dart' as sign_in; // Import your sign-in page with alias
 import 'screens/auth_gate.dart'; // Import AuthGate from dedicated file
 import 'screens/home_page.dart'; // Import StudentHomePage
+import 'screens/school_dashboard.dart'; // Import SchoolDashboardPage
+import 'screens/teacher_dashboard.dart'; // Import TeacherDashboardPage
 import 'screens/about_us.dart'; // Import About Us page
 import 'screens/privacy_policy.dart'; // Import Privacy Policy page
 import 'screens/terms_of_service.dart'; // Import Terms of Service page
@@ -39,6 +41,8 @@ class MyApp extends StatelessWidget {
         '/auth': (_) => const AuthGate(), // AuthGate for post-login routing
         '/home': (_) => const StudentHomePage(),
         '/dashboard': (_) => const StudentHomePage(),
+        '/school': (_) => const SchoolDashboardPage(), // Add school dashboard route
+        '/teacher': (_) => const TeacherDashboardPage(), // Add teacher dashboard route
       },
     );
   }
@@ -47,5 +51,5 @@ class MyApp extends StatelessWidget {
 // Note: The flow is:
 // 1. uriel.academy → LandingPage (marketing page with sign-up/sign-in buttons)
 // 2. User clicks Sign In/Sign Up → respective pages
-// 3. After successful auth → routes to /home → StudentHomePage
+// 3. After successful auth → routes to /home (students) or /school (teachers/schools) based on user role
 

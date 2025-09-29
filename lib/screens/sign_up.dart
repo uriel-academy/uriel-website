@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:uriel_mainapp/services/auth_service.dart';
+import 'package:uriel_mainapp/services/user_service.dart';
 
 enum UserType { student, teacher, school }
 
@@ -130,11 +131,27 @@ class _SignUpPageState extends State<SignUpPage> {
       if (user == null) {
         _showError('Google sign-up failed. Please try again.');
       } else {
-        Navigator.pushNamedAndRemoveUntil(
-          context,
-          '/home',
-          (route) => false,
-        );
+        // Check if this is a new user or existing user
+        final existingRole = await UserService().getUserRoleByEmail(user.email!);
+        
+        if (existingRole != null) {
+          // Existing user - route based on role
+          _routeUserBasedOnRole(existingRole);
+        } else {
+          // New user - create profile with default student role and go to home
+          await UserService().createUserProfile(
+            userId: user.uid,
+            email: user.email!,
+            role: UserRole.student,
+            name: user.displayName,
+          );
+          
+          Navigator.pushNamedAndRemoveUntil(
+            context,
+            '/home',
+            (route) => false,
+          );
+        }
       }
     } catch (e) {
       _showError('An error occurred during sign-up.');
@@ -157,6 +174,33 @@ class _SignUpPageState extends State<SignUpPage> {
         margin: const EdgeInsets.all(16),
       ),
     );
+  }
+
+  void _routeUserBasedOnRole(UserRole role) {
+    switch (role) {
+      case UserRole.teacher:
+        Navigator.pushNamedAndRemoveUntil(
+          context,
+          '/teacher',
+          (route) => false,
+        );
+        break;
+      case UserRole.school:
+        Navigator.pushNamedAndRemoveUntil(
+          context,
+          '/school',
+          (route) => false,
+        );
+        break;
+      case UserRole.student:
+      default:
+        Navigator.pushNamedAndRemoveUntil(
+          context,
+          '/home',
+          (route) => false,
+        );
+        break;
+    }
   }
 
   bool _validateCurrentStep() {
@@ -1322,16 +1366,24 @@ class _SignUpPageState extends State<SignUpPage> {
     });
 
     try {
-      // Here you would integrate with your authentication service
-      // For now, we'll simulate the signup process
-      await Future.delayed(const Duration(seconds: 2));
-      
-      // Navigate directly to home page (skip OTP verification)
-      Navigator.pushNamedAndRemoveUntil(
-        context,
-        '/home',
-        (route) => false,
+      // Create Firebase user account
+      final user = await AuthService().registerWithEmail(
+        emailController.text.trim(),
+        passwordController.text.trim(),
       );
+      
+      if (user == null) {
+        _showError('Sign up failed. Please try again.');
+        return;
+      }
+
+      // Store user data based on selected user type
+      await _storeUserData(user.uid);
+      
+      // Route user based on their role
+      final userRole = _getUserRoleFromType(selectedUserType!);
+      _routeUserBasedOnRole(userRole);
+      
     } catch (e) {
       _showError('Sign up failed. Please try again.');
     } finally {
@@ -1340,6 +1392,58 @@ class _SignUpPageState extends State<SignUpPage> {
           isLoading = false;
         });
       }
+    }
+  }
+
+  UserRole _getUserRoleFromType(UserType userType) {
+    switch (userType) {
+      case UserType.student:
+        return UserRole.student;
+      case UserType.teacher:
+        return UserRole.teacher;
+      case UserType.school:
+        return UserRole.school;
+    }
+  }
+
+  Future<void> _storeUserData(String userId) async {
+    switch (selectedUserType!) {
+      case UserType.student:
+        await UserService().storeStudentData(
+          userId: userId,
+          name: nameController.text.trim(),
+          email: emailController.text.trim(),
+          phoneNumber: phoneController.text.trim(),
+          schoolName: schoolNameController.text.trim(),
+          grade: selectedGrade!,
+          age: int.parse(ageController.text.trim()),
+          guardianName: guardianNameController.text.trim(),
+          guardianEmail: guardianEmailController.text.trim(),
+          guardianPhone: guardianPhoneController.text.trim(),
+        );
+        break;
+        
+      case UserType.teacher:
+        await UserService().storeTeacherData(
+          userId: userId,
+          name: nameController.text.trim(),
+          email: emailController.text.trim(),
+          phoneNumber: phoneController.text.trim(),
+          schoolName: teacherSchoolController.text.trim(),
+          teachingGrade: selectedTeachingClasses.isNotEmpty ? selectedTeachingClasses.first : null,
+        );
+        break;
+        
+      case UserType.school:
+        await UserService().storeSchoolData(
+          userId: userId,
+          institutionName: nameController.text.trim(),
+          email: emailController.text.trim(),
+          contactPersonName: contactPersonController.text.trim(),
+          phoneNumber: phoneController.text.trim(),
+          region: selectedRegion!,
+        );
+        break;
     }
   }
 }
