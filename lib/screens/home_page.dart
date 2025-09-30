@@ -4,6 +4,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../constants/app_styles.dart';
 import 'past_questions_search_page.dart';
+import 'textbooks_page.dart';
+import 'mock_exams_page.dart';
+import 'trivia_page.dart';
 
 class StudentHomePage extends StatefulWidget {
   const StudentHomePage({super.key});
@@ -1498,155 +1501,15 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   }
 
   Widget _buildTextbooksPage() {
-    return _buildFeaturePage(
-      'Digital Textbooks',
-      'NACCA approved textbooks for all subjects',
-      Icons.menu_book_outlined,
-      [
-        _buildFeatureCard('JHS Textbooks', 'Junior High School curriculum', Icons.school, () => _showComingSoon('JHS Textbooks')),
-        _buildFeatureCard('SHS Textbooks', 'Senior High School curriculum', Icons.library_books, () => _showComingSoon('SHS Textbooks')),
-        _buildFeatureCard('Reference Materials', 'Additional learning resources', Icons.folder_open, () => _showComingSoon('Reference Materials')),
-      ],
-    );
+    return const TextbooksPage();
   }
 
   Widget _buildMockExamsPage() {
-    return _buildFeaturePage(
-      'Mock Examinations',
-      'Full-length practice examinations with detailed feedback',
-      Icons.assessment_outlined,
-      [
-        _buildFeatureCard('BECE Mock', 'Basic Education Certificate Mock', Icons.edit_note, () => _showComingSoon('BECE Mock')),
-        _buildFeatureCard('WASSCE Mock', 'Senior School Certificate Mock', Icons.assignment, () => _showComingSoon('WASSCE Mock')),
-        _buildFeatureCard('Custom Tests', 'Create your own practice tests', Icons.create, () => _showComingSoon('Custom Tests')),
-      ],
-    );
+    return const MockExamsPage();
   }
 
   Widget _buildTriviaPage() {
-    return _buildFeaturePage(
-      'Learning Trivia',
-      'Gamified learning with fun trivia challenges',
-      Icons.psychology_outlined,
-      [
-        _buildFeatureCard('Daily Challenge', 'New questions every day', Icons.today, () => _showComingSoon('Daily Challenge')),
-        _buildFeatureCard('Subject Trivia', 'Focus on specific subjects', Icons.category, () => _showComingSoon('Subject Trivia')),
-        _buildFeatureCard('Multiplayer', 'Challenge your classmates', Icons.groups, () => _showComingSoon('Multiplayer')),
-      ],
-    );
-  }
-
-  Widget _buildFeaturePage(String title, String subtitle, IconData icon, List<Widget> features) {
-    final screenWidth = MediaQuery.of(context).size.width;
-    final isSmallScreen = screenWidth < 768;
-    
-    return SingleChildScrollView(
-      padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Container(
-                padding: EdgeInsets.all(isSmallScreen ? 8 : 12),
-                decoration: BoxDecoration(
-                  color: const Color(0xFFD62828).withOpacity(0.1),
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: Icon(icon, color: const Color(0xFFD62828), size: isSmallScreen ? 20 : 24),
-              ),
-              const SizedBox(width: 16),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      title,
-                      style: GoogleFonts.playfairDisplay(
-                        fontSize: isSmallScreen ? 20 : 24,
-                        fontWeight: FontWeight.bold,
-                        color: _isDarkMode ? Colors.white : const Color(0xFF1A1E3F),
-                      ),
-                    ),
-                    Text(
-                      subtitle,
-                      style: GoogleFonts.montserrat(
-                        fontSize: isSmallScreen ? 14 : 16,
-                        color: Colors.grey[600],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-          SizedBox(height: isSmallScreen ? 24 : 32),
-          ...features,
-          // Add extra bottom padding for mobile
-          if (isSmallScreen) const SizedBox(height: 80),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildFeatureCard(String title, String description, IconData icon, VoidCallback onTap) {
-    return Container(
-      margin: const EdgeInsets.only(bottom: 16),
-      child: InkWell(
-        onTap: onTap,
-        borderRadius: BorderRadius.circular(16),
-        child: Container(
-          padding: const EdgeInsets.all(20),
-          decoration: BoxDecoration(
-            color: _isDarkMode ? const Color(0xFF161B22) : Colors.white,
-            borderRadius: BorderRadius.circular(16),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withOpacity(0.05),
-                blurRadius: 10,
-                offset: const Offset(0, 4),
-              ),
-            ],
-          ),
-          child: Row(
-            children: [
-              Container(
-                padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  color: const Color(0xFF1A1E3F).withOpacity(0.1),
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: Icon(icon, color: const Color(0xFF1A1E3F), size: 24),
-              ),
-              const SizedBox(width: 16),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      title,
-                      style: GoogleFonts.montserrat(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        color: _isDarkMode ? Colors.white : const Color(0xFF1A1E3F),
-                      ),
-                    ),
-                    const SizedBox(height: 4),
-                    Text(
-                      description,
-                      style: GoogleFonts.montserrat(
-                        color: Colors.grey[600],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Icon(Icons.arrow_forward_ios, color: Colors.grey[400], size: 16),
-            ],
-          ),
-        ),
-      ),
-    );
+    return const TriviaPage();
   }
 
   // Helper methods

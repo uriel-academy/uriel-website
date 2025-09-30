@@ -163,33 +163,36 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
             // Page Header
             SliverAppBar(
               floating: true,
-              pinned: false,
+              pinned: true,
               automaticallyImplyLeading: false,
-              expandedHeight: 120,
+              expandedHeight: 100,
               backgroundColor: Colors.white,
+              title: Text(
+                'Past Questions',
+                style: GoogleFonts.playfairDisplay(
+                  fontSize: isSmallScreen ? 18 : 20,
+                  fontWeight: FontWeight.w700,
+                  color: const Color(0xFF1A1E3F),
+                ),
+              ),
+              centerTitle: false,
+              titleSpacing: isSmallScreen ? 16 : 24,
               flexibleSpace: FlexibleSpaceBar(
                 background: Container(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: isSmallScreen ? 16 : 24,
-                    vertical: 16,
+                  padding: EdgeInsets.only(
+                    left: isSmallScreen ? 16 : 24,
+                    right: isSmallScreen ? 16 : 24,
+                    bottom: 16,
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Text(
-                        'Past Questions',
-                        style: GoogleFonts.playfairDisplay(
-                          fontSize: isSmallScreen ? 24 : 28,
-                          fontWeight: FontWeight.w700,
-                          color: const Color(0xFF1A1E3F),
-                        ),
-                      ),
-                      const SizedBox(height: 4),
+                      const SizedBox(height: 40), // Space for title
                       Text(
                         'BECE Questions • WASSCE Questions • Mock Tests',
                         style: GoogleFonts.montserrat(
-                          fontSize: isSmallScreen ? 14 : 16,
+                          fontSize: isSmallScreen ? 12 : 14,
                           color: Colors.grey[600],
                         ),
                       ),
