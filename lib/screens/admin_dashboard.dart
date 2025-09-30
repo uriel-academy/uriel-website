@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../services/auth_service.dart';
+import 'admin_question_management.dart';
+import 'user_management_page.dart';
+import 'content_management_page.dart';
 
 class AdminDashboard extends StatefulWidget {
   const AdminDashboard({super.key});
@@ -435,18 +438,40 @@ class _AdminDashboardState extends State<AdminDashboard> {
                 childAspectRatio: MediaQuery.of(context).size.width > 600 ? 1.5 : 1.8,
                 children: [
                   _buildAdminCard(
+                    'Question Management',
+                    'Add, import, and manage exam questions',
+                    Icons.quiz,
+                    const Color(0xFFD62828),
+                    () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const AdminQuestionManagementPage(),
+                      ),
+                    ),
+                  ),
+                  _buildAdminCard(
                     'User Management',
                     'Manage students, teachers, and parents',
                     Icons.people,
                     const Color(0xFF3498DB),
-                    () => _showFeatureDialog('User Management'),
+                    () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const UserManagementPage(),
+                      ),
+                    ),
                   ),
                   _buildAdminCard(
                     'Content Control',
                     'Manage educational content and resources',
                     Icons.library_books,
                     const Color(0xFF2ECC71),
-                    () => _showFeatureDialog('Content Control'),
+                    () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ContentManagementPage(),
+                      ),
+                    ),
                   ),
                   _buildAdminCard(
                     'Analytics',
@@ -664,5 +689,132 @@ class _AdminDashboardState extends State<AdminDashboard> {
         );
       },
     );
+  }
+
+  void _showUserProfile() {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(
+          'User Profile',
+          style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
+        ),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            CircleAvatar(
+              radius: 30,
+              backgroundColor: const Color(0xFF1A1E3F),
+              child: Text(
+                FirebaseAuth.instance.currentUser?.email?.substring(0, 1).toUpperCase() ?? 'A',
+                style: GoogleFonts.montserrat(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 20,
+                ),
+              ),
+            ),
+            const SizedBox(height: 16),
+            Text(
+              FirebaseAuth.instance.currentUser?.email ?? 'No email',
+              style: GoogleFonts.montserrat(fontSize: 14),
+            ),
+            const SizedBox(height: 8),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+              decoration: BoxDecoration(
+                color: const Color(0xFFD62828).withOpacity(0.1),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Text(
+                'Super Admin',
+                style: GoogleFonts.montserrat(
+                  fontSize: 12,
+                  color: const Color(0xFFD62828),
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(),
+            child: Text(
+              'Close',
+              style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _showSettings() {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(
+          'Settings',
+          style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
+        ),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            ListTile(
+              leading: const Icon(Icons.notifications),
+              title: const Text('Notifications'),
+              trailing: Switch(
+                value: true,
+                onChanged: (value) {},
+                activeColor: const Color(0xFF1A1E3F),
+              ),
+            ),
+            ListTile(
+              leading: const Icon(Icons.dark_mode),
+              title: const Text('Dark Mode'),
+              trailing: Switch(
+                value: false,
+                onChanged: (value) {},
+                activeColor: const Color(0xFF1A1E3F),
+              ),
+            ),
+            ListTile(
+              leading: const Icon(Icons.language),
+              title: const Text('Language'),
+              trailing: const Text('English'),
+              onTap: () {},
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(),
+            child: Text(
+              'Close',
+              style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Future<void> _handleLogout() async {
+    try {
+      await _authService.signOut();
+      if (mounted) {
+        Navigator.of(context).pushReplacementNamed('/landing');
+      }
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Error signing out: $e'),
+            backgroundColor: Colors.red,
+          ),
+        );
+      }
+    }
   }
 }

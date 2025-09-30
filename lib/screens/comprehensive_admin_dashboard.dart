@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../services/auth_service.dart';
+import 'admin_question_management.dart';
+import 'user_management_page.dart';
+import 'content_management_page.dart';
+import 'trivia_management_page.dart';
 
 class ComprehensiveAdminDashboard extends StatefulWidget {
   const ComprehensiveAdminDashboard({super.key});
@@ -267,36 +271,82 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
     }
     
     // If authorized, show the comprehensive admin dashboard
-    final isSmallScreen = MediaQuery.of(context).size.width < 1200;
+    final isSmallScreen = MediaQuery.of(context).size.width < 768;
+    final isMobileScreen = MediaQuery.of(context).size.width < 600;
     
     return Scaffold(
       backgroundColor: const Color(0xFFF8F9FA),
-      body: Row(
+      body: Stack(
         children: [
-          // Left Sidebar
-          _buildSidebar(isSmallScreen),
-          
-          // Main Content Area
-          Expanded(
-            child: Column(
-              children: [
-                // Top Header Bar
-                _buildTopHeader(context, isSmallScreen),
-                
-                // Main Dashboard Content
-                Expanded(
-                  child: _buildMainContent(isSmallScreen),
+          Row(
+            children: [
+              // Left Sidebar - Always present for desktop, hidden for mobile when collapsed
+              if (!isMobileScreen)
+                _buildSidebar(isSmallScreen, isMobileScreen),
+              
+              // Main Content Area
+              Expanded(
+                child: Column(
+                  children: [
+                    // Top Header Bar
+                    _buildTopHeader(context, isSmallScreen, isMobileScreen),
+                    
+                    // Main Dashboard Content
+                    Expanded(
+                      child: _buildMainContent(isSmallScreen),
+                    ),
+                  ],
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
+          
+          // Mobile sidebar overlay
+          if (isMobileScreen && !isSidebarCollapsed)
+            Positioned.fill(
+              child: Container(
+                color: Colors.black54,
+                child: Row(
+                  children: [
+                    _buildSidebar(isSmallScreen, isMobileScreen),
+                    Expanded(
+                      child: GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            isSidebarCollapsed = true;
+                          });
+                        },
+                        child: Container(),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
         ],
       ),
+      // Add floating action button for mobile menu
+      floatingActionButton: isMobileScreen ? FloatingActionButton(
+        backgroundColor: const Color(0xFF1A1E3F),
+        elevation: 8,
+        onPressed: () {
+          setState(() {
+            isSidebarCollapsed = !isSidebarCollapsed;
+          });
+        },
+        child: Icon(
+          isSidebarCollapsed ? Icons.menu : Icons.close,
+          color: Colors.white,
+        ),
+      ) : null,
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
 
-  Widget _buildSidebar(bool isSmallScreen) {
-    final sidebarWidth = isSidebarCollapsed ? 70.0 : 280.0;
+  Widget _buildSidebar(bool isSmallScreen, [bool isMobileScreen = false]) {
+    final sidebarWidth = isMobileScreen 
+        ? (isSidebarCollapsed ? 0.0 : 280.0)
+        : (isSidebarCollapsed ? 70.0 : 280.0);
     
     return AnimatedContainer(
       duration: const Duration(milliseconds: 300),
@@ -402,6 +452,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
                 
                 _buildNavSection('CONTENT'),
                 _buildNavItem(Icons.quiz, 'Past Questions', 'questions'),
+                _buildNavItem(Icons.psychology, 'Trivia', 'trivia'),
                 _buildNavItem(Icons.library_books, 'Textbooks', 'textbooks'),
                 _buildNavItem(Icons.smart_toy, 'AI Tools Config', 'ai_tools'),
                 _buildNavItem(Icons.perm_media, 'Multimedia', 'multimedia'),
@@ -502,9 +553,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
         child: InkWell(
           borderRadius: BorderRadius.circular(8),
           onTap: () {
-            setState(() {
-              selectedModule = moduleKey;
-            });
+            _handleNavigation(moduleKey);
           },
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
@@ -543,7 +592,85 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
     );
   }
 
-  Widget _buildTopHeader(BuildContext context, bool isSmallScreen) {
+  void _handleNavigation(String moduleKey) {
+    setState(() {
+      selectedModule = moduleKey;
+    });
+
+    // Navigate to appropriate pages
+    switch (moduleKey) {
+      case 'students':
+      case 'teachers':
+      case 'school_admins':
+      case 'parents':
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const UserManagementPage(),
+          ),
+        );
+        break;
+      case 'questions':
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const AdminQuestionManagementPage(),
+          ),
+        );
+        break;
+      case 'trivia':
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const TriviaManagementPage(),
+          ),
+        );
+        break;
+      case 'textbooks':
+      case 'multimedia':
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const ContentManagementPage(),
+          ),
+        );
+        break;
+      case 'overview':
+        // Stay on current dashboard
+        break;
+      default:
+        // Show coming soon dialog for unimplemented features
+        _showComingSoonDialog(moduleKey);
+        break;
+    }
+  }
+
+  void _showComingSoonDialog(String feature) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(
+          'Coming Soon',
+          style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
+        ),
+        content: Text(
+          'The $feature feature is currently under development.',
+          style: GoogleFonts.montserrat(),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(),
+            child: Text(
+              'OK',
+              style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildTopHeader(BuildContext context, bool isSmallScreen, [bool isMobileScreen = false]) {
     return Container(
       height: 70,
       decoration: BoxDecoration(
@@ -557,12 +684,31 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
         ],
       ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+        padding: EdgeInsets.symmetric(
+          horizontal: isMobileScreen ? 12 : 24, 
+          vertical: 12
+        ),
         child: Row(
           children: [
+            // Mobile menu button for top bar (backup to floating button)
+            if (isMobileScreen) ...[
+              IconButton(
+                onPressed: () {
+                  setState(() {
+                    isSidebarCollapsed = !isSidebarCollapsed;
+                  });
+                },
+                icon: Icon(
+                  isSidebarCollapsed ? Icons.menu : Icons.close,
+                  color: const Color(0xFF1A1E3F),
+                ),
+              ),
+              const SizedBox(width: 8),
+            ],
+            
             // Global Search Bar
             Expanded(
-              flex: 3,
+              flex: isMobileScreen ? 4 : 3,
               child: Container(
                 height: 46,
                 decoration: BoxDecoration(
@@ -573,18 +719,20 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
                 child: TextField(
                   controller: searchController,
                   decoration: InputDecoration(
-                    hintText: 'Search students, schools, teachers, transactions...',
+                    hintText: isMobileScreen 
+                        ? 'Search...' 
+                        : 'Search students, schools, teachers, transactions...',
                     hintStyle: GoogleFonts.montserrat(
-                      fontSize: 14,
+                      fontSize: isMobileScreen ? 12 : 14,
                       color: Colors.grey[500],
                     ),
                     prefixIcon: const Icon(Icons.search, color: Colors.grey),
-                    suffixIcon: IconButton(
+                    suffixIcon: !isMobileScreen ? IconButton(
                       onPressed: () {
                         // TODO: Show advanced search filters
                       },
                       icon: const Icon(Icons.tune, color: Colors.grey),
-                    ),
+                    ) : null,
                     border: InputBorder.none,
                     contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                   ),
@@ -592,7 +740,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
               ),
             ),
             
-            const SizedBox(width: 24),
+            SizedBox(width: isMobileScreen ? 8 : 24),
             
             // Notifications
             _buildHeaderAction(
@@ -741,15 +889,17 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
   }
 
   Widget _buildMainContent(bool isSmallScreen) {
+    final isMobileScreen = MediaQuery.of(context).size.width < 600;
+    
     return Padding(
-      padding: const EdgeInsets.all(24),
+      padding: EdgeInsets.all(isMobileScreen ? 12 : 24),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Welcome Section
-          _buildWelcomeSection(),
+          _buildWelcomeSection(isMobileScreen),
           
-          const SizedBox(height: 24),
+          SizedBox(height: isMobileScreen ? 16 : 24),
           
           // Main Dashboard Content
           Expanded(
@@ -762,7 +912,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
     );
   }
 
-  Widget _buildWelcomeSection() {
+  Widget _buildWelcomeSection([bool isMobileScreen = false]) {
     return Row(
       children: [
         Expanded(
@@ -770,9 +920,11 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Welcome back, $adminName',
+                isMobileScreen 
+                    ? 'Welcome, $adminName'
+                    : 'Welcome back, $adminName',
                 style: GoogleFonts.montserrat(
-                  fontSize: 28,
+                  fontSize: isMobileScreen ? 20 : 28,
                   fontWeight: FontWeight.w700,
                   color: const Color(0xFF1A1E3F),
                 ),

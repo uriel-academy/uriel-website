@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../constants/app_styles.dart';
+import 'past_questions_search_page.dart';
 
 class StudentHomePage extends StatefulWidget {
   const StudentHomePage({super.key});
@@ -1493,16 +1494,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
 
   // Page implementations for other tabs
   Widget _buildQuestionsPage() {
-    return _buildFeaturePage(
-      'Past Questions',
-      'Access comprehensive past questions for BECE and WASSCE',
-      Icons.quiz_outlined,
-      [
-        _buildFeatureCard('BECE Questions', 'Basic Education Certificate Exam', Icons.school, () => _showComingSoon('BECE Questions')),
-        _buildFeatureCard('WASSCE Questions', 'West African Senior School Certificate', Icons.workspace_premium, () => _showComingSoon('WASSCE Questions')),
-        _buildFeatureCard('Mock Tests', 'Practice with timed examinations', Icons.timer, () => _showComingSoon('Mock Tests')),
-      ],
-    );
+    return const PastQuestionsSearchPage();
   }
 
   Widget _buildTextbooksPage() {

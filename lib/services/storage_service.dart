@@ -8,23 +8,46 @@ class StorageService {
   // Get BECE RME past questions from storage
   static Future<List<PastQuestion>> getBECERMEQuestions() async {
     try {
-      final ListResult result = await _storage.ref('bece-rme questions').listAll();
+      // Try multiple possible folder names for RME questions
+      List<String> possiblePaths = [
+        'bece-rme questions',
+        'bece-rme',
+        'rme questions',
+        'rme',
+        'RME',
+        'Religious and Moral Education',
+        'BECE RME'
+      ];
       
       List<PastQuestion> questions = [];
       
-      for (var item in result.items) {
-        final String downloadUrl = await item.getDownloadURL();
-        final FullMetadata metadata = await item.getMetadata();
-        
-        questions.add(PastQuestion(
-          id: item.name,
-          title: item.name.replaceAll('.pdf', '').replaceAll('_', ' '),
-          subject: 'Religious and Moral Education',
-          year: extractYearFromFileName(item.name),
-          downloadUrl: downloadUrl,
-          fileSize: metadata.size ?? 0,
-          uploadTime: metadata.timeCreated ?? DateTime.now(),
-        ));
+      for (String path in possiblePaths) {
+        try {
+          final ListResult result = await _storage.ref(path).listAll();
+          
+          for (var item in result.items) {
+            final String downloadUrl = await item.getDownloadURL();
+            final FullMetadata metadata = await item.getMetadata();
+            
+            questions.add(PastQuestion(
+              id: item.name,
+              title: item.name.replaceAll('.pdf', '').replaceAll('_', ' '),
+              subject: 'Religious and Moral Education',
+              year: extractYearFromFileName(item.name),
+              downloadUrl: downloadUrl,
+              fileSize: metadata.size ?? 0,
+              uploadTime: metadata.timeCreated ?? DateTime.now(),
+            ));
+          }
+          
+          if (questions.isNotEmpty) {
+            print('Found RME questions in folder: $path');
+            break; // Found questions, stop searching
+          }
+        } catch (e) {
+          print('Failed to access folder: $path - $e');
+          continue; // Try next folder
+        }
       }
       
       // Sort by year (newest first)
@@ -33,6 +56,59 @@ class StorageService {
       return questions;
     } catch (e) {
       print('Error fetching BECE RME questions: $e');
+      return [];
+    }
+  }
+
+  // Get trivia content from storage
+  static Future<List<PastQuestion>> getTriviaContent() async {
+    try {
+      // Try multiple possible folder names for trivia
+      List<String> possiblePaths = [
+        'trivia',
+        'Trivia',
+        'TRIVIA',
+        'trivia questions',
+        'Trivia Questions'
+      ];
+      
+      List<PastQuestion> questions = [];
+      
+      for (String path in possiblePaths) {
+        try {
+          final ListResult result = await _storage.ref(path).listAll();
+          
+          for (var item in result.items) {
+            final String downloadUrl = await item.getDownloadURL();
+            final FullMetadata metadata = await item.getMetadata();
+            
+            questions.add(PastQuestion(
+              id: item.name,
+              title: item.name.replaceAll('.pdf', '').replaceAll('.txt', '').replaceAll('_', ' '),
+              subject: 'Trivia',
+              year: extractYearFromFileName(item.name),
+              downloadUrl: downloadUrl,
+              fileSize: metadata.size ?? 0,
+              uploadTime: metadata.timeCreated ?? DateTime.now(),
+            ));
+          }
+          
+          if (questions.isNotEmpty) {
+            print('Found trivia content in folder: $path');
+            break; // Found questions, stop searching
+          }
+        } catch (e) {
+          print('Failed to access folder: $path - $e');
+          continue; // Try next folder
+        }
+      }
+      
+      // Sort by upload time (newest first)
+      questions.sort((a, b) => b.uploadTime.compareTo(a.uploadTime));
+      
+      return questions;
+    } catch (e) {
+      print('Error fetching trivia content: $e');
       return [];
     }
   }
@@ -46,6 +122,10 @@ class StorageService {
       final beceRmeQuestions = await getBECERMEQuestions();
       allQuestions.addAll(beceRmeQuestions);
       
+      // Get trivia content
+      final triviaQuestions = await getTriviaContent();
+      allQuestions.addAll(triviaQuestions);
+      
       // TODO: Add other subjects as you upload them
       // final mathQuestions = await getBECEMathQuestions();
       // allQuestions.addAll(mathQuestions);
@@ -53,6 +133,88 @@ class StorageService {
       return allQuestions;
     } catch (e) {
       print('Error fetching all past questions: $e');
+      return [];
+    }
+  }
+
+  // Get questions by subject from storage
+  static Future<List<PastQuestion>> getQuestionsBySubject(String subject) async {
+    try {
+      String folderPath;
+      switch (subject.toLowerCase()) {
+        case 'rme':
+        case 'religious and moral education':
+          folderPath = 'bece-rme questions';
+          break;
+        case 'trivia':
+          folderPath = 'trivia';
+          break;
+        case 'mathematics':
+          folderPath = 'bece-math questions';
+          break;
+        case 'english':
+          folderPath = 'bece-english questions';
+          break;
+        case 'science':
+          folderPath = 'bece-science questions';
+          break;
+        default:
+          folderPath = 'bece-${subject.toLowerCase()} questions';
+      }
+      
+      final ListResult result = await _storage.ref(folderPath).listAll();
+      List<PastQuestion> questions = [];
+      
+      for (var item in result.items) {
+        final String downloadUrl = await item.getDownloadURL();
+        final FullMetadata metadata = await item.getMetadata();
+        
+        questions.add(PastQuestion(
+          id: item.name,
+          title: item.name.replaceAll('.pdf', '').replaceAll('.txt', '').replaceAll('_', ' '),
+          subject: subject,
+          year: extractYearFromFileName(item.name),
+          downloadUrl: downloadUrl,
+          fileSize: metadata.size ?? 0,
+          uploadTime: metadata.timeCreated ?? DateTime.now(),
+        ));
+      }
+      
+      // Sort by year (newest first)
+      questions.sort((a, b) => b.year.compareTo(a.year));
+      
+      return questions;
+    } catch (e) {
+      print('Error fetching questions for subject $subject: $e');
+      return [];
+    }
+  }
+
+  // Debug method to list all folders in Firebase Storage root
+  static Future<List<String>> listAllStorageFolders() async {
+    try {
+      final ListResult result = await _storage.ref().listAll();
+      
+      List<String> folders = [];
+      
+      // Add all prefixes (folders)
+      for (var prefix in result.prefixes) {
+        folders.add(prefix.name);
+      }
+      
+      // Add all items (files in root)
+      for (var item in result.items) {
+        folders.add('FILE: ${item.name}');
+      }
+      
+      print('Available folders/files in Firebase Storage:');
+      for (String folder in folders) {
+        print('- $folder');
+      }
+      
+      return folders;
+    } catch (e) {
+      print('Error listing storage folders: $e');
       return [];
     }
   }
@@ -73,6 +235,32 @@ class StorageService {
              question.subject.toLowerCase().contains(query.toLowerCase()) ||
              question.year.contains(query);
     }).toList();
+  }
+
+  // Upload file to storage (for admin use)
+  static Future<String> uploadFile(String filePath, String fileName, String subject) async {
+    try {
+      String folderPath;
+      switch (subject.toLowerCase()) {
+        case 'rme':
+        case 'religious and moral education':
+          folderPath = 'bece-rme questions';
+          break;
+        case 'trivia':
+          folderPath = 'trivia';
+          break;
+        default:
+          folderPath = 'bece-${subject.toLowerCase()} questions';
+      }
+      
+      final ref = _storage.ref('$folderPath/$fileName');
+      // Note: For web, you'd use different upload method
+      // This is just the structure for future implementation
+      
+      return await ref.getDownloadURL();
+    } catch (e) {
+      throw Exception('Failed to upload file: $e');
+    }
   }
 }
 

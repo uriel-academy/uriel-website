@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'subject_detail.dart';
-import 'past_questions.dart';
+import 'past_questions_search_page.dart';
 import 'textbooks.dart';
 // Removed unused import 'mock_exams.dart'
 import 'ai_tools.dart';
@@ -134,7 +134,7 @@ class _StudentDashboardPageState extends State<StudentDashboardPage> {
       children: [
         _dashboardAction(context, Icons.quiz, 'Past Questions', () {
           Navigator.push(context, MaterialPageRoute(
-            builder: (_) => PastQuestionsPage(onQuizCompleted: () => _updateProgress(quizzes: 1)),
+            builder: (_) => const PastQuestionsSearchPage(),
           ));
         }),
         _dashboardAction(context, Icons.menu_book, 'Textbooks', () {
