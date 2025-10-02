@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../constants/app_styles.dart';
+import '../widgets/common_footer.dart';
 import 'sign_up.dart';
 import 'sign_in.dart';
 
@@ -9,6 +10,8 @@ class LandingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -19,7 +22,11 @@ class LandingPage extends StatelessWidget {
             _buildValueProposition(context),
             _buildPricingSection(context),
             _buildTestimonialsSection(context),
-            _buildFooter(context),
+                        // Footer
+            CommonFooter(
+              isSmallScreen: screenWidth < 768,
+              showLinks: true,
+            ),
           ],
         ),
       ),
@@ -635,73 +642,6 @@ class LandingPage extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-
-  Widget _buildFooter(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(20),
-      color: const Color(0xFF1A1E3F),
-      child: Column(
-        children: [
-          const SizedBox(height: 40),
-          // Centered title without logo
-          Text(
-            'Uriel Academy',
-            style: AppStyles.brandNameDark(fontSize: 22),
-          ),
-          const SizedBox(height: 24),
-          Text(
-            'Empowering Ghanaian students to excel in BECE & WASSCE',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 16,
-              color: Colors.white.withOpacity(0.8),
-            ),
-          ),
-          const SizedBox(height: 32),
-          // Contact Info
-          Wrap(
-            spacing: 32,
-            runSpacing: 16,
-            alignment: WrapAlignment.center,
-            children: [
-              _buildFooterLink('About Us', () => Navigator.pushNamed(context, '/about')),
-              _buildFooterLink('Contact', () => Navigator.pushNamed(context, '/contact')),
-              _buildFooterLink('Privacy Policy', () => Navigator.pushNamed(context, '/privacy')),
-              _buildFooterLink('Terms of Service', () => Navigator.pushNamed(context, '/terms')),
-              _buildFooterLink('FAQ', () => Navigator.pushNamed(context, '/faq')),
-            ],
-          ),
-          const SizedBox(height: 32),
-          Divider(color: Colors.white.withOpacity(0.2)),
-          const SizedBox(height: 16),
-          Text(
-            '© 2025 Uriel Academy. Built with ❤️ for Ghanaian students.',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 14,
-              color: Colors.white.withOpacity(0.6),
-            ),
-          ),
-          const SizedBox(height: 20),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildFooterLink(String text, VoidCallback onTap) {
-    return InkWell(
-      onTap: onTap,
-      child: Text(
-        text,
-        style: TextStyle(
-          fontSize: 14,
-          color: Colors.white.withOpacity(0.8),
-          fontWeight: FontWeight.w500,
-        ),
       ),
     );
   }

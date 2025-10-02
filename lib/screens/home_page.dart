@@ -7,6 +7,7 @@ import 'past_questions_search_page.dart';
 import 'textbooks_page.dart';
 import 'mock_exams_page.dart';
 import 'trivia_page.dart';
+import 'student_profile_page.dart';
 
 class StudentHomePage extends StatefulWidget {
   const StudentHomePage({super.key});
@@ -21,7 +22,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   late Animation<double> _fadeAnimation;
   
   int _selectedIndex = 0;
-  bool _isDarkMode = false;
+  bool _showingProfile = false;
   
   // User progress data (would come from Firestore in real app)
   String userName = "Alex";
@@ -67,21 +68,55 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     final user = FirebaseAuth.instance.currentUser;
     if (user != null) {
       try {
+        // Set a timeout for the Firestore operation
         final userDoc = await FirebaseFirestore.instance
             .collection('users')
             .doc(user.uid)
-            .get();
+            .get()
+            .timeout(
+              const Duration(seconds: 5),
+              onTimeout: () {
+                throw Exception('Connection timeout');
+              },
+            );
+        
         if (userDoc.exists) {
           final data = userDoc.data() as Map<String, dynamic>;
           setState(() {
-            userName = data['firstName'] ?? user.displayName?.split(' ').first ?? 'Student';
+            userName = data['firstName'] ?? user.displayName?.split(' ').first ?? _getNameFromEmail(user.email);
+          });
+        } else {
+          setState(() {
+            userName = user.displayName?.split(' ').first ?? _getNameFromEmail(user.email);
           });
         }
       } catch (e) {
-        // Handle error silently or show user-friendly message
-        print('Error loading user data: $e');
+        // Handle offline or connection errors gracefully
+        setState(() {
+          userName = user.displayName?.split(' ').first ?? _getNameFromEmail(user.email);
+        });
+        
+        // Only log the error, don't show it to the user
+        print('Unable to load user data (offline or connection issue): $e');
+        
+        // Optionally, you could show a subtle indicator that the app is offline
+        // but don't interrupt the user experience with error dialogs
       }
+    } else {
+      // Set default name when no user is logged in
+      setState(() {
+        userName = 'Student';
+      });
     }
+  }
+  
+  String _getNameFromEmail(String? email) {
+    if (email == null) return 'Student';
+    final emailPart = email.split('@').first;
+    if (emailPart.length >= 5) {
+      return emailPart.substring(0, 5);
+    }
+    return emailPart;
   }
 
   @override
@@ -93,7 +128,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       animation: _fadeAnimation,
       builder: (context, child) {
         return Scaffold(
-          backgroundColor: _isDarkMode ? const Color(0xFF0D1117) : const Color(0xFFF8FAFE),
+          backgroundColor: const Color(0xFFF8FAFE),
           body: SafeArea(
             child: isSmallScreen 
                 ? Column(
@@ -103,16 +138,18 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                       
                       // Mobile Content
                       Expanded(
-                        child: IndexedStack(
-                          index: _selectedIndex,
-                          children: [
-                            _buildDashboard(),
-                            _buildQuestionsPage(),
-                            _buildTextbooksPage(),
-                            _buildMockExamsPage(),
-                            _buildTriviaPage(),
-                          ],
-                        ),
+                        child: _showingProfile 
+                            ? const StudentProfilePage()
+                            : IndexedStack(
+                                index: _selectedIndex,
+                                children: [
+                                  _buildDashboard(),
+                                  _buildQuestionsPage(),
+                                  _buildTextbooksPage(),
+                                  _buildMockExamsPage(),
+                                  _buildTriviaPage(),
+                                ],
+                              ),
                       ),
                     ],
                   )
@@ -130,16 +167,18 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                             
                             // Desktop Content Area
                             Expanded(
-                              child: IndexedStack(
-                                index: _selectedIndex,
-                                children: [
-                                  _buildDashboard(),
-                                  _buildQuestionsPage(),
-                                  _buildTextbooksPage(),
-                                  _buildMockExamsPage(),
-                                  _buildTriviaPage(),
-                                ],
-                              ),
+                              child: _showingProfile 
+                                  ? const StudentProfilePage()
+                                  : IndexedStack(
+                                      index: _selectedIndex,
+                                      children: [
+                                        _buildDashboard(),
+                                        _buildQuestionsPage(),
+                                        _buildTextbooksPage(),
+                                        _buildMockExamsPage(),
+                                        _buildTriviaPage(),
+                                      ],
+                                    ),
                             ),
                           ],
                         ),
@@ -159,7 +198,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       decoration: BoxDecoration(
-        color: _isDarkMode ? const Color(0xFF161B22) : Colors.white,
+        color: Colors.white,
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.05),
@@ -181,7 +220,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           // Search Icon for mobile
           Container(
             decoration: BoxDecoration(
-              color: (_isDarkMode ? Colors.grey[800] : Colors.grey[100]),
+              color: Colors.grey[100],
               borderRadius: BorderRadius.circular(8),
             ),
             child: IconButton(
@@ -243,7 +282,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     return Container(
       width: 280,
       decoration: BoxDecoration(
-        color: _isDarkMode ? const Color(0xFF161B22) : Colors.white,
+        color: Colors.white,
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.05),
@@ -261,55 +300,60 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               'Uriel Academy',
               style: AppStyles.brandNameStyle(
                 fontSize: 20,
-                isDark: _isDarkMode,
               ),
             ),
           ),
           
           // User Profile Card
-          Container(
-            margin: const EdgeInsets.symmetric(horizontal: 16),
-            padding: const EdgeInsets.all(16),
-            decoration: BoxDecoration(
-              color: const Color(0xFF1A1E3F).withOpacity(0.05),
-              borderRadius: BorderRadius.circular(16),
-              border: Border.all(
-                color: const Color(0xFF1A1E3F).withOpacity(0.1),
+          GestureDetector(
+            onTap: () => setState(() {
+              _showingProfile = !_showingProfile;
+              if (_showingProfile) _selectedIndex = 0; // Reset to dashboard when returning
+            }),
+            child: Container(
+              margin: const EdgeInsets.symmetric(horizontal: 16),
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: const Color(0xFF1A1E3F).withOpacity(0.05),
+                borderRadius: BorderRadius.circular(16),
+                border: Border.all(
+                  color: const Color(0xFF1A1E3F).withOpacity(0.1),
+                ),
               ),
-            ),
-            child: Row(
-              children: [
-                CircleAvatar(
-                  radius: 20,
-                  backgroundColor: const Color(0xFF1A1E3F),
-                  child: Text(
-                    userName[0].toUpperCase(),
-                    style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              child: Row(
+                children: [
+                  CircleAvatar(
+                    radius: 20,
+                    backgroundColor: const Color(0xFF1A1E3F),
+                    child: Text(
+                      userName[0].toUpperCase(),
+                      style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
                   ),
-                ),
-                const SizedBox(width: 12),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        userName,
-                        style: GoogleFonts.montserrat(
-                          fontWeight: FontWeight.w600,
-                          color: _isDarkMode ? Colors.white : const Color(0xFF1A1E3F),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          userName,
+                          style: GoogleFonts.montserrat(
+                            fontWeight: FontWeight.w600,
+                            color: const Color(0xFF1A1E3F),
+                          ),
                         ),
-                      ),
-                      Text(
-                        'JHS Form 3 Student',
-                        style: GoogleFonts.montserrat(
-                          fontSize: 12,
-                          color: Colors.grey[600],
+                        Text(
+                          'JHS Form 3 Student',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 12,
+                            color: Colors.grey[600],
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           
@@ -346,24 +390,6 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             child: Column(
               children: [
                 ListTile(
-                  leading: Icon(
-                    _isDarkMode ? Icons.light_mode : Icons.dark_mode,
-                    color: Colors.grey[600],
-                  ),
-                  title: Text(
-                    _isDarkMode ? 'Light Mode' : 'Dark Mode',
-                    style: GoogleFonts.montserrat(
-                      fontSize: 14,
-                      color: Colors.grey[600],
-                    ),
-                  ),
-                  trailing: Switch(
-                    value: _isDarkMode,
-                    onChanged: (value) => setState(() => _isDarkMode = value),
-                    activeColor: const Color(0xFFD62828),
-                  ),
-                ),
-                ListTile(
                   leading: Icon(Icons.logout, color: Colors.grey[600]),
                   title: Text(
                     'Sign Out',
@@ -396,13 +422,16 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
             color: isSelected 
                 ? const Color(0xFFD62828)
-                : (_isDarkMode ? Colors.grey[300] : Colors.grey[700]),
+                : Colors.grey[700],
           ),
         ),
         selected: isSelected,
         selectedTileColor: const Color(0xFFD62828).withOpacity(0.1),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-        onTap: isMainNav ? () => setState(() => _selectedIndex = index) : () => _showComingSoon(title),
+        onTap: isMainNav ? () => setState(() {
+          _selectedIndex = index;
+          _showingProfile = false; // Close profile when switching tabs
+        }) : () => _showComingSoon(title),
       ),
     );
   }
@@ -412,7 +441,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     
     return Container(
       decoration: BoxDecoration(
-        color: _isDarkMode ? const Color(0xFF161B22) : Colors.white,
+        color: Colors.white,
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.1),
@@ -427,7 +456,10 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         children: List.generate(tabs.length, (index) {
           final isSelected = _selectedIndex == index;
           return GestureDetector(
-            onTap: () => setState(() => _selectedIndex = index),
+            onTap: () => setState(() {
+              _selectedIndex = index;
+              _showingProfile = false; // Close profile when switching tabs
+            }),
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
               decoration: BoxDecoration(
@@ -443,7 +475,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
                   color: isSelected 
                       ? const Color(0xFFD62828)
-                      : (_isDarkMode ? Colors.grey[400] : Colors.grey[600]),
+                      : Colors.grey[600],
                 ),
               ),
             ),
@@ -463,7 +495,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         vertical: 16,
       ),
       decoration: BoxDecoration(
-        color: _isDarkMode ? const Color(0xFF161B22) : Colors.white,
+        color: Colors.white,
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.05),
@@ -488,7 +520,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             child: Container(
               height: 45,
               decoration: BoxDecoration(
-                color: (_isDarkMode ? Colors.grey[800] : Colors.grey[100]),
+                color: Colors.grey[100],
                 borderRadius: BorderRadius.circular(12),
               ),
               child: TextField(
@@ -571,11 +603,11 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Welcome back, $userName! 👋',
+                  'Welcome back, $userName!',
                   style: GoogleFonts.playfairDisplay(
                     fontSize: isSmallScreen ? 22 : 28,
                     fontWeight: FontWeight.bold,
-                    color: _isDarkMode ? Colors.white : const Color(0xFF1A1E3F),
+                    color: const Color(0xFF1A1E3F),
                   ),
                 ),
                 const SizedBox(height: 8),
@@ -949,7 +981,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: _isDarkMode ? const Color(0xFF161B22) : Colors.white,
+        color: Colors.white,
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
@@ -970,7 +1002,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                 style: GoogleFonts.playfairDisplay(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
-                  color: _isDarkMode ? Colors.white : const Color(0xFF1A1E3F),
+                  color: const Color(0xFF1A1E3F),
                 ),
               ),
               TextButton(
@@ -1004,7 +1036,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                 subject.name,
                 style: GoogleFonts.montserrat(
                   fontWeight: FontWeight.w500,
-                  color: _isDarkMode ? Colors.white : Colors.black87,
+                  color: Colors.black87,
                 ),
               ),
               Text(
@@ -1032,7 +1064,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: _isDarkMode ? const Color(0xFF161B22) : Colors.white,
+        color: Colors.white,
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
@@ -1050,7 +1082,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             style: GoogleFonts.playfairDisplay(
               fontSize: 18,
               fontWeight: FontWeight.bold,
-              color: _isDarkMode ? Colors.white : const Color(0xFF1A1E3F),
+              color: const Color(0xFF1A1E3F),
             ),
           ),
           const SizedBox(height: 16),
@@ -1102,7 +1134,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   title,
                   style: GoogleFonts.montserrat(
                     fontWeight: FontWeight.w600,
-                    color: _isDarkMode ? Colors.white : Colors.black87,
+                    color: Colors.black87,
                   ),
                 ),
                 Text(
@@ -1124,7 +1156,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: _isDarkMode ? const Color(0xFF161B22) : Colors.white,
+        color: Colors.white,
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
@@ -1142,7 +1174,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             style: GoogleFonts.playfairDisplay(
               fontSize: 18,
               fontWeight: FontWeight.bold,
-              color: _isDarkMode ? Colors.white : const Color(0xFF1A1E3F),
+              color: const Color(0xFF1A1E3F),
             ),
           ),
           const SizedBox(height: 16),
@@ -1174,7 +1206,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             value,
             style: GoogleFonts.montserrat(
               fontWeight: FontWeight.bold,
-              color: _isDarkMode ? Colors.white : const Color(0xFF1A1E3F),
+              color: const Color(0xFF1A1E3F),
             ),
           ),
         ],
@@ -1186,7 +1218,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: _isDarkMode ? const Color(0xFF161B22) : Colors.white,
+        color: Colors.white,
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
@@ -1204,7 +1236,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             style: GoogleFonts.playfairDisplay(
               fontSize: 18,
               fontWeight: FontWeight.bold,
-              color: _isDarkMode ? Colors.white : const Color(0xFF1A1E3F),
+              color: const Color(0xFF1A1E3F),
             ),
           ),
           const SizedBox(height: 16),
@@ -1235,7 +1267,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               title,
               style: GoogleFonts.montserrat(
                 fontWeight: FontWeight.w500,
-                color: _isDarkMode ? Colors.white : Colors.black87,
+                color: Colors.black87,
               ),
             ),
           ),
@@ -1256,7 +1288,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: _isDarkMode ? const Color(0xFF161B22) : Colors.white,
+        color: Colors.white,
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
@@ -1274,7 +1306,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             style: GoogleFonts.playfairDisplay(
               fontSize: 18,
               fontWeight: FontWeight.bold,
-              color: _isDarkMode ? Colors.white : const Color(0xFF1A1E3F),
+              color: const Color(0xFF1A1E3F),
             ),
           ),
           const SizedBox(height: 16),
@@ -1306,7 +1338,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               label,
               style: GoogleFonts.montserrat(
                 fontWeight: FontWeight.w500,
-                color: _isDarkMode ? Colors.white : Colors.black87,
+                color: Colors.black87,
               ),
             ),
             const Spacer(),
@@ -1321,7 +1353,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: _isDarkMode ? const Color(0xFF161B22) : Colors.white,
+        color: Colors.white,
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
@@ -1339,7 +1371,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             style: GoogleFonts.playfairDisplay(
               fontSize: 18,
               fontWeight: FontWeight.bold,
-              color: _isDarkMode ? Colors.white : const Color(0xFF1A1E3F),
+              color: const Color(0xFF1A1E3F),
             ),
           ),
           const SizedBox(height: 16),
@@ -1390,7 +1422,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             style: GoogleFonts.montserrat(
               fontSize: 12,
               fontWeight: FontWeight.w600,
-              color: _isDarkMode ? Colors.white : Colors.black87,
+              color: Colors.black87,
             ),
           ),
         ],

@@ -194,6 +194,7 @@ class _TriviaPageState extends State<TriviaPage>
                       ),
                       child: TextField(
                         controller: _searchController,
+                        style: TextStyle(color: Colors.black),
                         decoration: InputDecoration(
                           hintText: 'Search trivia challenges, topics...',
                           hintStyle: GoogleFonts.montserrat(

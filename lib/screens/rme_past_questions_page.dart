@@ -26,15 +26,23 @@ class _RMEPastQuestionsPageState extends State<RMEPastQuestionsPage> {
   Future<void> _loadQuestions() async {
     setState(() => _isLoading = true);
     try {
-      final questions = await StorageService.getBECERMEQuestions();
+      final questions = await StorageService.getBECERMEQuestions().timeout(
+        const Duration(seconds: 5),
+        onTimeout: () => <PastQuestion>[],
+      );
       setState(() {
         _questions = questions;
         _filteredQuestions = questions;
         _isLoading = false;
       });
     } catch (e) {
-      setState(() => _isLoading = false);
-      _showErrorSnackBar('Failed to load RME questions: $e');
+      // Silent fallback - don't show error to user
+      print('RME questions loading error (handled gracefully): $e');
+      setState(() {
+        _questions = [];
+        _filteredQuestions = [];
+        _isLoading = false;
+      });
     }
   }
 

@@ -42,9 +42,11 @@ class _SignUpPageState extends State<SignUpPage> {
   final TextEditingController teacherSchoolController = TextEditingController();
   final TextEditingController yearsExperienceController = TextEditingController();
   final TextEditingController teacherIdController = TextEditingController();
+  final TextEditingController teacherInstitutionCodeController = TextEditingController();
   
   // School specific controllers
   final TextEditingController contactPersonController = TextEditingController();
+  final TextEditingController schoolInstitutionCodeController = TextEditingController();
   final TextEditingController positionController = TextEditingController();
   final TextEditingController schoolEmailController = TextEditingController();
   final TextEditingController schoolPhoneController = TextEditingController();
@@ -86,7 +88,9 @@ class _SignUpPageState extends State<SignUpPage> {
     teacherSchoolController.dispose();
     yearsExperienceController.dispose();
     teacherIdController.dispose();
+    teacherInstitutionCodeController.dispose();
     contactPersonController.dispose();
+    schoolInstitutionCodeController.dispose();
     positionController.dispose();
     schoolEmailController.dispose();
     schoolPhoneController.dispose();
@@ -790,6 +794,19 @@ class _SignUpPageState extends State<SignUpPage> {
           return null;
         },
       ),
+      const SizedBox(height: 20),
+      _buildTextField(
+        controller: teacherInstitutionCodeController,
+        label: 'Institution Code',
+        hint: 'Enter your institution code',
+        icon: Icons.code_outlined,
+        validator: (value) {
+          if (value == null || value.isEmpty) {
+            return 'Institution code is required';
+          }
+          return null;
+        },
+      ),
     ];
   }
 
@@ -833,6 +850,19 @@ class _SignUpPageState extends State<SignUpPage> {
         validator: (value) {
           if (value == null || value.isEmpty) {
             return 'Contact person is required';
+          }
+          return null;
+        },
+      ),
+      const SizedBox(height: 20),
+      _buildTextField(
+        controller: schoolInstitutionCodeController,
+        label: 'Institution Code',
+        hint: 'Enter your institution code',
+        icon: Icons.code_outlined,
+        validator: (value) {
+          if (value == null || value.isEmpty) {
+            return 'Institution code is required';
           }
           return null;
         },
@@ -1431,6 +1461,7 @@ class _SignUpPageState extends State<SignUpPage> {
           phoneNumber: phoneController.text.trim(),
           schoolName: teacherSchoolController.text.trim(),
           teachingGrade: selectedTeachingClasses.isNotEmpty ? selectedTeachingClasses.first : null,
+          institutionCode: teacherInstitutionCodeController.text.trim(),
         );
         break;
         
@@ -1442,6 +1473,7 @@ class _SignUpPageState extends State<SignUpPage> {
           contactPersonName: contactPersonController.text.trim(),
           phoneNumber: phoneController.text.trim(),
           region: selectedRegion!,
+          institutionCode: schoolInstitutionCodeController.text.trim(),
         );
         break;
     }

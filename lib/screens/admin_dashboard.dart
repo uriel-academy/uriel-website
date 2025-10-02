@@ -771,15 +771,6 @@ class _AdminDashboardState extends State<AdminDashboard> {
               ),
             ),
             ListTile(
-              leading: const Icon(Icons.dark_mode),
-              title: const Text('Dark Mode'),
-              trailing: Switch(
-                value: false,
-                onChanged: (value) {},
-                activeColor: const Color(0xFF1A1E3F),
-              ),
-            ),
-            ListTile(
               leading: const Icon(Icons.language),
               title: const Text('Language'),
               trailing: const Text('English'),

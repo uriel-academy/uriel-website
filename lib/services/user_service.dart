@@ -173,6 +173,7 @@ class UserService {
     List<String>? subjects,
     int? yearsExperience,
     String? teacherId,
+    String? institutionCode,
   }) async {
     try {
       final teacherData = {
@@ -184,6 +185,7 @@ class UserService {
         'subjects': subjects ?? [],
         'yearsExperience': yearsExperience,
         'teacherId': teacherId,
+        'institutionCode': institutionCode,
         'role': UserRole.teacher.name,
         'createdAt': FieldValue.serverTimestamp(),
         'lastLoginAt': FieldValue.serverTimestamp(),
@@ -243,6 +245,7 @@ class UserService {
     String? address,
     int? studentCount,
     int? teacherCount,
+    String? institutionCode,
   }) async {
     try {
       final schoolData = {
@@ -255,6 +258,7 @@ class UserService {
         'address': address,
         'studentCount': studentCount,
         'teacherCount': teacherCount,
+        'institutionCode': institutionCode,
         'role': UserRole.school.name,
         'createdAt': FieldValue.serverTimestamp(),
         'lastLoginAt': FieldValue.serverTimestamp(),

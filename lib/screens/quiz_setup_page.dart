@@ -184,11 +184,11 @@ class _QuizSetupPageState extends State<QuizSetupPage> {
               ),
               flexibleSpace: FlexibleSpaceBar(
                 background: Container(
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     gradient: LinearGradient(
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
-                      colors: [Colors.white, Color(0xFFF8FAFE)],
+                      colors: [Colors.white, const Color(0xFFF8FAFE)],
                     ),
                   ),
                 ),
@@ -344,6 +344,7 @@ class _QuizSetupPageState extends State<QuizSetupPage> {
   ) {
     return Card(
       elevation: 4,
+      color: Colors.white,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       child: Padding(
         padding: EdgeInsets.all(isMobile ? 16 : 20),
@@ -400,14 +401,19 @@ class _QuizSetupPageState extends State<QuizSetupPage> {
               ),
               hint: Text(
                 'Select $title',
-                style: GoogleFonts.montserrat(color: Colors.grey[600]),
+                style: GoogleFonts.montserrat(
+                  color: Colors.grey[600],
+                ),
               ),
+              dropdownColor: Colors.white,
               items: options.map((option) {
                 return DropdownMenuItem(
                   value: option,
                   child: Text(
                     option,
-                    style: GoogleFonts.montserrat(),
+                    style: GoogleFonts.montserrat(
+                      color: Colors.black,
+                    ),
                   ),
                 );
               }).toList(),
@@ -422,6 +428,7 @@ class _QuizSetupPageState extends State<QuizSetupPage> {
   Widget _buildOptionsCard(bool isMobile) {
     return Card(
       elevation: 4,
+      color: Colors.white,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       child: Padding(
         padding: EdgeInsets.all(isMobile ? 16 : 20),
@@ -485,11 +492,17 @@ class _QuizSetupPageState extends State<QuizSetupPage> {
             SwitchListTile(
               title: Text(
                 'Practice Mode',
-                style: GoogleFonts.montserrat(fontWeight: FontWeight.w500),
+                style: GoogleFonts.montserrat(
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black,
+                ),
               ),
               subtitle: Text(
                 'Show explanations after each question',
-                style: GoogleFonts.montserrat(fontSize: 12, color: Colors.grey[600]),
+                style: GoogleFonts.montserrat(
+                  fontSize: 12, 
+                  color: Colors.grey[600],
+                ),
               ),
               value: isPracticeMode,
               onChanged: (value) => setState(() => isPracticeMode = value),
@@ -500,11 +513,17 @@ class _QuizSetupPageState extends State<QuizSetupPage> {
             SwitchListTile(
               title: Text(
                 'Randomize Questions',
-                style: GoogleFonts.montserrat(fontWeight: FontWeight.w500),
+                style: GoogleFonts.montserrat(
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black,
+                ),
               ),
               subtitle: Text(
                 'Questions will appear in random order',
-                style: GoogleFonts.montserrat(fontSize: 12, color: Colors.grey[600]),
+                style: GoogleFonts.montserrat(
+                  fontSize: 12, 
+                  color: Colors.grey[600],
+                ),
               ),
               value: randomizeQuestions,
               onChanged: (value) => setState(() => randomizeQuestions = value),
@@ -519,6 +538,7 @@ class _QuizSetupPageState extends State<QuizSetupPage> {
   Widget _buildInfoCard(bool isMobile) {
     return Card(
       elevation: 4,
+      color: Colors.white,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       child: Padding(
         padding: EdgeInsets.all(isMobile ? 16 : 20),

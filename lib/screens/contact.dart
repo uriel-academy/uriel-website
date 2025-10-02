@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../constants/app_styles.dart';
+import '../widgets/common_footer.dart';
 import 'sign_up.dart';
 
 class ContactPage extends StatefulWidget {
@@ -132,7 +133,10 @@ class _ContactPageState extends State<ContactPage> with TickerProviderStateMixin
             _buildFAQSection(isSmallScreen),
             
             // Footer
-            _buildFooter(isSmallScreen),
+            CommonFooter(
+              isSmallScreen: isSmallScreen,
+              showLinks: false,
+            ),
           ],
         ),
       ),
@@ -808,36 +812,6 @@ class _ContactPageState extends State<ContactPage> with TickerProviderStateMixin
                 height: 1.6,
               ),
             ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildFooter(bool isSmallScreen) {
-    return Container(
-      width: double.infinity,
-      padding: EdgeInsets.symmetric(
-        horizontal: isSmallScreen ? 16 : 32,
-        vertical: isSmallScreen ? 24 : 32,
-      ),
-      color: const Color(0xFF1A1E3F),
-      child: Column(
-        children: [
-          Text(
-            'Uriel Academy',
-            style: AppStyles.brandNameDark(fontSize: isSmallScreen ? 18 : 20),
-          ),
-          
-          SizedBox(height: isSmallScreen ? 12 : 16),
-          
-          Text(
-            '© 2025 Uriel Academy. Built with ❤️ for Ghanaian students.',
-            style: GoogleFonts.montserrat(
-              fontSize: isSmallScreen ? 12 : 14,
-              color: Colors.white.withOpacity(0.7),
-            ),
-            textAlign: TextAlign.center,
           ),
         ],
       ),

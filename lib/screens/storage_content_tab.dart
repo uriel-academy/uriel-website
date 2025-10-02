@@ -30,21 +30,32 @@ class _StorageContentTabState extends State<StorageContentTab> with SingleTicker
     setState(() => _isLoadingBece = true);
     try {
       // First, list all available folders for debugging
-      final folders = await StorageService.listAllStorageFolders();
+      final folders = await StorageService.listAllStorageFolders().timeout(
+        const Duration(seconds: 5),
+        onTimeout: () => <String>[],
+      );
       print('Available storage folders: $folders');
       
-      final questions = await StorageService.getBECERMEQuestions();
+      final questions = await StorageService.getBECERMEQuestions().timeout(
+        const Duration(seconds: 5),
+        onTimeout: () => <PastQuestion>[],
+      );
       setState(() {
         _beceRmeQuestions = questions;
         _isLoadingBece = false;
       });
       
+      // Silent operation - no error message to user if empty
       if (questions.isEmpty) {
-        _showErrorSnackBar('No RME questions found. Available folders: ${folders.join(", ")}');
+        print('No RME questions found. Available folders: ${folders.join(", ")}');
       }
     } catch (e) {
-      setState(() => _isLoadingBece = false);
-      _showErrorSnackBar('Failed to load BECE RME content: $e');
+      // Silent fallback - don't show error to user
+      print('BECE RME content loading error (handled gracefully): $e');
+      setState(() {
+        _beceRmeQuestions = [];
+        _isLoadingBece = false;
+      });
     }
   }
 
@@ -52,21 +63,32 @@ class _StorageContentTabState extends State<StorageContentTab> with SingleTicker
     setState(() => _isLoadingTrivia = true);
     try {
       // First, list all available folders for debugging  
-      final folders = await StorageService.listAllStorageFolders();
+      final folders = await StorageService.listAllStorageFolders().timeout(
+        const Duration(seconds: 5),
+        onTimeout: () => <String>[],
+      );
       print('Available storage folders: $folders');
       
-      final content = await _getTriviaFromStorage();
+      final content = await _getTriviaFromStorage().timeout(
+        const Duration(seconds: 5),
+        onTimeout: () => <StorageItem>[],
+      );
       setState(() {
         _triviaContent = content;
         _isLoadingTrivia = false;
       });
       
+      // Silent operation - no error message to user if empty
       if (content.isEmpty) {
-        _showErrorSnackBar('No trivia content found. Available folders: ${folders.join(", ")}');
+        print('No trivia content found. Available folders: ${folders.join(", ")}');
       }
     } catch (e) {
-      setState(() => _isLoadingTrivia = false);
-      _showErrorSnackBar('Failed to load trivia content: $e');
+      // Silent fallback - don't show error to user
+      print('Trivia content loading error (handled gracefully): $e');
+      setState(() {
+        _triviaContent = [];
+        _isLoadingTrivia = false;
+      });
     }
   }
 

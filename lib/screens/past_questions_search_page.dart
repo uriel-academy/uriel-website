@@ -53,11 +53,20 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
   Future<void> _loadInitialData() async {
     setState(() => _isLoading = true);
     try {
-      // Load database questions
-      final questions = await _questionService.getQuestions();
+      // Load database questions with timeout
+      final questionsTask = _questionService.getQuestions().timeout(
+        const Duration(seconds: 5),
+        onTimeout: () => <Question>[],
+      );
       
-      // Load storage questions (RME and others)
-      final storageQuestions = await StorageService.getAllPastQuestions();
+      // Load storage questions (RME and others) with timeout  
+      final storageQuestionsTask = StorageService.getAllPastQuestions().timeout(
+        const Duration(seconds: 5),
+        onTimeout: () => <PastQuestion>[],
+      );
+      
+      final questions = await questionsTask;
+      final storageQuestions = await storageQuestionsTask;
       
       setState(() {
         _questions = questions;
@@ -66,19 +75,15 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
         _isLoading = false;
       });
     } catch (e) {
-      setState(() => _isLoading = false);
-      _showErrorSnackBar('Failed to load questions: $e');
+      // Silent fallback - don't show error to user
+      print('Questions loading error (handled gracefully): $e');
+      setState(() {
+        _questions = [];
+        _storageQuestions = [];
+        _filteredQuestions = [];
+        _isLoading = false;
+      });
     }
-  }
-
-  void _showErrorSnackBar(String message) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(message),
-        backgroundColor: Colors.red,
-        behavior: SnackBarBehavior.floating,
-      ),
-    );
   }
 
   void _applyFilters() {
@@ -172,6 +177,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
     final isSmallScreen = screenWidth < 768;
+
     
     return Scaffold(
       backgroundColor: const Color(0xFFF8F9FA),
@@ -304,7 +310,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
                           _searchController.clear();
                           _applyFilters();
                         },
-                        icon: const Icon(Icons.clear),
+                        icon: Icon(Icons.clear, color: Colors.grey[600]),
                       )
                     : null,
                 border: InputBorder.none,
@@ -1479,6 +1485,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
           preselectedSubject: _mapSubjectToString(question.subject),
           preselectedExamType: _mapExamTypeToString(question.examType),
           preselectedLevel: 'JHS 3',
+          
         ),
       ),
     );
