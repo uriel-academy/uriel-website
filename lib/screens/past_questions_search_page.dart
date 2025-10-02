@@ -4,6 +4,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import '../models/question_model.dart';
 import '../services/question_service.dart';
 import '../services/storage_service.dart';
+import 'quiz_setup_page.dart';
+import 'question_detail_page.dart';
 
 class PastQuestionsSearchPage extends StatefulWidget {
   const PastQuestionsSearchPage({Key? key}) : super(key: key);
@@ -93,10 +95,10 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
     }
     
     if (_selectedSubject != 'All Subjects') {
-      Subject subject = Subject.values.firstWhere(
-        (s) => s.name.toLowerCase().contains(_selectedSubject.toLowerCase()),
-      );
-      filtered = filtered.where((q) => q.subject == subject).toList();
+      Subject? subject = _getSubjectFromDisplayName(_selectedSubject);
+      if (subject != null) {
+        filtered = filtered.where((q) => q.subject == subject).toList();
+      }
     }
     
     if (_selectedYear != 'All Years') {
@@ -105,10 +107,27 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
     
     // Apply search text
     if (_searchController.text.isNotEmpty) {
-      filtered = filtered.where((q) => 
-        q.questionText.toLowerCase().contains(_searchController.text.toLowerCase()) ||
-        q.subject.name.toLowerCase().contains(_searchController.text.toLowerCase())
-      ).toList();
+      String searchTerm = _searchController.text.toLowerCase();
+      filtered = filtered.where((q) { 
+        // Search in question text
+        bool matchesQuestion = q.questionText.toLowerCase().contains(searchTerm);
+        
+        // Search in subject (both enum name and display name)
+        bool matchesSubject = q.subject.name.toLowerCase().contains(searchTerm) ||
+                             _mapSubjectToString(q.subject).toLowerCase().contains(searchTerm);
+        
+        // Search in year
+        bool matchesYear = q.year.toLowerCase().contains(searchTerm);
+        
+        // Search in exam type
+        bool matchesExamType = q.examType.name.toLowerCase().contains(searchTerm) ||
+                              _mapExamTypeToString(q.examType).toLowerCase().contains(searchTerm);
+        
+        // Search in topics
+        bool matchesTopics = q.topics.any((topic) => topic.toLowerCase().contains(searchTerm));
+        
+        return matchesQuestion || matchesSubject || matchesYear || matchesExamType || matchesTopics;
+      }).toList();
     }
     
     // Apply sorting
@@ -397,7 +416,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
               child: _buildFilterChip(
                 'Year',
                 _selectedYear,
-                ['All Years', '2024', '2023', '2022', '2021', '2020'],
+                ['All Years', '2024', '2023', '2022', '2021', '2020', '2019', '2018', '2017', '2016', '2015', '2014', '2013', '2012', '2011', '2010', '2009', '2008', '2007', '2006', '2005', '2004', '2003', '2002', '2001', '2000', '1999', '1998', '1997', '1996', '1995', '1994', '1993', '1992', '1991', '1990'],
                 (value) => setState(() => _selectedYear = value!),
                 Icons.calendar_today,
               ),
@@ -439,7 +458,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
           child: _buildFilterChip(
             'Year',
             _selectedYear,
-            ['All Years', '2024', '2023', '2022', '2021', '2020'],
+            ['All Years', '2024', '2023', '2022', '2021', '2020', '2019', '2018', '2017', '2016', '2015', '2014', '2013', '2012', '2011', '2010', '2009', '2008', '2007', '2006', '2005', '2004', '2003', '2002', '2001', '2000', '1999', '1998', '1997', '1996', '1995', '1994', '1993', '1992', '1991', '1990'],
             (value) => setState(() => _selectedYear = value!),
             Icons.calendar_today,
           ),
@@ -544,10 +563,11 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
 
   Widget _buildQuickActions(bool isSmallScreen) {
     final quickActions = [
-      {'label': 'BECE Questions', 'icon': Icons.school, 'color': const Color(0xFF2E7D32)},
-      {'label': 'WASSCE Questions', 'icon': Icons.workspace_premium, 'color': const Color(0xFF1565C0)},
-      {'label': 'Mock Tests', 'icon': Icons.timer, 'color': const Color(0xFFE65100)},
-      {'label': 'Recent Questions', 'icon': Icons.access_time, 'color': const Color(0xFF7B1FA2)},
+      {'label': 'Start Quiz', 'icon': Icons.play_circle_fill, 'color': const Color(0xFFD62828), 'action': 'quiz'},
+      {'label': 'BECE Questions', 'icon': Icons.school, 'color': const Color(0xFF2E7D32), 'action': 'bece'},
+      {'label': 'WASSCE Questions', 'icon': Icons.workspace_premium, 'color': const Color(0xFF1565C0), 'action': 'wassce'},
+      {'label': 'Mock Tests', 'icon': Icons.timer, 'color': const Color(0xFFE65100), 'action': 'mock'},
+      {'label': 'Recent Questions', 'icon': Icons.access_time, 'color': const Color(0xFF7B1FA2), 'action': 'recent'},
     ];
 
     return SingleChildScrollView(
@@ -557,14 +577,16 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
           return Container(
             margin: const EdgeInsets.only(right: 12),
             child: InkWell(
-              onTap: () => _applyQuickAction(action['label'] as String),
+              onTap: () => _applyQuickAction(action['action'] as String),
               child: Container(
                 padding: EdgeInsets.symmetric(
                   horizontal: isSmallScreen ? 12 : 16,
                   vertical: isSmallScreen ? 8 : 12,
                 ),
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: action['action'] == 'quiz' 
+                      ? (action['color'] as Color).withOpacity(0.1)
+                      : Colors.white,
                   borderRadius: BorderRadius.circular(20),
                   border: Border.all(color: action['color'] as Color),
                   boxShadow: [
@@ -603,23 +625,39 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
   }
 
   void _applyQuickAction(String actionType) {
-    setState(() {
-      switch (actionType) {
-        case 'BECE Questions':
+    switch (actionType) {
+      case 'quiz':
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => const QuizSetupPage(),
+          ),
+        );
+        break;
+      case 'bece':
+        setState(() {
           _selectedExamType = 'BECE';
-          break;
-        case 'WASSCE Questions':
+        });
+        _applyFilters();
+        break;
+      case 'wassce':
+        setState(() {
           _selectedExamType = 'WASSCE';
-          break;
-        case 'Mock Tests':
+        });
+        _applyFilters();
+        break;
+      case 'mock':
+        setState(() {
           _selectedExamType = 'Mock';
-          break;
-        case 'Recent Questions':
+        });
+        _applyFilters();
+        break;
+      case 'recent':
+        setState(() {
           _sortBy = 'Most Recent';
-          break;
-      }
-    });
-    _applyFilters();
+        });
+        _applyFilters();
+        break;
+    }
   }
 
   Widget _buildResultsHeader(bool isSmallScreen) {
@@ -941,8 +979,13 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
         Row(
           children: [
             Expanded(
-              child: ElevatedButton(
-                onPressed: () => _viewQuestion(question),
+              child: ElevatedButton.icon(
+                onPressed: () => _startQuizWithQuestion(question),
+                icon: const Icon(Icons.play_arrow, size: 16),
+                label: Text(
+                  'Start Quiz',
+                  style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
+                ),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFFD62828),
                   foregroundColor: Colors.white,
@@ -951,16 +994,12 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
                     borderRadius: BorderRadius.circular(8),
                   ),
                 ),
-                child: Text(
-                  'View Question',
-                  style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
-                ),
               ),
             ),
-            const SizedBox(width: 12),
+            const SizedBox(width: 8),
             Expanded(
               child: OutlinedButton(
-                onPressed: () => _practiceQuestion(question),
+                onPressed: () => _viewQuestion(question),
                 style: OutlinedButton.styleFrom(
                   foregroundColor: const Color(0xFFD62828),
                   side: const BorderSide(color: Color(0xFFD62828)),
@@ -970,7 +1009,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
                   ),
                 ),
                 child: Text(
-                  'Practice',
+                  'View',
                   style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
                 ),
               ),
@@ -1065,8 +1104,10 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
         // Right Section - Actions
         Column(
           children: [
-            ElevatedButton(
-              onPressed: () => _viewQuestion(question),
+            ElevatedButton.icon(
+              onPressed: () => _startQuizWithQuestion(question),
+              icon: const Icon(Icons.play_arrow, size: 16),
+              label: const Text('Start Quiz'),
               style: ElevatedButton.styleFrom(
                 backgroundColor: const Color(0xFFD62828),
                 foregroundColor: Colors.white,
@@ -1074,11 +1115,10 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
                   borderRadius: BorderRadius.circular(8),
                 ),
               ),
-              child: const Text('View Question'),
             ),
             const SizedBox(height: 8),
             OutlinedButton(
-              onPressed: () => _practiceQuestion(question),
+              onPressed: () => _viewQuestion(question),
               style: OutlinedButton.styleFrom(
                 foregroundColor: const Color(0xFFD62828),
                 side: const BorderSide(color: Color(0xFFD62828)),
@@ -1086,7 +1126,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
                   borderRadius: BorderRadius.circular(8),
                 ),
               ),
-              child: const Text('Practice'),
+              child: const Text('View'),
             ),
           ],
         ),
@@ -1431,11 +1471,93 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
     );
   }
 
+  void _startQuizWithQuestion(Question question) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => QuizSetupPage(
+          preselectedSubject: _mapSubjectToString(question.subject),
+          preselectedExamType: _mapExamTypeToString(question.examType),
+          preselectedLevel: 'JHS 3',
+        ),
+      ),
+    );
+  }
+  
+  String _mapSubjectToString(Subject subject) {
+    switch (subject) {
+      case Subject.religiousMoralEducation:
+        return 'Religious and Moral Education';
+      case Subject.mathematics:
+        return 'Mathematics';
+      case Subject.english:
+        return 'English Language';
+      case Subject.integratedScience:
+        return 'Science';
+      case Subject.socialStudies:
+        return 'Social Studies';
+      case Subject.ict:
+        return 'Information Technology';
+      case Subject.creativeArts:
+        return 'Creative Arts';
+      case Subject.french:
+        return 'French';
+      case Subject.ghanaianLanguage:
+        return 'Twi';
+      default:
+        return 'Religious and Moral Education';
+    }
+  }
+  
+  String _mapExamTypeToString(ExamType examType) {
+    switch (examType) {
+      case ExamType.bece:
+        return 'BECE';
+      case ExamType.wassce:
+        return 'WASSCE';
+      case ExamType.mock:
+        return 'Mock Exam';
+      case ExamType.practice:
+        return 'Practice Questions';
+      default:
+        return 'BECE';
+    }
+  }
+
+  Subject? _getSubjectFromDisplayName(String displayName) {
+    switch (displayName.toLowerCase()) {
+      case 'mathematics':
+        return Subject.mathematics;
+      case 'english':
+        return Subject.english;
+      case 'science':
+      case 'integrated science':
+        return Subject.integratedScience;
+      case 'rme':
+      case 'religious and moral education':
+        return Subject.religiousMoralEducation;
+      case 'social studies':
+        return Subject.socialStudies;
+      case 'ghanaian language':
+        return Subject.ghanaianLanguage;
+      case 'french':
+        return Subject.french;
+      case 'ict':
+        return Subject.ict;
+      case 'creative arts':
+        return Subject.creativeArts;
+      case 'trivia':
+        return Subject.trivia;
+      default:
+        return null;
+    }
+  }
+
   void _practiceQuestion(Question question) {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => PracticeQuestionPage(question: question),
+        builder: (context) => QuestionDetailPage(question: question),
       ),
     );
   }
@@ -1451,34 +1573,5 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
     _animationController.dispose();
     _searchController.dispose();
     super.dispose();
-  }
-}
-
-// Placeholder pages for navigation
-class QuestionDetailPage extends StatelessWidget {
-  final Question question;
-
-  const QuestionDetailPage({Key? key, required this.question}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Question Details')),
-      body: const Center(child: Text('Question detail view will be implemented here')),
-    );
-  }
-}
-
-class PracticeQuestionPage extends StatelessWidget {
-  final Question question;
-
-  const PracticeQuestionPage({Key? key, required this.question}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Practice Question')),
-      body: const Center(child: Text('Practice mode will be implemented here')),
-    );
   }
 }
