@@ -84,10 +84,51 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
       print('📚 Loaded ${rmeQuestions.length} RME questions specifically');
       print('📁 Loaded ${storageQuestions.length} storage questions');
       
+      // Merge database questions with RME questions and storage questions so searches can find all
+      final mergedQuestions = <Question>[];
+
+      // Add database questions
+      mergedQuestions.addAll(questions);
+
+      // Add RME questions from Firestore (avoid duplicates)
+      for (final q in rmeQuestions) {
+        if (!mergedQuestions.any((existing) => existing.id == q.id)) {
+          mergedQuestions.add(q);
+        }
+      }
+
+      // Convert storage PastQuestion entries into Question-lite objects for display/search
+      for (final p in storageQuestions) {
+        // Convert storage PastQuestion to an in-memory Question for search/display
+        final storageAsQuestion = Question(
+          id: 'storage_${p.id}',
+          questionText: p.title,
+          type: QuestionType.essay,
+          subject: Subject.religiousMoralEducation,
+          examType: ExamType.bece,
+          year: p.year,
+          section: 'A',
+          questionNumber: 0,
+          options: [],
+          correctAnswer: '',
+          explanation: '',
+          marks: 0,
+          difficulty: 'medium',
+          topics: [p.subject],
+          createdAt: p.uploadTime,
+          createdBy: 'storage',
+          isActive: true,
+        );
+
+        if (!mergedQuestions.any((existing) => existing.id == storageAsQuestion.id)) {
+          mergedQuestions.add(storageAsQuestion);
+        }
+      }
+
       setState(() {
-        _questions = questions;
+        _questions = mergedQuestions;
         _storageQuestions = storageQuestions;
-        _filteredQuestions = questions;
+        _filteredQuestions = mergedQuestions;
         _isLoading = false;
       });
       // If the widget was constructed with an initial subject, apply it
@@ -136,24 +177,31 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
     // Apply search text
     if (_searchController.text.isNotEmpty) {
       String searchTerm = _searchController.text.toLowerCase();
-      filtered = filtered.where((q) { 
+
+      // Recognize common RME search terms (allow 'rme' abbreviation)
+      final isRmeQuery = searchTerm.contains('rme') || searchTerm.contains('religious');
+
+      filtered = filtered.where((q) {
         // Search in question text
         bool matchesQuestion = q.questionText.toLowerCase().contains(searchTerm);
-        
+
         // Search in subject (both enum name and display name)
         bool matchesSubject = q.subject.name.toLowerCase().contains(searchTerm) ||
-                             _mapSubjectToString(q.subject).toLowerCase().contains(searchTerm);
-        
+            _mapSubjectToString(q.subject).toLowerCase().contains(searchTerm) ||
+            // Explicit RME handling: if user typed 'rme' match RME subject
+            (isRmeQuery && q.subject == Subject.religiousMoralEducation);
+
         // Search in year
         bool matchesYear = q.year.toLowerCase().contains(searchTerm);
-        
+
         // Search in exam type
         bool matchesExamType = q.examType.name.toLowerCase().contains(searchTerm) ||
-                              _mapExamTypeToString(q.examType).toLowerCase().contains(searchTerm);
-        
-        // Search in topics
-        bool matchesTopics = q.topics.any((topic) => topic.toLowerCase().contains(searchTerm));
-        
+            _mapExamTypeToString(q.examType).toLowerCase().contains(searchTerm);
+
+        // Search in topics (also check for rme abbreviation)
+        bool matchesTopics = q.topics.any((topic) => topic.toLowerCase().contains(searchTerm)) ||
+            (isRmeQuery && q.topics.any((topic) => topic.toLowerCase().contains('rme')));
+
         return matchesQuestion || matchesSubject || matchesYear || matchesExamType || matchesTopics;
       }).toList();
     }
