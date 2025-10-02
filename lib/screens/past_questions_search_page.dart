@@ -8,7 +8,10 @@ import 'quiz_setup_page.dart';
 import 'question_detail_page.dart';
 
 class PastQuestionsSearchPage extends StatefulWidget {
-  const PastQuestionsSearchPage({Key? key}) : super(key: key);
+  /// Optional initial subject display name (e.g. 'RME' or 'Religious And Moral Education')
+  final String? initialSubject;
+
+  const PastQuestionsSearchPage({Key? key, this.initialSubject}) : super(key: key);
 
   @override
   State<PastQuestionsSearchPage> createState() => _PastQuestionsSearchPageState();
@@ -87,6 +90,13 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
         _filteredQuestions = questions;
         _isLoading = false;
       });
+      // If the widget was constructed with an initial subject, apply it
+      if (widget.initialSubject != null && widget.initialSubject!.isNotEmpty) {
+        setState(() {
+          _selectedSubject = widget.initialSubject!;
+        });
+        _applyFilters();
+      }
     } catch (e) {
       // Silent fallback - don't show error to user
       print('❌ Questions loading error (handled gracefully): $e');
