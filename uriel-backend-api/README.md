@@ -37,14 +37,16 @@ uriel-backend-api
    ```
    git clone <repository-url>
    ```
-2. Navigate to the project directory:
+2. Navigate to the project root directory:
    ```
-   cd uriel-backend-api
+   cd uriel-website
    ```
-3. Install the dependencies:
+3. Build and start the backend API using Docker:
    ```
-   npm install
+   docker-compose up --build backend
    ```
+
+This will automatically install dependencies and start the backend server in a container. No need to run `npm install` locally.
 
 ## Usage
 1. Start the server:

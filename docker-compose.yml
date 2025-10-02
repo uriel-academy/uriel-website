@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  backend:
+    build: ./uriel-backend-api
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./uriel-backend-api:/app
+    environment:
+      - NODE_ENV=development
+  frontend:
+    build: ./
+    ports:
+      - "8080:80"
+    environment:
+      - NGINX_PORT=80
