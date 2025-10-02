@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+// ...existing imports...
 import '../models/question_model.dart';
 import '../services/question_service.dart';
 import '../services/storage_service.dart';
@@ -32,7 +32,6 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
   // State Management
   List<Question> _questions = [];
   List<Question> _filteredQuestions = [];
-  List<PastQuestion> _storageQuestions = [];
   bool _isLoading = false;
   bool _isGridView = false;
   String _sortBy = 'Most Recent';
@@ -127,7 +126,6 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
 
       setState(() {
         _questions = mergedQuestions;
-        _storageQuestions = storageQuestions;
         _filteredQuestions = mergedQuestions;
         _isLoading = false;
       });
@@ -143,7 +141,6 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
       print('❌ Questions loading error (handled gracefully): $e');
       setState(() {
         _questions = [];
-        _storageQuestions = [];
         _filteredQuestions = [];
         _isLoading = false;
       });
@@ -228,7 +225,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
         questions.sort((a, b) => b.year.compareTo(a.year));
         break;
       case 'By Difficulty':
-        questions.sort((a, b) => (b.difficulty ?? 'medium').compareTo(a.difficulty ?? 'medium'));
+        questions.sort((a, b) => b.difficulty.compareTo(a.difficulty));
         break;
     }
   }
@@ -1045,8 +1042,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
           runSpacing: 6,
           children: [
             _buildSmallBadge(question.type.name, Colors.orange),
-            if (question.difficulty != null)
-              _buildDifficultyBadge(question.difficulty!),
+            _buildDifficultyBadge(question.difficulty),
           ],
         ),
         
@@ -1168,8 +1164,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
                   _buildBadge(question.year, Colors.blue),
                   _buildBadge(_getSubjectName(question.subject), _getSubjectColor(question.subject)),
                   _buildBadge(question.type.name, Colors.orange),
-                  if (question.difficulty != null)
-                    _buildDifficultyBadge(question.difficulty!),
+                  _buildDifficultyBadge(question.difficulty),
                 ],
               ),
             ],
