@@ -53,8 +53,16 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
   Future<void> _loadInitialData() async {
     setState(() => _isLoading = true);
     try {
+      print('🚀 Loading questions from database...');
+      
       // Load database questions with timeout
       final questionsTask = _questionService.getQuestions().timeout(
+        const Duration(seconds: 5),
+        onTimeout: () => <Question>[],
+      );
+      
+      // Load RME questions specifically for debugging
+      final rmeQuestionsTask = _questionService.getRMEQuestions().timeout(
         const Duration(seconds: 5),
         onTimeout: () => <Question>[],
       );
@@ -66,7 +74,12 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
       );
       
       final questions = await questionsTask;
+      final rmeQuestions = await rmeQuestionsTask;
       final storageQuestions = await storageQuestionsTask;
+      
+      print('📊 Loaded ${questions.length} total questions from database');
+      print('📚 Loaded ${rmeQuestions.length} RME questions specifically');
+      print('📁 Loaded ${storageQuestions.length} storage questions');
       
       setState(() {
         _questions = questions;
@@ -76,7 +89,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
       });
     } catch (e) {
       // Silent fallback - don't show error to user
-      print('Questions loading error (handled gracefully): $e');
+      print('❌ Questions loading error (handled gracefully): $e');
       setState(() {
         _questions = [];
         _storageQuestions = [];

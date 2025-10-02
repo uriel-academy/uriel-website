@@ -9,6 +9,8 @@ import 'screens/school_dashboard.dart'; // Import SchoolDashboardPage
 import 'screens/teacher_dashboard.dart'; // Import TeacherDashboardPage
 import 'screens/parent_dashboard.dart'; // Import ParentDashboardPage
 import 'screens/comprehensive_admin_dashboard.dart'; // Import ComprehensiveAdminDashboard
+import 'screens/admin_setup_page.dart'; // Import Admin Setup page
+import 'screens/rme_debug_page.dart'; // Import RME Debug Page
 import 'screens/about_us.dart'; // Import About Us page
 import 'screens/privacy_policy.dart'; // Import Privacy Policy page
 import 'screens/terms_of_service.dart'; // Import Terms of Service page
@@ -47,6 +49,9 @@ class MyApp extends StatelessWidget {
         '/teacher': (_) => const TeacherDashboardPage(), // Add teacher dashboard route
         '/parent': (_) => const ParentDashboardPage(), // Add parent dashboard route
         '/admin': (_) => const ComprehensiveAdminDashboard(), // Add comprehensive admin dashboard route
+        '/admin-setup': (_) => const AdminSetupPage(), // Add admin setup route
+        '/rme-debug': (_) => const RMEQuestionsDebugPage(), // Add RME debug route
+        '/comprehensive-admin': (_) => const ComprehensiveAdminDashboard(), // Add comprehensive admin dashboard route
       },
     );
   }
