@@ -24,10 +24,10 @@ class UserService {
     try {
       print('UserService: Creating profile for user: $userId, email: $email, role: $role');
       
+      // Don't write 'role' from the client side - roles must be assigned by admin/server.
       final userData = {
         'userId': userId,
         'email': email.toLowerCase(),
-        'role': role.name,
         'name': name,
         'schoolName': schoolName,
         'phoneNumber': phoneNumber,
@@ -176,6 +176,7 @@ class UserService {
     String? institutionCode,
   }) async {
     try {
+      // Do not set 'role' here; role assignment is admin/server responsibility.
       final teacherData = {
         'name': name,
         'email': email.toLowerCase(),
@@ -186,7 +187,6 @@ class UserService {
         'yearsExperience': yearsExperience,
         'teacherId': teacherId,
         'institutionCode': institutionCode,
-        'role': UserRole.teacher.name,
         'createdAt': FieldValue.serverTimestamp(),
         'lastLoginAt': FieldValue.serverTimestamp(),
       };
@@ -212,6 +212,7 @@ class UserService {
     required String guardianPhone,
   }) async {
     try {
+      // Client should not set role; leave role assignment to admin/server.
       final studentData = {
         'name': name,
         'email': email.toLowerCase(),
@@ -222,7 +223,6 @@ class UserService {
         'guardianName': guardianName,
         'guardianEmail': guardianEmail.toLowerCase(),
         'guardianPhone': guardianPhone,
-        'role': UserRole.student.name,
         'createdAt': FieldValue.serverTimestamp(),
         'lastLoginAt': FieldValue.serverTimestamp(),
       };
@@ -248,6 +248,7 @@ class UserService {
     String? institutionCode,
   }) async {
     try {
+      // Avoid setting 'role' here from the client side.
       final schoolData = {
         'institutionName': institutionName,
         'name': institutionName, // For consistency
@@ -259,7 +260,6 @@ class UserService {
         'studentCount': studentCount,
         'teacherCount': teacherCount,
         'institutionCode': institutionCode,
-        'role': UserRole.school.name,
         'createdAt': FieldValue.serverTimestamp(),
         'lastLoginAt': FieldValue.serverTimestamp(),
       };

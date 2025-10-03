@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../services/auth_service.dart';
+import '../services/rme_data_import_service.dart';
 import 'admin_question_management.dart';
 import 'user_management_page.dart';
 import 'content_management_page.dart';
@@ -487,6 +488,13 @@ class _AdminDashboardState extends State<AdminDashboard> {
                     const Color(0xFF9B59B6),
                     () => _showFeatureDialog('System Settings'),
                   ),
+                  _buildAdminCard(
+                    'Import RME Data',
+                    'Import 1999 BECE RME questions',
+                    Icons.upload_file,
+                    const Color(0xFFFF9800),
+                    () => _importRMEData(),
+                  ),
                 ],
               ),
             ),
@@ -689,6 +697,258 @@ class _AdminDashboardState extends State<AdminDashboard> {
         );
       },
     );
+  }
+
+  Future<void> _importRMEData() async {
+    // Show confirmation dialog
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
+          title: Text(
+            'Import RME Data',
+            style: GoogleFonts.montserrat(
+              fontSize: 20,
+              fontWeight: FontWeight.w600,
+              color: const Color(0xFF1A1E3F),
+            ),
+          ),
+          content: Text(
+            'This will import 40 RME questions from the 1999 BECE exam into the database. Continue?',
+            style: GoogleFonts.montserrat(
+              fontSize: 14,
+              color: Colors.grey[600],
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(false),
+              child: Text(
+                'Cancel',
+                style: GoogleFonts.montserrat(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.grey[600],
+                ),
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () => Navigator.of(context).pop(true),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFFFF9800),
+                foregroundColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
+              ),
+              child: Text(
+                'Import',
+                style: GoogleFonts.montserrat(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+
+    if (confirmed == true) {
+      // Show loading dialog
+      showDialog(
+        context: context,
+        barrierDismissible: false,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+            ),
+            content: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const CircularProgressIndicator(
+                  valueColor: AlwaysStoppedAnimation<Color>(Color(0xFFFF9800)),
+                ),
+                const SizedBox(height: 16),
+                Text(
+                  'Importing RME questions...',
+                  style: GoogleFonts.montserrat(
+                    fontSize: 14,
+                    color: Colors.grey[600],
+                  ),
+                ),
+              ],
+            ),
+          );
+        },
+      );
+
+      try {
+        final result = await RMEDataImportService.importRMEQuestions();
+        
+        // Close loading dialog
+        Navigator.of(context).pop();
+        
+        if (result['success'] == true) {
+          // Show success dialog
+          showDialog(
+            context: context,
+            builder: (BuildContext context) {
+            return AlertDialog(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16),
+              ),
+              title: Row(
+                children: [
+                  const Icon(
+                    Icons.check_circle,
+                    color: Colors.green,
+                    size: 24,
+                  ),
+                  const SizedBox(width: 8),
+                  Text(
+                    'Success',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
+                      color: const Color(0xFF1A1E3F),
+                    ),
+                  ),
+                ],
+              ),
+              content: Text(
+                'Successfully imported 40 RME questions from 1999 BECE. They are now available in the quiz system.',
+                style: GoogleFonts.montserrat(
+                  fontSize: 14,
+                  color: Colors.grey[600],
+                ),
+              ),
+              actions: [
+                ElevatedButton(
+                  onPressed: () => Navigator.of(context).pop(),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.green,
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                  ),
+                  child: Text(
+                    'OK',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+              ],
+            );
+          },
+        );
+        } else {
+          // Show error dialog for failed import
+          showDialog(
+            context: context,
+            builder: (BuildContext context) {
+              return AlertDialog(
+                title: Row(
+                  children: [
+                    Icon(Icons.error, color: Colors.red),
+                    SizedBox(width: 8),
+                    Text(
+                      'Import Failed',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
+                ),
+                content: Text(
+                  result['message'] ?? 'Failed to import RME questions.',
+                  style: GoogleFonts.montserrat(fontSize: 14),
+                ),
+                actions: [
+                  ElevatedButton(
+                    onPressed: () => Navigator.of(context).pop(),
+                    child: Text(
+                      'OK',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+                ],
+              );
+            },
+          );
+        }
+      } catch (e) {
+        // Close loading dialog
+        Navigator.of(context).pop();
+        
+        // Show error dialog
+        showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16),
+              ),
+              title: Row(
+                children: [
+                  const Icon(
+                    Icons.error,
+                    color: Colors.red,
+                    size: 24,
+                  ),
+                  const SizedBox(width: 8),
+                  Text(
+                    'Error',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
+                      color: const Color(0xFF1A1E3F),
+                    ),
+                  ),
+                ],
+              ),
+              content: Text(
+                'Failed to import RME questions: $e',
+                style: GoogleFonts.montserrat(
+                  fontSize: 14,
+                  color: Colors.grey[600],
+                ),
+              ),
+              actions: [
+                ElevatedButton(
+                  onPressed: () => Navigator.of(context).pop(),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red,
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                  ),
+                  child: Text(
+                    'OK',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+              ],
+            );
+          },
+        );
+      }
+    }
   }
 
   void _showUserProfile() {

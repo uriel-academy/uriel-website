@@ -412,10 +412,6 @@ Marks: 10''',
     try {
       final questions = await widget.questionService.parseQuestionsFromText(
         _textController.text.trim(),
-        subject: _selectedSubject,
-        examType: _selectedExamType,
-        year: _yearController.text.trim(),
-        section: _selectedSection,
       );
 
       setState(() => _previewQuestions = questions);
@@ -1040,10 +1036,10 @@ class _ExamManagementTabState extends State<ExamManagementTab> {
     setState(() => _isLoading = true);
 
     try {
-      final exam = await widget.questionService.createBECEExam(subject, '2024');
+      final examId = await widget.questionService.createBECEExam(subject, '2024');
       
       _showSnackBar(
-        'Created ${_getSubjectDisplayName(subject)} BECE exam with ${exam.questionIds.length} questions!',
+        'Created ${_getSubjectDisplayName(subject)} BECE exam with ID: $examId',
         Colors.green,
       );
       

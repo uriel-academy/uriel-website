@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import '../services/auth_service.dart';
+import 'package:cloud_functions/cloud_functions.dart';
+import '../services/rme_data_import_service.dart';
+import '../utils/web_compatibility.dart';
 import 'admin_question_management.dart';
 import 'user_management_page.dart';
 import 'content_management_page.dart';
@@ -15,7 +17,6 @@ class ComprehensiveAdminDashboard extends StatefulWidget {
 }
 
 class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboard> {
-  final AuthService _authService = AuthService();
   bool _isAuthorized = false;
   bool _isLoading = true;
   
@@ -326,19 +327,104 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
         ],
       ),
       // Add floating action button for mobile menu
-      floatingActionButton: isMobileScreen ? FloatingActionButton(
-        backgroundColor: const Color(0xFF1A1E3F),
-        elevation: 8,
-        onPressed: () {
-          setState(() {
-            isSidebarCollapsed = !isSidebarCollapsed;
-          });
+      floatingActionButton: isMobileScreen ? GestureDetector(
+        onLongPress: () {
+          // Show import options
+          showModalBottomSheet(
+            context: context,
+            builder: (context) => Container(
+              padding: EdgeInsets.all(20),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    'Quick Import',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  SizedBox(height: 16),
+                  ListTile(
+                    leading: Icon(Icons.upload_file, color: Color(0xFFFF9800)),
+                    title: Text('Import RME Questions'),
+                    subtitle: Text('1999 BECE - 40 questions'),
+                    onTap: () {
+                      Navigator.of(context).pop();
+                      _importRMEData();
+                    },
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.admin_panel_settings, color: Color(0xFF2196F3)),
+                    title: Text('Set Admin Role'),
+                    subtitle: Text('Grant admin access to users'),
+                    onTap: () {
+                      Navigator.of(context).pop();
+                      _showSetAdminRoleDialog();
+                    },
+                  ),
+                ],
+              ),
+            ),
+          );
         },
-        child: Icon(
-          isSidebarCollapsed ? Icons.menu : Icons.close,
-          color: Colors.white,
+        child: FloatingActionButton(
+          backgroundColor: const Color(0xFF1A1E3F),
+          elevation: 8,
+          onPressed: () {
+            setState(() {
+              isSidebarCollapsed = !isSidebarCollapsed;
+            });
+          },
+          child: Icon(
+            isSidebarCollapsed ? Icons.menu : Icons.close,
+            color: Colors.white,
+          ),
         ),
-      ) : null,
+      ) : PopupMenuButton<String>(
+        onSelected: (value) {
+          if (value == 'import_rme') {
+            _importRMEData();
+          } else if (value == 'set_admin') {
+            _showSetAdminRoleDialog();
+          }
+        },
+        itemBuilder: (context) => [
+          PopupMenuItem(
+            value: 'import_rme',
+            child: Row(
+              children: [
+                Icon(Icons.upload_file, color: Color(0xFFFF9800)),
+                SizedBox(width: 8),
+                Text('Import RME Questions'),
+              ],
+            ),
+          ),
+          PopupMenuItem(
+            value: 'set_admin',
+            child: Row(
+              children: [
+                Icon(Icons.admin_panel_settings, color: Color(0xFF2196F3)),
+                SizedBox(width: 8),
+                Text('Set Admin Role'),
+              ],
+            ),
+          ),
+        ],
+        child: FloatingActionButton.extended(
+          backgroundColor: const Color(0xFFFF9800),
+          elevation: 8,
+          onPressed: null, // Handled by PopupMenuButton
+          icon: Icon(Icons.admin_panel_settings, color: Colors.white),
+          label: Text(
+            'Admin Tools',
+            style: GoogleFonts.montserrat(
+              color: Colors.white,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+        ),
+      ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
@@ -1814,5 +1900,273 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
       case 'settings': return 'System Settings';
       default: return 'Dashboard';
     }
+  }
+
+  // Import RME Data Method
+  Future<void> _importRMEData() async {
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(
+          'Import RME Data',
+          style: GoogleFonts.montserrat(
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+        content: Text(
+          'This will import 40 RME questions from the 1999 BECE exam into the database. Continue?',
+          style: GoogleFonts.montserrat(),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(false),
+            child: Text('Cancel'),
+          ),
+          ElevatedButton(
+            onPressed: () => Navigator.of(context).pop(true),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color(0xFFFF9800),
+            ),
+            child: Text('Import'),
+          ),
+        ],
+      ),
+    );
+
+    if (confirmed == true) {
+      showDialog(
+        context: context,
+        barrierDismissible: false,
+        builder: (context) => AlertDialog(
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              CircularProgressIndicator(),
+              SizedBox(height: 16),
+              Text(
+                'Importing RME questions...',
+                style: GoogleFonts.montserrat(),
+              ),
+            ],
+          ),
+        ),
+      );
+
+      try {
+        final result = await RMEDataImportService.importRMEQuestions();
+        
+        Navigator.of(context).pop(); // Close loading dialog
+        
+        if (result['success'] == true) {
+          showDialog(
+            context: context,
+            builder: (context) => AlertDialog(
+              title: Row(
+                children: [
+                  Icon(Icons.check_circle, color: Colors.green),
+                  SizedBox(width: 8),
+                  Text('Success'),
+                ],
+              ),
+              content: Text(
+                result['message'] ?? 'Successfully imported RME questions.',
+                style: GoogleFonts.montserrat(),
+              ),
+              actions: [
+                ElevatedButton(
+                  onPressed: () => Navigator.of(context).pop(),
+                  child: Text('OK'),
+                ),
+              ],
+            ),
+          );
+        } else {
+          // Show error message from the result
+          showDialog(
+            context: context,
+            builder: (context) => AlertDialog(
+              title: Row(
+                children: [
+                  Icon(Icons.error, color: Colors.red),
+                  SizedBox(width: 8),
+                  Text('Error'),
+                ],
+              ),
+              content: Text(
+                result['message'] ?? 'Failed to import RME questions.',
+                style: GoogleFonts.montserrat(),
+              ),
+              actions: [
+                ElevatedButton(
+                  onPressed: () => Navigator.of(context).pop(),
+                  child: Text('OK'),
+                ),
+              ],
+            ),
+          );
+        }
+      } catch (e) {
+        Navigator.of(context).pop(); // Close loading dialog
+        
+        showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+            title: Row(
+              children: [
+                Icon(Icons.error, color: Colors.red),
+                SizedBox(width: 8),
+                Text('Error'),
+              ],
+            ),
+            content: Text(
+              'Failed to import RME questions: $e',
+              style: GoogleFonts.montserrat(),
+            ),
+            actions: [
+              ElevatedButton(
+                onPressed: () => Navigator.of(context).pop(),
+                child: Text('OK'),
+              ),
+            ],
+          ),
+        );
+      }
+    }
+  }
+
+  // Set Admin Role Method
+  Future<void> _showSetAdminRoleDialog() async {
+    final TextEditingController emailController = TextEditingController();
+    bool isLoading = false;
+
+    showDialog(
+      context: context,
+      builder: (context) => StatefulBuilder(
+        builder: (context, setState) => AlertDialog(
+          title: Row(
+            children: [
+              Icon(Icons.admin_panel_settings, color: Colors.blue),
+              SizedBox(width: 8),
+              Text(
+                'Set Admin Role',
+                style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
+              ),
+            ],
+          ),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Enter the email address that should have admin access:',
+                style: GoogleFonts.montserrat(),
+              ),
+              SizedBox(height: 16),
+              TextField(
+                controller: emailController,
+                decoration: InputDecoration(
+                  labelText: 'Email Address',
+                  hintText: 'studywithuriel@gmail.com',
+                  border: OutlineInputBorder(),
+                  prefixIcon: Icon(Icons.email),
+                ),
+                keyboardType: TextInputType.emailAddress,
+              ),
+              SizedBox(height: 16),
+              Container(
+                padding: EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: Colors.blue.shade50,
+                  borderRadius: BorderRadius.circular(8),
+                  border: Border.all(color: Colors.blue.shade200),
+                ),
+                child: Text(
+                  'Note: This will grant super admin privileges. The user will need to sign out and sign in again to access admin features.',
+                  style: GoogleFonts.montserrat(
+                    fontSize: 12,
+                    color: Colors.blue.shade700,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          actions: [
+            TextButton(
+              onPressed: isLoading ? null : () => Navigator.of(context).pop(),
+              child: Text('Cancel'),
+            ),
+            ElevatedButton(
+              onPressed: isLoading ? null : () async {
+                if (emailController.text.trim().isEmpty) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Text('Please enter an email address')),
+                  );
+                  return;
+                }
+
+                setState(() => isLoading = true);
+
+                try {
+                  final functions = FirebaseFunctions.instanceFor(region: 'us-central1');
+                  final callable = functions.httpsCallable('setAdminRole');
+                  
+                  final result = await callable.call({
+                    'email': emailController.text.trim(),
+                  });
+
+                  Navigator.of(context).pop();
+                  
+                  // Safely handle the response data to avoid Int64 issues
+                  final responseData = safeDocumentData(Map<String, dynamic>.from(result.data));
+                  final message = responseData['message']?.toString() ?? 'Admin role set successfully!\n\nThe user should sign out and sign in again to access admin features.';
+                  
+                  showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                      title: Row(
+                        children: [
+                          Icon(Icons.check_circle, color: Colors.green),
+                          SizedBox(width: 8),
+                          Text('Success'),
+                        ],
+                      ),
+                      content: Text(
+                        message,
+                        style: GoogleFonts.montserrat(),
+                      ),
+                      actions: [
+                        ElevatedButton(
+                          onPressed: () => Navigator.of(context).pop(),
+                          child: Text('OK'),
+                        ),
+                      ],
+                    ),
+                  );
+
+                } catch (e) {
+                  setState(() => isLoading = false);
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text('Error: ${e.toString()}'),
+                      backgroundColor: Colors.red,
+                    ),
+                  );
+                }
+              },
+              child: isLoading
+                  ? SizedBox(
+                      width: 20,
+                      height: 20,
+                      child: CircularProgressIndicator(
+                        strokeWidth: 2,
+                        valueColor: AlwaysStoppedAnimation(Colors.white),
+                      ),
+                    )
+                  : Text('Set Admin Role'),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

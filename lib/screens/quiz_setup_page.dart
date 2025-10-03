@@ -89,8 +89,8 @@ class _QuizSetupPageState extends State<QuizSetupPage> {
     
     try {
       final questions = await _questionService.getQuestionsByFilters(
-        subject: selectedSubject!,
-        examType: selectedExamType!,
+        subject: _mapStringToSubject(selectedSubject!),
+        examType: _mapStringToExamType(selectedExamType!),
         level: selectedLevel!,
       );
       
@@ -598,5 +598,48 @@ class _QuizSetupPageState extends State<QuizSetupPage> {
         ),
       ),
     );
+  }
+
+  // Helper methods to map strings to enums
+  Subject _mapStringToSubject(String subject) {
+    switch (subject) {
+      case 'Religious and Moral Education':
+        return Subject.religiousMoralEducation;
+      case 'Mathematics':
+        return Subject.mathematics;
+      case 'English Language':
+        return Subject.english;
+      case 'Science':
+        return Subject.integratedScience;
+      case 'Social Studies':
+        return Subject.socialStudies;
+      case 'Information Technology':
+        return Subject.ict;
+      case 'Creative Arts':
+        return Subject.creativeArts;
+      case 'French':
+        return Subject.french;
+      case 'Twi':
+      case 'Ga':
+      case 'Ewe':
+        return Subject.ghanaianLanguage;
+      default:
+        return Subject.religiousMoralEducation; // Default fallback
+    }
+  }
+
+  ExamType _mapStringToExamType(String examType) {
+    switch (examType) {
+      case 'BECE':
+        return ExamType.bece;
+      case 'Mock Exam':
+        return ExamType.mock;
+      case 'Class Test':
+      case 'Assignment':
+      case 'Practice Questions':
+        return ExamType.practice;
+      default:
+        return ExamType.bece; // Default fallback
+    }
   }
 }
