@@ -127,67 +127,8 @@ class QuestionService {
     String? year,
     String? section,
   }) {
-    final sampleQuestions = [
-      Question(
-        id: 'sample_1',
-        questionText: 'What is the capital of Ghana?',
-        type: QuestionType.multipleChoice,
-        subject: Subject.socialStudies,
-        examType: ExamType.bece,
-        year: '2023',
-        section: 'A',
-        questionNumber: 1,
-        options: ['Accra', 'Kumasi', 'Tamale', 'Cape Coast'],
-        correctAnswer: 'Accra',
-        explanation: 'Accra is the capital and largest city of Ghana.',
-        marks: 1,
-        difficulty: 'easy',
-        topics: ['Geography', 'Ghana'],
-        createdAt: DateTime.now(),
-        createdBy: 'system',
-        isActive: true,
-      ),
-      Question(
-        id: 'sample_2',
-        questionText: 'Which planet is closest to the Sun?',
-        type: QuestionType.multipleChoice,
-        subject: Subject.integratedScience,
-        examType: ExamType.bece,
-        year: '2023',
-        section: 'A',
-        questionNumber: 2,
-        options: ['Venus', 'Mars', 'Mercury', 'Earth'],
-        correctAnswer: 'Mercury',
-        explanation: 'Mercury is the planet closest to the Sun in our solar system.',
-        marks: 1,
-        difficulty: 'easy',
-        topics: ['Astronomy', 'Solar System'],
-        createdAt: DateTime.now(),
-        createdBy: 'system',
-        isActive: true,
-      ),
-    ];
-
-    // Filter sample questions based on parameters
-    List<Question> filteredQuestions = sampleQuestions;
-    
-    if (examType != null) {
-      filteredQuestions = filteredQuestions.where((q) => q.examType == examType).toList();
-    }
-    
-    if (subject != null) {
-      filteredQuestions = filteredQuestions.where((q) => q.subject == subject).toList();
-    }
-    
-    if (year != null) {
-      filteredQuestions = filteredQuestions.where((q) => q.year == year).toList();
-    }
-    
-    if (section != null) {
-      filteredQuestions = filteredQuestions.where((q) => q.section == section).toList();
-    }
-    
-    return filteredQuestions;
+    // Return empty list - no fallback sample questions
+    return [];
   }
 
   /// Enhanced method to get questions with advanced filtering
@@ -205,13 +146,16 @@ class QuestionService {
     try {
       Query query = _questionsCollection;
       
+      String? examTypeStr;
+      String? subjectStr;
+      
       if (examType != null) {
-        String examTypeStr = examType is ExamType ? _getExamTypeString(examType) : examType.toString();
+        examTypeStr = examType is ExamType ? _getExamTypeString(examType) : examType.toString();
         query = query.where('examType', isEqualTo: examTypeStr);
       }
       
       if (subject != null) {
-        String subjectStr = subject is Subject ? _getSubjectString(subject) : subject.toString();
+        subjectStr = subject is Subject ? _getSubjectString(subject) : subject.toString();
         query = query.where('subject', isEqualTo: subjectStr);
       }
       
@@ -238,7 +182,11 @@ class QuestionService {
         query = query.limit(limit);
       }
       
+      print('🔍 QuestionService.getQuestionsByFilters: Querying Firestore with subject=$subjectStr, examType=$examTypeStr, activeOnly=$activeOnly');
+      
       QuerySnapshot snapshot = await query.get();
+      
+      print('📊 QuestionService.getQuestionsByFilters: Found ${snapshot.docs.length} documents');
       
       if (snapshot.docs.isNotEmpty) {
         List<Question> questions = snapshot.docs.map((doc) => Question.fromJson(doc.data() as Map<String, dynamic>)).toList();

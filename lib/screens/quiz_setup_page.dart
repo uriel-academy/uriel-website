@@ -96,11 +96,8 @@ class _QuizSetupPageState extends State<QuizSetupPage> {
       
       setState(() {
         availableQuestions = questions.length;
-        if (selectedQuestionCount > availableQuestions && availableQuestions > 0) {
-          selectedQuestionCount = questionCounts
-              .where((count) => count <= availableQuestions)
-              .lastOrNull ?? 5;
-        }
+        // Set question count to all available questions (capped at 50 for reasonable quiz length)
+        selectedQuestionCount = availableQuestions > 50 ? 50 : availableQuestions;
       });
     } catch (e) {
       setState(() => availableQuestions = 0);
@@ -127,6 +124,7 @@ class _QuizSetupPageState extends State<QuizSetupPage> {
           examType: selectedExamType!,
           level: selectedLevel!,
           preloadedQuestions: widget.preloadedQuestions,
+          questionCount: selectedQuestionCount,
         ),
       ),
     );
@@ -459,31 +457,41 @@ class _QuizSetupPageState extends State<QuizSetupPage> {
             
             const SizedBox(height: 16),
 
-            // Number of Questions
-            Text(
-              'Number of Questions',
-              style: GoogleFonts.montserrat(
-                fontWeight: FontWeight.w500,
-                color: const Color(0xFF1A1E3F),
+            // Show number of questions (non-editable)
+            Container(
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: const Color(0xFFD62828).withOpacity(0.1),
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: const Color(0xFFD62828).withOpacity(0.3)),
               ),
-            ),
-            const SizedBox(height: 8),
-            Wrap(
-              spacing: 8,
-              children: questionCounts.where((count) => count <= availableQuestions).map((count) {
-                final isSelected = selectedQuestionCount == count;
-                return FilterChip(
-                  label: Text('$count'),
-                  selected: isSelected,
-                  onSelected: (selected) {
-                    if (selected) {
-                      setState(() => selectedQuestionCount = count);
-                    }
-                  },
-                  selectedColor: const Color(0xFFD62828).withOpacity(0.2),
-                  checkmarkColor: const Color(0xFFD62828),
-                );
-              }).toList(),
+              child: Row(
+                children: [
+                  const Icon(Icons.quiz, color: Color(0xFFD62828)),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Quiz Questions',
+                          style: GoogleFonts.montserrat(
+                            fontWeight: FontWeight.w600,
+                            color: const Color(0xFF1A1E3F),
+                          ),
+                        ),
+                        Text(
+                          '$selectedQuestionCount questions will be included in this quiz',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 12,
+                            color: Colors.grey[700],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
 
             const SizedBox(height: 16),

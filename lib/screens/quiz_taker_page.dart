@@ -10,6 +10,7 @@ class QuizTakerPage extends StatefulWidget {
   final String examType;
   final String level;
   final List<Question>? preloadedQuestions;
+  final int? questionCount;
 
   const QuizTakerPage({
     super.key,
@@ -17,6 +18,7 @@ class QuizTakerPage extends StatefulWidget {
     required this.examType,
     required this.level,
     this.preloadedQuestions,
+    this.questionCount,
   });
 
   @override
@@ -81,23 +83,37 @@ class _QuizTakerPageState extends State<QuizTakerPage>
       if (widget.preloadedQuestions != null) {
         questions = widget.preloadedQuestions!;
       } else {
+        // Map display name to Firestore field name
+        final subjectEnum = _mapStringToSubject(widget.subject);
+        final examTypeEnum = _mapStringToExamType(widget.examType);
+        
+        print('🎯 QuizTaker: Loading questions for subject=${subjectEnum.name}, examType=${examTypeEnum.name}, level=${widget.level}');
+        
         questions = await _questionService.getQuestionsByFilters(
-          subject: widget.subject,
-          examType: widget.examType,
+          subject: subjectEnum,
+          examType: examTypeEnum,
           level: widget.level,
         ).timeout(
-          const Duration(seconds: 5),
-          onTimeout: () => <Question>[],
+          const Duration(seconds: 10),
+          onTimeout: () {
+            print('⏰ QuizTaker: Timeout loading questions');
+            return <Question>[];
+          },
         );
+        
+        print('📊 QuizTaker: Loaded ${questions.length} questions');
       }
       
       // Shuffle questions for randomization
       questions.shuffle();
       
-      // Limit to 20 questions for better user experience
-      if (questions.length > 20) {
-        questions = questions.take(20).toList();
+      // Limit to specified question count (or use all questions up to 50)
+      final maxQuestions = widget.questionCount ?? (questions.length > 50 ? 50 : questions.length);
+      if (questions.length > maxQuestions) {
+        questions = questions.take(maxQuestions).toList();
       }
+      
+      print('📊 QuizTaker: Final question count: ${questions.length}');
       
       // If no questions loaded, create a fallback or just continue silently
       if (questions.isNotEmpty) {
@@ -186,7 +202,22 @@ class _QuizTakerPageState extends State<QuizTakerPage>
     for (int i = 0; i < questions.length; i++) {
       final question = questions[i];
       final userAnswer = userAnswers[i] ?? '';
-      final isCorrect = userAnswer == question.correctAnswer;
+      
+      // Extract answer letter from full option text (e.g., "E. 6th day" -> "E")
+      String userAnswerLetter = userAnswer;
+      if (userAnswer.contains('.')) {
+        userAnswerLetter = userAnswer.split('.')[0].trim();
+      }
+      
+      // Also handle if correctAnswer has the full text
+      String correctAnswerLetter = question.correctAnswer;
+      if (correctAnswerLetter.contains('.')) {
+        correctAnswerLetter = correctAnswerLetter.split('.')[0].trim();
+      }
+      
+      final isCorrect = userAnswerLetter == correctAnswerLetter;
+      
+      print('🎯 Quiz Result: Q${i+1} - User: "$userAnswerLetter" vs Correct: "$correctAnswerLetter" = ${isCorrect ? "✅" : "❌"}');
       
       if (isCorrect) correctAnswers++;
       
@@ -714,5 +745,48 @@ class _QuizTakerPageState extends State<QuizTakerPage>
         ),
       ),
     );
+  }
+
+  // Helper methods to map string display names to enums
+  Subject _mapStringToSubject(String subject) {
+    switch (subject) {
+      case 'Religious and Moral Education':
+        return Subject.religiousMoralEducation;
+      case 'Mathematics':
+        return Subject.mathematics;
+      case 'English Language':
+        return Subject.english;
+      case 'Science':
+        return Subject.integratedScience;
+      case 'Social Studies':
+        return Subject.socialStudies;
+      case 'Information Technology':
+        return Subject.ict;
+      case 'Creative Arts':
+        return Subject.creativeArts;
+      case 'French':
+        return Subject.french;
+      case 'Twi':
+      case 'Ga':
+      case 'Ewe':
+        return Subject.ghanaianLanguage;
+      default:
+        return Subject.religiousMoralEducation;
+    }
+  }
+
+  ExamType _mapStringToExamType(String examType) {
+    switch (examType) {
+      case 'BECE':
+        return ExamType.bece;
+      case 'Mock Exam':
+        return ExamType.mock;
+      case 'Class Test':
+      case 'Assignment':
+      case 'Practice Questions':
+        return ExamType.practice;
+      default:
+        return ExamType.bece;
+    }
   }
 }

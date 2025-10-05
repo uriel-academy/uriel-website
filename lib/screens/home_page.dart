@@ -3,7 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../constants/app_styles.dart';
-import 'past_questions_search_page.dart';
+import 'question_collections_page.dart';
 import 'textbooks_page.dart';
 import 'mock_exams_page.dart';
 import 'trivia_page.dart';
@@ -25,7 +25,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   bool _showingProfile = false;
   
   // User progress data (would come from Firestore in real app)
-  String userName = "Alex";
+  String userName = "";
   double overallProgress = 76.5;
   int currentStreak = 12;
   int weeklyStudyHours = 8;
@@ -603,7 +603,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Welcome back, $userName!',
+                  'Welcome $userName!',
                   style: GoogleFonts.playfairDisplay(
                     fontSize: isSmallScreen ? 22 : 28,
                     fontWeight: FontWeight.bold,
@@ -1316,13 +1316,13 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           const SizedBox(height: 8),
           _buildQuickActionButton('Read Books', Icons.menu_book, () => setState(() => _selectedIndex = 2)),
           const SizedBox(height: 8),
-          // Quick action to take an RME quiz (navigates to past questions filtered to RME)
+          // Quick action to take an RME quiz (navigates to question collections filtered to RME)
           InkWell(
             onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (_) => const PastQuestionsSearchPage(initialSubject: 'RME'),
+                  builder: (_) => const QuestionCollectionsPage(initialSubject: 'RME'),
                 ),
               );
             },
@@ -1564,7 +1564,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
 
   // Page implementations for other tabs
   Widget _buildQuestionsPage() {
-    return const PastQuestionsSearchPage();
+    return const QuestionCollectionsPage();
   }
 
   Widget _buildTextbooksPage() {

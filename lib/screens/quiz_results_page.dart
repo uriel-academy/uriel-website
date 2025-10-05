@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:share_plus/share_plus.dart';
 import '../models/quiz_model.dart';
 import 'past_questions_search_page.dart';
+import 'quiz_setup_page.dart';
 
 class QuizResultsPage extends StatefulWidget {
   final Quiz quiz;
@@ -110,13 +111,15 @@ ${_getPerformanceMessage()}
   }
 
   void _retakeQuiz() {
-    Navigator.of(context).pushReplacementNamed(
-      '/quiz',
-      arguments: {
-        'subject': widget.quiz.subject,
-        'examType': widget.quiz.examType,
-        'level': widget.quiz.level,
-      },
+    // Navigate back to quiz setup with same parameters
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(
+        builder: (context) => QuizSetupPage(
+          preselectedSubject: widget.quiz.subject,
+          preselectedExamType: widget.quiz.examType,
+          preselectedLevel: widget.quiz.level,
+        ),
+      ),
     );
   }
 
