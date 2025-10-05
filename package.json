@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "firebase-admin": "^13.5.0",
+    "puppeteer": "^24.23.0"
+  },
+  "name": "uriel_mainapp",
+  "version": "1.0.0",
+  "description": "A new Flutter project.",
+  "main": "call_cloud_function.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uriel-academy/uriel-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uriel-academy/uriel-website/issues"
+  },
+  "homepage": "https://github.com/uriel-academy/uriel-website#readme"
+}

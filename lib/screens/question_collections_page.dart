@@ -155,18 +155,18 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
     final isSmallScreen = MediaQuery.of(context).size.width < 768;
     
     return Scaffold(
-      backgroundColor: const Color(0xFF1A1E3F),
+      backgroundColor: const Color(0xFFF8FAFE),
       appBar: AppBar(
-        backgroundColor: const Color(0xFF1A1E3F),
+        backgroundColor: Colors.white,
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          icon: const Icon(Icons.arrow_back, color: Color(0xFF1A1E3F)),
           onPressed: () => Navigator.pop(context),
         ),
         title: Text(
           'Past Question Collections',
           style: GoogleFonts.playfairDisplay(
-            color: Colors.white,
+            color: const Color(0xFF1A1E3F),
             fontSize: 20,
             fontWeight: FontWeight.bold,
           ),
@@ -174,10 +174,12 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
       ),
       body: _isLoading
           ? const Center(child: CircularProgressIndicator(color: Color(0xFFD62828)))
-          : Column(
-              children: [
-                _buildFilters(isSmallScreen),
-                Expanded(
+          : CustomScrollView(
+              slivers: [
+                SliverToBoxAdapter(
+                  child: _buildFilters(isSmallScreen),
+                ),
+                SliverToBoxAdapter(
                   child: _filteredCollections.isEmpty
                       ? _buildEmptyState()
                       : _buildCollectionsList(isSmallScreen),
@@ -189,25 +191,48 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
 
   Widget _buildFilters(bool isSmallScreen) {
     return Container(
-      padding: const EdgeInsets.all(16),
-      color: const Color(0xFF2A2E4F),
+      margin: EdgeInsets.all(isSmallScreen ? 16 : 24),
+      padding: EdgeInsets.all(isSmallScreen ? 16 : 20),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.05),
+            blurRadius: 10,
+            offset: const Offset(0, 2),
+          ),
+        ],
+      ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          // Title
+          Text(
+            'Search & Filter',
+            style: GoogleFonts.playfairDisplay(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              color: const Color(0xFF1A1E3F),
+            ),
+          ),
+          const SizedBox(height: 16),
           // Search bar
           TextField(
             controller: _searchController,
             onChanged: (_) => _applyFilters(),
-            style: GoogleFonts.montserrat(color: Colors.white),
+            style: GoogleFonts.montserrat(color: const Color(0xFF1A1E3F)),
             decoration: InputDecoration(
               hintText: 'Search collections...',
-              hintStyle: GoogleFonts.montserrat(color: Colors.white54),
-              prefixIcon: const Icon(Icons.search, color: Colors.white54),
+              hintStyle: GoogleFonts.montserrat(color: Colors.grey[400]),
+              prefixIcon: Icon(Icons.search, color: Colors.grey[600]),
               filled: true,
-              fillColor: const Color(0xFF1A1E3F),
+              fillColor: const Color(0xFFF8FAFE),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(12),
                 borderSide: BorderSide.none,
               ),
+              contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
             ),
           ),
           const SizedBox(height: 12),
@@ -256,10 +281,39 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
                 ),
               ],
             ),
-          const SizedBox(height: 12),
-          Text(
-            'Found ${_filteredCollections.length} collections',
-            style: GoogleFonts.montserrat(color: Colors.white70, fontSize: 14),
+          const SizedBox(height: 16),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Found ${_filteredCollections.length} collections',
+                style: GoogleFonts.montserrat(
+                  color: Colors.grey[700],
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              if (_searchController.text.isNotEmpty || 
+                  _selectedExamType != 'All Types' || 
+                  _selectedSubject != 'All Subjects' || 
+                  _selectedYear != 'All Years')
+                TextButton.icon(
+                  onPressed: () {
+                    setState(() {
+                      _searchController.clear();
+                      _selectedExamType = 'All Types';
+                      _selectedSubject = 'All Subjects';
+                      _selectedYear = 'All Years';
+                    });
+                    _applyFilters();
+                  },
+                  icon: const Icon(Icons.clear, size: 16),
+                  label: const Text('Clear Filters'),
+                  style: TextButton.styleFrom(
+                    foregroundColor: const Color(0xFFD62828),
+                  ),
+                ),
+            ],
           ),
         ],
       ),
@@ -272,16 +326,17 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
       onChanged: onChanged,
       decoration: InputDecoration(
         labelText: label,
-        labelStyle: GoogleFonts.montserrat(color: Colors.white70),
+        labelStyle: GoogleFonts.montserrat(color: Colors.grey[600]),
         filled: true,
-        fillColor: const Color(0xFF1A1E3F),
+        fillColor: const Color(0xFFF8FAFE),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
           borderSide: BorderSide.none,
         ),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
       ),
-      dropdownColor: const Color(0xFF1A1E3F),
-      style: GoogleFonts.montserrat(color: Colors.white),
+      dropdownColor: Colors.white,
+      style: GoogleFonts.montserrat(color: const Color(0xFF1A1E3F)),
       items: options.map((option) {
         return DropdownMenuItem(value: option, child: Text(option));
       }).toList(),
@@ -301,33 +356,44 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
   }
 
   Widget _buildEmptyState() {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(Icons.folder_open, size: 64, color: Colors.white.withOpacity(0.3)),
-          const SizedBox(height: 16),
-          Text(
-            'No collections found',
-            style: GoogleFonts.playfairDisplay(color: Colors.white70, fontSize: 18),
-          ),
-          const SizedBox(height: 8),
-          Text(
-            'Try adjusting your filters',
-            style: GoogleFonts.montserrat(color: Colors.white54, fontSize: 14),
-          ),
-        ],
+    return Container(
+      padding: const EdgeInsets.all(48),
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.folder_open, size: 64, color: Colors.grey[300]),
+            const SizedBox(height: 16),
+            Text(
+              'No collections found',
+              style: GoogleFonts.playfairDisplay(
+                color: const Color(0xFF1A1E3F),
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              'Try adjusting your filters',
+              style: GoogleFonts.montserrat(color: Colors.grey[600], fontSize: 14),
+            ),
+          ],
+        ),
       ),
     );
   }
 
   Widget _buildCollectionsList(bool isSmallScreen) {
-    return ListView.builder(
-      padding: const EdgeInsets.all(16),
-      itemCount: _filteredCollections.length,
-      itemBuilder: (context, index) {
-        return _buildCollectionCard(_filteredCollections[index], isSmallScreen);
-      },
+    return Container(
+      padding: EdgeInsets.symmetric(
+        horizontal: isSmallScreen ? 16 : 24,
+        vertical: 8,
+      ),
+      child: Column(
+        children: _filteredCollections.map((collection) {
+          return _buildCollectionCard(collection, isSmallScreen);
+        }).toList(),
+      ),
     );
   }
 
@@ -335,19 +401,18 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
     return Container(
       margin: const EdgeInsets.only(bottom: 16),
       decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            const Color(0xFF2A2E4F),
-            const Color(0xFF1A1E3F),
-          ],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
+        color: Colors.white,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: const Color(0xFFD62828).withOpacity(0.3)),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.05),
+            blurRadius: 10,
+            offset: const Offset(0, 2),
+          ),
+        ],
       ),
       child: Padding(
-        padding: const EdgeInsets.all(20),
+        padding: EdgeInsets.all(isSmallScreen ? 16 : 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -372,13 +437,14 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.1),
+                    color: const Color(0xFFF8FAFE),
                     borderRadius: BorderRadius.circular(8),
+                    border: Border.all(color: const Color(0xFF1A1E3F).withOpacity(0.1)),
                   ),
                   child: Text(
                     collection.year,
                     style: GoogleFonts.montserrat(
-                      color: Colors.white,
+                      color: const Color(0xFF1A1E3F),
                       fontSize: 12,
                       fontWeight: FontWeight.bold,
                     ),
@@ -390,18 +456,24 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
             Text(
               collection.displayName,
               style: GoogleFonts.playfairDisplay(
-                color: Colors.white,
-                fontSize: 20,
+                color: const Color(0xFF1A1E3F),
+                fontSize: isSmallScreen ? 18 : 20,
                 fontWeight: FontWeight.bold,
               ),
             ),
             const SizedBox(height: 8),
-            Text(
-              '${collection.questionCount} Questions',
-              style: GoogleFonts.montserrat(
-                color: Colors.white70,
-                fontSize: 14,
-              ),
+            Row(
+              children: [
+                Icon(Icons.quiz, size: 16, color: Colors.grey[600]),
+                const SizedBox(width: 4),
+                Text(
+                  '${collection.questionCount} Questions',
+                  style: GoogleFonts.montserrat(
+                    color: Colors.grey[600],
+                    fontSize: 14,
+                  ),
+                ),
+              ],
             ),
             const SizedBox(height: 16),
             if (isSmallScreen)
@@ -462,12 +534,15 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
       icon: Icon(icon, size: 20),
       label: Text(label),
       style: ElevatedButton.styleFrom(
-        backgroundColor: isPrimary ? const Color(0xFFD62828) : Colors.white.withOpacity(0.1),
-        foregroundColor: Colors.white,
-        padding: const EdgeInsets.symmetric(vertical: 14),
+        backgroundColor: isPrimary ? const Color(0xFFD62828) : const Color(0xFFF8FAFE),
+        foregroundColor: isPrimary ? Colors.white : const Color(0xFF1A1E3F),
+        padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 16),
+        elevation: 0,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
-          side: isPrimary ? BorderSide.none : BorderSide(color: Colors.white.withOpacity(0.3)),
+          side: isPrimary 
+              ? BorderSide.none 
+              : BorderSide(color: const Color(0xFF1A1E3F).withOpacity(0.1)),
         ),
       ),
     );
