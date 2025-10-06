@@ -9,6 +9,7 @@ class QuizSetupPage extends StatefulWidget {
   final String? preselectedExamType;
   final String? preselectedLevel;
   final List<Question>? preloadedQuestions;
+  final String? triviaCategory; // New: for trivia category selection
 
   const QuizSetupPage({
     super.key,
@@ -16,6 +17,7 @@ class QuizSetupPage extends StatefulWidget {
     this.preselectedExamType,
     this.preselectedLevel,
     this.preloadedQuestions,
+    this.triviaCategory,
   });
 
   @override
@@ -92,12 +94,15 @@ class _QuizSetupPageState extends State<QuizSetupPage> {
         subject: _mapStringToSubject(selectedSubject!),
         examType: _mapStringToExamType(selectedExamType!),
         level: selectedLevel!,
+        triviaCategory: widget.triviaCategory, // Pass trivia category for filtering
       );
       
       setState(() {
         availableQuestions = questions.length;
-        // Set question count to all available questions (capped at 50 for reasonable quiz length)
-        selectedQuestionCount = availableQuestions > 50 ? 50 : availableQuestions;
+        // For trivia: cap at 20 questions by default
+        // For other exams: cap at 50 questions
+        final maxQuestions = selectedExamType?.toLowerCase() == 'trivia' ? 20 : 50;
+        selectedQuestionCount = availableQuestions > maxQuestions ? maxQuestions : availableQuestions;
       });
     } catch (e) {
       setState(() => availableQuestions = 0);
@@ -182,11 +187,11 @@ class _QuizSetupPageState extends State<QuizSetupPage> {
               ),
               flexibleSpace: FlexibleSpaceBar(
                 background: Container(
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     gradient: LinearGradient(
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
-                      colors: [Colors.white, const Color(0xFFF8FAFE)],
+                      colors: [Colors.white, Color(0xFFF8FAFE)],
                     ),
                   ),
                 ),

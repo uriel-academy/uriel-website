@@ -142,6 +142,7 @@ class QuestionService {
     bool activeOnly = true,
     String? difficulty,
     List<String>? topics,
+    String? triviaCategory, // New: filter by trivia category
   }) async {
     try {
       Query query = _questionsCollection;
@@ -182,14 +183,31 @@ class QuestionService {
         query = query.limit(limit);
       }
       
-      print('🔍 QuestionService.getQuestionsByFilters: Querying Firestore with subject=$subjectStr, examType=$examTypeStr, activeOnly=$activeOnly');
+      print('🔍 QuestionService.getQuestionsByFilters: Querying Firestore with subject=$subjectStr, examType=$examTypeStr, triviaCategory=$triviaCategory, activeOnly=$activeOnly');
       
       QuerySnapshot snapshot = await query.get();
       
       print('📊 QuestionService.getQuestionsByFilters: Found ${snapshot.docs.length} documents');
       
       if (snapshot.docs.isNotEmpty) {
-        List<Question> questions = snapshot.docs.map((doc) => Question.fromJson(doc.data() as Map<String, dynamic>)).toList();
+        List<Question> questions = [];
+        
+        // Convert documents to Question objects and filter by triviaCategory if needed
+        for (var doc in snapshot.docs) {
+          final data = doc.data() as Map<String, dynamic>;
+          
+          // If triviaCategory filter is specified, check if this question matches
+          if (triviaCategory != null && triviaCategory.isNotEmpty) {
+            final String? qCategory = data['triviaCategory'] as String?;
+            if (qCategory != triviaCategory) {
+              continue; // Skip questions that don't match the category
+            }
+          }
+          
+          questions.add(Question.fromJson(data));
+        }
+        
+        print('📊 After triviaCategory filter: ${questions.length} questions${triviaCategory != null ? ' for category "$triviaCategory"' : ''}');
         
         // Filter by topics if specified
         if (topics != null && topics.isNotEmpty) {

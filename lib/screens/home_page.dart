@@ -6,7 +6,7 @@ import '../constants/app_styles.dart';
 import 'question_collections_page.dart';
 import 'textbooks_page.dart';
 import 'mock_exams_page.dart';
-import 'trivia_page.dart';
+import 'trivia_categories_page.dart';
 import 'student_profile_page.dart';
 
 class StudentHomePage extends StatefulWidget {
@@ -240,7 +240,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             child: IconButton(
               icon: Stack(
                 children: [
-                  Icon(Icons.notifications_outlined, color: const Color(0xFFD62828), size: 20),
+                  const Icon(Icons.notifications_outlined, color: Color(0xFFD62828), size: 20),
                   Positioned(
                     right: 0,
                     top: 0,
@@ -1335,7 +1335,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               ),
               child: Row(
                 children: [
-                  Icon(Icons.book, size: 16, color: const Color(0xFF6C5CE7)),
+                  const Icon(Icons.book, size: 16, color: Color(0xFF6C5CE7)),
                   const SizedBox(width: 12),
                   Text(
                     'Take RME Quiz',
@@ -1488,7 +1488,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         children: [
           Row(
             children: [
-              Icon(Icons.psychology, color: Colors.white, size: 24),
+              const Icon(Icons.psychology, color: Colors.white, size: 24),
               const SizedBox(width: 12),
               Text(
                 'Study Recommendations',
@@ -1576,7 +1576,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   }
 
   Widget _buildTriviaPage() {
-    return const TriviaPage();
+    return const TriviaCategoriesPage();
   }
 
   // Helper methods
