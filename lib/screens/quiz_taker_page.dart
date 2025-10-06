@@ -107,13 +107,20 @@ class _QuizTakerPageState extends State<QuizTakerPage>
       // Shuffle questions for randomization
       questions.shuffle();
       
-      // Limit to specified question count (or use all questions up to 50)
-      final maxQuestions = widget.questionCount ?? (questions.length > 50 ? 50 : questions.length);
+      // Limit to specified question count
+      // Special rule: Trivia is always limited to 20 questions
+      int maxQuestions;
+      if (widget.examType.toLowerCase() == 'trivia') {
+        maxQuestions = widget.questionCount ?? 20; // Trivia default: 20 questions
+      } else {
+        maxQuestions = widget.questionCount ?? (questions.length > 50 ? 50 : questions.length);
+      }
+      
       if (questions.length > maxQuestions) {
         questions = questions.take(maxQuestions).toList();
       }
       
-      print('📊 QuizTaker: Final question count: ${questions.length}');
+      print('📊 QuizTaker: Final question count: ${questions.length} (max: $maxQuestions for ${widget.examType})');
       
       // If no questions loaded, create a fallback or just continue silently
       if (questions.isNotEmpty) {
@@ -376,7 +383,7 @@ class _QuizTakerPageState extends State<QuizTakerPage>
           backgroundColor: Colors.white,
           elevation: 0,
           leading: IconButton(
-            icon: Icon(Icons.arrow_back, color: const Color(0xFF1A1E3F)),
+            icon: const Icon(Icons.arrow_back, color: Color(0xFF1A1E3F)),
             onPressed: () => Navigator.pop(context),
           ),
         ),
@@ -441,9 +448,9 @@ class _QuizTakerPageState extends State<QuizTakerPage>
               // Header with progress
               Container(
                 padding: EdgeInsets.all(isMobile ? 16 : 24),
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Colors.white,
-                  boxShadow: const [
+                  boxShadow: [
                     BoxShadow(
                       color: Colors.black12,
                       blurRadius: 4,
@@ -458,7 +465,7 @@ class _QuizTakerPageState extends State<QuizTakerPage>
                       children: [
                         IconButton(
                           onPressed: _exitQuiz,
-                          icon: Icon(Icons.close, color: const Color(0xFF1A1E3F)),
+                          icon: const Icon(Icons.close, color: Color(0xFF1A1E3F)),
                         ),
                         Expanded(
                           child: Column(
@@ -535,9 +542,9 @@ class _QuizTakerPageState extends State<QuizTakerPage>
               // Navigation buttons
               Container(
                 padding: EdgeInsets.all(isMobile ? 16 : 24),
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Colors.white,
-                  boxShadow: const [
+                  boxShadow: [
                     BoxShadow(
                       color: Colors.black12,
                       blurRadius: 4,
