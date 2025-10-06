@@ -1,0 +1,1803 @@
+{
+  "subject": "Ghana History",
+  "q1": {
+    "question": "On what date did Ghana gain independence?",
+    "possibleAnswers": [
+      "A. 1 July 1960",
+      "B. 6 March 1957",
+      "C. 24 February 1966",
+      "D. 21 September 1909"
+    ]
+  },
+  "q2": {
+    "question": "Who served as Ghana’s first President?",
+    "possibleAnswers": [
+      "A. Hilla Limann",
+      "B. Kwame Nkrumah",
+      "C. Kofi Abrefa Busia",
+      "D. Jerry John Rawlings"
+    ]
+  },
+  "q3": {
+    "question": "Which political party did Kwame Nkrumah found in 1949?",
+    "possibleAnswers": [
+      "A. United Gold Coast Convention (UGCC)",
+      "B. National Liberation Council (NLC)",
+      "C. Convention People’s Party (CPP)",
+      "D. People’s National Party (PNP)"
+    ]
+  },
+  "q4": {
+    "question": "The “Big Six” were leaders associated with which political movement?",
+    "possibleAnswers": [
+      "A. The CPP’s Positive Action",
+      "B. The UGCC",
+      "C. The PNDC",
+      "D. The AFRC"
+    ]
+  },
+  "q5": {
+    "question": "Who introduced cocoa to the Gold Coast in the late 19th century?",
+    "possibleAnswers": [
+      "A. J. B. Danquah",
+      "B. Tetteh Quarshie",
+      "C. Paa Grant",
+      "D. Komla Agbeli Gbedemah"
+    ]
+  },
+  "q6": {
+    "question": "Which European power built Elmina Castle in 1482?",
+    "possibleAnswers": [
+      "A. Britain",
+      "B. Portugal",
+      "C. Netherlands",
+      "D. Denmark"
+    ]
+  },
+  "q7": {
+    "question": "Which city became the capital of the Gold Coast in 1877?",
+    "possibleAnswers": [
+      "A. Cape Coast",
+      "B. Accra",
+      "C. Kumasi",
+      "D. Sekondi"
+    ]
+  },
+  "q8": {
+    "question": "The 1900 War of the Golden Stool was led by which queen mother?",
+    "possibleAnswers": [
+      "A. Nana Yaa Naa",
+      "B. Yaa Asantewaa",
+      "C. Nana Yaa Serwaa",
+      "D. Abla Pokou"
+    ]
+  },
+  "q9": {
+    "question": "The Bond of 1844 primarily established what?",
+    "possibleAnswers": [
+      "A. The abolition of slavery in Gold Coast",
+      "B. British legal authority over serious crimes",
+      "C. The end of the Anglo–Asante conflicts",
+      "D. The election of African representatives"
+    ]
+  },
+  "q10": {
+    "question": "The colors of Ghana’s national flag were designed by:",
+    "possibleAnswers": [
+      "A. Amon Kotei",
+      "B. Theodosia Okoh",
+      "C. Philip Gbeho",
+      "D. Ephraim Amu"
+    ]
+  },
+  "q11": {
+    "question": "The black star at the center of Ghana’s flag symbolizes:",
+    "possibleAnswers": [
+      "A. Mineral wealth",
+      "B. Unity of the Ga people",
+      "C. African emancipation and freedom",
+      "D. The Black Stars football team"
+    ]
+  },
+  "q12": {
+    "question": "Which Asante priest is associated with the Golden Stool legend?",
+    "possibleAnswers": [
+      "A. Okomfo Anokye",
+      "B. Nana Kwaku Dua",
+      "C. Kofi Karikari",
+      "D. Osei Kwadwo"
+    ]
+  },
+  "q13": {
+    "question": "The Aborigines’ Rights Protection Society (ARPS) was formed in 1897 to oppose:",
+    "possibleAnswers": [
+      "A. The Poll Tax Ordinance",
+      "B. The Lands Bill",
+      "C. The Native Jurisdiction Ordinance",
+      "D. The Sedition Act"
+    ]
+  },
+  "q14": {
+    "question": "Ghana became a republic on:",
+    "possibleAnswers": [
+      "A. 6 March 1957",
+      "B. 1 July 1960",
+      "C. 7 January 1993",
+      "D. 24 February 1966"
+    ]
+  },
+  "q15": {
+    "question": "The 1966 coup that overthrew Nkrumah established the:",
+    "possibleAnswers": [
+      "A. PNDC",
+      "B. AFRC",
+      "C. NLC",
+      "D. PNP"
+    ]
+  },
+  "q16": {
+    "question": "Who is credited with composing Ghana’s national anthem?",
+    "possibleAnswers": [
+      "A. Ephraim Amu",
+      "B. Philip Gbeho",
+      "C. Nana Ampadu",
+      "D. Osibisa"
+    ]
+  },
+  "q17": {
+    "question": "Which leader declared Ghana a one-party state in 1964?",
+    "possibleAnswers": [
+      "A. Joseph Arthur Ankrah",
+      "B. Kwame Nkrumah",
+      "C. K. A. Busia",
+      "D. I. K. Acheampong"
+    ]
+  },
+  "q18": {
+    "question": "The University College of the Gold Coast (now UG) was founded in:",
+    "possibleAnswers": [
+      "A. 1927",
+      "B. 1948",
+      "C. 1952",
+      "D. 1961"
+    ]
+  },
+  "q19": {
+    "question": "The All-African Peoples’ Conference hosted in Accra took place in:",
+    "possibleAnswers": [
+      "A. 1953",
+      "B. 1958",
+      "C. 1962",
+      "D. 1966"
+    ]
+  },
+  "q20": {
+    "question": "The trans-Volta Togoland plebiscite that led to union with Ghana occurred in:",
+    "possibleAnswers": [
+      "A. 1947",
+      "B. 1956",
+      "C. 1960",
+      "D. 1963"
+    ]
+  },
+  "q21": {
+    "question": "The Asante Empire’s founder is traditionally recognized as:",
+    "possibleAnswers": [
+      "A. Osei Tutu I",
+      "B. Kwaku Dua I",
+      "C. Opoku Ware I",
+      "D. Kofi Karikari"
+    ]
+  },
+  "q22": {
+    "question": "Who is often called the “founding father and financier” of the UGCC?",
+    "possibleAnswers": [
+      "A. J. B. Danquah",
+      "B. Emmanuel Obetsebi-Lamptey",
+      "C. Paa Grant",
+      "D. Edward Akufo-Addo"
+    ]
+  },
+  "q23": {
+    "question": "Which governor is associated with vast public works, including Korle Bu and Achimota?",
+    "possibleAnswers": [
+      "A. Gordon Guggisberg",
+      "B. Frederick Hodgson",
+      "C. Charles MacCarthy",
+      "D. Hugh Clifford"
+    ]
+  },
+  "q24": {
+    "question": "Which harbor was developed as part of Guggisberg’s plan and opened in 1928?",
+    "possibleAnswers": [
+      "A. Tema Harbour",
+      "B. Takoradi Harbour",
+      "C. Sekondi Jetty",
+      "D. Elmina Dock"
+    ]
+  },
+  "q25": {
+    "question": "Which fortress is a UNESCO World Heritage Site?",
+    "possibleAnswers": [
+      "A. Fort Prinzenstein",
+      "B. Fort Apollonia",
+      "C. Elmina Castle",
+      "D. Fort William"
+    ]
+  },
+  "q26": {
+    "question": "The “Positive Action” campaign was launched by:",
+    "possibleAnswers": [
+      "A. UGCC in 1947",
+      "B. CPP in 1950",
+      "C. AFRC in 1979",
+      "D. PNDC in 1981"
+    ]
+  },
+  "q27": {
+    "question": "The head of state who introduced “Operation Feed Yourself” was:",
+    "possibleAnswers": [
+      "A. Hilla Limann",
+      "B. I. K. Acheampong",
+      "C. K. A. Busia",
+      "D. J. J. Rawlings"
+    ]
+  },
+  "q28": {
+    "question": "The 1992 Constitution ushered in the:",
+    "possibleAnswers": [
+      "A. First Republic",
+      "B. Second Republic",
+      "C. Third Republic",
+      "D. Fourth Republic"
+    ]
+  },
+  "q29": {
+    "question": "The Asantehene’s official seat is in:",
+    "possibleAnswers": [
+      "A. Sunyani",
+      "B. Kumasi",
+      "C. Tamale",
+      "D. Koforidua"
+    ]
+  },
+  "q30": {
+    "question": "Which newspaper was founded in 1950 by the Mirror Group?",
+    "possibleAnswers": [
+      "A. The Spectator",
+      "B. Daily Graphic",
+      "C. Ghanaian Times",
+      "D. The Pioneer"
+    ]
+  },
+  "q31": {
+    "question": "The first Ghanaian Chief Justice was:",
+    "possibleAnswers": [
+      "A. Edward Akufo-Addo",
+      "B. Sir Kobina Arku Korsah",
+      "C. Nii Amaa Ollennu",
+      "D. E. N. P. Sowah"
+    ]
+  },
+  "q32": {
+    "question": "The AFRC led by Jerry Rawlings took power in:",
+    "possibleAnswers": [
+      "A. 1966",
+      "B. 1972",
+      "C. 1979",
+      "D. 1981"
+    ]
+  },
+  "q33": {
+    "question": "Which major dam created Lake Volta in the 1960s?",
+    "possibleAnswers": [
+      "A. Bui Dam",
+      "B. Kpong Dam",
+      "C. Akosombo Dam",
+      "D. Weija Dam"
+    ]
+  },
+  "q34": {
+    "question": "Which region was created following the 2018–2019 regional reorganization?",
+    "possibleAnswers": [
+      "A. Ashanti",
+      "B. Oti",
+      "C. Greater Accra",
+      "D. Western"
+    ]
+  },
+  "q35": {
+    "question": "The former name “Gold Coast” referred to:",
+    "possibleAnswers": [
+      "A. Northern Territories only",
+      "B. The British colony on the Gulf of Guinea",
+      "C. The Asante Empire alone",
+      "D. Eastern Togoland"
+    ]
+  },
+  "q36": {
+    "question": "The “Verandah Boys” was a nickname for supporters of:",
+    "possibleAnswers": [
+      "A. UGCC",
+      "B. CPP",
+      "C. PNP",
+      "D. NPP"
+    ]
+  },
+  "q37": {
+    "question": "The seat of government “Jubilee House” is located in:",
+    "possibleAnswers": [
+      "A. Kumasi",
+      "B. Cape Coast",
+      "C. Accra",
+      "D. Tamale"
+    ]
+  },
+  "q38": {
+    "question": "Kente weaving is most closely associated with:",
+    "possibleAnswers": [
+      "A. Bonwire in Asante",
+      "B. Ada in Greater Accra",
+      "C. Anloga in Volta",
+      "D. Elmina in Central Region"
+    ]
+  },
+  "q39": {
+    "question": "Which palace is the seat of the Asantehene?",
+    "possibleAnswers": [
+      "A. Aban Palace",
+      "B. Manhyia Palace",
+      "C. Gbewaa Palace",
+      "D. Ofori Panin Fie"
+    ]
+  },
+  "q40": {
+    "question": "Ghana’s motto on the coat of arms is:",
+    "possibleAnswers": [
+      "A. Unity and Strength",
+      "B. Freedom and Justice",
+      "C. Peace and Prosperity",
+      "D. Forward Ever"
+    ]
+  },
+  "q41": {
+    "question": "Amon Kotei is best known for designing:",
+    "possibleAnswers": [
+      "A. National flag",
+      "B. Coat of arms",
+      "C. National pledge",
+      "D. Independence Arch"
+    ]
+  },
+  "q42": {
+    "question": "The Kumasi city was burned during which Anglo–Asante War?",
+    "possibleAnswers": [
+      "A. 1824 Nsamankow",
+      "B. 1863 Battle of Dodowa",
+      "C. 1874 Sagrenti War",
+      "D. 1900 Golden Stool War"
+    ]
+  },
+  "q43": {
+    "question": "Prempeh I was exiled by the British to:",
+    "possibleAnswers": [
+      "A. Seychelles",
+      "B. Barbados",
+      "C. St. Helena",
+      "D. Mauritius"
+    ]
+  },
+  "q44": {
+    "question": "The 1852 Poll Tax Ordinance aimed to:",
+    "possibleAnswers": [
+      "A. Raise revenue for colonial administration",
+      "B. End the slave trade immediately",
+      "C. Create African representation in London",
+      "D. Fund a national university"
+    ]
+  },
+  "q45": {
+    "question": "The first modern political party in the Gold Coast was:",
+    "possibleAnswers": [
+      "A. CPP",
+      "B. ARPS",
+      "C. UGCC",
+      "D. PNP"
+    ]
+  },
+  "q46": {
+    "question": "The first Prime Minister of self-governing Gold Coast (1952) was:",
+    "possibleAnswers": [
+      "A. Komla Gbedemah",
+      "B. Kwame Nkrumah",
+      "C. J. B. Danquah",
+      "D. Edward Akufo-Addo"
+    ]
+  },
+  "q47": {
+    "question": "The seat of the Ga Mantse is in:",
+    "possibleAnswers": [
+      "A. Jamestown (Ga Mashie)",
+      "B. Nsawam",
+      "C. Dodowa",
+      "D. Keta"
+    ]
+  },
+  "q48": {
+    "question": "The British abolished the slave trade in:",
+    "possibleAnswers": [
+      "A. 1787",
+      "B. 1807",
+      "C. 1833",
+      "D. 1874"
+    ]
+  },
+  "q49": {
+    "question": "The capital of the Northern Territories during colonial rule was:",
+    "possibleAnswers": [
+      "A. Wa",
+      "B. Tamale",
+      "C. Yendi",
+      "D. Bolgatanga"
+    ]
+  },
+  "q50": {
+    "question": "The first African UN Secretary-General from Ghana was:",
+    "possibleAnswers": [
+      "A. Kofi Annan",
+      "B. Busumuru Kofi Annan",
+      "C. Alex Quaison-Sackey",
+      "D. Komla Dumor"
+    ]
+  },
+  "q51": {
+    "question": "The CPP slogan “Self-Government Now” contrasted the UGCC’s:",
+    "possibleAnswers": [
+      "A. “Self-Government in the Distant Future”",
+      "B. “Self-Government Within the Shortest Possible Time”",
+      "C. “Commonwealth Forever”",
+      "D. “Union Now”"
+    ]
+  },
+  "q52": {
+    "question": "The British headquarters on the coast before 1877 was:",
+    "possibleAnswers": [
+      "A. Elmina",
+      "B. Cape Coast",
+      "C. Accra",
+      "D. Keta"
+    ]
+  },
+  "q53": {
+    "question": "The National Liberation Council (1966–69) was chaired by:",
+    "possibleAnswers": [
+      "A. J. A. Ankrah, later A. A. Afrifa",
+      "B. I. K. Acheampong alone",
+      "C. Hilla Limann",
+      "D. Edward Akufo-Addo"
+    ]
+  },
+  "q54": {
+    "question": "The Korle Bu Teaching Hospital was opened in:",
+    "possibleAnswers": [
+      "A. 1919",
+      "B. 1923",
+      "C. 1948",
+      "D. 1955"
+    ]
+  },
+  "q55": {
+    "question": "The Achimota School officially opened in:",
+    "possibleAnswers": [
+      "A. 1911",
+      "B. 1927",
+      "C. 1947",
+      "D. 1951"
+    ]
+  },
+  "q56": {
+    "question": "The 1979 Third Republic President was:",
+    "possibleAnswers": [
+      "A. Jerry John Rawlings",
+      "B. Hilla Limann",
+      "C. K. A. Busia",
+      "D. Edward Akufo-Addo"
+    ]
+  },
+  "q57": {
+    "question": "The PNDC era lasted from:",
+    "possibleAnswers": [
+      "A. 1972–1979",
+      "B. 1979–1981",
+      "C. 1981–1993",
+      "D. 1993–2001"
+    ]
+  },
+  "q58": {
+    "question": "The 2007 cedi redenomination removed how many zeros?",
+    "possibleAnswers": [
+      "A. Two",
+      "B. Three",
+      "C. Four",
+      "D. Five"
+    ]
+  },
+  "q59": {
+    "question": "The first modern railway in the Gold Coast was built primarily to move:",
+    "possibleAnswers": [
+      "A. Timber from Axim",
+      "B. Cocoa from Brong Ahafo",
+      "C. Minerals from Tarkwa/Obuasi",
+      "D. Textiles from Kumasi"
+    ]
+  },
+  "q60": {
+    "question": "Who among the Big Six later became Chief Justice and President (ceremonial)?",
+    "possibleAnswers": [
+      "A. J. B. Danquah",
+      "B. Edward Akufo-Addo",
+      "C. William Ofori Atta",
+      "D. Ako Adjei"
+    ]
+  },
+  "q61": {
+    "question": "The Akan migration traditions often trace origins to:",
+    "possibleAnswers": [
+      "A. The Sahara",
+      "B. Ancient Ghana Empire",
+      "C. The Congo Basin",
+      "D. The Nile Delta"
+    ]
+  },
+  "q62": {
+    "question": "The name “Ghana” was proposed by:",
+    "possibleAnswers": [
+      "A. Kwame Nkrumah",
+      "B. J. B. Danquah",
+      "C. Paa Grant",
+      "D. Komla Gbedemah"
+    ]
+  },
+  "q63": {
+    "question": "The 1969 Constitution inaugurated the:",
+    "possibleAnswers": [
+      "A. First Republic",
+      "B. Second Republic",
+      "C. Third Republic",
+      "D. Fourth Republic"
+    ]
+  },
+  "q64": {
+    "question": "The original national anthem lyrics were adopted in:",
+    "possibleAnswers": [
+      "A. 1957",
+      "B. 1960",
+      "C. 1966",
+      "D. 1992"
+    ]
+  },
+  "q65": {
+    "question": "The Danish influence on the Gold Coast is most visible at:",
+    "possibleAnswers": [
+      "A. Christiansborg (Osu) Castle",
+      "B. Cape Coast Castle",
+      "C. Elmina Castle",
+      "D. Fort St. Jago"
+    ]
+  },
+  "q66": {
+    "question": "The “Year of Return” marked 400 years since 1619 and was held in:",
+    "possibleAnswers": [
+      "A. 2017",
+      "B. 2018",
+      "C. 2019",
+      "D. 2020"
+    ]
+  },
+  "q67": {
+    "question": "The Independence Arch and Black Star Gate are located at:",
+    "possibleAnswers": [
+      "A. Manhyia Grounds",
+      "B. Black Star Square",
+      "C. Jubilee Park",
+      "D. Polo Grounds"
+    ]
+  },
+  "q68": {
+    "question": "Nkrumah’s “Seven-Year Development Plan” launched in:",
+    "possibleAnswers": [
+      "A. 1951",
+      "B. 1957",
+      "C. 1963",
+      "D. 1966"
+    ]
+  },
+  "q69": {
+    "question": "The 1874 Treaty of Fomena followed which conflict?",
+    "possibleAnswers": [
+      "A. War of the Golden Stool",
+      "B. Sagrenti War",
+      "C. Battle of Nsamankow",
+      "D. Kintampo Accord"
+    ]
+  },
+  "q70": {
+    "question": "The first Ghanaian female Chief Justice was:",
+    "possibleAnswers": [
+      "A. Joyce Bamford-Addo",
+      "B. Georgina Theodora Wood",
+      "C. Sophia Akuffo",
+      "D. Justice Akua Kuenyehia"
+    ]
+  },
+  "q71": {
+    "question": "The British Togoland was administered as a:",
+    "possibleAnswers": [
+      "A. Crown Colony",
+      "B. Protectorate",
+      "C. UN Trust Territory",
+      "D. Dominion"
+    ]
+  },
+  "q72": {
+    "question": "The seat of the Yaa Naa is located at:",
+    "possibleAnswers": [
+      "A. Yendi",
+      "B. Wa",
+      "C. Tamale",
+      "D. Bawku"
+    ]
+  },
+  "q73": {
+    "question": "The Fante Confederacy (1868) attempted to:",
+    "possibleAnswers": [
+      "A. Resist Asante alone",
+      "B. Form a self-governing coastal polity",
+      "C. Abolish chieftaincy",
+      "D. Unite with the Dutch"
+    ]
+  },
+  "q74": {
+    "question": "The Ghanaian novelist of “The Beautyful Ones Are Not Yet Born” is:",
+    "possibleAnswers": [
+      "A. Ayi Kwei Armah",
+      "B. Ama Ata Aidoo",
+      "C. Kofi Awoonor",
+      "D. Cameron Duodu"
+    ]
+  },
+  "q75": {
+    "question": "The Pan-African leader who addressed Parliament in Accra and later became UNGA President:",
+    "possibleAnswers": [
+      "A. Alex Quaison-Sackey",
+      "B. Komla Agbeli Gbedemah",
+      "C. K. B. Asante",
+      "D. K. A. Busia"
+    ]
+  },
+  "q76": {
+    "question": "The Independence speech “At long last, the battle has ended…” was delivered at:",
+    "possibleAnswers": [
+      "A. Black Star Square",
+      "B. Old Polo Grounds",
+      "C. Manhyia Palace",
+      "D. Parliament House"
+    ]
+  },
+  "q77": {
+    "question": "The original British headquarters moved from Cape Coast to Accra in:",
+    "possibleAnswers": [
+      "A. 1862",
+      "B. 1877",
+      "C. 1896",
+      "D. 1900"
+    ]
+  },
+  "q78": {
+    "question": "The capital of the Volta Region is:",
+    "possibleAnswers": [
+      "A. Keta",
+      "B. Ho",
+      "C. Hohoe",
+      "D. Jasikan"
+    ]
+  },
+  "q79": {
+    "question": "Ghana’s first oil from the Jubilee Field flowed in:",
+    "possibleAnswers": [
+      "A. 2005",
+      "B. 2007",
+      "C. 2010",
+      "D. 2012"
+    ]
+  },
+  "q80": {
+    "question": "Which coastal city is famous for the Aboakyer festival?",
+    "possibleAnswers": [
+      "A. Elmina",
+      "B. Anomabu",
+      "C. Winneba",
+      "D. Saltpond"
+    ]
+  },
+  "q81": {
+    "question": "The Homowo festival is celebrated by the:",
+    "possibleAnswers": [
+      "A. Ewe",
+      "B. Ga",
+      "C. Dagomba",
+      "D. Frafra"
+    ]
+  },
+  "q82": {
+    "question": "The Hogbetsotso festival commemorates an Ewe migration from:",
+    "possibleAnswers": [
+      "A. Bono",
+      "B. Takyiman",
+      "C. Notsie",
+      "D. Gonja"
+    ]
+  },
+  "q83": {
+    "question": "The Odwira festival is associated mainly with:",
+    "possibleAnswers": [
+      "A. Fante states",
+      "B. Akuapem and Akwamu areas",
+      "C. Dagbon",
+      "D. Dagaare communities"
+    ]
+  },
+  "q84": {
+    "question": "The Damba festival is celebrated predominantly in:",
+    "possibleAnswers": [
+      "A. Greater Accra",
+      "B. Northern Ghana",
+      "C. Western Region",
+      "D. Oti Region"
+    ]
+  },
+  "q85": {
+    "question": "The 1969–72 government was led by:",
+    "possibleAnswers": [
+      "A. K. A. Busia",
+      "B. E. Akufo-Addo (executive)",
+      "C. Hilla Limann",
+      "D. J. J. Rawlings"
+    ]
+  },
+  "q86": {
+    "question": "The National Liberation Movement (NLM) was strong in:",
+    "possibleAnswers": [
+      "A. Ga Mashie",
+      "B. Asante",
+      "C. Volta",
+      "D. Northern Territories"
+    ]
+  },
+  "q87": {
+    "question": "Ghana’s currency “cedi” was first introduced in:",
+    "possibleAnswers": [
+      "A. 1957",
+      "B. 1965",
+      "C. 1967",
+      "D. 2007"
+    ]
+  },
+  "q88": {
+    "question": "The pesewa is the:",
+    "possibleAnswers": [
+      "A. Former currency unit",
+      "B. Subunit of the cedi",
+      "C. Name for coins minted before 1970",
+      "D. Tax on cocoa exports"
+    ]
+  },
+  "q89": {
+    "question": "The Basel Mission contributed significantly to:",
+    "possibleAnswers": [
+      "A. Catholic institutions",
+      "B. Presbyterian education and printing",
+      "C. Islamic schools",
+      "D. Railway engineering"
+    ]
+  },
+  "q90": {
+    "question": "The Presbyterian Church of Ghana traces its roots to:",
+    "possibleAnswers": [
+      "A. 17th-century Portuguese missions",
+      "B. 18th-century Danish/Swiss missions",
+      "C. 19th-century British Baptists",
+      "D. 20th-century American Methodists"
+    ]
+  },
+  "q91": {
+    "question": "The Accra sports stadium was renamed in honor of:",
+    "possibleAnswers": [
+      "A. Ohene Djan",
+      "B. Baba Yara",
+      "C. Robert Mensah",
+      "D. C. K. Gyamfi"
+    ]
+  },
+  "q92": {
+    "question": "The Baba Yara Stadium is located in:",
+    "possibleAnswers": [
+      "A. Accra",
+      "B. Kumasi",
+      "C. Tamale",
+      "D. Sekondi-Takoradi"
+    ]
+  },
+  "q93": {
+    "question": "Ghana Broadcasting Corporation (TV) began regular transmissions in:",
+    "possibleAnswers": [
+      "A. 1958",
+      "B. 1961",
+      "C. 1965",
+      "D. 1967"
+    ]
+  },
+  "q94": {
+    "question": "The first Ghanaian to become President of the UN General Assembly was:",
+    "possibleAnswers": [
+      "A. Kofi Annan",
+      "B. Alex Quaison-Sackey",
+      "C. Komla Gbedemah",
+      "D. Victor Owusu"
+    ]
+  },
+  "q95": {
+    "question": "The modern port city constructed in the 1960s to support industry was:",
+    "possibleAnswers": [
+      "A. Takoradi",
+      "B. Tema",
+      "C. Elmina",
+      "D. Axim"
+    ]
+  },
+  "q96": {
+    "question": "The Black Star in Ghana’s flag is partly inspired by:",
+    "possibleAnswers": [
+      "A. The Black Star Line",
+      "B. The night sky over Kumasi",
+      "C. The starfish of the Gulf of Guinea",
+      "D. The Northern Star of Europe"
+    ]
+  },
+  "q97": {
+    "question": "Which of these was NOT one of the Big Six?",
+    "possibleAnswers": [
+      "A. Ako Adjei",
+      "B. William Ofori Atta",
+      "C. E. Akuffo-Addo",
+      "D. I. K. Acheampong"
+    ]
+  },
+  "q98": {
+    "question": "The Pan-Africanist who wrote “Consciencism” was:",
+    "possibleAnswers": [
+      "A. W. E. B. Du Bois",
+      "B. George Padmore",
+      "C. Kwame Nkrumah",
+      "D. Marcus Garvey"
+    ]
+  },
+  "q99": {
+    "question": "The Fourth Republic was inaugurated on:",
+    "possibleAnswers": [
+      "A. 31 December 1981",
+      "B. 7 January 1993",
+      "C. 7 January 2001",
+      "D. 7 January 2009"
+    ]
+  },
+  "q100": {
+    "question": "Ghana’s Parliament operates under a:",
+    "possibleAnswers": [
+      "A. Federal system",
+      "B. Unitary constitutional democracy",
+      "C. Confederal arrangement",
+      "D. Absolute monarchy"
+    ]
+  },
+  "q101": {
+    "question": "The title of the Asante king is:",
+    "possibleAnswers": [
+      "A. Ya-Na",
+      "B. Asantehene",
+      "C. Okyenhene",
+      "D. Omanhene"
+    ]
+  },
+  "q102": {
+    "question": "The Ofori Panin Fie is the palace of the:",
+    "possibleAnswers": [
+      "A. Dagbon king",
+      "B. Okyenhene of Akyem Abuakwa",
+      "C. Asantehene",
+      "D. Yagbonwura"
+    ]
+  },
+  "q103": {
+    "question": "The Ga-Dangme peoples historically occupied areas around:",
+    "possibleAnswers": [
+      "A. Central Volta",
+      "B. Greater Accra and parts of Eastern",
+      "C. Upper West",
+      "D. Northern Savannah"
+    ]
+  },
+  "q104": {
+    "question": "The British annexed Asante as a colony in:",
+    "possibleAnswers": [
+      "A. 1874",
+      "B. 1896",
+      "C. 1901",
+      "D. 1906"
+    ]
+  },
+  "q105": {
+    "question": "The Northern Territories became a Protectorate in:",
+    "possibleAnswers": [
+      "A. 1896",
+      "B. 1902",
+      "C. 1910",
+      "D. 1914"
+    ]
+  },
+  "q106": {
+    "question": "The Poll Tax Ordinance caused resistance partly because it:",
+    "possibleAnswers": [
+      "A. Taxed chiefs only",
+      "B. Ignored local authority structures",
+      "C. Abolished the courts",
+      "D. Required military service"
+    ]
+  },
+  "q107": {
+    "question": "The name “Black Stars” for Ghana’s national team draws from:",
+    "possibleAnswers": [
+      "A. The Asante symbol for unity",
+      "B. The national flag’s star",
+      "C. A Ga fishing symbol",
+      "D. Dutch naval emblem"
+    ]
+  },
+  "q108": {
+    "question": "Ghana’s first AFCON title came in:",
+    "possibleAnswers": [
+      "A. 1957",
+      "B. 1963",
+      "C. 1968",
+      "D. 1978"
+    ]
+  },
+  "q109": {
+    "question": "The capital of the newly created North East Region is:",
+    "possibleAnswers": [
+      "A. Damongo",
+      "B. Dambai",
+      "C. Nalerigu",
+      "D. Goaso"
+    ]
+  },
+  "q110": {
+    "question": "The writer of “Songs of Sorrow,” later a statesman, was:",
+    "possibleAnswers": [
+      "A. Kofi Awoonor",
+      "B. Atukwei Okai",
+      "C. Ayi Kwei Armah",
+      "D. Kofi Anyidoho"
+    ]
+  },
+  "q111": {
+    "question": "The 2019 referendum increased Ghana’s regions from:",
+    "possibleAnswers": [
+      "A. 8 to 10",
+      "B. 10 to 12",
+      "C. 10 to 16",
+      "D. 12 to 16"
+    ]
+  },
+  "q112": {
+    "question": "The British demand for the Golden Stool was made by:",
+    "possibleAnswers": [
+      "A. Governor Guggisberg",
+      "B. Governor Hodgson",
+      "C. Governor Clifford",
+      "D. Governor MacCarthy"
+    ]
+  },
+  "q113": {
+    "question": "Which group is most associated with Asafo companies?",
+    "possibleAnswers": [
+      "A. Ga",
+      "B. Fante",
+      "C. Dagomba",
+      "D. Ewe"
+    ]
+  },
+  "q114": {
+    "question": "The National Cathedral project is primarily located in:",
+    "possibleAnswers": [
+      "A. Kumasi",
+      "B. Tamale",
+      "C. Accra",
+      "D. Sunyani"
+    ]
+  },
+  "q115": {
+    "question": "The 2010 census confirmed Ghana’s population exceeded:",
+    "possibleAnswers": [
+      "A. 12 million",
+      "B. 18 million",
+      "C. 24 million",
+      "D. 30 million"
+    ]
+  },
+  "q116": {
+    "question": "The first President of the Second Republic (1969) was:",
+    "possibleAnswers": [
+      "A. Edward Akufo-Addo (ceremonial)",
+      "B. K. A. Busia (executive)",
+      "C. Hilla Limann (executive)",
+      "D. Jerry Rawlings (executive)"
+    ]
+  },
+  "q117": {
+    "question": "The 1972 coup that toppled Busia brought to power:",
+    "possibleAnswers": [
+      "A. NLC",
+      "B. PNDC",
+      "C. NRC/SMC under Acheampong",
+      "D. AFRC"
+    ]
+  },
+  "q118": {
+    "question": "The Keta Sea Defence project is in which region?",
+    "possibleAnswers": [
+      "A. Central",
+      "B. Volta",
+      "C. Eastern",
+      "D. Greater Accra"
+    ]
+  },
+  "q119": {
+    "question": "Which Ghanaian leader championed Non-Aligned Movement ideals?",
+    "possibleAnswers": [
+      "A. Hilla Limann",
+      "B. K. A. Busia",
+      "C. Kwame Nkrumah",
+      "D. Edward Akufo-Addo"
+    ]
+  },
+  "q120": {
+    "question": "The building commonly called “Job 600” is associated with:",
+    "possibleAnswers": [
+      "A. Judicial Service",
+      "B. Parliament",
+      "C. Electoral Commission",
+      "D. Foreign Affairs"
+    ]
+  },
+  "q121": {
+    "question": "The Basel Mission Press helped publish:",
+    "possibleAnswers": [
+      "A. The Daily Graphic",
+      "B. Christian Messenger",
+      "C. Ghanaian Times",
+      "D. Ashanti Pioneer"
+    ]
+  },
+  "q122": {
+    "question": "Sekondi–Tarkwa railway opened around:",
+    "possibleAnswers": [
+      "A. 1885",
+      "B. 1901",
+      "C. 1913",
+      "D. 1928"
+    ]
+  },
+  "q123": {
+    "question": "The Asante capital historically is:",
+    "possibleAnswers": [
+      "A. Sunyani",
+      "B. Goaso",
+      "C. Kumasi",
+      "D. Techiman"
+    ]
+  },
+  "q124": {
+    "question": "The Portuguese first reached parts of the Gold Coast coast around:",
+    "possibleAnswers": [
+      "A. 1361",
+      "B. 1421",
+      "C. 1471",
+      "D. 1511"
+    ]
+  },
+  "q125": {
+    "question": "The castle that later housed Ghana’s seat of government for decades:",
+    "possibleAnswers": [
+      "A. Cape Coast Castle",
+      "B. Christiansborg (Osu) Castle",
+      "C. Fort Amsterdam",
+      "D. Fort William"
+    ]
+  },
+  "q126": {
+    "question": "The CPP motto included:",
+    "possibleAnswers": [
+      "A. Freedom and Justice",
+      "B. Work and Happiness",
+      "C. Forward Ever; Backward Never",
+      "D. Time Changes"
+    ]
+  },
+  "q127": {
+    "question": "The first modern census in the Gold Coast was taken in:",
+    "possibleAnswers": [
+      "A. 1891",
+      "B. 1901",
+      "C. 1911",
+      "D. 1921"
+    ]
+  },
+  "q128": {
+    "question": "The “Polo Grounds” where independence was declared stood in:",
+    "possibleAnswers": [
+      "A. Ridge, Accra",
+      "B. Osu, Accra",
+      "C. Cantonments, Accra",
+      "D. Asylum Down, Accra"
+    ]
+  },
+  "q129": {
+    "question": "The political party that won the 1951 Legislative Assembly elections was:",
+    "possibleAnswers": [
+      "A. UGCC",
+      "B. CPP",
+      "C. NLM",
+      "D. PNP"
+    ]
+  },
+  "q130": {
+    "question": "Ghana’s first female Speaker of Parliament was:",
+    "possibleAnswers": [
+      "A. Joyce Bamford-Addo",
+      "B. Georgina Wood",
+      "C. Nana Konadu Agyeman-Rawlings",
+      "D. Betty Mould-Iddrisu"
+    ]
+  },
+  "q131": {
+    "question": "The first executive President of the Fourth Republic was:",
+    "possibleAnswers": [
+      "A. J. J. Rawlings",
+      "B. John Agyekum Kufuor",
+      "C. John Evans Atta Mills",
+      "D. Jerry John Limann"
+    ]
+  },
+  "q132": {
+    "question": "The cathedral-like “National Theatre” opened in:",
+    "possibleAnswers": [
+      "A. 1982",
+      "B. 1992",
+      "C. 2002",
+      "D. 2012"
+    ]
+  },
+  "q133": {
+    "question": "The traditional state famous for the Akwasidae festival is:",
+    "possibleAnswers": [
+      "A. Anlo",
+      "B. Akyem Abuakwa",
+      "C. Asante",
+      "D. Gonja"
+    ]
+  },
+  "q134": {
+    "question": "The ancient Sudanic empire that inspired Ghana’s name lay mostly in:",
+    "possibleAnswers": [
+      "A. Present-day Ghana",
+      "B. Present-day Mali/Mauritania",
+      "C. Present-day Nigeria",
+      "D. Present-day Sudan"
+    ]
+  },
+  "q135": {
+    "question": "The Osu Castle was controlled by which European power before Britain?",
+    "possibleAnswers": [
+      "A. Netherlands",
+      "B. Portugal",
+      "C. Denmark",
+      "D. Spain"
+    ]
+  },
+  "q136": {
+    "question": "The cocoa marketing board was instituted primarily to:",
+    "possibleAnswers": [
+      "A. Fix cocoa prices and stabilize the market",
+      "B. Tax cocoa farms away",
+      "C. Privatize railways",
+      "D. Import foreign cocoa"
+    ]
+  },
+  "q137": {
+    "question": "The 1995 “Kume Preko” protest occurred during the presidency of:",
+    "possibleAnswers": [
+      "A. J. J. Rawlings",
+      "B. J. A. Kufuor",
+      "C. J. E. A. Mills",
+      "D. Hilla Limann"
+    ]
+  },
+  "q138": {
+    "question": "The Asante unity was solidified by:",
+    "possibleAnswers": [
+      "A. The sword planted at Kumasi",
+      "B. The oaths to the Golden Stool",
+      "C. The oath to the British Crown",
+      "D. The treaty with Fante"
+    ]
+  },
+  "q139": {
+    "question": "The Bono state of Techiman is part of the larger:",
+    "possibleAnswers": [
+      "A. Guan traditions",
+      "B. Ga-Dangme group",
+      "C. Akan traditions",
+      "D. Mole-Dagbani group"
+    ]
+  },
+  "q140": {
+    "question": "The seat of the Yagbonwura is in:",
+    "possibleAnswers": [
+      "A. Damongo",
+      "B. Yendi",
+      "C. Walewale",
+      "D. Bole"
+    ]
+  },
+  "q141": {
+    "question": "Ghana’s first female Chief of Staff was:",
+    "possibleAnswers": [
+      "A. Frema Osei-Opare",
+      "B. Hannah Tetteh",
+      "C. Gloria Akuffo",
+      "D. Elizabeth Ohene"
+    ]
+  },
+  "q142": {
+    "question": "The first Ghanaian to serve as OAU (AU) Chair in the early years was:",
+    "possibleAnswers": [
+      "A. Kwame Nkrumah",
+      "B. K. A. Busia",
+      "C. I. K. Acheampong",
+      "D. Flt. Lt. J. J. Rawlings"
+    ]
+  },
+  "q143": {
+    "question": "The first national elections after the 1992 Constitution were held in:",
+    "possibleAnswers": [
+      "A. 1992",
+      "B. 1996",
+      "C. 2000",
+      "D. 2004"
+    ]
+  },
+  "q144": {
+    "question": "The capital of the Ahafo Region is:",
+    "possibleAnswers": [
+      "A. Goaso",
+      "B. Techiman",
+      "C. Sunyani",
+      "D. Kintampo"
+    ]
+  },
+  "q145": {
+    "question": "The capital of the Savannah Region is:",
+    "possibleAnswers": [
+      "A. Bole",
+      "B. Damongo",
+      "C. Salaga",
+      "D. Sawla"
+    ]
+  },
+  "q146": {
+    "question": "The famous Asante Golden Stool is believed to house the:",
+    "possibleAnswers": [
+      "A. Wealth of Kumasi",
+      "B. Soul of the Asante nation",
+      "C. Code of Asante laws",
+      "D. Coronation regalia of Osei Tutu II"
+    ]
+  },
+  "q147": {
+    "question": "The Dutch ceded Elmina to the British in:",
+    "possibleAnswers": [
+      "A. 1800",
+      "B. 1867",
+      "C. 1872",
+      "D. 1884"
+    ]
+  },
+  "q148": {
+    "question": "The Danquah–Busia tradition is associated with:",
+    "possibleAnswers": [
+      "A. CPP lineage",
+      "B. Nkrumahist parties",
+      "C. UP/NPP lineage",
+      "D. PNDC lineage"
+    ]
+  },
+  "q149": {
+    "question": "The main export that overtook gold in the early 20th century was:",
+    "possibleAnswers": [
+      "A. Timber",
+      "B. Cocoa",
+      "C. Bauxite",
+      "D. Diamonds"
+    ]
+  },
+  "q150": {
+    "question": "The “Independence Square” is also officially called:",
+    "possibleAnswers": [
+      "A. Nkrumah Square",
+      "B. Black Star Square",
+      "C. Jubilee Grounds",
+      "D. Freedom Field"
+    ]
+  },
+  "q151": {
+    "question": "Cape Coast was the seat of:",
+    "possibleAnswers": [
+      "A. Asantehene",
+      "B. Ewe Awoamefia",
+      "C. Colonial administration before 1877",
+      "D. Ga Mantse"
+    ]
+  },
+  "q152": {
+    "question": "The first Executive President under the 1960 Constitution was:",
+    "possibleAnswers": [
+      "A. Kwame Nkrumah",
+      "B. Edward Akufo-Addo",
+      "C. K. A. Busia",
+      "D. Hilla Limann"
+    ]
+  },
+  "q153": {
+    "question": "The 1981 coup that ushered in PNDC happened on:",
+    "possibleAnswers": [
+      "A. 24 February",
+      "B. 13 January",
+      "C. 4 June",
+      "D. 31 December"
+    ]
+  },
+  "q154": {
+    "question": "The “Preventive Detention Act” was passed in:",
+    "possibleAnswers": [
+      "A. 1957",
+      "B. 1958",
+      "C. 1960",
+      "D. 1964"
+    ]
+  },
+  "q155": {
+    "question": "The capital of the Western North Region is:",
+    "possibleAnswers": [
+      "A. Sefwi Wiawso",
+      "B. Tarkwa",
+      "C. Enchi",
+      "D. Axim"
+    ]
+  },
+  "q156": {
+    "question": "The first Ghanaian to head the African Union Commission:",
+    "possibleAnswers": [
+      "A. Kofi Annan",
+      "B. Hanna Tetteh",
+      "C. Dr. K. A. Busia",
+      "D. (None; AU Commission has not been headed by a Ghanaian)"
+    ]
+  },
+  "q157": {
+    "question": "“Freedom and Justice” appears on:",
+    "possibleAnswers": [
+      "A. The national flag",
+      "B. The coat of arms",
+      "C. The currency notes",
+      "D. Parliament mace"
+    ]
+  },
+  "q158": {
+    "question": "The colonial name “Asante Protectorate” became a colony in:",
+    "possibleAnswers": [
+      "A. 1896",
+      "B. 1901",
+      "C. 1911",
+      "D. 1921"
+    ]
+  },
+  "q159": {
+    "question": "The first modern teacher training institutions were often founded by:",
+    "possibleAnswers": [
+      "A. Colonial police",
+      "B. Mission societies",
+      "C. Railway boards",
+      "D. Cocoa cooperatives"
+    ]
+  },
+  "q160": {
+    "question": "The University of Science and Technology (now KNUST) began in:",
+    "possibleAnswers": [
+      "A. 1946",
+      "B. 1952",
+      "C. 1961",
+      "D. 1966"
+    ]
+  },
+  "q161": {
+    "question": "The capital of the Bono East Region is:",
+    "possibleAnswers": [
+      "A. Techiman",
+      "B. Sunyani",
+      "C. Kintampo",
+      "D. Nkawkaw"
+    ]
+  },
+  "q162": {
+    "question": "The first President of the Third Republic was:",
+    "possibleAnswers": [
+      "A. Hilla Limann",
+      "B. J. A. Kufuor",
+      "C. J. E. A. Mills",
+      "D. Jerry Rawlings"
+    ]
+  },
+  "q163": {
+    "question": "The Ashanti Confederacy was restored by the British in:",
+    "possibleAnswers": [
+      "A. 1901",
+      "B. 1924",
+      "C. 1935",
+      "D. 1946"
+    ]
+  },
+  "q164": {
+    "question": "The “Sagrenti War” name is a local corruption of:",
+    "possibleAnswers": [
+      "A. Sir Garnet Wolseley",
+      "B. Sir George Taubman",
+      "C. Sir Arthur Wellesley",
+      "D. Sir Charles MacCarthy"
+    ]
+  },
+  "q165": {
+    "question": "The Ga word “Homowo” literally refers to:",
+    "possibleAnswers": [
+      "A. Harvest of millet",
+      "B. Hooting at hunger",
+      "C. Dance of joy",
+      "D. Blessing the sea"
+    ]
+  },
+  "q166": {
+    "question": "The coastal fort used as a lighthouse is:",
+    "possibleAnswers": [
+      "A. Fort William, Anomabu",
+      "B. Fort St. Jago, Elmina",
+      "C. Fort James, Accra",
+      "D. Fort Prinzenstein, Keta"
+    ]
+  },
+  "q167": {
+    "question": "The “CPP Split” of 1961 led to formation of:",
+    "possibleAnswers": [
+      "A. NLM",
+      "B. PNP",
+      "C. NPP",
+      "D. Opposition realignments but CPP remained dominant"
+    ]
+  },
+  "q168": {
+    "question": "The first Ghanaian to chair ECOWAS Authority of Heads of State:",
+    "possibleAnswers": [
+      "A. J. J. Rawlings",
+      "B. J. A. Kufuor",
+      "C. K. A. Busia",
+      "D. Edward Akufo-Addo"
+    ]
+  },
+  "q169": {
+    "question": "The “Akwapim Ridge” historically protected:",
+    "possibleAnswers": [
+      "A. Kumasi from northern raids",
+      "B. Accra from inland incursions",
+      "C. Cape Coast from sea erosion",
+      "D. Wa from droughts"
+    ]
+  },
+  "q170": {
+    "question": "The Kumasi Fort now serves as a:",
+    "possibleAnswers": [
+      "A. Textile museum",
+      "B. Military museum",
+      "C. Cocoa museum",
+      "D. Mining museum"
+    ]
+  },
+  "q171": {
+    "question": "The first female running mate to win Ghana’s presidency/VP ticket was:",
+    "possibleAnswers": [
+      "A. Nana Konadu Agyeman-Rawlings",
+      "B. Jane Naana Opoku-Agyemang",
+      "C. Samira Bawumia",
+      "D. (None; as of now, no female has served as President/VP—trick choice)"
+    ]
+  },
+  "q172": {
+    "question": "The first Executive Vice-President/VP of the Fourth Republic was:",
+    "possibleAnswers": [
+      "A. Kow Nkensen Arkaah",
+      "B. Aliu Mahama",
+      "C. John Mahama",
+      "D. Paa Kwesi Bekoe Amissah-Arthur"
+    ]
+  },
+  "q173": {
+    "question": "The Ghana Museums and Monuments Board primarily manages:",
+    "possibleAnswers": [
+      "A. Only forts",
+      "B. Museums and heritage sites",
+      "C. Only castles",
+      "D. Only palaces"
+    ]
+  },
+  "q174": {
+    "question": "The first Speaker of the Fourth Republic was:",
+    "possibleAnswers": [
+      "A. D. F. Annan",
+      "B. Peter Ala Adjetey",
+      "C. Joyce Bamford-Addo",
+      "D. Mike Oquaye"
+    ]
+  },
+  "q175": {
+    "question": "The “Saltpond” area is historically noted for:",
+    "possibleAnswers": [
+      "A. Early offshore oil drilling",
+      "B. Cocoa processing",
+      "C. Timber export",
+      "D. Bauxite refining"
+    ]
+  },
+  "q176": {
+    "question": "The Kwame Nkrumah Mausoleum is located at:",
+    "possibleAnswers": [
+      "A. Cape Coast",
+      "B. Accra",
+      "C. Nkroful",
+      "D. Kumasi"
+    ]
+  },
+  "q177": {
+    "question": "The first Ghanaian to head the Commonwealth as Chair-in-Office:",
+    "possibleAnswers": [
+      "A. J. A. Kufuor",
+      "B. J. J. Rawlings",
+      "C. J. E. A. Mills",
+      "D. K. A. Busia"
+    ]
+  },
+  "q178": {
+    "question": "The traditional area of Anlo is in:",
+    "possibleAnswers": [
+      "A. Western",
+      "B. Volta",
+      "C. Central",
+      "D. Bono"
+    ]
+  },
+  "q179": {
+    "question": "The Akan matrilineal inheritance system is called:",
+    "possibleAnswers": [
+      "A. Patriliny",
+      "B. Matriliny",
+      "C. Dual descent",
+      "D. Bilateral reckoning"
+    ]
+  },
+  "q180": {
+    "question": "The first Gold Coast Legislative Council with African unofficial members was in:",
+    "possibleAnswers": [
+      "A. 1865",
+      "B. 1884",
+      "C. 1916",
+      "D. 1925"
+    ]
+  },
+  "q181": {
+    "question": "The capital of the Western Region is:",
+    "possibleAnswers": [
+      "A. Sekondi-Takoradi",
+      "B. Tarkwa",
+      "C. Sefwi Wiawso",
+      "D. Axim"
+    ]
+  },
+  "q182": {
+    "question": "The British defeated and killed Governor MacCarthy at:",
+    "possibleAnswers": [
+      "A. Nsamankow (1824)",
+      "B. Dodowa (1863)",
+      "C. Sowutuom (1854)",
+      "D. Essikado (1828)"
+    ]
+  },
+  "q183": {
+    "question": "The first Ghanaian to serve as GFA chair and FIFA Council member was:",
+    "possibleAnswers": [
+      "A. Ohene Djan",
+      "B. C. K. Gyamfi",
+      "C. Kwesi Nyantakyi",
+      "D. Ben Koufie"
+    ]
+  },
+  "q184": {
+    "question": "The first lighthouse in Accra associated with colonial trade stands in:",
+    "possibleAnswers": [
+      "A. Osu",
+      "B. Jamestown",
+      "C. Labadi",
+      "D. Teshie"
+    ]
+  },
+  "q185": {
+    "question": "The inland port that supports Lake Volta transport is at:",
+    "possibleAnswers": [
+      "A. Yeji/Akosombo",
+      "B. Elubo",
+      "C. Aflao",
+      "D. Paga"
+    ]
+  },
+  "q186": {
+    "question": "The ancient Bono capital renowned for trading is:",
+    "possibleAnswers": [
+      "A. Begho (Bighu)",
+      "B. Salaga",
+      "C. Kintampo",
+      "D. Wa"
+    ]
+  },
+  "q187": {
+    "question": "The 1969 elections returned which party to power?",
+    "possibleAnswers": [
+      "A. CPP",
+      "B. Progress Party (PP)",
+      "C. National Alliance of Liberals (NAL)",
+      "D. People’s National Party (PNP)"
+    ]
+  },
+  "q188": {
+    "question": "The first Ghanaian Inspector-General of Police was:",
+    "possibleAnswers": [
+      "A. E. R. T. Madjitey",
+      "B. J. A. Ankrah",
+      "C. N. A. Kotoka",
+      "D. Peter Nimo"
+    ]
+  },
+  "q189": {
+    "question": "The Bui Dam is on which river?",
+    "possibleAnswers": [
+      "A. Volta (Black Volta arm)",
+      "B. Pra",
+      "C. Ankobra",
+      "D. Densu"
+    ]
+  },
+  "q190": {
+    "question": "The seat of the Omanhene of Oguaa is found in:",
+    "possibleAnswers": [
+      "A. Elmina",
+      "B. Cape Coast",
+      "C. Mankessim",
+      "D. Anomabu"
+    ]
+  },
+  "q191": {
+    "question": "The Kumasi Central Market is also known as:",
+    "possibleAnswers": [
+      "A. Agbogbloshie",
+      "B. Kejetia",
+      "C. Makola",
+      "D. Kaneshie"
+    ]
+  },
+  "q192": {
+    "question": "The “Saltpond Declaration” (1962) is linked with:",
+    "possibleAnswers": [
+      "A. Cocoa price hikes",
+      "B. Press freedom",
+      "C. Methodist Church of Ghana autonomy",
+      "D. Formation of ARPS"
+    ]
+  },
+  "q193": {
+    "question": "The first Ghana International Trade Fair was held in:",
+    "possibleAnswers": [
+      "A. Kumasi",
+      "B. Accra",
+      "C. Tamale",
+      "D. Sekondi-Takoradi"
+    ]
+  },
+  "q194": {
+    "question": "The Asante symbol “Gye Nyame” expresses:",
+    "possibleAnswers": [
+      "A. Bravery",
+      "B. Supremacy of God",
+      "C. Unity",
+      "D. Hospitality"
+    ]
+  },
+  "q195": {
+    "question": "The Ghana Police Service traces origins to:",
+    "possibleAnswers": [
+      "A. 1820s constabulary",
+      "B. 1860s constabulary and 1894 reorganization",
+      "C. 1901 royal decree",
+      "D. 1925 city watch"
+    ]
+  },
+  "q196": {
+    "question": "The capital of the Upper West Region is:",
+    "possibleAnswers": [
+      "A. Bolgatanga",
+      "B. Wa",
+      "C. Navrongo",
+      "D. Tumu"
+    ]
+  },
+  "q197": {
+    "question": "The 1978 “UNIGOV” proposal under:",
+    "possibleAnswers": [
+      "A. Acheampong",
+      "B. Afrifa",
+      "C. Akuffo",
+      "D. Limann"
+    ]
+  },
+  "q198": {
+    "question": "The Ga Mantse’s traditional stool name includes:",
+    "possibleAnswers": [
+      "A. Osei Tutu",
+      "B. Nii Tackie",
+      "C. Togbe Sri",
+      "D. Yaa Naa"
+    ]
+  },
+  "q199": {
+    "question": "The castle in Cape Coast became central to:",
+    "possibleAnswers": [
+      "A. Rubber trade",
+      "B. Slave trade and administration",
+      "C. Textile exports",
+      "D. Dutch naval base"
+    ]
+  },
+  "q200": {
+    "question": "The first President of the Second Republic (ceremonial) was:",
+    "possibleAnswers": [
+      "A. Edward Akufo-Addo",
+      "B. K. A. Busia",
+      "C. Nii Amaa Ollennu",
+      "D. Hilla Limann"
+    ]
+  }
+}

@@ -36,7 +36,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
   bool _isGridView = false;
   String _sortBy = 'Most Recent';
   int _currentPage = 1;
-  int _questionsPerPage = 20;
+  final int _questionsPerPage = 20;
 
   @override
   void initState() {
@@ -124,9 +124,17 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
         }
       }
 
+      // Filter to show only BECE and WASSCE questions (exclude trivia, mock, practice)
+      final beceWasscceQuestions = mergedQuestions
+          .where((q) => 
+            q.examType == ExamType.bece || 
+            q.examType == ExamType.wassce
+          )
+          .toList();
+
       setState(() {
-        _questions = mergedQuestions;
-        _filteredQuestions = mergedQuestions;
+        _questions = beceWasscceQuestions;
+        _filteredQuestions = beceWasscceQuestions;
         _isLoading = false;
       });
       // If the widget was constructed with an initial subject, apply it
@@ -151,6 +159,13 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
     setState(() => _isLoading = true);
     
     List<Question> filtered = List.from(_questions);
+    
+    // Questions are already filtered to BECE/WASSCE only in _loadInitialData
+    // This filter is redundant but kept for safety
+    filtered = filtered.where((q) => 
+      q.examType == ExamType.bece || 
+      q.examType == ExamType.wassce
+    ).toList();
     
     // Apply filters
     if (_selectedExamType != 'All Types') {
@@ -466,7 +481,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
               child: _buildFilterChip(
                 'Exam Type',
                 _selectedExamType,
-                ['All Types', 'BECE', 'WASSCE', 'Mock'],
+                ['All Types', 'BECE', 'WASSCE'],
                 (value) => setState(() => _selectedExamType = value!),
                 Icons.school,
               ),
@@ -512,7 +527,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
           child: _buildFilterChip(
             'Exam Type',
             _selectedExamType,
-            ['All Types', 'BECE', 'WASSCE', 'Mock'],
+            ['All Types', 'BECE', 'WASSCE'],
             (value) => setState(() => _selectedExamType = value!),
             Icons.school,
           ),
@@ -813,7 +828,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
   }
 
   Widget _buildLoadingState() {
-    return Container(
+    return SizedBox(
       height: 300,
       child: Center(
         child: Column(
@@ -835,7 +850,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
   }
 
   Widget _buildEmptyState() {
-    return Container(
+    return SizedBox(
       height: 300,
       child: Center(
         child: Column(
@@ -1097,7 +1112,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
     return Row(
       children: [
         // Left Section
-        Container(
+        SizedBox(
           width: 60,
           child: Column(
             children: [

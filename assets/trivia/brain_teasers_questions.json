@@ -1,0 +1,1795 @@
+{
+  "subject": "Brain Teasers",
+  "q1": {
+    "question": "If TWO = 39 and TEN = 45 (sum of letter positions), what is FIVE?",
+    "possibleAnswers": [
+      "A. 42",
+      "B. 54",
+      "C. 56",
+      "D. 60"
+    ]
+  },
+  "q2": {
+    "question": "What comes next in the sequence: 2, 3, 5, 9, 17, ?",
+    "possibleAnswers": [
+      "A. 25",
+      "B. 31",
+      "C. 33",
+      "D. 35"
+    ]
+  },
+  "q3": {
+    "question": "A clock shows 3:15. What is the smaller angle between hands?",
+    "possibleAnswers": [
+      "A. 0°",
+      "B. 7.5°",
+      "C. 15°",
+      "D. 22.5°"
+    ]
+  },
+  "q4": {
+    "question": "If 5 cats catch 5 mice in 5 minutes, how many cats to catch 100 mice in 100 minutes (same rate)?",
+    "possibleAnswers": [
+      "A. 5",
+      "B. 10",
+      "C. 20",
+      "D. 100"
+    ]
+  },
+  "q5": {
+    "question": "Which number makes the proportion true: 6:9 = 14:x ?",
+    "possibleAnswers": [
+      "A. 18",
+      "B. 20",
+      "C. 21",
+      "D. 24"
+    ]
+  },
+  "q6": {
+    "question": "A palindrome year after 1991 is:",
+    "possibleAnswers": [
+      "A. 1999",
+      "B. 2002",
+      "C. 2010",
+      "D. 2111"
+    ]
+  },
+  "q7": {
+    "question": "Fill the blank: O T T F F S S E N ___",
+    "possibleAnswers": [
+      "A. E",
+      "B. I",
+      "C. T",
+      "D. N"
+    ]
+  },
+  "q8": {
+    "question": "The day after tomorrow is two days before Thursday. What day is today?",
+    "possibleAnswers": [
+      "A. Sunday",
+      "B. Monday",
+      "C. Tuesday",
+      "D. Wednesday"
+    ]
+  },
+  "q9": {
+    "question": "Which weighs more: 1 kg of iron or 1 kg of cotton?",
+    "possibleAnswers": [
+      "A. Iron",
+      "B. Cotton",
+      "C. Same",
+      "D. Depends on volume"
+    ]
+  },
+  "q10": {
+    "question": "Find the odd one out: 64, 49, 36, 25, 18",
+    "possibleAnswers": [
+      "A. 64",
+      "B. 49",
+      "C. 18",
+      "D. 25"
+    ]
+  },
+  "q11": {
+    "question": "Arrange to make the earliest time: 5, 1, 2, 8 (hh:mm, 24h).",
+    "possibleAnswers": [
+      "A. 12:58",
+      "B. 15:28",
+      "C. 21:58",
+      "D. 18:25"
+    ]
+  },
+  "q12": {
+    "question": "If MONK = 57 (M=13 etc.), then NUN = ?",
+    "possibleAnswers": [
+      "A. 49",
+      "B. 53",
+      "C. 55",
+      "D. 57"
+    ]
+  },
+  "q13": {
+    "question": "Next: 1, 4, 9, 16, 25, ?",
+    "possibleAnswers": [
+      "A. 30",
+      "B. 32",
+      "C. 36",
+      "D. 49"
+    ]
+  },
+  "q14": {
+    "question": "A farmer has 17 sheep; all but 9 die. How many remain?",
+    "possibleAnswers": [
+      "A. 0",
+      "B. 8",
+      "C. 9",
+      "D. 17"
+    ]
+  },
+  "q15": {
+    "question": "Which is larger:  or ? A) B)",
+    "possibleAnswers": [
+      "C. Same",
+      "D. Not comparable"
+    ]
+  },
+  "q16": {
+    "question": "If 3A = 2B and B = 12, find A.",
+    "possibleAnswers": [
+      "A. 4",
+      "B. 6",
+      "C. 8",
+      "D. 18"
+    ]
+  },
+  "q17": {
+    "question": "Which number fits? 7, 10, 8, 11, 9, 12, ?",
+    "possibleAnswers": [
+      "A. 10",
+      "B. 11",
+      "C. 12",
+      "D. 13"
+    ]
+  },
+  "q18": {
+    "question": "How many squares in a 3×3 grid?",
+    "possibleAnswers": [
+      "A. 9",
+      "B. 10",
+      "C. 14",
+      "D. 14"
+    ]
+  },
+  "q19": {
+    "question": "A man looks at a portrait and says, “Brothers and sisters have I none, but that man’s father is my father’s son.” Who is in the portrait?",
+    "possibleAnswers": [
+      "A. Himself",
+      "B. His son",
+      "C. His father",
+      "D. His nephew"
+    ]
+  },
+  "q20": {
+    "question": "Which three letters complete: J, F, M, A, M, J, J, A, S, O, ?",
+    "possibleAnswers": [
+      "A. P, Q",
+      "B. N, D",
+      "C. N, D, J",
+      "D. D, J, F"
+    ]
+  },
+  "q21": {
+    "question": "Replace ?: 3 → 6, 4 → 12, 5 → 20, 6 → ? (pattern n→ n(n−1))",
+    "possibleAnswers": [
+      "A. 24",
+      "B. 25",
+      "C. 30",
+      "D. 36"
+    ]
+  },
+  "q22": {
+    "question": "If 12 = 3, 20 = 4, 30 = 5, then 56 = ? (sum of prime factors)",
+    "possibleAnswers": [
+      "A. 6",
+      "B. 7",
+      "C. 8",
+      "D. 10"
+    ]
+  },
+  "q23": {
+    "question": "Next: 2, 5, 10, 17, 26, ?",
+    "possibleAnswers": [
+      "A. 35",
+      "B. 37",
+      "C. 38",
+      "D. 41"
+    ]
+  },
+  "q24": {
+    "question": "Which two-month pair has 61 days total?",
+    "possibleAnswers": [
+      "A. Apr + May",
+      "B. Jul + Aug",
+      "C. Sep + Oct",
+      "D. Nov + Dec"
+    ]
+  },
+  "q25": {
+    "question": "A book costs $10. You get 20% off then add 10% tax. Final price?",
+    "possibleAnswers": [
+      "A. $8.80",
+      "B. $9.00",
+      "C. $8.80 × 1.1 = $9.68",
+      "D. $8.00"
+    ]
+  },
+  "q26": {
+    "question": "If noon in Accra (GMT+0) is 15:00 in Riyadh (GMT+3), what time in Tokyo (GMT+9)?",
+    "possibleAnswers": [
+      "A. 18:00",
+      "B. 21:00",
+      "C. 00:00",
+      "D. 21:00 next day"
+    ]
+  },
+  "q27": {
+    "question": "Find missing letter: A, D, G, J, M, ?",
+    "possibleAnswers": [
+      "A. O",
+      "B. P",
+      "C. Q",
+      "D. N"
+    ]
+  },
+  "q28": {
+    "question": "Which number is divisible by 9?",
+    "possibleAnswers": [
+      "A. 3,456",
+      "B. 2,718",
+      "C. 5,432",
+      "D. 7,654"
+    ]
+  },
+  "q29": {
+    "question": "If a rectangle’s sides double, area becomes:",
+    "possibleAnswers": [
+      "A. 2×",
+      "B. 3×",
+      "C. 4×",
+      "D. 8×"
+    ]
+  },
+  "q30": {
+    "question": "Which is a perfect cube?",
+    "possibleAnswers": [
+      "A. 64",
+      "B. 81",
+      "C. 49",
+      "D. 125"
+    ]
+  },
+  "q31": {
+    "question": "You can only add one line to 6+4=10 to make it true.",
+    "possibleAnswers": [
+      "A. Make + a 4 to get 8",
+      "B. Make = a ≠",
+      "C. Make 6 a 8 (8+4=12)",
+      "D. Make 6 a 8 and ≠"
+    ]
+  },
+  "q32": {
+    "question": "Next: 1, 1, 2, 3, 5, 8, 13, ?",
+    "possibleAnswers": [
+      "A. 18",
+      "B. 21",
+      "C. 22",
+      "D. 24"
+    ]
+  },
+  "q33": {
+    "question": "How many minutes from 2:15 to 3:40?",
+    "possibleAnswers": [
+      "A. 75",
+      "B. 85",
+      "C. 90",
+      "D. 95"
+    ]
+  },
+  "q34": {
+    "question": "Fill the blank: 4, 6, 9, 13, 18, ?",
+    "possibleAnswers": [
+      "A. 23",
+      "B. 24",
+      "C. 25",
+      "D. 26"
+    ]
+  },
+  "q35": {
+    "question": "What number multiplied by itself gives 0.25?",
+    "possibleAnswers": [
+      "A. 0.25",
+      "B. 0.5",
+      "C. 2",
+      "D. 0.75"
+    ]
+  },
+  "q36": {
+    "question": "Which two-digit number equals the sum of its digits times 7?",
+    "possibleAnswers": [
+      "A. 21",
+      "B. 28",
+      "C. 35",
+      "D. 42"
+    ]
+  },
+  "q37": {
+    "question": "A cube has how many edges?",
+    "possibleAnswers": [
+      "A. 8",
+      "B. 10",
+      "C. 12",
+      "D. 16"
+    ]
+  },
+  "q38": {
+    "question": "What’s next: 3, 6, 12, 24, ?",
+    "possibleAnswers": [
+      "A. 36",
+      "B. 40",
+      "C. 48",
+      "D. 72"
+    ]
+  },
+  "q39": {
+    "question": "Which fraction is largest?",
+    "possibleAnswers": [
+      "A. 3/7",
+      "B. 4/9",
+      "C. 5/11",
+      "D. 6/13"
+    ]
+  },
+  "q40": {
+    "question": "If a = 2 and b = 3, what is (a^b + b^a)?",
+    "possibleAnswers": [
+      "A. 13",
+      "B. 17",
+      "C. 25",
+      "D. 31"
+    ]
+  },
+  "q41": {
+    "question": "Which two numbers sum to 27 and differ by 5?",
+    "possibleAnswers": [
+      "A. 11 & 16",
+      "B. 12 & 15",
+      "C. 13 & 14",
+      "D. 10 & 17"
+    ]
+  },
+  "q42": {
+    "question": "What 3-letter word can precede AND follow: LIGHT, HOUSE, KEEP?",
+    "possibleAnswers": [
+      "A. WATCH",
+      "B. KEY",
+      "C. OUT",
+      "D. MAN"
+    ]
+  },
+  "q43": {
+    "question": "Which is the next prime after 97?",
+    "possibleAnswers": [
+      "A. 99",
+      "B. 101",
+      "C. 103",
+      "D. 107"
+    ]
+  },
+  "q44": {
+    "question": "A triangle has angles x, x, (x+10). Find x.",
+    "possibleAnswers": [
+      "A. 55",
+      "B. 56.5",
+      "C. 58",
+      "D. 85"
+    ]
+  },
+  "q45": {
+    "question": "If 1=3, 2=3, 3=5, 4=4, 5=4, then 6=? (letters count)",
+    "possibleAnswers": [
+      "A. 3",
+      "B. 4",
+      "C. 5",
+      "D. 6"
+    ]
+  },
+  "q46": {
+    "question": "Which number is the median: 12, 4, 9, 17, 15?",
+    "possibleAnswers": [
+      "A. 9",
+      "B. 12",
+      "C. 15",
+      "D. 17"
+    ]
+  },
+  "q47": {
+    "question": "How many 90° angles in a rectangle?",
+    "possibleAnswers": [
+      "A. 1",
+      "B. 2",
+      "C. 3",
+      "D. 4"
+    ]
+  },
+  "q48": {
+    "question": "If a car averages 60 km/h for 2.5 hours, distance?",
+    "possibleAnswers": [
+      "A. 120 km",
+      "B. 140 km",
+      "C. 150 km",
+      "D. 180 km"
+    ]
+  },
+  "q49": {
+    "question": "Which two months start on the same weekday in non-leap years?",
+    "possibleAnswers": [
+      "A. Feb & Mar",
+      "B. Apr & Jul",
+      "C. Sep & Dec",
+      "D. Oct & Jan"
+    ]
+  },
+  "q50": {
+    "question": "If 8⊗3 = 8×3 + 8 = ?, then 7⊗4 = ?",
+    "possibleAnswers": [
+      "A. 28",
+      "B. 35",
+      "C. 36",
+      "D. 42"
+    ]
+  },
+  "q51": {
+    "question": "Find the odd one: AZ, BY, CX, DU",
+    "possibleAnswers": [
+      "A. AZ",
+      "B. BY",
+      "C. CX",
+      "D. DU"
+    ]
+  },
+  "q52": {
+    "question": "If 100% of x is 80, what is 125% of x?",
+    "possibleAnswers": [
+      "A. 90",
+      "B. 95",
+      "C. 100",
+      "D. 120"
+    ]
+  },
+  "q53": {
+    "question": "Which two-digit number equals 4 times the sum of its digits?",
+    "possibleAnswers": [
+      "A. 28",
+      "B. 36",
+      "C. 40",
+      "D. 44"
+    ]
+  },
+  "q54": {
+    "question": "What is the next term: 10, 7, 4, 1, ?",
+    "possibleAnswers": [
+      "A. 0",
+      "B. –1",
+      "C. –2",
+      "D. –3"
+    ]
+  },
+  "q55": {
+    "question": "A rope is 60 m. Cut into 3 equal pieces, then each into 2 equal pieces. Longest piece length?",
+    "possibleAnswers": [
+      "A. 5 m",
+      "B. 7.5 m",
+      "C. 10 m",
+      "D. 15 m"
+    ]
+  },
+  "q56": {
+    "question": "If AB=12, BC=9, AC=15, triangle ABC is:",
+    "possibleAnswers": [
+      "A. Right",
+      "B. Acute",
+      "C. Obtuse",
+      "D. Impossible"
+    ]
+  },
+  "q57": {
+    "question": "Next: 2, 4, 8, 14, 22, ? (+2, +4, +6, +8…)",
+    "possibleAnswers": [
+      "A. 30",
+      "B. 31",
+      "C. 32",
+      "D. 34"
+    ]
+  },
+  "q58": {
+    "question": "If 9A = 3B and A=6, then B=?",
+    "possibleAnswers": [
+      "A. 6",
+      "B. 12",
+      "C. 18",
+      "D. 27"
+    ]
+  },
+  "q59": {
+    "question": "Which is a power of 3?",
+    "possibleAnswers": [
+      "A. 18",
+      "B. 27",
+      "C. 36",
+      "D. 45"
+    ]
+  },
+  "q60": {
+    "question": "Which is the next letter: B, C, E, H, L, ?",
+    "possibleAnswers": [
+      "A. M",
+      "B. Q",
+      "C. R",
+      "D. S"
+    ]
+  },
+  "q61": {
+    "question": "If a square has area 64, perimeter is:",
+    "possibleAnswers": [
+      "A. 16",
+      "B. 24",
+      "C. 28",
+      "D. 32"
+    ]
+  },
+  "q62": {
+    "question": "A code shifts letters +2 (A→C). What is CODE?",
+    "possibleAnswers": [
+      "A. EQFG",
+      "B. EQFG?",
+      "C. EQFG (shift each)",
+      "D. DPDF"
+    ]
+  },
+  "q63": {
+    "question": "Which completes: 11, 13, 17, 19, ?",
+    "possibleAnswers": [
+      "A. 21",
+      "B. 22",
+      "C. 23",
+      "D. 25"
+    ]
+  },
+  "q64": {
+    "question": "Sum of digits of 10! (3,628,800) is:",
+    "possibleAnswers": [
+      "A. 24",
+      "B. 27",
+      "C. 30",
+      "D. 36"
+    ]
+  },
+  "q65": {
+    "question": "If today is Friday, what day will it be in 100 days?",
+    "possibleAnswers": [
+      "A. Sunday",
+      "B. Monday",
+      "C. Tuesday",
+      "D. Wednesday"
+    ]
+  },
+  "q66": {
+    "question": "In a class, 60% are boys. If 24 boys, total students?",
+    "possibleAnswers": [
+      "A. 36",
+      "B. 38",
+      "C. 40",
+      "D. 44"
+    ]
+  },
+  "q67": {
+    "question": "What comes next: 5, 11, 23, 47, ?",
+    "possibleAnswers": [
+      "A. 95",
+      "B. 96",
+      "C. 97",
+      "D. 99"
+    ]
+  },
+  "q68": {
+    "question": "Find x: (x/3 + x/4 = 14)",
+    "possibleAnswers": [
+      "A. 24",
+      "B. 28",
+      "C. 32",
+      "D. 40"
+    ]
+  },
+  "q69": {
+    "question": "Which is NOT a factor of 84?",
+    "possibleAnswers": [
+      "A. 3",
+      "B. 4",
+      "C. 5",
+      "D. 6"
+    ]
+  },
+  "q70": {
+    "question": "If 2★x = 2x + 1, then 2★(2★2) = ?",
+    "possibleAnswers": [
+      "A. 9",
+      "B. 11",
+      "C. 13",
+      "D. 15"
+    ]
+  },
+  "q71": {
+    "question": "Next: 1, 2, 6, 24, 120, ?",
+    "possibleAnswers": [
+      "A. 480",
+      "B. 600",
+      "C. 720",
+      "D. 840"
+    ]
+  },
+  "q72": {
+    "question": "A cube’s faces are colored. How many faces total?",
+    "possibleAnswers": [
+      "A. 4",
+      "B. 5",
+      "C. 6",
+      "D. 8"
+    ]
+  },
+  "q73": {
+    "question": "Which is nearest to  ?",
+    "possibleAnswers": [
+      "A. 6.8",
+      "B. 7.1",
+      "C. 7.3",
+      "D. 7.5"
+    ]
+  },
+  "q74": {
+    "question": "If “GAIN” → “HBJO” (Caesar +1), then “MIND” → ?",
+    "possibleAnswers": [
+      "A. NJOE",
+      "B. NJOE",
+      "C. NJOE (pattern)",
+      "D. NJOF"
+    ]
+  },
+  "q75": {
+    "question": "Three consecutive even numbers sum to 48. Middle?",
+    "possibleAnswers": [
+      "A. 14",
+      "B. 16",
+      "C. 18",
+      "D. 20"
+    ]
+  },
+  "q76": {
+    "question": "If a:b=2:3 and b:c=4:5, then a:c=?",
+    "possibleAnswers": [
+      "A. 8:15",
+      "B. 2:5",
+      "C. 4:15",
+      "D. 6:5"
+    ]
+  },
+  "q77": {
+    "question": "Fill blank: 3, 5, 9, 17, 33, ?",
+    "possibleAnswers": [
+      "A. 47",
+      "B. 49",
+      "C. 57",
+      "D. 65"
+    ]
+  },
+  "q78": {
+    "question": "A clock is advanced by 20 minutes. When it shows 6:00, actual time is:",
+    "possibleAnswers": [
+      "A. 5:40",
+      "B. 5:50",
+      "C. 6:20",
+      "D. 6:40"
+    ]
+  },
+  "q79": {
+    "question": "Which two numbers multiply to 72 and add to 18?",
+    "possibleAnswers": [
+      "A. 6 & 12",
+      "B. 8 & 9",
+      "C. 9 & 9",
+      "D. 4 & 14"
+    ]
+  },
+  "q80": {
+    "question": "If 2x – 5 = 19, x = ?",
+    "possibleAnswers": [
+      "A. 6",
+      "B. 10",
+      "C. 12",
+      "D. 14"
+    ]
+  },
+  "q81": {
+    "question": "Next: 1, 3, 7, 15, 31, ?",
+    "possibleAnswers": [
+      "A. 62",
+      "B. 63",
+      "C. 65",
+      "D. 67"
+    ]
+  },
+  "q82": {
+    "question": "Replace ?: 8 → 2, 27 → 3, 64 → 4, 125 → ?",
+    "possibleAnswers": [
+      "A. 4",
+      "B. 5",
+      "C. 6",
+      "D. 8"
+    ]
+  },
+  "q83": {
+    "question": "Which is the smallest positive integer NOT a sum of distinct Fibonacci numbers (Zeckendorf)?",
+    "possibleAnswers": [
+      "A. 1",
+      "B. 2",
+      "C. 3",
+      "D. All can be expressed"
+    ]
+  },
+  "q84": {
+    "question": "Next letter: A, C, F, J, O, ?",
+    "possibleAnswers": [
+      "A. S",
+      "B. T",
+      "C. U",
+      "D. V"
+    ]
+  },
+  "q85": {
+    "question": "If perimeter of a rectangle is 34 and sides are integers, which area is possible?",
+    "possibleAnswers": [
+      "A. 72",
+      "B. 70",
+      "C. 60",
+      "D. 56"
+    ]
+  },
+  "q86": {
+    "question": "Sum from 1 to 50 equals:",
+    "possibleAnswers": [
+      "A. 1,275",
+      "B. 1,300",
+      "C. 1,325",
+      "D. 1,350"
+    ]
+  },
+  "q87": {
+    "question": "If 1/3 of a number is 18, the number is:",
+    "possibleAnswers": [
+      "A. 36",
+      "B. 48",
+      "C. 54",
+      "D. 60"
+    ]
+  },
+  "q88": {
+    "question": "If 12 men build a wall in 6 days, 8 men take:",
+    "possibleAnswers": [
+      "A. 4 days",
+      "B. 6 days",
+      "C. 9 days",
+      "D. 12 days"
+    ]
+  },
+  "q89": {
+    "question": "What’s next: 4, 12, 36, 108, ?",
+    "possibleAnswers": [
+      "A. 216",
+      "B. 324",
+      "C. 432",
+      "D. 486"
+    ]
+  },
+  "q90": {
+    "question": "A rectangle 6×8 has diagonal:",
+    "possibleAnswers": [
+      "A. 10"
+    ]
+  },
+  "q91": {
+    "question": "If a+b=12 and ab=20, then a and b are roots of:",
+    "possibleAnswers": [
+      "A. x²–12x+20=0",
+      "B. x²+12x+20=0",
+      "C. x²–20x+12=0",
+      "D. x²+20x–12=0"
+    ]
+  },
+  "q92": {
+    "question": "Which two-digit number is divisible by both 3 and 4?",
+    "possibleAnswers": [
+      "A. 20",
+      "B. 24",
+      "C. 30",
+      "D. 42"
+    ]
+  },
+  "q93": {
+    "question": "If x% of 200 = 50, x = ?",
+    "possibleAnswers": [
+      "A. 10",
+      "B. 20",
+      "C. 25",
+      "D. 30"
+    ]
+  },
+  "q94": {
+    "question": "Which fraction equals 0.375?",
+    "possibleAnswers": [
+      "A. 3/8",
+      "B. 1/3",
+      "C. 2/5",
+      "D. 5/12"
+    ]
+  },
+  "q95": {
+    "question": "Which is the next hexagon number: 1, 6, 15, 28, ?",
+    "possibleAnswers": [
+      "A. 40",
+      "B. 45",
+      "C. 51",
+      "D. 66"
+    ]
+  },
+  "q96": {
+    "question": "Add smallest number to 39 to make it divisible by 7.",
+    "possibleAnswers": [
+      "A. 1",
+      "B. 2",
+      "C. 3",
+      "D. 4"
+    ]
+  },
+  "q97": {
+    "question": "If sum of angles in polygon is 900°, number of sides?",
+    "possibleAnswers": [
+      "A. 6",
+      "B. 7",
+      "C. 8",
+      "D. 9"
+    ]
+  },
+  "q98": {
+    "question": "Next: 2, 3, 6, 11, 18, 27, ? (+1, +3, +5, +7, +9…)",
+    "possibleAnswers": [
+      "A. 36",
+      "B. 37",
+      "C. 38",
+      "D. 39"
+    ]
+  },
+  "q99": {
+    "question": "If 0.2x = 5, x = ?",
+    "possibleAnswers": [
+      "A. 10",
+      "B. 20",
+      "C. 25",
+      "D. 30"
+    ]
+  },
+  "q100": {
+    "question": "Which is a perfect number?",
+    "possibleAnswers": [
+      "A. 6",
+      "B. 10",
+      "C. 14",
+      "D. 20"
+    ]
+  },
+  "q101": {
+    "question": "Next: 13, 17, 19, 23, ?",
+    "possibleAnswers": [
+      "A. 25",
+      "B. 27",
+      "C. 29",
+      "D. 31"
+    ]
+  },
+  "q102": {
+    "question": "If a circle’s circumference is 31.4 (π≈3.14), radius ≈ ?",
+    "possibleAnswers": [
+      "A. 4",
+      "B. 5",
+      "C. 6",
+      "D. 10"
+    ]
+  },
+  "q103": {
+    "question": "Find the odd one: 3, 9, 27, 81, 243, 729, 1,000",
+    "possibleAnswers": [
+      "A. 81",
+      "B. 243",
+      "C. 729",
+      "D. 1,000"
+    ]
+  },
+  "q104": {
+    "question": "Next: 1, 4, 7, 10, ?",
+    "possibleAnswers": [
+      "A. 11",
+      "B. 12",
+      "C. 13",
+      "D. 14"
+    ]
+  },
+  "q105": {
+    "question": "If 9y – 5 = 31, y = ?",
+    "possibleAnswers": [
+      "A. 2",
+      "B. 3",
+      "C. 4",
+      "D. 5"
+    ]
+  },
+  "q106": {
+    "question": "Which pair has LCM 60?",
+    "possibleAnswers": [
+      "A. 10 & 12",
+      "B. 12 & 15",
+      "C. 15 & 20",
+      "D. 12 & 20"
+    ]
+  },
+  "q107": {
+    "question": "Which fraction equals 0.2?",
+    "possibleAnswers": [
+      "A. 1/4",
+      "B. 1/5",
+      "C. 1/6",
+      "D. 1/8"
+    ]
+  },
+  "q108": {
+    "question": "Next: 0, 1, 1, 2, 3, 5, ?",
+    "possibleAnswers": [
+      "A. 7",
+      "B. 8",
+      "C. 9",
+      "D. 10"
+    ]
+  },
+  "q109": {
+    "question": "A square’s diagonal is 10. Side is:",
+    "possibleAnswers": [
+      "A. 5"
+    ]
+  },
+  "q110": {
+    "question": "Which is a triangular number?",
+    "possibleAnswers": [
+      "A. 10",
+      "B. 12",
+      "C. 14",
+      "D. 16"
+    ]
+  },
+  "q111": {
+    "question": "If 15% of N is 45, N = ?",
+    "possibleAnswers": [
+      "A. 200",
+      "B. 250",
+      "C. 300",
+      "D. 350"
+    ]
+  },
+  "q112": {
+    "question": "The mean of 12, 20, 28, 40 is:",
+    "possibleAnswers": [
+      "A. 24",
+      "B. 25",
+      "C. 26",
+      "D. 27"
+    ]
+  },
+  "q113": {
+    "question": "Next: 1, 2, 3, 5, 8, 13, ?",
+    "possibleAnswers": [
+      "A. 20",
+      "B. 21",
+      "C. 22",
+      "D. 24"
+    ]
+  },
+  "q114": {
+    "question": "Which number is divisible by 11?",
+    "possibleAnswers": [
+      "A. 4,235",
+      "B. 4,356",
+      "C. 4,466",
+      "D. 4,567"
+    ]
+  },
+  "q115": {
+    "question": "If x² = 196, x = ?",
+    "possibleAnswers": [
+      "A. 12",
+      "B. 13",
+      "C. 14",
+      "D. 16"
+    ]
+  },
+  "q116": {
+    "question": "What is 15% of 80?",
+    "possibleAnswers": [
+      "A. 10",
+      "B. 12",
+      "C. 14",
+      "D. 16"
+    ]
+  },
+  "q117": {
+    "question": "Which ratio equals 3:5?",
+    "possibleAnswers": [
+      "A. 6:11",
+      "B. 9:15",
+      "C. 12:22",
+      "D. 15:21"
+    ]
+  },
+  "q118": {
+    "question": "Next: 100, 50, 25, 12.5, ?",
+    "possibleAnswers": [
+      "A. 6.25",
+      "B. 7.5",
+      "C. 8.25",
+      "D. 10"
+    ]
+  },
+  "q119": {
+    "question": "If 9 + 6 = 3 (clock arithmetic), then 7 + 8 = ?",
+    "possibleAnswers": [
+      "A. 2",
+      "B. 3",
+      "C. 4",
+      "D. 5"
+    ]
+  },
+  "q120": {
+    "question": "Which is prime?",
+    "possibleAnswers": [
+      "A. 91",
+      "B. 93",
+      "C. 97",
+      "D. 99"
+    ]
+  },
+  "q121": {
+    "question": "Next: 2, 7, 14, 23, 34, ? (+5,+7,+9,+11…)",
+    "possibleAnswers": [
+      "A. 45",
+      "B. 46",
+      "C. 47",
+      "D. 49"
+    ]
+  },
+  "q122": {
+    "question": "If 3/4 of a number is 21, the number is:",
+    "possibleAnswers": [
+      "A. 24",
+      "B. 26",
+      "C. 28",
+      "D. 32"
+    ]
+  },
+  "q123": {
+    "question": "Which two-digit number equals the product of its digits times 2?",
+    "possibleAnswers": [
+      "A. 12",
+      "B. 24",
+      "C. 36",
+      "D. 48"
+    ]
+  },
+  "q124": {
+    "question": "Which is closest to  +   ?",
+    "possibleAnswers": [
+      "A. 2.8",
+      "B. 3.1",
+      "C. 3.3",
+      "D. 3.5"
+    ]
+  },
+  "q125": {
+    "question": "If 2^x = 64, x = ?",
+    "possibleAnswers": [
+      "A. 4",
+      "B. 5",
+      "C. 6",
+      "D. 7"
+    ]
+  },
+  "q126": {
+    "question": "Next: 9, 16, 25, 36, ?",
+    "possibleAnswers": [
+      "A. 42",
+      "B. 45",
+      "C. 48",
+      "D. 49"
+    ]
+  },
+  "q127": {
+    "question": "A triangle with sides 7, 24, 25 is:",
+    "possibleAnswers": [
+      "A. Right",
+      "B. Acute",
+      "C. Obtuse",
+      "D. Impossible"
+    ]
+  },
+  "q128": {
+    "question": "If x + y = 18 and x – y = 6, x = ?",
+    "possibleAnswers": [
+      "A. 6",
+      "B. 9",
+      "C. 12",
+      "D. 15"
+    ]
+  },
+  "q129": {
+    "question": "Which is the next letter if pattern skips increasing steps: A, B, D, G, K, ?",
+    "possibleAnswers": [
+      "A. L",
+      "B. M",
+      "C. N",
+      "D. P"
+    ]
+  },
+  "q130": {
+    "question": "If 5 pencils cost $3, how much for 20?",
+    "possibleAnswers": [
+      "A. $10",
+      "B. $11",
+      "C. $12",
+      "D. $13"
+    ]
+  },
+  "q131": {
+    "question": "Which is the sum of first 6 odd numbers?",
+    "possibleAnswers": [
+      "A. 25",
+      "B. 30",
+      "C. 36",
+      "D. 49"
+    ]
+  },
+  "q132": {
+    "question": "Next: 81, 27, 9, 3, ?",
+    "possibleAnswers": [
+      "A. 1",
+      "B. 2",
+      "C. (1)",
+      "D. (1)"
+    ]
+  },
+  "q133": {
+    "question": "Which is the median of 1–9?",
+    "possibleAnswers": [
+      "A. 4",
+      "B. 5",
+      "C. 6",
+      "D. 5.5"
+    ]
+  },
+  "q134": {
+    "question": "If the sum of interior angles is 1,080°, polygon sides = ?",
+    "possibleAnswers": [
+      "A. 7",
+      "B. 8",
+      "C. 9",
+      "D. 10"
+    ]
+  },
+  "q135": {
+    "question": "Which number is both a square and a cube?",
+    "possibleAnswers": [
+      "A. 16",
+      "B. 27",
+      "C. 36",
+      "D. 64"
+    ]
+  },
+  "q136": {
+    "question": "If 20% of x = 30, x = ?",
+    "possibleAnswers": [
+      "A. 120",
+      "B. 140",
+      "C. 150",
+      "D. 180"
+    ]
+  },
+  "q137": {
+    "question": "Next: 4, 11, 25, 53, ? (×2+3, ×2+3, …)",
+    "possibleAnswers": [
+      "A. 109",
+      "B. 111",
+      "C. 113",
+      "D. 115"
+    ]
+  },
+  "q138": {
+    "question": "Which equals 3/4?",
+    "possibleAnswers": [
+      "A. 6/8",
+      "B. 9/16",
+      "C. 12/20",
+      "D. 21/28"
+    ]
+  },
+  "q139": {
+    "question": "If 3x – 2 = 16, x = ?",
+    "possibleAnswers": [
+      "A. 5",
+      "B. 6",
+      "C. 7",
+      "D. 8"
+    ]
+  },
+  "q140": {
+    "question": "Next: 2, 4, 3, 9, 8, 64, ?",
+    "possibleAnswers": [
+      "A. 9",
+      "B. 27",
+      "C. 125",
+      "D. 256"
+    ]
+  },
+  "q141": {
+    "question": "If x:y = 5:8 and x=35, y=?",
+    "possibleAnswers": [
+      "A. 49",
+      "B. 52",
+      "C. 56",
+      "D. 63"
+    ]
+  },
+  "q142": {
+    "question": "Which completes: 6, 10, 18, 34, ?",
+    "possibleAnswers": [
+      "A. 50",
+      "B. 58",
+      "C. 66",
+      "D. 70"
+    ]
+  },
+  "q143": {
+    "question": "What is the remainder when 100 is divided by 9?",
+    "possibleAnswers": [
+      "A. 0",
+      "B. 1",
+      "C. 2",
+      "D. 4"
+    ]
+  },
+  "q144": {
+    "question": "Next: 1, 2, 4, 8, 16, 32, ?",
+    "possibleAnswers": [
+      "A. 48",
+      "B. 56",
+      "C. 60",
+      "D. 64"
+    ]
+  },
+  "q145": {
+    "question": "Which pair has GCD 8?",
+    "possibleAnswers": [
+      "A. 16 & 24",
+      "B. 24 & 40",
+      "C. 32 & 56",
+      "D. 20 & 28"
+    ]
+  },
+  "q146": {
+    "question": "If 0.5x = 7.5, x = ?",
+    "possibleAnswers": [
+      "A. 10",
+      "B. 12",
+      "C. 15",
+      "D. 18"
+    ]
+  },
+  "q147": {
+    "question": "Which is a prime gap from 29 to next prime?",
+    "possibleAnswers": [
+      "A. 2",
+      "B. 4",
+      "C. 6",
+      "D. 8"
+    ]
+  },
+  "q148": {
+    "question": "Next: 3, 5, 8, 12, 17, ? (+2,+3,+4,+5…)",
+    "possibleAnswers": [
+      "A. 21",
+      "B. 22",
+      "C. 23",
+      "D. 24"
+    ]
+  },
+  "q149": {
+    "question": "If a square’s perimeter is 48, area is:",
+    "possibleAnswers": [
+      "A. 96",
+      "B. 128",
+      "C. 144",
+      "D. 196"
+    ]
+  },
+  "q150": {
+    "question": "Which is a power of 2?",
+    "possibleAnswers": [
+      "A. 96",
+      "B. 128",
+      "C. 160",
+      "D. 192"
+    ]
+  },
+  "q151": {
+    "question": "Next: 10, 14, 19, 25, 32, ? (+4,+5,+6,+7…)",
+    "possibleAnswers": [
+      "A. 39",
+      "B. 40",
+      "C. 41",
+      "D. 42"
+    ]
+  },
+  "q152": {
+    "question": "If sum is 55 and count is 10, average = ?",
+    "possibleAnswers": [
+      "A. 4.5",
+      "B. 5.0",
+      "C. 5.5",
+      "D. 6.0"
+    ]
+  },
+  "q153": {
+    "question": "Which equals 45% of 200?",
+    "possibleAnswers": [
+      "A. 80",
+      "B. 85",
+      "C. 90",
+      "D. 95"
+    ]
+  },
+  "q154": {
+    "question": "Next: 2, 6, 18, 54, ?",
+    "possibleAnswers": [
+      "A. 108",
+      "B. 162",
+      "C. 216",
+      "D. 324"
+    ]
+  },
+  "q155": {
+    "question": "Which is the product of first five primes?",
+    "possibleAnswers": [
+      "A. 210",
+      "B. 231",
+      "C. 247",
+      "D. 273"
+    ]
+  },
+  "q156": {
+    "question": "If 3⁵ ÷ 3² = 3^x, x = ?",
+    "possibleAnswers": [
+      "A. 2",
+      "B. 3",
+      "C. 5",
+      "D. 7"
+    ]
+  },
+  "q157": {
+    "question": "Which is NOT prime?",
+    "possibleAnswers": [
+      "A. 71",
+      "B. 73",
+      "C. 75",
+      "D. 79"
+    ]
+  },
+  "q158": {
+    "question": "Next: 7, 14, 28, 56, ?",
+    "possibleAnswers": [
+      "A. 98",
+      "B. 112",
+      "C. 120",
+      "D. 126"
+    ]
+  },
+  "q159": {
+    "question": "If 5 men do a job in 12 days, 10 men take:",
+    "possibleAnswers": [
+      "A. 6",
+      "B. 8",
+      "C. 10",
+      "D. 12"
+    ]
+  },
+  "q160": {
+    "question": "Which is a square between 30 and 50?",
+    "possibleAnswers": [
+      "A. 35",
+      "B. 36",
+      "C. 40",
+      "D. 49"
+    ]
+  },
+  "q161": {
+    "question": "Next: 1, 4, 10, 19, 31, ? (+3,+6,+9,+12…)",
+    "possibleAnswers": [
+      "A. 42",
+      "B. 43",
+      "C. 45",
+      "D. 46"
+    ]
+  },
+  "q162": {
+    "question": "If angle x and y are complementary and x=37°, y=?",
+    "possibleAnswers": [
+      "A. 43°",
+      "B. 53°",
+      "C. 63°",
+      "D. 73°"
+    ]
+  },
+  "q163": {
+    "question": "Which is equal to 7/8?",
+    "possibleAnswers": [
+      "A. 14/18",
+      "B. 21/24",
+      "C. 28/32",
+      "D. 35/45"
+    ]
+  },
+  "q164": {
+    "question": "Next: 5, 9, 17, 33, 65, ? (×2–1)",
+    "possibleAnswers": [
+      "A. 127",
+      "B. 129",
+      "C. 131",
+      "D. 133"
+    ]
+  },
+  "q165": {
+    "question": "If 0.125 = 1/x, x = ?",
+    "possibleAnswers": [
+      "A. 6",
+      "B. 8",
+      "C. 10",
+      "D. 12"
+    ]
+  },
+  "q166": {
+    "question": "Which is the next square after 225?",
+    "possibleAnswers": [
+      "A. 230",
+      "B. 256",
+      "C. 289",
+      "D. 324"
+    ]
+  },
+  "q167": {
+    "question": "If 2/3 of x is 18, x = ?",
+    "possibleAnswers": [
+      "A. 24",
+      "B. 27",
+      "C. 30",
+      "D. 36"
+    ]
+  },
+  "q168": {
+    "question": "Next: 4, 8, 16, 32, 64, ?",
+    "possibleAnswers": [
+      "A. 96",
+      "B. 100",
+      "C. 128",
+      "D. 256"
+    ]
+  },
+  "q169": {
+    "question": "Which equals 0.125?",
+    "possibleAnswers": [
+      "A. 1/2",
+      "B. 1/4",
+      "C. 1/6",
+      "D. 1/8"
+    ]
+  },
+  "q170": {
+    "question": "Next: 6, 10, 16, 26, 42, ? (+4,+6,+10,+16…)",
+    "possibleAnswers": [
+      "A. 52",
+      "B. 56",
+      "C. 58",
+      "D. 68"
+    ]
+  },
+  "q171": {
+    "question": "If a triangle has sides 5, 12, 13, area = ?",
+    "possibleAnswers": [
+      "A. 24",
+      "B. 30",
+      "C. 36",
+      "D. 60"
+    ]
+  },
+  "q172": {
+    "question": "Which equals 2.5% as a fraction?",
+    "possibleAnswers": [
+      "A. 1/20",
+      "B. 1/25",
+      "C. 1/40",
+      "D. 1/50"
+    ]
+  },
+  "q173": {
+    "question": "Next: 11, 22, 44, 88, ?",
+    "possibleAnswers": [
+      "A. 110",
+      "B. 132",
+      "C. 160",
+      "D. 176"
+    ]
+  },
+  "q174": {
+    "question": "If 7x = 84, x = ?",
+    "possibleAnswers": [
+      "A. 10",
+      "B. 11",
+      "C. 12",
+      "D. 13"
+    ]
+  },
+  "q175": {
+    "question": "Which is the sum of interior angles of a pentagon?",
+    "possibleAnswers": [
+      "A. 360°",
+      "B. 450°",
+      "C. 540°",
+      "D. 720°"
+    ]
+  },
+  "q176": {
+    "question": "Next: 1, 8, 27, 64, ?",
+    "possibleAnswers": [
+      "A. 81",
+      "B. 100",
+      "C. 125",
+      "D. 216"
+    ]
+  },
+  "q177": {
+    "question": "If (a^2 – b^2 = (a+b)(a-b)), for a=9, b=7, value = ?",
+    "possibleAnswers": [
+      "A. 16",
+      "B. 32",
+      "C. 36",
+      "D. 64"
+    ]
+  },
+  "q178": {
+    "question": "Which equals ?",
+    "possibleAnswers": [
+      "A. 0.2",
+      "B. 2",
+      "C. 5",
+      "D. 10"
+    ]
+  },
+  "q179": {
+    "question": "Next: 14, 28, 56, 112, ?",
+    "possibleAnswers": [
+      "A. 168",
+      "B. 196",
+      "C. 224",
+      "D. 240"
+    ]
+  },
+  "q180": {
+    "question": "If 4x + 5 = 3x + 17, x = ?",
+    "possibleAnswers": [
+      "A. 10",
+      "B. 11",
+      "C. 12",
+      "D. 13"
+    ]
+  },
+  "q181": {
+    "question": "Which equals 1/3 as a percent?",
+    "possibleAnswers": [
+      "A. 30%",
+      "B. 33%",
+      "C. 33.3…%",
+      "D. 35%"
+    ]
+  },
+  "q182": {
+    "question": "Next: 2, 5, 11, 23, 47, ? (×2+1)",
+    "possibleAnswers": [
+      "A. 93",
+      "B. 95",
+      "C. 97",
+      "D. 99"
+    ]
+  },
+  "q183": {
+    "question": "If sum of first n natural numbers is 210, n = ?",
+    "possibleAnswers": [
+      "A. 19",
+      "B. 20",
+      "C. 21",
+      "D. 22"
+    ]
+  },
+  "q184": {
+    "question": "Which equals ( (a+b)^2)?",
+    "possibleAnswers": [
+      "A. a² + b²",
+      "B. a² + 2ab + b²",
+      "C. (a² + b²)/2",
+      "D. a² – 2ab + b²"
+    ]
+  },
+  "q185": {
+    "question": "Next: 0, 2, 6, 12, 20, ? (n(n+1))",
+    "possibleAnswers": [
+      "A. 24",
+      "B. 30",
+      "C. 36",
+      "D. 42"
+    ]
+  },
+  "q186": {
+    "question": "If 40% of y = 72, y = ?",
+    "possibleAnswers": [
+      "A. 120",
+      "B. 160",
+      "C. 180",
+      "D. 200"
+    ]
+  },
+  "q187": {
+    "question": "Which is prime?",
+    "possibleAnswers": [
+      "A. 87",
+      "B. 91",
+      "C. 97",
+      "D. 99"
+    ]
+  },
+  "q188": {
+    "question": "Next: 50, 45, 41, 38, 36, ? (–5, –4, –3, –2, …)",
+    "possibleAnswers": [
+      "A. 35",
+      "B. 34",
+      "C. 33",
+      "D. 32"
+    ]
+  },
+  "q189": {
+    "question": "If 1 liter = 1,000 ml, then 2.5 liters = ?",
+    "possibleAnswers": [
+      "A. 150 ml",
+      "B. 2,000 ml",
+      "C. 2,500 ml",
+      "D. 3,000 ml"
+    ]
+  },
+  "q190": {
+    "question": "Which equals 9² – 7²?",
+    "possibleAnswers": [
+      "A. 16",
+      "B. 24",
+      "C. 32",
+      "D. 36"
+    ]
+  },
+  "q191": {
+    "question": "Next: 1, 5, 14, 30, 55, ? (+4,+9,+16,+25…)",
+    "possibleAnswers": [
+      "A. 79",
+      "B. 85",
+      "C. 91",
+      "D. 96"
+    ]
+  },
+  "q192": {
+    "question": "If (x/5 = 7), x = ?",
+    "possibleAnswers": [
+      "A. 30",
+      "B. 32",
+      "C. 33",
+      "D. 35"
+    ]
+  },
+  "q193": {
+    "question": "Which equals 12% as decimal?",
+    "possibleAnswers": [
+      "A. 0.012",
+      "B. 0.12",
+      "C. 1.2",
+      "D. 12"
+    ]
+  },
+  "q194": {
+    "question": "Next: 3, 9, 27, 81, 243, ?",
+    "possibleAnswers": [
+      "A. 486",
+      "B. 500",
+      "C. 512",
+      "D. 576"
+    ]
+  },
+  "q195": {
+    "question": "If 2(x–3) = 14, x = ?",
+    "possibleAnswers": [
+      "A. 7",
+      "B. 8",
+      "C. 9",
+      "D. 10"
+    ]
+  },
+  "q196": {
+    "question": "Which equals 0.04 as a fraction?",
+    "possibleAnswers": [
+      "A. 1/50",
+      "B. 1/40",
+      "C. 1/25",
+      "D. 1/20"
+    ]
+  },
+  "q197": {
+    "question": "Next: 4, 7, 11, 16, 22, ? (+3,+4,+5,+6…)",
+    "possibleAnswers": [
+      "A. 27",
+      "B. 28",
+      "C. 29",
+      "D. 30"
+    ]
+  },
+  "q198": {
+    "question": "If a/b = 3/4 and a=27, b=?",
+    "possibleAnswers": [
+      "A. 32",
+      "B. 34",
+      "C. 35",
+      "D. 36"
+    ]
+  },
+  "q199": {
+    "question": "Which equals (3/5) x (10/9) ?",
+    "possibleAnswers": [
+      "A. 2/3",
+      "B. 3/2",
+      "C. 4/5",
+      "D. 2/5"
+    ]
+  },
+  "q200": {
+    "question": "Next: 1, 4, 13, 40, ? (×3+1)",
+    "possibleAnswers": [
+      "A. 100",
+      "B. 121",
+      "C. 130",
+      "D. 163"
+    ]
+  }
+}

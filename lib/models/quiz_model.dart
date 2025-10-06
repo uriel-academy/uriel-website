@@ -10,6 +10,7 @@ class Quiz {
   final List<QuizAnswer> answers;
   final DateTime startTime;
   final DateTime endTime;
+  final String? triviaCategory;
 
   Quiz({
     required this.id,
@@ -21,6 +22,7 @@ class Quiz {
     required this.answers,
     required this.startTime,
     required this.endTime,
+    this.triviaCategory,
   });
 
   double get percentage => (correctAnswers / totalQuestions) * 100;
@@ -37,6 +39,7 @@ class Quiz {
     'answers': answers.map((a) => a.toJson()).toList(),
     'startTime': startTime.toIso8601String(),
     'endTime': endTime.toIso8601String(),
+    'triviaCategory': triviaCategory,
   };
 
   factory Quiz.fromJson(Map<String, dynamic> json) => Quiz(
@@ -51,6 +54,7 @@ class Quiz {
         .toList(),
     startTime: DateTime.parse(json['startTime']),
     endTime: DateTime.parse(json['endTime']),
+    triviaCategory: json['triviaCategory'],
   );
 }
 

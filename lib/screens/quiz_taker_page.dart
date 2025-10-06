@@ -11,6 +11,7 @@ class QuizTakerPage extends StatefulWidget {
   final String level;
   final List<Question>? preloadedQuestions;
   final int? questionCount;
+  final String? triviaCategory;
 
   const QuizTakerPage({
     super.key,
@@ -19,6 +20,7 @@ class QuizTakerPage extends StatefulWidget {
     required this.level,
     this.preloadedQuestions,
     this.questionCount,
+    this.triviaCategory,
   });
 
   @override
@@ -87,12 +89,13 @@ class _QuizTakerPageState extends State<QuizTakerPage>
         final subjectEnum = _mapStringToSubject(widget.subject);
         final examTypeEnum = _mapStringToExamType(widget.examType);
         
-        print('🎯 QuizTaker: Loading questions for subject=${subjectEnum.name}, examType=${examTypeEnum.name}, level=${widget.level}');
+        print('🎯 QuizTaker: Loading questions for subject=${subjectEnum.name}, examType=${examTypeEnum.name}, level=${widget.level}, triviaCategory=${widget.triviaCategory}');
         
         questions = await _questionService.getQuestionsByFilters(
           subject: subjectEnum,
           examType: examTypeEnum,
           level: widget.level,
+          triviaCategory: widget.triviaCategory,
         ).timeout(
           const Duration(seconds: 10),
           onTimeout: () {
@@ -249,6 +252,7 @@ class _QuizTakerPageState extends State<QuizTakerPage>
       answers: quizAnswers,
       startTime: quizStartTime!,
       endTime: quizEndTime!,
+      triviaCategory: widget.triviaCategory,
     );
     
     // Navigate to results
@@ -472,7 +476,7 @@ class _QuizTakerPageState extends State<QuizTakerPage>
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Text(
-                                '${widget.subject} Quiz',
+                                widget.triviaCategory ?? '${widget.subject} Quiz',
                                 style: GoogleFonts.playfairDisplay(
                                   fontSize: isMobile ? 16 : 18,
                                   fontWeight: FontWeight.bold,
@@ -756,26 +760,30 @@ class _QuizTakerPageState extends State<QuizTakerPage>
 
   // Helper methods to map string display names to enums
   Subject _mapStringToSubject(String subject) {
-    switch (subject) {
-      case 'Religious and Moral Education':
+    switch (subject.toLowerCase()) {
+      case 'trivia':
+        return Subject.trivia;
+      case 'religious and moral education':
         return Subject.religiousMoralEducation;
-      case 'Mathematics':
+      case 'mathematics':
         return Subject.mathematics;
-      case 'English Language':
+      case 'english language':
+      case 'english':
         return Subject.english;
-      case 'Science':
+      case 'science':
         return Subject.integratedScience;
-      case 'Social Studies':
+      case 'social studies':
         return Subject.socialStudies;
-      case 'Information Technology':
+      case 'information technology':
+      case 'ict':
         return Subject.ict;
-      case 'Creative Arts':
+      case 'creative arts':
         return Subject.creativeArts;
-      case 'French':
+      case 'french':
         return Subject.french;
-      case 'Twi':
-      case 'Ga':
-      case 'Ewe':
+      case 'twi':
+      case 'ga':
+      case 'ewe':
         return Subject.ghanaianLanguage;
       default:
         return Subject.religiousMoralEducation;
@@ -783,14 +791,20 @@ class _QuizTakerPageState extends State<QuizTakerPage>
   }
 
   ExamType _mapStringToExamType(String examType) {
-    switch (examType) {
-      case 'BECE':
+    switch (examType.toLowerCase()) {
+      case 'trivia':
+        return ExamType.trivia;
+      case 'bece':
         return ExamType.bece;
-      case 'Mock Exam':
+      case 'wassce':
+        return ExamType.wassce;
+      case 'mock exam':
+      case 'mock':
         return ExamType.mock;
-      case 'Class Test':
-      case 'Assignment':
-      case 'Practice Questions':
+      case 'class test':
+      case 'assignment':
+      case 'practice questions':
+      case 'practice':
         return ExamType.practice;
       default:
         return ExamType.bece;

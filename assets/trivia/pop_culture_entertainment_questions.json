@@ -1,0 +1,1803 @@
+{
+  "subject": "Pop Culture & Entertainment",
+  "q1": {
+    "question": "Which film won the Academy Award for Best Picture at the first Oscars (1929)?",
+    "possibleAnswers": [
+      "A. Wings",
+      "B. Sunrise",
+      "C. The Jazz Singer",
+      "D. All Quiet on the Western Front"
+    ]
+  },
+  "q2": {
+    "question": "Who created the Star Wars franchise?",
+    "possibleAnswers": [
+      "A. Steven Spielberg",
+      "B. George Lucas",
+      "C. Ridley Scott",
+      "D. James Cameron"
+    ]
+  },
+  "q3": {
+    "question": "Which singer is known as the “Queen of Soul”?",
+    "possibleAnswers": [
+      "A. Whitney Houston",
+      "B. Aretha Franklin",
+      "C. Tina Turner",
+      "D. Diana Ross"
+    ]
+  },
+  "q4": {
+    "question": "Mario, the video game character, first appeared in which game?",
+    "possibleAnswers": [
+      "A. Super Mario Bros.",
+      "B. Donkey Kong",
+      "C. Mario Bros.",
+      "D. Super Mario 64"
+    ]
+  },
+  "q5": {
+    "question": "“Wakanda” is a fictional nation in which cinematic universe?",
+    "possibleAnswers": [
+      "A. DC Extended Universe",
+      "B. MonsterVerse",
+      "C. Marvel Cinematic Universe",
+      "D. Dark Universe"
+    ]
+  },
+  "q6": {
+    "question": "Who played Jack Dawson in Titanic (1997)?",
+    "possibleAnswers": [
+      "A. Brad Pitt",
+      "B. Tom Cruise",
+      "C. Leonardo DiCaprio",
+      "D. Matt Damon"
+    ]
+  },
+  "q7": {
+    "question": "Which streaming series features the character Eleven?",
+    "possibleAnswers": [
+      "A. The Umbrella Academy",
+      "B. Stranger Things",
+      "C. The Boys",
+      "D. Dark"
+    ]
+  },
+  "q8": {
+    "question": "Which artist released the album “Thriller” (1982)?",
+    "possibleAnswers": [
+      "A. Prince",
+      "B. Michael Jackson",
+      "C. Madonna",
+      "D. Lionel Richie"
+    ]
+  },
+  "q9": {
+    "question": "“Hedwig” is the owl companion of which character?",
+    "possibleAnswers": [
+      "A. Katniss Everdeen",
+      "B. Harry Potter",
+      "C. Percy Jackson",
+      "D. Frodo Baggins"
+    ]
+  },
+  "q10": {
+    "question": "Who directed The Lord of the Rings film trilogy (2001–2003)?",
+    "possibleAnswers": [
+      "A. Peter Jackson",
+      "B. Sam Raimi",
+      "C. Christopher Nolan",
+      "D. David Fincher"
+    ]
+  },
+  "q11": {
+    "question": "Which K-pop group released “Dynamite” (2020)?",
+    "possibleAnswers": [
+      "A. BLACKPINK",
+      "B. EXO",
+      "C. BTS",
+      "D. TWICE"
+    ]
+  },
+  "q12": {
+    "question": "The show “Friends” is primarily set in which city?",
+    "possibleAnswers": [
+      "A. Chicago",
+      "B. New York City",
+      "C. Los Angeles",
+      "D. Boston"
+    ]
+  },
+  "q13": {
+    "question": "Which superhero is known as the “Dark Knight”?",
+    "possibleAnswers": [
+      "A. Superman",
+      "B. Batman",
+      "C. Iron Man",
+      "D. Spider-Man"
+    ]
+  },
+  "q14": {
+    "question": "Who is the author of A Song of Ice and Fire?",
+    "possibleAnswers": [
+      "A. J. R. R. Tolkien",
+      "B. George R. R. Martin",
+      "C. Robert Jordan",
+      "D. Patrick Rothfuss"
+    ]
+  },
+  "q15": {
+    "question": "Which singer is nicknamed “Queen Bey”?",
+    "possibleAnswers": [
+      "A. Beyoncé",
+      "B. Billie Eilish",
+      "C. Rihanna",
+      "D. Adele"
+    ]
+  },
+  "q16": {
+    "question": "Who played the title role in Wonder Woman (2017)?",
+    "possibleAnswers": [
+      "A. Scarlett Johansson",
+      "B. Gal Gadot",
+      "C. Brie Larson",
+      "D. Margot Robbie"
+    ]
+  },
+  "q17": {
+    "question": "The video game “The Legend of Zelda” was created by:",
+    "possibleAnswers": [
+      "A. Hideo Kojima",
+      "B. Shigeru Miyamoto",
+      "C. Sid Meier",
+      "D. Ken Levine"
+    ]
+  },
+  "q18": {
+    "question": "Which film popularized the line “May the Force be with you”?",
+    "possibleAnswers": [
+      "A. Star Wars: A New Hope",
+      "B. Star Trek: The Motion Picture",
+      "C. Dune (1984)",
+      "D. Blade Runner"
+    ]
+  },
+  "q19": {
+    "question": "Who wrote the musical “Hamilton”?",
+    "possibleAnswers": [
+      "A. Andrew Lloyd Webber",
+      "B. Lin-Manuel Miranda",
+      "C. Stephen Sondheim",
+      "D. Jonathan Larson"
+    ]
+  },
+  "q20": {
+    "question": "Which movie launched the Marvel Cinematic Universe in 2008?",
+    "possibleAnswers": [
+      "A. The Incredible Hulk",
+      "B. Iron Man",
+      "C. Captain America: The First Avenger",
+      "D. Thor"
+    ]
+  },
+  "q21": {
+    "question": "Which video game series features Master Chief?",
+    "possibleAnswers": [
+      "A. Halo",
+      "B. Gears of War",
+      "C. Destiny",
+      "D. Mass Effect"
+    ]
+  },
+  "q22": {
+    "question": "“The Boy Who Lived” refers to:",
+    "possibleAnswers": [
+      "A. Percy Jackson",
+      "B. Harry Potter",
+      "C. Eragon",
+      "D. Artemis Fowl"
+    ]
+  },
+  "q23": {
+    "question": "Who directed Inception (2010)?",
+    "possibleAnswers": [
+      "A. Denis Villeneuve",
+      "B. Christopher Nolan",
+      "C. Alfonso Cuarón",
+      "D. J. J. Abrams"
+    ]
+  },
+  "q24": {
+    "question": "Which artist is known for the album “Lemonade”?",
+    "possibleAnswers": [
+      "A. Ariana Grande",
+      "B. Beyoncé",
+      "C. Taylor Swift",
+      "D. SZA"
+    ]
+  },
+  "q25": {
+    "question": "What is the real name of rapper “Eminem”?",
+    "possibleAnswers": [
+      "A. Marshall Mathers",
+      "B. Curtis Jackson",
+      "C. Calvin Broadus",
+      "D. Andre Young"
+    ]
+  },
+  "q26": {
+    "question": "Which TV series features the noble houses Stark and Lannister?",
+    "possibleAnswers": [
+      "A. The Witcher",
+      "B. Game of Thrones",
+      "C. Vikings",
+      "D. The Last Kingdom"
+    ]
+  },
+  "q27": {
+    "question": "The character Lara Croft is from which game franchise?",
+    "possibleAnswers": [
+      "A. Uncharted",
+      "B. Tomb Raider",
+      "C. Metroid",
+      "D. Horizon"
+    ]
+  },
+  "q28": {
+    "question": "Who played Wolverine in the X-Men films (2000–2017)?",
+    "possibleAnswers": [
+      "A. Hugh Jackman",
+      "B. Liev Schreiber",
+      "C. James McAvoy",
+      "D. Tom Hardy"
+    ]
+  },
+  "q29": {
+    "question": "Which band recorded “Bohemian Rhapsody”?",
+    "possibleAnswers": [
+      "A. The Beatles",
+      "B. Queen",
+      "C. Pink Floyd",
+      "D. The Rolling Stones"
+    ]
+  },
+  "q30": {
+    "question": "The film Parasite (2019) was directed by:",
+    "possibleAnswers": [
+      "A. Bong Joon-ho",
+      "B. Park Chan-wook",
+      "C. Hirokazu Kore-eda",
+      "D. Ang Lee"
+    ]
+  },
+  "q31": {
+    "question": "Nintendo’s mascot is:",
+    "possibleAnswers": [
+      "A. Sonic",
+      "B. Mario",
+      "C. Crash Bandicoot",
+      "D. Pac-Man"
+    ]
+  },
+  "q32": {
+    "question": "Which show features a chemistry teacher turned meth cook?",
+    "possibleAnswers": [
+      "A. Narcos",
+      "B. Ozark",
+      "C. Breaking Bad",
+      "D. Better Call Saul"
+    ]
+  },
+  "q33": {
+    "question": "The “Hunger Games” Trilogy was written by:",
+    "possibleAnswers": [
+      "A. Suzanne Collins",
+      "B. Veronica Roth",
+      "C. Stephenie Meyer",
+      "D. Leigh Bardugo"
+    ]
+  },
+  "q34": {
+    "question": "Which artist is behind the album “1989”?",
+    "possibleAnswers": [
+      "A. Taylor Swift",
+      "B. Katy Perry",
+      "C. Lorde",
+      "D. Demi Lovato"
+    ]
+  },
+  "q35": {
+    "question": "The character “Black Panther” is also known as:",
+    "possibleAnswers": [
+      "A. T’Challa",
+      "B. M’Baku",
+      "C. Erik Killmonger",
+      "D. Shuri"
+    ]
+  },
+  "q36": {
+    "question": "Who directed Avatar (2009)?",
+    "possibleAnswers": [
+      "A. Peter Jackson",
+      "B. James Cameron",
+      "C. Michael Bay",
+      "D. Zack Snyder"
+    ]
+  },
+  "q37": {
+    "question": "Which console introduced the controller with a motion sensor “Wii Remote”?",
+    "possibleAnswers": [
+      "A. Xbox 360",
+      "B. PlayStation 3",
+      "C. Nintendo Wii",
+      "D. Sega Dreamcast"
+    ]
+  },
+  "q38": {
+    "question": "Which singer released “Hello” in 2015?",
+    "possibleAnswers": [
+      "A. Adele",
+      "B. Rihanna",
+      "C. Sia",
+      "D. Ellie Goulding"
+    ]
+  },
+  "q39": {
+    "question": "The superhero team including Iron Man, Thor, and Captain America is:",
+    "possibleAnswers": [
+      "A. Justice League",
+      "B. Avengers",
+      "C. X-Men",
+      "D. Fantastic Four"
+    ]
+  },
+  "q40": {
+    "question": "The animated film with the song “Let It Go” is:",
+    "possibleAnswers": [
+      "A. Tangled",
+      "B. Moana",
+      "C. Frozen",
+      "D. Encanto"
+    ]
+  },
+  "q41": {
+    "question": "Which director is known for Pulp Fiction?",
+    "possibleAnswers": [
+      "A. Guy Ritchie",
+      "B. Quentin Tarantino",
+      "C. Martin Scorsese",
+      "D. Paul Thomas Anderson"
+    ]
+  },
+  "q42": {
+    "question": "The sitcom with the character Sheldon Cooper is:",
+    "possibleAnswers": [
+      "A. The Office",
+      "B. Parks and Recreation",
+      "C. Modern Family",
+      "D. The Big Bang Theory"
+    ]
+  },
+  "q43": {
+    "question": "The rapper “Kendrick Lamar” hails from which city?",
+    "possibleAnswers": [
+      "A. Chicago",
+      "B. New York",
+      "C. Compton",
+      "D. Atlanta"
+    ]
+  },
+  "q44": {
+    "question": "The 007 agent “James Bond” was created by:",
+    "possibleAnswers": [
+      "A. John le Carré",
+      "B. Ian Fleming",
+      "C. Tom Clancy",
+      "D. Frederick Forsyth"
+    ]
+  },
+  "q45": {
+    "question": "Which series features Geralt of Rivia?",
+    "possibleAnswers": [
+      "A. The Witcher",
+      "B. Shadow and Bone",
+      "C. The Wheel of Time",
+      "D. His Dark Materials"
+    ]
+  },
+  "q46": {
+    "question": "“Studio Ghibli” is a film studio from:",
+    "possibleAnswers": [
+      "A. China",
+      "B. South Korea",
+      "C. Japan",
+      "D. Thailand"
+    ]
+  },
+  "q47": {
+    "question": "Which artist popularized the dance “Moonwalk” on TV in 1983?",
+    "possibleAnswers": [
+      "A. James Brown",
+      "B. Michael Jackson",
+      "C. Usher",
+      "D. Chris Brown"
+    ]
+  },
+  "q48": {
+    "question": "The villain “Joker” is primarily the nemesis of:",
+    "possibleAnswers": [
+      "A. Batman",
+      "B. Superman",
+      "C. The Flash",
+      "D. Aquaman"
+    ]
+  },
+  "q49": {
+    "question": "The first feature-length animated film (widely cited) was:",
+    "possibleAnswers": [
+      "A. Snow White and the Seven Dwarfs",
+      "B. Pinocchio",
+      "C. Fantasia",
+      "D. Steamboat Willie"
+    ]
+  },
+  "q50": {
+    "question": "Who plays Captain Jack Sparrow?",
+    "possibleAnswers": [
+      "A. Orlando Bloom",
+      "B. Johnny Depp",
+      "C. Jude Law",
+      "D. Colin Farrell"
+    ]
+  },
+  "q51": {
+    "question": "Which show features the ship “The Black Pearl”?",
+    "possibleAnswers": [
+      "A. Black Sails",
+      "B. Pirates of the Caribbean (film series)",
+      "C. One Piece (live action)",
+      "D. Master and Commander"
+    ]
+  },
+  "q52": {
+    "question": "The song “Shape of You” is by:",
+    "possibleAnswers": [
+      "A. Justin Bieber",
+      "B. Ed Sheeran",
+      "C. Shawn Mendes",
+      "D. The Weeknd"
+    ]
+  },
+  "q53": {
+    "question": "The character “Neo” appears in:",
+    "possibleAnswers": [
+      "A. Blade Runner",
+      "B. The Matrix",
+      "C. Terminator",
+      "D. Ghost in the Shell"
+    ]
+  },
+  "q54": {
+    "question": "Who directed The Dark Knight (2008)?",
+    "possibleAnswers": [
+      "A. Christopher Nolan",
+      "B. Tim Burton",
+      "C. Joel Schumacher",
+      "D. Matt Reeves"
+    ]
+  },
+  "q55": {
+    "question": "Which video game franchise features Hyrule?",
+    "possibleAnswers": [
+      "A. Dragon Quest",
+      "B. The Legend of Zelda",
+      "C. Final Fantasy",
+      "D. Monster Hunter"
+    ]
+  },
+  "q56": {
+    "question": "“Okoye” is the fierce general of which group in Black Panther?",
+    "possibleAnswers": [
+      "A. Dora Milaje",
+      "B. Ten Rings",
+      "C. Valkyries",
+      "D. Eternals"
+    ]
+  },
+  "q57": {
+    "question": "The artist behind “Umbrella” (2007) is:",
+    "possibleAnswers": [
+      "A. Beyoncé",
+      "B. Rihanna",
+      "C. Ciara",
+      "D. Alicia Keys"
+    ]
+  },
+  "q58": {
+    "question": "Who composed the iconic Star Wars main theme?",
+    "possibleAnswers": [
+      "A. Hans Zimmer",
+      "B. John Williams",
+      "C. Howard Shore",
+      "D. Ennio Morricone"
+    ]
+  },
+  "q59": {
+    "question": "The film with the quote about a box of chocolates (“life was like a…”) is:",
+    "possibleAnswers": [
+      "A. The Green Mile",
+      "B. Cast Away",
+      "C. Forrest Gump",
+      "D. Rain Man"
+    ]
+  },
+  "q60": {
+    "question": "Which TV series follows a bounty hunter and “The Child” (Grogu)?",
+    "possibleAnswers": [
+      "A. The Mandalorian",
+      "B. Andor",
+      "C. Obi-Wan Kenobi",
+      "D. The Book of Boba Fett"
+    ]
+  },
+  "q61": {
+    "question": "The music festival held in Indio, California, is:",
+    "possibleAnswers": [
+      "A. Lollapalooza",
+      "B. Coachella",
+      "C. Glastonbury",
+      "D. Bonnaroo"
+    ]
+  },
+  "q62": {
+    "question": "“Miyazaki” is best associated with which film?",
+    "possibleAnswers": [
+      "A. Your Name",
+      "B. Spirited Away",
+      "C. Weathering With You",
+      "D. Paprika"
+    ]
+  },
+  "q63": {
+    "question": "The rapper who released “To Pimp a Butterfly”:",
+    "possibleAnswers": [
+      "A. Drake",
+      "B. Kendrick Lamar",
+      "C. J. Cole",
+      "D. Childish Gambino"
+    ]
+  },
+  "q64": {
+    "question": "The first console by Sony was the:",
+    "possibleAnswers": [
+      "A. PlayStation",
+      "B. PlayStation 2",
+      "C. PlayStation Portable",
+      "D. PlayStation 3"
+    ]
+  },
+  "q65": {
+    "question": "The TV show with dragons and the Night King is:",
+    "possibleAnswers": [
+      "A. House of the Dragon",
+      "B. Game of Thrones",
+      "C. The Witcher",
+      "D. Shadow and Bone"
+    ]
+  },
+  "q66": {
+    "question": "The film “Get Out” (2017) was directed by:",
+    "possibleAnswers": [
+      "A. Jordan Peele",
+      "B. Spike Lee",
+      "C. Barry Jenkins",
+      "D. Ryan Coogler"
+    ]
+  },
+  "q67": {
+    "question": "Which artist is known for the visual album “Black Is King”?",
+    "possibleAnswers": [
+      "A. Lizzo",
+      "B. Beyoncé",
+      "C. Doja Cat",
+      "D. Solange"
+    ]
+  },
+  "q68": {
+    "question": "Which comic universe includes Wonder Woman and The Flash?",
+    "possibleAnswers": [
+      "A. Marvel",
+      "B. Image",
+      "C. Dark Horse",
+      "D. DC"
+    ]
+  },
+  "q69": {
+    "question": "The song “Smells Like Teen Spirit” is by:",
+    "possibleAnswers": [
+      "A. Pearl Jam",
+      "B. Nirvana",
+      "C. Foo Fighters",
+      "D. Soundgarden"
+    ]
+  },
+  "q70": {
+    "question": "The actress who played Hermione Granger is:",
+    "possibleAnswers": [
+      "A. Emma Thompson",
+      "B. Emma Stone",
+      "C. Emma Watson",
+      "D. Emily Blunt"
+    ]
+  },
+  "q71": {
+    "question": "Which animated series features a yellow family from Springfield?",
+    "possibleAnswers": [
+      "A. Family Guy",
+      "B. The Simpsons",
+      "C. South Park",
+      "D. Bob’s Burgers"
+    ]
+  },
+  "q72": {
+    "question": "The battle royale game that popularized building mechanics is:",
+    "possibleAnswers": [
+      "A. Apex Legends",
+      "B. PUBG",
+      "C. Fortnite",
+      "D. Warzone"
+    ]
+  },
+  "q73": {
+    "question": "The Netflix series about a chess prodigy:",
+    "possibleAnswers": [
+      "A. The Crown",
+      "B. The Queen’s Gambit",
+      "C. Mindhunter",
+      "D. The OA"
+    ]
+  },
+  "q74": {
+    "question": "The first African to win the Nobel Prize in Literature (1986) is:",
+    "possibleAnswers": [
+      "A. Chinua Achebe",
+      "B. Wole Soyinka",
+      "C. Nadine Gordimer",
+      "D. Naguib Mahfouz"
+    ]
+  },
+  "q75": {
+    "question": "“Slim Shady” is an alter ego of:",
+    "possibleAnswers": [
+      "A. Lil Wayne",
+      "B. Eminem",
+      "C. Machine Gun Kelly",
+      "D. Post Malone"
+    ]
+  },
+  "q76": {
+    "question": "The director of Titanic and The Terminator is:",
+    "possibleAnswers": [
+      "A. Steven Spielberg",
+      "B. James Cameron",
+      "C. Ridley Scott",
+      "D. Robert Zemeckis"
+    ]
+  },
+  "q77": {
+    "question": "The sitcom that follows paper company employees in Scranton:",
+    "possibleAnswers": [
+      "A. The Office (US)",
+      "B. Brooklyn Nine-Nine",
+      "C. 30 Rock",
+      "D. Parks and Recreation"
+    ]
+  },
+  "q78": {
+    "question": "Which artist released the album “25”?",
+    "possibleAnswers": [
+      "A. Adele",
+      "B. Taylor Swift",
+      "C. Lady Gaga",
+      "D. Kacey Musgraves"
+    ]
+  },
+  "q79": {
+    "question": "The character “Kratos” appears in:",
+    "possibleAnswers": [
+      "A. God of War",
+      "B. Assassin’s Creed",
+      "C. Gears of War",
+      "D. Diablo"
+    ]
+  },
+  "q80": {
+    "question": "The film “Moonlight” won Best Picture at the Oscars in:",
+    "possibleAnswers": [
+      "A. 2015",
+      "B. 2016",
+      "C. 2017",
+      "D. 2018"
+    ]
+  },
+  "q81": {
+    "question": "The superhero team led by Professor X is the:",
+    "possibleAnswers": [
+      "A. Avengers",
+      "B. Justice League",
+      "C. X-Men",
+      "D. Teen Titans"
+    ]
+  },
+  "q82": {
+    "question": "The lead singer of U2 is:",
+    "possibleAnswers": [
+      "A. Sting",
+      "B. Bono",
+      "C. Chris Martin",
+      "D. Thom Yorke"
+    ]
+  },
+  "q83": {
+    "question": "The anime featuring the pirate Monkey D. Luffy is:",
+    "possibleAnswers": [
+      "A. Naruto",
+      "B. One Piece",
+      "C. Bleach",
+      "D. Fairy Tail"
+    ]
+  },
+  "q84": {
+    "question": "The award for excellence in television is the:",
+    "possibleAnswers": [
+      "A. Grammy",
+      "B. Emmy",
+      "C. Tony",
+      "D. Oscar"
+    ]
+  },
+  "q85": {
+    "question": "The film with a DeLorean time machine is:",
+    "possibleAnswers": [
+      "A. Bill & Ted’s Excellent Adventure",
+      "B. The Time Machine",
+      "C. Back to the Future",
+      "D. Timecop"
+    ]
+  },
+  "q86": {
+    "question": "The creator of the Marvel character Spider-Man (co-creator) is often credited as:",
+    "possibleAnswers": [
+      "A. Bob Kane",
+      "B. Stan Lee (with Steve Ditko)",
+      "C. Jack Kirby alone",
+      "D. Frank Miller"
+    ]
+  },
+  "q87": {
+    "question": "The album “The Miseducation of Lauryn Hill” was released by:",
+    "possibleAnswers": [
+      "A. Lauryn Hill",
+      "B. Erykah Badu",
+      "C. Alicia Keys",
+      "D. Mary J. Blige"
+    ]
+  },
+  "q88": {
+    "question": "The Oscar-winning song “My Heart Will Go On” is performed by:",
+    "possibleAnswers": [
+      "A. Celine Dion",
+      "B. Mariah Carey",
+      "C. Shania Twain",
+      "D. Faith Hill"
+    ]
+  },
+  "q89": {
+    "question": "The author of The Fault in Our Stars is:",
+    "possibleAnswers": [
+      "A. John Green",
+      "B. Rainbow Rowell",
+      "C. Jenny Han",
+      "D. Stephen Chbosky"
+    ]
+  },
+  "q90": {
+    "question": "The gaming company behind “Assassin’s Creed” is:",
+    "possibleAnswers": [
+      "A. EA",
+      "B. Ubisoft",
+      "C. Activision",
+      "D. Square Enix"
+    ]
+  },
+  "q91": {
+    "question": "The British band behind “Yellow” is:",
+    "possibleAnswers": [
+      "A. Oasis",
+      "B. Coldplay",
+      "C. Radiohead",
+      "D. Blur"
+    ]
+  },
+  "q92": {
+    "question": "The lead character of “The Mandalorian” is named:",
+    "possibleAnswers": [
+      "A. Din Djarin",
+      "B. Cassian Andor",
+      "C. Jyn Erso",
+      "D. Poe Dameron"
+    ]
+  },
+  "q93": {
+    "question": "The film Casablanca (1942) stars Humphrey Bogart and:",
+    "possibleAnswers": [
+      "A. Ingrid Bergman",
+      "B. Katharine Hepburn",
+      "C. Lauren Bacall",
+      "D. Bette Davis"
+    ]
+  },
+  "q94": {
+    "question": "The first Pokémon games released internationally were:",
+    "possibleAnswers": [
+      "A. Gold and Silver",
+      "B. Ruby and Sapphire",
+      "C. Red and Blue",
+      "D. Diamond and Pearl"
+    ]
+  },
+  "q95": {
+    "question": "The Grammy is primarily awarded for:",
+    "possibleAnswers": [
+      "A. Film",
+      "B. Music",
+      "C. Theater",
+      "D. Television"
+    ]
+  },
+  "q96": {
+    "question": "The FIFA video game series is developed by:",
+    "possibleAnswers": [
+      "A. Konami",
+      "B. EA Sports",
+      "C. 2K Sports",
+      "D. SEGA"
+    ]
+  },
+  "q97": {
+    "question": "The TV drama focused on British royalty is:",
+    "possibleAnswers": [
+      "A. The Crown",
+      "B. Downton Abbey",
+      "C. The Tudors",
+      "D. Victoria"
+    ]
+  },
+  "q98": {
+    "question": "The film “Joker” (2019) stars:",
+    "possibleAnswers": [
+      "A. Jared Leto",
+      "B. Joaquin Phoenix",
+      "C. Heath Ledger",
+      "D. Ben Affleck"
+    ]
+  },
+  "q99": {
+    "question": "The creator of Dragon Ball is:",
+    "possibleAnswers": [
+      "A. Eiichiro Oda",
+      "B. Masashi Kishimoto",
+      "C. Akira Toriyama",
+      "D. Yoshihiro Togashi"
+    ]
+  },
+  "q100": {
+    "question": "The sci-fi franchise with the starship Enterprise is:",
+    "possibleAnswers": [
+      "A. Star Wars",
+      "B. Battlestar Galactica",
+      "C. Star Trek",
+      "D. Firefly"
+    ]
+  },
+  "q101": {
+    "question": "The artist who sang “Single Ladies (Put a Ring on It)” is:",
+    "possibleAnswers": [
+      "A. Rihanna",
+      "B. Beyoncé",
+      "C. Ciara",
+      "D. Jennifer Lopez"
+    ]
+  },
+  "q102": {
+    "question": "The director known for “Pan’s Labyrinth” and “The Shape of Water”:",
+    "possibleAnswers": [
+      "A. Guillermo del Toro",
+      "B. Alejandro G. Iñárritu",
+      "C. Alfonso Cuarón",
+      "D. Pedro Almodóvar"
+    ]
+  },
+  "q103": {
+    "question": "The film series featuring “The Infinity Stones” is:",
+    "possibleAnswers": [
+      "A. Star Trek",
+      "B. DC Extended Universe",
+      "C. Marvel Cinematic Universe",
+      "D. The Matrix"
+    ]
+  },
+  "q104": {
+    "question": "The sitcom with a character named “Barney Stinson” is:",
+    "possibleAnswers": [
+      "A. Seinfeld",
+      "B. How I Met Your Mother",
+      "C. New Girl",
+      "D. Community"
+    ]
+  },
+  "q105": {
+    "question": "The artist behind “Bad Guy” (2019) is:",
+    "possibleAnswers": [
+      "A. Billie Eilish",
+      "B. Halsey",
+      "C. Lorde",
+      "D. Dua Lipa"
+    ]
+  },
+  "q106": {
+    "question": "The movie with the line “I’ll be back” (first used) is:",
+    "possibleAnswers": [
+      "A. Terminator 2",
+      "B. The Terminator",
+      "C. Predator",
+      "D. Commando"
+    ]
+  },
+  "q107": {
+    "question": "The game franchise with the region of “Kanto” is:",
+    "possibleAnswers": [
+      "A. Pokémon",
+      "B. Final Fantasy",
+      "C. Dragon Quest",
+      "D. Monster Hunter"
+    ]
+  },
+  "q108": {
+    "question": "The film director of “Schindler’s List” is:",
+    "possibleAnswers": [
+      "A. Ron Howard",
+      "B. Steven Spielberg",
+      "C. Ridley Scott",
+      "D. Clint Eastwood"
+    ]
+  },
+  "q109": {
+    "question": "The character “Tony Stark” is also known as:",
+    "possibleAnswers": [
+      "A. War Machine",
+      "B. Iron Man",
+      "C. Ant-Man",
+      "D. Doctor Strange"
+    ]
+  },
+  "q110": {
+    "question": "The hit series about a chemistry teacher’s lawyer spin-off is:",
+    "possibleAnswers": [
+      "A. Narcos: Mexico",
+      "B. Better Call Saul",
+      "C. El Camino",
+      "D. Fargo"
+    ]
+  },
+  "q111": {
+    "question": "The band that released “Hotel California” is:",
+    "possibleAnswers": [
+      "A. Eagles",
+      "B. Journey",
+      "C. Fleetwood Mac",
+      "D. The Doors"
+    ]
+  },
+  "q112": {
+    "question": "The video game company behind “The Last of Us” is:",
+    "possibleAnswers": [
+      "A. Naughty Dog",
+      "B. Insomniac",
+      "C. CD Projekt",
+      "D. Bethesda"
+    ]
+  },
+  "q113": {
+    "question": "The fantasy series featuring Daenerys Targaryen is based on books titled:",
+    "possibleAnswers": [
+      "A. The Kingkiller Chronicle",
+      "B. The First Law",
+      "C. A Song of Ice and Fire",
+      "D. The Stormlight Archive"
+    ]
+  },
+  "q114": {
+    "question": "The singer known for “Umbrella” hails from:",
+    "possibleAnswers": [
+      "A. Jamaica",
+      "B. Barbados",
+      "C. Trinidad",
+      "D. Bahamas"
+    ]
+  },
+  "q115": {
+    "question": "The film “The Godfather” was directed by:",
+    "possibleAnswers": [
+      "A. Francis Ford Coppola",
+      "B. Martin Scorsese",
+      "C. Brian De Palma",
+      "D. Sidney Lumet"
+    ]
+  },
+  "q116": {
+    "question": "The game where you catch insects, fish, and craft on an island is:",
+    "possibleAnswers": [
+      "A. Stardew Valley",
+      "B. Animal Crossing: New Horizons",
+      "C. Harvest Moon",
+      "D. Terraria"
+    ]
+  },
+  "q117": {
+    "question": "The actress who plays Black Widow (Natasha Romanoff) in the MCU:",
+    "possibleAnswers": [
+      "A. Brie Larson",
+      "B. Scarlett Johansson",
+      "C. Elizabeth Olsen",
+      "D. Natalie Portman"
+    ]
+  },
+  "q118": {
+    "question": "The lead character of the “John Wick” films is played by:",
+    "possibleAnswers": [
+      "A. Keanu Reeves",
+      "B. Tom Hardy",
+      "C. Matt Damon",
+      "D. Chris Evans"
+    ]
+  },
+  "q119": {
+    "question": "The Star Wars character known for saying “This is the way” is from:",
+    "possibleAnswers": [
+      "A. Rogue One",
+      "B. The Mandalorian",
+      "C. Rebels",
+      "D. Solo"
+    ]
+  },
+  "q120": {
+    "question": "The song “Rolling in the Deep” is by:",
+    "possibleAnswers": [
+      "A. Adele",
+      "B. Amy Winehouse",
+      "C. Alicia Keys",
+      "D. Kelly Clarkson"
+    ]
+  },
+  "q121": {
+    "question": "The film “Spirited Away” won the Oscar for:",
+    "possibleAnswers": [
+      "A. Best Picture",
+      "B. Best Director",
+      "C. Best Animated Feature",
+      "D. Best Foreign Language Film"
+    ]
+  },
+  "q122": {
+    "question": "The superhero also known as “The Scarlet Speedster” is:",
+    "possibleAnswers": [
+      "A. Quicksilver",
+      "B. The Flash",
+      "C. Dash Parr",
+      "D. A-Train"
+    ]
+  },
+  "q123": {
+    "question": "The creator of the sitcom “Seinfeld” with Jerry Seinfeld is:",
+    "possibleAnswers": [
+      "A. Judd Apatow",
+      "B. Larry David",
+      "C. Greg Daniels",
+      "D. Dan Harmon"
+    ]
+  },
+  "q124": {
+    "question": "The metal band known for the album “Master of Puppets” is:",
+    "possibleAnswers": [
+      "A. Metallica",
+      "B. Iron Maiden",
+      "C. Megadeth",
+      "D. Slayer"
+    ]
+  },
+  "q125": {
+    "question": "The Oscar given for lifetime achievement in film is the:",
+    "possibleAnswers": [
+      "A. Irving G. Thalberg Memorial Award",
+      "B. Humanitarian Award",
+      "C. Jean Hersholt Award",
+      "D. Governors Award (Academy Honorary)"
+    ]
+  },
+  "q126": {
+    "question": "The gaming character “Sonic” is a:",
+    "possibleAnswers": [
+      "A. Fox",
+      "B. Hedgehog",
+      "C. Mouse",
+      "D. Rabbit"
+    ]
+  },
+  "q127": {
+    "question": "The documentary series “The Last Dance” focuses on:",
+    "possibleAnswers": [
+      "A. Lionel Messi",
+      "B. Michael Jordan and the Bulls",
+      "C. Serena Williams",
+      "D. Tiger Woods"
+    ]
+  },
+  "q128": {
+    "question": "The director of “Dune” (2021) is:",
+    "possibleAnswers": [
+      "A. Denis Villeneuve",
+      "B. David Lynch",
+      "C. Christopher Nolan",
+      "D. Zack Snyder"
+    ]
+  },
+  "q129": {
+    "question": "The fantasy author of The Sandman graphic novels is:",
+    "possibleAnswers": [
+      "A. Alan Moore",
+      "B. Neil Gaiman",
+      "C. Frank Miller",
+      "D. Grant Morrison"
+    ]
+  },
+  "q130": {
+    "question": "The music genre pioneered by DJ Kool Herc in the 1970s is:",
+    "possibleAnswers": [
+      "A. Punk",
+      "B. Hip-hop",
+      "C. House",
+      "D. Grunge"
+    ]
+  },
+  "q131": {
+    "question": "The show with the characters Ross, Rachel, Monica, Chandler, Joey, and Phoebe is:",
+    "possibleAnswers": [
+      "A. Seinfeld",
+      "B. Friends",
+      "C. How I Met Your Mother",
+      "D. Will & Grace"
+    ]
+  },
+  "q132": {
+    "question": "The Batman film starring Heath Ledger as the Joker is:",
+    "possibleAnswers": [
+      "A. Batman Begins",
+      "B. The Dark Knight",
+      "C. The Dark Knight Rises",
+      "D. Joker"
+    ]
+  },
+  "q133": {
+    "question": "The director of “La La Land” is:",
+    "possibleAnswers": [
+      "A. Damien Chazelle",
+      "B. Luca Guadagnino",
+      "C. Barry Jenkins",
+      "D. Greta Gerwig"
+    ]
+  },
+  "q134": {
+    "question": "The pop star known for the album “Future Nostalgia” is:",
+    "possibleAnswers": [
+      "A. Dua Lipa",
+      "B. Ariana Grande",
+      "C. Camila Cabello",
+      "D. Selena Gomez"
+    ]
+  },
+  "q135": {
+    "question": "The franchise featuring “Optimus Prime” is:",
+    "possibleAnswers": [
+      "A. Power Rangers",
+      "B. Transformers",
+      "C. Pacific Rim",
+      "D. Voltron"
+    ]
+  },
+  "q136": {
+    "question": "The Netflix series about a Colombian drug lord is:",
+    "possibleAnswers": [
+      "A. Narcos",
+      "B. El Chapo",
+      "C. Queen of the South",
+      "D. Snowfall"
+    ]
+  },
+  "q137": {
+    "question": "The director famous for “Goodfellas” and “The Irishman”:",
+    "possibleAnswers": [
+      "A. Francis Ford Coppola",
+      "B. Martin Scorsese",
+      "C. Brian De Palma",
+      "D. Michael Mann"
+    ]
+  },
+  "q138": {
+    "question": "The singer of “Blinding Lights” is:",
+    "possibleAnswers": [
+      "A. The Weeknd",
+      "B. Bruno Mars",
+      "C. Shawn Mendes",
+      "D. Harry Styles"
+    ]
+  },
+  "q139": {
+    "question": "The creator of The Walking Dead comics is:",
+    "possibleAnswers": [
+      "A. Robert Kirkman",
+      "B. Todd McFarlane",
+      "C. Brian K. Vaughan",
+      "D. Garth Ennis"
+    ]
+  },
+  "q140": {
+    "question": "The anime film “Your Name” was directed by:",
+    "possibleAnswers": [
+      "A. Mamoru Hosoda",
+      "B. Makoto Shinkai",
+      "C. Satoshi Kon",
+      "D. Hayao Miyazaki"
+    ]
+  },
+  "q141": {
+    "question": "The streaming platform home to The Handmaid’s Tale (U.S.) is:",
+    "possibleAnswers": [
+      "A. Netflix",
+      "B. Prime Video",
+      "C. Hulu",
+      "D. Apple TV+"
+    ]
+  },
+  "q142": {
+    "question": "The band behind “Stairway to Heaven” is:",
+    "possibleAnswers": [
+      "A. Led Zeppelin",
+      "B. AC/DC",
+      "C. The Who",
+      "D. Deep Purple"
+    ]
+  },
+  "q143": {
+    "question": "The actor who played the Joker in “The Dark Knight”:",
+    "possibleAnswers": [
+      "A. Joaquin Phoenix",
+      "B. Heath Ledger",
+      "C. Jared Leto",
+      "D. Jack Nicholson"
+    ]
+  },
+  "q144": {
+    "question": "The film “The Social Network” centers on the founding of:",
+    "possibleAnswers": [
+      "A. Twitter",
+      "B. Facebook",
+      "C. Google",
+      "D. Reddit"
+    ]
+  },
+  "q145": {
+    "question": "The sitcom about a paper company with Michael Scott is set at:",
+    "possibleAnswers": [
+      "A. Dunder Mifflin, Scranton",
+      "B. Wernham Hogg, Slough",
+      "C. Initech, Austin",
+      "D. Sterling Cooper, NYC"
+    ]
+  },
+  "q146": {
+    "question": "The instrument largely associated with jazz legend Miles Davis:",
+    "possibleAnswers": [
+      "A. Saxophone",
+      "B. Trumpet",
+      "C. Piano",
+      "D. Trombone"
+    ]
+  },
+  "q147": {
+    "question": "The game series with “Nuka-Cola” is:",
+    "possibleAnswers": [
+      "A. Fallout",
+      "B. Borderlands",
+      "C. BioShock",
+      "D. Metro"
+    ]
+  },
+  "q148": {
+    "question": "The director who made “Roma” and “Gravity”:",
+    "possibleAnswers": [
+      "A. Alfonso Cuarón",
+      "B. Alejandro G. Iñárritu",
+      "C. Guillermo del Toro",
+      "D. Ang Lee"
+    ]
+  },
+  "q149": {
+    "question": "The film festival held annually in the south of France is:",
+    "possibleAnswers": [
+      "A. Venice",
+      "B. Cannes",
+      "C. Berlin",
+      "D. Locarno"
+    ]
+  },
+  "q150": {
+    "question": "The rapper and producer behind “Stronger” and “Graduation” is:",
+    "possibleAnswers": [
+      "A. Jay-Z",
+      "B. Kanye West (Ye)",
+      "C. Pharrell Williams",
+      "D. Dr. Dre"
+    ]
+  },
+  "q151": {
+    "question": "The TV series where Jon Snow appears is:",
+    "possibleAnswers": [
+      "A. The Witcher",
+      "B. Game of Thrones",
+      "C. Vikings",
+      "D. Merlin"
+    ]
+  },
+  "q152": {
+    "question": "The Pixar film featuring a chef rat is:",
+    "possibleAnswers": [
+      "A. Ratatouille",
+      "B. Up",
+      "C. WALL-E",
+      "D. Inside Out"
+    ]
+  },
+  "q153": {
+    "question": "The “Met Gala” is primarily associated with:",
+    "possibleAnswers": [
+      "A. Sports",
+      "B. Fashion",
+      "C. Tech",
+      "D. Television"
+    ]
+  },
+  "q154": {
+    "question": "The film “Crouching Tiger, Hidden Dragon” is primarily in which language?",
+    "possibleAnswers": [
+      "A. Cantonese",
+      "B. Mandarin",
+      "C. Japanese",
+      "D. Korean"
+    ]
+  },
+  "q155": {
+    "question": "The PlayStation exclusive about a zombie pandemic and Ellie & Joel:",
+    "possibleAnswers": [
+      "A. Days Gone",
+      "B. The Last of Us",
+      "C. Dead Rising",
+      "D. State of Decay"
+    ]
+  },
+  "q156": {
+    "question": "The director of the Mad Max: Fury Road is:",
+    "possibleAnswers": [
+      "A. George Miller",
+      "B. David Ayer",
+      "C. Guy Ritchie",
+      "D. Matthew Vaughn"
+    ]
+  },
+  "q157": {
+    "question": "The pop star who released “Anti” (2016) is:",
+    "possibleAnswers": [
+      "A. Rihanna",
+      "B. Beyoncé",
+      "C. Nicki Minaj",
+      "D. Ariana Grande"
+    ]
+  },
+  "q158": {
+    "question": "The anime studio behind “Attack on Titan” (Season 1) was:",
+    "possibleAnswers": [
+      "A. MAPPA",
+      "B. Wit Studio",
+      "C. Toei Animation",
+      "D. Bones"
+    ]
+  },
+  "q159": {
+    "question": "The film “Rocky” stars:",
+    "possibleAnswers": [
+      "A. Arnold Schwarzenegger",
+      "B. Sylvester Stallone",
+      "C. Jean-Claude Van Damme",
+      "D. Chuck Norris"
+    ]
+  },
+  "q160": {
+    "question": "The music streaming service launched by Daniel Ek is:",
+    "possibleAnswers": [
+      "A. Tidal",
+      "B. Spotify",
+      "C. Deezer",
+      "D. Pandora"
+    ]
+  },
+  "q161": {
+    "question": "The sitcom “Modern Family” is shot in a:",
+    "possibleAnswers": [
+      "A. Live studio audience style",
+      "B. Mockumentary style",
+      "C. Single-camera drama",
+      "D. Animated format"
+    ]
+  },
+  "q162": {
+    "question": "The Oscar-winning film about a silent caretaker and amphibian man:",
+    "possibleAnswers": [
+      "A. The Shape of Water",
+      "B. The Artist",
+      "C. A Quiet Place",
+      "D. The Lighthouse"
+    ]
+  },
+  "q163": {
+    "question": "The band known for “Wonderwall”:",
+    "possibleAnswers": [
+      "A. Oasis",
+      "B. Blur",
+      "C. Pulp",
+      "D. Suede"
+    ]
+  },
+  "q164": {
+    "question": "The anime featuring the Survey Corps vs Titans is:",
+    "possibleAnswers": [
+      "A. Fullmetal Alchemist",
+      "B. Attack on Titan",
+      "C. Tokyo Ghoul",
+      "D. One Punch Man"
+    ]
+  },
+  "q165": {
+    "question": "The K-drama about games of survival with a green tracksuit:",
+    "possibleAnswers": [
+      "A. Sweet Home",
+      "B. Kingdom",
+      "C. Squid Game",
+      "D. All of Us Are Dead"
+    ]
+  },
+  "q166": {
+    "question": "The director of “Black Panther” is:",
+    "possibleAnswers": [
+      "A. Ava DuVernay",
+      "B. Ryan Coogler",
+      "C. F. Gary Gray",
+      "D. Barry Jenkins"
+    ]
+  },
+  "q167": {
+    "question": "The first winner of “American Idol” (Season 1) was:",
+    "possibleAnswers": [
+      "A. Carrie Underwood",
+      "B. Kelly Clarkson",
+      "C. Fantasia Barrino",
+      "D. Jordin Sparks"
+    ]
+  },
+  "q168": {
+    "question": "The artist behind “Hips Don’t Lie”:",
+    "possibleAnswers": [
+      "A. Jennifer Lopez",
+      "B. Shakira",
+      "C. Nelly Furtado",
+      "D. Camila Cabello"
+    ]
+  },
+  "q169": {
+    "question": "The show about a mortuary family in Los Angeles:",
+    "possibleAnswers": [
+      "A. Six Feet Under",
+      "B. Dexter",
+      "C. True Blood",
+      "D. Weeds"
+    ]
+  },
+  "q170": {
+    "question": "The video game series featuring Ryu and Hadouken:",
+    "possibleAnswers": [
+      "A. Tekken",
+      "B. Street Fighter",
+      "C. Mortal Kombat",
+      "D. King of Fighters"
+    ]
+  },
+  "q171": {
+    "question": "The lead singer of Queen after Freddie Mercury (touring widely) has included:",
+    "possibleAnswers": [
+      "A. Adam Lambert",
+      "B. Axl Rose",
+      "C. Brandon Flowers",
+      "D. Matt Bellamy"
+    ]
+  },
+  "q172": {
+    "question": "The film with the ship “Nostromo” and a xenomorph is:",
+    "possibleAnswers": [
+      "A. Aliens",
+      "B. Alien (1979)",
+      "C. Prometheus",
+      "D. Event Horizon"
+    ]
+  },
+  "q173": {
+    "question": "The song “Purple Rain” is by:",
+    "possibleAnswers": [
+      "A. Prince",
+      "B. David Bowie",
+      "C. George Michael",
+      "D. Phil Collins"
+    ]
+  },
+  "q174": {
+    "question": "The studio that made Toy Story:",
+    "possibleAnswers": [
+      "A. DreamWorks",
+      "B. Pixar",
+      "C. Illumination",
+      "D. Blue Sky"
+    ]
+  },
+  "q175": {
+    "question": "The actor who plays Deadpool:",
+    "possibleAnswers": [
+      "A. Ryan Reynolds",
+      "B. Chris Hemsworth",
+      "C. Hugh Jackman",
+      "D. Chris Pratt"
+    ]
+  },
+  "q176": {
+    "question": "The film about the heist at Nakatomi Plaza is:",
+    "possibleAnswers": [
+      "A. Heat",
+      "B. Die Hard",
+      "C. Inside Man",
+      "D. The Italian Job"
+    ]
+  },
+  "q177": {
+    "question": "The creator of “One Piece”:",
+    "possibleAnswers": [
+      "A. Masashi Kishimoto",
+      "B. Eiichiro Oda",
+      "C. Tite Kubo",
+      "D. Yoshihiro Togashi"
+    ]
+  },
+  "q178": {
+    "question": "The singer who released “Lover” (2019) is:",
+    "possibleAnswers": [
+      "A. Ariana Grande",
+      "B. Taylor Swift",
+      "C. Selena Gomez",
+      "D. Katy Perry"
+    ]
+  },
+  "q179": {
+    "question": "The director of “Do the Right Thing” is:",
+    "possibleAnswers": [
+      "A. Spike Lee",
+      "B. John Singleton",
+      "C. Barry Jenkins",
+      "D. Ava DuVernay"
+    ]
+  },
+  "q180": {
+    "question": "The game series featuring the character “Solid Snake”:",
+    "possibleAnswers": [
+      "A. Splinter Cell",
+      "B. Metal Gear Solid",
+      "C. Hitman",
+      "D. Deus Ex"
+    ]
+  },
+  "q181": {
+    "question": "The band behind “Californication”:",
+    "possibleAnswers": [
+      "A. Red Hot Chili Peppers",
+      "B. Green Day",
+      "C. Foo Fighters",
+      "D. The Killers"
+    ]
+  },
+  "q182": {
+    "question": "The anime with the alchemists Edward and Alphonse Elric:",
+    "possibleAnswers": [
+      "A. Blue Exorcist",
+      "B. Fullmetal Alchemist",
+      "C. Naruto",
+      "D. Bleach"
+    ]
+  },
+  "q183": {
+    "question": "The streaming platform that produced “The Boys” (U.S.) is:",
+    "possibleAnswers": [
+      "A. Netflix",
+      "B. Prime Video",
+      "C. Hulu",
+      "D. Max (HBO)"
+    ]
+  },
+  "q184": {
+    "question": "The actor who portrayed Black Panther (T’Challa) first in the MCU:",
+    "possibleAnswers": [
+      "A. Michael B. Jordan",
+      "B. Anthony Mackie",
+      "C. Chadwick Boseman",
+      "D. John Boyega"
+    ]
+  },
+  "q185": {
+    "question": "The artist who released the album “Channel Orange”:",
+    "possibleAnswers": [
+      "A. Frank Ocean",
+      "B. The Weeknd",
+      "C. Miguel",
+      "D. Bryson Tiller"
+    ]
+  },
+  "q186": {
+    "question": "The film series centered on a ring of power is:",
+    "possibleAnswers": [
+      "A. The Chronicles of Narnia",
+      "B. The Lord of the Rings",
+      "C. The Dark Tower",
+      "D. The Wheel of Time"
+    ]
+  },
+  "q187": {
+    "question": "The VR rhythm game with laser sabers is:",
+    "possibleAnswers": [
+      "A. Beat Saber",
+      "B. Thumper",
+      "C. Rez Infinite",
+      "D. Pistol Whip"
+    ]
+  },
+  "q188": {
+    "question": "The director of “Whiplash” is:",
+    "possibleAnswers": [
+      "A. Damien Chazelle",
+      "B. David Fincher",
+      "C. Christopher Nolan",
+      "D. Sofia Coppola"
+    ]
+  },
+  "q189": {
+    "question": "The pop star who released “Rare” (2020) is:",
+    "possibleAnswers": [
+      "A. Dua Lipa",
+      "B. Selena Gomez",
+      "C. Miley Cyrus",
+      "D. Ariana Grande"
+    ]
+  },
+  "q190": {
+    "question": "The film “12 Years a Slave” was directed by:",
+    "possibleAnswers": [
+      "A. Steve McQueen",
+      "B. Barry Jenkins",
+      "C. Ava DuVernay",
+      "D. Kathryn Bigelow"
+    ]
+  },
+  "q191": {
+    "question": "The game that popularized “battle royale” in 2017 alongside Fortnite:",
+    "possibleAnswers": [
+      "A. H1Z1",
+      "B. PUBG: Battlegrounds",
+      "C. Overwatch",
+      "D. Destiny 2"
+    ]
+  },
+  "q192": {
+    "question": "The director known for “Inglourious Basterds” and “Kill Bill”:",
+    "possibleAnswers": [
+      "A. Quentin Tarantino",
+      "B. Robert Rodriguez",
+      "C. Guy Ritchie",
+      "D. Matthew Vaughn"
+    ]
+  },
+  "q193": {
+    "question": "The British singer known for “Shape of You” is:",
+    "possibleAnswers": [
+      "A. Ed Sheeran",
+      "B. Sam Smith",
+      "C. George Ezra",
+      "D. Lewis Capaldi"
+    ]
+  },
+  "q194": {
+    "question": "The Pixar film where emotions are characters:",
+    "possibleAnswers": [
+      "A. Soul",
+      "B. Inside Out",
+      "C. Coco",
+      "D. Turning Red"
+    ]
+  },
+  "q195": {
+    "question": "The actor who played Sherlock Holmes in the BBC series “Sherlock”:",
+    "possibleAnswers": [
+      "A. Tom Hiddleston",
+      "B. Benedict Cumberbatch",
+      "C. David Tennant",
+      "D. Matt Smith"
+    ]
+  },
+  "q196": {
+    "question": "The director of “Interstellar” is:",
+    "possibleAnswers": [
+      "A. Denis Villeneuve",
+      "B. Christopher Nolan",
+      "C. Ridley Scott",
+      "D. James Cameron"
+    ]
+  },
+  "q197": {
+    "question": "The pop star who released “New Rules”:",
+    "possibleAnswers": [
+      "A. Dua Lipa",
+      "B. Camila Cabello",
+      "C. Zara Larsson",
+      "D. Bebe Rexha"
+    ]
+  },
+  "q198": {
+    "question": "The film series featuring John McClane:",
+    "possibleAnswers": [
+      "A. Lethal Weapon",
+      "B. Die Hard",
+      "C. Mission: Impossible",
+      "D. Bourne"
+    ]
+  },
+  "q199": {
+    "question": "The animated series featuring Aang, the Avatar, is:",
+    "possibleAnswers": [
+      "A. The Legend of Korra",
+      "B. Avatar: The Last Airbender",
+      "C. Dragon Prince",
+      "D. Samurai Jack"
+    ]
+  },
+  "q200": {
+    "question": "The MCU supervillain seeking to balance the universe is:",
+    "possibleAnswers": [
+      "A. Loki",
+      "B. Thanos",
+      "C. Ultron",
+      "D. Red Skull"
+    ]
+  }
+}

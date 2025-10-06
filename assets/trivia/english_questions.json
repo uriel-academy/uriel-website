@@ -1,0 +1,1803 @@
+{
+  "subject": "English",
+  "q1": {
+    "question": "Which sentence is grammatically correct?",
+    "possibleAnswers": [
+      "A. She don’t like coffee.",
+      "B. She doesn’t likes coffee.",
+      "C. She doesn’t like coffee.",
+      "D. She not like coffee."
+    ]
+  },
+  "q2": {
+    "question": "Who wrote Pride and Prejudice?",
+    "possibleAnswers": [
+      "A. Emily Brontë",
+      "B. Jane Austen",
+      "C. Charlotte Brontë",
+      "D. Mary Shelley"
+    ]
+  },
+  "q3": {
+    "question": "What part of speech is the word “quickly” in “She ran quickly”?",
+    "possibleAnswers": [
+      "A. Adjective",
+      "B. Adverb",
+      "C. Noun",
+      "D. Preposition"
+    ]
+  },
+  "q4": {
+    "question": "Which figure of speech compares two things using “like” or “as”?",
+    "possibleAnswers": [
+      "A. Metaphor",
+      "B. Simile",
+      "C. Personification",
+      "D. Hyperbole"
+    ]
+  },
+  "q5": {
+    "question": "Choose the correct plural of “criterion.”",
+    "possibleAnswers": [
+      "A. Criterias",
+      "B. Criteria",
+      "C. Criterii",
+      "D. Criterion"
+    ]
+  },
+  "q6": {
+    "question": "Who is the author of 1984?",
+    "possibleAnswers": [
+      "A. George Orwell",
+      "B. Aldous Huxley",
+      "C. Ray Bradbury",
+      "D. Arthur Koestler"
+    ]
+  },
+  "q7": {
+    "question": "Choose the correctly punctuated sentence.",
+    "possibleAnswers": [
+      "A. It’s raining; bring an umbrella.",
+      "B. Its raining; bring an umbrella.",
+      "C. Its raining bring an umbrella.",
+      "D. It’s raining bring an umbrella."
+    ]
+  },
+  "q8": {
+    "question": "What is the past participle of “write”?",
+    "possibleAnswers": [
+      "A. Writed",
+      "B. Wrote",
+      "C. Written",
+      "D. Writing"
+    ]
+  },
+  "q9": {
+    "question": "In Shakespeare, which character says “To be, or not to be”?",
+    "possibleAnswers": [
+      "A. Macbeth",
+      "B. Othello",
+      "C. Hamlet",
+      "D. King Lear"
+    ]
+  },
+  "q10": {
+    "question": "Identify the synonym of “lucid.”",
+    "possibleAnswers": [
+      "A. Confusing",
+      "B. Clear",
+      "C. Dim",
+      "D. Hidden"
+    ]
+  },
+  "q11": {
+    "question": "What is the antonym of “benevolent”?",
+    "possibleAnswers": [
+      "A. Kind",
+      "B. Malevolent",
+      "C. Generous",
+      "D. Charitable"
+    ]
+  },
+  "q12": {
+    "question": "Which sentence uses the subjunctive mood?",
+    "possibleAnswers": [
+      "A. If I was you, I would study.",
+      "B. I wish I were taller.",
+      "C. She is taller than me.",
+      "D. He walks to school."
+    ]
+  },
+  "q13": {
+    "question": "The main idea of a paragraph is often stated in the:",
+    "possibleAnswers": [
+      "A. Topic sentence",
+      "B. Concluding sentence",
+      "C. Supporting detail",
+      "D. Transition"
+    ]
+  },
+  "q14": {
+    "question": "Which literary term refers to hints about future events?",
+    "possibleAnswers": [
+      "A. Flashback",
+      "B. Foreshadowing",
+      "C. Irony",
+      "D. Allusion"
+    ]
+  },
+  "q15": {
+    "question": "Choose the correct comparative form: “more/most”?",
+    "possibleAnswers": [
+      "A. Good, more good, most good",
+      "B. Good, better, best",
+      "C. Good, gooder, goodest",
+      "D. Good, most good, best"
+    ]
+  },
+  "q16": {
+    "question": "Who wrote The Raven?",
+    "possibleAnswers": [
+      "A. Walt Whitman",
+      "B. Edgar Allan Poe",
+      "C. Emily Dickinson",
+      "D. Robert Frost"
+    ]
+  },
+  "q17": {
+    "question": "Which sentence contains a dangling modifier?",
+    "possibleAnswers": [
+      "A. Walking to school, the rain soaked my clothes.",
+      "B. Walking to school, I was soaked by the rain.",
+      "C. I was soaked while walking to school.",
+      "D. The rain soaked me on my walk."
+    ]
+  },
+  "q18": {
+    "question": "What is the correct past tense of “lie” (to recline)?",
+    "possibleAnswers": [
+      "A. Lied",
+      "B. Lay",
+      "C. Lain",
+      "D. Laid"
+    ]
+  },
+  "q19": {
+    "question": "Identify the clause type: “because it was raining.”",
+    "possibleAnswers": [
+      "A. Independent",
+      "B. Dependent (subordinate)",
+      "C. Relative",
+      "D. Noun clause"
+    ]
+  },
+  "q20": {
+    "question": "Who wrote Things Fall Apart?",
+    "possibleAnswers": [
+      "A. Wole Soyinka",
+      "B. Chinua Achebe",
+      "C. Chimamanda Ngozi Adichie",
+      "D. Ngũgĩ wa Thiong’o"
+    ]
+  },
+  "q21": {
+    "question": "Choose the sentence with correct subject–verb agreement.",
+    "possibleAnswers": [
+      "A. The team are winning the match.",
+      "B. The data is compelling (formal scientific style aside).",
+      "C. The group of players is celebrating.",
+      "D. The list of items are long."
+    ]
+  },
+  "q22": {
+    "question": "The opposite of “ambiguous” is:",
+    "possibleAnswers": [
+      "A. Vague",
+      "B. Clear",
+      "C. Obscure",
+      "D. Nebulous"
+    ]
+  },
+  "q23": {
+    "question": "“She gave him a gift.” The word “him” is a(n):",
+    "possibleAnswers": [
+      "A. Subject pronoun",
+      "B. Object pronoun",
+      "C. Possessive adjective",
+      "D. Reflexive pronoun"
+    ]
+  },
+  "q24": {
+    "question": "Which work begins with “Call me Ishmael”?",
+    "possibleAnswers": [
+      "A. The Old Man and the Sea",
+      "B. Moby-Dick",
+      "C. Heart of Darkness",
+      "D. The Catcher in the Rye"
+    ]
+  },
+  "q25": {
+    "question": "What is the term for an overused expression?",
+    "possibleAnswers": [
+      "A. Idiom",
+      "B. Cliché",
+      "C. Paradox",
+      "D. Euphemism"
+    ]
+  },
+  "q26": {
+    "question": "Choose the correctly punctuated series.",
+    "possibleAnswers": [
+      "A. We bought apples, bananas and, pears.",
+      "B. We bought apples bananas, and pears.",
+      "C. We bought apples, bananas, and pears.",
+      "D. We bought, apples, bananas and pears."
+    ]
+  },
+  "q27": {
+    "question": "Which sentence is in passive voice?",
+    "possibleAnswers": [
+      "A. The chef cooked the meal.",
+      "B. The meal was cooked by the chef.",
+      "C. The chef cooks each night.",
+      "D. The chef will cook."
+    ]
+  },
+  "q28": {
+    "question": "The main conflict in a story is best defined as:",
+    "possibleAnswers": [
+      "A. A problem between characters only",
+      "B. A struggle between opposing forces",
+      "C. A moral at the end",
+      "D. The setting description"
+    ]
+  },
+  "q29": {
+    "question": "Choose the correct homophone: “Their/There/They’re going to win.”",
+    "possibleAnswers": [
+      "A. Their",
+      "B. There",
+      "C. They’re",
+      "D. Thier"
+    ]
+  },
+  "q30": {
+    "question": "The narrator who knows all thoughts and feelings is:",
+    "possibleAnswers": [
+      "A. First-person limited",
+      "B. Third-person objective",
+      "C. Third-person omniscient",
+      "D. Second-person"
+    ]
+  },
+  "q31": {
+    "question": "Who wrote The Waste Land?",
+    "possibleAnswers": [
+      "A. T. S. Eliot",
+      "B. Ezra Pound",
+      "C. W. B. Yeats",
+      "D. Dylan Thomas"
+    ]
+  },
+  "q32": {
+    "question": "What is a “sonnet”?",
+    "possibleAnswers": [
+      "A. A 12-line poem",
+      "B. A 14-line poem",
+      "C. A 16-line poem",
+      "D. Free verse"
+    ]
+  },
+  "q33": {
+    "question": "Choose the correct pronoun: “Between you and ___, this is secret.”",
+    "possibleAnswers": [
+      "A. I",
+      "B. me",
+      "C. myself",
+      "D. mine"
+    ]
+  },
+  "q34": {
+    "question": "The word “onomatopoeia” refers to:",
+    "possibleAnswers": [
+      "A. Words that imitate sounds",
+      "B. Exaggeration for effect",
+      "C. Opposite meanings",
+      "D. Repeating consonants"
+    ]
+  },
+  "q35": {
+    "question": "Who wrote The Canterbury Tales?",
+    "possibleAnswers": [
+      "A. Geoffrey Chaucer",
+      "B. John Milton",
+      "C. Thomas More",
+      "D. William Langland"
+    ]
+  },
+  "q36": {
+    "question": "Identify the verb mood: “Close the door.”",
+    "possibleAnswers": [
+      "A. Indicative",
+      "B. Subjunctive",
+      "C. Imperative",
+      "D. Interrogative"
+    ]
+  },
+  "q37": {
+    "question": "Which sentence is parallel in structure?",
+    "possibleAnswers": [
+      "A. She likes dancing, to swim, and biking.",
+      "B. She likes to dance, to swim, and to bike.",
+      "C. She likes to dance, swimming, and to bike.",
+      "D. She likes dance, to swim, and biking."
+    ]
+  },
+  "q38": {
+    "question": "The central character in a literary work is the:",
+    "possibleAnswers": [
+      "A. Antagonist",
+      "B. Protagonist",
+      "C. Foil",
+      "D. Narrator only"
+    ]
+  },
+  "q39": {
+    "question": "Choose the correct form: “fewer/less.”",
+    "possibleAnswers": [
+      "A. There were less people at the concert.",
+      "B. There were fewer people at the concert.",
+      "C. There was fewer water in the glass.",
+      "D. Fewer sugar is needed."
+    ]
+  },
+  "q40": {
+    "question": "Which play includes the line “Out, damned spot!”?",
+    "possibleAnswers": [
+      "A. Hamlet",
+      "B. Macbeth",
+      "C. Othello",
+      "D. King Lear"
+    ]
+  },
+  "q41": {
+    "question": "Identify the figure of speech: “The wind whispered.”",
+    "possibleAnswers": [
+      "A. Hyperbole",
+      "B. Metaphor",
+      "C. Personification",
+      "D. Alliteration"
+    ]
+  },
+  "q42": {
+    "question": "Choose the sentence free of a comma splice.",
+    "possibleAnswers": [
+      "A. It rained, we stayed inside.",
+      "B. It rained; we stayed inside.",
+      "C. It rained, we stayed, inside.",
+      "D. It rained we stayed inside."
+    ]
+  },
+  "q43": {
+    "question": "The denotation of a word is its:",
+    "possibleAnswers": [
+      "A. Emotional association",
+      "B. Dictionary definition",
+      "C. Historical origin",
+      "D. Sound"
+    ]
+  },
+  "q44": {
+    "question": "Who wrote The Great Gatsby?",
+    "possibleAnswers": [
+      "A. Ernest Hemingway",
+      "B. F. Scott Fitzgerald",
+      "C. John Steinbeck",
+      "D. William Faulkner"
+    ]
+  },
+  "q45": {
+    "question": "“He has less/fewer than ten dollars.” Choose correctly.",
+    "possibleAnswers": [
+      "A. Less",
+      "B. Fewer",
+      "C. Either",
+      "D. Neither"
+    ]
+  },
+  "q46": {
+    "question": "Identify the error type: “She invited Tom, and I.”",
+    "possibleAnswers": [
+      "A. Subject-verb disagreement",
+      "B. Pronoun case error",
+      "C. Dangling modifier",
+      "D. Misplaced comma"
+    ]
+  },
+  "q47": {
+    "question": "The opposite of “loquacious” is:",
+    "possibleAnswers": [
+      "A. Garrulous",
+      "B. Reticent",
+      "C. Chatty",
+      "D. Voluble"
+    ]
+  },
+  "q48": {
+    "question": "Which is a collective noun?",
+    "possibleAnswers": [
+      "A. Flock",
+      "B. Chair",
+      "C. Happiness",
+      "D. Run"
+    ]
+  },
+  "q49": {
+    "question": "Who wrote A Midsummer Night’s Dream?",
+    "possibleAnswers": [
+      "A. Christopher Marlowe",
+      "B. Ben Jonson",
+      "C. William Shakespeare",
+      "D. Thomas Kyd"
+    ]
+  },
+  "q50": {
+    "question": "Choose the correct spelling.",
+    "possibleAnswers": [
+      "A. Accommodate",
+      "B. Acommodate",
+      "C. Accomodate",
+      "D. Acommodete"
+    ]
+  },
+  "q51": {
+    "question": "“He ran swift.” To correct the adverb, choose:",
+    "possibleAnswers": [
+      "A. Swiftly",
+      "B. Swifter",
+      "C. Most swift",
+      "D. More swift"
+    ]
+  },
+  "q52": {
+    "question": "The prefix in “impossible” conveys:",
+    "possibleAnswers": [
+      "A. Not",
+      "B. Before",
+      "C. Between",
+      "D. Across"
+    ]
+  },
+  "q53": {
+    "question": "Identify the irony type when the audience knows more than a character.",
+    "possibleAnswers": [
+      "A. Verbal irony",
+      "B. Situational irony",
+      "C. Dramatic irony",
+      "D. Cosmic irony"
+    ]
+  },
+  "q54": {
+    "question": "Which sentence is a compound sentence?",
+    "possibleAnswers": [
+      "A. She sang and danced.",
+      "B. She sang, and he played the piano.",
+      "C. Because she sang, he clapped.",
+      "D. Singing, she smiled."
+    ]
+  },
+  "q55": {
+    "question": "Who wrote Beloved?",
+    "possibleAnswers": [
+      "A. Toni Morrison",
+      "B. Alice Walker",
+      "C. Zora Neale Hurston",
+      "D. Maya Angelou"
+    ]
+  },
+  "q56": {
+    "question": "The function of a thesis statement is to:",
+    "possibleAnswers": [
+      "A. Provide a hook only",
+      "B. State the main claim",
+      "C. Give all evidence",
+      "D. Replace the conclusion"
+    ]
+  },
+  "q57": {
+    "question": "Choose the correct question tag: “You’re coming, ___?”",
+    "possibleAnswers": [
+      "A. are you",
+      "B. aren’t you",
+      "C. do you",
+      "D. didn’t you"
+    ]
+  },
+  "q58": {
+    "question": "A story that teaches a moral with animals as characters is a:",
+    "possibleAnswers": [
+      "A. Myth",
+      "B. Fable",
+      "C. Legend",
+      "D. Epic"
+    ]
+  },
+  "q59": {
+    "question": "Who wrote The Odyssey?",
+    "possibleAnswers": [
+      "A. Homer",
+      "B. Virgil",
+      "C. Sophocles",
+      "D. Aeschylus"
+    ]
+  },
+  "q60": {
+    "question": "Identify the tense: “I will have finished by noon.”",
+    "possibleAnswers": [
+      "A. Future simple",
+      "B. Future continuous",
+      "C. Future perfect",
+      "D. Present perfect"
+    ]
+  },
+  "q61": {
+    "question": "Choose the correctly hyphenated compound adjective.",
+    "possibleAnswers": [
+      "A. A well known author",
+      "B. A well-known author",
+      "C. A wellknown author",
+      "D. A well-knownly author"
+    ]
+  },
+  "q62": {
+    "question": "“He was penitent after the mistake.” The closest meaning is:",
+    "possibleAnswers": [
+      "A. Proud",
+      "B. Sorry",
+      "C. Confused",
+      "D. Angry"
+    ]
+  },
+  "q63": {
+    "question": "Which word is a conjunction?",
+    "possibleAnswers": [
+      "A. Nevertheless",
+      "B. Quickly",
+      "C. Bright",
+      "D. Chair"
+    ]
+  },
+  "q64": {
+    "question": "The meter commonly used in Shakespeare’s sonnets is:",
+    "possibleAnswers": [
+      "A. Trochaic tetrameter",
+      "B. Iambic pentameter",
+      "C. Dactylic hexameter",
+      "D. Anapestic trimeter"
+    ]
+  },
+  "q65": {
+    "question": "Choose the sentence with correct punctuation of a nonessential clause.",
+    "possibleAnswers": [
+      "A. My brother who lives in Accra, is a doctor.",
+      "B. My brother, who lives in Accra is a doctor.",
+      "C. My brother, who lives in Accra, is a doctor.",
+      "D. My brother who lives in Accra is, a doctor."
+    ]
+  },
+  "q66": {
+    "question": "Who wrote Jane Eyre?",
+    "possibleAnswers": [
+      "A. Emily Brontë",
+      "B. Charlotte Brontë",
+      "C. Anne Brontë",
+      "D. Elizabeth Gaskell"
+    ]
+  },
+  "q67": {
+    "question": "Identify the type of conflict: character vs. nature is:",
+    "possibleAnswers": [
+      "A. Internal",
+      "B. External",
+      "C. Psychological",
+      "D. Symbolic"
+    ]
+  },
+  "q68": {
+    "question": "Pick the correct conditional:",
+    "possibleAnswers": [
+      "A. If it will rain, we will stay home.",
+      "B. If it rains, we will stay home.",
+      "C. If it rained, we will stay home.",
+      "D. If it rain, we will stay home."
+    ]
+  },
+  "q69": {
+    "question": "“She looked at the azure sky.” “Azure” means:",
+    "possibleAnswers": [
+      "A. Red",
+      "B. Blue",
+      "C. Gray",
+      "D. Green"
+    ]
+  },
+  "q70": {
+    "question": "Who wrote The Tempest?",
+    "possibleAnswers": [
+      "A. William Shakespeare",
+      "B. John Donne",
+      "C. Christopher Marlowe",
+      "D. Thomas Middleton"
+    ]
+  },
+  "q71": {
+    "question": "Choose the sentence with correct parallelism.",
+    "possibleAnswers": [
+      "A. He likes reading, to jog, and cooking.",
+      "B. He likes reading, jogging, and cooking.",
+      "C. He likes to read, jogging, and cooking.",
+      "D. He likes reading, to jog, and to cooking."
+    ]
+  },
+  "q72": {
+    "question": "“She felt enervated after the heat.” Meaning?",
+    "possibleAnswers": [
+      "A. Energized",
+      "B. Weakened",
+      "C. Excited",
+      "D. Calmed"
+    ]
+  },
+  "q73": {
+    "question": "Identify the rhetorical appeal based on credibility.",
+    "possibleAnswers": [
+      "A. Ethos",
+      "B. Pathos",
+      "C. Logos",
+      "D. Telos"
+    ]
+  },
+  "q74": {
+    "question": "Which novelist wrote Invisible Man (1952)?",
+    "possibleAnswers": [
+      "A. Ralph Ellison",
+      "B. Richard Wright",
+      "C. James Baldwin",
+      "D. Langston Hughes"
+    ]
+  },
+  "q75": {
+    "question": "Choose the correct form: “It is I/me.” (formal)",
+    "possibleAnswers": [
+      "A. It is me.",
+      "B. It is I.",
+      "C. It’s myself.",
+      "D. It am I."
+    ]
+  },
+  "q76": {
+    "question": "Identify the metaphor.",
+    "possibleAnswers": [
+      "A. Her smile is like sunshine.",
+      "B. Her smile is sunshine.",
+      "C. Her smile shines like sunshine.",
+      "D. Her smile as sunshine."
+    ]
+  },
+  "q77": {
+    "question": "The climax of a story is:",
+    "possibleAnswers": [
+      "A. Background information",
+      "B. The turning point of highest tension",
+      "C. The conclusion only",
+      "D. The rising action"
+    ]
+  },
+  "q78": {
+    "question": "Who wrote A Tale of Two Cities?",
+    "possibleAnswers": [
+      "A. Charles Dickens",
+      "B. Thomas Hardy",
+      "C. Anthony Trollope",
+      "D. Wilkie Collins"
+    ]
+  },
+  "q79": {
+    "question": "Choose the correct relative pronoun: “The book ___ I bought is new.”",
+    "possibleAnswers": [
+      "A. whom",
+      "B. which",
+      "C. who",
+      "D. whose"
+    ]
+  },
+  "q80": {
+    "question": "“She is candid.” Closest meaning:",
+    "possibleAnswers": [
+      "A. Secretive",
+      "B. Frank",
+      "C. Deceitful",
+      "D. Hesitant"
+    ]
+  },
+  "q81": {
+    "question": "Identify the sentence fragment.",
+    "possibleAnswers": [
+      "A. Because we were late.",
+      "B. We were late to the show.",
+      "C. We were late, but we entered quietly.",
+      "D. Although late, we sat calmly."
+    ]
+  },
+  "q82": {
+    "question": "Which poet wrote “Do not go gentle into that good night”?",
+    "possibleAnswers": [
+      "A. Philip Larkin",
+      "B. W. H. Auden",
+      "C. Dylan Thomas",
+      "D. Seamus Heaney"
+    ]
+  },
+  "q83": {
+    "question": "Choose the correct use of “fewer/less.”",
+    "possibleAnswers": [
+      "A. Less bottles on the shelf.",
+      "B. Fewer bottles on the shelf.",
+      "C. Fewer water in the glass.",
+      "D. Less problems than before."
+    ]
+  },
+  "q84": {
+    "question": "The narrative perspective using “I” is:",
+    "possibleAnswers": [
+      "A. First person",
+      "B. Second person",
+      "C. Third-person limited",
+      "D. Third-person omniscient"
+    ]
+  },
+  "q85": {
+    "question": "Which sentence correctly uses a semicolon?",
+    "possibleAnswers": [
+      "A. I studied; because I had a test.",
+      "B. I studied; I had a test.",
+      "C. I studied; and I had a test.",
+      "D. I studied; however because I had a test."
+    ]
+  },
+  "q86": {
+    "question": "Who wrote The Sound and the Fury?",
+    "possibleAnswers": [
+      "A. William Faulkner",
+      "B. Ernest Hemingway",
+      "C. John Steinbeck",
+      "D. F. Scott Fitzgerald"
+    ]
+  },
+  "q87": {
+    "question": "“Antithesis” is:",
+    "possibleAnswers": [
+      "A. A contradiction in terms",
+      "B. Repetition of vowel sounds",
+      "C. Juxtaposition of contrasting ideas",
+      "D. A reference to a famous work"
+    ]
+  },
+  "q88": {
+    "question": "Choose the correct spelling.",
+    "possibleAnswers": [
+      "A. Definitely",
+      "B. Definately",
+      "C. Definetely",
+      "D. Defanitely"
+    ]
+  },
+  "q89": {
+    "question": "Identify the type of phrase: “to swim in the ocean.”",
+    "possibleAnswers": [
+      "A. Gerund phrase",
+      "B. Infinitive phrase",
+      "C. Participial phrase",
+      "D. Prepositional phrase"
+    ]
+  },
+  "q90": {
+    "question": "Who wrote The Color Purple?",
+    "possibleAnswers": [
+      "A. Alice Walker",
+      "B. Toni Morrison",
+      "C. Octavia Butler",
+      "D. Nella Larsen"
+    ]
+  },
+  "q91": {
+    "question": "Choose the sentence with correct pronoun reference.",
+    "possibleAnswers": [
+      "A. When Sarah met Anna, she smiled, but it was unclear who she was.",
+      "B. When Sarah met Anna, Sarah smiled.",
+      "C. When Sarah met Anna, she smiled, confusing them.",
+      "D. When Sarah met Anna, they smiled, she smiled too."
+    ]
+  },
+  "q92": {
+    "question": "The function of an oxford comma is to:",
+    "possibleAnswers": [
+      "A. Replace “and” in lists",
+      "B. Prevent ambiguity in lists",
+      "C. Mark nonrestrictive clauses",
+      "D. Indicate possession"
+    ]
+  },
+  "q93": {
+    "question": "Which play features the character Iago?",
+    "possibleAnswers": [
+      "A. Othello",
+      "B. King Lear",
+      "C. Julius Caesar",
+      "D. Hamlet"
+    ]
+  },
+  "q94": {
+    "question": "“Her laughter was a melody.” This is:",
+    "possibleAnswers": [
+      "A. Simile",
+      "B. Metaphor",
+      "C. Hyperbole",
+      "D. Metonymy"
+    ]
+  },
+  "q95": {
+    "question": "Choose the correct possessive form.",
+    "possibleAnswers": [
+      "A. The childrens’ toys",
+      "B. The children’s toys",
+      "C. The child’ss toys",
+      "D. The childs’ toys"
+    ]
+  },
+  "q96": {
+    "question": "Who wrote The Handmaid’s Tale?",
+    "possibleAnswers": [
+      "A. Margaret Atwood",
+      "B. Ursula K. Le Guin",
+      "C. Doris Lessing",
+      "D. Atwood Margaret"
+    ]
+  },
+  "q97": {
+    "question": "“All hands on deck” is:",
+    "possibleAnswers": [
+      "A. Synecdoche",
+      "B. Metonymy",
+      "C. Irony",
+      "D. Paradox"
+    ]
+  },
+  "q98": {
+    "question": "Choose the grammatically correct option.",
+    "possibleAnswers": [
+      "A. He, as well as his friends, are coming.",
+      "B. He, as well as his friends, is coming.",
+      "C. He as well as his friends are coming.",
+      "D. He and his friends, is coming."
+    ]
+  },
+  "q99": {
+    "question": "“The assignment was a piece of cake” means:",
+    "possibleAnswers": [
+      "A. It was easy",
+      "B. It was sweet",
+      "C. It was delicious",
+      "D. It was complicated"
+    ]
+  },
+  "q100": {
+    "question": "Who wrote The Stranger (L’Étranger)?",
+    "possibleAnswers": [
+      "A. Albert Camus",
+      "B. Jean-Paul Sartre",
+      "C. Franz Kafka",
+      "D. Italo Calvino"
+    ]
+  },
+  "q101": {
+    "question": "Choose the sentence with correct capitalization.",
+    "possibleAnswers": [
+      "A. We visited the university of ghana.",
+      "B. We visited the University of Ghana.",
+      "C. We visited the University Of Ghana.",
+      "D. We visited The University of Ghana."
+    ]
+  },
+  "q102": {
+    "question": "Which poet wrote Leaves of Grass?",
+    "possibleAnswers": [
+      "A. Robert Frost",
+      "B. Walt Whitman",
+      "C. Emily Dickinson",
+      "D. Ezra Pound"
+    ]
+  },
+  "q103": {
+    "question": "Identify the gerund.",
+    "possibleAnswers": [
+      "A. Running is fun.",
+      "B. I will run later.",
+      "C. Run faster!",
+      "D. To run is healthy."
+    ]
+  },
+  "q104": {
+    "question": "“He spoke succinctly.” Meaning?",
+    "possibleAnswers": [
+      "A. At length",
+      "B. Briefly",
+      "C. Loudly",
+      "D. Vaguely"
+    ]
+  },
+  "q105": {
+    "question": "Choose the correct sentence.",
+    "possibleAnswers": [
+      "A. Each of the students have a pen.",
+      "B. Each of the students has a pen.",
+      "C. Each of the student have a pen.",
+      "D. Each students has a pen."
+    ]
+  },
+  "q106": {
+    "question": "Who wrote The Iliad?",
+    "possibleAnswers": [
+      "A. Homer",
+      "B. Virgil",
+      "C. Ovid",
+      "D. Hesiod"
+    ]
+  },
+  "q107": {
+    "question": "Identify the rhetorical device: asking a question not to elicit an answer.",
+    "possibleAnswers": [
+      "A. Anadiplosis",
+      "B. Rhetorical question",
+      "C. Hypophora",
+      "D. Epistrophe"
+    ]
+  },
+  "q108": {
+    "question": "Choose the correct form of comparison.",
+    "possibleAnswers": [
+      "A. More happier",
+      "B. Most happiest",
+      "C. Happier",
+      "D. Happier than me is she."
+    ]
+  },
+  "q109": {
+    "question": "“He exercised to maintain stamina.” Closest meaning:",
+    "possibleAnswers": [
+      "A. Endurance",
+      "B. Appetite",
+      "C. Strength only",
+      "D. Flexibility"
+    ]
+  },
+  "q110": {
+    "question": "Who wrote The Old Man and the Sea?",
+    "possibleAnswers": [
+      "A. John Steinbeck",
+      "B. Ernest Hemingway",
+      "C. Jack London",
+      "D. Mark Twain"
+    ]
+  },
+  "q111": {
+    "question": "Choose the correctly punctuated dialogue.",
+    "possibleAnswers": [
+      "A. “Let’s go”, she said.",
+      "B. “Let’s go,” she said.",
+      "C. “Let’s go.” she said",
+      "D. “Let’s go” she said."
+    ]
+  },
+  "q112": {
+    "question": "“Anachronism” in literature is:",
+    "possibleAnswers": [
+      "A. A timeline inconsistency",
+      "B. A sound imitation",
+      "C. A moral lesson",
+      "D. A paradox"
+    ]
+  },
+  "q113": {
+    "question": "Identify the preposition.",
+    "possibleAnswers": [
+      "A. Before",
+      "B. Because",
+      "C. Blue",
+      "D. Beautiful"
+    ]
+  },
+  "q114": {
+    "question": "Who wrote Wuthering Heights?",
+    "possibleAnswers": [
+      "A. Emily Brontë",
+      "B. Charlotte Brontë",
+      "C. Anne Brontë",
+      "D. Elizabeth Barrett Browning"
+    ]
+  },
+  "q115": {
+    "question": "Choose the correct conditional perfect.",
+    "possibleAnswers": [
+      "A. If he had studied, he would have passed.",
+      "B. If he studied, he would have passed.",
+      "C. If he would study, he had passed.",
+      "D. If he had studied, he will pass."
+    ]
+  },
+  "q116": {
+    "question": "“She is astute.” Meaning?",
+    "possibleAnswers": [
+      "A. Foolish",
+      "B. Clever",
+      "C. Honest",
+      "D. Angry"
+    ]
+  },
+  "q117": {
+    "question": "The term “free verse” means:",
+    "possibleAnswers": [
+      "A. Strict meter",
+      "B. No regular meter or rhyme",
+      "C. Only rhyme, no meter",
+      "D. Only meter, no rhyme"
+    ]
+  },
+  "q118": {
+    "question": "Who wrote Animal Farm?",
+    "possibleAnswers": [
+      "A. George Orwell",
+      "B. Aldous Huxley",
+      "C. J. D. Salinger",
+      "D. Joseph Heller"
+    ]
+  },
+  "q119": {
+    "question": "Identify the chiasmus.",
+    "possibleAnswers": [
+      "A. Ask not what your country can do for you—ask what you can do for your country.",
+      "B. Veni, vidi, vici.",
+      "C. To be, or not to be.",
+      "D. A rose by any other name."
+    ]
+  },
+  "q120": {
+    "question": "Choose the correct pronoun case: “for you and ___.”",
+    "possibleAnswers": [
+      "A. I",
+      "B. me",
+      "C. myself",
+      "D. mine"
+    ]
+  },
+  "q121": {
+    "question": "“The crown announced new policies” is:",
+    "possibleAnswers": [
+      "A. Irony",
+      "B. Synecdoche",
+      "C. Metonymy",
+      "D. Hyperbole"
+    ]
+  },
+  "q122": {
+    "question": "Who wrote Hamlet?",
+    "possibleAnswers": [
+      "A. William Shakespeare",
+      "B. Christopher Marlowe",
+      "C. Thomas Kyd",
+      "D. Ben Jonson"
+    ]
+  },
+  "q123": {
+    "question": "Identify the dangling participle.",
+    "possibleAnswers": [
+      "A. Driving to work, the traffic annoyed me.",
+      "B. Driving to work, I was annoyed by traffic.",
+      "C. While I drove to work, traffic annoyed me.",
+      "D. I was annoyed by traffic while driving."
+    ]
+  },
+  "q124": {
+    "question": "Choose the correct use of “whom.”",
+    "possibleAnswers": [
+      "A. Whom is going to the party?",
+      "B. To whom did you speak?",
+      "C. Whom called you?",
+      "D. Whom do you think is here?"
+    ]
+  },
+  "q125": {
+    "question": "“He was magnanimous in victory.” Meaning?",
+    "possibleAnswers": [
+      "A. Boastful",
+      "B. Generous",
+      "C. Vengeful",
+      "D. Careless"
+    ]
+  },
+  "q126": {
+    "question": "Who wrote The Metamorphosis?",
+    "possibleAnswers": [
+      "A. Franz Kafka",
+      "B. Albert Camus",
+      "C. Fyodor Dostoevsky",
+      "D. Thomas Mann"
+    ]
+  },
+  "q127": {
+    "question": "Choose the correct parallel structure.",
+    "possibleAnswers": [
+      "A. She promised to write, calling, and to visit.",
+      "B. She promised to write, to call, and to visit.",
+      "C. She promised to write, call, and to visiting.",
+      "D. She promised writing, to call, and to visit."
+    ]
+  },
+  "q128": {
+    "question": "Identify the oxymoron.",
+    "possibleAnswers": [
+      "A. Bittersweet",
+      "B. Sweet",
+      "C. Bitter",
+      "D. Savory"
+    ]
+  },
+  "q129": {
+    "question": "“The denouement of the novel…” refers to:",
+    "possibleAnswers": [
+      "A. The beginning",
+      "B. The rising action",
+      "C. The resolution",
+      "D. The climax"
+    ]
+  },
+  "q130": {
+    "question": "Who wrote Their Eyes Were Watching God?",
+    "possibleAnswers": [
+      "A. Zora Neale Hurston",
+      "B. Nella Larsen",
+      "C. Gwendolyn Brooks",
+      "D. Jessie Redmon Fauset"
+    ]
+  },
+  "q131": {
+    "question": "Choose the correct parallel correlative pair.",
+    "possibleAnswers": [
+      "A. Not only she sings, but also dances.",
+      "B. Not only does she sing, but she also dances.",
+      "C. Not only she sings, she also dances.",
+      "D. Not only she sings, but also she dances."
+    ]
+  },
+  "q132": {
+    "question": "An “ellipse” in punctuation is actually spelled:",
+    "possibleAnswers": [
+      "A. Ellipses (plural)",
+      "B. Ellipse (geometry)",
+      "C. Ellipsis (singular)",
+      "D. Ellipsus"
+    ]
+  },
+  "q133": {
+    "question": "Who wrote Great Expectations?",
+    "possibleAnswers": [
+      "A. Charles Dickens",
+      "B. Thomas Hardy",
+      "C. George Eliot",
+      "D. Henry James"
+    ]
+  },
+  "q134": {
+    "question": "Identify the appositive.",
+    "possibleAnswers": [
+      "A. My sister, a doctor, lives abroad.",
+      "B. My sister lives abroad.",
+      "C. My sister abroad lives.",
+      "D. My sister lives, abroad."
+    ]
+  },
+  "q135": {
+    "question": "“Precarious” most nearly means:",
+    "possibleAnswers": [
+      "A. Safe",
+      "B. Risky",
+      "C. Simple",
+      "D. Obvious"
+    ]
+  },
+  "q136": {
+    "question": "Who wrote The Road Not Taken?",
+    "possibleAnswers": [
+      "A. Robert Frost",
+      "B. Carl Sandburg",
+      "C. Wallace Stevens",
+      "D. Langston Hughes"
+    ]
+  },
+  "q137": {
+    "question": "Choose the correct sentence.",
+    "possibleAnswers": [
+      "A. Neither of the answers are correct.",
+      "B. Neither of the answers is correct.",
+      "C. Neither answers is correct.",
+      "D. Neither answer are correct."
+    ]
+  },
+  "q138": {
+    "question": "Identify the zeugma.",
+    "possibleAnswers": [
+      "A. She broke his car and his heart.",
+      "B. She broke his car and laughed.",
+      "C. She broke and laughed.",
+      "D. She broke his car with a hammer."
+    ]
+  },
+  "q139": {
+    "question": "Who wrote The Divine Comedy?",
+    "possibleAnswers": [
+      "A. Dante Alighieri",
+      "B. Giovanni Boccaccio",
+      "C. Petrarch",
+      "D. Ariosto"
+    ]
+  },
+  "q140": {
+    "question": "“Cacophony” refers to:",
+    "possibleAnswers": [
+      "A. Pleasant sound",
+      "B. Harsh, discordant sound",
+      "C. Silence",
+      "D. Sweetness"
+    ]
+  },
+  "q141": {
+    "question": "Choose the correct idiom completion: “Bite the ___.”",
+    "possibleAnswers": [
+      "A. rock",
+      "B. bullet",
+      "C. dust only",
+      "D. bench"
+    ]
+  },
+  "q142": {
+    "question": "Who wrote The Sun Also Rises?",
+    "possibleAnswers": [
+      "A. F. Scott Fitzgerald",
+      "B. Ernest Hemingway",
+      "C. John Dos Passos",
+      "D. John Steinbeck"
+    ]
+  },
+  "q143": {
+    "question": "Identify the apostrophe (figure of speech).",
+    "possibleAnswers": [
+      "A. “O death, where is thy sting?”",
+      "B. “He is brave as a lion.”",
+      "C. “The leaves danced.”",
+      "D. “Boom!” went the drum."
+    ]
+  },
+  "q144": {
+    "question": "Choose the correct spelling.",
+    "possibleAnswers": [
+      "A. Maintainance",
+      "B. Maintenance",
+      "C. Maintanence",
+      "D. Maintainence"
+    ]
+  },
+  "q145": {
+    "question": "“He is parsimonious.” Meaning?",
+    "possibleAnswers": [
+      "A. Generous",
+      "B. Stingy",
+      "C. Liberal",
+      "D. Impulsive"
+    ]
+  },
+  "q146": {
+    "question": "Who wrote The Catcher in the Rye?",
+    "possibleAnswers": [
+      "A. J. D. Salinger",
+      "B. Jack Kerouac",
+      "C. Truman Capote",
+      "D. Saul Bellow"
+    ]
+  },
+  "q147": {
+    "question": "Identify the litotes.",
+    "possibleAnswers": [
+      "A. Not bad at all",
+      "B. Very bad",
+      "C. Extremely good",
+      "D. Pretty average"
+    ]
+  },
+  "q148": {
+    "question": "Choose the correct reported speech.",
+    "possibleAnswers": [
+      "A. He says, “I am tired,” that he is tired.",
+      "B. He says that he is tired.",
+      "C. He says he is tired “now.”",
+      "D. He says that “he is tired.”"
+    ]
+  },
+  "q149": {
+    "question": "Which is a subordinate conjunction?",
+    "possibleAnswers": [
+      "A. Although",
+      "B. Also",
+      "C. And",
+      "D. As well"
+    ]
+  },
+  "q150": {
+    "question": "Who wrote The Brothers Karamazov?",
+    "possibleAnswers": [
+      "A. Leo Tolstoy",
+      "B. Fyodor Dostoevsky",
+      "C. Ivan Turgenev",
+      "D. Nikolai Gogol"
+    ]
+  },
+  "q151": {
+    "question": "“Palindrome” refers to a word/phrase that:",
+    "possibleAnswers": [
+      "A. Rhymes internally",
+      "B. Reads the same backward and forward",
+      "C. Has hidden meaning",
+      "D. Is an acronym"
+    ]
+  },
+  "q152": {
+    "question": "Choose the correct comma placement with introductory phrase.",
+    "possibleAnswers": [
+      "A. After lunch we went out.",
+      "B. After lunch, we went out.",
+      "C. After lunch we, went out.",
+      "D. After lunch we went, out."
+    ]
+  },
+  "q153": {
+    "question": "Who wrote One Hundred Years of Solitude?",
+    "possibleAnswers": [
+      "A. Mario Vargas Llosa",
+      "B. Gabriel García Márquez",
+      "C. Julio Cortázar",
+      "D. Jorge Luis Borges"
+    ]
+  },
+  "q154": {
+    "question": "Identify the malapropism.",
+    "possibleAnswers": [
+      "A. He’s the pineapple of politeness.",
+      "B. He’s the pinnacle of politeness.",
+      "C. He’s polite.",
+      "D. He’s political."
+    ]
+  },
+  "q155": {
+    "question": "“Ubiquitous” means:",
+    "possibleAnswers": [
+      "A. Everywhere present",
+      "B. Rare",
+      "C. Hidden",
+      "D. Noisy"
+    ]
+  },
+  "q156": {
+    "question": "Who wrote The Bell Jar?",
+    "possibleAnswers": [
+      "A. Sylvia Plath",
+      "B. Anne Sexton",
+      "C. Dorothy Parker",
+      "D. Virginia Woolf"
+    ]
+  },
+  "q157": {
+    "question": "Choose the correct sequence of tenses.",
+    "possibleAnswers": [
+      "A. She said she is tired.",
+      "B. She said she was tired.",
+      "C. She says she was tired.",
+      "D. She says she had been tired yesterday."
+    ]
+  },
+  "q158": {
+    "question": "Identify the spoonerism.",
+    "possibleAnswers": [
+      "A. You have hissed all my mystery lectures.",
+      "B. You have missed my history lectures.",
+      "C. You have kissed all my lecture mystery.",
+      "D. You have listed all my lectures."
+    ]
+  },
+  "q159": {
+    "question": "Who wrote A Doll’s House?",
+    "possibleAnswers": [
+      "A. Henrik Ibsen",
+      "B. Anton Chekhov",
+      "C. August Strindberg",
+      "D. Bertolt Brecht"
+    ]
+  },
+  "q160": {
+    "question": "“Metonymy” is best illustrated by:",
+    "possibleAnswers": [
+      "A. The pen is mightier than the sword.",
+      "B. Nice wheels!",
+      "C. All hands on deck.",
+      "D. The kettle boils."
+    ]
+  },
+  "q161": {
+    "question": "Choose the correct hyphenation.",
+    "possibleAnswers": [
+      "A. A two year old child",
+      "B. A two-year-old child",
+      "C. A two-years-old child",
+      "D. A two year-old child"
+    ]
+  },
+  "q162": {
+    "question": "Who wrote To Kill a Mockingbird?",
+    "possibleAnswers": [
+      "A. Harper Lee",
+      "B. Carson McCullers",
+      "C. Flannery O’Connor",
+      "D. Eudora Welty"
+    ]
+  },
+  "q163": {
+    "question": "Identify the euphemism.",
+    "possibleAnswers": [
+      "A. He passed away.",
+      "B. He died.",
+      "C. He kicked.",
+      "D. He ceased."
+    ]
+  },
+  "q164": {
+    "question": "Choose the correct sequence: “principle/principal.”",
+    "possibleAnswers": [
+      "A. The school principle explained the principles.",
+      "B. The school principal explained the principles.",
+      "C. The school principal explained the principels.",
+      "D. The school principle explained the principals."
+    ]
+  },
+  "q165": {
+    "question": "Who wrote Mrs Dalloway?",
+    "possibleAnswers": [
+      "A. Virginia Woolf",
+      "B. Katherine Mansfield",
+      "C. Doris Lessing",
+      "D. George Eliot"
+    ]
+  },
+  "q166": {
+    "question": "“Apostrophe” (punctuation) indicates:",
+    "possibleAnswers": [
+      "A. Plural always",
+      "B. Possession or omission",
+      "C. Emphasis",
+      "D. Italics"
+    ]
+  },
+  "q167": {
+    "question": "Identify the run-on sentence.",
+    "possibleAnswers": [
+      "A. I went home; I slept.",
+      "B. I went home, I slept.",
+      "C. I went home. I slept.",
+      "D. After I went home, I slept."
+    ]
+  },
+  "q168": {
+    "question": "Who wrote The Trial?",
+    "possibleAnswers": [
+      "A. Franz Kafka",
+      "B. Albert Camus",
+      "C. Thomas Mann",
+      "D. Hermann Hesse"
+    ]
+  },
+  "q169": {
+    "question": "“Portmanteau” is:",
+    "possibleAnswers": [
+      "A. A made-up nonsense word",
+      "B. A blend of two words",
+      "C. A long foreign word",
+      "D. A palindrome"
+    ]
+  },
+  "q170": {
+    "question": "Choose the correct relative clause punctuation.",
+    "possibleAnswers": [
+      "A. The car that is red, is fast.",
+      "B. The car, which is red, is fast.",
+      "C. The car which is red is, fast.",
+      "D. The car, that is red, is fast."
+    ]
+  },
+  "q171": {
+    "question": "Who wrote Middlemarch?",
+    "possibleAnswers": [
+      "A. George Eliot",
+      "B. Thomas Hardy",
+      "C. Elizabeth Gaskell",
+      "D. Anthony Trollope"
+    ]
+  },
+  "q172": {
+    "question": "Identify the anaphora.",
+    "possibleAnswers": [
+      "A. “We shall fight… We shall defend… We shall never surrender…”",
+      "B. “Ask not what…”",
+      "C. “Better to reign…”",
+      "D. “Et tu, Brute?”"
+    ]
+  },
+  "q173": {
+    "question": "“Sagacious” means:",
+    "possibleAnswers": [
+      "A. Foolish",
+      "B. Wise",
+      "C. Angry",
+      "D. Greedy"
+    ]
+  },
+  "q174": {
+    "question": "Who wrote The Road?",
+    "possibleAnswers": [
+      "A. Cormac McCarthy",
+      "B. Don DeLillo",
+      "C. Philip Roth",
+      "D. Jonathan Franzen"
+    ]
+  },
+  "q175": {
+    "question": "Choose the correct pronoun agreement.",
+    "possibleAnswers": [
+      "A. Everyone should bring their notebook. (informal ok)",
+      "B. Everyone should bring his or her notebook. (formal)",
+      "C. Everyone should bring they notebook.",
+      "D. Everyone should bring them notebook."
+    ]
+  },
+  "q176": {
+    "question": "Identify the hyperbole.",
+    "possibleAnswers": [
+      "A. I’ve told you a million times.",
+      "B. The leaves danced.",
+      "C. The silent sound screamed.",
+      "D. As busy as a bee."
+    ]
+  },
+  "q177": {
+    "question": "Who wrote Mrs. Warren’s Profession?",
+    "possibleAnswers": [
+      "A. Oscar Wilde",
+      "B. George Bernard Shaw",
+      "C. J. M. Synge",
+      "D. W. B. Yeats"
+    ]
+  },
+  "q178": {
+    "question": "“Paradox” is:",
+    "possibleAnswers": [
+      "A. A statement that contradicts itself yet may be true",
+      "B. A direct comparison using “as”",
+      "C. A harsh sound",
+      "D. A play on words"
+    ]
+  },
+  "q179": {
+    "question": "Choose the correct parallel comparison.",
+    "possibleAnswers": [
+      "A. She prefers reading to to write.",
+      "B. She prefers reading to writing.",
+      "C. She prefers to read to writing.",
+      "D. She prefers read to writing."
+    ]
+  },
+  "q180": {
+    "question": "Who wrote The Remains of the Day?",
+    "possibleAnswers": [
+      "A. Kazuo Ishiguro",
+      "B. Haruki Murakami",
+      "C. Ian McEwan",
+      "D. Salman Rushdie"
+    ]
+  },
+  "q181": {
+    "question": "Identify the correct comma with coordinate adjectives.",
+    "possibleAnswers": [
+      "A. The tall friendly guard waved.",
+      "B. The tall, friendly guard waved.",
+      "C. The tall, friendly, guard waved.",
+      "D. The tall friendly, guard waved."
+    ]
+  },
+  "q182": {
+    "question": "“Pastoral” poetry typically deals with:",
+    "possibleAnswers": [
+      "A. War",
+      "B. Urban life",
+      "C. Rural life and shepherds",
+      "D. Court politics"
+    ]
+  },
+  "q183": {
+    "question": "Who wrote Song of Solomon (novel)?",
+    "possibleAnswers": [
+      "A. Toni Morrison",
+      "B. James Baldwin",
+      "C. Alice Walker",
+      "D. Maya Angelou"
+    ]
+  },
+  "q184": {
+    "question": "“Colloquialism” is:",
+    "possibleAnswers": [
+      "A. Formal diction",
+      "B. Everyday informal speech",
+      "C. Technical jargon",
+      "D. Poetic diction"
+    ]
+  },
+  "q185": {
+    "question": "Choose the correct comparative irregular.",
+    "possibleAnswers": [
+      "A. More bad",
+      "B. Worse",
+      "C. Bader",
+      "D. Worser"
+    ]
+  },
+  "q186": {
+    "question": "Who wrote Madame Bovary?",
+    "possibleAnswers": [
+      "A. Gustave Flaubert",
+      "B. Émile Zola",
+      "C. Stendhal",
+      "D. Balzac"
+    ]
+  },
+  "q187": {
+    "question": "Identify the tautology.",
+    "possibleAnswers": [
+      "A. Free gift",
+      "B. Jumbo shrimp",
+      "C. Deafening silence",
+      "D. Honest truth"
+    ]
+  },
+  "q188": {
+    "question": "Choose the correct preposition. “Different ___ me.”",
+    "possibleAnswers": [
+      "A. than",
+      "B. from",
+      "C. with",
+      "D. of"
+    ]
+  },
+  "q189": {
+    "question": "Who wrote The Cherry Orchard?",
+    "possibleAnswers": [
+      "A. Anton Chekhov",
+      "B. Maxim Gorky",
+      "C. Leo Tolstoy",
+      "D. Ivan Turgenev"
+    ]
+  },
+  "q190": {
+    "question": "“Etymology” is the study of:",
+    "possibleAnswers": [
+      "A. Insects",
+      "B. Word origins",
+      "C. Rocks",
+      "D. Ancient coins"
+    ]
+  },
+  "q191": {
+    "question": "Choose the sentence with correct parallel correlative.",
+    "possibleAnswers": [
+      "A. Either you can stay or go.",
+      "B. You can either stay or go.",
+      "C. You can stay either or go.",
+      "D. Either you can stay, or going."
+    ]
+  },
+  "q192": {
+    "question": "Who wrote If— (“If you can keep your head…”)?",
+    "possibleAnswers": [
+      "A. Rudyard Kipling",
+      "B. W. B. Yeats",
+      "C. T. S. Eliot",
+      "D. Robert Browning"
+    ]
+  },
+  "q193": {
+    "question": "“Assonance” is:",
+    "possibleAnswers": [
+      "A. Repetition of consonant sounds",
+      "B. Repetition of vowel sounds",
+      "C. Word origins",
+      "D. Poetic foot"
+    ]
+  },
+  "q194": {
+    "question": "Choose the correct form of “who/whom.”",
+    "possibleAnswers": [
+      "A. Who did you invite?",
+      "B. Whom did you say came?",
+      "C. Whom is at the door?",
+      "D. Whom wants cake?"
+    ]
+  },
+  "q195": {
+    "question": "Who wrote The Bluest Eye?",
+    "possibleAnswers": [
+      "A. Alice Walker",
+      "B. Maya Angelou",
+      "C. Toni Morrison",
+      "D. Zadie Smith"
+    ]
+  },
+  "q196": {
+    "question": "“Climax” (rhetoric) is:",
+    "possibleAnswers": [
+      "A. Repetition at the end of clauses",
+      "B. Arrangement of words in increasing importance",
+      "C. Repetition at the beginning",
+      "D. Deliberate understatement"
+    ]
+  },
+  "q197": {
+    "question": "Choose the sentence free of a misplaced modifier.",
+    "possibleAnswers": [
+      "A. She nearly drove her kids to school every day.",
+      "B. She drove her kids to school nearly every day.",
+      "C. Nearly she drove her kids to school every day.",
+      "D. She drove nearly her kids to school every day."
+    ]
+  },
+  "q198": {
+    "question": "Who wrote The Kite Runner?",
+    "possibleAnswers": [
+      "A. Khaled Hosseini",
+      "B. Mohsin Hamid",
+      "C. Orhan Pamuk",
+      "D. Aravind Adiga"
+    ]
+  },
+  "q199": {
+    "question": "“Euphonious” most nearly means:",
+    "possibleAnswers": [
+      "A. Harsh-sounding",
+      "B. Pleasant-sounding",
+      "C. Loud",
+      "D. Whispered"
+    ]
+  },
+  "q200": {
+    "question": "Choose the grammatically correct closing.",
+    "possibleAnswers": [
+      "A. Yours Truly,",
+      "B. Yours truly,",
+      "C. Your’s truly,",
+      "D. Yours, truly"
+    ]
+  }
+}

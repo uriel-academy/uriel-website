@@ -4,6 +4,7 @@ import 'package:share_plus/share_plus.dart';
 import '../models/quiz_model.dart';
 import 'past_questions_search_page.dart';
 import 'quiz_setup_page.dart';
+import 'quiz_taker_page.dart';
 
 class QuizResultsPage extends StatefulWidget {
   final Quiz quiz;
@@ -111,16 +112,31 @@ ${_getPerformanceMessage()}
   }
 
   void _retakeQuiz() {
-    // Navigate back to quiz setup with same parameters
-    Navigator.of(context).pushReplacement(
-      MaterialPageRoute(
-        builder: (context) => QuizSetupPage(
-          preselectedSubject: widget.quiz.subject,
-          preselectedExamType: widget.quiz.examType,
-          preselectedLevel: widget.quiz.level,
+    // For trivia, go directly to quiz taker page
+    if (widget.quiz.examType.toLowerCase() == 'trivia' && widget.quiz.triviaCategory != null) {
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+          builder: (context) => QuizTakerPage(
+            subject: 'trivia',
+            examType: 'trivia',
+            level: widget.quiz.level,
+            triviaCategory: widget.quiz.triviaCategory,
+            questionCount: 20,
+          ),
         ),
-      ),
-    );
+      );
+    } else {
+      // For other quiz types, navigate to quiz setup
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+          builder: (context) => QuizSetupPage(
+            preselectedSubject: widget.quiz.subject,
+            preselectedExamType: widget.quiz.examType,
+            preselectedLevel: widget.quiz.level,
+          ),
+        ),
+      );
+    }
   }
 
   void _backToQuestions() {

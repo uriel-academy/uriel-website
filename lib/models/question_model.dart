@@ -114,10 +114,33 @@ class Question {
       marks: json['marks'],
       difficulty: json['difficulty'],
       topics: List<String>.from(json['topics']),
-      createdAt: DateTime.parse(json['createdAt']),
+      createdAt: _parseDateTime(json['createdAt']),
       createdBy: json['createdBy'],
       isActive: json['isActive'] ?? true,
     );
+  }
+
+  static DateTime _parseDateTime(dynamic dateValue) {
+    if (dateValue == null) {
+      return DateTime.now();
+    }
+    
+    // Handle Firestore Timestamp object
+    if (dateValue is Map && dateValue.containsKey('_seconds')) {
+      final seconds = dateValue['_seconds'] as int;
+      final nanoseconds = (dateValue['_nanoseconds'] as int?) ?? 0;
+      return DateTime.fromMillisecondsSinceEpoch(
+        seconds * 1000 + (nanoseconds ~/ 1000000),
+      );
+    }
+    
+    // Handle ISO string format
+    if (dateValue is String) {
+      return DateTime.parse(dateValue);
+    }
+    
+    // Fallback
+    return DateTime.now();
   }
 }
 

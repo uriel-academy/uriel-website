@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../models/question_model.dart';
-import '../services/question_service.dart';
-import 'quiz_setup_page.dart';
+import 'quiz_taker_page.dart';
 
 class TriviaCategoriesPage extends StatefulWidget {
   const TriviaCategoriesPage({super.key});
@@ -16,7 +14,6 @@ class _TriviaCategoriesPageState extends State<TriviaCategoriesPage>
   late AnimationController _animationController;
   late Animation<double> _fadeAnimation;
 
-  final QuestionService _questionService = QuestionService();
   final TextEditingController _searchController = TextEditingController();
 
   bool isLoading = true;
@@ -130,7 +127,8 @@ class _TriviaCategoriesPageState extends State<TriviaCategoriesPage>
     _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
       CurvedAnimation(parent: _animationController, curve: Curves.easeIn),
     );
-    filteredCategories = categories;
+    // Filter out Mathematics category (temporarily disabled)
+    filteredCategories = categories.where((cat) => cat.name != 'Mathematics').toList();
     _animationController.forward();
     _loadQuestionCounts();
   }
@@ -145,15 +143,9 @@ class _TriviaCategoriesPageState extends State<TriviaCategoriesPage>
   Future<void> _loadQuestionCounts() async {
     setState(() => isLoading = true);
     try {
-      // Load question counts for each category
+      // Set question counts for each category (all categories have ~200 questions)
       for (var category in categories) {
-        final count = await _questionService.getQuestionsCount(
-          examType: 'trivia',
-          subject: 'trivia',
-        );
-        // Note: We're showing all questions are available since they're imported
-        // In production, you'd filter by triviaCategory field
-        categoryCounts[category.name] = 200; // Each category has ~200 questions
+        categoryCounts[category.name] = 200;
       }
     } catch (e) {
       print('Error loading question counts: $e');
@@ -165,11 +157,14 @@ class _TriviaCategoriesPageState extends State<TriviaCategoriesPage>
   void _applySearch() {
     setState(() {
       if (searchQuery.isEmpty) {
-        filteredCategories = categories;
+        // Filter out Mathematics category (temporarily disabled)
+        filteredCategories = categories.where((cat) => cat.name != 'Mathematics').toList();
       } else {
         filteredCategories = categories.where((category) {
-          return category.name.toLowerCase().contains(searchQuery.toLowerCase()) ||
-              category.description.toLowerCase().contains(searchQuery.toLowerCase());
+          // Exclude Mathematics and apply search filter
+          return category.name != 'Mathematics' &&
+              (category.name.toLowerCase().contains(searchQuery.toLowerCase()) ||
+              category.description.toLowerCase().contains(searchQuery.toLowerCase()));
         }).toList();
       }
     });
@@ -179,11 +174,12 @@ class _TriviaCategoriesPageState extends State<TriviaCategoriesPage>
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => QuizSetupPage(
-          preselectedSubject: 'trivia',
-          preselectedExamType: 'trivia',
-          preselectedLevel: 'JHS',
+        builder: (context) => QuizTakerPage(
+          subject: 'trivia',
+          examType: 'trivia',
+          level: 'JHS',
           triviaCategory: category.name,
+          questionCount: 20, // Trivia always uses 20 questions
         ),
       ),
     );
