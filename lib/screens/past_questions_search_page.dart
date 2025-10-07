@@ -25,7 +25,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
   
   // Filter Controllers
   final TextEditingController _searchController = TextEditingController();
-  String _selectedExamType = 'All Types';
+  String _selectedExamType = 'BECE';
   String _selectedSubject = 'All Subjects';
   String _selectedYear = 'All Years';
   
@@ -161,19 +161,11 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
     List<Question> filtered = List.from(_questions);
     
     // Questions are already filtered to BECE/WASSCE only in _loadInitialData
-    // This filter is redundant but kept for safety
-    filtered = filtered.where((q) => 
-      q.examType == ExamType.bece || 
-      q.examType == ExamType.wassce
-    ).toList();
-    
-    // Apply filters
-    if (_selectedExamType != 'All Types') {
-      ExamType examType = ExamType.values.firstWhere(
-        (e) => e.name.toUpperCase() == _selectedExamType.toUpperCase(),
-      );
-      filtered = filtered.where((q) => q.examType == examType).toList();
-    }
+    // Apply exam type filter (always applied since no "All Types" option)
+    ExamType examType = ExamType.values.firstWhere(
+      (e) => e.name.toUpperCase() == _selectedExamType.toUpperCase(),
+    );
+    filtered = filtered.where((q) => q.examType == examType).toList();
     
     if (_selectedSubject != 'All Subjects') {
       Subject? subject = _getSubjectFromDisplayName(_selectedSubject);
@@ -247,7 +239,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
 
   void _resetFilters() {
     setState(() {
-      _selectedExamType = 'All Types';
+      _selectedExamType = 'BECE';
       _selectedSubject = 'All Subjects';
       _selectedYear = 'All Years';
       _searchController.clear();
@@ -481,7 +473,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
               child: _buildFilterChip(
                 'Exam Type',
                 _selectedExamType,
-                ['All Types', 'BECE', 'WASSCE'],
+                ['BECE', 'WASSCE'],
                 (value) => setState(() => _selectedExamType = value!),
                 Icons.school,
               ),
@@ -527,7 +519,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
           child: _buildFilterChip(
             'Exam Type',
             _selectedExamType,
-            ['All Types', 'BECE', 'WASSCE'],
+            ['BECE', 'WASSCE'],
             (value) => setState(() => _selectedExamType = value!),
             Icons.school,
           ),

@@ -1,0 +1,110 @@
+import 'dart:async';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+
+class ConnectionService {
+  static final ConnectionService _instance = ConnectionService._internal();
+  factory ConnectionService() => _instance;
+  ConnectionService._internal();
+
+  Timer? _connectionCheckTimer;
+  bool _isConnected = true;
+  final _connectionController = StreamController<bool>.broadcast();
+
+  Stream<bool> get connectionStatus => _connectionController.stream;
+  bool get isConnected => _isConnected;
+
+  // Start monitoring connection status
+  void startMonitoring() {
+    // Check connection every 30 seconds
+    _connectionCheckTimer = Timer.periodic(
+      const Duration(seconds: 30),
+      (_) => _checkConnection(),
+    );
+
+    // Initial check
+    _checkConnection();
+  }
+
+  // Check if Firebase connection is active
+  Future<void> _checkConnection() async {
+    try {
+      // Try a lightweight Firestore operation to test connection
+      final user = FirebaseAuth.instance.currentUser;
+      
+      if (user == null) {
+        _updateConnectionStatus(false);
+        return;
+      }
+
+      // Test Firestore connection with a timeout
+      await FirebaseFirestore.instance
+          .collection('_connection_test')
+          .limit(1)
+          .get(const GetOptions(source: Source.server))
+          .timeout(
+            const Duration(seconds: 5),
+            onTimeout: () => throw TimeoutException('Connection check timeout'),
+          );
+
+      // Verify auth token is still valid
+      await user.getIdToken(false).timeout(
+        const Duration(seconds: 5),
+        onTimeout: () => throw TimeoutException('Token check timeout'),
+      );
+
+      _updateConnectionStatus(true);
+    } catch (e) {
+      print('Connection check failed: $e');
+      _updateConnectionStatus(false);
+      
+      // Try to recover connection
+      await _attemptReconnection();
+    }
+  }
+
+  // Update connection status and notify listeners
+  void _updateConnectionStatus(bool connected) {
+    if (_isConnected != connected) {
+      _isConnected = connected;
+      _connectionController.add(connected);
+      print('Connection status changed: ${connected ? "CONNECTED" : "DISCONNECTED"}');
+    }
+  }
+
+  // Attempt to reconnect by refreshing auth token
+  Future<void> _attemptReconnection() async {
+    try {
+      final user = FirebaseAuth.instance.currentUser;
+      if (user != null) {
+        print('Attempting to refresh auth token...');
+        await user.getIdToken(true); // Force refresh
+        print('Auth token refreshed successfully');
+        
+        // Recheck connection
+        await Future.delayed(const Duration(seconds: 2));
+        await _checkConnection();
+      }
+    } catch (e) {
+      print('Reconnection attempt failed: $e');
+    }
+  }
+
+  // Manually trigger connection check
+  Future<bool> checkConnectionNow() async {
+    await _checkConnection();
+    return _isConnected;
+  }
+
+  // Stop monitoring
+  void stopMonitoring() {
+    _connectionCheckTimer?.cancel();
+    _connectionController.close();
+  }
+
+  // Force reconnection
+  Future<void> forceReconnect() async {
+    print('Force reconnection initiated...');
+    await _attemptReconnection();
+  }
+}

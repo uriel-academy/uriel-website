@@ -1,11 +1,60 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:google_sign_in/google_sign_in.dart';
+import 'dart:async';
 
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
+  Timer? _tokenRefreshTimer;
 
   Stream<User?> get userChanges => _auth.authStateChanges();
+
+  // Constructor to start token refresh monitoring
+  AuthService() {
+    _initTokenRefresh();
+  }
+
+  // Initialize token refresh to prevent session timeouts
+  void _initTokenRefresh() {
+    _auth.authStateChanges().listen((User? user) {
+      if (user != null) {
+        // Cancel existing timer if any
+        _tokenRefreshTimer?.cancel();
+        
+        // Refresh token every 50 minutes (tokens expire after 1 hour)
+        _tokenRefreshTimer = Timer.periodic(
+          const Duration(minutes: 50),
+          (_) => _refreshToken(user),
+        );
+      } else {
+        // Cancel timer when user logs out
+        _tokenRefreshTimer?.cancel();
+      }
+    });
+  }
+
+  // Refresh the user's auth token
+  Future<void> _refreshToken(User user) async {
+    try {
+      await user.getIdToken(true); // Force token refresh
+      print('Auth token refreshed successfully');
+    } catch (e) {
+      print('Token refresh error: $e');
+    }
+  }
+
+  // Manually trigger token refresh if needed
+  Future<void> refreshCurrentUserToken() async {
+    final user = _auth.currentUser;
+    if (user != null) {
+      await _refreshToken(user);
+    }
+  }
+
+  // Dispose timer when service is destroyed
+  void dispose() {
+    _tokenRefreshTimer?.cancel();
+  }
 
   Future<User?> signInWithEmail(String email, String pwd) async {
     try {
@@ -66,7 +115,7 @@ class AuthService {
           return null;
         }
 
-        final GoogleSignInAuthentication googleAuth = await googleUser.authentication;
+        final GoogleSignInAuthentication googleAuth = googleUser.authentication;
         
         final AuthCredential credential = GoogleAuthProvider.credential(
           idToken: googleAuth.idToken,

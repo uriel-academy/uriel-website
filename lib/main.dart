@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_plugins/url_strategy.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'firebase_options.dart';
+import 'services/connection_service.dart'; // Import connection monitoring service
 import 'screens/landing_page.dart'; // Import LandingPage for first load
 import 'screens/sign_in.dart' as sign_in; // Import your sign-in page with alias
 import 'screens/auth_gate.dart'; // Import AuthGate from dedicated file
@@ -19,9 +23,26 @@ import 'screens/faq.dart'; // Import FAQ page
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  
+  // Use path-based URLs instead of hash-based (#) URLs for better SEO
+  usePathUrlStrategy();
+  
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  // Configure Firestore settings for better connection management and offline support
+  FirebaseFirestore.instance.settings = const Settings(
+    persistenceEnabled: true,
+    cacheSizeBytes: Settings.CACHE_SIZE_UNLIMITED,
+  );
+
+  // Keep auth state persistent across page refreshes
+  await FirebaseAuth.instance.setPersistence(Persistence.LOCAL);
+
+  // Start connection monitoring to detect and recover from disconnections
+  ConnectionService().startMonitoring();
+
   runApp(const MyApp());
 }
 

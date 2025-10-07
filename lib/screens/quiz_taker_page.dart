@@ -451,7 +451,7 @@ class _QuizTakerPageState extends State<QuizTakerPage>
             children: [
               // Header with progress
               Container(
-                padding: EdgeInsets.all(isMobile ? 16 : 24),
+                padding: EdgeInsets.all(isMobile ? 12 : 19), // Reduced by 20% (16→12.8≈12, 24→19.2≈19)
                 decoration: const BoxDecoration(
                   color: Colors.white,
                   boxShadow: [
@@ -528,24 +528,31 @@ class _QuizTakerPageState extends State<QuizTakerPage>
               Expanded(
                 child: SingleChildScrollView(
                   padding: EdgeInsets.all(isMobile ? 16 : 24),
-                  child: AnimatedBuilder(
-                    animation: _slideAnimation,
-                    builder: (context, child) {
-                      return Transform.translate(
-                        offset: Offset(_slideAnimation.value * 300, 0),
-                        child: FadeTransition(
-                          opacity: _fadeAnimation,
-                          child: _buildQuestionCard(currentQuestion, isMobile),
-                        ),
-                      );
-                    },
+                  child: Center(
+                    child: ConstrainedBox(
+                      constraints: BoxConstraints(
+                        maxWidth: isMobile ? double.infinity : 800, // 40% width reduction for desktop
+                      ),
+                      child: AnimatedBuilder(
+                        animation: _slideAnimation,
+                        builder: (context, child) {
+                          return Transform.translate(
+                            offset: Offset(_slideAnimation.value * 300, 0),
+                            child: FadeTransition(
+                              opacity: _fadeAnimation,
+                              child: _buildQuestionCard(currentQuestion, isMobile),
+                            ),
+                          );
+                        },
+                      ),
+                    ),
                   ),
                 ),
               ),
 
               // Navigation buttons
               Container(
-                padding: EdgeInsets.all(isMobile ? 16 : 24),
+                padding: EdgeInsets.all(isMobile ? 12 : 19), // Reduced by 20% (16→12.8≈12, 24→19.2≈19)
                 decoration: const BoxDecoration(
                   color: Colors.white,
                   boxShadow: [
@@ -611,6 +618,7 @@ class _QuizTakerPageState extends State<QuizTakerPage>
     return Card(
       elevation: 4,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      color: const Color(0xFF1A1E3F), // Uriel blue background
       child: Padding(
         padding: EdgeInsets.all(isMobile ? 20 : 24),
         child: Column(
@@ -622,7 +630,7 @@ class _QuizTakerPageState extends State<QuizTakerPage>
               style: GoogleFonts.playfairDisplay(
                 fontSize: isMobile ? 18 : 20,
                 fontWeight: FontWeight.w600,
-                color: const Color(0xFF1A1E3F),
+                color: Colors.white, // White text
                 height: 1.4,
               ),
             ),
@@ -651,17 +659,17 @@ class _QuizTakerPageState extends State<QuizTakerPage>
                                 ? Colors.red
                                 : isSelected 
                                     ? const Color(0xFFD62828) 
-                                    : Colors.grey[300]!,
+                                    : Colors.white.withOpacity(0.3),
                         width: isSelected || showCorrect || showIncorrect ? 2 : 1,
                       ),
                       borderRadius: BorderRadius.circular(12),
                       color: showCorrect 
-                          ? Colors.green.withOpacity(0.1)
+                          ? Colors.green.withOpacity(0.2)
                           : showIncorrect 
-                              ? Colors.red.withOpacity(0.1)
+                              ? Colors.red.withOpacity(0.2)
                               : isSelected 
-                                  ? const Color(0xFFD62828).withOpacity(0.1) 
-                                  : Colors.white,
+                                  ? const Color(0xFFD62828) // Uriel red for selected
+                                  : Colors.white.withOpacity(0.9), // White with slight transparency
                     ),
                     child: Row(
                       children: [
@@ -676,19 +684,19 @@ class _QuizTakerPageState extends State<QuizTakerPage>
                                   : showIncorrect 
                                       ? Colors.red
                                       : isSelected 
-                                          ? const Color(0xFFD62828) 
+                                          ? Colors.white 
                                           : Colors.grey[400]!,
                               width: 2,
                             ),
                             color: isSelected || showCorrect 
-                                ? (showCorrect ? Colors.green : const Color(0xFFD62828))
+                                ? (showCorrect ? Colors.green : Colors.white)
                                 : Colors.white,
                           ),
                           child: isSelected || showCorrect 
                               ? Icon(
                                   showCorrect ? Icons.check : Icons.circle,
                                   size: 12,
-                                  color: Colors.white,
+                                  color: showCorrect ? Colors.white : const Color(0xFFD62828),
                                 )
                               : null,
                         ),
@@ -698,7 +706,7 @@ class _QuizTakerPageState extends State<QuizTakerPage>
                             option,
                             style: GoogleFonts.montserrat(
                               fontSize: isMobile ? 14 : 16,
-                              color: const Color(0xFF1A1E3F),
+                              color: isSelected ? Colors.white : const Color(0xFF1A1E3F), // White text when selected
                               fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
                             ),
                           ),

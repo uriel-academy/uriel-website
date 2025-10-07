@@ -3,6 +3,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../constants/app_styles.dart';
+import '../services/connection_service.dart';
+import '../services/auth_service.dart';
 import 'question_collections_page.dart';
 import 'textbooks_page.dart';
 import 'mock_exams_page.dart';
@@ -129,55 +131,57 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       builder: (context, child) {
         return Scaffold(
           backgroundColor: const Color(0xFFF8FAFE),
-          body: SafeArea(
-            child: isSmallScreen 
-                ? Column(
-                    children: [
-                      // Mobile Header
-                      _buildMobileHeader(),
-                      
-                      // Mobile Content
-                      Expanded(
-                        child: _showingProfile 
-                            ? const StudentProfilePage()
-                            : IndexedStack(
-                                index: _selectedIndex,
-                                children: [
-                                  _buildDashboard(),
-                                  _buildQuestionsPage(),
-                                  _buildTextbooksPage(),
-                                  _buildMockExamsPage(),
-                                  _buildTriviaPage(),
-                                ],
-                              ),
-                      ),
-                    ],
-                  )
-                : Row(
-                    children: [
-                      // Desktop Sidebar Navigation
-                      _buildSideNavigation(),
-                      
-                      // Desktop Main Content
-                      Expanded(
-                        child: Column(
-                          children: [
-                            // Desktop Header
-                            _buildHeader(context),
-                            
-                            // Desktop Content Area
-                            Expanded(
-                              child: _showingProfile 
-                                  ? const StudentProfilePage()
-                                  : IndexedStack(
-                                      index: _selectedIndex,
-                                      children: [
-                                        _buildDashboard(),
-                                        _buildQuestionsPage(),
-                                        _buildTextbooksPage(),
-                                        _buildMockExamsPage(),
-                                        _buildTriviaPage(),
-                                      ],
+          body: Stack(
+            children: [
+              SafeArea(
+                child: isSmallScreen 
+                    ? Column(
+                        children: [
+                          // Mobile Header
+                          _buildMobileHeader(),
+                          
+                          // Mobile Content
+                          Expanded(
+                            child: _showingProfile 
+                                ? const StudentProfilePage()
+                                : IndexedStack(
+                                    index: _selectedIndex,
+                                    children: [
+                                      _buildDashboard(),
+                                      _buildQuestionsPage(),
+                                      _buildTextbooksPage(),
+                                      _buildMockExamsPage(),
+                                      _buildTriviaPage(),
+                                    ],
+                                  ),
+                          ),
+                        ],
+                      )
+                    : Row(
+                        children: [
+                          // Desktop Sidebar Navigation
+                          _buildSideNavigation(),
+                          
+                          // Desktop Main Content
+                          Expanded(
+                            child: Column(
+                              children: [
+                                // Desktop Header
+                                _buildHeader(context),
+                                
+                                // Desktop Content Area
+                                Expanded(
+                                  child: _showingProfile 
+                                      ? const StudentProfilePage()
+                                      : IndexedStack(
+                                          index: _selectedIndex,
+                                          children: [
+                                            _buildDashboard(),
+                                            _buildQuestionsPage(),
+                                            _buildTextbooksPage(),
+                                            _buildMockExamsPage(),
+                                            _buildTriviaPage(),
+                                          ],
                                     ),
                             ),
                           ],
@@ -185,12 +189,75 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                       ),
                     ],
                   ),
+              ),
+              
+              // Connection Status Indicator
+              StreamBuilder<bool>(
+                stream: ConnectionService().connectionStatus,
+                builder: (context, snapshot) {
+                  if (snapshot.hasData && !snapshot.data!) {
+                    return _buildConnectionBanner();
+                  }
+                  return const SizedBox.shrink();
+                },
+              ),
+            ],
           ),
           
           // Bottom Navigation (Mobile Only)
           bottomNavigationBar: isSmallScreen ? _buildBottomNavigation() : null,
         );
       },
+    );
+  }
+
+  // Connection status banner
+  Widget _buildConnectionBanner() {
+    return Positioned(
+      top: 0,
+      left: 0,
+      right: 0,
+      child: Material(
+        elevation: 4,
+        color: Colors.orange.shade700,
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+          child: Row(
+            children: [
+              const Icon(
+                Icons.wifi_off,
+                color: Colors.white,
+                size: 20,
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Text(
+                  'Connection lost. Reconnecting...',
+                  style: GoogleFonts.montserrat(
+                    color: Colors.white,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+              TextButton(
+                onPressed: () async {
+                  // Attempt manual reconnection
+                  await ConnectionService().forceReconnect();
+                  await AuthService().refreshCurrentUserToken();
+                },
+                child: Text(
+                  'Retry',
+                  style: GoogleFonts.montserrat(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 

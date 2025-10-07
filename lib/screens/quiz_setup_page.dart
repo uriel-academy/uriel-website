@@ -200,26 +200,33 @@ class _QuizSetupPageState extends State<QuizSetupPage> {
 
             // Content
             SliverToBoxAdapter(
-              child: Padding(
-                padding: EdgeInsets.all(isMobile ? 16 : 24),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    // Header
-                    Text(
-                      'Configure Your Quiz',
-                      style: GoogleFonts.playfairDisplay(
-                        fontSize: isMobile ? 20 : 24,
-                        fontWeight: FontWeight.bold,
-                        color: const Color(0xFF1A1E3F),
-                      ),
-                    ),
-                    Text(
-                      'Customize your quiz experience by selecting your preferences below.',
-                      style: GoogleFonts.montserrat(
-                        color: Colors.grey[600],
-                      ),
-                    ),
+              child: Center(
+                child: ConstrainedBox(
+                  constraints: BoxConstraints(
+                    maxWidth: isMobile ? double.infinity : 700, // 50% width reduction for desktop
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.all(isMobile ? 16 : 24),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center, // Center content
+                      children: [
+                        // Header
+                        Text(
+                          'Configure Your Quiz',
+                          textAlign: TextAlign.center, // Center the title
+                          style: GoogleFonts.playfairDisplay(
+                            fontSize: isMobile ? 20 : 24,
+                            fontWeight: FontWeight.bold,
+                            color: const Color(0xFF1A1E3F),
+                          ),
+                        ),
+                        Text(
+                          'Customize your quiz experience by selecting your preferences below.',
+                          textAlign: TextAlign.center, // Center the subtitle
+                          style: GoogleFonts.montserrat(
+                            color: Colors.grey[600],
+                          ),
+                        ),
 
                     const SizedBox(height: 32),
 
@@ -326,6 +333,8 @@ class _QuizSetupPageState extends State<QuizSetupPage> {
 
                     const SizedBox(height: 24),
                   ],
+                ),
+              ),
                 ),
               ),
             ),
