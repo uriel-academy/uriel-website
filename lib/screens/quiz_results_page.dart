@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:share_plus/share_plus.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/quiz_model.dart';
-import 'past_questions_search_page.dart';
 import 'quiz_setup_page.dart';
 import 'quiz_taker_page.dart';
+import 'home_page.dart';
 
 class QuizResultsPage extends StatefulWidget {
   final Quiz quiz;
@@ -47,12 +49,40 @@ class _QuizResultsPageState extends State<QuizResultsPage>
     );
 
     _startAnimations();
+    _saveQuizResult();
   }
 
   void _startAnimations() async {
     await Future.delayed(const Duration(milliseconds: 500));
     _scoreAnimationController.forward();
     _cardAnimationController.forward();
+  }
+
+  Future<void> _saveQuizResult() async {
+    try {
+      final user = FirebaseAuth.instance.currentUser;
+      if (user == null) return;
+
+      // Save quiz result to Firestore
+      await FirebaseFirestore.instance.collection('quizzes').add({
+        'userId': user.uid,
+        'subject': widget.quiz.subject,
+        'examType': widget.quiz.examType,
+        'quizType': widget.quiz.examType, // For filtering (trivia, bece, etc.)
+        'level': widget.quiz.level,
+        'totalQuestions': widget.quiz.totalQuestions,
+        'correctAnswers': widget.quiz.correctAnswers,
+        'percentage': widget.quiz.percentage,
+        'duration': widget.quiz.duration.inSeconds,
+        'timestamp': FieldValue.serverTimestamp(),
+        'triviaCategory': widget.quiz.triviaCategory,
+      });
+
+      print('Quiz result saved successfully');
+    } catch (e) {
+      print('Error saving quiz result: $e');
+      // Don't show error to user, just log it
+    }
   }
 
   @override
@@ -139,11 +169,21 @@ ${_getPerformanceMessage()}
     }
   }
 
-  void _backToQuestions() {
-    Navigator.of(context).pushAndRemoveUntil(
-      MaterialPageRoute(builder: (context) => const PastQuestionsSearchPage()),
-      (route) => false,
-    );
+  void _backToHome() {
+    // Navigate to home page, clearing all quiz-related pages from the stack
+    // First try to use named route, if that fails, use direct navigation
+    try {
+      Navigator.of(context).pushNamedAndRemoveUntil(
+        '/home',
+        (route) => false, // Remove all previous routes
+      );
+    } catch (e) {
+      // Fallback: Direct navigation to StudentHomePage
+      Navigator.of(context).pushAndRemoveUntil(
+        MaterialPageRoute(builder: (context) => const StudentHomePage()),
+        (route) => false,
+      );
+    }
   }
 
   @override
@@ -165,7 +205,7 @@ ${_getPerformanceMessage()}
               elevation: 0,
               leading: IconButton(
                 icon: const Icon(Icons.close),
-                onPressed: _backToQuestions,
+                onPressed: _backToHome,
               ),
               title: Text(
                 'Quiz Results',
@@ -474,9 +514,9 @@ ${_getPerformanceMessage()}
         SizedBox(
           width: double.infinity,
           child: OutlinedButton.icon(
-            onPressed: _backToQuestions,
+            onPressed: _backToHome,
             icon: const Icon(Icons.arrow_back),
-            label: const Text('Back to Questions'),
+            label: const Text('Back to Home'),
             style: OutlinedButton.styleFrom(
               foregroundColor: const Color(0xFF1A1E3F),
               side: const BorderSide(color: Color(0xFF1A1E3F)),

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../services/auth_service.dart';
 import '../services/user_service.dart';
-import 'sign_in.dart' as sign_in;
+import 'landing_page.dart';
 import 'home_page.dart'; // Import StudentHomePage
 import 'school_dashboard.dart'; // Import SchoolDashboardPage
 import 'teacher_dashboard.dart'; // Import TeacherDashboardPage
@@ -52,8 +52,8 @@ class AuthGate extends StatelessWidget {
             },
           );
         } else {
-          // User is not logged in
-          return const sign_in.SignInPage();
+          // User is not logged in - show landing page
+          return const LandingPage();
         }
       },
     );

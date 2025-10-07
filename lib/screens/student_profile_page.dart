@@ -1,4 +1,4 @@
-import 'dart:io';
+import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -32,7 +32,8 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
   bool _isLoading = false;
   bool _isEditingPassword = false;
   String? _profileImageUrl;
-  File? _selectedImage;
+  XFile? _selectedImage;
+  Uint8List? _selectedImageBytes;
   String _selectedClass = 'JHS Form 1';
   
   final List<String> _classes = [
@@ -145,9 +146,14 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
       );
       
       if (image != null) {
+        // Read image bytes for web compatibility
+        final bytes = await image.readAsBytes();
+        
         setState(() {
-          _selectedImage = File(image.path);
+          _selectedImage = image;
+          _selectedImageBytes = bytes;
         });
+        
         await _uploadProfileImage();
       }
     } catch (e) {
@@ -156,21 +162,32 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
   }
 
   Future<void> _uploadProfileImage() async {
-    if (_selectedImage == null) return;
+    if (_selectedImage == null || _selectedImageBytes == null) return;
     
     setState(() => _isLoading = true);
     
     try {
       final user = FirebaseAuth.instance.currentUser;
-      if (user == null) return;
+      if (user == null) {
+        _showErrorSnackBar('User not authenticated');
+        return;
+      }
       
       final storageRef = FirebaseStorage.instance
           .ref()
           .child('profile_images')
           .child('${user.uid}.jpg');
       
-      await storageRef.putFile(_selectedImage!);
-      final downloadUrl = await storageRef.getDownloadURL();
+      // Upload using bytes for web compatibility
+      final uploadTask = await storageRef.putData(
+        _selectedImageBytes!,
+        SettableMetadata(
+          contentType: 'image/jpeg',
+          customMetadata: {'userId': user.uid},
+        ),
+      );
+      
+      final downloadUrl = await uploadTask.ref.getDownloadURL();
       
       // Update Firestore
       await FirebaseFirestore.instance
@@ -184,10 +201,12 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
       setState(() {
         _profileImageUrl = downloadUrl;
         _selectedImage = null;
+        _selectedImageBytes = null;
       });
       
       _showSuccessSnackBar('Profile picture updated successfully!');
     } catch (e) {
+      print('Error uploading profile image: $e');
       _showErrorSnackBar('Failed to upload image: $e');
     } finally {
       setState(() => _isLoading = false);
@@ -412,12 +431,12 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
               CircleAvatar(
                 radius: isSmallScreen ? 50 : 60,
                 backgroundColor: const Color(0xFF1A1E3F),
-                backgroundImage: _selectedImage != null
-                    ? FileImage(_selectedImage!)
+                backgroundImage: _selectedImageBytes != null
+                    ? MemoryImage(_selectedImageBytes!)
                     : (_profileImageUrl != null
                         ? NetworkImage(_profileImageUrl!)
                         : null) as ImageProvider?,
-                child: (_selectedImage == null && _profileImageUrl == null)
+                child: (_selectedImageBytes == null && _profileImageUrl == null)
                     ? Text(
                         _firstNameController.text.isNotEmpty
                             ? _firstNameController.text[0].toUpperCase()

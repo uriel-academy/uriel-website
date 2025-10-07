@@ -26,22 +26,28 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   int _selectedIndex = 0;
   bool _showingProfile = false;
   
-  // User progress data (would come from Firestore in real app)
+  // User progress data - Live from Firestore
   String userName = "";
-  double overallProgress = 76.5;
-  int currentStreak = 12;
-  int weeklyStudyHours = 8;
-  int questionsAnswered = 147;
-  int upcomingExamDays = 45;
+  double overallProgress = 0.0; // Calculated from quiz results
+  int currentStreak = 0; // Days of consecutive activity
+  int weeklyStudyHours = 0; // Calculated from session time
+  int questionsAnswered = 0; // Total questions from quizzes
+  int beceCountdownDays = 0; // Live countdown to BECE 2026
   
-  // Subject progress data
-  final List<SubjectProgress> _subjectProgress = [
-    SubjectProgress('Mathematics', 85.0, Colors.blue),
-    SubjectProgress('English', 72.0, Colors.green),
-    SubjectProgress('Science', 68.0, Colors.orange),
-    SubjectProgress('Social Studies', 90.0, Colors.purple),
-    SubjectProgress('ICT', 78.0, Colors.red),
-  ];
+  // Past Questions tracking
+  int pastQuestionsAnswered = 0;
+  double pastQuestionsProgress = 0.0;
+  
+  // Trivia tracking
+  int triviaQuestionsAnswered = 0;
+  double triviaProgress = 0.0;
+  int triviaCorrect = 0;
+  
+  // Subject progress data - Live from quiz performance
+  List<SubjectProgress> _subjectProgress = [];
+  
+  // Recent activity data
+  List<Map<String, dynamic>> _recentActivity = [];
 
   @override
   void initState() {
@@ -56,7 +62,20 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     );
     _animationController.forward();
     
+    _calculateBeceCountdown();
     _loadUserData();
+    _loadUserStats();
+  }
+  
+  void _calculateBeceCountdown() {
+    // BECE 2026: May 4 - May 11, 2026
+    final beceStartDate = DateTime(2026, 5, 4);
+    final now = DateTime.now();
+    final difference = beceStartDate.difference(now);
+    
+    setState(() {
+      beceCountdownDays = difference.inDays > 0 ? difference.inDays : 0;
+    });
   }
 
   @override
@@ -100,9 +119,6 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         
         // Only log the error, don't show it to the user
         print('Unable to load user data (offline or connection issue): $e');
-        
-        // Optionally, you could show a subtle indicator that the app is offline
-        // but don't interrupt the user experience with error dialogs
       }
     } else {
       // Set default name when no user is logged in
@@ -110,6 +126,204 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         userName = 'Student';
       });
     }
+  }
+  
+  Future<void> _loadUserStats() async {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user == null) return;
+    
+    try {
+      // Load quiz results for the user
+      final quizSnapshot = await FirebaseFirestore.instance
+          .collection('quizzes')
+          .where('userId', isEqualTo: user.uid)
+          .orderBy('timestamp', descending: true)
+          .limit(100)
+          .get()
+          .timeout(const Duration(seconds: 10));
+      
+      if (quizSnapshot.docs.isEmpty) {
+        // No quiz data yet - show 0%
+        setState(() {
+          questionsAnswered = 0;
+          overallProgress = 0.0;
+          currentStreak = 0;
+          _subjectProgress = [];
+          _recentActivity = [];
+        });
+        return;
+      }
+      
+      // Calculate stats from quiz data
+      int totalQuestions = 0;
+      int totalCorrect = 0;
+      int pastQuestionsTotal = 0;
+      int pastQuestionsCorrect = 0;
+      int triviaTotal = 0;
+      int triviaCorrect = 0;
+      Map<String, List<double>> subjectScores = {};
+      List<DateTime> activityDates = [];
+      List<Map<String, dynamic>> recentQuizzes = [];
+      
+      for (var doc in quizSnapshot.docs) {
+        final data = doc.data();
+        int questions = (data['totalQuestions'] as int?) ?? 0;
+        int correct = (data['correctAnswers'] as int?) ?? 0;
+        
+        totalQuestions += questions;
+        totalCorrect += correct;
+        
+        // Track subject progress
+        String subject = data['subject'] ?? 'Unknown';
+        String quizType = data['quizType'] ?? '';
+        double score = (data['percentage'] as num?)?.toDouble() ?? 0.0;
+        
+        // Separate tracking for past questions (BECE questions)
+        if (quizType.toLowerCase().contains('bece') || 
+            subject.toLowerCase().contains('bece') ||
+            quizType.toLowerCase().contains('past')) {
+          pastQuestionsTotal += questions;
+          pastQuestionsCorrect += correct;
+        }
+        
+        // Separate tracking for trivia
+        if (quizType.toLowerCase().contains('trivia') || 
+            subject.toLowerCase().contains('trivia')) {
+          triviaTotal += questions;
+          triviaCorrect += correct;
+        }
+        
+        if (!subjectScores.containsKey(subject)) {
+          subjectScores[subject] = [];
+        }
+        subjectScores[subject]!.add(score);
+        
+        // Track activity dates for streak
+        if (data['timestamp'] != null) {
+          try {
+            DateTime date;
+            if (data['timestamp'] is Timestamp) {
+              date = (data['timestamp'] as Timestamp).toDate();
+            } else {
+              date = DateTime.parse(data['timestamp'].toString());
+            }
+            activityDates.add(date);
+          } catch (e) {
+            print('Error parsing timestamp: $e');
+          }
+        }
+        
+        // Recent activity
+        if (recentQuizzes.length < 5) {
+          recentQuizzes.add({
+            'subject': subject,
+            'score': score,
+            'date': data['timestamp'],
+            'questions': data['totalQuestions'] ?? 0,
+          });
+        }
+      }
+      
+      // Calculate overall progress
+      double avgProgress = totalQuestions > 0 
+          ? (totalCorrect / totalQuestions * 100) 
+          : 0.0;
+      
+      // Calculate past questions progress
+      double pastQProgress = pastQuestionsTotal > 0 
+          ? (pastQuestionsCorrect / pastQuestionsTotal * 100) 
+          : 0.0;
+      
+      // Calculate trivia progress
+      double triviaAvg = triviaTotal > 0 
+          ? (triviaCorrect / triviaTotal * 100) 
+          : 0.0;
+      
+      // Calculate streak
+      int streak = _calculateStreak(activityDates);
+      
+      // Build subject progress list
+      List<SubjectProgress> subjects = [];
+      final colors = [Colors.blue, Colors.green, Colors.orange, Colors.purple, Colors.red, Colors.teal];
+      int colorIndex = 0;
+      
+      subjectScores.forEach((subject, scores) {
+        double avgScore = scores.reduce((a, b) => a + b) / scores.length;
+        subjects.add(SubjectProgress(
+          subject, 
+          avgScore, 
+          colors[colorIndex % colors.length]
+        ));
+        colorIndex++;
+      });
+      
+      setState(() {
+        questionsAnswered = totalQuestions;
+        overallProgress = avgProgress;
+        currentStreak = streak;
+        _subjectProgress = subjects;
+        _recentActivity = recentQuizzes;
+        
+        // Past questions metrics
+        pastQuestionsAnswered = pastQuestionsTotal;
+        pastQuestionsProgress = pastQProgress;
+        
+        // Trivia metrics
+        triviaQuestionsAnswered = triviaTotal;
+        triviaProgress = triviaAvg;
+        triviaCorrect = triviaCorrect;
+      });
+      
+    } catch (e) {
+      print('Error loading user stats: $e');
+      // Keep default values (0) on error
+    }
+  }
+  
+  int _calculateStreak(List<DateTime> activityDates) {
+    if (activityDates.isEmpty) return 0;
+    
+    // Sort dates
+    activityDates.sort((a, b) => b.compareTo(a));
+    
+    // Check if user was active today or yesterday
+    final now = DateTime.now();
+    final today = DateTime(now.year, now.month, now.day);
+    final yesterday = today.subtract(const Duration(days: 1));
+    
+    final lastActivity = DateTime(
+      activityDates.first.year,
+      activityDates.first.month,
+      activityDates.first.day,
+    );
+    
+    if (lastActivity != today && lastActivity != yesterday) {
+      return 0; // Streak broken
+    }
+    
+    // Count consecutive days
+    int streak = 1;
+    for (int i = 0; i < activityDates.length - 1; i++) {
+      final current = DateTime(
+        activityDates[i].year,
+        activityDates[i].month,
+        activityDates[i].day,
+      );
+      final next = DateTime(
+        activityDates[i + 1].year,
+        activityDates[i + 1].month,
+        activityDates[i + 1].day,
+      );
+      
+      final difference = current.difference(next).inDays;
+      if (difference == 1) {
+        streak++;
+      } else if (difference > 1) {
+        break;
+      }
+    }
+    
+    return streak;
   }
   
   String _getNameFromEmail(String? email) {
@@ -126,11 +340,49 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     final screenWidth = MediaQuery.of(context).size.width;
     final isSmallScreen = screenWidth < 768;
     
-    return AnimatedBuilder(
-      animation: _fadeAnimation,
-      builder: (context, child) {
-        return Scaffold(
-          backgroundColor: const Color(0xFFF8FAFE),
+    return WillPopScope(
+      onWillPop: () async {
+        // Prevent going back to landing/login page
+        // Show exit confirmation dialog instead
+        return await showDialog<bool>(
+          context: context,
+          builder: (context) => AlertDialog(
+            title: Text(
+              'Exit App?',
+              style: GoogleFonts.playfairDisplay(
+                fontWeight: FontWeight.bold,
+                color: const Color(0xFF1A1E3F),
+              ),
+            ),
+            content: Text(
+              'Are you sure you want to exit?',
+              style: GoogleFonts.montserrat(),
+            ),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.of(context).pop(false),
+                child: Text(
+                  'Cancel',
+                  style: GoogleFonts.montserrat(color: Colors.grey[600]),
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () => Navigator.of(context).pop(true),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFFD62828),
+                  foregroundColor: Colors.white,
+                ),
+                child: Text('Exit', style: GoogleFonts.montserrat()),
+              ),
+            ],
+          ),
+        ) ?? false;
+      },
+      child: AnimatedBuilder(
+        animation: _fadeAnimation,
+        builder: (context, child) {
+          return Scaffold(
+            backgroundColor: const Color(0xFFF8FAFE),
           body: Stack(
             children: [
               SafeArea(
@@ -206,8 +458,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           
           // Bottom Navigation (Mobile Only)
           bottomNavigationBar: isSmallScreen ? _buildBottomNavigation() : null,
-        );
-      },
+          );
+        },
+      ),
     );
   }
 
@@ -700,11 +953,13 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           if (isSmallScreen) ...[
             _buildSubjectProgressCard(),
             const SizedBox(height: 16),
+            _buildRecentActivityCard(),
+            const SizedBox(height: 16),
+            _buildPastQuestionsCard(),
+            const SizedBox(height: 16),
             _buildQuickStatsCard(),
             const SizedBox(height: 16),
             _buildUpcomingDeadlines(),
-            const SizedBox(height: 16),
-            _buildRecentActivityCard(),
             const SizedBox(height: 16),
             _buildQuickActionsCard(),
           ] else ...[
@@ -719,6 +974,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                       _buildSubjectProgressCard(),
                       const SizedBox(height: 16),
                       _buildRecentActivityCard(),
+                      const SizedBox(height: 16),
+                      _buildPastQuestionsCard(),
                     ],
                   ),
                 ),
@@ -932,7 +1189,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'BECE 2025',
+                                'BECE 2026',
                                 style: GoogleFonts.montserrat(
                                   fontSize: 14,
                                   fontWeight: FontWeight.bold,
@@ -940,7 +1197,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                                 ),
                               ),
                               Text(
-                                '$upcomingExamDays days remaining',
+                                '$beceCountdownDays days remaining',
                                 style: GoogleFonts.montserrat(
                                   fontSize: 12,
                                   color: Colors.white70,
@@ -975,7 +1232,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'BECE 2025',
+                            'BECE 2026',
                             style: GoogleFonts.montserrat(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
@@ -983,7 +1240,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                             ),
                           ),
                           Text(
-                            '$upcomingExamDays days remaining',
+                            '$beceCountdownDays days remaining',
                             style: GoogleFonts.montserrat(
                               fontSize: 14,
                               color: Colors.white70,
@@ -1045,6 +1302,14 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   }
 
   Widget _buildSubjectProgressCard() {
+    // If no subject progress data, show default subjects with 0%
+    final displayProgress = _subjectProgress.isEmpty 
+        ? [
+            SubjectProgress('RME', 0.0, Colors.blue),
+            SubjectProgress('Trivia', 0.0, Colors.green),
+          ]
+        : _subjectProgress;
+    
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
@@ -1085,7 +1350,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             ],
           ),
           const SizedBox(height: 16),
-          ...(_subjectProgress.map((subject) => _buildSubjectProgressItem(subject)).toList()),
+          ...(displayProgress.map((subject) => _buildSubjectProgressItem(subject)).toList()),
         ],
       ),
     );
@@ -1248,6 +1513,12 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           _buildQuickStatItem('Questions Answered', questionsAnswered.toString(), Icons.quiz),
           _buildQuickStatItem('Average Score', '${(overallProgress * 0.85).toStringAsFixed(1)}%', Icons.trending_up),
           _buildQuickStatItem('Study Streak', '$currentStreak days', Icons.local_fire_department),
+          const Divider(height: 24),
+          _buildQuickStatItem('Past Questions Solved', pastQuestionsAnswered.toString(), Icons.history_edu),
+          _buildQuickStatItem('Past Questions Score', '${pastQuestionsProgress.toStringAsFixed(1)}%', Icons.school),
+          const Divider(height: 24),
+          _buildQuickStatItem('Trivia Answered', triviaQuestionsAnswered.toString(), Icons.emoji_events),
+          _buildQuickStatItem('Trivia Score', '${triviaProgress.toStringAsFixed(1)}%', Icons.stars),
         ],
       ),
     );
@@ -1281,6 +1552,188 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     );
   }
 
+  Widget _buildPastQuestionsCard() {
+    return Container(
+      padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.05),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Icon(Icons.history_edu, color: const Color(0xFF1A1E3F), size: 20),
+              const SizedBox(width: 8),
+              Text(
+                'Past Questions Progress',
+                style: GoogleFonts.playfairDisplay(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: const Color(0xFF1A1E3F),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 16),
+          
+          // Past Questions Stats
+          Container(
+            padding: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  const Color(0xFF1A1E3F),
+                  const Color(0xFF1A1E3F).withOpacity(0.8),
+                ],
+              ),
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Questions Solved',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 12,
+                            color: Colors.white70,
+                          ),
+                        ),
+                        const SizedBox(height: 4),
+                        Text(
+                          pastQuestionsAnswered.toString(),
+                          style: GoogleFonts.montserrat(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Text(
+                          'Average Score',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 12,
+                            color: Colors.white70,
+                          ),
+                        ),
+                        const SizedBox(height: 4),
+                        Text(
+                          '${pastQuestionsProgress.toStringAsFixed(1)}%',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                            color: const Color(0xFFD62828),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 16),
+                
+                // Progress Bar
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: LinearProgressIndicator(
+                    value: pastQuestionsProgress / 100,
+                    backgroundColor: Colors.white24,
+                    valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFFD62828)),
+                    minHeight: 8,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          
+          const SizedBox(height: 16),
+          
+          // Trivia Stats
+          Container(
+            padding: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  Colors.orange.shade600,
+                  Colors.orange.shade400,
+                ],
+              ),
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Icon(Icons.emoji_events, color: Colors.white, size: 20),
+                    const SizedBox(width: 8),
+                    Text(
+                      'Trivia Challenge',
+                      style: GoogleFonts.playfairDisplay(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 12),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    _buildTriviaStatItem('Answered', triviaQuestionsAnswered.toString()),
+                    Container(width: 1, height: 30, color: Colors.white24),
+                    _buildTriviaStatItem('Score', '${triviaProgress.toStringAsFixed(1)}%'),
+                    Container(width: 1, height: 30, color: Colors.white24),
+                    _buildTriviaStatItem('Correct', triviaCorrect.toString()),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildTriviaStatItem(String label, String value) {
+    return Column(
+      children: [
+        Text(
+          value,
+          style: GoogleFonts.montserrat(
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        ),
+        const SizedBox(height: 4),
+        Text(
+          label,
+          style: GoogleFonts.montserrat(
+            fontSize: 11,
+            color: Colors.white70,
+          ),
+        ),
+      ],
+    );
+  }
+
   Widget _buildUpcomingDeadlines() {
     return Container(
       padding: const EdgeInsets.all(20),
@@ -1307,7 +1760,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             ),
           ),
           const SizedBox(height: 16),
-          _buildDeadlineItem('BECE 2025', '$upcomingExamDays days', Colors.red),
+          _buildDeadlineItem('BECE 2026', '$beceCountdownDays days', Colors.red),
           _buildDeadlineItem('Math Quiz', '3 days', Colors.orange),
           _buildDeadlineItem('Science Assignment', '1 week', Colors.blue),
         ],
@@ -1835,11 +2288,16 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   void _handleSignOut() async {
     try {
       await FirebaseAuth.instance.signOut();
-      Navigator.of(context).pushNamedAndRemoveUntil('/login', (route) => false);
+      // Clear navigation stack and go to landing page
+      if (mounted) {
+        Navigator.of(context).pushNamedAndRemoveUntil('/landing', (route) => false);
+      }
     } catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Error signing out. Please try again.')),
-      );
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Error signing out. Please try again.')),
+        );
+      }
     }
   }
 }

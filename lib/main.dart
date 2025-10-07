@@ -54,7 +54,35 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Uriel Academy',
       debugShowCheckedModeBanner: false,
-      home: const LandingPage(), // Start with LandingPage (marketing page)
+      home: const AuthGate(), // Start with AuthGate (checks auth state automatically)
+      onGenerateRoute: (settings) {
+        // Check if user is authenticated
+        final isAuthenticated = FirebaseAuth.instance.currentUser != null;
+        
+        // Public routes accessible to everyone
+        final publicRoutes = [
+          '/landing',
+          '/about',
+          '/privacy',
+          '/terms',
+          '/contact',
+          '/faq',
+          '/login',
+        ];
+        
+        // If trying to access landing/login while authenticated, redirect to auth gate
+        if (isAuthenticated && publicRoutes.contains(settings.name)) {
+          return MaterialPageRoute(builder: (_) => const AuthGate());
+        }
+        
+        // If trying to access protected routes while not authenticated, redirect to landing
+        if (!isAuthenticated && !publicRoutes.contains(settings.name) && settings.name != '/') {
+          return MaterialPageRoute(builder: (_) => const LandingPage());
+        }
+        
+        // Default route handling
+        return null; // Let the routes map handle it
+      },
       routes: {
         '/landing': (_) => const LandingPage(),
         '/about': (_) => const AboutUsPage(),
