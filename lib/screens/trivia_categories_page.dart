@@ -192,23 +192,6 @@ class _TriviaCategoriesPageState extends State<TriviaCategoriesPage>
 
     return Scaffold(
       backgroundColor: const Color(0xFFF8FAFE),
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Color(0xFF1A1E3F)),
-          onPressed: () => Navigator.pop(context),
-        ),
-        title: Text(
-          'Trivia Categories',
-          style: GoogleFonts.playfairDisplay(
-            fontSize: isMobile ? 20 : 24,
-            fontWeight: FontWeight.bold,
-            color: const Color(0xFF1A1E3F),
-          ),
-        ),
-        centerTitle: false,
-      ),
       body: FadeTransition(
         opacity: _fadeAnimation,
         child: SingleChildScrollView(

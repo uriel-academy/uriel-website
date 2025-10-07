@@ -260,43 +260,21 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
         opacity: _fadeAnimation,
         child: CustomScrollView(
           slivers: [
-            // Page Header
-            SliverAppBar(
-              floating: true,
-              pinned: true,
-              automaticallyImplyLeading: false,
-              expandedHeight: 100,
-              backgroundColor: Colors.white,
-              title: Text(
-                'Past Questions',
-                style: GoogleFonts.playfairDisplay(
-                  fontSize: isSmallScreen ? 18 : 20,
-                  fontWeight: FontWeight.w700,
-                  color: const Color(0xFF1A1E3F),
+            // Page Header - Removed title and back button as requested
+            SliverToBoxAdapter(
+              child: Container(
+                color: Colors.white,
+                padding: EdgeInsets.fromLTRB(
+                  isSmallScreen ? 16 : 24,
+                  16,
+                  isSmallScreen ? 16 : 24,
+                  16,
                 ),
-              ),
-              centerTitle: false,
-              titleSpacing: isSmallScreen ? 16 : 24,
-              flexibleSpace: FlexibleSpaceBar(
-                background: Container(
-                  padding: EdgeInsets.only(
-                    left: isSmallScreen ? 16 : 24,
-                    right: isSmallScreen ? 16 : 24,
-                    bottom: 16,
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      const SizedBox(height: 40), // Space for title
-                      Text(
-                        'BECE Questions • WASSCE Questions • Mock Tests',
-                        style: GoogleFonts.montserrat(
-                          fontSize: isSmallScreen ? 12 : 14,
-                          color: Colors.grey[600],
-                        ),
-                      ),
-                    ],
+                child: Text(
+                  'BECE Questions • WASSCE Questions • Mock Tests',
+                  style: GoogleFonts.montserrat(
+                    fontSize: isSmallScreen ? 12 : 14,
+                    color: Colors.grey[600],
                   ),
                 ),
               ),

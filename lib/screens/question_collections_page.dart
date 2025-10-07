@@ -3,7 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 import '../models/question_model.dart';
 import '../models/question_collection_model.dart';
 import '../services/question_service.dart';
-import '../services/storage_service.dart';
 import 'quiz_setup_page.dart';
 import 'question_detail_page.dart';
 
@@ -156,22 +155,6 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
     
     return Scaffold(
       backgroundColor: const Color(0xFFF8FAFE),
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Color(0xFF1A1E3F)),
-          onPressed: () => Navigator.pop(context),
-        ),
-        title: Text(
-          'Past Question Collections',
-          style: GoogleFonts.playfairDisplay(
-            color: const Color(0xFF1A1E3F),
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
       body: _isLoading
           ? const Center(child: CircularProgressIndicator(color: Color(0xFFD62828)))
           : CustomScrollView(
