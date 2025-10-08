@@ -12,6 +12,7 @@ class QuizTakerPage extends StatefulWidget {
   final List<Question>? preloadedQuestions;
   final int? questionCount;
   final String? triviaCategory;
+  final bool randomizeQuestions;
 
   const QuizTakerPage({
     super.key,
@@ -21,6 +22,7 @@ class QuizTakerPage extends StatefulWidget {
     this.preloadedQuestions,
     this.questionCount,
     this.triviaCategory,
+    this.randomizeQuestions = false,
   });
 
   @override
@@ -97,18 +99,27 @@ class _QuizTakerPageState extends State<QuizTakerPage>
           level: widget.level,
           triviaCategory: widget.triviaCategory,
         ).timeout(
-          const Duration(seconds: 10),
+          const Duration(seconds: 30),
           onTimeout: () {
-            print('⏰ QuizTaker: Timeout loading questions');
+            print('⏰ QuizTaker: Timeout loading questions after 30 seconds');
             return <Question>[];
           },
         );
         
         print('📊 QuizTaker: Loaded ${questions.length} questions');
+        
+        if (questions.isEmpty) {
+          print('⚠️ QuizTaker: NO QUESTIONS LOADED! Check:');
+          print('   - Firestore rules allow reading questions');
+          print('   - User is authenticated');
+          print('   - Questions exist for subject=${subjectEnum.name}, examType=${examTypeEnum.name}, triviaCategory=${widget.triviaCategory}');
+        }
       }
       
-      // Shuffle questions for randomization
-      questions.shuffle();
+      // Shuffle questions for randomization (only if enabled)
+      if (widget.randomizeQuestions) {
+        questions.shuffle();
+      }
       
       // Limit to specified question count
       // Special rule: Trivia is always limited to 20 questions

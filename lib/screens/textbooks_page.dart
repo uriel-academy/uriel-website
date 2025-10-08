@@ -123,47 +123,6 @@ class _TextbooksPageState extends State<TextbooksPage>
         opacity: _fadeAnimation,
         child: CustomScrollView(
           slivers: [
-            // App Bar
-            SliverAppBar(
-              expandedHeight: isMobile ? 100 : 120,
-              floating: true,
-              pinned: true,
-              elevation: 0,
-              backgroundColor: Colors.white,
-              foregroundColor: const Color(0xFF1A1E3F),
-              title: Text(
-                'Digital Textbooks',
-                style: GoogleFonts.playfairDisplay(
-                  fontSize: isMobile ? 18 : 20,
-                  fontWeight: FontWeight.bold,
-                  color: const Color(0xFF1A1E3F),
-                ),
-              ),
-              centerTitle: false,
-              titleSpacing: isMobile ? 16 : 24,
-              flexibleSpace: FlexibleSpaceBar(
-                background: Container(
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: [Colors.white, Color(0xFFF8FAFE)],
-                    ),
-                  ),
-                ),
-              ),
-              actions: [
-                IconButton(
-                  icon: Icon(
-                    isGridView ? Icons.view_list : Icons.grid_view,
-                    color: const Color(0xFF1A1E3F),
-                  ),
-                  onPressed: () => setState(() => isGridView = !isGridView),
-                ),
-                const SizedBox(width: 8),
-              ],
-            ),
-
             // Search and Filters
             SliverToBoxAdapter(
               child: Container(
@@ -227,9 +186,9 @@ class _TextbooksPageState extends State<TextbooksPage>
                       const SizedBox(height: 12),
                       Row(
                         children: [
-                          Icon(Icons.filter_list, 
+                          const Icon(Icons.filter_list, 
                               size: 16, 
-                              color: const Color(0xFFD62828)),
+                              color: Color(0xFFD62828)),
                           const SizedBox(width: 8),
                           Expanded(
                             child: Text(
@@ -266,8 +225,8 @@ class _TextbooksPageState extends State<TextbooksPage>
                   controller: _tabController,
                   tabs: const [
                     Tab(text: 'All Books'),
-                    Tab(text: 'Recently Added'),
-                    Tab(text: 'Popular'),
+                    Tab(text: 'Textbooks'),
+                    Tab(text: 'Storybooks'),
                   ],
                   labelColor: const Color(0xFFD62828),
                   unselectedLabelColor: Colors.grey[600],
@@ -637,10 +596,10 @@ class _TextbooksPageState extends State<TextbooksPage>
                             ),
                           ),
                         ),
-                        Icon(
+                        const Icon(
                           Icons.download,
                           size: 16,
-                          color: const Color(0xFFD62828),
+                          color: Color(0xFFD62828),
                         ),
                       ],
                     ),

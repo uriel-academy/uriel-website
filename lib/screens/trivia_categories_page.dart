@@ -20,98 +20,98 @@ class _TriviaCategoriesPageState extends State<TriviaCategoriesPage>
   String searchQuery = '';
   Map<String, int> categoryCounts = {};
 
-  // 13 trivia categories as imported
+  // 13 trivia categories with pastel colors (no gradients)
   final List<TriviaCategory> categories = [
     TriviaCategory(
       name: 'African History',
       description: 'Explore the rich and diverse history of the African continent',
       icon: Icons.history_edu,
-      color: const Color(0xFF795548),
-      gradient: const [Color(0xFF795548), Color(0xFF5D4037)],
+      color: const Color(0xFF6B7280), // Pastel Black (Cool Gray)
+      gradient: const [Color(0xFF6B7280), Color(0xFF6B7280)],
     ),
     TriviaCategory(
       name: 'Art and Culture',
       description: 'Discover the world of art, music, and cultural traditions',
       icon: Icons.palette,
-      color: const Color(0xFFE91E63),
-      gradient: const [Color(0xFFE91E63), Color(0xFFC2185B)],
+      color: const Color(0xFFFBBF77), // Pastel Peach
+      gradient: const [Color(0xFFFBBF77), Color(0xFFFBBF77)],
     ),
     TriviaCategory(
       name: 'Brain Teasers',
       description: 'Challenge your mind with puzzles and logical thinking',
       icon: Icons.psychology,
-      color: const Color(0xFF9C27B0),
-      gradient: const [Color(0xFF9C27B0), Color(0xFF7B1FA2)],
+      color: const Color(0xFFB4A7D6), // Pastel Purple
+      gradient: const [Color(0xFFB4A7D6), Color(0xFFB4A7D6)],
     ),
     TriviaCategory(
       name: 'English',
       description: 'Test your knowledge of English language and literature',
       icon: Icons.menu_book,
-      color: const Color(0xFF4CAF50),
-      gradient: const [Color(0xFF4CAF50), Color(0xFF388E3C)],
+      color: const Color(0xFFA8D8B9), // Pastel Mint Green
+      gradient: const [Color(0xFFA8D8B9), Color(0xFFA8D8B9)],
     ),
     TriviaCategory(
       name: 'General Knowledge',
       description: 'Test your knowledge across various topics and subjects',
       icon: Icons.lightbulb,
-      color: const Color(0xFF607D8B),
-      gradient: const [Color(0xFF607D8B), Color(0xFF455A64)],
+      color: const Color(0xFFFFE599), // Pastel Yellow
+      gradient: const [Color(0xFFFFE599), Color(0xFFFFE599)],
     ),
     TriviaCategory(
       name: 'Geography',
       description: 'Journey through continents, countries, and landmarks',
       icon: Icons.map,
-      color: const Color(0xFF009688),
-      gradient: const [Color(0xFF009688), Color(0xFF00796B)],
+      color: const Color(0xFF9CD4D4), // Pastel Teal
+      gradient: const [Color(0xFF9CD4D4), Color(0xFF9CD4D4)],
     ),
     TriviaCategory(
       name: 'Ghana History',
       description: 'Learn about Ghana\'s rich heritage and independence journey',
       icon: Icons.flag,
-      color: const Color(0xFFFF9800),
-      gradient: const [Color(0xFFFF9800), Color(0xFFF57C00)],
+      color: const Color(0xFFFFB84D), // Pastel Gold/Amber
+      gradient: const [Color(0xFFFFB84D), Color(0xFFFFB84D)],
     ),
     TriviaCategory(
       name: 'Mathematics',
       description: 'Sharpen your mathematical skills and problem-solving',
       icon: Icons.calculate,
-      color: const Color(0xFF2196F3),
-      gradient: const [Color(0xFF2196F3), Color(0xFF1976D2)],
+      color: const Color(0xFF9BB8E8), // Pastel Blue
+      gradient: const [Color(0xFF9BB8E8), Color(0xFF9BB8E8)],
     ),
     TriviaCategory(
       name: 'Pop Culture and Entertainment',
       description: 'Stay updated with movies, music, and entertainment',
       icon: Icons.movie,
-      color: const Color(0xFFFF5722),
-      gradient: const [Color(0xFFFF5722), Color(0xFFE64A19)],
+      color: const Color(0xFFFFB3BA), // Pastel Pink
+      gradient: const [Color(0xFFFFB3BA), Color(0xFFFFB3BA)],
     ),
     TriviaCategory(
       name: 'Science',
       description: 'Explore physics, chemistry, biology, and more',
       icon: Icons.science,
-      color: const Color(0xFF00BCD4),
-      gradient: const [Color(0xFF00BCD4), Color(0xFF0097A7)],
+      color: const Color(0xFFB5E5CF), // Pastel Sage Green
+      gradient: const [Color(0xFFB5E5CF), Color(0xFFB5E5CF)],
     ),
     TriviaCategory(
       name: 'Sports',
       description: 'Test your sports knowledge from football to athletics',
       icon: Icons.sports_soccer,
-      color: const Color(0xFF8BC34A),
-      gradient: const [Color(0xFF8BC34A), Color(0xFF689F38)],
+      color: const Color(0xFFD4F1A5), // Pastel Lime
+      gradient: const [Color(0xFFD4F1A5), Color(0xFFD4F1A5)],
     ),
     TriviaCategory(
       name: 'Technology',
       description: 'Stay ahead with tech, computers, and innovations',
       icon: Icons.computer,
-      color: const Color(0xFF9E9E9E),
-      gradient: const [Color(0xFF9E9E9E), Color(0xFF757575)],
+      color: const Color(0xFFC1C1C1), // Pastel Silver
+      gradient: const [Color(0xFFC1C1C1), Color(0xFFC1C1C1)],
     ),
     TriviaCategory(
       name: 'World History',
       description: 'Journey through civilizations and global historical events',
       icon: Icons.public,
-      color: const Color(0xFF3F51B5),
-      gradient: const [Color(0xFF3F51B5), Color(0xFF303F9F)],
+      color: const Color(0xFFBAC7E8), // Pastel Lavender Blue
+      gradient: const [Color(0xFFBAC7E8), Color(0xFFBAC7E8)],
     ),
   ];
 
@@ -180,6 +180,7 @@ class _TriviaCategoriesPageState extends State<TriviaCategoriesPage>
           level: 'JHS',
           triviaCategory: category.name,
           questionCount: 20, // Trivia always uses 20 questions
+          randomizeQuestions: true, // Always randomize trivia for variety
         ),
       ),
     );
@@ -192,23 +193,6 @@ class _TriviaCategoriesPageState extends State<TriviaCategoriesPage>
 
     return Scaffold(
       backgroundColor: const Color(0xFFF8FAFE),
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Color(0xFF1A1E3F)),
-          onPressed: () => Navigator.pop(context),
-        ),
-        title: Text(
-          'Trivia Categories',
-          style: GoogleFonts.playfairDisplay(
-            fontSize: isMobile ? 20 : 24,
-            fontWeight: FontWeight.bold,
-            color: const Color(0xFF1A1E3F),
-          ),
-        ),
-        centerTitle: false,
-      ),
       body: FadeTransition(
         opacity: _fadeAnimation,
         child: SingleChildScrollView(
@@ -446,7 +430,7 @@ class _TriviaCategoriesPageState extends State<TriviaCategoriesPage>
                         style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
                       ),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: category.color,
+                        backgroundColor: const Color(0xFF2ECC71), // Accent Green
                         foregroundColor: Colors.white,
                         disabledBackgroundColor: Colors.grey[300],
                         disabledForegroundColor: Colors.grey[600],

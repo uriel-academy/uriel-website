@@ -4,8 +4,6 @@ import 'package:share_plus/share_plus.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/quiz_model.dart';
-import 'quiz_setup_page.dart';
-import 'quiz_taker_page.dart';
 import 'home_page.dart';
 
 class QuizResultsPage extends StatefulWidget {
@@ -142,31 +140,8 @@ ${_getPerformanceMessage()}
   }
 
   void _retakeQuiz() {
-    // For trivia, go directly to quiz taker page
-    if (widget.quiz.examType.toLowerCase() == 'trivia' && widget.quiz.triviaCategory != null) {
-      Navigator.of(context).pushReplacement(
-        MaterialPageRoute(
-          builder: (context) => QuizTakerPage(
-            subject: 'trivia',
-            examType: 'trivia',
-            level: widget.quiz.level,
-            triviaCategory: widget.quiz.triviaCategory,
-            questionCount: 20,
-          ),
-        ),
-      );
-    } else {
-      // For other quiz types, navigate to quiz setup
-      Navigator.of(context).pushReplacement(
-        MaterialPageRoute(
-          builder: (context) => QuizSetupPage(
-            preselectedSubject: widget.quiz.subject,
-            preselectedExamType: widget.quiz.examType,
-            preselectedLevel: widget.quiz.level,
-          ),
-        ),
-      );
-    }
+    // After quiz completion, return to home page instead of quiz setup
+    _backToHome();
   }
 
   void _backToHome() {

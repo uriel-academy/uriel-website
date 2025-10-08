@@ -686,7 +686,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                 children: [
                   _buildNavItem(0, 'Dashboard'),
                   _buildNavItem(1, 'Questions'),
-                  _buildNavItem(2, 'Textbooks'),
+                  _buildNavItem(2, 'Books'),
                   _buildNavItem(3, 'Mock Exams'),
                   _buildNavItem(4, 'Trivia'),
                   

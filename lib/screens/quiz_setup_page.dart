@@ -317,7 +317,7 @@ class _QuizSetupPageState extends State<QuizSetupPage> {
                         ),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: availableQuestions > 0 
-                              ? const Color(0xFFD62828) 
+                              ? const Color(0xFF2ECC71) // Accent Green
                               : Colors.grey[400],
                           foregroundColor: Colors.white,
                           padding: EdgeInsets.symmetric(

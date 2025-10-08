@@ -272,7 +272,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
                 style: GoogleFonts.playfairDisplay(
                   fontSize: isSmallScreen ? 18 : 20,
                   fontWeight: FontWeight.w700,
-                  color: const Color(0xFF1A1E3F),
+                  color: const Color(0xFF2ECC71),
                 ),
               ),
               centerTitle: false,
@@ -447,7 +447,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
                     ),
                   ),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFFD62828),
+                    backgroundColor: const Color(0xFF2ECC71) // Pastel Navy Blue
                     padding: EdgeInsets.symmetric(
                       vertical: isSmallScreen ? 12 : 16,
                     ),
@@ -766,7 +766,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
                   style: GoogleFonts.montserrat(
                     fontSize: isSmallScreen ? 16 : 18,
                     fontWeight: FontWeight.w700,
-                    color: const Color(0xFF1A1E3F),
+                    color: const Color(0xFF2ECC71),
                   ),
                 ),
                 if (_filteredQuestions.isNotEmpty)
@@ -866,7 +866,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
               style: GoogleFonts.montserrat(
                 fontSize: 20,
                 fontWeight: FontWeight.w700,
-                color: const Color(0xFF1A1E3F),
+                color: const Color(0xFF2ECC71),
               ),
             ),
             const SizedBox(height: 8),
@@ -883,7 +883,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
               icon: const Icon(Icons.refresh, color: Colors.white),
               label: const Text('Reset Filters'),
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFFD62828),
+                backgroundColor: const Color(0xFF2ECC71) // Pastel Navy Blue
                 foregroundColor: Colors.white,
               ),
             ),
@@ -1001,7 +1001,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
                     style: GoogleFonts.montserrat(
                       fontSize: 14,
                       fontWeight: FontWeight.w600,
-                      color: const Color(0xFF1A1E3F),
+                      color: const Color(0xFF2ECC71),
                     ),
                   ),
                   Text(
@@ -1034,7 +1034,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
               : question.questionText,
           style: GoogleFonts.montserrat(
             fontSize: 14,
-            color: const Color(0xFF1A1E3F),
+            color: const Color(0xFF2ECC71),
             height: 1.4,
           ),
           maxLines: 3,
@@ -1067,9 +1067,11 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
                   style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
                 ),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFFD62828),
+                  backgroundColor: const Color(0xFF2ECC71), // Pastel Navy Blue
                   foregroundColor: Colors.white,
                   padding: const EdgeInsets.symmetric(vertical: 12),
+
+                  side: const BorderSide(color: Color(0xFF4CAF50), width: 1.5), // Pastel Green outline
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8),
                   ),
@@ -1154,7 +1156,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
                 style: GoogleFonts.montserrat(
                   fontSize: 16,
                   fontWeight: FontWeight.w600,
-                  color: const Color(0xFF1A1E3F),
+                  color: const Color(0xFF2ECC71),
                 ),
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
@@ -1188,7 +1190,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
               icon: const Icon(Icons.play_arrow, size: 16),
               label: const Text('Start Quiz'),
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFFD62828),
+                backgroundColor: const Color(0xFF2ECC71) // Pastel Navy Blue
                 foregroundColor: Colors.white,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8),
@@ -1281,7 +1283,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
                   style: GoogleFonts.montserrat(
                     fontSize: 14,
                     fontWeight: FontWeight.w600,
-                    color: const Color(0xFF1A1E3F),
+                    color: const Color(0xFF2ECC71),
                   ),
                   maxLines: 3,
                   overflow: TextOverflow.ellipsis,
@@ -1309,7 +1311,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
                     child: ElevatedButton(
                       onPressed: () => _viewQuestion(question),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFFD62828),
+                        backgroundColor: const Color(0xFF2ECC71) // Pastel Navy Blue
                         foregroundColor: Colors.white,
                         padding: const EdgeInsets.symmetric(vertical: 8),
                         shape: RoundedRectangleBorder(

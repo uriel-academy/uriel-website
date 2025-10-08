@@ -4,7 +4,7 @@ import '../models/question_model.dart';
 import '../models/question_collection_model.dart';
 import '../services/question_service.dart';
 import '../services/storage_service.dart';
-import 'quiz_setup_page.dart';
+import 'quiz_taker_page.dart';
 import 'question_detail_page.dart';
 
 /// Page that displays past questions grouped as collections (e.g., "BECE RME 1999 MCQ")
@@ -24,6 +24,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
   List<QuestionCollection> _collections = [];
   List<QuestionCollection> _filteredCollections = [];
   bool _isLoading = false;
+  bool _randomizeQuestions = false;
   
   // Filters
   String _selectedExamType = 'All Types';
@@ -48,15 +49,21 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
     try {
       print('🚀 Loading question collections...');
       
-      // Load all questions
+      // Load all questions with increased timeout
       final questions = await _questionService.getQuestions().timeout(
-        const Duration(seconds: 5),
-        onTimeout: () => <Question>[],
+        const Duration(seconds: 30),
+        onTimeout: () {
+          print('⏰ Timeout loading general questions');
+          return <Question>[];
+        },
       );
       
       final rmeQuestions = await _questionService.getRMEQuestions().timeout(
-        const Duration(seconds: 5),
-        onTimeout: () => <Question>[],
+        const Duration(seconds: 30),
+        onTimeout: () {
+          print('⏰ Timeout loading RME questions');
+          return <Question>[];
+        },
       );
       
       // Merge questions
@@ -68,6 +75,10 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
       }
       
       print('📊 Loaded ${mergedQuestions.length} total questions');
+      
+      if (mergedQuestions.isEmpty) {
+        print('⚠️ No questions loaded! Check Firebase connection and data.');
+      }
       
       // Group into collections
       final collections = QuestionCollection.groupQuestions(mergedQuestions);
@@ -156,22 +167,6 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
     
     return Scaffold(
       backgroundColor: const Color(0xFFF8FAFE),
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Color(0xFF1A1E3F)),
-          onPressed: () => Navigator.pop(context),
-        ),
-        title: Text(
-          'Past Question Collections',
-          style: GoogleFonts.playfairDisplay(
-            color: const Color(0xFF1A1E3F),
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
       body: _isLoading
           ? const Center(child: CircularProgressIndicator(color: Color(0xFFD62828)))
           : CustomScrollView(
@@ -389,17 +384,32 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
         horizontal: isSmallScreen ? 16 : 24,
         vertical: 8,
       ),
-      child: Column(
-        children: _filteredCollections.map((collection) {
-          return _buildCollectionCard(collection, isSmallScreen);
-        }).toList(),
-      ),
+      child: isSmallScreen
+          ? Column(
+              children: _filteredCollections.map((collection) {
+                return _buildCollectionCard(collection, isSmallScreen);
+              }).toList(),
+            )
+          : GridView.builder(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2, // 2 cards per line
+                crossAxisSpacing: 16,
+                mainAxisSpacing: 16,
+                childAspectRatio: 1.8, // Adjust height ratio
+              ),
+              itemCount: _filteredCollections.length,
+              itemBuilder: (context, index) {
+                return _buildCollectionCard(_filteredCollections[index], isSmallScreen);
+              },
+            ),
     );
   }
 
   Widget _buildCollectionCard(QuestionCollection collection, bool isSmallScreen) {
     return Container(
-      margin: const EdgeInsets.only(bottom: 16),
+      margin: isSmallScreen ? const EdgeInsets.only(bottom: 16) : EdgeInsets.zero,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
@@ -476,38 +486,50 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
               ],
             ),
             const SizedBox(height: 16),
-            if (isSmallScreen)
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  _buildActionButton(
-                    icon: Icons.visibility,
-                    label: 'View Questions',
-                    onPressed: () => _viewCollection(collection),
-                    isPrimary: false,
+            // Randomize Toggle and Start Quiz Button on same line
+            Row(
+              children: [
+                // Randomize Questions Toggle (Left side)
+                Expanded(
+                  flex: 2,
+                  child: Row(
+                    children: [
+                      Switch(
+                        value: _randomizeQuestions,
+                        onChanged: (value) => setState(() => _randomizeQuestions = value),
+                        activeColor: const Color(0xFFD62828),
+                      ),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Randomize',
+                              style: GoogleFonts.montserrat(
+                                fontWeight: FontWeight.w500,
+                                fontSize: 13,
+                                color: const Color(0xFF1A1E3F),
+                              ),
+                            ),
+                            Text(
+                              'Random order',
+                              style: GoogleFonts.montserrat(
+                                fontSize: 11,
+                                color: Colors.grey[600],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
-                  const SizedBox(height: 8),
-                  _buildActionButton(
-                    icon: Icons.play_arrow,
-                    label: 'Start Quiz',
-                    onPressed: () => _startQuiz(collection),
-                    isPrimary: true,
-                  ),
-                ],
-              )
-            else
-              Row(
-                children: [
-                  Expanded(
-                    child: _buildActionButton(
-                      icon: Icons.visibility,
-                      label: 'View Questions',
-                      onPressed: () => _viewCollection(collection),
-                      isPrimary: false,
-                    ),
-                  ),
-                  const SizedBox(width: 12),
-                  Expanded(
+                ),
+                const SizedBox(width: 12),
+                // Start Quiz Button (Right side) - 30% smaller
+                Flexible(
+                  child: FractionallySizedBox(
+                    widthFactor: 0.7, // 30% reduction
                     child: _buildActionButton(
                       icon: Icons.play_arrow,
                       label: 'Start Quiz',
@@ -515,8 +537,9 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
                       isPrimary: true,
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
@@ -534,41 +557,29 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
       icon: Icon(icon, size: 20),
       label: Text(label),
       style: ElevatedButton.styleFrom(
-        backgroundColor: isPrimary ? const Color(0xFFD62828) : const Color(0xFFF8FAFE),
-        foregroundColor: isPrimary ? Colors.white : const Color(0xFF1A1E3F),
+        backgroundColor: isPrimary ? const Color(0xFF2ECC71) : const Color(0xFF1A1E3F), // Uriel Blue
+        foregroundColor: Colors.white, // White text for both buttons
         padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 16),
         elevation: 0,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
-          side: isPrimary 
-              ? BorderSide.none 
-              : BorderSide(color: const Color(0xFF1A1E3F).withOpacity(0.1)),
         ),
       ),
     );
   }
 
-  void _viewCollection(QuestionCollection collection) {
-    // Navigate to a page showing all questions in this collection
-    if (collection.questions.isNotEmpty) {
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => QuestionDetailPage(question: collection.questions.first),
-        ),
-      );
-    }
-  }
-
   void _startQuiz(QuestionCollection collection) {
+    // Start quiz immediately, bypassing quiz setup page
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => QuizSetupPage(
-          preselectedSubject: _formatSubjectName(collection.subject),
-          preselectedExamType: collection.examType.name.toUpperCase(),
-          preselectedLevel: 'JHS 3', // Default to JHS 3 for BECE
-          preloadedQuestions: collection.questions,
+        builder: (context) => QuizTakerPage(
+          subject: _formatSubjectName(collection.subject),
+          examType: collection.examType.name.toUpperCase(),
+          level: 'JHS 3', // Default to JHS 3 for BECE
+          questionCount: collection.questions.length,
+          randomizeQuestions: _randomizeQuestions, // Use toggle state
+          preloadedQuestions: collection.questions, // Pass questions directly
         ),
       ),
     );

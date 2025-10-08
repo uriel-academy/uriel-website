@@ -126,48 +126,6 @@ class _MockExamsPageState extends State<MockExamsPage>
         opacity: _fadeAnimation,
         child: CustomScrollView(
           slivers: [
-            // App Bar
-            SliverAppBar(
-              expandedHeight: isMobile ? 100 : 120,
-              floating: true,
-              pinned: true,
-              elevation: 0,
-              backgroundColor: Colors.white,
-              foregroundColor: const Color(0xFF1A1E3F),
-              title: Text(
-                'Mock Examinations',
-                style: GoogleFonts.playfairDisplay(
-                  fontSize: isMobile ? 18 : 20,
-                  fontWeight: FontWeight.bold,
-                  color: const Color(0xFF1A1E3F),
-                ),
-              ),
-              centerTitle: false,
-              titleSpacing: isMobile ? 16 : 24,
-              flexibleSpace: FlexibleSpaceBar(
-                background: Container(
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: [Colors.white, Color(0xFFF8FAFE)],
-                    ),
-                  ),
-                ),
-              ),
-              actions: [
-                IconButton(
-                  icon: const Icon(Icons.history),
-                  onPressed: () => _showExamHistory(),
-                ),
-                IconButton(
-                  icon: const Icon(Icons.analytics),
-                  onPressed: () => _showPerformanceAnalytics(),
-                ),
-                const SizedBox(width: 8),
-              ],
-            ),
-
             // Search and Filters
             SliverToBoxAdapter(
               child: Container(
@@ -231,9 +189,9 @@ class _MockExamsPageState extends State<MockExamsPage>
                       const SizedBox(height: 12),
                       Row(
                         children: [
-                          Icon(Icons.filter_list, 
+                          const Icon(Icons.filter_list, 
                               size: 16, 
-                              color: const Color(0xFFD62828)),
+                              color: Color(0xFFD62828)),
                           const SizedBox(width: 8),
                           Expanded(
                             child: Text(
@@ -754,7 +712,7 @@ class _MockExamsPageState extends State<MockExamsPage>
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                Icon(Icons.check_circle, size: 14, color: Colors.green),
+                                const Icon(Icons.check_circle, size: 14, color: Colors.green),
                                 const SizedBox(width: 4),
                                 Text(
                                   '${exam.lastScore}%',
@@ -794,7 +752,7 @@ class _MockExamsPageState extends State<MockExamsPage>
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Icon(Icons.check_circle, size: 16, color: Colors.green),
+                            const Icon(Icons.check_circle, size: 16, color: Colors.green),
                             const SizedBox(width: 6),
                             Text(
                               'Completed - ${exam.lastScore}%',
@@ -821,11 +779,11 @@ class _MockExamsPageState extends State<MockExamsPage>
                     Expanded(
                       child: OutlinedButton.icon(
                         onPressed: () => _viewResults(exam),
-                        icon: Icon(Icons.analytics, size: 16),
-                        label: Text('View Results'),
+                        icon: const Icon(Icons.analytics, size: 16),
+                        label: const Text('View Results'),
                         style: OutlinedButton.styleFrom(
                           foregroundColor: const Color(0xFF1A1E3F),
-                          side: BorderSide(color: const Color(0xFF1A1E3F)),
+                          side: const BorderSide(color: Color(0xFF1A1E3F)),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8),
                           ),
@@ -1083,26 +1041,6 @@ class _MockExamsPageState extends State<MockExamsPage>
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
         content: Text('Custom test creator coming soon!'),
-        backgroundColor: Color(0xFF1A1E3F),
-      ),
-    );
-  }
-
-  void _showExamHistory() {
-    // TODO: Show exam history
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Exam history coming soon!'),
-        backgroundColor: Color(0xFF1A1E3F),
-      ),
-    );
-  }
-
-  void _showPerformanceAnalytics() {
-    // TODO: Show performance analytics
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Performance analytics coming soon!'),
         backgroundColor: Color(0xFF1A1E3F),
       ),
     );

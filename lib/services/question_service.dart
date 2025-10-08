@@ -199,7 +199,9 @@ class QuestionService {
           // If triviaCategory filter is specified, check if this question matches
           if (triviaCategory != null && triviaCategory.isNotEmpty) {
             final String? qCategory = data['triviaCategory'] as String?;
-            if (qCategory != triviaCategory) {
+            // Case-insensitive comparison
+            if (qCategory == null || qCategory.toLowerCase().trim() != triviaCategory.toLowerCase().trim()) {
+              print('   ⏭️ Skipping question with category "$qCategory" (looking for "$triviaCategory")');
               continue; // Skip questions that don't match the category
             }
           }
