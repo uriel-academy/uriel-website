@@ -163,38 +163,51 @@ class _PricingPageState extends State<PricingPage> {
         horizontal: isMobile ? 16 : 60,
         vertical: 40,
       ),
-      child: isMobile
-          ? Column(
-              children: [
-                _buildPricingCard('Free', 'Get Started', 0, 0, [], false, false, isMobile),
-                const SizedBox(height: 20),
-                _buildPricingCard('Standard', 'Everything You Need to Pass BECE', 9.99, 99, _standardFeatures(), false, true, isMobile),
-                const SizedBox(height: 20),
-                _buildPricingCard('Premium', 'Learn 2x Faster with AI', 14.99, 149, _premiumFeatures(), true, false, isMobile),
-                const SizedBox(height: 20),
-                _buildSchoolCard(isMobile),
-              ],
-            )
-          : Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Expanded(
-                  child: _buildPricingCard('Free', 'Get Started', 0, 0, [], false, false, isMobile),
+      child: Column(
+        children: [
+          // First row: 3 cards
+          isMobile
+              ? Column(
+                  children: [
+                    _buildPricingCard('Free', 'Get Started', 0, 0, [], false, false, isMobile),
+                    const SizedBox(height: 20),
+                    _buildPricingCard('Premium', 'Learn 2x Faster with AI', 14.99, 149, _premiumFeatures(), true, false, isMobile),
+                    const SizedBox(height: 20),
+                    _buildPricingCard('Standard', 'Everything You Need to Pass BECE', 9.99, 99, _standardFeatures(), false, true, isMobile),
+                    const SizedBox(height: 20),
+                    _buildSchoolCard(isMobile),
+                  ],
+                )
+              : Column(
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Expanded(
+                          child: _buildPricingCard('Free', 'Get Started', 0, 0, [], false, false, isMobile),
+                        ),
+                        const SizedBox(width: 20),
+                        Expanded(
+                          child: _buildPricingCard('Premium', 'Learn 2x Faster with AI', 14.99, 149, _premiumFeatures(), true, false, isMobile),
+                        ),
+                        const SizedBox(width: 20),
+                        Expanded(
+                          child: _buildPricingCard('Standard', 'Everything You Need to Pass BECE', 9.99, 99, _standardFeatures(), false, true, isMobile),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 40),
+                    // Second row: School card centered
+                    Center(
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width / 3.5,
+                        child: _buildSchoolCard(isMobile),
+                      ),
+                    ),
+                  ],
                 ),
-                const SizedBox(width: 20),
-                Expanded(
-                  child: _buildPricingCard('Standard', 'Everything You Need to Pass BECE', 9.99, 99, _standardFeatures(), false, true, isMobile),
-                ),
-                const SizedBox(width: 20),
-                Expanded(
-                  child: _buildPricingCard('Premium', 'Learn 2x Faster with AI', 14.99, 149, _premiumFeatures(), true, false, isMobile),
-                ),
-                const SizedBox(width: 20),
-                Expanded(
-                  child: _buildSchoolCard(isMobile),
-                ),
-              ],
-            ),
+        ],
+      ),
     );
   }
 
@@ -240,52 +253,20 @@ class _PricingPageState extends State<PricingPage> {
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
-          color: isPremium
-              ? const Color(0xFFFFD700)
-              : isBestValue
-                  ? urielNavy
-                  : urielNavy.withOpacity(0.2),
-          width: isPremium || isBestValue ? 3 : 1,
+          color: Colors.grey.withOpacity(0.3),
+          width: 1,
         ),
         boxShadow: [
           BoxShadow(
-            color: urielNavy.withOpacity(0.1),
+            color: Colors.grey.withOpacity(0.1),
             blurRadius: 20,
             offset: const Offset(0, 10),
           ),
         ],
       ),
-      transform: isPremium ? Matrix4.translationValues(0, -10, 0) : null,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          if (isPremium || isBestValue)
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.symmetric(vertical: 8),
-              decoration: BoxDecoration(
-                color: isPremium ? const Color(0xFFFFD700) : urielNavy,
-                borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(16),
-                  topRight: Radius.circular(16),
-                ),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  if (isPremium) const Text('⭐', style: TextStyle(fontSize: 16)),
-                  const SizedBox(width: 8),
-                  Text(
-                    isPremium ? 'Most Popular' : 'Best Value',
-                    style: GoogleFonts.montserrat(
-                      color: isPremium ? urielNavy : Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 14,
-                    ),
-                  ),
-                ],
-              ),
-            ),
           Padding(
             padding: const EdgeInsets.all(24),
             child: Column(
@@ -366,24 +347,13 @@ class _PricingPageState extends State<PricingPage> {
                   child: ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: tier == 'Free'
-                          ? Colors.transparent
-                          : isPremium
-                              ? const Color(0xFFFFD700)
-                              : urielNavy,
-                      foregroundColor: tier == 'Free'
-                          ? urielNavy
-                          : isPremium
-                              ? urielNavy
-                              : Colors.white,
+                      backgroundColor: Colors.black,
+                      foregroundColor: Colors.white,
                       padding: const EdgeInsets.symmetric(vertical: 16),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
-                        side: tier == 'Free'
-                            ? BorderSide(color: urielNavy)
-                            : BorderSide.none,
                       ),
-                      elevation: tier == 'Free' ? 0 : 2,
+                      elevation: 2,
                     ),
                     child: Text(
                       tier == 'Free'
@@ -412,12 +382,12 @@ class _PricingPageState extends State<PricingPage> {
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
-          color: const Color(0xFF9B59B6),
-          width: 3,
+          color: Colors.grey.withOpacity(0.3),
+          width: 1,
         ),
         boxShadow: [
           BoxShadow(
-            color: urielNavy.withOpacity(0.1),
+            color: Colors.grey.withOpacity(0.1),
             blurRadius: 20,
             offset: const Offset(0, 10),
           ),
@@ -426,26 +396,6 @@ class _PricingPageState extends State<PricingPage> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(vertical: 8),
-            decoration: const BoxDecoration(
-              color: Color(0xFF9B59B6),
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(16),
-                topRight: Radius.circular(16),
-              ),
-            ),
-            child: Text(
-              'For Institutions',
-              textAlign: TextAlign.center,
-              style: GoogleFonts.montserrat(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 14,
-              ),
-            ),
-          ),
           Padding(
             padding: const EdgeInsets.all(24),
             child: Column(
@@ -476,13 +426,6 @@ class _PricingPageState extends State<PricingPage> {
                     color: urielNavy,
                   ),
                 ),
-                Text(
-                  'From GHS 75/student/year',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 14,
-                    color: urielNavy.withOpacity(0.6),
-                  ),
-                ),
                 const SizedBox(height: 24),
                 _buildFeatureItem('Teacher dashboard - Track every student'),
                 _buildFeatureItem('Class analytics - Identify weak topics'),
@@ -490,14 +433,13 @@ class _PricingPageState extends State<PricingPage> {
                 _buildFeatureItem('School-wide analytics & reporting'),
                 _buildFeatureItem('Custom branding options'),
                 _buildFeatureItem('Dedicated account manager'),
-                _buildFeatureItem('Teacher training & support'),
                 const SizedBox(height: 24),
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF9B59B6),
+                      backgroundColor: Colors.black,
                       foregroundColor: Colors.white,
                       padding: const EdgeInsets.symmetric(vertical: 16),
                       shape: RoundedRectangleBorder(
@@ -657,7 +599,7 @@ class _PricingPageState extends State<PricingPage> {
                 ),
               ],
               rows: [
-                _buildComparisonRow('Price', 'GHS 0', 'GHS 9.99/mo', 'GHS 14.99/mo', 'From GHS 75/yr'),
+                _buildComparisonRow('Price', 'GHS 0', 'GHS 9.99/mo', 'GHS 14.99/mo', 'Custom'),
                 _buildComparisonRow('Trivia & gamification', '✅', '✅', '✅', '✅'),
                 _buildComparisonRow('Classic literature', '✅', '✅', '✅', '✅'),
                 _buildComparisonRow('Past questions', '5/subject/month', 'Unlimited', 'Unlimited', 'Unlimited'),
@@ -666,7 +608,7 @@ class _PricingPageState extends State<PricingPage> {
                 _buildComparisonRow('Notes Tab', 'View only', 'View only', '✅ Upload', '✅ Upload'),
                 _buildComparisonRow('Mock exams', '❌', '1/subject', 'Unlimited', 'Unlimited'),
                 _buildComparisonRow('Teacher dashboard', '❌', '❌', '❌', '✅'),
-                _buildComparisonRow('Support', 'Community', 'Email (48hr)', 'WhatsApp (4hr)', 'Dedicated'),
+                _buildComparisonRow('Support', 'Community', 'Email (48hr)', 'Premium', 'Dedicated'),
               ],
             ),
           ),
