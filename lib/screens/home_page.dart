@@ -448,15 +448,15 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                                       _buildDashboard(),
                                       _buildQuestionsPage(),
                                       _buildTextbooksPage(),
-                                      _buildFeedbackPage(),
                                       _buildTriviaPage(),
                                       LeaderboardPage(
                                         onStartQuiz: () {
                                           setState(() {
-                                            _selectedIndex = 4; // Switch to Trivia tab
+                                            _selectedIndex = 3; // Switch to Trivia tab
                                           });
                                         },
                                       ),
+                                      _buildFeedbackPage(),
                                     ],
                                   ),
                           ),
@@ -484,15 +484,15 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                                             _buildDashboard(),
                                             _buildQuestionsPage(),
                                             _buildTextbooksPage(),
-                                            _buildFeedbackPage(),
                                             _buildTriviaPage(),
                                             LeaderboardPage(
                                               onStartQuiz: () {
                                                 setState(() {
-                                                  _selectedIndex = 4; // Switch to Trivia tab
+                                                  _selectedIndex = 3; // Switch to Trivia tab
                                                 });
                                               },
                                             ),
+                                            _buildFeedbackPage(),
                                           ],
                                     ),
                             ),
@@ -747,9 +747,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   _buildNavItem(0, 'Dashboard'),
                   _buildNavItem(1, 'Questions'),
                   _buildNavItem(2, 'Books'),
-                  _buildNavItem(3, 'Feedback'),
-                  _buildNavItem(4, 'Trivia'),
-                  _buildNavItem(5, 'Leaderboard'),
+                  _buildNavItem(3, 'Trivia'),
+                  _buildNavItem(4, 'Leaderboard'),
+                  _buildNavItem(5, 'Feedback'),
                   
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
@@ -823,9 +823,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       {'label': 'Dashboard', 'icon': Icons.dashboard_outlined},
       {'label': 'Questions', 'icon': Icons.quiz_outlined},
       {'label': 'Books', 'icon': Icons.menu_book_outlined},
-      {'label': 'Feedback', 'icon': Icons.feedback_outlined},
       {'label': 'Trivia', 'icon': Icons.extension_outlined},
       {'label': 'Leaderboard', 'icon': Icons.emoji_events_outlined},
+      {'label': 'Feedback', 'icon': Icons.feedback_outlined},
     ];
     
     return Container(

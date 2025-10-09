@@ -231,49 +231,11 @@ class _FeedbackPageState extends State<FeedbackPage> {
   Widget _buildEmbeddedContent(bool isMobile) {
     return CustomScrollView(
       slivers: [
-        // Header
-        SliverToBoxAdapter(
-          child: Container(
-            padding: EdgeInsets.fromLTRB(
-              isMobile ? 16 : 32,
-              isMobile ? 24 : 40,
-              isMobile ? 16 : 32,
-              isMobile ? 16 : 24,
-            ),
-            child: Column(
-              children: [
-                Text(
-                  'Hi there, ${_getUsername()}! 👋',
-                  style: GoogleFonts.playfairDisplay(
-                    fontSize: isMobile ? 28 : 36,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF1A1E3F),
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-                const SizedBox(height: 16),
-                Container(
-                  constraints: const BoxConstraints(maxWidth: 700),
-                  child: Text(
-                    'Thanks for visiting our site! We\'re hard at work building something great, and your feedback is invaluable to us.\n\nWe\'d love to hear from you:\n\n• Did you run into any issues or bugs?\n• What\'s working well?\n• Is there a feature you\'re hoping to see?\n• Any other thoughts or suggestions?\n\nYour input helps us create a better experience for everyone. Don\'t hold back — we\'re all ears!',
-                    style: GoogleFonts.montserrat(
-                      fontSize: 14,
-                      color: Colors.grey[600],
-                      height: 1.6,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-
-        // Feedback Form
+        // Feedback Form with integrated message
         SliverPadding(
           padding: EdgeInsets.fromLTRB(
             isMobile ? 16 : 32,
-            0,
+            isMobile ? 24 : 40,
             isMobile ? 16 : 32,
             isMobile ? 24 : 40,
           ),
@@ -308,6 +270,55 @@ class _FeedbackPageState extends State<FeedbackPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // Letter-style greeting
+            Text(
+              'Hello, ${_getUsername()}',
+              style: GoogleFonts.playfairDisplay(
+                fontSize: isMobile ? 22 : 26,
+                fontWeight: FontWeight.bold,
+                color: const Color(0xFF1A1E3F),
+              ),
+            ),
+            const SizedBox(height: 20),
+            
+            // Message body - left aligned
+            Text(
+              'Thanks for visiting our site! We\'re hard at work building something great for you, and your feedback is invaluable to us.',
+              style: GoogleFonts.montserrat(
+                fontSize: 15,
+                color: Colors.grey[700],
+                height: 1.6,
+              ),
+            ),
+            const SizedBox(height: 16),
+            
+            Text(
+              'We\'d love to hear from you. Did you run into any issues or bugs? What\'s working well? Is there a feature you\'re hoping to see? Any other thoughts or suggestions?',
+              style: GoogleFonts.montserrat(
+                fontSize: 15,
+                color: Colors.grey[700],
+                height: 1.6,
+              ),
+            ),
+            const SizedBox(height: 16),
+            
+            Text(
+              'Your input will help us create a better experience for everyone. Don\'t hold back, we\'re all ears!',
+              style: GoogleFonts.montserrat(
+                fontSize: 15,
+                color: Colors.grey[700],
+                height: 1.6,
+              ),
+            ),
+            
+            const SizedBox(height: 32),
+            
+            // Divider
+            Divider(color: Colors.grey[300], thickness: 1),
+            
+            const SizedBox(height: 32),
+            
+            // Form section title
             Text(
               'Share your feedback',
               style: GoogleFonts.playfairDisplay(
