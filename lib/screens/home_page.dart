@@ -756,11 +756,12 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                     child: Divider(),
                   ),
                   
-                  _buildNavItem(-1, 'About Us'),
-                  _buildNavItem(-2, 'Contact'),
-                  _buildNavItem(-3, 'Privacy Policy'),
-                  _buildNavItem(-4, 'Terms of Service'),
-                  _buildNavItem(-5, 'FAQ'),
+                  _buildNavItem(-1, 'Pricing'),
+                  _buildNavItem(-2, 'About Us'),
+                  _buildNavItem(-3, 'Contact'),
+                  _buildNavItem(-4, 'Privacy Policy'),
+                  _buildNavItem(-5, 'Terms of Service'),
+                  _buildNavItem(-6, 'FAQ'),
                 ],
               ),
             ),
@@ -823,6 +824,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   void _navigateToFooterPage(String pageName) {
     String route;
     switch (pageName) {
+      case 'Pricing':
+        route = '/pricing';
+        break;
       case 'About Us':
         route = '/about';
         break;
