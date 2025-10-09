@@ -138,10 +138,14 @@ class _PricingPageState extends State<PricingPage> {
   }
 
   Widget _buildToggleButton(String text, bool isSelected, VoidCallback onTap) {
+    final isMobile = MediaQuery.of(context).size.width < 768;
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+        padding: EdgeInsets.symmetric(
+          horizontal: isMobile ? 16 : 24,
+          vertical: isMobile ? 10 : 12,
+        ),
         decoration: BoxDecoration(
           color: isSelected ? urielNavy : Colors.transparent,
           borderRadius: BorderRadius.circular(20),
@@ -151,6 +155,7 @@ class _PricingPageState extends State<PricingPage> {
           style: GoogleFonts.montserrat(
             color: isSelected ? Colors.white : urielNavy,
             fontWeight: FontWeight.w600,
+            fontSize: isMobile ? 13 : 14,
           ),
         ),
       ),
@@ -169,7 +174,7 @@ class _PricingPageState extends State<PricingPage> {
           isMobile
               ? Column(
                   children: [
-                    _buildPricingCard('Free', 'Get Started', 0, 0, [], false, false, isMobile),
+                    _buildPricingCard('Free', 'Get Started', 0, 0, _freeFeatures(), false, false, isMobile),
                     const SizedBox(height: 20),
                     _buildPricingCard('Premium', 'Learn 2x Faster with AI', 14.99, 149, _premiumFeatures(), true, false, isMobile),
                     const SizedBox(height: 20),
@@ -184,7 +189,7 @@ class _PricingPageState extends State<PricingPage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Expanded(
-                          child: _buildPricingCard('Free', 'Get Started', 0, 0, [], false, false, isMobile),
+                          child: _buildPricingCard('Free', 'Get Started', 0, 0, _freeFeatures(), false, false, isMobile),
                         ),
                         const SizedBox(width: 20),
                         Expanded(
@@ -197,10 +202,10 @@ class _PricingPageState extends State<PricingPage> {
                       ],
                     ),
                     const SizedBox(height: 40),
-                    // Second row: School card centered
+                    // Second row: School card centered (50% wider)
                     Center(
                       child: SizedBox(
-                        width: MediaQuery.of(context).size.width / 3.5,
+                        width: MediaQuery.of(context).size.width / 2.3,
                         child: _buildSchoolCard(isMobile),
                       ),
                     ),
@@ -211,13 +216,23 @@ class _PricingPageState extends State<PricingPage> {
     );
   }
 
+  List<String> _freeFeatures() {
+    return [
+      'Trivia & gamification - Fun learning challenges',
+      'Classic literature - Access to reading materials',
+      '5 past questions per subject per month',
+      '1 textbook chapter per subject',
+      'Notes Tab - View only access',
+      'Community support',
+    ];
+  }
+
   List<String> _standardFeatures() {
     return [
       'All textbooks - Every subject, JHS 1-3, NACCA-aligned',
       'All past questions - 1990-2024, every BECE subject',
       'Student dashboard - Track your progress in real-time',
       'Weekly parent reports - Automated SMS/WhatsApp updates',
-      'Offline downloads - Study without data (5 chapters)',
       'Priority support - Email response within 48 hours',
     ];
   }
@@ -253,8 +268,8 @@ class _PricingPageState extends State<PricingPage> {
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
-          color: Colors.grey.withOpacity(0.3),
-          width: 1,
+          color: isPremium ? urielRed : Colors.grey.withOpacity(0.3),
+          width: isPremium ? 2 : 1,
         ),
         boxShadow: [
           BoxShadow(
@@ -267,35 +282,56 @@ class _PricingPageState extends State<PricingPage> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          if (isPremium)
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: urielRed,
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(15),
+                  topRight: Radius.circular(15),
+                ),
+              ),
+              child: Text(
+                'Most Popular',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.montserrat(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 14,
+                ),
+              ),
+            ),
           Padding(
-            padding: const EdgeInsets.all(24),
+            padding: EdgeInsets.all(isMobile ? 20 : 24),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   tier,
                   style: GoogleFonts.montserrat(
-                    fontSize: 24,
+                    fontSize: isMobile ? 20 : 24,
                     fontWeight: FontWeight.bold,
-                    color: urielNavy,
+                    color: isPremium ? urielRed : urielNavy,
                   ),
                 ),
-                const SizedBox(height: 8),
+                SizedBox(height: isMobile ? 6 : 8),
                 Text(
                   subtitle,
                   style: GoogleFonts.montserrat(
-                    fontSize: 14,
-                    color: urielNavy.withOpacity(0.7),
+                    fontSize: isMobile ? 13 : 14,
+                    color: isPremium ? Colors.black : urielNavy.withOpacity(0.7),
                   ),
                 ),
-                const SizedBox(height: 24),
+                SizedBox(height: isMobile ? 20 : 24),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       'GHS',
                       style: GoogleFonts.montserrat(
-                        fontSize: 18,
+                        fontSize: isMobile ? 16 : 18,
                         fontWeight: FontWeight.w600,
                         color: urielNavy,
                       ),
@@ -304,7 +340,7 @@ class _PricingPageState extends State<PricingPage> {
                     Text(
                       displayPrice == 0 ? '0' : displayPrice.toStringAsFixed(2),
                       style: GoogleFonts.montserrat(
-                        fontSize: 48,
+                        fontSize: isMobile ? 40 : 48,
                         fontWeight: FontWeight.bold,
                         color: urielNavy,
                       ),
@@ -347,7 +383,7 @@ class _PricingPageState extends State<PricingPage> {
                   child: ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.black,
+                      backgroundColor: isPremium ? urielRed : urielNavy,
                       foregroundColor: Colors.white,
                       padding: const EdgeInsets.symmetric(vertical: 16),
                       shape: RoundedRectangleBorder(
@@ -397,51 +433,51 @@ class _PricingPageState extends State<PricingPage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.all(24),
+            padding: EdgeInsets.all(isMobile ? 20 : 32),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   'School Plan',
                   style: GoogleFonts.montserrat(
-                    fontSize: 24,
+                    fontSize: isMobile ? 24 : 32,
                     fontWeight: FontWeight.bold,
                     color: urielNavy,
                   ),
                 ),
-                const SizedBox(height: 8),
+                SizedBox(height: isMobile ? 8 : 12),
                 Text(
                   'For Schools & Educational Institutions',
                   style: GoogleFonts.montserrat(
-                    fontSize: 14,
+                    fontSize: isMobile ? 14 : 18,
                     color: urielNavy.withOpacity(0.7),
                   ),
                 ),
-                const SizedBox(height: 24),
+                SizedBox(height: isMobile ? 20 : 32),
                 Text(
                   'Custom Pricing',
                   style: GoogleFonts.montserrat(
-                    fontSize: 20,
+                    fontSize: isMobile ? 18 : 24,
                     fontWeight: FontWeight.bold,
                     color: urielNavy,
                   ),
                 ),
-                const SizedBox(height: 24),
-                _buildFeatureItem('Teacher dashboard - Track every student'),
-                _buildFeatureItem('Class analytics - Identify weak topics'),
-                _buildFeatureItem('Content upload - Share notes directly'),
-                _buildFeatureItem('School-wide analytics & reporting'),
-                _buildFeatureItem('Custom branding options'),
-                _buildFeatureItem('Dedicated account manager'),
-                const SizedBox(height: 24),
+                SizedBox(height: isMobile ? 20 : 32),
+                _buildSchoolFeatureItem('Teacher dashboard - Track every student', isMobile),
+                _buildSchoolFeatureItem('Class analytics - Identify weak topics', isMobile),
+                _buildSchoolFeatureItem('Content upload - Share notes directly', isMobile),
+                _buildSchoolFeatureItem('School-wide analytics & reporting', isMobile),
+                _buildSchoolFeatureItem('Custom branding options', isMobile),
+                _buildSchoolFeatureItem('Dedicated account manager', isMobile),
+                SizedBox(height: isMobile ? 20 : 32),
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.black,
+                      backgroundColor: urielNavy,
                       foregroundColor: Colors.white,
-                      padding: const EdgeInsets.symmetric(vertical: 16),
+                      padding: EdgeInsets.symmetric(vertical: isMobile ? 16 : 20),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                       ),
@@ -450,12 +486,39 @@ class _PricingPageState extends State<PricingPage> {
                       'Request School Demo',
                       style: GoogleFonts.montserrat(
                         fontWeight: FontWeight.w600,
-                        fontSize: 16,
+                        fontSize: isMobile ? 16 : 18,
                       ),
                     ),
                   ),
                 ),
               ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildSchoolFeatureItem(String text, bool isMobile) {
+    return Padding(
+      padding: EdgeInsets.only(bottom: isMobile ? 12 : 16),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Icon(
+            _getFeatureIcon(text),
+            size: isMobile ? 20 : 28,
+            color: Colors.black,
+          ),
+          SizedBox(width: isMobile ? 8 : 12),
+          Expanded(
+            child: Text(
+              text,
+              style: GoogleFonts.montserrat(
+                fontSize: isMobile ? 13 : 16,
+                color: urielNavy.withOpacity(0.8),
+                height: 1.5,
+              ),
             ),
           ),
         ],
@@ -479,21 +542,25 @@ class _PricingPageState extends State<PricingPage> {
     if (text.contains('exam') || text.contains('test')) return Icons.assignment;
     if (text.contains('study plan') || text.contains('personalized')) return Icons.calendar_today;
     if (text.contains('Calm') || text.contains('focus')) return Icons.self_improvement;
-    if (text.contains('gamification') || text.contains('achievement')) return Icons.emoji_events;
+    if (text.contains('gamification') || text.contains('achievement') || text.contains('Advanced gamification')) return Icons.emoji_events;
     if (text.contains('Ad-free') || text.contains('distraction')) return Icons.block;
     if (text.contains('WhatsApp') || text.contains('chat')) return Icons.chat;
     if (text.contains('teacher') || text.contains('Teacher')) return Icons.school;
     if (text.contains('analytics') || text.contains('Analytics')) return Icons.analytics;
     if (text.contains('content') || text.contains('Content')) return Icons.cloud_upload;
-    if (text.contains('branding') || text.contains('logo')) return Icons.branding_watermark;
+    if (text.contains('branding') || text.contains('logo') || text.contains('Custom branding')) return Icons.branding_watermark;
     if (text.contains('training') || text.contains('onboarding')) return Icons.cast_for_education;
     if (text.contains('trivia') || text.contains('Trivia')) return Icons.extension;
-    if (text.contains('literature') || text.contains('reading')) return Icons.auto_stories;
+    if (text.contains('literature') || text.contains('reading') || text.contains('Classic literature')) return Icons.auto_stories;
     if (text.contains('tracking') || text.contains('Track')) return Icons.track_changes;
     if (text.contains('Community') || text.contains('school rankings')) return Icons.people;
     if (text.contains('leaderboard')) return Icons.emoji_events;
     if (text.contains('chapter') || text.contains('sample')) return Icons.description;
     if (text.contains('classic')) return Icons.auto_stories;
+    if (text.contains('per month') || text.contains('per subject')) return Icons.calendar_month;
+    if (text.contains('View only')) return Icons.visibility;
+    if (text.contains('account manager') || text.contains('Dedicated')) return Icons.person_pin;
+    if (text.contains('School-wide') || text.contains('reporting')) return Icons.summarize;
     
     return Icons.check_circle;
   }
@@ -528,7 +595,7 @@ class _PricingPageState extends State<PricingPage> {
   Widget _buildComparisonTable(bool isMobile) {
     return Container(
       margin: EdgeInsets.symmetric(
-        horizontal: isMobile ? 16 : 60,
+        horizontal: isMobile ? 16 : 24,
         vertical: 40,
       ),
       padding: const EdgeInsets.all(24),
@@ -715,7 +782,7 @@ class _PricingPageState extends State<PricingPage> {
 
   Widget _buildTestimonialCard(String quote, String name, String title, bool isMobile) {
     return Container(
-      padding: const EdgeInsets.all(24),
+      padding: EdgeInsets.all(isMobile ? 20 : 24),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(12),
@@ -729,22 +796,22 @@ class _PricingPageState extends State<PricingPage> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text('⭐⭐⭐⭐⭐', style: TextStyle(fontSize: 20)),
-          const SizedBox(height: 12),
+          Text('⭐⭐⭐⭐⭐', style: TextStyle(fontSize: isMobile ? 16 : 20)),
+          SizedBox(height: isMobile ? 10 : 12),
           Text(
             quote,
             style: GoogleFonts.montserrat(
-              fontSize: 14,
+              fontSize: isMobile ? 13 : 14,
               color: urielNavy,
               fontStyle: FontStyle.italic,
               height: 1.5,
             ),
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: isMobile ? 12 : 16),
           Text(
             name,
             style: GoogleFonts.montserrat(
-              fontSize: 14,
+              fontSize: isMobile ? 13 : 14,
               fontWeight: FontWeight.bold,
               color: urielNavy,
             ),
@@ -752,7 +819,7 @@ class _PricingPageState extends State<PricingPage> {
           Text(
             title,
             style: GoogleFonts.montserrat(
-              fontSize: 12,
+              fontSize: isMobile ? 11 : 12,
               color: urielNavy.withOpacity(0.6),
             ),
           ),
@@ -829,14 +896,14 @@ class _PricingPageState extends State<PricingPage> {
                       });
                     },
                     child: Padding(
-                      padding: const EdgeInsets.all(20),
+                      padding: EdgeInsets.all(isMobile ? 16 : 20),
                       child: Row(
                         children: [
                           Expanded(
                             child: Text(
                               faq['question']!,
                               style: GoogleFonts.montserrat(
-                                fontSize: 16,
+                                fontSize: isMobile ? 14 : 16,
                                 fontWeight: FontWeight.w600,
                                 color: urielNavy,
                               ),
@@ -845,6 +912,7 @@ class _PricingPageState extends State<PricingPage> {
                           Icon(
                             isExpanded ? Icons.remove : Icons.add,
                             color: urielNavy,
+                            size: isMobile ? 20 : 24,
                           ),
                         ],
                       ),
@@ -852,17 +920,17 @@ class _PricingPageState extends State<PricingPage> {
                   ),
                   if (isExpanded)
                     Padding(
-                      padding: const EdgeInsets.only(
-                        left: 20,
-                        right: 20,
-                        bottom: 20,
+                      padding: EdgeInsets.only(
+                        left: isMobile ? 16 : 20,
+                        right: isMobile ? 16 : 20,
+                        bottom: isMobile ? 16 : 20,
                       ),
                       child: Align(
                         alignment: Alignment.centerLeft,
                         child: Text(
                           faq['answer']!,
                           style: GoogleFonts.montserrat(
-                            fontSize: 14,
+                            fontSize: isMobile ? 13 : 14,
                             color: urielNavy.withOpacity(0.7),
                             height: 1.5,
                           ),

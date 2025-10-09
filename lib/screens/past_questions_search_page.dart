@@ -447,7 +447,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
                     ),
                   ),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF2ECC71) // Pastel Navy Blue
+                    backgroundColor: const Color(0xFF2ECC71), // Pastel Navy Blue
                     padding: EdgeInsets.symmetric(
                       vertical: isSmallScreen ? 12 : 16,
                     ),
@@ -883,7 +883,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
               icon: const Icon(Icons.refresh, color: Colors.white),
               label: const Text('Reset Filters'),
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF2ECC71) // Pastel Navy Blue
+                backgroundColor: const Color(0xFF2ECC71), // Pastel Navy Blue
                 foregroundColor: Colors.white,
               ),
             ),
@@ -1070,7 +1070,6 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
                   backgroundColor: const Color(0xFF2ECC71), // Pastel Navy Blue
                   foregroundColor: Colors.white,
                   padding: const EdgeInsets.symmetric(vertical: 12),
-
                   side: const BorderSide(color: Color(0xFF4CAF50), width: 1.5), // Pastel Green outline
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8),
@@ -1190,7 +1189,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
               icon: const Icon(Icons.play_arrow, size: 16),
               label: const Text('Start Quiz'),
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF2ECC71) // Pastel Navy Blue
+                backgroundColor: const Color(0xFF2ECC71), // Pastel Navy Blue
                 foregroundColor: Colors.white,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8),
@@ -1311,7 +1310,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
                     child: ElevatedButton(
                       onPressed: () => _viewQuestion(question),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFF2ECC71) // Pastel Navy Blue
+                        backgroundColor: const Color(0xFF2ECC71), // Pastel Navy Blue
                         foregroundColor: Colors.white,
                         padding: const EdgeInsets.symmetric(vertical: 8),
                         shape: RoundedRectangleBorder(
