@@ -4,6 +4,8 @@ import 'package:share_plus/share_plus.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/quiz_model.dart';
+import '../services/xp_service.dart';
+import '../services/achievement_service.dart';
 import 'home_page.dart';
 
 class QuizResultsPage extends StatefulWidget {
@@ -26,6 +28,8 @@ class _QuizResultsPageState extends State<QuizResultsPage>
   late Animation<double> _slideAnimation;
 
   bool showDetailedReview = false;
+  int xpEarned = 0;
+  bool showXPAnimation = false;
 
   @override
   void initState() {
@@ -59,10 +63,18 @@ class _QuizResultsPageState extends State<QuizResultsPage>
   Future<void> _saveQuizResult() async {
     try {
       final user = FirebaseAuth.instance.currentUser;
-      if (user == null) return;
+      if (user == null) {
+        print('⚠️ Cannot save quiz result: User not authenticated');
+        return;
+      }
+
+      print('💾 Saving quiz result for user: ${user.uid}');
+      print('   Subject: ${widget.quiz.subject}');
+      print('   ExamType: ${widget.quiz.examType}');
+      print('   Score: ${widget.quiz.correctAnswers}/${widget.quiz.totalQuestions} (${widget.quiz.percentage}%)');
 
       // Save quiz result to Firestore
-      await FirebaseFirestore.instance.collection('quizzes').add({
+      final docRef = await FirebaseFirestore.instance.collection('quizzes').add({
         'userId': user.uid,
         'subject': widget.quiz.subject,
         'examType': widget.quiz.examType,
@@ -76,11 +88,143 @@ class _QuizResultsPageState extends State<QuizResultsPage>
         'triviaCategory': widget.quiz.triviaCategory,
       });
 
-      print('Quiz result saved successfully');
+      print('✅ Quiz result saved successfully! Document ID: ${docRef.id}');
+
+      // Calculate and save XP with bonuses
+      final earnedXP = await XPService().calculateAndSaveQuizXP(
+        userId: user.uid,
+        quizId: docRef.id,
+        correctAnswers: widget.quiz.correctAnswers,
+        totalQuestions: widget.quiz.totalQuestions,
+        percentage: widget.quiz.percentage,
+        examType: widget.quiz.examType,
+        subject: widget.quiz.subject,
+        triviaCategory: widget.quiz.triviaCategory,
+      );
+
+      setState(() {
+        xpEarned = earnedXP;
+      });
+
+      // Show XP animation after a delay
+      await Future.delayed(const Duration(milliseconds: 2500));
+      setState(() {
+        showXPAnimation = true;
+      });
+
+      // Check for newly earned achievements
+      await _checkAchievements(user.uid);
+
     } catch (e) {
-      print('Error saving quiz result: $e');
+      print('❌ Error saving quiz result: $e');
+      print('   Stack trace: ${StackTrace.current}');
       // Don't show error to user, just log it
     }
+  }
+
+  Future<void> _checkAchievements(String userId) async {
+    try {
+      final AchievementService achievementService = AchievementService();
+      final newAchievements = await achievementService.checkAndAwardAchievements(userId);
+
+      if (newAchievements.isNotEmpty && mounted) {
+        // Show achievement unlock dialog
+        Future.delayed(const Duration(milliseconds: 1000), () {
+          if (mounted) {
+            _showAchievementDialog(newAchievements);
+          }
+        });
+      }
+    } catch (e) {
+      print('Error checking achievements: $e');
+    }
+  }
+
+  void _showAchievementDialog(List<dynamic> achievements) {
+    showDialog(
+      context: context,
+      builder: (context) => Dialog(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        child: Container(
+          padding: const EdgeInsets.all(24),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            gradient: const LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [Color(0xFFFFE599), Color(0xFFFFCC99)],
+            ),
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Text(
+                '🏆',
+                style: TextStyle(fontSize: 60),
+              ),
+              const SizedBox(height: 16),
+              Text(
+                'Achievement${achievements.length > 1 ? 's' : ''} Unlocked!',
+                style: GoogleFonts.playfairDisplay(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              const SizedBox(height: 16),
+              ...achievements.map((achievement) => Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8),
+                child: Column(
+                  children: [
+                    Text(
+                      '${achievement.icon} ${achievement.name}',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    Text(
+                      achievement.description,
+                      style: GoogleFonts.montserrat(
+                        fontSize: 14,
+                        color: Colors.white.withOpacity(0.9),
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    Text(
+                      '+${achievement.xpReward} XP',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+              )),
+              const SizedBox(height: 24),
+              ElevatedButton(
+                onPressed: () => Navigator.pop(context),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.white,
+                  foregroundColor: const Color(0xFFFFD700),
+                  padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+                child: Text(
+                  'Awesome!',
+                  style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 
   @override
@@ -124,19 +268,154 @@ class _QuizResultsPageState extends State<QuizResultsPage>
   }
 
   void _shareResults() {
-    final message = '''
-🎓 Quiz Results - ${widget.quiz.subject}
+    // Show dialog to choose platform
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(
+          'Share Your Results',
+          style: GoogleFonts.playfairDisplay(
+            fontWeight: FontWeight.bold,
+            color: const Color(0xFF1A1E3F),
+          ),
+        ),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              'Challenge your friends!',
+              style: GoogleFonts.montserrat(
+                fontSize: 14,
+                color: Colors.grey[600],
+              ),
+            ),
+            const SizedBox(height: 20),
+            _buildShareButton(
+              'Facebook',
+              Icons.facebook,
+              Colors.blue[800]!,
+              _getShareMessage('facebook'),
+            ),
+            const SizedBox(height: 12),
+            _buildShareButton(
+              'Instagram',
+              Icons.camera_alt,
+              Colors.purple,
+              _getShareMessage('instagram'),
+            ),
+            const SizedBox(height: 12),
+            _buildShareButton(
+              'X (Twitter)',
+              Icons.close, // X icon
+              Colors.black,
+              _getShareMessage('twitter'),
+            ),
+            const SizedBox(height: 12),
+            _buildShareButton(
+              'Snapchat',
+              Icons.chat,
+              Colors.yellow[700]!,
+              _getShareMessage('snapchat'),
+            ),
+            const SizedBox(height: 12),
+            _buildShareButton(
+              'Other',
+              Icons.share,
+              const Color(0xFF1A1E3F),
+              _getShareMessage('general'),
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: Text(
+              'Cancel',
+              style: GoogleFonts.montserrat(color: Colors.grey[600]),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 
-📊 Score: ${widget.quiz.correctAnswers}/${widget.quiz.totalQuestions} (${widget.quiz.percentage.toStringAsFixed(1)}%)
-🎯 Grade: ${_getGradeLetter()}
-⏱️ Time: ${widget.quiz.duration.inMinutes}m ${widget.quiz.duration.inSeconds % 60}s
+  Widget _buildShareButton(String platform, IconData icon, Color color, String message) {
+    return SizedBox(
+      width: double.infinity,
+      child: ElevatedButton.icon(
+        onPressed: () {
+          Navigator.pop(context);
+          Share.share(message);
+        },
+        icon: Icon(icon, size: 20),
+        label: Text(
+          platform,
+          style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
+        ),
+        style: ElevatedButton.styleFrom(
+          backgroundColor: color,
+          foregroundColor: Colors.white,
+          padding: const EdgeInsets.symmetric(vertical: 12),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
+        ),
+      ),
+    );
+  }
 
-${_getPerformanceMessage()}
+  String _getShareMessage(String platform) {
+    final score = widget.quiz.percentage.toStringAsFixed(0);
+    final quizTitle = widget.quiz.examType == 'trivia' 
+        ? '${widget.quiz.triviaCategory ?? widget.quiz.subject} Trivia'
+        : '${widget.quiz.subject} ${widget.quiz.examType.toUpperCase()}';
+    final url = 'https://uriel.academy';
 
-#UrielAcademy #Quiz #${widget.quiz.subject.replaceAll(' ', '')}
-    ''';
+    switch (platform) {
+      case 'facebook':
+        return '''🎉 I just scored $score% on the $quizTitle at Uriel Academy!
 
-    Share.share(message);
+Do you think you can beat me? 😏📚
+
+Try it here 👉 $url
+Let's see who's the real quiz master!
+
+#UrielAcademy #LearnPracticeSucceed #QuizChallenge''';
+
+      case 'instagram':
+        return '''💡 Just smashed $score% on the $quizTitle at Uriel Academy 🔥
+
+Swipe up / Tap the link in bio 👉 $url
+
+Think you can beat my score? Challenge accepted? 👀✨
+
+#QuizChallenge #UrielAcademy #LearnPracticeSucceed''';
+
+      case 'twitter':
+        return '''Just scored $score% on the $quizTitle at @UrielAcademy 🎉
+
+Think you can do better? Take the quiz 👉 $url
+
+#QuizChallenge #LearnPracticeSucceed''';
+
+      case 'snapchat':
+        return '''🤯 I scored $score% on the $quizTitle quiz at Uriel Academy!
+
+Can you beat me? Swipe up and prove it 💪🔥
+👉 $url
+
+#UrielAcademy #QuizChallenge''';
+
+      default: // general
+        return '''🎉 I just scored $score% on the $quizTitle at Uriel Academy!
+
+Think you can beat me? 💪🔥
+
+Tap below to try the quiz yourself and see if you can match or top my score. 🚀
+
+👉 $url
+#UrielAcademy #LearnPracticeSucceed #QuizChallenge''';
+    }
   }
 
   void _retakeQuiz() {
@@ -226,6 +505,22 @@ ${_getPerformanceMessage()}
                     ),
 
                     const SizedBox(height: 24),
+
+                    // XP Earned Card (with animation)
+                    if (showXPAnimation && xpEarned > 0)
+                      AnimatedOpacity(
+                        opacity: showXPAnimation ? 1.0 : 0.0,
+                        duration: const Duration(milliseconds: 800),
+                        child: AnimatedScale(
+                          scale: showXPAnimation ? 1.0 : 0.5,
+                          duration: const Duration(milliseconds: 800),
+                          curve: Curves.elasticOut,
+                          child: _buildXPCard(isMobile),
+                        ),
+                      ),
+
+                    if (showXPAnimation && xpEarned > 0)
+                      const SizedBox(height: 24),
 
                     // Stats Cards
                     AnimatedBuilder(
@@ -390,6 +685,134 @@ ${_getPerformanceMessage()}
           ],
         ),
       ),
+    );
+  }
+
+  Widget _buildXPCard(bool isMobile) {
+    return Card(
+      elevation: 8,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      child: Container(
+        padding: EdgeInsets.all(isMobile ? 20 : 24),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          gradient: const LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              Color(0xFFFFE599), // Pastel gold
+              Color(0xFFFFCC99), // Pastel bronze
+            ],
+          ),
+        ),
+        child: Column(
+          children: [
+            // Trophy Icon
+            Container(
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: Colors.white.withOpacity(0.3),
+                shape: BoxShape.circle,
+              ),
+              child: const Icon(
+                Icons.emoji_events,
+                color: Colors.white,
+                size: 40,
+              ),
+            ),
+            const SizedBox(height: 16),
+            // XP Earned Text
+            Text(
+              'XP Earned',
+              style: GoogleFonts.montserrat(
+                fontSize: isMobile ? 16 : 18,
+                fontWeight: FontWeight.w600,
+                color: Colors.white,
+              ),
+            ),
+            const SizedBox(height: 8),
+            // XP Amount
+            Text(
+              '+$xpEarned XP',
+              style: GoogleFonts.playfairDisplay(
+                fontSize: isMobile ? 36 : 48,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            const SizedBox(height: 12),
+            // XP Breakdown
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+              decoration: BoxDecoration(
+                color: Colors.white.withOpacity(0.2),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Column(
+                children: [
+                  _buildXPBreakdownRow(
+                    'Correct Answers',
+                    '${widget.quiz.correctAnswers} × 5',
+                    widget.quiz.correctAnswers * 5,
+                  ),
+                  if (widget.quiz.percentage == 100.0) ...[
+                    const SizedBox(height: 8),
+                    _buildXPBreakdownRow(
+                      'Perfect Score! 🎉',
+                      'Bonus',
+                      20,
+                    ),
+                  ],
+                  if (xpEarned > (widget.quiz.correctAnswers * 5 + (widget.quiz.percentage == 100.0 ? 20 : 0))) ...[
+                    const SizedBox(height: 8),
+                    _buildXPBreakdownRow(
+                      'Special Bonuses ✨',
+                      'First Time / Master Explorer',
+                      xpEarned - (widget.quiz.correctAnswers * 5 + (widget.quiz.percentage == 100.0 ? 20 : 0)),
+                    ),
+                  ],
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildXPBreakdownRow(String label, String detail, int xp) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              label,
+              style: GoogleFonts.montserrat(
+                fontSize: 12,
+                fontWeight: FontWeight.w600,
+                color: Colors.white,
+              ),
+            ),
+            Text(
+              detail,
+              style: GoogleFonts.montserrat(
+                fontSize: 10,
+                color: Colors.white.withOpacity(0.8),
+              ),
+            ),
+          ],
+        ),
+        Text(
+          '+$xp XP',
+          style: GoogleFonts.montserrat(
+            fontSize: 14,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        ),
+      ],
     );
   }
 

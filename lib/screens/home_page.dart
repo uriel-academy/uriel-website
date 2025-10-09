@@ -10,6 +10,7 @@ import 'textbooks_page.dart';
 import 'mock_exams_page.dart';
 import 'trivia_categories_page.dart';
 import 'student_profile_page.dart';
+import 'leaderboard_page.dart';
 
 class StudentHomePage extends StatefulWidget {
   const StudentHomePage({super.key});
@@ -65,6 +66,23 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     _calculateBeceCountdown();
     _loadUserData();
     _loadUserStats();
+    _recordDailyActivity();
+  }
+
+  void _recordDailyActivity() async {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user != null) {
+      try {
+        // Import will be added
+        // final streakResult = await StreakService().recordDailyActivity(user.uid);
+        // Show streak notification if earned XP
+        // if (streakResult['xpEarned'] > 0) {
+        //   _showStreakNotification(streakResult);
+        // }
+      } catch (e) {
+        print('Error recording daily activity: $e');
+      }
+    }
   }
   
   void _calculateBeceCountdown() {
@@ -242,6 +260,33 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       // Calculate streak
       int streak = _calculateStreak(activityDates);
       
+      // Calculate study hours (estimate: 2 minutes per question, filtered for this week)
+      final now = DateTime.now();
+      final weekStart = now.subtract(Duration(days: now.weekday - 1));
+      final weekStartDate = DateTime(weekStart.year, weekStart.month, weekStart.day);
+      
+      int weeklyQuestions = 0;
+      for (var doc in quizSnapshot.docs) {
+        final data = doc.data();
+        if (data['timestamp'] != null) {
+          try {
+            DateTime date;
+            if (data['timestamp'] is Timestamp) {
+              date = (data['timestamp'] as Timestamp).toDate();
+            } else {
+              date = DateTime.parse(data['timestamp'].toString());
+            }
+            if (date.isAfter(weekStartDate)) {
+              weeklyQuestions += (data['totalQuestions'] as int?) ?? 0;
+            }
+          } catch (e) {
+            print('Error parsing timestamp for study hours: $e');
+          }
+        }
+      }
+      
+      int studyHours = (weeklyQuestions * 2 / 60).round(); // 2 minutes per question
+      
       // Build subject progress list
       List<SubjectProgress> subjects = [];
       final colors = [Colors.blue, Colors.green, Colors.orange, Colors.purple, Colors.red, Colors.teal];
@@ -261,6 +306,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         questionsAnswered = totalQuestions;
         overallProgress = avgProgress;
         currentStreak = streak;
+        weeklyStudyHours = studyHours;
         _subjectProgress = subjects;
         _recentActivity = recentQuizzes;
         
@@ -404,6 +450,13 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                                       _buildTextbooksPage(),
                                       _buildMockExamsPage(),
                                       _buildTriviaPage(),
+                                      LeaderboardPage(
+                                        onStartQuiz: () {
+                                          setState(() {
+                                            _selectedIndex = 4; // Switch to Trivia tab
+                                          });
+                                        },
+                                      ),
                                     ],
                                   ),
                           ),
@@ -433,6 +486,13 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                                             _buildTextbooksPage(),
                                             _buildMockExamsPage(),
                                             _buildTriviaPage(),
+                                            LeaderboardPage(
+                                              onStartQuiz: () {
+                                                setState(() {
+                                                  _selectedIndex = 4; // Switch to Trivia tab
+                                                });
+                                              },
+                                            ),
                                           ],
                                     ),
                             ),
@@ -689,6 +749,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   _buildNavItem(2, 'Books'),
                   _buildNavItem(3, 'Mock Exams'),
                   _buildNavItem(4, 'Trivia'),
+                  _buildNavItem(5, 'Leaderboard'),
                   
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
@@ -696,9 +757,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   ),
                   
                   _buildNavItem(-1, 'Analytics'),
-                  _buildNavItem(-2, 'Leaderboard'),
-                  _buildNavItem(-3, 'Study Groups'),
-                  _buildNavItem(-4, 'Resources'),
+                  _buildNavItem(-2, 'Study Groups'),
+                  _buildNavItem(-3, 'Resources'),
                 ],
               ),
             ),
@@ -748,16 +808,25 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         selected: isSelected,
         selectedTileColor: const Color(0xFFD62828).withOpacity(0.1),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-        onTap: isMainNav ? () => setState(() {
-          _selectedIndex = index;
-          _showingProfile = false; // Close profile when switching tabs
-        }) : () => _showComingSoon(title),
+        onTap: isMainNav ? () {
+          setState(() {
+            _selectedIndex = index;
+            _showingProfile = false; // Close profile when switching tabs
+          });
+        } : () => _showComingSoon(title),
       ),
     );
   }
 
   Widget _buildBottomNavigation() {
-    final tabs = ['Dashboard', 'Questions', 'Books', 'Mock', 'Trivia'];
+    final tabs = [
+      {'label': 'Dashboard', 'icon': Icons.dashboard_outlined},
+      {'label': 'Questions', 'icon': Icons.quiz_outlined},
+      {'label': 'Books', 'icon': Icons.menu_book_outlined},
+      {'label': 'Mock', 'icon': Icons.assignment_outlined},
+      {'label': 'Trivia', 'icon': Icons.extension_outlined},
+      {'label': 'Leaderboard', 'icon': Icons.emoji_events_outlined},
+    ];
     
     return Container(
       decoration: BoxDecoration(
@@ -770,37 +839,45 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           ),
         ],
       ),
-      padding: const EdgeInsets.symmetric(vertical: 8),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: List.generate(tabs.length, (index) {
-          final isSelected = _selectedIndex == index;
-          return GestureDetector(
-            onTap: () => setState(() {
-              _selectedIndex = index;
-              _showingProfile = false; // Close profile when switching tabs
-            }),
-            child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-              decoration: BoxDecoration(
-                color: isSelected 
-                    ? const Color(0xFFD62828).withOpacity(0.1)
-                    : Colors.transparent,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Text(
-                tabs[index],
-                style: GoogleFonts.montserrat(
-                  fontSize: 12,
-                  fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
-                  color: isSelected 
-                      ? const Color(0xFFD62828)
-                      : Colors.grey[600],
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+        child: Row(
+          children: List.generate(tabs.length, (index) {
+            final isSelected = _selectedIndex == index;
+            return Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 4),
+              child: GestureDetector(
+                onTap: () => setState(() {
+                  _selectedIndex = index;
+                  _showingProfile = false;
+                }),
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  decoration: BoxDecoration(
+                    color: isSelected 
+                        ? const Color(0xFFD62828).withOpacity(0.1)
+                        : Colors.transparent,
+                    borderRadius: BorderRadius.circular(20),
+                    border: isSelected 
+                        ? Border.all(color: const Color(0xFFD62828).withOpacity(0.3), width: 1)
+                        : null,
+                  ),
+                  child: Text(
+                    tabs[index]['label'] as String,
+                    style: GoogleFonts.montserrat(
+                      fontSize: 12,
+                      fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
+                      color: isSelected 
+                          ? const Color(0xFFD62828)
+                          : Colors.grey[600],
+                    ),
+                  ),
                 ),
               ),
-            ),
-          );
-        }),
+            );
+          }),
+        ),
       ),
     );
   }

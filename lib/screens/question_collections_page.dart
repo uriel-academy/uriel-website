@@ -397,7 +397,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
                 crossAxisCount: 2, // 2 cards per line
                 crossAxisSpacing: 16,
                 mainAxisSpacing: 16,
-                childAspectRatio: 1.8, // Adjust height ratio
+                childAspectRatio: 2.1, // 15% height reduction (was 1.8)
               ),
               itemCount: _filteredCollections.length,
               itemBuilder: (context, index) {
@@ -486,60 +486,107 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
               ],
             ),
             const SizedBox(height: 16),
-            // Randomize Toggle and Start Quiz Button on same line
-            Row(
-              children: [
-                // Randomize Questions Toggle (Left side)
-                Expanded(
-                  flex: 2,
-                  child: Row(
+            // Randomize Toggle and Start Quiz Button - responsive layout
+            isSmallScreen
+                ? Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      Switch(
-                        value: _randomizeQuestions,
-                        onChanged: (value) => setState(() => _randomizeQuestions = value),
-                        activeColor: const Color(0xFFD62828),
-                      ),
-                      const SizedBox(width: 8),
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Randomize',
-                              style: GoogleFonts.montserrat(
-                                fontWeight: FontWeight.w500,
-                                fontSize: 13,
-                                color: const Color(0xFF1A1E3F),
-                              ),
+                      // Randomize Toggle (Mobile - full width)
+                      Row(
+                        children: [
+                          Switch(
+                            value: _randomizeQuestions,
+                            onChanged: (value) => setState(() => _randomizeQuestions = value),
+                            activeColor: const Color(0xFFD62828),
+                          ),
+                          const SizedBox(width: 8),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Randomize Questions',
+                                  style: GoogleFonts.montserrat(
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 14,
+                                    color: const Color(0xFF1A1E3F),
+                                  ),
+                                ),
+                                Text(
+                                  'Questions will appear in random order',
+                                  style: GoogleFonts.montserrat(
+                                    fontSize: 12,
+                                    color: Colors.grey[600],
+                                  ),
+                                ),
+                              ],
                             ),
-                            Text(
-                              'Random order',
-                              style: GoogleFonts.montserrat(
-                                fontSize: 11,
-                                color: Colors.grey[600],
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 12),
+                      // Start Quiz Button (Mobile - full width)
+                      _buildActionButton(
+                        icon: Icons.play_arrow,
+                        label: 'Start Quiz',
+                        onPressed: () => _startQuiz(collection),
+                        isPrimary: true,
+                      ),
+                    ],
+                  )
+                : Row(
+                    children: [
+                      // Randomize Questions Toggle (Desktop - Left side)
+                      Expanded(
+                        flex: 2,
+                        child: Row(
+                          children: [
+                            Switch(
+                              value: _randomizeQuestions,
+                              onChanged: (value) => setState(() => _randomizeQuestions = value),
+                              activeColor: const Color(0xFFD62828),
+                            ),
+                            const SizedBox(width: 8),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Randomize',
+                                    style: GoogleFonts.montserrat(
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 13,
+                                      color: const Color(0xFF1A1E3F),
+                                    ),
+                                  ),
+                                  Text(
+                                    'Random order',
+                                    style: GoogleFonts.montserrat(
+                                      fontSize: 11,
+                                      color: Colors.grey[600],
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                           ],
                         ),
                       ),
+                      const SizedBox(width: 12),
+                      // Start Quiz Button (Desktop - Right side, 20% larger than before)
+                      Flexible(
+                        child: FractionallySizedBox(
+                          widthFactor: 0.84, // 20% increase from 0.7
+                          child: _buildActionButton(
+                            icon: Icons.play_arrow,
+                            label: 'Start Quiz',
+                            onPressed: () => _startQuiz(collection),
+                            isPrimary: true,
+                          ),
+                        ),
+                      ),
                     ],
                   ),
-                ),
-                const SizedBox(width: 12),
-                // Start Quiz Button (Right side) - 30% smaller
-                Flexible(
-                  child: FractionallySizedBox(
-                    widthFactor: 0.7, // 30% reduction
-                    child: _buildActionButton(
-                      icon: Icons.play_arrow,
-                      label: 'Start Quiz',
-                      onPressed: () => _startQuiz(collection),
-                      isPrimary: true,
-                    ),
-                  ),
-                ),
-              ],
-            ),
           ],
         ),
       ),

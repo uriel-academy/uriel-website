@@ -299,16 +299,6 @@ class _MockExamsPageState extends State<MockExamsPage>
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () => _createCustomTest(),
-        backgroundColor: const Color(0xFFD62828),
-        foregroundColor: Colors.white,
-        icon: const Icon(Icons.add),
-        label: Text(
-          'Create Test',
-          style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
-        ),
-      ),
     );
   }
 
@@ -1036,13 +1026,4 @@ class _MockExamsPageState extends State<MockExamsPage>
     );
   }
 
-  void _createCustomTest() {
-    // TODO: Navigate to custom test creator
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Custom test creator coming soon!'),
-        backgroundColor: Color(0xFF1A1E3F),
-      ),
-    );
-  }
 }
