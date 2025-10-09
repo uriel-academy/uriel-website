@@ -7,7 +7,7 @@ import '../services/connection_service.dart';
 import '../services/auth_service.dart';
 import 'question_collections_page.dart';
 import 'textbooks_page.dart';
-import 'mock_exams_page.dart';
+import 'feedback_page.dart';
 import 'trivia_categories_page.dart';
 import 'student_profile_page.dart';
 import 'leaderboard_page.dart';
@@ -448,7 +448,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                                       _buildDashboard(),
                                       _buildQuestionsPage(),
                                       _buildTextbooksPage(),
-                                      _buildMockExamsPage(),
+                                      _buildFeedbackPage(),
                                       _buildTriviaPage(),
                                       LeaderboardPage(
                                         onStartQuiz: () {
@@ -484,7 +484,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                                             _buildDashboard(),
                                             _buildQuestionsPage(),
                                             _buildTextbooksPage(),
-                                            _buildMockExamsPage(),
+                                            _buildFeedbackPage(),
                                             _buildTriviaPage(),
                                             LeaderboardPage(
                                               onStartQuiz: () {
@@ -747,7 +747,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   _buildNavItem(0, 'Dashboard'),
                   _buildNavItem(1, 'Questions'),
                   _buildNavItem(2, 'Books'),
-                  _buildNavItem(3, 'Mock Exams'),
+                  _buildNavItem(3, 'Feedback'),
                   _buildNavItem(4, 'Trivia'),
                   _buildNavItem(5, 'Leaderboard'),
                   
@@ -823,7 +823,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       {'label': 'Dashboard', 'icon': Icons.dashboard_outlined},
       {'label': 'Questions', 'icon': Icons.quiz_outlined},
       {'label': 'Books', 'icon': Icons.menu_book_outlined},
-      {'label': 'Mock', 'icon': Icons.assignment_outlined},
+      {'label': 'Feedback', 'icon': Icons.feedback_outlined},
       {'label': 'Trivia', 'icon': Icons.extension_outlined},
       {'label': 'Leaderboard', 'icon': Icons.emoji_events_outlined},
     ];
@@ -2168,8 +2168,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     return const TextbooksPage();
   }
 
-  Widget _buildMockExamsPage() {
-    return const MockExamsPage();
+  Widget _buildFeedbackPage() {
+    return const FeedbackPage();
   }
 
   Widget _buildTriviaPage() {
