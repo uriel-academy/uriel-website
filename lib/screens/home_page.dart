@@ -756,9 +756,11 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                     child: Divider(),
                   ),
                   
-                  _buildNavItem(-1, 'Analytics'),
-                  _buildNavItem(-2, 'Study Groups'),
-                  _buildNavItem(-3, 'Resources'),
+                  _buildNavItem(-1, 'About Us'),
+                  _buildNavItem(-2, 'Contact'),
+                  _buildNavItem(-3, 'Privacy Policy'),
+                  _buildNavItem(-4, 'Terms of Service'),
+                  _buildNavItem(-5, 'FAQ'),
                 ],
               ),
             ),
@@ -813,9 +815,33 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             _selectedIndex = index;
             _showingProfile = false; // Close profile when switching tabs
           });
-        } : () => _showComingSoon(title),
+        } : () => _navigateToFooterPage(title),
       ),
     );
+  }
+  
+  void _navigateToFooterPage(String pageName) {
+    String route;
+    switch (pageName) {
+      case 'About Us':
+        route = '/about';
+        break;
+      case 'Contact':
+        route = '/contact';
+        break;
+      case 'Privacy Policy':
+        route = '/privacy';
+        break;
+      case 'Terms of Service':
+        route = '/terms';
+        break;
+      case 'FAQ':
+        route = '/faq';
+        break;
+      default:
+        return;
+    }
+    Navigator.pushNamed(context, route);
   }
 
   Widget _buildBottomNavigation() {
