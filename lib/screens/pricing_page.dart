@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import '../widgets/common_footer.dart';
 
 class PricingPage extends StatefulWidget {
   const PricingPage({Key? key}) : super(key: key);
@@ -10,7 +11,7 @@ class PricingPage extends StatefulWidget {
 }
 
 class _PricingPageState extends State<PricingPage> {
-  bool isAnnual = true;
+  bool isAnnual = false;
   bool showComparison = false;
   int selectedFAQ = -1;
 
@@ -29,14 +30,11 @@ class _PricingPageState extends State<PricingPage> {
         child: Column(
           children: [
             _buildHeader(context, isMobile),
-            _buildLimitedOffer(isMobile),
             _buildHeroSection(isMobile),
             _buildPricingCards(isMobile),
             _buildComparisonTable(isMobile),
             _buildTestimonials(isMobile),
             _buildFAQ(isMobile),
-            _buildMoneyBackGuarantee(isMobile),
-            _buildCTA(isMobile),
             _buildFooter(isMobile),
           ],
         ),
@@ -62,66 +60,26 @@ class _PricingPageState extends State<PricingPage> {
                 isLoggedIn ? '/home' : '/landing',
               );
             },
-            child: Row(
-              children: [
-                Image.asset(
-                  'assets/uriel_logo.png',
-                  height: isMobile ? 32 : 40,
-                ),
-                if (!isMobile) ...[
-                  const SizedBox(width: 12),
-                  Text(
-                    'Uriel Academy',
-                    style: GoogleFonts.montserrat(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: urielNavy,
-                    ),
-                  ),
-                ],
-              ],
+            child: Image.asset(
+              'assets/uriel_logo.png',
+              height: isMobile ? 32 : 40,
             ),
           ),
           if (!isMobile)
-            Row(
-              children: [
-                TextButton(
-                  onPressed: () {
-                    final isLoggedIn = FirebaseAuth.instance.currentUser != null;
-                    Navigator.pushReplacementNamed(
-                      context,
-                      isLoggedIn ? '/home' : '/landing',
-                    );
-                  },
-                  child: Text(
-                    'Back to Home',
-                    style: GoogleFonts.montserrat(color: urielNavy),
-                  ),
-                ),
-              ],
+            TextButton(
+              onPressed: () {
+                final isLoggedIn = FirebaseAuth.instance.currentUser != null;
+                Navigator.pushReplacementNamed(
+                  context,
+                  isLoggedIn ? '/home' : '/landing',
+                );
+              },
+              child: Text(
+                'Back to Home',
+                style: GoogleFonts.montserrat(color: urielNavy),
+              ),
             ),
         ],
-      ),
-    );
-  }
-
-  Widget _buildLimitedOffer(bool isMobile) {
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.symmetric(vertical: 12),
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [urielRed, const Color(0xFFFF4444)],
-        ),
-      ),
-      child: Text(
-        '🎉 Special Launch Offer: 20% off first year + 1 month free!',
-        textAlign: TextAlign.center,
-        style: GoogleFonts.montserrat(
-          color: Colors.white,
-          fontWeight: FontWeight.w600,
-          fontSize: isMobile ? 12 : 14,
-        ),
       ),
     );
   }
@@ -587,35 +545,6 @@ class _PricingPageState extends State<PricingPage> {
                 _buildFeatureItem('Custom branding options'),
                 _buildFeatureItem('Dedicated account manager'),
                 _buildFeatureItem('Teacher training & support'),
-                const SizedBox(height: 16),
-                Container(
-                  padding: const EdgeInsets.all(12),
-                  decoration: BoxDecoration(
-                    color: const Color(0xFF9B59B6).withOpacity(0.1),
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Volume Discounts:',
-                        style: GoogleFonts.montserrat(
-                          fontSize: 12,
-                          fontWeight: FontWeight.bold,
-                          color: const Color(0xFF9B59B6),
-                        ),
-                      ),
-                      const SizedBox(height: 4),
-                      Text(
-                        '• 200-499 students: 5% off\n• 500-999 students: 10% off\n• 1,000+ students: 15% off',
-                        style: GoogleFonts.montserrat(
-                          fontSize: 11,
-                          color: urielNavy.withOpacity(0.7),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
                 const SizedBox(height: 24),
                 SizedBox(
                   width: double.infinity,
@@ -655,13 +584,44 @@ class _PricingPageState extends State<PricingPage> {
     );
   }
 
+  IconData _getFeatureIcon(String text) {
+    if (text.contains('textbook') || text.contains('Books')) return Icons.menu_book;
+    if (text.contains('question') || text.contains('quiz')) return Icons.quiz;
+    if (text.contains('dashboard') || text.contains('progress')) return Icons.dashboard;
+    if (text.contains('report') || text.contains('parent')) return Icons.assessment;
+    if (text.contains('download') || text.contains('offline')) return Icons.download;
+    if (text.contains('support') || text.contains('help')) return Icons.support_agent;
+    if (text.contains('AI') || text.contains('Uri')) return Icons.psychology;
+    if (text.contains('Notes') || text.contains('upload')) return Icons.note_add;
+    if (text.contains('exam') || text.contains('test')) return Icons.assignment;
+    if (text.contains('study plan') || text.contains('personalized')) return Icons.calendar_today;
+    if (text.contains('Calm') || text.contains('focus')) return Icons.self_improvement;
+    if (text.contains('gamification') || text.contains('achievement')) return Icons.emoji_events;
+    if (text.contains('Ad-free') || text.contains('distraction')) return Icons.block;
+    if (text.contains('WhatsApp') || text.contains('chat')) return Icons.chat;
+    if (text.contains('teacher') || text.contains('Teacher')) return Icons.school;
+    if (text.contains('analytics') || text.contains('Analytics')) return Icons.analytics;
+    if (text.contains('content') || text.contains('Content')) return Icons.cloud_upload;
+    if (text.contains('branding') || text.contains('logo')) return Icons.branding_watermark;
+    if (text.contains('training') || text.contains('onboarding')) return Icons.cast_for_education;
+    if (text.contains('trivia') || text.contains('Trivia')) return Icons.extension;
+    if (text.contains('literature') || text.contains('reading')) return Icons.auto_stories;
+    if (text.contains('tracking') || text.contains('Track')) return Icons.track_changes;
+    if (text.contains('Community') || text.contains('school rankings')) return Icons.people;
+    return Icons.check_circle;
+  }
+
   Widget _buildFeatureItem(String text) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text('✅', style: TextStyle(fontSize: 16)),
+          Icon(
+            _getFeatureIcon(text),
+            size: 20,
+            color: urielGreen,
+          ),
           const SizedBox(width: 8),
           Expanded(
             child: Text(
@@ -1010,12 +970,16 @@ class _PricingPageState extends State<PricingPage> {
                         right: 20,
                         bottom: 20,
                       ),
-                      child: Text(
-                        faq['answer']!,
-                        style: GoogleFonts.montserrat(
-                          fontSize: 14,
-                          color: urielNavy.withOpacity(0.7),
-                          height: 1.5,
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          faq['answer']!,
+                          style: GoogleFonts.montserrat(
+                            fontSize: 14,
+                            color: urielNavy.withOpacity(0.7),
+                            height: 1.5,
+                          ),
+                          textAlign: TextAlign.left,
                         ),
                       ),
                     ),
@@ -1028,189 +992,9 @@ class _PricingPageState extends State<PricingPage> {
     );
   }
 
-  Widget _buildMoneyBackGuarantee(bool isMobile) {
-    return Container(
-      margin: EdgeInsets.symmetric(
-        horizontal: isMobile ? 16 : 60,
-        vertical: 40,
-      ),
-      padding: EdgeInsets.all(isMobile ? 24 : 40),
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [urielGreen, urielGreen.withOpacity(0.8)],
-        ),
-        borderRadius: BorderRadius.circular(16),
-      ),
-      child: Column(
-        children: [
-          const Text('✅', style: TextStyle(fontSize: 48)),
-          const SizedBox(height: 16),
-          Text(
-            '30-Day Money-Back Guarantee',
-            style: GoogleFonts.montserrat(
-              fontSize: isMobile ? 24 : 32,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-            ),
-            textAlign: TextAlign.center,
-          ),
-          const SizedBox(height: 16),
-          Text(
-            'Try any paid plan risk-free for 30 days. If you don\'t see improvement in your studies, we\'ll refund you fully. No questions asked.',
-            style: GoogleFonts.montserrat(
-              fontSize: isMobile ? 14 : 16,
-              color: Colors.white,
-              height: 1.6,
-            ),
-            textAlign: TextAlign.center,
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildCTA(bool isMobile) {
-    return Container(
-      padding: EdgeInsets.symmetric(
-        horizontal: isMobile ? 16 : 60,
-        vertical: 40,
-      ),
-      child: Column(
-        children: [
-          Text(
-            'Still Not Sure Which Plan Is Right for You?',
-            style: GoogleFonts.montserrat(
-              fontSize: isMobile ? 20 : 28,
-              fontWeight: FontWeight.bold,
-              color: urielNavy,
-            ),
-            textAlign: TextAlign.center,
-          ),
-          const SizedBox(height: 32),
-          isMobile
-              ? Column(
-                  children: [
-                    SizedBox(
-                      width: double.infinity,
-                      child: ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: urielNavy,
-                          padding: const EdgeInsets.symmetric(vertical: 16),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                        ),
-                        child: Text(
-                          'Take Our 2-Minute Quiz',
-                          style: GoogleFonts.montserrat(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 16),
-                    SizedBox(
-                      width: double.infinity,
-                      child: OutlinedButton(
-                        onPressed: () {},
-                        style: OutlinedButton.styleFrom(
-                          foregroundColor: urielNavy,
-                          side: BorderSide(color: urielNavy),
-                          padding: const EdgeInsets.symmetric(vertical: 16),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                        ),
-                        child: Text(
-                          'Chat with Us',
-                          style: GoogleFonts.montserrat(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                )
-              : Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: urielNavy,
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 32,
-                          vertical: 16,
-                        ),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                      ),
-                      child: Text(
-                        'Take Our 2-Minute Quiz',
-                        style: GoogleFonts.montserrat(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(width: 16),
-                    OutlinedButton(
-                      onPressed: () {},
-                      style: OutlinedButton.styleFrom(
-                        foregroundColor: urielNavy,
-                        side: BorderSide(color: urielNavy),
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 32,
-                          vertical: 16,
-                        ),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                      ),
-                      child: Text(
-                        'Chat with Us',
-                        style: GoogleFonts.montserrat(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-        ],
-      ),
-    );
-  }
-
   Widget _buildFooter(bool isMobile) {
-    return Container(
-      padding: EdgeInsets.all(isMobile ? 20 : 40),
-      color: urielNavy,
-      child: Column(
-        children: [
-          Text(
-            '© 2025 Uriel Academy. All rights reserved.',
-            style: GoogleFonts.montserrat(
-              color: Colors.white,
-              fontSize: 14,
-            ),
-            textAlign: TextAlign.center,
-          ),
-          const SizedBox(height: 8),
-          Text(
-            'Mon-Fri, 8am-6pm | schools@urielacademy.com',
-            style: GoogleFonts.montserrat(
-              color: Colors.white.withOpacity(0.7),
-              fontSize: 12,
-            ),
-            textAlign: TextAlign.center,
-          ),
-        ],
-      ),
+    return CommonFooter(
+      isSmallScreen: isMobile,
     );
   }
 }
