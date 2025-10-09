@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../widgets/common_footer.dart';
+import '../constants/app_styles.dart';
 
 class PricingPage extends StatefulWidget {
   const PricingPage({Key? key}) : super(key: key);
@@ -60,9 +61,9 @@ class _PricingPageState extends State<PricingPage> {
                 isLoggedIn ? '/home' : '/landing',
               );
             },
-            child: Image.asset(
-              'assets/uriel_logo.png',
-              height: isMobile ? 32 : 40,
+            child: Text(
+              'Uriel Academy',
+              style: AppStyles.brandNameLight(fontSize: isMobile ? 18 : 22),
             ),
           ),
           if (!isMobile)
@@ -217,9 +218,6 @@ class _PricingPageState extends State<PricingPage> {
       'Personalized study plans - AI analyzes weak areas',
       'Calm Learning Mode - Focus timer, progress badges',
       'Advanced gamification - Achievements, streaks, competitions',
-      'Unlimited offline downloads - Study anytime, anywhere',
-      'Ad-free experience - Zero distractions',
-      'WhatsApp support - Get help within 4 hours',
     ];
   }
 
@@ -400,58 +398,6 @@ class _PricingPageState extends State<PricingPage> {
                     ),
                   ),
                 ),
-                if (tier == 'Standard') ...[
-                  const SizedBox(height: 16),
-                  Container(
-                    padding: const EdgeInsets.all(12),
-                    decoration: BoxDecoration(
-                      color: urielGreen.withOpacity(0.1),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: Row(
-                      children: [
-                        const Text('💰', style: TextStyle(fontSize: 20)),
-                        const SizedBox(width: 8),
-                        Expanded(
-                          child: Text(
-                            'Replaces GHS 1,600 in textbooks',
-                            style: GoogleFonts.montserrat(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w600,
-                              color: urielGreen,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-                if (tier == 'Premium') ...[
-                  const SizedBox(height: 16),
-                  Container(
-                    padding: const EdgeInsets.all(12),
-                    decoration: BoxDecoration(
-                      color: const Color(0xFFFFD700).withOpacity(0.1),
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: Row(
-                      children: [
-                        const Text('🎯', style: TextStyle(fontSize: 20)),
-                        const SizedBox(width: 8),
-                        Expanded(
-                          child: Text(
-                            'Learn 2x faster with AI-powered revision',
-                            style: GoogleFonts.montserrat(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w600,
-                              color: const Color(0xFFB8860B),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
               ],
             ),
           ),
@@ -567,15 +513,6 @@ class _PricingPageState extends State<PricingPage> {
                     ),
                   ),
                 ),
-                const SizedBox(height: 12),
-                Text(
-                  'See how we help 50+ schools improve BECE scores',
-                  textAlign: TextAlign.center,
-                  style: GoogleFonts.montserrat(
-                    fontSize: 12,
-                    color: urielNavy.withOpacity(0.6),
-                  ),
-                ),
               ],
             ),
           ),
@@ -585,6 +522,10 @@ class _PricingPageState extends State<PricingPage> {
   }
 
   IconData _getFeatureIcon(String text) {
+    // Special case for "Everything in" text
+    if (text.contains('Everything in')) return Icons.stars;
+    
+    // Feature-specific icons
     if (text.contains('textbook') || text.contains('Books')) return Icons.menu_book;
     if (text.contains('question') || text.contains('quiz')) return Icons.quiz;
     if (text.contains('dashboard') || text.contains('progress')) return Icons.dashboard;
@@ -608,6 +549,10 @@ class _PricingPageState extends State<PricingPage> {
     if (text.contains('literature') || text.contains('reading')) return Icons.auto_stories;
     if (text.contains('tracking') || text.contains('Track')) return Icons.track_changes;
     if (text.contains('Community') || text.contains('school rankings')) return Icons.people;
+    if (text.contains('leaderboard')) return Icons.emoji_events;
+    if (text.contains('chapter') || text.contains('sample')) return Icons.description;
+    if (text.contains('classic')) return Icons.auto_stories;
+    
     return Icons.check_circle;
   }
 
@@ -620,7 +565,7 @@ class _PricingPageState extends State<PricingPage> {
           Icon(
             _getFeatureIcon(text),
             size: 20,
-            color: urielGreen,
+            color: Colors.black,
           ),
           const SizedBox(width: 8),
           Expanded(
