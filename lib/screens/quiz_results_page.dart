@@ -1100,46 +1100,6 @@ Tap below to try the quiz yourself and see if you can match or top my score. ðŸš
                 Icons.check_circle,
               ),
             ],
-
-            // Explanation
-            if (answer.explanation.isNotEmpty) ...[
-              const SizedBox(height: 16),
-              Container(
-                padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  color: Colors.blue.withOpacity(0.1),
-                  borderRadius: BorderRadius.circular(8),
-                  border: Border.all(color: Colors.blue.withOpacity(0.3)),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        const Icon(Icons.lightbulb, color: Colors.blue, size: 16),
-                        const SizedBox(width: 8),
-                        Text(
-                          'Explanation',
-                          style: GoogleFonts.montserrat(
-                            fontWeight: FontWeight.w600,
-                            color: Colors.blue,
-                            fontSize: 12,
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 8),
-                    Text(
-                      answer.explanation,
-                      style: GoogleFonts.montserrat(
-                        fontSize: 12,
-                        color: const Color(0xFF1A1E3F),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
           ],
         ),
       ),
