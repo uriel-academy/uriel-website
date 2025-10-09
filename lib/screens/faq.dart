@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import '../constants/app_styles.dart';
 import 'sign_up.dart';
 import 'contact.dart';
@@ -351,7 +352,14 @@ class _FAQPageState extends State<FAQPage> with TickerProviderStateMixin {
         children: [
           // Logo
           GestureDetector(
-            onTap: () => Navigator.pushReplacementNamed(context, '/landing'),
+            onTap: () {
+              // If user is logged in, go to home, otherwise go to landing
+              final isLoggedIn = FirebaseAuth.instance.currentUser != null;
+              Navigator.pushReplacementNamed(
+                context, 
+                isLoggedIn ? '/home' : '/landing',
+              );
+            },
             child: Text(
               'Uriel Academy',
               style: AppStyles.brandNameLight(fontSize: isSmallScreen ? 18 : 22),
@@ -1065,10 +1073,10 @@ class _FAQPageState extends State<FAQPage> with TickerProviderStateMixin {
 
   void _showFeedback(String response) {
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
+      const SnackBar(
         content: Text('Thank you for your feedback!'),
-        backgroundColor: const Color(0xFF1A1E3F),
-        duration: const Duration(seconds: 2),
+        backgroundColor: Color(0xFF1A1E3F),
+        duration: Duration(seconds: 2),
       ),
     );
   }

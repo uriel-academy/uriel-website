@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import '../constants/app_styles.dart';
 import '../widgets/common_footer.dart';
 import 'sign_up.dart';
@@ -104,7 +105,14 @@ class _AboutUsPageState extends State<AboutUsPage> with TickerProviderStateMixin
         children: [
           // Logo
           GestureDetector(
-            onTap: () => Navigator.pushReplacementNamed(context, '/landing'),
+            onTap: () {
+              // If user is logged in, go to home, otherwise go to landing
+              final isLoggedIn = FirebaseAuth.instance.currentUser != null;
+              Navigator.pushReplacementNamed(
+                context, 
+                isLoggedIn ? '/home' : '/landing',
+              );
+            },
             child: Text(
               'Uriel Academy',
               style: AppStyles.brandNameLight(fontSize: isSmallScreen ? 18 : 22),
