@@ -29,11 +29,14 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   
   // User progress data - Live from Firestore
   String userName = "";
+  String userClass = "JHS Form 3 Student";
+  String? userPhotoUrl;
   double overallProgress = 0.0; // Calculated from quiz results
   int currentStreak = 0; // Days of consecutive activity
   int weeklyStudyHours = 0; // Calculated from session time
   int questionsAnswered = 0; // Total questions from quizzes
   int beceCountdownDays = 0; // Live countdown to BECE 2026
+  Stream<DocumentSnapshot>? _userStream;
   
   // Past Questions tracking
   int pastQuestionsAnswered = 0;
@@ -68,6 +71,29 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     _loadUserData();
     _loadUserStats();
     _recordDailyActivity();
+    _setupUserStream();
+  }
+  
+  void _setupUserStream() {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user != null) {
+      _userStream = FirebaseFirestore.instance
+          .collection('users')
+          .doc(user.uid)
+          .snapshots();
+      
+      // Listen to changes and update state
+      _userStream!.listen((snapshot) {
+        if (snapshot.exists && mounted) {
+          final data = snapshot.data() as Map<String, dynamic>;
+          setState(() {
+            userName = data['firstName'] ?? user.displayName?.split(' ').first ?? _getNameFromEmail(user.email);
+            userClass = data['class'] ?? 'JHS Form 3';
+            userPhotoUrl = data['profileImageUrl'] ?? user.photoURL;
+          });
+        }
+      });
+    }
   }
 
   void _recordDailyActivity() async {
@@ -657,10 +683,11 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             child: CircleAvatar(
               radius: 16,
               backgroundColor: const Color(0xFF1A1E3F),
-              child: Text(
+              backgroundImage: userPhotoUrl != null ? NetworkImage(userPhotoUrl!) : null,
+              child: userPhotoUrl == null ? Text(
                 userName[0].toUpperCase(),
                 style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14),
-              ),
+              ) : null,
             ),
           ),
         ],
@@ -715,10 +742,11 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   CircleAvatar(
                     radius: 20,
                     backgroundColor: const Color(0xFF1A1E3F),
-                    child: Text(
+                    backgroundImage: userPhotoUrl != null ? NetworkImage(userPhotoUrl!) : null,
+                    child: userPhotoUrl == null ? Text(
                       userName[0].toUpperCase(),
                       style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-                    ),
+                    ) : null,
                   ),
                   const SizedBox(width: 12),
                   Expanded(
@@ -733,7 +761,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                           ),
                         ),
                         Text(
-                          'JHS Form 3 Student',
+                          userClass,
                           style: GoogleFonts.montserrat(
                             fontSize: 12,
                             color: Colors.grey[600],
@@ -2381,10 +2409,11 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                               CircleAvatar(
                                 radius: 20,
                                 backgroundColor: const Color(0xFF1A1E3F),
-                                child: Text(
+                                backgroundImage: userPhotoUrl != null ? NetworkImage(userPhotoUrl!) : null,
+                                child: userPhotoUrl == null ? Text(
                                   userName[0].toUpperCase(),
                                   style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-                                ),
+                                ) : null,
                               ),
                               const SizedBox(width: 12),
                               Expanded(
@@ -2400,7 +2429,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                                       overflow: TextOverflow.ellipsis,
                                     ),
                                     Text(
-                                      'JHS Form 3 Student',
+                                      userClass,
                                       style: GoogleFonts.montserrat(
                                         fontSize: 11,
                                         color: Colors.grey[600],
@@ -2426,7 +2455,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                         const Divider(height: 1),
                         
                         // Footer Pages Section
-                        _buildProfileMenuItem(Icons.monetization_on_outlined, 'Pricing', () {
+                        _buildProfileMenuItem(Icons.attach_money_outlined, 'Pricing', () {
                           Navigator.pop(context);
                           Navigator.pushNamed(context, '/pricing');
                         }),
