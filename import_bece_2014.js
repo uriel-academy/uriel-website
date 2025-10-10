@@ -29,35 +29,50 @@ async function importQuestions() {
     let importedCount = 0;
     const batch = db.batch();
     
-    // Import multiple choice questions
+    // Import multiple choice questions - using same format as import_all_bece_rme.js
     const mcQuestions = questionsData.multiple_choice;
     const mcAnswers = answersData.multiple_choice;
     
     for (const [key, questionData] of Object.entries(mcQuestions)) {
-      const questionNumber = key.replace('q', '');
+      const questionNumber = parseInt(key.replace('q', ''));
       const correctAnswer = mcAnswers[key];
       
-      // Find the correct answer option (A, B, C, D)
-      const correctOption = correctAnswer.charAt(0); // Get 'A', 'B', 'C', or 'D'
+      const docId = `rme_2014_q${questionNumber}`;
       
       const questionDoc = {
-        question: questionData.question,
-        options: questionData.possibleAnswers,
-        correctAnswer: correctOption,
-        correctAnswerText: correctAnswer,
-        subject: 'RME',
-        examType: 'BECE',
-        year: 2014,
-        variant: questionsData.variant || 'N/A',
-        questionNumber: parseInt(questionNumber),
+        id: docId,
+        questionText: questionData.question,
+        type: 'multipleChoice',
+        subject: 'religiousMoralEducation',
+        subjectName: 'Religious And Moral Education',
+        subjectCode: 'RME',
+        examType: 'bece',
+        examName: 'Basic Education Certificate Examination',
+        year: '2014',
+        section: 'A',
+        questionNumber: questionNumber,
+        options: questionData.possibleAnswers || [],
+        correctAnswer: correctAnswer,
+        explanation: `BECE 2014 RME Question ${questionNumber}`,
+        marks: 1,
         difficulty: 'medium',
-        topic: 'Religious And Moral Education',
+        topics: ['Religious And Moral Education', 'BECE', '2014'],
+        tags: ['rme', 'bece', '2014', 'past-question'],
         createdAt: admin.firestore.FieldValue.serverTimestamp(),
-        updatedAt: admin.firestore.FieldValue.serverTimestamp()
+        updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+        createdBy: 'system_import_2024',
+        isActive: true,
+        isPremium: false,
+        metadata: {
+          source: 'BECE 2014 RME',
+          importDate: new Date().toISOString(),
+          verified: true,
+          version: '2.0'
+        }
       };
       
-      const docRef = db.collection('questions').doc();
-      batch.set(docRef, questionDoc);
+      const docRef = db.collection('questions').doc(docId);
+      batch.set(docRef, questionDoc, { merge: false });
       importedCount++;
       
       if (importedCount % 10 === 0) {
@@ -72,9 +87,9 @@ async function importQuestions() {
     
     // Verify import
     const snapshot = await db.collection('questions')
-      .where('examType', '==', 'BECE')
-      .where('year', '==', 2014)
-      .where('subject', '==', 'RME')
+      .where('examType', '==', 'bece')
+      .where('year', '==', '2014')
+      .where('subjectCode', '==', 'RME')
       .get();
     
     console.log(`\n🔍 Verification: Found ${snapshot.size} questions for BECE 2014 RME in database`);
@@ -83,8 +98,8 @@ async function importQuestions() {
     console.log('\n📝 Sample imported questions:');
     snapshot.docs.slice(0, 3).forEach((doc, index) => {
       const data = doc.data();
-      console.log(`\n${index + 1}. Question ${data.questionNumber}: ${data.question.substring(0, 80)}...`);
-      console.log(`   Correct Answer: ${data.correctAnswer} - ${data.correctAnswerText}`);
+      console.log(`\n${index + 1}. Question ${data.questionNumber}: ${data.questionText.substring(0, 80)}...`);
+      console.log(`   Correct Answer: ${data.correctAnswer}`);
     });
     
   } catch (error) {
@@ -97,17 +112,16 @@ async function main() {
   try {
     // Check if questions already exist
     const existingQuestions = await db.collection('questions')
-      .where('examType', '==', 'BECE')
-      .where('year', '==', 2014)
-      .where('subject', '==', 'RME')
+      .where('examType', '==', 'bece')
+      .where('year', '==', '2014')
+      .where('subjectCode', '==', 'RME')
       .get();
     
     if (existingQuestions.size > 0) {
       console.log(`⚠️  Found ${existingQuestions.size} existing BECE 2014 RME questions.`);
-      console.log('Do you want to delete them and re-import? (This script will overwrite)\n');
+      console.log('🗑️  Deleting existing questions to re-import with correct format...\n');
       
       // Delete existing questions
-      console.log('🗑️  Deleting existing questions...');
       const deleteBatch = db.batch();
       existingQuestions.docs.forEach(doc => {
         deleteBatch.delete(doc.ref);
@@ -118,6 +132,17 @@ async function main() {
     
     // Import questions
     await importQuestions();
+    
+    // Update metadata to include 2014
+    console.log('\n📊 Updating metadata...');
+    await db.collection('app_metadata').doc('content').set({
+      availableYears: admin.firestore.FieldValue.arrayUnion('2014'),
+      availableSubjects: admin.firestore.FieldValue.arrayUnion('Religious And Moral Education', 'RME'),
+      lastUpdated: admin.firestore.FieldValue.serverTimestamp(),
+      rmeQuestionsImported: true,
+      rmeYears: admin.firestore.FieldValue.arrayUnion('2014')
+    }, { merge: true });
+    console.log('✓ Metadata updated');
     
     console.log('\n🎉 Import completed successfully!');
     console.log('\n📱 The questions are now live and available in:');
