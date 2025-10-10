@@ -195,7 +195,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
                 width: 80,
                 height: 80,
                 decoration: BoxDecoration(
-                  color: const Color(0xFFD62828).withOpacity(0.1),
+                  color: const Color(0xFFD62828).withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(40),
                 ),
                 child: const Icon(
@@ -455,7 +455,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             decoration: BoxDecoration(
               border: Border(
-                bottom: BorderSide(color: Colors.white.withOpacity(0.1)),
+                bottom: BorderSide(color: Colors.white.withValues(alpha: 0.1)),
               ),
             ),
             child: Row(
@@ -563,7 +563,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
                 border: Border(
-                  top: BorderSide(color: Colors.white.withOpacity(0.1)),
+                  top: BorderSide(color: Colors.white.withValues(alpha: 0.1)),
                 ),
               ),
               child: Column(
@@ -644,10 +644,10 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
             decoration: BoxDecoration(
-              color: isSelected ? const Color(0xFFD62828).withOpacity(0.15) : null,
+              color: isSelected ? const Color(0xFFD62828).withValues(alpha: 0.15) : null,
               borderRadius: BorderRadius.circular(8),
               border: isSelected 
-                ? Border.all(color: const Color(0xFFD62828).withOpacity(0.3))
+                ? Border.all(color: const Color(0xFFD62828).withValues(alpha: 0.3))
                 : null,
             ),
             child: Row(
@@ -763,7 +763,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 4,
             offset: const Offset(0, 2),
           ),
@@ -800,7 +800,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
                 decoration: BoxDecoration(
                   color: const Color(0xFFF8F9FA),
                   borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: Colors.grey.withOpacity(0.2)),
+                  border: Border.all(color: Colors.grey.withValues(alpha: 0.2)),
                 ),
                 child: TextField(
                   controller: searchController,
@@ -896,7 +896,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1),
                         decoration: BoxDecoration(
-                          color: const Color(0xFFD62828).withOpacity(0.1),
+                          color: const Color(0xFFD62828).withValues(alpha: 0.1),
                           borderRadius: BorderRadius.circular(4),
                         ),
                         child: Text(
@@ -938,7 +938,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
           decoration: BoxDecoration(
             color: const Color(0xFFF8F9FA),
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: Colors.grey.withOpacity(0.2)),
+            border: Border.all(color: Colors.grey.withValues(alpha: 0.2)),
           ),
           child: IconButton(
             onPressed: onTap,
@@ -1021,7 +1021,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                     decoration: BoxDecoration(
-                      color: const Color(0xFFD62828).withOpacity(0.1),
+                      color: const Color(0xFFD62828).withValues(alpha: 0.1),
                       borderRadius: BorderRadius.circular(6),
                     ),
                     child: Text(
@@ -1049,9 +1049,9 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
           decoration: BoxDecoration(
-            color: const Color(0xFF2ECC71).withOpacity(0.1),
+            color: const Color(0xFF2ECC71).withValues(alpha: 0.1),
             borderRadius: BorderRadius.circular(8),
-            border: Border.all(color: const Color(0xFF2ECC71).withOpacity(0.3)),
+            border: Border.all(color: const Color(0xFF2ECC71).withValues(alpha: 0.3)),
           ),
           child: Row(
             mainAxisSize: MainAxisSize.min,
@@ -1176,12 +1176,12 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 12,
             offset: const Offset(0, 4),
           ),
         ],
-        border: Border.all(color: Colors.grey.withOpacity(0.1)),
+        border: Border.all(color: Colors.grey.withValues(alpha: 0.1)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1191,7 +1191,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
               Container(
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  color: color.withOpacity(0.1),
+                  color: color.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Icon(icon, color: color, size: 20),
@@ -1202,8 +1202,8 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
                   padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                   decoration: BoxDecoration(
                     color: trend == 'up' 
-                      ? const Color(0xFF2ECC71).withOpacity(0.1)
-                      : const Color(0xFFD62828).withOpacity(0.1),
+                      ? const Color(0xFF2ECC71).withValues(alpha: 0.1)
+                      : const Color(0xFFD62828).withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(4),
                   ),
                   child: Row(
@@ -1336,12 +1336,12 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.03),
+            color: Colors.black.withValues(alpha: 0.03),
             blurRadius: 8,
             offset: const Offset(0, 2),
           ),
         ],
-        border: Border.all(color: Colors.grey.withOpacity(0.1)),
+        border: Border.all(color: Colors.grey.withValues(alpha: 0.1)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1442,12 +1442,12 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 12,
             offset: const Offset(0, 4),
           ),
         ],
-        border: Border.all(color: Colors.grey.withOpacity(0.1)),
+        border: Border.all(color: Colors.grey.withValues(alpha: 0.1)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1468,7 +1468,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
                 decoration: BoxDecoration(
                   color: const Color(0xFFF8F9FA),
                   borderRadius: BorderRadius.circular(8),
-                  border: Border.all(color: Colors.grey.withOpacity(0.2)),
+                  border: Border.all(color: Colors.grey.withValues(alpha: 0.2)),
                 ),
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
@@ -1545,12 +1545,12 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 12,
             offset: const Offset(0, 4),
           ),
         ],
-        border: Border.all(color: Colors.grey.withOpacity(0.1)),
+        border: Border.all(color: Colors.grey.withValues(alpha: 0.1)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1632,12 +1632,12 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 12,
             offset: const Offset(0, 4),
           ),
         ],
-        border: Border.all(color: Colors.grey.withOpacity(0.1)),
+        border: Border.all(color: Colors.grey.withValues(alpha: 0.1)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1756,7 +1756,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
             width: 32,
             height: 32,
             decoration: BoxDecoration(
-              color: iconColor.withOpacity(0.1),
+              color: iconColor.withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(8),
             ),
             child: Icon(icon, color: iconColor, size: 16),
@@ -1805,12 +1805,12 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 12,
             offset: const Offset(0, 4),
           ),
         ],
-        border: Border.all(color: Colors.grey.withOpacity(0.1)),
+        border: Border.all(color: Colors.grey.withValues(alpha: 0.1)),
       ),
       child: Center(
         child: Column(
@@ -1819,7 +1819,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
             Icon(
               _getModuleIcon(module),
               size: 64,
-              color: const Color(0xFF1A1E3F).withOpacity(0.3),
+              color: const Color(0xFF1A1E3F).withValues(alpha: 0.3),
             ),
             const SizedBox(height: 16),
             Text(
@@ -1842,7 +1842,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               decoration: BoxDecoration(
-                color: const Color(0xFFD62828).withOpacity(0.1),
+                color: const Color(0xFFD62828).withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(8),
               ),
               child: Text(

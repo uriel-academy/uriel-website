@@ -108,7 +108,7 @@ class _PricingPageState extends State<PricingPage> {
             'All plans include access to trivia challenges and curated classic literature',
             style: GoogleFonts.montserrat(
               fontSize: isMobile ? 14 : 18,
-              color: urielNavy.withOpacity(0.7),
+              color: urielNavy.withValues(alpha: 0.7),
             ),
             textAlign: TextAlign.center,
           ),
@@ -119,7 +119,7 @@ class _PricingPageState extends State<PricingPage> {
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(25),
-              border: Border.all(color: urielNavy.withOpacity(0.2)),
+              border: Border.all(color: urielNavy.withValues(alpha: 0.2)),
             ),
             child: Row(
               mainAxisSize: MainAxisSize.min,
@@ -280,12 +280,12 @@ class _PricingPageState extends State<PricingPage> {
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
-          color: isPremium ? urielRed : Colors.grey.withOpacity(0.3),
+          color: isPremium ? urielRed : Colors.grey.withValues(alpha: 0.3),
           width: isPremium ? 2 : 1,
         ),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.1),
+            color: Colors.grey.withValues(alpha: 0.1),
             blurRadius: 20,
             offset: const Offset(0, 10),
           ),
@@ -333,7 +333,7 @@ class _PricingPageState extends State<PricingPage> {
                   subtitle,
                   style: GoogleFonts.montserrat(
                     fontSize: isMobile ? 13 : 14,
-                    color: isPremium ? Colors.black : urielNavy.withOpacity(0.7),
+                    color: isPremium ? Colors.black : urielNavy.withValues(alpha: 0.7),
                   ),
                 ),
                 SizedBox(height: isMobile ? 20 : 24),
@@ -364,7 +364,7 @@ class _PricingPageState extends State<PricingPage> {
                     displayPrice == 0 ? 'Forever free' : '/$period',
                     style: GoogleFonts.montserrat(
                       fontSize: 14,
-                      color: urielNavy.withOpacity(0.6),
+                      color: urielNavy.withValues(alpha: 0.6),
                     ),
                   ),
                   if (savings > 0) ...[
@@ -442,12 +442,12 @@ class _PricingPageState extends State<PricingPage> {
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
-          color: Colors.grey.withOpacity(0.3),
+          color: Colors.grey.withValues(alpha: 0.3),
           width: 1,
         ),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.1),
+            color: Colors.grey.withValues(alpha: 0.1),
             blurRadius: 20,
             offset: const Offset(0, 10),
           ),
@@ -474,7 +474,7 @@ class _PricingPageState extends State<PricingPage> {
                   'For Schools & Educational Institutions',
                   style: GoogleFonts.montserrat(
                     fontSize: isMobile ? 14 : 18,
-                    color: urielNavy.withOpacity(0.7),
+                    color: urielNavy.withValues(alpha: 0.7),
                   ),
                 ),
                 SizedBox(height: isMobile ? 20 : 32),
@@ -551,7 +551,7 @@ class _PricingPageState extends State<PricingPage> {
               text,
               style: GoogleFonts.montserrat(
                 fontSize: isMobile ? 13 : 16,
-                color: urielNavy.withOpacity(0.8),
+                color: urielNavy.withValues(alpha: 0.8),
                 height: 1.5,
               ),
             ),
@@ -617,7 +617,7 @@ class _PricingPageState extends State<PricingPage> {
               text,
               style: GoogleFonts.montserrat(
                 fontSize: 13,
-                color: urielNavy.withOpacity(0.8),
+                color: urielNavy.withValues(alpha: 0.8),
                 height: 1.4,
               ),
             ),
@@ -639,7 +639,7 @@ class _PricingPageState extends State<PricingPage> {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: urielNavy.withOpacity(0.1),
+            color: urielNavy.withValues(alpha: 0.1),
             blurRadius: 20,
           ),
         ],
@@ -660,14 +660,14 @@ class _PricingPageState extends State<PricingPage> {
               'Tap to expand table',
               style: GoogleFonts.montserrat(
                 fontSize: 14,
-                color: urielNavy.withOpacity(0.6),
+                color: urielNavy.withValues(alpha: 0.6),
               ),
             ),
           const SizedBox(height: 16),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: DataTable(
-              headingRowColor: MaterialStateProperty.all(urielNavy.withOpacity(0.1)),
+              headingRowColor: MaterialStateProperty.all(urielNavy.withValues(alpha: 0.1)),
               columns: [
                 DataColumn(
                   label: Text(
@@ -742,7 +742,7 @@ class _PricingPageState extends State<PricingPage> {
         horizontal: isMobile ? 16 : 60,
         vertical: 40,
       ),
-      color: urielNavy.withOpacity(0.05),
+      color: urielNavy.withValues(alpha: 0.05),
       child: Column(
         children: [
           Text(
@@ -823,7 +823,7 @@ class _PricingPageState extends State<PricingPage> {
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: urielNavy.withOpacity(0.1),
+            color: urielNavy.withValues(alpha: 0.1),
             blurRadius: 15,
           ),
         ],
@@ -855,7 +855,7 @@ class _PricingPageState extends State<PricingPage> {
             title,
             style: GoogleFonts.montserrat(
               fontSize: isMobile ? 11 : 12,
-              color: urielNavy.withOpacity(0.6),
+              color: urielNavy.withValues(alpha: 0.6),
             ),
           ),
         ],
@@ -919,7 +919,7 @@ class _PricingPageState extends State<PricingPage> {
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(
-                  color: urielNavy.withOpacity(0.1),
+                  color: urielNavy.withValues(alpha: 0.1),
                 ),
               ),
               child: Column(
@@ -966,7 +966,7 @@ class _PricingPageState extends State<PricingPage> {
                           faq['answer']!,
                           style: GoogleFonts.montserrat(
                             fontSize: isMobile ? 13 : 14,
-                            color: urielNavy.withOpacity(0.7),
+                            color: urielNavy.withValues(alpha: 0.7),
                             height: 1.5,
                           ),
                           textAlign: TextAlign.left,

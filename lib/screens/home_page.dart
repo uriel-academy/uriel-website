@@ -582,7 +582,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -615,7 +615,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           // Notifications
           Container(
             decoration: BoxDecoration(
-              color: const Color(0xFFD62828).withOpacity(0.1),
+              color: const Color(0xFFD62828).withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(8),
             ),
             child: IconButton(
@@ -666,7 +666,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(2, 0),
           ),
@@ -695,10 +695,10 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               margin: const EdgeInsets.symmetric(horizontal: 16),
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: const Color(0xFF1A1E3F).withOpacity(0.05),
+                color: const Color(0xFF1A1E3F).withValues(alpha: 0.05),
                 borderRadius: BorderRadius.circular(16),
                 border: Border.all(
-                  color: const Color(0xFF1A1E3F).withOpacity(0.1),
+                  color: const Color(0xFF1A1E3F).withValues(alpha: 0.1),
                 ),
               ),
               child: Row(
@@ -811,7 +811,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           ),
         ),
         selected: isSelected,
-        selectedTileColor: const Color(0xFFD62828).withOpacity(0.1),
+        selectedTileColor: const Color(0xFFD62828).withValues(alpha: 0.1),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         onTap: isMainNav ? () {
           setState(() {
@@ -868,7 +868,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.1),
+            color: Colors.black.withValues(alpha: 0.1),
             blurRadius: 10,
             offset: const Offset(0, -2),
           ),
@@ -891,11 +891,11 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                   decoration: BoxDecoration(
                     color: isSelected 
-                        ? const Color(0xFFD62828).withOpacity(0.1)
+                        ? const Color(0xFFD62828).withValues(alpha: 0.1)
                         : Colors.transparent,
                     borderRadius: BorderRadius.circular(20),
                     border: isSelected 
-                        ? Border.all(color: const Color(0xFFD62828).withOpacity(0.3), width: 1)
+                        ? Border.all(color: const Color(0xFFD62828).withValues(alpha: 0.3), width: 1)
                         : null,
                   ),
                   child: Text(
@@ -930,7 +930,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -975,7 +975,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           // Notifications
           Container(
             decoration: BoxDecoration(
-              color: const Color(0xFFD62828).withOpacity(0.1),
+              color: const Color(0xFFD62828).withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(12),
             ),
             child: IconButton(
@@ -1139,7 +1139,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         borderRadius: BorderRadius.circular(isSmallScreen ? 16 : 20),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF1A1E3F).withOpacity(0.3),
+            color: const Color(0xFF1A1E3F).withValues(alpha: 0.3),
             blurRadius: isSmallScreen ? 15 : 20,
             offset: Offset(0, isSmallScreen ? 6 : 10),
           ),
@@ -1162,7 +1162,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
               decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.2),
+                color: Colors.white.withValues(alpha: 0.2),
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Text(
@@ -1189,7 +1189,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.2),
+                    color: Colors.white.withValues(alpha: 0.2),
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Text(
@@ -1278,9 +1278,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           Container(
             padding: EdgeInsets.all(isSmallScreen ? 12 : 16),
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.1),
+              color: Colors.white.withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: Colors.white.withOpacity(0.2)),
+              border: Border.all(color: Colors.white.withValues(alpha: 0.2)),
             ),
             child: isSmallScreen 
                 ? Column(
@@ -1405,7 +1405,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         const SizedBox(height: 8),
         LinearProgressIndicator(
           value: progress,
-          backgroundColor: Colors.white.withOpacity(0.3),
+          backgroundColor: Colors.white.withValues(alpha: 0.3),
           valueColor: const AlwaysStoppedAnimation<Color>(Colors.white),
           minHeight: 4,
         ),
@@ -1429,7 +1429,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -1495,7 +1495,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           const SizedBox(height: 8),
           LinearProgressIndicator(
             value: subject.progress / 100,
-            backgroundColor: subject.color.withOpacity(0.2),
+            backgroundColor: subject.color.withValues(alpha: 0.2),
             valueColor: AlwaysStoppedAnimation<Color>(subject.color),
             minHeight: 6,
           ),
@@ -1512,7 +1512,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -1564,7 +1564,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           Container(
             padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
-              color: color.withOpacity(0.1),
+              color: color.withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(8),
             ),
             child: Icon(icon, size: 16, color: color),
@@ -1604,7 +1604,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -1672,7 +1672,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -1704,7 +1704,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               gradient: LinearGradient(
                 colors: [
                   const Color(0xFF1A1E3F),
-                  const Color(0xFF1A1E3F).withOpacity(0.8),
+                  const Color(0xFF1A1E3F).withValues(alpha: 0.8),
                 ],
               ),
               borderRadius: BorderRadius.circular(12),
@@ -1854,7 +1854,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -1924,7 +1924,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -1962,7 +1962,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             child: Container(
               padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
               decoration: BoxDecoration(
-                border: Border.all(color: Colors.grey.withOpacity(0.2)),
+                border: Border.all(color: Colors.grey.withValues(alpha: 0.2)),
                 borderRadius: BorderRadius.circular(8),
               ),
               child: Row(
@@ -1994,7 +1994,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
         decoration: BoxDecoration(
-          border: Border.all(color: Colors.grey.withOpacity(0.2)),
+          border: Border.all(color: Colors.grey.withValues(alpha: 0.2)),
           borderRadius: BorderRadius.circular(8),
         ),
         child: Row(
@@ -2024,7 +2024,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -2067,10 +2067,10 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
-          colors: [color.withOpacity(0.1), color.withOpacity(0.05)],
+          colors: [color.withValues(alpha: 0.1), color.withValues(alpha: 0.05)],
         ),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: color.withOpacity(0.3)),
+        border: Border.all(color: color.withValues(alpha: 0.3)),
       ),
       child: Column(
         children: [
@@ -2109,7 +2109,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFFD62828).withOpacity(0.3),
+            color: const Color(0xFFD62828).withValues(alpha: 0.3),
             blurRadius: 15,
             offset: const Offset(0, 8),
           ),
@@ -2136,7 +2136,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           Text(
             'Based on your recent performance, here are some personalized recommendations:',
             style: GoogleFonts.montserrat(
-              color: Colors.white.withOpacity(0.9),
+              color: Colors.white.withValues(alpha: 0.9),
             ),
           ),
           const SizedBox(height: 12),
@@ -2184,7 +2184,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             child: Text(
               text,
               style: GoogleFonts.montserrat(
-                color: Colors.white.withOpacity(0.9),
+                color: Colors.white.withValues(alpha: 0.9),
                 fontSize: 14,
               ),
             ),
@@ -2291,7 +2291,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           children: [
             ListTile(
               leading: CircleAvatar(
-                backgroundColor: Colors.blue.withOpacity(0.2),
+                backgroundColor: Colors.blue.withValues(alpha: 0.2),
                 child: const Icon(Icons.quiz, color: Colors.blue),
               ),
               title: const Text('New Math Quiz Available'),
@@ -2299,7 +2299,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             ),
             ListTile(
               leading: CircleAvatar(
-                backgroundColor: Colors.green.withOpacity(0.2),
+                backgroundColor: Colors.green.withValues(alpha: 0.2),
                 child: const Icon(Icons.star, color: Colors.green),
               ),
               title: const Text('Achievement Unlocked!'),

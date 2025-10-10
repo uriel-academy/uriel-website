@@ -78,7 +78,7 @@ class _TermsOfServicePageState extends State<TermsOfServicePage> with TickerProv
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -170,7 +170,7 @@ class _TermsOfServicePageState extends State<TermsOfServicePage> with TickerProv
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                     decoration: BoxDecoration(
-                      color: const Color(0xFFD62828).withOpacity(0.1),
+                      color: const Color(0xFFD62828).withValues(alpha: 0.1),
                       borderRadius: BorderRadius.circular(30),
                     ),
                     child: Text(
@@ -360,10 +360,10 @@ class _TermsOfServicePageState extends State<TermsOfServicePage> with TickerProv
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: const Color(0xFFD62828).withOpacity(0.2)),
+        border: Border.all(color: const Color(0xFFD62828).withValues(alpha: 0.2)),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 15,
             offset: const Offset(0, 4),
           ),
@@ -462,7 +462,7 @@ class _TermsOfServicePageState extends State<TermsOfServicePage> with TickerProv
                 'If you have questions about these Terms, please contact us:',
                 style: GoogleFonts.montserrat(
                   fontSize: isSmallScreen ? 16 : 18,
-                  color: Colors.white.withOpacity(0.9),
+                  color: Colors.white.withValues(alpha: 0.9),
                   height: 1.6,
                 ),
                 textAlign: TextAlign.center,
@@ -473,9 +473,9 @@ class _TermsOfServicePageState extends State<TermsOfServicePage> with TickerProv
               Container(
                 padding: EdgeInsets.all(isSmallScreen ? 20 : 24),
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.1),
+                  color: Colors.white.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(16),
-                  border: Border.all(color: Colors.white.withOpacity(0.2)),
+                  border: Border.all(color: Colors.white.withValues(alpha: 0.2)),
                 ),
                 child: Column(
                   children: [
@@ -491,13 +491,13 @@ class _TermsOfServicePageState extends State<TermsOfServicePage> with TickerProv
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.email, color: Colors.white.withOpacity(0.9), size: 16),
+                        Icon(Icons.email, color: Colors.white.withValues(alpha: 0.9), size: 16),
                         const SizedBox(width: 8),
                         Text(
                           'studywithuriel@gmail.com',
                           style: GoogleFonts.montserrat(
                             fontSize: isSmallScreen ? 14 : 16,
-                            color: Colors.white.withOpacity(0.9),
+                            color: Colors.white.withValues(alpha: 0.9),
                           ),
                         ),
                       ],
@@ -506,13 +506,13 @@ class _TermsOfServicePageState extends State<TermsOfServicePage> with TickerProv
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.web, color: Colors.white.withOpacity(0.9), size: 16),
+                        Icon(Icons.web, color: Colors.white.withValues(alpha: 0.9), size: 16),
                         const SizedBox(width: 8),
                         Text(
                           'www.uriel.academy',
                           style: GoogleFonts.montserrat(
                             fontSize: isSmallScreen ? 14 : 16,
-                            color: Colors.white.withOpacity(0.9),
+                            color: Colors.white.withValues(alpha: 0.9),
                           ),
                         ),
                       ],
@@ -561,7 +561,7 @@ class _TermsOfServicePageState extends State<TermsOfServicePage> with TickerProv
             '© 2025 Uriel Academy. Built with ❤️ for Ghanaian students.',
             style: GoogleFonts.montserrat(
               fontSize: isSmallScreen ? 12 : 14,
-              color: Colors.white.withOpacity(0.7),
+              color: Colors.white.withValues(alpha: 0.7),
             ),
             textAlign: TextAlign.center,
           ),

@@ -507,7 +507,7 @@ class _QuizTakerPageState extends State<QuizTakerPage>
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                           decoration: BoxDecoration(
-                            color: const Color(0xFFD62828).withOpacity(0.1),
+                            color: const Color(0xFFD62828).withValues(alpha: 0.1),
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: Text(
@@ -670,17 +670,17 @@ class _QuizTakerPageState extends State<QuizTakerPage>
                                 ? Colors.red
                                 : isSelected 
                                     ? const Color(0xFFD62828) 
-                                    : Colors.white.withOpacity(0.3),
+                                    : Colors.white.withValues(alpha: 0.3),
                         width: isSelected || showCorrect || showIncorrect ? 2 : 1,
                       ),
                       borderRadius: BorderRadius.circular(12),
                       color: showCorrect 
-                          ? Colors.green.withOpacity(0.2)
+                          ? Colors.green.withValues(alpha: 0.2)
                           : showIncorrect 
-                              ? Colors.red.withOpacity(0.2)
+                              ? Colors.red.withValues(alpha: 0.2)
                               : isSelected 
                                   ? const Color(0xFFD62828) // Uriel red for selected
-                                  : Colors.white.withOpacity(0.9), // White with slight transparency
+                                  : Colors.white.withValues(alpha: 0.9), // White with slight transparency
                     ),
                     child: Row(
                       children: [
@@ -740,9 +740,9 @@ class _QuizTakerPageState extends State<QuizTakerPage>
               Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color: Colors.blue.withOpacity(0.1),
+                  color: Colors.blue.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: Colors.blue.withOpacity(0.3)),
+                  border: Border.all(color: Colors.blue.withValues(alpha: 0.3)),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

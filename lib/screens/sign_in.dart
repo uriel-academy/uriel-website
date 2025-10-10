@@ -175,6 +175,8 @@ class _SignInPageState extends State<SignInPage> {
         // Skip OTP verification and route based on user role
         final userRole = await UserService().getUserRoleByEmail(user.email!);
         
+        if (!mounted) return;
+        
         if (userRole != null) {
           // Update last login time
           await UserService().updateLastLogin(user.uid);
@@ -313,13 +315,13 @@ class _SignInPageState extends State<SignInPage> {
         borderRadius: BorderRadius.circular(isSmallScreen ? 12 : 16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 20,
             offset: const Offset(0, 8),
           ),
         ],
         border: Border.all(
-          color: Colors.grey.withOpacity(0.1),
+          color: Colors.grey.withValues(alpha: 0.1),
           width: 1,
         ),
       ),

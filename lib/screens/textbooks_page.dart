@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/textbook_model.dart';
 import '../services/textbook_service.dart';
 
@@ -138,7 +137,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                       decoration: BoxDecoration(
                         color: const Color(0xFFF5F7FA),
                         borderRadius: BorderRadius.circular(12),
-                        border: Border.all(color: Colors.grey.withOpacity(0.2)),
+                        border: Border.all(color: Colors.grey.withValues(alpha: 0.2)),
                       ),
                       child: TextField(
                         controller: _searchController,
@@ -387,7 +386,7 @@ class _TextbooksPageState extends State<TextbooksPage>
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.grey.withOpacity(0.3)),
+        border: Border.all(color: Colors.grey.withValues(alpha: 0.3)),
         borderRadius: BorderRadius.circular(8),
         color: Colors.white,
       ),
@@ -479,7 +478,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                     colors: [
-                      _getSubjectColor(textbook.subject).withOpacity(0.7),
+                      _getSubjectColor(textbook.subject).withValues(alpha: 0.7),
                       _getSubjectColor(textbook.subject),
                     ],
                   ),
@@ -502,7 +501,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                               vertical: 4,
                             ),
                             decoration: BoxDecoration(
-                              color: Colors.white.withOpacity(0.9),
+                              color: Colors.white.withValues(alpha: 0.9),
                               borderRadius: BorderRadius.circular(4),
                             ),
                             child: Text(
@@ -584,7 +583,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                             vertical: 2,
                           ),
                           decoration: BoxDecoration(
-                            color: _getSubjectColor(textbook.subject).withOpacity(0.1),
+                            color: _getSubjectColor(textbook.subject).withValues(alpha: 0.1),
                             borderRadius: BorderRadius.circular(4),
                           ),
                           child: Text(
@@ -635,7 +634,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                     colors: [
-                      _getSubjectColor(textbook.subject).withOpacity(0.7),
+                      _getSubjectColor(textbook.subject).withValues(alpha: 0.7),
                       _getSubjectColor(textbook.subject),
                     ],
                   ),
@@ -655,7 +654,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                         vertical: 2,
                       ),
                       decoration: BoxDecoration(
-                        color: Colors.white.withOpacity(0.9),
+                        color: Colors.white.withValues(alpha: 0.9),
                         borderRadius: BorderRadius.circular(4),
                       ),
                       child: Text(
@@ -731,7 +730,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                             vertical: 4,
                           ),
                           decoration: BoxDecoration(
-                            color: _getSubjectColor(textbook.subject).withOpacity(0.1),
+                            color: _getSubjectColor(textbook.subject).withValues(alpha: 0.1),
                             borderRadius: BorderRadius.circular(6),
                           ),
                           child: Text(
@@ -750,7 +749,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                             vertical: 4,
                           ),
                           decoration: BoxDecoration(
-                            color: Colors.grey.withOpacity(0.1),
+                            color: Colors.grey.withValues(alpha: 0.1),
                             borderRadius: BorderRadius.circular(6),
                           ),
                           child: Text(
@@ -781,7 +780,7 @@ class _TextbooksPageState extends State<TextbooksPage>
               Container(
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  color: const Color(0xFFD62828).withOpacity(0.1),
+                  color: const Color(0xFFD62828).withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: const Icon(
@@ -807,7 +806,7 @@ class _TextbooksPageState extends State<TextbooksPage>
             Container(
               padding: const EdgeInsets.all(32),
               decoration: BoxDecoration(
-                color: Colors.grey.withOpacity(0.1),
+                color: Colors.grey.withValues(alpha: 0.1),
                 shape: BoxShape.circle,
               ),
               child: Icon(

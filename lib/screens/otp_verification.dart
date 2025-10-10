@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:uriel_mainapp/screens/onboarding_walkthrough.dart';
 
 class OTPVerificationPage extends StatefulWidget {
   final String email;

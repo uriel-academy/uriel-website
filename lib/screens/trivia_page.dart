@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/trivia_model.dart';
 import '../services/trivia_service.dart';
 
@@ -190,11 +189,11 @@ class _TriviaPageState extends State<TriviaPage>
                       decoration: BoxDecoration(
                         color: const Color(0xFFF5F7FA),
                         borderRadius: BorderRadius.circular(12),
-                        border: Border.all(color: Colors.grey.withOpacity(0.2)),
+                        border: Border.all(color: Colors.grey.withValues(alpha: 0.2)),
                       ),
                       child: TextField(
                         controller: _searchController,
-                        style: TextStyle(color: Colors.black),
+                        style: const TextStyle(color: Colors.black),
                         decoration: InputDecoration(
                           hintText: 'Search trivia challenges, topics...',
                           hintStyle: GoogleFonts.montserrat(
@@ -239,9 +238,9 @@ class _TriviaPageState extends State<TriviaPage>
                       const SizedBox(height: 12),
                       Row(
                         children: [
-                          Icon(Icons.filter_list, 
+                          const Icon(Icons.filter_list, 
                               size: 16, 
-                              color: const Color(0xFFD62828)),
+                              color: Color(0xFFD62828)),
                           const SizedBox(width: 8),
                           Expanded(
                             child: Text(
@@ -374,7 +373,7 @@ class _TriviaPageState extends State<TriviaPage>
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFFE91E63).withOpacity(0.3),
+            color: const Color(0xFFE91E63).withValues(alpha: 0.3),
             blurRadius: 15,
             offset: const Offset(0, 8),
           ),
@@ -399,13 +398,13 @@ class _TriviaPageState extends State<TriviaPage>
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.2),
+                  color: Colors.white.withValues(alpha: 0.2),
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Icon(Icons.local_fire_department, 
+                    const Icon(Icons.local_fire_department, 
                          color: Colors.white, 
                          size: 16),
                     const SizedBox(width: 4),
@@ -463,9 +462,9 @@ class _TriviaPageState extends State<TriviaPage>
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.1),
+        color: Colors.white.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: Colors.white.withOpacity(0.2)),
+        border: Border.all(color: Colors.white.withValues(alpha: 0.2)),
       ),
       child: Column(
         children: [
@@ -589,7 +588,7 @@ class _TriviaPageState extends State<TriviaPage>
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.grey.withOpacity(0.3)),
+        border: Border.all(color: Colors.grey.withValues(alpha: 0.3)),
         borderRadius: BorderRadius.circular(8),
         color: Colors.white,
       ),
@@ -633,7 +632,7 @@ class _TriviaPageState extends State<TriviaPage>
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF1A1E3F).withOpacity(0.3),
+            color: const Color(0xFF1A1E3F).withValues(alpha: 0.3),
             blurRadius: 15,
             offset: const Offset(0, 8),
           ),
@@ -665,7 +664,7 @@ class _TriviaPageState extends State<TriviaPage>
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                 decoration: BoxDecoration(
-                  color: Colors.orange.withOpacity(0.2),
+                  color: Colors.orange.withValues(alpha: 0.2),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Text(
@@ -692,7 +691,7 @@ class _TriviaPageState extends State<TriviaPage>
           Text(
             'Test your knowledge about Ghana\'s journey to independence with this special challenge featuring 20 questions about our nation\'s history.',
             style: GoogleFonts.montserrat(
-              color: Colors.white.withOpacity(0.9),
+              color: Colors.white.withValues(alpha: 0.9),
               fontSize: 14,
             ),
           ),
@@ -758,12 +757,12 @@ class _TriviaPageState extends State<TriviaPage>
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Icon(icon, color: Colors.white.withOpacity(0.8), size: 16),
+        Icon(icon, color: Colors.white.withValues(alpha: 0.8), size: 16),
         const SizedBox(width: 4),
         Text(
           text,
           style: GoogleFonts.montserrat(
-            color: Colors.white.withOpacity(0.8),
+            color: Colors.white.withValues(alpha: 0.8),
             fontSize: 12,
             fontWeight: FontWeight.w500,
           ),
@@ -812,7 +811,7 @@ class _TriviaPageState extends State<TriviaPage>
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               colors: [
-                _getCategoryColor(challenge.category).withOpacity(0.1),
+                _getCategoryColor(challenge.category).withValues(alpha: 0.1),
                 Colors.white,
               ],
             ),
@@ -923,7 +922,7 @@ class _TriviaPageState extends State<TriviaPage>
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                     decoration: BoxDecoration(
-                      color: _getDifficultyColor(challenge.difficulty).withOpacity(0.1),
+                      color: _getDifficultyColor(challenge.difficulty).withValues(alpha: 0.1),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Text(
@@ -988,7 +987,7 @@ class _TriviaPageState extends State<TriviaPage>
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.1),
+        color: color.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(4),
       ),
       child: Row(
@@ -1019,7 +1018,7 @@ class _TriviaPageState extends State<TriviaPage>
             Container(
               padding: const EdgeInsets.all(32),
               decoration: BoxDecoration(
-                color: Colors.grey.withOpacity(0.1),
+                color: Colors.grey.withValues(alpha: 0.1),
                 shape: BoxShape.circle,
               ),
               child: Icon(

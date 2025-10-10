@@ -475,7 +475,7 @@ Join the challenge 👉 $url
                 color: Colors.white,
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.05),
+                    color: Colors.black.withValues(alpha: 0.05),
                     blurRadius: 10,
                     offset: const Offset(0, 2),
                   ),
@@ -767,13 +767,13 @@ Join the challenge 👉 $url
               end: Alignment.bottomRight,
               colors: [
                 _getTierColor(entry.tier),
-                _getTierColor(entry.tier).withOpacity(0.7),
+                _getTierColor(entry.tier).withValues(alpha: 0.7),
               ],
             ),
             borderRadius: BorderRadius.circular(20),
             boxShadow: [
               BoxShadow(
-                color: _getTierColor(entry.tier).withOpacity(0.3),
+                color: _getTierColor(entry.tier).withValues(alpha: 0.3),
                 blurRadius: 20,
                 offset: const Offset(0, 8),
               ),
@@ -790,7 +790,7 @@ Join the challenge 👉 $url
                   shape: BoxShape.circle,
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.2),
+                      color: Colors.black.withValues(alpha: 0.2),
                       blurRadius: 12,
                       offset: const Offset(0, 4),
                     ),
@@ -815,7 +815,7 @@ Join the challenge 👉 $url
                       'Your Rank',
                       style: GoogleFonts.montserrat(
                         fontSize: 12,
-                        color: Colors.white.withOpacity(0.9),
+                        color: Colors.white.withValues(alpha: 0.9),
                         fontWeight: FontWeight.w500,
                       ),
                     ),
@@ -834,7 +834,7 @@ Join the challenge 👉 $url
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                           decoration: BoxDecoration(
-                            color: Colors.white.withOpacity(0.25),
+                            color: Colors.white.withValues(alpha: 0.25),
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: Text(
@@ -850,7 +850,7 @@ Join the challenge 👉 $url
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                           decoration: BoxDecoration(
-                            color: Colors.white.withOpacity(0.25),
+                            color: Colors.white.withValues(alpha: 0.25),
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: Text(
@@ -892,7 +892,7 @@ Join the challenge 👉 $url
             borderRadius: BorderRadius.circular(20),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.08),
+                color: Colors.black.withValues(alpha: 0.08),
                 blurRadius: 20,
                 offset: const Offset(0, 4),
               ),
@@ -966,7 +966,7 @@ Join the challenge 👉 $url
             borderRadius: BorderRadius.circular(16),
             boxShadow: [
               BoxShadow(
-                color: const Color(0xFF2ECC71).withOpacity(0.3),
+                color: const Color(0xFF2ECC71).withValues(alpha: 0.3),
                 blurRadius: 12,
                 offset: const Offset(0, 4),
               ),
@@ -992,7 +992,7 @@ Join the challenge 👉 $url
                       'Start a quiz to earn more XP and improve your rank',
                       style: GoogleFonts.montserrat(
                         fontSize: 12,
-                        color: Colors.white.withOpacity(0.9),
+                        color: Colors.white.withValues(alpha: 0.9),
                       ),
                     ),
                   ],
@@ -1031,9 +1031,9 @@ Join the challenge 👉 $url
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.08),
+        color: color.withValues(alpha: 0.08),
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: color.withOpacity(0.2), width: 1),
+        border: Border.all(color: color.withValues(alpha: 0.2), width: 1),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1041,7 +1041,7 @@ Join the challenge 👉 $url
           Container(
             padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
-              color: color.withOpacity(0.15),
+              color: color.withValues(alpha: 0.15),
               borderRadius: BorderRadius.circular(10),
             ),
             child: Icon(icon, size: 20, color: color),
@@ -1084,7 +1084,7 @@ Join the challenge 👉 $url
           Container(
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.3),
+              color: Colors.white.withValues(alpha: 0.3),
               shape: BoxShape.circle,
             ),
             child: const Icon(Icons.emoji_events, color: Colors.white, size: 28),
@@ -1269,7 +1269,7 @@ Join the challenge 👉 $url
             width: 80,
             height: height,
           decoration: BoxDecoration(
-            color: color.withOpacity(0.3),
+            color: color.withValues(alpha: 0.3),
             borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
             border: Border.all(color: color, width: 2),
           ),
@@ -1303,14 +1303,14 @@ Join the challenge 👉 $url
       margin: const EdgeInsets.only(bottom: 12),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: isCurrentUser ? _getTierColor(entry.tier).withOpacity(0.2) : Colors.white,
+        color: isCurrentUser ? _getTierColor(entry.tier).withValues(alpha: 0.2) : Colors.white,
         borderRadius: BorderRadius.circular(16),
         border: isCurrentUser 
             ? Border.all(color: _getTierColor(entry.tier), width: 2)
             : null,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -1323,7 +1323,7 @@ Join the challenge 👉 $url
             width: 40,
             height: 40,
             decoration: BoxDecoration(
-              color: _getTierColor(entry.tier).withOpacity(0.3),
+              color: _getTierColor(entry.tier).withValues(alpha: 0.3),
               shape: BoxShape.circle,
               border: Border.all(color: _getTierColor(entry.tier), width: 2),
             ),

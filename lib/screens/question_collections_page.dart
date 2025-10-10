@@ -3,9 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../models/question_model.dart';
 import '../models/question_collection_model.dart';
 import '../services/question_service.dart';
-import '../services/storage_service.dart';
 import 'quiz_taker_page.dart';
-import 'question_detail_page.dart';
 
 /// Page that displays past questions grouped as collections (e.g., "BECE RME 1999 MCQ")
 /// This provides a much cleaner UI when there are hundreds of questions across multiple years
@@ -193,7 +191,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -415,7 +413,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -449,7 +447,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
                   decoration: BoxDecoration(
                     color: const Color(0xFFF8FAFE),
                     borderRadius: BorderRadius.circular(8),
-                    border: Border.all(color: const Color(0xFF1A1E3F).withOpacity(0.1)),
+                    border: Border.all(color: const Color(0xFF1A1E3F).withValues(alpha: 0.1)),
                   ),
                   child: Text(
                     collection.year,

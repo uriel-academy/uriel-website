@@ -78,7 +78,7 @@ class _PrivacyPolicyPageState extends State<PrivacyPolicyPage> with TickerProvid
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -170,7 +170,7 @@ class _PrivacyPolicyPageState extends State<PrivacyPolicyPage> with TickerProvid
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                     decoration: BoxDecoration(
-                      color: const Color(0xFFD62828).withOpacity(0.1),
+                      color: const Color(0xFFD62828).withValues(alpha: 0.1),
                       borderRadius: BorderRadius.circular(30),
                     ),
                     child: Text(
@@ -329,10 +329,10 @@ class _PrivacyPolicyPageState extends State<PrivacyPolicyPage> with TickerProvid
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: const Color(0xFFD62828).withOpacity(0.2)),
+        border: Border.all(color: const Color(0xFFD62828).withValues(alpha: 0.2)),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 15,
             offset: const Offset(0, 4),
           ),
@@ -373,7 +373,7 @@ class _PrivacyPolicyPageState extends State<PrivacyPolicyPage> with TickerProvid
       decoration: BoxDecoration(
         color: Colors.grey[50],
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: Colors.grey.withOpacity(0.2)),
+        border: Border.all(color: Colors.grey.withValues(alpha: 0.2)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -435,7 +435,7 @@ class _PrivacyPolicyPageState extends State<PrivacyPolicyPage> with TickerProvid
                 'If you have any questions about this Privacy Policy or your data, please contact us:',
                 style: GoogleFonts.montserrat(
                   fontSize: isSmallScreen ? 16 : 18,
-                  color: Colors.white.withOpacity(0.9),
+                  color: Colors.white.withValues(alpha: 0.9),
                   height: 1.6,
                 ),
                 textAlign: TextAlign.center,
@@ -446,9 +446,9 @@ class _PrivacyPolicyPageState extends State<PrivacyPolicyPage> with TickerProvid
               Container(
                 padding: EdgeInsets.all(isSmallScreen ? 20 : 24),
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.1),
+                  color: Colors.white.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(16),
-                  border: Border.all(color: Colors.white.withOpacity(0.2)),
+                  border: Border.all(color: Colors.white.withValues(alpha: 0.2)),
                 ),
                 child: Column(
                   children: [
@@ -464,13 +464,13 @@ class _PrivacyPolicyPageState extends State<PrivacyPolicyPage> with TickerProvid
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.email, color: Colors.white.withOpacity(0.9), size: 16),
+                        Icon(Icons.email, color: Colors.white.withValues(alpha: 0.9), size: 16),
                         const SizedBox(width: 8),
                         Text(
                           'studywithuriel@gmail.com',
                           style: GoogleFonts.montserrat(
                             fontSize: isSmallScreen ? 14 : 16,
-                            color: Colors.white.withOpacity(0.9),
+                            color: Colors.white.withValues(alpha: 0.9),
                           ),
                         ),
                       ],
@@ -479,13 +479,13 @@ class _PrivacyPolicyPageState extends State<PrivacyPolicyPage> with TickerProvid
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.web, color: Colors.white.withOpacity(0.9), size: 16),
+                        Icon(Icons.web, color: Colors.white.withValues(alpha: 0.9), size: 16),
                         const SizedBox(width: 8),
                         Text(
                           'www.uriel.academy',
                           style: GoogleFonts.montserrat(
                             fontSize: isSmallScreen ? 14 : 16,
-                            color: Colors.white.withOpacity(0.9),
+                            color: Colors.white.withValues(alpha: 0.9),
                           ),
                         ),
                       ],
@@ -534,7 +534,7 @@ class _PrivacyPolicyPageState extends State<PrivacyPolicyPage> with TickerProvid
             '© 2025 Uriel Academy. Built with ❤️ for Ghanaian students.',
             style: GoogleFonts.montserrat(
               fontSize: isSmallScreen ? 12 : 14,
-              color: Colors.white.withOpacity(0.7),
+              color: Colors.white.withValues(alpha: 0.7),
             ),
             textAlign: TextAlign.center,
           ),

@@ -150,6 +150,8 @@ class _SignUpPageState extends State<SignUpPage> {
             name: user.displayName,
           );
           
+          if (!mounted) return;
+          
           Navigator.pushNamedAndRemoveUntil(
             context,
             '/home',
@@ -294,7 +296,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         borderRadius: BorderRadius.circular(16),
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.black.withOpacity(0.08),
+                            color: Colors.black.withValues(alpha: 0.08),
                             blurRadius: 20,
                             offset: const Offset(0, 4),
                           ),
@@ -476,7 +478,7 @@ class _SignUpPageState extends State<SignUpPage> {
       child: Container(
         padding: const EdgeInsets.all(20),
         decoration: BoxDecoration(
-          color: isSelected ? const Color(0xFF1A1E3F).withOpacity(0.05) : Colors.grey[50],
+          color: isSelected ? const Color(0xFF1A1E3F).withValues(alpha: 0.05) : Colors.grey[50],
           border: Border.all(
             color: isSelected ? const Color(0xFF1A1E3F) : Colors.grey[300]!,
             width: isSelected ? 2 : 1,
@@ -1247,7 +1249,7 @@ class _SignUpPageState extends State<SignUpPage> {
 
   // Google Sign Up Button
   Widget _buildGoogleSignUpButton() {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       child: ElevatedButton(
         onPressed: isLoading ? null : _handleGoogleSignUp,

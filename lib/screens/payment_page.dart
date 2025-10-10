@@ -289,7 +289,7 @@ class _PaymentPageState extends State<PaymentPage> {
                   boxShadow: isActive
                       ? [
                           BoxShadow(
-                            color: _red.withOpacity(0.2),
+                            color: _red.withValues(alpha: 0.2),
                             blurRadius: 16,
                             offset: const Offset(0, 6),
                           ),
@@ -478,7 +478,7 @@ class _PaymentPageState extends State<PaymentPage> {
           ),
           boxShadow: [
             BoxShadow(
-              color: isSelected ? _red.withOpacity(0.12) : Colors.black.withOpacity(0.05),
+              color: isSelected ? _red.withValues(alpha: 0.12) : Colors.black.withValues(alpha: 0.05),
               blurRadius: isSelected ? 22 : 12,
               offset: const Offset(0, 10),
             ),
@@ -593,7 +593,7 @@ class _PaymentPageState extends State<PaymentPage> {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                 decoration: BoxDecoration(
-                  color: _red.withOpacity(0.08),
+                  color: _red.withValues(alpha: 0.08),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Row(
@@ -684,7 +684,7 @@ class _PaymentPageState extends State<PaymentPage> {
         borderRadius: BorderRadius.circular(18),
         border: Border.all(color: Colors.grey.shade200),
         boxShadow: [
-          BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 20, offset: const Offset(0, 12)),
+          BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 20, offset: const Offset(0, 12)),
         ],
       ),
       child: Column(
@@ -791,7 +791,7 @@ class _PaymentPageState extends State<PaymentPage> {
         borderRadius: BorderRadius.circular(18),
         border: Border.all(color: Colors.grey.shade200),
         boxShadow: [
-          BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 18, offset: const Offset(0, 10)),
+          BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 18, offset: const Offset(0, 10)),
         ],
       ),
       child: Column(
@@ -863,7 +863,7 @@ class _PaymentPageState extends State<PaymentPage> {
         borderRadius: BorderRadius.circular(18),
         border: Border.all(color: Colors.grey.shade200),
         boxShadow: [
-          BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 18, offset: const Offset(0, 10)),
+          BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 18, offset: const Offset(0, 10)),
         ],
       ),
       child: Column(
@@ -927,7 +927,7 @@ class _PaymentPageState extends State<PaymentPage> {
           borderRadius: BorderRadius.circular(16),
           border: Border.all(color: isSelected ? _red : Colors.grey.shade200, width: isSelected ? 2 : 1),
           boxShadow: [
-            BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 12, offset: const Offset(0, 6)),
+            BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 12, offset: const Offset(0, 6)),
           ],
         ),
         child: Column(
@@ -936,7 +936,7 @@ class _PaymentPageState extends State<PaymentPage> {
             Row(
               children: [
                 CircleAvatar(
-                  backgroundColor: isSelected ? _red.withOpacity(0.1) : Colors.grey.shade100,
+                  backgroundColor: isSelected ? _red.withValues(alpha: 0.1) : Colors.grey.shade100,
                   child: Icon(icon, color: isSelected ? _red : _navy),
                 ),
                 const Spacer(),
@@ -986,7 +986,7 @@ class _PaymentPageState extends State<PaymentPage> {
         borderRadius: BorderRadius.circular(18),
         border: Border.all(color: Colors.grey.shade200),
         boxShadow: [
-          BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 18, offset: const Offset(0, 10)),
+          BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 18, offset: const Offset(0, 10)),
         ],
       ),
       child: Form(
@@ -1092,7 +1092,7 @@ class _PaymentPageState extends State<PaymentPage> {
         borderRadius: BorderRadius.circular(18),
         border: Border.all(color: Colors.grey.shade200),
         boxShadow: [
-          BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 18, offset: const Offset(0, 10)),
+          BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 18, offset: const Offset(0, 10)),
         ],
       ),
       child: Form(
@@ -1138,7 +1138,7 @@ class _PaymentPageState extends State<PaymentPage> {
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: _green.withOpacity(0.08),
+                color: _green.withValues(alpha: 0.08),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Row(
@@ -1165,7 +1165,7 @@ class _PaymentPageState extends State<PaymentPage> {
     return ChoiceChip(
       label: Text(label, style: GoogleFonts.montserrat(color: _navy, fontWeight: FontWeight.w600, fontSize: 12)),
       selected: true,
-      selectedColor: _navy.withOpacity(0.08),
+      selectedColor: _navy.withValues(alpha: 0.08),
       onSelected: (_) {},
     );
   }
@@ -1182,7 +1182,7 @@ class _PaymentPageState extends State<PaymentPage> {
         borderRadius: BorderRadius.circular(18),
         border: Border.all(color: Colors.grey.shade200),
         boxShadow: [
-          BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 18, offset: const Offset(0, 10)),
+          BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 18, offset: const Offset(0, 10)),
         ],
       ),
       child: Column(
@@ -1202,7 +1202,7 @@ class _PaymentPageState extends State<PaymentPage> {
           Container(
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
-              color: _navy.withOpacity(0.06),
+              color: _navy.withValues(alpha: 0.06),
               borderRadius: BorderRadius.circular(12),
             ),
             child: Text(
@@ -1232,7 +1232,7 @@ class _PaymentPageState extends State<PaymentPage> {
         borderRadius: BorderRadius.circular(18),
         border: Border.all(color: Colors.grey.shade200),
         boxShadow: [
-          BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 18, offset: const Offset(0, 10)),
+          BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 18, offset: const Offset(0, 10)),
         ],
       ),
       child: Column(
@@ -1268,7 +1268,7 @@ class _PaymentPageState extends State<PaymentPage> {
                 const SizedBox(height: 6),
                 Text(
                   'Dial this USSD code',
-                  style: GoogleFonts.montserrat(color: Colors.white.withOpacity(0.8), fontSize: 12),
+                  style: GoogleFonts.montserrat(color: Colors.white.withValues(alpha: 0.8), fontSize: 12),
                 ),
               ],
             ),
@@ -1328,7 +1328,7 @@ class _PaymentPageState extends State<PaymentPage> {
         borderRadius: BorderRadius.circular(18),
         border: Border.all(color: Colors.grey.shade200),
         boxShadow: [
-          BoxShadow(color: Colors.black.withOpacity(0.08), blurRadius: 24, offset: const Offset(0, 16)),
+          BoxShadow(color: Colors.black.withValues(alpha: 0.08), blurRadius: 24, offset: const Offset(0, 16)),
         ],
       ),
       child: Column(
@@ -1378,7 +1378,7 @@ class _PaymentPageState extends State<PaymentPage> {
           Container(
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
-              color: _navy.withOpacity(0.05),
+              color: _navy.withValues(alpha: 0.05),
               borderRadius: BorderRadius.circular(12),
             ),
             child: Column(
@@ -1474,7 +1474,7 @@ class _PaymentPageState extends State<PaymentPage> {
                 label: const Text('Send payment link to parent'),
                 style: OutlinedButton.styleFrom(
                   foregroundColor: _navy,
-                  side: BorderSide(color: _navy.withOpacity(0.4)),
+                  side: BorderSide(color: _navy.withValues(alpha: 0.4)),
                   textStyle: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
                 ),
               ),
@@ -1484,7 +1484,7 @@ class _PaymentPageState extends State<PaymentPage> {
                 label: const Text('Request school invoice'),
                 style: OutlinedButton.styleFrom(
                   foregroundColor: _navy,
-                  side: BorderSide(color: _navy.withOpacity(0.4)),
+                  side: BorderSide(color: _navy.withValues(alpha: 0.4)),
                   textStyle: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
                 ),
               ),
@@ -1631,7 +1631,7 @@ class _PaymentPageState extends State<PaymentPage> {
         children: [
           CircleAvatar(
             radius: 22,
-            backgroundColor: _navy.withOpacity(0.08),
+            backgroundColor: _navy.withValues(alpha: 0.08),
             child: Icon(icon, color: _navy),
           ),
           const SizedBox(height: 12),
@@ -1651,7 +1651,7 @@ class _PaymentPageState extends State<PaymentPage> {
 
   Widget _buildProcessingOverlay() {
     return Container(
-      color: Colors.black.withOpacity(0.35),
+      color: Colors.black.withValues(alpha: 0.35),
       child: Center(
         child: Container(
           padding: const EdgeInsets.all(24),
@@ -1693,7 +1693,7 @@ class _PaymentPageState extends State<PaymentPage> {
             height: 160,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: isSuccess ? _green.withOpacity(0.12) : Colors.orange.withOpacity(0.12),
+              color: isSuccess ? _green.withValues(alpha: 0.12) : Colors.orange.withValues(alpha: 0.12),
             ),
             child: Icon(
               isSuccess ? Icons.check_circle : Icons.error_outline,
@@ -1723,7 +1723,7 @@ class _PaymentPageState extends State<PaymentPage> {
               borderRadius: BorderRadius.circular(18),
               border: Border.all(color: Colors.grey.shade200),
               boxShadow: [
-                BoxShadow(color: Colors.black.withOpacity(0.08), blurRadius: 24, offset: const Offset(0, 16)),
+                BoxShadow(color: Colors.black.withValues(alpha: 0.08), blurRadius: 24, offset: const Offset(0, 16)),
               ],
             ),
             child: Column(
@@ -1762,7 +1762,7 @@ class _PaymentPageState extends State<PaymentPage> {
                       label: const Text('Download receipt'),
                       style: OutlinedButton.styleFrom(
                         foregroundColor: _navy,
-                        side: BorderSide(color: _navy.withOpacity(0.3)),
+                        side: BorderSide(color: _navy.withValues(alpha: 0.3)),
                       ),
                     ),
                     OutlinedButton.icon(
@@ -1771,7 +1771,7 @@ class _PaymentPageState extends State<PaymentPage> {
                       label: const Text('View my dashboard'),
                       style: OutlinedButton.styleFrom(
                         foregroundColor: _navy,
-                        side: BorderSide(color: _navy.withOpacity(0.3)),
+                        side: BorderSide(color: _navy.withValues(alpha: 0.3)),
                       ),
                     ),
                   ],
@@ -1829,7 +1829,7 @@ class _PaymentPageState extends State<PaymentPage> {
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: _navy.withOpacity(0.05),
+        color: _navy.withValues(alpha: 0.05),
         borderRadius: BorderRadius.circular(16),
       ),
       child: Column(

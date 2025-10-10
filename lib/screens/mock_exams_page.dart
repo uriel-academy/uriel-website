@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/mock_exam_model.dart';
 import '../services/mock_exam_service.dart';
 
@@ -141,7 +140,7 @@ class _MockExamsPageState extends State<MockExamsPage>
                       decoration: BoxDecoration(
                         color: const Color(0xFFF5F7FA),
                         borderRadius: BorderRadius.circular(12),
-                        border: Border.all(color: Colors.grey.withOpacity(0.2)),
+                        border: Border.all(color: Colors.grey.withValues(alpha: 0.2)),
                       ),
                       child: TextField(
                         controller: _searchController,
@@ -429,7 +428,7 @@ class _MockExamsPageState extends State<MockExamsPage>
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.grey.withOpacity(0.3)),
+        border: Border.all(color: Colors.grey.withValues(alpha: 0.3)),
         borderRadius: BorderRadius.circular(8),
         color: Colors.white,
       ),
@@ -473,7 +472,7 @@ class _MockExamsPageState extends State<MockExamsPage>
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF1A1E3F).withOpacity(0.3),
+            color: const Color(0xFF1A1E3F).withValues(alpha: 0.3),
             blurRadius: 15,
             offset: const Offset(0, 8),
           ),
@@ -531,9 +530,9 @@ class _MockExamsPageState extends State<MockExamsPage>
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.1),
+        color: Colors.white.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: Colors.white.withOpacity(0.2)),
+        border: Border.all(color: Colors.white.withValues(alpha: 0.2)),
       ),
       child: Column(
         children: [
@@ -604,7 +603,7 @@ class _MockExamsPageState extends State<MockExamsPage>
                       gradient: LinearGradient(
                         colors: [
                           _getExamTypeColor(exam.examType),
-                          _getExamTypeColor(exam.examType).withOpacity(0.7),
+                          _getExamTypeColor(exam.examType).withValues(alpha: 0.7),
                         ],
                       ),
                       borderRadius: BorderRadius.circular(12),
@@ -641,7 +640,7 @@ class _MockExamsPageState extends State<MockExamsPage>
                                 vertical: 4,
                               ),
                               decoration: BoxDecoration(
-                                color: _getDifficultyColor(exam.difficulty).withOpacity(0.1),
+                                color: _getDifficultyColor(exam.difficulty).withValues(alpha: 0.1),
                                 borderRadius: BorderRadius.circular(12),
                               ),
                               child: Text(
@@ -696,7 +695,7 @@ class _MockExamsPageState extends State<MockExamsPage>
                           Container(
                             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                             decoration: BoxDecoration(
-                              color: Colors.green.withOpacity(0.1),
+                              color: Colors.green.withValues(alpha: 0.1),
                               borderRadius: BorderRadius.circular(12),
                             ),
                             child: Row(
@@ -736,7 +735,7 @@ class _MockExamsPageState extends State<MockExamsPage>
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                         decoration: BoxDecoration(
-                          color: Colors.green.withOpacity(0.1),
+                          color: Colors.green.withValues(alpha: 0.1),
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: Row(
@@ -812,7 +811,7 @@ class _MockExamsPageState extends State<MockExamsPage>
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.1),
+        color: color.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(6),
       ),
       child: Row(
@@ -843,7 +842,7 @@ class _MockExamsPageState extends State<MockExamsPage>
             Container(
               padding: const EdgeInsets.all(32),
               decoration: BoxDecoration(
-                color: Colors.grey.withOpacity(0.1),
+                color: Colors.grey.withValues(alpha: 0.1),
                 shape: BoxShape.circle,
               ),
               child: Icon(

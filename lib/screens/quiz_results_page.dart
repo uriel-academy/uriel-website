@@ -189,7 +189,7 @@ class _QuizResultsPageState extends State<QuizResultsPage>
                       achievement.description,
                       style: GoogleFonts.montserrat(
                         fontSize: 14,
-                        color: Colors.white.withOpacity(0.9),
+                        color: Colors.white.withValues(alpha: 0.9),
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -586,8 +586,8 @@ Tap below to try the quiz yourself and see if you can match or top my score. ðŸš
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              _getGradeColor().withOpacity(0.1),
-              _getGradeColor().withOpacity(0.05),
+              _getGradeColor().withValues(alpha: 0.1),
+              _getGradeColor().withValues(alpha: 0.05),
             ],
           ),
         ),
@@ -711,7 +711,7 @@ Tap below to try the quiz yourself and see if you can match or top my score. ðŸš
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.3),
+                color: Colors.white.withValues(alpha: 0.3),
                 shape: BoxShape.circle,
               ),
               child: const Icon(
@@ -745,7 +745,7 @@ Tap below to try the quiz yourself and see if you can match or top my score. ðŸš
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
               decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.2),
+                color: Colors.white.withValues(alpha: 0.2),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Column(
@@ -799,7 +799,7 @@ Tap below to try the quiz yourself and see if you can match or top my score. ðŸš
               detail,
               style: GoogleFonts.montserrat(
                 fontSize: 10,
-                color: Colors.white.withOpacity(0.8),
+                color: Colors.white.withValues(alpha: 0.8),
               ),
             ),
           ],
@@ -859,7 +859,7 @@ Tap below to try the quiz yourself and see if you can match or top my score. ðŸš
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: color.withOpacity(0.1),
+                color: color.withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Icon(icon, color: color, size: 24),
@@ -1039,8 +1039,8 @@ Tap below to try the quiz yourself and see if you can match or top my score. ðŸš
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                   decoration: BoxDecoration(
                     color: answer.isCorrect 
-                        ? Colors.green.withOpacity(0.1)
-                        : Colors.red.withOpacity(0.1),
+                        ? Colors.green.withValues(alpha: 0.1)
+                        : Colors.red.withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Row(
@@ -1110,9 +1110,9 @@ Tap below to try the quiz yourself and see if you can match or top my score. ðŸš
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.1),
+        color: color.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: color.withOpacity(0.3)),
+        border: Border.all(color: color.withValues(alpha: 0.3)),
       ),
       child: Row(
         children: [

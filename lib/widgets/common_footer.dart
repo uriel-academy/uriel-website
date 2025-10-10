@@ -36,7 +36,7 @@ class CommonFooter extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: isSmallScreen ? 14 : 16,
-                color: Colors.white.withOpacity(0.8),
+                color: Colors.white.withValues(alpha: 0.8),
               ),
             ),
             SizedBox(height: isSmallScreen ? 24 : 32),
@@ -56,7 +56,7 @@ class CommonFooter extends StatelessWidget {
               ],
             ),
             SizedBox(height: isSmallScreen ? 24 : 32),
-            Divider(color: Colors.white.withOpacity(0.2)),
+            Divider(color: Colors.white.withValues(alpha: 0.2)),
             SizedBox(height: isSmallScreen ? 12 : 16),
           ] else ...[
             Text(
@@ -70,7 +70,7 @@ class CommonFooter extends StatelessWidget {
             '© 2025 Uriel Academy. Built with ❤️ for Ghanaian students.',
             style: GoogleFonts.montserrat(
               fontSize: isSmallScreen ? 12 : 14,
-              color: Colors.white.withOpacity(0.7),
+              color: Colors.white.withValues(alpha: 0.7),
             ),
             textAlign: TextAlign.center,
           ),
@@ -88,9 +88,9 @@ class CommonFooter extends StatelessWidget {
         text,
         style: TextStyle(
           fontSize: isSmallScreen ? 14 : 16,
-          color: Colors.white.withOpacity(0.8),
+          color: Colors.white.withValues(alpha: 0.8),
           decoration: TextDecoration.underline,
-          decorationColor: Colors.white.withOpacity(0.8),
+          decorationColor: Colors.white.withValues(alpha: 0.8),
         ),
       ),
     );

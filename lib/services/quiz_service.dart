@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/quiz_model.dart';
-import '../models/question_model.dart';
 
 class QuizService {
   static const String _quizHistoryKey = 'quiz_history';
@@ -95,7 +94,6 @@ class QuizService {
   // Update quiz statistics
   Future<void> _updateQuizStats(Quiz quiz) async {
     try {
-      final currentStats = await getQuizStats();
       final quizHistory = await getQuizHistory();
       
       // Calculate new stats
