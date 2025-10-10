@@ -2460,11 +2460,10 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                         // Menu Items
                         _buildProfileMenuItem(Icons.person, 'Profile Settings', () {
                           Navigator.pop(context);
-                          _showComingSoon('Profile Settings');
-                        }),
-                        _buildProfileMenuItem(Icons.notifications, 'Notification Settings', () {
-                          Navigator.pop(context);
-                          _showComingSoon('Notification Settings');
+                          setState(() {
+                            _selectedIndex = 0; // Navigate to Profile tab
+                            _showingProfile = true;
+                          });
                         }),
                         
                         const Divider(height: 1),
