@@ -24,6 +24,7 @@ class StorageService {
         try {
           final ListResult result = await _storage.ref(path).listAll();
           
+          // Check files directly in the folder
           for (var item in result.items) {
             final String downloadUrl = await item.getDownloadURL();
             final FullMetadata metadata = await item.getMetadata();
@@ -39,8 +40,36 @@ class StorageService {
             ));
           }
           
+          // Check subdirectories (e.g., 2014/, 2015/, etc.)
+          for (var prefix in result.prefixes) {
+            try {
+              final ListResult subResult = await prefix.listAll();
+              
+              for (var item in subResult.items) {
+                final String downloadUrl = await item.getDownloadURL();
+                final FullMetadata metadata = await item.getMetadata();
+                
+                // Extract year from folder name (e.g., "2014" from "bece-rme questions/2014/")
+                String yearFromFolder = prefix.name;
+                String extractedYear = extractYearFromFileName(item.name);
+                
+                questions.add(PastQuestion(
+                  id: item.name,
+                  title: item.name.replaceAll('.pdf', '').replaceAll('.json', '').replaceAll('_', ' '),
+                  subject: 'Religious and Moral Education',
+                  year: extractedYear != 'Unknown' ? extractedYear : yearFromFolder,
+                  downloadUrl: downloadUrl,
+                  fileSize: metadata.size ?? 0,
+                  uploadTime: metadata.timeCreated ?? DateTime.now(),
+                ));
+              }
+            } catch (e) {
+              debugPrint('Failed to access subfolder ${prefix.name}: $e');
+            }
+          }
+          
           if (questions.isNotEmpty) {
-            debugPrint('Found RME questions in folder: $path');
+            debugPrint('Found ${questions.length} RME questions in folder: $path');
             break; // Found questions, stop searching
           }
         } catch (e) {
