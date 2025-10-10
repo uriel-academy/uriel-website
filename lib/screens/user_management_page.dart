@@ -47,7 +47,7 @@ class _UserManagementPageState extends State<UserManagementPage>
       ),
       body: TabBarView(
         controller: _tabController,
-        children: [
+        children: const [
           StudentManagementTab(),
           TeacherManagementTab(),
           SchoolAdminManagementTab(),
@@ -64,6 +64,8 @@ class _UserManagementPageState extends State<UserManagementPage>
 }
 
 class StudentManagementTab extends StatelessWidget {
+  const StudentManagementTab({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -258,6 +260,8 @@ class StudentManagementTab extends StatelessWidget {
 }
 
 class TeacherManagementTab extends StatelessWidget {
+  const TeacherManagementTab({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -466,6 +470,8 @@ class TeacherManagementTab extends StatelessWidget {
 }
 
 class SchoolAdminManagementTab extends StatelessWidget {
+  const SchoolAdminManagementTab({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(

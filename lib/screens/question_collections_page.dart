@@ -45,13 +45,13 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
   Future<void> _loadCollections() async {
     setState(() => _isLoading = true);
     try {
-      print('🚀 Loading question collections...');
+      debugPrint('🚀 Loading question collections...');
       
       // Load all questions with increased timeout
       final questions = await _questionService.getQuestions().timeout(
         const Duration(seconds: 30),
         onTimeout: () {
-          print('⏰ Timeout loading general questions');
+          debugPrint('⏰ Timeout loading general questions');
           return <Question>[];
         },
       );
@@ -59,7 +59,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
       final rmeQuestions = await _questionService.getRMEQuestions().timeout(
         const Duration(seconds: 30),
         onTimeout: () {
-          print('⏰ Timeout loading RME questions');
+          debugPrint('⏰ Timeout loading RME questions');
           return <Question>[];
         },
       );
@@ -72,10 +72,10 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
         }
       }
       
-      print('📊 Loaded ${mergedQuestions.length} total questions');
+      debugPrint('📊 Loaded ${mergedQuestions.length} total questions');
       
       if (mergedQuestions.isEmpty) {
-        print('⚠️ No questions loaded! Check Firebase connection and data.');
+        debugPrint('⚠️ No questions loaded! Check Firebase connection and data.');
       }
       
       // Group into collections
@@ -84,7 +84,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
       // Sort by year (most recent first)
       collections.sort((a, b) => b.year.compareTo(a.year));
       
-      print('📦 Created ${collections.length} collections');
+      debugPrint('📦 Created ${collections.length} collections');
       
       setState(() {
         _collections = collections;
@@ -97,7 +97,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
         _applyInitialSubjectFilter();
       }
     } catch (e) {
-      print('❌ Error loading collections: $e');
+      debugPrint('❌ Error loading collections: $e');
       setState(() => _isLoading = false);
     }
   }

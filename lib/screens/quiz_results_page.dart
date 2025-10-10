@@ -64,14 +64,14 @@ class _QuizResultsPageState extends State<QuizResultsPage>
     try {
       final user = FirebaseAuth.instance.currentUser;
       if (user == null) {
-        print('⚠️ Cannot save quiz result: User not authenticated');
+        debugPrint('⚠️ Cannot save quiz result: User not authenticated');
         return;
       }
 
-      print('💾 Saving quiz result for user: ${user.uid}');
-      print('   Subject: ${widget.quiz.subject}');
-      print('   ExamType: ${widget.quiz.examType}');
-      print('   Score: ${widget.quiz.correctAnswers}/${widget.quiz.totalQuestions} (${widget.quiz.percentage}%)');
+      debugPrint('💾 Saving quiz result for user: ${user.uid}');
+      debugPrint('   Subject: ${widget.quiz.subject}');
+      debugPrint('   ExamType: ${widget.quiz.examType}');
+      debugPrint('   Score: ${widget.quiz.correctAnswers}/${widget.quiz.totalQuestions} (${widget.quiz.percentage}%)');
 
       // Save quiz result to Firestore
       final docRef = await FirebaseFirestore.instance.collection('quizzes').add({
@@ -88,7 +88,7 @@ class _QuizResultsPageState extends State<QuizResultsPage>
         'triviaCategory': widget.quiz.triviaCategory,
       });
 
-      print('✅ Quiz result saved successfully! Document ID: ${docRef.id}');
+      debugPrint('✅ Quiz result saved successfully! Document ID: ${docRef.id}');
 
       // Calculate and save XP with bonuses
       final earnedXP = await XPService().calculateAndSaveQuizXP(
@@ -116,8 +116,8 @@ class _QuizResultsPageState extends State<QuizResultsPage>
       await _checkAchievements(user.uid);
 
     } catch (e) {
-      print('❌ Error saving quiz result: $e');
-      print('   Stack trace: ${StackTrace.current}');
+      debugPrint('❌ Error saving quiz result: $e');
+      debugPrint('   Stack trace: ${StackTrace.current}');
       // Don't show error to user, just log it
     }
   }
@@ -136,7 +136,7 @@ class _QuizResultsPageState extends State<QuizResultsPage>
         });
       }
     } catch (e) {
-      print('Error checking achievements: $e');
+      debugPrint('Error checking achievements: $e');
     }
   }
 
@@ -369,7 +369,7 @@ class _QuizResultsPageState extends State<QuizResultsPage>
     final quizTitle = widget.quiz.examType == 'trivia' 
         ? '${widget.quiz.triviaCategory ?? widget.quiz.subject} Trivia'
         : '${widget.quiz.subject} ${widget.quiz.examType.toUpperCase()}';
-    final url = 'https://uriel.academy';
+    const url = 'https://uriel.academy';
 
     switch (platform) {
       case 'facebook':

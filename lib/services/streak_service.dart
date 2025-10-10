@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'xp_service.dart';
 import 'notification_service.dart';
 
+import 'package:flutter/foundation.dart';
 class StreakService {
   static final StreakService _instance = StreakService._internal();
   factory StreakService() => _instance;
@@ -127,7 +128,7 @@ class StreakService {
         'streakBroken': daysSinceLastActivity > 1,
       };
     } catch (e) {
-      print('Error recording daily activity: $e');
+      debugPrint('Error recording daily activity: $e');
       return {
         'newStreak': 0,
         'xpEarned': 0,
@@ -159,7 +160,7 @@ class StreakService {
         );
       }
     } catch (e) {
-      print('Error checking streak risk: $e');
+      debugPrint('Error checking streak risk: $e');
     }
   }
 
@@ -169,7 +170,7 @@ class StreakService {
       final userDoc = await _firestore.collection('users').doc(userId).get();
       return (userDoc.data()?['currentStreak'] as int?) ?? 0;
     } catch (e) {
-      print('Error getting current streak: $e');
+      debugPrint('Error getting current streak: $e');
       return 0;
     }
   }
@@ -180,7 +181,7 @@ class StreakService {
       final userDoc = await _firestore.collection('users').doc(userId).get();
       return (userDoc.data()?['longestStreak'] as int?) ?? 0;
     } catch (e) {
-      print('Error getting longest streak: $e');
+      debugPrint('Error getting longest streak: $e');
       return 0;
     }
   }
@@ -197,7 +198,7 @@ class StreakService {
         'totalDays': (data?['totalActiveDays'] as int?) ?? 0,
       };
     } catch (e) {
-      print('Error getting streak stats: $e');
+      debugPrint('Error getting streak stats: $e');
       return {'current': 0, 'longest': 0, 'totalDays': 0};
     }
   }
@@ -229,7 +230,7 @@ class StreakService {
       final hoursSinceActivity = now.difference(lastActivity).inHours;
       return hoursSinceActivity >= 20;
     } catch (e) {
-      print('Error checking streak risk: $e');
+      debugPrint('Error checking streak risk: $e');
       return false;
     }
   }

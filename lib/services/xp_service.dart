@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+import 'package:flutter/foundation.dart';
 class XPService {
   static final XPService _instance = XPService._internal();
   factory XPService() => _instance;
@@ -53,7 +54,7 @@ class XPService {
       // Perfect Score Bonus
       if (percentage == 100.0) {
         xpEarned += PERFECT_SCORE_BONUS;
-        print('✨ Perfect Score Bonus: +$PERFECT_SCORE_BONUS XP');
+        debugPrint('✨ Perfect Score Bonus: +$PERFECT_SCORE_BONUS XP');
       }
 
       // First Time Category Bonus
@@ -66,7 +67,7 @@ class XPService {
 
       if (isFirstTime) {
         xpEarned += FIRST_TIME_CATEGORY_BONUS;
-        print('🎉 First Time Bonus: +$FIRST_TIME_CATEGORY_BONUS XP');
+        debugPrint('🎉 First Time Bonus: +$FIRST_TIME_CATEGORY_BONUS XP');
         
         // Mark category as completed
         await _markCategoryCompleted(
@@ -82,7 +83,7 @@ class XPService {
         final earnedMasterExplorer = await _checkMasterExplorerProgress(userId);
         if (earnedMasterExplorer) {
           xpEarned += MASTER_EXPLORER_BONUS;
-          print('👑 Master Explorer Badge Earned: +$MASTER_EXPLORER_BONUS XP');
+          debugPrint('👑 Master Explorer Badge Earned: +$MASTER_EXPLORER_BONUS XP');
         }
       }
 
@@ -108,10 +109,10 @@ class XPService {
       // Update user's total XP
       await _updateUserTotalXP(userId, xpEarned);
 
-      print('💰 Total XP Earned: $xpEarned');
+      debugPrint('💰 Total XP Earned: $xpEarned');
       return xpEarned;
     } catch (e) {
-      print('❌ Error calculating quiz XP: $e');
+      debugPrint('❌ Error calculating quiz XP: $e');
       return 0;
     }
   }
@@ -131,7 +132,7 @@ class XPService {
       
       return !completedCategories.contains(categoryKey);
     } catch (e) {
-      print('Error checking first time category: $e');
+      debugPrint('Error checking first time category: $e');
       return false;
     }
   }
@@ -150,7 +151,7 @@ class XPService {
         'completedCategories': FieldValue.arrayUnion([categoryKey]),
       });
     } catch (e) {
-      print('Error marking category completed: $e');
+      debugPrint('Error marking category completed: $e');
     }
   }
 
@@ -188,7 +189,7 @@ class XPService {
       
       return false;
     } catch (e) {
-      print('Error checking Master Explorer progress: $e');
+      debugPrint('Error checking Master Explorer progress: $e');
       return false;
     }
   }
@@ -211,7 +212,7 @@ class XPService {
         'timestamp': FieldValue.serverTimestamp(),
       });
     } catch (e) {
-      print('Error saving XP transaction: $e');
+      debugPrint('Error saving XP transaction: $e');
     }
   }
 
@@ -223,7 +224,7 @@ class XPService {
         'lastXPUpdate': FieldValue.serverTimestamp(),
       });
     } catch (e) {
-      print('Error updating user total XP: $e');
+      debugPrint('Error updating user total XP: $e');
     }
   }
 
@@ -233,7 +234,7 @@ class XPService {
       final userDoc = await _firestore.collection('users').doc(userId).get();
       return (userDoc.data()?['totalXP'] as int?) ?? 0;
     } catch (e) {
-      print('Error getting user total XP: $e');
+      debugPrint('Error getting user total XP: $e');
       return 0;
     }
   }
@@ -278,7 +279,7 @@ class XPService {
 
       return breakdown;
     } catch (e) {
-      print('Error getting XP breakdown: $e');
+      debugPrint('Error getting XP breakdown: $e');
       return {};
     }
   }
@@ -317,10 +318,10 @@ class XPService {
         'lastLoginDate': FieldValue.serverTimestamp(),
       });
       
-      print('🎁 Daily Login Bonus: +$DAILY_LOGIN_BONUS XP');
+      debugPrint('🎁 Daily Login Bonus: +$DAILY_LOGIN_BONUS XP');
       return DAILY_LOGIN_BONUS;
     } catch (e) {
-      print('Error recording daily login: $e');
+      debugPrint('Error recording daily login: $e');
       return 0;
     }
   }
@@ -348,10 +349,10 @@ class XPService {
       
       await _updateUserTotalXP(userId, xpEarned);
       
-      print('📚 Reading Session XP: +$xpEarned XP');
+      debugPrint('📚 Reading Session XP: +$xpEarned XP');
       return xpEarned;
     } catch (e) {
-      print('Error recording reading session: $e');
+      debugPrint('Error recording reading session: $e');
       return 0;
     }
   }
@@ -378,10 +379,10 @@ class XPService {
       
       await _updateUserTotalXP(userId, xpEarned);
       
-      print('🎉 Book Completed: +$xpEarned XP');
+      debugPrint('🎉 Book Completed: +$xpEarned XP');
       return xpEarned;
     } catch (e) {
-      print('Error recording book completion: $e');
+      debugPrint('Error recording book completion: $e');
       return 0;
     }
   }
@@ -402,7 +403,7 @@ class XPService {
       
       return count;
     } catch (e) {
-      print('Error getting completed trivia categories: $e');
+      debugPrint('Error getting completed trivia categories: $e');
       return 0;
     }
   }

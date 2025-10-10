@@ -21,7 +21,7 @@ class _OTPVerificationPageState extends State<OTPVerificationPage> {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => OnboardingWalkthroughPage(),
+          builder: (context) => const OnboardingWalkthroughPage(),
         ),
       );
     } else {
@@ -83,7 +83,7 @@ class OnboardingWalkthroughPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Onboarding Walkthrough')),
-      body: Center(
+      body: const Center(
         child: Text('Welcome to the Onboarding Walkthrough!', style: TextStyle(fontSize: 24)),
       ),
     );

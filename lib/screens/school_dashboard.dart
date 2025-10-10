@@ -15,8 +15,8 @@ class _SchoolDashboardPageState extends State<SchoolDashboardPage> with TickerPr
   late ScrollController _scrollController;
   
   int _selectedNavIndex = 0;
-  String _userRole = 'Principal'; // Principal, Teacher
-  String _schoolName = 'Presbyterian Boys\' Secondary School';
+  final String _userRole = 'Principal'; // Principal, Teacher
+  final String _schoolName = 'Presbyterian Boys\' Secondary School';
   
   final List<Map<String, dynamic>> _navigationItems = [
     {'icon': Icons.dashboard_rounded, 'label': 'Dashboard', 'key': 'dashboard'},
@@ -821,9 +821,9 @@ class _SchoolDashboardPageState extends State<SchoolDashboardPage> with TickerPr
               ),
               Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.local_fire_department_rounded,
-                    color: const Color(0xFFFF9800),
+                    color: Color(0xFFFF9800),
                     size: 12,
                   ),
                   const SizedBox(width: 2),

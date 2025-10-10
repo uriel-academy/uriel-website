@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/quiz_model.dart';
 
+import 'package:flutter/foundation.dart';
 class QuizService {
   static const String _quizHistoryKey = 'quiz_history';
   static const String _quizStatsKey = 'quiz_stats';
@@ -37,7 +38,7 @@ class QuizService {
       await _updateQuizStats(quiz);
       
     } catch (e) {
-      print('Error saving quiz: $e');
+      debugPrint('Error saving quiz: $e');
     }
   }
 
@@ -54,7 +55,7 @@ class QuizService {
       
       return [];
     } catch (e) {
-      print('Error loading quiz history: $e');
+      debugPrint('Error loading quiz history: $e');
       return [];
     }
   }
@@ -79,7 +80,7 @@ class QuizService {
         recentQuizzes: [],
       );
     } catch (e) {
-      print('Error loading quiz stats: $e');
+      debugPrint('Error loading quiz stats: $e');
       return QuizStats(
         totalQuizzesTaken: 0,
         averageScore: 0.0,
@@ -135,7 +136,7 @@ class QuizService {
       await prefs.setString(_quizStatsKey, json.encode(updatedStats.toJson()));
       
     } catch (e) {
-      print('Error updating quiz stats: $e');
+      debugPrint('Error updating quiz stats: $e');
     }
   }
 
@@ -145,7 +146,7 @@ class QuizService {
       final prefs = await SharedPreferences.getInstance();
       await prefs.setString(_currentSessionKey, json.encode(session.toJson()));
     } catch (e) {
-      print('Error saving quiz session: $e');
+      debugPrint('Error saving quiz session: $e');
     }
   }
 
@@ -161,7 +162,7 @@ class QuizService {
       
       return null;
     } catch (e) {
-      print('Error loading quiz session: $e');
+      debugPrint('Error loading quiz session: $e');
       return null;
     }
   }
@@ -172,7 +173,7 @@ class QuizService {
       final prefs = await SharedPreferences.getInstance();
       await prefs.remove(_currentSessionKey);
     } catch (e) {
-      print('Error clearing quiz session: $e');
+      debugPrint('Error clearing quiz session: $e');
     }
   }
 
@@ -224,7 +225,7 @@ class QuizService {
       await prefs.remove(_quizStatsKey);
       await prefs.remove(_currentSessionKey);
     } catch (e) {
-      print('Error clearing quiz data: $e');
+      debugPrint('Error clearing quiz data: $e');
     }
   }
 

@@ -667,7 +667,7 @@ class _PricingPageState extends State<PricingPage> {
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: DataTable(
-              headingRowColor: MaterialStateProperty.all(urielNavy.withValues(alpha: 0.1)),
+              headingRowColor: WidgetStateProperty.all(urielNavy.withValues(alpha: 0.1)),
               columns: [
                 DataColumn(
                   label: Text(

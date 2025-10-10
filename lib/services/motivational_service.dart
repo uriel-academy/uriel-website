@@ -62,13 +62,13 @@ class MotivationalService {
   /// Get streak message
   String getStreakMessage(int streakDays) {
     if (streakDays >= 30) {
-      return '🔥 Incredible ${streakDays}-day streak! You\'re unstoppable!';
+      return '🔥 Incredible $streakDays-day streak! You\'re unstoppable!';
     } else if (streakDays >= 14) {
-      return '⚡ ${streakDays} days strong! You\'re building a great habit!';
+      return '⚡ $streakDays days strong! You\'re building a great habit!';
     } else if (streakDays >= 7) {
       return '🌟 Week streak! Keep the momentum going!';
     } else if (streakDays >= 3) {
-      return '🎯 ${streakDays} days in a row! You\'re on a roll!';
+      return '🎯 $streakDays days in a row! You\'re on a roll!';
     } else if (streakDays > 0) {
       return '💪 Start of a great streak! Keep going!';
     } else {

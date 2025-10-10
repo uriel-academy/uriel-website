@@ -104,7 +104,7 @@ class _SingleQuestionInputTabState extends State<SingleQuestionInputTab> {
   Subject _selectedSubject = Subject.mathematics;
   ExamType _selectedExamType = ExamType.bece;
   String _selectedDifficulty = 'medium';
-  List<String> _topics = [];
+  final List<String> _topics = [];
   final _topicController = TextEditingController();
   bool _isLoading = false;
 

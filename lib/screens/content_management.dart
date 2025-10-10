@@ -25,7 +25,7 @@ class _ContentManagementPageState extends State<ContentManagementPage> {
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: Text('Edit Content'),
+          title: const Text('Edit Content'),
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: [

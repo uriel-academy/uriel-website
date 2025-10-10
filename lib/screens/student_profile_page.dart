@@ -1,4 +1,3 @@
-import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -6,6 +5,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 
+import 'package:flutter/foundation.dart';
 class StudentProfilePage extends StatefulWidget {
   const StudentProfilePage({
     Key? key,
@@ -130,7 +130,7 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
         });
         
         // Only log the error, don't show error message to user for connectivity issues
-        print('Unable to load user profile data (offline or connection issue): $e');
+        debugPrint('Unable to load user profile data (offline or connection issue): $e');
       }
     }
   }
@@ -206,7 +206,7 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
       
       _showSuccessSnackBar('Profile picture updated successfully!');
     } catch (e) {
-      print('Error uploading profile image: $e');
+      debugPrint('Error uploading profile image: $e');
       _showErrorSnackBar('Failed to upload image: $e');
     } finally {
       setState(() => _isLoading = false);
@@ -229,8 +229,8 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
         return;
       }
       
-      print('Saving profile for user: ${user.uid}');
-      print('Data: ${_firstNameController.text}, ${_lastNameController.text}');
+      debugPrint('Saving profile for user: ${user.uid}');
+      debugPrint('Data: ${_firstNameController.text}, ${_lastNameController.text}');
       
       // Update Firestore
       await FirebaseFirestore.instance
@@ -246,17 +246,17 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
         'updatedAt': FieldValue.serverTimestamp(),
       }, SetOptions(merge: true));
       
-      print('Firestore update completed');
+      debugPrint('Firestore update completed');
       
       // Update Auth profile
       await user.updateDisplayName(
         '${_firstNameController.text.trim()} ${_lastNameController.text.trim()}',
       );
       
-      print('Auth profile update completed');
+      debugPrint('Auth profile update completed');
       _showSuccessSnackBar('Profile updated successfully!');
     } catch (e) {
-      print('Error saving profile: $e');
+      debugPrint('Error saving profile: $e');
       _showErrorSnackBar('Failed to update profile: $e');
     } finally {
       setState(() => _isLoading = false);

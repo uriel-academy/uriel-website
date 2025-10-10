@@ -2,9 +2,10 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../firebase_options.dart';
 
+import 'package:flutter/foundation.dart';
 /// Simple script to check if RME questions exist in database
 void main() async {
-  print('🔍 Checking for RME questions in database...');
+  debugPrint('🔍 Checking for RME questions in database...');
   
   try {
     // Initialize Firebase
@@ -21,10 +22,10 @@ void main() async {
         .where('year', isEqualTo: '1999')
         .get();
     
-    print('📊 Found ${questionsSnapshot.docs.length} RME questions');
+    debugPrint('📊 Found ${questionsSnapshot.docs.length} RME questions');
     
     if (questionsSnapshot.docs.isEmpty) {
-      print('📝 No RME questions found. Importing now...');
+      debugPrint('📝 No RME questions found. Importing now...');
       
       // Import using the service
       await _importRMEQuestions();
@@ -37,13 +38,13 @@ void main() async {
           .where('year', isEqualTo: '1999')
           .get();
       
-      print('✅ Import complete! Now have ${newSnapshot.docs.length} RME questions');
+      debugPrint('✅ Import complete! Now have ${newSnapshot.docs.length} RME questions');
     } else {
-      print('✅ RME questions already exist in database!');
+      debugPrint('✅ RME questions already exist in database!');
     }
     
   } catch (e) {
-    print('❌ Error: $e');
+    debugPrint('❌ Error: $e');
   }
 }
 
@@ -182,5 +183,5 @@ Future<void> _importRMEQuestions() async {
   }
   
   await batch.commit();
-  print('📝 Successfully imported ${questions.length} RME questions');
+  debugPrint('📝 Successfully imported ${questions.length} RME questions');
 }

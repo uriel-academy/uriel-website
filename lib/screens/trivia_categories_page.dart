@@ -148,7 +148,7 @@ class _TriviaCategoriesPageState extends State<TriviaCategoriesPage>
         categoryCounts[category.name] = 200;
       }
     } catch (e) {
-      print('Error loading question counts: $e');
+      debugPrint('Error loading question counts: $e');
     } finally {
       setState(() => isLoading = false);
     }
@@ -287,11 +287,11 @@ class _TriviaCategoriesPageState extends State<TriviaCategoriesPage>
                 ),
                 padding: EdgeInsets.all(isMobile ? 16 : 24),
                 child: isLoading
-                    ? Center(
+                    ? const Center(
                         child: Padding(
-                          padding: const EdgeInsets.all(48.0),
+                          padding: EdgeInsets.all(48.0),
                           child: CircularProgressIndicator(
-                            color: const Color(0xFFD62828),
+                            color: Color(0xFFD62828),
                           ),
                         ),
                       )

@@ -81,7 +81,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         //   _showStreakNotification(streakResult);
         // }
       } catch (e) {
-        print('Error recording daily activity: $e');
+        debugPrint('Error recording daily activity: $e');
       }
     }
   }
@@ -137,7 +137,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         });
         
         // Only log the error, don't show it to the user
-        print('Unable to load user data (offline or connection issue): $e');
+        debugPrint('Unable to load user data (offline or connection issue): $e');
       }
     } else {
       // Set default name when no user is logged in
@@ -228,7 +228,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             }
             activityDates.add(date);
           } catch (e) {
-            print('Error parsing timestamp: $e');
+            debugPrint('Error parsing timestamp: $e');
           }
         }
         
@@ -281,7 +281,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               weeklyQuestions += (data['totalQuestions'] as int?) ?? 0;
             }
           } catch (e) {
-            print('Error parsing timestamp for study hours: $e');
+            debugPrint('Error parsing timestamp for study hours: $e');
           }
         }
       }
@@ -322,7 +322,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       });
       
     } catch (e) {
-      print('Error loading user stats: $e');
+      debugPrint('Error loading user stats: $e');
       // Keep default values (0) on error
     }
   }
@@ -1683,7 +1683,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         children: [
           Row(
             children: [
-              Icon(Icons.history_edu, color: const Color(0xFF1A1E3F), size: 20),
+              const Icon(Icons.history_edu, color: Color(0xFF1A1E3F), size: 20),
               const SizedBox(width: 8),
               Text(
                 'Past Questions Progress',
@@ -1792,7 +1792,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               children: [
                 Row(
                   children: [
-                    Icon(Icons.emoji_events, color: Colors.white, size: 20),
+                    const Icon(Icons.emoji_events, color: Colors.white, size: 20),
                     const SizedBox(width: 8),
                     Text(
                       'Trivia Challenge',

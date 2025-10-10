@@ -57,8 +57,8 @@ class ParentDashboardPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              children: const [
+            const Row(
+              children: [
                 Icon(Icons.school, color: Color(0xFFD62828)),
                 SizedBox(width: 8),
                 Text('Student Overview', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
@@ -99,8 +99,8 @@ class ParentDashboardPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              children: const [
+            const Row(
+              children: [
                 Icon(Icons.bar_chart, color: Color(0xFFD62828)),
                 SizedBox(width: 8),
                 Text('Weekly AI Progress Report', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
@@ -145,8 +145,8 @@ class ParentDashboardPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              children: const [
+            const Row(
+              children: [
                 Icon(Icons.grid_on, color: Color(0xFFD62828)),
                 SizedBox(width: 8),
                 Text('Performance Heatmap', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
@@ -200,8 +200,8 @@ class ParentDashboardPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              children: const [
+            const Row(
+              children: [
                 Icon(Icons.notifications, color: Color(0xFFD62828)),
                 SizedBox(width: 8),
                 Text('Notifications', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),

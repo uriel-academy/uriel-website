@@ -333,7 +333,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
           showModalBottomSheet(
             context: context,
             builder: (context) => Container(
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
@@ -344,20 +344,20 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                  SizedBox(height: 16),
+                  const SizedBox(height: 16),
                   ListTile(
-                    leading: Icon(Icons.upload_file, color: Color(0xFFFF9800)),
-                    title: Text('Import RME Questions'),
-                    subtitle: Text('1999 BECE - 40 questions'),
+                    leading: const Icon(Icons.upload_file, color: Color(0xFFFF9800)),
+                    title: const Text('Import RME Questions'),
+                    subtitle: const Text('1999 BECE - 40 questions'),
                     onTap: () {
                       Navigator.of(context).pop();
                       _importRMEData();
                     },
                   ),
                   ListTile(
-                    leading: Icon(Icons.admin_panel_settings, color: Color(0xFF2196F3)),
-                    title: Text('Set Admin Role'),
-                    subtitle: Text('Grant admin access to users'),
+                    leading: const Icon(Icons.admin_panel_settings, color: Color(0xFF2196F3)),
+                    title: const Text('Set Admin Role'),
+                    subtitle: const Text('Grant admin access to users'),
                     onTap: () {
                       Navigator.of(context).pop();
                       _showSetAdminRoleDialog();
@@ -390,7 +390,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
           }
         },
         itemBuilder: (context) => [
-          PopupMenuItem(
+          const PopupMenuItem(
             value: 'import_rme',
             child: Row(
               children: [
@@ -400,7 +400,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
               ],
             ),
           ),
-          PopupMenuItem(
+          const PopupMenuItem(
             value: 'set_admin',
             child: Row(
               children: [
@@ -415,7 +415,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
           backgroundColor: const Color(0xFFFF9800),
           elevation: 8,
           onPressed: null, // Handled by PopupMenuButton
-          icon: Icon(Icons.admin_panel_settings, color: Colors.white),
+          icon: const Icon(Icons.admin_panel_settings, color: Colors.white),
           label: Text(
             'Admin Tools',
             style: GoogleFonts.montserrat(
@@ -1503,10 +1503,10 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.trending_up,
                       size: 48,
-                      color: const Color(0xFF2ECC71),
+                      color: Color(0xFF2ECC71),
                     ),
                     const SizedBox(height: 12),
                     Text(
@@ -1582,10 +1582,10 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.grid_view,
                       size: 40,
-                      color: const Color(0xFF3498DB),
+                      color: Color(0xFF3498DB),
                     ),
                     const SizedBox(height: 8),
                     Text(
@@ -1920,14 +1920,14 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(false),
-            child: Text('Cancel'),
+            child: const Text('Cancel'),
           ),
           ElevatedButton(
             onPressed: () => Navigator.of(context).pop(true),
             style: ElevatedButton.styleFrom(
               backgroundColor: const Color(0xFFFF9800),
             ),
-            child: Text('Import'),
+            child: const Text('Import'),
           ),
         ],
       ),
@@ -1941,8 +1941,8 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              CircularProgressIndicator(),
-              SizedBox(height: 16),
+              const CircularProgressIndicator(),
+              const SizedBox(height: 16),
               Text(
                 'Importing RME questions...',
                 style: GoogleFonts.montserrat(),
@@ -1961,7 +1961,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
           showDialog(
             context: context,
             builder: (context) => AlertDialog(
-              title: Row(
+              title: const Row(
                 children: [
                   Icon(Icons.check_circle, color: Colors.green),
                   SizedBox(width: 8),
@@ -1975,7 +1975,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
               actions: [
                 ElevatedButton(
                   onPressed: () => Navigator.of(context).pop(),
-                  child: Text('OK'),
+                  child: const Text('OK'),
                 ),
               ],
             ),
@@ -1985,7 +1985,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
           showDialog(
             context: context,
             builder: (context) => AlertDialog(
-              title: Row(
+              title: const Row(
                 children: [
                   Icon(Icons.error, color: Colors.red),
                   SizedBox(width: 8),
@@ -1999,7 +1999,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
               actions: [
                 ElevatedButton(
                   onPressed: () => Navigator.of(context).pop(),
-                  child: Text('OK'),
+                  child: const Text('OK'),
                 ),
               ],
             ),
@@ -2011,7 +2011,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
         showDialog(
           context: context,
           builder: (context) => AlertDialog(
-            title: Row(
+            title: const Row(
               children: [
                 Icon(Icons.error, color: Colors.red),
                 SizedBox(width: 8),
@@ -2025,7 +2025,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
             actions: [
               ElevatedButton(
                 onPressed: () => Navigator.of(context).pop(),
-                child: Text('OK'),
+                child: const Text('OK'),
               ),
             ],
           ),
@@ -2045,8 +2045,8 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
         builder: (context, setState) => AlertDialog(
           title: Row(
             children: [
-              Icon(Icons.admin_panel_settings, color: Colors.blue),
-              SizedBox(width: 8),
+              const Icon(Icons.admin_panel_settings, color: Colors.blue),
+              const SizedBox(width: 8),
               Text(
                 'Set Admin Role',
                 style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
@@ -2061,10 +2061,10 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
                 'Enter the email address that should have admin access:',
                 style: GoogleFonts.montserrat(),
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               TextField(
                 controller: emailController,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: 'Email Address',
                   hintText: 'studywithuriel@gmail.com',
                   border: OutlineInputBorder(),
@@ -2072,9 +2072,9 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
                 ),
                 keyboardType: TextInputType.emailAddress,
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               Container(
-                padding: EdgeInsets.all(12),
+                padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
                   color: Colors.blue.shade50,
                   borderRadius: BorderRadius.circular(8),
@@ -2093,13 +2093,13 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
           actions: [
             TextButton(
               onPressed: isLoading ? null : () => Navigator.of(context).pop(),
-              child: Text('Cancel'),
+              child: const Text('Cancel'),
             ),
             ElevatedButton(
               onPressed: isLoading ? null : () async {
                 if (emailController.text.trim().isEmpty) {
                   ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(content: Text('Please enter an email address')),
+                    const SnackBar(content: Text('Please enter an email address')),
                   );
                   return;
                 }
@@ -2123,7 +2123,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
                   showDialog(
                     context: context,
                     builder: (context) => AlertDialog(
-                      title: Row(
+                      title: const Row(
                         children: [
                           Icon(Icons.check_circle, color: Colors.green),
                           SizedBox(width: 8),
@@ -2137,7 +2137,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
                       actions: [
                         ElevatedButton(
                           onPressed: () => Navigator.of(context).pop(),
-                          child: Text('OK'),
+                          child: const Text('OK'),
                         ),
                       ],
                     ),
@@ -2154,7 +2154,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
                 }
               },
               child: isLoading
-                  ? SizedBox(
+                  ? const SizedBox(
                       width: 20,
                       height: 20,
                       child: CircularProgressIndicator(
@@ -2162,7 +2162,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
                         valueColor: AlwaysStoppedAnimation(Colors.white),
                       ),
                     )
-                  : Text('Set Admin Role'),
+                  : const Text('Set Admin Role'),
             ),
           ],
         ),

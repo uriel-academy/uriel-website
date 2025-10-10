@@ -23,16 +23,16 @@ class _RMEQuestionsDebugPageState extends State<RMEQuestionsDebugPage> {
 
   Future<void> _loadRMEQuestions() async {
     try {
-      print('🔍 Loading RME questions for debug...');
+      debugPrint('🔍 Loading RME questions for debug...');
       final questions = await _questionService.getRMEQuestions();
-      print('📊 Debug: Got ${questions.length} RME questions');
+      debugPrint('📊 Debug: Got ${questions.length} RME questions');
       
       setState(() {
         _rmeQuestions = questions;
         _isLoading = false;
       });
     } catch (e) {
-      print('❌ Error loading RME questions: $e');
+      debugPrint('❌ Error loading RME questions: $e');
       setState(() {
         _isLoading = false;
       });

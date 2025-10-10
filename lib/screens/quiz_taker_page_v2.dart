@@ -144,7 +144,7 @@ class _QuizTakerPageV2State extends State<QuizTakerPageV2>
 
       setState(() => isLoading = false);
     } catch (e) {
-      print('Error loading questions: $e');
+      debugPrint('Error loading questions: $e');
       setState(() {
         questions = [];
         isLoading = false;

@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+import 'package:flutter/foundation.dart';
 class NotificationService {
   static final NotificationService _instance = NotificationService._internal();
   factory NotificationService() => _instance;
@@ -25,7 +26,7 @@ class NotificationService {
         type = 'rank_up';
       } else if (change > 0) {
         // Moved down (worse rank)
-        message = '⚠️ You dropped ${change} ${change == 1 ? 'spot' : 'spots'} to rank #$newRank. Time to study!';
+        message = '⚠️ You dropped $change ${change == 1 ? 'spot' : 'spots'} to rank #$newRank. Time to study!';
         type = 'rank_down';
       } else {
         return; // No change
@@ -42,7 +43,7 @@ class NotificationService {
         },
       );
     } catch (e) {
-      print('Error notifying rank change: $e');
+      debugPrint('Error notifying rank change: $e');
     }
   }
 
@@ -77,7 +78,7 @@ class NotificationService {
         },
       );
     } catch (e) {
-      print('Error notifying milestone: $e');
+      debugPrint('Error notifying milestone: $e');
     }
   }
 
@@ -94,7 +95,7 @@ class NotificationService {
         data: {'passerName': passerName},
       );
     } catch (e) {
-      print('Error notifying someone passed: $e');
+      debugPrint('Error notifying someone passed: $e');
     }
   }
 
@@ -117,7 +118,7 @@ class NotificationService {
         },
       );
     } catch (e) {
-      print('Error notifying friend challenge: $e');
+      debugPrint('Error notifying friend challenge: $e');
     }
   }
 
@@ -134,7 +135,7 @@ class NotificationService {
         data: {'streakDays': streakDays},
       );
     } catch (e) {
-      print('Error notifying streak risk: $e');
+      debugPrint('Error notifying streak risk: $e');
     }
   }
 
@@ -155,7 +156,7 @@ class NotificationService {
         'timestamp': FieldValue.serverTimestamp(),
       });
     } catch (e) {
-      print('Error creating notification: $e');
+      debugPrint('Error creating notification: $e');
     }
   }
 
@@ -170,7 +171,7 @@ class NotificationService {
       
       return snapshot.docs.length;
     } catch (e) {
-      print('Error getting unread count: $e');
+      debugPrint('Error getting unread count: $e');
       return 0;
     }
   }
@@ -192,7 +193,7 @@ class NotificationService {
         'read': true,
       });
     } catch (e) {
-      print('Error marking notification as read: $e');
+      debugPrint('Error marking notification as read: $e');
     }
   }
 
@@ -211,7 +212,7 @@ class NotificationService {
       }
       await batch.commit();
     } catch (e) {
-      print('Error marking all as read: $e');
+      debugPrint('Error marking all as read: $e');
     }
   }
 
@@ -246,7 +247,7 @@ class NotificationService {
         }
       }
     } catch (e) {
-      print('Error checking daily engagement: $e');
+      debugPrint('Error checking daily engagement: $e');
     }
   }
 }

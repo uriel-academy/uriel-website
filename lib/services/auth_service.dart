@@ -1,5 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:flutter/foundation.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'dart:async';
 
@@ -37,9 +37,9 @@ class AuthService {
   Future<void> _refreshToken(User user) async {
     try {
       await user.getIdToken(true); // Force token refresh
-      print('Auth token refreshed successfully');
+      debugPrint('Auth token refreshed successfully');
     } catch (e) {
-      print('Token refresh error: $e');
+      debugPrint('Token refresh error: $e');
     }
   }
 
@@ -111,7 +111,7 @@ class AuthService {
               .timeout(const Duration(seconds: 30));
         } catch (e) {
           // Handle timeout or any other error
-          print('Google authentication error: $e');
+          debugPrint('Google authentication error: $e');
           return null;
         }
 
@@ -131,7 +131,7 @@ class AuthService {
         return userCredential.user;
       }
     } catch (e) {
-      print('Google Sign-In Error: $e');
+      debugPrint('Google Sign-In Error: $e');
       return null;
     }
   }

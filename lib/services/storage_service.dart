@@ -1,6 +1,7 @@
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+import 'package:flutter/foundation.dart';
 class StorageService {
   static final FirebaseStorage _storage = FirebaseStorage.instance;
   static final FirebaseFirestore _firestore = FirebaseFirestore.instance;
@@ -41,11 +42,11 @@ class StorageService {
           }
           
           if (questions.isNotEmpty) {
-            print('Found RME questions in folder: $path');
+            debugPrint('Found RME questions in folder: $path');
             break; // Found questions, stop searching
           }
         } catch (e) {
-          print('Failed to access folder: $path - $e');
+          debugPrint('Failed to access folder: $path - $e');
           continue; // Try next folder
         }
       }
@@ -55,7 +56,7 @@ class StorageService {
       
       return questions;
     } catch (e) {
-      print('Error fetching BECE RME questions: $e');
+      debugPrint('Error fetching BECE RME questions: $e');
       return [];
     }
   }
@@ -94,11 +95,11 @@ class StorageService {
           }
           
           if (questions.isNotEmpty) {
-            print('Found trivia content in folder: $path');
+            debugPrint('Found trivia content in folder: $path');
             break; // Found questions, stop searching
           }
         } catch (e) {
-          print('Failed to access folder: $path - $e');
+          debugPrint('Failed to access folder: $path - $e');
           continue; // Try next folder
         }
       }
@@ -108,7 +109,7 @@ class StorageService {
       
       return questions;
     } catch (e) {
-      print('Error fetching trivia content: $e');
+      debugPrint('Error fetching trivia content: $e');
       return [];
     }
   }
@@ -132,7 +133,7 @@ class StorageService {
       
       return allQuestions;
     } catch (e) {
-      print('Error fetching all past questions: $e');
+      debugPrint('Error fetching all past questions: $e');
       return [];
     }
   }
@@ -185,7 +186,7 @@ class StorageService {
       
       return questions;
     } catch (e) {
-      print('Error fetching questions for subject $subject: $e');
+      debugPrint('Error fetching questions for subject $subject: $e');
       return [];
     }
   }
@@ -207,14 +208,14 @@ class StorageService {
         folders.add('FILE: ${item.name}');
       }
       
-      print('Available folders/files in Firebase Storage:');
+      debugPrint('Available folders/files in Firebase Storage:');
       for (String folder in folders) {
-        print('- $folder');
+        debugPrint('- $folder');
       }
       
       return folders;
     } catch (e) {
-      print('Error listing storage folders: $e');
+      debugPrint('Error listing storage folders: $e');
       return [];
     }
   }

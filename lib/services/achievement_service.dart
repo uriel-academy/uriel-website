@@ -286,7 +286,7 @@ class AchievementService {
 
       return newlyEarned;
     } catch (e) {
-      print('Error checking achievements: $e');
+      debugPrint('Error checking achievements: $e');
       return [];
     }
   }
@@ -308,9 +308,9 @@ class AchievementService {
         xpAmount: achievement.xpReward,
       );
 
-      print('🏆 Achievement Unlocked: ${achievement.name} (+${achievement.xpReward} XP)');
+      debugPrint('🏆 Achievement Unlocked: ${achievement.name} (+${achievement.xpReward} XP)');
     } catch (e) {
-      print('Error awarding achievement: $e');
+      debugPrint('Error awarding achievement: $e');
     }
   }
 
@@ -355,7 +355,7 @@ class AchievementService {
         'textbooksRead': 0, // TODO: Track from reading
       };
     } catch (e) {
-      print('Error getting user stats: $e');
+      debugPrint('Error getting user stats: $e');
       return {};
     }
   }
@@ -380,7 +380,7 @@ class AchievementService {
 
       return questionsToday >= required;
     } catch (e) {
-      print('Error checking questions in day: $e');
+      debugPrint('Error checking questions in day: $e');
       return false;
     }
   }
@@ -392,7 +392,7 @@ class AchievementService {
       // For now, return false
       return false;
     } catch (e) {
-      print('Error checking daily quiz streak: $e');
+      debugPrint('Error checking daily quiz streak: $e');
       return false;
     }
   }
@@ -405,7 +405,7 @@ class AchievementService {
 
       return allAchievements.where((a) => earnedIds.contains(a.id)).toList();
     } catch (e) {
-      print('Error getting user achievements: $e');
+      debugPrint('Error getting user achievements: $e');
       return [];
     }
   }
@@ -457,7 +457,7 @@ class AchievementService {
 
       return locked;
     } catch (e) {
-      print('Error getting locked achievements: $e');
+      debugPrint('Error getting locked achievements: $e');
       return [];
     }
   }

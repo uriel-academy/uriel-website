@@ -15,8 +15,8 @@ class _TeacherDashboardPageState extends State<TeacherDashboardPage> with Ticker
   late ScrollController _scrollController;
   
   int _selectedNavIndex = 0;
-  String _teacherName = 'Mrs. Akosua Mensah';
-  String _teacherTitle = 'Mathematics & Science Teacher';
+  final String _teacherName = 'Mrs. Akosua Mensah';
+  final String _teacherTitle = 'Mathematics & Science Teacher';
   bool _sidebarCollapsed = false;
   
   final List<Map<String, dynamic>> _navigationItems = [
@@ -758,9 +758,9 @@ class _TeacherDashboardPageState extends State<TeacherDashboardPage> with Ticker
               ),
               const Spacer(),
               if (metric['title'] == 'Avg Class Score')
-                Icon(
+                const Icon(
                   Icons.trending_up,
-                  color: const Color(0xFF2ECC71),
+                  color: Color(0xFF2ECC71),
                   size: 16,
                 ),
             ],
@@ -1331,9 +1331,9 @@ class _TeacherDashboardPageState extends State<TeacherDashboardPage> with Ticker
           
           Row(
             children: [
-              Icon(
+              const Icon(
                 Icons.local_fire_department_rounded,
-                color: const Color(0xFFFF9800),
+                color: Color(0xFFFF9800),
                 size: 14,
               ),
               Text(

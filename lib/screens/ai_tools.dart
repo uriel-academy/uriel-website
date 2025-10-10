@@ -28,7 +28,7 @@ class AIToolsPage extends StatelessWidget {
               leading: Icon(tools[i]['icon'] as IconData, color: const Color(0xFFD62828)),
               title: Text(tools[i]['name'] as String),
               subtitle: Text(tools[i]['desc'] as String),
-              trailing: Icon(Icons.arrow_forward_ios),
+              trailing: const Icon(Icons.arrow_forward_ios),
               onTap: () {
                 if (onAIToolUsed != null) onAIToolUsed!();
                 if (tools[i]['name'] == 'Instant Question Solver') {

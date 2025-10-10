@@ -70,7 +70,7 @@ class _PaymentPageState extends State<PaymentPage> {
         monthlyPrice: 0,
         annualPrice: 0,
         isAnnual: _isAnnualBilling,
-        features: [
+        features: const [
           'Trivia & gamification challenges',
           'Classic literature library',
           '5 past questions per subject monthly',
@@ -85,7 +85,7 @@ class _PaymentPageState extends State<PaymentPage> {
         monthlyPrice: 9.99,
         annualPrice: 99,
         isAnnual: _isAnnualBilling,
-        features: [
+        features: const [
           'All NACCA-aligned textbooks (JHS 1-3)',
           'Unlimited past questions (1990-2024)',
           'Student analytics dashboard',
@@ -100,7 +100,7 @@ class _PaymentPageState extends State<PaymentPage> {
         monthlyPrice: 14.99,
         annualPrice: 149,
         isAnnual: _isAnnualBilling,
-        features: [
+        features: const [
           'Uri AI Tutor - unlimited assistance',
           'Upload your own notes & resources',
           'Unlimited AI-generated mock exams',
@@ -116,7 +116,7 @@ class _PaymentPageState extends State<PaymentPage> {
         annualPrice: 0,
         isAnnual: _isAnnualBilling,
         isSchoolPlan: true,
-        features: [
+        features: const [
           'Teacher dashboard & class analytics',
           'Bulk student onboarding & management',
           'Custom branding for your school',

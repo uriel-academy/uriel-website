@@ -34,7 +34,7 @@ class _StorageContentTabState extends State<StorageContentTab> with SingleTicker
         const Duration(seconds: 5),
         onTimeout: () => <String>[],
       );
-      print('Available storage folders: $folders');
+      debugPrint('Available storage folders: $folders');
       
       final questions = await StorageService.getBECERMEQuestions().timeout(
         const Duration(seconds: 5),
@@ -47,11 +47,11 @@ class _StorageContentTabState extends State<StorageContentTab> with SingleTicker
       
       // Silent operation - no error message to user if empty
       if (questions.isEmpty) {
-        print('No RME questions found. Available folders: ${folders.join(", ")}');
+        debugPrint('No RME questions found. Available folders: ${folders.join(", ")}');
       }
     } catch (e) {
       // Silent fallback - don't show error to user
-      print('BECE RME content loading error (handled gracefully): $e');
+      debugPrint('BECE RME content loading error (handled gracefully): $e');
       setState(() {
         _beceRmeQuestions = [];
         _isLoadingBece = false;
@@ -67,7 +67,7 @@ class _StorageContentTabState extends State<StorageContentTab> with SingleTicker
         const Duration(seconds: 5),
         onTimeout: () => <String>[],
       );
-      print('Available storage folders: $folders');
+      debugPrint('Available storage folders: $folders');
       
       final content = await _getTriviaFromStorage().timeout(
         const Duration(seconds: 5),
@@ -80,11 +80,11 @@ class _StorageContentTabState extends State<StorageContentTab> with SingleTicker
       
       // Silent operation - no error message to user if empty
       if (content.isEmpty) {
-        print('No trivia content found. Available folders: ${folders.join(", ")}');
+        debugPrint('No trivia content found. Available folders: ${folders.join(", ")}');
       }
     } catch (e) {
       // Silent fallback - don't show error to user
-      print('Trivia content loading error (handled gracefully): $e');
+      debugPrint('Trivia content loading error (handled gracefully): $e');
       setState(() {
         _triviaContent = [];
         _isLoadingTrivia = false;
@@ -112,7 +112,7 @@ class _StorageContentTabState extends State<StorageContentTab> with SingleTicker
       
       return items;
     } catch (e) {
-      print('Error fetching trivia content: $e');
+      debugPrint('Error fetching trivia content: $e');
       return [];
     }
   }

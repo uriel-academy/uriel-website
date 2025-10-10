@@ -1,8 +1,8 @@
-import 'dart:typed_data';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import '../models/question_model.dart';
 
+import 'package:flutter/foundation.dart';
 class QuestionService {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final FirebaseStorage _storage = FirebaseStorage.instance;
@@ -81,7 +81,7 @@ class QuestionService {
       return getSampleQuestions(examType: examTypeEnum, subject: subjectEnum, year: year, section: section);
       
     } catch (e) {
-      print('Error fetching questions from database: $e');
+      debugPrint('Error fetching questions from database: $e');
       // Fallback to sample questions on error
       ExamType? examTypeEnum = examType is ExamType ? examType : null;
       Subject? subjectEnum = subject is Subject ? subject : null;
@@ -92,7 +92,7 @@ class QuestionService {
   /// Get RME questions specifically for debugging
   Future<List<Question>> getRMEQuestions() async {
     try {
-      print('🔍 Fetching RME questions from Firestore...');
+      debugPrint('🔍 Fetching RME questions from Firestore...');
       
       QuerySnapshot snapshot = await FirebaseFirestore.instance
           .collection('questions')
@@ -100,22 +100,22 @@ class QuestionService {
           .where('isActive', isEqualTo: true)
           .get();
       
-      print('📊 Found ${snapshot.docs.length} RME documents in Firestore');
+      debugPrint('📊 Found ${snapshot.docs.length} RME documents in Firestore');
       
       if (snapshot.docs.isNotEmpty) {
         final questions = snapshot.docs.map((doc) {
-          print('📝 Processing RME question: ${doc.id}');
+          debugPrint('📝 Processing RME question: ${doc.id}');
           return Question.fromJson(doc.data() as Map<String, dynamic>);
         }).toList();
         
-        print('✅ Successfully converted ${questions.length} RME questions');
+        debugPrint('✅ Successfully converted ${questions.length} RME questions');
         return questions;
       } else {
-        print('❌ No RME questions found in database');
+        debugPrint('❌ No RME questions found in database');
         return [];
       }
     } catch (e) {
-      print('❌ Error fetching RME questions: $e');
+      debugPrint('❌ Error fetching RME questions: $e');
       return [];
     }
   }
@@ -183,11 +183,11 @@ class QuestionService {
         query = query.limit(limit);
       }
       
-      print('🔍 QuestionService.getQuestionsByFilters: Querying Firestore with subject=$subjectStr, examType=$examTypeStr, triviaCategory=$triviaCategory, activeOnly=$activeOnly');
+      debugPrint('🔍 QuestionService.getQuestionsByFilters: Querying Firestore with subject=$subjectStr, examType=$examTypeStr, triviaCategory=$triviaCategory, activeOnly=$activeOnly');
       
       QuerySnapshot snapshot = await query.get();
       
-      print('📊 QuestionService.getQuestionsByFilters: Found ${snapshot.docs.length} documents');
+      debugPrint('📊 QuestionService.getQuestionsByFilters: Found ${snapshot.docs.length} documents');
       
       if (snapshot.docs.isNotEmpty) {
         List<Question> questions = [];
@@ -201,7 +201,7 @@ class QuestionService {
             final String? qCategory = data['triviaCategory'] as String?;
             // Case-insensitive comparison
             if (qCategory == null || qCategory.toLowerCase().trim() != triviaCategory.toLowerCase().trim()) {
-              print('   ⏭️ Skipping question with category "$qCategory" (looking for "$triviaCategory")');
+              debugPrint('   ⏭️ Skipping question with category "$qCategory" (looking for "$triviaCategory")');
               continue; // Skip questions that don't match the category
             }
           }
@@ -209,7 +209,7 @@ class QuestionService {
           questions.add(Question.fromJson(data));
         }
         
-        print('📊 After triviaCategory filter: ${questions.length} questions${triviaCategory != null ? ' for category "$triviaCategory"' : ''}');
+        debugPrint('📊 After triviaCategory filter: ${questions.length} questions${triviaCategory != null ? ' for category "$triviaCategory"' : ''}');
         
         // Filter by topics if specified
         if (topics != null && topics.isNotEmpty) {
@@ -227,7 +227,7 @@ class QuestionService {
       return getSampleQuestions(examType: examTypeEnum, subject: subjectEnum, year: year, section: section);
       
     } catch (e) {
-      print('Error fetching questions with filters: $e');
+      debugPrint('Error fetching questions with filters: $e');
       ExamType? examTypeEnum = examType is ExamType ? examType : null;
       Subject? subjectEnum = subject is Subject ? subject : null;
       return getSampleQuestions(examType: examTypeEnum, subject: subjectEnum, year: year, section: section);
@@ -354,7 +354,7 @@ class QuestionService {
       QuerySnapshot snapshot = await query.get();
       return snapshot.docs.length;
     } catch (e) {
-      print('Error getting questions count: $e');
+      debugPrint('Error getting questions count: $e');
       return 0;
     }
   }

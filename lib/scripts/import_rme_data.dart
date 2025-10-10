@@ -2,36 +2,37 @@ import 'package:firebase_core/firebase_core.dart';
 import '../firebase_options.dart';
 import '../services/rme_data_import_service.dart';
 
+import 'package:flutter/foundation.dart';
 /// Standalone script to import RME data to Firestore
 /// Run this with: flutter run lib/scripts/import_rme_data.dart
 void main() async {
-  print('🚀 Starting RME Data Import...');
+  debugPrint('🚀 Starting RME Data Import...');
   
   try {
     // Initialize Firebase
     await Firebase.initializeApp(
       options: DefaultFirebaseOptions.currentPlatform,
     );
-    print('✅ Firebase initialized successfully');
+    debugPrint('✅ Firebase initialized successfully');
     
-    print('📚 Preparing to import RME questions...');
+    debugPrint('📚 Preparing to import RME questions...');
     
     // Import RME questions
-    print('⏳ Importing 1999 BECE RME questions...');
+    debugPrint('⏳ Importing 1999 BECE RME questions...');
     final result = await RMEDataImportService.importRMEQuestions();
     
     if (result['success'] == true) {
-      print('🎉 SUCCESS! ${result['questionsImported']} RME questions imported successfully!');
-      print('📝 Questions are now available in the quiz system.');
-      print('✨ You can now create RME quizzes from the homepage.');
+      debugPrint('🎉 SUCCESS! ${result['questionsImported']} RME questions imported successfully!');
+      debugPrint('📝 Questions are now available in the quiz system.');
+      debugPrint('✨ You can now create RME quizzes from the homepage.');
     } else {
-      print('❌ Import failed: ${result['message']}');
+      debugPrint('❌ Import failed: ${result['message']}');
     }
     
   } catch (e) {
-    print('❌ Error importing RME data: $e');
-    print('💡 Make sure Firebase is properly configured.');
+    debugPrint('❌ Error importing RME data: $e');
+    debugPrint('💡 Make sure Firebase is properly configured.');
   }
   
-  print('🏁 Import process completed.');
+  debugPrint('🏁 Import process completed.');
 }

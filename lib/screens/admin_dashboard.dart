@@ -373,7 +373,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
             const SizedBox(height: 16),
             
             // Dashboard Navigation Cards
-            Container(
+            SizedBox(
               height: MediaQuery.of(context).size.width < 600 ? 100 : 120,
               child: ListView(
                 scrollDirection: Axis.horizontal,
@@ -857,8 +857,8 @@ class _AdminDashboardState extends State<AdminDashboard> {
               return AlertDialog(
                 title: Row(
                   children: [
-                    Icon(Icons.error, color: Colors.red),
-                    SizedBox(width: 8),
+                    const Icon(Icons.error, color: Colors.red),
+                    const SizedBox(width: 8),
                     Text(
                       'Import Failed',
                       style: GoogleFonts.montserrat(

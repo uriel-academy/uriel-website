@@ -265,7 +265,7 @@ class _LeaderboardPageState extends State<LeaderboardPage> with TickerProviderSt
       }
       
     } catch (e) {
-      print('Error loading leaderboard: $e');
+      debugPrint('Error loading leaderboard: $e');
     } finally {
       setState(() => _isLoading = false);
     }
@@ -323,7 +323,7 @@ class _LeaderboardPageState extends State<LeaderboardPage> with TickerProviderSt
         correctAnswers: totalCorrect,
       );
     } catch (e) {
-      print('Error calculating user stats: $e');
+      debugPrint('Error calculating user stats: $e');
       return UserCategoryStats(score: 0, totalQuestions: 0, correctAnswers: 0);
     }
   }
@@ -445,10 +445,10 @@ class _LeaderboardPageState extends State<LeaderboardPage> with TickerProviderSt
     final rank = _currentUserEntry!.rank;
     final xp = _currentUserEntry!.xp;
     final tier = _currentUserEntry!.tier;
-    final url = 'https://uriel.academy';
+    const url = 'https://uriel.academy';
     
     final baseMessage = '''🏆 I'm ranked #$rank on Uriel Academy with $xp XP!
-${tier} Tier 🌟
+$tier Tier 🌟
 
 Think you can beat me? 💪🔥
 Join the challenge 👉 $url
@@ -581,7 +581,7 @@ Join the challenge 👉 $url
           SliverPadding(
             padding: EdgeInsets.all(isMobile ? 16 : 24),
             sliver: _isLoading
-                ? SliverToBoxAdapter(
+                ? const SliverToBoxAdapter(
                     child: Center(
                       child: CircularProgressIndicator(
                         valueColor: AlwaysStoppedAnimation<Color>(
@@ -718,7 +718,7 @@ Join the challenge 👉 $url
           SliverPadding(
             padding: EdgeInsets.all(isMobile ? 16 : 24),
             sliver: _isLoading
-                ? SliverToBoxAdapter(
+                ? const SliverToBoxAdapter(
                     child: Center(
                       child: CircularProgressIndicator(
                         valueColor: AlwaysStoppedAnimation<Color>(
@@ -1009,7 +1009,7 @@ Join the challenge 👉 $url
                   'Start Quiz',
                   style: GoogleFonts.montserrat(
                     fontWeight: FontWeight.w600,
-                    color: Color(0xFF2ECC71),
+                    color: const Color(0xFF2ECC71),
                   ),
                 ),
                 style: ElevatedButton.styleFrom(

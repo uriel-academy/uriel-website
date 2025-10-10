@@ -88,7 +88,7 @@ class _TriviaSingleQuestionTabState extends State<TriviaSingleQuestionTab> {
   final _explanationController = TextEditingController();
   
   String _selectedDifficulty = 'medium';
-  List<String> _categories = [];
+  final List<String> _categories = [];
   bool _isLoading = false;
 
   @override
@@ -129,7 +129,7 @@ class _TriviaSingleQuestionTabState extends State<TriviaSingleQuestionTab> {
           children: [
             Row(
               children: [
-                Icon(Icons.lightbulb, color: const Color(0xFF9C27B0)),
+                const Icon(Icons.lightbulb, color: Color(0xFF9C27B0)),
                 const SizedBox(width: 8),
                 Text(
                   'Trivia Question Tips',

@@ -91,7 +91,7 @@ class _QuizTakerPageState extends State<QuizTakerPage>
         final subjectEnum = _mapStringToSubject(widget.subject);
         final examTypeEnum = _mapStringToExamType(widget.examType);
         
-        print('🎯 QuizTaker: Loading questions for subject=${subjectEnum.name}, examType=${examTypeEnum.name}, level=${widget.level}, triviaCategory=${widget.triviaCategory}');
+        debugPrint('🎯 QuizTaker: Loading questions for subject=${subjectEnum.name}, examType=${examTypeEnum.name}, level=${widget.level}, triviaCategory=${widget.triviaCategory}');
         
         questions = await _questionService.getQuestionsByFilters(
           subject: subjectEnum,
@@ -101,18 +101,18 @@ class _QuizTakerPageState extends State<QuizTakerPage>
         ).timeout(
           const Duration(seconds: 30),
           onTimeout: () {
-            print('⏰ QuizTaker: Timeout loading questions after 30 seconds');
+            debugPrint('⏰ QuizTaker: Timeout loading questions after 30 seconds');
             return <Question>[];
           },
         );
         
-        print('📊 QuizTaker: Loaded ${questions.length} questions');
+        debugPrint('📊 QuizTaker: Loaded ${questions.length} questions');
         
         if (questions.isEmpty) {
-          print('⚠️ QuizTaker: NO QUESTIONS LOADED! Check:');
-          print('   - Firestore rules allow reading questions');
-          print('   - User is authenticated');
-          print('   - Questions exist for subject=${subjectEnum.name}, examType=${examTypeEnum.name}, triviaCategory=${widget.triviaCategory}');
+          debugPrint('⚠️ QuizTaker: NO QUESTIONS LOADED! Check:');
+          debugPrint('   - Firestore rules allow reading questions');
+          debugPrint('   - User is authenticated');
+          debugPrint('   - Questions exist for subject=${subjectEnum.name}, examType=${examTypeEnum.name}, triviaCategory=${widget.triviaCategory}');
         }
       }
       
@@ -134,7 +134,7 @@ class _QuizTakerPageState extends State<QuizTakerPage>
         questions = questions.take(maxQuestions).toList();
       }
       
-      print('📊 QuizTaker: Final question count: ${questions.length} (max: $maxQuestions for ${widget.examType})');
+      debugPrint('📊 QuizTaker: Final question count: ${questions.length} (max: $maxQuestions for ${widget.examType})');
       
       // If no questions loaded, create a fallback or just continue silently
       if (questions.isNotEmpty) {
@@ -144,7 +144,7 @@ class _QuizTakerPageState extends State<QuizTakerPage>
       
     } catch (e) {
       // Silent fallback - don't show error dialog to user
-      print('Quiz questions loading error (handled gracefully): $e');
+      debugPrint('Quiz questions loading error (handled gracefully): $e');
       setState(() {
         questions = [];
       });
@@ -238,7 +238,7 @@ class _QuizTakerPageState extends State<QuizTakerPage>
       
       final isCorrect = userAnswerLetter == correctAnswerLetter;
       
-      print('🎯 Quiz Result: Q${i+1} - User: "$userAnswerLetter" vs Correct: "$correctAnswerLetter" = ${isCorrect ? "✅" : "❌"}');
+      debugPrint('🎯 Quiz Result: Q${i+1} - User: "$userAnswerLetter" vs Correct: "$correctAnswerLetter" = ${isCorrect ? "✅" : "❌"}');
       
       if (isCorrect) correctAnswers++;
       

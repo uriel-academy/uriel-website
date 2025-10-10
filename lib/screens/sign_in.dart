@@ -71,7 +71,7 @@ class _SignInPageState extends State<SignInPage> {
       await _checkUserRoleAndRoute(user);
       
     } catch (e) {
-      print('Google Sign-In Error: $e');
+      debugPrint('Google Sign-In Error: $e');
       _showError('An error occurred during sign-in: ${e.toString()}');
     } finally {
       if (mounted) {
@@ -84,19 +84,19 @@ class _SignInPageState extends State<SignInPage> {
   
   Future<void> _checkUserRoleAndRoute(user) async {
     try {
-      print('Checking user role for: ${user.email}');
+      debugPrint('Checking user role for: ${user.email}');
       
       // Check user role with timeout
       final userRole = await UserService()
           .getUserRoleByEmail(user.email!)
           .timeout(const Duration(seconds: 10));
       
-      print('User role found: $userRole');
+      debugPrint('User role found: $userRole');
       
       if (userRole != null) {
         // Update last login time asynchronously (don't wait for it)
         UserService().updateLastLogin(user.uid).catchError((e) {
-          print('Failed to update last login: $e');
+          debugPrint('Failed to update last login: $e');
         });
         
         // Route based on role
@@ -104,7 +104,7 @@ class _SignInPageState extends State<SignInPage> {
           _routeUserBasedOnRole(userRole);
         }
       } else {
-        print('No user role found, creating new student profile');
+        debugPrint('No user role found, creating new student profile');
         
         // New user - create default student profile asynchronously
         UserService().createUserProfile(
@@ -113,7 +113,7 @@ class _SignInPageState extends State<SignInPage> {
           role: UserRole.student,
           name: user.displayName,
         ).catchError((e) {
-          print('Failed to create user profile: $e');
+          debugPrint('Failed to create user profile: $e');
         });
         
         // Route to student home immediately
@@ -123,7 +123,7 @@ class _SignInPageState extends State<SignInPage> {
       }
     } catch (e) {
       // If role check fails, default to student dashboard
-      print('Role check failed: $e');
+      debugPrint('Role check failed: $e');
       if (mounted) {
         Navigator.pushReplacementNamed(context, '/home');
       }
@@ -136,21 +136,21 @@ class _SignInPageState extends State<SignInPage> {
     try {
       switch (role) {
         case UserRole.teacher:
-          print('Routing to teacher dashboard');
+          debugPrint('Routing to teacher dashboard');
           Navigator.pushReplacementNamed(context, '/teacher');
           break;
         case UserRole.school:
-          print('Routing to school dashboard');
+          debugPrint('Routing to school dashboard');
           Navigator.pushReplacementNamed(context, '/school');
           break;
         case UserRole.student:
         default:
-          print('Routing to student dashboard');
+          debugPrint('Routing to student dashboard');
           Navigator.pushReplacementNamed(context, '/home');
           break;
       }
     } catch (e) {
-      print('Navigation error: $e');
+      debugPrint('Navigation error: $e');
       // Fallback navigation
       Navigator.pushReplacementNamed(context, '/home');
     }

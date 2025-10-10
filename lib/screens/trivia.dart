@@ -135,7 +135,7 @@ class _TriviaPageState extends State<TriviaPage> {
                 ),
               )),
             ] else ...[
-              Text('Quiz Complete!', style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+              const Text('Quiz Complete!', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
               const SizedBox(height: 16),
               Text('Your score: $score / 50', style: const TextStyle(fontSize: 18)),
               const SizedBox(height: 24),

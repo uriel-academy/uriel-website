@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+import 'package:flutter/foundation.dart';
 class ConnectionService {
   static final ConnectionService _instance = ConnectionService._internal();
   factory ConnectionService() => _instance;
@@ -55,7 +56,7 @@ class ConnectionService {
 
       _updateConnectionStatus(true);
     } catch (e) {
-      print('Connection check failed: $e');
+      debugPrint('Connection check failed: $e');
       _updateConnectionStatus(false);
       
       // Try to recover connection
@@ -68,7 +69,7 @@ class ConnectionService {
     if (_isConnected != connected) {
       _isConnected = connected;
       _connectionController.add(connected);
-      print('Connection status changed: ${connected ? "CONNECTED" : "DISCONNECTED"}');
+      debugPrint('Connection status changed: ${connected ? "CONNECTED" : "DISCONNECTED"}');
     }
   }
 
@@ -77,16 +78,16 @@ class ConnectionService {
     try {
       final user = FirebaseAuth.instance.currentUser;
       if (user != null) {
-        print('Attempting to refresh auth token...');
+        debugPrint('Attempting to refresh auth token...');
         await user.getIdToken(true); // Force refresh
-        print('Auth token refreshed successfully');
+        debugPrint('Auth token refreshed successfully');
         
         // Recheck connection
         await Future.delayed(const Duration(seconds: 2));
         await _checkConnection();
       }
     } catch (e) {
-      print('Reconnection attempt failed: $e');
+      debugPrint('Reconnection attempt failed: $e');
     }
   }
 
@@ -104,7 +105,7 @@ class ConnectionService {
 
   // Force reconnection
   Future<void> forceReconnect() async {
-    print('Force reconnection initiated...');
+    debugPrint('Force reconnection initiated...');
     await _attemptReconnection();
   }
 }

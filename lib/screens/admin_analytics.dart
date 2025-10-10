@@ -85,7 +85,7 @@ class _AdminAnalyticsPageState extends State<AdminAnalyticsPage> {
                         BarChartGroupData(x: 4, barRods: [BarChartRodData(toY: 45, color: Colors.red)]),
                       ],
                       titlesData: FlTitlesData(
-                        leftTitles: AxisTitles(sideTitles: SideTitles(showTitles: true)),
+                        leftTitles: const AxisTitles(sideTitles: SideTitles(showTitles: true)),
                         bottomTitles: AxisTitles(
                           sideTitles: SideTitles(
                             showTitles: true,

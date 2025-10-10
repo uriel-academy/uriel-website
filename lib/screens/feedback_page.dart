@@ -91,7 +91,7 @@ Allow Follow-up: ${_allowFollowUp ? 'Yes' : 'No'}
       }
     } catch (e) {
       // Email launch failed, but we still saved to Firestore
-      print('Could not launch email: $e');
+      debugPrint('Could not launch email: $e');
     }
   }
 

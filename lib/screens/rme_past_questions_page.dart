@@ -37,7 +37,7 @@ class _RMEPastQuestionsPageState extends State<RMEPastQuestionsPage> {
       });
     } catch (e) {
       // Silent fallback - don't show error to user
-      print('RME questions loading error (handled gracefully): $e');
+      debugPrint('RME questions loading error (handled gracefully): $e');
       setState(() {
         _questions = [];
         _filteredQuestions = [];

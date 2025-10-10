@@ -49,7 +49,7 @@ class _ContentManagementPageState extends State<ContentManagementPage>
       ),
       body: TabBarView(
         controller: _tabController,
-        children: [
+        children: const [
           PastQuestionsTab(),
           TriviaTab(),
           ResourcesTab(),
@@ -66,6 +66,8 @@ class _ContentManagementPageState extends State<ContentManagementPage>
 }
 
 class PastQuestionsTab extends StatelessWidget {
+  const PastQuestionsTab({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -339,6 +341,8 @@ class PastQuestionsTab extends StatelessWidget {
 }
 
 class TriviaTab extends StatelessWidget {
+  const TriviaTab({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -509,9 +513,9 @@ class TriviaTab extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.psychology,
-                    color: const Color(0xFF9C27B0),
+                    color: Color(0xFF9C27B0),
                     size: 48,
                   ),
                   const SizedBox(height: 16),
@@ -619,6 +623,8 @@ class TriviaTab extends StatelessWidget {
 }
 
 class ResourcesTab extends StatelessWidget {
+  const ResourcesTab({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(

@@ -879,7 +879,7 @@ ${_messageController.text.trim()}
       }
     } catch (e) {
       // Email launch failed, but form still submitted
-      print('Could not launch email: $e');
+      debugPrint('Could not launch email: $e');
     }
   }
 
