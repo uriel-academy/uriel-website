@@ -387,11 +387,14 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     final screenWidth = MediaQuery.of(context).size.width;
     final isSmallScreen = screenWidth < 768;
     
-    return WillPopScope(
-      onWillPop: () async {
+    return PopScope(
+      canPop: false,
+      onPopInvokedWithResult: (bool didPop, dynamic result) async {
+        if (didPop) return;
+        
         // Prevent going back to landing/login page
         // Show exit confirmation dialog instead
-        return await showDialog<bool>(
+        final shouldExit = await showDialog<bool>(
           context: context,
           builder: (context) => AlertDialog(
             title: Text(
@@ -424,6 +427,12 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             ],
           ),
         ) ?? false;
+        
+        if (shouldExit == true) {
+          if (context.mounted) {
+            Navigator.of(context).pop();
+          }
+        }
       },
       child: AnimatedBuilder(
         animation: _fadeAnimation,

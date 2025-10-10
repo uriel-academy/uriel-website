@@ -450,10 +450,12 @@ class _QuizTakerPageState extends State<QuizTakerPage>
     final currentQuestion = questions[currentQuestionIndex];
     final progress = (currentQuestionIndex + 1) / questions.length;
 
-    return WillPopScope(
-      onWillPop: () async {
-        _exitQuiz();
-        return false;
+    return PopScope(
+      canPop: false,
+      onPopInvokedWithResult: (bool didPop, dynamic result) {
+        if (!didPop) {
+          _exitQuiz();
+        }
       },
       child: Scaffold(
         backgroundColor: const Color(0xFFF8FAFE),
