@@ -31,6 +31,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   String userName = "";
   String userClass = "JHS Form 3 Student";
   String? userPhotoUrl;
+  String? userPresetAvatar;
   double overallProgress = 0.0; // Calculated from quiz results
   int currentStreak = 0; // Days of consecutive activity
   int weeklyStudyHours = 0; // Calculated from session time
@@ -90,10 +91,20 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             userName = data['firstName'] ?? user.displayName?.split(' ').first ?? _getNameFromEmail(user.email);
             userClass = data['class'] ?? 'JHS Form 3';
             userPhotoUrl = data['profileImageUrl'] ?? user.photoURL;
+            userPresetAvatar = data['presetAvatar'];
           });
         }
       });
     }
+  }
+  
+  ImageProvider? _getAvatarImage() {
+    if (userPhotoUrl != null) {
+      return NetworkImage(userPhotoUrl!);
+    } else if (userPresetAvatar != null) {
+      return AssetImage(userPresetAvatar!);
+    }
+    return null;
   }
 
   void _recordDailyActivity() async {
@@ -683,8 +694,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             child: CircleAvatar(
               radius: 16,
               backgroundColor: const Color(0xFF1A1E3F),
-              backgroundImage: userPhotoUrl != null ? NetworkImage(userPhotoUrl!) : null,
-              child: userPhotoUrl == null ? Text(
+              backgroundImage: _getAvatarImage(),
+              child: _getAvatarImage() == null ? Text(
                 userName[0].toUpperCase(),
                 style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14),
               ) : null,
@@ -742,8 +753,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   CircleAvatar(
                     radius: 20,
                     backgroundColor: const Color(0xFF1A1E3F),
-                    backgroundImage: userPhotoUrl != null ? NetworkImage(userPhotoUrl!) : null,
-                    child: userPhotoUrl == null ? Text(
+                    backgroundImage: _getAvatarImage(),
+                    child: _getAvatarImage() == null ? Text(
                       userName[0].toUpperCase(),
                       style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                     ) : null,
@@ -2409,8 +2420,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                               CircleAvatar(
                                 radius: 20,
                                 backgroundColor: const Color(0xFF1A1E3F),
-                                backgroundImage: userPhotoUrl != null ? NetworkImage(userPhotoUrl!) : null,
-                                child: userPhotoUrl == null ? Text(
+                                backgroundImage: _getAvatarImage(),
+                                child: _getAvatarImage() == null ? Text(
                                   userName[0].toUpperCase(),
                                   style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                                 ) : null,

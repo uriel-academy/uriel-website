@@ -35,6 +35,7 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
   XFile? _selectedImage;
   Uint8List? _selectedImageBytes;
   String _selectedClass = 'JHS Form 1';
+  String? _selectedPresetAvatar; // Track selected preset avatar
   
   final List<String> _classes = [
     'JHS Form 1',
@@ -99,6 +100,7 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
             _schoolController.text = data['school'] ?? '';
             _selectedClass = data['class'] ?? 'JHS Form 1';
             _profileImageUrl = data['profileImageUrl'];
+            _selectedPresetAvatar = data['presetAvatar'];
           });
         } else {
           // Set default values from auth
@@ -135,6 +137,173 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
     }
   }
 
+  Future<void> _showAvatarPicker() async {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(
+          'Choose Profile Picture',
+          style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
+        ),
+        content: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              // Preset Avatars
+              Text(
+                'Choose from presets:',
+                style: GoogleFonts.montserrat(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 14,
+                ),
+              ),
+              const SizedBox(height: 16),
+              GridView.count(
+                shrinkWrap: true,
+                crossAxisCount: 4,
+                mainAxisSpacing: 12,
+                crossAxisSpacing: 12,
+                children: [
+                  _buildPresetAvatar('assets/profile_pic_1.png'),
+                  _buildPresetAvatar('assets/profile_pic_2.png'),
+                  _buildPresetAvatar('assets/profile_pic_3.png'),
+                  _buildPresetAvatar('assets/profile_pic_4.png'),
+                ],
+              ),
+              const SizedBox(height: 24),
+              const Divider(),
+              const SizedBox(height: 16),
+              // Upload Custom Image
+              ElevatedButton.icon(
+                onPressed: () {
+                  Navigator.pop(context);
+                  _pickImage();
+                },
+                icon: const Icon(Icons.upload),
+                label: Text(
+                  'Upload Your Own Photo',
+                  style: GoogleFonts.montserrat(),
+                ),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFF1A1E3F),
+                  foregroundColor: Colors.white,
+                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                ),
+              ),
+              const SizedBox(height: 8),
+              // Use Default (Initial)
+              TextButton.icon(
+                onPressed: () {
+                  Navigator.pop(context);
+                  _useDefaultAvatar();
+                },
+                icon: const Icon(Icons.person),
+                label: Text(
+                  'Use Default (Initial)',
+                  style: GoogleFonts.montserrat(),
+                ),
+              ),
+            ],
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: Text(
+              'Cancel',
+              style: GoogleFonts.montserrat(),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+  
+  Widget _buildPresetAvatar(String assetPath) {
+    final isSelected = _selectedPresetAvatar == assetPath;
+    
+    return GestureDetector(
+      onTap: () {
+        Navigator.pop(context);
+        _selectPresetAvatar(assetPath);
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          border: Border.all(
+            color: isSelected ? const Color(0xFFD62828) : Colors.grey[300]!,
+            width: isSelected ? 3 : 2,
+          ),
+        ),
+        child: CircleAvatar(
+          radius: 30,
+          backgroundImage: AssetImage(assetPath),
+        ),
+      ),
+    );
+  }
+  
+  Future<void> _selectPresetAvatar(String assetPath) async {
+    setState(() {
+      _selectedPresetAvatar = assetPath;
+      _profileImageUrl = null;
+      _selectedImage = null;
+      _selectedImageBytes = null;
+    });
+    
+    // Save to Firestore
+    try {
+      final user = FirebaseAuth.instance.currentUser;
+      if (user != null) {
+        await FirebaseFirestore.instance
+            .collection('users')
+            .doc(user.uid)
+            .set({
+          'presetAvatar': assetPath,
+          'profileImageUrl': null, // Clear custom photo
+          'updatedAt': FieldValue.serverTimestamp(),
+        }, SetOptions(merge: true));
+        
+        // Clear Auth photo URL since we're using preset
+        await user.updatePhotoURL(null);
+        
+        _showSuccessSnackBar('Profile picture updated!');
+      }
+    } catch (e) {
+      _showErrorSnackBar('Failed to update profile picture: $e');
+    }
+  }
+  
+  Future<void> _useDefaultAvatar() async {
+    setState(() {
+      _selectedPresetAvatar = null;
+      _profileImageUrl = null;
+      _selectedImage = null;
+      _selectedImageBytes = null;
+    });
+    
+    // Save to Firestore
+    try {
+      final user = FirebaseAuth.instance.currentUser;
+      if (user != null) {
+        await FirebaseFirestore.instance
+            .collection('users')
+            .doc(user.uid)
+            .set({
+          'presetAvatar': null,
+          'profileImageUrl': null,
+          'updatedAt': FieldValue.serverTimestamp(),
+        }, SetOptions(merge: true));
+        
+        await user.updatePhotoURL(null);
+        
+        _showSuccessSnackBar('Using default profile picture!');
+      }
+    } catch (e) {
+      _showErrorSnackBar('Failed to update profile picture: $e');
+    }
+  }
+
   Future<void> _pickImage() async {
     try {
       final ImagePicker picker = ImagePicker();
@@ -152,6 +321,7 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
         setState(() {
           _selectedImage = image;
           _selectedImageBytes = bytes;
+          _selectedPresetAvatar = null; // Clear preset when uploading custom
         });
         
         await _uploadProfileImage();
@@ -193,7 +363,11 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
       await FirebaseFirestore.instance
           .collection('users')
           .doc(user.uid)
-          .update({'profileImageUrl': downloadUrl});
+          .set({
+        'profileImageUrl': downloadUrl,
+        'presetAvatar': null, // Clear preset when uploading custom
+        'updatedAt': FieldValue.serverTimestamp(),
+      }, SetOptions(merge: true));
       
       // Update Auth profile
       await user.updatePhotoURL(downloadUrl);
@@ -202,6 +376,7 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
         _profileImageUrl = downloadUrl;
         _selectedImage = null;
         _selectedImageBytes = null;
+        _selectedPresetAvatar = null;
       });
       
       _showSuccessSnackBar('Profile picture updated successfully!');
@@ -435,8 +610,12 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
                     ? MemoryImage(_selectedImageBytes!)
                     : (_profileImageUrl != null
                         ? NetworkImage(_profileImageUrl!)
-                        : null) as ImageProvider?,
-                child: (_selectedImageBytes == null && _profileImageUrl == null)
+                        : (_selectedPresetAvatar != null
+                            ? AssetImage(_selectedPresetAvatar!)
+                            : null)) as ImageProvider?,
+                child: (_selectedImageBytes == null && 
+                        _profileImageUrl == null && 
+                        _selectedPresetAvatar == null)
                     ? Text(
                         _firstNameController.text.isNotEmpty
                             ? _firstNameController.text[0].toUpperCase()
@@ -455,7 +634,7 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
                 bottom: 0,
                 right: 0,
                 child: GestureDetector(
-                  onTap: _pickImage,
+                  onTap: _showAvatarPicker,
                   child: Container(
                     padding: const EdgeInsets.all(8),
                     decoration: BoxDecoration(
