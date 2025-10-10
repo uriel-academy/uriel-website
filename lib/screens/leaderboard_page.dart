@@ -208,6 +208,7 @@ class _LeaderboardPageState extends State<LeaderboardPage> with TickerProviderSt
           school: (data['school'] as String?) ?? 'Ghana School',
           xp: stats.score,
           avatarUrl: data['photoURL'] as String?,
+          presetAvatar: data['presetAvatar'] as String?,
           questionsAnswered: stats.totalQuestions,
           accuracy: stats.totalQuestions > 0 ? (stats.correctAnswers / stats.totalQuestions * 100) : 0,
           streak: 0,
@@ -233,6 +234,7 @@ class _LeaderboardPageState extends State<LeaderboardPage> with TickerProviderSt
           school: userData?['school'] as String? ?? 'My School',
           xp: userStats.score,
           avatarUrl: user.photoURL,
+          presetAvatar: userData?['presetAvatar'] as String?,
           questionsAnswered: userStats.totalQuestions,
           accuracy: userStats.totalQuestions > 0 ? (userStats.correctAnswers / userStats.totalQuestions * 100) : 0,
           streak: 0,
@@ -325,6 +327,33 @@ class _LeaderboardPageState extends State<LeaderboardPage> with TickerProviderSt
     if (xp >= 1000) return 'Gold';
     if (xp >= 500) return 'Silver';
     return 'Bronze';
+  }
+  
+  Widget _buildAvatarImage(LeaderboardEntry entry, double iconSize) {
+    // Check preset avatar first, then custom photo URL
+    if (entry.presetAvatar != null) {
+      return ClipOval(
+        child: Image.asset(
+          entry.presetAvatar!,
+          fit: BoxFit.cover,
+          errorBuilder: (context, error, stackTrace) {
+            return Icon(Icons.person, size: iconSize, color: Colors.grey[600]);
+          },
+        ),
+      );
+    } else if (entry.avatarUrl != null) {
+      return ClipOval(
+        child: Image.network(
+          entry.avatarUrl!,
+          fit: BoxFit.cover,
+          errorBuilder: (context, error, stackTrace) {
+            return Icon(Icons.person, size: iconSize, color: Colors.grey[600]);
+          },
+        ),
+      );
+    } else {
+      return Icon(Icons.person, size: iconSize, color: Colors.grey[600]);
+    }
   }
   
   Color _getTierColor(String tier) {
@@ -771,7 +800,7 @@ Join the challenge 👉 $url
           ),
           child: Row(
             children: [
-              // Generic Pet Avatar (Cat emoji as placeholder)
+              // User Profile Avatar
               Container(
                 width: isMobile ? 80 : 100,
                 height: isMobile ? 80 : 100,
@@ -786,11 +815,8 @@ Join the challenge 👉 $url
                     ),
                   ],
                 ),
-                child: Center(
-                  child: Text(
-                    '🐱',
-                    style: TextStyle(fontSize: isMobile ? 40 : 50),
-                  ),
+                child: ClipOval(
+                  child: _buildAvatarImage(entry, isMobile ? 40 : 50),
                 ),
               ),
               
@@ -1228,9 +1254,7 @@ Join the challenge 👉 $url
               border: Border.all(color: color, width: 3),
               color: Colors.grey[300],
             ),
-            child: entry.avatarUrl != null
-                ? ClipOval(child: Image.network(entry.avatarUrl!, fit: BoxFit.cover))
-                : Icon(Icons.person, size: 30, color: Colors.grey[600]),
+            child: _buildAvatarImage(entry, 30),
           ),
           const SizedBox(height: 8),
           // Username - truncate on small screens
@@ -1337,9 +1361,7 @@ Join the challenge 👉 $url
               shape: BoxShape.circle,
               color: Colors.grey[300],
             ),
-            child: entry.avatarUrl != null
-                ? ClipOval(child: Image.network(entry.avatarUrl!, fit: BoxFit.cover))
-                : Icon(Icons.person, size: 20, color: Colors.grey[600]),
+            child: _buildAvatarImage(entry, 20),
           ),
           const SizedBox(width: 12),
           // Info
@@ -1527,6 +1549,7 @@ class LeaderboardEntry {
   final String school;
   final int xp;
   final String? avatarUrl;
+  final String? presetAvatar;
   final int questionsAnswered;
   final double accuracy;
   final int streak;
@@ -1539,6 +1562,7 @@ class LeaderboardEntry {
     required this.school,
     required this.xp,
     this.avatarUrl,
+    this.presetAvatar,
     required this.questionsAnswered,
     required this.accuracy,
     required this.streak,

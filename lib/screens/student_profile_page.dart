@@ -235,7 +235,7 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
             .doc(user.uid)
             .set({
           'presetAvatar': assetPath,
-          'profileImageUrl': null, // Clear custom photo
+          'profileImageUrl': FieldValue.delete(), // Delete custom photo field
           'updatedAt': FieldValue.serverTimestamp(),
         }, SetOptions(merge: true));
         
@@ -263,8 +263,8 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
             .collection('users')
             .doc(user.uid)
             .set({
-          'presetAvatar': null,
-          'profileImageUrl': null,
+          'presetAvatar': FieldValue.delete(),
+          'profileImageUrl': FieldValue.delete(),
           'updatedAt': FieldValue.serverTimestamp(),
         }, SetOptions(merge: true));
         
@@ -390,9 +390,16 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
   void _showSuccessSnackBar(String message) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text(message),
+        content: Text(message, textAlign: TextAlign.center),
         backgroundColor: Colors.green,
         behavior: SnackBarBehavior.floating,
+        margin: EdgeInsets.symmetric(
+          horizontal: MediaQuery.of(context).size.width * 0.35,
+          vertical: MediaQuery.of(context).size.height * 0.4,
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+        ),
       ),
     );
   }
@@ -400,9 +407,16 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
   void _showErrorSnackBar(String message) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text(message),
+        content: Text(message, textAlign: TextAlign.center),
         backgroundColor: Colors.red,
         behavior: SnackBarBehavior.floating,
+        margin: EdgeInsets.symmetric(
+          horizontal: MediaQuery.of(context).size.width * 0.35,
+          vertical: MediaQuery.of(context).size.height * 0.4,
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+        ),
       ),
     );
   }

@@ -87,6 +87,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       _userStream!.listen((snapshot) {
         if (snapshot.exists && mounted) {
           final data = snapshot.data() as Map<String, dynamic>;
+          debugPrint('🔄 User data updated from Firestore:');
+          debugPrint('  presetAvatar: ${data['presetAvatar']}');
+          debugPrint('  profileImageUrl: ${data['profileImageUrl']}');
           setState(() {
             userName = data['firstName'] ?? user.displayName?.split(' ').first ?? _getNameFromEmail(user.email);
             userClass = data['class'] ?? 'JHS Form 3';
@@ -99,10 +102,10 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   }
   
   ImageProvider? _getAvatarImage() {
-    if (userPhotoUrl != null) {
-      return NetworkImage(userPhotoUrl!);
-    } else if (userPresetAvatar != null) {
+    if (userPresetAvatar != null) {
       return AssetImage(userPresetAvatar!);
+    } else if (userPhotoUrl != null) {
+      return NetworkImage(userPhotoUrl!);
     }
     return null;
   }
@@ -1060,10 +1063,11 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             child: CircleAvatar(
               radius: 20,
               backgroundColor: const Color(0xFF1A1E3F),
-              child: Text(
+              backgroundImage: _getAvatarImage(),
+              child: _getAvatarImage() == null ? Text(
                 userName[0].toUpperCase(),
                 style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-              ),
+              ) : null,
             ),
           ),
         ],
