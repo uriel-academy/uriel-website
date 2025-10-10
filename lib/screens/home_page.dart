@@ -48,6 +48,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   List<SubjectProgress> _subjectProgress = [];
   
   // Recent activity data
+  // ignore: unused_field
   List<Map<String, dynamic>> _recentActivity = [];
 
   @override
@@ -757,6 +758,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   ),
                   
                   _buildNavItem(-1, 'Pricing'),
+                  _buildNavItem(-7, 'Payment'),
                   _buildNavItem(-2, 'About Us'),
                   _buildNavItem(-3, 'Contact'),
                   _buildNavItem(-4, 'Privacy Policy'),
@@ -826,6 +828,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     switch (pageName) {
       case 'Pricing':
         route = '/pricing';
+        break;
+      case 'Payment':
+        route = '/payment';
         break;
       case 'About Us':
         route = '/about';

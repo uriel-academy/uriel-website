@@ -5,11 +5,13 @@ import '../constants/app_styles.dart';
 class CommonFooter extends StatelessWidget {
   final bool isSmallScreen;
   final bool showLinks;
+  final bool showPricing;
 
   const CommonFooter({
     Key? key,
     required this.isSmallScreen,
     this.showLinks = true,
+    this.showPricing = true,
   }) : super(key: key);
 
   @override
@@ -44,7 +46,8 @@ class CommonFooter extends StatelessWidget {
               runSpacing: 16,
               alignment: WrapAlignment.center,
               children: [
-                _buildFooterLink(context, 'Pricing', () => Navigator.pushNamed(context, '/pricing')),
+                if (showPricing) _buildFooterLink(context, 'Pricing', () => Navigator.pushNamed(context, '/pricing')),
+                _buildFooterLink(context, 'Payment', () => Navigator.pushNamed(context, '/payment')),
                 _buildFooterLink(context, 'About Us', () => Navigator.pushNamed(context, '/about')),
                 _buildFooterLink(context, 'Contact', () => Navigator.pushNamed(context, '/contact')),
                 _buildFooterLink(context, 'Privacy Policy', () => Navigator.pushNamed(context, '/privacy')),

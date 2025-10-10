@@ -21,6 +21,7 @@ import 'screens/terms_of_service.dart'; // Import Terms of Service page
 import 'screens/contact.dart'; // Import Contact page
 import 'screens/faq.dart'; // Import FAQ page
 import 'screens/pricing_page.dart'; // Import Pricing page
+import 'screens/payment_page.dart'; // Import Payment page
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -69,6 +70,7 @@ class MyApp extends StatelessWidget {
           '/contact',
           '/faq',
           '/pricing',
+          '/payment',
           '/login',
         ];
         
@@ -88,6 +90,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/landing': (_) => const LandingPage(),
         '/pricing': (_) => const PricingPage(),
+  '/payment': (_) => const PaymentPage(),
         '/about': (_) => const AboutUsPage(),
         '/privacy': (_) => const PrivacyPolicyPage(),
         '/terms': (_) => const TermsOfServicePage(),

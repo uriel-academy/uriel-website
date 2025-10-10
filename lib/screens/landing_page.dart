@@ -26,6 +26,7 @@ class LandingPage extends StatelessWidget {
             CommonFooter(
               isSmallScreen: screenWidth < 768,
               showLinks: true,
+              showPricing: false,
             ),
           ],
         ),
@@ -338,6 +339,7 @@ class LandingPage extends StatelessWidget {
                 runSpacing: 16,
                 children: [
                   _buildPricingCard(
+                    context: context,
                     title: 'Free',
                     subtitle: 'Get Started',
                     price: '₵0',
@@ -354,6 +356,7 @@ class LandingPage extends StatelessWidget {
                     width: isDesktop ? (constraints.maxWidth - 48) / 4 : (constraints.maxWidth - 16) / 2,
                   ),
                   _buildPricingCard(
+                    context: context,
                     title: 'Standard',
                     subtitle: 'Everything You Need',
                     price: '₵9.99',
@@ -369,6 +372,7 @@ class LandingPage extends StatelessWidget {
                     width: isDesktop ? (constraints.maxWidth - 48) / 4 : (constraints.maxWidth - 16) / 2,
                   ),
                   _buildPricingCard(
+                    context: context,
                     title: 'Premium',
                     subtitle: 'Learn 2x Faster with AI',
                     price: '₵14.99',
@@ -386,6 +390,7 @@ class LandingPage extends StatelessWidget {
                     width: isDesktop ? (constraints.maxWidth - 48) / 4 : (constraints.maxWidth - 16) / 2,
                   ),
                   _buildPricingCard(
+                    context: context,
                     title: 'School Plan',
                     subtitle: 'For Institutions',
                     price: 'Custom',
@@ -412,6 +417,7 @@ class LandingPage extends StatelessWidget {
   }
 
   Widget _buildPricingCard({
+    required BuildContext context,
     required String title,
     required String subtitle,
     required String price,
@@ -532,7 +538,10 @@ class LandingPage extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      // TODO: Implement subscription logic
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (_) => const SignUpPage()),
+                      );
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: isPopular ? const Color(0xFFD62828) : const Color(0xFF1A1E3F),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class FeedbackPage extends StatefulWidget {
   final bool isEmbedded;
@@ -56,6 +57,44 @@ class _FeedbackPageState extends State<FeedbackPage> {
     return 'there';
   }
 
+  Future<void> _sendEmailNotification() async {
+    final user = FirebaseAuth.instance.currentUser;
+    final selectedCategories = _categories.entries
+        .where((entry) => entry.value)
+        .map((entry) => _categoryLabels[entry.key])
+        .join(', ');
+    
+    final emailBody = '''
+Feedback from ${_getUsername()}
+
+User Email: ${user?.email ?? _contactController.text.trim()}
+Experience: ${_selectedExperience ?? 'Not specified'}
+Priority: ${_selectedPriority ?? 'Not specified'}
+Categories: $selectedCategories
+
+Details:
+${_detailsController.text.trim()}
+
+${_reproController.text.isNotEmpty ? 'Steps to Reproduce:\n${_reproController.text.trim()}\n\n' : ''}${_featureController.text.isNotEmpty ? 'Feature Idea:\n${_featureController.text.trim()}\n\n' : ''}${_screenshotController.text.isNotEmpty ? 'Screenshot/Link:\n${_screenshotController.text.trim()}\n\n' : ''}Contact: ${_contactController.text.trim()}
+Allow Follow-up: ${_allowFollowUp ? 'Yes' : 'No'}
+    '''.trim();
+
+    final emailUri = Uri(
+      scheme: 'mailto',
+      path: 'studywithuriel@gmail.com',
+      query: 'subject=${Uri.encodeComponent('New Feedback from ${_getUsername()}')}&body=${Uri.encodeComponent(emailBody)}',
+    );
+
+    try {
+      if (await canLaunchUrl(emailUri)) {
+        await launchUrl(emailUri);
+      }
+    } catch (e) {
+      // Email launch failed, but we still saved to Firestore
+      print('Could not launch email: $e');
+    }
+  }
+
   Future<void> _submitFeedback() async {
     if (!_formKey.currentState!.validate()) return;
 
@@ -94,6 +133,9 @@ class _FeedbackPageState extends State<FeedbackPage> {
         'timestamp': FieldValue.serverTimestamp(),
         'status': 'new',
       });
+
+      // Send email notification
+      await _sendEmailNotification();
 
       setState(() {
         _isSubmitting = false;

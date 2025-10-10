@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../widgets/common_footer.dart';
 import '../constants/app_styles.dart';
+import '../models/subscription_plan_selection.dart';
 
 class PricingPage extends StatefulWidget {
   const PricingPage({Key? key}) : super(key: key);
@@ -249,6 +250,17 @@ class _PricingPageState extends State<PricingPage> {
     ];
   }
 
+  List<String> _schoolFeatures() {
+    return [
+      'Teacher dashboard - Track every student',
+      'Class analytics - Identify weak topics',
+      'Content upload - Share notes directly',
+      'School-wide analytics & reporting',
+      'Custom branding options',
+      'Dedicated account manager',
+    ];
+  }
+
   Widget _buildPricingCard(
     String tier,
     String subtitle,
@@ -381,7 +393,23 @@ class _PricingPageState extends State<PricingPage> {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      final selectedFeatures = tier == 'Free' ? _freeFeatures() : features;
+                      final planSelection = SubscriptionPlanSelection(
+                        id: tier.toLowerCase().replaceAll(' ', '-'),
+                        name: tier,
+                        subtitle: subtitle,
+                        monthlyPrice: monthlyPrice,
+                        annualPrice: annualPrice,
+                        isAnnual: isAnnual,
+                        features: selectedFeatures,
+                      );
+                      Navigator.pushNamed(
+                        context,
+                        '/payment',
+                        arguments: planSelection,
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: isPremium ? urielRed : urielNavy,
                       foregroundColor: Colors.white,
@@ -392,11 +420,7 @@ class _PricingPageState extends State<PricingPage> {
                       elevation: 2,
                     ),
                     child: Text(
-                      tier == 'Free'
-                          ? 'Start Free'
-                          : tier == 'Standard'
-                              ? 'Start Standard'
-                              : 'Upgrade to Premium',
+                      'Continue to payment',
                       style: GoogleFonts.montserrat(
                         fontWeight: FontWeight.w600,
                         fontSize: 16,
@@ -463,17 +487,28 @@ class _PricingPageState extends State<PricingPage> {
                   ),
                 ),
                 SizedBox(height: isMobile ? 20 : 32),
-                _buildSchoolFeatureItem('Teacher dashboard - Track every student', isMobile),
-                _buildSchoolFeatureItem('Class analytics - Identify weak topics', isMobile),
-                _buildSchoolFeatureItem('Content upload - Share notes directly', isMobile),
-                _buildSchoolFeatureItem('School-wide analytics & reporting', isMobile),
-                _buildSchoolFeatureItem('Custom branding options', isMobile),
-                _buildSchoolFeatureItem('Dedicated account manager', isMobile),
+                ..._schoolFeatures().map((feature) => _buildSchoolFeatureItem(feature, isMobile)).toList(),
                 SizedBox(height: isMobile ? 20 : 32),
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      final planSelection = SubscriptionPlanSelection(
+                        id: 'school',
+                        name: 'School Plan',
+                        subtitle: 'For Schools & Educational Institutions',
+                        monthlyPrice: 0,
+                        annualPrice: 0,
+                        isAnnual: isAnnual,
+                        isSchoolPlan: true,
+                        features: _schoolFeatures(),
+                      );
+                      Navigator.pushNamed(
+                        context,
+                        '/payment',
+                        arguments: planSelection,
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: urielNavy,
                       foregroundColor: Colors.white,

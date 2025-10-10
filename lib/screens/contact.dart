@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../constants/app_styles.dart';
 import '../widgets/common_footer.dart';
 import 'sign_up.dart';
@@ -279,7 +280,7 @@ class _ContactPageState extends State<ContactPage> with TickerProviderStateMixin
           children: [
             _buildContactCard(
               'Email Us',
-              'studywithuriel@gmail.com',
+              'info@uriel.academy',
               'Within 24 hours',
               Icons.email_outlined,
               const Color(0xFF2196F3),
@@ -830,8 +831,11 @@ class _ContactPageState extends State<ContactPage> with TickerProviderStateMixin
     if (_formKey.currentState!.validate() && _captchaVerified) {
       setState(() => _isSubmitting = true);
       
+      // Send email with form data
+      await _sendContactEmail();
+      
       // Simulate form submission
-      await Future.delayed(const Duration(seconds: 2));
+      await Future.delayed(const Duration(seconds: 1));
       
       setState(() {
         _isSubmitting = false;
@@ -849,23 +853,93 @@ class _ContactPageState extends State<ContactPage> with TickerProviderStateMixin
     }
   }
 
-  void _launchEmail() {
-    // In a real app, you would use url_launcher to open email client
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Email client would open here: studywithuriel@gmail.com'),
-        backgroundColor: Color(0xFF1A1E3F),
-      ),
+  Future<void> _sendContactEmail() async {
+    final emailBody = '''
+Contact Form Submission from ${_nameController.text.trim()}
+
+Name: ${_nameController.text.trim()}
+Email: ${_emailController.text.trim()}
+Phone: ${_phoneController.text.isNotEmpty ? _phoneController.text.trim() : 'Not provided'}
+User Type: $_selectedUserType
+Inquiry Type: $_selectedInquiryType
+
+Message:
+${_messageController.text.trim()}
+    '''.trim();
+
+    final emailUri = Uri(
+      scheme: 'mailto',
+      path: 'info@uriel.academy',
+      query: 'subject=${Uri.encodeComponent('Contact: $_selectedInquiryType from ${_nameController.text.trim()}')}&body=${Uri.encodeComponent(emailBody)}',
     );
+
+    try {
+      if (await canLaunchUrl(emailUri)) {
+        await launchUrl(emailUri);
+      }
+    } catch (e) {
+      // Email launch failed, but form still submitted
+      print('Could not launch email: $e');
+    }
   }
 
-  void _launchWhatsApp() {
-    // In a real app, you would use url_launcher to open WhatsApp
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('WhatsApp would open here'),
-        backgroundColor: Color(0xFF4CAF50),
-      ),
+  void _launchEmail() async {
+    final emailUri = Uri(
+      scheme: 'mailto',
+      path: 'info@uriel.academy',
+      query: 'subject=${Uri.encodeComponent('Contact from Uriel Academy')}&body=${Uri.encodeComponent('Hi, I would like to get in touch...')}',
     );
+
+    try {
+      if (await canLaunchUrl(emailUri)) {
+        await launchUrl(emailUri);
+      } else {
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text('Could not open email client'),
+              backgroundColor: Color(0xFFD62828),
+            ),
+          );
+        }
+      }
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('Error opening email client'),
+            backgroundColor: Color(0xFFD62828),
+          ),
+        );
+      }
+    }
+  }
+
+  void _launchWhatsApp() async {
+    final whatsappUri = Uri.parse('https://wa.me/233247317076?text=${Uri.encodeComponent('Hi, I would like to get in touch...')}');
+
+    try {
+      if (await canLaunchUrl(whatsappUri)) {
+        await launchUrl(whatsappUri, mode: LaunchMode.externalApplication);
+      } else {
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text('Could not open WhatsApp'),
+              backgroundColor: Color(0xFFD62828),
+            ),
+          );
+        }
+      }
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('Error opening WhatsApp'),
+            backgroundColor: Color(0xFFD62828),
+          ),
+        );
+      }
+    }
   }
 }
