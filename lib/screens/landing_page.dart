@@ -243,7 +243,7 @@ class LandingPage extends StatelessWidget {
                     width: isDesktop ? (constraints.maxWidth - 40) / 3 : constraints.maxWidth,
                   ),
                   _buildFeatureCard(
-                    title: 'NACCA Approved Textbooks',
+                    title: 'NACCA Aligned Textbooks',
                     description: 'Curated digital textbooks aligned with Ghana Education Service curriculum',
                     width: isDesktop ? (constraints.maxWidth - 40) / 3 : constraints.maxWidth,
                   ),
