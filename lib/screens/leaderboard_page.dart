@@ -35,16 +35,6 @@ class _LeaderboardPageState extends State<LeaderboardPage> with TickerProviderSt
   final List<String> _periods = ['Today', 'This Week', 'This Month', 'All Time'];
   final List<String> _scopes = ['My School', 'Regional', 'National', 'Global'];
   
-  // Category tabs
-  final List<String> _mainCategories = [
-    '🏆 Overall',
-    '🎯 Trivia',
-    '📝 BECE',
-    '📚 WASSCE',
-    '📖 Stories',
-    '📕 Textbooks'
-  ];
-  
   // Trivia categories
   final List<String> _triviaCategories = [
     'Overall',

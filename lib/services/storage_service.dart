@@ -4,7 +4,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
 class StorageService {
   static final FirebaseStorage _storage = FirebaseStorage.instance;
-  static final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
   // Get BECE RME past questions from storage
   static Future<List<PastQuestion>> getBECERMEQuestions() async {

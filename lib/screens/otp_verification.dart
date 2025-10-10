@@ -18,6 +18,7 @@ class _OTPVerificationPageState extends State<OTPVerificationPage> {
     // TODO: Replace with real OTP verification logic
     await Future.delayed(const Duration(seconds: 1));
     if (otpController.text == '123456') {
+      if (!mounted) return;
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(

@@ -15,7 +15,6 @@ void main() async {
 
   int filesModified = 0;
   int printReplacements = 0;
-  int constAdditions = 0;
 
   for (var file in dartFiles) {
     try {
@@ -50,15 +49,6 @@ void main() async {
           }
         }
       }
-
-      // Add const to constructors where missing
-      // Pattern: Widget( without const before it
-      final constPattern = RegExp(
-        r'(?<!const\s)(?<!\/\/.*)\b(Container|Text|SizedBox|Padding|Column|Row|Icon|Center|Expanded|Flexible|Card|ListTile|Divider|SizedBox|Spacer|EdgeInsets\.(?:all|symmetric|only))\s*\(',
-      );
-      
-      // This is a simpler approach - we'll let Flutter's auto-fix handle const constructors
-      // since doing it programmatically can be error-prone
 
       if (content != originalContent) {
         await file.writeAsString(content);

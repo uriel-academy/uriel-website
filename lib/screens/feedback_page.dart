@@ -163,6 +163,7 @@ Allow Follow-up: ${_allowFollowUp ? 'Yes' : 'No'}
       });
     } catch (e) {
       setState(() => _isSubmitting = false);
+      if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text('Error submitting feedback: $e'),

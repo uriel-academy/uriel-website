@@ -201,9 +201,10 @@ class _AdminDashboardState extends State<AdminDashboard> {
                 // Mobile: Show only logout button
                 return IconButton(
                   onPressed: () async {
+                    final navigator = Navigator.of(context);
                     await _authService.signOut();
                     if (mounted) {
-                      Navigator.of(context).pushReplacementNamed('/landing');
+                      navigator.pushReplacementNamed('/landing');
                     }
                   },
                   icon: const Icon(
@@ -233,9 +234,10 @@ class _AdminDashboardState extends State<AdminDashboard> {
                       const SizedBox(width: 8),
                       IconButton(
                         onPressed: () async {
+                          final navigator = Navigator.of(context);
                           await _authService.signOut();
                           if (mounted) {
-                            Navigator.of(context).pushReplacementNamed('/landing');
+                            navigator.pushReplacementNamed('/landing');
                           }
                         },
                         icon: const Icon(
@@ -787,14 +789,17 @@ class _AdminDashboardState extends State<AdminDashboard> {
         },
       );
 
+      final navigator = Navigator.of(context);
       try {
         final result = await RMEDataImportService.importRMEQuestions();
         
         // Close loading dialog
-        Navigator.of(context).pop();
+        if (!mounted) return;
+        navigator.pop();
         
         if (result['success'] == true) {
           // Show success dialog
+          if (!mounted) return;
           showDialog(
             context: context,
             builder: (BuildContext context) {
@@ -851,6 +856,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
         );
         } else {
           // Show error dialog for failed import
+          if (!mounted) return;
           showDialog(
             context: context,
             builder: (BuildContext context) {
@@ -890,7 +896,8 @@ class _AdminDashboardState extends State<AdminDashboard> {
         }
       } catch (e) {
         // Close loading dialog
-        Navigator.of(context).pop();
+        if (!mounted) return;
+        navigator.pop();
         
         // Show error dialog
         showDialog(
@@ -946,124 +953,6 @@ class _AdminDashboardState extends State<AdminDashboard> {
               ],
             );
           },
-        );
-      }
-    }
-  }
-
-  void _showUserProfile() {
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: Text(
-          'User Profile',
-          style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
-        ),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            CircleAvatar(
-              radius: 30,
-              backgroundColor: const Color(0xFF1A1E3F),
-              child: Text(
-                FirebaseAuth.instance.currentUser?.email?.substring(0, 1).toUpperCase() ?? 'A',
-                style: GoogleFonts.montserrat(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w600,
-                  fontSize: 20,
-                ),
-              ),
-            ),
-            const SizedBox(height: 16),
-            Text(
-              FirebaseAuth.instance.currentUser?.email ?? 'No email',
-              style: GoogleFonts.montserrat(fontSize: 14),
-            ),
-            const SizedBox(height: 8),
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-              decoration: BoxDecoration(
-                color: const Color(0xFFD62828).withValues(alpha: 0.1),
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Text(
-                'Super Admin',
-                style: GoogleFonts.montserrat(
-                  fontSize: 12,
-                  color: const Color(0xFFD62828),
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-            ),
-          ],
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(),
-            child: Text(
-              'Close',
-              style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  void _showSettings() {
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: Text(
-          'Settings',
-          style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
-        ),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            ListTile(
-              leading: const Icon(Icons.notifications),
-              title: const Text('Notifications'),
-              trailing: Switch(
-                value: true,
-                onChanged: (value) {},
-                activeColor: const Color(0xFF1A1E3F),
-              ),
-            ),
-            ListTile(
-              leading: const Icon(Icons.language),
-              title: const Text('Language'),
-              trailing: const Text('English'),
-              onTap: () {},
-            ),
-          ],
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(),
-            child: Text(
-              'Close',
-              style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Future<void> _handleLogout() async {
-    try {
-      await _authService.signOut();
-      if (mounted) {
-        Navigator.of(context).pushReplacementNamed('/landing');
-      }
-    } catch (e) {
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text('Error signing out: $e'),
-            backgroundColor: Colors.red,
-          ),
         );
       }
     }
