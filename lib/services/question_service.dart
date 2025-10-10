@@ -161,7 +161,9 @@ class QuestionService {
       }
       
       if (year != null) {
-        query = query.where('year', isEqualTo: year);
+        // Try to parse year as int if it's a string, since Firebase stores it as int
+        final yearValue = int.tryParse(year) ?? year;
+        query = query.where('year', isEqualTo: yearValue);
       }
       
       if (section != null) {
