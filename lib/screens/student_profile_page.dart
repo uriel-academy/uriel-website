@@ -2,10 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:image_picker/image_picker.dart';
-import 'package:firebase_storage/firebase_storage.dart';
-
-import 'package:flutter/foundation.dart';
 class StudentProfilePage extends StatefulWidget {
   const StudentProfilePage({
     Key? key,
@@ -32,8 +28,6 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
   bool _isLoading = false;
   bool _isEditingPassword = false;
   String? _profileImageUrl;
-  XFile? _selectedImage;
-  Uint8List? _selectedImageBytes;
   String _selectedClass = 'JHS Form 1';
   String? _selectedPresetAvatar; // Track selected preset avatar
   
@@ -170,37 +164,20 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
                   _buildPresetAvatar('assets/profile_pic_4.png'),
                 ],
               ),
-              const SizedBox(height: 24),
-              const Divider(),
               const SizedBox(height: 16),
-              // Upload Custom Image
-              ElevatedButton.icon(
-                onPressed: () {
-                  Navigator.pop(context);
-                  _pickImage();
-                },
-                icon: const Icon(Icons.upload),
-                label: Text(
-                  'Upload Your Own Photo',
-                  style: GoogleFonts.montserrat(),
-                ),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF1A1E3F),
-                  foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-                ),
-              ),
-              const SizedBox(height: 8),
               // Use Default (Initial)
-              TextButton.icon(
+              OutlinedButton.icon(
                 onPressed: () {
                   Navigator.pop(context);
                   _useDefaultAvatar();
                 },
                 icon: const Icon(Icons.person),
                 label: Text(
-                  'Use Default (Initial)',
+                  'Use Default (Name Initial)',
                   style: GoogleFonts.montserrat(),
+                ),
+                style: OutlinedButton.styleFrom(
+                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                 ),
               ),
             ],
@@ -247,8 +224,6 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
     setState(() {
       _selectedPresetAvatar = assetPath;
       _profileImageUrl = null;
-      _selectedImage = null;
-      _selectedImageBytes = null;
     });
     
     // Save to Firestore
@@ -278,8 +253,6 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
     setState(() {
       _selectedPresetAvatar = null;
       _profileImageUrl = null;
-      _selectedImage = null;
-      _selectedImageBytes = null;
     });
     
     // Save to Firestore
@@ -304,89 +277,7 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
     }
   }
 
-  Future<void> _pickImage() async {
-    try {
-      final ImagePicker picker = ImagePicker();
-      final XFile? image = await picker.pickImage(
-        source: ImageSource.gallery,
-        maxWidth: 512,
-        maxHeight: 512,
-        imageQuality: 80,
-      );
-      
-      if (image != null) {
-        // Read image bytes for web compatibility
-        final bytes = await image.readAsBytes();
-        
-        setState(() {
-          _selectedImage = image;
-          _selectedImageBytes = bytes;
-          _selectedPresetAvatar = null; // Clear preset when uploading custom
-        });
-        
-        await _uploadProfileImage();
-      }
-    } catch (e) {
-      _showErrorSnackBar('Failed to pick image: $e');
-    }
-  }
 
-  Future<void> _uploadProfileImage() async {
-    if (_selectedImage == null || _selectedImageBytes == null) return;
-    
-    setState(() => _isLoading = true);
-    
-    try {
-      final user = FirebaseAuth.instance.currentUser;
-      if (user == null) {
-        _showErrorSnackBar('User not authenticated');
-        return;
-      }
-      
-      final storageRef = FirebaseStorage.instance
-          .ref()
-          .child('profile_images')
-          .child('${user.uid}.jpg');
-      
-      // Upload using bytes for web compatibility
-      final uploadTask = await storageRef.putData(
-        _selectedImageBytes!,
-        SettableMetadata(
-          contentType: 'image/jpeg',
-          customMetadata: {'userId': user.uid},
-        ),
-      );
-      
-      final downloadUrl = await uploadTask.ref.getDownloadURL();
-      
-      // Update Firestore
-      await FirebaseFirestore.instance
-          .collection('users')
-          .doc(user.uid)
-          .set({
-        'profileImageUrl': downloadUrl,
-        'presetAvatar': null, // Clear preset when uploading custom
-        'updatedAt': FieldValue.serverTimestamp(),
-      }, SetOptions(merge: true));
-      
-      // Update Auth profile
-      await user.updatePhotoURL(downloadUrl);
-      
-      setState(() {
-        _profileImageUrl = downloadUrl;
-        _selectedImage = null;
-        _selectedImageBytes = null;
-        _selectedPresetAvatar = null;
-      });
-      
-      _showSuccessSnackBar('Profile picture updated successfully!');
-    } catch (e) {
-      debugPrint('Error uploading profile image: $e');
-      _showErrorSnackBar('Failed to upload image: $e');
-    } finally {
-      setState(() => _isLoading = false);
-    }
-  }
 
   Future<void> _saveProfile() async {
     if (!_formKey.currentState!.validate()) {
@@ -606,16 +497,12 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
               CircleAvatar(
                 radius: isSmallScreen ? 50 : 60,
                 backgroundColor: const Color(0xFF1A1E3F),
-                backgroundImage: _selectedImageBytes != null
-                    ? MemoryImage(_selectedImageBytes!)
+                backgroundImage: _selectedPresetAvatar != null
+                    ? AssetImage(_selectedPresetAvatar!)
                     : (_profileImageUrl != null
                         ? NetworkImage(_profileImageUrl!)
-                        : (_selectedPresetAvatar != null
-                            ? AssetImage(_selectedPresetAvatar!)
-                            : null)) as ImageProvider?,
-                child: (_selectedImageBytes == null && 
-                        _profileImageUrl == null && 
-                        _selectedPresetAvatar == null)
+                        : null) as ImageProvider?,
+                child: (_profileImageUrl == null && _selectedPresetAvatar == null)
                     ? Text(
                         _firstNameController.text.isNotEmpty
                             ? _firstNameController.text[0].toUpperCase()

@@ -161,10 +161,14 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           final data = userDoc.data() as Map<String, dynamic>;
           setState(() {
             userName = data['firstName'] ?? user.displayName?.split(' ').first ?? _getNameFromEmail(user.email);
+            userClass = data['class'] ?? 'JHS Form 3';
+            userPhotoUrl = data['profileImageUrl'] ?? user.photoURL;
+            userPresetAvatar = data['presetAvatar'];
           });
         } else {
           setState(() {
             userName = user.displayName?.split(' ').first ?? _getNameFromEmail(user.email);
+            userClass = 'JHS Form 3';
           });
         }
       } catch (e) {
