@@ -2327,68 +2327,175 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   }
 
   void _showProfileMenu() {
-    showModalBottomSheet(
+    showDialog(
       context: context,
-      builder: (context) => Container(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
+      barrierColor: Colors.transparent,
+      builder: (context) {
+        final screenWidth = MediaQuery.of(context).size.width;
+        final dialogWidth = screenWidth * 0.18; // 50% reduction from typical 36% to 18%
+        
+        return Stack(
           children: [
-            ListTile(
-              leading: CircleAvatar(
-                backgroundColor: const Color(0xFF1A1E3F),
-                child: Text(userName[0].toUpperCase(), style: const TextStyle(color: Colors.white)),
+            // Invisible barrier to close on outside click
+            GestureDetector(
+              onTap: () => Navigator.pop(context),
+              child: Container(color: Colors.transparent),
+            ),
+            // Positioned dialog in top right
+            Positioned(
+              top: 70, // Below header (header height ~60px + spacing)
+              right: 16,
+              child: Material(
+                elevation: 8,
+                borderRadius: BorderRadius.circular(12),
+                child: Container(
+                  width: dialogWidth.clamp(280, 350), // Min 280, max 350
+                  constraints: const BoxConstraints(maxHeight: 600),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(12),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withValues(alpha: 0.1),
+                        blurRadius: 10,
+                        offset: const Offset(0, 4),
+                      ),
+                    ],
+                  ),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        // User Profile Header
+                        Container(
+                          padding: const EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFF1A1E3F).withValues(alpha: 0.05),
+                            borderRadius: const BorderRadius.only(
+                              topLeft: Radius.circular(12),
+                              topRight: Radius.circular(12),
+                            ),
+                          ),
+                          child: Row(
+                            children: [
+                              CircleAvatar(
+                                radius: 20,
+                                backgroundColor: const Color(0xFF1A1E3F),
+                                child: Text(
+                                  userName[0].toUpperCase(),
+                                  style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                              const SizedBox(width: 12),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      userName,
+                                      style: GoogleFonts.montserrat(
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 14,
+                                      ),
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                    Text(
+                                      'JHS Form 3 Student',
+                                      style: GoogleFonts.montserrat(
+                                        fontSize: 11,
+                                        color: Colors.grey[600],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        
+                        // Menu Items
+                        _buildProfileMenuItem(Icons.person, 'Profile Settings', () {
+                          Navigator.pop(context);
+                          _showComingSoon('Profile Settings');
+                        }),
+                        _buildProfileMenuItem(Icons.notifications, 'Notification Settings', () {
+                          Navigator.pop(context);
+                          _showComingSoon('Notification Settings');
+                        }),
+                        
+                        const Divider(height: 1),
+                        
+                        // Footer Pages Section
+                        _buildProfileMenuItem(Icons.attach_money, 'Pricing', () {
+                          Navigator.pop(context);
+                          Navigator.pushNamed(context, '/pricing');
+                        }),
+                        _buildProfileMenuItem(Icons.payment, 'Payment', () {
+                          Navigator.pop(context);
+                          Navigator.pushNamed(context, '/payment');
+                        }),
+                        _buildProfileMenuItem(Icons.info_outline, 'About Us', () {
+                          Navigator.pop(context);
+                          Navigator.pushNamed(context, '/about');
+                        }),
+                        _buildProfileMenuItem(Icons.contact_mail, 'Contact', () {
+                          Navigator.pop(context);
+                          Navigator.pushNamed(context, '/contact');
+                        }),
+                        _buildProfileMenuItem(Icons.help_outline, 'FAQ', () {
+                          Navigator.pop(context);
+                          Navigator.pushNamed(context, '/faq');
+                        }),
+                        _buildProfileMenuItem(Icons.privacy_tip_outlined, 'Privacy Policy', () {
+                          Navigator.pop(context);
+                          Navigator.pushNamed(context, '/privacy');
+                        }),
+                        _buildProfileMenuItem(Icons.gavel_outlined, 'Terms of Service', () {
+                          Navigator.pop(context);
+                          Navigator.pushNamed(context, '/terms');
+                        }),
+                        
+                        const Divider(height: 1),
+                        
+                        // Sign Out
+                        _buildProfileMenuItem(
+                          Icons.logout,
+                          'Sign Out',
+                          _handleSignOut,
+                          color: const Color(0xFFD62828),
+                        ),
+                        
+                        const SizedBox(height: 4),
+                      ],
+                    ),
+                  ),
+                ),
               ),
-              title: Text(userName),
-              subtitle: const Text('JHS Form 3 Student'),
             ),
-            const Divider(),
-            ListTile(
-              leading: const Icon(Icons.person),
-              title: const Text('Profile Settings'),
-              onTap: () => _showComingSoon('Profile Settings'),
-            ),
-            ListTile(
-              leading: const Icon(Icons.info_outline),
-              title: const Text('About Uriel Academy'),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.pushNamed(context, '/about');
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.privacy_tip_outlined),
-              title: const Text('Privacy Policy'),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.pushNamed(context, '/privacy');
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.gavel_outlined),
-              title: const Text('Terms of Service'),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.pushNamed(context, '/terms');
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.notifications),
-              title: const Text('Notification Settings'),
-              onTap: () => _showComingSoon('Notification Settings'),
-            ),
-            ListTile(
-              leading: const Icon(Icons.help),
-              title: const Text('Help & Support'),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.pushNamed(context, '/contact');
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.logout, color: Color(0xFFD62828)),
-              title: const Text('Sign Out', style: TextStyle(color: Color(0xFFD62828))),
-              onTap: _handleSignOut,
+          ],
+        );
+      },
+    );
+  }
+  
+  Widget _buildProfileMenuItem(IconData icon, String title, VoidCallback onTap, {Color? color}) {
+    return InkWell(
+      onTap: onTap,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        child: Row(
+          children: [
+            Icon(icon, size: 20, color: color ?? Colors.grey[700]),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Text(
+                title,
+                style: GoogleFonts.montserrat(
+                  fontSize: 13,
+                  color: color ?? Colors.grey[800],
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
             ),
           ],
         ),
