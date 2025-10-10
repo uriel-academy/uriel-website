@@ -2426,7 +2426,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                         const Divider(height: 1),
                         
                         // Footer Pages Section
-                        _buildProfileMenuItem(Icons.attach_money, 'Pricing', () {
+                        _buildProfileMenuItem(Icons.monetization_on_outlined, 'Pricing', () {
                           Navigator.pop(context);
                           Navigator.pushNamed(context, '/pricing');
                         }),
@@ -2438,7 +2438,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                           Navigator.pop(context);
                           Navigator.pushNamed(context, '/about');
                         }),
-                        _buildProfileMenuItem(Icons.contact_mail, 'Contact', () {
+                        _buildProfileMenuItem(Icons.phone_outlined, 'Contact', () {
                           Navigator.pop(context);
                           Navigator.pushNamed(context, '/contact');
                         }),
