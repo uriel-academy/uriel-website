@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../models/textbook_model.dart';
+import '../models/storybook_model.dart';
 import '../services/textbook_service.dart';
+import '../services/storybook_service.dart';
+import 'enhanced_epub_reader_page.dart';
 
 class TextbooksPage extends StatefulWidget {
   const TextbooksPage({super.key});
@@ -17,16 +20,21 @@ class _TextbooksPageState extends State<TextbooksPage>
   late TabController _tabController;
 
   final TextbookService _textbookService = TextbookService();
+  final StorybookService _storybookService = StorybookService();
   final TextEditingController _searchController = TextEditingController();
 
   String selectedLevel = 'All';
   String selectedSubject = 'All';
   String selectedPublisher = 'All';
+  String selectedAuthor = 'All';
   String searchQuery = '';
   bool isGridView = true;
 
   List<Textbook> allTextbooks = [];
   List<Textbook> filteredTextbooks = [];
+  List<Storybook> allStorybooks = [];
+  List<Storybook> filteredStorybooks = [];
+  List<String> authors = [];
   bool isLoading = true;
 
   final List<String> levels = ['All', 'JHS 1', 'JHS 2', 'JHS 3', 'SHS 1', 'SHS 2', 'SHS 3'];
@@ -51,8 +59,10 @@ class _TextbooksPageState extends State<TextbooksPage>
       CurvedAnimation(parent: _animationController, curve: Curves.easeInOut),
     );
     _tabController = TabController(length: 3, vsync: this);
+    _tabController.addListener(_onTabChanged);
     
     _loadTextbooks();
+    _loadStorybooks();
     _animationController.forward();
   }
 
@@ -74,6 +84,26 @@ class _TextbooksPageState extends State<TextbooksPage>
     } finally {
       setState(() => isLoading = false);
     }
+  }
+
+  Future<void> _loadStorybooks() async {
+    try {
+      allStorybooks = await _storybookService.getStorybooks();
+      authors = await _storybookService.getAuthors();
+      _applyStoryFilter();
+    } catch (e) {
+      debugPrint('Error loading storybooks: $e');
+    }
+  }
+
+  void _onTabChanged() {
+    setState(() {
+      // Reset search when switching tabs
+      _searchController.clear();
+      searchQuery = '';
+      _applyFilters();
+      _applyStoryFilter();
+    });
   }
 
   void _applyFilters() {
@@ -100,15 +130,33 @@ class _TextbooksPageState extends State<TextbooksPage>
     });
   }
 
+  void _applyStoryFilter() {
+    setState(() {
+      filteredStorybooks = allStorybooks.where((book) {
+        final matchesAuthor = selectedAuthor == 'All' || book.author == selectedAuthor;
+        final matchesSearch = searchQuery.isEmpty ||
+            book.title.toLowerCase().contains(searchQuery.toLowerCase()) ||
+            book.author.toLowerCase().contains(searchQuery.toLowerCase());
+
+        return matchesAuthor && matchesSearch;
+      }).toList();
+
+      // Sort alphabetically by title
+      filteredStorybooks.sort((a, b) => a.title.compareTo(b.title));
+    });
+  }
+
   void _resetFilters() {
     setState(() {
       selectedLevel = 'All';
       selectedSubject = 'All';
       selectedPublisher = 'All';
+      selectedAuthor = 'All';
       searchQuery = '';
       _searchController.clear();
     });
     _applyFilters();
+    _applyStoryFilter();
   }
 
   @override
@@ -167,6 +215,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                         onChanged: (value) {
                           setState(() => searchQuery = value);
                           _applyFilters();
+                          _applyStoryFilter();
                         },
                       ),
                     ),
@@ -174,10 +223,20 @@ class _TextbooksPageState extends State<TextbooksPage>
                     const SizedBox(height: 16),
 
                     // Filter Chips
-                    if (isMobile) ...[
-                      _buildMobileFilters(),
+                    if (_tabController.index == 2) ...[
+                      // Storybooks filters
+                      if (isMobile) ...[
+                        _buildStorybookMobileFilters(),
+                      ] else ...[
+                        _buildStorybookDesktopFilters(),
+                      ],
                     ] else ...[
-                      _buildDesktopFilters(),
+                      // Textbooks filters
+                      if (isMobile) ...[
+                        _buildMobileFilters(),
+                      ] else ...[
+                        _buildDesktopFilters(),
+                      ],
                     ],
 
                     // Filter Summary and Clear
@@ -191,7 +250,9 @@ class _TextbooksPageState extends State<TextbooksPage>
                           const SizedBox(width: 8),
                           Expanded(
                             child: Text(
-                              '${filteredTextbooks.length} textbooks found',
+                              _tabController.index == 2
+                                  ? '${filteredStorybooks.length} storybooks found'
+                                  : '${filteredTextbooks.length} textbooks found',
                               style: GoogleFonts.montserrat(
                                 fontSize: 14,
                                 color: const Color(0xFF1A1E3F),
@@ -243,7 +304,7 @@ class _TextbooksPageState extends State<TextbooksPage>
             ),
 
             // Content
-            if (isLoading) ...[
+            if (isLoading && _tabController.index != 2) ...[
               SliverFillRemaining(
                 child: Center(
                   child: Column(
@@ -264,6 +325,20 @@ class _TextbooksPageState extends State<TextbooksPage>
                   ),
                 ),
               ),
+            ] else if (_tabController.index == 2) ...[
+              // Storybooks tab content
+              if (filteredStorybooks.isEmpty) ...[
+                SliverFillRemaining(
+                  child: _buildEmptyState(),
+                ),
+              ] else ...[
+                SliverPadding(
+                  padding: EdgeInsets.all(isMobile ? 16 : 24),
+                  sliver: isGridView
+                      ? _buildStorybooksGrid(isMobile)
+                      : _buildStorybooksList(isMobile),
+                ),
+              ],
             ] else if (filteredTextbooks.isEmpty) ...[
               SliverFillRemaining(
                 child: _buildEmptyState(),
@@ -419,10 +494,472 @@ class _TextbooksPageState extends State<TextbooksPage>
   }
 
   bool _hasActiveFilters() {
+    if (_tabController.index == 2) {
+      return selectedAuthor != 'All' || searchQuery.isNotEmpty;
+    }
     return selectedLevel != 'All' ||
         selectedSubject != 'All' ||
         selectedPublisher != 'All' ||
         searchQuery.isNotEmpty;
+  }
+
+  Widget _buildStorybookMobileFilters() {
+    return _buildFilterDropdown(
+      'Author',
+      selectedAuthor,
+      ['All', ...authors],
+      (value) => setState(() {
+        selectedAuthor = value!;
+        _applyStoryFilter();
+      }),
+    );
+  }
+
+  Widget _buildStorybookDesktopFilters() {
+    return _buildFilterDropdown(
+      'Author',
+      selectedAuthor,
+      ['All', ...authors],
+      (value) => setState(() {
+        selectedAuthor = value!;
+        _applyStoryFilter();
+      }),
+    );
+  }
+
+  Widget _buildStorybooksGrid(bool isMobile) {
+    final crossAxisCount = isMobile ? 2 : 4;
+    
+    return SliverGrid(
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: crossAxisCount,
+        childAspectRatio: isMobile ? 0.7 : 0.75,
+        crossAxisSpacing: isMobile ? 12 : 16,
+        mainAxisSpacing: isMobile ? 12 : 16,
+      ),
+      delegate: SliverChildBuilderDelegate(
+        (context, index) {
+          final storybook = filteredStorybooks[index];
+          return _buildStorybookCard(storybook, isMobile);
+        },
+        childCount: filteredStorybooks.length,
+      ),
+    );
+  }
+
+  Widget _buildStorybooksList(bool isMobile) {
+    return SliverList(
+      delegate: SliverChildBuilderDelegate(
+        (context, index) {
+          final storybook = filteredStorybooks[index];
+          return _buildStorybookListItem(storybook, isMobile);
+        },
+        childCount: filteredStorybooks.length,
+      ),
+    );
+  }
+
+  Widget _buildStorybookCard(Storybook storybook, bool isMobile) {
+    return Card(
+      elevation: 3,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(12),
+        onTap: () => _openStorybook(storybook),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Cover Image
+            Expanded(
+              flex: 3,
+              child: Container(
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
+                ),
+                child: Stack(
+                  children: [
+                    // Book Cover Image
+                    if (storybook.coverImageUrl != null)
+                      ClipRRect(
+                        borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
+                        child: Image.asset(
+                          storybook.coverImageUrl!,
+                          width: double.infinity,
+                          height: double.infinity,
+                          fit: BoxFit.cover,
+                          errorBuilder: (context, error, stackTrace) {
+                            // Fallback to icon if image fails to load
+                            return Container(
+                              decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                                  begin: Alignment.topLeft,
+                                  end: Alignment.bottomRight,
+                                  colors: [
+                                    const Color(0xFF1A1E3F).withValues(alpha: 0.8),
+                                    const Color(0xFF1A1E3F),
+                                  ],
+                                ),
+                              ),
+                              child: Center(
+                                child: Icon(
+                                  Icons.auto_stories,
+                                  size: isMobile ? 40 : 48,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            );
+                          },
+                        ),
+                      )
+                    else
+                      // Fallback if no cover
+                      Container(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                            colors: [
+                              const Color(0xFF1A1E3F).withValues(alpha: 0.8),
+                              const Color(0xFF1A1E3F),
+                            ],
+                          ),
+                        ),
+                        child: Center(
+                          child: Icon(
+                            Icons.auto_stories,
+                            size: isMobile ? 40 : 48,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    
+                    // Format Badge (bottom left)
+                    Positioned(
+                      bottom: 8,
+                      left: 8,
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 8,
+                          vertical: 4,
+                        ),
+                        decoration: BoxDecoration(
+                          color: Colors.black.withValues(alpha: 0.7),
+                          borderRadius: BorderRadius.circular(4),
+                        ),
+                        child: Text(
+                          storybook.format.toUpperCase(),
+                          style: GoogleFonts.montserrat(
+                            fontSize: 10,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                    ),
+                    
+                    // NEW Badge (top right)
+                    if (storybook.isNewRelease) ...[
+                      Positioned(
+                        top: 8,
+                        right: 8,
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 6,
+                            vertical: 2,
+                          ),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFD62828),
+                            borderRadius: BorderRadius.circular(8),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black.withValues(alpha: 0.3),
+                                blurRadius: 4,
+                              ),
+                            ],
+                          ),
+                          child: Text(
+                            'NEW',
+                            style: GoogleFonts.montserrat(
+                              fontSize: 8,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ],
+                ),
+              ),
+            ),
+
+            // Book Details
+            Expanded(
+              flex: 2,
+              child: Padding(
+                padding: EdgeInsets.all(isMobile ? 8 : 12),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      storybook.title,
+                      style: GoogleFonts.montserrat(
+                        fontSize: isMobile ? 12 : 14,
+                        fontWeight: FontWeight.bold,
+                        color: const Color(0xFF1A1E3F),
+                      ),
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      storybook.author,
+                      style: GoogleFonts.montserrat(
+                        fontSize: isMobile ? 10 : 12,
+                        color: Colors.grey[600],
+                      ),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    const Spacer(),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 6,
+                            vertical: 2,
+                          ),
+                          decoration: BoxDecoration(
+                            color: Colors.green.withValues(alpha: 0.1),
+                            borderRadius: BorderRadius.circular(4),
+                          ),
+                          child: Text(
+                            storybook.fileSizeFormatted,
+                            style: GoogleFonts.montserrat(
+                              fontSize: 8,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.green[700],
+                            ),
+                          ),
+                        ),
+                        const Icon(
+                          Icons.menu_book,
+                          size: 16,
+                          color: Color(0xFFD62828),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildStorybookListItem(Storybook storybook, bool isMobile) {
+    return Card(
+      elevation: 2,
+      margin: const EdgeInsets.only(bottom: 12),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(12),
+        onTap: () => _openStorybook(storybook),
+        child: Padding(
+          padding: EdgeInsets.all(isMobile ? 12 : 16),
+          child: Row(
+            children: [
+              // Cover
+              Container(
+                width: isMobile ? 60 : 80,
+                height: isMobile ? 80 : 100,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: [
+                      const Color(0xFF1A1E3F).withValues(alpha: 0.8),
+                      const Color(0xFF1A1E3F),
+                    ],
+                  ),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.auto_stories,
+                      color: Colors.white,
+                      size: isMobile ? 24 : 32,
+                    ),
+                    const SizedBox(height: 4),
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 4,
+                        vertical: 2,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.white.withValues(alpha: 0.9),
+                        borderRadius: BorderRadius.circular(4),
+                      ),
+                      child: Text(
+                        storybook.format.toUpperCase(),
+                        style: GoogleFonts.montserrat(
+                          fontSize: 8,
+                          fontWeight: FontWeight.bold,
+                          color: const Color(0xFF1A1E3F),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
+              const SizedBox(width: 16),
+
+              // Details
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Text(
+                            storybook.title,
+                            style: GoogleFonts.montserrat(
+                              fontSize: isMobile ? 14 : 16,
+                              fontWeight: FontWeight.bold,
+                              color: const Color(0xFF1A1E3F),
+                            ),
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                        if (storybook.isNewRelease) ...[
+                          Container(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 8,
+                              vertical: 4,
+                            ),
+                            decoration: BoxDecoration(
+                              color: const Color(0xFFD62828),
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: Text(
+                              'NEW',
+                              style: GoogleFonts.montserrat(
+                                fontSize: 10,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ],
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      'By ${storybook.author}',
+                      style: GoogleFonts.montserrat(
+                        fontSize: isMobile ? 12 : 14,
+                        color: Colors.grey[600],
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    Row(
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 8,
+                            vertical: 4,
+                          ),
+                          decoration: BoxDecoration(
+                            color: Colors.green.withValues(alpha: 0.1),
+                            borderRadius: BorderRadius.circular(6),
+                          ),
+                          child: Text(
+                            storybook.fileSizeFormatted,
+                            style: GoogleFonts.montserrat(
+                              fontSize: 10,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.green[700],
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 8),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 8,
+                            vertical: 4,
+                          ),
+                          decoration: BoxDecoration(
+                            color: Colors.grey.withValues(alpha: 0.1),
+                            borderRadius: BorderRadius.circular(6),
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              const Icon(Icons.visibility, size: 12, color: Colors.grey),
+                              const SizedBox(width: 4),
+                              Text(
+                                '${storybook.readCount} reads',
+                                style: GoogleFonts.montserrat(
+                                  fontSize: 10,
+                                  color: Colors.grey[600],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+
+              const SizedBox(width: 12),
+
+              // Read button
+              Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFD62828).withValues(alpha: 0.1),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: const Icon(
+                  Icons.menu_book,
+                  color: Color(0xFFD62828),
+                  size: 20,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  void _openStorybook(Storybook storybook) {
+    // Increment read count
+    _storybookService.incrementReadCount(storybook.id);
+    
+    // Open the Enhanced EPUB reader
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => EnhancedEpubReaderPage(
+          bookTitle: storybook.title,
+          author: storybook.author,
+          assetPath: storybook.assetPath,
+          bookId: storybook.id,
+        ),
+      ),
+    );
   }
 
   Widget _buildTextbookGrid(bool isMobile) {

@@ -171,44 +171,36 @@ class _PricingPageState extends State<PricingPage> {
       ),
       child: Column(
         children: [
-          // First row: 3 cards
+          // All 4 cards in one row for desktop
           isMobile
               ? Column(
                   children: [
                     _buildPricingCard('Free', 'Get Started', 0, 0, _freeFeatures(), false, false, isMobile),
                     const SizedBox(height: 20),
-                    _buildPricingCard('Premium', 'Learn 2x Faster with AI', 14.99, 149, _premiumFeatures(), true, false, isMobile),
+                    _buildPricingCard('Standard', 'Everything You Need to Pass BECE', 9.99, 99.99, _standardFeatures(), false, true, isMobile),
                     const SizedBox(height: 20),
-                    _buildPricingCard('Standard', 'Everything You Need to Pass BECE', 9.99, 99, _standardFeatures(), false, true, isMobile),
+                    _buildPricingCard('Premium', 'Learn 2x Faster with AI', 14.99, 149.99, _premiumFeatures(), true, false, isMobile),
                     const SizedBox(height: 20),
                     _buildSchoolCard(isMobile),
                   ],
                 )
-              : Column(
+              : Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Expanded(
-                          child: _buildPricingCard('Free', 'Get Started', 0, 0, _freeFeatures(), false, false, isMobile),
-                        ),
-                        const SizedBox(width: 20),
-                        Expanded(
-                          child: _buildPricingCard('Premium', 'Learn 2x Faster with AI', 14.99, 149, _premiumFeatures(), true, false, isMobile),
-                        ),
-                        const SizedBox(width: 20),
-                        Expanded(
-                          child: _buildPricingCard('Standard', 'Everything You Need to Pass BECE', 9.99, 99, _standardFeatures(), false, true, isMobile),
-                        ),
-                      ],
+                    Expanded(
+                      child: _buildPricingCard('Free', 'Get Started', 0, 0, _freeFeatures(), false, false, isMobile),
                     ),
-                    const SizedBox(height: 40),
-                    // Second row: School card centered (50% wider)
-                    Center(
-                      child: SizedBox(
-                        width: MediaQuery.of(context).size.width / 2.3,
-                        child: _buildSchoolCard(isMobile),
-                      ),
+                    const SizedBox(width: 20),
+                    Expanded(
+                      child: _buildPricingCard('Standard', 'Everything You Need to Pass BECE', 9.99, 99.99, _standardFeatures(), false, true, isMobile),
+                    ),
+                    const SizedBox(width: 20),
+                    Expanded(
+                      child: _buildPricingCard('Premium', 'Learn 2x Faster with AI', 14.99, 149.99, _premiumFeatures(), true, false, isMobile),
+                    ),
+                    const SizedBox(width: 20),
+                    Expanded(
+                      child: _buildSchoolCard(isMobile),
                     ),
                   ],
                 ),
@@ -628,111 +620,421 @@ class _PricingPageState extends State<PricingPage> {
   }
 
   Widget _buildComparisonTable(bool isMobile) {
-    return Container(
-      margin: EdgeInsets.symmetric(
-        horizontal: isMobile ? 16 : 24,
-        vertical: 40,
+    return Center(
+      child: Container(
+        width: isMobile ? double.infinity : MediaQuery.of(context).size.width * 0.75,
+        margin: EdgeInsets.symmetric(
+          horizontal: isMobile ? 16 : 60,
+          vertical: 40,
+        ),
+        child: Column(
+          children: [
+            // Section Header
+            Text(
+              'Compare Plans',
+              style: GoogleFonts.playfairDisplay(
+                fontSize: isMobile ? 32 : 48,
+                fontWeight: FontWeight.bold,
+                color: urielNavy,
+              ),
+            ),
+            const SizedBox(height: 12),
+            Text(
+              'Choose the perfect plan for your learning journey',
+              style: GoogleFonts.montserrat(
+                fontSize: isMobile ? 14 : 16,
+                color: urielNavy.withValues(alpha: 0.6),
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 48),
+            
+            // Comparison Grid
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(24),
+                border: Border.all(
+                  color: urielNavy.withValues(alpha: 0.08),
+                  width: 1,
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: urielNavy.withValues(alpha: 0.04),
+                    blurRadius: 40,
+                    offset: const Offset(0, 20),
+                  ),
+                ],
+              ),
+              child: isMobile
+                  ? _buildMobileComparison()
+                  : _buildDesktopComparison(),
+            ),
+          ],
+        ),
       ),
-      padding: const EdgeInsets.all(24),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(16),
-        boxShadow: [
-          BoxShadow(
-            color: urielNavy.withValues(alpha: 0.1),
-            blurRadius: 20,
+    );
+  }
+
+  Widget _buildDesktopComparison() {
+    final features = [
+      {'name': 'Pricing', 'free': 'GHS 0', 'standard': 'GHS 9.99/mo', 'premium': 'GHS 14.99/mo', 'school': 'Custom'},
+      {'name': 'Trivia Challenges', 'free': true, 'standard': true, 'premium': true, 'school': true},
+      {'name': 'Classic Literature', 'free': true, 'standard': true, 'premium': true, 'school': true},
+      {'name': 'Past Questions', 'free': '5/month', 'standard': 'Unlimited', 'premium': 'Unlimited', 'school': 'Unlimited'},
+      {'name': 'Textbooks Access', 'free': '1 chapter', 'standard': 'Full access', 'premium': 'Full access', 'school': 'Full access'},
+      {'name': 'Uri AI Tutor', 'free': false, 'standard': false, 'premium': true, 'school': true},
+      {'name': 'Notes Tab', 'free': 'View only', 'standard': 'View only', 'premium': 'Upload & Share', 'school': 'Upload & Share'},
+      {'name': 'Mock Exams', 'free': false, 'standard': '1/subject', 'premium': 'Unlimited', 'school': 'Unlimited'},
+      {'name': 'Progress Dashboard', 'free': 'Basic', 'standard': 'Advanced', 'premium': 'Premium', 'school': 'School-wide'},
+      {'name': 'Teacher Dashboard', 'free': false, 'standard': false, 'premium': false, 'school': true},
+      {'name': 'Parent Reports', 'free': false, 'standard': 'Weekly SMS', 'premium': 'Weekly SMS', 'school': 'Custom'},
+      {'name': 'Support', 'free': 'Community', 'standard': 'Email 48hr', 'premium': 'Priority', 'school': 'Dedicated'},
+    ];
+
+    return Column(
+      children: [
+        // Header Row
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 24),
+          decoration: BoxDecoration(
+            color: urielNavy.withValues(alpha: 0.02),
+            borderRadius: const BorderRadius.only(
+              topLeft: Radius.circular(24),
+              topRight: Radius.circular(24),
+            ),
           ),
-        ],
-      ),
+          child: Row(
+            children: [
+              Expanded(
+                flex: 2,
+                child: Text(
+                  'Features',
+                  style: GoogleFonts.montserrat(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                    color: urielNavy.withValues(alpha: 0.5),
+                    letterSpacing: 1.2,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: _buildPlanHeader('Free', null),
+              ),
+              Expanded(
+                child: _buildPlanHeader('Standard', urielGreen),
+              ),
+              Expanded(
+                child: _buildPlanHeader('Premium', urielRed),
+              ),
+              Expanded(
+                child: _buildPlanHeader('School', urielNavy),
+              ),
+            ],
+          ),
+        ),
+        
+        // Feature Rows
+        ...features.asMap().entries.map((entry) {
+          final index = entry.key;
+          final feature = entry.value;
+          final isLast = index == features.length - 1;
+          
+          return Container(
+            padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 20),
+            decoration: BoxDecoration(
+              color: index % 2 == 0 ? Colors.white : urielNavy.withValues(alpha: 0.01),
+              borderRadius: isLast ? const BorderRadius.only(
+                bottomLeft: Radius.circular(24),
+                bottomRight: Radius.circular(24),
+              ) : null,
+              border: Border(
+                bottom: isLast ? BorderSide.none : BorderSide(
+                  color: urielNavy.withValues(alpha: 0.05),
+                  width: 1,
+                ),
+              ),
+            ),
+            child: Row(
+              children: [
+                Expanded(
+                  flex: 2,
+                  child: Text(
+                    feature['name'] as String,
+                    style: GoogleFonts.montserrat(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w500,
+                      color: urielNavy,
+                    ),
+                  ),
+                ),
+                Expanded(child: _buildFeatureValue(feature['free'])),
+                Expanded(child: _buildFeatureValue(feature['standard'])),
+                Expanded(child: _buildFeatureValue(feature['premium'])),
+                Expanded(child: _buildFeatureValue(feature['school'])),
+              ],
+            ),
+          );
+        }).toList(),
+      ],
+    );
+  }
+
+  Widget _buildMobileComparison() {
+    final features = [
+      {'name': 'Pricing', 'free': 'GHS 0', 'standard': 'GHS 9.99/mo', 'premium': 'GHS 14.99/mo', 'school': 'Custom'},
+      {'name': 'Trivia Challenges', 'free': true, 'standard': true, 'premium': true, 'school': true},
+      {'name': 'Classic Literature', 'free': true, 'standard': true, 'premium': true, 'school': true},
+      {'name': 'Past Questions', 'free': '5/month', 'standard': 'Unlimited', 'premium': 'Unlimited', 'school': 'Unlimited'},
+      {'name': 'Textbooks Access', 'free': '1 chapter', 'standard': 'Full access', 'premium': 'Full access', 'school': 'Full access'},
+      {'name': 'Uri AI Tutor', 'free': false, 'standard': false, 'premium': true, 'school': true},
+      {'name': 'Notes Tab', 'free': 'View only', 'standard': 'View only', 'premium': 'Upload', 'school': 'Upload'},
+      {'name': 'Mock Exams', 'free': false, 'standard': '1/subject', 'premium': 'Unlimited', 'school': 'Unlimited'},
+      {'name': 'Progress Dashboard', 'free': 'Basic', 'standard': 'Advanced', 'premium': 'Premium', 'school': 'School-wide'},
+      {'name': 'Teacher Dashboard', 'free': false, 'standard': false, 'premium': false, 'school': true},
+      {'name': 'Parent Reports', 'free': false, 'standard': 'Weekly', 'premium': 'Weekly', 'school': 'Custom'},
+      {'name': 'Support', 'free': 'Community', 'standard': 'Email 48h', 'premium': 'Priority', 'school': 'Dedicated'},
+    ];
+
+    return Padding(
+      padding: const EdgeInsets.all(16),
       child: Column(
         children: [
-          Text(
-            'Compare Plans',
-            style: GoogleFonts.montserrat(
-              fontSize: isMobile ? 24 : 32,
-              fontWeight: FontWeight.bold,
-              color: urielNavy,
+          // Plan selector tabs
+          Container(
+            padding: const EdgeInsets.all(4),
+            decoration: BoxDecoration(
+              color: urielNavy.withValues(alpha: 0.05),
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Row(
+              children: [
+                _buildPlanTab('Free', 0),
+                _buildPlanTab('Standard', 1),
+                _buildPlanTab('Premium', 2),
+                _buildPlanTab('School', 3),
+              ],
             ),
           ),
           const SizedBox(height: 24),
-          if (isMobile)
-            Text(
-              'Tap to expand table',
-              style: GoogleFonts.montserrat(
-                fontSize: 14,
-                color: urielNavy.withValues(alpha: 0.6),
-              ),
-            ),
-          const SizedBox(height: 16),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: DataTable(
-              headingRowColor: WidgetStateProperty.all(urielNavy.withValues(alpha: 0.1)),
-              columns: [
-                DataColumn(
-                  label: Text(
-                    'Feature',
-                    style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),
-                  ),
-                ),
-                DataColumn(
-                  label: Text(
-                    'Free',
-                    style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),
-                  ),
-                ),
-                DataColumn(
-                  label: Text(
-                    'Standard',
-                    style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),
-                  ),
-                ),
-                DataColumn(
-                  label: Text(
-                    'Premium',
-                    style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),
-                  ),
-                ),
-                DataColumn(
-                  label: Text(
-                    'School',
-                    style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),
-                  ),
-                ),
-              ],
-              rows: [
-                _buildComparisonRow('Price', 'GHS 0', 'GHS 9.99/mo', 'GHS 14.99/mo', 'Custom'),
-                _buildComparisonRow('Trivia & gamification', '✅', '✅', '✅', '✅'),
-                _buildComparisonRow('Classic literature', '✅', '✅', '✅', '✅'),
-                _buildComparisonRow('Past questions', '5/subject/month', 'Unlimited', 'Unlimited', 'Unlimited'),
-                _buildComparisonRow('Textbooks', '1 chapter', 'All chapters', 'All chapters', 'All chapters'),
-                _buildComparisonRow('Uri AI Tutor', '❌', '❌', '✅', '✅'),
-                _buildComparisonRow('Notes Tab', 'View only', 'View only', '✅ Upload', '✅ Upload'),
-                _buildComparisonRow('Mock exams', '❌', '1/subject', 'Unlimited', 'Unlimited'),
-                _buildComparisonRow('Teacher dashboard', '❌', '❌', '❌', '✅'),
-                _buildComparisonRow('Support', 'Community', 'Email (48hr)', 'Premium', 'Dedicated'),
-              ],
-            ),
-          ),
+          
+          // Selected plan details
+          _buildMobilePlanComparison(features),
         ],
       ),
     );
   }
 
-  DataRow _buildComparisonRow(String feature, String free, String standard, String premium, String school) {
-    return DataRow(
-      cells: [
-        DataCell(
-          Text(
-            feature,
-            style: GoogleFonts.montserrat(fontWeight: FontWeight.w500),
+  int _selectedMobilePlan = 2; // Default to Premium
+  
+  Widget _buildPlanTab(String name, int index) {
+    final isSelected = _selectedMobilePlan == index;
+    Color planColor = urielNavy;
+    if (name == 'Standard') planColor = urielGreen;
+    if (name == 'Premium') planColor = urielRed;
+    
+    return Expanded(
+      child: GestureDetector(
+        onTap: () => setState(() => _selectedMobilePlan = index),
+        child: Container(
+          padding: const EdgeInsets.symmetric(vertical: 10),
+          decoration: BoxDecoration(
+            color: isSelected ? Colors.white : Colors.transparent,
+            borderRadius: BorderRadius.circular(8),
+            boxShadow: isSelected ? [
+              BoxShadow(
+                color: planColor.withValues(alpha: 0.1),
+                blurRadius: 8,
+                offset: const Offset(0, 2),
+              ),
+            ] : null,
+          ),
+          child: Column(
+            children: [
+              Text(
+                name,
+                style: GoogleFonts.montserrat(
+                  fontSize: 12,
+                  fontWeight: isSelected ? FontWeight.bold : FontWeight.w500,
+                  color: isSelected ? planColor : urielNavy.withValues(alpha: 0.6),
+                ),
+                textAlign: TextAlign.center,
+              ),
+              if (isSelected) ...[
+                const SizedBox(height: 4),
+                Container(
+                  width: 20,
+                  height: 2,
+                  decoration: BoxDecoration(
+                    color: planColor,
+                    borderRadius: BorderRadius.circular(1),
+                  ),
+                ),
+              ],
+            ],
           ),
         ),
-        DataCell(Text(free, style: GoogleFonts.montserrat(fontSize: 12))),
-        DataCell(Text(standard, style: GoogleFonts.montserrat(fontSize: 12))),
-        DataCell(Text(premium, style: GoogleFonts.montserrat(fontSize: 12))),
-        DataCell(Text(school, style: GoogleFonts.montserrat(fontSize: 12))),
+      ),
+    );
+  }
+
+  Widget _buildMobilePlanComparison(List<Map<String, dynamic>> features) {
+    final plans = ['free', 'standard', 'premium', 'school'];
+    final selectedPlan = plans[_selectedMobilePlan];
+    
+    return Column(
+      children: features.map((feature) {
+        final value = feature[selectedPlan];
+        
+        return Container(
+          margin: const EdgeInsets.only(bottom: 12),
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(
+              color: urielNavy.withValues(alpha: 0.08),
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: urielNavy.withValues(alpha: 0.03),
+                blurRadius: 8,
+                offset: const Offset(0, 2),
+              ),
+            ],
+          ),
+          child: Row(
+            children: [
+              Expanded(
+                flex: 3,
+                child: Text(
+                  feature['name'] as String,
+                  style: GoogleFonts.montserrat(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                    color: urielNavy,
+                  ),
+                ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                flex: 2,
+                child: _buildMobileFeatureValue(value),
+              ),
+            ],
+          ),
+        );
+      }).toList(),
+    );
+  }
+
+  Widget _buildMobileFeatureValue(dynamic value) {
+    if (value is bool) {
+      return Container(
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+        decoration: BoxDecoration(
+          color: value 
+              ? urielGreen.withValues(alpha: 0.1) 
+              : urielNavy.withValues(alpha: 0.05),
+          borderRadius: BorderRadius.circular(6),
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              value ? Icons.check_circle : Icons.cancel,
+              size: 16,
+              color: value ? urielGreen : urielNavy.withValues(alpha: 0.3),
+            ),
+            const SizedBox(width: 4),
+            Text(
+              value ? 'Yes' : 'No',
+              style: GoogleFonts.montserrat(
+                fontSize: 13,
+                fontWeight: FontWeight.w600,
+                color: value ? urielGreen : urielNavy.withValues(alpha: 0.4),
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+    
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+      decoration: BoxDecoration(
+        color: urielNavy.withValues(alpha: 0.05),
+        borderRadius: BorderRadius.circular(6),
+      ),
+      child: Text(
+        value.toString(),
+        style: GoogleFonts.montserrat(
+          fontSize: 13,
+          fontWeight: FontWeight.w600,
+          color: urielNavy.withValues(alpha: 0.8),
+        ),
+        textAlign: TextAlign.center,
+      ),
+    );
+  }
+
+  Widget _buildPlanHeader(String name, Color? accentColor) {
+    return Column(
+      children: [
+        Text(
+          name,
+          style: GoogleFonts.montserrat(
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+            color: accentColor ?? urielNavy,
+          ),
+          textAlign: TextAlign.center,
+        ),
+        if (accentColor != null) ...[
+          const SizedBox(height: 6),
+          Container(
+            width: 32,
+            height: 3,
+            decoration: BoxDecoration(
+              color: accentColor,
+              borderRadius: BorderRadius.circular(2),
+            ),
+          ),
+        ],
       ],
+    );
+  }
+
+  Widget _buildFeatureValue(dynamic value) {
+    if (value is bool) {
+      return Center(
+        child: Container(
+          width: 28,
+          height: 28,
+          decoration: BoxDecoration(
+            color: value 
+                ? urielGreen.withValues(alpha: 0.1) 
+                : urielNavy.withValues(alpha: 0.05),
+            shape: BoxShape.circle,
+          ),
+          child: Icon(
+            value ? Icons.check : Icons.close,
+            size: 16,
+            color: value ? urielGreen : urielNavy.withValues(alpha: 0.3),
+          ),
+        ),
+      );
+    }
+    
+    return Text(
+      value.toString(),
+      style: GoogleFonts.montserrat(
+        fontSize: 14,
+        color: urielNavy.withValues(alpha: 0.8),
+        fontWeight: FontWeight.w500,
+      ),
+      textAlign: TextAlign.center,
     );
   }
 
