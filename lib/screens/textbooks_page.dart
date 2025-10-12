@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../models/textbook_model.dart';
 import '../models/storybook_model.dart';
+import '../models/course_models.dart';
 import '../services/textbook_service.dart';
 import '../services/storybook_service.dart';
+import '../services/course_reader_service.dart';
 import 'enhanced_epub_reader_page.dart';
+import 'course_unit_list_page.dart';
 
 class TextbooksPage extends StatefulWidget {
   const TextbooksPage({super.key});
@@ -21,11 +24,13 @@ class _TextbooksPageState extends State<TextbooksPage>
 
   final TextbookService _textbookService = TextbookService();
   final StorybookService _storybookService = StorybookService();
+  final TextEditingController _searchController = TextEditingController();
 
   String selectedLevel = 'All';
   String selectedSubject = 'All';
   String selectedPublisher = 'All';
   String selectedAuthor = 'All';
+  String searchQuery = '';
   bool isGridView = true;
 
   List<Textbook> allTextbooks = [];
@@ -68,6 +73,7 @@ class _TextbooksPageState extends State<TextbooksPage>
   void dispose() {
     _animationController.dispose();
     _tabController.dispose();
+    _searchController.dispose();
     super.dispose();
   }
 
@@ -95,6 +101,9 @@ class _TextbooksPageState extends State<TextbooksPage>
 
   void _onTabChanged() {
     setState(() {
+      // Reset search when switching tabs
+      _searchController.clear();
+      searchQuery = '';
       _applyFilters();
       _applyStoryFilter();
     });
@@ -106,7 +115,12 @@ class _TextbooksPageState extends State<TextbooksPage>
         final matchesLevel = selectedLevel == 'All' || textbook.level == selectedLevel;
         final matchesSubject = selectedSubject == 'All' || textbook.subject == selectedSubject;
         final matchesPublisher = selectedPublisher == 'All' || textbook.publisher == selectedPublisher;
-        return matchesLevel && matchesSubject && matchesPublisher;
+        final matchesSearch = searchQuery.isEmpty ||
+            textbook.title.toLowerCase().contains(searchQuery.toLowerCase()) ||
+            textbook.subject.toLowerCase().contains(searchQuery.toLowerCase()) ||
+            textbook.author.toLowerCase().contains(searchQuery.toLowerCase());
+
+        return matchesLevel && matchesSubject && matchesPublisher && matchesSearch;
       }).toList();
 
       // Sort by relevance and level
@@ -123,7 +137,11 @@ class _TextbooksPageState extends State<TextbooksPage>
     setState(() {
       filteredStorybooks = allStorybooks.where((book) {
         final matchesAuthor = selectedAuthor == 'All' || book.author == selectedAuthor;
-        return matchesAuthor;
+        final matchesSearch = searchQuery.isEmpty ||
+            book.title.toLowerCase().contains(searchQuery.toLowerCase()) ||
+            book.author.toLowerCase().contains(searchQuery.toLowerCase());
+
+        return matchesAuthor && matchesSearch;
       }).toList();
 
       // Sort alphabetically by title
@@ -137,6 +155,8 @@ class _TextbooksPageState extends State<TextbooksPage>
       selectedSubject = 'All';
       selectedPublisher = 'All';
       selectedAuthor = 'All';
+      searchQuery = '';
+      _searchController.clear();
     });
     _applyFilters();
     _applyStoryFilter();
@@ -153,7 +173,7 @@ class _TextbooksPageState extends State<TextbooksPage>
         opacity: _fadeAnimation,
         child: CustomScrollView(
           slivers: [
-            // Filters
+            // Search and Filters
             SliverToBoxAdapter(
               child: Container(
                 color: Colors.white,
@@ -163,6 +183,48 @@ class _TextbooksPageState extends State<TextbooksPage>
                 ),
                 child: Column(
                   children: [
+                    // Search Bar
+                    Container(
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFF5F7FA),
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(color: Colors.grey.withValues(alpha: 0.2)),
+                      ),
+                      child: TextField(
+                        controller: _searchController,
+                        decoration: InputDecoration(
+                          hintText: 'Search textbooks, subjects, authors...',
+                          hintStyle: GoogleFonts.montserrat(
+                            color: Colors.grey[600],
+                            fontSize: 14,
+                          ),
+                          prefixIcon: Icon(Icons.search, color: Colors.grey[600]),
+                          suffixIcon: searchQuery.isNotEmpty
+                              ? IconButton(
+                                  icon: Icon(Icons.clear, color: Colors.grey[600]),
+                                  onPressed: () {
+                                    _searchController.clear();
+                                    setState(() => searchQuery = '');
+                                    _applyFilters();
+                                  },
+                                )
+                              : null,
+                          border: InputBorder.none,
+                          contentPadding: const EdgeInsets.symmetric(
+                            horizontal: 16,
+                            vertical: 12,
+                          ),
+                        ),
+                        onChanged: (value) {
+                          setState(() => searchQuery = value);
+                          _applyFilters();
+                          _applyStoryFilter();
+                        },
+                      ),
+                    ),
+
+                    const SizedBox(height: 16),
+
                     // Filter Chips
                     if (_tabController.index == 2) ...[
                       // Storybooks filters
@@ -436,11 +498,12 @@ class _TextbooksPageState extends State<TextbooksPage>
 
   bool _hasActiveFilters() {
     if (_tabController.index == 2) {
-      return selectedAuthor != 'All';
+      return selectedAuthor != 'All' || searchQuery.isNotEmpty;
     }
     return selectedLevel != 'All' ||
         selectedSubject != 'All' ||
-        selectedPublisher != 'All';
+        selectedPublisher != 'All' ||
+        searchQuery.isNotEmpty;
   }
 
   Widget _buildStorybookMobileFilters() {
@@ -905,6 +968,10 @@ class _TextbooksPageState extends State<TextbooksPage>
   Widget _buildTextbookGrid(bool isMobile) {
     final crossAxisCount = isMobile ? 2 : 4;
     
+    // Check if we're on the Textbooks tab (index 1) and should show the course
+    final bool showCourseCard = _tabController.index == 1 || _tabController.index == 0; // Show in Textbooks and All Books tabs
+    final int totalItems = filteredTextbooks.length + (showCourseCard ? 1 : 0);
+    
     return SliverGrid(
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: crossAxisCount,
@@ -914,22 +981,43 @@ class _TextbooksPageState extends State<TextbooksPage>
       ),
       delegate: SliverChildBuilderDelegate(
         (context, index) {
-          final textbook = filteredTextbooks[index];
+          // Show course card as first item
+          if (showCourseCard && index == 0) {
+            return _buildEnglishCourseCard(isMobile);
+          }
+          
+          // Adjust index for textbooks
+          final textbookIndex = showCourseCard ? index - 1 : index;
+          final textbook = filteredTextbooks[textbookIndex];
           return _buildTextbookCard(textbook, isMobile);
         },
-        childCount: filteredTextbooks.length,
+        childCount: totalItems,
       ),
     );
   }
 
   Widget _buildTextbookList(bool isMobile) {
+    // Check if we're on the Textbooks tab (index 1) and should show the course
+    final bool showCourseCard = _tabController.index == 1 || _tabController.index == 0; // Show in Textbooks and All Books tabs
+    final int totalItems = filteredTextbooks.length + (showCourseCard ? 1 : 0);
+    
     return SliverList(
       delegate: SliverChildBuilderDelegate(
         (context, index) {
-          final textbook = filteredTextbooks[index];
+          // Show course card as first item
+          if (showCourseCard && index == 0) {
+            return Padding(
+              padding: const EdgeInsets.only(bottom: 12),
+              child: _buildEnglishCourseListItem(isMobile),
+            );
+          }
+          
+          // Adjust index for textbooks
+          final textbookIndex = showCourseCard ? index - 1 : index;
+          final textbook = filteredTextbooks[textbookIndex];
           return _buildTextbookListItem(textbook, isMobile);
         },
-        childCount: filteredTextbooks.length,
+        childCount: totalItems,
       ),
     );
   }
@@ -1084,6 +1172,314 @@ class _TextbooksPageState extends State<TextbooksPage>
               ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+
+  // English Course Card - Interactive Textbook
+  Widget _buildEnglishCourseCard(bool isMobile) {
+    return Card(
+      elevation: 4,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(12),
+        onTap: () async {
+          // Fetch the course and navigate
+          final courseService = CourseReaderService();
+          final courses = await courseService.getAllCourses();
+          final englishCourse = courses.firstWhere(
+            (c) => c.courseId == 'english_b7',
+            orElse: () => courses.first, // Fallback to first course
+          );
+          
+          if (mounted) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => CourseUnitListPage(
+                  course: englishCourse,
+                ),
+              ),
+            );
+          }
+        },
+        child: Stack(
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // Cover with gradient - English theme
+                Expanded(
+                  flex: 3,
+                  child: Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
+                      gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [
+                          const Color(0xFF4A90E2).withValues(alpha: 0.8), // English blue
+                          const Color(0xFF357ABD),
+                        ],
+                      ),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.book,
+                          size: isMobile ? 40 : 48,
+                          color: Colors.white,
+                        ),
+                        const SizedBox(height: 8),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 8,
+                            vertical: 4,
+                          ),
+                          decoration: BoxDecoration(
+                            color: Colors.white.withValues(alpha: 0.9),
+                            borderRadius: BorderRadius.circular(4),
+                          ),
+                          child: Text(
+                            'JHS 1',
+                            style: GoogleFonts.montserrat(
+                              fontSize: 10,
+                              fontWeight: FontWeight.bold,
+                              color: const Color(0xFF357ABD),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                // Content info
+                Expanded(
+                  flex: 2,
+                  child: Padding(
+                    padding: const EdgeInsets.all(12),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Uriel English',
+                          style: GoogleFonts.montserrat(
+                            fontSize: isMobile ? 13 : 14,
+                            fontWeight: FontWeight.bold,
+                            color: const Color(0xFF1A1E3F),
+                          ),
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                        const SizedBox(height: 4),
+                        Text(
+                          'Interactive Course',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 11,
+                            color: Colors.grey[600],
+                          ),
+                        ),
+                        const Spacer(),
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.school,
+                              size: 14,
+                              color: Colors.grey[600],
+                            ),
+                            const SizedBox(width: 4),
+                            Text(
+                              '10 Units • 46 Lessons',
+                              style: GoogleFonts.montserrat(
+                                fontSize: 10,
+                                color: Colors.grey[600],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            // NEW badge
+            Positioned(
+              top: 8,
+              right: 8,
+              child: Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 6,
+                  vertical: 2,
+                ),
+                decoration: BoxDecoration(
+                  color: const Color(0xFF34C759),
+                  borderRadius: BorderRadius.circular(4),
+                ),
+                child: Text(
+                  'NEW',
+                  style: GoogleFonts.montserrat(
+                    fontSize: 9,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  // English Course List Item - Interactive Textbook
+  Widget _buildEnglishCourseListItem(bool isMobile) {
+    return Card(
+      elevation: 3,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(12),
+        onTap: () async {
+          // Fetch the course and navigate
+          final courseService = CourseReaderService();
+          final courses = await courseService.getAllCourses();
+          final englishCourse = courses.firstWhere(
+            (c) => c.courseId == 'english_b7',
+            orElse: () => courses.first, // Fallback to first course
+          );
+          
+          if (mounted) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => CourseUnitListPage(
+                  course: englishCourse,
+                ),
+              ),
+            );
+          }
+        },
+        child: Padding(
+          padding: EdgeInsets.all(isMobile ? 12 : 16),
+          child: Row(
+            children: [
+              // Cover
+              Container(
+                width: isMobile ? 60 : 80,
+                height: isMobile ? 80 : 100,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: [
+                      const Color(0xFF4A90E2).withValues(alpha: 0.8),
+                      const Color(0xFF357ABD),
+                    ],
+                  ),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.book,
+                      size: isMobile ? 24 : 32,
+                      color: Colors.white,
+                    ),
+                    const SizedBox(height: 4),
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 6,
+                        vertical: 2,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.white.withValues(alpha: 0.9),
+                        borderRadius: BorderRadius.circular(4),
+                      ),
+                      child: Text(
+                        'JHS 1',
+                        style: GoogleFonts.montserrat(
+                          fontSize: 9,
+                          fontWeight: FontWeight.bold,
+                          color: const Color(0xFF357ABD),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(width: 16),
+              // Content
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Text(
+                            'Uriel English',
+                            style: GoogleFonts.montserrat(
+                              fontSize: isMobile ? 15 : 16,
+                              fontWeight: FontWeight.bold,
+                              color: const Color(0xFF1A1E3F),
+                            ),
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 8,
+                            vertical: 4,
+                          ),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFF34C759),
+                            borderRadius: BorderRadius.circular(4),
+                          ),
+                          child: Text(
+                            'NEW',
+                            style: GoogleFonts.montserrat(
+                              fontSize: 10,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      'Interactive Course',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 13,
+                        color: Colors.grey[600],
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.school,
+                          size: 16,
+                          color: Colors.grey[600],
+                        ),
+                        const SizedBox(width: 4),
+                        Text(
+                          '10 Units • 46 Lessons • 1,890 XP',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 12,
+                            color: Colors.grey[600],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -1303,7 +1699,9 @@ class _TextbooksPageState extends State<TextbooksPage>
             ),
             const SizedBox(height: 8),
             Text(
-              'No textbooks available for the selected filters.\nTry selecting different options.',
+              searchQuery.isNotEmpty
+                  ? 'No textbooks match your search criteria.\nTry adjusting your filters or search terms.'
+                  : 'No textbooks available for the selected filters.\nTry selecting different options.',
               textAlign: TextAlign.center,
               style: GoogleFonts.montserrat(
                 color: Colors.grey[600],

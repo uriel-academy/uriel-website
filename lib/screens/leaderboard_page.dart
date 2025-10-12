@@ -342,57 +342,35 @@ class _LeaderboardPageState extends State<LeaderboardPage> with TickerProviderSt
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           // Loading placeholder
-          return Container(
-            width: iconSize,
-            height: iconSize,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.grey[200],
-            ),
+          return CircleAvatar(
+            radius: iconSize / 2,
+            backgroundColor: Colors.grey[200],
             child: Icon(Icons.emoji_events_outlined, size: iconSize * 0.5, color: Colors.grey[400]),
           );
         }
         
         final rank = snapshot.data;
         if (rank != null && rank.imageUrl.isNotEmpty) {
-          // Show rank badge from Firebase Storage
-          return ClipOval(
-            child: CachedNetworkImage(
-              imageUrl: rank.imageUrl,
-              width: iconSize,
-              height: iconSize,
-              fit: BoxFit.cover,
-              placeholder: (context, url) => Container(
-                color: rank.getTierColor().withOpacity(0.1),
-                child: Icon(
-                  Icons.emoji_events,
-                  color: rank.getTierColor(),
-                  size: iconSize * 0.5,
-                ),
-              ),
-              errorWidget: (context, url, error) => Container(
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: rank.getTierColor().withOpacity(0.2),
-                ),
-                child: Icon(
-                  Icons.emoji_events,
-                  color: rank.getTierColor(),
-                  size: iconSize * 0.5,
-                ),
-              ),
-            ),
+          // Show rank badge from Firebase Storage using CircleAvatar
+          return CircleAvatar(
+            radius: iconSize / 2,
+            backgroundColor: rank.getTierColor().withOpacity(0.1),
+            backgroundImage: CachedNetworkImageProvider(rank.imageUrl),
+            onBackgroundImageError: (exception, stackTrace) {
+              // Error handling is done via child fallback
+            },
+            child: null, // Image will show if loaded successfully
           );
         } else {
           // Fallback to trophy icon
-          return Container(
-            width: iconSize,
-            height: iconSize,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.grey[300],
+          return CircleAvatar(
+            radius: iconSize / 2,
+            backgroundColor: rank?.getTierColor().withOpacity(0.2) ?? Colors.grey[300],
+            child: Icon(
+              Icons.emoji_events,
+              size: iconSize * 0.5,
+              color: rank?.getTierColor() ?? Colors.grey[600],
             ),
-            child: Icon(Icons.emoji_events, size: iconSize * 0.5, color: Colors.grey[600]),
           );
         }
       },

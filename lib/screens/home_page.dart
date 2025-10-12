@@ -15,7 +15,7 @@ import 'textbooks_page.dart';
 import 'feedback_page.dart';
 import 'trivia_categories_page.dart';
 import 'student_profile_page.dart';
-import 'leaderboard_page.dart';
+import 'redesigned_leaderboard_page.dart';
 
 class StudentHomePage extends StatefulWidget {
   const StudentHomePage({super.key});
@@ -545,13 +545,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                                       _buildQuestionsPage(),
                                       _buildTextbooksPage(),
                                       _buildTriviaPage(),
-                                      LeaderboardPage(
-                                        onStartQuiz: () {
-                                          setState(() {
-                                            _selectedIndex = 3; // Switch to Trivia tab
-                                          });
-                                        },
-                                      ),
+                                      const RedesignedLeaderboardPage(),
                                       _buildFeedbackPage(),
                                     ],
                                   ),
@@ -581,13 +575,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                                             _buildQuestionsPage(),
                                             _buildTextbooksPage(),
                                             _buildTriviaPage(),
-                                            LeaderboardPage(
-                                              onStartQuiz: () {
-                                                setState(() {
-                                                  _selectedIndex = 3; // Switch to Trivia tab
-                                                });
-                                              },
-                                            ),
+                                            const RedesignedLeaderboardPage(),
                                             _buildFeedbackPage(),
                                           ],
                                     ),
@@ -697,11 +685,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           GestureDetector(
             onTap: () => _showRankDialog(),
             child: Container(
-              width: 32,
-              height: 32,
               decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(6),
+                shape: BoxShape.circle,
                 border: Border.all(
                   color: currentRank != null 
                       ? currentRank!.getTierColor().withOpacity(0.3)
@@ -718,38 +703,20 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   ),
                 ],
               ),
-              child: currentRank != null
-                  ? ClipRRect(
-                      borderRadius: BorderRadius.circular(6),
-                      child: currentRank!.imageUrl.isNotEmpty
-                          ? CachedNetworkImage(
-                              imageUrl: currentRank!.imageUrl,
-                              fit: BoxFit.cover,
-                              placeholder: (context, url) => Container(
-                                color: currentRank!.getTierColor().withOpacity(0.1),
-                                child: Icon(
-                                  Icons.emoji_events,
-                                  color: currentRank!.getTierColor(),
-                                  size: 16,
-                                ),
-                              ),
-                              errorWidget: (context, url, error) => Icon(
-                                Icons.emoji_events,
-                                color: currentRank!.getTierColor(),
-                                size: 16,
-                              ),
-                            )
-                          : Icon(
-                              Icons.emoji_events,
-                              color: currentRank!.getTierColor(),
-                              size: 16,
-                            ),
-                    )
-                  : const Icon(
-                      Icons.emoji_events_outlined,
-                      color: Colors.grey,
-                      size: 16,
-                    ),
+              child: CircleAvatar(
+                radius: 16,
+                backgroundColor: Colors.white,
+                backgroundImage: currentRank != null && currentRank!.imageUrl.isNotEmpty
+                    ? CachedNetworkImageProvider(currentRank!.imageUrl)
+                    : null,
+                child: currentRank == null || currentRank!.imageUrl.isEmpty
+                    ? Icon(
+                        currentRank != null ? Icons.emoji_events : Icons.emoji_events_outlined,
+                        color: currentRank?.getTierColor() ?? Colors.grey,
+                        size: 16,
+                      )
+                    : null,
+              ),
             ),
           ),
           
@@ -1080,11 +1047,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           GestureDetector(
             onTap: () => _showRankDialog(),
             child: Container(
-              width: 38,
-              height: 38,
               decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10),
+                shape: BoxShape.circle,
                 border: Border.all(
                   color: currentRank != null 
                       ? currentRank!.getTierColor().withOpacity(0.3)
@@ -1101,38 +1065,20 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   ),
                 ],
               ),
-              child: currentRank != null
-                  ? ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: currentRank!.imageUrl.isNotEmpty
-                          ? CachedNetworkImage(
-                              imageUrl: currentRank!.imageUrl,
-                              fit: BoxFit.cover,
-                              placeholder: (context, url) => Container(
-                                color: currentRank!.getTierColor().withOpacity(0.1),
-                                child: Icon(
-                                  Icons.emoji_events,
-                                  color: currentRank!.getTierColor(),
-                                  size: 20,
-                                ),
-                              ),
-                              errorWidget: (context, url, error) => Icon(
-                                Icons.emoji_events,
-                                color: currentRank!.getTierColor(),
-                                size: 20,
-                              ),
-                            )
-                          : Icon(
-                              Icons.emoji_events,
-                              color: currentRank!.getTierColor(),
-                              size: 20,
-                            ),
-                    )
-                  : const Icon(
-                      Icons.emoji_events_outlined,
-                      color: Colors.grey,
-                      size: 20,
-                    ),
+              child: CircleAvatar(
+                radius: 19,
+                backgroundColor: Colors.white,
+                backgroundImage: currentRank != null && currentRank!.imageUrl.isNotEmpty
+                    ? CachedNetworkImageProvider(currentRank!.imageUrl)
+                    : null,
+                child: currentRank == null || currentRank!.imageUrl.isEmpty
+                    ? Icon(
+                        currentRank != null ? Icons.emoji_events : Icons.emoji_events_outlined,
+                        color: currentRank?.getTierColor() ?? Colors.grey,
+                        size: 20,
+                      )
+                    : null,
+              ),
             ),
           ),
           
@@ -2354,11 +2300,10 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     return const QuestionCollectionsPage();
   }
 
-  Widget _buildTextbooksPage() {
-    return const TextbooksPage();
-  }
-
-  Widget _buildFeedbackPage() {
+Widget _buildTextbooksPage() {
+  // Return the existing TextbooksPage with tabs (All Books, Textbooks, Storybooks)
+  return const TextbooksPage();
+}  Widget _buildFeedbackPage() {
     return const FeedbackPage();
   }
 
@@ -2476,7 +2421,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                           Container(
                             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                             child: Text(
-                              '${currentRank?.name.toUpperCase() ?? 'LEARNER'} · ${_formatXP(userXP)}',
+                              '${currentRank?.name.toUpperCase() ?? 'LEARNER'} · ${_formatXP(userXP)}XP',
                               style: GoogleFonts.inter(
                                 fontSize: 13,
                                 fontWeight: FontWeight.w600,

@@ -1,0 +1,556 @@
+{
+  "course_id": "english_b7",
+  "version": "1.0.0",
+  "last_updated_utc": "2025-10-12T00:05:32.252936Z",
+  "unit": {
+    "unit_id": "eng_b7_u2",
+    "title": "Parts of Speech I: Building Strong Sentences",
+    "overview": "This unit deepens learners’ mastery of core parts of speech—nouns, adjectives, verbs, and pronouns—and shows how they combine to form clear, respectful, and effective sentences. Lessons are short, interactive, and aligned to NaCCA CCP (B7). Enrichment includes AI rewriting tasks, advanced vocabulary, and Ghanaian/Christian moral themes.",
+    "estimated_duration_min": 190,
+    "competencies": [
+      "Identify and classify nouns (common, proper, collective, abstract) in short texts.",
+      "Use adjectives precisely (order, comparison) to add detail without redundancy.",
+      "Demonstrate accurate subject–verb agreement in simple tenses.",
+      "Use personal and possessive pronouns to maintain cohesion and avoid repetition.",
+      "Write a well‑structured paragraph using varied parts of speech and correct punctuation."
+    ],
+    "values_morals": [
+      "Humility and truthfulness in self‑description (avoid boastful language).",
+      "Clarity and respect in speech reflect good character (Colossians 4:6)."
+    ],
+    "xp_total": 160,
+    "streak_bonus_xp": 5,
+    "parent_report_hooks": [
+      "unit_completion_rate",
+      "quiz_accuracy",
+      "writing_submission_status",
+      "ai_task_completions",
+      "xp_earned"
+    ],
+    "lessons": [
+      {
+        "lesson_id": "eng_b7_u2_l1",
+        "title": "Nouns Everywhere",
+        "estimated_time_min": 30,
+        "xp_reward": 30,
+        "objectives": [
+          "Distinguish common, proper, collective, and abstract nouns.",
+          "Capitalise proper nouns correctly (British English conventions)."
+        ],
+        "vocabulary": [
+          {
+            "word": "collective noun",
+            "level": "core",
+            "definition": "A noun that names a group (e.g., choir, team)."
+          },
+          {
+            "word": "abstract noun",
+            "level": "adv",
+            "definition": "A noun that names an idea or quality (e.g., honesty, courage)."
+          }
+        ],
+        "moral_link": "Name people and places with respect; truthfully represent ideas and groups.",
+        "content_blocks": [
+          {
+            "type": "text",
+            "body": "Common: market, river • Proper: Volta River, Adabraka JHS • Collective: choir • Abstract: honesty."
+          },
+          {
+            "type": "image",
+            "src": "/images/eng_b7/u2/noun_map.svg",
+            "caption": "Classifying nouns in context (Ghanaian examples)."
+          },
+          {
+            "type": "tip",
+            "body": "Capitalise names of people, towns, rivers, holidays, and institutions."
+          }
+        ],
+        "interactive": {
+          "classify": {
+            "prompt": "Drag each word to the correct noun type.",
+            "items": [
+              {
+                "word": "faith",
+                "type": "abstract"
+              },
+              {
+                "word": "Accra",
+                "type": "proper"
+              },
+              {
+                "word": "team",
+                "type": "collective"
+              },
+              {
+                "word": "church",
+                "type": "common"
+              }
+            ],
+            "xp": 10
+          },
+          "quick_check": [
+            {
+              "q": "Choose the correctly capitalised sentence.",
+              "options": [
+                "We crossed the volta river near sogakope.",
+                "We crossed the Volta River near Sogakope."
+              ],
+              "answer_index": 1,
+              "xp": 5
+            }
+          ]
+        },
+        "assets": [
+          "/images/eng_b7/u2/noun_map.svg"
+        ]
+      },
+      {
+        "lesson_id": "eng_b7_u2_l2",
+        "title": "Adjectives with Purpose",
+        "estimated_time_min": 30,
+        "xp_reward": 30,
+        "objectives": [
+          "Use adjectives for precise description without exaggeration.",
+          "Apply the typical order of adjectives before nouns (opinion, size, age, colour, origin, material, purpose)."
+        ],
+        "vocabulary": [
+          {
+            "word": "modifier",
+            "level": "adv",
+            "definition": "A word or phrase that describes or limits another word."
+          },
+          {
+            "word": "comparative",
+            "level": "core",
+            "definition": "Form that compares two (e.g., taller, more honest)."
+          },
+          {
+            "word": "superlative",
+            "level": "core",
+            "definition": "Form that compares three or more (e.g., tallest, most honest)."
+          }
+        ],
+        "moral_link": "Describe truthfully; avoid boastful or misleading adjectives.",
+        "content_blocks": [
+          {
+            "type": "text",
+            "body": "Order example: 'a beautiful small new blue Ghanaian cotton school bag'."
+          },
+          {
+            "type": "image",
+            "src": "/images/eng_b7/u2/adjective_order.svg",
+            "caption": "Typical adjective order."
+          },
+          {
+            "type": "text",
+            "body": "Comparatives: tall → taller; honest → more honest. Superlatives: tallest; most honest."
+          }
+        ],
+        "interactive": {
+          "reorder_words": {
+            "prompt": "Arrange the adjectives in a natural order.",
+            "given": [
+              "Ghanaian",
+              "new",
+              "small",
+              "school",
+              "bag",
+              "blue"
+            ],
+            "target": "a small new blue Ghanaian school bag",
+            "xp": 10
+          },
+          "mini_quiz": [
+            {
+              "q": "Choose the best comparative form: 'Ama is ___ than Kofi.'",
+              "options": [
+                "more kinder",
+                "kinder",
+                "kindest",
+                "most kind"
+              ],
+              "answer_index": 1,
+              "xp": 5
+            }
+          ],
+          "ai_task": {
+            "prompt": "Rewrite this sentence to be truthful and concise: 'Our school is the most amazingly incredible best school ever in the universe!'",
+            "expected_focus": [
+              "appropriate register",
+              "avoid exaggeration"
+            ],
+            "xp": 10
+          }
+        },
+        "assets": [
+          "/images/eng_b7/u2/adjective_order.svg"
+        ]
+      },
+      {
+        "lesson_id": "eng_b7_u2_l3",
+        "title": "Verbs and Agreement",
+        "estimated_time_min": 35,
+        "xp_reward": 35,
+        "objectives": [
+          "Use simple present, past, and future accurately.",
+          "Apply subject–verb agreement with singular/plural subjects and collective nouns."
+        ],
+        "vocabulary": [
+          {
+            "word": "aspect",
+            "level": "adv",
+            "definition": "How an action extends over time (simple, continuous, perfect)."
+          },
+          {
+            "word": "agreement",
+            "level": "core",
+            "definition": "Matching verb form to subject (e.g., 'she walks', 'they walk')."
+          }
+        ],
+        "moral_link": "Consistency in speech mirrors integrity in character.",
+        "content_blocks": [
+          {
+            "type": "text",
+            "body": "Simple tenses: I walk (present), I walked (past), I will walk (future)."
+          },
+          {
+            "type": "text",
+            "body": "Collective nouns in formal British usage often take singular verbs: 'The choir sings well.'"
+          },
+          {
+            "type": "audio",
+            "src": "/audio/eng_b7/u2/verbs_agreement.mp3",
+            "caption": "Verb forms and agreement examples."
+          }
+        ],
+        "interactive": {
+          "fill_blanks": {
+            "prompt": "Choose the correct verb.",
+            "items": [
+              {
+                "text": "The committee __ (meet/meets) on Friday.",
+                "answer": "meets"
+              },
+              {
+                "text": "Ama and Kofi __ (visit/visits) the library.",
+                "answer": "visit"
+              },
+              {
+                "text": "Tomorrow, we __ (will present/will presents) our poem.",
+                "answer": "will present"
+              }
+            ],
+            "xp": 10
+          },
+          "ai_task": {
+            "prompt": "Convert these to simple past: 'I write a letter. They sing a hymn.'",
+            "expected_focus": [
+              "tense change",
+              "agreement"
+            ],
+            "xp": 10
+          }
+        },
+        "assets": [
+          "/audio/eng_b7/u2/verbs_agreement.mp3"
+        ]
+      },
+      {
+        "lesson_id": "eng_b7_u2_l4",
+        "title": "Pronouns for Cohesion",
+        "estimated_time_min": 30,
+        "xp_reward": 30,
+        "objectives": [
+          "Use personal, possessive, demonstrative, and reflexive pronouns accurately.",
+          "Ensure clear reference (avoid vague 'they/it')."
+        ],
+        "vocabulary": [
+          {
+            "word": "cohesion",
+            "level": "adv",
+            "definition": "The quality of forming a unified whole; smooth connection of ideas."
+          },
+          {
+            "word": "ambiguous reference",
+            "level": "adv",
+            "definition": "When a pronoun could refer to more than one noun."
+          }
+        ],
+        "moral_link": "Be clear and honest; do not confuse your listener.",
+        "content_blocks": [
+          {
+            "type": "text",
+            "body": "Personal: I, you, he, she, it, we, they • Possessive: my, your, his, her, its, our, their • Demonstrative: this/that/these/those • Reflexive: myself, yourself, etc."
+          },
+          {
+            "type": "image",
+            "src": "/images/eng_b7/u2/pronouns_chart.svg",
+            "caption": "Pronoun families at a glance."
+          }
+        ],
+        "interactive": {
+          "drag_drop": {
+            "prompt": "Match each pronoun to its antecedent in the paragraph.",
+            "pairs": [
+              {
+                "pronoun": "his",
+                "antecedent": "Yaw"
+              },
+              {
+                "pronoun": "their",
+                "antecedent": "the prefects"
+              },
+              {
+                "pronoun": "those",
+                "antecedent": "exercise books (plural, far)"
+              }
+            ],
+            "xp": 10
+          },
+          "error_hunt": {
+            "text": "Kofi told Kwame that he should meet him at his desk. They were late.",
+            "tasks": [
+              "Remove ambiguity by rewriting pronouns."
+            ],
+            "solution_hint": "Repeat the noun when clarity matters: 'Kofi told Kwame to meet Kofi at Kofi’s desk.'",
+            "xp": 10
+          }
+        },
+        "assets": [
+          "/images/eng_b7/u2/pronouns_chart.svg"
+        ]
+      },
+      {
+        "lesson_id": "eng_b7_u2_l5",
+        "title": "Sentence Building Workshop",
+        "estimated_time_min": 35,
+        "xp_reward": 35,
+        "objectives": [
+          "Combine nouns, adjectives, verbs, and pronouns to write clear sentences.",
+          "Write a cohesive 5–6 sentence paragraph with correct agreement and punctuation."
+        ],
+        "vocabulary": [
+          {
+            "word": "coherence",
+            "level": "adv",
+            "definition": "Logical connection and consistency of ideas."
+          },
+          {
+            "word": "transition",
+            "level": "core",
+            "definition": "A word/phrase that links ideas (e.g., therefore, however, meanwhile)."
+          }
+        ],
+        "moral_link": "Use your words to build up, not tear down (Ephesians 4:29).",
+        "content_blocks": [
+          {
+            "type": "image",
+            "src": "/images/eng_b7/u2/sentence_blocks.svg",
+            "caption": "Building sentences: subject + verb + details."
+          },
+          {
+            "type": "text",
+            "body": "Model paragraph shows topic sentence, details with adjectives and clear pronouns, and a concluding sentence."
+          }
+        ],
+        "interactive": {
+          "guided_writing": {
+            "scaffold": [
+              "Topic sentence: Introduce a class activity (e.g., choir practice).",
+              "Detail 1: Use one collective noun and a precise verb.",
+              "Detail 2: Add two adjectives in natural order.",
+              "Detail 3: Use at least one pronoun for cohesion.",
+              "Conclusion: Reflect on teamwork or humility."
+            ],
+            "submission_type": "text",
+            "ai_feedback": [
+              "Subject–verb agreement",
+              "Adjective order and precision",
+              "Pronoun clarity",
+              "Punctuation and capitalisation",
+              "Cohesion via transitions"
+            ],
+            "xp": 20
+          }
+        },
+        "assets": [
+          "/images/eng_b7/u2/sentence_blocks.svg"
+        ]
+      }
+    ],
+    "assessments": {
+      "quiz_mcq": [
+        {
+          "id": "u2_q1",
+          "q": "Which is an abstract noun?",
+          "options": [
+            "honesty",
+            "table",
+            "Accra",
+            "team"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "u2_q2",
+          "q": "Choose the correctly capitalised sentence.",
+          "options": [
+            "The president visited cape coast castle.",
+            "The President visited Cape Coast Castle."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u2_q3",
+          "q": "Which sentence uses adjectives in a natural order?",
+          "options": [
+            "I bought a Ghanaian blue new small bag.",
+            "I bought a small new blue Ghanaian bag."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u2_q4",
+          "q": "Select the correct comparative form.",
+          "options": [
+            "more honest",
+            "honester",
+            "most honest",
+            "honestest"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "u2_q5",
+          "q": "Choose the sentence with correct agreement.",
+          "options": [
+            "The team win their match today.",
+            "The team wins its match today."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u2_q6",
+          "q": "Pick the correct verb form: 'Ama and Kofi __ to school early.'",
+          "options": [
+            "goes",
+            "go"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u2_q7",
+          "q": "Which pronoun best replaces the underlined nouns? 'The prefects helped the new pupils. The prefects guided the pupils to their class.'",
+          "options": [
+            "They helped them. They guided them to their class.",
+            "He helped them. He guided them to their class."
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "u2_q8",
+          "q": "Identify the vague pronoun: 'They said it was late.'",
+          "options": [
+            "They",
+            "late",
+            "said",
+            "was"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "u2_q9",
+          "q": "Choose the best transition: 'We practised the hymn. ____, we performed before assembly.'",
+          "options": [
+            "However",
+            "Later",
+            "Meanwhile",
+            "Because"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u2_q10",
+          "q": "Which sentence is most coherent?",
+          "options": [
+            "The choir sing. Kind. Loud. Church.",
+            "The choir sings well; later, it will perform in church."
+          ],
+          "answer_index": 1
+        }
+      ],
+      "writing_prompt": {
+        "id": "u2_w1",
+        "prompt": "Write a 5–6 sentence paragraph describing a class event (e.g., science fair or sports day). Use at least two adjectives, one collective noun, one pronoun, and correct subject–verb agreement.",
+        "rubric_ref": "rubric_writing_u2"
+      },
+      "speaking_task": {
+        "id": "u2_s1",
+        "prompt": "Give a 30‑second oral report about your class activity, using respectful register and clear pronouns.",
+        "rubric_ref": "rubric_speaking_u2"
+      },
+      "rubrics": {
+        "rubric_writing_u2": {
+          "criteria": [
+            {
+              "name": "Content & Requirements",
+              "scale": 4,
+              "descriptor": "Meets all language targets (adjectives, noun types, pronouns, agreement)."
+            },
+            {
+              "name": "Grammar & Mechanics",
+              "scale": 4,
+              "descriptor": "Capitalisation, punctuation, verb forms are correct."
+            },
+            {
+              "name": "Cohesion & Transitions",
+              "scale": 4,
+              "descriptor": "Logical flow with helpful linking words."
+            },
+            {
+              "name": "Register & Honesty",
+              "scale": 4,
+              "descriptor": "Truthful, respectful tone (no exaggeration)."
+            }
+          ],
+          "proficiency_labels": [
+            "Beginning",
+            "Developing",
+            "Proficient",
+            "Advanced"
+          ]
+        },
+        "rubric_speaking_u2": {
+          "criteria": [
+            {
+              "name": "Clarity & Pronunciation",
+              "scale": 4,
+              "descriptor": "Words are clear and steady."
+            },
+            {
+              "name": "Register & Respect",
+              "scale": 4,
+              "descriptor": "Appropriate greetings and politeness markers."
+            },
+            {
+              "name": "Organisation",
+              "scale": 4,
+              "descriptor": "Clear opening, details, and closing."
+            },
+            {
+              "name": "Grammar Accuracy",
+              "scale": 4,
+              "descriptor": "Correct verb forms and pronouns."
+            }
+          ],
+          "proficiency_labels": [
+            "Beginning",
+            "Developing",
+            "Proficient",
+            "Advanced"
+          ]
+        }
+      }
+    }
+  }
+}

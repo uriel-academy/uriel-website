@@ -1,0 +1,562 @@
+{
+  "course_id": "english_b7",
+  "version": "1.0.0",
+  "last_updated_utc": "2025-10-12T00:03:06.242219Z",
+  "unit": {
+    "unit_id": "eng_b7_u1",
+    "title": "Communication and You",
+    "overview": "In this unit, learners develop polite, effective communication skills in everyday Ghanaian contexts. They practise greetings and introductions, reading for meaning, and foundational grammar (nouns and pronouns). Activities are short and interactive to reduce fatigue, and include moral themes from Ghanaian/Christian perspectives.",
+    "estimated_duration_min": 180,
+    "competencies": [
+      "Listen and respond appropriately in conversations with peers and adults.",
+      "Use nouns and pronouns accurately in simple and compound sentences.",
+      "Read short texts and identify main ideas and details.",
+      "Write a short paragraph to introduce oneself with correct punctuation and cohesion.",
+      "Demonstrate respectful language aligned with Ghanaian cultural norms and Christian moral values."
+    ],
+    "values_morals": [
+      "Respect for elders and peers in speech.",
+      "Truthfulness and humility in self‑presentation.",
+      "Kindness: 'A gentle answer turns away wrath' (Proverbs 15:1)."
+    ],
+    "xp_total": 150,
+    "streak_bonus_xp": 5,
+    "parent_report_hooks": [
+      "unit_completion_rate",
+      "quiz_accuracy",
+      "writing_submission_status",
+      "speaking_task_submission_status",
+      "xp_earned"
+    ],
+    "lessons": [
+      {
+        "lesson_id": "eng_b7_u1_l1",
+        "title": "Greetings and Introductions",
+        "estimated_time_min": 25,
+        "xp_reward": 25,
+        "objectives": [
+          "Use polite greetings and forms of address for different audiences.",
+          "Introduce oneself clearly (name, school, hometown, interest)."
+        ],
+        "vocabulary": [
+          {
+            "word": "courteous",
+            "level": "adv",
+            "definition": "Polite and respectful in speech and behaviour."
+          },
+          {
+            "word": "salutation",
+            "level": "adv",
+            "definition": "A greeting used at the start of a conversation or letter."
+          },
+          {
+            "word": "etiquette",
+            "level": "adv",
+            "definition": "Accepted rules for polite behaviour in society."
+          }
+        ],
+        "moral_link": "Show respect through tone and word choice; greet elders first.",
+        "content_blocks": [
+          {
+            "type": "text",
+            "body": "Ghanaians value respectful greetings. Use 'Good morning/afternoon/evening' and appropriate titles such as Sir, Madam, Auntie, or Uncle."
+          },
+          {
+            "type": "audio",
+            "src": "/audio/eng_b7/u1/l1_greetings.mp3",
+            "caption": "Model greetings and introductions."
+          },
+          {
+            "type": "tip",
+            "body": "Smile, make eye contact, and speak clearly. Keep your introduction short: name, class, school, hometown."
+          }
+        ],
+        "interactive": {
+          "quick_check": [
+            {
+              "q": "Which greeting shows the most respect to an elder?",
+              "options": [
+                "Hey there!",
+                "Good morning, Madam.",
+                "Yo!",
+                "Hi guys"
+              ],
+              "answer_index": 1,
+              "xp": 5
+            },
+            {
+              "q": "The word 'courteous' mostly means:",
+              "options": [
+                "rude",
+                "confused",
+                "polite",
+                "silent"
+              ],
+              "answer_index": 2,
+              "xp": 5
+            }
+          ],
+          "speaking_task": {
+            "prompt": "Record a 20–30 second introduction. Include your name, class, school, and one interest.",
+            "ai_feedback": [
+              "Pronunciation clarity (0–3)",
+              "Polite tone (0–3)",
+              "Completeness (0–4)"
+            ],
+            "submission_type": "audio",
+            "xp": 10
+          }
+        },
+        "assets": [
+          "/images/eng_b7/u1/greetings.svg"
+        ]
+      },
+      {
+        "lesson_id": "eng_b7_u1_l2",
+        "title": "Nouns and Pronouns in Conversation",
+        "estimated_time_min": 20,
+        "xp_reward": 20,
+        "objectives": [
+          "Identify common, proper, and collective nouns in short texts.",
+          "Choose correct personal and possessive pronouns to avoid repetition."
+        ],
+        "vocabulary": [
+          {
+            "word": "antecedent",
+            "level": "adv",
+            "definition": "The noun a pronoun refers to."
+          },
+          {
+            "word": "cohesion",
+            "level": "adv",
+            "definition": "How well ideas connect in writing or speech."
+          }
+        ],
+        "moral_link": "Clarity shows respect for listeners—be clear and accurate.",
+        "content_blocks": [
+          {
+            "type": "text",
+            "body": "Nouns name people, places, things, and ideas: Ama, Accra, market, honesty."
+          },
+          {
+            "type": "text",
+            "body": "Pronouns replace nouns to avoid repetition: Ama forgot her book. She borrowed one."
+          },
+          {
+            "type": "image",
+            "src": "/images/eng_b7/u1/nouns_pronouns.svg",
+            "caption": "Noun→Pronoun mapping."
+          }
+        ],
+        "interactive": {
+          "drag_drop": {
+            "prompt": "Match each pronoun to its antecedent in the passage.",
+            "pairs": [
+              {
+                "pronoun": "she",
+                "antecedent": "Ama"
+              },
+              {
+                "pronoun": "they",
+                "antecedent": "the students"
+              },
+              {
+                "pronoun": "it",
+                "antecedent": "the library book"
+              }
+            ],
+            "xp": 10
+          },
+          "ai_task": {
+            "prompt": "Rewrite: 'Kofi met Kofi’s teacher at Kofi’s church.' Replace repeated nouns with correct pronouns.",
+            "expected_focus": [
+              "pronoun choice",
+              "possessive forms"
+            ],
+            "xp": 10
+          }
+        }
+      },
+      {
+        "lesson_id": "eng_b7_u1_l3",
+        "title": "Reading for Meaning: A Visit to Auntie Ama",
+        "estimated_time_min": 30,
+        "xp_reward": 30,
+        "objectives": [
+          "Read a short narrative and identify main idea and supporting details.",
+          "Infer character feelings from actions and dialogue."
+        ],
+        "vocabulary": [
+          {
+            "word": "hospitality",
+            "level": "adv",
+            "definition": "Friendly and generous treatment of guests."
+          },
+          {
+            "word": "gesture",
+            "level": "core",
+            "definition": "A movement that expresses an idea or feeling."
+          }
+        ],
+        "moral_link": "Christian hospitality—welcoming others with kindness (Hebrews 13:2).",
+        "content_blocks": [
+          {
+            "type": "reading",
+            "title": "A Visit to Auntie Ama",
+            "body": "It was Saturday afternoon when Efua visited Auntie Ama in Kasoa. Before Efua could knock, Auntie Ama opened\nthe door with a warm smile. She offered water first, then asked about school. When Efua spoke, Auntie Ama\nlistened carefully, nodding and asking gentle questions. As Efua prepared to leave, Auntie Ama said,\n'Remember, kind words build bridges.' Efua felt lighter walking home."
+          },
+          {
+            "type": "audio",
+            "src": "/audio/eng_b7/u1/l3_reading.mp3",
+            "caption": "Narrated passage."
+          }
+        ],
+        "interactive": {
+          "comprehension": [
+            {
+              "q": "What is the main idea of the passage?",
+              "options": [
+                "Efua dislikes visiting Kasoa.",
+                "Auntie Ama models kindness and good listening.",
+                "Efua wants to avoid school.",
+                "It was a rainy Saturday."
+              ],
+              "answer_index": 1,
+              "xp": 5
+            },
+            {
+              "q": "Which detail best supports the main idea?",
+              "options": [
+                "Efua arrived on Saturday afternoon.",
+                "Auntie Ama offered water and listened carefully.",
+                "Efua walked home.",
+                "They were in Kasoa."
+              ],
+              "answer_index": 1,
+              "xp": 5
+            },
+            {
+              "q": "The phrase 'kind words build bridges' suggests:",
+              "options": [
+                "Words can connect people and solve problems.",
+                "You should never speak to strangers.",
+                "Bridges are expensive to build.",
+                "Kindness is only for family."
+              ],
+              "answer_index": 0,
+              "xp": 5
+            }
+          ],
+          "vocab_in_context": [
+            {
+              "q": "‘Hospitality’ in the passage is best shown when Auntie Ama:",
+              "options": [
+                "asks about the weather.",
+                "offers water first and listens.",
+                "closes the door quickly.",
+                "tells Efua to hurry."
+              ],
+              "answer_index": 1,
+              "xp": 5
+            }
+          ]
+        }
+      },
+      {
+        "lesson_id": "eng_b7_u1_l4",
+        "title": "Grammar Workshop: Nouns, Pronouns, and Agreement",
+        "estimated_time_min": 25,
+        "xp_reward": 25,
+        "objectives": [
+          "Ensure pronouns agree in number and person with antecedents.",
+          "Edit short texts for consistency and cohesion."
+        ],
+        "vocabulary": [
+          {
+            "word": "agreement",
+            "level": "core",
+            "definition": "Matching in number and person between words (e.g., noun–pronoun)."
+          },
+          {
+            "word": "consistency",
+            "level": "adv",
+            "definition": "Keeping the same form or idea throughout a text."
+          }
+        ],
+        "moral_link": "Be consistent and truthful in how you represent people.",
+        "content_blocks": [
+          {
+            "type": "text",
+            "body": "Pronoun–antecedent agreement: 'The class finished its test.' (not 'their test')."
+          },
+          {
+            "type": "text",
+            "body": "Maintain point of view: avoid switching from 'I' to 'you' without reason."
+          }
+        ],
+        "interactive": {
+          "error_hunt": {
+            "text": "The choir practised their songs. Ama is a prefect; they leads the prayer. Every student must bring their pencil.",
+            "tasks": [
+              "Fix pronoun–antecedent errors.",
+              "Fix subject–verb agreement errors."
+            ],
+            "solution_hint": "Collective nouns like 'choir' often take singular agreement in Ghanaian English: 'its'.",
+            "xp": 15
+          },
+          "mini_quiz": [
+            {
+              "q": "Choose the correct sentence.",
+              "options": [
+                "Each pupil must submit their homework.",
+                "Each pupil must submit his or her homework."
+              ],
+              "answer_index": 1,
+              "xp": 5
+            },
+            {
+              "q": "Select the sentence with correct agreement.",
+              "options": [
+                "The committee gave their decision.",
+                "The committee gave its decision."
+              ],
+              "answer_index": 1,
+              "xp": 5
+            }
+          ]
+        }
+      },
+      {
+        "lesson_id": "eng_b7_u1_l5",
+        "title": "Writing Your Introduction",
+        "estimated_time_min": 30,
+        "xp_reward": 30,
+        "objectives": [
+          "Write a cohesive 6–8 sentence paragraph to introduce yourself.",
+          "Use correct capitalisation, punctuation, and pronouns."
+        ],
+        "vocabulary": [
+          {
+            "word": "coherence",
+            "level": "adv",
+            "definition": "Logical flow of ideas in a text."
+          },
+          {
+            "word": "register",
+            "level": "adv",
+            "definition": "Level of formality in language."
+          }
+        ],
+        "moral_link": "Be honest and humble in self‑presentation.",
+        "content_blocks": [
+          {
+            "type": "text",
+            "body": "Model paragraph shows topic sentence, supporting details, and concluding sentence."
+          },
+          {
+            "type": "image",
+            "src": "/images/eng_b7/u1/paragraph_burger.svg",
+            "caption": "Paragraph 'burger' structure."
+          }
+        ],
+        "interactive": {
+          "guided_writing": {
+            "scaffold": [
+              "Topic sentence: Who are you? (name, class, school)",
+              "Detail 1: Where are you from or what do you value?",
+              "Detail 2: One interest or talent.",
+              "Detail 3: A goal for the term.",
+              "Conclusion: A courteous closing line."
+            ],
+            "submission_type": "text",
+            "ai_feedback": [
+              "Capitalisation and punctuation",
+              "Pronoun use",
+              "Cohesion (linking words)",
+              "Register (polite tone)"
+            ],
+            "xp": 20
+          }
+        }
+      }
+    ],
+    "assessments": {
+      "quiz_mcq": [
+        {
+          "id": "u1_q1",
+          "q": "Which is the most appropriate greeting to an elder in the morning?",
+          "options": [
+            "Hey!",
+            "Good morning, Sir.",
+            "Yo!",
+            "Hi there"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u1_q2",
+          "q": "Choose the sentence with correct pronoun use.",
+          "options": [
+            "Efua met Efua’s teacher and Efua thanked Efua.",
+            "Efua met her teacher and she thanked her."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u1_q3",
+          "q": "A pronoun’s antecedent is:",
+          "options": [
+            "The noun it replaces.",
+            "A verb it modifies.",
+            "An adjective near it.",
+            "The sentence subject only."
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "u1_q4",
+          "q": "Select the correctly punctuated sentence.",
+          "options": [
+            "my name is yaw i attend Adabraka JHS",
+            "My name is Yaw; I attend Adabraka JHS."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u1_q5",
+          "q": "Which sentence shows correct agreement?",
+          "options": [
+            "The class finished their test.",
+            "The class finished its test."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u1_q6",
+          "q": "The main idea of a paragraph is usually in the:",
+          "options": [
+            "Topic sentence.",
+            "Random detail.",
+            "Conclusion only.",
+            "Longest sentence."
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "u1_q7",
+          "q": "Which is a respectful closing line in an introduction?",
+          "options": [
+            "That’s all. Bye!",
+            "Thank you for your time."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u1_q8",
+          "q": "‘Hospitality’ most nearly means:",
+          "options": [
+            "Generosity to guests.",
+            "Strict rules.",
+            "Silence.",
+            "Fearfulness."
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "u1_q9",
+          "q": "Choose the best linking word to add cohesion: 'I enjoy reading. ____, I practise every day.'",
+          "options": [
+            "However",
+            "Therefore",
+            "Suddenly",
+            "Meanwhile"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u1_q10",
+          "q": "Which register is most suitable for a school letter?",
+          "options": [
+            "Formal",
+            "Slangy",
+            "Playful only",
+            "Aggressive"
+          ],
+          "answer_index": 0
+        }
+      ],
+      "writing_prompt": {
+        "id": "u1_w1",
+        "prompt": "Write a cohesive paragraph (6–8 sentences) introducing yourself to your new English teacher. Include your name, class, one value you hold, one interest, and a goal for this term.",
+        "rubric_ref": "rubric_writing_u1"
+      },
+      "speaking_task": {
+        "id": "u1_s1",
+        "prompt": "Deliver a 30‑second oral introduction using a polite register and clear pronunciation.",
+        "rubric_ref": "rubric_speaking_u1"
+      },
+      "rubrics": {
+        "rubric_writing_u1": {
+          "criteria": [
+            {
+              "name": "Content completeness",
+              "scale": 4,
+              "descriptor": "Includes all required details."
+            },
+            {
+              "name": "Grammar & Mechanics",
+              "scale": 4,
+              "descriptor": "Correct capitalisation, punctuation, pronouns."
+            },
+            {
+              "name": "Cohesion",
+              "scale": 4,
+              "descriptor": "Logical flow; appropriate linking words."
+            },
+            {
+              "name": "Register & Tone",
+              "scale": 4,
+              "descriptor": "Polite, respectful language."
+            }
+          ],
+          "proficiency_labels": [
+            "Beginning",
+            "Developing",
+            "Proficient",
+            "Advanced"
+          ]
+        },
+        "rubric_speaking_u1": {
+          "criteria": [
+            {
+              "name": "Pronunciation clarity",
+              "scale": 4,
+              "descriptor": "Words are clear and understandable."
+            },
+            {
+              "name": "Polite register",
+              "scale": 4,
+              "descriptor": "Appropriate greetings, respectful address."
+            },
+            {
+              "name": "Organisation",
+              "scale": 4,
+              "descriptor": "Clear opening, details, closing."
+            },
+            {
+              "name": "Fluency",
+              "scale": 4,
+              "descriptor": "Smooth delivery with minimal hesitation."
+            }
+          ],
+          "proficiency_labels": [
+            "Beginning",
+            "Developing",
+            "Proficient",
+            "Advanced"
+          ]
+        }
+      }
+    }
+  }
+}

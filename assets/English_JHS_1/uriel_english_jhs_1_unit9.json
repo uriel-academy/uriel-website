@@ -1,0 +1,499 @@
+{
+  "course_id": "english_b7",
+  "version": "1.0.0",
+  "last_updated_utc": "2025-10-12T00:42:35.899256Z",
+  "unit": {
+    "unit_id": "eng_b7_u9",
+    "title": "Grammar Workshop II: Clauses, Punctuation, and Editing",
+    "overview": "Learners consolidate grammar for clear writing and speaking: independent/dependent clauses, compound and complex sentences, and British punctuation (commas, semicolons, colons, quotation marks). The unit includes a hands‑on editing challenge and a short skit project to apply grammar in dialogue. Lessons are short and gamified to reduce fatigue, with AI feedback and XP hooks.",
+    "estimated_duration_min": 220,
+    "competencies": [
+      "Identify independent and dependent clauses; form compound and complex sentences.",
+      "Use coordinating and subordinating conjunctions accurately (for, and, nor, but, or, yet, so; because, although, when, if).",
+      "Apply British punctuation rules for commas, semicolons, colons, and quotation marks in dialogue.",
+      "Edit paragraphs to correct fragments, run‑ons, and misused punctuation.",
+      "Write and perform a short skit with clear dialogue punctuation and stage directions."
+    ],
+    "values_morals": [
+      "Clarity and honesty in communication build trust.",
+      "Teamwork and respect while scripting and performing."
+    ],
+    "xp_total": 210,
+    "streak_bonus_xp": 5,
+    "parent_report_hooks": [
+      "unit_completion_rate",
+      "quiz_accuracy",
+      "editing_task_status",
+      "speaking_task_submissions",
+      "xp_earned"
+    ],
+    "lessons": [
+      {
+        "lesson_id": "eng_b7_u9_l1",
+        "title": "Clauses & Sentence Types",
+        "estimated_time_min": 40,
+        "xp_reward": 40,
+        "objectives": [
+          "Distinguish independent vs dependent clauses.",
+          "Build simple, compound, and complex sentences."
+        ],
+        "vocabulary": [
+          {
+            "word": "independent clause",
+            "level": "adv",
+            "definition": "A group of words with a subject and verb that can stand alone."
+          },
+          {
+            "word": "dependent clause",
+            "level": "adv",
+            "definition": "A clause that cannot stand alone and begins with a subordinator (e.g., because, although)."
+          },
+          {
+            "word": "complex sentence",
+            "level": "core",
+            "definition": "One independent clause + at least one dependent clause."
+          }
+        ],
+        "moral_link": "Structure your ideas so others can follow your meaning.",
+        "content_blocks": [
+          {
+            "type": "image",
+            "src": "/images/eng_b7/u9/clause_tree.svg",
+            "caption": "Clause tree: roots (subject/verb), branches (connectors)."
+          },
+          {
+            "type": "text",
+            "body": "Examples: Simple—'Ama sings.' Compound—'Ama sings, and Kofi plays.' Complex—'Although Ama is shy, she sings well.'"
+          },
+          {
+            "type": "tip",
+            "body": "If a sentence begins with a dependent clause, add a comma after it in British English style."
+          }
+        ],
+        "interactive": {
+          "classify": {
+            "prompt": "Mark each as Independent (I) or Dependent (D).",
+            "items": [
+              {
+                "text": "because the rain stopped",
+                "label": "D"
+              },
+              {
+                "text": "we cleaned the pitch",
+                "label": "I"
+              },
+              {
+                "text": "although the bell rang",
+                "label": "D"
+              }
+            ],
+            "xp": 10
+          },
+          "ai_task": {
+            "prompt": "Combine: 'The bell rang.' + 'We stayed to tidy the hall.' Create (1) a compound and (2) a complex sentence.",
+            "expected_focus": [
+              "clause control",
+              "punctuation"
+            ],
+            "xp": 15
+          }
+        },
+        "assets": [
+          "/images/eng_b7/u9/clause_tree.svg"
+        ]
+      },
+      {
+        "lesson_id": "eng_b7_u9_l2",
+        "title": "Conjunctions: Coordinating & Subordinating",
+        "estimated_time_min": 40,
+        "xp_reward": 35,
+        "objectives": [
+          "Use coordinating conjunctions (FANBOYS) with comma rules.",
+          "Use subordinators (because, although, when, if, while) to show relationships."
+        ],
+        "vocabulary": [
+          {
+            "word": "coordinating conjunction",
+            "level": "adv",
+            "definition": "Joins equal parts (for, and, nor, but, or, yet, so)."
+          },
+          {
+            "word": "subordinating conjunction",
+            "level": "adv",
+            "definition": "Opens a dependent clause (because, although, when…)."
+          }
+        ],
+        "moral_link": "Choose words that show fair and honest connections.",
+        "content_blocks": [
+          {
+            "type": "image",
+            "src": "/images/eng_b7/u9/conjunction_map.svg",
+            "caption": "Conjunction map: cause, contrast, time, condition."
+          },
+          {
+            "type": "text",
+            "body": "Comma rule: use a comma before a coordinating conjunction joining two independent clauses."
+          }
+        ],
+        "interactive": {
+          "fill_blanks": {
+            "prompt": "Select the best conjunction.",
+            "items": [
+              {
+                "text": "We wanted to help, ___ we were tired.",
+                "options": [
+                  "but",
+                  "because",
+                  "if"
+                ],
+                "answer": "but"
+              },
+              {
+                "text": "___ it rained, the team cleaned the hall.",
+                "options": [
+                  "Although",
+                  "So",
+                  "And"
+                ],
+                "answer": "Although"
+              },
+              {
+                "text": "We will start ___ the bell rings.",
+                "options": [
+                  "when",
+                  "but",
+                  "so"
+                ],
+                "answer": "when"
+              }
+            ],
+            "xp": 10
+          },
+          "ai_task": {
+            "prompt": "Write three complex sentences showing cause, contrast, and time using 'because', 'although', and 'when'.",
+            "expected_focus": [
+              "variety",
+              "comma use"
+            ],
+            "xp": 15
+          }
+        },
+        "assets": [
+          "/images/eng_b7/u9/conjunction_map.svg"
+        ]
+      },
+      {
+        "lesson_id": "eng_b7_u9_l3",
+        "title": "Punctuation Power: Commas, Semicolons, Colons, Quotes",
+        "estimated_time_min": 50,
+        "xp_reward": 45,
+        "objectives": [
+          "Use commas for lists, clause openers, and before coordinating conjunctions in compound sentences.",
+          "Use semicolons to join closely related independent clauses; use colons to introduce lists/explanations.",
+          "Punctuate dialogue with British quotation marks and punctuation placement."
+        ],
+        "vocabulary": [
+          {
+            "word": "semicolon",
+            "level": "adv",
+            "definition": "A punctuation mark (;) linking two related independent clauses."
+          },
+          {
+            "word": "colon",
+            "level": "adv",
+            "definition": "A punctuation mark (:) introducing a list or explanation."
+          },
+          {
+            "word": "quotation marks (British)",
+            "level": "adv",
+            "definition": "Often single quotes for direct speech; punctuation usually outside unless part of the quote."
+          }
+        ],
+        "moral_link": "Good punctuation helps you speak truth clearly on the page.",
+        "content_blocks": [
+          {
+            "type": "text",
+            "body": "Semicolon: 'The pitch was muddy; we cleaned the hall instead.' Colon: 'Bring these items: gloves, brooms, and bags.'"
+          },
+          {
+            "type": "text",
+            "body": "British quotes: 'We will help,' Ama said. Yaw replied, 'That is kind.'"
+          },
+          {
+            "type": "image",
+            "src": "/images/eng_b7/u9/punct_cards.svg",
+            "caption": "When to use comma, semicolon, colon, and quotes."
+          }
+        ],
+        "interactive": {
+          "error_hunt": {
+            "text": "We were ready but the rain was heavy we waited however we still started. 'let’s go', said yaw.",
+            "tasks": [
+              "Fix run‑ons using semicolons and commas with FANBOYS.",
+              "Fix quotation marks and capitalisation (British style)."
+            ],
+            "solution_hint": "Split or link clauses: ';', ', and'. Capitalise dialogue starts; single quotes are standard in UK style.",
+            "xp": 20
+          },
+          "mini_quiz": [
+            {
+              "q": "Select the correct sentence.",
+              "options": [
+                "Bring: gloves, and brooms, and bags.",
+                "Bring these items: gloves, brooms, and bags."
+              ],
+              "answer_index": 1,
+              "xp": 5
+            },
+            {
+              "q": "Choose the best semicolon use.",
+              "options": [
+                "I like reading; and writing.",
+                "I like reading; I also enjoy writing."
+              ],
+              "answer_index": 1,
+              "xp": 5
+            }
+          ]
+        },
+        "assets": [
+          "/images/eng_b7/u9/punct_cards.svg"
+        ]
+      },
+      {
+        "lesson_id": "eng_b7_u9_l4",
+        "title": "Editing Challenge: Fragments & Run‑ons",
+        "estimated_time_min": 45,
+        "xp_reward": 40,
+        "objectives": [
+          "Detect and fix sentence fragments and run‑on sentences.",
+          "Apply punctuation rules consistently."
+        ],
+        "vocabulary": [
+          {
+            "word": "fragment",
+            "level": "adv",
+            "definition": "A group of words punctuated as a sentence but lacking a complete thought."
+          },
+          {
+            "word": "run‑on",
+            "level": "adv",
+            "definition": "Two or more independent clauses improperly joined."
+          }
+        ],
+        "moral_link": "Finish what you start—complete ideas show responsibility.",
+        "content_blocks": [
+          {
+            "type": "text",
+            "body": "Strategies: add missing subject/verb, join clauses with semicolons or conjunctions, or split into sentences."
+          }
+        ],
+        "interactive": {
+          "ai_task": {
+            "prompt": "Paste a paragraph of your writing. Ask the AI to flag fragments and run‑ons, explain the issue, and offer two corrected versions.",
+            "expected_focus": [
+              "self‑editing",
+              "punctuation"
+            ],
+            "xp": 20
+          },
+          "quick_check": [
+            {
+              "q": "Which is a fragment?",
+              "options": [
+                "Because the rain stopped.",
+                "The rain stopped, and we played.",
+                "We played when the rain stopped.",
+                "Although it rained, we stayed inside."
+              ],
+              "answer_index": 0,
+              "xp": 5
+            }
+          ]
+        }
+      },
+      {
+        "lesson_id": "eng_b7_u9_l5",
+        "title": "Project: Write & Perform a Skit",
+        "estimated_time_min": 45,
+        "xp_reward": 50,
+        "objectives": [
+          "Draft a 1–2 page skit script with clear stage directions and correctly punctuated dialogue.",
+          "Perform the skit (60–90 seconds per group) with clear pronunciation and respectful teamwork."
+        ],
+        "vocabulary": [
+          {
+            "word": "stage directions",
+            "level": "adv",
+            "definition": "Instructions in a script about actions, setting, or tone."
+          },
+          {
+            "word": "dialogue",
+            "level": "core",
+            "definition": "Conversation between characters."
+          }
+        ],
+        "moral_link": "Use teamwork and honesty to create a performance that uplifts others.",
+        "content_blocks": [
+          {
+            "type": "image",
+            "src": "/images/eng_b7/u9/skit_layout.svg",
+            "caption": "Skit script layout with character names and stage directions."
+          },
+          {
+            "type": "tip",
+            "body": "Keep scenes focused; use conjunctions to link ideas and punctuation to guide readers."
+          }
+        ],
+        "interactive": {
+          "guided_writing": {
+            "scaffold": [
+              "Title and characters",
+              "Setting and stage directions",
+              "Scene 1 (conflict introduced)",
+              "Scene 2 (rising action with clear dialogue punctuation)",
+              "Resolution and moral line"
+            ],
+            "submission_type": "text",
+            "ai_feedback": [
+              "Dialogue punctuation (British quotes)",
+              "Clause variety (compound/complex)",
+              "Punctuation accuracy",
+              "Clarity and teamwork notes"
+            ],
+            "xp": 25
+          },
+          "speaking_task": {
+            "prompt": "Perform your skit (group audio/video 60–90 seconds). Speak clearly; respect turn‑taking.",
+            "submission_type": "audio_or_video",
+            "xp": 25
+          }
+        },
+        "assets": [
+          "/images/eng_b7/u9/skit_layout.svg"
+        ]
+      }
+    ],
+    "assessments": {
+      "quiz_mcq": [
+        {
+          "id": "u9_q1",
+          "q": "A dependent clause is:",
+          "options": [
+            "A complete sentence that stands alone.",
+            "A clause that needs an independent clause to be complete."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u9_q2",
+          "q": "Choose the correctly punctuated compound sentence.",
+          "options": [
+            "We cleaned the lab, and we labelled the shelves.",
+            "We cleaned the lab and, we labelled the shelves."
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "u9_q3",
+          "q": "Select the best semicolon use.",
+          "options": [
+            "Ama practised; because the test was near.",
+            "Ama practised; she wanted to improve."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u9_q4",
+          "q": "Which sentence uses a colon correctly?",
+          "options": [
+            "Bring: gloves; brooms; bags.",
+            "Bring these items: gloves, brooms, bags."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u9_q5",
+          "q": "British dialogue punctuation is correct in:",
+          "options": [
+            "'We will help', said Ama.",
+            "'We will help,' said Ama."
+          ],
+          "answer_index": 1
+        }
+      ],
+      "editing_task": {
+        "id": "u9_e1",
+        "prompt": "Edit a 120–150 word paragraph to fix fragments, run‑ons, and punctuation (comma/semicolon/colon/quotes) errors. Provide before-and-after versions.",
+        "rubric_ref": "rubric_editing_u9"
+      },
+      "speaking_task": {
+        "id": "u9_s1",
+        "prompt": "Record your group’s skit (60–90 seconds). Ensure clear speech, correct dialogue punctuation in the script, and respectful teamwork.",
+        "rubric_ref": "rubric_skit_u9"
+      },
+      "rubrics": {
+        "rubric_editing_u9": {
+          "criteria": [
+            {
+              "name": "Error Detection",
+              "scale": 4,
+              "descriptor": "Correctly identifies fragments, run‑ons, and punctuation issues."
+            },
+            {
+              "name": "Corrections & Explanations",
+              "scale": 4,
+              "descriptor": "Effective fixes with brief reasons."
+            },
+            {
+              "name": "Clarity & Flow",
+              "scale": 4,
+              "descriptor": "Revised text reads smoothly with accurate clause links."
+            },
+            {
+              "name": "Mechanics (UK)",
+              "scale": 4,
+              "descriptor": "Correct British quotation, spelling, and punctuation."
+            }
+          ],
+          "proficiency_labels": [
+            "Beginning",
+            "Developing",
+            "Proficient",
+            "Advanced"
+          ]
+        },
+        "rubric_skit_u9": {
+          "criteria": [
+            {
+              "name": "Script Quality",
+              "scale": 4,
+              "descriptor": "Clear structure, correct dialogue punctuation, varied clauses."
+            },
+            {
+              "name": "Delivery",
+              "scale": 4,
+              "descriptor": "Audible, paced speech; teamwork and turn‑taking."
+            },
+            {
+              "name": "Language Accuracy",
+              "scale": 4,
+              "descriptor": "Grammar and punctuation support understanding."
+            },
+            {
+              "name": "Engagement & Moral",
+              "scale": 4,
+              "descriptor": "Performance uplifts; moral/theme is clear."
+            }
+          ],
+          "proficiency_labels": [
+            "Beginning",
+            "Developing",
+            "Proficient",
+            "Advanced"
+          ]
+        }
+      }
+    }
+  }
+}

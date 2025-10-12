@@ -106,6 +106,10 @@ class RankProgressCard extends StatelessWidget {
         : 0;
     final rankService = LeaderboardRankService();
 
+    // Soft navy color palette
+    const cardColor = Color(0xFF4A5568); // Soft slate gray/navy
+    const accentColor = Color(0xFF2D3748); // Darker navy
+    
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
@@ -113,14 +117,14 @@ class RankProgressCard extends StatelessWidget {
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            currentRank.getTierColor(),
-            currentRank.getTierColor().withOpacity(0.7),
+            cardColor,
+            accentColor,
           ],
         ),
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
-            color: currentRank.color.withOpacity(0.3),
+            color: cardColor.withOpacity(0.3),
             blurRadius: 15,
             offset: const Offset(0, 8),
           ),
@@ -161,10 +165,36 @@ class RankProgressCard extends StatelessWidget {
                   ],
                 ),
               ),
-              RankBadgeWidget(
-                rank: currentRank,
-                size: 60,
-                showLabel: false,
+              // Rank Badge as CircleAvatar with border
+              Container(
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                    color: Colors.white.withOpacity(0.4),
+                    width: 2,
+                  ),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      blurRadius: 8,
+                      offset: const Offset(0, 4),
+                    ),
+                  ],
+                ),
+                child: CircleAvatar(
+                  radius: 30,
+                  backgroundColor: Colors.white,
+                  backgroundImage: currentRank.imageUrl.isNotEmpty
+                      ? CachedNetworkImageProvider(currentRank.imageUrl)
+                      : null,
+                  child: currentRank.imageUrl.isEmpty
+                      ? Icon(
+                          Icons.emoji_events,
+                          color: currentRank.getTierColor(),
+                          size: 30,
+                        )
+                      : null,
+                ),
               ),
             ],
           ),

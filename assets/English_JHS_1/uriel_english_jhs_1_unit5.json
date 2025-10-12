@@ -1,0 +1,459 @@
+{
+  "course_id": "english_b7",
+  "version": "1.0.0",
+  "last_updated_utc": "2025-10-12T00:16:39.305724Z",
+  "unit": {
+    "unit_id": "eng_b7_u5",
+    "title": "Listening & Speaking II: Storytelling, Debate, and Pronunciation",
+    "overview": "Learners strengthen oral communication through Ghanaian storytelling, respectful debate, and a British English pronunciation lab (word stress, connected speech). Lessons are short to avoid fatigue and include audio tasks, AI feedback, and XP hooks. Moral focus: speak truth in love; listen with respect.",
+    "estimated_duration_min": 210,
+    "competencies": [
+      "Plan and tell a short story with clear beginning, middle, and end.",
+      "Use voice features (pace, volume, intonation) and correct word stress to improve clarity.",
+      "Participate in a short debate using claims, reasons, and evidence with respectful language.",
+      "Listen for key ideas and supporting details in short speeches and summarise accurately.",
+      "Deliver a 45–60 second presentation with clear structure and polite register."
+    ],
+    "values_morals": [
+      "Respectful dialogue; humility in disagreement; truthfulness in claims.",
+      "Proverbs 15:1 – A gentle answer turns away wrath."
+    ],
+    "xp_total": 190,
+    "streak_bonus_xp": 5,
+    "parent_report_hooks": [
+      "unit_completion_rate",
+      "listening_accuracy",
+      "speaking_task_submissions",
+      "ai_task_completions",
+      "xp_earned"
+    ],
+    "lessons": [
+      {
+        "lesson_id": "eng_b7_u5_l1",
+        "title": "Storytelling Techniques (Ghanaian Context)",
+        "estimated_time_min": 40,
+        "xp_reward": 40,
+        "objectives": [
+          "Use story structure (beginning–middle–end) with a clear theme or lesson.",
+          "Apply dialogue tags and descriptive details to bring scenes to life."
+        ],
+        "vocabulary": [
+          {
+            "word": "narrator",
+            "level": "core",
+            "definition": "The voice telling the story."
+          },
+          {
+            "word": "pacing",
+            "level": "adv",
+            "definition": "How fast or slow a story moves."
+          },
+          {
+            "word": "dialogue tag",
+            "level": "adv",
+            "definition": "Words that tell who is speaking and how (e.g., 'he whispered')."
+          }
+        ],
+        "moral_link": "Use stories to teach wisdom and encourage good character.",
+        "content_blocks": [
+          {
+            "type": "text",
+            "body": "Plan with a story map: setting → problem → rising action → solution → lesson."
+          },
+          {
+            "type": "image",
+            "src": "/images/eng_b7/u5/story_map.svg",
+            "caption": "Simple story map."
+          },
+          {
+            "type": "tip",
+            "body": "Keep dialogue short and clear; use actions and gestures to show feelings."
+          }
+        ],
+        "interactive": {
+          "ai_task": {
+            "prompt": "Write a 6–8 sentence story outline (bullets) set in your community with a moral lesson.",
+            "expected_focus": [
+              "structure",
+              "theme clarity"
+            ],
+            "xp": 15
+          },
+          "speaking_task": {
+            "prompt": "Record a 45-second story based on your outline. Use dialogue and a clear moral.",
+            "submission_type": "audio",
+            "xp": 15
+          }
+        },
+        "assets": [
+          "/images/eng_b7/u5/story_map.svg"
+        ]
+      },
+      {
+        "lesson_id": "eng_b7_u5_l2",
+        "title": "Pronunciation Lab: Word Stress & Intonation (British)",
+        "estimated_time_min": 40,
+        "xp_reward": 35,
+        "objectives": [
+          "Identify stressed syllables in common words and pronounce them clearly.",
+          "Use rising and falling intonation patterns to show questions and statements."
+        ],
+        "vocabulary": [
+          {
+            "word": "stress",
+            "level": "core",
+            "definition": "The emphasis placed on a syllable in a word."
+          },
+          {
+            "word": "intonation",
+            "level": "adv",
+            "definition": "The rise and fall of the voice when speaking."
+          },
+          {
+            "word": "schwa",
+            "level": "adv",
+            "definition": "The weak vowel sound /ə/ in unstressed syllables (e.g., 'teacher' /ˈtiːtʃə/)."
+          }
+        ],
+        "moral_link": "Clarity honours your listener; speak so others can understand.",
+        "content_blocks": [
+          {
+            "type": "text",
+            "body": "Stress examples (British): TA‑ble, TEA‑cher, in‑FOR‑ma‑tion. Intonation: rising for yes/no questions; falling for statements."
+          },
+          {
+            "type": "audio",
+            "src": "/audio/eng_b7/u5/stress_examples.mp3",
+            "caption": "Model stress and intonation patterns."
+          }
+        ],
+        "interactive": {
+          "stress_marking": {
+            "prompt": "Tap the stressed syllable: ‘information’, ‘photograph’, ‘economy’.",
+            "items": [
+              {
+                "word": "information",
+                "stress_index": 2
+              },
+              {
+                "word": "photograph",
+                "stress_index": 0
+              },
+              {
+                "word": "economy",
+                "stress_index": 1
+              }
+            ],
+            "xp": 10
+          },
+          "speaking_task": {
+            "prompt": "Record yourself reading three sentences: one statement, one yes/no question, one wh‑question. Focus on intonation.",
+            "submission_type": "audio",
+            "xp": 15
+          }
+        },
+        "assets": [
+          "/audio/eng_b7/u5/stress_examples.mp3"
+        ]
+      },
+      {
+        "lesson_id": "eng_b7_u5_l3",
+        "title": "Respectful Debate: Claims, Reasons, Evidence",
+        "estimated_time_min": 45,
+        "xp_reward": 40,
+        "objectives": [
+          "State a clear claim and support it with reasons and evidence.",
+          "Use respectful language for agreement and disagreement."
+        ],
+        "vocabulary": [
+          {
+            "word": "claim",
+            "level": "core",
+            "definition": "A statement that can be argued for or against."
+          },
+          {
+            "word": "evidence",
+            "level": "core",
+            "definition": "Facts or examples supporting a claim."
+          },
+          {
+            "word": "counter‑argument",
+            "level": "adv",
+            "definition": "An argument opposed to your claim."
+          }
+        ],
+        "moral_link": "Speak the truth in love; listen before you answer.",
+        "content_blocks": [
+          {
+            "type": "text",
+            "body": "Sentence frames: 'I agree because…', 'I see your point; however…', 'A better reason is…'"
+          },
+          {
+            "type": "image",
+            "src": "/images/eng_b7/u5/debate_cards.svg",
+            "caption": "Debate cue cards for polite language."
+          }
+        ],
+        "interactive": {
+          "classify": {
+            "prompt": "Identify each as Claim (C), Reason (R), or Evidence (E).",
+            "items": [
+              {
+                "text": "Schools should have reading clubs.",
+                "label": "C"
+              },
+              {
+                "text": "They improve vocabulary and confidence.",
+                "label": "R"
+              },
+              {
+                "text": "In a 2023 survey, members read 20% more books.",
+                "label": "E"
+              }
+            ],
+            "xp": 10
+          },
+          "ai_task": {
+            "prompt": "Write a 3‑turn mini‑debate: your claim, a counter‑argument, and your reply using polite language.",
+            "expected_focus": [
+              "respectful tone",
+              "evidence"
+            ],
+            "xp": 15
+          }
+        },
+        "assets": [
+          "/images/eng_b7/u5/debate_cards.svg"
+        ]
+      },
+      {
+        "lesson_id": "eng_b7_u5_l4",
+        "title": "Listening Comprehension: Short Speech",
+        "estimated_time_min": 45,
+        "xp_reward": 40,
+        "objectives": [
+          "Listen for main idea, key details, and speaker’s tone.",
+          "Take brief notes and summarise in 2–3 sentences."
+        ],
+        "vocabulary": [
+          {
+            "word": "tone",
+            "level": "adv",
+            "definition": "The speaker’s attitude or feeling."
+          },
+          {
+            "word": "note‑taking",
+            "level": "core",
+            "definition": "Writing short points to remember information."
+          }
+        ],
+        "moral_link": "Good listening shows respect and leads to understanding.",
+        "content_blocks": [
+          {
+            "type": "audio",
+            "src": "/audio/eng_b7/u5/short_speech_school_clean_up.mp3",
+            "caption": "Short speech: School clean‑up campaign."
+          },
+          {
+            "type": "tip",
+            "body": "Listen twice if possible: first for main idea, second for details."
+          }
+        ],
+        "interactive": {
+          "comprehension": [
+            {
+              "q": "What is the main idea of the speech?",
+              "options": [
+                "Announcing a sports competition.",
+                "Encouraging a school clean‑up campaign with clear steps.",
+                "Selling items at the market.",
+                "Explaining exam rules only."
+              ],
+              "answer_index": 1,
+              "xp": 5
+            },
+            {
+              "q": "Which detail supports the main idea?",
+              "options": [
+                "The date and time for the clean‑up.",
+                "The speaker’s favourite food.",
+                "A story about a pet.",
+                "The price of a broom in town."
+              ],
+              "answer_index": 0,
+              "xp": 5
+            },
+            {
+              "q": "What is the speaker’s tone?",
+              "options": [
+                "angry",
+                "persuasive and respectful",
+                "fearful",
+                "sleepy"
+              ],
+              "answer_index": 1,
+              "xp": 5
+            }
+          ],
+          "summary_task": {
+            "prompt": "Write a 2–3 sentence summary including the main idea and two key details.",
+            "submission_type": "text",
+            "xp": 10
+          }
+        },
+        "assets": [
+          "/audio/eng_b7/u5/short_speech_school_clean_up.mp3"
+        ]
+      },
+      {
+        "lesson_id": "eng_b7_u5_l5",
+        "title": "Presentation Skills: Speak with Confidence",
+        "estimated_time_min": 40,
+        "xp_reward": 35,
+        "objectives": [
+          "Organise a 45–60 second presentation with clear opening, points, and closing.",
+          "Use eye contact, posture, and voice control to enhance delivery."
+        ],
+        "vocabulary": [
+          {
+            "word": "posture",
+            "level": "core",
+            "definition": "How you hold your body when standing or sitting."
+          },
+          {
+            "word": "projection",
+            "level": "adv",
+            "definition": "Sending your voice clearly so the audience can hear."
+          }
+        ],
+        "moral_link": "Confidence grows with practice; encourage others as you speak.",
+        "content_blocks": [
+          {
+            "type": "text",
+            "body": "Use a simple outline: greeting → main idea → two points with examples → conclusion with call to action."
+          },
+          {
+            "type": "image",
+            "src": "/images/eng_b7/u5/presentation_outline.svg",
+            "caption": "Presentation outline card."
+          }
+        ],
+        "interactive": {
+          "ai_task": {
+            "prompt": "Draft a 4‑point outline for a 60‑second talk encouraging classmates to read daily.",
+            "expected_focus": [
+              "clarity",
+              "persuasion",
+              "polite register"
+            ],
+            "xp": 15
+          },
+          "speaking_task": {
+            "prompt": "Record your 45–60 second presentation using your outline. Focus on posture and voice.",
+            "submission_type": "audio",
+            "xp": 15
+          }
+        },
+        "assets": [
+          "/images/eng_b7/u5/presentation_outline.svg"
+        ]
+      }
+    ],
+    "assessments": {
+      "quiz_mcq": [
+        {
+          "id": "u5_q1",
+          "q": "A clear story usually includes:",
+          "options": [
+            "Random scenes only",
+            "Beginning–middle–end",
+            "Only dialogue",
+            "Only description"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u5_q2",
+          "q": "In British English, the stressed syllable in 'information' is:",
+          "options": [
+            "IN‑formation",
+            "in‑FOR‑ma‑tion",
+            "in‑for‑MA‑tion",
+            "in‑for‑ma‑TION"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u5_q3",
+          "q": "Which sentence shows respectful disagreement?",
+          "options": [
+            "That’s wrong!",
+            "I see your point; however, the data suggest a different result.",
+            "You don’t know anything.",
+            "Be quiet."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u5_q4",
+          "q": "Listening for key details helps you:",
+          "options": [
+            "Ignore the main idea",
+            "Remember facts and steps accurately",
+            "Speak louder",
+            "Avoid summarising"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u5_q5",
+          "q": "A strong 60‑second presentation should include:",
+          "options": [
+            "A greeting, two clear points with examples, and a closing.",
+            "Only jokes.",
+            "Long quotations only.",
+            "Shouting for attention."
+          ],
+          "answer_index": 0
+        }
+      ],
+      "speaking_task": {
+        "id": "u5_s1",
+        "prompt": "Deliver a 45–60 second persuasive talk on a school improvement idea (e.g., reading club, cleanliness). Use respectful language and clear structure.",
+        "rubric_ref": "rubric_speaking_u5"
+      },
+      "rubrics": {
+        "rubric_speaking_u5": {
+          "criteria": [
+            {
+              "name": "Structure",
+              "scale": 4,
+              "descriptor": "Clear opening, points, and conclusion."
+            },
+            {
+              "name": "Delivery",
+              "scale": 4,
+              "descriptor": "Audible volume, steady pace, appropriate intonation."
+            },
+            {
+              "name": "Language",
+              "scale": 4,
+              "descriptor": "Polite register; accurate pronunciation and word stress."
+            },
+            {
+              "name": "Engagement",
+              "scale": 4,
+              "descriptor": "Eye contact (camera), posture, and call to action."
+            }
+          ],
+          "proficiency_labels": [
+            "Beginning",
+            "Developing",
+            "Proficient",
+            "Advanced"
+          ]
+        }
+      }
+    }
+  }
+}

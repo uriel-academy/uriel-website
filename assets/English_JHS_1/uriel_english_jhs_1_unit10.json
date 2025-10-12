@@ -1,0 +1,493 @@
+{
+  "course_id": "english_b7",
+  "version": "1.0.0",
+  "last_updated_utc": "2025-10-12T00:48:24.818721Z",
+  "unit": {
+    "unit_id": "eng_b7_u10",
+    "title": "Revision & Assessment (BECE-style Exam)",
+    "overview": "Capstone revision with BECE-style exam: 40 Multiple-Choice Questions sampling Units 1–9 (communication, grammar, reading, writing conventions, listening context) and one essay. Designed for digital delivery with anti-fatigue pacing (sections of 10 MCQs) and XP/badge logic.",
+    "estimated_duration_min": 240,
+    "competencies": [
+      "Demonstrate cumulative mastery of B7 English outcomes across listening/speaking, reading, grammar, and writing.",
+      "Apply British English conventions in usage, punctuation, and spelling.",
+      "Write a coherent essay with clear organisation, development, and moral awareness."
+    ],
+    "values_morals": [
+      "Excellence through diligence and honesty (no malpractice).",
+      "Encouragement and humility in success or failure (Proverbs 24:16)."
+    ],
+    "xp_total": 250,
+    "streak_bonus_xp": 5,
+    "parent_report_hooks": [
+      "unit_completion_rate",
+      "quiz_accuracy",
+      "writing_submission_status",
+      "xp_earned"
+    ],
+    "lessons": [
+      {
+        "lesson_id": "eng_b7_u10_rev_cards",
+        "title": "Quick Revision Cards",
+        "estimated_time_min": 30,
+        "xp_reward": 20,
+        "content_blocks": [
+          {
+            "type": "text",
+            "body": "Revise: greetings/register; nouns/pronouns; adjective order; verbs/agreement; prepositions (at/on/in)."
+          },
+          {
+            "type": "text",
+            "body": "Revise: reading strategies (main idea, context clues, text features, bias); poetry devices; clauses & punctuation."
+          },
+          {
+            "type": "tip",
+            "body": "Calm Mode: breathe in (4), hold (4), out (6) before the exam. Pray/reflect briefly; be confident."
+          }
+        ]
+      }
+    ],
+    "assessments": {
+      "exam_mcq_40": [
+        {
+          "id": "u10_q1",
+          "q": "Which greeting is most respectful to an elder in the morning?",
+          "options": [
+            "Hey!",
+            "Good morning, Sir.",
+            "Yo!",
+            "Hiya"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u10_q2",
+          "q": "A pronoun’s antecedent is:",
+          "options": [
+            "The noun it replaces.",
+            "A verb it modifies.",
+            "An adjective it describes.",
+            "A sentence type."
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "u10_q3",
+          "q": "Choose the correctly punctuated sentence.",
+          "options": [
+            "my name is yaw i attend adabraka jhs",
+            "My name is Yaw; I attend Adabraka JHS."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u10_q4",
+          "q": "‘Hospitality’ is best shown when someone:",
+          "options": [
+            "Offers help and listens kindly.",
+            "Speaks loudly.",
+            "Ignores visitors.",
+            "Leaves early."
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "u10_q5",
+          "q": "Which sentence shows correct register for a school letter?",
+          "options": [
+            "Yo, let me use the hall.",
+            "I am writing to request the use of the hall."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u10_q6",
+          "q": "Which is an abstract noun?",
+          "options": [
+            "table",
+            "Ghana",
+            "honesty",
+            "team"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "u10_q7",
+          "q": "Correct adjective order:",
+          "options": [
+            "a Ghanaian blue new small bag",
+            "a small new blue Ghanaian bag"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u10_q8",
+          "q": "Best comparative form:",
+          "options": [
+            "more kinder",
+            "kinder",
+            "kindest",
+            "most kind"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u10_q9",
+          "q": "Subject–verb agreement is correct in:",
+          "options": [
+            "The team win their match.",
+            "The team wins its match."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u10_q10",
+          "q": "Choose the best transition for addition:",
+          "options": [
+            "However",
+            "Therefore",
+            "Moreover",
+            "Suddenly"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "u10_q11",
+          "q": "The main idea is:",
+          "options": [
+            "What the text is mostly about.",
+            "A picture caption.",
+            "A joke.",
+            "A random fact."
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "u10_q12",
+          "q": "A context clue using contrast is signalled by:",
+          "options": [
+            "such as",
+            "means",
+            "but/unlike",
+            "for example"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "u10_q13",
+          "q": "Which sentence shows an inference?",
+          "options": [
+            "Kojo returned the purse.",
+            "Kojo values honesty more than money."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u10_q14",
+          "q": "A strong 1–2 sentence summary should:",
+          "options": [
+            "Retell all details.",
+            "State the main idea with key points."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u10_q15",
+          "q": "Which evidence best supports a theme of integrity?",
+          "options": [
+            "He hung the purse where all could see and returned it.",
+            "It was sunset."
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "u10_q16",
+          "q": "Correct pair for ‘Dear Sir/Madam,’ is:",
+          "options": [
+            "Yours sincerely,",
+            "Yours faithfully,"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u10_q17",
+          "q": "Informal sign‑off:",
+          "options": [
+            "Your friend,",
+            "Your obedient servant,"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "u10_q18",
+          "q": "A diary entry typically uses:",
+          "options": [
+            "First person and time order.",
+            "Third person only."
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "u10_q19",
+          "q": "Safe digital etiquette includes:",
+          "options": [
+            "Sharing passwords",
+            "Asking before sharing images",
+            "Forwarding rumours",
+            "Typing in all caps"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u10_q20",
+          "q": "Formal letter layout (first element):",
+          "options": [
+            "Sender’s address",
+            "Receiver’s address",
+            "Salutation",
+            "Signature"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "u10_q21",
+          "q": "A clear story usually includes:",
+          "options": [
+            "Beginning–middle–end",
+            "Only dialogue"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "u10_q22",
+          "q": "British stress in ‘information’:",
+          "options": [
+            "IN‑formation",
+            "in‑FOR‑ma‑tion",
+            "in‑for‑MA‑tion",
+            "in‑for‑ma‑TION"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u10_q23",
+          "q": "Respectful disagreement:",
+          "options": [
+            "That’s wrong!",
+            "I see your point; however…",
+            "Be quiet.",
+            "You know nothing."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u10_q24",
+          "q": "Listening for key details helps you:",
+          "options": [
+            "Remember steps accurately.",
+            "Avoid summarising."
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "u10_q25",
+          "q": "Choose the correct tense: ‘Every day, the prefects __ the hall.’",
+          "options": [
+            "clean",
+            "cleaned",
+            "will clean"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "u10_q26",
+          "q": "Pick the correct option: ‘We arrived __ 7:30 a.m.’",
+          "options": [
+            "on",
+            "at",
+            "in",
+            "by"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u10_q27",
+          "q": "Select the correct preposition: ‘Yaw lives __ Kumasi.’",
+          "options": [
+            "at",
+            "in",
+            "on",
+            "into"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u10_q28",
+          "q": "Avoiding a tense shift:",
+          "options": [
+            "We cleaned the lab and we present the report.",
+            "We cleaned the lab and presented the report."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u10_q29",
+          "q": "ABAB rhyme means:",
+          "options": [
+            "1 rhymes with 3; 2 with 4",
+            "1 with 2; 3 with 4"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "u10_q30",
+          "q": "Which line is a metaphor?",
+          "options": [
+            "Her eyes are stars in the night.",
+            "Her eyes shine like stars."
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "u10_q31",
+          "q": "‘Market mothers murmur’ shows:",
+          "options": [
+            "alliteration",
+            "assonance"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "u10_q32",
+          "q": "A strong performance includes:",
+          "options": [
+            "Clear pace, intonation, and pauses",
+            "Shouting the whole time"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "u10_q33",
+          "q": "Skimming helps you:",
+          "options": [
+            "Get the general idea fast",
+            "Find one date only"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "u10_q34",
+          "q": "A text feature explaining parts of a process:",
+          "options": [
+            "Diagram",
+            "Stanza",
+            "Simile",
+            "Rhyme"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "u10_q35",
+          "q": "An example of bias language:",
+          "options": [
+            "Everyone knows it is useless!",
+            "It began in 2023."
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "u10_q36",
+          "q": "A credible source is usually:",
+          "options": [
+            "Recent, known organisation, balanced language",
+            "Anonymous with extreme language"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "u10_q37",
+          "q": "A dependent clause:",
+          "options": [
+            "Can stand alone.",
+            "Needs an independent clause."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u10_q38",
+          "q": "Correct compound sentence:",
+          "options": [
+            "We cleaned the lab, and we labelled the shelves.",
+            "We cleaned the lab and, we labelled the shelves."
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "u10_q39",
+          "q": "Best semicolon use:",
+          "options": [
+            "Ama practised; she wanted to improve.",
+            "Ama practised; because the test was near."
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "u10_q40",
+          "q": "British dialogue punctuation:",
+          "options": [
+            "'We will help,' said Ama.",
+            "'We will help', said Ama."
+          ],
+          "answer_index": 0
+        }
+      ],
+      "essay": {
+        "id": "u10_essay",
+        "choices": [
+          "Formal letter: Write to your headteacher requesting support for a reading club. Include three reasons and propose a schedule.",
+          "Narrative: Tell a true story about a time when honesty brought a good result at school or home (150–200 words).",
+          "Expository: Explain two ways your school can save water and improve health. Give examples and a concluding recommendation."
+        ],
+        "word_count_range": "150–200",
+        "rubric_ref": "rubric_essay_u10"
+      },
+      "rubrics": {
+        "rubric_essay_u10": {
+          "criteria": [
+            {
+              "name": "Content & Development",
+              "scale": 5,
+              "descriptor": "Clear focus with well‑developed points and examples."
+            },
+            {
+              "name": "Organisation",
+              "scale": 5,
+              "descriptor": "Logical paragraphs; effective opening and conclusion."
+            },
+            {
+              "name": "Language Accuracy",
+              "scale": 5,
+              "descriptor": "Grammar, punctuation, and British spelling are accurate."
+            },
+            {
+              "name": "Cohesion",
+              "scale": 5,
+              "descriptor": "Linking words and pronouns guide the reader smoothly."
+            },
+            {
+              "name": "Register & Moral Awareness",
+              "scale": 5,
+              "descriptor": "Appropriate tone; values are expressed respectfully."
+            }
+          ],
+          "proficiency_labels": [
+            "Beginning",
+            "Developing",
+            "Proficient",
+            "Advanced",
+            "Excellent"
+          ]
+        }
+      }
+    }
+  }
+}

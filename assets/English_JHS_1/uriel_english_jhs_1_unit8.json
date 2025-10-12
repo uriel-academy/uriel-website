@@ -1,0 +1,485 @@
+{
+  "course_id": "english_b7",
+  "version": "1.0.0",
+  "last_updated_utc": "2025-10-12T00:34:35.209643Z",
+  "unit": {
+    "unit_id": "eng_b7_u8",
+    "title": "Reading for Meaning II: Longer Texts & Critical Reading",
+    "overview": "Learners tackle slightly longer texts (multi-paragraph non-fiction and informational articles) and practise strategies for skimming, scanning, recognising text features, distinguishing fact from opinion, spotting bias, and evaluating sources. Lessons are short, interactive, and NaCCA-aligned with Ghanaian contexts and Christian moral framing (truthfulness, diligence, stewardship).",
+    "estimated_duration_min": 220,
+    "competencies": [
+      "Use skimming and scanning to locate main ideas, headings, and key facts.",
+      "Interpret common non-fiction text features (headings, subheadings, captions, charts, diagrams).",
+      "Differentiate facts from opinions and recognise bias or persuasive techniques.",
+      "Evaluate credibility of a short passage or source using simple criteria (author, date, purpose).",
+      "Synthesize information across two short texts into a clear summary or comparison."
+    ],
+    "values_morals": [
+      "Seek truth and fairness when reading and sharing information.",
+      "Stewardship: use information to improve school and community life."
+    ],
+    "xp_total": 200,
+    "streak_bonus_xp": 5,
+    "parent_report_hooks": [
+      "unit_completion_rate",
+      "quiz_accuracy",
+      "summary_submission_status",
+      "ai_task_completions",
+      "xp_earned"
+    ],
+    "lessons": [
+      {
+        "lesson_id": "eng_b7_u8_l1",
+        "title": "Text Features: Headings, Captions, & Diagrams",
+        "estimated_time_min": 40,
+        "xp_reward": 40,
+        "objectives": [
+          "Identify and explain how headings, subheadings, captions, and charts support understanding.",
+          "Use features to predict and verify main ideas."
+        ],
+        "vocabulary": [
+          {
+            "word": "caption",
+            "level": "core",
+            "definition": "A short explanation below an image or chart."
+          },
+          {
+            "word": "diagram",
+            "level": "core",
+            "definition": "A labelled drawing that explains how something works."
+          },
+          {
+            "word": "subheading",
+            "level": "core",
+            "definition": "A smaller title under a heading that introduces a section."
+          }
+        ],
+        "moral_link": "Orderly presentation helps others learn well.",
+        "content_blocks": [
+          {
+            "type": "image",
+            "src": "/images/eng_b7/u8/text_features_poster.svg",
+            "caption": "Common non‑fiction text features."
+          },
+          {
+            "type": "text",
+            "body": "Scan headings first. Read captions. Check diagrams for steps or parts. Then read paragraphs for details."
+          }
+        ],
+        "interactive": {
+          "classify": {
+            "prompt": "Match each feature to its function.",
+            "items": [
+              {
+                "text": "Caption",
+                "label": "Explains an image briefly"
+              },
+              {
+                "text": "Diagram",
+                "label": "Shows parts/steps with labels"
+              },
+              {
+                "text": "Subheading",
+                "label": "Introduces a section"
+              }
+            ],
+            "xp": 10
+          },
+          "quick_check": [
+            {
+              "q": "Which feature best explains a process at a glance?",
+              "options": [
+                "Diagram",
+                "Glossary",
+                "Index",
+                "Footnote"
+              ],
+              "answer_index": 0,
+              "xp": 5
+            }
+          ]
+        },
+        "assets": [
+          "/images/eng_b7/u8/text_features_poster.svg"
+        ]
+      },
+      {
+        "lesson_id": "eng_b7_u8_l2",
+        "title": "Skimming & Scanning Strategies",
+        "estimated_time_min": 40,
+        "xp_reward": 35,
+        "objectives": [
+          "Skim for main idea (titles, first sentences, key words).",
+          "Scan for specific facts (dates, names, numbers)."
+        ],
+        "vocabulary": [
+          {
+            "word": "skim",
+            "level": "core",
+            "definition": "Read quickly to understand the general idea."
+          },
+          {
+            "word": "scan",
+            "level": "core",
+            "definition": "Look quickly for a specific piece of information."
+          }
+        ],
+        "moral_link": "Use time wisely: choose the right reading strategy for the task.",
+        "content_blocks": [
+          {
+            "type": "text",
+            "body": "Skim: title → headings → first sentences → keywords. Scan: move your eyes down the page for numbers, dates, names."
+          },
+          {
+            "type": "audio",
+            "src": "/audio/eng_b7/u8/skim_scan_tips.mp3",
+            "caption": "Skim/scan in action."
+          }
+        ],
+        "interactive": {
+          "ai_task": {
+            "prompt": "Given a multi‑paragraph article, first write one sentence with the main idea (skim). Then list three facts with numbers or names (scan).",
+            "expected_focus": [
+              "strategy use",
+              "concise writing"
+            ],
+            "xp": 15
+          }
+        },
+        "assets": [
+          "/audio/eng_b7/u8/skim_scan_tips.mp3"
+        ]
+      },
+      {
+        "lesson_id": "eng_b7_u8_l3",
+        "title": "Fact vs Opinion and Spotting Bias",
+        "estimated_time_min": 45,
+        "xp_reward": 40,
+        "objectives": [
+          "Distinguish factual statements from opinions.",
+          "Identify simple bias or persuasive language in short excerpts."
+        ],
+        "vocabulary": [
+          {
+            "word": "fact",
+            "level": "core",
+            "definition": "A statement that can be proved true or false."
+          },
+          {
+            "word": "opinion",
+            "level": "core",
+            "definition": "A personal belief or feeling that cannot be proved."
+          },
+          {
+            "word": "bias",
+            "level": "adv",
+            "definition": "Favouring one side unfairly; slanted presentation."
+          }
+        ],
+        "moral_link": "Be fair. Share information truthfully without twisting it.",
+        "content_blocks": [
+          {
+            "type": "text",
+            "body": "Fact clues: numbers, dates, measurable claims. Opinion clues: 'best', 'worst', 'I think', value-laden adjectives."
+          },
+          {
+            "type": "image",
+            "src": "/images/eng_b7/u8/fact_opinion_scale.svg",
+            "caption": "From fact to opinion—spot the language."
+          }
+        ],
+        "interactive": {
+          "classify": {
+            "prompt": "Label each as Fact (F) or Opinion (O).",
+            "items": [
+              {
+                "text": "The school clean‑up collected 25 bags of rubbish.",
+                "label": "F"
+              },
+              {
+                "text": "Clean schools are the best schools in the world.",
+                "label": "O"
+              },
+              {
+                "text": "Assembly starts at 7:30 a.m.",
+                "label": "F"
+              }
+            ],
+            "xp": 10
+          },
+          "error_hunt": {
+            "text": "Everyone knows the new library is the most useless building ever! It’s always empty.",
+            "tasks": [
+              "Identify bias words and rewrite fairly."
+            ],
+            "solution_hint": "Replace extreme language; add factual evidence.",
+            "xp": 15
+          }
+        },
+        "assets": [
+          "/images/eng_b7/u8/fact_opinion_scale.svg"
+        ]
+      },
+      {
+        "lesson_id": "eng_b7_u8_l4",
+        "title": "Evaluate Sources: Who? When? Why?",
+        "estimated_time_min": 45,
+        "xp_reward": 40,
+        "objectives": [
+          "Use simple criteria for credibility: author/organisation, date, purpose/audience.",
+          "Decide if a text is suitable for school research."
+        ],
+        "vocabulary": [
+          {
+            "word": "credibility",
+            "level": "adv",
+            "definition": "How trustworthy a source is."
+          },
+          {
+            "word": "purpose",
+            "level": "core",
+            "definition": "Reason the text was made: inform, persuade, entertain, sell."
+          }
+        ],
+        "moral_link": "Honour truth: choose reliable sources and cite honestly.",
+        "content_blocks": [
+          {
+            "type": "text",
+            "body": "Check: Who wrote it? When was it published? Why was it written? Is the language balanced or extreme?"
+          },
+          {
+            "type": "image",
+            "src": "/images/eng_b7/u8/source_checklist.svg",
+            "caption": "Quick credibility checklist."
+          }
+        ],
+        "interactive": {
+          "source_rating": {
+            "prompt": "Rate each 'source card' as Strong / OK / Weak with a short reason.",
+            "cards": [
+              {
+                "author": "Ministry of Education",
+                "date": "2024",
+                "purpose": "Inform",
+                "lang": "neutral"
+              },
+              {
+                "author": "Anonymous social post",
+                "date": "unknown",
+                "purpose": "Persuade",
+                "lang": "extreme adjectives"
+              },
+              {
+                "author": "Local NGO report",
+                "date": "2022",
+                "purpose": "Inform",
+                "lang": "mostly neutral"
+              }
+            ],
+            "xp": 15
+          }
+        },
+        "assets": [
+          "/images/eng_b7/u8/source_checklist.svg"
+        ]
+      },
+      {
+        "lesson_id": "eng_b7_u8_l5",
+        "title": "Synthesis Task: Compare Two Texts",
+        "estimated_time_min": 50,
+        "xp_reward": 45,
+        "objectives": [
+          "Combine key ideas from two short texts into a brief summary or comparison.",
+          "Use linking words (however, therefore, meanwhile) to show relationships."
+        ],
+        "vocabulary": [
+          {
+            "word": "synthesise",
+            "level": "adv",
+            "definition": "Combine ideas to form a connected understanding."
+          },
+          {
+            "word": "linking words",
+            "level": "core",
+            "definition": "Words that connect ideas (e.g., however, therefore, meanwhile)."
+          }
+        ],
+        "moral_link": "Use information to plan helpful actions for school and community.",
+        "content_blocks": [
+          {
+            "type": "reading",
+            "title": "Text A: School Water Conservation",
+            "body": "Our school’s water bill rose last term. The science club studied common causes: leaking taps, long washing\ntimes, and broken gutters during rainstorms. The club measured flow rates and found three taps leaking\nconstantly. They proposed simple fixes: report leaks, install tap aerators, and collect rainwater in drums for\ncleaning."
+          },
+          {
+            "type": "reading",
+            "title": "Text B: Clean Water & Health",
+            "body": "Clean water prevents disease and saves time. When schools provide hand‑washing stations, attendance improves.\nA local clinic’s data show fewer stomach illnesses after hand‑washing education. Community groups support\nschools with low-cost tanks and soap drives."
+          }
+        ],
+        "interactive": {
+          "ai_task": {
+            "prompt": "Write a 4–5 sentence comparison: What does each text focus on, and how do their ideas fit together for a school plan? Use two linking words.",
+            "expected_focus": [
+              "main ideas",
+              "linking words",
+              "actionable synthesis"
+            ],
+            "xp": 25
+          }
+        }
+      }
+    ],
+    "assessments": {
+      "quiz_mcq": [
+        {
+          "id": "u8_q1",
+          "q": "Which feature most likely labels parts of a process?",
+          "options": [
+            "Caption",
+            "Diagram",
+            "Index",
+            "Glossary"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u8_q2",
+          "q": "Skimming helps you:",
+          "options": [
+            "Find one date quickly",
+            "Get the general idea fast",
+            "Memorise every word",
+            "Write poetry"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u8_q3",
+          "q": "Which sentence is an opinion?",
+          "options": [
+            "Assembly starts at 7:30 a.m.",
+            "The clean‑up collected 25 bags of rubbish.",
+            "Clean schools are the best in the universe.",
+            "The club measured flow rates."
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "u8_q4",
+          "q": "A source is most credible when:",
+          "options": [
+            "It is recent, from a known organisation, and uses balanced language.",
+            "It is anonymous and uses extreme language.",
+            "It is very old and has no author.",
+            "It is a rumour shared by a friend."
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "u8_q5",
+          "q": "Synthesis means:",
+          "options": [
+            "Copying a paragraph",
+            "Combining ideas into a connected whole",
+            "Only comparing differences",
+            "Writing only opinions"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u8_q6",
+          "q": "Which linking word shows contrast?",
+          "options": [
+            "Therefore",
+            "However",
+            "Because",
+            "For example"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u8_q7",
+          "q": "Which is a text feature?",
+          "options": [
+            "Rhyme",
+            "Caption",
+            "Simile",
+            "Stanza"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u8_q8",
+          "q": "Scanning is best for finding:",
+          "options": [
+            "The theme",
+            "A specific name or number",
+            "The moral",
+            "Tone"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u8_q9",
+          "q": "An example of bias language is:",
+          "options": [
+            "The event lasted two hours.",
+            "Experts report 35% attendance.",
+            "Everyone knows it is useless!",
+            "The programme began in 2023."
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "u8_q10",
+          "q": "A strong 1–2 sentence summary should:",
+          "options": [
+            "Include every detail",
+            "Focus on the main idea and key points",
+            "Be very long",
+            "Use only opinions"
+          ],
+          "answer_index": 1
+        }
+      ],
+      "writing_prompt": {
+        "id": "u8_w1",
+        "prompt": "Write a 4–6 sentence summary that synthesises Text A and Text B into a simple plan for your school’s water and health practices. Use at least two text features (e.g., a heading and a caption) in your final layout.",
+        "rubric_ref": "rubric_synthesis_u8"
+      },
+      "rubrics": {
+        "rubric_synthesis_u8": {
+          "criteria": [
+            {
+              "name": "Main Ideas & Accuracy",
+              "scale": 4,
+              "descriptor": "Captures key ideas from both texts correctly."
+            },
+            {
+              "name": "Connections & Linking Words",
+              "scale": 4,
+              "descriptor": "Shows how ideas relate; uses appropriate connectors."
+            },
+            {
+              "name": "Use of Features",
+              "scale": 4,
+              "descriptor": "Includes helpful heading/caption/diagram reference."
+            },
+            {
+              "name": "Clarity & Mechanics (UK)",
+              "scale": 4,
+              "descriptor": "Clear sentences; correct spelling and punctuation."
+            }
+          ],
+          "proficiency_labels": [
+            "Beginning",
+            "Developing",
+            "Proficient",
+            "Advanced"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,537 @@
+{
+  "course_id": "english_b7",
+  "version": "1.0.0",
+  "last_updated_utc": "2025-10-12T00:14:38.812395Z",
+  "unit": {
+    "unit_id": "eng_b7_u4",
+    "title": "Writing for Purpose: Letters, Diaries, and Digital Etiquette",
+    "overview": "Learners practise purpose-driven writing: informal and formal letters, diary entries, and safe, respectful digital communication. The unit emphasises register, structure, cohesion, and moral responsibility online. All lessons are bite-sized, with AI scaffolds, XP hooks, and British English conventions.",
+    "estimated_duration_min": 210,
+    "competencies": [
+      "Distinguish purpose, audience, and register across writing tasks.",
+      "Apply correct structure and conventions for informal and formal letters (British style).",
+      "Write a coherent diary entry using time order and reflective tone.",
+      "Demonstrate safe, respectful digital communication in short-form messages.",
+      "Edit writing for cohesion, punctuation, and spelling."
+    ],
+    "values_morals": [
+      "Truthfulness and respect in all forms of communication.",
+      "Digital responsibility: speak with gentleness and integrity (Proverbs 15:1)."
+    ],
+    "xp_total": 180,
+    "streak_bonus_xp": 5,
+    "parent_report_hooks": [
+      "unit_completion_rate",
+      "quiz_accuracy",
+      "writing_submission_status",
+      "ai_task_completions",
+      "xp_earned"
+    ],
+    "lessons": [
+      {
+        "lesson_id": "eng_b7_u4_l1",
+        "title": "Purpose & Audience: Choosing the Right Register",
+        "estimated_time_min": 30,
+        "xp_reward": 30,
+        "objectives": [
+          "Identify purpose and audience for different tasks.",
+          "Choose formal vs informal register appropriately."
+        ],
+        "vocabulary": [
+          {
+            "word": "register",
+            "level": "adv",
+            "definition": "Level of formality in language."
+          },
+          {
+            "word": "audience",
+            "level": "core",
+            "definition": "The intended reader or listener."
+          },
+          {
+            "word": "purpose",
+            "level": "core",
+            "definition": "The reason for communication (inform, persuade, request, etc.)."
+          }
+        ],
+        "moral_link": "Respect your reader—your tone reflects your character.",
+        "content_blocks": [
+          {
+            "type": "text",
+            "body": "Match tone to audience: headteacher (formal), friend (informal), parent (respectful)."
+          },
+          {
+            "type": "image",
+            "src": "/images/eng_b7/u4/register_scale.svg",
+            "caption": "Register scale from informal to formal."
+          }
+        ],
+        "interactive": {
+          "classify": {
+            "prompt": "Label each scenario as Formal or Informal.",
+            "items": [
+              {
+                "scenario": "Writing to your headteacher to request permission",
+                "label": "Formal"
+              },
+              {
+                "scenario": "Texting your best friend about homework",
+                "label": "Informal"
+              },
+              {
+                "scenario": "Emailing a coach for schedule clarification",
+                "label": "Formal"
+              }
+            ],
+            "xp": 10
+          },
+          "quick_check": [
+            {
+              "q": "Which closing suits a formal letter?",
+              "options": [
+                "Cheers!",
+                "Bestie forever",
+                "Yours faithfully,",
+                "See ya!"
+              ],
+              "answer_index": 2,
+              "xp": 5
+            }
+          ]
+        },
+        "assets": [
+          "/images/eng_b7/u4/register_scale.svg"
+        ]
+      },
+      {
+        "lesson_id": "eng_b7_u4_l2",
+        "title": "Informal Letters (British Style)",
+        "estimated_time_min": 40,
+        "xp_reward": 35,
+        "objectives": [
+          "Use correct informal letter layout (address/date optional in digital context, greeting, body, closing).",
+          "Maintain friendly tone, clear paragraphs, and basic punctuation."
+        ],
+        "vocabulary": [
+          {
+            "word": "salutation",
+            "level": "adv",
+            "definition": "Greeting at the start of a letter (e.g., Dear Ama,)."
+          },
+          {
+            "word": "postscript",
+            "level": "adv",
+            "definition": "An added note after the main message (P.S.)."
+          }
+        ],
+        "moral_link": "Honesty and warmth strengthen friendships.",
+        "content_blocks": [
+          {
+            "type": "text",
+            "body": "Model: Dear Kofi, … (friendly tone, short paragraphs, sign‑off: Yours truly,/Your friend,)."
+          },
+          {
+            "type": "image",
+            "src": "/images/eng_b7/u4/informal_layout.svg",
+            "caption": "Informal letter layout (digital-friendly)."
+          },
+          {
+            "type": "tip",
+            "body": "Keep one idea per paragraph; avoid slang that may confuse."
+          }
+        ],
+        "interactive": {
+          "guided_writing": {
+            "scaffold": [
+              "Greeting and purpose",
+              "Detail 1 (news/update)",
+              "Detail 2 (feelings/reflection)",
+              "Plan/next step",
+              "Sign‑off"
+            ],
+            "submission_type": "text",
+            "ai_feedback": [
+              "Paragraphing and cohesion",
+              "Punctuation and spelling",
+              "Tone and clarity"
+            ],
+            "xp": 20
+          }
+        },
+        "assets": [
+          "/images/eng_b7/u4/informal_layout.svg"
+        ]
+      },
+      {
+        "lesson_id": "eng_b7_u4_l3",
+        "title": "Formal Letters (British Style)",
+        "estimated_time_min": 45,
+        "xp_reward": 40,
+        "objectives": [
+          "Apply correct British formal letter layout: sender’s address, date, receiver’s address, salutation, subject line (optional), body, closing, signature.",
+          "Use ‘Yours faithfully,’ when salutation is ‘Dear Sir/Madam,’ and ‘Yours sincerely,’ when the recipient is named."
+        ],
+        "vocabulary": [
+          {
+            "word": "enclosure",
+            "level": "adv",
+            "definition": "Document included with a letter."
+          },
+          {
+            "word": "subject line",
+            "level": "core",
+            "definition": "A short heading stating the purpose of the letter."
+          }
+        ],
+        "moral_link": "Respect authority and be concise and truthful in requests.",
+        "content_blocks": [
+          {
+            "type": "image",
+            "src": "/images/eng_b7/u4/formal_layout_uk.svg",
+            "caption": "British formal letter layout."
+          },
+          {
+            "type": "text",
+            "body": "Use clear paragraphs: introduction (purpose), details (evidence), courteous request, closing."
+          }
+        ],
+        "interactive": {
+          "reorder_blocks": {
+            "prompt": "Arrange the parts of a formal letter in correct order.",
+            "blocks": [
+              "Sender’s address",
+              "Date",
+              "Receiver’s address",
+              "Salutation",
+              "Subject line (optional)",
+              "Body (3 paragraphs)",
+              "Closing (Yours faithfully,/Yours sincerely,)",
+              "Signature"
+            ],
+            "xp": 10
+          },
+          "ai_task": {
+            "prompt": "Write a formal letter to your headteacher requesting permission to start a reading club. Keep it respectful, concise, and persuasive.",
+            "expected_focus": [
+              "layout",
+              "register",
+              "cohesion"
+            ],
+            "xp": 20
+          }
+        },
+        "assets": [
+          "/images/eng_b7/u4/formal_layout_uk.svg"
+        ]
+      },
+      {
+        "lesson_id": "eng_b7_u4_l4",
+        "title": "Diary Writing: Reflect & Grow",
+        "estimated_time_min": 40,
+        "xp_reward": 35,
+        "objectives": [
+          "Write a reflective diary entry using time order and feelings vocabulary.",
+          "Use first person and consistent tense; close with a brief insight or prayer if preferred."
+        ],
+        "vocabulary": [
+          {
+            "word": "reflection",
+            "level": "adv",
+            "definition": "Serious thought about past events."
+          },
+          {
+            "word": "insight",
+            "level": "adv",
+            "definition": "A deep understanding of a person or situation."
+          }
+        ],
+        "moral_link": "Self-examination helps build character and gratitude.",
+        "content_blocks": [
+          {
+            "type": "text",
+            "body": "Typical features: date/time, first‑person voice, feelings/thoughts, events in sequence, closing insight."
+          },
+          {
+            "type": "image",
+            "src": "/images/eng_b7/u4/diary_elements.svg",
+            "caption": "Key elements of a diary entry."
+          }
+        ],
+        "interactive": {
+          "guided_writing": {
+            "scaffold": [
+              "Date and greeting (Dear Diary,)",
+              "Event 1 (what happened)",
+              "Event 2 (what you felt/thought)",
+              "Lesson/thanksgiving/prayer",
+              "Closing line"
+            ],
+            "submission_type": "text",
+            "ai_feedback": [
+              "Time order and clarity",
+              "Feelings vocabulary",
+              "Grammar and punctuation"
+            ],
+            "xp": 20
+          }
+        },
+        "assets": [
+          "/images/eng_b7/u4/diary_elements.svg"
+        ]
+      },
+      {
+        "lesson_id": "eng_b7_u4_l5",
+        "title": "Digital Etiquette: Safe & Respectful Messaging",
+        "estimated_time_min": 35,
+        "xp_reward": 40,
+        "objectives": [
+          "Write short digital messages (email/SMS/WhatsApp) using polite register and clarity.",
+          "Apply safety: no personal data sharing, no bullying; think before posting."
+        ],
+        "vocabulary": [
+          {
+            "word": "netiquette",
+            "level": "adv",
+            "definition": "Rules for proper behaviour on the internet."
+          },
+          {
+            "word": "brevity",
+            "level": "adv",
+            "definition": "Concise and exact use of words."
+          }
+        ],
+        "moral_link": "Let your speech be gracious, seasoned with salt (Colossians 4:6).",
+        "content_blocks": [
+          {
+            "type": "text",
+            "body": "Be brief, clear, and kind. Avoid forwarding rumours. Ask permission before sharing images."
+          },
+          {
+            "type": "image",
+            "src": "/images/eng_b7/u4/digital_etiquette.svg",
+            "caption": "Simple rules for safe messaging."
+          }
+        ],
+        "interactive": {
+          "error_hunt": {
+            "text": "pls send me ur notes NOW!!! also add kofi’s number here",
+            "tasks": [
+              "Fix tone, spelling, capitalisation, and remove unsafe request."
+            ],
+            "solution_hint": "Be polite, use sentence case, and never request someone’s personal number publicly.",
+            "xp": 15
+          },
+          "mini_quiz": [
+            {
+              "q": "Which is safest to share in a class group?",
+              "options": [
+                "Your home address",
+                "A rumour about a classmate",
+                "Homework instructions",
+                "Your password"
+              ],
+              "answer_index": 2,
+              "xp": 5
+            }
+          ],
+          "ai_task": {
+            "prompt": "Write a respectful, 2–3 sentence message to your teacher asking for an extension on an assignment.",
+            "expected_focus": [
+              "polite register",
+              "brevity",
+              "clear request"
+            ],
+            "xp": 15
+          }
+        },
+        "assets": [
+          "/images/eng_b7/u4/digital_etiquette.svg"
+        ]
+      }
+    ],
+    "assessments": {
+      "quiz_mcq": [
+        {
+          "id": "u4_q1",
+          "q": "Which closing matches 'Dear Sir/Madam,'?",
+          "options": [
+            "Yours sincerely,",
+            "Yours faithfully,",
+            "Best wishes,",
+            "Cheers,"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u4_q2",
+          "q": "Which layout item comes first in a British formal letter?",
+          "options": [
+            "Receiver’s address",
+            "Sender’s address",
+            "Salutation",
+            "Signature"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u4_q3",
+          "q": "An appropriate informal sign‑off is:",
+          "options": [
+            "Your obedient servant,",
+            "Yours faithfully,",
+            "Your friend,",
+            "Respectfully submitted,"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "u4_q4",
+          "q": "A diary entry typically uses:",
+          "options": [
+            "Third person, future tense only",
+            "First person and time order",
+            "Only dialogue",
+            "Passive voice only"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u4_q5",
+          "q": "Safe digital etiquette includes:",
+          "options": [
+            "Sharing passwords with friends",
+            "Forwarding rumours to check later",
+            "Asking before sharing images",
+            "Typing in all caps to be clear"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "u4_q6",
+          "q": "Which is the correct pair?",
+          "options": [
+            "Dear Sir/Madam, — Yours sincerely,",
+            "Dear Mr Mensah, — Yours sincerely,",
+            "Dear Madam Akua, — Yours faithfully,",
+            "Hi Sir, — Yours respectfully,"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u4_q7",
+          "q": "Best register for a headteacher request:",
+          "options": [
+            "Slangy and playful",
+            "Polite and formal",
+            "Aggressive and brief",
+            "Joking and casual"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u4_q8",
+          "q": "Which statement is most coherent?",
+          "options": [
+            "Letter write I permission want please.",
+            "I am writing to request permission to use the library after school on Fridays."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u4_q9",
+          "q": "In formal letters, paragraphs should be:",
+          "options": [
+            "One very long block",
+            "Short and focused on one idea",
+            "Only bullet points",
+            "Only one sentence"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u4_q10",
+          "q": "A respectful digital message should be:",
+          "options": [
+            "Long and dramatic",
+            "Brief, clear, and courteous",
+            "Filled with emojis",
+            "Written in all caps"
+          ],
+          "answer_index": 1
+        }
+      ],
+      "writing_prompt": {
+        "id": "u4_w1",
+        "prompt": "Write a British‑style formal letter to your headteacher requesting a clean‑up campaign on campus. Use correct layout, respectful register, and three supporting points.",
+        "rubric_ref": "rubric_formal_letter_u4"
+      },
+      "speaking_task": {
+        "id": "u4_s1",
+        "prompt": "Record a 30–40 second speech asking your class to support the clean‑up campaign. Use persuasive but respectful language.",
+        "rubric_ref": "rubric_speaking_u4"
+      },
+      "rubrics": {
+        "rubric_formal_letter_u4": {
+          "criteria": [
+            {
+              "name": "Layout & Conventions",
+              "scale": 4,
+              "descriptor": "Correct British layout; accurate salutation/closing."
+            },
+            {
+              "name": "Register & Courtesy",
+              "scale": 4,
+              "descriptor": "Polite, concise, and audience-appropriate."
+            },
+            {
+              "name": "Content & Support",
+              "scale": 4,
+              "descriptor": "Clear purpose with three relevant points."
+            },
+            {
+              "name": "Cohesion & Mechanics",
+              "scale": 4,
+              "descriptor": "Logical paragraphs; correct grammar and punctuation."
+            }
+          ],
+          "proficiency_labels": [
+            "Beginning",
+            "Developing",
+            "Proficient",
+            "Advanced"
+          ]
+        },
+        "rubric_speaking_u4": {
+          "criteria": [
+            {
+              "name": "Organisation",
+              "scale": 4,
+              "descriptor": "Clear opening, points, and conclusion."
+            },
+            {
+              "name": "Pronunciation & Fluency",
+              "scale": 4,
+              "descriptor": "Steady pace; clear articulation."
+            },
+            {
+              "name": "Persuasive Register",
+              "scale": 4,
+              "descriptor": "Respectful, encouraging tone."
+            },
+            {
+              "name": "Accuracy",
+              "scale": 4,
+              "descriptor": "Grammar and word choice support clarity."
+            }
+          ],
+          "proficiency_labels": [
+            "Beginning",
+            "Developing",
+            "Proficient",
+            "Advanced"
+          ]
+        }
+      }
+    }
+  }
+}
