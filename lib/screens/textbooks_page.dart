@@ -21,13 +21,11 @@ class _TextbooksPageState extends State<TextbooksPage>
 
   final TextbookService _textbookService = TextbookService();
   final StorybookService _storybookService = StorybookService();
-  final TextEditingController _searchController = TextEditingController();
 
   String selectedLevel = 'All';
   String selectedSubject = 'All';
   String selectedPublisher = 'All';
   String selectedAuthor = 'All';
-  String searchQuery = '';
   bool isGridView = true;
 
   List<Textbook> allTextbooks = [];
@@ -70,7 +68,6 @@ class _TextbooksPageState extends State<TextbooksPage>
   void dispose() {
     _animationController.dispose();
     _tabController.dispose();
-    _searchController.dispose();
     super.dispose();
   }
 
@@ -98,9 +95,6 @@ class _TextbooksPageState extends State<TextbooksPage>
 
   void _onTabChanged() {
     setState(() {
-      // Reset search when switching tabs
-      _searchController.clear();
-      searchQuery = '';
       _applyFilters();
       _applyStoryFilter();
     });
@@ -112,12 +106,7 @@ class _TextbooksPageState extends State<TextbooksPage>
         final matchesLevel = selectedLevel == 'All' || textbook.level == selectedLevel;
         final matchesSubject = selectedSubject == 'All' || textbook.subject == selectedSubject;
         final matchesPublisher = selectedPublisher == 'All' || textbook.publisher == selectedPublisher;
-        final matchesSearch = searchQuery.isEmpty ||
-            textbook.title.toLowerCase().contains(searchQuery.toLowerCase()) ||
-            textbook.subject.toLowerCase().contains(searchQuery.toLowerCase()) ||
-            textbook.author.toLowerCase().contains(searchQuery.toLowerCase());
-
-        return matchesLevel && matchesSubject && matchesPublisher && matchesSearch;
+        return matchesLevel && matchesSubject && matchesPublisher;
       }).toList();
 
       // Sort by relevance and level
@@ -134,11 +123,7 @@ class _TextbooksPageState extends State<TextbooksPage>
     setState(() {
       filteredStorybooks = allStorybooks.where((book) {
         final matchesAuthor = selectedAuthor == 'All' || book.author == selectedAuthor;
-        final matchesSearch = searchQuery.isEmpty ||
-            book.title.toLowerCase().contains(searchQuery.toLowerCase()) ||
-            book.author.toLowerCase().contains(searchQuery.toLowerCase());
-
-        return matchesAuthor && matchesSearch;
+        return matchesAuthor;
       }).toList();
 
       // Sort alphabetically by title
@@ -152,8 +137,6 @@ class _TextbooksPageState extends State<TextbooksPage>
       selectedSubject = 'All';
       selectedPublisher = 'All';
       selectedAuthor = 'All';
-      searchQuery = '';
-      _searchController.clear();
     });
     _applyFilters();
     _applyStoryFilter();
@@ -170,7 +153,7 @@ class _TextbooksPageState extends State<TextbooksPage>
         opacity: _fadeAnimation,
         child: CustomScrollView(
           slivers: [
-            // Search and Filters
+            // Filters
             SliverToBoxAdapter(
               child: Container(
                 color: Colors.white,
@@ -180,48 +163,6 @@ class _TextbooksPageState extends State<TextbooksPage>
                 ),
                 child: Column(
                   children: [
-                    // Search Bar
-                    Container(
-                      decoration: BoxDecoration(
-                        color: const Color(0xFFF5F7FA),
-                        borderRadius: BorderRadius.circular(12),
-                        border: Border.all(color: Colors.grey.withValues(alpha: 0.2)),
-                      ),
-                      child: TextField(
-                        controller: _searchController,
-                        decoration: InputDecoration(
-                          hintText: 'Search textbooks, subjects, authors...',
-                          hintStyle: GoogleFonts.montserrat(
-                            color: Colors.grey[600],
-                            fontSize: 14,
-                          ),
-                          prefixIcon: Icon(Icons.search, color: Colors.grey[600]),
-                          suffixIcon: searchQuery.isNotEmpty
-                              ? IconButton(
-                                  icon: Icon(Icons.clear, color: Colors.grey[600]),
-                                  onPressed: () {
-                                    _searchController.clear();
-                                    setState(() => searchQuery = '');
-                                    _applyFilters();
-                                  },
-                                )
-                              : null,
-                          border: InputBorder.none,
-                          contentPadding: const EdgeInsets.symmetric(
-                            horizontal: 16,
-                            vertical: 12,
-                          ),
-                        ),
-                        onChanged: (value) {
-                          setState(() => searchQuery = value);
-                          _applyFilters();
-                          _applyStoryFilter();
-                        },
-                      ),
-                    ),
-
-                    const SizedBox(height: 16),
-
                     // Filter Chips
                     if (_tabController.index == 2) ...[
                       // Storybooks filters
@@ -495,12 +436,11 @@ class _TextbooksPageState extends State<TextbooksPage>
 
   bool _hasActiveFilters() {
     if (_tabController.index == 2) {
-      return selectedAuthor != 'All' || searchQuery.isNotEmpty;
+      return selectedAuthor != 'All';
     }
     return selectedLevel != 'All' ||
         selectedSubject != 'All' ||
-        selectedPublisher != 'All' ||
-        searchQuery.isNotEmpty;
+        selectedPublisher != 'All';
   }
 
   Widget _buildStorybookMobileFilters() {
@@ -574,8 +514,8 @@ class _TextbooksPageState extends State<TextbooksPage>
               flex: 3,
               child: Container(
                 width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
                 ),
                 child: Stack(
                   children: [
@@ -1363,9 +1303,7 @@ class _TextbooksPageState extends State<TextbooksPage>
             ),
             const SizedBox(height: 8),
             Text(
-              searchQuery.isNotEmpty
-                  ? 'No textbooks match your search criteria.\nTry adjusting your filters or search terms.'
-                  : 'No textbooks available for the selected filters.\nTry selecting different options.',
+              'No textbooks available for the selected filters.\nTry selecting different options.',
               textAlign: TextAlign.center,
               style: GoogleFonts.montserrat(
                 color: Colors.grey[600],

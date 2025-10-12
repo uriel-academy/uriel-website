@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import '../constants/app_styles.dart';
 import '../services/connection_service.dart';
 import '../services/auth_service.dart';
+import '../services/xp_service.dart';
+import '../services/leaderboard_rank_service.dart';
+import '../widgets/rank_badge_widget.dart';
+import 'redesigned_all_ranks_page.dart';
 import 'question_collections_page.dart';
 import 'textbooks_page.dart';
 import 'feedback_page.dart';
@@ -48,6 +53,11 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   double triviaProgress = 0.0;
   int triviaCorrect = 0;
   
+  // Rank tracking
+  int userXP = 0;
+  LeaderboardRank? currentRank;
+  LeaderboardRank? nextRank;
+  
   // Subject progress data - Live from quiz performance
   List<SubjectProgress> _subjectProgress = [];
   
@@ -71,8 +81,40 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     _calculateBeceCountdown();
     _loadUserData();
     _loadUserStats();
+    _loadUserRank();
     _recordDailyActivity();
     _setupUserStream();
+  }
+  
+  void _loadUserRank() async {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user == null) return;
+    
+    try {
+      final xpService = XPService();
+      final rankService = LeaderboardRankService();
+      
+      // Get user XP
+      final xp = await xpService.getUserTotalXP(user.uid);
+      
+      // Get current and next rank
+      final current = await rankService.getUserRank(xp);
+      final next = await rankService.getNextRank(xp);
+      
+      setState(() {
+        userXP = xp;
+        currentRank = current;
+        nextRank = next;
+      });
+      
+      debugPrint('👑 User Rank: ${current?.name} (Rank #${current?.rank}) - XP: $xp');
+      debugPrint('🖼️ Rank Image URL: ${current?.imageUrl}');
+      if (current?.imageUrl.isEmpty ?? true) {
+        debugPrint('⚠️ WARNING: Rank image URL is empty!');
+      }
+    } catch (e) {
+      debugPrint('❌ Error loading user rank: $e');
+    }
   }
   
   void _setupUserStream() {
@@ -651,60 +693,78 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           
           const Spacer(),
           
-          // Search Icon for mobile
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.grey[100],
-              borderRadius: BorderRadius.circular(8),
-            ),
-            child: IconButton(
-              icon: Icon(Icons.search, color: Colors.grey[600]),
-              onPressed: () => _showMobileSearch(),
-            ),
-          ),
-          
-          const SizedBox(width: 8),
-          
-          // Notifications
-          Container(
-            decoration: BoxDecoration(
-              color: const Color(0xFFD62828).withValues(alpha: 0.1),
-              borderRadius: BorderRadius.circular(8),
-            ),
-            child: IconButton(
-              icon: Stack(
-                children: [
-                  const Icon(Icons.notifications_outlined, color: Color(0xFFD62828), size: 20),
-                  Positioned(
-                    right: 0,
-                    top: 0,
-                    child: Container(
-                      width: 6,
-                      height: 6,
-                      decoration: const BoxDecoration(
-                        color: Color(0xFFD62828),
-                        shape: BoxShape.circle,
-                      ),
-                    ),
+          // User Rank Badge (smaller than profile)
+          GestureDetector(
+            onTap: () => _showRankDialog(),
+            child: Container(
+              width: 32,
+              height: 32,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(6),
+                border: Border.all(
+                  color: currentRank != null 
+                      ? currentRank!.getTierColor().withOpacity(0.3)
+                      : Colors.grey.withOpacity(0.3),
+                  width: 1.5,
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: currentRank != null 
+                        ? currentRank!.getTierColor().withOpacity(0.15)
+                        : Colors.grey.withOpacity(0.08),
+                    blurRadius: 6,
+                    offset: const Offset(0, 2),
                   ),
                 ],
               ),
-              onPressed: () => _showNotifications(),
+              child: currentRank != null
+                  ? ClipRRect(
+                      borderRadius: BorderRadius.circular(6),
+                      child: currentRank!.imageUrl.isNotEmpty
+                          ? CachedNetworkImage(
+                              imageUrl: currentRank!.imageUrl,
+                              fit: BoxFit.cover,
+                              placeholder: (context, url) => Container(
+                                color: currentRank!.getTierColor().withOpacity(0.1),
+                                child: Icon(
+                                  Icons.emoji_events,
+                                  color: currentRank!.getTierColor(),
+                                  size: 16,
+                                ),
+                              ),
+                              errorWidget: (context, url, error) => Icon(
+                                Icons.emoji_events,
+                                color: currentRank!.getTierColor(),
+                                size: 16,
+                              ),
+                            )
+                          : Icon(
+                              Icons.emoji_events,
+                              color: currentRank!.getTierColor(),
+                              size: 16,
+                            ),
+                    )
+                  : const Icon(
+                      Icons.emoji_events_outlined,
+                      color: Colors.grey,
+                      size: 16,
+                    ),
             ),
           ),
           
           const SizedBox(width: 8),
           
-          // Profile Avatar
+          // Profile Avatar (larger than badge)
           GestureDetector(
             onTap: () => _showProfileMenu(),
             child: CircleAvatar(
-              radius: 16,
+              radius: 18,
               backgroundColor: const Color(0xFF1A1E3F),
               backgroundImage: _getAvatarImage(),
               child: _getAvatarImage() == null ? Text(
                 userName[0].toUpperCase(),
-                style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14),
+                style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),
               ) : null,
             ),
           ),
@@ -819,6 +879,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   _buildNavItem(-4, 'Privacy Policy'),
                   _buildNavItem(-5, 'Terms of Service'),
                   _buildNavItem(-6, 'FAQ'),
+                  _buildNavItem(-8, 'All Ranks'),
                 ],
               ),
             ),
@@ -879,6 +940,17 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   }
   
   void _navigateToFooterPage(String pageName) {
+    // Handle All Ranks page separately
+    if (pageName == 'All Ranks') {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => RedesignedAllRanksPage(userXP: userXP),
+        ),
+      );
+      return;
+    }
+    
     String route;
     switch (pageName) {
       case 'Pricing':
@@ -1002,71 +1074,80 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             const SizedBox(width: 16),
           ],
           
-          // Search Bar
-          Expanded(
+          const Spacer(),
+          
+          // User Rank Badge (smaller than profile)
+          GestureDetector(
+            onTap: () => _showRankDialog(),
             child: Container(
-              height: 45,
+              width: 38,
+              height: 38,
               decoration: BoxDecoration(
-                color: Colors.grey[100],
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: TextField(
-                decoration: InputDecoration(
-                  hintText: 'Search questions, textbooks, topics...',
-                  hintStyle: GoogleFonts.montserrat(
-                    color: Colors.grey[600],
-                    fontSize: 14,
-                  ),
-                  prefixIcon: Icon(Icons.search, color: Colors.grey[600]),
-                  border: InputBorder.none,
-                  contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
+                border: Border.all(
+                  color: currentRank != null 
+                      ? currentRank!.getTierColor().withOpacity(0.3)
+                      : Colors.grey.withOpacity(0.3),
+                  width: 1.5,
                 ),
-              ),
-            ),
-          ),
-          
-          const SizedBox(width: 16),
-          
-          // Notifications
-          Container(
-            decoration: BoxDecoration(
-              color: const Color(0xFFD62828).withValues(alpha: 0.1),
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: IconButton(
-              icon: Stack(
-                children: [
-                  const Icon(Icons.notifications_outlined, color: Color(0xFFD62828)),
-                  Positioned(
-                    right: 0,
-                    top: 0,
-                    child: Container(
-                      width: 8,
-                      height: 8,
-                      decoration: const BoxDecoration(
-                        color: Color(0xFFD62828),
-                        shape: BoxShape.circle,
-                      ),
-                    ),
+                boxShadow: [
+                  BoxShadow(
+                    color: currentRank != null 
+                        ? currentRank!.getTierColor().withOpacity(0.15)
+                        : Colors.grey.withOpacity(0.08),
+                    blurRadius: 8,
+                    offset: const Offset(0, 3),
                   ),
                 ],
               ),
-              onPressed: () => _showNotifications(),
+              child: currentRank != null
+                  ? ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: currentRank!.imageUrl.isNotEmpty
+                          ? CachedNetworkImage(
+                              imageUrl: currentRank!.imageUrl,
+                              fit: BoxFit.cover,
+                              placeholder: (context, url) => Container(
+                                color: currentRank!.getTierColor().withOpacity(0.1),
+                                child: Icon(
+                                  Icons.emoji_events,
+                                  color: currentRank!.getTierColor(),
+                                  size: 20,
+                                ),
+                              ),
+                              errorWidget: (context, url, error) => Icon(
+                                Icons.emoji_events,
+                                color: currentRank!.getTierColor(),
+                                size: 20,
+                              ),
+                            )
+                          : Icon(
+                              Icons.emoji_events,
+                              color: currentRank!.getTierColor(),
+                              size: 20,
+                            ),
+                    )
+                  : const Icon(
+                      Icons.emoji_events_outlined,
+                      color: Colors.grey,
+                      size: 20,
+                    ),
             ),
           ),
           
           const SizedBox(width: 16),
           
-          // Profile Avatar
+          // Profile Avatar (larger than badge)
           GestureDetector(
             onTap: () => _showProfileMenu(),
             child: CircleAvatar(
-              radius: 20,
+              radius: 22,
               backgroundColor: const Color(0xFF1A1E3F),
               backgroundImage: _getAvatarImage(),
               child: _getAvatarImage() == null ? Text(
                 userName[0].toUpperCase(),
-                style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),
               ) : null,
             ),
           ),
@@ -1114,6 +1195,24 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           
           // Progress Overview Hero Card
           _buildProgressOverviewCard(),
+          
+          SizedBox(height: isSmallScreen ? 16 : 24),
+          
+          // Rank Progress Card
+          if (currentRank != null)
+            RankProgressCard(
+              currentRank: currentRank!,
+              nextRank: nextRank,
+              userXP: userXP,
+              onViewAllRanks: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => RedesignedAllRanksPage(userXP: userXP),
+                  ),
+                );
+              },
+            ),
           
           SizedBox(height: isSmallScreen ? 16 : 24),
           
@@ -2268,46 +2367,6 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   }
 
   // Helper methods
-  void _showMobileSearch() {
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: Text(
-          'Search',
-          style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),
-        ),
-        content: TextField(
-          decoration: InputDecoration(
-            hintText: 'Search questions, textbooks, topics...',
-            hintStyle: GoogleFonts.montserrat(color: Colors.grey[600]),
-            border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
-            prefixIcon: Icon(Icons.search, color: Colors.grey[600]),
-          ),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: Text(
-              'Cancel',
-              style: GoogleFonts.montserrat(color: Colors.grey[600]),
-            ),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.pop(context);
-              _showComingSoon('Search');
-            },
-            style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFFD62828),
-              foregroundColor: Colors.white,
-            ),
-            child: Text('Search', style: GoogleFonts.montserrat()),
-          ),
-        ],
-      ),
-    );
-  }
-
   void _showMobileMenu() {
     showModalBottomSheet(
       context: context,
@@ -2337,39 +2396,152 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     );
   }
 
-  void _showNotifications() {
+  String _formatXP(int xp) {
+    if (xp >= 1000000) {
+      return '${(xp / 1000000).toStringAsFixed(1)}M';
+    } else if (xp >= 1000) {
+      return '${(xp / 1000).toStringAsFixed(1)}K';
+    }
+    return xp.toString();
+  }
+
+  void _showRankDialog() {
     showDialog(
       context: context,
-      builder: (context) => AlertDialog(
-        title: const Text('Notifications'),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
+      barrierColor: Colors.black.withOpacity(0.01),
+      barrierDismissible: true,
+      builder: (context) {
+        final screenWidth = MediaQuery.of(context).size.width;
+        final isMobile = screenWidth < 768;
+        
+        return Stack(
           children: [
-            ListTile(
-              leading: CircleAvatar(
-                backgroundColor: Colors.blue.withValues(alpha: 0.2),
-                child: const Icon(Icons.quiz, color: Colors.blue),
-              ),
-              title: const Text('New Math Quiz Available'),
-              subtitle: const Text('2 hours ago'),
+            // Invisible barrier to close on outside click
+            GestureDetector(
+              onTap: () => Navigator.pop(context),
+              child: Container(color: Colors.transparent),
             ),
-            ListTile(
-              leading: CircleAvatar(
-                backgroundColor: Colors.green.withValues(alpha: 0.2),
-                child: const Icon(Icons.star, color: Colors.green),
+            // Positioned dropdown below rank badge - Apple style
+            Positioned(
+              top: isMobile ? 56 : 64,
+              right: isMobile ? 44 : 60,
+              child: TweenAnimationBuilder<double>(
+                duration: const Duration(milliseconds: 200),
+                tween: Tween(begin: 0.0, end: 1.0),
+                curve: Curves.easeOutCubic,
+                builder: (context, value, child) {
+                  return Transform.scale(
+                    scale: 0.95 + (0.05 * value),
+                    alignment: Alignment.topRight,
+                    child: Opacity(
+                      opacity: value,
+                      child: child,
+                    ),
+                  );
+                },
+                child: Material(
+                  elevation: 0,
+                  color: Colors.transparent,
+                  borderRadius: BorderRadius.circular(12),
+                  child: Container(
+                    width: 220,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(
+                        color: Colors.grey.shade200,
+                        width: 0.5,
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.08),
+                          blurRadius: 24,
+                          offset: const Offset(0, 8),
+                          spreadRadius: 0,
+                        ),
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.04),
+                          blurRadius: 8,
+                          offset: const Offset(0, 2),
+                          spreadRadius: 0,
+                        ),
+                      ],
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(12),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          // Current Rank - Compact
+                          Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                            child: Text(
+                              '${currentRank?.name.toUpperCase() ?? 'LEARNER'} · ${_formatXP(userXP)}',
+                              style: GoogleFonts.inter(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.grey.shade700,
+                                letterSpacing: 0.3,
+                              ),
+                            ),
+                          ),
+                          
+                          // Subtle divider
+                          Container(
+                            height: 0.5,
+                            color: Colors.grey.shade200,
+                          ),
+                          
+                          // All Ranks Button - Minimal
+                          InkWell(
+                            onTap: () {
+                              Navigator.pop(context);
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => RedesignedAllRanksPage(userXP: userXP),
+                                ),
+                              );
+                            },
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Icon(
+                                    Icons.emoji_events_outlined,
+                                    size: 16,
+                                    color: currentRank?.getTierColor() ?? Colors.grey.shade600,
+                                  ),
+                                  const SizedBox(width: 8),
+                                  Text(
+                                    'All Ranks',
+                                    style: GoogleFonts.inter(
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w500,
+                                      color: currentRank?.getTierColor() ?? Colors.grey.shade600,
+                                    ),
+                                  ),
+                                  const Spacer(),
+                                  Icon(
+                                    Icons.chevron_right,
+                                    size: 16,
+                                    color: Colors.grey.shade400,
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
               ),
-              title: const Text('Achievement Unlocked!'),
-              subtitle: const Text('7-Day Study Streak'),
             ),
           ],
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: const Text('Close'),
-          ),
-        ],
-      ),
+        );
+      },
     );
   }
 

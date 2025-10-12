@@ -6,6 +6,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/quiz_model.dart';
 import '../services/xp_service.dart';
 import '../services/achievement_service.dart';
+import '../services/leaderboard_rank_service.dart';
+import '../widgets/rank_badge_widget.dart';
 import 'home_page.dart';
 
 class QuizResultsPage extends StatefulWidget {
@@ -30,6 +32,9 @@ class _QuizResultsPageState extends State<QuizResultsPage>
   bool showDetailedReview = false;
   int xpEarned = 0;
   bool showXPAnimation = false;
+  LeaderboardRank? oldRank;
+  LeaderboardRank? newRank;
+  bool rankedUp = false;
 
   @override
   void initState() {
@@ -90,8 +95,12 @@ class _QuizResultsPageState extends State<QuizResultsPage>
 
       debugPrint('✅ Quiz result saved successfully! Document ID: ${docRef.id}');
 
+      // Get current rank before XP award
+      final xpService = XPService();
+      final currentRank = await xpService.getUserRank(user.uid);
+
       // Calculate and save XP with bonuses
-      final earnedXP = await XPService().calculateAndSaveQuizXP(
+      final earnedXP = await xpService.calculateAndSaveQuizXP(
         userId: user.uid,
         quizId: docRef.id,
         correctAnswers: widget.quiz.correctAnswers,
@@ -102,8 +111,20 @@ class _QuizResultsPageState extends State<QuizResultsPage>
         triviaCategory: widget.quiz.triviaCategory,
       );
 
+      // Get new rank after XP award
+      final updatedRank = await xpService.getUserRank(user.uid);
+
+      // Check if rank up occurred
+      bool didRankUp = false;
+      if (currentRank != null && updatedRank != null && currentRank.rank < updatedRank.rank) {
+        didRankUp = true;
+      }
+
       setState(() {
         xpEarned = earnedXP;
+        oldRank = currentRank;
+        newRank = updatedRank;
+        rankedUp = didRankUp;
       });
 
       // Show XP animation after a delay
@@ -111,6 +132,14 @@ class _QuizResultsPageState extends State<QuizResultsPage>
       setState(() {
         showXPAnimation = true;
       });
+
+      // Show rank up dialog if ranked up
+      if (didRankUp && updatedRank != null && mounted) {
+        await Future.delayed(const Duration(milliseconds: 3000));
+        if (mounted) {
+          RankUpDialog.show(context, updatedRank, earnedXP);
+        }
+      }
 
       // Check for newly earned achievements
       await _checkAchievements(user.uid);

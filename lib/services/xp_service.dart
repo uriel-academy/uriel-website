@@ -1,22 +1,41 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-
 import 'package:flutter/foundation.dart';
+import 'leaderboard_rank_service.dart';
+
 class XPService {
   static final XPService _instance = XPService._internal();
   factory XPService() => _instance;
   XPService._internal();
 
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
+  final LeaderboardRankService _rankService = LeaderboardRankService();
 
-  // XP Constants
+  // XP Constants - Quiz & Learning
   static const int XP_PER_CORRECT_ANSWER = 5;
   static const int PERFECT_SCORE_BONUS = 20;
   static const int FIRST_TIME_CATEGORY_BONUS = 50;
   static const int MASTER_EXPLORER_BONUS = 100;
-  static const int DAILY_LOGIN_BONUS = 10;
+  
+  // XP Constants - Daily Activities
+  static const int DAILY_LOGIN_BONUS = 50;
   static const int READING_SESSION_XP = 15;
   static const int BOOK_COMPLETION_XP = 50;
   static const int TEXTBOOK_CHAPTER_XP = 10;
+  
+  // XP Constants - Social & Contribution
+  static const int UPLOAD_NOTES_XP = 150;
+  static const int NOTE_UPVOTE_XP = 10;
+  static const int NOTE_DOWNLOAD_XP = 5;
+  
+  // XP Constants - Streaks & Milestones
+  static const int SEVEN_DAY_STREAK_BONUS = 300;
+  static const int THIRTY_DAY_STREAK_BONUS = 1500;
+  static const int PERFECT_ATTENDANCE_BONUS = 2000;
+  
+  // XP Constants - Advanced
+  static const int AI_REVISION_PLAN_XP = 500;
+  static const int SUBJECT_MODULE_COMPLETION_XP = 1500;
+  static const int MONTHLY_CONTEST_WINNER_XP = 5000;
 
   // Trivia categories for Master Explorer tracking
   static const List<String> triviaCategories = [
@@ -216,15 +235,99 @@ class XPService {
     }
   }
 
-  /// Update user's total XP
-  Future<void> _updateUserTotalXP(String userId, int xpToAdd) async {
+  /// Update user's total XP and check for rank up
+  Future<Map<String, dynamic>> _updateUserTotalXP(String userId, int xpToAdd) async {
     try {
+      // Get current XP
+      final userDoc = await _firestore.collection('users').doc(userId).get();
+      final currentXP = (userDoc.data()?['totalXP'] as int?) ?? 0;
+      final newXP = currentXP + xpToAdd;
+
+      // Get old and new ranks
+      final oldRank = await _rankService.getUserRank(currentXP);
+      final newRank = await _rankService.getUserRank(newXP);
+
+      // Update XP
       await _firestore.collection('users').doc(userId).update({
         'totalXP': FieldValue.increment(xpToAdd),
         'lastXPUpdate': FieldValue.serverTimestamp(),
       });
+
+      // Check for rank up
+      bool rankedUp = false;
+      if (oldRank != null && newRank != null && oldRank.rank < newRank.rank) {
+        await _handleRankUp(userId, oldRank, newRank);
+        rankedUp = true;
+      }
+
+      return {
+        'rankedUp': rankedUp,
+        'oldRank': oldRank,
+        'newRank': newRank,
+        'newXP': newXP,
+      };
     } catch (e) {
       debugPrint('Error updating user total XP: $e');
+      return {
+        'rankedUp': false,
+        'oldRank': null,
+        'newRank': null,
+        'newXP': 0,
+      };
+    }
+  }
+
+  /// Handle rank up event
+  Future<void> _handleRankUp(
+    String userId,
+    LeaderboardRank oldRank,
+    LeaderboardRank newRank,
+  ) async {
+    try {
+      // Log rank achievement
+      await _firestore.collection('rankAchievements').add({
+        'userId': userId,
+        'oldRank': oldRank.rank,
+        'oldRankName': oldRank.name,
+        'newRank': newRank.rank,
+        'newRankName': newRank.name,
+        'tier': newRank.tier,
+        'timestamp': FieldValue.serverTimestamp(),
+      });
+
+      // Update user's current rank
+      await _firestore.collection('users').doc(userId).update({
+        'currentRank': newRank.rank,
+        'currentRankName': newRank.name,
+        'currentTier': newRank.tier,
+        'rankImageUrl': newRank.imageUrl,
+      });
+
+      debugPrint('🎉 RANK UP! ${oldRank.name} → ${newRank.name}');
+    } catch (e) {
+      debugPrint('Error handling rank up: $e');
+    }
+  }
+
+  /// Get user's current rank
+  Future<LeaderboardRank?> getUserRank(String userId) async {
+    try {
+      final xp = await getUserTotalXP(userId);
+      return await _rankService.getUserRank(xp);
+    } catch (e) {
+      debugPrint('Error getting user rank: $e');
+      return null;
+    }
+  }
+
+  /// Get user's next rank
+  Future<LeaderboardRank?> getNextRank(String userId) async {
+    try {
+      final xp = await getUserTotalXP(userId);
+      return await _rankService.getNextRank(xp);
+    } catch (e) {
+      debugPrint('Error getting next rank: $e');
+      return null;
     }
   }
 
@@ -284,14 +387,15 @@ class XPService {
     }
   }
 
-  /// Record daily login and award bonus
-  Future<int> recordDailyLogin(String userId) async {
+  /// Record daily login and award bonus with streak tracking
+  Future<Map<String, dynamic>> recordDailyLogin(String userId) async {
     try {
       final userDoc = await _firestore.collection('users').doc(userId).get();
       final data = userDoc.data();
       
       final lastLoginTimestamp = data?['lastLoginDate'] as Timestamp?;
       final lastLoginDate = lastLoginTimestamp?.toDate();
+      final currentStreak = (data?['currentStreak'] as int?) ?? 0;
       final today = DateTime.now();
       
       // Check if already logged in today
@@ -299,29 +403,234 @@ class XPService {
           lastLoginDate.year == today.year &&
           lastLoginDate.month == today.month &&
           lastLoginDate.day == today.day) {
-        return 0; // Already logged in today
+        return {
+          'xpEarned': 0,
+          'streakBonus': 0,
+          'currentStreak': currentStreak,
+          'message': 'Already logged in today'
+        }; // Already logged in today
+      }
+      
+      int totalXP = DAILY_LOGIN_BONUS;
+      int streakBonus = 0;
+      int newStreak = 1;
+      
+      // Check if streak continues (logged in yesterday)
+      if (lastLoginDate != null) {
+        final yesterday = today.subtract(const Duration(days: 1));
+        if (lastLoginDate.year == yesterday.year &&
+            lastLoginDate.month == yesterday.month &&
+            lastLoginDate.day == yesterday.day) {
+          newStreak = currentStreak + 1;
+        }
+      }
+      
+      // Check for streak milestones
+      if (newStreak == 7) {
+        streakBonus = SEVEN_DAY_STREAK_BONUS;
+        totalXP += streakBonus;
+        debugPrint('🔥 7-Day Streak Bonus: +$streakBonus XP');
+      } else if (newStreak == 30) {
+        streakBonus = THIRTY_DAY_STREAK_BONUS;
+        totalXP += streakBonus;
+        debugPrint('🔥🔥 30-Day Streak Bonus: +$streakBonus XP');
+      } else if (newStreak % 7 == 0 && newStreak > 0) {
+        // Weekly milestone bonus
+        streakBonus = SEVEN_DAY_STREAK_BONUS;
+        totalXP += streakBonus;
+        debugPrint('🔥 Weekly Streak Milestone: +$streakBonus XP');
       }
       
       // Award daily login bonus
       await _saveXPTransaction(
         userId: userId,
-        xpAmount: DAILY_LOGIN_BONUS,
+        xpAmount: totalXP,
         source: 'daily_login',
         sourceId: 'login_${DateTime.now().millisecondsSinceEpoch}',
-        details: {'date': today.toIso8601String()},
+        details: {
+          'date': today.toIso8601String(),
+          'streak': newStreak,
+          'streakBonus': streakBonus,
+        },
       );
       
-      await _updateUserTotalXP(userId, DAILY_LOGIN_BONUS);
+      await _updateUserTotalXP(userId, totalXP);
       
-      // Update last login date
+      // Update last login date and streak
       await _firestore.collection('users').doc(userId).update({
         'lastLoginDate': FieldValue.serverTimestamp(),
+        'currentStreak': newStreak,
+        'longestStreak': newStreak > (data?['longestStreak'] as int? ?? 0) 
+            ? newStreak 
+            : data?['longestStreak'],
       });
       
-      debugPrint('🎁 Daily Login Bonus: +$DAILY_LOGIN_BONUS XP');
-      return DAILY_LOGIN_BONUS;
+      debugPrint('🎁 Daily Login: +$DAILY_LOGIN_BONUS XP (Streak: $newStreak days)');
+      return {
+        'xpEarned': totalXP,
+        'streakBonus': streakBonus,
+        'currentStreak': newStreak,
+        'message': streakBonus > 0 
+            ? 'Streak milestone reached!' 
+            : 'Keep it up! Day $newStreak'
+      };
     } catch (e) {
       debugPrint('Error recording daily login: $e');
+      return {
+        'xpEarned': 0,
+        'streakBonus': 0,
+        'currentStreak': 0,
+        'message': 'Error recording login'
+      };
+    }
+  }
+  
+  /// Record note upload
+  Future<int> recordNoteUpload({
+    required String userId,
+    required String noteId,
+    required String noteTitle,
+    required String subject,
+  }) async {
+    try {
+      await _saveXPTransaction(
+        userId: userId,
+        xpAmount: UPLOAD_NOTES_XP,
+        source: 'note_upload',
+        sourceId: noteId,
+        details: {
+          'noteTitle': noteTitle,
+          'subject': subject,
+        },
+      );
+      
+      await _updateUserTotalXP(userId, UPLOAD_NOTES_XP);
+      
+      debugPrint('📝 Note Uploaded: +$UPLOAD_NOTES_XP XP');
+      return UPLOAD_NOTES_XP;
+    } catch (e) {
+      debugPrint('Error recording note upload: $e');
+      return 0;
+    }
+  }
+  
+  /// Record note engagement (upvote/download)
+  Future<int> recordNoteEngagement({
+    required String noteOwnerId,
+    required String noteId,
+    required String engagementType, // 'upvote' or 'download'
+  }) async {
+    try {
+      final xp = engagementType == 'upvote' ? NOTE_UPVOTE_XP : NOTE_DOWNLOAD_XP;
+      
+      await _saveXPTransaction(
+        userId: noteOwnerId,
+        xpAmount: xp,
+        source: 'note_engagement',
+        sourceId: noteId,
+        details: {
+          'engagementType': engagementType,
+        },
+      );
+      
+      await _updateUserTotalXP(noteOwnerId, xp);
+      
+      debugPrint('👍 Note $engagementType: +$xp XP');
+      return xp;
+    } catch (e) {
+      debugPrint('Error recording note engagement: $e');
+      return 0;
+    }
+  }
+  
+  /// Record AI revision plan completion
+  Future<int> recordAIRevisionPlan({
+    required String userId,
+    required String planId,
+    required String subject,
+  }) async {
+    try {
+      await _saveXPTransaction(
+        userId: userId,
+        xpAmount: AI_REVISION_PLAN_XP,
+        source: 'ai_revision_plan',
+        sourceId: planId,
+        details: {
+          'subject': subject,
+        },
+      );
+      
+      await _updateUserTotalXP(userId, AI_REVISION_PLAN_XP);
+      
+      debugPrint('🤖 AI Revision Plan Completed: +$AI_REVISION_PLAN_XP XP');
+      return AI_REVISION_PLAN_XP;
+    } catch (e) {
+      debugPrint('Error recording AI revision plan: $e');
+      return 0;
+    }
+  }
+  
+  /// Record subject module completion
+  Future<int> recordSubjectModuleCompletion({
+    required String userId,
+    required String moduleId,
+    required String subject,
+  }) async {
+    try {
+      await _saveXPTransaction(
+        userId: userId,
+        xpAmount: SUBJECT_MODULE_COMPLETION_XP,
+        source: 'module_completion',
+        sourceId: moduleId,
+        details: {
+          'subject': subject,
+        },
+      );
+      
+      await _updateUserTotalXP(userId, SUBJECT_MODULE_COMPLETION_XP);
+      
+      debugPrint('🎓 Subject Module Completed: +$SUBJECT_MODULE_COMPLETION_XP XP');
+      return SUBJECT_MODULE_COMPLETION_XP;
+    } catch (e) {
+      debugPrint('Error recording module completion: $e');
+      return 0;
+    }
+  }
+  
+  /// Award monthly contest winner
+  Future<int> recordMonthlyContestWin({
+    required String userId,
+    required String contestId,
+    required String contestName,
+  }) async {
+    try {
+      await _saveXPTransaction(
+        userId: userId,
+        xpAmount: MONTHLY_CONTEST_WINNER_XP,
+        source: 'contest_win',
+        sourceId: contestId,
+        details: {
+          'contestName': contestName,
+        },
+      );
+      
+      await _updateUserTotalXP(userId, MONTHLY_CONTEST_WINNER_XP);
+      
+      debugPrint('🏆 Monthly Contest Won: +$MONTHLY_CONTEST_WINNER_XP XP');
+      return MONTHLY_CONTEST_WINNER_XP;
+    } catch (e) {
+      debugPrint('Error recording contest win: $e');
+      return 0;
+    }
+  }
+  
+  /// Get current streak
+  Future<int> getCurrentStreak(String userId) async {
+    try {
+      final userDoc = await _firestore.collection('users').doc(userId).get();
+      return (userDoc.data()?['currentStreak'] as int?) ?? 0;
+    } catch (e) {
+      debugPrint('Error getting current streak: $e');
       return 0;
     }
   }

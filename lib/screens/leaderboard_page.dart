@@ -3,8 +3,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:share_plus/share_plus.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import '../services/xp_service.dart';
 import '../services/motivational_service.dart';
+import '../services/leaderboard_rank_service.dart';
 
 class LeaderboardPage extends StatefulWidget {
   final bool isEmbedded; // Whether it's embedded in home page or standalone
@@ -201,12 +203,15 @@ class _LeaderboardPageState extends State<LeaderboardPage> with TickerProviderSt
         final data = userDoc.data();
         if (data == null) continue;
         
+        // Use actual totalXP from users collection, not calculated quiz XP
+        final actualTotalXP = (data['totalXP'] as int?) ?? 0;
+        
         final leaderboardEntry = LeaderboardEntry(
           rank: rank,
           userId: userId,
           username: (data['displayName'] as String?) ?? 'Student',
           school: (data['school'] as String?) ?? 'Ghana School',
-          xp: stats.score,
+          xp: actualTotalXP,
           avatarUrl: data['photoURL'] as String?,
           presetAvatar: data['presetAvatar'] as String?,
           questionsAnswered: stats.totalQuestions,
@@ -227,18 +232,19 @@ class _LeaderboardPageState extends State<LeaderboardPage> with TickerProviderSt
       // If current user not in top 100, calculate their stats and add separately
       if (_currentUserEntry == null) {
         final userStats = await _calculateUserStats(user.uid, _selectedCategory, _selectedSubCategory);
+        final actualTotalXP = (userData?['totalXP'] as int?) ?? 0;
         _currentUserEntry = LeaderboardEntry(
           rank: rank,
           userId: user.uid,
           username: user.displayName ?? 'Student',
           school: userData?['school'] as String? ?? 'My School',
-          xp: userStats.score,
+          xp: actualTotalXP,
           avatarUrl: user.photoURL,
           presetAvatar: userData?['presetAvatar'] as String?,
           questionsAnswered: userStats.totalQuestions,
           accuracy: userStats.totalQuestions > 0 ? (userStats.correctAnswers / userStats.totalQuestions * 100) : 0,
           streak: 0,
-          tier: _getTier(userStats.score),
+          tier: _getTier(actualTotalXP),
         );
       }
 
@@ -330,30 +336,67 @@ class _LeaderboardPageState extends State<LeaderboardPage> with TickerProviderSt
   }
   
   Widget _buildAvatarImage(LeaderboardEntry entry, double iconSize) {
-    // Check preset avatar first, then custom photo URL
-    if (entry.presetAvatar != null) {
-      return ClipOval(
-        child: Image.asset(
-          entry.presetAvatar!,
-          fit: BoxFit.cover,
-          errorBuilder: (context, error, stackTrace) {
-            return Icon(Icons.person, size: iconSize, color: Colors.grey[600]);
-          },
-        ),
-      );
-    } else if (entry.avatarUrl != null) {
-      return ClipOval(
-        child: Image.network(
-          entry.avatarUrl!,
-          fit: BoxFit.cover,
-          errorBuilder: (context, error, stackTrace) {
-            return Icon(Icons.person, size: iconSize, color: Colors.grey[600]);
-          },
-        ),
-      );
-    } else {
-      return Icon(Icons.person, size: iconSize, color: Colors.grey[600]);
-    }
+    // Get user's rank badge based on XP
+    return FutureBuilder<LeaderboardRank?>(
+      future: LeaderboardRankService().getUserRank(entry.xp),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          // Loading placeholder
+          return Container(
+            width: iconSize,
+            height: iconSize,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.grey[200],
+            ),
+            child: Icon(Icons.emoji_events_outlined, size: iconSize * 0.5, color: Colors.grey[400]),
+          );
+        }
+        
+        final rank = snapshot.data;
+        if (rank != null && rank.imageUrl.isNotEmpty) {
+          // Show rank badge from Firebase Storage
+          return ClipOval(
+            child: CachedNetworkImage(
+              imageUrl: rank.imageUrl,
+              width: iconSize,
+              height: iconSize,
+              fit: BoxFit.cover,
+              placeholder: (context, url) => Container(
+                color: rank.getTierColor().withOpacity(0.1),
+                child: Icon(
+                  Icons.emoji_events,
+                  color: rank.getTierColor(),
+                  size: iconSize * 0.5,
+                ),
+              ),
+              errorWidget: (context, url, error) => Container(
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: rank.getTierColor().withOpacity(0.2),
+                ),
+                child: Icon(
+                  Icons.emoji_events,
+                  color: rank.getTierColor(),
+                  size: iconSize * 0.5,
+                ),
+              ),
+            ),
+          );
+        } else {
+          // Fallback to trophy icon
+          return Container(
+            width: iconSize,
+            height: iconSize,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: Colors.grey[300],
+            ),
+            child: Icon(Icons.emoji_events, size: iconSize * 0.5, color: Colors.grey[600]),
+          );
+        }
+      },
+    );
   }
   
   Color _getTierColor(String tier) {
@@ -845,40 +888,46 @@ Join the challenge 👉 $url
                       ),
                     ),
                     const SizedBox(height: 8),
-                    Row(
-                      children: [
-                        Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-                          decoration: BoxDecoration(
-                            color: Colors.white.withValues(alpha: 0.25),
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: Text(
-                            '${entry.tier} Tier',
-                            style: GoogleFonts.montserrat(
-                              fontSize: 12,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
+                    FutureBuilder<LeaderboardRank?>(
+                      future: LeaderboardRankService().getUserRank(entry.xp),
+                      builder: (context, snapshot) {
+                        final rankName = snapshot.data?.name ?? 'Loading...';
+                        return Row(
+                          children: [
+                            Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                              decoration: BoxDecoration(
+                                color: Colors.white.withValues(alpha: 0.25),
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: Text(
+                                rankName,
+                                style: GoogleFonts.montserrat(
+                                  fontSize: 12,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
                             ),
-                          ),
-                        ),
-                        const SizedBox(width: 8),
-                        Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-                          decoration: BoxDecoration(
-                            color: Colors.white.withValues(alpha: 0.25),
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: Text(
-                            '${entry.xp} XP',
-                            style: GoogleFonts.montserrat(
-                              fontSize: 12,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
+                            const SizedBox(width: 8),
+                            Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                              decoration: BoxDecoration(
+                                color: Colors.white.withValues(alpha: 0.25),
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: Text(
+                                '${entry.xp} XP',
+                                style: GoogleFonts.montserrat(
+                                  fontSize: 12,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
                             ),
-                          ),
-                        ),
-                      ],
+                          ],
+                        );
+                      },
                     ),
                   ],
                 ),
@@ -960,11 +1009,26 @@ Join the challenge 👉 $url
                   ),
                   const SizedBox(width: 12),
                   Expanded(
-                    child: _buildStatCard(
-                      '${(entry.questionsAnswered * 2 / 60).toStringAsFixed(1)}h',
-                      'Time\nSpent',
-                      Icons.access_time_outlined,
-                      const Color(0xFF8B5CF6),
+                    child: FutureBuilder<LeaderboardRank?>(
+                      future: LeaderboardRankService().getNextRank(entry.xp),
+                      builder: (context, snapshot) {
+                        if (snapshot.data != null) {
+                          final nextRank = snapshot.data!;
+                          final xpNeeded = nextRank.minXP - entry.xp;
+                          return _buildStatCard(
+                            '$xpNeeded',
+                            'XP to\n${nextRank.name}',
+                            Icons.trending_up,
+                            const Color(0xFF8B5CF6),
+                          );
+                        }
+                        return _buildStatCard(
+                          'Max',
+                          'Rank\nAchieved',
+                          Icons.emoji_events,
+                          const Color(0xFFFFD700),
+                        );
+                      },
                     ),
                   ),
                 ],

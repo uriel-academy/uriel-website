@@ -46,15 +46,13 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
   String _alignment = 'justified';
   
   // Reading Progress
-  int _currentPage = 0;
-  int _totalPages = 0;
-  double _progress = 0.0;
+  final int _currentPage = 0;
+  final double _progress = 0.0;
   DateTime? _sessionStartTime;
   Duration _totalReadingTime = Duration.zero;
   
   // Bookmarks & Highlights
   List<Map<String, dynamic>> _bookmarks = [];
-  List<Map<String, dynamic>> _highlights = [];
   
   // TTS
   FlutterTts? _flutterTts;
@@ -99,12 +97,6 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
       final bookmarksJson = prefs.getString('bookmarks_${widget.bookId}');
       if (bookmarksJson != null) {
         _bookmarks = List<Map<String, dynamic>>.from(jsonDecode(bookmarksJson));
-      }
-      
-      // Load highlights
-      final highlightsJson = prefs.getString('highlights_${widget.bookId}');
-      if (highlightsJson != null) {
-        _highlights = List<Map<String, dynamic>>.from(jsonDecode(highlightsJson));
       }
       
       // Load reading time
@@ -171,8 +163,9 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
       });
 
       if (lastPosJson != null) {
-        final lastPos = jsonDecode(lastPosJson);
         // TODO: Navigate to last position when EPUB loads
+        // final lastPos = jsonDecode(lastPosJson);
+        // Use lastPos to navigate to the saved position
       }
     } catch (e) {
       setState(() {
@@ -469,7 +462,7 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
                 children: [
                   // Back Button
                   IconButton(
-                    icon: Icon(Icons.arrow_back_ios, size: 20),
+                    icon: const Icon(Icons.arrow_back_ios, size: 20),
                     color: theme['text'],
                     onPressed: () {
                       _saveReadingTime();
