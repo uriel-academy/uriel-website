@@ -1,0 +1,1748 @@
+{
+  "q1": {
+    "question": "What is the capital city of Uzbekistan?",
+    "possibleAnswers": [
+      "A. Mal\u00e9",
+      "B. Seoul",
+      "C. Windhoek",
+      "D. Tashkent"
+    ]
+  },
+  "q2": {
+    "question": "What is the capital city of Nauru?",
+    "possibleAnswers": [
+      "A. Tehran",
+      "B. Yaren",
+      "C. Montevideo",
+      "D. Freetown"
+    ]
+  },
+  "q3": {
+    "question": "What is the capital city of Marshall Islands?",
+    "possibleAnswers": [
+      "A. Bogot\u00e1",
+      "B. Seoul",
+      "C. Majuro",
+      "D. Vientiane"
+    ]
+  },
+  "q4": {
+    "question": "What is the capital city of Guinea?",
+    "possibleAnswers": [
+      "A. Port Moresby",
+      "B. Pyongyang",
+      "C. Conakry",
+      "D. Antananarivo"
+    ]
+  },
+  "q5": {
+    "question": "What is the capital city of Kenya?",
+    "possibleAnswers": [
+      "A. Roseau",
+      "B. Rabat",
+      "C. Kuala Lumpur",
+      "D. Nairobi"
+    ]
+  },
+  "q6": {
+    "question": "What is the capital city of Brunei?",
+    "possibleAnswers": [
+      "A. Bandar Seri Begawan",
+      "B. Luanda",
+      "C. Copenhagen",
+      "D. Luxembourg City"
+    ]
+  },
+  "q7": {
+    "question": "What is the capital city of Norway?",
+    "possibleAnswers": [
+      "A. Yaound\u00e9",
+      "B. Oslo",
+      "C. Dili",
+      "D. Luxembourg City"
+    ]
+  },
+  "q8": {
+    "question": "What is the capital city of Kiribati?",
+    "possibleAnswers": [
+      "A. Vientiane",
+      "B. Bratislava",
+      "C. Harare",
+      "D. South Tarawa"
+    ]
+  },
+  "q9": {
+    "question": "What is the capital city of Benin?",
+    "possibleAnswers": [
+      "A. Oslo",
+      "B. Porto-Novo",
+      "C. Sana\u2019a",
+      "D. Accra"
+    ]
+  },
+  "q10": {
+    "question": "What is the capital city of South Africa?",
+    "possibleAnswers": [
+      "A. Damascus",
+      "B. Ouagadougou",
+      "C. Pretoria",
+      "D. Maseru"
+    ]
+  },
+  "q11": {
+    "question": "What is the capital city of Poland?",
+    "possibleAnswers": [
+      "A. Warsaw",
+      "B. Djibouti",
+      "C. Khartoum",
+      "D. Bangkok"
+    ]
+  },
+  "q12": {
+    "question": "What is the capital city of Liechtenstein?",
+    "possibleAnswers": [
+      "A. Vaduz",
+      "B. Abu Dhabi",
+      "C. Algiers",
+      "D. San Jos\u00e9"
+    ]
+  },
+  "q13": {
+    "question": "What is the capital city of Thailand?",
+    "possibleAnswers": [
+      "A. Podgorica",
+      "B. Bangkok",
+      "C. Kingstown",
+      "D. Bratislava"
+    ]
+  },
+  "q14": {
+    "question": "What is the capital city of Liberia?",
+    "possibleAnswers": [
+      "A. Vientiane",
+      "B. Seoul",
+      "C. Santiago",
+      "D. Monrovia"
+    ]
+  },
+  "q15": {
+    "question": "What is the capital city of Ukraine?",
+    "possibleAnswers": [
+      "A. Canberra",
+      "B. Mbabane",
+      "C. Kyiv",
+      "D. Palikir"
+    ]
+  },
+  "q16": {
+    "question": "What is the capital city of Taiwan?",
+    "possibleAnswers": [
+      "A. Taipei",
+      "B. Copenhagen",
+      "C. Majuro",
+      "D. Muscat"
+    ]
+  },
+  "q17": {
+    "question": "What is the capital city of Syria?",
+    "possibleAnswers": [
+      "A. Georgetown",
+      "B. Tehran",
+      "C. Damascus",
+      "D. Gitega"
+    ]
+  },
+  "q18": {
+    "question": "What is the capital city of Timor-Leste?",
+    "possibleAnswers": [
+      "A. Muscat",
+      "B. Dili",
+      "C. Juba",
+      "D. Tirana"
+    ]
+  },
+  "q19": {
+    "question": "What is the capital city of Uganda?",
+    "possibleAnswers": [
+      "A. Ottawa",
+      "B. Prague",
+      "C. Luxembourg City",
+      "D. Kampala"
+    ]
+  },
+  "q20": {
+    "question": "What is the capital city of Latvia?",
+    "possibleAnswers": [
+      "A. Port Louis",
+      "B. Vilnius",
+      "C. Riga",
+      "D. Gaborone"
+    ]
+  },
+  "q21": {
+    "question": "What is the capital city of Rwanda?",
+    "possibleAnswers": [
+      "A. Yaren",
+      "B. Lom\u00e9",
+      "C. Conakry",
+      "D. Kigali"
+    ]
+  },
+  "q22": {
+    "question": "What is the capital city of New Zealand?",
+    "possibleAnswers": [
+      "A. Thimphu",
+      "B. Wellington",
+      "C. Brussels",
+      "D. Berlin"
+    ]
+  },
+  "q23": {
+    "question": "What is the capital city of Gambia?",
+    "possibleAnswers": [
+      "A. Juba",
+      "B. Ashgabat",
+      "C. Port of Spain",
+      "D. Banjul"
+    ]
+  },
+  "q24": {
+    "question": "What is the capital city of Singapore?",
+    "possibleAnswers": [
+      "A. Singapore",
+      "B. Port Moresby",
+      "C. Managua",
+      "D. Islamabad"
+    ]
+  },
+  "q25": {
+    "question": "What is the capital city of Portugal?",
+    "possibleAnswers": [
+      "A. Riga",
+      "B. Lisbon",
+      "C. Bamako",
+      "D. Paris"
+    ]
+  },
+  "q26": {
+    "question": "What is the capital city of Lesotho?",
+    "possibleAnswers": [
+      "A. Pyongyang",
+      "B. Maseru",
+      "C. Berlin",
+      "D. San Jos\u00e9"
+    ]
+  },
+  "q27": {
+    "question": "What is the capital city of Greece?",
+    "possibleAnswers": [
+      "A. Lisbon",
+      "B. Paris",
+      "C. Athens",
+      "D. Ulaanbaatar"
+    ]
+  },
+  "q28": {
+    "question": "What is the capital city of United Kingdom?",
+    "possibleAnswers": [
+      "A. Harare",
+      "B. Rabat",
+      "C. Stockholm",
+      "D. London"
+    ]
+  },
+  "q29": {
+    "question": "What is the capital city of France?",
+    "possibleAnswers": [
+      "A. Damascus",
+      "B. Paris",
+      "C. Honiara",
+      "D. Windhoek"
+    ]
+  },
+  "q30": {
+    "question": "What is the capital city of North Macedonia?",
+    "possibleAnswers": [
+      "A. Caracas",
+      "B. Skopje",
+      "C. Honiara",
+      "D. Reykjavik"
+    ]
+  },
+  "q31": {
+    "question": "What is the capital city of Central African Republic?",
+    "possibleAnswers": [
+      "A. Moroni",
+      "B. Bangui",
+      "C. Jerusalem",
+      "D. Victoria"
+    ]
+  },
+  "q32": {
+    "question": "What is the capital city of Sweden?",
+    "possibleAnswers": [
+      "A. Paris",
+      "B. Niamey",
+      "C. Stockholm",
+      "D. Conakry"
+    ]
+  },
+  "q33": {
+    "question": "What is the capital city of Afghanistan?",
+    "possibleAnswers": [
+      "A. Kinshasa",
+      "B. Phnom Penh",
+      "C. Kabul",
+      "D. Nouakchott"
+    ]
+  },
+  "q34": {
+    "question": "What is the capital city of Gabon?",
+    "possibleAnswers": [
+      "A. Saint John\u2019s",
+      "B. Tallinn",
+      "C. Libreville",
+      "D. Moroni"
+    ]
+  },
+  "q35": {
+    "question": "What is the capital city of Brazil?",
+    "possibleAnswers": [
+      "A. Phnom Penh",
+      "B. Freetown",
+      "C. Vaduz",
+      "D. Bras\u00edlia"
+    ]
+  },
+  "q36": {
+    "question": "What is the capital city of Chile?",
+    "possibleAnswers": [
+      "A. Lilongwe",
+      "B. Athens",
+      "C. Chi\u0219in\u0103u",
+      "D. Santiago"
+    ]
+  },
+  "q37": {
+    "question": "What is the capital city of Switzerland?",
+    "possibleAnswers": [
+      "A. Praia",
+      "B. Bern",
+      "C. Juba",
+      "D. Asmara"
+    ]
+  },
+  "q38": {
+    "question": "What is the capital city of Uruguay?",
+    "possibleAnswers": [
+      "A. Colombo",
+      "B. Montevideo",
+      "C. Luxembourg City",
+      "D. Vienna"
+    ]
+  },
+  "q39": {
+    "question": "What is the capital city of Hungary?",
+    "possibleAnswers": [
+      "A. Budapest",
+      "B. Valletta",
+      "C. Lusaka",
+      "D. Tallinn"
+    ]
+  },
+  "q40": {
+    "question": "What is the capital city of Albania?",
+    "possibleAnswers": [
+      "A. Algiers",
+      "B. San Jos\u00e9",
+      "C. Tirana",
+      "D. Ouagadougou"
+    ]
+  },
+  "q41": {
+    "question": "What is the capital city of Barbados?",
+    "possibleAnswers": [
+      "A. Tokyo",
+      "B. Bangkok",
+      "C. Bridgetown",
+      "D. Wellington"
+    ]
+  },
+  "q42": {
+    "question": "What is the capital city of Cambodia?",
+    "possibleAnswers": [
+      "A. Valletta",
+      "B. Kigali",
+      "C. Phnom Penh",
+      "D. Bogot\u00e1"
+    ]
+  },
+  "q43": {
+    "question": "What is the capital city of Bosnia and Herzegovina?",
+    "possibleAnswers": [
+      "A. Pretoria",
+      "B. Quito",
+      "C. Sarajevo",
+      "D. Islamabad"
+    ]
+  },
+  "q44": {
+    "question": "What is the capital city of Suriname?",
+    "possibleAnswers": [
+      "A. Paramaribo",
+      "B. Bandar Seri Begawan",
+      "C. Havana",
+      "D. Honiara"
+    ]
+  },
+  "q45": {
+    "question": "What is the capital city of Bulgaria?",
+    "possibleAnswers": [
+      "A. Kampala",
+      "B. Abuja",
+      "C. Sofia",
+      "D. Reykjavik"
+    ]
+  },
+  "q46": {
+    "question": "What is the capital city of Bangladesh?",
+    "possibleAnswers": [
+      "A. Dhaka",
+      "B. Dodoma",
+      "C. Vatican City",
+      "D. Prague"
+    ]
+  },
+  "q47": {
+    "question": "What is the capital city of Guyana?",
+    "possibleAnswers": [
+      "A. Bras\u00edlia",
+      "B. Georgetown",
+      "C. Warsaw",
+      "D. Ouagadougou"
+    ]
+  },
+  "q48": {
+    "question": "What is the capital city of Bhutan?",
+    "possibleAnswers": [
+      "A. Taipei",
+      "B. S\u00e3o Tom\u00e9",
+      "C. Thimphu",
+      "D. Port Moresby"
+    ]
+  },
+  "q49": {
+    "question": "What is the capital city of Slovakia?",
+    "possibleAnswers": [
+      "A. Rome",
+      "B. Bratislava",
+      "C. Quito",
+      "D. Nicosia"
+    ]
+  },
+  "q50": {
+    "question": "What is the capital city of Sudan?",
+    "possibleAnswers": [
+      "A. Khartoum",
+      "B. Victoria",
+      "C. Tehran",
+      "D. Chi\u0219in\u0103u"
+    ]
+  },
+  "q51": {
+    "question": "What is the capital city of Solomon Islands?",
+    "possibleAnswers": [
+      "A. Honiara",
+      "B. Podgorica",
+      "C. Georgetown",
+      "D. Astana"
+    ]
+  },
+  "q52": {
+    "question": "What is the capital city of Kyrgyzstan?",
+    "possibleAnswers": [
+      "A. Dodoma",
+      "B. Bishkek",
+      "C. Windhoek",
+      "D. Havana"
+    ]
+  },
+  "q53": {
+    "question": "What is the capital city of Germany?",
+    "possibleAnswers": [
+      "A. Berlin",
+      "B. Astana",
+      "C. Praia",
+      "D. N'Djamena"
+    ]
+  },
+  "q54": {
+    "question": "What is the capital city of Pakistan?",
+    "possibleAnswers": [
+      "A. Porto-Novo",
+      "B. Islamabad",
+      "C. Vienna",
+      "D. Santo Domingo"
+    ]
+  },
+  "q55": {
+    "question": "What is the capital city of Morocco?",
+    "possibleAnswers": [
+      "A. Rabat",
+      "B. Tallinn",
+      "C. Andorra la Vella",
+      "D. San Jos\u00e9"
+    ]
+  },
+  "q56": {
+    "question": "What is the capital city of Mali?",
+    "possibleAnswers": [
+      "A. Addis Ababa",
+      "B. Tallinn",
+      "C. Bamako",
+      "D. Yaound\u00e9"
+    ]
+  },
+  "q57": {
+    "question": "What is the capital city of Kuwait?",
+    "possibleAnswers": [
+      "A. Kuwait City",
+      "B. Asunci\u00f3n",
+      "C. Bangui",
+      "D. Manila"
+    ]
+  },
+  "q58": {
+    "question": "What is the capital city of Philippines?",
+    "possibleAnswers": [
+      "A. Apia",
+      "B. Manila",
+      "C. Brussels",
+      "D. Montevideo"
+    ]
+  },
+  "q59": {
+    "question": "What is the capital city of Iraq?",
+    "possibleAnswers": [
+      "A. Monaco",
+      "B. Islamabad",
+      "C. Paris",
+      "D. Baghdad"
+    ]
+  },
+  "q60": {
+    "question": "What is the capital city of Papua New Guinea?",
+    "possibleAnswers": [
+      "A. Stockholm",
+      "B. Berlin",
+      "C. Port Moresby",
+      "D. Baghdad"
+    ]
+  },
+  "q61": {
+    "question": "What is the capital city of Iceland?",
+    "possibleAnswers": [
+      "A. Bishkek",
+      "B. Niamey",
+      "C. Copenhagen",
+      "D. Reykjavik"
+    ]
+  },
+  "q62": {
+    "question": "What is the capital city of Belgium?",
+    "possibleAnswers": [
+      "A. Caracas",
+      "B. Buenos Aires",
+      "C. Bissau",
+      "D. Brussels"
+    ]
+  },
+  "q63": {
+    "question": "What is the capital city of Montenegro?",
+    "possibleAnswers": [
+      "A. Managua",
+      "B. Libreville",
+      "C. Podgorica",
+      "D. Seoul"
+    ]
+  },
+  "q64": {
+    "question": "What is the capital city of Eritrea?",
+    "possibleAnswers": [
+      "A. Santiago",
+      "B. Asmara",
+      "C. San Jos\u00e9",
+      "D. Reykjavik"
+    ]
+  },
+  "q65": {
+    "question": "What is the capital city of Seychelles?",
+    "possibleAnswers": [
+      "A. Gitega",
+      "B. Muscat",
+      "C. Porto-Novo",
+      "D. Victoria"
+    ]
+  },
+  "q66": {
+    "question": "What is the capital city of Moldova?",
+    "possibleAnswers": [
+      "A. Sarajevo",
+      "B. Mogadishu",
+      "C. Tokyo",
+      "D. Chi\u0219in\u0103u"
+    ]
+  },
+  "q67": {
+    "question": "What is the capital city of Netherlands?",
+    "possibleAnswers": [
+      "A. Andorra la Vella",
+      "B. Amsterdam",
+      "C. Valletta",
+      "D. Jakarta"
+    ]
+  },
+  "q68": {
+    "question": "What is the capital city of Tanzania?",
+    "possibleAnswers": [
+      "A. Amman",
+      "B. Ankara",
+      "C. Basseterre",
+      "D. Dodoma"
+    ]
+  },
+  "q69": {
+    "question": "What is the capital city of Yemen?",
+    "possibleAnswers": [
+      "A. Bogot\u00e1",
+      "B. Roseau",
+      "C. Tehran",
+      "D. Sana\u2019a"
+    ]
+  },
+  "q70": {
+    "question": "What is the capital city of Russia?",
+    "possibleAnswers": [
+      "A. Bishkek",
+      "B. Addis Ababa",
+      "C. Santiago",
+      "D. Moscow"
+    ]
+  },
+  "q71": {
+    "question": "What is the capital city of Democratic Republic of the Congo?",
+    "possibleAnswers": [
+      "A. Panama City",
+      "B. Kinshasa",
+      "C. Dili",
+      "D. Gaborone"
+    ]
+  },
+  "q72": {
+    "question": "What is the capital city of Turkey?",
+    "possibleAnswers": [
+      "A. Jakarta",
+      "B. Ankara",
+      "C. Amsterdam",
+      "D. London"
+    ]
+  },
+  "q73": {
+    "question": "What is the capital city of Maldives?",
+    "possibleAnswers": [
+      "A. Copenhagen",
+      "B. Mal\u00e9",
+      "C. Conakry",
+      "D. Ljubljana"
+    ]
+  },
+  "q74": {
+    "question": "What is the capital city of Japan?",
+    "possibleAnswers": [
+      "A. Tirana",
+      "B. N'Djamena",
+      "C. Santo Domingo",
+      "D. Tokyo"
+    ]
+  },
+  "q75": {
+    "question": "What is the capital city of Bahrain?",
+    "possibleAnswers": [
+      "A. Manama",
+      "B. Kuwait City",
+      "C. Algiers",
+      "D. Copenhagen"
+    ]
+  },
+  "q76": {
+    "question": "What is the capital city of South Sudan?",
+    "possibleAnswers": [
+      "A. Kingstown",
+      "B. Juba",
+      "C. Mogadishu",
+      "D. Moroni"
+    ]
+  },
+  "q77": {
+    "question": "What is the capital city of Saudi Arabia?",
+    "possibleAnswers": [
+      "A. Havana",
+      "B. Tbilisi",
+      "C. Riyadh",
+      "D. Lilongwe"
+    ]
+  },
+  "q78": {
+    "question": "What is the capital city of Chad?",
+    "possibleAnswers": [
+      "A. Abuja",
+      "B. N'Djamena",
+      "C. Nicosia",
+      "D. Khartoum"
+    ]
+  },
+  "q79": {
+    "question": "What is the capital city of Saint Vincent and the Grenadines?",
+    "possibleAnswers": [
+      "A. Ankara",
+      "B. Saint John\u2019s",
+      "C. Belmopan",
+      "D. Kingstown"
+    ]
+  },
+  "q80": {
+    "question": "What is the capital city of Cuba?",
+    "possibleAnswers": [
+      "A. Havana",
+      "B. Helsinki",
+      "C. Majuro",
+      "D. Mal\u00e9"
+    ]
+  },
+  "q81": {
+    "question": "What is the capital city of Mozambique?",
+    "possibleAnswers": [
+      "A. Nassau",
+      "B. Maputo",
+      "C. Algiers",
+      "D. Georgetown"
+    ]
+  },
+  "q82": {
+    "question": "What is the capital city of Burundi?",
+    "possibleAnswers": [
+      "A. Maseru",
+      "B. Dodoma",
+      "C. Reykjavik",
+      "D. Gitega"
+    ]
+  },
+  "q83": {
+    "question": "What is the capital city of Equatorial Guinea?",
+    "possibleAnswers": [
+      "A. San Salvador",
+      "B. Ankara",
+      "C. Hanoi",
+      "D. Malabo"
+    ]
+  },
+  "q84": {
+    "question": "What is the capital city of Estonia?",
+    "possibleAnswers": [
+      "A. Tallinn",
+      "B. Bamako",
+      "C. Vatican City",
+      "D. Belmopan"
+    ]
+  },
+  "q85": {
+    "question": "What is the capital city of Mauritius?",
+    "possibleAnswers": [
+      "A. Damascus",
+      "B. Ngerulmud",
+      "C. Bern",
+      "D. Port Louis"
+    ]
+  },
+  "q86": {
+    "question": "What is the capital city of Panama?",
+    "possibleAnswers": [
+      "A. Panama City",
+      "B. Oslo",
+      "C. Dodoma",
+      "D. Canberra"
+    ]
+  },
+  "q87": {
+    "question": "What is the capital city of Malawi?",
+    "possibleAnswers": [
+      "A. Skopje",
+      "B. Quito",
+      "C. Nassau",
+      "D. Lilongwe"
+    ]
+  },
+  "q88": {
+    "question": "What is the capital city of Mexico?",
+    "possibleAnswers": [
+      "A. Baghdad",
+      "B. Seoul",
+      "C. Mexico City",
+      "D. Manila"
+    ]
+  },
+  "q89": {
+    "question": "What is the capital city of Honduras?",
+    "possibleAnswers": [
+      "A. Brazzaville",
+      "B. Tegucigalpa",
+      "C. Bangkok",
+      "D. Tunis"
+    ]
+  },
+  "q90": {
+    "question": "What is the capital city of Namibia?",
+    "possibleAnswers": [
+      "A. Maputo",
+      "B. Praia",
+      "C. Windhoek",
+      "D. Bern"
+    ]
+  },
+  "q91": {
+    "question": "What is the capital city of Luxembourg?",
+    "possibleAnswers": [
+      "A. Budapest",
+      "B. Luxembourg City",
+      "C. Quito",
+      "D. Panama City"
+    ]
+  },
+  "q92": {
+    "question": "What is the capital city of Italy?",
+    "possibleAnswers": [
+      "A. Guatemala City",
+      "B. Pyongyang",
+      "C. Rome",
+      "D. Manila"
+    ]
+  },
+  "q93": {
+    "question": "What is the capital city of India?",
+    "possibleAnswers": [
+      "A. Pyongyang",
+      "B. New Delhi",
+      "C. Baghdad",
+      "D. London"
+    ]
+  },
+  "q94": {
+    "question": "What is the capital city of Palau?",
+    "possibleAnswers": [
+      "A. Muscat",
+      "B. Monrovia",
+      "C. New Delhi",
+      "D. Ngerulmud"
+    ]
+  },
+  "q95": {
+    "question": "What is the capital city of Spain?",
+    "possibleAnswers": [
+      "A. Madrid",
+      "B. Kingston",
+      "C. Sarajevo",
+      "D. Vaduz"
+    ]
+  },
+  "q96": {
+    "question": "What is the capital city of Romania?",
+    "possibleAnswers": [
+      "A. Bucharest",
+      "B. Kuwait City",
+      "C. Stockholm",
+      "D. London"
+    ]
+  },
+  "q97": {
+    "question": "What is the capital city of United States?",
+    "possibleAnswers": [
+      "A. Sana\u2019a",
+      "B. Washington, D.C.",
+      "C. Yaren",
+      "D. S\u00e3o Tom\u00e9"
+    ]
+  },
+  "q98": {
+    "question": "What is the capital city of Niger?",
+    "possibleAnswers": [
+      "A. Belgrade",
+      "B. Lisbon",
+      "C. Niamey",
+      "D. Maseru"
+    ]
+  },
+  "q99": {
+    "question": "What is the capital city of Ireland?",
+    "possibleAnswers": [
+      "A. Amsterdam",
+      "B. Port of Spain",
+      "C. Georgetown",
+      "D. Dublin"
+    ]
+  },
+  "q100": {
+    "question": "What is the capital city of Paraguay?",
+    "possibleAnswers": [
+      "A. Asunci\u00f3n",
+      "B. Baku",
+      "C. Astana",
+      "D. Phnom Penh"
+    ]
+  },
+  "q101": {
+    "question": "What is the capital city of Congo?",
+    "possibleAnswers": [
+      "A. Canberra",
+      "B. Tbilisi",
+      "C. Brazzaville",
+      "D. Bratislava"
+    ]
+  },
+  "q102": {
+    "question": "What is the capital city of South Korea?",
+    "possibleAnswers": [
+      "A. Riyadh",
+      "B. Wellington",
+      "C. Seoul",
+      "D. S\u00e3o Tom\u00e9"
+    ]
+  },
+  "q103": {
+    "question": "What is the capital city of Mongolia?",
+    "possibleAnswers": [
+      "A. Ulaanbaatar",
+      "B. Lilongwe",
+      "C. Bangui",
+      "D. Accra"
+    ]
+  },
+  "q104": {
+    "question": "What is the capital city of Peru?",
+    "possibleAnswers": [
+      "A. Santo Domingo",
+      "B. Lima",
+      "C. Port Vila",
+      "D. Sucre"
+    ]
+  },
+  "q105": {
+    "question": "What is the capital city of Andorra?",
+    "possibleAnswers": [
+      "A. Andorra la Vella",
+      "B. Ankara",
+      "C. Singapore",
+      "D. Kabul"
+    ]
+  },
+  "q106": {
+    "question": "What is the capital city of Saint Lucia?",
+    "possibleAnswers": [
+      "A. Paris",
+      "B. Castries",
+      "C. Banjul",
+      "D. Bern"
+    ]
+  },
+  "q107": {
+    "question": "What is the capital city of Colombia?",
+    "possibleAnswers": [
+      "A. Bogot\u00e1",
+      "B. Doha",
+      "C. Hanoi",
+      "D. Riyadh"
+    ]
+  },
+  "q108": {
+    "question": "What is the capital city of Australia?",
+    "possibleAnswers": [
+      "A. Banjul",
+      "B. Canberra",
+      "C. Valletta",
+      "D. Castries"
+    ]
+  },
+  "q109": {
+    "question": "What is the capital city of Senegal?",
+    "possibleAnswers": [
+      "A. Dakar",
+      "B. Dhaka",
+      "C. Buenos Aires",
+      "D. Sucre"
+    ]
+  },
+  "q110": {
+    "question": "What is the capital city of Croatia?",
+    "possibleAnswers": [
+      "A. Ashgabat",
+      "B. Zagreb",
+      "C. Seoul",
+      "D. Vilnius"
+    ]
+  },
+  "q111": {
+    "question": "What is the capital city of Zimbabwe?",
+    "possibleAnswers": [
+      "A. Maseru",
+      "B. Riga",
+      "C. Harare",
+      "D. Gaborone"
+    ]
+  },
+  "q112": {
+    "question": "What is the capital city of San Marino?",
+    "possibleAnswers": [
+      "A. San Marino",
+      "B. Belmopan",
+      "C. Havana",
+      "D. Canberra"
+    ]
+  },
+  "q113": {
+    "question": "What is the capital city of Algeria?",
+    "possibleAnswers": [
+      "A. Washington, D.C.",
+      "B. Kingstown",
+      "C. Gaborone",
+      "D. Algiers"
+    ]
+  },
+  "q114": {
+    "question": "What is the capital city of Comoros?",
+    "possibleAnswers": [
+      "A. Paris",
+      "B. San Marino",
+      "C. Kampala",
+      "D. Moroni"
+    ]
+  },
+  "q115": {
+    "question": "What is the capital city of Denmark?",
+    "possibleAnswers": [
+      "A. Managua",
+      "B. Copenhagen",
+      "C. Vienna",
+      "D. Vatican City"
+    ]
+  },
+  "q116": {
+    "question": "What is the capital city of Guinea-Bissau?",
+    "possibleAnswers": [
+      "A. Budapest",
+      "B. Bissau",
+      "C. Manila",
+      "D. Bridgetown"
+    ]
+  },
+  "q117": {
+    "question": "What is the capital city of United Arab Emirates?",
+    "possibleAnswers": [
+      "A. Bishkek",
+      "B. Tehran",
+      "C. Banjul",
+      "D. Abu Dhabi"
+    ]
+  },
+  "q118": {
+    "question": "What is the capital city of Nigeria?",
+    "possibleAnswers": [
+      "A. Lilongwe",
+      "B. Wellington",
+      "C. Bishkek",
+      "D. Abuja"
+    ]
+  },
+  "q119": {
+    "question": "What is the capital city of Eswatini?",
+    "possibleAnswers": [
+      "A. Nassau",
+      "B. Bridgetown",
+      "C. Quito",
+      "D. Mbabane"
+    ]
+  },
+  "q120": {
+    "question": "What is the capital city of Austria?",
+    "possibleAnswers": [
+      "A. Monaco",
+      "B. Bandar Seri Begawan",
+      "C. Vienna",
+      "D. Bern"
+    ]
+  },
+  "q121": {
+    "question": "What is the capital city of Grenada?",
+    "possibleAnswers": [
+      "A. Singapore",
+      "B. Valletta",
+      "C. Saint George\u2019s",
+      "D. Niamey"
+    ]
+  },
+  "q122": {
+    "question": "What is the capital city of Guatemala?",
+    "possibleAnswers": [
+      "A. Panama City",
+      "B. Maputo",
+      "C. Port Vila",
+      "D. Guatemala City"
+    ]
+  },
+  "q123": {
+    "question": "What is the capital city of North Korea?",
+    "possibleAnswers": [
+      "A. Nouakchott",
+      "B. Canberra",
+      "C. Pyongyang",
+      "D. Monaco"
+    ]
+  },
+  "q124": {
+    "question": "What is the capital city of Israel?",
+    "possibleAnswers": [
+      "A. Manama",
+      "B. Jerusalem",
+      "C. Helsinki",
+      "D. Jakarta"
+    ]
+  },
+  "q125": {
+    "question": "What is the capital city of Libya?",
+    "possibleAnswers": [
+      "A. Luanda",
+      "B. Port Vila",
+      "C. Port Moresby",
+      "D. Tripoli"
+    ]
+  },
+  "q126": {
+    "question": "What is the capital city of Azerbaijan?",
+    "possibleAnswers": [
+      "A. Baku",
+      "B. Manila",
+      "C. Yaren",
+      "D. Bishkek"
+    ]
+  },
+  "q127": {
+    "question": "What is the capital city of Samoa?",
+    "possibleAnswers": [
+      "A. Apia",
+      "B. Kinshasa",
+      "C. Bucharest",
+      "D. Ouagadougou"
+    ]
+  },
+  "q128": {
+    "question": "What is the capital city of Tunisia?",
+    "possibleAnswers": [
+      "A. Tallinn",
+      "B. Bratislava",
+      "C. Manama",
+      "D. Tunis"
+    ]
+  },
+  "q129": {
+    "question": "What is the capital city of Dominican Republic?",
+    "possibleAnswers": [
+      "A. Santo Domingo",
+      "B. Riga",
+      "C. Singapore",
+      "D. Paris"
+    ]
+  },
+  "q130": {
+    "question": "What is the capital city of Nicaragua?",
+    "possibleAnswers": [
+      "A. Port Vila",
+      "B. Suva",
+      "C. Managua",
+      "D. Accra"
+    ]
+  },
+  "q131": {
+    "question": "What is the capital city of Burkina Faso?",
+    "possibleAnswers": [
+      "A. Nairobi",
+      "B. Ouagadougou",
+      "C. Moroni",
+      "D. Yaound\u00e9"
+    ]
+  },
+  "q132": {
+    "question": "What is the capital city of Tuvalu?",
+    "possibleAnswers": [
+      "A. Funafuti",
+      "B. Skopje",
+      "C. Lisbon",
+      "D. Muscat"
+    ]
+  },
+  "q133": {
+    "question": "What is the capital city of Djibouti?",
+    "possibleAnswers": [
+      "A. Panama City",
+      "B. Djibouti",
+      "C. Vienna",
+      "D. Nicosia"
+    ]
+  },
+  "q134": {
+    "question": "What is the capital city of Iran?",
+    "possibleAnswers": [
+      "A. Andorra la Vella",
+      "B. Reykjavik",
+      "C. Tehran",
+      "D. Damascus"
+    ]
+  },
+  "q135": {
+    "question": "What is the capital city of Vietnam?",
+    "possibleAnswers": [
+      "A. Doha",
+      "B. Lilongwe",
+      "C. Minsk",
+      "D. Hanoi"
+    ]
+  },
+  "q136": {
+    "question": "What is the capital city of El Salvador?",
+    "possibleAnswers": [
+      "A. Damascus",
+      "B. San Salvador",
+      "C. Dili",
+      "D. Bucharest"
+    ]
+  },
+  "q137": {
+    "question": "What is the capital city of Dominica?",
+    "possibleAnswers": [
+      "A. Djibouti",
+      "B. Tegucigalpa",
+      "C. San Salvador",
+      "D. Roseau"
+    ]
+  },
+  "q138": {
+    "question": "What is the capital city of Nepal?",
+    "possibleAnswers": [
+      "A. Kathmandu",
+      "B. Ashgabat",
+      "C. Asmara",
+      "D. New Delhi"
+    ]
+  },
+  "q139": {
+    "question": "What is the capital city of Argentina?",
+    "possibleAnswers": [
+      "A. Buenos Aires",
+      "B. Majuro",
+      "C. Pretoria",
+      "D. Jakarta"
+    ]
+  },
+  "q140": {
+    "question": "What is the capital city of Sri Lanka?",
+    "possibleAnswers": [
+      "A. Belgrade",
+      "B. Colombo",
+      "C. Palikir",
+      "D. Lilongwe"
+    ]
+  },
+  "q141": {
+    "question": "What is the capital city of Costa Rica?",
+    "possibleAnswers": [
+      "A. San Jos\u00e9",
+      "B. Abuja",
+      "C. Ottawa",
+      "D. Gaborone"
+    ]
+  },
+  "q142": {
+    "question": "What is the capital city of Serbia?",
+    "possibleAnswers": [
+      "A. Kigali",
+      "B. Belgrade",
+      "C. Yaren",
+      "D. Tehran"
+    ]
+  },
+  "q143": {
+    "question": "What is the capital city of Fiji?",
+    "possibleAnswers": [
+      "A. Vilnius",
+      "B. Guatemala City",
+      "C. Suva",
+      "D. Vatican City"
+    ]
+  },
+  "q144": {
+    "question": "What is the capital city of Micronesia?",
+    "possibleAnswers": [
+      "A. Ngerulmud",
+      "B. Havana",
+      "C. Palikir",
+      "D. Bangkok"
+    ]
+  },
+  "q145": {
+    "question": "What is the capital city of Venezuela?",
+    "possibleAnswers": [
+      "A. Riyadh",
+      "B. South Tarawa",
+      "C. Juba",
+      "D. Caracas"
+    ]
+  },
+  "q146": {
+    "question": "What is the capital city of China?",
+    "possibleAnswers": [
+      "A. Porto-Novo",
+      "B. Jerusalem",
+      "C. Beijing",
+      "D. Podgorica"
+    ]
+  },
+  "q147": {
+    "question": "What is the capital city of Belize?",
+    "possibleAnswers": [
+      "A. Port Louis",
+      "B. Belmopan",
+      "C. Dublin",
+      "D. Tirana"
+    ]
+  },
+  "q148": {
+    "question": "What is the capital city of Sierra Leone?",
+    "possibleAnswers": [
+      "A. Suva",
+      "B. Quito",
+      "C. Maseru",
+      "D. Freetown"
+    ]
+  },
+  "q149": {
+    "question": "What is the capital city of Antigua and Barbuda?",
+    "possibleAnswers": [
+      "A. Bras\u00edlia",
+      "B. Beijing",
+      "C. Berlin",
+      "D. Saint John\u2019s"
+    ]
+  },
+  "q150": {
+    "question": "What is the capital city of Indonesia?",
+    "possibleAnswers": [
+      "A. Jerusalem",
+      "B. Jakarta",
+      "C. Gitega",
+      "D. Nouakchott"
+    ]
+  },
+  "q151": {
+    "question": "What is the capital city of Zambia?",
+    "possibleAnswers": [
+      "A. Andorra la Vella",
+      "B. Lusaka",
+      "C. Kuwait City",
+      "D. Kuala Lumpur"
+    ]
+  },
+  "q152": {
+    "question": "What is the capital city of Vatican City?",
+    "possibleAnswers": [
+      "A. Astana",
+      "B. Harare",
+      "C. Vatican City",
+      "D. Malabo"
+    ]
+  },
+  "q153": {
+    "question": "What is the capital city of Myanmar?",
+    "possibleAnswers": [
+      "A. Funafuti",
+      "B. Tallinn",
+      "C. Naypyidaw",
+      "D. Apia"
+    ]
+  },
+  "q154": {
+    "question": "What is the capital city of Botswana?",
+    "possibleAnswers": [
+      "A. Luxembourg City",
+      "B. Gaborone",
+      "C. Tashkent",
+      "D. San Salvador"
+    ]
+  },
+  "q155": {
+    "question": "What is the capital city of Cameroon?",
+    "possibleAnswers": [
+      "A. Beirut",
+      "B. Tashkent",
+      "C. Accra",
+      "D. Yaound\u00e9"
+    ]
+  },
+  "q156": {
+    "question": "What is the capital city of Saint Kitts and Nevis?",
+    "possibleAnswers": [
+      "A. Conakry",
+      "B. Lusaka",
+      "C. Basseterre",
+      "D. Buenos Aires"
+    ]
+  },
+  "q157": {
+    "question": "What is the capital city of Tonga?",
+    "possibleAnswers": [
+      "A. Rabat",
+      "B. Maputo",
+      "C. Nuku\u02bbalofa",
+      "D. Kinshasa"
+    ]
+  },
+  "q158": {
+    "question": "What is the capital city of Jamaica?",
+    "possibleAnswers": [
+      "A. Algiers",
+      "B. Freetown",
+      "C. Kingston",
+      "D. Addis Ababa"
+    ]
+  },
+  "q159": {
+    "question": "What is the capital city of Finland?",
+    "possibleAnswers": [
+      "A. Helsinki",
+      "B. Tbilisi",
+      "C. Paramaribo",
+      "D. Kathmandu"
+    ]
+  },
+  "q160": {
+    "question": "What is the capital city of Qatar?",
+    "possibleAnswers": [
+      "A. Naypyidaw",
+      "B. Tehran",
+      "C. Praia",
+      "D. Doha"
+    ]
+  },
+  "q161": {
+    "question": "What is the capital city of Madagascar?",
+    "possibleAnswers": [
+      "A. Rabat",
+      "B. Antananarivo",
+      "C. Banjul",
+      "D. Castries"
+    ]
+  },
+  "q162": {
+    "question": "What is the capital city of Trinidad and Tobago?",
+    "possibleAnswers": [
+      "A. Port of Spain",
+      "B. Dhaka",
+      "C. Ashgabat",
+      "D. Tehran"
+    ]
+  },
+  "q163": {
+    "question": "What is the capital city of Malaysia?",
+    "possibleAnswers": [
+      "A. Amman",
+      "B. Kuala Lumpur",
+      "C. Yaound\u00e9",
+      "D. Kuwait City"
+    ]
+  },
+  "q164": {
+    "question": "What is the capital city of Ghana?",
+    "possibleAnswers": [
+      "A. Port Louis",
+      "B. Nairobi",
+      "C. Vilnius",
+      "D. Accra"
+    ]
+  },
+  "q165": {
+    "question": "What is the capital city of Sao Tome and Principe?",
+    "possibleAnswers": [
+      "A. S\u00e3o Tom\u00e9",
+      "B. Andorra la Vella",
+      "C. Luxembourg City",
+      "D. Basseterre"
+    ]
+  },
+  "q166": {
+    "question": "What is the capital city of Slovenia?",
+    "possibleAnswers": [
+      "A. Ljubljana",
+      "B. Ankara",
+      "C. Taipei",
+      "D. Maseru"
+    ]
+  },
+  "q167": {
+    "question": "What is the capital city of Cyprus?",
+    "possibleAnswers": [
+      "A. Nicosia",
+      "B. Washington, D.C.",
+      "C. Rabat",
+      "D. Ulaanbaatar"
+    ]
+  },
+  "q168": {
+    "question": "What is the capital city of Lebanon?",
+    "possibleAnswers": [
+      "A. Havana",
+      "B. Kathmandu",
+      "C. San Jos\u00e9",
+      "D. Beirut"
+    ]
+  },
+  "q169": {
+    "question": "What is the capital city of Bolivia?",
+    "possibleAnswers": [
+      "A. Maseru",
+      "B. Tehran",
+      "C. Sucre",
+      "D. Berlin"
+    ]
+  },
+  "q170": {
+    "question": "What is the capital city of Lithuania?",
+    "possibleAnswers": [
+      "A. Palikir",
+      "B. Vilnius",
+      "C. London",
+      "D. Damascus"
+    ]
+  },
+  "q171": {
+    "question": "What is the capital city of Laos?",
+    "possibleAnswers": [
+      "A. S\u00e3o Tom\u00e9",
+      "B. Vientiane",
+      "C. Addis Ababa",
+      "D. Cairo"
+    ]
+  },
+  "q172": {
+    "question": "What is the capital city of Jordan?",
+    "possibleAnswers": [
+      "A. Amman",
+      "B. Bishkek",
+      "C. Riga",
+      "D. Bamako"
+    ]
+  },
+  "q173": {
+    "question": "What is the capital city of Ethiopia?",
+    "possibleAnswers": [
+      "A. New Delhi",
+      "B. Guatemala City",
+      "C. Addis Ababa",
+      "D. Lusaka"
+    ]
+  },
+  "q174": {
+    "question": "What is the capital city of Armenia?",
+    "possibleAnswers": [
+      "A. Yerevan",
+      "B. Skopje",
+      "C. Warsaw",
+      "D. Dili"
+    ]
+  },
+  "q175": {
+    "question": "What is the capital city of Bahamas?",
+    "possibleAnswers": [
+      "A. Nassau",
+      "B. Suva",
+      "C. Freetown",
+      "D. Maputo"
+    ]
+  },
+  "q176": {
+    "question": "What is the capital city of Tajikistan?",
+    "possibleAnswers": [
+      "A. Nairobi",
+      "B. Dushanbe",
+      "C. Apia",
+      "D. Budapest"
+    ]
+  },
+  "q177": {
+    "question": "What is the capital city of Angola?",
+    "possibleAnswers": [
+      "A. Luanda",
+      "B. Bridgetown",
+      "C. Port of Spain",
+      "D. Libreville"
+    ]
+  },
+  "q178": {
+    "question": "What is the capital city of Czech Republic?",
+    "possibleAnswers": [
+      "A. Prague",
+      "B. Moroni",
+      "C. Port Moresby",
+      "D. Santo Domingo"
+    ]
+  },
+  "q179": {
+    "question": "What is the capital city of Monaco?",
+    "possibleAnswers": [
+      "A. Monaco",
+      "B. Islamabad",
+      "C. Vaduz",
+      "D. Caracas"
+    ]
+  },
+  "q180": {
+    "question": "What is the capital city of Cabo Verde?",
+    "possibleAnswers": [
+      "A. Praia",
+      "B. Quito",
+      "C. Tbilisi",
+      "D. Amman"
+    ]
+  },
+  "q181": {
+    "question": "What is the capital city of Belarus?",
+    "possibleAnswers": [
+      "A. Harare",
+      "B. Minsk",
+      "C. Muscat",
+      "D. Lom\u00e9"
+    ]
+  },
+  "q182": {
+    "question": "What is the capital city of Malta?",
+    "possibleAnswers": [
+      "A. Valletta",
+      "B. Bangui",
+      "C. Malabo",
+      "D. Djibouti"
+    ]
+  },
+  "q183": {
+    "question": "What is the capital city of Togo?",
+    "possibleAnswers": [
+      "A. Libreville",
+      "B. Lom\u00e9",
+      "C. Dhaka",
+      "D. Santiago"
+    ]
+  },
+  "q184": {
+    "question": "What is the capital city of Canada?",
+    "possibleAnswers": [
+      "A. Ottawa",
+      "B. South Tarawa",
+      "C. Monrovia",
+      "D. Singapore"
+    ]
+  },
+  "q185": {
+    "question": "What is the capital city of Vanuatu?",
+    "possibleAnswers": [
+      "A. Port Vila",
+      "B. Oslo",
+      "C. Luanda",
+      "D. Jerusalem"
+    ]
+  },
+  "q186": {
+    "question": "What is the capital city of Haiti?",
+    "possibleAnswers": [
+      "A. Bras\u00edlia",
+      "B. San Marino",
+      "C. Rabat",
+      "D. Port-au-Prince"
+    ]
+  },
+  "q187": {
+    "question": "What is the capital city of Ecuador?",
+    "possibleAnswers": [
+      "A. Ankara",
+      "B. Quito",
+      "C. Funafuti",
+      "D. Yaren"
+    ]
+  },
+  "q188": {
+    "question": "What is the capital city of Kazakhstan?",
+    "possibleAnswers": [
+      "A. Astana",
+      "B. Beirut",
+      "C. Andorra la Vella",
+      "D. Yaren"
+    ]
+  },
+  "q189": {
+    "question": "What is the capital city of Oman?",
+    "possibleAnswers": [
+      "A. Tegucigalpa",
+      "B. Buenos Aires",
+      "C. Kigali",
+      "D. Muscat"
+    ]
+  },
+  "q190": {
+    "question": "What is the capital city of Egypt?",
+    "possibleAnswers": [
+      "A. Tehran",
+      "B. Harare",
+      "C. Tunis",
+      "D. Cairo"
+    ]
+  },
+  "q191": {
+    "question": "What is the capital city of Somalia?",
+    "possibleAnswers": [
+      "A. Mogadishu",
+      "B. Jerusalem",
+      "C. Khartoum",
+      "D. Seoul"
+    ]
+  },
+  "q192": {
+    "question": "What is the capital city of Turkmenistan?",
+    "possibleAnswers": [
+      "A. Lilongwe",
+      "B. Ashgabat",
+      "C. Amman",
+      "D. Doha"
+    ]
+  },
+  "q193": {
+    "question": "What is the capital city of Georgia?",
+    "possibleAnswers": [
+      "A. Minsk",
+      "B. Tbilisi",
+      "C. Abuja",
+      "D. Ljubljana"
+    ]
+  },
+  "q194": {
+    "question": "What is the capital city of Mauritania?",
+    "possibleAnswers": [
+      "A. Chi\u0219in\u0103u",
+      "B. Rome",
+      "C. Rabat",
+      "D. Nouakchott"
+    ]
+  }
+}
