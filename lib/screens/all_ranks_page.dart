@@ -104,9 +104,34 @@ class _AllRanksPageState extends State<AllRanksPage> with SingleTickerProviderSt
       ),
       body: _isLoading
           ? const Center(child: CircularProgressIndicator())
-          : TabBarView(
-              controller: _tabController,
-              children: _tiers.map((tier) => _buildRanksList(tier, isSmallScreen)).toList(),
+          : Column(
+              children: [
+                // Quote at the top
+                Container(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: isSmallScreen ? 24 : 64,
+                    vertical: isSmallScreen ? 32 : 48,
+                  ),
+                  child: Text(
+                    '"Ranks in Uriel aren\'t about competition. They\'re about growth. Every learner\'s path is unique, but the journey is shared."',
+                    style: GoogleFonts.montserrat(
+                      fontSize: isSmallScreen ? 16 : 20,
+                      fontWeight: FontWeight.w400,
+                      color: const Color(0xFF6E6E73),
+                      fontStyle: FontStyle.italic,
+                      height: 1.4,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                // Existing TabBarView
+                Expanded(
+                  child: TabBarView(
+                    controller: _tabController,
+                    children: _tiers.map((tier) => _buildRanksList(tier, isSmallScreen)).toList(),
+                  ),
+                ),
+              ],
             ),
     );
   }
@@ -211,6 +236,9 @@ class _AllRanksPageState extends State<AllRanksPage> with SingleTickerProviderSt
           const SizedBox(height: 24),
         ],
 
+        // XP Economy Table
+        _buildXPEconomyTable(isSmallScreen),
+
         // Rank List
         ...filteredRanks.map((rank) {
           final isCurrentRank = _userCurrentRank?.rank == rank.rank;
@@ -227,6 +255,156 @@ class _AllRanksPageState extends State<AllRanksPage> with SingleTickerProviderSt
         // Bottom spacing
         const SizedBox(height: 80),
       ],
+    );
+  }
+
+  Widget _buildXPEconomyTable(bool isSmallScreen) {
+    final xpData = [
+      {'action': 'Daily login', 'reward': '50 XP', 'notes': ''},
+      {'action': 'Completing a quiz (40 questions)', 'reward': '200 XP', 'notes': '5 XP per question + completion bonus'},
+      {'action': 'Perfect quiz score (≥90%)', 'reward': '+100 XP bonus', 'notes': ''},
+      {'action': 'Uploading notes', 'reward': '150 XP', 'notes': ''},
+      {'action': 'Receiving upvotes/downloads on notes', 'reward': '+10 XP per upvote', 'notes': ''},
+      {'action': 'Completing AI Revision Plan', 'reward': '500 XP', 'notes': ''},
+      {'action': 'Maintaining 7-day streak', 'reward': '+300 XP bonus', 'notes': ''},
+      {'action': 'Achieving new badge', 'reward': '250–500 XP', 'notes': ''},
+      {'action': 'Finishing a full subject module', 'reward': '1000–2000 XP', 'notes': ''},
+      {'action': 'Monthly contest (winner)', 'reward': '5000 XP', 'notes': ''},
+    ];
+
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 16),
+      padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: Colors.grey[200]!),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey[100]!,
+            blurRadius: 10,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Text(
+                '📈 XP Economy',
+                style: GoogleFonts.montserrat(
+                  fontSize: isSmallScreen ? 18 : 20,
+                  fontWeight: FontWeight.bold,
+                  color: const Color(0xFF1A1E3F),
+                ),
+              ),
+              const SizedBox(width: 8),
+              if (!isSmallScreen)
+                Text(
+                  'How you earn XP',
+                  style: GoogleFonts.montserrat(
+                    fontSize: 14,
+                    color: Colors.grey[600],
+                  ),
+                ),
+            ],
+          ),
+          const SizedBox(height: 16),
+          // Table Header
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            decoration: BoxDecoration(
+              color: const Color(0xFFF8FAFE),
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: Row(
+              children: [
+                Expanded(
+                  flex: 4,
+                  child: Text(
+                    'Action',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      color: const Color(0xFF1A1E3F),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  flex: 2,
+                  child: Text(
+                    'XP Reward',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      color: const Color(0xFF1A1E3F),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  flex: 4,
+                  child: Text(
+                    'Notes',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      color: const Color(0xFF1A1E3F),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 8),
+          // Table Rows
+          ...xpData.map((item) => Container(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            decoration: BoxDecoration(
+              border: Border(
+                bottom: BorderSide(color: Colors.grey[100]!, width: 1),
+              ),
+            ),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(
+                  flex: 4,
+                  child: Text(
+                    item['action']!,
+                    style: GoogleFonts.montserrat(
+                      fontSize: 14,
+                      color: const Color(0xFF1A1E3F),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  flex: 2,
+                  child: Text(
+                    item['reward']!,
+                    style: GoogleFonts.montserrat(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      color: const Color(0xFFD62828),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  flex: 4,
+                  child: Text(
+                    item['notes']!,
+                    style: GoogleFonts.montserrat(
+                      fontSize: 13,
+                      color: Colors.grey[600],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          )),
+        ],
+      ),
     );
   }
 
