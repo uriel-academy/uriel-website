@@ -63,9 +63,9 @@ class _QuestionDetailPageState extends State<QuestionDetailPage> {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.1),
+        color: color.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: color.withOpacity(0.3)),
+        border: Border.all(color: color.withValues(alpha: 0.3)),
       ),
       child: Text(
         stars,
@@ -195,9 +195,9 @@ class _QuestionDetailPageState extends State<QuestionDetailPage> {
                                 Container(
                                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                                   decoration: BoxDecoration(
-                                    color: Colors.blue.withOpacity(0.1),
+                                    color: Colors.blue.withValues(alpha: 0.1),
                                     borderRadius: BorderRadius.circular(12),
-                                    border: Border.all(color: Colors.blue.withOpacity(0.3)),
+                                    border: Border.all(color: Colors.blue.withValues(alpha: 0.3)),
                                   ),
                                   child: Text(
                                     widget.question.type.name,
@@ -211,9 +211,9 @@ class _QuestionDetailPageState extends State<QuestionDetailPage> {
                                 Container(
                                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                                   decoration: BoxDecoration(
-                                    color: Colors.purple.withOpacity(0.1),
+                                    color: Colors.purple.withValues(alpha: 0.1),
                                     borderRadius: BorderRadius.circular(12),
-                                    border: Border.all(color: Colors.purple.withOpacity(0.3)),
+                                    border: Border.all(color: Colors.purple.withValues(alpha: 0.3)),
                                   ),
                                   child: Text(
                                     'Level: JHS',
@@ -315,11 +315,11 @@ class _QuestionDetailPageState extends State<QuestionDetailPage> {
                                       ),
                                       borderRadius: BorderRadius.circular(12),
                                       color: isCorrect 
-                                          ? Colors.green.withOpacity(0.1)
+                                          ? Colors.green.withValues(alpha: 0.1)
                                           : isIncorrect 
-                                              ? Colors.red.withOpacity(0.1)
+                                              ? Colors.red.withValues(alpha: 0.1)
                                               : isSelected 
-                                                  ? const Color(0xFFD62828).withOpacity(0.1) 
+                                                  ? const Color(0xFFD62828).withValues(alpha: 0.1) 
                                                   : Colors.white,
                                     ),
                                     child: Row(

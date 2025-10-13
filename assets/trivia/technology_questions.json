@@ -1,0 +1,1803 @@
+{
+  "subject": "Technology",
+  "q1": {
+    "question": "What does CPU stand for?",
+    "possibleAnswers": [
+      "A. Central Processing Unit",
+      "B. Core Processing Utility",
+      "C. Control Program Unit",
+      "D. Central Program Utility"
+    ]
+  },
+  "q2": {
+    "question": "Which company created the Android operating system?",
+    "possibleAnswers": [
+      "A. Apple",
+      "B. Microsoft",
+      "C. Google",
+      "D. IBM"
+    ]
+  },
+  "q3": {
+    "question": "What does “GPU” primarily accelerate?",
+    "possibleAnswers": [
+      "A. Disk encryption",
+      "B. Graphics and parallel computation",
+      "C. Network routing",
+      "D. Audio mixing"
+    ]
+  },
+  "q4": {
+    "question": "Which protocol is used to securely browse the web?",
+    "possibleAnswers": [
+      "A. HTTP",
+      "B. FTP",
+      "C. HTTPS",
+      "D. SMTP"
+    ]
+  },
+  "q5": {
+    "question": "In computers, RAM is:",
+    "possibleAnswers": [
+      "A. Non-volatile storage",
+      "B. Volatile memory",
+      "C. Optical memory",
+      "D. Magnetic memory"
+    ]
+  },
+  "q6": {
+    "question": "Which device converts digital signals to analog for monitors like VGA?",
+    "possibleAnswers": [
+      "A. ADC",
+      "B. DAC",
+      "C. PSU",
+      "D. NIC"
+    ]
+  },
+  "q7": {
+    "question": "SSDs store data using:",
+    "possibleAnswers": [
+      "A. Spinning magnetic platters",
+      "B. Flash memory cells",
+      "C. Optical pits and lands",
+      "D. Magnetic tape"
+    ]
+  },
+  "q8": {
+    "question": "What does HTML stand for?",
+    "possibleAnswers": [
+      "A. Hyperlinks and Text Markup Language",
+      "B. HyperText Markup Language",
+      "C. HighText Machine Language",
+      "D. Hyper Transfer Markup Language"
+    ]
+  },
+  "q9": {
+    "question": "Which CSS property changes text color?",
+    "possibleAnswers": [
+      "A. font-style",
+      "B. text-color",
+      "C. color",
+      "D. fill"
+    ]
+  },
+  "q10": {
+    "question": "Which of these is a version control system?",
+    "possibleAnswers": [
+      "A. Docker",
+      "B. Git",
+      "C. Nginx",
+      "D. Redis"
+    ]
+  },
+  "q11": {
+    "question": "In networking, a router primarily operates at which OSI layer?",
+    "possibleAnswers": [
+      "A. Layer 1",
+      "B. Layer 2",
+      "C. Layer 3",
+      "D. Layer 4"
+    ]
+  },
+  "q12": {
+    "question": "The command pip is associated with which language?",
+    "possibleAnswers": [
+      "A. Ruby",
+      "B. Python",
+      "C. Java",
+      "D. Go"
+    ]
+  },
+  "q13": {
+    "question": "Which SQL command retrieves data?",
+    "possibleAnswers": [
+      "A. INSERT",
+      "B. UPDATE",
+      "C. DELETE",
+      "D. SELECT"
+    ]
+  },
+  "q14": {
+    "question": "JavaScript runs natively in:",
+    "possibleAnswers": [
+      "A. Browsers",
+      "B. Database servers only",
+      "C. BIOS",
+      "D. Hypervisors"
+    ]
+  },
+  "q15": {
+    "question": "Two’s complement is used to represent:",
+    "possibleAnswers": [
+      "A. Floating-point numbers",
+      "B. Signed integers",
+      "C. Hexadecimal digits",
+      "D. ASCII codes"
+    ]
+  },
+  "q16": {
+    "question": "What is the main purpose of a CDN?",
+    "possibleAnswers": [
+      "A. Encrypt email",
+      "B. Distribute content closer to users",
+      "C. Compile code",
+      "D. Manage user accounts"
+    ]
+  },
+  "q17": {
+    "question": "Which database is NoSQL by default?",
+    "possibleAnswers": [
+      "A. PostgreSQL",
+      "B. MongoDB",
+      "C. MySQL",
+      "D. MariaDB"
+    ]
+  },
+  "q18": {
+    "question": "In web dev, CORS stands for:",
+    "possibleAnswers": [
+      "A. Cross-Origin Resource Sharing",
+      "B. Cross-Object Resource Service",
+      "C. Centralized Origin Routing System",
+      "D. Client-Origin Request Service"
+    ]
+  },
+  "q19": {
+    "question": "IPv6 addresses are how many bits long?",
+    "possibleAnswers": [
+      "A. 32",
+      "B. 64",
+      "C. 96",
+      "D. 128"
+    ]
+  },
+  "q20": {
+    "question": "Which one is a Linux distribution?",
+    "possibleAnswers": [
+      "A. Catalina",
+      "B. Ubuntu",
+      "C. Mojave",
+      "D. Ventura"
+    ]
+  },
+  "q21": {
+    "question": "Which file format is commonly used for lossless images on the web?",
+    "possibleAnswers": [
+      "A. JPG",
+      "B. PNG",
+      "C. GIF",
+      "D. WEBM"
+    ]
+  },
+  "q22": {
+    "question": "The JOIN that returns only matching rows in both tables is:",
+    "possibleAnswers": [
+      "A. LEFT JOIN",
+      "B. RIGHT JOIN",
+      "C. FULL OUTER JOIN",
+      "D. INNER JOIN"
+    ]
+  },
+  "q23": {
+    "question": "The term “latency” refers to:",
+    "possibleAnswers": [
+      "A. Total data transmitted",
+      "B. Delay before data transfer begins",
+      "C. Bandwidth per second",
+      "D. Packet loss rate"
+    ]
+  },
+  "q24": {
+    "question": "What does DNS translate?",
+    "possibleAnswers": [
+      "A. IP to MAC",
+      "B. Domain names to IP addresses",
+      "C. Ports to protocols",
+      "D. HTML to CSS"
+    ]
+  },
+  "q25": {
+    "question": "Which of the following is a compiled language (traditionally)?",
+    "possibleAnswers": [
+      "A. Python",
+      "B. Java",
+      "C. C",
+      "D. JavaScript"
+    ]
+  },
+  "q26": {
+    "question": "In cybersecurity, MFA stands for:",
+    "possibleAnswers": [
+      "A. Multi-Factor Authentication",
+      "B. Multi-File Access",
+      "C. Multi-Firewall Application",
+      "D. Managed Federated Account"
+    ]
+  },
+  "q27": {
+    "question": "Which HTTP method is idempotent by definition?",
+    "possibleAnswers": [
+      "A. POST",
+      "B. PUT",
+      "C. PATCH",
+      "D. CONNECT"
+    ]
+  },
+  "q28": {
+    "question": "“Responsive design” means a website:",
+    "possibleAnswers": [
+      "A. Responds to emails",
+      "B. Adapts layout to different screens",
+      "C. Requires no CSS",
+      "D. Uses only tables"
+    ]
+  },
+  "q29": {
+    "question": "Docker is primarily used for:",
+    "possibleAnswers": [
+      "A. Virtual machines with full OS kernels",
+      "B. Managing containers",
+      "C. Building desktop apps",
+      "D. Rendering graphics"
+    ]
+  },
+  "q30": {
+    "question": "In AI, “supervised learning” uses:",
+    "possibleAnswers": [
+      "A. Unlabeled data",
+      "B. Labeled data",
+      "C. Random noise only",
+      "D. No data"
+    ]
+  },
+  "q31": {
+    "question": "The primary purpose of an operating system is to:",
+    "possibleAnswers": [
+      "A. Run a single app only",
+      "B. Manage hardware and provide services",
+      "C. Translate HTML",
+      "D. Host DNS"
+    ]
+  },
+  "q32": {
+    "question": "What does API stand for?",
+    "possibleAnswers": [
+      "A. Application Protocol Interface",
+      "B. Application Programming Interface",
+      "C. Advanced Programming Internet",
+      "D. Application Port Integration"
+    ]
+  },
+  "q33": {
+    "question": "Git command to create a new branch:",
+    "possibleAnswers": [
+      "A. git branch <name>",
+      "B. git new <name>",
+      "C. git split <name>",
+      "D. git fork <name>"
+    ]
+  },
+  "q34": {
+    "question": "Which data structure uses FIFO?",
+    "possibleAnswers": [
+      "A. Stack",
+      "B. Queue",
+      "C. Binary tree",
+      "D. Hash map"
+    ]
+  },
+  "q35": {
+    "question": "What does CRUD stand for?",
+    "possibleAnswers": [
+      "A. Create, Read, Update, Delete",
+      "B. Copy, Run, Upload, Download",
+      "C. Create, Run, Undo, Delete",
+      "D. Cache, Route, Update, Deny"
+    ]
+  },
+  "q36": {
+    "question": "A byte equals:",
+    "possibleAnswers": [
+      "A. 4 bits",
+      "B. 8 bits",
+      "C. 12 bits",
+      "D. 16 bits"
+    ]
+  },
+  "q37": {
+    "question": "“Phishing” is:",
+    "possibleAnswers": [
+      "A. Breaking encryption",
+      "B. Tricking users to reveal credentials",
+      "C. Installing updates",
+      "D. Scanning ports"
+    ]
+  },
+  "q38": {
+    "question": "The markup for bold text in HTML5 is commonly:",
+    "possibleAnswers": [
+      "A. <bold>",
+      "B. <b> or <strong>",
+      "C. <em>",
+      "D. <i>"
+    ]
+  },
+  "q39": {
+    "question": "What does SaaS stand for?",
+    "possibleAnswers": [
+      "A. Software as a Service",
+      "B. Storage as a Server",
+      "C. Security as a Service",
+      "D. Support as a System"
+    ]
+  },
+  "q40": {
+    "question": "Primary goal of a firewall:",
+    "possibleAnswers": [
+      "A. Speed up GPU",
+      "B. Control network traffic based on rules",
+      "C. Store backups",
+      "D. Render websites"
+    ]
+  },
+  "q41": {
+    "question": "The smallest addressable unit on a hard drive is a:",
+    "possibleAnswers": [
+      "A. Track",
+      "B. Sector",
+      "C. Cylinder",
+      "D. Cluster only"
+    ]
+  },
+  "q42": {
+    "question": "Which sorting algorithm has average time (O(n \\log n))?",
+    "possibleAnswers": [
+      "A. Bubble sort",
+      "B. Insertion sort",
+      "C. Merge sort",
+      "D. Selection sort"
+    ]
+  },
+  "q43": {
+    "question": "In Python, lists are:",
+    "possibleAnswers": [
+      "A. Immutable",
+      "B. Mutable",
+      "C. Fixed-size",
+      "D. Type-restricted"
+    ]
+  },
+  "q44": {
+    "question": "Public-key cryptography uses:",
+    "possibleAnswers": [
+      "A. Single shared key",
+      "B. Two keys: public and private",
+      "C. No keys",
+      "D. Only passwords"
+    ]
+  },
+  "q45": {
+    "question": "Which port is default for HTTPS?",
+    "possibleAnswers": [
+      "A. 21",
+      "B. 22",
+      "C. 80",
+      "D. 443"
+    ]
+  },
+  "q46": {
+    "question": "The command to see current directory in Unix is:",
+    "possibleAnswers": [
+      "A. ls",
+      "B. pwd",
+      "C. cd",
+      "D. whoami"
+    ]
+  },
+  "q47": {
+    "question": "RAID 1 provides:",
+    "possibleAnswers": [
+      "A. Striping",
+      "B. Mirroring",
+      "C. Parity only",
+      "D. No redundancy"
+    ]
+  },
+  "q48": {
+    "question": "Binary 1010 equals decimal:",
+    "possibleAnswers": [
+      "A. 8",
+      "B. 9",
+      "C. 10",
+      "D. 12"
+    ]
+  },
+  "q49": {
+    "question": "Which of these is a microcontroller platform popular with hobbyists?",
+    "possibleAnswers": [
+      "A. Arduino",
+      "B. Xeon",
+      "C. Threadripper",
+      "D. EPYC"
+    ]
+  },
+  "q50": {
+    "question": "In machine learning, overfitting occurs when a model:",
+    "possibleAnswers": [
+      "A. Learns patterns and generalizes well",
+      "B. Learns noise and performs poorly on new data",
+      "C. Ignores training data",
+      "D. Has too few parameters"
+    ]
+  },
+  "q51": {
+    "question": "What is a “pixel”?",
+    "possibleAnswers": [
+      "A. A color palette",
+      "B. The smallest controllable element of a display",
+      "C. A GPU core",
+      "D. A font file"
+    ]
+  },
+  "q52": {
+    "question": "The UNIX epoch time starts at:",
+    "possibleAnswers": [
+      "A. 1970-01-01 UTC",
+      "B. 1960-01-01 UTC",
+      "C. 1980-01-01 UTC",
+      "D. 2000-01-01 UTC"
+    ]
+  },
+  "q53": {
+    "question": "Which file system is common on Linux?",
+    "possibleAnswers": [
+      "A. NTFS",
+      "B. APFS",
+      "C. ext4",
+      "D. HFS+"
+    ]
+  },
+  "q54": {
+    "question": "Which of these is a strongly-typed, statically-typed language?",
+    "possibleAnswers": [
+      "A. Java",
+      "B. JavaScript",
+      "C. PHP",
+      "D. Python"
+    ]
+  },
+  "q55": {
+    "question": "CDN POP stands for:",
+    "possibleAnswers": [
+      "A. Point of Presence",
+      "B. Packet of Protocol",
+      "C. Process of Proxy",
+      "D. Page of Performance"
+    ]
+  },
+  "q56": {
+    "question": "The purpose of hashing passwords is to:",
+    "possibleAnswers": [
+      "A. Speed up login UI",
+      "B. Store passwords irreversibly (one-way)",
+      "C. Compress credentials",
+      "D. Encrypt emails"
+    ]
+  },
+  "q57": {
+    "question": "A “null pointer” refers to:",
+    "possibleAnswers": [
+      "A. A pointer to random data",
+      "B. A pointer to no valid object",
+      "C. A pointer to stack memory only",
+      "D. A pointer to GPU RAM"
+    ]
+  },
+  "q58": {
+    "question": "What does CRUD “Update” correspond to in SQL?",
+    "possibleAnswers": [
+      "A. SELECT",
+      "B. INSERT",
+      "C. UPDATE",
+      "D. DELETE"
+    ]
+  },
+  "q59": {
+    "question": "“Latency” in cloud regions is reduced by:",
+    "possibleAnswers": [
+      "A. Using a slower protocol",
+      "B. Placing servers closer to users",
+      "C. Removing caches",
+      "D. Increasing packet size only"
+    ]
+  },
+  "q60": {
+    "question": "CLI stands for:",
+    "possibleAnswers": [
+      "A. Central Logic Interface",
+      "B. Command-Line Interface",
+      "C. Cache Link Integration",
+      "D. Core Language Interpreter"
+    ]
+  },
+  "q61": {
+    "question": "Which is a 64-bit ARM architecture term often seen in mobile/servers?",
+    "possibleAnswers": [
+      "A. x86-64",
+      "B. ARMv8-A / ARM64",
+      "C. MIPS64",
+      "D. SPARC64"
+    ]
+  },
+  "q62": {
+    "question": "A “pull request” is used in:",
+    "possibleAnswers": [
+      "A. CI/CD only",
+      "B. DVCS workflows like Git",
+      "C. VPN tunnels",
+      "D. DHCP leases"
+    ]
+  },
+  "q63": {
+    "question": "The unit “Hz” measures:",
+    "possibleAnswers": [
+      "A. Voltage",
+      "B. Current",
+      "C. Frequency",
+      "D. Resistance"
+    ]
+  },
+  "q64": {
+    "question": "Which device assigns IP addresses dynamically?",
+    "possibleAnswers": [
+      "A. DNS",
+      "B. DHCP server",
+      "C. NTP",
+      "D. SMTP"
+    ]
+  },
+  "q65": {
+    "question": "npm is the default package manager for:",
+    "possibleAnswers": [
+      "A. Python",
+      "B. Ruby",
+      "C. Node.js",
+      "D. Rust"
+    ]
+  },
+  "q66": {
+    "question": "Which storage class is fastest but most expensive per GB on cloud?",
+    "possibleAnswers": [
+      "A. Glacier/Archive",
+      "B. Standard/Hot",
+      "C. Coldline",
+      "D. Tape"
+    ]
+  },
+  "q67": {
+    "question": "The main purpose of OAuth 2.0 is:",
+    "possibleAnswers": [
+      "A. Encrypting emails",
+      "B. Authorization delegation",
+      "C. File compression",
+      "D. Circuit switching"
+    ]
+  },
+  "q68": {
+    "question": "Which of these is NOT an HTTP status in the 2xx range?",
+    "possibleAnswers": [
+      "A. 200",
+      "B. 201",
+      "C. 204",
+      "D. 302"
+    ]
+  },
+  "q69": {
+    "question": "“Big-O” notation describes:",
+    "possibleAnswers": [
+      "A. Code readability",
+      "B. Algorithmic time/space growth",
+      "C. Network topology",
+      "D. File sizes"
+    ]
+  },
+  "q70": {
+    "question": "A “race condition” occurs when:",
+    "possibleAnswers": [
+      "A. Two programs run on different machines",
+      "B. Output depends on unpredictable timing of events",
+      "C. CPU frequency is too high",
+      "D. Disk cache is full"
+    ]
+  },
+  "q71": {
+    "question": "Public cloud providers include all EXCEPT:",
+    "possibleAnswers": [
+      "A. AWS",
+      "B. Azure",
+      "C. Google Cloud",
+      "D. Oracle Database (the product)"
+    ]
+  },
+  "q72": {
+    "question": "In CSS, display: flex; enables:",
+    "possibleAnswers": [
+      "A. Grid layout",
+      "B. Flexbox layout",
+      "C. Table layout",
+      "D. Float layout"
+    ]
+  },
+  "q73": {
+    "question": "JSON stands for:",
+    "possibleAnswers": [
+      "A. Java Source Object Notation",
+      "B. JavaScript Object Notation",
+      "C. JavaScript Oriented Network",
+      "D. Joined Source Object Network"
+    ]
+  },
+  "q74": {
+    "question": "What is a “primary key” in a relational table?",
+    "possibleAnswers": [
+      "A. A field that must be encrypted",
+      "B. A unique identifier for each row",
+      "C. The longest text field",
+      "D. The first column only"
+    ]
+  },
+  "q75": {
+    "question": "RAID 0 provides:",
+    "possibleAnswers": [
+      "A. Parity",
+      "B. Mirroring",
+      "C. Striping without redundancy",
+      "D. Hot spare"
+    ]
+  },
+  "q76": {
+    "question": "What does SMTP handle?",
+    "possibleAnswers": [
+      "A. Web pages",
+      "B. File transfers",
+      "C. Email sending",
+      "D. Remote login"
+    ]
+  },
+  "q77": {
+    "question": "The acronym “IoT” stands for:",
+    "possibleAnswers": [
+      "A. Internet of Tools",
+      "B. Internet of Things",
+      "C. Interface of Technology",
+      "D. Input of Telemetry"
+    ]
+  },
+  "q78": {
+    "question": "A “hypervisor” manages:",
+    "possibleAnswers": [
+      "A. Containers",
+      "B. Virtual machines",
+      "C. Databases",
+      "D. Source code"
+    ]
+  },
+  "q79": {
+    "question": "Which is an example of a message broker?",
+    "possibleAnswers": [
+      "A. Apache Kafka",
+      "B. React",
+      "C. jQuery",
+      "D. Bootstrap"
+    ]
+  },
+  "q80": {
+    "question": "The process of transforming code into machine code at runtime is:",
+    "possibleAnswers": [
+      "A. AOT compilation",
+      "B. JIT compilation",
+      "C. Linking",
+      "D. Parsing"
+    ]
+  },
+  "q81": {
+    "question": "“TLS” provides:",
+    "possibleAnswers": [
+      "A. Transport Layer Security",
+      "B. Transmission Line Service",
+      "C. Token Login System",
+      "D. Trusted Lock Standard"
+    ]
+  },
+  "q82": {
+    "question": "A for loop that never changes its condition variable risks:",
+    "possibleAnswers": [
+      "A. Stack overflow",
+      "B. Infinite loop",
+      "C. Cache miss",
+      "D. GC pause only"
+    ]
+  },
+  "q83": {
+    "question": "SELECT COUNT(*) FROM users; returns:",
+    "possibleAnswers": [
+      "A. Number of columns",
+      "B. Number of tables",
+      "C. Number of rows",
+      "D. Sum of user IDs"
+    ]
+  },
+  "q84": {
+    "question": "What is Kubernetes primarily for?",
+    "possibleAnswers": [
+      "A. Front-end frameworks",
+      "B. Container orchestration",
+      "C. GPU programming",
+      "D. Image processing"
+    ]
+  },
+  "q85": {
+    "question": "In object-oriented programming, “encapsulation” is:",
+    "possibleAnswers": [
+      "A. Combining data and methods with access control",
+      "B. Inheriting from a parent class",
+      "C. Allowing many forms",
+      "D. Splitting modules"
+    ]
+  },
+  "q86": {
+    "question": "What does CRUD “Create” correspond to?",
+    "possibleAnswers": [
+      "A. INSERT",
+      "B. UPDATE",
+      "C. DELETE",
+      "D. SELECT"
+    ]
+  },
+  "q87": {
+    "question": "CDN reduces:",
+    "possibleAnswers": [
+      "A. Origin server load and latency",
+      "B. Browser caching",
+      "C. TLS encryption",
+      "D. Server-side rendering"
+    ]
+  },
+  "q88": {
+    "question": "A 32-bit unsigned integer can represent up to:",
+    "possibleAnswers": [
+      "A. (2^{16}-1)",
+      "B. (2^{32}-1)",
+      "C. (2^{64}-1)",
+      "D. (10^9-1)"
+    ]
+  },
+  "q89": {
+    "question": "Which is a distributed version control platform?",
+    "possibleAnswers": [
+      "A. Subversion (SVN)",
+      "B. GitHub",
+      "C. Perforce",
+      "D. CVS"
+    ]
+  },
+  "q90": {
+    "question": "A MAC address length is:",
+    "possibleAnswers": [
+      "A. 32 bits",
+      "B. 48 bits",
+      "C. 64 bits",
+      "D. 128 bits"
+    ]
+  },
+  "q91": {
+    "question": "“Ping” uses which protocol?",
+    "possibleAnswers": [
+      "A. TCP",
+      "B. UDP",
+      "C. ICMP",
+      "D. ARP"
+    ]
+  },
+  "q92": {
+    "question": "The default port for SSH is:",
+    "possibleAnswers": [
+      "A. 20",
+      "B. 22",
+      "C. 25",
+      "D. 53"
+    ]
+  },
+  "q93": {
+    "question": "Which storage is typically fastest?",
+    "possibleAnswers": [
+      "A. HDD",
+      "B. SATA SSD",
+      "C. NVMe SSD",
+      "D. Tape"
+    ]
+  },
+  "q94": {
+    "question": "In REST, resources are identified by:",
+    "possibleAnswers": [
+      "A. IPs",
+      "B. MACs",
+      "C. URLs/URIs",
+      "D. Ports"
+    ]
+  },
+  "q95": {
+    "question": "“Branch prediction” aims to:",
+    "possibleAnswers": [
+      "A. Reduce power supply",
+      "B. Improve CPU pipeline efficiency",
+      "C. Increase disk cache",
+      "D. Enhance GPU shaders"
+    ]
+  },
+  "q96": {
+    "question": "A “deadlock” happens when:",
+    "possibleAnswers": [
+      "A. Processes wait on each other’s resources cyclically",
+      "B. A thread exits",
+      "C. Memory is freed",
+      "D. Disk is full"
+    ]
+  },
+  "q97": {
+    "question": "UTF-8 is a:",
+    "possibleAnswers": [
+      "A. Lossy image format",
+      "B. Character encoding",
+      "C. Compression algorithm",
+      "D. Hash function"
+    ]
+  },
+  "q98": {
+    "question": "Which language is primarily used for iOS app development (modern)?",
+    "possibleAnswers": [
+      "A. Kotlin",
+      "B. Swift",
+      "C. C#",
+      "D. PHP"
+    ]
+  },
+  "q99": {
+    "question": "The difference between HTTP and WebSocket is that WebSocket:",
+    "possibleAnswers": [
+      "A. Is stateless",
+      "B. Provides full-duplex persistent connection",
+      "C. Uses only UDP",
+      "D. Cannot run in browsers"
+    ]
+  },
+  "q100": {
+    "question": "A “hash collision” means:",
+    "possibleAnswers": [
+      "A. Two inputs produce the same hash",
+      "B. A hash is too long",
+      "C. Hash cannot be computed",
+      "D. Hash equals the input"
+    ]
+  },
+  "q101": {
+    "question": "CDN “edge caching” stores content:",
+    "possibleAnswers": [
+      "A. Only at origin",
+      "B. At points closer to end users",
+      "C. Only in browsers",
+      "D. Only on mobile devices"
+    ]
+  },
+  "q102": {
+    "question": "Which is NOT a NoSQL type?",
+    "possibleAnswers": [
+      "A. Key–value",
+      "B. Column-family",
+      "C. Graph",
+      "D. Stored-procedure"
+    ]
+  },
+  "q103": {
+    "question": "A “binary search” requires:",
+    "possibleAnswers": [
+      "A. Sorted data",
+      "B. Tree data only",
+      "C. Hash map",
+      "D. Linked list"
+    ]
+  },
+  "q104": {
+    "question": "What does HTTP 404 indicate?",
+    "possibleAnswers": [
+      "A. Success",
+      "B. Not Found",
+      "C. Server Error",
+      "D. Unauthorized"
+    ]
+  },
+  "q105": {
+    "question": "Primary key constraint ensures:",
+    "possibleAnswers": [
+      "A. Nulls allowed",
+      "B. Uniqueness and non-null",
+      "C. Duplicate rows allowed",
+      "D. Only text type"
+    ]
+  },
+  "q106": {
+    "question": "Which command shows network connections on many systems?",
+    "possibleAnswers": [
+      "A. netstat",
+      "B. ps",
+      "C. df",
+      "D. top"
+    ]
+  },
+  "q107": {
+    "question": "“Serverless” typically means:",
+    "possibleAnswers": [
+      "A. No servers exist",
+      "B. Cloud provider manages servers; you deploy functions",
+      "C. Only client-side code",
+      "D. Databases only"
+    ]
+  },
+  "q108": {
+    "question": "A “hash table” average lookup time is:",
+    "possibleAnswers": [
+      "A. (O(n))",
+      "B. (O(\\log n))",
+      "C. (O(1))",
+      "D. (O(n \\log n))"
+    ]
+  },
+  "q109": {
+    "question": "In CSS, position: fixed; positions an element relative to:",
+    "possibleAnswers": [
+      "A. Its parent",
+      "B. The viewport",
+      "C. The next sibling",
+      "D. The document flow only"
+    ]
+  },
+  "q110": {
+    "question": "A “hot swap” drive can be:",
+    "possibleAnswers": [
+      "A. Removed only when off",
+      "B. Replaced while system is running",
+      "C. Replaced only in BIOS",
+      "D. Replaced after shutdown completes"
+    ]
+  },
+  "q111": {
+    "question": "SMTP usually uses which port for submission (modern)?",
+    "possibleAnswers": [
+      "A. 25",
+      "B. 110",
+      "C. 465/587",
+      "D. 993"
+    ]
+  },
+  "q112": {
+    "question": "“Normalization” in databases aims to:",
+    "possibleAnswers": [
+      "A. Increase redundancy",
+      "B. Reduce redundancy and anomalies",
+      "C. Remove primary keys",
+      "D. Speed up all queries"
+    ]
+  },
+  "q113": {
+    "question": "What is “sharding”?",
+    "possibleAnswers": [
+      "A. Encrypting tables",
+      "B. Horizontally partitioning data across nodes",
+      "C. Rebuilding indexes",
+      "D. Denormalizing data only"
+    ]
+  },
+  "q114": {
+    "question": "“ACID” guarantees include all EXCEPT:",
+    "possibleAnswers": [
+      "A. Atomicity",
+      "B. Consistency",
+      "C. Isolation",
+      "D. Durability"
+    ]
+  },
+  "q115": {
+    "question": "DNS record type “A” maps to:",
+    "possibleAnswers": [
+      "A. IPv6",
+      "B. IPv4",
+      "C. Mail server",
+      "D. Canonical name"
+    ]
+  },
+  "q116": {
+    "question": "In Python, a dictionary literal uses:",
+    "possibleAnswers": [
+      "A. []",
+      "B. {}",
+      "C. ()",
+      "D. <>"
+    ]
+  },
+  "q117": {
+    "question": "“Garbage collection” automatically:",
+    "possibleAnswers": [
+      "A. Manages unused memory",
+      "B. Compresses files",
+      "C. Updates OS",
+      "D. Deletes user files"
+    ]
+  },
+  "q118": {
+    "question": "A “reverse proxy” typically:",
+    "possibleAnswers": [
+      "A. Proxies client requests to backend servers",
+      "B. Proxies server responses to clients only",
+      "C. Translates SQL",
+      "D. Executes OS updates"
+    ]
+  },
+  "q119": {
+    "question": "“Vectorization” in numerical computing often means:",
+    "possibleAnswers": [
+      "A. Converting bitmaps to SVG",
+      "B. Using array operations instead of loops",
+      "C. Encrypting arrays",
+      "D. Turning code into vectors for GPUs only"
+    ]
+  },
+  "q120": {
+    "question": "Which cloud service model gives you VMs you manage?",
+    "possibleAnswers": [
+      "A. IaaS",
+      "B. PaaS",
+      "C. SaaS",
+      "D. FaaS"
+    ]
+  },
+  "q121": {
+    "question": "MVC stands for:",
+    "possibleAnswers": [
+      "A. Model–View–Controller",
+      "B. Module–Vector–Class",
+      "C. Model–Vector–Cache",
+      "D. Main–View–Cache"
+    ]
+  },
+  "q122": {
+    "question": "A “foreign key” enforces:",
+    "possibleAnswers": [
+      "A. Intra-table uniqueness",
+      "B. Referential integrity between tables",
+      "C. Column data type",
+      "D. Hash uniqueness"
+    ]
+  },
+  "q123": {
+    "question": "The command chmod 755 file sets:",
+    "possibleAnswers": [
+      "A. rwxr-xr-x",
+      "B. rw-r--r--",
+      "C. r-xr-xr-x",
+      "D. rwxrwxrwx"
+    ]
+  },
+  "q124": {
+    "question": "“GPU VRAM” is primarily used to store:",
+    "possibleAnswers": [
+      "A. Audio streams",
+      "B. Graphics textures and buffers",
+      "C. Disk partitions",
+      "D. SSH keys"
+    ]
+  },
+  "q125": {
+    "question": "Which compression format is lossless?",
+    "possibleAnswers": [
+      "A. MP3",
+      "B. AAC",
+      "C. FLAC",
+      "D. JPEG"
+    ]
+  },
+  "q126": {
+    "question": "Web “cookies” are used to:",
+    "possibleAnswers": [
+      "A. Render 3D",
+      "B. Store state/info in the browser",
+      "C. Accelerate DNS",
+      "D. Replace TLS"
+    ]
+  },
+  "q127": {
+    "question": "A “content hash” like SHA-256 length (digest) is:",
+    "possibleAnswers": [
+      "A. Variable",
+      "B. Fixed-length",
+      "C. Plaintext",
+      "D. Encrypted text"
+    ]
+  },
+  "q128": {
+    "question": "SMTP + TLS is often called:",
+    "possibleAnswers": [
+      "A. SMTPS",
+      "B. SSH mail",
+      "C. POP3S",
+      "D. HTTP mail"
+    ]
+  },
+  "q129": {
+    "question": "“SQL injection” exploits:",
+    "possibleAnswers": [
+      "A. Weak SSL certs",
+      "B. Improper input sanitization",
+      "C. Slow networks",
+      "D. Missing DNS entries"
+    ]
+  },
+  "q130": {
+    "question": "A “monolith” app is:",
+    "possibleAnswers": [
+      "A. Many small services",
+      "B. A single deployable unit",
+      "C. A serverless function only",
+      "D. Always faster than microservices"
+    ]
+  },
+  "q131": {
+    "question": "React is primarily a:",
+    "possibleAnswers": [
+      "A. CSS framework",
+      "B. JavaScript UI library",
+      "C. Database",
+      "D. Web server"
+    ]
+  },
+  "q132": {
+    "question": "“Promise” in JavaScript represents:",
+    "possibleAnswers": [
+      "A. A synchronous value",
+      "B. A proxy for a value available later",
+      "C. A DOM event",
+      "D. A CSS rule"
+    ]
+  },
+  "q133": {
+    "question": "CDN “cache miss” means:",
+    "possibleAnswers": [
+      "A. Content served from edge cache",
+      "B. Content fetched from origin",
+      "C. TLS failed",
+      "D. DNS failed"
+    ]
+  },
+  "q134": {
+    "question": "The PRIMARY KEY can be:",
+    "possibleAnswers": [
+      "A. Nullable",
+      "B. Duplicated",
+      "C. Composite (multiple columns)",
+      "D. Text only"
+    ]
+  },
+  "q135": {
+    "question": "Which is a distributed version control tool (the tool itself)?",
+    "possibleAnswers": [
+      "A. Git",
+      "B. GitHub",
+      "C. GitLab",
+      "D. Bitbucket"
+    ]
+  },
+  "q136": {
+    "question": "“WebAssembly” runs in:",
+    "possibleAnswers": [
+      "A. Only servers",
+      "B. Modern browsers and servers",
+      "C. Only native apps",
+      "D. Only mobile OS"
+    ]
+  },
+  "q137": {
+    "question": "A “kernel” in OS terms is:",
+    "possibleAnswers": [
+      "A. A bootloader only",
+      "B. Core component that manages resources",
+      "C. A text editor",
+      "D. A compiler"
+    ]
+  },
+  "q138": {
+    "question": "O(1) space means:",
+    "possibleAnswers": [
+      "A. Space grows with input",
+      "B. Constant extra space",
+      "C. Linear space",
+      "D. Logarithmic space"
+    ]
+  },
+  "q139": {
+    "question": "“CAP theorem” says a distributed system can only guarantee two of:",
+    "possibleAnswers": [
+      "A. Cache, Audit, Privacy",
+      "B. Consistency, Availability, Partition tolerance",
+      "C. Compute, Availability, Performance",
+      "D. Consistency, Audit, Parity"
+    ]
+  },
+  "q140": {
+    "question": "A “GUID/UUID” is:",
+    "possibleAnswers": [
+      "A. A hash function",
+      "B. A globally unique identifier",
+      "C. A type of checksum",
+      "D. A random port"
+    ]
+  },
+  "q141": {
+    "question": "What is “idempotency” in APIs?",
+    "possibleAnswers": [
+      "A. Multiple identical requests have the same effect",
+      "B. Requests must be unique",
+      "C. Only GET works",
+      "D. Caches are disabled"
+    ]
+  },
+  "q142": {
+    "question": "An “N+1 query” problem occurs when:",
+    "possibleAnswers": [
+      "A. One query loads N records and then runs 1 more",
+      "B. One query is cached",
+      "C. N queries are parallelized",
+      "D. An index is missing for PK"
+    ]
+  },
+  "q143": {
+    "question": "Which storage has highest write endurance typically?",
+    "possibleAnswers": [
+      "A. SLC NAND",
+      "B. MLC NAND",
+      "C. TLC NAND",
+      "D. QLC NAND"
+    ]
+  },
+  "q144": {
+    "question": "“Edge computing” moves compute:",
+    "possibleAnswers": [
+      "A. To the data center core",
+      "B. Closer to data sources/users",
+      "C. To tape archives",
+      "D. To single-thread CPUs"
+    ]
+  },
+  "q145": {
+    "question": "The main difference between TCP and UDP is TCP is:",
+    "possibleAnswers": [
+      "A. Connectionless and unreliable",
+      "B. Connection-oriented and reliable",
+      "C. Only used for streaming",
+      "D. Faster but unordered"
+    ]
+  },
+  "q146": {
+    "question": "A “load balancer” distributes:",
+    "possibleAnswers": [
+      "A. Logs",
+      "B. Traffic across servers",
+      "C. GPU cores",
+      "D. Compilation tasks only"
+    ]
+  },
+  "q147": {
+    "question": "Which of the following is a time-series database?",
+    "possibleAnswers": [
+      "A. MySQL",
+      "B. InfluxDB",
+      "C. SQLite",
+      "D. Neo4j"
+    ]
+  },
+  "q148": {
+    "question": "“HDD seek time” refers to:",
+    "possibleAnswers": [
+      "A. CPU cache delay",
+      "B. Head movement time to track",
+      "C. GPU shader time",
+      "D. RAM refresh"
+    ]
+  },
+  "q149": {
+    "question": "A “symbolic link” is:",
+    "possibleAnswers": [
+      "A. A copy of a file",
+      "B. A reference/pointer to another file",
+      "C. A compressed file",
+      "D. A checksum file"
+    ]
+  },
+  "q150": {
+    "question": "Which is a standard for container images?",
+    "possibleAnswers": [
+      "A. OCI",
+      "B. ODBC",
+      "C. OIDC",
+      "D. OSPF"
+    ]
+  },
+  "q151": {
+    "question": "“gRPC” uses which data format by default?",
+    "possibleAnswers": [
+      "A. JSON",
+      "B. Protobuf",
+      "C. XML",
+      "D. CSV"
+    ]
+  },
+  "q152": {
+    "question": "“REST” stands for:",
+    "possibleAnswers": [
+      "A. Representational State Transfer",
+      "B. Remote Execution Service Tool",
+      "C. Real-time Event Streaming Transport",
+      "D. Resource Exchange Standard"
+    ]
+  },
+  "q153": {
+    "question": "A “b-tree index” speeds up:",
+    "possibleAnswers": [
+      "A. Full table scans",
+      "B. Ordered lookups and range queries",
+      "C. Binary to text conversion",
+      "D. Cache eviction"
+    ]
+  },
+  "q154": {
+    "question": "The command ssh-keygen is used to:",
+    "possibleAnswers": [
+      "A. Generate SSH key pairs",
+      "B. Generate TLS certs",
+      "C. Generate JWTs",
+      "D. Generate MAC addresses"
+    ]
+  },
+  "q155": {
+    "question": "A “JWT” includes:",
+    "possibleAnswers": [
+      "A. Header, Payload, Signature",
+      "B. Key, IV, Ciphertext",
+      "C. Public, Private, Shared keys",
+      "D. User, Token, Role only"
+    ]
+  },
+  "q156": {
+    "question": "“Cache invalidation” is:",
+    "possibleAnswers": [
+      "A. Always trivial",
+      "B. One of the hard problems in CS",
+      "C. Only for CDNs",
+      "D. Not needed"
+    ]
+  },
+  "q157": {
+    "question": "Which RAID level can survive a single disk failure with parity?",
+    "possibleAnswers": [
+      "A. RAID 0",
+      "B. RAID 1",
+      "C. RAID 5",
+      "D. RAID 10 (mirror+stripe)"
+    ]
+  },
+  "q158": {
+    "question": "A “cron job” is:",
+    "possibleAnswers": [
+      "A. A Windows scheduled task",
+      "B. A Unix scheduled task",
+      "C. A browser timer",
+      "D. A DB trigger"
+    ]
+  },
+  "q159": {
+    "question": "“Blue/Green deployment” aims to:",
+    "possibleAnswers": [
+      "A. Increase dev headcount",
+      "B. Reduce downtime by swapping environments",
+      "C. Reduce CSS size",
+      "D. Minify JS"
+    ]
+  },
+  "q160": {
+    "question": "A “service mesh” provides:",
+    "possibleAnswers": [
+      "A. Microservice networking features like observability, retries, mTLS",
+      "B. CSS utilities",
+      "C. GPU scheduling",
+      "D. File storage"
+    ]
+  },
+  "q161": {
+    "question": "“HATEOAS” is a constraint of:",
+    "possibleAnswers": [
+      "A. SOAP",
+      "B. REST",
+      "C. GraphQL",
+      "D. RPC"
+    ]
+  },
+  "q162": {
+    "question": "“ETL” stands for:",
+    "possibleAnswers": [
+      "A. Encode, Transform, Load",
+      "B. Extract, Transform, Load",
+      "C. Extract, Transfer, Log",
+      "D. Export, Translate, Link"
+    ]
+  },
+  "q163": {
+    "question": "The ping utility measures:",
+    "possibleAnswers": [
+      "A. Throughput",
+      "B. Latency (round-trip time)",
+      "C. CPU load",
+      "D. Disk I/O"
+    ]
+  },
+  "q164": {
+    "question": "“Dockerfile” instruction to set base image:",
+    "possibleAnswers": [
+      "A. FROM",
+      "B. RUN",
+      "C. COPY",
+      "D. CMD"
+    ]
+  },
+  "q165": {
+    "question": "“MapReduce” was popularized by:",
+    "possibleAnswers": [
+      "A. Microsoft",
+      "B. Google",
+      "C. IBM",
+      "D. Oracle"
+    ]
+  },
+  "q166": {
+    "question": "“Object storage” like S3 stores data as:",
+    "possibleAnswers": [
+      "A. Blocks",
+      "B. Files in POSIX FS",
+      "C. Objects with metadata and IDs",
+      "D. Tape stripes"
+    ]
+  },
+  "q167": {
+    "question": "“Diffie–Hellman” is used for:",
+    "possibleAnswers": [
+      "A. Key exchange",
+      "B. Hashing",
+      "C. Symmetric encryption",
+      "D. Compression"
+    ]
+  },
+  "q168": {
+    "question": "“Spectre/Meltdown” are:",
+    "possibleAnswers": [
+      "A. Database bugs",
+      "B. CPU speculative execution vulnerabilities",
+      "C. GPU errors",
+      "D. Network worms"
+    ]
+  },
+  "q169": {
+    "question": "“Webhooks” are:",
+    "possibleAnswers": [
+      "A. Pull-based callbacks",
+      "B. Push-based HTTP callbacks on events",
+      "C. Only for mobile apps",
+      "D. DNS aliases"
+    ]
+  },
+  "q170": {
+    "question": "Which is a graph database?",
+    "possibleAnswers": [
+      "A. Cassandra",
+      "B. Neo4j",
+      "C. Redis",
+      "D. SQLite"
+    ]
+  },
+  "q171": {
+    "question": "“CORS preflight” uses which method?",
+    "possibleAnswers": [
+      "A. GET",
+      "B. POST",
+      "C. OPTIONS",
+      "D. HEAD"
+    ]
+  },
+  "q172": {
+    "question": "“SSE” (Server-Sent Events) is:",
+    "possibleAnswers": [
+      "A. Client → server stream",
+      "B. Server → client unidirectional stream",
+      "C. Bidirectional like WebSocket",
+      "D. UDP only"
+    ]
+  },
+  "q173": {
+    "question": "A “memory leak” happens when:",
+    "possibleAnswers": [
+      "A. Memory usage drops unexpectedly",
+      "B. Allocated memory isn’t released",
+      "C. GC runs too often",
+      "D. CPU spikes on IO"
+    ]
+  },
+  "q174": {
+    "question": "“TLS handshake” establishes:",
+    "possibleAnswers": [
+      "A. Physical link",
+      "B. Cryptographic parameters and keys",
+      "C. DNS resolution",
+      "D. HTTP verbs"
+    ]
+  },
+  "q175": {
+    "question": "What is “idempotent” in HTTP methods?",
+    "possibleAnswers": [
+      "A. GET and DELETE are not idempotent",
+      "B. PUT and DELETE are idempotent",
+      "C. POST is idempotent",
+      "D. PATCH is always idempotent"
+    ]
+  },
+  "q176": {
+    "question": "“Horizontal scaling” means:",
+    "possibleAnswers": [
+      "A. Bigger machine",
+      "B. More machines",
+      "C. Overclocking",
+      "D. Faster disks only"
+    ]
+  },
+  "q177": {
+    "question": "A “hotfix” is:",
+    "possibleAnswers": [
+      "A. A UI theme",
+      "B. An urgent patch to production",
+      "C. A docker restart",
+      "D. A DNS change"
+    ]
+  },
+  "q178": {
+    "question": "“OLTP” systems focus on:",
+    "possibleAnswers": [
+      "A. Analytical queries",
+      "B. Transaction processing",
+      "C. GPU operations",
+      "D. Log shipping"
+    ]
+  },
+  "q179": {
+    "question": "“ACME” protocol is used by:",
+    "possibleAnswers": [
+      "A. Let’s Encrypt for automated certs",
+      "B. OAuth providers",
+      "C. NTP servers",
+      "D. SMTP relays"
+    ]
+  },
+  "q180": {
+    "question": "“Zero Trust” security assumes:",
+    "possibleAnswers": [
+      "A. Internal network is trusted",
+      "B. Never trust, always verify",
+      "C. No authentication",
+      "D. Only passwords"
+    ]
+  },
+  "q181": {
+    "question": "A “Bloom filter” is:",
+    "possibleAnswers": [
+      "A. Exact set membership structure",
+      "B. Probabilistic structure with false positives",
+      "C. Compression codec",
+      "D. Sorting algorithm"
+    ]
+  },
+  "q182": {
+    "question": "“gzip” primarily provides:",
+    "possibleAnswers": [
+      "A. Encryption",
+      "B. Compression",
+      "C. Encoding",
+      "D. Hashing"
+    ]
+  },
+  "q183": {
+    "question": "“Backpressure” in streams controls:",
+    "possibleAnswers": [
+      "A. CPU temperature",
+      "B. Producer rate when consumer is slow",
+      "C. CSS layout",
+      "D. DNS cache"
+    ]
+  },
+  "q184": {
+    "question": "“Terraform” is a tool for:",
+    "possibleAnswers": [
+      "A. Container runtime",
+      "B. Infrastructure as Code",
+      "C. Log collection",
+      "D. APM"
+    ]
+  },
+  "q185": {
+    "question": "“SAML” primarily enables:",
+    "possibleAnswers": [
+      "A. Single sign-on (federated auth)",
+      "B. Data storage",
+      "C. Queueing",
+      "D. Video streaming"
+    ]
+  },
+  "q186": {
+    "question": "“WebAuthn” enables:",
+    "possibleAnswers": [
+      "A. Password managers only",
+      "B. Public-key authentication in browsers",
+      "C. SMS codes only",
+      "D. Email login only"
+    ]
+  },
+  "q187": {
+    "question": "“Quorum” in distributed systems refers to:",
+    "possibleAnswers": [
+      "A. A single node",
+      "B. Majority or required subset to proceed",
+      "C. Backup data copy",
+      "D. Read-only follower"
+    ]
+  },
+  "q188": {
+    "question": "“Raft” is a:",
+    "possibleAnswers": [
+      "A. Compression format",
+      "B. Consensus algorithm",
+      "C. Hash function",
+      "D. TCP extension"
+    ]
+  },
+  "q189": {
+    "question": "“Mutual TLS” means:",
+    "possibleAnswers": [
+      "A. Server authenticates client as well",
+      "B. Only server presents a cert",
+      "C. Client presents password",
+      "D. No certificates used"
+    ]
+  },
+  "q190": {
+    "question": "“ZKP” (Zero-Knowledge Proof) lets one party:",
+    "possibleAnswers": [
+      "A. Prove knowledge without revealing the secret",
+      "B. Compress data without loss",
+      "C. Hash faster",
+      "D. Avoid TLS"
+    ]
+  },
+  "q191": {
+    "question": "“WAF” stands for:",
+    "possibleAnswers": [
+      "A. Wide Area Firewall",
+      "B. Web Application Firewall",
+      "C. Web Access Federation",
+      "D. Wireless Access Filter"
+    ]
+  },
+  "q192": {
+    "question": "“HSTS” forces:",
+    "possibleAnswers": [
+      "A. HTTP only",
+      "B. HTTPS usage by browsers",
+      "C. Disabling cookies",
+      "D. Disabling JS"
+    ]
+  },
+  "q193": {
+    "question": "“SRAM vs DRAM”: SRAM is:",
+    "possibleAnswers": [
+      "A. Slower and cheaper",
+      "B. Faster and used in caches",
+      "C. Only for disks",
+      "D. Magnetic"
+    ]
+  },
+  "q194": {
+    "question": "“AMP” pages aim to:",
+    "possibleAnswers": [
+      "A. Accelerate mobile pages",
+      "B. Disable TLS",
+      "C. Replace HTML",
+      "D. Remove CSS"
+    ]
+  },
+  "q195": {
+    "question": "“TOTP” codes are:",
+    "possibleAnswers": [
+      "A. Time-based one-time passwords",
+      "B. Token-based offline passwords",
+      "C. Transport-oriented tokens",
+      "D. Two-offline token pairs"
+    ]
+  },
+  "q196": {
+    "question": "“FUSE” allows:",
+    "possibleAnswers": [
+      "A. User-space file systems",
+      "B. GPU drivers",
+      "C. NIC teaming",
+      "D. BIOS updates"
+    ]
+  },
+  "q197": {
+    "question": "“NAT” translates:",
+    "possibleAnswers": [
+      "A. MAC to IP",
+      "B. Private IPs to public IPs",
+      "C. IPv4 to IPv6 only",
+      "D. HTTP to HTTPS"
+    ]
+  },
+  "q198": {
+    "question": "“gpg” is commonly used for:",
+    "possibleAnswers": [
+      "A. Graphics processing",
+      "B. OpenPGP encryption/signing",
+      "C. Video playback",
+      "D. Audio mixing"
+    ]
+  },
+  "q199": {
+    "question": "“Time to First Byte (TTFB)” measures:",
+    "possibleAnswers": [
+      "A. Total page load",
+      "B. Delay until first byte of response",
+      "C. DNS cache age",
+      "D. SSL cert length"
+    ]
+  },
+  "q200": {
+    "question": "“Quantum computing qubit” differs in that it can be:",
+    "possibleAnswers": [
+      "A. Only 0 or 1",
+      "B. A superposition of 0 and 1",
+      "C. Only 1",
+      "D. Only 0"
+    ]
+  }
+}

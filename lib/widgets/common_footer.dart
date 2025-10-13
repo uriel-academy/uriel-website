@@ -5,11 +5,13 @@ import '../constants/app_styles.dart';
 class CommonFooter extends StatelessWidget {
   final bool isSmallScreen;
   final bool showLinks;
+  final bool showPricing;
 
   const CommonFooter({
     Key? key,
     required this.isSmallScreen,
     this.showLinks = true,
+    this.showPricing = true,
   }) : super(key: key);
 
   @override
@@ -34,7 +36,7 @@ class CommonFooter extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: isSmallScreen ? 14 : 16,
-                color: Colors.white.withOpacity(0.8),
+                color: Colors.white.withValues(alpha: 0.8),
               ),
             ),
             SizedBox(height: isSmallScreen ? 24 : 32),
@@ -44,6 +46,8 @@ class CommonFooter extends StatelessWidget {
               runSpacing: 16,
               alignment: WrapAlignment.center,
               children: [
+                if (showPricing) _buildFooterLink(context, 'Pricing', () => Navigator.pushNamed(context, '/pricing')),
+                _buildFooterLink(context, 'Payment', () => Navigator.pushNamed(context, '/payment')),
                 _buildFooterLink(context, 'About Us', () => Navigator.pushNamed(context, '/about')),
                 _buildFooterLink(context, 'Contact', () => Navigator.pushNamed(context, '/contact')),
                 _buildFooterLink(context, 'Privacy Policy', () => Navigator.pushNamed(context, '/privacy')),
@@ -52,7 +56,7 @@ class CommonFooter extends StatelessWidget {
               ],
             ),
             SizedBox(height: isSmallScreen ? 24 : 32),
-            Divider(color: Colors.white.withOpacity(0.2)),
+            Divider(color: Colors.white.withValues(alpha: 0.2)),
             SizedBox(height: isSmallScreen ? 12 : 16),
           ] else ...[
             Text(
@@ -66,7 +70,7 @@ class CommonFooter extends StatelessWidget {
             '© 2025 Uriel Academy. Built with ❤️ for Ghanaian students.',
             style: GoogleFonts.montserrat(
               fontSize: isSmallScreen ? 12 : 14,
-              color: Colors.white.withOpacity(0.7),
+              color: Colors.white.withValues(alpha: 0.7),
             ),
             textAlign: TextAlign.center,
           ),
@@ -84,9 +88,9 @@ class CommonFooter extends StatelessWidget {
         text,
         style: TextStyle(
           fontSize: isSmallScreen ? 14 : 16,
-          color: Colors.white.withOpacity(0.8),
+          color: Colors.white.withValues(alpha: 0.8),
           decoration: TextDecoration.underline,
-          decorationColor: Colors.white.withOpacity(0.8),
+          decorationColor: Colors.white.withValues(alpha: 0.8),
         ),
       ),
     );

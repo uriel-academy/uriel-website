@@ -41,7 +41,7 @@ class _CommunityModerationPageState extends State<CommunityModerationPage> {
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: Text('Moderate Post'),
+          title: const Text('Moderate Post'),
           content: Text('User: ${post['user']}\n\nContent: ${post['content']}'),
           actions: [
             TextButton(

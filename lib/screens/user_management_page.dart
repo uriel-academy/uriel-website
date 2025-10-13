@@ -47,7 +47,7 @@ class _UserManagementPageState extends State<UserManagementPage>
       ),
       body: TabBarView(
         controller: _tabController,
-        children: [
+        children: const [
           StudentManagementTab(),
           TeacherManagementTab(),
           SchoolAdminManagementTab(),
@@ -64,6 +64,8 @@ class _UserManagementPageState extends State<UserManagementPage>
 }
 
 class StudentManagementTab extends StatelessWidget {
+  const StudentManagementTab({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -120,7 +122,7 @@ class StudentManagementTab extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 8,
             offset: const Offset(0, 2),
           ),
@@ -136,7 +138,7 @@ class StudentManagementTab extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  color: color.withOpacity(0.1),
+                  color: color.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Icon(icon, color: color, size: 16),
@@ -171,7 +173,7 @@ class StudentManagementTab extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 8,
             offset: const Offset(0, 2),
           ),
@@ -220,7 +222,7 @@ class StudentManagementTab extends StatelessWidget {
             itemBuilder: (context, index) {
               return ListTile(
                 leading: CircleAvatar(
-                  backgroundColor: const Color(0xFF3498DB).withOpacity(0.1),
+                  backgroundColor: const Color(0xFF3498DB).withValues(alpha: 0.1),
                   child: Text(
                     'S${index + 1}',
                     style: GoogleFonts.montserrat(
@@ -258,6 +260,8 @@ class StudentManagementTab extends StatelessWidget {
 }
 
 class TeacherManagementTab extends StatelessWidget {
+  const TeacherManagementTab({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -314,7 +318,7 @@ class TeacherManagementTab extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 8,
             offset: const Offset(0, 2),
           ),
@@ -330,7 +334,7 @@ class TeacherManagementTab extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  color: color.withOpacity(0.1),
+                  color: color.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Icon(icon, color: color, size: 16),
@@ -365,7 +369,7 @@ class TeacherManagementTab extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 8,
             offset: const Offset(0, 2),
           ),
@@ -415,7 +419,7 @@ class TeacherManagementTab extends StatelessWidget {
               final subjects = ['Mathematics', 'English', 'Science', 'History', 'Arts'];
               return ListTile(
                 leading: CircleAvatar(
-                  backgroundColor: const Color(0xFF2ECC71).withOpacity(0.1),
+                  backgroundColor: const Color(0xFF2ECC71).withValues(alpha: 0.1),
                   child: Text(
                     'T${index + 1}',
                     style: GoogleFonts.montserrat(
@@ -466,6 +470,8 @@ class TeacherManagementTab extends StatelessWidget {
 }
 
 class SchoolAdminManagementTab extends StatelessWidget {
+  const SchoolAdminManagementTab({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -522,7 +528,7 @@ class SchoolAdminManagementTab extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 8,
             offset: const Offset(0, 2),
           ),
@@ -538,7 +544,7 @@ class SchoolAdminManagementTab extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  color: color.withOpacity(0.1),
+                  color: color.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Icon(icon, color: color, size: 16),
@@ -573,7 +579,7 @@ class SchoolAdminManagementTab extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 8,
             offset: const Offset(0, 2),
           ),
@@ -624,7 +630,7 @@ class SchoolAdminManagementTab extends StatelessWidget {
               final permissions = ['Full Access', 'Academic Only', 'Technical Only', 'Reports Only'];
               return ListTile(
                 leading: CircleAvatar(
-                  backgroundColor: const Color(0xFF9B59B6).withOpacity(0.1),
+                  backgroundColor: const Color(0xFF9B59B6).withValues(alpha: 0.1),
                   child: Text(
                     'A${index + 1}',
                     style: GoogleFonts.montserrat(

@@ -1,0 +1,1803 @@
+{
+  "subject": "Science",
+  "q1": {
+    "question": "What is the smallest unit of life?",
+    "possibleAnswers": [
+      "A. Atom",
+      "B. Cell",
+      "C. Tissue",
+      "D. Organelle"
+    ]
+  },
+  "q2": {
+    "question": "Which subatomic particle has a negative charge?",
+    "possibleAnswers": [
+      "A. Proton",
+      "B. Neutron",
+      "C. Electron",
+      "D. Positron"
+    ]
+  },
+  "q3": {
+    "question": "Which organ filters blood and produces urine?",
+    "possibleAnswers": [
+      "A. Liver",
+      "B. Kidney",
+      "C. Spleen",
+      "D. Pancreas"
+    ]
+  },
+  "q4": {
+    "question": "Photosynthesis primarily occurs in which plant organelle?",
+    "possibleAnswers": [
+      "A. Mitochondrion",
+      "B. Ribosome",
+      "C. Chloroplast",
+      "D. Nucleus"
+    ]
+  },
+  "q5": {
+    "question": "What is the chemical symbol for sodium?",
+    "possibleAnswers": [
+      "A. So",
+      "B. Na",
+      "C. S",
+      "D. Sn"
+    ]
+  },
+  "q6": {
+    "question": "Which vitamin is primarily synthesized in the skin with sunlight exposure?",
+    "possibleAnswers": [
+      "A. Vitamin A",
+      "B. Vitamin B12",
+      "C. Vitamin C",
+      "D. Vitamin D"
+    ]
+  },
+  "q7": {
+    "question": "The acceleration due to gravity on Earth is approximately:",
+    "possibleAnswers": [
+      "A. 1.6 m/s²",
+      "B. 3.7 m/s²",
+      "C. 9.8 m/s²",
+      "D. 24.8 m/s²"
+    ]
+  },
+  "q8": {
+    "question": "Which gas is most abundant in Earth’s atmosphere?",
+    "possibleAnswers": [
+      "A. Oxygen",
+      "B. Nitrogen",
+      "C. Carbon dioxide",
+      "D. Argon"
+    ]
+  },
+  "q9": {
+    "question": "The pH of pure water at 25°C is about:",
+    "possibleAnswers": [
+      "A. 3",
+      "B. 5",
+      "C. 7",
+      "D. 9"
+    ]
+  },
+  "q10": {
+    "question": "Which bond involves the sharing of electron pairs?",
+    "possibleAnswers": [
+      "A. Ionic",
+      "B. Covalent",
+      "C. Metallic",
+      "D. Hydrogen"
+    ]
+  },
+  "q11": {
+    "question": "Which blood cells are primarily responsible for oxygen transport?",
+    "possibleAnswers": [
+      "A. Platelets",
+      "B. Red blood cells",
+      "C. White blood cells",
+      "D. Plasma cells"
+    ]
+  },
+  "q12": {
+    "question": "What is the powerhouse of the cell?",
+    "possibleAnswers": [
+      "A. Nucleus",
+      "B. Endoplasmic reticulum",
+      "C. Mitochondrion",
+      "D. Golgi apparatus"
+    ]
+  },
+  "q13": {
+    "question": "Which law states that pressure and volume are inversely related at constant temperature?",
+    "possibleAnswers": [
+      "A. Charles’s law",
+      "B. Boyle’s law",
+      "C. Gay-Lussac’s law",
+      "D. Avogadro’s law"
+    ]
+  },
+  "q14": {
+    "question": "DNA stands for:",
+    "possibleAnswers": [
+      "A. Deoxyribonucleic acid",
+      "B. Deoxyriboprotein acid",
+      "C. Dihydronuclear acid",
+      "D. Deoxyribose nitrogen acid"
+    ]
+  },
+  "q15": {
+    "question": "Which part of the brain coordinates balance and movement?",
+    "possibleAnswers": [
+      "A. Cerebrum",
+      "B. Cerebellum",
+      "C. Medulla",
+      "D. Hypothalamus"
+    ]
+  },
+  "q16": {
+    "question": "Which metal is liquid at room temperature?",
+    "possibleAnswers": [
+      "A. Mercury",
+      "B. Sodium",
+      "C. Aluminum",
+      "D. Copper"
+    ]
+  },
+  "q17": {
+    "question": "What particle is emitted in alpha radiation?",
+    "possibleAnswers": [
+      "A. Electron",
+      "B. Helium nucleus",
+      "C. Neutrino",
+      "D. Gamma photon"
+    ]
+  },
+  "q18": {
+    "question": "Which process converts glucose to pyruvate?",
+    "possibleAnswers": [
+      "A. Krebs cycle",
+      "B. Glycolysis",
+      "C. Oxidative phosphorylation",
+      "D. Calvin cycle"
+    ]
+  },
+  "q19": {
+    "question": "Which organ secretes insulin?",
+    "possibleAnswers": [
+      "A. Thyroid",
+      "B. Pancreas",
+      "C. Adrenal gland",
+      "D. Pituitary"
+    ]
+  },
+  "q20": {
+    "question": "Which electromagnetic wave has the shortest wavelength?",
+    "possibleAnswers": [
+      "A. Radio",
+      "B. Infrared",
+      "C. Ultraviolet",
+      "D. Gamma ray"
+    ]
+  },
+  "q21": {
+    "question": "What is the main product of cellular respiration?",
+    "possibleAnswers": [
+      "A. Oxygen",
+      "B. ATP",
+      "C. Lactic acid",
+      "D. Glucose"
+    ]
+  },
+  "q22": {
+    "question": "The SI unit of electric current is:",
+    "possibleAnswers": [
+      "A. Volt",
+      "B. Watt",
+      "C. Ampere",
+      "D. Ohm"
+    ]
+  },
+  "q23": {
+    "question": "Which type of rock is formed from cooled magma?",
+    "possibleAnswers": [
+      "A. Sedimentary",
+      "B. Igneous",
+      "C. Metamorphic",
+      "D. Evaporite"
+    ]
+  },
+  "q24": {
+    "question": "In humans, the normal diploid number of chromosomes is:",
+    "possibleAnswers": [
+      "A. 22",
+      "B. 23",
+      "C. 44",
+      "D. 46"
+    ]
+  },
+  "q25": {
+    "question": "Which hormone regulates the sleep–wake cycle?",
+    "possibleAnswers": [
+      "A. Melatonin",
+      "B. Cortisol",
+      "C. Insulin",
+      "D. Thyroxine"
+    ]
+  },
+  "q26": {
+    "question": "What is the main function of hemoglobin?",
+    "possibleAnswers": [
+      "A. Clotting",
+      "B. Immunity",
+      "C. Oxygen transport",
+      "D. Hormone signaling"
+    ]
+  },
+  "q27": {
+    "question": "Which scientist proposed the three laws of motion?",
+    "possibleAnswers": [
+      "A. Galileo Galilei",
+      "B. Isaac Newton",
+      "C. Albert Einstein",
+      "D. Niels Bohr"
+    ]
+  },
+  "q28": {
+    "question": "The measure of disorder in a system is called:",
+    "possibleAnswers": [
+      "A. Enthalpy",
+      "B. Entropy",
+      "C. Gibbs energy",
+      "D. Heat capacity"
+    ]
+  },
+  "q29": {
+    "question": "Which organ produces bile?",
+    "possibleAnswers": [
+      "A. Pancreas",
+      "B. Liver",
+      "C. Gallbladder",
+      "D. Stomach"
+    ]
+  },
+  "q30": {
+    "question": "Which planet has the largest number of known moons?",
+    "possibleAnswers": [
+      "A. Earth",
+      "B. Mars",
+      "C. Jupiter",
+      "D. Mercury"
+    ]
+  },
+  "q31": {
+    "question": "What is the common unit for measuring frequency?",
+    "possibleAnswers": [
+      "A. Joule",
+      "B. Hertz",
+      "C. Newton",
+      "D. Pascal"
+    ]
+  },
+  "q32": {
+    "question": "Which macromolecule is primarily used for long-term energy storage in animals?",
+    "possibleAnswers": [
+      "A. Proteins",
+      "B. Carbohydrates",
+      "C. Lipids",
+      "D. Nucleic acids"
+    ]
+  },
+  "q33": {
+    "question": "The ozone layer is primarily found in the:",
+    "possibleAnswers": [
+      "A. Troposphere",
+      "B. Stratosphere",
+      "C. Mesosphere",
+      "D. Thermosphere"
+    ]
+  },
+  "q34": {
+    "question": "Which element has the highest electronegativity?",
+    "possibleAnswers": [
+      "A. Oxygen",
+      "B. Fluorine",
+      "C. Chlorine",
+      "D. Nitrogen"
+    ]
+  },
+  "q35": {
+    "question": "The unit of force is the:",
+    "possibleAnswers": [
+      "A. Joule",
+      "B. Newton",
+      "C. Watt",
+      "D. Pascal"
+    ]
+  },
+  "q36": {
+    "question": "What is the main structural component of plant cell walls?",
+    "possibleAnswers": [
+      "A. Chitin",
+      "B. Cellulose",
+      "C. Glycogen",
+      "D. Peptidoglycan"
+    ]
+  },
+  "q37": {
+    "question": "A substance that speeds up a chemical reaction without being consumed is a:",
+    "possibleAnswers": [
+      "A. Solvent",
+      "B. Catalyst",
+      "C. Inhibitor",
+      "D. Reactant"
+    ]
+  },
+  "q38": {
+    "question": "The process by which plants lose water vapor through leaves is:",
+    "possibleAnswers": [
+      "A. Transpiration",
+      "B. Respiration",
+      "C. Osmosis",
+      "D. Diffusion"
+    ]
+  },
+  "q39": {
+    "question": "Which scientist is associated with the periodic table’s modern form?",
+    "possibleAnswers": [
+      "A. Dalton",
+      "B. Mendeleev",
+      "C. Rutherford",
+      "D. Curie"
+    ]
+  },
+  "q40": {
+    "question": "Which blood component helps in clotting?",
+    "possibleAnswers": [
+      "A. Plasma",
+      "B. Platelets",
+      "C. Leukocytes",
+      "D. Erythrocytes"
+    ]
+  },
+  "q41": {
+    "question": "What is the primary cause of tides on Earth?",
+    "possibleAnswers": [
+      "A. Wind patterns",
+      "B. Moon’s gravity",
+      "C. Earth’s rotation only",
+      "D. Sunspot cycles"
+    ]
+  },
+  "q42": {
+    "question": "Which law relates current, voltage, and resistance?",
+    "possibleAnswers": [
+      "A. Faraday’s law",
+      "B. Ohm’s law",
+      "C. Coulomb’s law",
+      "D. Ampère’s law"
+    ]
+  },
+  "q43": {
+    "question": "What kind of bond connects amino acids in proteins?",
+    "possibleAnswers": [
+      "A. Glycosidic",
+      "B. Peptide",
+      "C. Hydrogen",
+      "D. Ionic"
+    ]
+  },
+  "q44": {
+    "question": "Which organ controls body temperature regulation?",
+    "possibleAnswers": [
+      "A. Cerebellum",
+      "B. Hypothalamus",
+      "C. Hippocampus",
+      "D. Pons"
+    ]
+  },
+  "q45": {
+    "question": "Which gas do plants take in during photosynthesis?",
+    "possibleAnswers": [
+      "A. Oxygen",
+      "B. Nitrogen",
+      "C. Carbon dioxide",
+      "D. Methane"
+    ]
+  },
+  "q46": {
+    "question": "The first law of thermodynamics is essentially the law of:",
+    "possibleAnswers": [
+      "A. Disorder",
+      "B. Energy conservation",
+      "C. Entropy increase",
+      "D. Heat death"
+    ]
+  },
+  "q47": {
+    "question": "Which particle determines the atomic number of an element?",
+    "possibleAnswers": [
+      "A. Proton",
+      "B. Neutron",
+      "C. Electron",
+      "D. Nucleus"
+    ]
+  },
+  "q48": {
+    "question": "What is the freezing point of pure water at 1 atm?",
+    "possibleAnswers": [
+      "A. 0°C",
+      "B. 32°C",
+      "C. 273°C",
+      "D. –32°C"
+    ]
+  },
+  "q49": {
+    "question": "Which organelle packages and modifies proteins?",
+    "possibleAnswers": [
+      "A. Nucleus",
+      "B. Golgi apparatus",
+      "C. Lysosome",
+      "D. Ribosome"
+    ]
+  },
+  "q50": {
+    "question": "Which type of energy transfer requires no medium?",
+    "possibleAnswers": [
+      "A. Conduction",
+      "B. Convection",
+      "C. Radiation",
+      "D. Evaporation"
+    ]
+  },
+  "q51": {
+    "question": "What is the predominant sugar in DNA?",
+    "possibleAnswers": [
+      "A. Ribose",
+      "B. Deoxyribose",
+      "C. Fructose",
+      "D. Glucose"
+    ]
+  },
+  "q52": {
+    "question": "Which acid is found in the stomach aiding digestion?",
+    "possibleAnswers": [
+      "A. Acetic acid",
+      "B. Nitric acid",
+      "C. Hydrochloric acid",
+      "D. Sulfuric acid"
+    ]
+  },
+  "q53": {
+    "question": "Which planet is known for its rings?",
+    "possibleAnswers": [
+      "A. Venus",
+      "B. Earth",
+      "C. Saturn",
+      "D. Mercury"
+    ]
+  },
+  "q54": {
+    "question": "The green pigment in plants is called:",
+    "possibleAnswers": [
+      "A. Hemoglobin",
+      "B. Keratin",
+      "C. Chlorophyll",
+      "D. Melanin"
+    ]
+  },
+  "q55": {
+    "question": "What is the basic unit of heredity?",
+    "possibleAnswers": [
+      "A. Chromosome",
+      "B. Gene",
+      "C. Allele",
+      "D. Genotype"
+    ]
+  },
+  "q56": {
+    "question": "Which disease is caused by lack of vitamin C?",
+    "possibleAnswers": [
+      "A. Rickets",
+      "B. Scurvy",
+      "C. Night blindness",
+      "D. Pellagra"
+    ]
+  },
+  "q57": {
+    "question": "Which scientist discovered penicillin?",
+    "possibleAnswers": [
+      "A. Louis Pasteur",
+      "B. Alexander Fleming",
+      "C. Robert Koch",
+      "D. Edward Jenner"
+    ]
+  },
+  "q58": {
+    "question": "Which process separates mixtures by boiling points?",
+    "possibleAnswers": [
+      "A. Filtration",
+      "B. Distillation",
+      "C. Chromatography",
+      "D. Centrifugation"
+    ]
+  },
+  "q59": {
+    "question": "The charge on a neutron is:",
+    "possibleAnswers": [
+      "A. +1",
+      "B. –1",
+      "C. 0",
+      "D. Fractional"
+    ]
+  },
+  "q60": {
+    "question": "Which waves require a medium?",
+    "possibleAnswers": [
+      "A. Light waves",
+      "B. Radio waves",
+      "C. Sound waves",
+      "D. Gamma rays"
+    ]
+  },
+  "q61": {
+    "question": "What structure controls what enters and leaves the cell?",
+    "possibleAnswers": [
+      "A. Cell wall",
+      "B. Cell membrane",
+      "C. Nucleus",
+      "D. Vacuole"
+    ]
+  },
+  "q62": {
+    "question": "The study of fungi is called:",
+    "possibleAnswers": [
+      "A. Virology",
+      "B. Mycology",
+      "C. Bacteriology",
+      "D. Parasitology"
+    ]
+  },
+  "q63": {
+    "question": "The Earth’s inner core is primarily composed of:",
+    "possibleAnswers": [
+      "A. Nickel and iron",
+      "B. Silicon and oxygen",
+      "C. Carbon and hydrogen",
+      "D. Sodium and chlorine"
+    ]
+  },
+  "q64": {
+    "question": "Which device measures atmospheric pressure?",
+    "possibleAnswers": [
+      "A. Thermometer",
+      "B. Barometer",
+      "C. Hygrometer",
+      "D. Anemometer"
+    ]
+  },
+  "q65": {
+    "question": "The unit of work or energy in SI is:",
+    "possibleAnswers": [
+      "A. Newton",
+      "B. Joule",
+      "C. Watt",
+      "D. Volt"
+    ]
+  },
+  "q66": {
+    "question": "Which organ is primarily responsible for detoxification and metabolism?",
+    "possibleAnswers": [
+      "A. Spleen",
+      "B. Liver",
+      "C. Kidney",
+      "D. Lung"
+    ]
+  },
+  "q67": {
+    "question": "Which scientist proposed natural selection with Darwin?",
+    "possibleAnswers": [
+      "A. Lamarck",
+      "B. Wallace",
+      "C. Mendel",
+      "D. Lyell"
+    ]
+  },
+  "q68": {
+    "question": "Which part of the eye controls the amount of light entering?",
+    "possibleAnswers": [
+      "A. Lens",
+      "B. Retina",
+      "C. Iris",
+      "D. Optic nerve"
+    ]
+  },
+  "q69": {
+    "question": "The principal component of natural gas is:",
+    "possibleAnswers": [
+      "A. Ethane",
+      "B. Methane",
+      "C. Propane",
+      "D. Butane"
+    ]
+  },
+  "q70": {
+    "question": "Which polymer is formed from glucose units in plants for storage?",
+    "possibleAnswers": [
+      "A. Cellulose",
+      "B. Starch",
+      "C. Glycogen",
+      "D. Chitin"
+    ]
+  },
+  "q71": {
+    "question": "The half-life of a radioactive isotope is the time it takes for:",
+    "possibleAnswers": [
+      "A. All atoms to decay",
+      "B. Temperature to halve",
+      "C. Half the atoms to decay",
+      "D. Radiation to stop"
+    ]
+  },
+  "q72": {
+    "question": "Which blood group is the universal donor (red cells)?",
+    "possibleAnswers": [
+      "A. A+",
+      "B. B–",
+      "C. AB+",
+      "D. O–"
+    ]
+  },
+  "q73": {
+    "question": "The device that converts chemical energy directly to electrical energy is a:",
+    "possibleAnswers": [
+      "A. Generator",
+      "B. Battery",
+      "C. Transformer",
+      "D. Turbine"
+    ]
+  },
+  "q74": {
+    "question": "Which planet is called Earth’s “twin” in size?",
+    "possibleAnswers": [
+      "A. Mars",
+      "B. Venus",
+      "C. Mercury",
+      "D. Neptune"
+    ]
+  },
+  "q75": {
+    "question": "The common cold is caused by:",
+    "possibleAnswers": [
+      "A. Bacteria",
+      "B. Protozoa",
+      "C. Viruses",
+      "D. Fungi"
+    ]
+  },
+  "q76": {
+    "question": "What type of reaction releases energy to surroundings?",
+    "possibleAnswers": [
+      "A. Endothermic",
+      "B. Exothermic",
+      "C. Isothermal",
+      "D. Photolytic"
+    ]
+  },
+  "q77": {
+    "question": "Which vitamin deficiency causes rickets?",
+    "possibleAnswers": [
+      "A. A",
+      "B. B1",
+      "C. D",
+      "D. K"
+    ]
+  },
+  "q78": {
+    "question": "The basic SI unit of temperature is:",
+    "possibleAnswers": [
+      "A. Celsius",
+      "B. Kelvin",
+      "C. Fahrenheit",
+      "D. Rankine"
+    ]
+  },
+  "q79": {
+    "question": "Which organ is the primary site of gas exchange in humans?",
+    "possibleAnswers": [
+      "A. Trachea",
+      "B. Alveoli (lungs)",
+      "C. Bronchi",
+      "D. Diaphragm"
+    ]
+  },
+  "q80": {
+    "question": "The most common noble gas in the atmosphere after nitrogen and oxygen is:",
+    "possibleAnswers": [
+      "A. Neon",
+      "B. Argon",
+      "C. Helium",
+      "D. Xenon"
+    ]
+  },
+  "q81": {
+    "question": "Which law explains buoyant force?",
+    "possibleAnswers": [
+      "A. Pascal’s principle",
+      "B. Archimedes’ principle",
+      "C. Bernoulli’s principle",
+      "D. Hooke’s law"
+    ]
+  },
+  "q82": {
+    "question": "The speed of light in vacuum is approximately:",
+    "possibleAnswers": [
+      "A. 3.0 × 10⁶ m/s",
+      "B. 3.0 × 10⁸ m/s",
+      "C. 3.0 × 10¹⁰ m/s",
+      "D. 3.0 × 10¹² m/s"
+    ]
+  },
+  "q83": {
+    "question": "Which gland is known as the “master gland”?",
+    "possibleAnswers": [
+      "A. Thyroid",
+      "B. Pituitary",
+      "C. Adrenal",
+      "D. Pineal"
+    ]
+  },
+  "q84": {
+    "question": "The bond between water molecules is primarily:",
+    "possibleAnswers": [
+      "A. Ionic",
+      "B. Metallic",
+      "C. Hydrogen bonding",
+      "D. Covalent only"
+    ]
+  },
+  "q85": {
+    "question": "The layer of Earth where tectonic plates move is the:",
+    "possibleAnswers": [
+      "A. Inner core",
+      "B. Asthenosphere/lithosphere system",
+      "C. Mesosphere",
+      "D. Exosphere"
+    ]
+  },
+  "q86": {
+    "question": "Which instrument splits light into its component wavelengths?",
+    "possibleAnswers": [
+      "A. Microscope",
+      "B. Spectroscope",
+      "C. Periscope",
+      "D. Endoscope"
+    ]
+  },
+  "q87": {
+    "question": "The universal solvent is commonly considered to be:",
+    "possibleAnswers": [
+      "A. Ethanol",
+      "B. Water",
+      "C. Acetone",
+      "D. Ether"
+    ]
+  },
+  "q88": {
+    "question": "Which process describes water movement across a semipermeable membrane?",
+    "possibleAnswers": [
+      "A. Diffusion",
+      "B. Osmosis",
+      "C. Active transport",
+      "D. Filtration"
+    ]
+  },
+  "q89": {
+    "question": "The red color of blood is due to:",
+    "possibleAnswers": [
+      "A. Melanin",
+      "B. Hemoglobin",
+      "C. Carotene",
+      "D. Myosin"
+    ]
+  },
+  "q90": {
+    "question": "Which organelle contains digestive enzymes for breakdown?",
+    "possibleAnswers": [
+      "A. Lysosome",
+      "B. Chloroplast",
+      "C. Vacuole",
+      "D. Centriole"
+    ]
+  },
+  "q91": {
+    "question": "The largest planet in our solar system is:",
+    "possibleAnswers": [
+      "A. Saturn",
+      "B. Jupiter",
+      "C. Uranus",
+      "D. Neptune"
+    ]
+  },
+  "q92": {
+    "question": "Which particle mediates the electromagnetic force (in physics models)?",
+    "possibleAnswers": [
+      "A. Gluon",
+      "B. Photon",
+      "C. W boson",
+      "D. Z boson"
+    ]
+  },
+  "q93": {
+    "question": "What is the pH range of most human blood?",
+    "possibleAnswers": [
+      "A. 6.2–6.6",
+      "B. 6.8–7.0",
+      "C. 7.35–7.45",
+      "D. 7.8–8.0"
+    ]
+  },
+  "q94": {
+    "question": "The primary function of white blood cells is:",
+    "possibleAnswers": [
+      "A. Oxygen transport",
+      "B. Immunity",
+      "C. Clotting",
+      "D. pH buffering"
+    ]
+  },
+  "q95": {
+    "question": "The most reactive group of nonmetals is the:",
+    "possibleAnswers": [
+      "A. Noble gases",
+      "B. Halogens",
+      "C. Alkali metals",
+      "D. Alkaline earths"
+    ]
+  },
+  "q96": {
+    "question": "A change of solid directly to gas is called:",
+    "possibleAnswers": [
+      "A. Condensation",
+      "B. Sublimation",
+      "C. Deposition",
+      "D. Evaporation"
+    ]
+  },
+  "q97": {
+    "question": "The enzyme that synthesizes DNA is:",
+    "possibleAnswers": [
+      "A. DNA polymerase",
+      "B. RNA polymerase",
+      "C. Ligase",
+      "D. Helicase"
+    ]
+  },
+  "q98": {
+    "question": "The Richter scale measures the magnitude of:",
+    "possibleAnswers": [
+      "A. Hurricanes",
+      "B. Tornadoes",
+      "C. Earthquakes",
+      "D. Volcanoes (VEI)"
+    ]
+  },
+  "q99": {
+    "question": "Which part of the ear converts vibrations to nerve impulses?",
+    "possibleAnswers": [
+      "A. Pinna",
+      "B. Ossicles",
+      "C. Cochlea",
+      "D. Eardrum"
+    ]
+  },
+  "q100": {
+    "question": "Which force keeps planets in orbit around the Sun?",
+    "possibleAnswers": [
+      "A. Electromagnetic",
+      "B. Strong nuclear",
+      "C. Weak nuclear",
+      "D. Gravitational"
+    ]
+  },
+  "q101": {
+    "question": "Which gas causes the “ozone hole” when CFCs break down ozone?",
+    "possibleAnswers": [
+      "A. Chlorine radicals",
+      "B. Nitrogen",
+      "C. Methane",
+      "D. Hydrogen"
+    ]
+  },
+  "q102": {
+    "question": "The main nitrogen-fixing organisms are:",
+    "possibleAnswers": [
+      "A. Fungi",
+      "B. Bacteria (e.g., Rhizobium)",
+      "C. Algae",
+      "D. Viruses"
+    ]
+  },
+  "q103": {
+    "question": "Which carbohydrate is the primary energy source for the brain?",
+    "possibleAnswers": [
+      "A. Fructose",
+      "B. Glucose",
+      "C. Galactose",
+      "D. Sucrose"
+    ]
+  },
+  "q104": {
+    "question": "The unit of electrical resistance is:",
+    "possibleAnswers": [
+      "A. Volt",
+      "B. Ampere",
+      "C. Ohm",
+      "D. Tesla"
+    ]
+  },
+  "q105": {
+    "question": "Which vitamin is essential for blood clotting?",
+    "possibleAnswers": [
+      "A. Vitamin K",
+      "B. Vitamin D",
+      "C. Vitamin E",
+      "D. Vitamin B6"
+    ]
+  },
+  "q106": {
+    "question": "The outermost electron shell is called the:",
+    "possibleAnswers": [
+      "A. Core shell",
+      "B. Valence shell",
+      "C. Inner shell",
+      "D. Proton shell"
+    ]
+  },
+  "q107": {
+    "question": "Which device is used to view very small objects using electrons?",
+    "possibleAnswers": [
+      "A. Light microscope",
+      "B. Electron microscope",
+      "C. Telescope",
+      "D. Spectrometer"
+    ]
+  },
+  "q108": {
+    "question": "The process by which organisms maintain internal stability is:",
+    "possibleAnswers": [
+      "A. Symbiosis",
+      "B. Homeostasis",
+      "C. Metamorphosis",
+      "D. Hemostasis"
+    ]
+  },
+  "q109": {
+    "question": "Which planet has the longest day (slow rotation) among the inner planets?",
+    "possibleAnswers": [
+      "A. Mercury",
+      "B. Venus",
+      "C. Earth",
+      "D. Mars"
+    ]
+  },
+  "q110": {
+    "question": "The chemical formula for table salt is:",
+    "possibleAnswers": [
+      "A. NaCl",
+      "B. KCl",
+      "C. Na₂CO₃",
+      "D. NH₄Cl"
+    ]
+  },
+  "q111": {
+    "question": "Which disease is bacterial?",
+    "possibleAnswers": [
+      "A. Influenza",
+      "B. Tuberculosis",
+      "C. Measles",
+      "D. COVID-19"
+    ]
+  },
+  "q112": {
+    "question": "The heat needed to change a substance from liquid to gas without temperature change is:",
+    "possibleAnswers": [
+      "A. Specific heat",
+      "B. Latent heat of vaporization",
+      "C. Heat of fusion",
+      "D. Enthalpy of formation"
+    ]
+  },
+  "q113": {
+    "question": "Which particles in the nucleus have no charge?",
+    "possibleAnswers": [
+      "A. Protons",
+      "B. Electrons",
+      "C. Neutrons",
+      "D. Positrons"
+    ]
+  },
+  "q114": {
+    "question": "The fluid mosaic model describes the:",
+    "possibleAnswers": [
+      "A. Cell wall",
+      "B. Cell membrane",
+      "C. Cytoskeleton",
+      "D. Nuclear envelope"
+    ]
+  },
+  "q115": {
+    "question": "The enzyme that unwinds DNA is:",
+    "possibleAnswers": [
+      "A. Ligase",
+      "B. Telomerase",
+      "C. Helicase",
+      "D. Kinase"
+    ]
+  },
+  "q116": {
+    "question": "The number of protons plus neutrons is the:",
+    "possibleAnswers": [
+      "A. Atomic number",
+      "B. Mass number",
+      "C. Valence number",
+      "D. Quantum number"
+    ]
+  },
+  "q117": {
+    "question": "Which is not a greenhouse gas?",
+    "possibleAnswers": [
+      "A. CO₂",
+      "B. CH₄",
+      "C. N₂O",
+      "D. O₂"
+    ]
+  },
+  "q118": {
+    "question": "The main function of xylem is to transport:",
+    "possibleAnswers": [
+      "A. Sugars",
+      "B. Water and minerals",
+      "C. Hormones",
+      "D. Oxygen"
+    ]
+  },
+  "q119": {
+    "question": "The compound primarily responsible for acid rain is:",
+    "possibleAnswers": [
+      "A. Nitrous oxide only",
+      "B. Sulfur dioxide (and NOx)",
+      "C. Methane",
+      "D. Ozone"
+    ]
+  },
+  "q120": {
+    "question": "What is the typical human body temperature (oral) in °C?",
+    "possibleAnswers": [
+      "A. 35.0",
+      "B. 36.5–37.5",
+      "C. 38.5",
+      "D. 39.5"
+    ]
+  },
+  "q121": {
+    "question": "Which law states that volumes of gases combine in simple ratios?",
+    "possibleAnswers": [
+      "A. Boyle’s law",
+      "B. Charles’s law",
+      "C. Gay-Lussac’s law (combining volumes)",
+      "D. Dalton’s law"
+    ]
+  },
+  "q122": {
+    "question": "The organelle that synthesizes proteins is the:",
+    "possibleAnswers": [
+      "A. Ribosome",
+      "B. Peroxisome",
+      "C. Centriole",
+      "D. Vacuole"
+    ]
+  },
+  "q123": {
+    "question": "The hard, protective outer layer of insects is made of:",
+    "possibleAnswers": [
+      "A. Cellulose",
+      "B. Chitin",
+      "C. Keratin",
+      "D. Collagen"
+    ]
+  },
+  "q124": {
+    "question": "Which star is at the center of our solar system?",
+    "possibleAnswers": [
+      "A. Sirius",
+      "B. Polaris",
+      "C. The Sun",
+      "D. Betelgeuse"
+    ]
+  },
+  "q125": {
+    "question": "Which property of sound determines pitch?",
+    "possibleAnswers": [
+      "A. Amplitude",
+      "B. Frequency",
+      "C. Speed",
+      "D. Wavelength only"
+    ]
+  },
+  "q126": {
+    "question": "The measure of how much solute dissolves at a given temperature is:",
+    "possibleAnswers": [
+      "A. Molarity",
+      "B. Solubility",
+      "C. Molality",
+      "D. Normality"
+    ]
+  },
+  "q127": {
+    "question": "Which element is essential for thyroid hormones?",
+    "possibleAnswers": [
+      "A. Calcium",
+      "B. Iodine",
+      "C. Iron",
+      "D. Zinc"
+    ]
+  },
+  "q128": {
+    "question": "The process by which white blood cells engulf pathogens is:",
+    "possibleAnswers": [
+      "A. Pinocytosis",
+      "B. Phagocytosis",
+      "C. Exocytosis",
+      "D. Diffusion"
+    ]
+  },
+  "q129": {
+    "question": "The organ that stores bile is the:",
+    "possibleAnswers": [
+      "A. Liver",
+      "B. Gallbladder",
+      "C. Pancreas",
+      "D. Spleen"
+    ]
+  },
+  "q130": {
+    "question": "Which disease is caused by Plasmodium?",
+    "possibleAnswers": [
+      "A. Cholera",
+      "B. Malaria",
+      "C. Typhoid",
+      "D. Dengue"
+    ]
+  },
+  "q131": {
+    "question": "The light-dependent reactions of photosynthesis occur in the:",
+    "possibleAnswers": [
+      "A. Stroma",
+      "B. Thylakoid membranes",
+      "C. Mitochondrial matrix",
+      "D. Cytosol"
+    ]
+  },
+  "q132": {
+    "question": "The Earth’s magnetic field is generated by movements in the:",
+    "possibleAnswers": [
+      "A. Inner core",
+      "B. Outer core",
+      "C. Mantle",
+      "D. Crust"
+    ]
+  },
+  "q133": {
+    "question": "The main site of nutrient absorption in humans is the:",
+    "possibleAnswers": [
+      "A. Stomach",
+      "B. Small intestine",
+      "C. Large intestine",
+      "D. Esophagus"
+    ]
+  },
+  "q134": {
+    "question": "The rate of reaction generally increases with:",
+    "possibleAnswers": [
+      "A. Lower temperature",
+      "B. Lower concentration",
+      "C. Higher temperature",
+      "D. Smaller surface area"
+    ]
+  },
+  "q135": {
+    "question": "The functional unit of the kidney is the:",
+    "possibleAnswers": [
+      "A. Neuron",
+      "B. Nephron",
+      "C. Alveolus",
+      "D. Sarcomere"
+    ]
+  },
+  "q136": {
+    "question": "Which vitamin is an antioxidant?",
+    "possibleAnswers": [
+      "A. B1",
+      "B. C",
+      "C. K",
+      "D. B12"
+    ]
+  },
+  "q137": {
+    "question": "The process of splitting water in photosynthesis is called:",
+    "possibleAnswers": [
+      "A. Photolysis",
+      "B. Hydrolysis",
+      "C. Glycolysis",
+      "D. Hemolysis"
+    ]
+  },
+  "q138": {
+    "question": "Which gas is used in balloons because it is less dense than air and nonflammable?",
+    "possibleAnswers": [
+      "A. Hydrogen",
+      "B. Helium",
+      "C. Methane",
+      "D. Neon"
+    ]
+  },
+  "q139": {
+    "question": "Which planet is known as the Red Planet?",
+    "possibleAnswers": [
+      "A. Venus",
+      "B. Mars",
+      "C. Jupiter",
+      "D. Saturn"
+    ]
+  },
+  "q140": {
+    "question": "The measure of how resistant a fluid is to flow is:",
+    "possibleAnswers": [
+      "A. Density",
+      "B. Viscosity",
+      "C. Buoyancy",
+      "D. Elasticity"
+    ]
+  },
+  "q141": {
+    "question": "The force that opposes motion between two surfaces is:",
+    "possibleAnswers": [
+      "A. Tension",
+      "B. Friction",
+      "C. Gravity",
+      "D. Normal force"
+    ]
+  },
+  "q142": {
+    "question": "Which compound is responsible for the blue color of the sky (scattering explanation aside)?",
+    "possibleAnswers": [
+      "A. Ozone",
+      "B. Nitrogen (Rayleigh scattering medium)",
+      "C. Water vapor",
+      "D. Carbon monoxide"
+    ]
+  },
+  "q143": {
+    "question": "The smallest bone in the human body is the:",
+    "possibleAnswers": [
+      "A. Stapes",
+      "B. Femur",
+      "C. Ulna",
+      "D. Patella"
+    ]
+  },
+  "q144": {
+    "question": "Enzymes are primarily composed of:",
+    "possibleAnswers": [
+      "A. Lipids",
+      "B. Proteins",
+      "C. Carbohydrates",
+      "D. Nucleic acids"
+    ]
+  },
+  "q145": {
+    "question": "Which of these is NOT a renewable energy source?",
+    "possibleAnswers": [
+      "A. Solar",
+      "B. Wind",
+      "C. Coal",
+      "D. Hydroelectric"
+    ]
+  },
+  "q146": {
+    "question": "The structure that connects muscle to bone is the:",
+    "possibleAnswers": [
+      "A. Ligament",
+      "B. Tendon",
+      "C. Cartilage",
+      "D. Fascia (only)"
+    ]
+  },
+  "q147": {
+    "question": "The SI unit of pressure is the:",
+    "possibleAnswers": [
+      "A. Bar",
+      "B. Pascal",
+      "C. Atmosphere",
+      "D. Torr"
+    ]
+  },
+  "q148": {
+    "question": "Which component of air varies most with humidity?",
+    "possibleAnswers": [
+      "A. Nitrogen",
+      "B. Oxygen",
+      "C. Water vapor",
+      "D. Argon"
+    ]
+  },
+  "q149": {
+    "question": "Which organ is essential for voice production?",
+    "possibleAnswers": [
+      "A. Pharynx",
+      "B. Larynx",
+      "C. Trachea",
+      "D. Bronchi"
+    ]
+  },
+  "q150": {
+    "question": "Antibiotics are effective against:",
+    "possibleAnswers": [
+      "A. Viruses",
+      "B. Bacteria",
+      "C. Fungi only",
+      "D. All pathogens"
+    ]
+  },
+  "q151": {
+    "question": "The movement of solvent from low solute concentration to high across a membrane is:",
+    "possibleAnswers": [
+      "A. Diffusion",
+      "B. Osmosis",
+      "C. Active transport",
+      "D. Facilitated diffusion"
+    ]
+  },
+  "q152": {
+    "question": "A neutralization reaction occurs between:",
+    "possibleAnswers": [
+      "A. Acid and base",
+      "B. Metal and salt",
+      "C. Oxidant and reductant",
+      "D. Gas and liquid"
+    ]
+  },
+  "q153": {
+    "question": "Which planet has the strongest magnetic field?",
+    "possibleAnswers": [
+      "A. Earth",
+      "B. Jupiter",
+      "C. Saturn",
+      "D. Uranus"
+    ]
+  },
+  "q154": {
+    "question": "Which blood vessels carry blood away from the heart?",
+    "possibleAnswers": [
+      "A. Veins",
+      "B. Arteries",
+      "C. Venules",
+      "D. Capillaries"
+    ]
+  },
+  "q155": {
+    "question": "Which scientist discovered the electron?",
+    "possibleAnswers": [
+      "A. J. J. Thomson",
+      "B. Rutherford",
+      "C. Bohr",
+      "D. Chadwick"
+    ]
+  },
+  "q156": {
+    "question": "What is the primary function of platelets?",
+    "possibleAnswers": [
+      "A. Oxygen transport",
+      "B. Immune defense",
+      "C. Clot formation",
+      "D. Hormone transport"
+    ]
+  },
+  "q157": {
+    "question": "The Law of Independent Assortment is attributed to:",
+    "possibleAnswers": [
+      "A. Darwin",
+      "B. Mendel",
+      "C. Watson",
+      "D. Crick"
+    ]
+  },
+  "q158": {
+    "question": "The pH of gastric juice is typically:",
+    "possibleAnswers": [
+      "A. ~1–2",
+      "B. ~4–5",
+      "C. ~7",
+      "D. ~9"
+    ]
+  },
+  "q159": {
+    "question": "The energy stored in a stretched spring is:",
+    "possibleAnswers": [
+      "A. Kinetic",
+      "B. Thermal",
+      "C. Elastic potential",
+      "D. Chemical"
+    ]
+  },
+  "q160": {
+    "question": "The Earth’s primary source of external energy is:",
+    "possibleAnswers": [
+      "A. Geothermal",
+      "B. Solar radiation",
+      "C. Tidal energy",
+      "D. Cosmic rays"
+    ]
+  },
+  "q161": {
+    "question": "The organ that produces digestive enzymes and bicarbonate is the:",
+    "possibleAnswers": [
+      "A. Pancreas",
+      "B. Liver",
+      "C. Gallbladder",
+      "D. Stomach"
+    ]
+  },
+  "q162": {
+    "question": "The process of cell division producing gametes is:",
+    "possibleAnswers": [
+      "A. Mitosis",
+      "B. Meiosis",
+      "C. Binary fission",
+      "D. Budding"
+    ]
+  },
+  "q163": {
+    "question": "The structural polysaccharide in fungal cell walls is:",
+    "possibleAnswers": [
+      "A. Cellulose",
+      "B. Chitin",
+      "C. Peptidoglycan",
+      "D. Lignin"
+    ]
+  },
+  "q164": {
+    "question": "The instrument to measure relative humidity is a:",
+    "possibleAnswers": [
+      "A. Hygrometer",
+      "B. Calorimeter",
+      "C. Manometer",
+      "D. Galvanometer"
+    ]
+  },
+  "q165": {
+    "question": "A mineral’s resistance to scratching is its:",
+    "possibleAnswers": [
+      "A. Cleavage",
+      "B. Hardness",
+      "C. Luster",
+      "D. Streak"
+    ]
+  },
+  "q166": {
+    "question": "The gas responsible for the sharp smell in bleach is mainly:",
+    "possibleAnswers": [
+      "A. Ammonia",
+      "B. Chlorine",
+      "C. Ozone",
+      "D. Nitric oxide"
+    ]
+  },
+  "q167": {
+    "question": "The device that increases or decreases AC voltage is a:",
+    "possibleAnswers": [
+      "A. Rectifier",
+      "B. Transformer",
+      "C. Inverter",
+      "D. Inductor"
+    ]
+  },
+  "q168": {
+    "question": "The “pacemaker” of the heart is the:",
+    "possibleAnswers": [
+      "A. AV node",
+      "B. SA node",
+      "C. Purkinje fibers",
+      "D. Bundle of His"
+    ]
+  },
+  "q169": {
+    "question": "The color of a star indicates its:",
+    "possibleAnswers": [
+      "A. Composition only",
+      "B. Temperature",
+      "C. Distance",
+      "D. Age only"
+    ]
+  },
+  "q170": {
+    "question": "The bond within a water molecule (H–O) is:",
+    "possibleAnswers": [
+      "A. Ionic",
+      "B. Covalent polar",
+      "C. Metallic",
+      "D. Hydrogen"
+    ]
+  },
+  "q171": {
+    "question": "The greenhouse effect primarily warms the:",
+    "possibleAnswers": [
+      "A. Stratosphere",
+      "B. Troposphere and surface",
+      "C. Mesosphere",
+      "D. Thermosphere"
+    ]
+  },
+  "q172": {
+    "question": "The main function of the large intestine is to:",
+    "possibleAnswers": [
+      "A. Digest proteins",
+      "B. Absorb water and form feces",
+      "C. Absorb most nutrients",
+      "D. Secrete bile"
+    ]
+  },
+  "q173": {
+    "question": "The law stating volume of a gas is proportional to absolute temperature at constant pressure is:",
+    "possibleAnswers": [
+      "A. Boyle’s law",
+      "B. Charles’s law",
+      "C. Dalton’s law",
+      "D. Graham’s law"
+    ]
+  },
+  "q174": {
+    "question": "The number of valence electrons in a carbon atom is:",
+    "possibleAnswers": [
+      "A. 2",
+      "B. 3",
+      "C. 4",
+      "D. 6"
+    ]
+  },
+  "q175": {
+    "question": "The term “isotope” refers to atoms with the same:",
+    "possibleAnswers": [
+      "A. Mass number",
+      "B. Number of neutrons",
+      "C. Atomic number",
+      "D. Electron number only"
+    ]
+  },
+  "q176": {
+    "question": "The structure that synthesizes ATP during cellular respiration is the:",
+    "possibleAnswers": [
+      "A. Ribosome",
+      "B. Mitochondrial inner membrane (ATP synthase)",
+      "C. Nucleus",
+      "D. Lysosome"
+    ]
+  },
+  "q177": {
+    "question": "The main pigment for human skin color is:",
+    "possibleAnswers": [
+      "A. Melanin",
+      "B. Hemoglobin",
+      "C. Carotene",
+      "D. Bilirubin"
+    ]
+  },
+  "q178": {
+    "question": "A vector for malaria transmission is the:",
+    "possibleAnswers": [
+      "A. Aedes mosquito",
+      "B. Anopheles mosquito",
+      "C. Culex mosquito",
+      "D. Tsetse fly"
+    ]
+  },
+  "q179": {
+    "question": "The Earth’s seasons are caused by:",
+    "possibleAnswers": [
+      "A. Changing Sun–Earth distance",
+      "B. Tilt of Earth’s axis",
+      "C. Solar flares",
+      "D. Moon’s orbit"
+    ]
+  },
+  "q180": {
+    "question": "The branch of science that studies heredity is:",
+    "possibleAnswers": [
+      "A. Taxonomy",
+      "B. Genetics",
+      "C. Ecology",
+      "D. Physiology"
+    ]
+  },
+  "q181": {
+    "question": "The main constituent of glass is:",
+    "possibleAnswers": [
+      "A. Sodium chloride",
+      "B. Calcium sulfate",
+      "C. Silicon dioxide",
+      "D. Aluminum oxide"
+    ]
+  },
+  "q182": {
+    "question": "The process of heat transfer through a fluid due to density differences is:",
+    "possibleAnswers": [
+      "A. Conduction",
+      "B. Convection",
+      "C. Radiation",
+      "D. Sublimation"
+    ]
+  },
+  "q183": {
+    "question": "Which particle completes beta-minus decay emission?",
+    "possibleAnswers": [
+      "A. Proton",
+      "B. Electron and antineutrino",
+      "C. Positron and neutrino",
+      "D. Alpha particle"
+    ]
+  },
+  "q184": {
+    "question": "The main function of the Golgi in plant and animal cells is:",
+    "possibleAnswers": [
+      "A. Photosynthesis",
+      "B. Protein modification and sorting",
+      "C. DNA replication",
+      "D. Glycolysis"
+    ]
+  },
+  "q185": {
+    "question": "The human body’s primary energy currency molecule is:",
+    "possibleAnswers": [
+      "A. ADP",
+      "B. ATP",
+      "C. AMP",
+      "D. GTP only"
+    ]
+  },
+  "q186": {
+    "question": "The atomic mass unit (u) is approximately the mass of:",
+    "possibleAnswers": [
+      "A. Electron",
+      "B. Proton or neutron",
+      "C. Atom of hydrogen plus electron",
+      "D. Alpha particle"
+    ]
+  },
+  "q187": {
+    "question": "A solution with pH 2 is:",
+    "possibleAnswers": [
+      "A. Strongly acidic",
+      "B. Weakly acidic",
+      "C. Neutral",
+      "D. Basic"
+    ]
+  },
+  "q188": {
+    "question": "The main cause of tooth decay is acids produced by bacteria acting on:",
+    "possibleAnswers": [
+      "A. Proteins",
+      "B. Fats",
+      "C. Sugars",
+      "D. Minerals"
+    ]
+  },
+  "q189": {
+    "question": "The optic nerve carries signals from the:",
+    "possibleAnswers": [
+      "A. Lens",
+      "B. Cornea",
+      "C. Retina",
+      "D. Iris"
+    ]
+  },
+  "q190": {
+    "question": "The process where DNA is copied into mRNA is:",
+    "possibleAnswers": [
+      "A. Translation",
+      "B. Transcription",
+      "C. Replication",
+      "D. Transduction"
+    ]
+  },
+  "q191": {
+    "question": "The organ responsible for blood sugar regulation by glucagon and insulin is the:",
+    "possibleAnswers": [
+      "A. Thyroid",
+      "B. Pancreas",
+      "C. Liver",
+      "D. Adrenal"
+    ]
+  },
+  "q192": {
+    "question": "The magnitude of an earthquake felt at the surface depends on depth and:",
+    "possibleAnswers": [
+      "A. Temperature",
+      "B. Distance and local geology",
+      "C. Humidity",
+      "D. Wind"
+    ]
+  },
+  "q193": {
+    "question": "The unit of electric power is the:",
+    "possibleAnswers": [
+      "A. Newton",
+      "B. Joule",
+      "C. Watt",
+      "D. Coulomb"
+    ]
+  },
+  "q194": {
+    "question": "Which metal is most abundant in Earth’s crust?",
+    "possibleAnswers": [
+      "A. Iron",
+      "B. Aluminum",
+      "C. Calcium",
+      "D. Sodium"
+    ]
+  },
+  "q195": {
+    "question": "The main function of chlorophyll is to:",
+    "possibleAnswers": [
+      "A. Absorb green light only",
+      "B. Absorb light energy for photosynthesis",
+      "C. Transport electrons in mitochondria",
+      "D. Store starch"
+    ]
+  },
+  "q196": {
+    "question": "The genetic code is read in groups of:",
+    "possibleAnswers": [
+      "A. Two bases",
+      "B. Three bases (codons)",
+      "C. Four bases",
+      "D. Five bases"
+    ]
+  },
+  "q197": {
+    "question": "A device that stores electrical charge is a:",
+    "possibleAnswers": [
+      "A. Resistor",
+      "B. Capacitor",
+      "C. Inductor",
+      "D. Diode"
+    ]
+  },
+  "q198": {
+    "question": "The majority of Earth’s freshwater is stored in:",
+    "possibleAnswers": [
+      "A. Rivers",
+      "B. Lakes",
+      "C. Groundwater and ice",
+      "D. Atmosphere"
+    ]
+  },
+  "q199": {
+    "question": "The tendency of an object to resist changes in motion is:",
+    "possibleAnswers": [
+      "A. Momentum",
+      "B. Inertia",
+      "C. Impulse",
+      "D. Acceleration"
+    ]
+  },
+  "q200": {
+    "question": "The basic unit of a protein is a(n):",
+    "possibleAnswers": [
+      "A. Monosaccharide",
+      "B. Fatty acid",
+      "C. Amino acid",
+      "D. Nucleotide"
+    ]
+  }
+}

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../services/auth_service.dart';
+import '../services/rme_data_import_service.dart';
 import 'admin_question_management.dart';
 import 'user_management_page.dart';
 import 'content_management_page.dart';
@@ -89,7 +90,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
                 width: 80,
                 height: 80,
                 decoration: BoxDecoration(
-                  color: const Color(0xFFD62828).withOpacity(0.1),
+                  color: const Color(0xFFD62828).withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(40),
                 ),
                 child: const Icon(
@@ -200,9 +201,10 @@ class _AdminDashboardState extends State<AdminDashboard> {
                 // Mobile: Show only logout button
                 return IconButton(
                   onPressed: () async {
+                    final navigator = Navigator.of(context);
                     await _authService.signOut();
                     if (mounted) {
-                      Navigator.of(context).pushReplacementNamed('/landing');
+                      navigator.pushReplacementNamed('/landing');
                     }
                   },
                   icon: const Icon(
@@ -232,9 +234,10 @@ class _AdminDashboardState extends State<AdminDashboard> {
                       const SizedBox(width: 8),
                       IconButton(
                         onPressed: () async {
+                          final navigator = Navigator.of(context);
                           await _authService.signOut();
                           if (mounted) {
-                            Navigator.of(context).pushReplacementNamed('/landing');
+                            navigator.pushReplacementNamed('/landing');
                           }
                         },
                         icon: const Icon(
@@ -275,7 +278,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
                 borderRadius: BorderRadius.circular(16),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.1),
+                    color: Colors.black.withValues(alpha: 0.1),
                     blurRadius: 10,
                     offset: const Offset(0, 4),
                   ),
@@ -372,7 +375,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
             const SizedBox(height: 16),
             
             // Dashboard Navigation Cards
-            Container(
+            SizedBox(
               height: MediaQuery.of(context).size.width < 600 ? 100 : 120,
               child: ListView(
                 scrollDirection: Axis.horizontal,
@@ -487,6 +490,13 @@ class _AdminDashboardState extends State<AdminDashboard> {
                     const Color(0xFF9B59B6),
                     () => _showFeatureDialog('System Settings'),
                   ),
+                  _buildAdminCard(
+                    'Import RME Data',
+                    'Import 1999 BECE RME questions',
+                    Icons.upload_file,
+                    const Color(0xFFFF9800),
+                    () => _importRMEData(),
+                  ),
                 ],
               ),
             ),
@@ -510,10 +520,10 @@ class _AdminDashboardState extends State<AdminDashboard> {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(16),
-          border: Border.all(color: color.withOpacity(0.2)),
+          border: Border.all(color: color.withValues(alpha: 0.2)),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.05),
+              color: Colors.black.withValues(alpha: 0.05),
               blurRadius: 8,
               offset: const Offset(0, 2),
             ),
@@ -526,7 +536,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
               width: 50,
               height: 50,
               decoration: BoxDecoration(
-                color: color.withOpacity(0.1),
+                color: color.withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Icon(
@@ -587,10 +597,10 @@ class _AdminDashboardState extends State<AdminDashboard> {
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: color.withOpacity(0.2)),
+            border: Border.all(color: color.withValues(alpha: 0.2)),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.05),
+                color: Colors.black.withValues(alpha: 0.05),
                 blurRadius: 6,
                 offset: const Offset(0, 2),
               ),
@@ -605,7 +615,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
                     width: MediaQuery.of(context).size.width < 600 ? 28 : 32,
                     height: MediaQuery.of(context).size.width < 600 ? 28 : 32,
                     decoration: BoxDecoration(
-                      color: color.withOpacity(0.1),
+                      color: color.withValues(alpha: 0.1),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Icon(
@@ -691,119 +701,258 @@ class _AdminDashboardState extends State<AdminDashboard> {
     );
   }
 
-  void _showUserProfile() {
-    showDialog(
+  Future<void> _importRMEData() async {
+    // Show confirmation dialog
+    final confirmed = await showDialog<bool>(
       context: context,
-      builder: (context) => AlertDialog(
-        title: Text(
-          'User Profile',
-          style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
-        ),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            CircleAvatar(
-              radius: 30,
-              backgroundColor: const Color(0xFF1A1E3F),
+      builder: (BuildContext context) {
+        return AlertDialog(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(16),
+          ),
+          title: Text(
+            'Import RME Data',
+            style: GoogleFonts.montserrat(
+              fontSize: 20,
+              fontWeight: FontWeight.w600,
+              color: const Color(0xFF1A1E3F),
+            ),
+          ),
+          content: Text(
+            'This will import 40 RME questions from the 1999 BECE exam into the database. Continue?',
+            style: GoogleFonts.montserrat(
+              fontSize: 14,
+              color: Colors.grey[600],
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(false),
               child: Text(
-                FirebaseAuth.instance.currentUser?.email?.substring(0, 1).toUpperCase() ?? 'A',
+                'Cancel',
                 style: GoogleFonts.montserrat(
-                  color: Colors.white,
+                  fontSize: 14,
                   fontWeight: FontWeight.w600,
-                  fontSize: 20,
+                  color: Colors.grey[600],
                 ),
               ),
             ),
-            const SizedBox(height: 16),
-            Text(
-              FirebaseAuth.instance.currentUser?.email ?? 'No email',
-              style: GoogleFonts.montserrat(fontSize: 14),
-            ),
-            const SizedBox(height: 8),
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-              decoration: BoxDecoration(
-                color: const Color(0xFFD62828).withOpacity(0.1),
-                borderRadius: BorderRadius.circular(20),
+            ElevatedButton(
+              onPressed: () => Navigator.of(context).pop(true),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFFFF9800),
+                foregroundColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8),
+                ),
               ),
               child: Text(
-                'Super Admin',
+                'Import',
                 style: GoogleFonts.montserrat(
-                  fontSize: 12,
-                  color: const Color(0xFFD62828),
+                  fontSize: 14,
                   fontWeight: FontWeight.w600,
                 ),
               ),
             ),
           ],
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(),
-            child: Text(
-              'Close',
-              style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
-            ),
-          ),
-        ],
-      ),
+        );
+      },
     );
-  }
 
-  void _showSettings() {
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: Text(
-          'Settings',
-          style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
-        ),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            ListTile(
-              leading: const Icon(Icons.notifications),
-              title: const Text('Notifications'),
-              trailing: Switch(
-                value: true,
-                onChanged: (value) {},
-                activeColor: const Color(0xFF1A1E3F),
+    if (confirmed == true) {
+      // Show loading dialog
+      showDialog(
+        context: context,
+        barrierDismissible: false,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+            ),
+            content: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const CircularProgressIndicator(
+                  valueColor: AlwaysStoppedAnimation<Color>(Color(0xFFFF9800)),
+                ),
+                const SizedBox(height: 16),
+                Text(
+                  'Importing RME questions...',
+                  style: GoogleFonts.montserrat(
+                    fontSize: 14,
+                    color: Colors.grey[600],
+                  ),
+                ),
+              ],
+            ),
+          );
+        },
+      );
+
+      final navigator = Navigator.of(context);
+      try {
+        final result = await RMEDataImportService.importRMEQuestions();
+        
+        // Close loading dialog
+        if (!mounted) return;
+        navigator.pop();
+        
+        if (result['success'] == true) {
+          // Show success dialog
+          if (!mounted) return;
+          showDialog(
+            context: context,
+            builder: (BuildContext context) {
+            return AlertDialog(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16),
               ),
-            ),
-            ListTile(
-              leading: const Icon(Icons.language),
-              title: const Text('Language'),
-              trailing: const Text('English'),
-              onTap: () {},
-            ),
-          ],
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(),
-            child: Text(
-              'Close',
-              style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Future<void> _handleLogout() async {
-    try {
-      await _authService.signOut();
-      if (mounted) {
-        Navigator.of(context).pushReplacementNamed('/landing');
-      }
-    } catch (e) {
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text('Error signing out: $e'),
-            backgroundColor: Colors.red,
-          ),
+              title: Row(
+                children: [
+                  const Icon(
+                    Icons.check_circle,
+                    color: Colors.green,
+                    size: 24,
+                  ),
+                  const SizedBox(width: 8),
+                  Text(
+                    'Success',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
+                      color: const Color(0xFF1A1E3F),
+                    ),
+                  ),
+                ],
+              ),
+              content: Text(
+                'Successfully imported 40 RME questions from 1999 BECE. They are now available in the quiz system.',
+                style: GoogleFonts.montserrat(
+                  fontSize: 14,
+                  color: Colors.grey[600],
+                ),
+              ),
+              actions: [
+                ElevatedButton(
+                  onPressed: () => Navigator.of(context).pop(),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.green,
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                  ),
+                  child: Text(
+                    'OK',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+              ],
+            );
+          },
+        );
+        } else {
+          // Show error dialog for failed import
+          if (!mounted) return;
+          showDialog(
+            context: context,
+            builder: (BuildContext context) {
+              return AlertDialog(
+                title: Row(
+                  children: [
+                    const Icon(Icons.error, color: Colors.red),
+                    const SizedBox(width: 8),
+                    Text(
+                      'Import Failed',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
+                ),
+                content: Text(
+                  result['message'] ?? 'Failed to import RME questions.',
+                  style: GoogleFonts.montserrat(fontSize: 14),
+                ),
+                actions: [
+                  ElevatedButton(
+                    onPressed: () => Navigator.of(context).pop(),
+                    child: Text(
+                      'OK',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+                ],
+              );
+            },
+          );
+        }
+      } catch (e) {
+        // Close loading dialog
+        if (!mounted) return;
+        navigator.pop();
+        
+        // Show error dialog
+        showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16),
+              ),
+              title: Row(
+                children: [
+                  const Icon(
+                    Icons.error,
+                    color: Colors.red,
+                    size: 24,
+                  ),
+                  const SizedBox(width: 8),
+                  Text(
+                    'Error',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
+                      color: const Color(0xFF1A1E3F),
+                    ),
+                  ),
+                ],
+              ),
+              content: Text(
+                'Failed to import RME questions: $e',
+                style: GoogleFonts.montserrat(
+                  fontSize: 14,
+                  color: Colors.grey[600],
+                ),
+              ),
+              actions: [
+                ElevatedButton(
+                  onPressed: () => Navigator.of(context).pop(),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red,
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                  ),
+                  child: Text(
+                    'OK',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+              ],
+            );
+          },
         );
       }
     }

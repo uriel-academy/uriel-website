@@ -3,6 +3,7 @@ library web_compatibility;
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+import 'package:flutter/foundation.dart';
 /// Safely converts any timestamp value to a web-compatible int
 int safeTimestamp(dynamic timestamp) {
   try {
@@ -24,7 +25,7 @@ int safeTimestamp(dynamic timestamp) {
     // Fallback for any unknown type
     return DateTime.now().millisecondsSinceEpoch;
   } catch (e) {
-    print('Warning: Failed to convert timestamp: $e');
+    debugPrint('Warning: Failed to convert timestamp: $e');
     return DateTime.now().millisecondsSinceEpoch;
   }
 }
@@ -50,7 +51,7 @@ DateTime safeDateTime(dynamic dateValue) {
     // Fallback for any unknown type
     return DateTime.now();
   } catch (e) {
-    print('Warning: Failed to convert date: $e');
+    debugPrint('Warning: Failed to convert date: $e');
     return DateTime.now();
   }
 }
@@ -72,7 +73,7 @@ int safeInt(dynamic value, {int defaultValue = 0}) {
     final parsed = int.tryParse(stringValue);
     return parsed ?? defaultValue;
   } catch (e) {
-    print('Warning: Failed to convert to int: $e');
+    debugPrint('Warning: Failed to convert to int: $e');
     return defaultValue;
   }
 }
@@ -94,7 +95,7 @@ double safeDouble(dynamic value, {double defaultValue = 0.0}) {
     final parsed = double.tryParse(stringValue);
     return parsed ?? defaultValue;
   } catch (e) {
-    print('Warning: Failed to convert to double: $e');
+    debugPrint('Warning: Failed to convert to double: $e');
     return defaultValue;
   }
 }
@@ -117,7 +118,7 @@ Map<String, dynamic> safeDocumentData(Map<String, dynamic> data) {
         result[key] = _safeSingleValue(value);
       }
     } catch (e) {
-      print('Warning: Failed to process field ${entry.key}: $e');
+      debugPrint('Warning: Failed to process field ${entry.key}: $e');
       result[entry.key] = entry.value; // Keep original if conversion fails
     }
   }
@@ -135,7 +136,7 @@ dynamic _safeSingleValue(dynamic value) {
     try {
       return safeInt(value);
     } catch (e) {
-      print('Warning: Int64 conversion failed: $e');
+      debugPrint('Warning: Int64 conversion failed: $e');
       return value.toString();
     }
   }
@@ -145,7 +146,7 @@ dynamic _safeSingleValue(dynamic value) {
     try {
       return value.toDate().toIso8601String();
     } catch (e) {
-      print('Warning: Timestamp conversion failed: $e');
+      debugPrint('Warning: Timestamp conversion failed: $e');
       return DateTime.now().toIso8601String();
     }
   }

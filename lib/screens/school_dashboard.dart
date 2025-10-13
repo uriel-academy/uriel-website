@@ -15,8 +15,8 @@ class _SchoolDashboardPageState extends State<SchoolDashboardPage> with TickerPr
   late ScrollController _scrollController;
   
   int _selectedNavIndex = 0;
-  String _userRole = 'Principal'; // Principal, Teacher
-  String _schoolName = 'Presbyterian Boys\' Secondary School';
+  final String _userRole = 'Principal'; // Principal, Teacher
+  final String _schoolName = 'Presbyterian Boys\' Secondary School';
   
   final List<Map<String, dynamic>> _navigationItems = [
     {'icon': Icons.dashboard_rounded, 'label': 'Dashboard', 'key': 'dashboard'},
@@ -121,7 +121,7 @@ class _SchoolDashboardPageState extends State<SchoolDashboardPage> with TickerPr
                   'School Dashboard',
                   style: GoogleFonts.montserrat(
                     fontSize: isMediumScreen ? 12 : 14,
-                    color: Colors.white.withOpacity(0.7),
+                    color: Colors.white.withValues(alpha: 0.7),
                     fontWeight: FontWeight.w500,
                   ),
                 ),
@@ -151,7 +151,7 @@ class _SchoolDashboardPageState extends State<SchoolDashboardPage> with TickerPr
                         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                         decoration: BoxDecoration(
                           color: isSelected 
-                            ? const Color(0xFFD62828).withOpacity(0.2)
+                            ? const Color(0xFFD62828).withValues(alpha: 0.2)
                             : Colors.transparent,
                           borderRadius: BorderRadius.circular(8),
                         ),
@@ -161,7 +161,7 @@ class _SchoolDashboardPageState extends State<SchoolDashboardPage> with TickerPr
                               item['icon'],
                               color: isSelected 
                                 ? const Color(0xFFD62828) 
-                                : Colors.white.withOpacity(0.8),
+                                : Colors.white.withValues(alpha: 0.8),
                               size: isMediumScreen ? 20 : 22,
                             ),
                             const SizedBox(width: 12),
@@ -172,7 +172,7 @@ class _SchoolDashboardPageState extends State<SchoolDashboardPage> with TickerPr
                                   fontSize: 14,
                                   color: isSelected 
                                     ? const Color(0xFFD62828) 
-                                    : Colors.white.withOpacity(0.9),
+                                    : Colors.white.withValues(alpha: 0.9),
                                   fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
                                 ),
                               ),
@@ -210,7 +210,7 @@ class _SchoolDashboardPageState extends State<SchoolDashboardPage> with TickerPr
                     _userRole,
                     style: GoogleFonts.montserrat(
                       fontSize: 14,
-                      color: Colors.white.withOpacity(0.9),
+                      color: Colors.white.withValues(alpha: 0.9),
                       fontWeight: FontWeight.w600,
                     ),
                   ),
@@ -218,7 +218,7 @@ class _SchoolDashboardPageState extends State<SchoolDashboardPage> with TickerPr
                     _schoolName,
                     style: GoogleFonts.montserrat(
                       fontSize: 12,
-                      color: Colors.white.withOpacity(0.7),
+                      color: Colors.white.withValues(alpha: 0.7),
                     ),
                     textAlign: TextAlign.center,
                     maxLines: 2,
@@ -243,7 +243,7 @@ class _SchoolDashboardPageState extends State<SchoolDashboardPage> with TickerPr
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.08),
+            color: Colors.black.withValues(alpha: 0.08),
             blurRadius: 4,
             offset: const Offset(0, 2),
           ),
@@ -519,7 +519,7 @@ class _SchoolDashboardPageState extends State<SchoolDashboardPage> with TickerPr
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -533,7 +533,7 @@ class _SchoolDashboardPageState extends State<SchoolDashboardPage> with TickerPr
               Container(
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  color: stat['color'].withOpacity(0.1),
+                  color: stat['color'].withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Icon(
@@ -546,7 +546,7 @@ class _SchoolDashboardPageState extends State<SchoolDashboardPage> with TickerPr
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF4CAF50).withOpacity(0.1),
+                  color: const Color(0xFF4CAF50).withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Text(
@@ -596,7 +596,7 @@ class _SchoolDashboardPageState extends State<SchoolDashboardPage> with TickerPr
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -705,7 +705,7 @@ class _SchoolDashboardPageState extends State<SchoolDashboardPage> with TickerPr
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -821,9 +821,9 @@ class _SchoolDashboardPageState extends State<SchoolDashboardPage> with TickerPr
               ),
               Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.local_fire_department_rounded,
-                    color: const Color(0xFFFF9800),
+                    color: Color(0xFFFF9800),
                     size: 12,
                   ),
                   const SizedBox(width: 2),
@@ -860,7 +860,7 @@ class _SchoolDashboardPageState extends State<SchoolDashboardPage> with TickerPr
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -921,7 +921,7 @@ class _SchoolDashboardPageState extends State<SchoolDashboardPage> with TickerPr
           Container(
             padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
-              color: getActivityColor(activity['type']).withOpacity(0.1),
+              color: getActivityColor(activity['type']).withValues(alpha: 0.1),
               shape: BoxShape.circle,
             ),
             child: Icon(
@@ -974,7 +974,7 @@ class _SchoolDashboardPageState extends State<SchoolDashboardPage> with TickerPr
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -1007,7 +1007,7 @@ class _SchoolDashboardPageState extends State<SchoolDashboardPage> with TickerPr
       child: ElevatedButton(
         onPressed: () => _handleQuickAction(action['label']),
         style: ElevatedButton.styleFrom(
-          backgroundColor: action['color'].withOpacity(0.1),
+          backgroundColor: action['color'].withValues(alpha: 0.1),
           foregroundColor: action['color'],
           elevation: 0,
           padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),

@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:share_plus/share_plus.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/quiz_model.dart';
-import 'past_questions_search_page.dart';
+import '../services/xp_service.dart';
+import '../services/achievement_service.dart';
+import '../services/leaderboard_rank_service.dart';
+import '../widgets/rank_badge_widget.dart';
+import 'home_page.dart';
 
 class QuizResultsPage extends StatefulWidget {
   final Quiz quiz;
@@ -24,6 +30,11 @@ class _QuizResultsPageState extends State<QuizResultsPage>
   late Animation<double> _slideAnimation;
 
   bool showDetailedReview = false;
+  int xpEarned = 0;
+  bool showXPAnimation = false;
+  LeaderboardRank? oldRank;
+  LeaderboardRank? newRank;
+  bool rankedUp = false;
 
   @override
   void initState() {
@@ -45,12 +56,204 @@ class _QuizResultsPageState extends State<QuizResultsPage>
     );
 
     _startAnimations();
+    _saveQuizResult();
   }
 
   void _startAnimations() async {
     await Future.delayed(const Duration(milliseconds: 500));
     _scoreAnimationController.forward();
     _cardAnimationController.forward();
+  }
+
+  Future<void> _saveQuizResult() async {
+    try {
+      final user = FirebaseAuth.instance.currentUser;
+      if (user == null) {
+        debugPrint('⚠️ Cannot save quiz result: User not authenticated');
+        return;
+      }
+
+      debugPrint('💾 Saving quiz result for user: ${user.uid}');
+      debugPrint('   Subject: ${widget.quiz.subject}');
+      debugPrint('   ExamType: ${widget.quiz.examType}');
+      debugPrint('   Score: ${widget.quiz.correctAnswers}/${widget.quiz.totalQuestions} (${widget.quiz.percentage}%)');
+
+      // Save quiz result to Firestore
+      final docRef = await FirebaseFirestore.instance.collection('quizzes').add({
+        'userId': user.uid,
+        'subject': widget.quiz.subject,
+        'examType': widget.quiz.examType,
+        'quizType': widget.quiz.examType, // For filtering (trivia, bece, etc.)
+        'level': widget.quiz.level,
+        'totalQuestions': widget.quiz.totalQuestions,
+        'correctAnswers': widget.quiz.correctAnswers,
+        'percentage': widget.quiz.percentage,
+        'duration': widget.quiz.duration.inSeconds,
+        'timestamp': FieldValue.serverTimestamp(),
+        'triviaCategory': widget.quiz.triviaCategory,
+      });
+
+      debugPrint('✅ Quiz result saved successfully! Document ID: ${docRef.id}');
+
+      // Get current rank before XP award
+      final xpService = XPService();
+      final currentRank = await xpService.getUserRank(user.uid);
+
+      // Calculate and save XP with bonuses
+      final earnedXP = await xpService.calculateAndSaveQuizXP(
+        userId: user.uid,
+        quizId: docRef.id,
+        correctAnswers: widget.quiz.correctAnswers,
+        totalQuestions: widget.quiz.totalQuestions,
+        percentage: widget.quiz.percentage,
+        examType: widget.quiz.examType,
+        subject: widget.quiz.subject,
+        triviaCategory: widget.quiz.triviaCategory,
+      );
+
+      // Get new rank after XP award
+      final updatedRank = await xpService.getUserRank(user.uid);
+
+      // Check if rank up occurred
+      bool didRankUp = false;
+      if (currentRank != null && updatedRank != null && currentRank.rank < updatedRank.rank) {
+        didRankUp = true;
+      }
+
+      setState(() {
+        xpEarned = earnedXP;
+        oldRank = currentRank;
+        newRank = updatedRank;
+        rankedUp = didRankUp;
+      });
+
+      // Show XP animation after a delay
+      await Future.delayed(const Duration(milliseconds: 2500));
+      setState(() {
+        showXPAnimation = true;
+      });
+
+      // Show rank up dialog if ranked up
+      if (didRankUp && updatedRank != null && mounted) {
+        await Future.delayed(const Duration(milliseconds: 3000));
+        if (mounted) {
+          RankUpDialog.show(context, updatedRank, earnedXP);
+        }
+      }
+
+      // Check for newly earned achievements
+      await _checkAchievements(user.uid);
+
+    } catch (e) {
+      debugPrint('❌ Error saving quiz result: $e');
+      debugPrint('   Stack trace: ${StackTrace.current}');
+      // Don't show error to user, just log it
+    }
+  }
+
+  Future<void> _checkAchievements(String userId) async {
+    try {
+      final AchievementService achievementService = AchievementService();
+      final newAchievements = await achievementService.checkAndAwardAchievements(userId);
+
+      if (newAchievements.isNotEmpty && mounted) {
+        // Show achievement unlock dialog
+        Future.delayed(const Duration(milliseconds: 1000), () {
+          if (mounted) {
+            _showAchievementDialog(newAchievements);
+          }
+        });
+      }
+    } catch (e) {
+      debugPrint('Error checking achievements: $e');
+    }
+  }
+
+  void _showAchievementDialog(List<dynamic> achievements) {
+    showDialog(
+      context: context,
+      builder: (context) => Dialog(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        child: Container(
+          padding: const EdgeInsets.all(24),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            gradient: const LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [Color(0xFFFFE599), Color(0xFFFFCC99)],
+            ),
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Text(
+                '🏆',
+                style: TextStyle(fontSize: 60),
+              ),
+              const SizedBox(height: 16),
+              Text(
+                'Achievement${achievements.length > 1 ? 's' : ''} Unlocked!',
+                style: GoogleFonts.playfairDisplay(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              const SizedBox(height: 16),
+              ...achievements.map((achievement) => Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8),
+                child: Column(
+                  children: [
+                    Text(
+                      '${achievement.icon} ${achievement.name}',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    Text(
+                      achievement.description,
+                      style: GoogleFonts.montserrat(
+                        fontSize: 14,
+                        color: Colors.white.withValues(alpha: 0.9),
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    Text(
+                      '+${achievement.xpReward} XP',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+              )),
+              const SizedBox(height: 24),
+              ElevatedButton(
+                onPressed: () => Navigator.pop(context),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.white,
+                  foregroundColor: const Color(0xFFFFD700),
+                  padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
+                child: Text(
+                  'Awesome!',
+                  style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 
   @override
@@ -94,37 +297,176 @@ class _QuizResultsPageState extends State<QuizResultsPage>
   }
 
   void _shareResults() {
-    final message = '''
-🎓 Quiz Results - ${widget.quiz.subject}
+    // Show dialog to choose platform
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(
+          'Share Your Results',
+          style: GoogleFonts.playfairDisplay(
+            fontWeight: FontWeight.bold,
+            color: const Color(0xFF1A1E3F),
+          ),
+        ),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              'Challenge your friends!',
+              style: GoogleFonts.montserrat(
+                fontSize: 14,
+                color: Colors.grey[600],
+              ),
+            ),
+            const SizedBox(height: 20),
+            _buildShareButton(
+              'Facebook',
+              Icons.facebook,
+              Colors.blue[800]!,
+              _getShareMessage('facebook'),
+            ),
+            const SizedBox(height: 12),
+            _buildShareButton(
+              'Instagram',
+              Icons.camera_alt,
+              Colors.purple,
+              _getShareMessage('instagram'),
+            ),
+            const SizedBox(height: 12),
+            _buildShareButton(
+              'X (Twitter)',
+              Icons.close, // X icon
+              Colors.black,
+              _getShareMessage('twitter'),
+            ),
+            const SizedBox(height: 12),
+            _buildShareButton(
+              'Snapchat',
+              Icons.chat,
+              Colors.yellow[700]!,
+              _getShareMessage('snapchat'),
+            ),
+            const SizedBox(height: 12),
+            _buildShareButton(
+              'Other',
+              Icons.share,
+              const Color(0xFF1A1E3F),
+              _getShareMessage('general'),
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: Text(
+              'Cancel',
+              style: GoogleFonts.montserrat(color: Colors.grey[600]),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 
-📊 Score: ${widget.quiz.correctAnswers}/${widget.quiz.totalQuestions} (${widget.quiz.percentage.toStringAsFixed(1)}%)
-🎯 Grade: ${_getGradeLetter()}
-⏱️ Time: ${widget.quiz.duration.inMinutes}m ${widget.quiz.duration.inSeconds % 60}s
+  Widget _buildShareButton(String platform, IconData icon, Color color, String message) {
+    return SizedBox(
+      width: double.infinity,
+      child: ElevatedButton.icon(
+        onPressed: () {
+          Navigator.pop(context);
+          Share.share(message);
+        },
+        icon: Icon(icon, size: 20),
+        label: Text(
+          platform,
+          style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
+        ),
+        style: ElevatedButton.styleFrom(
+          backgroundColor: color,
+          foregroundColor: Colors.white,
+          padding: const EdgeInsets.symmetric(vertical: 12),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
+        ),
+      ),
+    );
+  }
 
-${_getPerformanceMessage()}
+  String _getShareMessage(String platform) {
+    final score = widget.quiz.percentage.toStringAsFixed(0);
+    final quizTitle = widget.quiz.examType == 'trivia' 
+        ? '${widget.quiz.triviaCategory ?? widget.quiz.subject} Trivia'
+        : '${widget.quiz.subject} ${widget.quiz.examType.toUpperCase()}';
+    const url = 'https://uriel.academy';
 
-#UrielAcademy #Quiz #${widget.quiz.subject.replaceAll(' ', '')}
-    ''';
+    switch (platform) {
+      case 'facebook':
+        return '''🎉 I just scored $score% on the $quizTitle at Uriel Academy!
 
-    Share.share(message);
+Do you think you can beat me? 😏📚
+
+Try it here 👉 $url
+Let's see who's the real quiz master!
+
+#UrielAcademy #LearnPracticeSucceed #QuizChallenge''';
+
+      case 'instagram':
+        return '''💡 Just smashed $score% on the $quizTitle at Uriel Academy 🔥
+
+Swipe up / Tap the link in bio 👉 $url
+
+Think you can beat my score? Challenge accepted? 👀✨
+
+#QuizChallenge #UrielAcademy #LearnPracticeSucceed''';
+
+      case 'twitter':
+        return '''Just scored $score% on the $quizTitle at @UrielAcademy 🎉
+
+Think you can do better? Take the quiz 👉 $url
+
+#QuizChallenge #LearnPracticeSucceed''';
+
+      case 'snapchat':
+        return '''🤯 I scored $score% on the $quizTitle quiz at Uriel Academy!
+
+Can you beat me? Swipe up and prove it 💪🔥
+👉 $url
+
+#UrielAcademy #QuizChallenge''';
+
+      default: // general
+        return '''🎉 I just scored $score% on the $quizTitle at Uriel Academy!
+
+Think you can beat me? 💪🔥
+
+Tap below to try the quiz yourself and see if you can match or top my score. 🚀
+
+👉 $url
+#UrielAcademy #LearnPracticeSucceed #QuizChallenge''';
+    }
   }
 
   void _retakeQuiz() {
-    Navigator.of(context).pushReplacementNamed(
-      '/quiz',
-      arguments: {
-        'subject': widget.quiz.subject,
-        'examType': widget.quiz.examType,
-        'level': widget.quiz.level,
-      },
-    );
+    // After quiz completion, return to home page instead of quiz setup
+    _backToHome();
   }
 
-  void _backToQuestions() {
-    Navigator.of(context).pushAndRemoveUntil(
-      MaterialPageRoute(builder: (context) => const PastQuestionsSearchPage()),
-      (route) => false,
-    );
+  void _backToHome() {
+    // Navigate to home page, clearing all quiz-related pages from the stack
+    // First try to use named route, if that fails, use direct navigation
+    try {
+      Navigator.of(context).pushNamedAndRemoveUntil(
+        '/home',
+        (route) => false, // Remove all previous routes
+      );
+    } catch (e) {
+      // Fallback: Direct navigation to StudentHomePage
+      Navigator.of(context).pushAndRemoveUntil(
+        MaterialPageRoute(builder: (context) => const StudentHomePage()),
+        (route) => false,
+      );
+    }
   }
 
   @override
@@ -146,7 +488,7 @@ ${_getPerformanceMessage()}
               elevation: 0,
               leading: IconButton(
                 icon: const Icon(Icons.close),
-                onPressed: _backToQuestions,
+                onPressed: _backToHome,
               ),
               title: Text(
                 'Quiz Results',
@@ -192,6 +534,22 @@ ${_getPerformanceMessage()}
                     ),
 
                     const SizedBox(height: 24),
+
+                    // XP Earned Card (with animation)
+                    if (showXPAnimation && xpEarned > 0)
+                      AnimatedOpacity(
+                        opacity: showXPAnimation ? 1.0 : 0.0,
+                        duration: const Duration(milliseconds: 800),
+                        child: AnimatedScale(
+                          scale: showXPAnimation ? 1.0 : 0.5,
+                          duration: const Duration(milliseconds: 800),
+                          curve: Curves.elasticOut,
+                          child: _buildXPCard(isMobile),
+                        ),
+                      ),
+
+                    if (showXPAnimation && xpEarned > 0)
+                      const SizedBox(height: 24),
 
                     // Stats Cards
                     AnimatedBuilder(
@@ -257,8 +615,8 @@ ${_getPerformanceMessage()}
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              _getGradeColor().withOpacity(0.1),
-              _getGradeColor().withOpacity(0.05),
+              _getGradeColor().withValues(alpha: 0.1),
+              _getGradeColor().withValues(alpha: 0.05),
             ],
           ),
         ),
@@ -359,6 +717,134 @@ ${_getPerformanceMessage()}
     );
   }
 
+  Widget _buildXPCard(bool isMobile) {
+    return Card(
+      elevation: 8,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      child: Container(
+        padding: EdgeInsets.all(isMobile ? 20 : 24),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          gradient: const LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              Color(0xFFFFE599), // Pastel gold
+              Color(0xFFFFCC99), // Pastel bronze
+            ],
+          ),
+        ),
+        child: Column(
+          children: [
+            // Trophy Icon
+            Container(
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: Colors.white.withValues(alpha: 0.3),
+                shape: BoxShape.circle,
+              ),
+              child: const Icon(
+                Icons.emoji_events,
+                color: Colors.white,
+                size: 40,
+              ),
+            ),
+            const SizedBox(height: 16),
+            // XP Earned Text
+            Text(
+              'XP Earned',
+              style: GoogleFonts.montserrat(
+                fontSize: isMobile ? 16 : 18,
+                fontWeight: FontWeight.w600,
+                color: Colors.white,
+              ),
+            ),
+            const SizedBox(height: 8),
+            // XP Amount
+            Text(
+              '+$xpEarned XP',
+              style: GoogleFonts.playfairDisplay(
+                fontSize: isMobile ? 36 : 48,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            const SizedBox(height: 12),
+            // XP Breakdown
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+              decoration: BoxDecoration(
+                color: Colors.white.withValues(alpha: 0.2),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Column(
+                children: [
+                  _buildXPBreakdownRow(
+                    'Correct Answers',
+                    '${widget.quiz.correctAnswers} × 5',
+                    widget.quiz.correctAnswers * 5,
+                  ),
+                  if (widget.quiz.percentage == 100.0) ...[
+                    const SizedBox(height: 8),
+                    _buildXPBreakdownRow(
+                      'Perfect Score! 🎉',
+                      'Bonus',
+                      20,
+                    ),
+                  ],
+                  if (xpEarned > (widget.quiz.correctAnswers * 5 + (widget.quiz.percentage == 100.0 ? 20 : 0))) ...[
+                    const SizedBox(height: 8),
+                    _buildXPBreakdownRow(
+                      'Special Bonuses ✨',
+                      'First Time / Master Explorer',
+                      xpEarned - (widget.quiz.correctAnswers * 5 + (widget.quiz.percentage == 100.0 ? 20 : 0)),
+                    ),
+                  ],
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildXPBreakdownRow(String label, String detail, int xp) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              label,
+              style: GoogleFonts.montserrat(
+                fontSize: 12,
+                fontWeight: FontWeight.w600,
+                color: Colors.white,
+              ),
+            ),
+            Text(
+              detail,
+              style: GoogleFonts.montserrat(
+                fontSize: 10,
+                color: Colors.white.withValues(alpha: 0.8),
+              ),
+            ),
+          ],
+        ),
+        Text(
+          '+$xp XP',
+          style: GoogleFonts.montserrat(
+            fontSize: 14,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        ),
+      ],
+    );
+  }
+
   Widget _buildStatsCards(bool isMobile) {
     return Row(
       children: [
@@ -402,7 +888,7 @@ ${_getPerformanceMessage()}
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: color.withOpacity(0.1),
+                color: color.withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Icon(icon, color: color, size: 24),
@@ -455,9 +941,9 @@ ${_getPerformanceMessage()}
         SizedBox(
           width: double.infinity,
           child: OutlinedButton.icon(
-            onPressed: _backToQuestions,
+            onPressed: _backToHome,
             icon: const Icon(Icons.arrow_back),
-            label: const Text('Back to Questions'),
+            label: const Text('Back to Home'),
             style: OutlinedButton.styleFrom(
               foregroundColor: const Color(0xFF1A1E3F),
               side: const BorderSide(color: Color(0xFF1A1E3F)),
@@ -582,8 +1068,8 @@ ${_getPerformanceMessage()}
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                   decoration: BoxDecoration(
                     color: answer.isCorrect 
-                        ? Colors.green.withOpacity(0.1)
-                        : Colors.red.withOpacity(0.1),
+                        ? Colors.green.withValues(alpha: 0.1)
+                        : Colors.red.withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Row(
@@ -643,46 +1129,6 @@ ${_getPerformanceMessage()}
                 Icons.check_circle,
               ),
             ],
-
-            // Explanation
-            if (answer.explanation.isNotEmpty) ...[
-              const SizedBox(height: 16),
-              Container(
-                padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  color: Colors.blue.withOpacity(0.1),
-                  borderRadius: BorderRadius.circular(8),
-                  border: Border.all(color: Colors.blue.withOpacity(0.3)),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        const Icon(Icons.lightbulb, color: Colors.blue, size: 16),
-                        const SizedBox(width: 8),
-                        Text(
-                          'Explanation',
-                          style: GoogleFonts.montserrat(
-                            fontWeight: FontWeight.w600,
-                            color: Colors.blue,
-                            fontSize: 12,
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 8),
-                    Text(
-                      answer.explanation,
-                      style: GoogleFonts.montserrat(
-                        fontSize: 12,
-                        color: const Color(0xFF1A1E3F),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
           ],
         ),
       ),
@@ -693,9 +1139,9 @@ ${_getPerformanceMessage()}
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.1),
+        color: color.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: color.withOpacity(0.3)),
+        border: Border.all(color: color.withValues(alpha: 0.3)),
       ),
       child: Row(
         children: [

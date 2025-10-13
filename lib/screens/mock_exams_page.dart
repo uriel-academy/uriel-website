@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/mock_exam_model.dart';
 import '../services/mock_exam_service.dart';
 
@@ -126,48 +125,6 @@ class _MockExamsPageState extends State<MockExamsPage>
         opacity: _fadeAnimation,
         child: CustomScrollView(
           slivers: [
-            // App Bar
-            SliverAppBar(
-              expandedHeight: isMobile ? 100 : 120,
-              floating: true,
-              pinned: true,
-              elevation: 0,
-              backgroundColor: Colors.white,
-              foregroundColor: const Color(0xFF1A1E3F),
-              title: Text(
-                'Mock Examinations',
-                style: GoogleFonts.playfairDisplay(
-                  fontSize: isMobile ? 18 : 20,
-                  fontWeight: FontWeight.bold,
-                  color: const Color(0xFF1A1E3F),
-                ),
-              ),
-              centerTitle: false,
-              titleSpacing: isMobile ? 16 : 24,
-              flexibleSpace: FlexibleSpaceBar(
-                background: Container(
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                      colors: [Colors.white, Color(0xFFF8FAFE)],
-                    ),
-                  ),
-                ),
-              ),
-              actions: [
-                IconButton(
-                  icon: const Icon(Icons.history),
-                  onPressed: () => _showExamHistory(),
-                ),
-                IconButton(
-                  icon: const Icon(Icons.analytics),
-                  onPressed: () => _showPerformanceAnalytics(),
-                ),
-                const SizedBox(width: 8),
-              ],
-            ),
-
             // Search and Filters
             SliverToBoxAdapter(
               child: Container(
@@ -183,7 +140,7 @@ class _MockExamsPageState extends State<MockExamsPage>
                       decoration: BoxDecoration(
                         color: const Color(0xFFF5F7FA),
                         borderRadius: BorderRadius.circular(12),
-                        border: Border.all(color: Colors.grey.withOpacity(0.2)),
+                        border: Border.all(color: Colors.grey.withValues(alpha: 0.2)),
                       ),
                       child: TextField(
                         controller: _searchController,
@@ -231,9 +188,9 @@ class _MockExamsPageState extends State<MockExamsPage>
                       const SizedBox(height: 12),
                       Row(
                         children: [
-                          Icon(Icons.filter_list, 
+                          const Icon(Icons.filter_list, 
                               size: 16, 
-                              color: const Color(0xFFD62828)),
+                              color: Color(0xFFD62828)),
                           const SizedBox(width: 8),
                           Expanded(
                             child: Text(
@@ -339,16 +296,6 @@ class _MockExamsPageState extends State<MockExamsPage>
               ),
             ],
           ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () => _createCustomTest(),
-        backgroundColor: const Color(0xFFD62828),
-        foregroundColor: Colors.white,
-        icon: const Icon(Icons.add),
-        label: Text(
-          'Create Test',
-          style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
         ),
       ),
     );
@@ -481,7 +428,7 @@ class _MockExamsPageState extends State<MockExamsPage>
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.grey.withOpacity(0.3)),
+        border: Border.all(color: Colors.grey.withValues(alpha: 0.3)),
         borderRadius: BorderRadius.circular(8),
         color: Colors.white,
       ),
@@ -525,7 +472,7 @@ class _MockExamsPageState extends State<MockExamsPage>
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF1A1E3F).withOpacity(0.3),
+            color: const Color(0xFF1A1E3F).withValues(alpha: 0.3),
             blurRadius: 15,
             offset: const Offset(0, 8),
           ),
@@ -583,9 +530,9 @@ class _MockExamsPageState extends State<MockExamsPage>
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.1),
+        color: Colors.white.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: Colors.white.withOpacity(0.2)),
+        border: Border.all(color: Colors.white.withValues(alpha: 0.2)),
       ),
       child: Column(
         children: [
@@ -656,7 +603,7 @@ class _MockExamsPageState extends State<MockExamsPage>
                       gradient: LinearGradient(
                         colors: [
                           _getExamTypeColor(exam.examType),
-                          _getExamTypeColor(exam.examType).withOpacity(0.7),
+                          _getExamTypeColor(exam.examType).withValues(alpha: 0.7),
                         ],
                       ),
                       borderRadius: BorderRadius.circular(12),
@@ -693,7 +640,7 @@ class _MockExamsPageState extends State<MockExamsPage>
                                 vertical: 4,
                               ),
                               decoration: BoxDecoration(
-                                color: _getDifficultyColor(exam.difficulty).withOpacity(0.1),
+                                color: _getDifficultyColor(exam.difficulty).withValues(alpha: 0.1),
                                 borderRadius: BorderRadius.circular(12),
                               ),
                               child: Text(
@@ -748,13 +695,13 @@ class _MockExamsPageState extends State<MockExamsPage>
                           Container(
                             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                             decoration: BoxDecoration(
-                              color: Colors.green.withOpacity(0.1),
+                              color: Colors.green.withValues(alpha: 0.1),
                               borderRadius: BorderRadius.circular(12),
                             ),
                             child: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                Icon(Icons.check_circle, size: 14, color: Colors.green),
+                                const Icon(Icons.check_circle, size: 14, color: Colors.green),
                                 const SizedBox(width: 4),
                                 Text(
                                   '${exam.lastScore}%',
@@ -788,13 +735,13 @@ class _MockExamsPageState extends State<MockExamsPage>
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                         decoration: BoxDecoration(
-                          color: Colors.green.withOpacity(0.1),
+                          color: Colors.green.withValues(alpha: 0.1),
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Icon(Icons.check_circle, size: 16, color: Colors.green),
+                            const Icon(Icons.check_circle, size: 16, color: Colors.green),
                             const SizedBox(width: 6),
                             Text(
                               'Completed - ${exam.lastScore}%',
@@ -821,11 +768,11 @@ class _MockExamsPageState extends State<MockExamsPage>
                     Expanded(
                       child: OutlinedButton.icon(
                         onPressed: () => _viewResults(exam),
-                        icon: Icon(Icons.analytics, size: 16),
-                        label: Text('View Results'),
+                        icon: const Icon(Icons.analytics, size: 16),
+                        label: const Text('View Results'),
                         style: OutlinedButton.styleFrom(
                           foregroundColor: const Color(0xFF1A1E3F),
-                          side: BorderSide(color: const Color(0xFF1A1E3F)),
+                          side: const BorderSide(color: Color(0xFF1A1E3F)),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8),
                           ),
@@ -864,7 +811,7 @@ class _MockExamsPageState extends State<MockExamsPage>
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.1),
+        color: color.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(6),
       ),
       child: Row(
@@ -895,7 +842,7 @@ class _MockExamsPageState extends State<MockExamsPage>
             Container(
               padding: const EdgeInsets.all(32),
               decoration: BoxDecoration(
-                color: Colors.grey.withOpacity(0.1),
+                color: Colors.grey.withValues(alpha: 0.1),
                 shape: BoxShape.circle,
               ),
               child: Icon(
@@ -1078,33 +1025,4 @@ class _MockExamsPageState extends State<MockExamsPage>
     );
   }
 
-  void _createCustomTest() {
-    // TODO: Navigate to custom test creator
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Custom test creator coming soon!'),
-        backgroundColor: Color(0xFF1A1E3F),
-      ),
-    );
-  }
-
-  void _showExamHistory() {
-    // TODO: Show exam history
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Exam history coming soon!'),
-        backgroundColor: Color(0xFF1A1E3F),
-      ),
-    );
-  }
-
-  void _showPerformanceAnalytics() {
-    // TODO: Show performance analytics
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Performance analytics coming soon!'),
-        backgroundColor: Color(0xFF1A1E3F),
-      ),
-    );
-  }
 }

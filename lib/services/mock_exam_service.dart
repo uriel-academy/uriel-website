@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/mock_exam_model.dart';
 
+import 'package:flutter/foundation.dart';
 class MockExamService {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final String _collection = 'mock_exams';
@@ -20,7 +21,7 @@ class MockExamService {
         return MockExam.fromJson(data);
       }).toList();
     } catch (e) {
-      print('Error fetching mock exams: $e');
+      debugPrint('Error fetching mock exams: $e');
       // Return sample data as fallback
       return _getSampleMockExams();
     }
@@ -39,7 +40,7 @@ class MockExamService {
         return MockExam.fromJson(data);
       }).toList();
     } catch (e) {
-      print('Error fetching mock exams by type: $e');
+      debugPrint('Error fetching mock exams by type: $e');
       return [];
     }
   }
@@ -57,7 +58,7 @@ class MockExamService {
         return MockExam.fromJson(data);
       }).toList();
     } catch (e) {
-      print('Error fetching mock exams by subject: $e');
+      debugPrint('Error fetching mock exams by subject: $e');
       return [];
     }
   }
@@ -74,7 +75,7 @@ class MockExamService {
             exam.topics.any((topic) => topic.toLowerCase().contains(lowercaseQuery));
       }).toList();
     } catch (e) {
-      print('Error searching mock exams: $e');
+      debugPrint('Error searching mock exams: $e');
       return [];
     }
   }
@@ -89,7 +90,7 @@ class MockExamService {
       }
       return null;
     } catch (e) {
-      print('Error fetching mock exam by ID: $e');
+      debugPrint('Error fetching mock exam by ID: $e');
       return null;
     }
   }
@@ -103,7 +104,7 @@ class MockExamService {
         'currentAttempts': FieldValue.increment(1),
       });
     } catch (e) {
-      print('Error updating exam progress: $e');
+      debugPrint('Error updating exam progress: $e');
     }
   }
 

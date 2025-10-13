@@ -1,0 +1,1803 @@
+{
+  "subject": "Sports",
+  "q1": {
+    "question": "Which country won the first FIFA World Cup (1930)?",
+    "possibleAnswers": [
+      "A. Brazil",
+      "B. Uruguay",
+      "C. Argentina",
+      "D. Italy"
+    ]
+  },
+  "q2": {
+    "question": "In basketball, how many points is a shot from beyond the arc worth?",
+    "possibleAnswers": [
+      "A. 2",
+      "B. 3",
+      "C. 4",
+      "D. 1"
+    ]
+  },
+  "q3": {
+    "question": "Wimbledon is played on which surface?",
+    "possibleAnswers": [
+      "A. Clay",
+      "B. Grass",
+      "C. Hard",
+      "D. Carpet"
+    ]
+  },
+  "q4": {
+    "question": "How many players are on the field per team in soccer (association football)?",
+    "possibleAnswers": [
+      "A. 10",
+      "B. 11",
+      "C. 12",
+      "D. 9"
+    ]
+  },
+  "q5": {
+    "question": "The Olympic motto “Citius, Altius, Fortius” means:",
+    "possibleAnswers": [
+      "A. Faster, Higher, Stronger",
+      "B. Stronger, Faster, Braver",
+      "C. Higher, Stronger, Longer",
+      "D. Quicker, Taller, Braver"
+    ]
+  },
+  "q6": {
+    "question": "Which athlete is known as the “Lightning Bolt”?",
+    "possibleAnswers": [
+      "A. Carl Lewis",
+      "B. Michael Johnson",
+      "C. Usain Bolt",
+      "D. Maurice Greene"
+    ]
+  },
+  "q7": {
+    "question": "The Stanley Cup is awarded in which sport?",
+    "possibleAnswers": [
+      "A. Baseball",
+      "B. Ice hockey",
+      "C. American football",
+      "D. Basketball"
+    ]
+  },
+  "q8": {
+    "question": "In cricket, how many runs are scored for hitting the ball over the boundary on the bounce?",
+    "possibleAnswers": [
+      "A. 3",
+      "B. 4",
+      "C. 5",
+      "D. 6"
+    ]
+  },
+  "q9": {
+    "question": "Which country has won the most Rugby Union World Cups?",
+    "possibleAnswers": [
+      "A. South Africa",
+      "B. New Zealand",
+      "C. Australia",
+      "D. England"
+    ]
+  },
+  "q10": {
+    "question": "The term “birdie” is used in:",
+    "possibleAnswers": [
+      "A. Tennis",
+      "B. Golf",
+      "C. Badminton",
+      "D. Baseball"
+    ]
+  },
+  "q11": {
+    "question": "How long is a marathon?",
+    "possibleAnswers": [
+      "A. 41.195 km",
+      "B. 42.195 km",
+      "C. 26.195 km",
+      "D. 40.000 km"
+    ]
+  },
+  "q12": {
+    "question": "Which basketball legend is nicknamed “His Airness”?",
+    "possibleAnswers": [
+      "A. Magic Johnson",
+      "B. Kobe Bryant",
+      "C. Michael Jordan",
+      "D. Larry Bird"
+    ]
+  },
+  "q13": {
+    "question": "The sport of “sumo” originates from:",
+    "possibleAnswers": [
+      "A. China",
+      "B. Japan",
+      "C. Korea",
+      "D. Mongolia"
+    ]
+  },
+  "q14": {
+    "question": "Which Grand Slam is played on clay courts?",
+    "possibleAnswers": [
+      "A. Australian Open",
+      "B. French Open",
+      "C. Wimbledon",
+      "D. US Open"
+    ]
+  },
+  "q15": {
+    "question": "In Formula 1, what color flag indicates the end of the race?",
+    "possibleAnswers": [
+      "A. Red",
+      "B. Yellow",
+      "C. Black",
+      "D. Checkered"
+    ]
+  },
+  "q16": {
+    "question": "How many rings are on the Olympic flag?",
+    "possibleAnswers": [
+      "A. 4",
+      "B. 5",
+      "C. 6",
+      "D. 7"
+    ]
+  },
+  "q17": {
+    "question": "Which country hosted the 2010 FIFA World Cup?",
+    "possibleAnswers": [
+      "A. Germany",
+      "B. South Africa",
+      "C. Brazil",
+      "D. Russia"
+    ]
+  },
+  "q18": {
+    "question": "In baseball, how many strikes make an out?",
+    "possibleAnswers": [
+      "A. 2",
+      "B. 3",
+      "C. 4",
+      "D. 5"
+    ]
+  },
+  "q19": {
+    "question": "Which tennis player has the nickname “The King of Clay”?",
+    "possibleAnswers": [
+      "A. Roger Federer",
+      "B. Rafael Nadal",
+      "C. Novak Djokovic",
+      "D. Björn Borg"
+    ]
+  },
+  "q20": {
+    "question": "The “Ashes” is a Test cricket series between:",
+    "possibleAnswers": [
+      "A. India and Pakistan",
+      "B. Australia and England",
+      "C. South Africa and England",
+      "D. Australia and India"
+    ]
+  },
+  "q21": {
+    "question": "In boxing, what is the weight class just below heavyweight (traditional)?",
+    "possibleAnswers": [
+      "A. Cruiserweight",
+      "B. Light heavyweight",
+      "C. Middleweight",
+      "D. Super middleweight"
+    ]
+  },
+  "q22": {
+    "question": "The NBA team based in Los Angeles not named the Lakers is the:",
+    "possibleAnswers": [
+      "A. Kings",
+      "B. Clippers",
+      "C. Warriors",
+      "D. Suns"
+    ]
+  },
+  "q23": {
+    "question": "The term “offside” is used in all EXCEPT:",
+    "possibleAnswers": [
+      "A. Soccer",
+      "B. Rugby",
+      "C. Ice hockey",
+      "D. Basketball"
+    ]
+  },
+  "q24": {
+    "question": "Which golfer is nicknamed “The Golden Bear”?",
+    "possibleAnswers": [
+      "A. Tiger Woods",
+      "B. Jack Nicklaus",
+      "C. Arnold Palmer",
+      "D. Gary Player"
+    ]
+  },
+  "q25": {
+    "question": "In volleyball, what is the maximum number of hits allowed per side before the ball must go over?",
+    "possibleAnswers": [
+      "A. 2",
+      "B. 3",
+      "C. 4",
+      "D. 5"
+    ]
+  },
+  "q26": {
+    "question": "In athletics, how many hurdles are in the men’s 110m hurdles?",
+    "possibleAnswers": [
+      "A. 8",
+      "B. 10",
+      "C. 12",
+      "D. 14"
+    ]
+  },
+  "q27": {
+    "question": "Which country won the 2016 Olympic men’s football (soccer) gold?",
+    "possibleAnswers": [
+      "A. Germany",
+      "B. Brazil",
+      "C. Argentina",
+      "D. Nigeria"
+    ]
+  },
+  "q28": {
+    "question": "The “Triple Crown” of horse racing in the U.S. includes the Belmont Stakes, Preakness Stakes, and:",
+    "possibleAnswers": [
+      "A. Arlington Million",
+      "B. Kentucky Derby",
+      "C. Breeders’ Cup Classic",
+      "D. Travers Stakes"
+    ]
+  },
+  "q29": {
+    "question": "Which athlete won a record eight gold medals at a single Olympics?",
+    "possibleAnswers": [
+      "A. Mark Spitz",
+      "B. Michael Phelps",
+      "C. Ian Thorpe",
+      "D. Ryan Lochte"
+    ]
+  },
+  "q30": {
+    "question": "In cricket, what is it called when a bowler takes three wickets in three balls?",
+    "possibleAnswers": [
+      "A. Five-for",
+      "B. Hat-trick",
+      "C. Maiden",
+      "D. Beamer"
+    ]
+  },
+  "q31": {
+    "question": "Which African nation won the AFCON three times in a row (2006–2010)?",
+    "possibleAnswers": [
+      "A. Cameroon",
+      "B. Nigeria",
+      "C. Egypt",
+      "D. Ghana"
+    ]
+  },
+  "q32": {
+    "question": "In tennis, 40–40 is known as:",
+    "possibleAnswers": [
+      "A. Deuce",
+      "B. Love",
+      "C. Advantage",
+      "D. Set point"
+    ]
+  },
+  "q33": {
+    "question": "The term “slam dunk” belongs to:",
+    "possibleAnswers": [
+      "A. Basketball",
+      "B. Handball",
+      "C. Water polo",
+      "D. Volleyball"
+    ]
+  },
+  "q34": {
+    "question": "Which country famously won the 1980 “Miracle on Ice” in hockey?",
+    "possibleAnswers": [
+      "A. Canada",
+      "B. USSR",
+      "C. USA",
+      "D. Sweden"
+    ]
+  },
+  "q35": {
+    "question": "The “Tour de France” is primarily a race of what discipline?",
+    "possibleAnswers": [
+      "A. Speed skating",
+      "B. Cycling",
+      "C. Marathon",
+      "D. Rowing"
+    ]
+  },
+  "q36": {
+    "question": "In rugby union, a try is worth how many points?",
+    "possibleAnswers": [
+      "A. 3",
+      "B. 4",
+      "C. 5",
+      "D. 6"
+    ]
+  },
+  "q37": {
+    "question": "Which NFL team has a lightning bolt logo?",
+    "possibleAnswers": [
+      "A. Packers",
+      "B. Chargers",
+      "C. Cowboys",
+      "D. Broncos"
+    ]
+  },
+  "q38": {
+    "question": "In snooker, what is the maximum break in a single frame (without fouls, standard reds)?",
+    "possibleAnswers": [
+      "A. 141",
+      "B. 147",
+      "C. 155",
+      "D. 167"
+    ]
+  },
+  "q39": {
+    "question": "The “hand of God” goal was scored by:",
+    "possibleAnswers": [
+      "A. Lionel Messi",
+      "B. Diego Maradona",
+      "C. Pelé",
+      "D. Zinedine Zidane"
+    ]
+  },
+  "q40": {
+    "question": "In tennis, which tournament is nicknamed “The Championships”?",
+    "possibleAnswers": [
+      "A. Australian Open",
+      "B. French Open",
+      "C. Wimbledon",
+      "D. US Open"
+    ]
+  },
+  "q41": {
+    "question": "A regulation soccer match lasts:",
+    "possibleAnswers": [
+      "A. 80 minutes",
+      "B. 90 minutes",
+      "C. 100 minutes",
+      "D. 120 minutes"
+    ]
+  },
+  "q42": {
+    "question": "The “All Blacks” is the nickname for which national team?",
+    "possibleAnswers": [
+      "A. South Africa rugby",
+      "B. New Zealand rugby",
+      "C. England rugby",
+      "D. Scotland rugby"
+    ]
+  },
+  "q43": {
+    "question": "In baseball, which position is abbreviated “SS”?",
+    "possibleAnswers": [
+      "A. Second baseman",
+      "B. Shortstop",
+      "C. Starting starter",
+      "D. Side swinger"
+    ]
+  },
+  "q44": {
+    "question": "Which female gymnast won four golds at Rio 2016?",
+    "possibleAnswers": [
+      "A. Nadia Comăneci",
+      "B. Simone Biles",
+      "C. Shannon Miller",
+      "D. Mary Lou Retton"
+    ]
+  },
+  "q45": {
+    "question": "In athletics, the heptathlon for women consists of how many events?",
+    "possibleAnswers": [
+      "A. 5",
+      "B. 7",
+      "C. 8",
+      "D. 10"
+    ]
+  },
+  "q46": {
+    "question": "The “Green Jacket” is awarded at which golf tournament?",
+    "possibleAnswers": [
+      "A. The Open",
+      "B. U.S. Open",
+      "C. PGA Championship",
+      "D. The Masters"
+    ]
+  },
+  "q47": {
+    "question": "The “El Clásico” is contested by Barcelona and:",
+    "possibleAnswers": [
+      "A. Atlético Madrid",
+      "B. Real Madrid",
+      "C. Valencia",
+      "D. Sevilla"
+    ]
+  },
+  "q48": {
+    "question": "What is the maximum score with three darts in standard 501?",
+    "possibleAnswers": [
+      "A. 150",
+      "B. 171",
+      "C. 180",
+      "D. 189"
+    ]
+  },
+  "q49": {
+    "question": "In cricket, which dismissal involves the wicket-keeper removing the bails while the batter is out of the crease?",
+    "possibleAnswers": [
+      "A. Bowled",
+      "B. Stumped",
+      "C. Run out",
+      "D. Hit wicket"
+    ]
+  },
+  "q50": {
+    "question": "Which boxer was nicknamed “Iron Mike”?",
+    "possibleAnswers": [
+      "A. Mike Tyson",
+      "B. Evander Holyfield",
+      "C. Lennox Lewis",
+      "D. George Foreman"
+    ]
+  },
+  "q51": {
+    "question": "In football (soccer), what is the minimum number of players a team must have on the field to continue a match?",
+    "possibleAnswers": [
+      "A. 5",
+      "B. 7",
+      "C. 8",
+      "D. 9"
+    ]
+  },
+  "q52": {
+    "question": "The “Super Bowl” determines the champion of which league?",
+    "possibleAnswers": [
+      "A. MLB",
+      "B. NHL",
+      "C. NFL",
+      "D. NBA"
+    ]
+  },
+  "q53": {
+    "question": "In table tennis, what is the winning score in a standard game?",
+    "possibleAnswers": [
+      "A. 15 points, win by 2",
+      "B. 21 points, win by 2",
+      "C. 11 points, win by 2",
+      "D. 25 points, win by 2"
+    ]
+  },
+  "q54": {
+    "question": "The basketball position often responsible for bringing the ball up is the:",
+    "possibleAnswers": [
+      "A. Center",
+      "B. Power forward",
+      "C. Point guard",
+      "D. Small forward"
+    ]
+  },
+  "q55": {
+    "question": "Which African footballer won the Ballon d’Or in 1995?",
+    "possibleAnswers": [
+      "A. Samuel Eto’o",
+      "B. George Weah",
+      "C. Didier Drogba",
+      "D. Abedi Pele"
+    ]
+  },
+  "q56": {
+    "question": "The “Calcutta Cup” is contested in rugby union between:",
+    "possibleAnswers": [
+      "A. England and Scotland",
+      "B. England and Wales",
+      "C. Scotland and Ireland",
+      "D. Ireland and Wales"
+    ]
+  },
+  "q57": {
+    "question": "In F1, DRS stands for:",
+    "possibleAnswers": [
+      "A. Drag Reduction System",
+      "B. Downforce Regulation System",
+      "C. Dynamic Racing Setup",
+      "D. Driver Reset Switch"
+    ]
+  },
+  "q58": {
+    "question": "The “Yellow Jersey” (Maillot Jaune) signifies the leader in:",
+    "possibleAnswers": [
+      "A. Giro d’Italia",
+      "B. Tour de France",
+      "C. Vuelta a España",
+      "D. Paris–Roubaix"
+    ]
+  },
+  "q59": {
+    "question": "Which country won the first Cricket World Cup (1975)?",
+    "possibleAnswers": [
+      "A. Australia",
+      "B. West Indies",
+      "C. England",
+      "D. India"
+    ]
+  },
+  "q60": {
+    "question": "In athletics, the baton is used in:",
+    "possibleAnswers": [
+      "A. Hurdles",
+      "B. Relay races",
+      "C. Race walk",
+      "D. Steeplechase"
+    ]
+  },
+  "q61": {
+    "question": "The NBA trophy is named the:",
+    "possibleAnswers": [
+      "A. Larry O’Brien Trophy",
+      "B. Walter A. Brown Trophy",
+      "C. Maurice Podoloff Cup",
+      "D. Red Auerbach Cup"
+    ]
+  },
+  "q62": {
+    "question": "Which nation hosts the “All England Open” in badminton?",
+    "possibleAnswers": [
+      "A. England",
+      "B. Denmark",
+      "C. China",
+      "D. Indonesia"
+    ]
+  },
+  "q63": {
+    "question": "In soccer, the “Panenka” refers to:",
+    "possibleAnswers": [
+      "A. A chipped penalty",
+      "B. A backheel pass",
+      "C. A scissor kick",
+      "D. A goalkeeper feint"
+    ]
+  },
+  "q64": {
+    "question": "The “Big Bash League” is a domestic competition in:",
+    "possibleAnswers": [
+      "A. South Africa (cricket)",
+      "B. Australia (cricket)",
+      "C. India (cricket)",
+      "D. England (cricket)"
+    ]
+  },
+  "q65": {
+    "question": "In golf, what is one stroke under par on a hole?",
+    "possibleAnswers": [
+      "A. Eagle",
+      "B. Birdie",
+      "C. Bogey",
+      "D. Albatross"
+    ]
+  },
+  "q66": {
+    "question": "Which country hosted the 2008 Summer Olympics?",
+    "possibleAnswers": [
+      "A. Greece",
+      "B. China",
+      "C. UK",
+      "D. Brazil"
+    ]
+  },
+  "q67": {
+    "question": "The “Penalty box” is a term in:",
+    "possibleAnswers": [
+      "A. Rugby",
+      "B. Ice hockey",
+      "C. Volleyball",
+      "D. Cricket"
+    ]
+  },
+  "q68": {
+    "question": "How many players are on the court for one team in volleyball?",
+    "possibleAnswers": [
+      "A. 5",
+      "B. 6",
+      "C. 7",
+      "D. 9"
+    ]
+  },
+  "q69": {
+    "question": "The “Single sculls” event belongs to:",
+    "possibleAnswers": [
+      "A. Canoe sprint",
+      "B. Rowing",
+      "C. Sailing",
+      "D. Kayak slalom"
+    ]
+  },
+  "q70": {
+    "question": "In tennis, a “bagel” set score is:",
+    "possibleAnswers": [
+      "A. 6–1",
+      "B. 6–2",
+      "C. 6–3",
+      "D. 6–0"
+    ]
+  },
+  "q71": {
+    "question": "The “Lombardi Trophy” is awarded in:",
+    "possibleAnswers": [
+      "A. NBA",
+      "B. NFL",
+      "C. MLB",
+      "D. NHL"
+    ]
+  },
+  "q72": {
+    "question": "Which football club is nicknamed “The Red Devils”?",
+    "possibleAnswers": [
+      "A. Liverpool",
+      "B. Arsenal",
+      "C. Manchester United",
+      "D. AC Milan"
+    ]
+  },
+  "q73": {
+    "question": "In athletics, the decathlon is contested by:",
+    "possibleAnswers": [
+      "A. Women",
+      "B. Men (traditionally)",
+      "C. Mixed teams",
+      "D. Juniors only"
+    ]
+  },
+  "q74": {
+    "question": "In cricket, a “maiden over” means:",
+    "possibleAnswers": [
+      "A. 6 runs scored",
+      "B. No runs conceded from the bat",
+      "C. Two wickets in an over",
+      "D. A no-ball over"
+    ]
+  },
+  "q75": {
+    "question": "The Boston Red Sox play which sport?",
+    "possibleAnswers": [
+      "A. Basketball",
+      "B. Baseball",
+      "C. Ice hockey",
+      "D. American football"
+    ]
+  },
+  "q76": {
+    "question": "The “Golden Boot” is awarded to the top scorer at:",
+    "possibleAnswers": [
+      "A. UEFA Champions League only",
+      "B. FIFA World Cup",
+      "C. Copa América only",
+      "D. Africa Cup of Nations only"
+    ]
+  },
+  "q77": {
+    "question": "The “Bulls” and “All Blacks” are famous in which code?",
+    "possibleAnswers": [
+      "A. Rugby union",
+      "B. Rugby league",
+      "C. Soccer",
+      "D. Water polo"
+    ]
+  },
+  "q78": {
+    "question": "In NFL scoring, a touchdown is worth:",
+    "possibleAnswers": [
+      "A. 3 points",
+      "B. 6 points",
+      "C. 7 points",
+      "D. 8 points"
+    ]
+  },
+  "q79": {
+    "question": "The “Mano a mano” rivalry in tennis involved Federer and:",
+    "possibleAnswers": [
+      "A. Nadal",
+      "B. Djokovic",
+      "C. Murray",
+      "D. Sampras"
+    ]
+  },
+  "q80": {
+    "question": "“T20” in cricket refers to:",
+    "possibleAnswers": [
+      "A. 20 overs per team",
+      "B. 20 wickets per team",
+      "C. 20 balls per innings",
+      "D. 20 fielders on pitch"
+    ]
+  },
+  "q81": {
+    "question": "The “UEFA European Championship” final is typically held every:",
+    "possibleAnswers": [
+      "A. Year",
+      "B. Two years",
+      "C. Four years",
+      "D. Six years"
+    ]
+  },
+  "q82": {
+    "question": "In basketball, the restricted area arc guards against:",
+    "possibleAnswers": [
+      "A. 3-second violations",
+      "B. Charge calls under the rim",
+      "C. Goaltending",
+      "D. Illegal screens"
+    ]
+  },
+  "q83": {
+    "question": "Which nation won the 1998 FIFA World Cup?",
+    "possibleAnswers": [
+      "A. Brazil",
+      "B. France",
+      "C. Germany",
+      "D. Netherlands"
+    ]
+  },
+  "q84": {
+    "question": "The “Brier” is the Canadian national championship in:",
+    "possibleAnswers": [
+      "A. Curling",
+      "B. Ice hockey",
+      "C. Speed skating",
+      "D. Ski jumping"
+    ]
+  },
+  "q85": {
+    "question": "In tennis, a “let” on serve means:",
+    "possibleAnswers": [
+      "A. Fault",
+      "B. Replay the serve",
+      "C. Double fault",
+      "D. Point to receiver"
+    ]
+  },
+  "q86": {
+    "question": "“La Albiceleste” is the nickname of:",
+    "possibleAnswers": [
+      "A. Brazil",
+      "B. Argentina",
+      "C. Italy",
+      "D. Spain"
+    ]
+  },
+  "q87": {
+    "question": "The “Ryder Cup” is contested in:",
+    "possibleAnswers": [
+      "A. Tennis",
+      "B. Golf (Europe vs USA)",
+      "C. Rugby",
+      "D. Sailing"
+    ]
+  },
+  "q88": {
+    "question": "The “Vince Lombardi” coached which NFL team to the first two Super Bowls?",
+    "possibleAnswers": [
+      "A. Dallas Cowboys",
+      "B. Green Bay Packers",
+      "C. Pittsburgh Steelers",
+      "D. Chicago Bears"
+    ]
+  },
+  "q89": {
+    "question": "A “perfect game” in bowling scores:",
+    "possibleAnswers": [
+      "A. 250",
+      "B. 270",
+      "C. 300",
+      "D. 330"
+    ]
+  },
+  "q90": {
+    "question": "In athletics, the women’s steeplechase standard distance is:",
+    "possibleAnswers": [
+      "A. 1500 m",
+      "B. 2000 m",
+      "C. 3000 m",
+      "D. 5000 m"
+    ]
+  },
+  "q91": {
+    "question": "The “Haka” is a pre-match tradition of which team?",
+    "possibleAnswers": [
+      "A. Wallabies",
+      "B. All Blacks",
+      "C. Springboks",
+      "D. Pumas"
+    ]
+  },
+  "q92": {
+    "question": "Which boxer was known as “The Greatest”?",
+    "possibleAnswers": [
+      "A. Joe Frazier",
+      "B. George Foreman",
+      "C. Muhammad Ali",
+      "D. Larry Holmes"
+    ]
+  },
+  "q93": {
+    "question": "In football, the position often wearing number 10 is traditionally the:",
+    "possibleAnswers": [
+      "A. Sweeper",
+      "B. Playmaker/attacking midfielder",
+      "C. Fullback",
+      "D. Goalkeeper"
+    ]
+  },
+  "q94": {
+    "question": "The “Indy 500” is held in:",
+    "possibleAnswers": [
+      "A. Texas",
+      "B. Florida",
+      "C. Indiana",
+      "D. California"
+    ]
+  },
+  "q95": {
+    "question": "The “Proteas” is the nickname for which national cricket team?",
+    "possibleAnswers": [
+      "A. Australia",
+      "B. South Africa",
+      "C. New Zealand",
+      "D. Pakistan"
+    ]
+  },
+  "q96": {
+    "question": "In rugby union, how many players per team on the pitch?",
+    "possibleAnswers": [
+      "A. 11",
+      "B. 13",
+      "C. 15",
+      "D. 7"
+    ]
+  },
+  "q97": {
+    "question": "The “Triple-Double” statistic belongs to:",
+    "possibleAnswers": [
+      "A. Baseball",
+      "B. Basketball",
+      "C. Ice hockey",
+      "D. Rugby"
+    ]
+  },
+  "q98": {
+    "question": "In tennis, the line at the back of the court is the:",
+    "possibleAnswers": [
+      "A. Service line",
+      "B. Baseline",
+      "C. Alley",
+      "D. Center mark"
+    ]
+  },
+  "q99": {
+    "question": "Which nation has won the most Olympic medals overall?",
+    "possibleAnswers": [
+      "A. Russia/USSR",
+      "B. USA",
+      "C. Germany",
+      "D. China"
+    ]
+  },
+  "q100": {
+    "question": "“Fenway Park” is home to the:",
+    "possibleAnswers": [
+      "A. New York Yankees",
+      "B. Boston Red Sox",
+      "C. Chicago Cubs",
+      "D. Los Angeles Dodgers"
+    ]
+  },
+  "q101": {
+    "question": "In football, VAR stands for:",
+    "possibleAnswers": [
+      "A. Video Assistant Referee",
+      "B. Virtual Action Review",
+      "C. Video Active Replay",
+      "D. Verified Analyst Review"
+    ]
+  },
+  "q102": {
+    "question": "The “Sevens” World Series is a circuit in:",
+    "possibleAnswers": [
+      "A. Rugby sevens",
+      "B. Seven-a-side soccer",
+      "C. Seven-pin bowling",
+      "D. Seven-handed poker"
+    ]
+  },
+  "q103": {
+    "question": "Which nation won the men’s basketball gold at the 1992 Olympics with the “Dream Team”?",
+    "possibleAnswers": [
+      "A. Spain",
+      "B. USA",
+      "C. Croatia",
+      "D. Lithuania"
+    ]
+  },
+  "q104": {
+    "question": "The “Ironman” triathlon includes a marathon, cycling, and:",
+    "possibleAnswers": [
+      "A. Rowing",
+      "B. Swimming",
+      "C. Skiing",
+      "D. Speed skating"
+    ]
+  },
+  "q105": {
+    "question": "In cricket, what is “LBW”?",
+    "possibleAnswers": [
+      "A. Leg By Wicket",
+      "B. Leg Before Wicket",
+      "C. Long Ball Wide",
+      "D. Leave Ball Wide"
+    ]
+  },
+  "q106": {
+    "question": "The “US Open” in tennis is played on:",
+    "possibleAnswers": [
+      "A. Grass",
+      "B. Hard court",
+      "C. Clay",
+      "D. Carpet"
+    ]
+  },
+  "q107": {
+    "question": "The record 100m men’s world time (9.58) was set in 2009 by:",
+    "possibleAnswers": [
+      "A. Justin Gatlin",
+      "B. Asafa Powell",
+      "C. Usain Bolt",
+      "D. Tyson Gay"
+    ]
+  },
+  "q108": {
+    "question": "“Camp Nou” is the stadium of:",
+    "possibleAnswers": [
+      "A. Real Madrid",
+      "B. Barcelona",
+      "C. Atlético Madrid",
+      "D. Valencia"
+    ]
+  },
+  "q109": {
+    "question": "The “Head of the Charles” is a major regatta in:",
+    "possibleAnswers": [
+      "A. London",
+      "B. Boston",
+      "C. Sydney",
+      "D. Cape Town"
+    ]
+  },
+  "q110": {
+    "question": "The “FedExCup” is associated with:",
+    "possibleAnswers": [
+      "A. Tennis",
+      "B. Golf (PGA Tour)",
+      "C. Cycling",
+      "D. NASCAR"
+    ]
+  },
+  "q111": {
+    "question": "The African club competition equivalent of the UEFA Champions League is:",
+    "possibleAnswers": [
+      "A. CAF Confederation Cup",
+      "B. CAF Champions League",
+      "C. CHAN",
+      "D. COSAFA Cup"
+    ]
+  },
+  "q112": {
+    "question": "“Slugging percentage” is a stat in:",
+    "possibleAnswers": [
+      "A. Cricket",
+      "B. Baseball",
+      "C. Rugby",
+      "D. Basketball"
+    ]
+  },
+  "q113": {
+    "question": "The “NHL” has how many skaters on the ice per team at full strength (excluding goalie)?",
+    "possibleAnswers": [
+      "A. 4",
+      "B. 5",
+      "C. 6",
+      "D. 7"
+    ]
+  },
+  "q114": {
+    "question": "In athletics, the baton exchange zones in 4×100m relay are:",
+    "possibleAnswers": [
+      "A. 5 m",
+      "B. 10 m",
+      "C. 20 m",
+      "D. 30 m"
+    ]
+  },
+  "q115": {
+    "question": "“Old Trafford” is associated with:",
+    "possibleAnswers": [
+      "A. Liverpool FC",
+      "B. Manchester United",
+      "C. Manchester City",
+      "D. Chelsea FC"
+    ]
+  },
+  "q116": {
+    "question": "The “Bafana Bafana” nickname belongs to:",
+    "possibleAnswers": [
+      "A. Ghana",
+      "B. South Africa",
+      "C. Nigeria",
+      "D. Cameroon"
+    ]
+  },
+  "q117": {
+    "question": "In basketball, the shot clock in the NBA is:",
+    "possibleAnswers": [
+      "A. 30 seconds",
+      "B. 24 seconds",
+      "C. 35 seconds",
+      "D. 20 seconds"
+    ]
+  },
+  "q118": {
+    "question": "The “Grand National” is a famous:",
+    "possibleAnswers": [
+      "A. Cycling race",
+      "B. Horse race",
+      "C. Auto race",
+      "D. Marathon"
+    ]
+  },
+  "q119": {
+    "question": "“Giannis Antetokounmpo” plays primarily which position?",
+    "possibleAnswers": [
+      "A. Point guard",
+      "B. Forward",
+      "C. Center",
+      "D. Shooting guard"
+    ]
+  },
+  "q120": {
+    "question": "In football, the “false 9” refers to:",
+    "possibleAnswers": [
+      "A. A central defender",
+      "B. A deep-lying forward",
+      "C. A wide winger",
+      "D. A defensive midfielder"
+    ]
+  },
+  "q121": {
+    "question": "The “Heisman Trophy” is awarded in:",
+    "possibleAnswers": [
+      "A. College basketball (USA)",
+      "B. College football (USA)",
+      "C. MLB",
+      "D. MLS"
+    ]
+  },
+  "q122": {
+    "question": "The “UCL” stands for:",
+    "possibleAnswers": [
+      "A. Ultimate Club League",
+      "B. UEFA Champions League",
+      "C. United Club League",
+      "D. Universal Champions League"
+    ]
+  },
+  "q123": {
+    "question": "The “Six Nations” rugby tournament does NOT include:",
+    "possibleAnswers": [
+      "A. England",
+      "B. Italy",
+      "C. Spain",
+      "D. Ireland"
+    ]
+  },
+  "q124": {
+    "question": "In tennis doubles, the additional side area is called the:",
+    "possibleAnswers": [
+      "A. Gutter",
+      "B. Alley",
+      "C. Fringe",
+      "D. Wing"
+    ]
+  },
+  "q125": {
+    "question": "“Long jump” world records are measured from the takeoff board to:",
+    "possibleAnswers": [
+      "A. The furthest hand mark",
+      "B. The nearest body mark in sand",
+      "C. The head imprint",
+      "D. The official’s flag"
+    ]
+  },
+  "q126": {
+    "question": "“Penalty shoot-outs” in soccer typically start with how many kicks per team?",
+    "possibleAnswers": [
+      "A. 3",
+      "B. 4",
+      "C. 5",
+      "D. 6"
+    ]
+  },
+  "q127": {
+    "question": "The “MMA” organization known for the Octagon is:",
+    "possibleAnswers": [
+      "A. Bellator",
+      "B. ONE",
+      "C. UFC",
+      "D. PFL"
+    ]
+  },
+  "q128": {
+    "question": "“Odi” in cricket stands for:",
+    "possibleAnswers": [
+      "A. Over-distance innings",
+      "B. One Day International",
+      "C. Off-drive infield",
+      "D. Official Day Inning"
+    ]
+  },
+  "q129": {
+    "question": "The term “hat-trick” originated in:",
+    "possibleAnswers": [
+      "A. Soccer",
+      "B. Cricket",
+      "C. Ice hockey",
+      "D. Rugby"
+    ]
+  },
+  "q130": {
+    "question": "The “Davis Cup” is a team event in:",
+    "possibleAnswers": [
+      "A. Table tennis",
+      "B. Tennis",
+      "C. Badminton",
+      "D. Squash"
+    ]
+  },
+  "q131": {
+    "question": "In basketball, a field goal made while being fouled is called:",
+    "possibleAnswers": [
+      "A. And-one",
+      "B. Bank shot",
+      "C. Buzzer beater",
+      "D. Technical"
+    ]
+  },
+  "q132": {
+    "question": "The “Slam Dunk Contest” is part of:",
+    "possibleAnswers": [
+      "A. NBA All-Star Weekend",
+      "B. NCAA Final Four",
+      "C. EuroLeague Final Four",
+      "D. FIBA World Cup"
+    ]
+  },
+  "q133": {
+    "question": "The “Craven Cottage” is the home of:",
+    "possibleAnswers": [
+      "A. Fulham FC",
+      "B. Everton FC",
+      "C. West Ham United",
+      "D. Newcastle United"
+    ]
+  },
+  "q134": {
+    "question": "In fencing, the valid target in foil is:",
+    "possibleAnswers": [
+      "A. Entire body",
+      "B. Torso",
+      "C. Below the waist",
+      "D. Head only"
+    ]
+  },
+  "q135": {
+    "question": "The “Bledisloe Cup” is contested between:",
+    "possibleAnswers": [
+      "A. South Africa and England",
+      "B. New Zealand and Australia",
+      "C. England and Wales",
+      "D. France and Ireland"
+    ]
+  },
+  "q136": {
+    "question": "“Slam serving” is a term in:",
+    "possibleAnswers": [
+      "A. Volleyball",
+      "B. Tennis",
+      "C. Table tennis",
+      "D. Not a standard term"
+    ]
+  },
+  "q137": {
+    "question": "The “Indian Premier League” (IPL) is a T20 league in:",
+    "possibleAnswers": [
+      "A. Pakistan",
+      "B. India",
+      "C. Sri Lanka",
+      "D. Bangladesh"
+    ]
+  },
+  "q138": {
+    "question": "In golf, an “albatross” is:",
+    "possibleAnswers": [
+      "A. 1 under par",
+      "B. 2 under par",
+      "C. 3 under par on a hole",
+      "D. 4 under par"
+    ]
+  },
+  "q139": {
+    "question": "The “Rossoneri” is the nickname for:",
+    "possibleAnswers": [
+      "A. Inter Milan",
+      "B. AC Milan",
+      "C. Juventus",
+      "D. Napoli"
+    ]
+  },
+  "q140": {
+    "question": "The “Bird’s Nest” stadium hosted the 2008 Olympics in:",
+    "possibleAnswers": [
+      "A. Beijing",
+      "B. Tokyo",
+      "C. Athens",
+      "D. Seoul"
+    ]
+  },
+  "q141": {
+    "question": "In track cycling, the steeply banked track is called a:",
+    "possibleAnswers": [
+      "A. Circuit",
+      "B. Velodrome",
+      "C. Piste",
+      "D. Oval"
+    ]
+  },
+  "q142": {
+    "question": "“Super Over” is used to decide tied matches in:",
+    "possibleAnswers": [
+      "A. Test cricket",
+      "B. ODI/T20 cricket",
+      "C. Rugby",
+      "D. Baseball"
+    ]
+  },
+  "q143": {
+    "question": "The “Luge” involves racing:",
+    "possibleAnswers": [
+      "A. Feet first on a small sled",
+      "B. Head first on a sled",
+      "C. Two-person bobsled",
+      "D. Ice skates"
+    ]
+  },
+  "q144": {
+    "question": "In tennis, the “Hawk-Eye” system is used for:",
+    "possibleAnswers": [
+      "A. Player tracking",
+      "B. Line-calling challenges",
+      "C. Speed measurement only",
+      "D. Training drills"
+    ]
+  },
+  "q145": {
+    "question": "“Madison Square Garden” is in:",
+    "possibleAnswers": [
+      "A. Chicago",
+      "B. Boston",
+      "C. New York City",
+      "D. Los Angeles"
+    ]
+  },
+  "q146": {
+    "question": "The “Springboks” is the nickname for:",
+    "possibleAnswers": [
+      "A. South Africa rugby union team",
+      "B. South Africa cricket team",
+      "C. South Africa football team",
+      "D. South Africa hockey team"
+    ]
+  },
+  "q147": {
+    "question": "The “UEFA Europa League” final winner earns a place in:",
+    "possibleAnswers": [
+      "A. UEFA Super Cup",
+      "B. FIFA Club World Cup directly only",
+      "C. CAF Champions League",
+      "D. Copa Libertadores"
+    ]
+  },
+  "q148": {
+    "question": "In baseball, a home run with bases loaded is called a:",
+    "possibleAnswers": [
+      "A. Grand fly",
+      "B. Grand slam",
+      "C. Full run",
+      "D. Loaded homer"
+    ]
+  },
+  "q149": {
+    "question": "The “Clay Court” Masters event in Rome is called:",
+    "possibleAnswers": [
+      "A. Italian Open",
+      "B. Rome Masters Cup",
+      "C. Roman Slam",
+      "D. Foro Finals"
+    ]
+  },
+  "q150": {
+    "question": "The “Nordic combined” includes ski jumping and:",
+    "possibleAnswers": [
+      "A. Alpine skiing",
+      "B. Cross-country skiing",
+      "C. Biathlon",
+      "D. Speed skating"
+    ]
+  },
+  "q151": {
+    "question": "The “No. 23” famously worn in basketball by:",
+    "possibleAnswers": [
+      "A. Larry Bird",
+      "B. Michael Jordan",
+      "C. Tim Duncan",
+      "D. Kareem Abdul-Jabbar"
+    ]
+  },
+  "q152": {
+    "question": "In soccer, a “brace” refers to:",
+    "possibleAnswers": [
+      "A. Three goals",
+      "B. Two goals",
+      "C. Four goals",
+      "D. One goal and one assist"
+    ]
+  },
+  "q153": {
+    "question": "The “Ballon d’Or” is awarded by a magazine originally based in:",
+    "possibleAnswers": [
+      "A. England",
+      "B. France",
+      "C. Spain",
+      "D. Italy"
+    ]
+  },
+  "q154": {
+    "question": "In rugby union, a conversion kick after a try is worth:",
+    "possibleAnswers": [
+      "A. 1 point",
+      "B. 2 points",
+      "C. 3 points",
+      "D. 5 points"
+    ]
+  },
+  "q155": {
+    "question": "“Kumite” is a sparring discipline in:",
+    "possibleAnswers": [
+      "A. Judo",
+      "B. Karate",
+      "C. Taekwondo",
+      "D. Wrestling"
+    ]
+  },
+  "q156": {
+    "question": "The “Maracanã” stadium is in:",
+    "possibleAnswers": [
+      "A. São Paulo",
+      "B. Rio de Janeiro",
+      "C. Brasília",
+      "D. Belo Horizonte"
+    ]
+  },
+  "q157": {
+    "question": "The “PyeongChang 2018” Olympics were:",
+    "possibleAnswers": [
+      "A. Summer",
+      "B. Winter",
+      "C. Youth only",
+      "D. Canceled"
+    ]
+  },
+  "q158": {
+    "question": "In tennis, the “Sunshine Double” refers to:",
+    "possibleAnswers": [
+      "A. Miami and Indian Wells titles",
+      "B. Wimbledon and US Open",
+      "C. AO and FO",
+      "D. Madrid and Rome"
+    ]
+  },
+  "q159": {
+    "question": "The “Claret Jug” is awarded at:",
+    "possibleAnswers": [
+      "A. The Masters",
+      "B. The Open Championship",
+      "C. PGA Championship",
+      "D. US Open (golf)"
+    ]
+  },
+  "q160": {
+    "question": "The “Anfield” stadium belongs to:",
+    "possibleAnswers": [
+      "A. Everton",
+      "B. Liverpool",
+      "C. Manchester City",
+      "D. Chelsea"
+    ]
+  },
+  "q161": {
+    "question": "In athletics, the javelin throw must land:",
+    "possibleAnswers": [
+      "A. Tip first within sector",
+      "B. Anywhere in sector",
+      "C. Handle first",
+      "D. At least 70 m"
+    ]
+  },
+  "q162": {
+    "question": "The “All-Star Game” midseason classic is famous in:",
+    "possibleAnswers": [
+      "A. NFL",
+      "B. MLB",
+      "C. MLS",
+      "D. NWSL"
+    ]
+  },
+  "q163": {
+    "question": "The “Sprinter’s jersey” (green) in the Tour de France denotes:",
+    "possibleAnswers": [
+      "A. Mountains leader",
+      "B. Points classification leader",
+      "C. Best young rider",
+      "D. Most aggressive rider"
+    ]
+  },
+  "q164": {
+    "question": "The “EuroLeague” is a top club competition in:",
+    "possibleAnswers": [
+      "A. Football",
+      "B. Basketball (Europe)",
+      "C. Handball",
+      "D. Volleyball"
+    ]
+  },
+  "q165": {
+    "question": "The “PGA” in golf stands for:",
+    "possibleAnswers": [
+      "A. Pro Golf Association",
+      "B. Professional Golfers’ Association",
+      "C. Players Golfing Alliance",
+      "D. Professional Golf Association (of America only)"
+    ]
+  },
+  "q166": {
+    "question": "The “AFL” refers to:",
+    "possibleAnswers": [
+      "A. Arena Football League (US) or Australian Football League (context)",
+      "B. American Fencing League",
+      "C. Amateur Football League (UK only)",
+      "D. Alpine Federation League"
+    ]
+  },
+  "q167": {
+    "question": "In cricket, the protective pads worn by batters are called:",
+    "possibleAnswers": [
+      "A. Guards",
+      "B. Pads",
+      "C. Shin covers",
+      "D. Blocks"
+    ]
+  },
+  "q168": {
+    "question": "The “UEFA Nations League” primarily replaces:",
+    "possibleAnswers": [
+      "A. World Cup qualifiers",
+      "B. International friendlies",
+      "C. Confederations Cup",
+      "D. Euro qualifiers"
+    ]
+  },
+  "q169": {
+    "question": "The “X Games” focus on:",
+    "possibleAnswers": [
+      "A. Traditional Olympics",
+      "B. Extreme sports",
+      "C. Swimming",
+      "D. Baseball"
+    ]
+  },
+  "q170": {
+    "question": "“Dakar Rally” originally ran from Paris to:",
+    "possibleAnswers": [
+      "A. Accra",
+      "B. Dakar",
+      "C. Lagos",
+      "D. Nairobi"
+    ]
+  },
+  "q171": {
+    "question": "The “Old Firm” derby is between Celtic and:",
+    "possibleAnswers": [
+      "A. Hearts",
+      "B. Hibernian",
+      "C. Rangers",
+      "D. Aberdeen"
+    ]
+  },
+  "q172": {
+    "question": "In baseball, a pitcher who enters to close out a close game is a:",
+    "possibleAnswers": [
+      "A. Starter",
+      "B. Reliever",
+      "C. Closer",
+      "D. Opener"
+    ]
+  },
+  "q173": {
+    "question": "The “Quadruple-double” in basketball includes points, rebounds, assists, and:",
+    "possibleAnswers": [
+      "A. Three-pointers",
+      "B. Blocks/steals (both counted, need 10 in either two)",
+      "C. Free throws",
+      "D. Minutes played"
+    ]
+  },
+  "q174": {
+    "question": "The “Halftime” in soccer typically lasts:",
+    "possibleAnswers": [
+      "A. 10 min",
+      "B. 12 min",
+      "C. 15 min",
+      "D. 20 min"
+    ]
+  },
+  "q175": {
+    "question": "The “Nadal–Federer–Djokovic” trio is often called the:",
+    "possibleAnswers": [
+      "A. Big Three",
+      "B. Great Trio",
+      "C. Grand Trio",
+      "D. Golden Three"
+    ]
+  },
+  "q176": {
+    "question": "In rugby league, how many tackles before turnover?",
+    "possibleAnswers": [
+      "A. 4",
+      "B. 5",
+      "C. 6",
+      "D. 7"
+    ]
+  },
+  "q177": {
+    "question": "The “Bayern Munich” home stadium is:",
+    "possibleAnswers": [
+      "A. Allianz Arena",
+      "B. Signal Iduna Park",
+      "C. Veltins-Arena",
+      "D. Red Bull Arena"
+    ]
+  },
+  "q178": {
+    "question": "In athletics, false start rule typically disqualifies at:",
+    "possibleAnswers": [
+      "A. Second false start overall",
+      "B. First false start by an athlete",
+      "C. Third false start",
+      "D. Only after warning"
+    ]
+  },
+  "q179": {
+    "question": "The “Vuelta a España” jersey for overall leader is:",
+    "possibleAnswers": [
+      "A. Yellow",
+      "B. Red",
+      "C. Pink",
+      "D. Green"
+    ]
+  },
+  "q180": {
+    "question": "In cricket, an over consists of:",
+    "possibleAnswers": [
+      "A. 5 balls",
+      "B. 6 balls (standard)",
+      "C. 7 balls",
+      "D. 8 balls"
+    ]
+  },
+  "q181": {
+    "question": "The “Fosbury Flop” revolutionized which event?",
+    "possibleAnswers": [
+      "A. Long jump",
+      "B. Pole vault",
+      "C. High jump",
+      "D. Triple jump"
+    ]
+  },
+  "q182": {
+    "question": "The “Giro d’Italia” leader’s jersey is:",
+    "possibleAnswers": [
+      "A. Yellow",
+      "B. Red",
+      "C. Pink",
+      "D. Green"
+    ]
+  },
+  "q183": {
+    "question": "The “Bantamweight” is a class in:",
+    "possibleAnswers": [
+      "A. Boxing/MMA",
+      "B. Weightlifting",
+      "C. Rowing",
+      "D. Judo only"
+    ]
+  },
+  "q184": {
+    "question": "The “NBA Finals MVP” trophy is named after:",
+    "possibleAnswers": [
+      "A. Bill Russell",
+      "B. Larry Bird",
+      "C. Magic Johnson",
+      "D. Michael Jordan"
+    ]
+  },
+  "q185": {
+    "question": "The “Handball” in soccer results in:",
+    "possibleAnswers": [
+      "A. Direct free kick (usually)",
+      "B. Corner kick",
+      "C. Indirect free kick always",
+      "D. Drop ball"
+    ]
+  },
+  "q186": {
+    "question": "The “PBU” (pass breakup) is a stat in:",
+    "possibleAnswers": [
+      "A. MLB",
+      "B. NFL",
+      "C. NBA",
+      "D. NHL"
+    ]
+  },
+  "q187": {
+    "question": "“Synchronized diving” events commonly include:",
+    "possibleAnswers": [
+      "A. 1 m and 3 m springboard, 10 m platform",
+      "B. Only 10 m platform",
+      "C. Only 3 m springboard",
+      "D. 5 m platform only"
+    ]
+  },
+  "q188": {
+    "question": "The “Hop, step, and jump” describes:",
+    "possibleAnswers": [
+      "A. Triple jump",
+      "B. Long jump",
+      "C. High jump",
+      "D. Hurdles"
+    ]
+  },
+  "q189": {
+    "question": "In badminton, a “rally point” system means:",
+    "possibleAnswers": [
+      "A. Only server scores",
+      "B. Either side can score each rally",
+      "C. Only receiver scores",
+      "D. Only at game point"
+    ]
+  },
+  "q190": {
+    "question": "In soccer, the “treble” refers to:",
+    "possibleAnswers": [
+      "A. Three wins in a row",
+      "B. Winning league, main domestic cup, and continental title in one season",
+      "C. Three hat-tricks",
+      "D. Three clean sheets"
+    ]
+  },
+  "q191": {
+    "question": "The “Twenty20” World Cup in cricket is organized by:",
+    "possibleAnswers": [
+      "A. ICC",
+      "B. FIFA",
+      "C. IOC",
+      "D. IRB"
+    ]
+  },
+  "q192": {
+    "question": "The “No. 9” in rugby union is the:",
+    "possibleAnswers": [
+      "A. Fly-half",
+      "B. Scrum-half",
+      "C. Hooker",
+      "D. No. 8"
+    ]
+  },
+  "q193": {
+    "question": "The “Olympic Torch” is traditionally lit in:",
+    "possibleAnswers": [
+      "A. Paris",
+      "B. Olympia, Greece",
+      "C. Athens",
+      "D. Rome"
+    ]
+  },
+  "q194": {
+    "question": "The “Pogba” brothers are associated with:",
+    "possibleAnswers": [
+      "A. Rugby",
+      "B. Football (soccer)",
+      "C. Basketball",
+      "D. Handball only"
+    ]
+  },
+  "q195": {
+    "question": "The “Break point” in tennis occurs when:",
+    "possibleAnswers": [
+      "A. Server can win game",
+      "B. Receiver can win game on next point",
+      "C. It’s deuce",
+      "D. Tie-break starts"
+    ]
+  },
+  "q196": {
+    "question": "The “Varsity Match” in rugby union features:",
+    "possibleAnswers": [
+      "A. Oxford vs Cambridge",
+      "B. Harvard vs Yale",
+      "C. St Andrews vs Edinburgh",
+      "D. UCT vs Wits"
+    ]
+  },
+  "q197": {
+    "question": "In chess boxing, competitors alternate between chess and:",
+    "possibleAnswers": [
+      "A. Judo",
+      "B. Boxing",
+      "C. Wrestling",
+      "D. Fencing"
+    ]
+  },
+  "q198": {
+    "question": "The “Penalty corner” is a set play in:",
+    "possibleAnswers": [
+      "A. Ice hockey",
+      "B. Field hockey",
+      "C. Water polo",
+      "D. Handball"
+    ]
+  },
+  "q199": {
+    "question": "The “Ball-and-socket” reference is most relevant to which sport’s anatomy coaching?",
+    "possibleAnswers": [
+      "A. Baseball pitching shoulder",
+      "B. Soccer ankle",
+      "C. Tennis wrist",
+      "D. Cycling knee"
+    ]
+  },
+  "q200": {
+    "question": "The “Old Trafford” that hosts cricket is home to:",
+    "possibleAnswers": [
+      "A. Lancashire",
+      "B. Yorkshire",
+      "C. Surrey",
+      "D. Middlesex"
+    ]
+  }
+}

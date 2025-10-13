@@ -10,6 +10,9 @@ class QuizTakerPage extends StatefulWidget {
   final String examType;
   final String level;
   final List<Question>? preloadedQuestions;
+  final int? questionCount;
+  final String? triviaCategory;
+  final bool randomizeQuestions;
 
   const QuizTakerPage({
     super.key,
@@ -17,6 +20,9 @@ class QuizTakerPage extends StatefulWidget {
     required this.examType,
     required this.level,
     this.preloadedQuestions,
+    this.questionCount,
+    this.triviaCategory,
+    this.randomizeQuestions = false,
   });
 
   @override
@@ -81,23 +87,54 @@ class _QuizTakerPageState extends State<QuizTakerPage>
       if (widget.preloadedQuestions != null) {
         questions = widget.preloadedQuestions!;
       } else {
+        // Map display name to Firestore field name
+        final subjectEnum = _mapStringToSubject(widget.subject);
+        final examTypeEnum = _mapStringToExamType(widget.examType);
+        
+        debugPrint('🎯 QuizTaker: Loading questions for subject=${subjectEnum.name}, examType=${examTypeEnum.name}, level=${widget.level}, triviaCategory=${widget.triviaCategory}');
+        
         questions = await _questionService.getQuestionsByFilters(
-          subject: widget.subject,
-          examType: widget.examType,
+          subject: subjectEnum,
+          examType: examTypeEnum,
           level: widget.level,
+          triviaCategory: widget.triviaCategory,
         ).timeout(
-          const Duration(seconds: 5),
-          onTimeout: () => <Question>[],
+          const Duration(seconds: 30),
+          onTimeout: () {
+            debugPrint('⏰ QuizTaker: Timeout loading questions after 30 seconds');
+            return <Question>[];
+          },
         );
+        
+        debugPrint('📊 QuizTaker: Loaded ${questions.length} questions');
+        
+        if (questions.isEmpty) {
+          debugPrint('⚠️ QuizTaker: NO QUESTIONS LOADED! Check:');
+          debugPrint('   - Firestore rules allow reading questions');
+          debugPrint('   - User is authenticated');
+          debugPrint('   - Questions exist for subject=${subjectEnum.name}, examType=${examTypeEnum.name}, triviaCategory=${widget.triviaCategory}');
+        }
       }
       
-      // Shuffle questions for randomization
-      questions.shuffle();
-      
-      // Limit to 20 questions for better user experience
-      if (questions.length > 20) {
-        questions = questions.take(20).toList();
+      // Shuffle questions for randomization (only if enabled)
+      if (widget.randomizeQuestions) {
+        questions.shuffle();
       }
+      
+      // Limit to specified question count
+      // Special rule: Trivia is always limited to 20 questions
+      int maxQuestions;
+      if (widget.examType.toLowerCase() == 'trivia') {
+        maxQuestions = widget.questionCount ?? 20; // Trivia default: 20 questions
+      } else {
+        maxQuestions = widget.questionCount ?? (questions.length > 50 ? 50 : questions.length);
+      }
+      
+      if (questions.length > maxQuestions) {
+        questions = questions.take(maxQuestions).toList();
+      }
+      
+      debugPrint('📊 QuizTaker: Final question count: ${questions.length} (max: $maxQuestions for ${widget.examType})');
       
       // If no questions loaded, create a fallback or just continue silently
       if (questions.isNotEmpty) {
@@ -107,7 +144,7 @@ class _QuizTakerPageState extends State<QuizTakerPage>
       
     } catch (e) {
       // Silent fallback - don't show error dialog to user
-      print('Quiz questions loading error (handled gracefully): $e');
+      debugPrint('Quiz questions loading error (handled gracefully): $e');
       setState(() {
         questions = [];
       });
@@ -186,7 +223,22 @@ class _QuizTakerPageState extends State<QuizTakerPage>
     for (int i = 0; i < questions.length; i++) {
       final question = questions[i];
       final userAnswer = userAnswers[i] ?? '';
-      final isCorrect = userAnswer == question.correctAnswer;
+      
+      // Extract answer letter from full option text (e.g., "E. 6th day" -> "E")
+      String userAnswerLetter = userAnswer;
+      if (userAnswer.contains('.')) {
+        userAnswerLetter = userAnswer.split('.')[0].trim();
+      }
+      
+      // Also handle if correctAnswer has the full text
+      String correctAnswerLetter = question.correctAnswer;
+      if (correctAnswerLetter.contains('.')) {
+        correctAnswerLetter = correctAnswerLetter.split('.')[0].trim();
+      }
+      
+      final isCorrect = userAnswerLetter == correctAnswerLetter;
+      
+      debugPrint('🎯 Quiz Result: Q${i+1} - User: "$userAnswerLetter" vs Correct: "$correctAnswerLetter" = ${isCorrect ? "✅" : "❌"}');
       
       if (isCorrect) correctAnswers++;
       
@@ -211,6 +263,7 @@ class _QuizTakerPageState extends State<QuizTakerPage>
       answers: quizAnswers,
       startTime: quizStartTime!,
       endTime: quizEndTime!,
+      triviaCategory: widget.triviaCategory,
     );
     
     // Navigate to results
@@ -345,7 +398,7 @@ class _QuizTakerPageState extends State<QuizTakerPage>
           backgroundColor: Colors.white,
           elevation: 0,
           leading: IconButton(
-            icon: Icon(Icons.arrow_back, color: const Color(0xFF1A1E3F)),
+            icon: const Icon(Icons.arrow_back, color: Color(0xFF1A1E3F)),
             onPressed: () => Navigator.pop(context),
           ),
         ),
@@ -397,10 +450,12 @@ class _QuizTakerPageState extends State<QuizTakerPage>
     final currentQuestion = questions[currentQuestionIndex];
     final progress = (currentQuestionIndex + 1) / questions.length;
 
-    return WillPopScope(
-      onWillPop: () async {
-        _exitQuiz();
-        return false;
+    return PopScope(
+      canPop: false,
+      onPopInvokedWithResult: (bool didPop, dynamic result) {
+        if (!didPop) {
+          _exitQuiz();
+        }
       },
       child: Scaffold(
         backgroundColor: const Color(0xFFF8FAFE),
@@ -409,10 +464,10 @@ class _QuizTakerPageState extends State<QuizTakerPage>
             children: [
               // Header with progress
               Container(
-                padding: EdgeInsets.all(isMobile ? 16 : 24),
-                decoration: BoxDecoration(
+                padding: EdgeInsets.all(isMobile ? 12 : 19), // Reduced by 20% (16→12.8≈12, 24→19.2≈19)
+                decoration: const BoxDecoration(
                   color: Colors.white,
-                  boxShadow: const [
+                  boxShadow: [
                     BoxShadow(
                       color: Colors.black12,
                       blurRadius: 4,
@@ -427,14 +482,14 @@ class _QuizTakerPageState extends State<QuizTakerPage>
                       children: [
                         IconButton(
                           onPressed: _exitQuiz,
-                          icon: Icon(Icons.close, color: const Color(0xFF1A1E3F)),
+                          icon: const Icon(Icons.close, color: Color(0xFF1A1E3F)),
                         ),
                         Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Text(
-                                '${widget.subject} Quiz',
+                                widget.triviaCategory ?? '${widget.subject} Quiz',
                                 style: GoogleFonts.playfairDisplay(
                                   fontSize: isMobile ? 16 : 18,
                                   fontWeight: FontWeight.bold,
@@ -454,7 +509,7 @@ class _QuizTakerPageState extends State<QuizTakerPage>
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                           decoration: BoxDecoration(
-                            color: const Color(0xFFD62828).withOpacity(0.1),
+                            color: const Color(0xFFD62828).withValues(alpha: 0.1),
                             borderRadius: BorderRadius.circular(20),
                           ),
                           child: Text(
@@ -486,27 +541,34 @@ class _QuizTakerPageState extends State<QuizTakerPage>
               Expanded(
                 child: SingleChildScrollView(
                   padding: EdgeInsets.all(isMobile ? 16 : 24),
-                  child: AnimatedBuilder(
-                    animation: _slideAnimation,
-                    builder: (context, child) {
-                      return Transform.translate(
-                        offset: Offset(_slideAnimation.value * 300, 0),
-                        child: FadeTransition(
-                          opacity: _fadeAnimation,
-                          child: _buildQuestionCard(currentQuestion, isMobile),
-                        ),
-                      );
-                    },
+                  child: Center(
+                    child: ConstrainedBox(
+                      constraints: BoxConstraints(
+                        maxWidth: isMobile ? double.infinity : 800, // 40% width reduction for desktop
+                      ),
+                      child: AnimatedBuilder(
+                        animation: _slideAnimation,
+                        builder: (context, child) {
+                          return Transform.translate(
+                            offset: Offset(_slideAnimation.value * 300, 0),
+                            child: FadeTransition(
+                              opacity: _fadeAnimation,
+                              child: _buildQuestionCard(currentQuestion, isMobile),
+                            ),
+                          );
+                        },
+                      ),
+                    ),
                   ),
                 ),
               ),
 
               // Navigation buttons
               Container(
-                padding: EdgeInsets.all(isMobile ? 16 : 24),
-                decoration: BoxDecoration(
+                padding: EdgeInsets.all(isMobile ? 12 : 19), // Reduced by 20% (16→12.8≈12, 24→19.2≈19)
+                decoration: const BoxDecoration(
                   color: Colors.white,
-                  boxShadow: const [
+                  boxShadow: [
                     BoxShadow(
                       color: Colors.black12,
                       blurRadius: 4,
@@ -569,6 +631,7 @@ class _QuizTakerPageState extends State<QuizTakerPage>
     return Card(
       elevation: 4,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      color: const Color(0xFF1A1E3F), // Uriel blue background
       child: Padding(
         padding: EdgeInsets.all(isMobile ? 20 : 24),
         child: Column(
@@ -580,7 +643,7 @@ class _QuizTakerPageState extends State<QuizTakerPage>
               style: GoogleFonts.playfairDisplay(
                 fontSize: isMobile ? 18 : 20,
                 fontWeight: FontWeight.w600,
-                color: const Color(0xFF1A1E3F),
+                color: Colors.white, // White text
                 height: 1.4,
               ),
             ),
@@ -609,17 +672,17 @@ class _QuizTakerPageState extends State<QuizTakerPage>
                                 ? Colors.red
                                 : isSelected 
                                     ? const Color(0xFFD62828) 
-                                    : Colors.grey[300]!,
+                                    : Colors.white.withValues(alpha: 0.3),
                         width: isSelected || showCorrect || showIncorrect ? 2 : 1,
                       ),
                       borderRadius: BorderRadius.circular(12),
                       color: showCorrect 
-                          ? Colors.green.withOpacity(0.1)
+                          ? Colors.green.withValues(alpha: 0.2)
                           : showIncorrect 
-                              ? Colors.red.withOpacity(0.1)
+                              ? Colors.red.withValues(alpha: 0.2)
                               : isSelected 
-                                  ? const Color(0xFFD62828).withOpacity(0.1) 
-                                  : Colors.white,
+                                  ? const Color(0xFFD62828) // Uriel red for selected
+                                  : Colors.white.withValues(alpha: 0.9), // White with slight transparency
                     ),
                     child: Row(
                       children: [
@@ -634,19 +697,19 @@ class _QuizTakerPageState extends State<QuizTakerPage>
                                   : showIncorrect 
                                       ? Colors.red
                                       : isSelected 
-                                          ? const Color(0xFFD62828) 
+                                          ? Colors.white 
                                           : Colors.grey[400]!,
                               width: 2,
                             ),
                             color: isSelected || showCorrect 
-                                ? (showCorrect ? Colors.green : const Color(0xFFD62828))
+                                ? (showCorrect ? Colors.green : Colors.white)
                                 : Colors.white,
                           ),
                           child: isSelected || showCorrect 
                               ? Icon(
                                   showCorrect ? Icons.check : Icons.circle,
                                   size: 12,
-                                  color: Colors.white,
+                                  color: showCorrect ? Colors.white : const Color(0xFFD62828),
                                 )
                               : null,
                         ),
@@ -656,7 +719,7 @@ class _QuizTakerPageState extends State<QuizTakerPage>
                             option,
                             style: GoogleFonts.montserrat(
                               fontSize: isMobile ? 14 : 16,
-                              color: const Color(0xFF1A1E3F),
+                              color: isSelected ? Colors.white : const Color(0xFF1A1E3F), // White text when selected
                               fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
                             ),
                           ),
@@ -679,9 +742,9 @@ class _QuizTakerPageState extends State<QuizTakerPage>
               Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color: Colors.blue.withOpacity(0.1),
+                  color: Colors.blue.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: Colors.blue.withOpacity(0.3)),
+                  border: Border.all(color: Colors.blue.withValues(alpha: 0.3)),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -714,5 +777,58 @@ class _QuizTakerPageState extends State<QuizTakerPage>
         ),
       ),
     );
+  }
+
+  // Helper methods to map string display names to enums
+  Subject _mapStringToSubject(String subject) {
+    switch (subject.toLowerCase()) {
+      case 'trivia':
+        return Subject.trivia;
+      case 'religious and moral education':
+        return Subject.religiousMoralEducation;
+      case 'mathematics':
+        return Subject.mathematics;
+      case 'english language':
+      case 'english':
+        return Subject.english;
+      case 'science':
+        return Subject.integratedScience;
+      case 'social studies':
+        return Subject.socialStudies;
+      case 'information technology':
+      case 'ict':
+        return Subject.ict;
+      case 'creative arts':
+        return Subject.creativeArts;
+      case 'french':
+        return Subject.french;
+      case 'twi':
+      case 'ga':
+      case 'ewe':
+        return Subject.ghanaianLanguage;
+      default:
+        return Subject.religiousMoralEducation;
+    }
+  }
+
+  ExamType _mapStringToExamType(String examType) {
+    switch (examType.toLowerCase()) {
+      case 'trivia':
+        return ExamType.trivia;
+      case 'bece':
+        return ExamType.bece;
+      case 'wassce':
+        return ExamType.wassce;
+      case 'mock exam':
+      case 'mock':
+        return ExamType.mock;
+      case 'class test':
+      case 'assignment':
+      case 'practice questions':
+      case 'practice':
+        return ExamType.practice;
+      default:
+        return ExamType.bece;
+    }
   }
 }

@@ -1,0 +1,59 @@
+{
+  "course_id": "english_b7",
+  "title": "Uriel English – Basic 7",
+  "description": "NaCCA-aligned, British English digital course with Christian/Ghanaian moral framing, AI feedback, XP system, and Calm Mode.",
+  "version": "1.0.0",
+  "last_updated_utc": "2025-10-12T00:48:24.818721Z",
+  "units": [
+    {
+      "unit_id": "eng_b7_u1",
+      "title": "Communication and You",
+      "file": "uriel_english_b7_unit1.json"
+    },
+    {
+      "unit_id": "eng_b7_u2",
+      "title": "Parts of Speech I: Building Strong Sentences",
+      "file": "uriel_english_b7_unit2.json"
+    },
+    {
+      "unit_id": "eng_b7_u3",
+      "title": "Reading for Meaning I: Stories that Teach",
+      "file": "uriel_english_b7_unit3.json"
+    },
+    {
+      "unit_id": "eng_b7_u4",
+      "title": "Writing for Purpose: Letters, Diaries, and Digital Etiquette",
+      "file": "uriel_english_b7_unit4.json"
+    },
+    {
+      "unit_id": "eng_b7_u5",
+      "title": "Listening & Speaking II: Storytelling, Debate, and Pronunciation",
+      "file": "uriel_english_b7_unit5.json"
+    },
+    {
+      "unit_id": "eng_b7_u6",
+      "title": "Grammar in Action: Tenses & Prepositions",
+      "file": "uriel_english_b7_unit6.json"
+    },
+    {
+      "unit_id": "eng_b7_u7",
+      "title": "Poetry & Expression: Find Your Voice",
+      "file": "uriel_english_b7_unit7.json"
+    },
+    {
+      "unit_id": "eng_b7_u8",
+      "title": "Reading for Meaning II: Longer Texts & Critical Reading",
+      "file": "uriel_english_b7_unit8.json"
+    },
+    {
+      "unit_id": "eng_b7_u9",
+      "title": "Grammar Workshop II: Clauses, Punctuation, and Editing",
+      "file": "uriel_english_b7_unit9.json"
+    },
+    {
+      "unit_id": "eng_b7_u10",
+      "title": "Revision & Assessment (BECE-style Exam)",
+      "file": "uriel_english_b7_unit10.json"
+    }
+  ]
+}

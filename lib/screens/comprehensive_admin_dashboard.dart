@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import '../services/auth_service.dart';
+import 'package:cloud_functions/cloud_functions.dart';
+import '../services/rme_data_import_service.dart';
+import '../utils/web_compatibility.dart';
 import 'admin_question_management.dart';
 import 'user_management_page.dart';
 import 'content_management_page.dart';
@@ -15,7 +17,6 @@ class ComprehensiveAdminDashboard extends StatefulWidget {
 }
 
 class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboard> {
-  final AuthService _authService = AuthService();
   bool _isAuthorized = false;
   bool _isLoading = true;
   
@@ -194,7 +195,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
                 width: 80,
                 height: 80,
                 decoration: BoxDecoration(
-                  color: const Color(0xFFD62828).withOpacity(0.1),
+                  color: const Color(0xFFD62828).withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(40),
                 ),
                 child: const Icon(
@@ -326,19 +327,104 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
         ],
       ),
       // Add floating action button for mobile menu
-      floatingActionButton: isMobileScreen ? FloatingActionButton(
-        backgroundColor: const Color(0xFF1A1E3F),
-        elevation: 8,
-        onPressed: () {
-          setState(() {
-            isSidebarCollapsed = !isSidebarCollapsed;
-          });
+      floatingActionButton: isMobileScreen ? GestureDetector(
+        onLongPress: () {
+          // Show import options
+          showModalBottomSheet(
+            context: context,
+            builder: (context) => Container(
+              padding: const EdgeInsets.all(20),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    'Quick Import',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+                  ListTile(
+                    leading: const Icon(Icons.upload_file, color: Color(0xFFFF9800)),
+                    title: const Text('Import RME Questions'),
+                    subtitle: const Text('1999 BECE - 40 questions'),
+                    onTap: () {
+                      Navigator.of(context).pop();
+                      _importRMEData();
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.admin_panel_settings, color: Color(0xFF2196F3)),
+                    title: const Text('Set Admin Role'),
+                    subtitle: const Text('Grant admin access to users'),
+                    onTap: () {
+                      Navigator.of(context).pop();
+                      _showSetAdminRoleDialog();
+                    },
+                  ),
+                ],
+              ),
+            ),
+          );
         },
-        child: Icon(
-          isSidebarCollapsed ? Icons.menu : Icons.close,
-          color: Colors.white,
+        child: FloatingActionButton(
+          backgroundColor: const Color(0xFF1A1E3F),
+          elevation: 8,
+          onPressed: () {
+            setState(() {
+              isSidebarCollapsed = !isSidebarCollapsed;
+            });
+          },
+          child: Icon(
+            isSidebarCollapsed ? Icons.menu : Icons.close,
+            color: Colors.white,
+          ),
         ),
-      ) : null,
+      ) : PopupMenuButton<String>(
+        onSelected: (value) {
+          if (value == 'import_rme') {
+            _importRMEData();
+          } else if (value == 'set_admin') {
+            _showSetAdminRoleDialog();
+          }
+        },
+        itemBuilder: (context) => [
+          const PopupMenuItem(
+            value: 'import_rme',
+            child: Row(
+              children: [
+                Icon(Icons.upload_file, color: Color(0xFFFF9800)),
+                SizedBox(width: 8),
+                Text('Import RME Questions'),
+              ],
+            ),
+          ),
+          const PopupMenuItem(
+            value: 'set_admin',
+            child: Row(
+              children: [
+                Icon(Icons.admin_panel_settings, color: Color(0xFF2196F3)),
+                SizedBox(width: 8),
+                Text('Set Admin Role'),
+              ],
+            ),
+          ),
+        ],
+        child: FloatingActionButton.extended(
+          backgroundColor: const Color(0xFFFF9800),
+          elevation: 8,
+          onPressed: null, // Handled by PopupMenuButton
+          icon: const Icon(Icons.admin_panel_settings, color: Colors.white),
+          label: Text(
+            'Admin Tools',
+            style: GoogleFonts.montserrat(
+              color: Colors.white,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+        ),
+      ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
@@ -369,7 +455,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             decoration: BoxDecoration(
               border: Border(
-                bottom: BorderSide(color: Colors.white.withOpacity(0.1)),
+                bottom: BorderSide(color: Colors.white.withValues(alpha: 0.1)),
               ),
             ),
             child: Row(
@@ -477,7 +563,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
                 border: Border(
-                  top: BorderSide(color: Colors.white.withOpacity(0.1)),
+                  top: BorderSide(color: Colors.white.withValues(alpha: 0.1)),
                 ),
               ),
               child: Column(
@@ -558,10 +644,10 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
             decoration: BoxDecoration(
-              color: isSelected ? const Color(0xFFD62828).withOpacity(0.15) : null,
+              color: isSelected ? const Color(0xFFD62828).withValues(alpha: 0.15) : null,
               borderRadius: BorderRadius.circular(8),
               border: isSelected 
-                ? Border.all(color: const Color(0xFFD62828).withOpacity(0.3))
+                ? Border.all(color: const Color(0xFFD62828).withValues(alpha: 0.3))
                 : null,
             ),
             child: Row(
@@ -677,7 +763,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 4,
             offset: const Offset(0, 2),
           ),
@@ -714,7 +800,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
                 decoration: BoxDecoration(
                   color: const Color(0xFFF8F9FA),
                   borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: Colors.grey.withOpacity(0.2)),
+                  border: Border.all(color: Colors.grey.withValues(alpha: 0.2)),
                 ),
                 child: TextField(
                   controller: searchController,
@@ -810,7 +896,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1),
                         decoration: BoxDecoration(
-                          color: const Color(0xFFD62828).withOpacity(0.1),
+                          color: const Color(0xFFD62828).withValues(alpha: 0.1),
                           borderRadius: BorderRadius.circular(4),
                         ),
                         child: Text(
@@ -852,7 +938,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
           decoration: BoxDecoration(
             color: const Color(0xFFF8F9FA),
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: Colors.grey.withOpacity(0.2)),
+            border: Border.all(color: Colors.grey.withValues(alpha: 0.2)),
           ),
           child: IconButton(
             onPressed: onTap,
@@ -935,7 +1021,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                     decoration: BoxDecoration(
-                      color: const Color(0xFFD62828).withOpacity(0.1),
+                      color: const Color(0xFFD62828).withValues(alpha: 0.1),
                       borderRadius: BorderRadius.circular(6),
                     ),
                     child: Text(
@@ -963,9 +1049,9 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
           decoration: BoxDecoration(
-            color: const Color(0xFF2ECC71).withOpacity(0.1),
+            color: const Color(0xFF2ECC71).withValues(alpha: 0.1),
             borderRadius: BorderRadius.circular(8),
-            border: Border.all(color: const Color(0xFF2ECC71).withOpacity(0.3)),
+            border: Border.all(color: const Color(0xFF2ECC71).withValues(alpha: 0.3)),
           ),
           child: Row(
             mainAxisSize: MainAxisSize.min,
@@ -1090,12 +1176,12 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 12,
             offset: const Offset(0, 4),
           ),
         ],
-        border: Border.all(color: Colors.grey.withOpacity(0.1)),
+        border: Border.all(color: Colors.grey.withValues(alpha: 0.1)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1105,7 +1191,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
               Container(
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  color: color.withOpacity(0.1),
+                  color: color.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Icon(icon, color: color, size: 20),
@@ -1116,8 +1202,8 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
                   padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                   decoration: BoxDecoration(
                     color: trend == 'up' 
-                      ? const Color(0xFF2ECC71).withOpacity(0.1)
-                      : const Color(0xFFD62828).withOpacity(0.1),
+                      ? const Color(0xFF2ECC71).withValues(alpha: 0.1)
+                      : const Color(0xFFD62828).withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(4),
                   ),
                   child: Row(
@@ -1250,12 +1336,12 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.03),
+            color: Colors.black.withValues(alpha: 0.03),
             blurRadius: 8,
             offset: const Offset(0, 2),
           ),
         ],
-        border: Border.all(color: Colors.grey.withOpacity(0.1)),
+        border: Border.all(color: Colors.grey.withValues(alpha: 0.1)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1356,12 +1442,12 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 12,
             offset: const Offset(0, 4),
           ),
         ],
-        border: Border.all(color: Colors.grey.withOpacity(0.1)),
+        border: Border.all(color: Colors.grey.withValues(alpha: 0.1)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1382,7 +1468,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
                 decoration: BoxDecoration(
                   color: const Color(0xFFF8F9FA),
                   borderRadius: BorderRadius.circular(8),
-                  border: Border.all(color: Colors.grey.withOpacity(0.2)),
+                  border: Border.all(color: Colors.grey.withValues(alpha: 0.2)),
                 ),
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
@@ -1417,10 +1503,10 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.trending_up,
                       size: 48,
-                      color: const Color(0xFF2ECC71),
+                      color: Color(0xFF2ECC71),
                     ),
                     const SizedBox(height: 12),
                     Text(
@@ -1459,12 +1545,12 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 12,
             offset: const Offset(0, 4),
           ),
         ],
-        border: Border.all(color: Colors.grey.withOpacity(0.1)),
+        border: Border.all(color: Colors.grey.withValues(alpha: 0.1)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1496,10 +1582,10 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.grid_view,
                       size: 40,
-                      color: const Color(0xFF3498DB),
+                      color: Color(0xFF3498DB),
                     ),
                     const SizedBox(height: 8),
                     Text(
@@ -1546,12 +1632,12 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 12,
             offset: const Offset(0, 4),
           ),
         ],
-        border: Border.all(color: Colors.grey.withOpacity(0.1)),
+        border: Border.all(color: Colors.grey.withValues(alpha: 0.1)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1670,7 +1756,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
             width: 32,
             height: 32,
             decoration: BoxDecoration(
-              color: iconColor.withOpacity(0.1),
+              color: iconColor.withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(8),
             ),
             child: Icon(icon, color: iconColor, size: 16),
@@ -1719,12 +1805,12 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 12,
             offset: const Offset(0, 4),
           ),
         ],
-        border: Border.all(color: Colors.grey.withOpacity(0.1)),
+        border: Border.all(color: Colors.grey.withValues(alpha: 0.1)),
       ),
       child: Center(
         child: Column(
@@ -1733,7 +1819,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
             Icon(
               _getModuleIcon(module),
               size: 64,
-              color: const Color(0xFF1A1E3F).withOpacity(0.3),
+              color: const Color(0xFF1A1E3F).withValues(alpha: 0.3),
             ),
             const SizedBox(height: 16),
             Text(
@@ -1756,7 +1842,7 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               decoration: BoxDecoration(
-                color: const Color(0xFFD62828).withOpacity(0.1),
+                color: const Color(0xFFD62828).withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(8),
               ),
               child: Text(
@@ -1814,5 +1900,273 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
       case 'settings': return 'System Settings';
       default: return 'Dashboard';
     }
+  }
+
+  // Import RME Data Method
+  Future<void> _importRMEData() async {
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(
+          'Import RME Data',
+          style: GoogleFonts.montserrat(
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+        content: Text(
+          'This will import 40 RME questions from the 1999 BECE exam into the database. Continue?',
+          style: GoogleFonts.montserrat(),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(false),
+            child: const Text('Cancel'),
+          ),
+          ElevatedButton(
+            onPressed: () => Navigator.of(context).pop(true),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color(0xFFFF9800),
+            ),
+            child: const Text('Import'),
+          ),
+        ],
+      ),
+    );
+
+    if (confirmed == true) {
+      showDialog(
+        context: context,
+        barrierDismissible: false,
+        builder: (context) => AlertDialog(
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const CircularProgressIndicator(),
+              const SizedBox(height: 16),
+              Text(
+                'Importing RME questions...',
+                style: GoogleFonts.montserrat(),
+              ),
+            ],
+          ),
+        ),
+      );
+
+      try {
+        final result = await RMEDataImportService.importRMEQuestions();
+        
+        Navigator.of(context).pop(); // Close loading dialog
+        
+        if (result['success'] == true) {
+          showDialog(
+            context: context,
+            builder: (context) => AlertDialog(
+              title: const Row(
+                children: [
+                  Icon(Icons.check_circle, color: Colors.green),
+                  SizedBox(width: 8),
+                  Text('Success'),
+                ],
+              ),
+              content: Text(
+                result['message'] ?? 'Successfully imported RME questions.',
+                style: GoogleFonts.montserrat(),
+              ),
+              actions: [
+                ElevatedButton(
+                  onPressed: () => Navigator.of(context).pop(),
+                  child: const Text('OK'),
+                ),
+              ],
+            ),
+          );
+        } else {
+          // Show error message from the result
+          showDialog(
+            context: context,
+            builder: (context) => AlertDialog(
+              title: const Row(
+                children: [
+                  Icon(Icons.error, color: Colors.red),
+                  SizedBox(width: 8),
+                  Text('Error'),
+                ],
+              ),
+              content: Text(
+                result['message'] ?? 'Failed to import RME questions.',
+                style: GoogleFonts.montserrat(),
+              ),
+              actions: [
+                ElevatedButton(
+                  onPressed: () => Navigator.of(context).pop(),
+                  child: const Text('OK'),
+                ),
+              ],
+            ),
+          );
+        }
+      } catch (e) {
+        Navigator.of(context).pop(); // Close loading dialog
+        
+        showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+            title: const Row(
+              children: [
+                Icon(Icons.error, color: Colors.red),
+                SizedBox(width: 8),
+                Text('Error'),
+              ],
+            ),
+            content: Text(
+              'Failed to import RME questions: $e',
+              style: GoogleFonts.montserrat(),
+            ),
+            actions: [
+              ElevatedButton(
+                onPressed: () => Navigator.of(context).pop(),
+                child: const Text('OK'),
+              ),
+            ],
+          ),
+        );
+      }
+    }
+  }
+
+  // Set Admin Role Method
+  Future<void> _showSetAdminRoleDialog() async {
+    final TextEditingController emailController = TextEditingController();
+    bool isLoading = false;
+
+    showDialog(
+      context: context,
+      builder: (context) => StatefulBuilder(
+        builder: (context, setState) => AlertDialog(
+          title: Row(
+            children: [
+              const Icon(Icons.admin_panel_settings, color: Colors.blue),
+              const SizedBox(width: 8),
+              Text(
+                'Set Admin Role',
+                style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
+              ),
+            ],
+          ),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Enter the email address that should have admin access:',
+                style: GoogleFonts.montserrat(),
+              ),
+              const SizedBox(height: 16),
+              TextField(
+                controller: emailController,
+                decoration: const InputDecoration(
+                  labelText: 'Email Address',
+                  hintText: 'studywithuriel@gmail.com',
+                  border: OutlineInputBorder(),
+                  prefixIcon: Icon(Icons.email),
+                ),
+                keyboardType: TextInputType.emailAddress,
+              ),
+              const SizedBox(height: 16),
+              Container(
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: Colors.blue.shade50,
+                  borderRadius: BorderRadius.circular(8),
+                  border: Border.all(color: Colors.blue.shade200),
+                ),
+                child: Text(
+                  'Note: This will grant super admin privileges. The user will need to sign out and sign in again to access admin features.',
+                  style: GoogleFonts.montserrat(
+                    fontSize: 12,
+                    color: Colors.blue.shade700,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          actions: [
+            TextButton(
+              onPressed: isLoading ? null : () => Navigator.of(context).pop(),
+              child: const Text('Cancel'),
+            ),
+            ElevatedButton(
+              onPressed: isLoading ? null : () async {
+                if (emailController.text.trim().isEmpty) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text('Please enter an email address')),
+                  );
+                  return;
+                }
+
+                setState(() => isLoading = true);
+
+                try {
+                  final functions = FirebaseFunctions.instanceFor(region: 'us-central1');
+                  final callable = functions.httpsCallable('setAdminRole');
+                  
+                  final result = await callable.call({
+                    'email': emailController.text.trim(),
+                  });
+
+                  Navigator.of(context).pop();
+                  
+                  // Safely handle the response data to avoid Int64 issues
+                  final responseData = safeDocumentData(Map<String, dynamic>.from(result.data));
+                  final message = responseData['message']?.toString() ?? 'Admin role set successfully!\n\nThe user should sign out and sign in again to access admin features.';
+                  
+                  showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                      title: const Row(
+                        children: [
+                          Icon(Icons.check_circle, color: Colors.green),
+                          SizedBox(width: 8),
+                          Text('Success'),
+                        ],
+                      ),
+                      content: Text(
+                        message,
+                        style: GoogleFonts.montserrat(),
+                      ),
+                      actions: [
+                        ElevatedButton(
+                          onPressed: () => Navigator.of(context).pop(),
+                          child: const Text('OK'),
+                        ),
+                      ],
+                    ),
+                  );
+
+                } catch (e) {
+                  setState(() => isLoading = false);
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text('Error: ${e.toString()}'),
+                      backgroundColor: Colors.red,
+                    ),
+                  );
+                }
+              },
+              child: isLoading
+                  ? const SizedBox(
+                      width: 20,
+                      height: 20,
+                      child: CircularProgressIndicator(
+                        strokeWidth: 2,
+                        valueColor: AlwaysStoppedAnimation(Colors.white),
+                      ),
+                    )
+                  : const Text('Set Admin Role'),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

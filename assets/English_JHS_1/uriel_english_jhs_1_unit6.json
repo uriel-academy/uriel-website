@@ -1,0 +1,490 @@
+{
+  "course_id": "english_b7",
+  "version": "1.0.0",
+  "last_updated_utc": "2025-10-12T00:23:15.825940Z",
+  "unit": {
+    "unit_id": "eng_b7_u6",
+    "title": "Grammar in Action: Tenses & Prepositions",
+    "overview": "Learners consolidate control of simple tenses and common prepositions in real contexts. Lessons are interactive and short to reduce fatigue, with AI correction activities, XP hooks, and British English usage. Moral focus: speak and write truthfully and clearly.",
+    "estimated_duration_min": 200,
+    "competencies": [
+      "Use simple present, past, and future accurately in everyday contexts.",
+      "Recognise common time expressions that signal tense (every day, yesterday, tomorrow).",
+      "Use common prepositions of time and place (at, on, in; at school, on Monday, in Accra).",
+      "Edit short paragraphs to fix tense shifts and preposition errors.",
+      "Write a cohesive 6–8 sentence paragraph using correct tenses and prepositions."
+    ],
+    "values_morals": [
+      "Consistency and clarity reflect integrity.",
+      "Respect your reader: choose precise time/place expressions."
+    ],
+    "xp_total": 180,
+    "streak_bonus_xp": 5,
+    "parent_report_hooks": [
+      "unit_completion_rate",
+      "quiz_accuracy",
+      "ai_task_completions",
+      "writing_submission_status",
+      "xp_earned"
+    ],
+    "lessons": [
+      {
+        "lesson_id": "eng_b7_u6_l1",
+        "title": "Simple Tenses Review (Present–Past–Future)",
+        "estimated_time_min": 35,
+        "xp_reward": 35,
+        "objectives": [
+          "Identify and use simple present, past, and future with key time markers.",
+          "Avoid common errors in British English spelling (e.g., travelled, labelled)."
+        ],
+        "vocabulary": [
+          {
+            "word": "simple present",
+            "level": "core",
+            "definition": "Habit/fact: I walk; she walks."
+          },
+          {
+            "word": "simple past",
+            "level": "core",
+            "definition": "Finished action: I walked."
+          },
+          {
+            "word": "simple future",
+            "level": "core",
+            "definition": "Future action: I will walk."
+          }
+        ],
+        "moral_link": "Be consistent—do not switch tenses without reason.",
+        "content_blocks": [
+          {
+            "type": "text",
+            "body": "Signal words: every day/usually (present), yesterday/last week (past), tomorrow/next year (future)."
+          },
+          {
+            "type": "audio",
+            "src": "/audio/eng_b7/u6/tenses_overview.mp3",
+            "caption": "Tense forms with examples."
+          }
+        ],
+        "interactive": {
+          "fill_blanks": {
+            "prompt": "Choose the correct tense using signal words.",
+            "items": [
+              {
+                "text": "Every Monday, Ama __ (visit/visited/will visit) the library.",
+                "answer": "visit"
+              },
+              {
+                "text": "Yesterday, the class __ (clean/cleaned/will clean) the lab.",
+                "answer": "cleaned"
+              },
+              {
+                "text": "Tomorrow, we __ (present/presented/will present) our posters.",
+                "answer": "will present"
+              }
+            ],
+            "xp": 10
+          },
+          "ai_task": {
+            "prompt": "Rewrite these three sentences so their tenses match a timeline (past → present → future).",
+            "expected_focus": [
+              "tense control",
+              "signal words"
+            ],
+            "xp": 10
+          }
+        },
+        "assets": [
+          "/audio/eng_b7/u6/tenses_overview.mp3"
+        ]
+      },
+      {
+        "lesson_id": "eng_b7_u6_l2",
+        "title": "Prepositions of Time (at/on/in)",
+        "estimated_time_min": 35,
+        "xp_reward": 35,
+        "objectives": [
+          "Use at/on/in with times, days/dates, and months/years correctly.",
+          "Apply British date formats (e.g., 12 October 2025)."
+        ],
+        "vocabulary": [
+          {
+            "word": "preposition",
+            "level": "core",
+            "definition": "A word linking a noun to another word (time, place, etc.)."
+          }
+        ],
+        "moral_link": "Precision shows respect for your reader’s time.",
+        "content_blocks": [
+          {
+            "type": "image",
+            "src": "/images/eng_b7/u6/at_on_in_time.svg",
+            "caption": "Time prepositions: at 7:30, on Monday, in October."
+          },
+          {
+            "type": "text",
+            "body": "at + clock time / holiday period (at Christmas); on + day/date; in + month/year/season."
+          }
+        ],
+        "interactive": {
+          "drag_drop": {
+            "prompt": "Place each phrase under at, on, or in.",
+            "pairs": [
+              {
+                "phrase": "7:15 a.m.",
+                "group": "at"
+              },
+              {
+                "phrase": "Monday",
+                "group": "on"
+              },
+              {
+                "phrase": "12 October",
+                "group": "on"
+              },
+              {
+                "phrase": "October",
+                "group": "in"
+              },
+              {
+                "phrase": "2025",
+                "group": "in"
+              }
+            ],
+            "xp": 10
+          },
+          "quick_check": [
+            {
+              "q": "Choose the correct option: We meet __ Friday.",
+              "options": [
+                "at",
+                "on",
+                "in",
+                "by"
+              ],
+              "answer_index": 1,
+              "xp": 5
+            }
+          ]
+        },
+        "assets": [
+          "/images/eng_b7/u6/at_on_in_time.svg"
+        ]
+      },
+      {
+        "lesson_id": "eng_b7_u6_l3",
+        "title": "Prepositions of Place (at/in/on)",
+        "estimated_time_min": 35,
+        "xp_reward": 35,
+        "objectives": [
+          "Use at/in/on accurately for place (at school, in Accra, on the table).",
+          "Recognise fixed phrases common in British usage."
+        ],
+        "vocabulary": [
+          {
+            "word": "locale",
+            "level": "adv",
+            "definition": "A place where something happens."
+          }
+        ],
+        "moral_link": "Be clear about place to avoid confusion.",
+        "content_blocks": [
+          {
+            "type": "image",
+            "src": "/images/eng_b7/u6/at_in_on_place.svg",
+            "caption": "Place prepositions: at a point, in an area/volume, on a surface."
+          },
+          {
+            "type": "text",
+            "body": "at school/home/work; in Accra/Ghana/a car; on the bus/table/floor; on TV/radio (idiomatic)."
+          }
+        ],
+        "interactive": {
+          "vocab_in_context": [
+            {
+              "q": "We arrived __ the station early.",
+              "options": [
+                "at",
+                "in",
+                "on",
+                "to"
+              ],
+              "answer_index": 0,
+              "xp": 5
+            },
+            {
+              "q": "Yaw lives __ Accra but studies __ Kumasi.",
+              "options": [
+                "on / at",
+                "in / in",
+                "at / on",
+                "to / in"
+              ],
+              "answer_index": 1,
+              "xp": 5
+            }
+          ],
+          "ai_task": {
+            "prompt": "Write three sentences about your school using at/in/on correctly (e.g., 'We eat at the canteen').",
+            "expected_focus": [
+              "preposition choice"
+            ],
+            "xp": 10
+          }
+        },
+        "assets": [
+          "/images/eng_b7/u6/at_in_on_place.svg"
+        ]
+      },
+      {
+        "lesson_id": "eng_b7_u6_l4",
+        "title": "Edit for Tense Shifts & Prepositions",
+        "estimated_time_min": 45,
+        "xp_reward": 40,
+        "objectives": [
+          "Identify and correct tense shifts in a short paragraph.",
+          "Fix preposition errors to improve clarity and correctness."
+        ],
+        "vocabulary": [
+          {
+            "word": "tense shift",
+            "level": "adv",
+            "definition": "Changing tense without a logical reason."
+          },
+          {
+            "word": "consistency",
+            "level": "adv",
+            "definition": "Keeping to the same tense or pattern unless change is needed."
+          }
+        ],
+        "moral_link": "Consistency reflects integrity—keep your story steady.",
+        "content_blocks": [
+          {
+            "type": "text",
+            "body": "Keep the timeline steady unless you signal a change with clear time words."
+          }
+        ],
+        "interactive": {
+          "error_hunt": {
+            "text": "Yesterday we clean the classroom and we will place the chairs on the corner. Then Ama says she will help now.",
+            "tasks": [
+              "Fix tense to simple past for yesterday events.",
+              "Correct prepositions of place ('in/on/at')."
+            ],
+            "solution_hint": "Use past forms: cleaned, said; on → in the corner; will help now → helped.",
+            "xp": 15
+          },
+          "ai_task": {
+            "prompt": "Paste a short paragraph from your own writing. Ask the AI to flag tense shifts and preposition issues, then rewrite it clearly.",
+            "expected_focus": [
+              "self‑editing",
+              "clarity"
+            ],
+            "xp": 15
+          }
+        }
+      },
+      {
+        "lesson_id": "eng_b7_u6_l5",
+        "title": "Apply It: A Clear Narrative Paragraph",
+        "estimated_time_min": 50,
+        "xp_reward": 35,
+        "objectives": [
+          "Write a 6–8 sentence narrative paragraph with correct tenses and prepositions.",
+          "Use time markers and place phrases to guide the reader."
+        ],
+        "vocabulary": [
+          {
+            "word": "timeline",
+            "level": "core",
+            "definition": "The order in which events happen."
+          },
+          {
+            "word": "marker",
+            "level": "core",
+            "definition": "A word that signals time or place (yesterday, at school)."
+          }
+        ],
+        "moral_link": "Be truthful and specific in your storytelling.",
+        "content_blocks": [
+          {
+            "type": "image",
+            "src": "/images/eng_b7/u6/timeline_bar.svg",
+            "caption": "Timeline bar with time markers."
+          },
+          {
+            "type": "tip",
+            "body": "Underline time markers and circle prepositions as you draft."
+          }
+        ],
+        "interactive": {
+          "guided_writing": {
+            "scaffold": [
+              "Opening with time and place (e.g., Yesterday at the library, …)",
+              "Event 1 (simple past)",
+              "Event 2 with place phrase (at/in/on)",
+              "Event 3 with a reason or result",
+              "Closing sentence"
+            ],
+            "submission_type": "text",
+            "ai_feedback": [
+              "Tense control",
+              "Preposition accuracy",
+              "Cohesion and clarity",
+              "British spelling"
+            ],
+            "xp": 20
+          }
+        },
+        "assets": [
+          "/images/eng_b7/u6/timeline_bar.svg"
+        ]
+      }
+    ],
+    "assessments": {
+      "quiz_mcq": [
+        {
+          "id": "u6_q1",
+          "q": "Choose the correct tense: 'Every day, the prefects __ the hall.'",
+          "options": [
+            "clean",
+            "cleaned",
+            "will clean",
+            "were cleaning"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "u6_q2",
+          "q": "Pick the correct option: 'We arrived __ 7:30 a.m.'",
+          "options": [
+            "on",
+            "at",
+            "in",
+            "by"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u6_q3",
+          "q": "Select the correct preposition: 'Yaw lives __ Kumasi.'",
+          "options": [
+            "at",
+            "on",
+            "in",
+            "into"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "u6_q4",
+          "q": "Which sentence avoids an unnecessary tense shift?",
+          "options": [
+            "We cleaned the lab and we present the report.",
+            "We cleaned the lab and presented the report."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u6_q5",
+          "q": "British spelling is correct in:",
+          "options": [
+            "traveled, labeled",
+            "travelling, labelled",
+            "center, color",
+            "organize, realize"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u6_q6",
+          "q": "Which time marker signals the future?",
+          "options": [
+            "yesterday",
+            "usually",
+            "tomorrow",
+            "every day"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "u6_q7",
+          "q": "Choose the correct phrase:",
+          "options": [
+            "on the bus",
+            "in the bus (UK idiom)",
+            "at the bus (waiting)",
+            "to the bus"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "u6_q8",
+          "q": "Select the correct date format (British):",
+          "options": [
+            "October 12th, 2025",
+            "12 October 2025",
+            "10/12/25 (US)",
+            "12/10/25 (ambiguous)"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u6_q9",
+          "q": "Which sentence uses place prepositions correctly?",
+          "options": [
+            "Put the books in the table.",
+            "Put the books on the table by the window."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u6_q10",
+          "q": "A good narrative paragraph should include:",
+          "options": [
+            "Random tenses and places",
+            "Clear time markers, correct tenses, and precise places"
+          ],
+          "answer_index": 1
+        }
+      ],
+      "writing_prompt": {
+        "id": "u6_w1",
+        "prompt": "Write a narrative paragraph (6–8 sentences) about preparing for a school event. Include at least four time/place markers and keep tense consistent.",
+        "rubric_ref": "rubric_writing_u6"
+      },
+      "rubrics": {
+        "rubric_writing_u6": {
+          "criteria": [
+            {
+              "name": "Tense Control",
+              "scale": 4,
+              "descriptor": "Consistent simple tenses; changes signalled clearly."
+            },
+            {
+              "name": "Prepositions",
+              "scale": 4,
+              "descriptor": "Accurate at/on/in for time and place; correct idioms."
+            },
+            {
+              "name": "Cohesion & Clarity",
+              "scale": 4,
+              "descriptor": "Logical order with helpful markers."
+            },
+            {
+              "name": "Mechanics (UK)",
+              "scale": 4,
+              "descriptor": "British spelling and punctuation."
+            }
+          ],
+          "proficiency_labels": [
+            "Beginning",
+            "Developing",
+            "Proficient",
+            "Advanced"
+          ]
+        }
+      }
+    }
+  }
+}

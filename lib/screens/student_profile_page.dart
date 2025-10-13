@@ -1,11 +1,7 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:image_picker/image_picker.dart';
-import 'package:firebase_storage/firebase_storage.dart';
-
 class StudentProfilePage extends StatefulWidget {
   const StudentProfilePage({
     Key? key,
@@ -32,8 +28,8 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
   bool _isLoading = false;
   bool _isEditingPassword = false;
   String? _profileImageUrl;
-  File? _selectedImage;
   String _selectedClass = 'JHS Form 1';
+  String? _selectedPresetAvatar; // Track selected preset avatar
   
   final List<String> _classes = [
     'JHS Form 1',
@@ -98,6 +94,7 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
             _schoolController.text = data['school'] ?? '';
             _selectedClass = data['class'] ?? 'JHS Form 1';
             _profileImageUrl = data['profileImageUrl'];
+            _selectedPresetAvatar = data['presetAvatar'];
           });
         } else {
           // Set default values from auth
@@ -129,70 +126,158 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
         });
         
         // Only log the error, don't show error message to user for connectivity issues
-        print('Unable to load user profile data (offline or connection issue): $e');
+        debugPrint('Unable to load user profile data (offline or connection issue): $e');
       }
     }
   }
 
-  Future<void> _pickImage() async {
-    try {
-      final ImagePicker picker = ImagePicker();
-      final XFile? image = await picker.pickImage(
-        source: ImageSource.gallery,
-        maxWidth: 512,
-        maxHeight: 512,
-        imageQuality: 80,
-      );
-      
-      if (image != null) {
-        setState(() {
-          _selectedImage = File(image.path);
-        });
-        await _uploadProfileImage();
-      }
-    } catch (e) {
-      _showErrorSnackBar('Failed to pick image: $e');
-    }
+  Future<void> _showAvatarPicker() async {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text(
+          'Choose Profile Picture',
+          style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
+        ),
+        content: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              // Preset Avatars
+              Text(
+                'Choose from presets:',
+                style: GoogleFonts.montserrat(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 14,
+                ),
+              ),
+              const SizedBox(height: 16),
+              GridView.count(
+                shrinkWrap: true,
+                crossAxisCount: 4,
+                mainAxisSpacing: 12,
+                crossAxisSpacing: 12,
+                children: [
+                  _buildPresetAvatar('assets/profile_pic_1.png'),
+                  _buildPresetAvatar('assets/profile_pic_2.png'),
+                  _buildPresetAvatar('assets/profile_pic_3.png'),
+                  _buildPresetAvatar('assets/profile_pic_4.png'),
+                ],
+              ),
+              const SizedBox(height: 16),
+              // Use Default (Initial)
+              OutlinedButton.icon(
+                onPressed: () {
+                  Navigator.pop(context);
+                  _useDefaultAvatar();
+                },
+                icon: const Icon(Icons.person),
+                label: Text(
+                  'Use Default (Name Initial)',
+                  style: GoogleFonts.montserrat(),
+                ),
+                style: OutlinedButton.styleFrom(
+                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                ),
+              ),
+            ],
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: Text(
+              'Cancel',
+              style: GoogleFonts.montserrat(),
+            ),
+          ),
+        ],
+      ),
+    );
   }
-
-  Future<void> _uploadProfileImage() async {
-    if (_selectedImage == null) return;
+  
+  Widget _buildPresetAvatar(String assetPath) {
+    final isSelected = _selectedPresetAvatar == assetPath;
     
-    setState(() => _isLoading = true);
+    return GestureDetector(
+      onTap: () {
+        Navigator.pop(context);
+        _selectPresetAvatar(assetPath);
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          border: Border.all(
+            color: isSelected ? const Color(0xFFD62828) : Colors.grey[300]!,
+            width: isSelected ? 3 : 2,
+          ),
+        ),
+        child: CircleAvatar(
+          radius: 30,
+          backgroundImage: AssetImage(assetPath),
+        ),
+      ),
+    );
+  }
+  
+  Future<void> _selectPresetAvatar(String assetPath) async {
+    setState(() {
+      _selectedPresetAvatar = assetPath;
+      _profileImageUrl = null;
+    });
     
+    // Save to Firestore
     try {
       final user = FirebaseAuth.instance.currentUser;
-      if (user == null) return;
-      
-      final storageRef = FirebaseStorage.instance
-          .ref()
-          .child('profile_images')
-          .child('${user.uid}.jpg');
-      
-      await storageRef.putFile(_selectedImage!);
-      final downloadUrl = await storageRef.getDownloadURL();
-      
-      // Update Firestore
-      await FirebaseFirestore.instance
-          .collection('users')
-          .doc(user.uid)
-          .update({'profileImageUrl': downloadUrl});
-      
-      // Update Auth profile
-      await user.updatePhotoURL(downloadUrl);
-      
-      setState(() {
-        _profileImageUrl = downloadUrl;
-        _selectedImage = null;
-      });
-      
-      _showSuccessSnackBar('Profile picture updated successfully!');
+      if (user != null) {
+        await FirebaseFirestore.instance
+            .collection('users')
+            .doc(user.uid)
+            .set({
+          'presetAvatar': assetPath,
+          'profileImageUrl': FieldValue.delete(), // Delete custom photo field
+          'updatedAt': FieldValue.serverTimestamp(),
+        }, SetOptions(merge: true));
+        
+        // Clear Auth photo URL since we're using preset
+        await user.updatePhotoURL(null);
+        
+        _showSuccessSnackBar('Profile picture updated!');
+      }
     } catch (e) {
-      _showErrorSnackBar('Failed to upload image: $e');
-    } finally {
-      setState(() => _isLoading = false);
+      _showErrorSnackBar('Failed to update profile picture: $e');
     }
   }
+  
+  Future<void> _useDefaultAvatar() async {
+    setState(() {
+      _selectedPresetAvatar = null;
+      _profileImageUrl = null;
+    });
+    
+    // Save to Firestore
+    try {
+      final user = FirebaseAuth.instance.currentUser;
+      if (user != null) {
+        await FirebaseFirestore.instance
+            .collection('users')
+            .doc(user.uid)
+            .set({
+          'presetAvatar': FieldValue.delete(),
+          'profileImageUrl': FieldValue.delete(),
+          'updatedAt': FieldValue.serverTimestamp(),
+        }, SetOptions(merge: true));
+        
+        await user.updatePhotoURL(null);
+        
+        _showSuccessSnackBar('Using default profile picture!');
+      }
+    } catch (e) {
+      _showErrorSnackBar('Failed to update profile picture: $e');
+    }
+  }
+
+
 
   Future<void> _saveProfile() async {
     if (!_formKey.currentState!.validate()) {
@@ -210,8 +295,8 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
         return;
       }
       
-      print('Saving profile for user: ${user.uid}');
-      print('Data: ${_firstNameController.text}, ${_lastNameController.text}');
+      debugPrint('Saving profile for user: ${user.uid}');
+      debugPrint('Data: ${_firstNameController.text}, ${_lastNameController.text}');
       
       // Update Firestore
       await FirebaseFirestore.instance
@@ -227,17 +312,17 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
         'updatedAt': FieldValue.serverTimestamp(),
       }, SetOptions(merge: true));
       
-      print('Firestore update completed');
+      debugPrint('Firestore update completed');
       
       // Update Auth profile
       await user.updateDisplayName(
         '${_firstNameController.text.trim()} ${_lastNameController.text.trim()}',
       );
       
-      print('Auth profile update completed');
+      debugPrint('Auth profile update completed');
       _showSuccessSnackBar('Profile updated successfully!');
     } catch (e) {
-      print('Error saving profile: $e');
+      debugPrint('Error saving profile: $e');
       _showErrorSnackBar('Failed to update profile: $e');
     } finally {
       setState(() => _isLoading = false);
@@ -305,9 +390,16 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
   void _showSuccessSnackBar(String message) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text(message),
+        content: Text(message, textAlign: TextAlign.center),
         backgroundColor: Colors.green,
         behavior: SnackBarBehavior.floating,
+        margin: EdgeInsets.symmetric(
+          horizontal: MediaQuery.of(context).size.width * 0.35,
+          vertical: MediaQuery.of(context).size.height * 0.4,
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+        ),
       ),
     );
   }
@@ -315,9 +407,16 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
   void _showErrorSnackBar(String message) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text(message),
+        content: Text(message, textAlign: TextAlign.center),
         backgroundColor: Colors.red,
         behavior: SnackBarBehavior.floating,
+        margin: EdgeInsets.symmetric(
+          horizontal: MediaQuery.of(context).size.width * 0.35,
+          vertical: MediaQuery.of(context).size.height * 0.4,
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12),
+        ),
       ),
     );
   }
@@ -388,7 +487,7 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -412,12 +511,12 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
               CircleAvatar(
                 radius: isSmallScreen ? 50 : 60,
                 backgroundColor: const Color(0xFF1A1E3F),
-                backgroundImage: _selectedImage != null
-                    ? FileImage(_selectedImage!)
+                backgroundImage: _selectedPresetAvatar != null
+                    ? AssetImage(_selectedPresetAvatar!)
                     : (_profileImageUrl != null
                         ? NetworkImage(_profileImageUrl!)
                         : null) as ImageProvider?,
-                child: (_selectedImage == null && _profileImageUrl == null)
+                child: (_profileImageUrl == null && _selectedPresetAvatar == null)
                     ? Text(
                         _firstNameController.text.isNotEmpty
                             ? _firstNameController.text[0].toUpperCase()
@@ -436,7 +535,7 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
                 bottom: 0,
                 right: 0,
                 child: GestureDetector(
-                  onTap: _pickImage,
+                  onTap: _showAvatarPicker,
                   child: Container(
                     padding: const EdgeInsets.all(8),
                     decoration: BoxDecoration(
@@ -478,7 +577,7 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -579,7 +678,7 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
             
             Container(
               decoration: BoxDecoration(
-                border: Border.all(color: Colors.grey.withOpacity(0.3)),
+                border: Border.all(color: Colors.grey.withValues(alpha: 0.3)),
                 borderRadius: BorderRadius.circular(12),
                 color: Colors.grey[50],
               ),
@@ -624,7 +723,7 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -833,11 +932,11 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
             ),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
-              borderSide: BorderSide(color: Colors.grey.withOpacity(0.3)),
+              borderSide: BorderSide(color: Colors.grey.withValues(alpha: 0.3)),
             ),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),
-              borderSide: BorderSide(color: Colors.grey.withOpacity(0.3)),
+              borderSide: BorderSide(color: Colors.grey.withValues(alpha: 0.3)),
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12),

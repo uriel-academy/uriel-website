@@ -1,4 +1,4 @@
-import '../models/question_model.dart' as QuestionModel;
+import '../models/question_model.dart' as question_model;
 
 class Quiz {
   final String id;
@@ -10,6 +10,7 @@ class Quiz {
   final List<QuizAnswer> answers;
   final DateTime startTime;
   final DateTime endTime;
+  final String? triviaCategory;
 
   Quiz({
     required this.id,
@@ -21,6 +22,7 @@ class Quiz {
     required this.answers,
     required this.startTime,
     required this.endTime,
+    this.triviaCategory,
   });
 
   double get percentage => (correctAnswers / totalQuestions) * 100;
@@ -37,6 +39,7 @@ class Quiz {
     'answers': answers.map((a) => a.toJson()).toList(),
     'startTime': startTime.toIso8601String(),
     'endTime': endTime.toIso8601String(),
+    'triviaCategory': triviaCategory,
   };
 
   factory Quiz.fromJson(Map<String, dynamic> json) => Quiz(
@@ -51,6 +54,7 @@ class Quiz {
         .toList(),
     startTime: DateTime.parse(json['startTime']),
     endTime: DateTime.parse(json['endTime']),
+    triviaCategory: json['triviaCategory'],
   );
 }
 
@@ -137,7 +141,7 @@ class QuizSession {
   final String subject;
   final String examType;
   final String level;
-  final List<QuestionModel.Question> questions;
+  final List<question_model.Question> questions;
   final Map<int, String> answers;
   final DateTime startTime;
   final bool isCompleted;
@@ -179,7 +183,7 @@ class QuizSession {
     examType: json['examType'],
     level: json['level'],
     questions: (json['questions'] as List)
-        .map((q) => QuestionModel.Question.fromJson(q))
+        .map((q) => question_model.Question.fromJson(q))
         .toList(),
     answers: (json['answers'] as Map<String, dynamic>)
         .map((key, value) => MapEntry(int.parse(key), value.toString())),

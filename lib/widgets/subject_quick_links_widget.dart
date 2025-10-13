@@ -23,7 +23,7 @@ class SubjectQuickLinksWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -62,10 +62,10 @@ class SubjectQuickLinksWidget extends StatelessWidget {
                 child: Container(
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
-                    color: _getSubjectColor(subject).withOpacity(0.1),
+                    color: _getSubjectColor(subject).withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(12),
                     border: Border.all(
-                      color: _getSubjectColor(subject).withOpacity(0.3),
+                      color: _getSubjectColor(subject).withValues(alpha: 0.3),
                     ),
                   ),
                   child: Column(

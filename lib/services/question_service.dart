@@ -1,8 +1,8 @@
-import 'dart:typed_data';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import '../models/question_model.dart';
 
+import 'package:flutter/foundation.dart';
 class QuestionService {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final FirebaseStorage _storage = FirebaseStorage.instance;
@@ -81,7 +81,7 @@ class QuestionService {
       return getSampleQuestions(examType: examTypeEnum, subject: subjectEnum, year: year, section: section);
       
     } catch (e) {
-      print('Error fetching questions from database: $e');
+      debugPrint('Error fetching questions from database: $e');
       // Fallback to sample questions on error
       ExamType? examTypeEnum = examType is ExamType ? examType : null;
       Subject? subjectEnum = subject is Subject ? subject : null;
@@ -92,7 +92,7 @@ class QuestionService {
   /// Get RME questions specifically for debugging
   Future<List<Question>> getRMEQuestions() async {
     try {
-      print('🔍 Fetching RME questions from Firestore...');
+      debugPrint('🔍 Fetching RME questions from Firestore...');
       
       QuerySnapshot snapshot = await FirebaseFirestore.instance
           .collection('questions')
@@ -100,22 +100,22 @@ class QuestionService {
           .where('isActive', isEqualTo: true)
           .get();
       
-      print('📊 Found ${snapshot.docs.length} RME documents in Firestore');
+      debugPrint('📊 Found ${snapshot.docs.length} RME documents in Firestore');
       
       if (snapshot.docs.isNotEmpty) {
         final questions = snapshot.docs.map((doc) {
-          print('📝 Processing RME question: ${doc.id}');
+          debugPrint('📝 Processing RME question: ${doc.id}');
           return Question.fromJson(doc.data() as Map<String, dynamic>);
         }).toList();
         
-        print('✅ Successfully converted ${questions.length} RME questions');
+        debugPrint('✅ Successfully converted ${questions.length} RME questions');
         return questions;
       } else {
-        print('❌ No RME questions found in database');
+        debugPrint('❌ No RME questions found in database');
         return [];
       }
     } catch (e) {
-      print('❌ Error fetching RME questions: $e');
+      debugPrint('❌ Error fetching RME questions: $e');
       return [];
     }
   }
@@ -127,67 +127,8 @@ class QuestionService {
     String? year,
     String? section,
   }) {
-    final sampleQuestions = [
-      Question(
-        id: 'sample_1',
-        questionText: 'What is the capital of Ghana?',
-        type: QuestionType.multipleChoice,
-        subject: Subject.socialStudies,
-        examType: ExamType.bece,
-        year: '2023',
-        section: 'A',
-        questionNumber: 1,
-        options: ['Accra', 'Kumasi', 'Tamale', 'Cape Coast'],
-        correctAnswer: 'Accra',
-        explanation: 'Accra is the capital and largest city of Ghana.',
-        marks: 1,
-        difficulty: 'easy',
-        topics: ['Geography', 'Ghana'],
-        createdAt: DateTime.now(),
-        createdBy: 'system',
-        isActive: true,
-      ),
-      Question(
-        id: 'sample_2',
-        questionText: 'Which planet is closest to the Sun?',
-        type: QuestionType.multipleChoice,
-        subject: Subject.integratedScience,
-        examType: ExamType.bece,
-        year: '2023',
-        section: 'A',
-        questionNumber: 2,
-        options: ['Venus', 'Mars', 'Mercury', 'Earth'],
-        correctAnswer: 'Mercury',
-        explanation: 'Mercury is the planet closest to the Sun in our solar system.',
-        marks: 1,
-        difficulty: 'easy',
-        topics: ['Astronomy', 'Solar System'],
-        createdAt: DateTime.now(),
-        createdBy: 'system',
-        isActive: true,
-      ),
-    ];
-
-    // Filter sample questions based on parameters
-    List<Question> filteredQuestions = sampleQuestions;
-    
-    if (examType != null) {
-      filteredQuestions = filteredQuestions.where((q) => q.examType == examType).toList();
-    }
-    
-    if (subject != null) {
-      filteredQuestions = filteredQuestions.where((q) => q.subject == subject).toList();
-    }
-    
-    if (year != null) {
-      filteredQuestions = filteredQuestions.where((q) => q.year == year).toList();
-    }
-    
-    if (section != null) {
-      filteredQuestions = filteredQuestions.where((q) => q.section == section).toList();
-    }
-    
-    return filteredQuestions;
+    // Return empty list - no fallback sample questions
+    return [];
   }
 
   /// Enhanced method to get questions with advanced filtering
@@ -201,22 +142,28 @@ class QuestionService {
     bool activeOnly = true,
     String? difficulty,
     List<String>? topics,
+    String? triviaCategory, // New: filter by trivia category
   }) async {
     try {
       Query query = _questionsCollection;
       
+      String? examTypeStr;
+      String? subjectStr;
+      
       if (examType != null) {
-        String examTypeStr = examType is ExamType ? _getExamTypeString(examType) : examType.toString();
+        examTypeStr = examType is ExamType ? _getExamTypeString(examType) : examType.toString();
         query = query.where('examType', isEqualTo: examTypeStr);
       }
       
       if (subject != null) {
-        String subjectStr = subject is Subject ? _getSubjectString(subject) : subject.toString();
+        subjectStr = subject is Subject ? _getSubjectString(subject) : subject.toString();
         query = query.where('subject', isEqualTo: subjectStr);
       }
       
       if (year != null) {
-        query = query.where('year', isEqualTo: year);
+        // Try to parse year as int if it's a string, since Firebase stores it as int
+        final yearValue = int.tryParse(year) ?? year;
+        query = query.where('year', isEqualTo: yearValue);
       }
       
       if (section != null) {
@@ -238,10 +185,33 @@ class QuestionService {
         query = query.limit(limit);
       }
       
+      debugPrint('🔍 QuestionService.getQuestionsByFilters: Querying Firestore with subject=$subjectStr, examType=$examTypeStr, triviaCategory=$triviaCategory, activeOnly=$activeOnly');
+      
       QuerySnapshot snapshot = await query.get();
       
+      debugPrint('📊 QuestionService.getQuestionsByFilters: Found ${snapshot.docs.length} documents');
+      
       if (snapshot.docs.isNotEmpty) {
-        List<Question> questions = snapshot.docs.map((doc) => Question.fromJson(doc.data() as Map<String, dynamic>)).toList();
+        List<Question> questions = [];
+        
+        // Convert documents to Question objects and filter by triviaCategory if needed
+        for (var doc in snapshot.docs) {
+          final data = doc.data() as Map<String, dynamic>;
+          
+          // If triviaCategory filter is specified, check if this question matches
+          if (triviaCategory != null && triviaCategory.isNotEmpty) {
+            final String? qCategory = data['triviaCategory'] as String?;
+            // Case-insensitive comparison
+            if (qCategory == null || qCategory.toLowerCase().trim() != triviaCategory.toLowerCase().trim()) {
+              debugPrint('   ⏭️ Skipping question with category "$qCategory" (looking for "$triviaCategory")');
+              continue; // Skip questions that don't match the category
+            }
+          }
+          
+          questions.add(Question.fromJson(data));
+        }
+        
+        debugPrint('📊 After triviaCategory filter: ${questions.length} questions${triviaCategory != null ? ' for category "$triviaCategory"' : ''}');
         
         // Filter by topics if specified
         if (topics != null && topics.isNotEmpty) {
@@ -259,7 +229,7 @@ class QuestionService {
       return getSampleQuestions(examType: examTypeEnum, subject: subjectEnum, year: year, section: section);
       
     } catch (e) {
-      print('Error fetching questions with filters: $e');
+      debugPrint('Error fetching questions with filters: $e');
       ExamType? examTypeEnum = examType is ExamType ? examType : null;
       Subject? subjectEnum = subject is Subject ? subject : null;
       return getSampleQuestions(examType: examTypeEnum, subject: subjectEnum, year: year, section: section);
@@ -386,7 +356,7 @@ class QuestionService {
       QuerySnapshot snapshot = await query.get();
       return snapshot.docs.length;
     } catch (e) {
-      print('Error getting questions count: $e');
+      debugPrint('Error getting questions count: $e');
       return 0;
     }
   }

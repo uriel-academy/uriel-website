@@ -1,0 +1,95 @@
+{
+  "summary": [
+    {
+      "subject": "African History",
+      "num_questions": 200,
+      "num_answers": 200,
+      "questions_file": "african_history_questions.json",
+      "answers_file": "african_history_answers.json"
+    },
+    {
+      "subject": "Art and Culture",
+      "num_questions": 200,
+      "num_answers": 200,
+      "questions_file": "art_and_culture_questions.json",
+      "answers_file": "art_and_culture_answers.json"
+    },
+    {
+      "subject": "Brain Teasers",
+      "num_questions": 200,
+      "num_answers": 200,
+      "questions_file": "brain_teasers_questions.json",
+      "answers_file": "brain_teasers_answers.json"
+    },
+    {
+      "subject": "English",
+      "num_questions": 200,
+      "num_answers": 200,
+      "questions_file": "english_questions.json",
+      "answers_file": "english_answers.json"
+    },
+    {
+      "subject": "General Knowledge",
+      "num_questions": 200,
+      "num_answers": 200,
+      "questions_file": "general_knowledge_questions.json",
+      "answers_file": "general_knowledge_answers.json"
+    },
+    {
+      "subject": "Geography (Africa & World)",
+      "num_questions": 200,
+      "num_answers": 200,
+      "questions_file": "geography_africa_world_questions.json",
+      "answers_file": "geography_africa_world_answers.json"
+    },
+    {
+      "subject": "Ghana History",
+      "num_questions": 200,
+      "num_answers": 200,
+      "questions_file": "ghana_history_questions.json",
+      "answers_file": "ghana_history_answers.json"
+    },
+    {
+      "subject": "Mathematics",
+      "num_questions": 198,
+      "num_answers": 198,
+      "questions_file": "mathematics_questions.json",
+      "answers_file": "mathematics_answers.json"
+    },
+    {
+      "subject": "Pop Culture & Entertainment",
+      "num_questions": 200,
+      "num_answers": 200,
+      "questions_file": "pop_culture_entertainment_questions.json",
+      "answers_file": "pop_culture_entertainment_answers.json"
+    },
+    {
+      "subject": "Science",
+      "num_questions": 200,
+      "num_answers": 200,
+      "questions_file": "science_questions.json",
+      "answers_file": "science_answers.json"
+    },
+    {
+      "subject": "Sports",
+      "num_questions": 200,
+      "num_answers": 200,
+      "questions_file": "sports_questions.json",
+      "answers_file": "sports_answers.json"
+    },
+    {
+      "subject": "Technology",
+      "num_questions": 200,
+      "num_answers": 199,
+      "questions_file": "technology_questions.json",
+      "answers_file": "technology_answers.json"
+    },
+    {
+      "subject": "World History",
+      "num_questions": 200,
+      "num_answers": 200,
+      "questions_file": "world_history_questions.json",
+      "answers_file": "world_history_answers.json"
+    }
+  ]
+}

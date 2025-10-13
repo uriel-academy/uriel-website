@@ -1,0 +1,1803 @@
+{
+  "subject": "World History",
+  "q1": {
+    "question": "The Neolithic Revolution primarily refers to the shift from:",
+    "possibleAnswers": [
+      "A. Hunting-gathering to agriculture",
+      "B. Polytheism to monotheism",
+      "C. Copper to bronze tools",
+      "D. Oral to written law"
+    ]
+  },
+  "q2": {
+    "question": "The Code of Hammurabi was created in which ancient civilization?",
+    "possibleAnswers": [
+      "A. Egypt",
+      "B. Babylon",
+      "C. Hittite",
+      "D. Assyria"
+    ]
+  },
+  "q3": {
+    "question": "The river valley associated with ancient Egypt is the:",
+    "possibleAnswers": [
+      "A. Tigris",
+      "B. Euphrates",
+      "C. Nile",
+      "D. Indus"
+    ]
+  },
+  "q4": {
+    "question": "The Indus Valley city known for grid planning and drains is:",
+    "possibleAnswers": [
+      "A. Uruk",
+      "B. Mohenjo-Daro",
+      "C. Memphis",
+      "D. Persepolis"
+    ]
+  },
+  "q5": {
+    "question": "Zoroastrianism was historically tied to which empire?",
+    "possibleAnswers": [
+      "A. Roman",
+      "B. Persian (Achaemenid)",
+      "C. Carthaginian",
+      "D. Greek"
+    ]
+  },
+  "q6": {
+    "question": "The Battle of Marathon (490 BCE) was between:",
+    "possibleAnswers": [
+      "A. Rome and Carthage",
+      "B. Greece and Persia",
+      "C. Egypt and Hittites",
+      "D. Athens and Sparta"
+    ]
+  },
+  "q7": {
+    "question": "Who wrote The Histories, often called the “Father of History”?",
+    "possibleAnswers": [
+      "A. Thucydides",
+      "B. Herodotus",
+      "C. Xenophon",
+      "D. Polybius"
+    ]
+  },
+  "q8": {
+    "question": "Alexander the Great’s empire fragmented after his death into realms ruled by:",
+    "possibleAnswers": [
+      "A. Satraps of Rome",
+      "B. Hellenistic successor states (Diadochi)",
+      "C. Han generals",
+      "D. Carthaginian admirals"
+    ]
+  },
+  "q9": {
+    "question": "The Punic Wars were fought between Rome and:",
+    "possibleAnswers": [
+      "A. Gaul",
+      "B. Carthage",
+      "C. Macedonia",
+      "D. Egypt"
+    ]
+  },
+  "q10": {
+    "question": "Julius Caesar was assassinated on the Ides of March in:",
+    "possibleAnswers": [
+      "A. 59 BCE",
+      "B. 49 BCE",
+      "C. 44 BCE",
+      "D. 31 BCE"
+    ]
+  },
+  "q11": {
+    "question": "The Qin dynasty is known for:",
+    "possibleAnswers": [
+      "A. Paper money",
+      "B. First imperial unification of China",
+      "C. Grand Canal",
+      "D. Civil service exams (mature form)"
+    ]
+  },
+  "q12": {
+    "question": "The Mauryan emperor who embraced Buddhism and issued edicts was:",
+    "possibleAnswers": [
+      "A. Chandragupta I",
+      "B. Ashoka",
+      "C. Harsha",
+      "D. Kanishka"
+    ]
+  },
+  "q13": {
+    "question": "The spread of Hellenistic culture followed conquests by:",
+    "possibleAnswers": [
+      "A. Hannibal",
+      "B. Cyrus",
+      "C. Alexander the Great",
+      "D. Caesar"
+    ]
+  },
+  "q14": {
+    "question": "The Pax Romana refers to a period of:",
+    "possibleAnswers": [
+      "A. Religious persecution",
+      "B. Civil war",
+      "C. Relative peace and prosperity",
+      "D. Plague and decline"
+    ]
+  },
+  "q15": {
+    "question": "The Edict of Milan (313 CE) legalized:",
+    "possibleAnswers": [
+      "A. Judaism",
+      "B. Arianism",
+      "C. Christianity",
+      "D. Paganism only"
+    ]
+  },
+  "q16": {
+    "question": "The capital of the Byzantine Empire was:",
+    "possibleAnswers": [
+      "A. Rome",
+      "B. Constantinople",
+      "C. Antioch",
+      "D. Alexandria"
+    ]
+  },
+  "q17": {
+    "question": "The Prophet Muhammad fled Mecca to Medina in 622 CE, an event called the:",
+    "possibleAnswers": [
+      "A. Caliphate",
+      "B. Hajj",
+      "C. Hijra",
+      "D. Jihad"
+    ]
+  },
+  "q18": {
+    "question": "Charlemagne was crowned Emperor in 800 by:",
+    "possibleAnswers": [
+      "A. The Patriarch of Constantinople",
+      "B. The Doge of Venice",
+      "C. The Pope in Rome",
+      "D. The King of England"
+    ]
+  },
+  "q19": {
+    "question": "The Crusades were military expeditions primarily to:",
+    "possibleAnswers": [
+      "A. Conquer China",
+      "B. Retake the Holy Land",
+      "C. Colonize Africa",
+      "D. Defeat the Mongols"
+    ]
+  },
+  "q20": {
+    "question": "The Mongol Empire reached its greatest extent under:",
+    "possibleAnswers": [
+      "A. Genghis Khan",
+      "B. Ögedei Khan",
+      "C. Kublai Khan",
+      "D. Tamerlane"
+    ]
+  },
+  "q21": {
+    "question": "The Black Death in the 14th century was likely caused by:",
+    "possibleAnswers": [
+      "A. Cholera",
+      "B. Bubonic plague",
+      "C. Smallpox",
+      "D. Influenza"
+    ]
+  },
+  "q22": {
+    "question": "The Ming dynasty is credited with building much of the:",
+    "possibleAnswers": [
+      "A. Grand Canal",
+      "B. Forbidden City",
+      "C. Terracotta Army",
+      "D. Silk invention"
+    ]
+  },
+  "q23": {
+    "question": "The Hundred Years’ War was fought between:",
+    "possibleAnswers": [
+      "A. France and England",
+      "B. Spain and Portugal",
+      "C. Austria and Prussia",
+      "D. Venice and Genoa"
+    ]
+  },
+  "q24": {
+    "question": "The fall of Constantinople to the Ottomans occurred in:",
+    "possibleAnswers": [
+      "A. 1204",
+      "B. 1291",
+      "C. 1453",
+      "D. 1492"
+    ]
+  },
+  "q25": {
+    "question": "The Aztec capital conquered by Cortés was:",
+    "possibleAnswers": [
+      "A. Cuzco",
+      "B. Tenochtitlan",
+      "C. Tikal",
+      "D. Machu Picchu"
+    ]
+  },
+  "q26": {
+    "question": "The Inca used knotted cords called:",
+    "possibleAnswers": [
+      "A. Codex",
+      "B. Quipu",
+      "C. Stelae",
+      "D. Obsidian"
+    ]
+  },
+  "q27": {
+    "question": "The European Renaissance began notably in:",
+    "possibleAnswers": [
+      "A. England",
+      "B. Italy",
+      "C. Spain",
+      "D. Flanders only"
+    ]
+  },
+  "q28": {
+    "question": "Martin Luther’s 95 Theses were posted in:",
+    "possibleAnswers": [
+      "A. Wittenberg",
+      "B. Geneva",
+      "C. Zurich",
+      "D. Augsburg"
+    ]
+  },
+  "q29": {
+    "question": "The Act of Supremacy (1534) established the English monarch as head of the:",
+    "possibleAnswers": [
+      "A. Catholic Church",
+      "B. Church of England",
+      "C. Lutheran Church",
+      "D. Calvinist Synod"
+    ]
+  },
+  "q30": {
+    "question": "The Spanish Armada was defeated in:",
+    "possibleAnswers": [
+      "A. 1555",
+      "B. 1588",
+      "C. 1618",
+      "D. 1648"
+    ]
+  },
+  "q31": {
+    "question": "The Treaty of Westphalia (1648) ended the:",
+    "possibleAnswers": [
+      "A. War of the Roses",
+      "B. Thirty Years’ War",
+      "C. Seven Years’ War",
+      "D. Napoleonic Wars"
+    ]
+  },
+  "q32": {
+    "question": "The Scientific Revolution figure who proposed heliocentrism:",
+    "possibleAnswers": [
+      "A. Ptolemy",
+      "B. Copernicus",
+      "C. Kepler",
+      "D. Galileo only"
+    ]
+  },
+  "q33": {
+    "question": "The Enlightenment thinker who wrote The Social Contract:",
+    "possibleAnswers": [
+      "A. Locke",
+      "B. Hobbes",
+      "C. Rousseau",
+      "D. Montesquieu"
+    ]
+  },
+  "q34": {
+    "question": "The palace of Versailles is most associated with:",
+    "possibleAnswers": [
+      "A. Louis XIV",
+      "B. Henry IV",
+      "C. Louis XVI",
+      "D. Napoleon III"
+    ]
+  },
+  "q35": {
+    "question": "The American Revolution formally ended with the Treaty of:",
+    "possibleAnswers": [
+      "A. Paris (1783)",
+      "B. Utrecht",
+      "C. Ghent",
+      "D. Tordesillas"
+    ]
+  },
+  "q36": {
+    "question": "The French Revolution began in:",
+    "possibleAnswers": [
+      "A. 1776",
+      "B. 1789",
+      "C. 1799",
+      "D. 1804"
+    ]
+  },
+  "q37": {
+    "question": "The Reign of Terror was led by:",
+    "possibleAnswers": [
+      "A. Robespierre",
+      "B. Danton",
+      "C. Marat",
+      "D. Lafayette"
+    ]
+  },
+  "q38": {
+    "question": "Napoleon’s final defeat in 1815 was at:",
+    "possibleAnswers": [
+      "A. Austerlitz",
+      "B. Leipzig",
+      "C. Trafalgar",
+      "D. Waterloo"
+    ]
+  },
+  "q39": {
+    "question": "The Congress of Vienna sought to restore:",
+    "possibleAnswers": [
+      "A. Liberal constitutions",
+      "B. Balance of power in Europe",
+      "C. Papal supremacy",
+      "D. Colonies to Spain"
+    ]
+  },
+  "q40": {
+    "question": "The Haitian Revolution was led by:",
+    "possibleAnswers": [
+      "A. Simon Bolívar",
+      "B. Toussaint Louverture",
+      "C. José de San Martín",
+      "D. Dessalines only"
+    ]
+  },
+  "q41": {
+    "question": "The Industrial Revolution began in:",
+    "possibleAnswers": [
+      "A. Germany",
+      "B. Britain",
+      "C. France",
+      "D. USA"
+    ]
+  },
+  "q42": {
+    "question": "The Opium Wars primarily involved Britain and:",
+    "possibleAnswers": [
+      "A. Japan",
+      "B. China (Qing)",
+      "C. Korea",
+      "D. Siam"
+    ]
+  },
+  "q43": {
+    "question": "The Meiji Restoration (1868) transformed which country?",
+    "possibleAnswers": [
+      "A. China",
+      "B. Japan",
+      "C. Korea",
+      "D. Vietnam"
+    ]
+  },
+  "q44": {
+    "question": "The unification of Germany (1871) was proclaimed at:",
+    "possibleAnswers": [
+      "A. Versailles",
+      "B. Berlin",
+      "C. Frankfurt",
+      "D. Vienna"
+    ]
+  },
+  "q45": {
+    "question": "The Scramble for Africa was formalized at the:",
+    "possibleAnswers": [
+      "A. Paris Conference",
+      "B. Berlin Conference (1884–85)",
+      "C. Brussels Congress",
+      "D. Vienna Council"
+    ]
+  },
+  "q46": {
+    "question": "The American Civil War took place from:",
+    "possibleAnswers": [
+      "A. 1848–1852",
+      "B. 1861–1865",
+      "C. 1870–1876",
+      "D. 1890–1895"
+    ]
+  },
+  "q47": {
+    "question": "The Dreyfus Affair occurred in:",
+    "possibleAnswers": [
+      "A. Italy",
+      "B. France",
+      "C. Russia",
+      "D. Britain"
+    ]
+  },
+  "q48": {
+    "question": "The Russian serfs were emancipated in:",
+    "possibleAnswers": [
+      "A. 1789",
+      "B. 1861",
+      "C. 1905",
+      "D. 1917"
+    ]
+  },
+  "q49": {
+    "question": "The first modern Olympic Games were held in:",
+    "possibleAnswers": [
+      "A. London 1908",
+      "B. Athens 1896",
+      "C. Paris 1900",
+      "D. Stockholm 1912"
+    ]
+  },
+  "q50": {
+    "question": "The assassination that sparked WWI occurred in:",
+    "possibleAnswers": [
+      "A. Sarajevo",
+      "B. Belgrade",
+      "C. Vienna",
+      "D. Berlin"
+    ]
+  },
+  "q51": {
+    "question": "The Schlieffen Plan was Germany’s strategy to:",
+    "possibleAnswers": [
+      "A. Avoid naval blockade",
+      "B. Defeat France quickly then Russia",
+      "C. Invade Italy",
+      "D. Attack via the Alps"
+    ]
+  },
+  "q52": {
+    "question": "The Treaty of Brest-Litovsk (1918) was between Germany and:",
+    "possibleAnswers": [
+      "A. Austria-Hungary",
+      "B. Russia (Bolshevik)",
+      "C. Italy",
+      "D. Ottoman Empire"
+    ]
+  },
+  "q53": {
+    "question": "The League of Nations was proposed chiefly by:",
+    "possibleAnswers": [
+      "A. Lloyd George",
+      "B. Woodrow Wilson",
+      "C. Georges Clemenceau",
+      "D. Vittorio Orlando"
+    ]
+  },
+  "q54": {
+    "question": "The 1919 Treaty of Versailles imposed heavy reparations on:",
+    "possibleAnswers": [
+      "A. Russia",
+      "B. Germany",
+      "C. Austria",
+      "D. Turkey"
+    ]
+  },
+  "q55": {
+    "question": "The Weimar Republic refers to:",
+    "possibleAnswers": [
+      "A. Interwar Italy",
+      "B. Interwar Germany",
+      "C. Interwar Spain",
+      "D. Interwar Austria"
+    ]
+  },
+  "q56": {
+    "question": "The Great Depression began with the US stock market crash in:",
+    "possibleAnswers": [
+      "A. 1927",
+      "B. 1929",
+      "C. 1931",
+      "D. 1933"
+    ]
+  },
+  "q57": {
+    "question": "The Spanish Civil War (1936–39) pitted Republicans against:",
+    "possibleAnswers": [
+      "A. Monarchists only",
+      "B. Nationalists (Franco)",
+      "C. Communists",
+      "D. Anarchists only"
+    ]
+  },
+  "q58": {
+    "question": "The Axis Powers in WWII included Germany, Italy, and:",
+    "possibleAnswers": [
+      "A. Spain",
+      "B. Japan",
+      "C. Finland",
+      "D. Turkey"
+    ]
+  },
+  "q59": {
+    "question": "Operation Barbarossa was the invasion of:",
+    "possibleAnswers": [
+      "A. France",
+      "B. North Africa",
+      "C. Soviet Union",
+      "D. Britain"
+    ]
+  },
+  "q60": {
+    "question": "D-Day landings (June 6, 1944) occurred primarily in:",
+    "possibleAnswers": [
+      "A. Brittany",
+      "B. Normandy",
+      "C. Pas-de-Calais",
+      "D. Dunkirk"
+    ]
+  },
+  "q61": {
+    "question": "The Holocaust primarily targeted:",
+    "possibleAnswers": [
+      "A. Armenians",
+      "B. Jews (and other groups)",
+      "C. Huguenots",
+      "D. Boers"
+    ]
+  },
+  "q62": {
+    "question": "The atomic bombings of Japan struck Hiroshima and:",
+    "possibleAnswers": [
+      "A. Kobe",
+      "B. Nagasaki",
+      "C. Osaka",
+      "D. Yokohama"
+    ]
+  },
+  "q63": {
+    "question": "The UN was founded in:",
+    "possibleAnswers": [
+      "A. 1919",
+      "B. 1945",
+      "C. 1947",
+      "D. 1950"
+    ]
+  },
+  "q64": {
+    "question": "The Iron Curtain metaphor was popularized by:",
+    "possibleAnswers": [
+      "A. Truman",
+      "B. Churchill",
+      "C. Stalin",
+      "D. De Gaulle"
+    ]
+  },
+  "q65": {
+    "question": "The Marshall Plan aimed to:",
+    "possibleAnswers": [
+      "A. Rebuild Europe’s economy",
+      "B. Arm NATO",
+      "C. Contain China",
+      "D. Create the Euro"
+    ]
+  },
+  "q66": {
+    "question": "The Chinese Civil War ended in 1949 with victory for:",
+    "possibleAnswers": [
+      "A. Nationalists",
+      "B. Communists",
+      "C. Warlords",
+      "D. Japanese-backed government"
+    ]
+  },
+  "q67": {
+    "question": "The Korean War (1950–53) ended with:",
+    "possibleAnswers": [
+      "A. Northern victory",
+      "B. Southern victory",
+      "C. Armistice near 38th parallel",
+      "D. Full reunification"
+    ]
+  },
+  "q68": {
+    "question": "The Cuban Missile Crisis occurred in:",
+    "possibleAnswers": [
+      "A. 1959",
+      "B. 1961",
+      "C. 1962",
+      "D. 1963"
+    ]
+  },
+  "q69": {
+    "question": "The Bandung Conference (1955) was significant for:",
+    "possibleAnswers": [
+      "A. European union",
+      "B. Non-Aligned Movement origins",
+      "C. NATO expansion",
+      "D. Warsaw Pact"
+    ]
+  },
+  "q70": {
+    "question": "The Suez Crisis (1956) involved Egypt and primarily:",
+    "possibleAnswers": [
+      "A. USA & USSR",
+      "B. Britain, France, Israel",
+      "C. Germany & Italy",
+      "D. China & Japan"
+    ]
+  },
+  "q71": {
+    "question": "The Algerian War of Independence was against:",
+    "possibleAnswers": [
+      "A. Spain",
+      "B. Italy",
+      "C. France",
+      "D. Portugal"
+    ]
+  },
+  "q72": {
+    "question": "The partition of India (1947) created India and:",
+    "possibleAnswers": [
+      "A. Bangladesh",
+      "B. Pakistan",
+      "C. Sri Lanka",
+      "D. Nepal"
+    ]
+  },
+  "q73": {
+    "question": "The European Economic Community (EEC) emerged from the Treaty of:",
+    "possibleAnswers": [
+      "A. Maastricht",
+      "B. Paris",
+      "C. Rome (1957)",
+      "D. Lisbon"
+    ]
+  },
+  "q74": {
+    "question": "The Cultural Revolution was launched in:",
+    "possibleAnswers": [
+      "A. Soviet Union",
+      "B. China",
+      "C. Cambodia",
+      "D. North Korea"
+    ]
+  },
+  "q75": {
+    "question": "The Vietnam War ended with the fall of Saigon in:",
+    "possibleAnswers": [
+      "A. 1973",
+      "B. 1975",
+      "C. 1976",
+      "D. 1979"
+    ]
+  },
+  "q76": {
+    "question": "OPEC’s 1973 action that shocked global economies was an:",
+    "possibleAnswers": [
+      "A. Oil embargo",
+      "B. Currency devaluation",
+      "C. Gold sale",
+      "D. Wheat price hike"
+    ]
+  },
+  "q77": {
+    "question": "The Camp David Accords (1978) were between Egypt and:",
+    "possibleAnswers": [
+      "A. Jordan",
+      "B. Syria",
+      "C. Israel",
+      "D. Lebanon"
+    ]
+  },
+  "q78": {
+    "question": "The Iranian Revolution (1979) overthrew the:",
+    "possibleAnswers": [
+      "A. Ayatollah",
+      "B. Shah",
+      "C. Prime Minister",
+      "D. Caliph"
+    ]
+  },
+  "q79": {
+    "question": "The Soviet Union invaded which country in 1979?",
+    "possibleAnswers": [
+      "A. Poland",
+      "B. Hungary",
+      "C. Afghanistan",
+      "D. Czechoslovakia"
+    ]
+  },
+  "q80": {
+    "question": "Solidarity (Solidarność) was a labor movement in:",
+    "possibleAnswers": [
+      "A. East Germany",
+      "B. Poland",
+      "C. Romania",
+      "D. Bulgaria"
+    ]
+  },
+  "q81": {
+    "question": "The Falklands War (1982) was fought between the UK and:",
+    "possibleAnswers": [
+      "A. Chile",
+      "B. Argentina",
+      "C. Brazil",
+      "D. Uruguay"
+    ]
+  },
+  "q82": {
+    "question": "The genocide in Rwanda occurred in:",
+    "possibleAnswers": [
+      "A. 1984",
+      "B. 1994",
+      "C. 1999",
+      "D. 2004"
+    ]
+  },
+  "q83": {
+    "question": "The Tiananmen Square protests were in:",
+    "possibleAnswers": [
+      "A. 1987",
+      "B. 1989",
+      "C. 1991",
+      "D. 1993"
+    ]
+  },
+  "q84": {
+    "question": "The Berlin Wall fell in:",
+    "possibleAnswers": [
+      "A. 1987",
+      "B. 1988",
+      "C. 1989",
+      "D. 1990"
+    ]
+  },
+  "q85": {
+    "question": "The USSR dissolved in:",
+    "possibleAnswers": [
+      "A. 1989",
+      "B. 1990",
+      "C. 1991",
+      "D. 1992"
+    ]
+  },
+  "q86": {
+    "question": "The Maastricht Treaty (1992) created the:",
+    "possibleAnswers": [
+      "A. NATO",
+      "B. European Union (EU)",
+      "C. EFTA",
+      "D. Council of Europe"
+    ]
+  },
+  "q87": {
+    "question": "The Bosnian War included the siege of:",
+    "possibleAnswers": [
+      "A. Sarajevo",
+      "B. Belgrade",
+      "C. Zagreb",
+      "D. Skopje"
+    ]
+  },
+  "q88": {
+    "question": "The Good Friday Agreement (1998) addressed conflict in:",
+    "possibleAnswers": [
+      "A. Cyprus",
+      "B. Northern Ireland",
+      "C. Basque Country",
+      "D. Balkans"
+    ]
+  },
+  "q89": {
+    "question": "The Arab Spring began in late 2010 in:",
+    "possibleAnswers": [
+      "A. Egypt",
+      "B. Syria",
+      "C. Tunisia",
+      "D. Libya"
+    ]
+  },
+  "q90": {
+    "question": "The Silk Roads historically linked China to the:",
+    "possibleAnswers": [
+      "A. Pacific Islands",
+      "B. Mediterranean world",
+      "C. Sub-Saharan Africa only",
+      "D. Australia"
+    ]
+  },
+  "q91": {
+    "question": "The Magna Carta (1215) limited the power of the:",
+    "possibleAnswers": [
+      "A. Pope",
+      "B. English king",
+      "C. Parliament",
+      "D. Norman dukes"
+    ]
+  },
+  "q92": {
+    "question": "The Ottoman Empire captured much of the Balkans under:",
+    "possibleAnswers": [
+      "A. Mehmed II and successors",
+      "B. Suleiman only",
+      "C. Murad I only",
+      "D. Selim III"
+    ]
+  },
+  "q93": {
+    "question": "The Battle of Lepanto (1571) checked which power’s naval forces?",
+    "possibleAnswers": [
+      "A. Ottoman Empire",
+      "B. Spain",
+      "C. England",
+      "D. France"
+    ]
+  },
+  "q94": {
+    "question": "The Dutch Golden Age was driven by trade, especially via the:",
+    "possibleAnswers": [
+      "A. Dutch East India Company (VOC)",
+      "B. Hudson’s Bay Company",
+      "C. Royal African Company",
+      "D. Hanseatic League only"
+    ]
+  },
+  "q95": {
+    "question": "Peter the Great is known for westernizing:",
+    "possibleAnswers": [
+      "A. Poland",
+      "B. Sweden",
+      "C. Russia",
+      "D. Prussia"
+    ]
+  },
+  "q96": {
+    "question": "The 1688 “Glorious Revolution” in England resulted in:",
+    "possibleAnswers": [
+      "A. Absolute monarchy",
+      "B. Constitutional monarchy",
+      "C. Theocracy",
+      "D. Military dictatorship"
+    ]
+  },
+  "q97": {
+    "question": "The Seven Years’ War (1756–63) was truly:",
+    "possibleAnswers": [
+      "A. A regional war",
+      "B. A global conflict",
+      "C. A civil war",
+      "D. A naval-only war"
+    ]
+  },
+  "q98": {
+    "question": "The Haitian Revolution resulted in the first modern:",
+    "possibleAnswers": [
+      "A. Constitutional monarchy in Americas",
+      "B. Black republic",
+      "C. Slave empire",
+      "D. French colony in Africa"
+    ]
+  },
+  "q99": {
+    "question": "The Congress System (Concert of Europe) aimed to:",
+    "possibleAnswers": [
+      "A. Promote nationalism",
+      "B. Suppress revolutions and maintain balance",
+      "C. Spread socialism",
+      "D. Abolish monarchies"
+    ]
+  },
+  "q100": {
+    "question": "The Taiping Rebellion (1850s–60s) took place in:",
+    "possibleAnswers": [
+      "A. Japan",
+      "B. China",
+      "C. Korea",
+      "D. Vietnam"
+    ]
+  },
+  "q101": {
+    "question": "Boers in southern Africa were primarily settlers of:",
+    "possibleAnswers": [
+      "A. Portuguese origin",
+      "B. Dutch origin",
+      "C. French origin",
+      "D. German origin"
+    ]
+  },
+  "q102": {
+    "question": "The Boxer Rebellion (1900) targeted:",
+    "possibleAnswers": [
+      "A. Russian nobles",
+      "B. Foreigners and Christians in China",
+      "C. Japanese samurai",
+      "D. Ottoman sultans"
+    ]
+  },
+  "q103": {
+    "question": "The “Young Turks” movement was in:",
+    "possibleAnswers": [
+      "A. Persia",
+      "B. Ottoman Empire",
+      "C. Afghanistan",
+      "D. Egypt"
+    ]
+  },
+  "q104": {
+    "question": "The Balfour Declaration (1917) expressed British support for:",
+    "possibleAnswers": [
+      "A. Arab independence in Syria",
+      "B. A “national home for the Jewish people” in Palestine",
+      "C. A Kurdish state",
+      "D. Italian claims in Africa"
+    ]
+  },
+  "q105": {
+    "question": "The Amritsar Massacre (1919) occurred in:",
+    "possibleAnswers": [
+      "A. Burma",
+      "B. India",
+      "C. Ceylon",
+      "D. Malaya"
+    ]
+  },
+  "q106": {
+    "question": "Kemal Atatürk founded the modern state of:",
+    "possibleAnswers": [
+      "A. Iran",
+      "B. Turkey",
+      "C. Iraq",
+      "D. Syria"
+    ]
+  },
+  "q107": {
+    "question": "The Lateran Treaty (1929) recognized Vatican City by:",
+    "possibleAnswers": [
+      "A. France",
+      "B. Italy",
+      "C. Spain",
+      "D. Austria"
+    ]
+  },
+  "q108": {
+    "question": "The Nuremberg Laws (1935) were enacted in:",
+    "possibleAnswers": [
+      "A. Italy",
+      "B. Germany",
+      "C. Spain",
+      "D. Austria"
+    ]
+  },
+  "q109": {
+    "question": "The Rape of Nanjing (Nanking) was committed by invading forces from:",
+    "possibleAnswers": [
+      "A. Russia",
+      "B. Japan",
+      "C. Germany",
+      "D. Italy"
+    ]
+  },
+  "q110": {
+    "question": "The Atlantic Charter (1941) outlined postwar aims by the US and:",
+    "possibleAnswers": [
+      "A. France",
+      "B. USSR",
+      "C. Britain",
+      "D. China"
+    ]
+  },
+  "q111": {
+    "question": "The Bretton Woods Conference (1944) established the:",
+    "possibleAnswers": [
+      "A. UN Security Council",
+      "B. IMF and World Bank framework",
+      "C. NATO",
+      "D. GATT only"
+    ]
+  },
+  "q112": {
+    "question": "The Universal Declaration of Human Rights was adopted in:",
+    "possibleAnswers": [
+      "A. 1945",
+      "B. 1948",
+      "C. 1950",
+      "D. 1955"
+    ]
+  },
+  "q113": {
+    "question": "Apartheid was official policy in:",
+    "possibleAnswers": [
+      "A. Rhodesia",
+      "B. South Africa",
+      "C. Angola",
+      "D. Mozambique"
+    ]
+  },
+  "q114": {
+    "question": "The Bandung Spirit emphasized:",
+    "possibleAnswers": [
+      "A. Colonial revival",
+      "B. Afro-Asian solidarity",
+      "C. European integration",
+      "D. Arms race"
+    ]
+  },
+  "q115": {
+    "question": "The Prague Spring (1968) occurred in:",
+    "possibleAnswers": [
+      "A. Poland",
+      "B. Czechoslovakia",
+      "C. Hungary",
+      "D. Romania"
+    ]
+  },
+  "q116": {
+    "question": "The Six-Day War (1967) involved Israel and neighboring:",
+    "possibleAnswers": [
+      "A. Jordan, Egypt, Syria",
+      "B. Iran, Iraq, Turkey",
+      "C. Lebanon, Saudi Arabia, Yemen",
+      "D. Morocco, Algeria, Tunisia"
+    ]
+  },
+  "q117": {
+    "question": "The Khmer Rouge led by Pol Pot ruled:",
+    "possibleAnswers": [
+      "A. Laos",
+      "B. Cambodia",
+      "C. Vietnam",
+      "D. Thailand"
+    ]
+  },
+  "q118": {
+    "question": "The Iranian Hostage Crisis began in:",
+    "possibleAnswers": [
+      "A. 1977",
+      "B. 1979",
+      "C. 1981",
+      "D. 1983"
+    ]
+  },
+  "q119": {
+    "question": "The SALT talks were negotiations on:",
+    "possibleAnswers": [
+      "A. Trade tariffs",
+      "B. Strategic arms limitations",
+      "C. Space exploration",
+      "D. Oil pricing"
+    ]
+  },
+  "q120": {
+    "question": "The Solidarity movement’s leader later became president of Poland:",
+    "possibleAnswers": [
+      "A. Vaclav Havel",
+      "B. Lech Wałęsa",
+      "C. Nicolae Ceaușescu",
+      "D. Boris Yeltsin"
+    ]
+  },
+  "q121": {
+    "question": "The end of apartheid saw the election of:",
+    "possibleAnswers": [
+      "A. Julius Nyerere",
+      "B. Nelson Mandela",
+      "C. Samora Machel",
+      "D. Thabo Mbeki (later)"
+    ]
+  },
+  "q122": {
+    "question": "The Maastricht Treaty introduced plans for:",
+    "possibleAnswers": [
+      "A. A common army",
+      "B. A single currency (Euro)",
+      "C. A united presidency",
+      "D. Dissolving the EU"
+    ]
+  },
+  "q123": {
+    "question": "The Oslo Accords (1993) involved Israel and the:",
+    "possibleAnswers": [
+      "A. Arab League",
+      "B. PLO",
+      "C. Jordanian monarchy",
+      "D. Lebanese government"
+    ]
+  },
+  "q124": {
+    "question": "NAFTA originally included the US, Canada, and:",
+    "possibleAnswers": [
+      "A. Brazil",
+      "B. Mexico",
+      "C. Argentina",
+      "D. Chile"
+    ]
+  },
+  "q125": {
+    "question": "The Rwandan genocide primarily targeted:",
+    "possibleAnswers": [
+      "A. Tutsi",
+      "B. Hutu",
+      "C. Twa",
+      "D. Lendu"
+    ]
+  },
+  "q126": {
+    "question": "The Euro was physically introduced (cash/coins) in:",
+    "possibleAnswers": [
+      "A. 1999",
+      "B. 2000",
+      "C. 2002",
+      "D. 2004"
+    ]
+  },
+  "q127": {
+    "question": "The 2003 US-led invasion toppled the regime in:",
+    "possibleAnswers": [
+      "A. Iran",
+      "B. Iraq",
+      "C. Libya",
+      "D. Syria"
+    ]
+  },
+  "q128": {
+    "question": "The Arab Spring began after protests sparked by events in:",
+    "possibleAnswers": [
+      "A. Cairo’s Tahrir Square",
+      "B. Sidi Bouzid, Tunisia",
+      "C. Benghazi, Libya",
+      "D. Damascus, Syria"
+    ]
+  },
+  "q129": {
+    "question": "The Brexit referendum took place in:",
+    "possibleAnswers": [
+      "A. 2014",
+      "B. 2015",
+      "C. 2016",
+      "D. 2018"
+    ]
+  },
+  "q130": {
+    "question": "The Silk Road city of Samarkand flourished under the:",
+    "possibleAnswers": [
+      "A. Abbasids",
+      "B. Timurids",
+      "C. Seljuks",
+      "D. Safavids"
+    ]
+  },
+  "q131": {
+    "question": "The Mamluks were a military caste that ruled:",
+    "possibleAnswers": [
+      "A. Persia",
+      "B. Egypt and Syria",
+      "C. Anatolia",
+      "D. Maghreb"
+    ]
+  },
+  "q132": {
+    "question": "The Reconquista culminated in 1492 with the fall of:",
+    "possibleAnswers": [
+      "A. Toledo",
+      "B. Granada",
+      "C. Seville",
+      "D. Cordoba"
+    ]
+  },
+  "q133": {
+    "question": "The Tokugawa shogunate established a long peace in:",
+    "possibleAnswers": [
+      "A. Korea",
+      "B. Japan",
+      "C. China",
+      "D. Vietnam"
+    ]
+  },
+  "q134": {
+    "question": "The Treaty of Tordesillas (1494) divided new lands between:",
+    "possibleAnswers": [
+      "A. Spain and England",
+      "B. Spain and Portugal",
+      "C. Portugal and France",
+      "D. England and Netherlands"
+    ]
+  },
+  "q135": {
+    "question": "The Dutch founded New Amsterdam on the island of:",
+    "possibleAnswers": [
+      "A. Manhattan",
+      "B. Staten",
+      "C. Long",
+      "D. Roosevelt"
+    ]
+  },
+  "q136": {
+    "question": "The Glorious Revolution brought which monarchs to the English throne?",
+    "possibleAnswers": [
+      "A. James II",
+      "B. William III and Mary II",
+      "C. Charles II",
+      "D. Anne"
+    ]
+  },
+  "q137": {
+    "question": "The Jacobins were a radical faction in the:",
+    "possibleAnswers": [
+      "A. English Civil War",
+      "B. French Revolution",
+      "C. American Revolution",
+      "D. Russian Revolution"
+    ]
+  },
+  "q138": {
+    "question": "The Concert of Europe emerged after the defeat of:",
+    "possibleAnswers": [
+      "A. Louis XIV",
+      "B. Napoleon",
+      "C. Frederick the Great",
+      "D. Bismarck"
+    ]
+  },
+  "q139": {
+    "question": "The Berlin Wall was built in:",
+    "possibleAnswers": [
+      "A. 1959",
+      "B. 1961",
+      "C. 1963",
+      "D. 1965"
+    ]
+  },
+  "q140": {
+    "question": "The First Opium War ended with the Treaty of:",
+    "possibleAnswers": [
+      "A. Nanjing",
+      "B. Tientsin",
+      "C. Shimonoseki",
+      "D. Kanagawa"
+    ]
+  },
+  "q141": {
+    "question": "The first successful slave revolt leading to statehood occurred in:",
+    "possibleAnswers": [
+      "A. Jamaica",
+      "B. Saint-Domingue (Haiti)",
+      "C. Brazil",
+      "D. US South"
+    ]
+  },
+  "q142": {
+    "question": "The Sepoy Mutiny/Rebellion (1857) occurred in:",
+    "possibleAnswers": [
+      "A. Egypt",
+      "B. India",
+      "C. Burma",
+      "D. Java"
+    ]
+  },
+  "q143": {
+    "question": "The Meiji Constitution (1889) modeled aspects on:",
+    "possibleAnswers": [
+      "A. US Constitution",
+      "B. German (Prussian) system",
+      "C. French Third Republic",
+      "D. British unwritten system"
+    ]
+  },
+  "q144": {
+    "question": "The First Balkan War (1912) targeted:",
+    "possibleAnswers": [
+      "A. Austria-Hungary",
+      "B. Ottoman Empire",
+      "C. Russia",
+      "D. Italy"
+    ]
+  },
+  "q145": {
+    "question": "The Armenian Genocide occurred during:",
+    "possibleAnswers": [
+      "A. Crimean War",
+      "B. World War I",
+      "C. World War II",
+      "D. Cold War"
+    ]
+  },
+  "q146": {
+    "question": "The Treaty of San Stefano and Congress of Berlin (1878) reshaped:",
+    "possibleAnswers": [
+      "A. Scandinavia",
+      "B. Balkans",
+      "C. Low Countries",
+      "D. Iberia"
+    ]
+  },
+  "q147": {
+    "question": "The Long March (1934–35) was undertaken by:",
+    "possibleAnswers": [
+      "A. Chinese Communists",
+      "B. Chinese Nationalists",
+      "C. Vietnamese guerrillas",
+      "D. Korean partisans"
+    ]
+  },
+  "q148": {
+    "question": "The Nuremberg Trials prosecuted:",
+    "possibleAnswers": [
+      "A. Ottoman war criminals",
+      "B. Nazi leaders",
+      "C. Japanese emperors",
+      "D. Italian fascists only"
+    ]
+  },
+  "q149": {
+    "question": "The Partition Plan for Palestine (UN Resolution 181) was in:",
+    "possibleAnswers": [
+      "A. 1945",
+      "B. 1947",
+      "C. 1949",
+      "D. 1956"
+    ]
+  },
+  "q150": {
+    "question": "NATO was founded in:",
+    "possibleAnswers": [
+      "A. 1947",
+      "B. 1949",
+      "C. 1951",
+      "D. 1955"
+    ]
+  },
+  "q151": {
+    "question": "The Warsaw Pact formed in response in:",
+    "possibleAnswers": [
+      "A. 1949",
+      "B. 1955",
+      "C. 1957",
+      "D. 1961"
+    ]
+  },
+  "q152": {
+    "question": "The Hungarian Uprising against Soviet control occurred in:",
+    "possibleAnswers": [
+      "A. 1953",
+      "B. 1956",
+      "C. 1962",
+      "D. 1968"
+    ]
+  },
+  "q153": {
+    "question": "The “Great Leap Forward” was a policy in:",
+    "possibleAnswers": [
+      "A. USSR",
+      "B. China",
+      "C. North Korea",
+      "D. Vietnam"
+    ]
+  },
+  "q154": {
+    "question": "The Bay of Pigs invasion (1961) targeted:",
+    "possibleAnswers": [
+      "A. Nicaragua",
+      "B. Cuba",
+      "C. Dominican Republic",
+      "D. Haiti"
+    ]
+  },
+  "q155": {
+    "question": "The OAU (now African Union’s predecessor) was founded in:",
+    "possibleAnswers": [
+      "A. 1957",
+      "B. 1963",
+      "C. 1975",
+      "D. 1980"
+    ]
+  },
+  "q156": {
+    "question": "The Yom Kippur War (1973) began with attacks by Egypt and:",
+    "possibleAnswers": [
+      "A. Jordan",
+      "B. Syria",
+      "C. Lebanon",
+      "D. Iraq"
+    ]
+  },
+  "q157": {
+    "question": "The “Velvet Revolution” (1989) was a peaceful change in:",
+    "possibleAnswers": [
+      "A. East Germany",
+      "B. Czechoslovakia",
+      "C. Bulgaria",
+      "D. Romania"
+    ]
+  },
+  "q158": {
+    "question": "The Dayton Accords (1995) ended war in:",
+    "possibleAnswers": [
+      "A. Kosovo",
+      "B. Bosnia and Herzegovina",
+      "C. Croatia",
+      "D. Macedonia"
+    ]
+  },
+  "q159": {
+    "question": "The Kyoto Protocol (1997) addressed:",
+    "possibleAnswers": [
+      "A. Nuclear arms",
+      "B. Climate change",
+      "C. Trade tariffs",
+      "D. Human rights"
+    ]
+  },
+  "q160": {
+    "question": "The “Arab–Israeli peace treaty” first signed with Israel (1979) was by:",
+    "possibleAnswers": [
+      "A. Jordan",
+      "B. Egypt",
+      "C. Morocco",
+      "D. Lebanon"
+    ]
+  },
+  "q161": {
+    "question": "The Crusader Kingdom of Jerusalem was founded after the:",
+    "possibleAnswers": [
+      "A. First Crusade",
+      "B. Second Crusade",
+      "C. Third Crusade",
+      "D. Fourth Crusade"
+    ]
+  },
+  "q162": {
+    "question": "The Hanseatic League was a:",
+    "possibleAnswers": [
+      "A. Guild of weavers",
+      "B. Medieval commercial confederation",
+      "C. Crusader order",
+      "D. Monastic network"
+    ]
+  },
+  "q163": {
+    "question": "The Great Schism (1054) divided:",
+    "possibleAnswers": [
+      "A. Islam",
+      "B. Eastern and Western Christianity",
+      "C. Judaism",
+      "D. Hindu sects"
+    ]
+  },
+  "q164": {
+    "question": "The Investiture Controversy involved popes and emperors over:",
+    "possibleAnswers": [
+      "A. Taxation",
+      "B. Appointing bishops",
+      "C. Crusade leadership",
+      "D. Heresy trials"
+    ]
+  },
+  "q165": {
+    "question": "The Albigensian Crusade targeted heretics in:",
+    "possibleAnswers": [
+      "A. Italy",
+      "B. France (Languedoc)",
+      "C. Spain",
+      "D. Germany"
+    ]
+  },
+  "q166": {
+    "question": "The Reconquista was largely completed under:",
+    "possibleAnswers": [
+      "A. Ferdinand and Isabella",
+      "B. Philip II",
+      "C. Charles V",
+      "D. Alfonso X"
+    ]
+  },
+  "q167": {
+    "question": "The Sikh Empire was founded by:",
+    "possibleAnswers": [
+      "A. Ranjit Singh",
+      "B. Shivaji",
+      "C. Akbar",
+      "D. Aurangzeb"
+    ]
+  },
+  "q168": {
+    "question": "The Boxer Protocol imposed indemnities on:",
+    "possibleAnswers": [
+      "A. Japan",
+      "B. China",
+      "C. Korea",
+      "D. Siam"
+    ]
+  },
+  "q169": {
+    "question": "The Lusitania sinking (1915) strained relations between Germany and:",
+    "possibleAnswers": [
+      "A. Italy",
+      "B. USA",
+      "C. Russia",
+      "D. Spain"
+    ]
+  },
+  "q170": {
+    "question": "The Zimmermann Telegram proposed a German alliance with:",
+    "possibleAnswers": [
+      "A. Canada",
+      "B. Mexico",
+      "C. Brazil",
+      "D. Cuba"
+    ]
+  },
+  "q171": {
+    "question": "The Fourteen Points emphasized:",
+    "possibleAnswers": [
+      "A. Colonial expansion",
+      "B. Self-determination and open diplomacy",
+      "C. Secret treaties",
+      "D. Reparations increase"
+    ]
+  },
+  "q172": {
+    "question": "The New Deal was a response to:",
+    "possibleAnswers": [
+      "A. WWI",
+      "B. Great Depression",
+      "C. Korean War",
+      "D. Oil Crisis"
+    ]
+  },
+  "q173": {
+    "question": "The Molotov–Ribbentrop Pact (1939) was a non-aggression pact between:",
+    "possibleAnswers": [
+      "A. Germany and Italy",
+      "B. Germany and USSR",
+      "C. USSR and Japan",
+      "D. Britain and USSR"
+    ]
+  },
+  "q174": {
+    "question": "The Blitz was a German bombing campaign against:",
+    "possibleAnswers": [
+      "A. Paris",
+      "B. Moscow",
+      "C. London",
+      "D. Warsaw only"
+    ]
+  },
+  "q175": {
+    "question": "The Nanjing Decade (1927–37) refers to governance by:",
+    "possibleAnswers": [
+      "A. Warlords",
+      "B. Chinese Nationalists (KMT)",
+      "C. Communists",
+      "D. Japanese military"
+    ]
+  },
+  "q176": {
+    "question": "The Mau Mau Uprising occurred in:",
+    "possibleAnswers": [
+      "A. Ghana",
+      "B. Kenya",
+      "C. Nigeria",
+      "D. Tanzania"
+    ]
+  },
+  "q177": {
+    "question": "The Satyagraha method was developed by:",
+    "possibleAnswers": [
+      "A. Nehru",
+      "B. Gandhi",
+      "C. Patel",
+      "D. Bose"
+    ]
+  },
+  "q178": {
+    "question": "The Non-Aligned Movement was led early by Nasser, Nehru, and:",
+    "possibleAnswers": [
+      "A. Tito",
+      "B. Sukarno",
+      "C. Nkrumah",
+      "D. Castro"
+    ]
+  },
+  "q179": {
+    "question": "The first man in space was:",
+    "possibleAnswers": [
+      "A. John Glenn",
+      "B. Yuri Gagarin",
+      "C. Alan Shepard",
+      "D. Neil Armstrong"
+    ]
+  },
+  "q180": {
+    "question": "The “Ping-Pong diplomacy” helped thaw relations between the US and:",
+    "possibleAnswers": [
+      "A. USSR",
+      "B. China",
+      "C. Cuba",
+      "D. Vietnam"
+    ]
+  },
+  "q181": {
+    "question": "The first Gulf War (1990–91) responded to Iraq’s invasion of:",
+    "possibleAnswers": [
+      "A. Iran",
+      "B. Kuwait",
+      "C. Saudi Arabia",
+      "D. Jordan"
+    ]
+  },
+  "q182": {
+    "question": "The Good Neighbor Policy concerned US relations with:",
+    "possibleAnswers": [
+      "A. Europe",
+      "B. Latin America",
+      "C. Africa",
+      "D. Asia"
+    ]
+  },
+  "q183": {
+    "question": "The Great Purge (1930s) was conducted under:",
+    "possibleAnswers": [
+      "A. Lenin",
+      "B. Stalin",
+      "C. Khrushchev",
+      "D. Gorbachev"
+    ]
+  },
+  "q184": {
+    "question": "The Russo-Japanese War (1904–05) ended with victory for:",
+    "possibleAnswers": [
+      "A. Russia",
+      "B. Japan",
+      "C. Neither",
+      "D. China"
+    ]
+  },
+  "q185": {
+    "question": "The Easter Rising (1916) was in:",
+    "possibleAnswers": [
+      "A. Scotland",
+      "B. Ireland",
+      "C. Wales",
+      "D. England"
+    ]
+  },
+  "q186": {
+    "question": "The Treaty of Nanking ceded which territory to Britain?",
+    "possibleAnswers": [
+      "A. Taiwan",
+      "B. Hong Kong Island",
+      "C. Macau",
+      "D. Hainan"
+    ]
+  },
+  "q187": {
+    "question": "The Boer War (1899–1902) ended with British control of:",
+    "possibleAnswers": [
+      "A. Cape Colony only",
+      "B. Transvaal and Orange Free State",
+      "C. German Southwest Africa",
+      "D. Nyasaland"
+    ]
+  },
+  "q188": {
+    "question": "The Sykes–Picot Agreement secretly divided:",
+    "possibleAnswers": [
+      "A. Africa",
+      "B. The Ottoman Middle East",
+      "C. India",
+      "D. The Balkans"
+    ]
+  },
+  "q189": {
+    "question": "The Warsaw Ghetto Uprising occurred in:",
+    "possibleAnswers": [
+      "A. 1939",
+      "B. 1941",
+      "C. 1943",
+      "D. 1945"
+    ]
+  },
+  "q190": {
+    "question": "The Bretton Woods system pegged currencies to the:",
+    "possibleAnswers": [
+      "A. Silver",
+      "B. Pound",
+      "C. Gold (via US dollar)",
+      "D. Yen"
+    ]
+  },
+  "q191": {
+    "question": "The Apartheid-era protest where police killed dozens in 1960:",
+    "possibleAnswers": [
+      "A. Soweto Uprising",
+      "B. Sharpeville Massacre",
+      "C. Rivonia Raid",
+      "D. Marikana Strike"
+    ]
+  },
+  "q192": {
+    "question": "The Biafran War (Nigerian Civil War) occurred in:",
+    "possibleAnswers": [
+      "A. 1957–60",
+      "B. 1967–70",
+      "C. 1973–75",
+      "D. 1980–82"
+    ]
+  },
+  "q193": {
+    "question": "The Khmer Rouge genocide targeted perceived enemies in:",
+    "possibleAnswers": [
+      "A. Laos",
+      "B. Cambodia",
+      "C. Vietnam",
+      "D. Thailand"
+    ]
+  },
+  "q194": {
+    "question": "The Maastricht Treaty created the “three pillars” and paved the way for:",
+    "possibleAnswers": [
+      "A. Schengen only",
+      "B. Euro and deeper EU integration",
+      "C. NATO expansion",
+      "D. EFTA revival"
+    ]
+  },
+  "q195": {
+    "question": "The “Arab–Israeli peace treaty” second with Israel (1994) was by:",
+    "possibleAnswers": [
+      "A. Jordan",
+      "B. Syria",
+      "C. Lebanon",
+      "D. Iraq"
+    ]
+  },
+  "q196": {
+    "question": "The “Color Revolutions” include the Rose Revolution in:",
+    "possibleAnswers": [
+      "A. Ukraine",
+      "B. Georgia",
+      "C. Kyrgyzstan",
+      "D. Serbia only"
+    ]
+  },
+  "q197": {
+    "question": "The 2008 global crisis was triggered by collapse in:",
+    "possibleAnswers": [
+      "A. Oil markets",
+      "B. US housing and financial derivatives",
+      "C. Sovereign bonds only",
+      "D. Agricultural prices"
+    ]
+  },
+  "q198": {
+    "question": "The Paris Agreement (2015) addresses:",
+    "possibleAnswers": [
+      "A. Trade",
+      "B. Climate change",
+      "C. Refugees",
+      "D. Cybersecurity"
+    ]
+  },
+  "q199": {
+    "question": "The Belt and Road Initiative is led by:",
+    "possibleAnswers": [
+      "A. India",
+      "B. China",
+      "C. EU",
+      "D. Russia"
+    ]
+  },
+  "q200": {
+    "question": "The COVID-19 pandemic was declared by WHO in:",
+    "possibleAnswers": [
+      "A. January 2020",
+      "B. March 2020",
+      "C. June 2020",
+      "D. September 2020"
+    ]
+  }
+}

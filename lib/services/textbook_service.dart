@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/textbook_model.dart';
 
+import 'package:flutter/foundation.dart';
 class TextbookService {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final String _collection = 'textbooks';
@@ -20,7 +21,7 @@ class TextbookService {
         return Textbook.fromJson(data);
       }).toList();
     } catch (e) {
-      print('Error fetching textbooks: $e');
+      debugPrint('Error fetching textbooks: $e');
       // Return sample data as fallback
       return _getSampleTextbooks();
     }
@@ -39,7 +40,7 @@ class TextbookService {
         return Textbook.fromJson(data);
       }).toList();
     } catch (e) {
-      print('Error fetching textbooks by level: $e');
+      debugPrint('Error fetching textbooks by level: $e');
       return [];
     }
   }
@@ -57,7 +58,7 @@ class TextbookService {
         return Textbook.fromJson(data);
       }).toList();
     } catch (e) {
-      print('Error fetching textbooks by subject: $e');
+      debugPrint('Error fetching textbooks by subject: $e');
       return [];
     }
   }
@@ -74,7 +75,7 @@ class TextbookService {
             textbook.topics.any((topic) => topic.toLowerCase().contains(lowercaseQuery));
       }).toList();
     } catch (e) {
-      print('Error searching textbooks: $e');
+      debugPrint('Error searching textbooks: $e');
       return [];
     }
   }
@@ -89,7 +90,7 @@ class TextbookService {
       }
       return null;
     } catch (e) {
-      print('Error fetching textbook by ID: $e');
+      debugPrint('Error fetching textbook by ID: $e');
       return null;
     }
   }
@@ -100,7 +101,7 @@ class TextbookService {
         'downloads': FieldValue.increment(1),
       });
     } catch (e) {
-      print('Error incrementing download count: $e');
+      debugPrint('Error incrementing download count: $e');
     }
   }
 

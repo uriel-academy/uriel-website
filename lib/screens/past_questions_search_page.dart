@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+// ...existing imports...
 import '../models/question_model.dart';
 import '../services/question_service.dart';
 import '../services/storage_service.dart';
@@ -8,7 +8,10 @@ import 'quiz_setup_page.dart';
 import 'question_detail_page.dart';
 
 class PastQuestionsSearchPage extends StatefulWidget {
-  const PastQuestionsSearchPage({Key? key}) : super(key: key);
+  /// Optional initial subject display name (e.g. 'RME' or 'Religious And Moral Education')
+  final String? initialSubject;
+
+  const PastQuestionsSearchPage({Key? key, this.initialSubject}) : super(key: key);
 
   @override
   State<PastQuestionsSearchPage> createState() => _PastQuestionsSearchPageState();
@@ -22,19 +25,18 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
   
   // Filter Controllers
   final TextEditingController _searchController = TextEditingController();
-  String _selectedExamType = 'All Types';
+  String _selectedExamType = 'BECE';
   String _selectedSubject = 'All Subjects';
   String _selectedYear = 'All Years';
   
   // State Management
   List<Question> _questions = [];
   List<Question> _filteredQuestions = [];
-  List<PastQuestion> _storageQuestions = [];
   bool _isLoading = false;
   bool _isGridView = false;
   String _sortBy = 'Most Recent';
   int _currentPage = 1;
-  int _questionsPerPage = 20;
+  final int _questionsPerPage = 20;
 
   @override
   void initState() {
@@ -53,7 +55,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
   Future<void> _loadInitialData() async {
     setState(() => _isLoading = true);
     try {
-      print('🚀 Loading questions from database...');
+      debugPrint('🚀 Loading questions from database...');
       
       // Load database questions with timeout
       final questionsTask = _questionService.getQuestions().timeout(
@@ -77,22 +79,76 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
       final rmeQuestions = await rmeQuestionsTask;
       final storageQuestions = await storageQuestionsTask;
       
-      print('📊 Loaded ${questions.length} total questions from database');
-      print('📚 Loaded ${rmeQuestions.length} RME questions specifically');
-      print('📁 Loaded ${storageQuestions.length} storage questions');
+      debugPrint('📊 Loaded ${questions.length} total questions from database');
+      debugPrint('📚 Loaded ${rmeQuestions.length} RME questions specifically');
+      debugPrint('📁 Loaded ${storageQuestions.length} storage questions');
       
+      // Merge database questions with RME questions and storage questions so searches can find all
+      final mergedQuestions = <Question>[];
+
+      // Add database questions
+      mergedQuestions.addAll(questions);
+
+      // Add RME questions from Firestore (avoid duplicates)
+      for (final q in rmeQuestions) {
+        if (!mergedQuestions.any((existing) => existing.id == q.id)) {
+          mergedQuestions.add(q);
+        }
+      }
+
+      // Convert storage PastQuestion entries into Question-lite objects for display/search
+      for (final p in storageQuestions) {
+        // Convert storage PastQuestion to an in-memory Question for search/display
+        final storageAsQuestion = Question(
+          id: 'storage_${p.id}',
+          questionText: p.title,
+          type: QuestionType.essay,
+          subject: Subject.religiousMoralEducation,
+          examType: ExamType.bece,
+          year: p.year,
+          section: 'A',
+          questionNumber: 0,
+          options: [],
+          correctAnswer: '',
+          explanation: '',
+          marks: 0,
+          difficulty: 'medium',
+          topics: [p.subject],
+          createdAt: p.uploadTime,
+          createdBy: 'storage',
+          isActive: true,
+        );
+
+        if (!mergedQuestions.any((existing) => existing.id == storageAsQuestion.id)) {
+          mergedQuestions.add(storageAsQuestion);
+        }
+      }
+
+      // Filter to show only BECE and WASSCE questions (exclude trivia, mock, practice)
+      final beceWasscceQuestions = mergedQuestions
+          .where((q) => 
+            q.examType == ExamType.bece || 
+            q.examType == ExamType.wassce
+          )
+          .toList();
+
       setState(() {
-        _questions = questions;
-        _storageQuestions = storageQuestions;
-        _filteredQuestions = questions;
+        _questions = beceWasscceQuestions;
+        _filteredQuestions = beceWasscceQuestions;
         _isLoading = false;
       });
+      // If the widget was constructed with an initial subject, apply it
+      if (widget.initialSubject != null && widget.initialSubject!.isNotEmpty) {
+        setState(() {
+          _selectedSubject = widget.initialSubject!;
+        });
+        _applyFilters();
+      }
     } catch (e) {
       // Silent fallback - don't show error to user
-      print('❌ Questions loading error (handled gracefully): $e');
+      debugPrint('❌ Questions loading error (handled gracefully): $e');
       setState(() {
         _questions = [];
-        _storageQuestions = [];
         _filteredQuestions = [];
         _isLoading = false;
       });
@@ -104,13 +160,12 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
     
     List<Question> filtered = List.from(_questions);
     
-    // Apply filters
-    if (_selectedExamType != 'All Types') {
-      ExamType examType = ExamType.values.firstWhere(
-        (e) => e.name.toUpperCase() == _selectedExamType.toUpperCase(),
-      );
-      filtered = filtered.where((q) => q.examType == examType).toList();
-    }
+    // Questions are already filtered to BECE/WASSCE only in _loadInitialData
+    // Apply exam type filter (always applied since no "All Types" option)
+    ExamType examType = ExamType.values.firstWhere(
+      (e) => e.name.toUpperCase() == _selectedExamType.toUpperCase(),
+    );
+    filtered = filtered.where((q) => q.examType == examType).toList();
     
     if (_selectedSubject != 'All Subjects') {
       Subject? subject = _getSubjectFromDisplayName(_selectedSubject);
@@ -126,24 +181,31 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
     // Apply search text
     if (_searchController.text.isNotEmpty) {
       String searchTerm = _searchController.text.toLowerCase();
-      filtered = filtered.where((q) { 
+
+      // Recognize common RME search terms (allow 'rme' abbreviation)
+      final isRmeQuery = searchTerm.contains('rme') || searchTerm.contains('religious');
+
+      filtered = filtered.where((q) {
         // Search in question text
         bool matchesQuestion = q.questionText.toLowerCase().contains(searchTerm);
-        
+
         // Search in subject (both enum name and display name)
         bool matchesSubject = q.subject.name.toLowerCase().contains(searchTerm) ||
-                             _mapSubjectToString(q.subject).toLowerCase().contains(searchTerm);
-        
+            _mapSubjectToString(q.subject).toLowerCase().contains(searchTerm) ||
+            // Explicit RME handling: if user typed 'rme' match RME subject
+            (isRmeQuery && q.subject == Subject.religiousMoralEducation);
+
         // Search in year
         bool matchesYear = q.year.toLowerCase().contains(searchTerm);
-        
+
         // Search in exam type
         bool matchesExamType = q.examType.name.toLowerCase().contains(searchTerm) ||
-                              _mapExamTypeToString(q.examType).toLowerCase().contains(searchTerm);
-        
-        // Search in topics
-        bool matchesTopics = q.topics.any((topic) => topic.toLowerCase().contains(searchTerm));
-        
+            _mapExamTypeToString(q.examType).toLowerCase().contains(searchTerm);
+
+        // Search in topics (also check for rme abbreviation)
+        bool matchesTopics = q.topics.any((topic) => topic.toLowerCase().contains(searchTerm)) ||
+            (isRmeQuery && q.topics.any((topic) => topic.toLowerCase().contains('rme')));
+
         return matchesQuestion || matchesSubject || matchesYear || matchesExamType || matchesTopics;
       }).toList();
     }
@@ -170,14 +232,14 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
         questions.sort((a, b) => b.year.compareTo(a.year));
         break;
       case 'By Difficulty':
-        questions.sort((a, b) => (b.difficulty ?? 'medium').compareTo(a.difficulty ?? 'medium'));
+        questions.sort((a, b) => b.difficulty.compareTo(a.difficulty));
         break;
     }
   }
 
   void _resetFilters() {
     setState(() {
-      _selectedExamType = 'All Types';
+      _selectedExamType = 'BECE';
       _selectedSubject = 'All Subjects';
       _selectedYear = 'All Years';
       _searchController.clear();
@@ -210,7 +272,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
                 style: GoogleFonts.playfairDisplay(
                   fontSize: isSmallScreen ? 18 : 20,
                   fontWeight: FontWeight.w700,
-                  color: const Color(0xFF1A1E3F),
+                  color: const Color(0xFF2ECC71),
                 ),
               ),
               centerTitle: false,
@@ -293,7 +355,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -385,7 +447,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
                     ),
                   ),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFFD62828),
+                    backgroundColor: const Color(0xFF2ECC71), // Pastel Navy Blue
                     padding: EdgeInsets.symmetric(
                       vertical: isSmallScreen ? 12 : 16,
                     ),
@@ -411,7 +473,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
               child: _buildFilterChip(
                 'Exam Type',
                 _selectedExamType,
-                ['All Types', 'BECE', 'WASSCE', 'Mock'],
+                ['BECE', 'WASSCE'],
                 (value) => setState(() => _selectedExamType = value!),
                 Icons.school,
               ),
@@ -457,7 +519,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
           child: _buildFilterChip(
             'Exam Type',
             _selectedExamType,
-            ['All Types', 'BECE', 'WASSCE', 'Mock'],
+            ['BECE', 'WASSCE'],
             (value) => setState(() => _selectedExamType = value!),
             Icons.school,
           ),
@@ -604,13 +666,13 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
                 ),
                 decoration: BoxDecoration(
                   color: action['action'] == 'quiz' 
-                      ? (action['color'] as Color).withOpacity(0.1)
+                      ? (action['color'] as Color).withValues(alpha: 0.1)
                       : Colors.white,
                   borderRadius: BorderRadius.circular(20),
                   border: Border.all(color: action['color'] as Color),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.05),
+                      color: Colors.black.withValues(alpha: 0.05),
                       blurRadius: 5,
                       offset: const Offset(0, 2),
                     ),
@@ -687,7 +749,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -704,7 +766,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
                   style: GoogleFonts.montserrat(
                     fontSize: isSmallScreen ? 16 : 18,
                     fontWeight: FontWeight.w700,
-                    color: const Color(0xFF1A1E3F),
+                    color: const Color(0xFF2ECC71),
                   ),
                 ),
                 if (_filteredQuestions.isNotEmpty)
@@ -758,7 +820,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
   }
 
   Widget _buildLoadingState() {
-    return Container(
+    return SizedBox(
       height: 300,
       child: Center(
         child: Column(
@@ -780,7 +842,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
   }
 
   Widget _buildEmptyState() {
-    return Container(
+    return SizedBox(
       height: 300,
       child: Center(
         child: Column(
@@ -789,7 +851,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
             Container(
               padding: const EdgeInsets.all(24),
               decoration: BoxDecoration(
-                color: const Color(0xFFD62828).withOpacity(0.1),
+                color: const Color(0xFFD62828).withValues(alpha: 0.1),
                 shape: BoxShape.circle,
               ),
               child: const Icon(
@@ -804,7 +866,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
               style: GoogleFonts.montserrat(
                 fontSize: 20,
                 fontWeight: FontWeight.w700,
-                color: const Color(0xFF1A1E3F),
+                color: const Color(0xFF2ECC71),
               ),
             ),
             const SizedBox(height: 8),
@@ -821,7 +883,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
               icon: const Icon(Icons.refresh, color: Colors.white),
               label: const Text('Reset Filters'),
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFFD62828),
+                backgroundColor: const Color(0xFF2ECC71), // Pastel Navy Blue
                 foregroundColor: Colors.white,
               ),
             ),
@@ -889,7 +951,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
               border: Border.all(color: Colors.grey[200]!),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.05),
+                  color: Colors.black.withValues(alpha: 0.05),
                   blurRadius: 10,
                   offset: const Offset(0, 2),
                 ),
@@ -939,7 +1001,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
                     style: GoogleFonts.montserrat(
                       fontSize: 14,
                       fontWeight: FontWeight.w600,
-                      color: const Color(0xFF1A1E3F),
+                      color: const Color(0xFF2ECC71),
                     ),
                   ),
                   Text(
@@ -972,7 +1034,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
               : question.questionText,
           style: GoogleFonts.montserrat(
             fontSize: 14,
-            color: const Color(0xFF1A1E3F),
+            color: const Color(0xFF2ECC71),
             height: 1.4,
           ),
           maxLines: 3,
@@ -987,8 +1049,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
           runSpacing: 6,
           children: [
             _buildSmallBadge(question.type.name, Colors.orange),
-            if (question.difficulty != null)
-              _buildDifficultyBadge(question.difficulty!),
+            _buildDifficultyBadge(question.difficulty),
           ],
         ),
         
@@ -1006,9 +1067,10 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
                   style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
                 ),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFFD62828),
+                  backgroundColor: const Color(0xFF2ECC71), // Pastel Navy Blue
                   foregroundColor: Colors.white,
                   padding: const EdgeInsets.symmetric(vertical: 12),
+                  side: const BorderSide(color: Color(0xFF4CAF50), width: 1.5), // Pastel Green outline
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8),
                   ),
@@ -1043,7 +1105,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
     return Row(
       children: [
         // Left Section
-        Container(
+        SizedBox(
           width: 60,
           child: Column(
             children: [
@@ -1093,7 +1155,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
                 style: GoogleFonts.montserrat(
                   fontSize: 16,
                   fontWeight: FontWeight.w600,
-                  color: const Color(0xFF1A1E3F),
+                  color: const Color(0xFF2ECC71),
                 ),
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
@@ -1110,8 +1172,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
                   _buildBadge(question.year, Colors.blue),
                   _buildBadge(_getSubjectName(question.subject), _getSubjectColor(question.subject)),
                   _buildBadge(question.type.name, Colors.orange),
-                  if (question.difficulty != null)
-                    _buildDifficultyBadge(question.difficulty!),
+                  _buildDifficultyBadge(question.difficulty),
                 ],
               ),
             ],
@@ -1128,7 +1189,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
               icon: const Icon(Icons.play_arrow, size: 16),
               label: const Text('Start Quiz'),
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFFD62828),
+                backgroundColor: const Color(0xFF2ECC71), // Pastel Navy Blue
                 foregroundColor: Colors.white,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8),
@@ -1168,7 +1229,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
             border: Border.all(color: Colors.grey[200]!),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.05),
+                color: Colors.black.withValues(alpha: 0.05),
                 blurRadius: 10,
                 offset: const Offset(0, 2),
               ),
@@ -1221,7 +1282,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
                   style: GoogleFonts.montserrat(
                     fontSize: 14,
                     fontWeight: FontWeight.w600,
-                    color: const Color(0xFF1A1E3F),
+                    color: const Color(0xFF2ECC71),
                   ),
                   maxLines: 3,
                   overflow: TextOverflow.ellipsis,
@@ -1249,7 +1310,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
                     child: ElevatedButton(
                       onPressed: () => _viewQuestion(question),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFFD62828),
+                        backgroundColor: const Color(0xFF2ECC71), // Pastel Navy Blue
                         foregroundColor: Colors.white,
                         padding: const EdgeInsets.symmetric(vertical: 8),
                         shape: RoundedRectangleBorder(
@@ -1293,9 +1354,9 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.1),
+        color: color.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(6),
-        border: Border.all(color: color.withOpacity(0.3)),
+        border: Border.all(color: color.withValues(alpha: 0.3)),
       ),
       child: Text(
         text,
@@ -1312,7 +1373,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.1),
+        color: color.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(4),
       ),
       child: Text(
@@ -1350,7 +1411,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.1),
+        color: color.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(6),
       ),
       child: Row(

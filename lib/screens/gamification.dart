@@ -83,7 +83,7 @@ class _GamificationPageState extends State<GamificationPage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Your Progress:', style: const TextStyle(fontWeight: FontWeight.bold)),
+                    const Text('Your Progress:', style: TextStyle(fontWeight: FontWeight.bold)),
                     Text('Quizzes completed: $quizzesCompleted'),
                     Text('Textbooks read: $textbooksRead'),
                     Text('AI tools used: $aiToolsUsed'),
@@ -129,13 +129,13 @@ class _GamificationPageState extends State<GamificationPage> {
               ),
             ),
             const SizedBox(height: 24),
-            Card(
-              color: const Color(0xFFD62828),
+            const Card(
+              color: Color(0xFFD62828),
               child: Padding(
-                padding: const EdgeInsets.all(16),
+                padding: EdgeInsets.all(16),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
+                  children: [
                     Text('How to earn more points:', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
                     SizedBox(height: 8),
                     Text('• Complete quizzes and mock exams', style: TextStyle(color: Colors.white)),

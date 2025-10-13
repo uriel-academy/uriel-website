@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import '../constants/app_styles.dart';
 import 'sign_up.dart';
 import 'contact.dart';
@@ -341,7 +342,7 @@ class _FAQPageState extends State<FAQPage> with TickerProviderStateMixin {
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -351,7 +352,14 @@ class _FAQPageState extends State<FAQPage> with TickerProviderStateMixin {
         children: [
           // Logo
           GestureDetector(
-            onTap: () => Navigator.pushReplacementNamed(context, '/landing'),
+            onTap: () {
+              // If user is logged in, go to home, otherwise go to landing
+              final isLoggedIn = FirebaseAuth.instance.currentUser != null;
+              Navigator.pushReplacementNamed(
+                context, 
+                isLoggedIn ? '/home' : '/landing',
+              );
+            },
             child: Text(
               'Uriel Academy',
               style: AppStyles.brandNameLight(fontSize: isSmallScreen ? 18 : 22),
@@ -546,10 +554,10 @@ class _FAQPageState extends State<FAQPage> with TickerProviderStateMixin {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: const Color(0xFFD62828).withOpacity(0.2)),
+        border: Border.all(color: const Color(0xFFD62828).withValues(alpha: 0.2)),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -563,7 +571,7 @@ class _FAQPageState extends State<FAQPage> with TickerProviderStateMixin {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                 decoration: BoxDecoration(
-                  color: const Color(0xFFD62828).withOpacity(0.1),
+                  color: const Color(0xFFD62828).withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Text(
@@ -661,7 +669,7 @@ class _FAQPageState extends State<FAQPage> with TickerProviderStateMixin {
                       ),
                       boxShadow: isSelected ? [
                         BoxShadow(
-                          color: const Color(0xFFD62828).withOpacity(0.3),
+                          color: const Color(0xFFD62828).withValues(alpha: 0.3),
                           blurRadius: 8,
                           offset: const Offset(0, 2),
                         ),
@@ -735,7 +743,7 @@ class _FAQPageState extends State<FAQPage> with TickerProviderStateMixin {
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -761,7 +769,7 @@ class _FAQPageState extends State<FAQPage> with TickerProviderStateMixin {
                   padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                   margin: const EdgeInsets.only(right: 8),
                   decoration: BoxDecoration(
-                    color: const Color(0xFFD62828).withOpacity(0.1),
+                    color: const Color(0xFFD62828).withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Text(
@@ -921,7 +929,7 @@ class _FAQPageState extends State<FAQPage> with TickerProviderStateMixin {
                 'Our support team is here to help you succeed',
                 style: GoogleFonts.montserrat(
                   fontSize: isSmallScreen ? 16 : 18,
-                  color: Colors.white.withOpacity(0.9),
+                  color: Colors.white.withValues(alpha: 0.9),
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -971,9 +979,9 @@ class _FAQPageState extends State<FAQPage> with TickerProviderStateMixin {
       child: Container(
         padding: EdgeInsets.all(isSmallScreen ? 16 : 20),
         decoration: BoxDecoration(
-          color: Colors.white.withOpacity(0.1),
+          color: Colors.white.withValues(alpha: 0.1),
           borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: Colors.white.withOpacity(0.2)),
+          border: Border.all(color: Colors.white.withValues(alpha: 0.2)),
         ),
         child: Row(
           children: [
@@ -1006,7 +1014,7 @@ class _FAQPageState extends State<FAQPage> with TickerProviderStateMixin {
                     subtitle,
                     style: GoogleFonts.montserrat(
                       fontSize: isSmallScreen ? 12 : 13,
-                      color: Colors.white.withOpacity(0.8),
+                      color: Colors.white.withValues(alpha: 0.8),
                     ),
                   ),
                   const SizedBox(height: 4),
@@ -1014,7 +1022,7 @@ class _FAQPageState extends State<FAQPage> with TickerProviderStateMixin {
                     contact,
                     style: GoogleFonts.montserrat(
                       fontSize: isSmallScreen ? 12 : 13,
-                      color: Colors.white.withOpacity(0.9),
+                      color: Colors.white.withValues(alpha: 0.9),
                       fontWeight: FontWeight.w500,
                     ),
                   ),
@@ -1024,7 +1032,7 @@ class _FAQPageState extends State<FAQPage> with TickerProviderStateMixin {
             
             Icon(
               Icons.arrow_forward_ios,
-              color: Colors.white.withOpacity(0.7),
+              color: Colors.white.withValues(alpha: 0.7),
               size: 16,
             ),
           ],
@@ -1054,7 +1062,7 @@ class _FAQPageState extends State<FAQPage> with TickerProviderStateMixin {
             '© 2025 Uriel Academy. Built with ❤️ for Ghanaian students.',
             style: GoogleFonts.montserrat(
               fontSize: isSmallScreen ? 12 : 14,
-              color: Colors.white.withOpacity(0.7),
+              color: Colors.white.withValues(alpha: 0.7),
             ),
             textAlign: TextAlign.center,
           ),
@@ -1065,10 +1073,10 @@ class _FAQPageState extends State<FAQPage> with TickerProviderStateMixin {
 
   void _showFeedback(String response) {
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
+      const SnackBar(
         content: Text('Thank you for your feedback!'),
-        backgroundColor: const Color(0xFF1A1E3F),
-        duration: const Duration(seconds: 2),
+        backgroundColor: Color(0xFF1A1E3F),
+        duration: Duration(seconds: 2),
       ),
     );
   }

@@ -1,0 +1,1803 @@
+{
+  "subject": "Geography (Africa & World)",
+  "q1": {
+    "question": "What is the longest river in the world by most modern measurements?",
+    "possibleAnswers": [
+      "A. Amazon",
+      "B. Nile",
+      "C. Yangtze",
+      "D. Mississippi–Missouri"
+    ]
+  },
+  "q2": {
+    "question": "Which African lake is the largest by area?",
+    "possibleAnswers": [
+      "A. Lake Tanganyika",
+      "B. Lake Victoria",
+      "C. Lake Malawi",
+      "D. Lake Turkana"
+    ]
+  },
+  "q3": {
+    "question": "The Sahara Desert primarily lies in which part of Africa?",
+    "possibleAnswers": [
+      "A. Southern",
+      "B. Eastern",
+      "C. Northern",
+      "D. Central"
+    ]
+  },
+  "q4": {
+    "question": "Which country has the most time zones (including overseas territories)?",
+    "possibleAnswers": [
+      "A. United States",
+      "B. France",
+      "C. Russia",
+      "D. United Kingdom"
+    ]
+  },
+  "q5": {
+    "question": "Mount Kilimanjaro is located in:",
+    "possibleAnswers": [
+      "A. Kenya",
+      "B. Uganda",
+      "C. Tanzania",
+      "D. Ethiopia"
+    ]
+  },
+  "q6": {
+    "question": "Which city is at the confluence of the Blue and White Nile?",
+    "possibleAnswers": [
+      "A. Juba",
+      "B. Khartoum",
+      "C. Cairo",
+      "D. Aswan"
+    ]
+  },
+  "q7": {
+    "question": "The Great Rift Valley stretches primarily from:",
+    "possibleAnswers": [
+      "A. Algeria to Morocco",
+      "B. Ethiopia to Mozambique",
+      "C. Egypt to Sudan",
+      "D. Nigeria to Cameroon"
+    ]
+  },
+  "q8": {
+    "question": "The capital of Namibia is:",
+    "possibleAnswers": [
+      "A. Gaborone",
+      "B. Windhoek",
+      "C. Lusaka",
+      "D. Harare"
+    ]
+  },
+  "q9": {
+    "question": "Which ocean is the smallest by area?",
+    "possibleAnswers": [
+      "A. Arctic",
+      "B. Indian",
+      "C. Atlantic",
+      "D. Southern"
+    ]
+  },
+  "q10": {
+    "question": "The Sahel region borders the Sahara to the:",
+    "possibleAnswers": [
+      "A. North",
+      "B. South",
+      "C. East",
+      "D. West"
+    ]
+  },
+  "q11": {
+    "question": "Which is the highest mountain in Africa?",
+    "possibleAnswers": [
+      "A. Mount Kenya",
+      "B. Mount Stanley",
+      "C. Mount Meru",
+      "D. Mount Kilimanjaro"
+    ]
+  },
+  "q12": {
+    "question": "The Strait of Gibraltar connects the Mediterranean Sea to the:",
+    "possibleAnswers": [
+      "A. Red Sea",
+      "B. Atlantic Ocean",
+      "C. Black Sea",
+      "D. Arabian Sea"
+    ]
+  },
+  "q13": {
+    "question": "Which African country is completely surrounded by South Africa?",
+    "possibleAnswers": [
+      "A. Eswatini",
+      "B. Lesotho",
+      "C. Botswana",
+      "D. Namibia"
+    ]
+  },
+  "q14": {
+    "question": "The capital of Ethiopia is:",
+    "possibleAnswers": [
+      "A. Addis Ababa",
+      "B. Asmara",
+      "C. Nairobi",
+      "D. Mogadishu"
+    ]
+  },
+  "q15": {
+    "question": "Which river flows through Paris?",
+    "possibleAnswers": [
+      "A. Thames",
+      "B. Seine",
+      "C. Rhine",
+      "D. Danube"
+    ]
+  },
+  "q16": {
+    "question": "The world’s largest hot desert is the:",
+    "possibleAnswers": [
+      "A. Gobi",
+      "B. Sahara",
+      "C. Arabian",
+      "D. Kalahari"
+    ]
+  },
+  "q17": {
+    "question": "Which African river forms part of the border between Zambia and Zimbabwe?",
+    "possibleAnswers": [
+      "A. Zambezi",
+      "B. Limpopo",
+      "C. Orange",
+      "D. Congo"
+    ]
+  },
+  "q18": {
+    "question": "The Cape of Good Hope lies near which city?",
+    "possibleAnswers": [
+      "A. Cape Town",
+      "B. Durban",
+      "C. Port Elizabeth (Gqeberha)",
+      "D. Maputo"
+    ]
+  },
+  "q19": {
+    "question": "Which African country has the most population?",
+    "possibleAnswers": [
+      "A. Ethiopia",
+      "B. Egypt",
+      "C. DR Congo",
+      "D. Nigeria"
+    ]
+  },
+  "q20": {
+    "question": "The deepest lake in Africa is:",
+    "possibleAnswers": [
+      "A. Victoria",
+      "B. Tanganyika",
+      "C. Malawi",
+      "D. Kivu"
+    ]
+  },
+  "q21": {
+    "question": "Which country is known as the “Land of a Thousand Hills”?",
+    "possibleAnswers": [
+      "A. Rwanda",
+      "B. Burundi",
+      "C. Uganda",
+      "D. Malawi"
+    ]
+  },
+  "q22": {
+    "question": "The Atlas Mountains are primarily in:",
+    "possibleAnswers": [
+      "A. Morocco, Algeria, Tunisia",
+      "B. Egypt, Libya, Sudan",
+      "C. Nigeria, Benin, Togo",
+      "D. Kenya, Tanzania, Uganda"
+    ]
+  },
+  "q23": {
+    "question": "The capital of Ghana is:",
+    "possibleAnswers": [
+      "A. Kumasi",
+      "B. Accra",
+      "C. Tamale",
+      "D. Sekondi-Takoradi"
+    ]
+  },
+  "q24": {
+    "question": "Which is the largest island in the Indian Ocean?",
+    "possibleAnswers": [
+      "A. Sri Lanka",
+      "B. Madagascar",
+      "C. Sumatra",
+      "D. Borneo"
+    ]
+  },
+  "q25": {
+    "question": "The Great Barrier Reef is off the coast of:",
+    "possibleAnswers": [
+      "A. South Africa",
+      "B. Australia",
+      "C. Indonesia",
+      "D. Philippines"
+    ]
+  },
+  "q26": {
+    "question": "The world’s saltiest large water body (natural) is typically:",
+    "possibleAnswers": [
+      "A. Baltic Sea",
+      "B. Black Sea",
+      "C. Dead Sea",
+      "D. Caspian Sea"
+    ]
+  },
+  "q27": {
+    "question": "Which desert spans parts of Botswana, Namibia, and South Africa?",
+    "possibleAnswers": [
+      "A. Namib",
+      "B. Kalahari",
+      "C. Sahara",
+      "D. Danakil"
+    ]
+  },
+  "q28": {
+    "question": "The capital of Kenya is:",
+    "possibleAnswers": [
+      "A. Mombasa",
+      "B. Nairobi",
+      "C. Kisumu",
+      "D. Nakuru"
+    ]
+  },
+  "q29": {
+    "question": "Which line of latitude passes near Ghana’s southern coast?",
+    "possibleAnswers": [
+      "A. Equator",
+      "B. Tropic of Cancer",
+      "C. Tropic of Capricorn",
+      "D. Arctic Circle"
+    ]
+  },
+  "q30": {
+    "question": "The world’s highest waterfall by uninterrupted drop is:",
+    "possibleAnswers": [
+      "A. Tugela Falls",
+      "B. Angel Falls",
+      "C. Victoria Falls",
+      "D. Yosemite Falls"
+    ]
+  },
+  "q31": {
+    "question": "The Horn of Africa includes Somalia, Ethiopia, Eritrea, and:",
+    "possibleAnswers": [
+      "A. Sudan",
+      "B. Djibouti",
+      "C. Kenya",
+      "D. South Sudan"
+    ]
+  },
+  "q32": {
+    "question": "Which country has the city of Timbuktu?",
+    "possibleAnswers": [
+      "A. Mali",
+      "B. Niger",
+      "C. Burkina Faso",
+      "D. Senegal"
+    ]
+  },
+  "q33": {
+    "question": "The primary outflow of Lake Victoria is the:",
+    "possibleAnswers": [
+      "A. Congo River",
+      "B. Victoria Nile",
+      "C. White Nile (immediately)",
+      "D. Rufiji River"
+    ]
+  },
+  "q34": {
+    "question": "The Suez Canal connects the Mediterranean to the:",
+    "possibleAnswers": [
+      "A. Indian Ocean",
+      "B. Red Sea",
+      "C. Persian Gulf",
+      "D. Black Sea"
+    ]
+  },
+  "q35": {
+    "question": "Which African capital lies furthest south?",
+    "possibleAnswers": [
+      "A. Pretoria",
+      "B. Gaborone",
+      "C. Maseru",
+      "D. Cape Town (legislative)"
+    ]
+  },
+  "q36": {
+    "question": "The “Roof of the World” generally refers to:",
+    "possibleAnswers": [
+      "A. Andes",
+      "B. Tibetan Plateau",
+      "C. Alps",
+      "D. Ethiopian Highlands"
+    ]
+  },
+  "q37": {
+    "question": "The capital of Morocco is:",
+    "possibleAnswers": [
+      "A. Casablanca",
+      "B. Rabat",
+      "C. Marrakesh",
+      "D. Fes"
+    ]
+  },
+  "q38": {
+    "question": "Which river creates the iconic Victoria Falls?",
+    "possibleAnswers": [
+      "A. Congo",
+      "B. Zambezi",
+      "C. Limpopo",
+      "D. Orange"
+    ]
+  },
+  "q39": {
+    "question": "Which country is both in Europe and Asia (transcontinental)?",
+    "possibleAnswers": [
+      "A. Greece",
+      "B. Turkey",
+      "C. Italy",
+      "D. Spain"
+    ]
+  },
+  "q40": {
+    "question": "The Namib Desert runs along the coast of:",
+    "possibleAnswers": [
+      "A. Namibia",
+      "B. Angola",
+      "C. South Africa",
+      "D. Mozambique"
+    ]
+  },
+  "q41": {
+    "question": "Which country has no coastline?",
+    "possibleAnswers": [
+      "A. Somalia",
+      "B. Uganda",
+      "C. Mozambique",
+      "D. Tanzania"
+    ]
+  },
+  "q42": {
+    "question": "The world’s largest delta is the:",
+    "possibleAnswers": [
+      "A. Niger Delta",
+      "B. Ganges–Brahmaputra Delta",
+      "C. Mekong Delta",
+      "D. Amazon Delta"
+    ]
+  },
+  "q43": {
+    "question": "Lake Baikal is notable for being:",
+    "possibleAnswers": [
+      "A. Highest lake",
+      "B. Saltiest lake",
+      "C. Deepest freshwater lake",
+      "D. Largest by area"
+    ]
+  },
+  "q44": {
+    "question": "Which capital city sits at high altitude in East Africa?",
+    "possibleAnswers": [
+      "A. Kampala",
+      "B. Nairobi",
+      "C. Dar es Salaam",
+      "D. Mogadishu"
+    ]
+  },
+  "q45": {
+    "question": "The River Niger flows into the:",
+    "possibleAnswers": [
+      "A. Gulf of Guinea",
+      "B. Mediterranean Sea",
+      "C. Atlantic via Senegal",
+      "D. Red Sea"
+    ]
+  },
+  "q46": {
+    "question": "The capital of Senegal is:",
+    "possibleAnswers": [
+      "A. Banjul",
+      "B. Dakar",
+      "C. Conakry",
+      "D. Nouakchott"
+    ]
+  },
+  "q47": {
+    "question": "Mount Everest lies on the border of Nepal and:",
+    "possibleAnswers": [
+      "A. India",
+      "B. China (Tibet)",
+      "C. Bhutan",
+      "D. Pakistan"
+    ]
+  },
+  "q48": {
+    "question": "The capital of Botswana is:",
+    "possibleAnswers": [
+      "A. Gaborone",
+      "B. Francistown",
+      "C. Lobatse",
+      "D. Maun"
+    ]
+  },
+  "q49": {
+    "question": "The longest river in West Africa is the:",
+    "possibleAnswers": [
+      "A. Volta",
+      "B. Niger",
+      "C. Senegal",
+      "D. Gambia"
+    ]
+  },
+  "q50": {
+    "question": "Which island nation lies off Africa’s southeast coast and is famous for lemurs?",
+    "possibleAnswers": [
+      "A. Seychelles",
+      "B. Comoros",
+      "C. Mauritius",
+      "D. Madagascar"
+    ]
+  },
+  "q51": {
+    "question": "Which ocean current brings cold water to South Africa’s west coast?",
+    "possibleAnswers": [
+      "A. Agulhas Current",
+      "B. Benguela Current",
+      "C. Canary Current",
+      "D. Mozambique Current"
+    ]
+  },
+  "q52": {
+    "question": "The capital of Angola is:",
+    "possibleAnswers": [
+      "A. Lubango",
+      "B. Huambo",
+      "C. Luanda",
+      "D. Cabinda"
+    ]
+  },
+  "q53": {
+    "question": "Which mountain range separates Europe and Asia in Russia?",
+    "possibleAnswers": [
+      "A. Caucasus",
+      "B. Urals",
+      "C. Carpathians",
+      "D. Altai"
+    ]
+  },
+  "q54": {
+    "question": "The capital of Tanzania (official) is:",
+    "possibleAnswers": [
+      "A. Dar es Salaam",
+      "B. Mwanza",
+      "C. Dodoma",
+      "D. Arusha"
+    ]
+  },
+  "q55": {
+    "question": "The Volga River flows into the:",
+    "possibleAnswers": [
+      "A. Black Sea",
+      "B. Caspian Sea",
+      "C. Baltic Sea",
+      "D. Arctic Ocean"
+    ]
+  },
+  "q56": {
+    "question": "The capital of DR Congo is:",
+    "possibleAnswers": [
+      "A. Kisangani",
+      "B. Lubumbashi",
+      "C. Kinshasa",
+      "D. Goma"
+    ]
+  },
+  "q57": {
+    "question": "The White Nile’s headwaters are associated with:",
+    "possibleAnswers": [
+      "A. Lake Albert",
+      "B. Lake Tana",
+      "C. Lake Victoria",
+      "D. Lake Turkana"
+    ]
+  },
+  "q58": {
+    "question": "The world’s largest island (not a continent) is:",
+    "possibleAnswers": [
+      "A. New Guinea",
+      "B. Borneo",
+      "C. Greenland",
+      "D. Madagascar"
+    ]
+  },
+  "q59": {
+    "question": "The capital of Egypt is:",
+    "possibleAnswers": [
+      "A. Alexandria",
+      "B. Giza",
+      "C. Cairo",
+      "D. Luxor"
+    ]
+  },
+  "q60": {
+    "question": "Which African country straddles the equator and prime meridian?",
+    "possibleAnswers": [
+      "A. Ghana",
+      "B. Gabon",
+      "C. Sao Tomé and Principe",
+      "D. None"
+    ]
+  },
+  "q61": {
+    "question": "The world’s tallest freestanding mountain (base to peak, not range) is:",
+    "possibleAnswers": [
+      "A. Denali",
+      "B. Kilimanjaro",
+      "C. Aconcagua",
+      "D. Elbrus"
+    ]
+  },
+  "q62": {
+    "question": "The Outeniqua and Drakensberg are ranges in:",
+    "possibleAnswers": [
+      "A. Kenya",
+      "B. South Africa",
+      "C. Tanzania",
+      "D. Algeria"
+    ]
+  },
+  "q63": {
+    "question": "The capital of Côte d’Ivoire (official) is:",
+    "possibleAnswers": [
+      "A. Abidjan",
+      "B. Yamoussoukro",
+      "C. Bouaké",
+      "D. San-Pédro"
+    ]
+  },
+  "q64": {
+    "question": "“Maghreb” countries typically include Morocco, Algeria, Tunisia, and:",
+    "possibleAnswers": [
+      "A. Libya, Mauritania",
+      "B. Egypt, Sudan",
+      "C. Mali, Niger",
+      "D. Cyprus, Malta"
+    ]
+  },
+  "q65": {
+    "question": "The river that runs through Baghdad is the:",
+    "possibleAnswers": [
+      "A. Euphrates",
+      "B. Tigris",
+      "C. Jordan",
+      "D. Indus"
+    ]
+  },
+  "q66": {
+    "question": "The capital of Zimbabwe is:",
+    "possibleAnswers": [
+      "A. Bulawayo",
+      "B. Harare",
+      "C. Mutare",
+      "D. Gweru"
+    ]
+  },
+  "q67": {
+    "question": "The Atlas’ highest peak, Jebel Toubkal, is in:",
+    "possibleAnswers": [
+      "A. Algeria",
+      "B. Morocco",
+      "C. Tunisia",
+      "D. Libya"
+    ]
+  },
+  "q68": {
+    "question": "The capital of Spain is:",
+    "possibleAnswers": [
+      "A. Barcelona",
+      "B. Valencia",
+      "C. Madrid",
+      "D. Seville"
+    ]
+  },
+  "q69": {
+    "question": "The Okavango Delta fans out in which country?",
+    "possibleAnswers": [
+      "A. Namibia",
+      "B. Botswana",
+      "C. Angola",
+      "D. Zambia"
+    ]
+  },
+  "q70": {
+    "question": "The source of the Blue Nile is near:",
+    "possibleAnswers": [
+      "A. Lake Albert",
+      "B. Lake Tana",
+      "C. Lake Victoria",
+      "D. Lake Malawi"
+    ]
+  },
+  "q71": {
+    "question": "The island of Réunion belongs to:",
+    "possibleAnswers": [
+      "A. Madagascar",
+      "B. France",
+      "C. Mauritius",
+      "D. South Africa"
+    ]
+  },
+  "q72": {
+    "question": "The Great Lakes of Africa include Victoria, Tanganyika, and:",
+    "possibleAnswers": [
+      "A. Nyasa (Malawi)",
+      "B. Baikal",
+      "C. Superior",
+      "D. Chad"
+    ]
+  },
+  "q73": {
+    "question": "The “Cape to Cairo” idea spans mainly which longitude band?",
+    "possibleAnswers": [
+      "A. Around 0°",
+      "B. Eastern Africa",
+      "C. Western Africa",
+      "D. Sahara only"
+    ]
+  },
+  "q74": {
+    "question": "Which desert lies in northern Namibia and southern Angola?",
+    "possibleAnswers": [
+      "A. Karoo",
+      "B. Namib",
+      "C. Kalahari",
+      "D. Danakil"
+    ]
+  },
+  "q75": {
+    "question": "The capital of Mozambique is:",
+    "possibleAnswers": [
+      "A. Nampula",
+      "B. Beira",
+      "C. Maputo",
+      "D. Tete"
+    ]
+  },
+  "q76": {
+    "question": "The river forming much of the Sudan–South Sudan border is the:",
+    "possibleAnswers": [
+      "A. Sobat",
+      "B. Bahr el Ghazal",
+      "C. White Nile",
+      "D. Blue Nile"
+    ]
+  },
+  "q77": {
+    "question": "The capital of Turkey is:",
+    "possibleAnswers": [
+      "A. Istanbul",
+      "B. Ankara",
+      "C. Izmir",
+      "D. Bursa"
+    ]
+  },
+  "q78": {
+    "question": "The country with two capitals, legislative and administrative, among these is:",
+    "possibleAnswers": [
+      "A. South Africa",
+      "B. Ghana",
+      "C. Kenya",
+      "D. Morocco"
+    ]
+  },
+  "q79": {
+    "question": "The Gulf of Guinea is part of the:",
+    "possibleAnswers": [
+      "A. Indian Ocean",
+      "B. Atlantic Ocean",
+      "C. Arctic Ocean",
+      "D. Southern Ocean"
+    ]
+  },
+  "q80": {
+    "question": "The capital of Ethiopia’s neighbor, Eritrea, is:",
+    "possibleAnswers": [
+      "A. Massawa",
+      "B. Asmara",
+      "C. Mekelle",
+      "D. Kassala"
+    ]
+  },
+  "q81": {
+    "question": "Mount Elgon straddles which border?",
+    "possibleAnswers": [
+      "A. Kenya–Uganda",
+      "B. Kenya–Tanzania",
+      "C. Ethiopia–Eritrea",
+      "D. Rwanda–DRC"
+    ]
+  },
+  "q82": {
+    "question": "The capital of Senegal’s neighbor, The Gambia, is:",
+    "possibleAnswers": [
+      "A. Ziguinchor",
+      "B. Banjul",
+      "C. Bissau",
+      "D. Freetown"
+    ]
+  },
+  "q83": {
+    "question": "The Great Escarpment is a major feature in:",
+    "possibleAnswers": [
+      "A. North Africa",
+      "B. Southern Africa",
+      "C. East Africa only",
+      "D. West Africa"
+    ]
+  },
+  "q84": {
+    "question": "Africa’s largest country by area is (contemporary):",
+    "possibleAnswers": [
+      "A. Sudan",
+      "B. Algeria",
+      "C. DR Congo",
+      "D. Libya"
+    ]
+  },
+  "q85": {
+    "question": "The Drakensberg forms part of the border of:",
+    "possibleAnswers": [
+      "A. South Africa and Lesotho",
+      "B. South Africa and Namibia",
+      "C. Mozambique and Zimbabwe",
+      "D. Angola and Namibia"
+    ]
+  },
+  "q86": {
+    "question": "The city of Lagos lies on the coast of:",
+    "possibleAnswers": [
+      "A. Ghana",
+      "B. Nigeria",
+      "C. Benin",
+      "D. Cameroon"
+    ]
+  },
+  "q87": {
+    "question": "The Levant coastline borders the:",
+    "possibleAnswers": [
+      "A. Black Sea",
+      "B. Mediterranean Sea",
+      "C. Adriatic Sea",
+      "D. Red Sea"
+    ]
+  },
+  "q88": {
+    "question": "The island of Zanzibar is part of:",
+    "possibleAnswers": [
+      "A. Kenya",
+      "B. Tanzania",
+      "C. Mozambique",
+      "D. Somalia"
+    ]
+  },
+  "q89": {
+    "question": "The Cape Verde islands lie in which ocean?",
+    "possibleAnswers": [
+      "A. Atlantic",
+      "B. Indian",
+      "C. Pacific",
+      "D. Southern"
+    ]
+  },
+  "q90": {
+    "question": "Which African lake is famous for cichlid diversity?",
+    "possibleAnswers": [
+      "A. Lake Chad",
+      "B. Lake Malawi (Nyasa)",
+      "C. Lake Turkana",
+      "D. Lake Kariba"
+    ]
+  },
+  "q91": {
+    "question": "The Danube River empties into the:",
+    "possibleAnswers": [
+      "A. North Sea",
+      "B. Black Sea",
+      "C. Baltic Sea",
+      "D. Mediterranean"
+    ]
+  },
+  "q92": {
+    "question": "Which country is landlocked?",
+    "possibleAnswers": [
+      "A. Togo",
+      "B. Benin",
+      "C. Burkina Faso",
+      "D. Sierra Leone"
+    ]
+  },
+  "q93": {
+    "question": "The Sinai Peninsula connects Africa to:",
+    "possibleAnswers": [
+      "A. Europe",
+      "B. Arabia (Asia)",
+      "C. Persia",
+      "D. India"
+    ]
+  },
+  "q94": {
+    "question": "The “Sea of Japan” is also known as the:",
+    "possibleAnswers": [
+      "A. East Sea (in Korea)",
+      "B. Yellow Sea",
+      "C. Philippine Sea",
+      "D. South China Sea"
+    ]
+  },
+  "q95": {
+    "question": "The capital of Quebec province is:",
+    "possibleAnswers": [
+      "A. Montreal",
+      "B. Quebec City",
+      "C. Ottawa",
+      "D. Toronto"
+    ]
+  },
+  "q96": {
+    "question": "The world’s largest rainforest is the:",
+    "possibleAnswers": [
+      "A. Congo Basin",
+      "B. Amazon",
+      "C. Daintree",
+      "D. Southeast Asian"
+    ]
+  },
+  "q97": {
+    "question": "The capital of New Zealand is:",
+    "possibleAnswers": [
+      "A. Auckland",
+      "B. Wellington",
+      "C. Christchurch",
+      "D. Hamilton"
+    ]
+  },
+  "q98": {
+    "question": "The Aral Sea has drastically shrunk due to:",
+    "possibleAnswers": [
+      "A. Volcanic activity",
+      "B. Diversion for irrigation",
+      "C. Rising sea levels",
+      "D. Earthquakes"
+    ]
+  },
+  "q99": {
+    "question": "The capital of Saudi Arabia is:",
+    "possibleAnswers": [
+      "A. Jeddah",
+      "B. Mecca",
+      "C. Riyadh",
+      "D. Medina"
+    ]
+  },
+  "q100": {
+    "question": "“The Outback” refers to remote interior regions of:",
+    "possibleAnswers": [
+      "A. South Africa",
+      "B. Australia",
+      "C. United States",
+      "D. India"
+    ]
+  },
+  "q101": {
+    "question": "The capital of Norway is:",
+    "possibleAnswers": [
+      "A. Bergen",
+      "B. Oslo",
+      "C. Trondheim",
+      "D. Stavanger"
+    ]
+  },
+  "q102": {
+    "question": "The longest mountain range on land is the:",
+    "possibleAnswers": [
+      "A. Rockies",
+      "B. Andes",
+      "C. Himalayas",
+      "D. Alps"
+    ]
+  },
+  "q103": {
+    "question": "The “Ring of Fire” surrounds which ocean?",
+    "possibleAnswers": [
+      "A. Atlantic",
+      "B. Indian",
+      "C. Arctic",
+      "D. Pacific"
+    ]
+  },
+  "q104": {
+    "question": "The capital of Thailand is:",
+    "possibleAnswers": [
+      "A. Phuket",
+      "B. Chiang Mai",
+      "C. Bangkok",
+      "D. Pattaya"
+    ]
+  },
+  "q105": {
+    "question": "The Great Victoria Desert is in:",
+    "possibleAnswers": [
+      "A. South Africa",
+      "B. Australia",
+      "C. Chile",
+      "D. Namibia"
+    ]
+  },
+  "q106": {
+    "question": "The river that flows through Budapest is the:",
+    "possibleAnswers": [
+      "A. Rhine",
+      "B. Danube",
+      "C. Elbe",
+      "D. Po"
+    ]
+  },
+  "q107": {
+    "question": "The capital of Pakistan is:",
+    "possibleAnswers": [
+      "A. Karachi",
+      "B. Islamabad",
+      "C. Lahore",
+      "D. Peshawar"
+    ]
+  },
+  "q108": {
+    "question": "The Mediterranean island between Tunisia and Italy is:",
+    "possibleAnswers": [
+      "A. Corsica",
+      "B. Sardinia",
+      "C. Sicily",
+      "D. Malta"
+    ]
+  },
+  "q109": {
+    "question": "The capital of Argentina is:",
+    "possibleAnswers": [
+      "A. Córdoba",
+      "B. Buenos Aires",
+      "C. Rosario",
+      "D. Mendoza"
+    ]
+  },
+  "q110": {
+    "question": "The Euphrates and Tigris merge in:",
+    "possibleAnswers": [
+      "A. Turkey",
+      "B. Syria",
+      "C. Iraq",
+      "D. Iran"
+    ]
+  },
+  "q111": {
+    "question": "The capital of Chile is:",
+    "possibleAnswers": [
+      "A. Valparaíso",
+      "B. Santiago",
+      "C. Concepción",
+      "D. Antofagasta"
+    ]
+  },
+  "q112": {
+    "question": "The river that forms part of the US–Mexico border is the:",
+    "possibleAnswers": [
+      "A. Colorado",
+      "B. Rio Grande",
+      "C. Arkansas",
+      "D. Brazos"
+    ]
+  },
+  "q113": {
+    "question": "The Sierra Nevada mountain range is in:",
+    "possibleAnswers": [
+      "A. Spain and US (separate ranges)",
+      "B. Only Spain",
+      "C. Only US",
+      "D. Bolivia"
+    ]
+  },
+  "q114": {
+    "question": "The capital of the Philippines is:",
+    "possibleAnswers": [
+      "A. Cebu",
+      "B. Davao",
+      "C. Manila",
+      "D. Quezon City"
+    ]
+  },
+  "q115": {
+    "question": "The world’s highest plateau is the:",
+    "possibleAnswers": [
+      "A. Deccan",
+      "B. Tibetan Plateau",
+      "C. Altiplano",
+      "D. Ethiopian Plateau"
+    ]
+  },
+  "q116": {
+    "question": "The capital of Indonesia is (current official):",
+    "possibleAnswers": [
+      "A. Jakarta",
+      "B. Surabaya",
+      "C. Bandung",
+      "D. Yogyakarta"
+    ]
+  },
+  "q117": {
+    "question": "The Great Lakes of North America include all EXCEPT:",
+    "possibleAnswers": [
+      "A. Superior",
+      "B. Michigan",
+      "C. Huron",
+      "D. Winnipeg"
+    ]
+  },
+  "q118": {
+    "question": "The Atacama Desert is primarily in:",
+    "possibleAnswers": [
+      "A. Peru",
+      "B. Chile",
+      "C. Bolivia",
+      "D. Argentina"
+    ]
+  },
+  "q119": {
+    "question": "The Strait of Malacca lies between:",
+    "possibleAnswers": [
+      "A. Sumatra and Borneo",
+      "B. Sumatra and Malaya Peninsula",
+      "C. Java and Bali",
+      "D. Sulawesi and Mindanao"
+    ]
+  },
+  "q120": {
+    "question": "The capital of Vietnam is:",
+    "possibleAnswers": [
+      "A. Ho Chi Minh City",
+      "B. Hanoi",
+      "C. Da Nang",
+      "D. Hue"
+    ]
+  },
+  "q121": {
+    "question": "The Ural Mountains run roughly in which direction?",
+    "possibleAnswers": [
+      "A. East–West",
+      "B. North–South",
+      "C. Northeast–Southwest",
+      "D. Northwest–Southeast"
+    ]
+  },
+  "q122": {
+    "question": "The capital of Greece is:",
+    "possibleAnswers": [
+      "A. Thessaloniki",
+      "B. Athens",
+      "C. Patras",
+      "D. Heraklion"
+    ]
+  },
+  "q123": {
+    "question": "The largest island in the Mediterranean is:",
+    "possibleAnswers": [
+      "A. Cyprus",
+      "B. Corsica",
+      "C. Sardinia",
+      "D. Sicily"
+    ]
+  },
+  "q124": {
+    "question": "The capital of Sweden is:",
+    "possibleAnswers": [
+      "A. Gothenburg",
+      "B. Malmö",
+      "C. Stockholm",
+      "D. Uppsala"
+    ]
+  },
+  "q125": {
+    "question": "The River Plate (Río de la Plata) is an estuary between Argentina and:",
+    "possibleAnswers": [
+      "A. Brazil",
+      "B. Uruguay",
+      "C. Paraguay",
+      "D. Chile"
+    ]
+  },
+  "q126": {
+    "question": "The “Hindu Kush” range spans mainly Afghanistan and:",
+    "possibleAnswers": [
+      "A. Pakistan",
+      "B. India",
+      "C. Iran",
+      "D. Tajikistan"
+    ]
+  },
+  "q127": {
+    "question": "The capital of Portugal is:",
+    "possibleAnswers": [
+      "A. Porto",
+      "B. Lisbon",
+      "C. Braga",
+      "D. Coimbra"
+    ]
+  },
+  "q128": {
+    "question": "The Caucasus Mountains lie between the Black Sea and the:",
+    "possibleAnswers": [
+      "A. Caspian Sea",
+      "B. Baltic Sea",
+      "C. Aral Sea",
+      "D. Aegean Sea"
+    ]
+  },
+  "q129": {
+    "question": "The capital of Hungary is:",
+    "possibleAnswers": [
+      "A. Debrecen",
+      "B. Pécs",
+      "C. Szeged",
+      "D. Budapest"
+    ]
+  },
+  "q130": {
+    "question": "The Iberian Peninsula includes Spain and:",
+    "possibleAnswers": [
+      "A. France",
+      "B. Portugal",
+      "C. Italy",
+      "D. Andorra only"
+    ]
+  },
+  "q131": {
+    "question": "The island of Hispaniola is shared by Haiti and:",
+    "possibleAnswers": [
+      "A. Jamaica",
+      "B. Cuba",
+      "C. Dominican Republic",
+      "D. Puerto Rico"
+    ]
+  },
+  "q132": {
+    "question": "The capital of Iran is:",
+    "possibleAnswers": [
+      "A. Shiraz",
+      "B. Isfahan",
+      "C. Tabriz",
+      "D. Tehran"
+    ]
+  },
+  "q133": {
+    "question": "The “Great Game” historically involved the British Empire and:",
+    "possibleAnswers": [
+      "A. France",
+      "B. Russia",
+      "C. Germany",
+      "D. Ottoman Empire"
+    ]
+  },
+  "q134": {
+    "question": "The capital of Ukraine is:",
+    "possibleAnswers": [
+      "A. Kharkiv",
+      "B. Kyiv",
+      "C. Lviv",
+      "D. Odesa"
+    ]
+  },
+  "q135": {
+    "question": "The Great Dividing Range is in:",
+    "possibleAnswers": [
+      "A. Australia",
+      "B. South Africa",
+      "C. India",
+      "D. Canada"
+    ]
+  },
+  "q136": {
+    "question": "The capital of Finland is:",
+    "possibleAnswers": [
+      "A. Turku",
+      "B. Tampere",
+      "C. Helsinki",
+      "D. Oulu"
+    ]
+  },
+  "q137": {
+    "question": "The capital of Colombia is:",
+    "possibleAnswers": [
+      "A. Medellín",
+      "B. Bogotá",
+      "C. Cali",
+      "D. Barranquilla"
+    ]
+  },
+  "q138": {
+    "question": "The world’s largest bay by area is often cited as:",
+    "possibleAnswers": [
+      "A. Hudson Bay",
+      "B. Bay of Bengal",
+      "C. Bay of Biscay",
+      "D. Fundy"
+    ]
+  },
+  "q139": {
+    "question": "The capital of Uganda is:",
+    "possibleAnswers": [
+      "A. Entebbe",
+      "B. Kampala",
+      "C. Jinja",
+      "D. Gulu"
+    ]
+  },
+  "q140": {
+    "question": "The “Silk Road” connected China mainly to the:",
+    "possibleAnswers": [
+      "A. Pacific Islands",
+      "B. Mediterranean world",
+      "C. Sub-Saharan Africa",
+      "D. Australia"
+    ]
+  },
+  "q141": {
+    "question": "The capital of South Korea is:",
+    "possibleAnswers": [
+      "A. Busan",
+      "B. Incheon",
+      "C. Seoul",
+      "D. Daegu"
+    ]
+  },
+  "q142": {
+    "question": "The world’s largest coral atoll structure is:",
+    "possibleAnswers": [
+      "A. Aldabra",
+      "B. Bikini",
+      "C. Kwajalein",
+      "D. Great Chagos (Maldives complex)"
+    ]
+  },
+  "q143": {
+    "question": "The capital of Austria is:",
+    "possibleAnswers": [
+      "A. Salzburg",
+      "B. Vienna",
+      "C. Graz",
+      "D. Linz"
+    ]
+  },
+  "q144": {
+    "question": "The “Hellespont” is now called the:",
+    "possibleAnswers": [
+      "A. Bosporus",
+      "B. Dardanelles",
+      "C. Golden Horn",
+      "D. Suez"
+    ]
+  },
+  "q145": {
+    "question": "The capital of Netherlands is (constitutional):",
+    "possibleAnswers": [
+      "A. Rotterdam",
+      "B. The Hague (seat)",
+      "C. Amsterdam",
+      "D. Utrecht"
+    ]
+  },
+  "q146": {
+    "question": "The Yucatán Peninsula is part of:",
+    "possibleAnswers": [
+      "A. Mexico",
+      "B. Guatemala",
+      "C. Belize",
+      "D. All three share the region"
+    ]
+  },
+  "q147": {
+    "question": "The K2 peak is on the border of China and:",
+    "possibleAnswers": [
+      "A. India",
+      "B. Pakistan",
+      "C. Nepal",
+      "D. Bhutan"
+    ]
+  },
+  "q148": {
+    "question": "The capital of Belize is:",
+    "possibleAnswers": [
+      "A. Belize City",
+      "B. Belmopan",
+      "C. Orange Walk",
+      "D. Dangriga"
+    ]
+  },
+  "q149": {
+    "question": "The largest desert in Asia is the:",
+    "possibleAnswers": [
+      "A. Arabian",
+      "B. Gobi",
+      "C. Thar",
+      "D. Karakum"
+    ]
+  },
+  "q150": {
+    "question": "The “Maputo Corridor” connects South Africa with:",
+    "possibleAnswers": [
+      "A. Namibia",
+      "B. Mozambique",
+      "C. Botswana",
+      "D. Zimbabwe"
+    ]
+  },
+  "q151": {
+    "question": "The capital of Nepal is:",
+    "possibleAnswers": [
+      "A. Pokhara",
+      "B. Kathmandu",
+      "C. Lalitpur",
+      "D. Biratnagar"
+    ]
+  },
+  "q152": {
+    "question": "The strait between Africa and Arabia is the:",
+    "possibleAnswers": [
+      "A. Hormuz",
+      "B. Bab el-Mandeb",
+      "C. Bosporus",
+      "D. Sunda"
+    ]
+  },
+  "q153": {
+    "question": "The capital of Malaysia is:",
+    "possibleAnswers": [
+      "A. Johor Bahru",
+      "B. George Town",
+      "C. Kuala Lumpur (administrative in Putrajaya)",
+      "D. Kuching"
+    ]
+  },
+  "q154": {
+    "question": "The narrowest point of the Bering Strait separates Russia from:",
+    "possibleAnswers": [
+      "A. Canada",
+      "B. Alaska (USA)",
+      "C. Greenland",
+      "D. Iceland"
+    ]
+  },
+  "q155": {
+    "question": "The capital of Ethiopia’s neighbor, Sudan, is:",
+    "possibleAnswers": [
+      "A. Port Sudan",
+      "B. Khartoum",
+      "C. Nyala",
+      "D. Omdurman"
+    ]
+  },
+  "q156": {
+    "question": "The country formerly known as Zaire is:",
+    "possibleAnswers": [
+      "A. Republic of the Congo",
+      "B. DR Congo",
+      "C. Central African Republic",
+      "D. Gabon"
+    ]
+  },
+  "q157": {
+    "question": "The capital of Qatar is:",
+    "possibleAnswers": [
+      "A. Doha",
+      "B. Manama",
+      "C. Muscat",
+      "D. Abu Dhabi"
+    ]
+  },
+  "q158": {
+    "question": "The Sardar Sarovar Dam is on the:",
+    "possibleAnswers": [
+      "A. Ganges",
+      "B. Narmada",
+      "C. Godavari",
+      "D. Brahmaputra"
+    ]
+  },
+  "q159": {
+    "question": "The capital of Kenya’s neighbor, Tanzania, is:",
+    "possibleAnswers": [
+      "A. Arusha",
+      "B. Dodoma",
+      "C. Dar es Salaam",
+      "D. Tanga"
+    ]
+  },
+  "q160": {
+    "question": "The capital of Ethiopia’s neighbor, Somalia, is:",
+    "possibleAnswers": [
+      "A. Hargeisa",
+      "B. Mogadishu",
+      "C. Kismayo",
+      "D. Bosaso"
+    ]
+  },
+  "q161": {
+    "question": "The Marshall Islands lie in the:",
+    "possibleAnswers": [
+      "A. Indian Ocean",
+      "B. Pacific Ocean",
+      "C. Atlantic Ocean",
+      "D. Southern Ocean"
+    ]
+  },
+  "q162": {
+    "question": "The country with capital Tashkent is:",
+    "possibleAnswers": [
+      "A. Kazakhstan",
+      "B. Uzbekistan",
+      "C. Kyrgyzstan",
+      "D. Turkmenistan"
+    ]
+  },
+  "q163": {
+    "question": "The “Mekong River” flows into the sea at:",
+    "possibleAnswers": [
+      "A. Thailand",
+      "B. Laos",
+      "C. Vietnam",
+      "D. Cambodia"
+    ]
+  },
+  "q164": {
+    "question": "The capital of Myanmar is:",
+    "possibleAnswers": [
+      "A. Yangon",
+      "B. Mandalay",
+      "C. Naypyidaw",
+      "D. Bago"
+    ]
+  },
+  "q165": {
+    "question": "The Victoria Nile flows out of Lake:",
+    "possibleAnswers": [
+      "A. Albert",
+      "B. Kyoga",
+      "C. Victoria",
+      "D. Edward"
+    ]
+  },
+  "q166": {
+    "question": "The capital of Morocco’s neighbor, Algeria, is:",
+    "possibleAnswers": [
+      "A. Oran",
+      "B. Algiers",
+      "C. Constantine",
+      "D. Annaba"
+    ]
+  },
+  "q167": {
+    "question": "The Bosporus links the Black Sea and the:",
+    "possibleAnswers": [
+      "A. Aegean",
+      "B. Adriatic",
+      "C. Sea of Marmara",
+      "D. Ionian"
+    ]
+  },
+  "q168": {
+    "question": "The capital of Ethiopia’s neighbor, Djibouti, is:",
+    "possibleAnswers": [
+      "A. Obock",
+      "B. Tadjoura",
+      "C. Djibouti (city)",
+      "D. Ali Sabieh"
+    ]
+  },
+  "q169": {
+    "question": "The Lake Chad basin spans Nigeria, Niger, Cameroon, and:",
+    "possibleAnswers": [
+      "A. Chad",
+      "B. CAR",
+      "C. Sudan",
+      "D. Benin"
+    ]
+  },
+  "q170": {
+    "question": "The capital of Paraguay is:",
+    "possibleAnswers": [
+      "A. Asunción",
+      "B. La Paz",
+      "C. Sucre",
+      "D. Montevideo"
+    ]
+  },
+  "q171": {
+    "question": "The Laccadive–Lakshadweep Islands belong to:",
+    "possibleAnswers": [
+      "A. Sri Lanka",
+      "B. India",
+      "C. Maldives",
+      "D. Pakistan"
+    ]
+  },
+  "q172": {
+    "question": "The capital of Ethiopia’s neighbor, Kenya, is:",
+    "possibleAnswers": [
+      "A. Mombasa",
+      "B. Nairobi",
+      "C. Eldoret",
+      "D. Nakuru"
+    ]
+  },
+  "q173": {
+    "question": "The capital of Laos is:",
+    "possibleAnswers": [
+      "A. Vang Vieng",
+      "B. Vientiane",
+      "C. Luang Prabang",
+      "D. Pakse"
+    ]
+  },
+  "q174": {
+    "question": "The Ennedi Massif is located in:",
+    "possibleAnswers": [
+      "A. Niger",
+      "B. Chad",
+      "C. Libya",
+      "D. Sudan"
+    ]
+  },
+  "q175": {
+    "question": "The capital of Oman is:",
+    "possibleAnswers": [
+      "A. Salalah",
+      "B. Muscat",
+      "C. Sohar",
+      "D. Nizwa"
+    ]
+  },
+  "q176": {
+    "question": "The world’s southernmost city of significant size often cited is:",
+    "possibleAnswers": [
+      "A. Punta Arenas",
+      "B. Ushuaia",
+      "C. Puerto Williams",
+      "D. Christchurch"
+    ]
+  },
+  "q177": {
+    "question": "The capital of Slovenia is:",
+    "possibleAnswers": [
+      "A. Maribor",
+      "B. Ljubljana",
+      "C. Koper",
+      "D. Celje"
+    ]
+  },
+  "q178": {
+    "question": "The Niger River’s inland delta is in:",
+    "possibleAnswers": [
+      "A. Nigeria",
+      "B. Niger",
+      "C. Mali",
+      "D. Benin"
+    ]
+  },
+  "q179": {
+    "question": "The capital of Croatia is:",
+    "possibleAnswers": [
+      "A. Split",
+      "B. Dubrovnik",
+      "C. Zagreb",
+      "D. Zadar"
+    ]
+  },
+  "q180": {
+    "question": "The Cape Peninsula is part of which mountain system?",
+    "possibleAnswers": [
+      "A. Atlas",
+      "B. Cape Fold Belt",
+      "C. Drakensberg",
+      "D. Ethiopian Highlands"
+    ]
+  },
+  "q181": {
+    "question": "The capital of Mongolia is:",
+    "possibleAnswers": [
+      "A. Erdenet",
+      "B. Darkhan",
+      "C. Ulaanbaatar",
+      "D. Hohhot"
+    ]
+  },
+  "q182": {
+    "question": "The Canary Islands belong to:",
+    "possibleAnswers": [
+      "A. Portugal",
+      "B. Spain",
+      "C. Morocco",
+      "D. France"
+    ]
+  },
+  "q183": {
+    "question": "The capital of Ethiopia’s neighbor, South Sudan, is:",
+    "possibleAnswers": [
+      "A. Wau",
+      "B. Malakal",
+      "C. Juba",
+      "D. Bor"
+    ]
+  },
+  "q184": {
+    "question": "The Great Lakes region of Africa often includes the Albertine Rift lakes and:",
+    "possibleAnswers": [
+      "A. Chad",
+      "B. Victoria",
+      "C. Turkana",
+      "D. Mai-Ndombe"
+    ]
+  },
+  "q185": {
+    "question": "The capital of Lithuania is:",
+    "possibleAnswers": [
+      "A. Kaunas",
+      "B. Vilnius",
+      "C. Klaipėda",
+      "D. Šiauliai"
+    ]
+  },
+  "q186": {
+    "question": "The Karakoram Highway primarily connects China with:",
+    "possibleAnswers": [
+      "A. India",
+      "B. Pakistan",
+      "C. Nepal",
+      "D. Afghanistan"
+    ]
+  },
+  "q187": {
+    "question": "The Cape Floral Region is renowned for its:",
+    "possibleAnswers": [
+      "A. Fynbos biodiversity",
+      "B. Mangrove forests",
+      "C. Boreal pines",
+      "D. Coral reefs"
+    ]
+  },
+  "q188": {
+    "question": "The capital of Jordan is:",
+    "possibleAnswers": [
+      "A. Amman",
+      "B. Aqaba",
+      "C. Irbid",
+      "D. Zarqa"
+    ]
+  },
+  "q189": {
+    "question": "The Mozambique Channel separates:",
+    "possibleAnswers": [
+      "A. Madagascar from mainland Africa",
+      "B. Mauritius from Réunion",
+      "C. Zanzibar from Pemba",
+      "D. Comoros from Seychelles"
+    ]
+  },
+  "q190": {
+    "question": "The capital of Serbia is:",
+    "possibleAnswers": [
+      "A. Novi Sad",
+      "B. Niš",
+      "C. Belgrade",
+      "D. Kragujevac"
+    ]
+  },
+  "q191": {
+    "question": "The Sinai’s Mount Catherine is the highest point in:",
+    "possibleAnswers": [
+      "A. Jordan",
+      "B. Israel",
+      "C. Egypt",
+      "D. Lebanon"
+    ]
+  },
+  "q192": {
+    "question": "The capital of Ethiopia’s neighbor, Eritrea’s neighbor Sudan’s neighbor (Uganda), is:",
+    "possibleAnswers": [
+      "A. Kampala",
+      "B. Kigali",
+      "C. Bujumbura",
+      "D. Juba"
+    ]
+  },
+  "q193": {
+    "question": "The Great Fish River is in:",
+    "possibleAnswers": [
+      "A. Namibia",
+      "B. South Africa",
+      "C. Botswana",
+      "D. Lesotho"
+    ]
+  },
+  "q194": {
+    "question": "The capital of Cyprus is:",
+    "possibleAnswers": [
+      "A. Limassol",
+      "B. Nicosia",
+      "C. Larnaca",
+      "D. Paphos"
+    ]
+  },
+  "q195": {
+    "question": "The Pamir Mountains intersect with the:",
+    "possibleAnswers": [
+      "A. Kunlun, Tien Shan, Hindu Kush",
+      "B. Alps and Carpathians",
+      "C. Rockies and Sierra Madre",
+      "D. Drakensberg and Cape Fold"
+    ]
+  },
+  "q196": {
+    "question": "The capital of Switzerland is:",
+    "possibleAnswers": [
+      "A. Zurich",
+      "B. Geneva",
+      "C. Bern",
+      "D. Basel"
+    ]
+  },
+  "q197": {
+    "question": "The Zambezi River empties into the:",
+    "possibleAnswers": [
+      "A. Indian Ocean",
+      "B. Atlantic Ocean",
+      "C. Mediterranean",
+      "D. Red Sea"
+    ]
+  },
+  "q198": {
+    "question": "The capital of Ethiopia’s neighbor, Eritrea, borders which sea?",
+    "possibleAnswers": [
+      "A. Arabian Sea",
+      "B. Red Sea",
+      "C. Mediterranean",
+      "D. Black Sea"
+    ]
+  },
+  "q199": {
+    "question": "The Tibesti Mountains are in:",
+    "possibleAnswers": [
+      "A. Niger and Libya",
+      "B. Chad and Libya",
+      "C. Sudan and Egypt",
+      "D. Algeria and Mali"
+    ]
+  },
+  "q200": {
+    "question": "The capital of Ethiopia’s neighbor, Somalia’s neighbor Kenya’s neighbor to the west (Uganda) borders which lake?",
+    "possibleAnswers": [
+      "A. Lake Malawi",
+      "B. Lake Victoria",
+      "C. Lake Tanganyika",
+      "D. Lake Turkana"
+    ]
+  }
+}

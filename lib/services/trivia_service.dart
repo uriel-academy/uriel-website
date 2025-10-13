@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/trivia_model.dart';
 
+import 'package:flutter/foundation.dart';
 class TriviaService {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final String _collection = 'trivia_challenges';
@@ -20,7 +21,7 @@ class TriviaService {
         return TriviaChallenge.fromJson(data);
       }).toList();
     } catch (e) {
-      print('Error fetching trivia challenges: $e');
+      debugPrint('Error fetching trivia challenges: $e');
       // Return sample data as fallback
       return _getSampleTriviaChallenges();
     }
@@ -39,7 +40,7 @@ class TriviaService {
         return TriviaChallenge.fromJson(data);
       }).toList();
     } catch (e) {
-      print('Error fetching challenges by category: $e');
+      debugPrint('Error fetching challenges by category: $e');
       return [];
     }
   }
@@ -57,7 +58,7 @@ class TriviaService {
         return TriviaChallenge.fromJson(data);
       }).toList();
     } catch (e) {
-      print('Error fetching challenges by difficulty: $e');
+      debugPrint('Error fetching challenges by difficulty: $e');
       return [];
     }
   }
@@ -74,7 +75,7 @@ class TriviaService {
             challenge.tags.any((tag) => tag.toLowerCase().contains(lowercaseQuery));
       }).toList();
     } catch (e) {
-      print('Error searching challenges: $e');
+      debugPrint('Error searching challenges: $e');
       return [];
     }
   }
@@ -89,7 +90,7 @@ class TriviaService {
       }
       return null;
     } catch (e) {
-      print('Error fetching challenge by ID: $e');
+      debugPrint('Error fetching challenge by ID: $e');
       return null;
     }
   }
@@ -100,7 +101,7 @@ class TriviaService {
         'participants': FieldValue.increment(1),
       });
     } catch (e) {
-      print('Error incrementing participants: $e');
+      debugPrint('Error incrementing participants: $e');
     }
   }
 
@@ -109,7 +110,7 @@ class TriviaService {
       await _firestore.collection('trivia_results').add(result.toJson());
       await incrementParticipants(result.challengeId);
     } catch (e) {
-      print('Error submitting trivia result: $e');
+      debugPrint('Error submitting trivia result: $e');
     }
   }
 
@@ -127,7 +128,7 @@ class TriviaService {
         return TriviaResult.fromJson(data);
       }).toList();
     } catch (e) {
-      print('Error fetching user results: $e');
+      debugPrint('Error fetching user results: $e');
       return [];
     }
   }

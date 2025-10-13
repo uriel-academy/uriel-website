@@ -1,0 +1,567 @@
+{
+  "course_id": "english_b7",
+  "version": "1.0.0",
+  "last_updated_utc": "2025-10-12T00:11:22.113621Z",
+  "unit": {
+    "unit_id": "eng_b7_u3",
+    "title": "Reading for Meaning I: Stories that Teach",
+    "overview": "Learners practise strategic reading with short Ghanaian narratives and informational texts. They identify main ideas, supporting details, context clues, and inferences; then connect lessons to daily life and Christian/Ghanaian moral values. Designed as micro-lessons with built-in XP and AI tasks to reduce fatigue.",
+    "estimated_duration_min": 200,
+    "competencies": [
+      "Identify main idea and key details in short texts (fiction and non-fiction).",
+      "Use context clues (definition, example, contrast) to find word meanings.",
+      "Make inferences about characters’ feelings and motives using text evidence.",
+      "Summarise a paragraph in one or two clear sentences.",
+      "Explain a theme or moral and relate it to personal experience."
+    ],
+    "values_morals": [
+      "Honesty, hospitality, diligence, and respect for elders.",
+      "Proverbs as wisdom literature guiding behaviour (e.g., Proverbs 22:1)."
+    ],
+    "xp_total": 170,
+    "streak_bonus_xp": 5,
+    "parent_report_hooks": [
+      "unit_completion_rate",
+      "quiz_accuracy",
+      "summary_submission_status",
+      "ai_task_completions",
+      "xp_earned"
+    ],
+    "lessons": [
+      {
+        "lesson_id": "eng_b7_u3_l1",
+        "title": "Reading Strategy: Main Idea & Details",
+        "estimated_time_min": 30,
+        "xp_reward": 30,
+        "objectives": [
+          "Distinguish between main idea and supporting details.",
+          "Use headings and topic sentences to predict content."
+        ],
+        "vocabulary": [
+          {
+            "word": "main idea",
+            "level": "core",
+            "definition": "What the text is mostly about."
+          },
+          {
+            "word": "supporting detail",
+            "level": "core",
+            "definition": "Evidence or examples that explain the main idea."
+          },
+          {
+            "word": "predict",
+            "level": "core",
+            "definition": "Say what you think will happen or what a text will discuss."
+          }
+        ],
+        "moral_link": "Pay attention to the most important message before reacting.",
+        "content_blocks": [
+          {
+            "type": "text",
+            "body": "Skim headings and first sentences; ask: What is this mostly about? Then verify with key details."
+          },
+          {
+            "type": "image",
+            "src": "/images/eng_b7/u3/mainidea_tree.svg",
+            "caption": "Main idea (trunk) and details (branches)."
+          },
+          {
+            "type": "tip",
+            "body": "Underline the topic sentence; circle two details that support it."
+          }
+        ],
+        "interactive": {
+          "quick_check": [
+            {
+              "q": "The main idea is usually:",
+              "options": [
+                "A random fact",
+                "What the text is mostly about",
+                "A joke",
+                "A picture caption"
+              ],
+              "answer_index": 1,
+              "xp": 5
+            }
+          ],
+          "ai_task": {
+            "prompt": "Read a short paragraph (provided in the next lesson) and write one sentence that states the main idea.",
+            "expected_focus": [
+              "concise wording",
+              "no extra details"
+            ],
+            "xp": 10
+          }
+        },
+        "assets": [
+          "/images/eng_b7/u3/mainidea_tree.svg"
+        ]
+      },
+      {
+        "lesson_id": "eng_b7_u3_l2",
+        "title": "Folktale: The Honest Calabash",
+        "estimated_time_min": 45,
+        "xp_reward": 35,
+        "objectives": [
+          "Identify main idea, key details, and theme in a short Ghanaian folktale.",
+          "Infer character traits using evidence from dialogue and actions."
+        ],
+        "vocabulary": [
+          {
+            "word": "calabash",
+            "level": "core",
+            "definition": "A container made from a dried gourd."
+          },
+          {
+            "word": "integrity",
+            "level": "adv",
+            "definition": "Strong moral principles; honesty."
+          },
+          {
+            "word": "folktale",
+            "level": "core",
+            "definition": "A traditional story passed down by a community."
+          }
+        ],
+        "moral_link": "A good name is better than riches (Proverbs 22:1).",
+        "content_blocks": [
+          {
+            "type": "reading",
+            "title": "The Honest Calabash",
+            "body": "In a village near Hohoe, Kojo carved calabashes with careful hands. One market day, a trader dropped her\npurse. Kojo found it beside his stall. He asked around, but no one claimed it. Some urged him to keep the\nmoney, saying, 'Times are hard.' Kojo shook his head. He placed the purse inside a calabash and hung it where\nall could see. At sunset the trader returned, eyes worried. Kojo brought down the calabash and returned the\npurse. She opened it and smiled with relief. The next week, customers crowded Kojo’s stall, saying, 'We trust\nthe hands that carved these.' Kojo’s business grew—not because he kept the money, but because he kept his\nname."
+          },
+          {
+            "type": "audio",
+            "src": "/audio/eng_b7/u3/honest_calabash.mp3",
+            "caption": "Narrated folktale."
+          }
+        ],
+        "interactive": {
+          "comprehension": [
+            {
+              "q": "What is the main idea of the story?",
+              "options": [
+                "Kojo learned to carve calabashes.",
+                "Honesty builds trust and brings lasting reward.",
+                "Markets are busy in Hohoe.",
+                "The trader lost her way home."
+              ],
+              "answer_index": 1,
+              "xp": 5
+            },
+            {
+              "q": "Which detail best supports the main idea?",
+              "options": [
+                "Kojo carved calabashes with careful hands.",
+                "Kojo put the purse where all could see and returned it.",
+                "The trader visited the market at sunset.",
+                "There were many customers."
+              ],
+              "answer_index": 1,
+              "xp": 5
+            },
+            {
+              "q": "What can we infer about Kojo?",
+              "options": [
+                "He is careless.",
+                "He values integrity over quick money.",
+                "He dislikes traders.",
+                "He is shy."
+              ],
+              "answer_index": 1,
+              "xp": 5
+            }
+          ],
+          "theme_prompt": {
+            "prompt": "State the theme of the folktale in one sentence. Connect it to a real-life situation at school or home.",
+            "submission_type": "text",
+            "xp": 10
+          }
+        },
+        "assets": [
+          "/audio/eng_b7/u3/honest_calabash.mp3"
+        ]
+      },
+      {
+        "lesson_id": "eng_b7_u3_l3",
+        "title": "Context Clues: Unlocking Word Meaning",
+        "estimated_time_min": 30,
+        "xp_reward": 30,
+        "objectives": [
+          "Use definition, example, and contrast clues to guess meanings.",
+          "Confirm guesses with a dictionary (digital or print)."
+        ],
+        "vocabulary": [
+          {
+            "word": "context clue",
+            "level": "core",
+            "definition": "A hint in the sentence that helps you understand a word."
+          },
+          {
+            "word": "contrast",
+            "level": "core",
+            "definition": "A difference between two or more things."
+          },
+          {
+            "word": "definition",
+            "level": "core",
+            "definition": "A direct explanation of a word’s meaning."
+          }
+        ],
+        "moral_link": "Seek understanding first; do not pretend to know.",
+        "content_blocks": [
+          {
+            "type": "text",
+            "body": "Types: definition (is/means), example (such as/for example), contrast (but/unlike)."
+          },
+          {
+            "type": "image",
+            "src": "/images/eng_b7/u3/context_clues.svg",
+            "caption": "Spotting clue words."
+          }
+        ],
+        "interactive": {
+          "vocab_in_context": [
+            {
+              "q": "‘Integrity, which means strong moral principles, guided Kojo.’ — The clue type is:",
+              "options": [
+                "example",
+                "contrast",
+                "definition",
+                "guess"
+              ],
+              "answer_index": 2,
+              "xp": 5
+            },
+            {
+              "q": "‘Kojo was tempted, but unlike some traders, he refused to keep the purse.’ — The clue type is:",
+              "options": [
+                "example",
+                "contrast",
+                "definition",
+                "synonym"
+              ],
+              "answer_index": 1,
+              "xp": 5
+            }
+          ],
+          "ai_task": {
+            "prompt": "From the folktale, choose one difficult word and write your own sentence using a context clue to show its meaning.",
+            "expected_focus": [
+              "signal words",
+              "clarity"
+            ],
+            "xp": 10
+          }
+        },
+        "assets": [
+          "/images/eng_b7/u3/context_clues.svg"
+        ]
+      },
+      {
+        "lesson_id": "eng_b7_u3_l4",
+        "title": "Informational Text: Cocoa in Ghana",
+        "estimated_time_min": 35,
+        "xp_reward": 35,
+        "objectives": [
+          "Identify main idea and supporting details in non-fiction.",
+          "Summarise the paragraph in 1–2 sentences."
+        ],
+        "vocabulary": [
+          {
+            "word": "cultivation",
+            "level": "adv",
+            "definition": "The process of growing crops."
+          },
+          {
+            "word": "export",
+            "level": "core",
+            "definition": "A good sold to another country."
+          },
+          {
+            "word": "sustainable",
+            "level": "adv",
+            "definition": "Able to continue without harming resources."
+          }
+        ],
+        "moral_link": "Diligence and fairness in work bless the community.",
+        "content_blocks": [
+          {
+            "type": "reading",
+            "title": "Cocoa in Ghana",
+            "body": "Cocoa is one of Ghana’s most important cash crops. Many families depend on cocoa cultivation for income.\nFarmers plant seedlings under shade trees and carefully protect them from pests. When pods ripen, the beans\nare fermented and dried. Ghana exports cocoa to many countries, where it becomes chocolate and other products.\nProgrammes that teach sustainable farming help farmers increase quality while protecting the land."
+          }
+        ],
+        "interactive": {
+          "comprehension": [
+            {
+              "q": "What is the main idea of the paragraph?",
+              "options": [
+                "Ghanaian farmers prefer oranges to cocoa.",
+                "Cocoa is important to Ghana and requires careful cultivation and export.",
+                "Chocolate is unhealthy.",
+                "Pests are the only challenge farmers face."
+              ],
+              "answer_index": 1,
+              "xp": 5
+            },
+            {
+              "q": "Which is a supporting detail?",
+              "options": [
+                "Cocoa becomes chocolate in other countries.",
+                "Cocoa trees are very tall.",
+                "Cocoa is blue in Ghana.",
+                "Ghana grows only cocoa."
+              ],
+              "answer_index": 0,
+              "xp": 5
+            }
+          ],
+          "summary_task": {
+            "prompt": "Write a 1–2 sentence summary of the paragraph. Avoid examples and minor details.",
+            "submission_type": "text",
+            "xp": 10
+          }
+        }
+      },
+      {
+        "lesson_id": "eng_b7_u3_l5",
+        "title": "Putting It Together: Theme, Summary, and Presentation",
+        "estimated_time_min": 30,
+        "xp_reward": 40,
+        "objectives": [
+          "Explain how details support the main idea across texts.",
+          "Prepare a brief oral presentation connecting a theme to personal life."
+        ],
+        "vocabulary": [
+          {
+            "word": "theme",
+            "level": "core",
+            "definition": "The big idea or message of a text."
+          },
+          {
+            "word": "evidence",
+            "level": "core",
+            "definition": "Specific detail from a text that supports a point."
+          }
+        ],
+        "moral_link": "Let your words reflect your values; speak truth with humility.",
+        "content_blocks": [
+          {
+            "type": "text",
+            "body": "A strong theme statement + two pieces of evidence + a link to real life make a clear presentation."
+          },
+          {
+            "type": "image",
+            "src": "/images/eng_b7/u3/theme_evidence.svg",
+            "caption": "Theme–evidence–life connection."
+          }
+        ],
+        "interactive": {
+          "ai_task": {
+            "prompt": "Write a theme statement for either the folktale or the cocoa text. Add two evidence points.",
+            "expected_focus": [
+              "clear claim",
+              "textual evidence"
+            ],
+            "xp": 15
+          },
+          "speaking_task": {
+            "prompt": "Record a 30–40 second presentation explaining the theme and how it applies to school life.",
+            "submission_type": "audio",
+            "xp": 15
+          }
+        },
+        "assets": [
+          "/images/eng_b7/u3/theme_evidence.svg"
+        ]
+      }
+    ],
+    "assessments": {
+      "quiz_mcq": [
+        {
+          "id": "u3_q1",
+          "q": "The main idea of a text is:",
+          "options": [
+            "A random sentence",
+            "What the text is mostly about",
+            "The longest sentence",
+            "A picture caption"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u3_q2",
+          "q": "Which sentence best states the theme of 'The Honest Calabash'?",
+          "options": [
+            "Markets are crowded.",
+            "Honesty earns trust and lasting reward.",
+            "Kojo is a carver.",
+            "Calabashes can hold purses."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u3_q3",
+          "q": "‘Unlike some traders, Kojo refused to keep the purse.’ This is an example of a:",
+          "options": [
+            "definition clue",
+            "example clue",
+            "contrast clue",
+            "riddle"
+          ],
+          "answer_index": 2
+        },
+        {
+          "id": "u3_q4",
+          "q": "A good 1–2 sentence summary should:",
+          "options": [
+            "Retell every detail.",
+            "State the main idea and the most important points.",
+            "Include your opinion only.",
+            "Be as long as possible."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u3_q5",
+          "q": "Which is the best piece of evidence for the theme of integrity?",
+          "options": [
+            "Kojo carved calabashes.",
+            "Kojo hung the purse for all to see and returned it.",
+            "The market was noisy.",
+            "It was sunset."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u3_q6",
+          "q": "Context clues are:",
+          "options": [
+            "Pictures only.",
+            "Hints in the text that help you understand a word.",
+            "Captions at the bottom of a page.",
+            "Unrelated information."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u3_q7",
+          "q": "Which transition best links evidence to a theme?",
+          "options": [
+            "However",
+            "For example",
+            "Suddenly",
+            "Meanwhile"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u3_q8",
+          "q": "In non-fiction, supporting details often include:",
+          "options": [
+            "Opinions only",
+            "Facts, processes, and examples",
+            "Jokes",
+            "Unrelated stories"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u3_q9",
+          "q": "Which statement shows an inference?",
+          "options": [
+            "Kojo returned the purse.",
+            "Kojo values honesty more than money.",
+            "There was a purse.",
+            "Customers visited the stall."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u3_q10",
+          "q": "A theme best described as ‘hospitality’ would be supported by evidence that characters:",
+          "options": [
+            "Speak loudly at the market.",
+            "Welcome guests kindly and provide help.",
+            "Buy many items.",
+            "Walk home quickly."
+          ],
+          "answer_index": 1
+        }
+      ],
+      "writing_prompt": {
+        "id": "u3_w1",
+        "prompt": "Choose either the folktale or the cocoa text. Write a 3–4 sentence summary that includes the main idea and two key details.",
+        "rubric_ref": "rubric_summary_u3"
+      },
+      "speaking_task": {
+        "id": "u3_s1",
+        "prompt": "Give a 30-second oral summary of one text and explain one lesson you will apply at school or home.",
+        "rubric_ref": "rubric_speaking_u3"
+      },
+      "rubrics": {
+        "rubric_summary_u3": {
+          "criteria": [
+            {
+              "name": "Main Idea Accuracy",
+              "scale": 4,
+              "descriptor": "States the central idea clearly."
+            },
+            {
+              "name": "Key Details",
+              "scale": 4,
+              "descriptor": "Selects two strong, relevant details."
+            },
+            {
+              "name": "Clarity & Concision",
+              "scale": 4,
+              "descriptor": "Uses precise language; stays within length."
+            },
+            {
+              "name": "Grammar & Mechanics",
+              "scale": 4,
+              "descriptor": "Correct punctuation, capitalisation, and tense."
+            }
+          ],
+          "proficiency_labels": [
+            "Beginning",
+            "Developing",
+            "Proficient",
+            "Advanced"
+          ]
+        },
+        "rubric_speaking_u3": {
+          "criteria": [
+            {
+              "name": "Organisation",
+              "scale": 4,
+              "descriptor": "Clear opening, body, and closing."
+            },
+            {
+              "name": "Pronunciation & Fluency",
+              "scale": 4,
+              "descriptor": "Steady pace; understandable words."
+            },
+            {
+              "name": "Evidence Use",
+              "scale": 4,
+              "descriptor": "Cites text details to support points."
+            },
+            {
+              "name": "Connection to Life",
+              "scale": 4,
+              "descriptor": "Applies lesson appropriately and respectfully."
+            }
+          ],
+          "proficiency_labels": [
+            "Beginning",
+            "Developing",
+            "Proficient",
+            "Advanced"
+          ]
+        }
+      }
+    }
+  }
+}

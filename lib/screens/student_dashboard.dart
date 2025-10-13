@@ -182,11 +182,11 @@ class _StudentDashboardPageState extends State<StudentDashboardPage> {
         child: Card(
           elevation: 2,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-          child: Padding(
-            padding: const EdgeInsets.all(16),
+          child: const Padding(
+            padding: EdgeInsets.all(16),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
+              children: [
                 Text('Profile Analytics', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
                 SizedBox(height: 8),
                 Text('Track your progress, strengths, and areas to improve.'),
@@ -212,10 +212,10 @@ class _StudentDashboardPageState extends State<StudentDashboardPage> {
           color: const Color(0xFF2ECC71),
           elevation: 2,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-          child: Padding(
-            padding: const EdgeInsets.all(16),
+          child: const Padding(
+            padding: EdgeInsets.all(16),
             child: Row(
-              children: const [
+              children: [
                 Icon(Icons.self_improvement, color: Colors.white, size: 32),
                 SizedBox(width: 16),
                 Expanded(
@@ -236,7 +236,7 @@ class _StudentDashboardPageState extends State<StudentDashboardPage> {
       child: ListTile(
         leading: const Icon(Icons.emoji_events, color: Color(0xFFD62828)),
         title: const Text('Gamification'),
-        subtitle: Text('Badges, points, leaderboard'),
+        subtitle: const Text('Badges, points, leaderboard'),
         trailing: const Icon(Icons.arrow_forward_ios),
         onTap: () {
           Navigator.push(context, MaterialPageRoute(
@@ -262,7 +262,7 @@ class _StudentDashboardPageState extends State<StudentDashboardPage> {
           children: [
             const Icon(Icons.text_fields, color: Color(0xFFD62828)),
             const SizedBox(width: 12),
-            Expanded(child: Text('Large Font', style: TextStyle(fontSize: 16))),
+            const Expanded(child: Text('Large Font', style: TextStyle(fontSize: 16))),
             Switch(
               value: largeFont,
               onChanged: (val) {
@@ -287,7 +287,7 @@ class _StudentDashboardPageState extends State<StudentDashboardPage> {
           children: [
             const Icon(Icons.local_fire_department, color: Color(0xFFD62828)),
             const SizedBox(width: 12),
-            Expanded(child: Text('Daily Streak: $dailyStreak days', style: TextStyle(fontSize: 16))),
+            Expanded(child: Text('Daily Streak: $dailyStreak days', style: const TextStyle(fontSize: 16))),
           ],
         ),
       ),
@@ -304,7 +304,7 @@ class _StudentDashboardPageState extends State<StudentDashboardPage> {
           children: [
             const Icon(Icons.offline_bolt, color: Color(0xFFD62828)),
             const SizedBox(width: 12),
-            Expanded(child: Text(offlineMode ? 'Offline Mode: ON' : 'Offline Mode: OFF', style: TextStyle(fontSize: 16))),
+            Expanded(child: Text(offlineMode ? 'Offline Mode: ON' : 'Offline Mode: OFF', style: const TextStyle(fontSize: 16))),
           ],
         ),
       ),

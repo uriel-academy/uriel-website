@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import '../constants/app_styles.dart';
 import '../widgets/common_footer.dart';
 import 'sign_up.dart';
@@ -94,7 +95,7 @@ class _AboutUsPageState extends State<AboutUsPage> with TickerProviderStateMixin
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -104,7 +105,14 @@ class _AboutUsPageState extends State<AboutUsPage> with TickerProviderStateMixin
         children: [
           // Logo
           GestureDetector(
-            onTap: () => Navigator.pushReplacementNamed(context, '/landing'),
+            onTap: () {
+              // If user is logged in, go to home, otherwise go to landing
+              final isLoggedIn = FirebaseAuth.instance.currentUser != null;
+              Navigator.pushReplacementNamed(
+                context, 
+                isLoggedIn ? '/home' : '/landing',
+              );
+            },
             child: Text(
               'Uriel Academy',
               style: AppStyles.brandNameLight(fontSize: isSmallScreen ? 18 : 22),
@@ -179,7 +187,7 @@ class _AboutUsPageState extends State<AboutUsPage> with TickerProviderStateMixin
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
                     decoration: BoxDecoration(
-                      color: const Color(0xFFD62828).withOpacity(0.1),
+                      color: const Color(0xFFD62828).withValues(alpha: 0.1),
                       borderRadius: BorderRadius.circular(50),
                     ),
                     child: Text(
@@ -282,9 +290,9 @@ class _AboutUsPageState extends State<AboutUsPage> with TickerProviderStateMixin
     return Container(
       padding: EdgeInsets.all(isSmallScreen ? 20 : 24),
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.1),
+        color: Colors.white.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: Colors.white.withOpacity(0.2)),
+        border: Border.all(color: Colors.white.withValues(alpha: 0.2)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -302,7 +310,7 @@ class _AboutUsPageState extends State<AboutUsPage> with TickerProviderStateMixin
             content,
             style: GoogleFonts.montserrat(
               fontSize: isSmallScreen ? 14 : 16,
-              color: Colors.white.withOpacity(0.9),
+              color: Colors.white.withValues(alpha: 0.9),
               height: 1.6,
             ),
           ),
@@ -375,10 +383,10 @@ class _AboutUsPageState extends State<AboutUsPage> with TickerProviderStateMixin
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: const Color(0xFFD62828).withOpacity(0.2)),
+        border: Border.all(color: const Color(0xFFD62828).withValues(alpha: 0.2)),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.08),
+            color: Colors.black.withValues(alpha: 0.08),
             blurRadius: 20,
             offset: const Offset(0, 4),
           ),
@@ -461,9 +469,9 @@ class _AboutUsPageState extends State<AboutUsPage> with TickerProviderStateMixin
             Container(
               padding: EdgeInsets.all(isSmallScreen ? 20 : 24),
               decoration: BoxDecoration(
-                color: const Color(0xFFD62828).withOpacity(0.1),
+                color: const Color(0xFFD62828).withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(16),
-                border: Border.all(color: const Color(0xFFD62828).withOpacity(0.2)),
+                border: Border.all(color: const Color(0xFFD62828).withValues(alpha: 0.2)),
               ),
               child: Column(
                 children: [
@@ -572,10 +580,10 @@ class _AboutUsPageState extends State<AboutUsPage> with TickerProviderStateMixin
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: color.withOpacity(0.2)),
+        border: Border.all(color: color.withValues(alpha: 0.2)),
         boxShadow: [
           BoxShadow(
-            color: color.withOpacity(0.1),
+            color: color.withValues(alpha: 0.1),
             blurRadius: 15,
             offset: const Offset(0, 4),
           ),
@@ -586,7 +594,7 @@ class _AboutUsPageState extends State<AboutUsPage> with TickerProviderStateMixin
           Container(
             padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
-              color: color.withOpacity(0.1),
+              color: color.withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(8),
             ),
             child: Icon(icon, color: color, size: isSmallScreen ? 20 : 24),
@@ -636,8 +644,8 @@ class _AboutUsPageState extends State<AboutUsPage> with TickerProviderStateMixin
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            const Color(0xFFD62828).withOpacity(0.1),
-            const Color(0xFF1A1E3F).withOpacity(0.05),
+            const Color(0xFFD62828).withValues(alpha: 0.1),
+            const Color(0xFF1A1E3F).withValues(alpha: 0.05),
           ],
         ),
       ),
@@ -730,7 +738,7 @@ class _AboutUsPageState extends State<AboutUsPage> with TickerProviderStateMixin
             'For the students who dream bigger, the parents who care deeply, and the schools shaping tomorrow\'s leaders.',
             style: GoogleFonts.montserrat(
               fontSize: isSmallScreen ? 16 : 18,
-              color: Colors.white.withOpacity(0.9),
+              color: Colors.white.withValues(alpha: 0.9),
               height: 1.6,
             ),
             textAlign: TextAlign.center,

@@ -43,11 +43,11 @@ class SchoolAnalyticsPage extends StatelessWidget {
             Card(
               elevation: 2,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-              child: Padding(
-                padding: const EdgeInsets.all(16),
+              child: const Padding(
+                padding: EdgeInsets.all(16),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
+                  children: [
                     Text('Math scores have increased by 5% this term.'),
                     SizedBox(height: 8),
                     Text('English participation up 12% compared to last month.'),

@@ -2,11 +2,12 @@ import 'package:cloud_functions/cloud_functions.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../utils/web_compatibility.dart';
 
+import 'package:flutter/foundation.dart';
 class RMEDataImportService {
   /// Import RME questions using Cloud Function (Web-compatible version)
   static Future<Map<String, dynamic>> importRMEQuestions() async {
     try {
-      print('Calling importRMEQuestions Cloud Function...');
+      debugPrint('Calling importRMEQuestions Cloud Function...');
       
       // Try Cloud Function first
       try {
@@ -19,21 +20,21 @@ class RMEDataImportService {
         );
         final result = await callable.call(<String, dynamic>{});
         
-        print('Cloud Function completed successfully');
+        debugPrint('Cloud Function completed successfully');
         return {
           'success': true,
           'message': result.data['message']?.toString() ?? 'Import completed',
           'questionsImported': result.data['questionsImported'] ?? 0,
         };
       } catch (cloudFunctionError) {
-        print('Cloud Function failed, trying direct import: $cloudFunctionError');
+        debugPrint('Cloud Function failed, trying direct import: $cloudFunctionError');
         
         // Fallback to direct Firestore import with web-compatible approach
         return await _directImport();
       }
       
     } catch (e) {
-      print('Error calling Cloud Function: $e');
+      debugPrint('Error calling Cloud Function: $e');
       
       String errorMessage = 'Failed to import RME questions';
       if (e.toString().contains('int64')) {
@@ -55,7 +56,7 @@ class RMEDataImportService {
   /// Direct Firestore import as fallback
   static Future<Map<String, dynamic>> _directImport() async {
     try {
-      print('Starting direct Firestore import...');
+      debugPrint('Starting direct Firestore import...');
       
       final firestore = FirebaseFirestore.instance;
       final batch = firestore.batch();
@@ -105,7 +106,7 @@ class RMEDataImportService {
       }
       
       await batch.commit();
-      print('Direct import completed successfully');
+      debugPrint('Direct import completed successfully');
       
       return {
         'success': true,
@@ -114,7 +115,7 @@ class RMEDataImportService {
       };
       
     } catch (e) {
-      print('Direct import failed: $e');
+      debugPrint('Direct import failed: $e');
       return {
         'success': false,
         'message': 'Both Cloud Function and direct import failed: ${e.toString()}',

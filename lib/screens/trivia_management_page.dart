@@ -88,7 +88,7 @@ class _TriviaSingleQuestionTabState extends State<TriviaSingleQuestionTab> {
   final _explanationController = TextEditingController();
   
   String _selectedDifficulty = 'medium';
-  List<String> _categories = [];
+  final List<String> _categories = [];
   bool _isLoading = false;
 
   @override
@@ -129,7 +129,7 @@ class _TriviaSingleQuestionTabState extends State<TriviaSingleQuestionTab> {
           children: [
             Row(
               children: [
-                Icon(Icons.lightbulb, color: const Color(0xFF9C27B0)),
+                const Icon(Icons.lightbulb, color: Color(0xFF9C27B0)),
                 const SizedBox(width: 8),
                 Text(
                   'Trivia Question Tips',
@@ -278,7 +278,7 @@ class _TriviaSingleQuestionTabState extends State<TriviaSingleQuestionTab> {
                 return Chip(
                   label: Text(category),
                   onDeleted: () => _removeCategory(category),
-                  backgroundColor: const Color(0xFF9C27B0).withOpacity(0.1),
+                  backgroundColor: const Color(0xFF9C27B0).withValues(alpha: 0.1),
                   deleteIconColor: const Color(0xFF9C27B0),
                 );
               }).toList(),
@@ -966,7 +966,7 @@ class TriviaManageTab extends StatelessWidget {
           width: 50,
           height: 50,
           decoration: BoxDecoration(
-            color: color.withOpacity(0.1),
+            color: color.withValues(alpha: 0.1),
             borderRadius: BorderRadius.circular(12),
           ),
           child: Icon(icon, color: color, size: 24),

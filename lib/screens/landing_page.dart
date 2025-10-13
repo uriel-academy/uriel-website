@@ -26,6 +26,7 @@ class LandingPage extends StatelessWidget {
             CommonFooter(
               isSmallScreen: screenWidth < 768,
               showLinks: true,
+              showPricing: false,
             ),
           ],
         ),
@@ -40,7 +41,7 @@ class LandingPage extends StatelessWidget {
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -243,7 +244,7 @@ class LandingPage extends StatelessWidget {
                     width: isDesktop ? (constraints.maxWidth - 40) / 3 : constraints.maxWidth,
                   ),
                   _buildFeatureCard(
-                    title: 'NACCA Approved Textbooks',
+                    title: 'NACCA Aligned Textbooks',
                     description: 'Curated digital textbooks aligned with Ghana Education Service curriculum',
                     width: isDesktop ? (constraints.maxWidth - 40) / 3 : constraints.maxWidth,
                   ),
@@ -275,7 +276,7 @@ class LandingPage extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -338,49 +339,69 @@ class LandingPage extends StatelessWidget {
                 runSpacing: 16,
                 children: [
                   _buildPricingCard(
-                    title: 'Weekly',
-                    price: '₵2.99',
-                    period: '/week',
+                    context: context,
+                    title: 'Free',
+                    subtitle: 'Get Started',
+                    price: '₵0',
+                    period: '/month',
                     features: [
-                      'Access to past questions',
-                      'Basic textbooks',
-                      'Progress tracking',
+                      'Trivia & gamification',
+                      'Classic literature',
+                      '5 past questions/subject/month',
+                      '1 textbook chapter/subject',
+                      'Notes Tab - View only',
+                      'Community support',
                     ],
                     isPopular: false,
                     width: isDesktop ? (constraints.maxWidth - 48) / 4 : (constraints.maxWidth - 16) / 2,
                   ),
                   _buildPricingCard(
-                    title: 'Bi-weekly',
-                    price: '₵4.99',
-                    period: '/2 weeks',
-                    features: [
-                      'Everything in Weekly',
-                      'AI study plans',
-                      'Mock exams',
-                    ],
-                    isPopular: false,
-                    width: isDesktop ? (constraints.maxWidth - 48) / 4 : (constraints.maxWidth - 16) / 2,
-                  ),
-                  _buildPricingCard(
-                    title: 'Monthly',
+                    context: context,
+                    title: 'Standard',
+                    subtitle: 'Everything You Need',
                     price: '₵9.99',
                     period: '/month',
                     features: [
-                      'Everything in Bi-weekly',
-                      'Priority support',
-                      'Offline downloads',
+                      'All textbooks - JHS 1-3',
+                      'All past questions - 1990-2024',
+                      'Student dashboard',
+                      'Weekly parent reports',
+                      'Priority support - Email 48hr',
+                    ],
+                    isPopular: false,
+                    width: isDesktop ? (constraints.maxWidth - 48) / 4 : (constraints.maxWidth - 16) / 2,
+                  ),
+                  _buildPricingCard(
+                    context: context,
+                    title: 'Premium',
+                    subtitle: 'Learn 2x Faster with AI',
+                    price: '₵14.99',
+                    period: '/month',
+                    features: [
+                      'Everything in Standard, plus:',
+                      'Uri AI Tutor - Unlimited',
+                      'Notes Tab - Upload your own',
+                      'Unlimited mock exams',
+                      'Personalized study plans',
+                      'Calm Learning Mode',
+                      'Advanced gamification',
                     ],
                     isPopular: true,
                     width: isDesktop ? (constraints.maxWidth - 48) / 4 : (constraints.maxWidth - 16) / 2,
                   ),
                   _buildPricingCard(
-                    title: 'Yearly',
-                    price: '₵109.89',
-                    period: '/year',
+                    context: context,
+                    title: 'School Plan',
+                    subtitle: 'For Institutions',
+                    price: 'Custom',
+                    period: '',
                     features: [
-                      'Everything included',
-                      'Save ₵9.99',
-                      'Premium features',
+                      'Teacher dashboard',
+                      'Class analytics',
+                      'Content upload',
+                      'School-wide analytics',
+                      'Custom branding',
+                      'Dedicated account manager',
                     ],
                     isPopular: false,
                     width: isDesktop ? (constraints.maxWidth - 48) / 4 : (constraints.maxWidth - 16) / 2,
@@ -396,7 +417,9 @@ class LandingPage extends StatelessWidget {
   }
 
   Widget _buildPricingCard({
+    required BuildContext context,
     required String title,
+    required String subtitle,
     required String price,
     required String period,
     required List<String> features,
@@ -414,7 +437,7 @@ class LandingPage extends StatelessWidget {
         ),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -457,7 +480,15 @@ class LandingPage extends StatelessWidget {
                     color: Color(0xFF1A1E3F),
                   ),
                 ),
-                const SizedBox(height: 8),
+                const SizedBox(height: 4),
+                Text(
+                  subtitle,
+                  style: TextStyle(
+                    fontSize: 13,
+                    color: Colors.grey[600],
+                  ),
+                ),
+                const SizedBox(height: 12),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
@@ -469,13 +500,14 @@ class LandingPage extends StatelessWidget {
                         color: Color(0xFF1A1E3F),
                       ),
                     ),
-                    Text(
-                      period,
-                      style: TextStyle(
-                        fontSize: 14,
-                        color: Colors.grey[600],
+                    if (period.isNotEmpty)
+                      Text(
+                        period,
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.grey[600],
+                        ),
                       ),
-                    ),
                   ],
                 ),
                 const SizedBox(height: 20),
@@ -506,7 +538,10 @@ class LandingPage extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      // TODO: Implement subscription logic
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (_) => const SignUpPage()),
+                      );
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: isPopular ? const Color(0xFFD62828) : const Color(0xFF1A1E3F),
@@ -599,7 +634,7 @@ class LandingPage extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),

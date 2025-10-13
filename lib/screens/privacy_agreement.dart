@@ -8,10 +8,10 @@ class PrivacyAgreementModal extends StatelessWidget {
   Widget build(BuildContext context) {
     return AlertDialog(
       title: const Text('Privacy Policy & Terms'),
-      content: SingleChildScrollView(
+      content: const SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
+          children: [
             Text('Uriel Academy values your privacy and data security.'),
             SizedBox(height: 16),
             Text('By creating an account, you agree to our Privacy Policy and Terms of Service.'),

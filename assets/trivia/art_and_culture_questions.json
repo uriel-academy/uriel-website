@@ -1,0 +1,1803 @@
+{
+  "subject": "Art and Culture",
+  "q1": {
+    "question": "Which artist painted Starry Night?",
+    "possibleAnswers": [
+      "A. Claude Monet",
+      "B. Vincent van Gogh",
+      "C. Paul Cézanne",
+      "D. Edvard Munch"
+    ]
+  },
+  "q2": {
+    "question": "The Parthenon is primarily an example of which architectural order?",
+    "possibleAnswers": [
+      "A. Corinthian",
+      "B. Ionic",
+      "C. Doric",
+      "D. Tuscan"
+    ]
+  },
+  "q3": {
+    "question": "The Mona Lisa hangs in which museum?",
+    "possibleAnswers": [
+      "A. Uffizi Gallery",
+      "B. Prado Museum",
+      "C. Louvre Museum",
+      "D. National Gallery (London)"
+    ]
+  },
+  "q4": {
+    "question": "Which movement is associated with Salvador Dalí?",
+    "possibleAnswers": [
+      "A. Cubism",
+      "B. Surrealism",
+      "C. Fauvism",
+      "D. Impressionism"
+    ]
+  },
+  "q5": {
+    "question": "The Japanese art of paper folding is called:",
+    "possibleAnswers": [
+      "A. Ikebana",
+      "B. Origami",
+      "C. Ukiyo-e",
+      "D. Sumi-e"
+    ]
+  },
+  "q6": {
+    "question": "Michelangelo’s marble statue of David was carved for which city?",
+    "possibleAnswers": [
+      "A. Rome",
+      "B. Florence",
+      "C. Venice",
+      "D. Milan"
+    ]
+  },
+  "q7": {
+    "question": "Which African sculptural tradition is famous for wooden masks used in ritual?",
+    "possibleAnswers": [
+      "A. Benin Bronzes",
+      "B. Dogon",
+      "C. Ife terracottas",
+      "D. Nok"
+    ]
+  },
+  "q8": {
+    "question": "The Bauhaus was founded in which country?",
+    "possibleAnswers": [
+      "A. France",
+      "B. Germany",
+      "C. Netherlands",
+      "D. Italy"
+    ]
+  },
+  "q9": {
+    "question": "The Persistence of Memory famously shows:",
+    "possibleAnswers": [
+      "A. Melting clocks",
+      "B. Screaming faces",
+      "C. Water lilies",
+      "D. Cubist guitars"
+    ]
+  },
+  "q10": {
+    "question": "Which dance originated in Argentina?",
+    "possibleAnswers": [
+      "A. Salsa",
+      "B. Tango",
+      "C. Flamenco",
+      "D. Merengue"
+    ]
+  },
+  "q11": {
+    "question": "The Great Mosque of Djenné is built primarily from:",
+    "possibleAnswers": [
+      "A. Stone",
+      "B. Fired brick",
+      "C. Adobe (mud brick)",
+      "D. Timber"
+    ]
+  },
+  "q12": {
+    "question": "“Guernica” was painted in response to:",
+    "possibleAnswers": [
+      "A. World War I",
+      "B. Spanish Civil War",
+      "C. World War II",
+      "D. Franco–Prussian War"
+    ]
+  },
+  "q13": {
+    "question": "Traditional Chinese blue-and-white porcelain uses which oxide for color?",
+    "possibleAnswers": [
+      "A. Cobalt",
+      "B. Copper",
+      "C. Iron",
+      "D. Chromium"
+    ]
+  },
+  "q14": {
+    "question": "Frank Lloyd Wright designed which iconic house over a waterfall?",
+    "possibleAnswers": [
+      "A. Villa Savoye",
+      "B. Fallingwater",
+      "C. Farnsworth House",
+      "D. Glass House"
+    ]
+  },
+  "q15": {
+    "question": "The term “chiaroscuro” refers to the use of:",
+    "possibleAnswers": [
+      "A. Bold brushwork",
+      "B. Thick paint",
+      "C. Light and shadow contrasts",
+      "D. Nonrepresentational form"
+    ]
+  },
+  "q16": {
+    "question": "The Elgin Marbles come from which ancient temple?",
+    "possibleAnswers": [
+      "A. Temple of Zeus at Olympia",
+      "B. Parthenon",
+      "C. Temple of Apollo at Delphi",
+      "D. Erechtheion only"
+    ]
+  },
+  "q17": {
+    "question": "The Benin Bronzes were created by the:",
+    "possibleAnswers": [
+      "A. Edo people",
+      "B. Yoruba people",
+      "C. Ashanti people",
+      "D. Zulu people"
+    ]
+  },
+  "q18": {
+    "question": "The Aboriginal Australian “Dreamtime” relates to:",
+    "possibleAnswers": [
+      "A. Colonial history",
+      "B. Cosmology and creation stories",
+      "C. Agriculture",
+      "D. Royal lineage"
+    ]
+  },
+  "q19": {
+    "question": "Which photographer is known for Depression-era images like “Migrant Mother”?",
+    "possibleAnswers": [
+      "A. Ansel Adams",
+      "B. Dorothea Lange",
+      "C. Diane Arbus",
+      "D. Henri Cartier-Bresson"
+    ]
+  },
+  "q20": {
+    "question": "The violin maker Stradivari worked in which Italian city?",
+    "possibleAnswers": [
+      "A. Cremona",
+      "B. Naples",
+      "C. Bologna",
+      "D. Turin"
+    ]
+  },
+  "q21": {
+    "question": "Which movement championed “automatic writing” and dream imagery?",
+    "possibleAnswers": [
+      "A. Dada",
+      "B. Surrealism",
+      "C. Futurism",
+      "D. Symbolism"
+    ]
+  },
+  "q22": {
+    "question": "The Great Wave off Kanagawa is a print by:",
+    "possibleAnswers": [
+      "A. Hokusai",
+      "B. Hiroshige",
+      "C. Utamaro",
+      "D. Sharaku"
+    ]
+  },
+  "q23": {
+    "question": "A “fresco” is painted on:",
+    "possibleAnswers": [
+      "A. Dry canvas",
+      "B. Wet plaster",
+      "C. Paper",
+      "D. Tempera panel"
+    ]
+  },
+  "q24": {
+    "question": "Who designed the Vietnam Veterans Memorial in Washington, D.C.?",
+    "possibleAnswers": [
+      "A. I. M. Pei",
+      "B. Zaha Hadid",
+      "C. Maya Lin",
+      "D. Philip Johnson"
+    ]
+  },
+  "q25": {
+    "question": "The Yoruba “Gelede” festival features:",
+    "possibleAnswers": [
+      "A. Boat races",
+      "B. Masquerade performances",
+      "C. Wrestling",
+      "D. Horse parades"
+    ]
+  },
+  "q26": {
+    "question": "“Griot” in West Africa traditionally means:",
+    "possibleAnswers": [
+      "A. Weaver",
+      "B. Storyteller/musician",
+      "C. Sculptor",
+      "D. Blacksmith"
+    ]
+  },
+  "q27": {
+    "question": "The Girl with a Pearl Earring is by:",
+    "possibleAnswers": [
+      "A. Rembrandt",
+      "B. Vermeer",
+      "C. Rubens",
+      "D. Hals"
+    ]
+  },
+  "q28": {
+    "question": "The Gothic cathedral feature that supports high walls is the:",
+    "possibleAnswers": [
+      "A. Truss",
+      "B. Flying buttress",
+      "C. Barrel vault",
+      "D. Pilaster"
+    ]
+  },
+  "q29": {
+    "question": "Which fashion designer is known for the “New Look” in 1947?",
+    "possibleAnswers": [
+      "A. Coco Chanel",
+      "B. Christian Dior",
+      "C. Yves Saint Laurent",
+      "D. Balenciaga"
+    ]
+  },
+  "q30": {
+    "question": "Kente cloth originated with the:",
+    "possibleAnswers": [
+      "A. Akan/Ashanti peoples",
+      "B. Tuareg",
+      "C. Maasai",
+      "D. Xhosa"
+    ]
+  },
+  "q31": {
+    "question": "“Pointillism” is most associated with:",
+    "possibleAnswers": [
+      "A. Georges Seurat",
+      "B. Paul Gauguin",
+      "C. Henri Matisse",
+      "D. Amedeo Modigliani"
+    ]
+  },
+  "q32": {
+    "question": "The “Nok” culture is known for:",
+    "possibleAnswers": [
+      "A. Bronze plaques",
+      "B. Terracotta heads",
+      "C. Rock paintings",
+      "D. Gold regalia"
+    ]
+  },
+  "q33": {
+    "question": "The traditional Japanese theater with masks and stylized movement is:",
+    "possibleAnswers": [
+      "A. Kabuki",
+      "B. Noh",
+      "C. Bunraku",
+      "D. Kyogen only"
+    ]
+  },
+  "q34": {
+    "question": "The ancient city of Petra is famed for architecture carved into:",
+    "possibleAnswers": [
+      "A. Basalt",
+      "B. Sandstone",
+      "C. Granite",
+      "D. Marble"
+    ]
+  },
+  "q35": {
+    "question": "The Renaissance began roughly in which century?",
+    "possibleAnswers": [
+      "A. 11th",
+      "B. 12th",
+      "C. 14th",
+      "D. 16th"
+    ]
+  },
+  "q36": {
+    "question": "“Caryatid” refers to:",
+    "possibleAnswers": [
+      "A. A column shaped as a female figure",
+      "B. A square pier",
+      "C. A ribbed vault",
+      "D. A mosaic tile"
+    ]
+  },
+  "q37": {
+    "question": "The Ashanti Golden Stool symbolizes:",
+    "possibleAnswers": [
+      "A. Military power",
+      "B. Unity and soul of the nation",
+      "C. Agricultural fertility",
+      "D. Legal authority only"
+    ]
+  },
+  "q38": {
+    "question": "M.C. Escher is best known for:",
+    "possibleAnswers": [
+      "A. Color field painting",
+      "B. Impossible constructions and tessellations",
+      "C. Rococo interiors",
+      "D. Minimal sculpture"
+    ]
+  },
+  "q39": {
+    "question": "The ritual masked dance “Egungun” honors:",
+    "possibleAnswers": [
+      "A. Warriors",
+      "B. Ancestors",
+      "C. Kings",
+      "D. Hunters"
+    ]
+  },
+  "q40": {
+    "question": "The Terracotta Army was created for which emperor?",
+    "possibleAnswers": [
+      "A. Qin Shi Huang",
+      "B. Han Wudi",
+      "C. Tang Taizong",
+      "D. Sun Yat-sen"
+    ]
+  },
+  "q41": {
+    "question": "The “Golden Ratio” is approximately:",
+    "possibleAnswers": [
+      "A. 1.141",
+      "B. 1.314",
+      "C. 1.618",
+      "D. 2.718"
+    ]
+  },
+  "q42": {
+    "question": "The Sistine Chapel ceiling includes which famous scene?",
+    "possibleAnswers": [
+      "A. The Last Supper",
+      "B. Creation of Adam",
+      "C. School of Athens",
+      "D. Transfiguration"
+    ]
+  },
+  "q43": {
+    "question": "“Indigo dye” in West Africa traditionally comes from:",
+    "possibleAnswers": [
+      "A. Tree bark",
+      "B. Leaves of certain shrubs",
+      "C. Clay",
+      "D. Minerals"
+    ]
+  },
+  "q44": {
+    "question": "Gustav Klimt is associated most with:",
+    "possibleAnswers": [
+      "A. Vienna Secession",
+      "B. Fauvism",
+      "C. Neoclassicism",
+      "D. Dada"
+    ]
+  },
+  "q45": {
+    "question": "The “willow pattern” is a motif in:",
+    "possibleAnswers": [
+      "A. Persian carpets",
+      "B. English ceramics",
+      "C. Egyptian tombs",
+      "D. Inca textiles"
+    ]
+  },
+  "q46": {
+    "question": "The Dome of the Rock is in:",
+    "possibleAnswers": [
+      "A. Damascus",
+      "B. Jerusalem",
+      "C. Cairo",
+      "D. Istanbul"
+    ]
+  },
+  "q47": {
+    "question": "The “Sagrada Família” is in:",
+    "possibleAnswers": [
+      "A. Madrid",
+      "B. Barcelona",
+      "C. Seville",
+      "D. Valencia"
+    ]
+  },
+  "q48": {
+    "question": "Marcel Duchamp’s Fountain is a:",
+    "possibleAnswers": [
+      "A. Marble statue",
+      "B. Found urinal",
+      "C. Bronze cast",
+      "D. Painted panel"
+    ]
+  },
+  "q49": {
+    "question": "The art of beautiful handwriting is called:",
+    "possibleAnswers": [
+      "A. Paleography",
+      "B. Calligraphy",
+      "C. Typography",
+      "D. Epigraphy"
+    ]
+  },
+  "q50": {
+    "question": "The Ghanaian festival Homowo is celebrated by the:",
+    "possibleAnswers": [
+      "A. Ewe",
+      "B. Ga",
+      "C. Dagomba",
+      "D. Fante"
+    ]
+  },
+  "q51": {
+    "question": "The prehistoric cave paintings at Lascaux are in:",
+    "possibleAnswers": [
+      "A. Spain",
+      "B. France",
+      "C. Italy",
+      "D. Portugal"
+    ]
+  },
+  "q52": {
+    "question": "“Mudejar” style blends Islamic and:",
+    "possibleAnswers": [
+      "A. Chinese",
+      "B. European Christian",
+      "C. African",
+      "D. Mesoamerican"
+    ]
+  },
+  "q53": {
+    "question": "Jacob Lawrence is known for series on:",
+    "possibleAnswers": [
+      "A. Abstract landscapes",
+      "B. The Great Migration",
+      "C. Mythological scenes",
+      "D. Still lifes"
+    ]
+  },
+  "q54": {
+    "question": "Which is a Mesoamerican step-pyramid site?",
+    "possibleAnswers": [
+      "A. Angkor Wat",
+      "B. Chichén Itzá",
+      "C. Borobudur",
+      "D. Petra"
+    ]
+  },
+  "q55": {
+    "question": "The term “impasto” means:",
+    "possibleAnswers": [
+      "A. Thin glaze",
+      "B. Thickly applied paint",
+      "C. Sanded surface",
+      "D. Scratched underdrawing"
+    ]
+  },
+  "q56": {
+    "question": "Which sculptor made The Thinker?",
+    "possibleAnswers": [
+      "A. Canova",
+      "B. Rodin",
+      "C. Bernini",
+      "D. Donatello"
+    ]
+  },
+  "q57": {
+    "question": "“Shodo” is which cultural practice?",
+    "possibleAnswers": [
+      "A. Tea ceremony",
+      "B. Flower arrangement",
+      "C. Calligraphy (Japan)",
+      "D. Ink wash painting only"
+    ]
+  },
+  "q58": {
+    "question": "The Dogon “granary doors” are famous for:",
+    "possibleAnswers": [
+      "A. Metal inlay",
+      "B. Carved relief symbolism",
+      "C. Painted enamels",
+      "D. Woven patterns"
+    ]
+  },
+  "q59": {
+    "question": "A “minaret” is part of:",
+    "possibleAnswers": [
+      "A. A synagogue",
+      "B. A mosque",
+      "C. A church",
+      "D. A stupa"
+    ]
+  },
+  "q60": {
+    "question": "The “Akan goldweights” were used to measure:",
+    "possibleAnswers": [
+      "A. Cloth",
+      "B. Salt",
+      "C. Gold dust",
+      "D. Grain"
+    ]
+  },
+  "q61": {
+    "question": "The Impressionist who painted Water Lilies series:",
+    "possibleAnswers": [
+      "A. Degas",
+      "B. Renoir",
+      "C. Monet",
+      "D. Pissarro"
+    ]
+  },
+  "q62": {
+    "question": "A “megalith” is:",
+    "possibleAnswers": [
+      "A. A tiny gem",
+      "B. A large stone monument",
+      "C. A clay tablet",
+      "D. A bronze plaque"
+    ]
+  },
+  "q63": {
+    "question": "The “Ife heads” are celebrated for:",
+    "possibleAnswers": [
+      "A. Naturalistic bronze casting",
+      "B. Marble carving",
+      "C. Wood carving",
+      "D. Basket weaving"
+    ]
+  },
+  "q64": {
+    "question": "Zaha Hadid’s work is often described as:",
+    "possibleAnswers": [
+      "A. Classical symmetry",
+      "B. Deconstructivist/curvilinear",
+      "C. Brutalist",
+      "D. Neo-Gothic"
+    ]
+  },
+  "q65": {
+    "question": "The “Rose Window” is typical of:",
+    "possibleAnswers": [
+      "A. Romanesque churches",
+      "B. Gothic cathedrals",
+      "C. Renaissance villas",
+      "D. Baroque palaces"
+    ]
+  },
+  "q66": {
+    "question": "The “Kora” is a West African:",
+    "possibleAnswers": [
+      "A. Drum",
+      "B. Lute/harp",
+      "C. Flute",
+      "D. Rattle"
+    ]
+  },
+  "q67": {
+    "question": "Andy Warhol was a leading figure in:",
+    "possibleAnswers": [
+      "A. Pop Art",
+      "B. Minimalism",
+      "C. Abstract Expressionism",
+      "D. Op Art"
+    ]
+  },
+  "q68": {
+    "question": "“Intaglio” printing uses:",
+    "possibleAnswers": [
+      "A. Ink on raised surfaces",
+      "B. Ink in incised lines",
+      "C. Stencils",
+      "D. Lithographic grease"
+    ]
+  },
+  "q69": {
+    "question": "The Palace of Versailles exemplifies:",
+    "possibleAnswers": [
+      "A. Gothic",
+      "B. Baroque",
+      "C. Neoclassical",
+      "D. Modernist"
+    ]
+  },
+  "q70": {
+    "question": "The “Venus of Willendorf” is a:",
+    "possibleAnswers": [
+      "A. Neolithic pottery jar",
+      "B. Paleolithic fertility figurine",
+      "C. Bronze goddess statue",
+      "D. Medieval reliquary"
+    ]
+  },
+  "q71": {
+    "question": "“Adire” textiles are resist-dyed cloth from:",
+    "possibleAnswers": [
+      "A. Ghana",
+      "B. Nigeria (Yoruba)",
+      "C. Ethiopia",
+      "D. Kenya"
+    ]
+  },
+  "q72": {
+    "question": "The architect of the Louvre Pyramid:",
+    "possibleAnswers": [
+      "A. Renzo Piano",
+      "B. I. M. Pei",
+      "C. Norman Foster",
+      "D. Oscar Niemeyer"
+    ]
+  },
+  "q73": {
+    "question": "The “terracotta” medium is:",
+    "possibleAnswers": [
+      "A. Fired clay",
+      "B. Plaster",
+      "C. Wax",
+      "D. Stone"
+    ]
+  },
+  "q74": {
+    "question": "Frida Kahlo is renowned for:",
+    "possibleAnswers": [
+      "A. Abstract sculptures",
+      "B. Self-portraits exploring identity",
+      "C. Landscapes only",
+      "D. War photography"
+    ]
+  },
+  "q75": {
+    "question": "The “Ashanti kente” patterns often encode:",
+    "possibleAnswers": [
+      "A. Poetry in Latin",
+      "B. Clan histories and proverbs",
+      "C. Maps",
+      "D. Musical notation"
+    ]
+  },
+  "q76": {
+    "question": "The Colosseum is in:",
+    "possibleAnswers": [
+      "A. Athens",
+      "B. Rome",
+      "C. Alexandria",
+      "D. Carthage"
+    ]
+  },
+  "q77": {
+    "question": "“Sfumato” refers to:",
+    "possibleAnswers": [
+      "A. Sharp outlines",
+      "B. Smoky, soft transitions",
+      "C. High contrast",
+      "D. Metallic pigments"
+    ]
+  },
+  "q78": {
+    "question": "The Māori traditional facial tattooing is called:",
+    "possibleAnswers": [
+      "A. Taonga",
+      "B. Tā moko",
+      "C. Mana",
+      "D. Haka"
+    ]
+  },
+  "q79": {
+    "question": "The Guggenheim Museum Bilbao was designed by:",
+    "possibleAnswers": [
+      "A. Frank Gehry",
+      "B. Santiago Calatrava",
+      "C. Tadao Ando",
+      "D. Rafael Moneo"
+    ]
+  },
+  "q80": {
+    "question": "“Batik” is a dye-resist technique using:",
+    "possibleAnswers": [
+      "A. Wax",
+      "B. Clay",
+      "C. Resin",
+      "D. Salt"
+    ]
+  },
+  "q81": {
+    "question": "The Athenian “kouros” statues depict:",
+    "possibleAnswers": [
+      "A. Seated goddesses",
+      "B. Standing nude youths",
+      "C. Warriors on horseback",
+      "D. Boxers"
+    ]
+  },
+  "q82": {
+    "question": "“Ndebele house painting” is noted for:",
+    "possibleAnswers": [
+      "A. Pastel florals",
+      "B. Geometric patterns",
+      "C. Animal scenes",
+      "D. Calligraphy"
+    ]
+  },
+  "q83": {
+    "question": "The “Rosetta Stone” helped decipher:",
+    "possibleAnswers": [
+      "A. Cuneiform",
+      "B. Hieroglyphs",
+      "C. Linear B",
+      "D. Phoenician"
+    ]
+  },
+  "q84": {
+    "question": "“Ukiyo-e” prints often depict:",
+    "possibleAnswers": [
+      "A. Courtly knights",
+      "B. Buddhist mandalas only",
+      "C. Floating world of actors and courtesans",
+      "D. Battle scenes exclusively"
+    ]
+  },
+  "q85": {
+    "question": "The sculptor of Pietà is:",
+    "possibleAnswers": [
+      "A. Michelangelo",
+      "B. Donatello",
+      "C. Cellini",
+      "D. Ghiberti"
+    ]
+  },
+  "q86": {
+    "question": "“Klimt’s The Kiss” is known for use of:",
+    "possibleAnswers": [
+      "A. Pure line",
+      "B. Gold leaf and pattern",
+      "C. Marble relief",
+      "D. Subtractive carving"
+    ]
+  },
+  "q87": {
+    "question": "Which is a hallmark of Romanesque architecture?",
+    "possibleAnswers": [
+      "A. Pointed arches",
+      "B. Round arches and thick walls",
+      "C. Iron skeletons",
+      "D. Flying buttresses"
+    ]
+  },
+  "q88": {
+    "question": "“Macao lacquer” refers to:",
+    "possibleAnswers": [
+      "A. European bronze",
+      "B. Chinese/Japanese lacquerware trade",
+      "C. African beadwork",
+      "D. Persian tile glaze"
+    ]
+  },
+  "q89": {
+    "question": "The “Hausa” architectural tradition famously uses:",
+    "possibleAnswers": [
+      "A. Coral stone",
+      "B. Mud plaster and timber",
+      "C. Glass curtain walls",
+      "D. Granite ashlar"
+    ]
+  },
+  "q90": {
+    "question": "“Pietra dura” is:",
+    "possibleAnswers": [
+      "A. Inlaid hard stone decoration",
+      "B. Wet fresco",
+      "C. Gilt bronze",
+      "D. Burnished wood"
+    ]
+  },
+  "q91": {
+    "question": "The sculptor who made Bird in Space:",
+    "possibleAnswers": [
+      "A. Brâncuși",
+      "B. Moore",
+      "C. Giacometti",
+      "D. Hepworth"
+    ]
+  },
+  "q92": {
+    "question": "The “Florentine” Renaissance favored:",
+    "possibleAnswers": [
+      "A. Oil on canvas first",
+      "B. Tempera and fresco with linear perspective",
+      "C. Marble only",
+      "D. Etching only"
+    ]
+  },
+  "q93": {
+    "question": "“Chinua Achebe’s” cultural significance is MOST tied to:",
+    "possibleAnswers": [
+      "A. Sculpture",
+      "B. Literature examining Igbo culture",
+      "C. Dance",
+      "D. Architecture"
+    ]
+  },
+  "q94": {
+    "question": "The “Valley of the Kings” is in:",
+    "possibleAnswers": [
+      "A. Lower Egypt (Delta)",
+      "B. Upper Egypt (near Luxor)",
+      "C. Sinai",
+      "D. Western Desert (Siwa)"
+    ]
+  },
+  "q95": {
+    "question": "“Op Art” emphasizes:",
+    "possibleAnswers": [
+      "A. Political satire",
+      "B. Optical illusions",
+      "C. Religious icons",
+      "D. Naturalism"
+    ]
+  },
+  "q96": {
+    "question": "The “Cloisonné” technique uses:",
+    "possibleAnswers": [
+      "A. Wire cells filled with enamel",
+      "B. Etched wood",
+      "C. Pressed clay",
+      "D. Cast iron"
+    ]
+  },
+  "q97": {
+    "question": "The “Masai shuka” is a:",
+    "possibleAnswers": [
+      "A. Necklace",
+      "B. Beaded crown",
+      "C. Checked cloth wrap",
+      "D. Leather shield"
+    ]
+  },
+  "q98": {
+    "question": "“Mannerism” followed which movement?",
+    "possibleAnswers": [
+      "A. Gothic",
+      "B. Renaissance High Style",
+      "C. Neoclassicism",
+      "D. Impressionism"
+    ]
+  },
+  "q99": {
+    "question": "The “Farnese Hercules” is a:",
+    "possibleAnswers": [
+      "A. Greek temple",
+      "B. Roman marble copy",
+      "C. Egyptian obelisk",
+      "D. Sumerian relief"
+    ]
+  },
+  "q100": {
+    "question": "The “Toraja” in Indonesia are known for:",
+    "possibleAnswers": [
+      "A. Batik",
+      "B. Tongkonan houses with boat-shaped roofs",
+      "C. Silk brocades",
+      "D. Shaman drums"
+    ]
+  },
+  "q101": {
+    "question": "Antoni Gaudí’s style is often termed:",
+    "possibleAnswers": [
+      "A. Gothic Revival",
+      "B. Catalan Modernisme",
+      "C. Rationalism",
+      "D. Bauhaus"
+    ]
+  },
+  "q102": {
+    "question": "The “Rock-hewn churches” of Lalibela are in:",
+    "possibleAnswers": [
+      "A. Eritrea",
+      "B. Ethiopia",
+      "C. Sudan",
+      "D. Somalia"
+    ]
+  },
+  "q103": {
+    "question": "“Shona stone sculpture” is associated with:",
+    "possibleAnswers": [
+      "A. Zimbabwe",
+      "B. Botswana",
+      "C. Namibia",
+      "D. Malawi"
+    ]
+  },
+  "q104": {
+    "question": "“The Arnolfini Portrait” is by:",
+    "possibleAnswers": [
+      "A. Jan van Eyck",
+      "B. Hans Holbein",
+      "C. Rogier van der Weyden",
+      "D. Pieter Bruegel"
+    ]
+  },
+  "q105": {
+    "question": "“Jali” refers to:",
+    "possibleAnswers": [
+      "A. Openwork stone screens in Indo-Islamic architecture",
+      "B. A Tamil bronze",
+      "C. A Persian carpet knot",
+      "D. A Chinese roof tile"
+    ]
+  },
+  "q106": {
+    "question": "“Henri Matisse” is famed for:",
+    "possibleAnswers": [
+      "A. Black-and-white etchings",
+      "B. Bold color and Fauvism",
+      "C. Minimalist grids",
+      "D. Scientific naturalism"
+    ]
+  },
+  "q107": {
+    "question": "“Ming Dynasty porcelain” is prized for:",
+    "possibleAnswers": [
+      "A. Red-and-gold dragons only",
+      "B. Refined forms and underglaze blue",
+      "C. Celadon only",
+      "D. Overglaze polychrome only"
+    ]
+  },
+  "q108": {
+    "question": "“Timbuktu” is historically significant for its:",
+    "possibleAnswers": [
+      "A. Bronze foundries",
+      "B. Manuscripts and learning centers",
+      "C. Marble quarries",
+      "D. Porcelain kilns"
+    ]
+  },
+  "q109": {
+    "question": "“Art Deco” flourished in the:",
+    "possibleAnswers": [
+      "A. 1820s–1840s",
+      "B. 1890s–1905",
+      "C. 1920s–1930s",
+      "D. 1950s–1960s"
+    ]
+  },
+  "q110": {
+    "question": "The “N’goni” is a:",
+    "possibleAnswers": [
+      "A. North African flute",
+      "B. West African lute ancestor",
+      "C. Ethiopian harp",
+      "D. Congolese drum"
+    ]
+  },
+  "q111": {
+    "question": "“Tapa cloth” is made from:",
+    "possibleAnswers": [
+      "A. Silk",
+      "B. Bark (beaten inner bark)",
+      "C. Cotton",
+      "D. Wool"
+    ]
+  },
+  "q112": {
+    "question": "“Trompe-l’œil” aims to:",
+    "possibleAnswers": [
+      "A. Abstract form",
+      "B. Fool the eye with realism",
+      "C. Express inner emotion",
+      "D. Use pure geometry"
+    ]
+  },
+  "q113": {
+    "question": "The Birth of Venus is by:",
+    "possibleAnswers": [
+      "A. Botticelli",
+      "B. Titian",
+      "C. Raphael",
+      "D. Caravaggio"
+    ]
+  },
+  "q114": {
+    "question": "“Kasubi Tombs” are royal burial grounds of the:",
+    "possibleAnswers": [
+      "A. Buganda Kingdom (Uganda)",
+      "B. Benin Kingdom",
+      "C. Ashanti Kingdom",
+      "D. Zulu Kingdom"
+    ]
+  },
+  "q115": {
+    "question": "“Qipao/Cheongsam” is a traditional dress from:",
+    "possibleAnswers": [
+      "A. Korea",
+      "B. Japan",
+      "C. China",
+      "D. Vietnam"
+    ]
+  },
+  "q116": {
+    "question": "“Sapeur” culture known for dandy fashion is linked to:",
+    "possibleAnswers": [
+      "A. Morocco",
+      "B. DR Congo/Republic of the Congo",
+      "C. Kenya",
+      "D. Senegal"
+    ]
+  },
+  "q117": {
+    "question": "“Wassily Kandinsky” is credited as:",
+    "possibleAnswers": [
+      "A. Father of abstract painting",
+      "B. Pioneer of Cubism",
+      "C. Photorealist leader",
+      "D. Fauvist sculptor"
+    ]
+  },
+  "q118": {
+    "question": "“Great Zimbabwe” is best known for:",
+    "possibleAnswers": [
+      "A. Pyramids",
+      "B. Stone enclosures and towers",
+      "C. Earthen mounds",
+      "D. Timber palisades"
+    ]
+  },
+  "q119": {
+    "question": "The “Lotus Temple” (Bahá’í House of Worship) is in:",
+    "possibleAnswers": [
+      "A. Lahore",
+      "B. New Delhi",
+      "C. Kathmandu",
+      "D. Dhaka"
+    ]
+  },
+  "q120": {
+    "question": "“Haida” art comes from:",
+    "possibleAnswers": [
+      "A. Andean highlands",
+      "B. Pacific Northwest Coast",
+      "C. Polynesia",
+      "D. Siberia"
+    ]
+  },
+  "q121": {
+    "question": "“Katsushika Hokusai” also created:",
+    "possibleAnswers": [
+      "A. Silk batiks",
+      "B. Thirty-Six Views of Mount Fuji",
+      "C. Bronze bells",
+      "D. Lacquer boxes only"
+    ]
+  },
+  "q122": {
+    "question": "“Black-figure pottery” belongs to:",
+    "possibleAnswers": [
+      "A. Ancient Greece",
+      "B. Ancient Egypt",
+      "C. Ancient China",
+      "D. Moche Peru"
+    ]
+  },
+  "q123": {
+    "question": "“May Day” traditions in Europe often feature:",
+    "possibleAnswers": [
+      "A. Menorah lighting",
+      "B. Maypole dancing",
+      "C. Fasting",
+      "D. Bon Odori"
+    ]
+  },
+  "q124": {
+    "question": "“Hausa-Fulani” calabash art involved:",
+    "possibleAnswers": [
+      "A. Engraving and dyeing gourds",
+      "B. Casting iron",
+      "C. Felting wool",
+      "D. Knotting nets"
+    ]
+  },
+  "q125": {
+    "question": "“Baroque” painting often emphasizes:",
+    "possibleAnswers": [
+      "A. Calm symmetry",
+      "B. Dramatic light and movement",
+      "C. Flat color fields",
+      "D. Geometric abstraction"
+    ]
+  },
+  "q126": {
+    "question": "The “Ashurbanipal Lion Hunt” reliefs are:",
+    "possibleAnswers": [
+      "A. Egyptian",
+      "B. Assyrian",
+      "C. Hittite",
+      "D. Persian"
+    ]
+  },
+  "q127": {
+    "question": "“Nadar” was a pioneering:",
+    "possibleAnswers": [
+      "A. Photographer",
+      "B. Ceramicist",
+      "C. Engraver",
+      "D. Architect"
+    ]
+  },
+  "q128": {
+    "question": "“The School of Athens” fresco is by:",
+    "possibleAnswers": [
+      "A. Raphael",
+      "B. Leonardo",
+      "C. Michelangelo",
+      "D. Titian"
+    ]
+  },
+  "q129": {
+    "question": "“Shibori” refers to:",
+    "possibleAnswers": [
+      "A. Japanese resist-dye techniques",
+      "B. Korean celadon",
+      "C. Chinese cloisonné",
+      "D. Thai silk weaving"
+    ]
+  },
+  "q130": {
+    "question": "“Ngil masks” are associated with the:",
+    "possibleAnswers": [
+      "A. Fang people (Gabon)",
+      "B. Maasai",
+      "C. Akan",
+      "D. Berber"
+    ]
+  },
+  "q131": {
+    "question": "The “Pont du Gard” is a:",
+    "possibleAnswers": [
+      "A. Greek stoa",
+      "B. Roman aqueduct",
+      "C. Gothic bridge",
+      "D. Baroque fountain"
+    ]
+  },
+  "q132": {
+    "question": "“Dorothy Lange” is incorrect; her name is:",
+    "possibleAnswers": [
+      "A. Dorethea Lang",
+      "B. Dorothea Lange",
+      "C. Dorothea Langue",
+      "D. Dorothée Langer"
+    ]
+  },
+  "q133": {
+    "question": "The “Ptolemaic” period art is from:",
+    "possibleAnswers": [
+      "A. Greece",
+      "B. Egypt under Greek rule",
+      "C. Persia",
+      "D. Rome"
+    ]
+  },
+  "q134": {
+    "question": "“Hopi kachina” figures are:",
+    "possibleAnswers": [
+      "A. Metal icons",
+      "B. Painted wooden spirit dolls",
+      "C. Stone axes",
+      "D. Feathered capes"
+    ]
+  },
+  "q135": {
+    "question": "“Knossos” on Crete is associated with:",
+    "possibleAnswers": [
+      "A. Mycenaean megaron",
+      "B. Minoan palace complex",
+      "C. Phoenician harbor",
+      "D. Roman amphitheater"
+    ]
+  },
+  "q136": {
+    "question": "“Rococo” interiors are:",
+    "possibleAnswers": [
+      "A. Severe and geometric",
+      "B. Ornate, playful, pastel",
+      "C. Brutalist concrete",
+      "D. Minimalist white cubes"
+    ]
+  },
+  "q137": {
+    "question": "“Anansi” stories are part of:",
+    "possibleAnswers": [
+      "A. Norse myth",
+      "B. Akan folklore",
+      "C. Inuit tales",
+      "D. Khmer epics"
+    ]
+  },
+  "q138": {
+    "question": "“Tromp l’oeil” floor marbles in Rome are called:",
+    "possibleAnswers": [
+      "A. Opus sectile",
+      "B. Opus spicatum",
+      "C. Opus caementicium",
+      "D. Opus incertum"
+    ]
+  },
+  "q139": {
+    "question": "“Die Brücke” was a group in:",
+    "possibleAnswers": [
+      "A. Italian Futurism",
+      "B. German Expressionism",
+      "C. Russian Constructivism",
+      "D. French Symbolism"
+    ]
+  },
+  "q140": {
+    "question": "“Ajanta Caves” are famous for:",
+    "possibleAnswers": [
+      "A. Bronze Buddha",
+      "B. Buddhist murals and rock-cut architecture",
+      "C. Marble Jain statues",
+      "D. Hindu stupas"
+    ]
+  },
+  "q141": {
+    "question": "“Mochica/Moche” pottery is known for:",
+    "possibleAnswers": [
+      "A. Black polished ware",
+      "B. Stirrup spouts and portrait vessels",
+      "C. Blue-and-white glazes",
+      "D. Tin-glazed earthenware"
+    ]
+  },
+  "q142": {
+    "question": "“Oba” refers to a king among the:",
+    "possibleAnswers": [
+      "A. Zulu",
+      "B. Edo (Benin)",
+      "C. Songhai",
+      "D. Hausa"
+    ]
+  },
+  "q143": {
+    "question": "“Palladio” is best known for:",
+    "possibleAnswers": [
+      "A. Gothic cathedrals",
+      "B. Classical villas and treatises",
+      "C. Steel skyscrapers",
+      "D. Suspension bridges"
+    ]
+  },
+  "q144": {
+    "question": "“Asafo flags” originate in:",
+    "possibleAnswers": [
+      "A. Mali",
+      "B. Ghana (Fante)",
+      "C. Ethiopia",
+      "D. Benin"
+    ]
+  },
+  "q145": {
+    "question": "“Blue Mosque” (Sultan Ahmed) is in:",
+    "possibleAnswers": [
+      "A. Cairo",
+      "B. Istanbul",
+      "C. Tehran",
+      "D. Bukhara"
+    ]
+  },
+  "q146": {
+    "question": "“Indigofera” plants were global sources of:",
+    "possibleAnswers": [
+      "A. Silk",
+      "B. Blue dye",
+      "C. Paper",
+      "D. Perfume"
+    ]
+  },
+  "q147": {
+    "question": "“Alhambra” is notable for:",
+    "possibleAnswers": [
+      "A. Greek columns",
+      "B. Islamic geometric and vegetal ornament",
+      "C. Gothic stained glass",
+      "D. Roman concrete domes"
+    ]
+  },
+  "q148": {
+    "question": "“Taj Mahal” was built by:",
+    "possibleAnswers": [
+      "A. Akbar",
+      "B. Shah Jahan",
+      "C. Aurangzeb",
+      "D. Babur"
+    ]
+  },
+  "q149": {
+    "question": "“Moai” statues are on:",
+    "possibleAnswers": [
+      "A. Easter Island (Rapa Nui)",
+      "B. Hawaii",
+      "C. Samoa",
+      "D. Fiji"
+    ]
+  },
+  "q150": {
+    "question": "“Stave churches” are medieval wooden churches in:",
+    "possibleAnswers": [
+      "A. Scotland",
+      "B. Norway",
+      "C. Poland",
+      "D. Russia"
+    ]
+  },
+  "q151": {
+    "question": "“Naqa” and “Meroë” are sites from:",
+    "possibleAnswers": [
+      "A. Aksumite Kingdom",
+      "B. Kingdom of Kush (Nubia)",
+      "C. Carthage",
+      "D. Ghana Empire"
+    ]
+  },
+  "q152": {
+    "question": "“Heian” period art is from:",
+    "possibleAnswers": [
+      "A. China",
+      "B. Japan",
+      "C. Korea",
+      "D. Vietnam"
+    ]
+  },
+  "q153": {
+    "question": "“Gandhara” art shows influence from:",
+    "possibleAnswers": [
+      "A. Rome and Greece (Greco-Buddhist)",
+      "B. China",
+      "C. Persia only",
+      "D. Egypt"
+    ]
+  },
+  "q154": {
+    "question": "“Warka Vase” belongs to:",
+    "possibleAnswers": [
+      "A. Inca",
+      "B. Sumerian/Uruk",
+      "C. Hittite",
+      "D. Indus Valley"
+    ]
+  },
+  "q155": {
+    "question": "“Amber Room” originally belonged to:",
+    "possibleAnswers": [
+      "A. Versailles",
+      "B. Catherine Palace (Tsarskoye Selo)",
+      "C. Winter Palace",
+      "D. Schönbrunn"
+    ]
+  },
+  "q156": {
+    "question": "“Pueblo kiva” is a:",
+    "possibleAnswers": [
+      "A. Pottery kiln",
+      "B. Ceremonial subterranean chamber",
+      "C. Textile loom",
+      "D. Grain silo"
+    ]
+  },
+  "q157": {
+    "question": "“San rock art” is found primarily in:",
+    "possibleAnswers": [
+      "A. Southern Africa",
+      "B. North Africa",
+      "C. West Africa",
+      "D. East Africa"
+    ]
+  },
+  "q158": {
+    "question": "“Isenheim Altarpiece” is by:",
+    "possibleAnswers": [
+      "A. Grünewald",
+      "B. Cranach",
+      "C. Dürer",
+      "D. Bosch"
+    ]
+  },
+  "q159": {
+    "question": "“Cycladic idols” are:",
+    "possibleAnswers": [
+      "A. Bronze helmets",
+      "B. Stylized marble figures",
+      "C. Clay tablets",
+      "D. Gold masks"
+    ]
+  },
+  "q160": {
+    "question": "“Tlingit Chilkat” blankets are:",
+    "possibleAnswers": [
+      "A. Woven with curvilinear crest designs",
+      "B. Felted wool rugs",
+      "C. Embroidered silk banners",
+      "D. Tie-dyed cottons"
+    ]
+  },
+  "q161": {
+    "question": "“Haniwa” figures are from:",
+    "possibleAnswers": [
+      "A. Korean Three Kingdoms",
+      "B. Japanese Kofun period",
+      "C. Chinese Han",
+      "D. Vietnamese Dong Son"
+    ]
+  },
+  "q162": {
+    "question": "“Tenebrism” is associated with:",
+    "possibleAnswers": [
+      "A. Constable",
+      "B. Caravaggio",
+      "C. Turner",
+      "D. Corot"
+    ]
+  },
+  "q163": {
+    "question": "“Nazca Lines” are in:",
+    "possibleAnswers": [
+      "A. Mexico",
+      "B. Peru",
+      "C. Bolivia",
+      "D. Chile"
+    ]
+  },
+  "q164": {
+    "question": "“Living history” museums aim to:",
+    "possibleAnswers": [
+      "A. Preserve only artifacts",
+      "B. Recreate past lifeways with interpreters",
+      "C. Sell replicas",
+      "D. Focus solely on art"
+    ]
+  },
+  "q165": {
+    "question": "“Reliquary” contains:",
+    "possibleAnswers": [
+      "A. Paints",
+      "B. Relics of saints",
+      "C. Coins",
+      "D. Spices"
+    ]
+  },
+  "q166": {
+    "question": "“Chinampas” relate to:",
+    "possibleAnswers": [
+      "A. Aztec agriculture",
+      "B. Inca stonework",
+      "C. Maya writing",
+      "D. Olmec jade"
+    ]
+  },
+  "q167": {
+    "question": "“Shinto torii” marks:",
+    "possibleAnswers": [
+      "A. A burial ground",
+      "B. Entrance to a sacred space",
+      "C. A market",
+      "D. A palace gate"
+    ]
+  },
+  "q168": {
+    "question": "“Mudras” are:",
+    "possibleAnswers": [
+      "A. Dance costumes",
+      "B. Symbolic hand gestures in Hindu-Buddhist art",
+      "C. Temple bells",
+      "D. Silk painting tools"
+    ]
+  },
+  "q169": {
+    "question": "“Edo period” woodblock prints often featured:",
+    "possibleAnswers": [
+      "A. Samurai, courtesans, kabuki actors",
+      "B. Christian saints",
+      "C. Desert caravans",
+      "D. Viking ships"
+    ]
+  },
+  "q170": {
+    "question": "“Hagia Sophia” features a massive:",
+    "possibleAnswers": [
+      "A. Minaret only",
+      "B. Dome on pendentives",
+      "C. Timber truss",
+      "D. Glass curtain wall"
+    ]
+  },
+  "q171": {
+    "question": "“Zulu beadwork” often communicates:",
+    "possibleAnswers": [
+      "A. Mathematical theorems",
+      "B. Messages and social information",
+      "C. Astrology",
+      "D. Trade prices"
+    ]
+  },
+  "q172": {
+    "question": "“Katsura Imperial Villa” exemplifies:",
+    "possibleAnswers": [
+      "A. Japanese wabi-sabi aesthetics",
+      "B. Baroque exuberance",
+      "C. Art Deco luxury",
+      "D. Brutalism"
+    ]
+  },
+  "q173": {
+    "question": "“Nazar” amulet wards off:",
+    "possibleAnswers": [
+      "A. Thunder",
+      "B. Evil eye",
+      "C. Fire",
+      "D. Snakes"
+    ]
+  },
+  "q174": {
+    "question": "“Stonehenge” is aligned with:",
+    "possibleAnswers": [
+      "A. Lunar eclipse",
+      "B. Summer solstice sunrise",
+      "C. Equatorial sunset",
+      "D. Venus transit"
+    ]
+  },
+  "q175": {
+    "question": "“Bauhaus” emphasized:",
+    "possibleAnswers": [
+      "A. Ornament",
+      "B. Unity of art, craft, industry",
+      "C. Historical styles",
+      "D. Purely handcraft only"
+    ]
+  },
+  "q176": {
+    "question": "“Pueblo” pottery artist Maria Martinez revived:",
+    "possibleAnswers": [
+      "A. Blue-and-white",
+      "B. Black-on-black pottery",
+      "C. Lusterware",
+      "D. Terra sigillata"
+    ]
+  },
+  "q177": {
+    "question": "“Trombone” belongs to which orchestral section?",
+    "possibleAnswers": [
+      "A. Strings",
+      "B. Brass",
+      "C. Woodwinds",
+      "D. Percussion"
+    ]
+  },
+  "q178": {
+    "question": "“Chhatris” in Indian architecture are:",
+    "possibleAnswers": [
+      "A. Dome pavilions/canopies",
+      "B. Drainage channels",
+      "C. Fortress gates",
+      "D. Stepwell stairs only"
+    ]
+  },
+  "q179": {
+    "question": "“Guqin” is a:",
+    "possibleAnswers": [
+      "A. Chinese zither",
+      "B. Japanese drum",
+      "C. Korean lute",
+      "D. Mongolian fiddle"
+    ]
+  },
+  "q180": {
+    "question": "“Florence Baptistery doors” called “Gates of Paradise” were by:",
+    "possibleAnswers": [
+      "A. Ghiberti",
+      "B. Brunelleschi",
+      "C. Donatello",
+      "D. Pisano"
+    ]
+  },
+  "q181": {
+    "question": "“Mina’i ware” is:",
+    "possibleAnswers": [
+      "A. Persian polychrome overglaze ceramic",
+      "B. Roman glass",
+      "C. Chinese celadon",
+      "D. Greek black-figure"
+    ]
+  },
+  "q182": {
+    "question": "“Chupícuaro” ceramics are from:",
+    "possibleAnswers": [
+      "A. Andes",
+      "B. West Mexico",
+      "C. Amazon basin",
+      "D. Patagonia"
+    ]
+  },
+  "q183": {
+    "question": "“Ajrak” is a block-print textile tradition from:",
+    "possibleAnswers": [
+      "A. Sindh/Kutch region",
+      "B. Anatolia",
+      "C. Java",
+      "D. Laos"
+    ]
+  },
+  "q184": {
+    "question": "“Tughra” is an imperial:",
+    "possibleAnswers": [
+      "A. Ottoman calligraphic monogram",
+      "B. Mughal miniature",
+      "C. Safavid silk",
+      "D. Timurid tile"
+    ]
+  },
+  "q185": {
+    "question": "“Bembe” masks are from:",
+    "possibleAnswers": [
+      "A. DR Congo",
+      "B. Madagascar",
+      "C. Ghana",
+      "D. Morocco"
+    ]
+  },
+  "q186": {
+    "question": "“Kandake” refers historically to queens of:",
+    "possibleAnswers": [
+      "A. Kush/Nubia",
+      "B. Axum",
+      "C. Mali",
+      "D. Carthage"
+    ]
+  },
+  "q187": {
+    "question": "“Tambura/Tanpura” provides:",
+    "possibleAnswers": [
+      "A. Drum rhythm",
+      "B. Drone in Indian classical music",
+      "C. Melody lead",
+      "D. Brass fanfare"
+    ]
+  },
+  "q188": {
+    "question": "“Dogū” are small prehistoric figures from:",
+    "possibleAnswers": [
+      "A. Jōmon Japan",
+      "B. Neolithic China",
+      "C. Bronze Age Korea",
+      "D. Iron Age Vietnam"
+    ]
+  },
+  "q189": {
+    "question": "“Hausa–Fulani” architectural mosques feature:",
+    "possibleAnswers": [
+      "A. Stone domes only",
+      "B. Mud towers with timber beams",
+      "C. Glass spires",
+      "D. Steel arches"
+    ]
+  },
+  "q190": {
+    "question": "“Ishtar Gate” is from ancient:",
+    "possibleAnswers": [
+      "A. Thebes",
+      "B. Babylon",
+      "C. Nineveh",
+      "D. Persepolis"
+    ]
+  },
+  "q191": {
+    "question": "“Jade cong” and “bi” disks are from:",
+    "possibleAnswers": [
+      "A. Liangzhu culture (China)",
+      "B. Jomon Japan",
+      "C. Shang dynasty only",
+      "D. Han dynasty"
+    ]
+  },
+  "q192": {
+    "question": "“Bierstadt” painted dramatic:",
+    "possibleAnswers": [
+      "A. Dutch interiors",
+      "B. American Western landscapes",
+      "C. Italian vedute",
+      "D. French salons"
+    ]
+  },
+  "q193": {
+    "question": "“Wassail” is a tradition linked to:",
+    "possibleAnswers": [
+      "A. Rice harvest Japan",
+      "B. Orchard toasting England",
+      "C. Wine stomping France",
+      "D. Olive pressing Greece"
+    ]
+  },
+  "q194": {
+    "question": "“Senufo” masks are from:",
+    "possibleAnswers": [
+      "A. Mali/Côte d’Ivoire/Burkina Faso region",
+      "B. Ethiopia",
+      "C. Tanzania",
+      "D. Egypt"
+    ]
+  },
+  "q195": {
+    "question": "“Hausa Ajami” refers to:",
+    "possibleAnswers": [
+      "A. Arabic-based script adapted to Hausa",
+      "B. Latinized Hausa",
+      "C. Tifinagh script",
+      "D. Ge’ez script"
+    ]
+  },
+  "q196": {
+    "question": "“Piet Mondrian” is famed for:",
+    "possibleAnswers": [
+      "A. Cubist portraits",
+      "B. De Stijl grids of primary colors",
+      "C. Surrealist landscapes",
+      "D. Romantic seascapes"
+    ]
+  },
+  "q197": {
+    "question": "“Bambara (Bamana) Chi Wara” headdresses depict:",
+    "possibleAnswers": [
+      "A. Lion",
+      "B. Antelope",
+      "C. Crocodile",
+      "D. Eagle"
+    ]
+  },
+  "q198": {
+    "question": "“T’boli T’nalak” textiles are woven from:",
+    "possibleAnswers": [
+      "A. Cotton",
+      "B. Abaca fiber (Philippines)",
+      "C. Silk",
+      "D. Wool"
+    ]
+  },
+  "q199": {
+    "question": "“Kora/Koum” masks belong mainly to the:",
+    "possibleAnswers": [
+      "A. Dan and Guro peoples",
+      "B. Yoruba",
+      "C. Tuareg",
+      "D. Zulu"
+    ]
+  },
+  "q200": {
+    "question": "“World Heritage” status is conferred by:",
+    "possibleAnswers": [
+      "A. ICOM",
+      "B. UNESCO",
+      "C. MoMA",
+      "D. ICOMOS only"
+    ]
+  }
+}

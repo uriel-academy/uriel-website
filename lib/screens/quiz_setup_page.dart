@@ -9,6 +9,7 @@ class QuizSetupPage extends StatefulWidget {
   final String? preselectedExamType;
   final String? preselectedLevel;
   final List<Question>? preloadedQuestions;
+  final String? triviaCategory; // New: for trivia category selection
 
   const QuizSetupPage({
     super.key,
@@ -16,6 +17,7 @@ class QuizSetupPage extends StatefulWidget {
     this.preselectedExamType,
     this.preselectedLevel,
     this.preloadedQuestions,
+    this.triviaCategory,
   });
 
   @override
@@ -89,18 +91,18 @@ class _QuizSetupPageState extends State<QuizSetupPage> {
     
     try {
       final questions = await _questionService.getQuestionsByFilters(
-        subject: selectedSubject!,
-        examType: selectedExamType!,
+        subject: _mapStringToSubject(selectedSubject!),
+        examType: _mapStringToExamType(selectedExamType!),
         level: selectedLevel!,
+        triviaCategory: widget.triviaCategory, // Pass trivia category for filtering
       );
       
       setState(() {
         availableQuestions = questions.length;
-        if (selectedQuestionCount > availableQuestions && availableQuestions > 0) {
-          selectedQuestionCount = questionCounts
-              .where((count) => count <= availableQuestions)
-              .lastOrNull ?? 5;
-        }
+        // For trivia: cap at 20 questions by default
+        // For other exams: cap at 50 questions
+        final maxQuestions = selectedExamType?.toLowerCase() == 'trivia' ? 20 : 50;
+        selectedQuestionCount = availableQuestions > maxQuestions ? maxQuestions : availableQuestions;
       });
     } catch (e) {
       setState(() => availableQuestions = 0);
@@ -127,6 +129,7 @@ class _QuizSetupPageState extends State<QuizSetupPage> {
           examType: selectedExamType!,
           level: selectedLevel!,
           preloadedQuestions: widget.preloadedQuestions,
+          questionCount: selectedQuestionCount,
         ),
       ),
     );
@@ -184,11 +187,11 @@ class _QuizSetupPageState extends State<QuizSetupPage> {
               ),
               flexibleSpace: FlexibleSpaceBar(
                 background: Container(
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     gradient: LinearGradient(
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
-                      colors: [Colors.white, const Color(0xFFF8FAFE)],
+                      colors: [Colors.white, Color(0xFFF8FAFE)],
                     ),
                   ),
                 ),
@@ -197,26 +200,33 @@ class _QuizSetupPageState extends State<QuizSetupPage> {
 
             // Content
             SliverToBoxAdapter(
-              child: Padding(
-                padding: EdgeInsets.all(isMobile ? 16 : 24),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    // Header
-                    Text(
-                      'Configure Your Quiz',
-                      style: GoogleFonts.playfairDisplay(
-                        fontSize: isMobile ? 20 : 24,
-                        fontWeight: FontWeight.bold,
-                        color: const Color(0xFF1A1E3F),
-                      ),
-                    ),
-                    Text(
-                      'Customize your quiz experience by selecting your preferences below.',
-                      style: GoogleFonts.montserrat(
-                        color: Colors.grey[600],
-                      ),
-                    ),
+              child: Center(
+                child: ConstrainedBox(
+                  constraints: BoxConstraints(
+                    maxWidth: isMobile ? double.infinity : 700, // 50% width reduction for desktop
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.all(isMobile ? 16 : 24),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center, // Center content
+                      children: [
+                        // Header
+                        Text(
+                          'Configure Your Quiz',
+                          textAlign: TextAlign.center, // Center the title
+                          style: GoogleFonts.playfairDisplay(
+                            fontSize: isMobile ? 20 : 24,
+                            fontWeight: FontWeight.bold,
+                            color: const Color(0xFF1A1E3F),
+                          ),
+                        ),
+                        Text(
+                          'Customize your quiz experience by selecting your preferences below.',
+                          textAlign: TextAlign.center, // Center the subtitle
+                          style: GoogleFonts.montserrat(
+                            color: Colors.grey[600],
+                          ),
+                        ),
 
                     const SizedBox(height: 32),
 
@@ -307,7 +317,7 @@ class _QuizSetupPageState extends State<QuizSetupPage> {
                         ),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: availableQuestions > 0 
-                              ? const Color(0xFFD62828) 
+                              ? const Color(0xFF2ECC71) // Accent Green
                               : Colors.grey[400],
                           foregroundColor: Colors.white,
                           padding: EdgeInsets.symmetric(
@@ -323,6 +333,8 @@ class _QuizSetupPageState extends State<QuizSetupPage> {
 
                     const SizedBox(height: 24),
                   ],
+                ),
+              ),
                 ),
               ),
             ),
@@ -356,7 +368,7 @@ class _QuizSetupPageState extends State<QuizSetupPage> {
                 Container(
                   padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                    color: color.withOpacity(0.1),
+                    color: color.withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Icon(icon, color: color, size: 20),
@@ -440,7 +452,7 @@ class _QuizSetupPageState extends State<QuizSetupPage> {
                 Container(
                   padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                    color: Colors.purple.withOpacity(0.1),
+                    color: Colors.purple.withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: const Icon(Icons.settings, color: Colors.purple, size: 20),
@@ -459,31 +471,41 @@ class _QuizSetupPageState extends State<QuizSetupPage> {
             
             const SizedBox(height: 16),
 
-            // Number of Questions
-            Text(
-              'Number of Questions',
-              style: GoogleFonts.montserrat(
-                fontWeight: FontWeight.w500,
-                color: const Color(0xFF1A1E3F),
+            // Show number of questions (non-editable)
+            Container(
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: const Color(0xFFD62828).withValues(alpha: 0.1),
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: const Color(0xFFD62828).withValues(alpha: 0.3)),
               ),
-            ),
-            const SizedBox(height: 8),
-            Wrap(
-              spacing: 8,
-              children: questionCounts.where((count) => count <= availableQuestions).map((count) {
-                final isSelected = selectedQuestionCount == count;
-                return FilterChip(
-                  label: Text('$count'),
-                  selected: isSelected,
-                  onSelected: (selected) {
-                    if (selected) {
-                      setState(() => selectedQuestionCount = count);
-                    }
-                  },
-                  selectedColor: const Color(0xFFD62828).withOpacity(0.2),
-                  checkmarkColor: const Color(0xFFD62828),
-                );
-              }).toList(),
+              child: Row(
+                children: [
+                  const Icon(Icons.quiz, color: Color(0xFFD62828)),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Quiz Questions',
+                          style: GoogleFonts.montserrat(
+                            fontWeight: FontWeight.w600,
+                            color: const Color(0xFF1A1E3F),
+                          ),
+                        ),
+                        Text(
+                          '$selectedQuestionCount questions will be included in this quiz',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 12,
+                            color: Colors.grey[700],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
 
             const SizedBox(height: 16),
@@ -548,10 +570,10 @@ class _QuizSetupPageState extends State<QuizSetupPage> {
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
                 color: isLoadingQuestions 
-                    ? Colors.grey.withOpacity(0.1)
+                    ? Colors.grey.withValues(alpha: 0.1)
                     : availableQuestions > 0 
-                        ? Colors.green.withOpacity(0.1)
-                        : Colors.red.withOpacity(0.1),
+                        ? Colors.green.withValues(alpha: 0.1)
+                        : Colors.red.withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: isLoadingQuestions
@@ -598,5 +620,48 @@ class _QuizSetupPageState extends State<QuizSetupPage> {
         ),
       ),
     );
+  }
+
+  // Helper methods to map strings to enums
+  Subject _mapStringToSubject(String subject) {
+    switch (subject) {
+      case 'Religious and Moral Education':
+        return Subject.religiousMoralEducation;
+      case 'Mathematics':
+        return Subject.mathematics;
+      case 'English Language':
+        return Subject.english;
+      case 'Science':
+        return Subject.integratedScience;
+      case 'Social Studies':
+        return Subject.socialStudies;
+      case 'Information Technology':
+        return Subject.ict;
+      case 'Creative Arts':
+        return Subject.creativeArts;
+      case 'French':
+        return Subject.french;
+      case 'Twi':
+      case 'Ga':
+      case 'Ewe':
+        return Subject.ghanaianLanguage;
+      default:
+        return Subject.religiousMoralEducation; // Default fallback
+    }
+  }
+
+  ExamType _mapStringToExamType(String examType) {
+    switch (examType) {
+      case 'BECE':
+        return ExamType.bece;
+      case 'Mock Exam':
+        return ExamType.mock;
+      case 'Class Test':
+      case 'Assignment':
+      case 'Practice Questions':
+        return ExamType.practice;
+      default:
+        return ExamType.bece; // Default fallback
+    }
   }
 }

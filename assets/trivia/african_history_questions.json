@@ -1,0 +1,1803 @@
+{
+  "subject": "African History",
+  "q1": {
+    "question": "Which river valley supported ancient Egypt’s civilization?",
+    "possibleAnswers": [
+      "A. Niger",
+      "B. Limpopo",
+      "C. Nile",
+      "D. Zambezi"
+    ]
+  },
+  "q2": {
+    "question": "The ancient kingdom of Kush had its early capital at:",
+    "possibleAnswers": [
+      "A. Axum",
+      "B. Meroë",
+      "C. Timbuktu",
+      "D. Gao"
+    ]
+  },
+  "q3": {
+    "question": "Carthage, a major Mediterranean power, was founded by settlers from:",
+    "possibleAnswers": [
+      "A. Greece",
+      "B. Phoenicia",
+      "C. Rome",
+      "D. Egypt"
+    ]
+  },
+  "q4": {
+    "question": "The famous rock-hewn churches at Lalibela are in present-day:",
+    "possibleAnswers": [
+      "A. Eritrea",
+      "B. Ethiopia",
+      "C. Sudan",
+      "D. Somalia"
+    ]
+  },
+  "q5": {
+    "question": "The Mali Empire reached its height under:",
+    "possibleAnswers": [
+      "A. Sundiata Keita",
+      "B. Mansa Musa",
+      "C. Sunni Ali",
+      "D. Askia Muhammad"
+    ]
+  },
+  "q6": {
+    "question": "Great Zimbabwe flourished mainly due to trade in:",
+    "possibleAnswers": [
+      "A. Silk",
+      "B. Spices",
+      "C. Gold and cattle",
+      "D. Timber"
+    ]
+  },
+  "q7": {
+    "question": "The Swahili Coast city-states spoke a language most influenced by Bantu and:",
+    "possibleAnswers": [
+      "A. Latin",
+      "B. Hebrew",
+      "C. Arabic",
+      "D. Persian only"
+    ]
+  },
+  "q8": {
+    "question": "The trans-Saharan trade commonly linked West Africa to:",
+    "possibleAnswers": [
+      "A. South Asia",
+      "B. North Africa",
+      "C. Australasia",
+      "D. Oceania"
+    ]
+  },
+  "q9": {
+    "question": "The Kingdom of Aksum famously erected:",
+    "possibleAnswers": [
+      "A. Ziggurats",
+      "B. Obelisks (stelae)",
+      "C. Pyramids of Giza",
+      "D. Stone circles of Senegambia"
+    ]
+  },
+  "q10": {
+    "question": "Who defeated the Italians at the Battle of Adwa (1896)?",
+    "possibleAnswers": [
+      "A. Menelik II",
+      "B. Haile Selassie I",
+      "C. Tewodros II",
+      "D. Yohannes IV"
+    ]
+  },
+  "q11": {
+    "question": "The Almoravid movement began among the:",
+    "possibleAnswers": [
+      "A. Tuareg",
+      "B. San",
+      "C. Berbers",
+      "D. Zulu"
+    ]
+  },
+  "q12": {
+    "question": "The capital of the Songhai Empire under Askia Muhammad was:",
+    "possibleAnswers": [
+      "A. Marrakesh",
+      "B. Cairo",
+      "C. Gao",
+      "D. Timbuktu only"
+    ]
+  },
+  "q13": {
+    "question": "The famous University of Sankoré is associated with:",
+    "possibleAnswers": [
+      "A. Kilwa",
+      "B. Timbuktu",
+      "C. Cairo",
+      "D. Kairouan"
+    ]
+  },
+  "q14": {
+    "question": "The Bantu migrations primarily spread from:",
+    "possibleAnswers": [
+      "A. North Africa to West Africa",
+      "B. West Africa to the Maghreb",
+      "C. West/Central Africa to the east and south",
+      "D. East Africa to the Sahara"
+    ]
+  },
+  "q15": {
+    "question": "The ancient Kingdom of Mapungubwe preceded:",
+    "possibleAnswers": [
+      "A. Benin",
+      "B. Great Zimbabwe",
+      "C. Oyo",
+      "D. Kongo"
+    ]
+  },
+  "q16": {
+    "question": "The Berlin Conference (1884–85) is best known for:",
+    "possibleAnswers": [
+      "A. Ending the slave trade",
+      "B. Partitioning Africa among European powers",
+      "C. Founding the AU",
+      "D. Recognizing African independence"
+    ]
+  },
+  "q17": {
+    "question": "Which empire was ruled by Obas and famed for bronze plaques?",
+    "possibleAnswers": [
+      "A. Benin (Edo)",
+      "B. Mali",
+      "C. Kanem-Bornu",
+      "D. Ashanti"
+    ]
+  },
+  "q18": {
+    "question": "The Ashanti Confederacy is in present-day:",
+    "possibleAnswers": [
+      "A. Nigeria",
+      "B. Ghana",
+      "C. Benin",
+      "D. Togo"
+    ]
+  },
+  "q19": {
+    "question": "The Zulu kingdom was consolidated by:",
+    "possibleAnswers": [
+      "A. Cetshwayo",
+      "B. Shaka",
+      "C. Dingane",
+      "D. Mpande"
+    ]
+  },
+  "q20": {
+    "question": "The Kanem-Bornu Empire centered around which lake?",
+    "possibleAnswers": [
+      "A. Lake Victoria",
+      "B. Lake Chad",
+      "C. Lake Tanganyika",
+      "D. Lake Malawi"
+    ]
+  },
+  "q21": {
+    "question": "Which North African city became an intellectual hub under the Fatimids?",
+    "possibleAnswers": [
+      "A. Alexandria",
+      "B. Algiers",
+      "C. Tunis",
+      "D. Cairo"
+    ]
+  },
+  "q22": {
+    "question": "The Oyo Empire’s military strength relied on:",
+    "possibleAnswers": [
+      "A. Camel cavalry",
+      "B. War canoes",
+      "C. Horse cavalry",
+      "D. Elephants"
+    ]
+  },
+  "q23": {
+    "question": "The Kingdom of Kongo’s capital was near:",
+    "possibleAnswers": [
+      "A. Mbanza Kongo",
+      "B. Luanda",
+      "C. Kinshasa",
+      "D. Libreville"
+    ]
+  },
+  "q24": {
+    "question": "The Anglo-Zulu War culminated in Zulu defeat at:",
+    "possibleAnswers": [
+      "A. Isandlwana",
+      "B. Rorke’s Drift",
+      "C. Ulundi",
+      "D. Blood River"
+    ]
+  },
+  "q25": {
+    "question": "Queen Nzinga resisted Portuguese expansion in:",
+    "possibleAnswers": [
+      "A. Kongo",
+      "B. Ndongo/Matamba",
+      "C. Dahomey",
+      "D. Kilwa"
+    ]
+  },
+  "q26": {
+    "question": "The Almohads and Almoravids were reform movements in:",
+    "possibleAnswers": [
+      "A. West Africa only",
+      "B. North Africa and Iberia",
+      "C. Central Africa",
+      "D. Southern Africa"
+    ]
+  },
+  "q27": {
+    "question": "The city of Kilwa Kisiwani prospered by trading with:",
+    "possibleAnswers": [
+      "A. Rome and Gaul",
+      "B. China and India",
+      "C. Scandinavia",
+      "D. Polynesia"
+    ]
+  },
+  "q28": {
+    "question": "Timbuktu’s prosperity rested largely on trade in:",
+    "possibleAnswers": [
+      "A. Furs and lumber",
+      "B. Salt, gold, books",
+      "C. Sugar and tea",
+      "D. Copper and tin"
+    ]
+  },
+  "q29": {
+    "question": "The Battle of Omdurman (1898) resulted in:",
+    "possibleAnswers": [
+      "A. Mahdist victory",
+      "B. Anglo-Egyptian victory",
+      "C. Ottoman victory",
+      "D. Ethiopian conquest of Sudan"
+    ]
+  },
+  "q30": {
+    "question": "The first Sub-Saharan African nation to gain independence in the 20th century was:",
+    "possibleAnswers": [
+      "A. Nigeria",
+      "B. Ghana",
+      "C. Sudan",
+      "D. Libya"
+    ]
+  },
+  "q31": {
+    "question": "The Mau Mau uprising occurred in:",
+    "possibleAnswers": [
+      "A. Tanzania",
+      "B. Kenya",
+      "C. Uganda",
+      "D. Malawi"
+    ]
+  },
+  "q32": {
+    "question": "Kwame Nkrumah helped found the:",
+    "possibleAnswers": [
+      "A. Non-Aligned Movement",
+      "B. Warsaw Pact",
+      "C. NATO",
+      "D. OPEC"
+    ]
+  },
+  "q33": {
+    "question": "The Sahara was once greener during the:",
+    "possibleAnswers": [
+      "A. Pleistocene Ice Age exclusively",
+      "B. African Humid Period",
+      "C. Little Ice Age",
+      "D. Roman Warm Period only"
+    ]
+  },
+  "q34": {
+    "question": "The Fulani Jihads were led notably by:",
+    "possibleAnswers": [
+      "A. Usman dan Fodio",
+      "B. Samori Touré",
+      "C. Mansa Musa",
+      "D. Mohammad Ali"
+    ]
+  },
+  "q35": {
+    "question": "The Hehe resistance was led by:",
+    "possibleAnswers": [
+      "A. Mirambo",
+      "B. Mkwawa",
+      "C. Lobengula",
+      "D. Lewanika"
+    ]
+  },
+  "q36": {
+    "question": "The Aswan High Dam lies on the:",
+    "possibleAnswers": [
+      "A. Blue Nile in Ethiopia",
+      "B. Nile in Egypt",
+      "C. Niger in Mali",
+      "D. Zambezi in Egypt"
+    ]
+  },
+  "q37": {
+    "question": "“House of Stone” is often linked to:",
+    "possibleAnswers": [
+      "A. Benin City walls",
+      "B. Great Zimbabwe",
+      "C. Axumite stelae",
+      "D. Kano walls"
+    ]
+  },
+  "q38": {
+    "question": "The Fashoda Incident (1898) was between:",
+    "possibleAnswers": [
+      "A. Britain and France",
+      "B. Italy and Ethiopia",
+      "C. Germany and Portugal",
+      "D. Spain and Morocco"
+    ]
+  },
+  "q39": {
+    "question": "The Battle of Kadesh involved ancient Egypt and:",
+    "possibleAnswers": [
+      "A. Hittites",
+      "B. Persians",
+      "C. Greeks",
+      "D. Romans"
+    ]
+  },
+  "q40": {
+    "question": "The Sahelian mosque style using mud-brick and timber beams is typical of:",
+    "possibleAnswers": [
+      "A. Djenne",
+      "B. Fez",
+      "C. Tunis",
+      "D. Asmara"
+    ]
+  },
+  "q41": {
+    "question": "“Scramble for Africa” intensified after:",
+    "possibleAnswers": [
+      "A. French loss in Algeria",
+      "B. Discovery of diamonds/gold in southern Africa",
+      "C. Formation of OAU",
+      "D. Abolition of slavery in the U.S."
+    ]
+  },
+  "q42": {
+    "question": "The Dahomey Kingdom was renowned for:",
+    "possibleAnswers": [
+      "A. Stone citadels",
+      "B. Amazon warriors (Agojie)",
+      "C. Camel cavalry",
+      "D. Longbow corps"
+    ]
+  },
+  "q43": {
+    "question": "Axum converted to Christianity in the 4th century under:",
+    "possibleAnswers": [
+      "A. Ezana",
+      "B. Lalibela",
+      "C. Kaleb",
+      "D. Menelik I"
+    ]
+  },
+  "q44": {
+    "question": "The “Stone Town” of East Africa refers notably to:",
+    "possibleAnswers": [
+      "A. Mombasa",
+      "B. Lamu",
+      "C. Zanzibar",
+      "D. Malindi"
+    ]
+  },
+  "q45": {
+    "question": "The Reconquest of Western Sahara from Almoravids was led by:",
+    "possibleAnswers": [
+      "A. Almohads",
+      "B. Mamluks",
+      "C. Ottomans",
+      "D. Ptolemies"
+    ]
+  },
+  "q46": {
+    "question": "The Luba-Lunda states rose in:",
+    "possibleAnswers": [
+      "A. West Africa",
+      "B. Central Africa",
+      "C. North Africa",
+      "D. Horn of Africa"
+    ]
+  },
+  "q47": {
+    "question": "The Anglo-Ashanti wars were fought primarily over:",
+    "possibleAnswers": [
+      "A. Trade and sovereignty",
+      "B. Religion",
+      "C. Language",
+      "D. Dynastic succession in Britain"
+    ]
+  },
+  "q48": {
+    "question": "Tuareg confederations historically dominated trade across:",
+    "possibleAnswers": [
+      "A. Kalahari",
+      "B. Sahel/Sahara",
+      "C. Congo Basin",
+      "D. Drakensberg"
+    ]
+  },
+  "q49": {
+    "question": "The Moroccan Sultan who invaded Songhai in 1591 was:",
+    "possibleAnswers": [
+      "A. Ahmad al-Mansur",
+      "B. Yusuf ibn Tashfin",
+      "C. Abd al-Malik",
+      "D. Moulay Ismail"
+    ]
+  },
+  "q50": {
+    "question": "The Nile has two main tributaries, White and:",
+    "possibleAnswers": [
+      "A. Green",
+      "B. Blue",
+      "C. Red",
+      "D. Black"
+    ]
+  },
+  "q51": {
+    "question": "The “Golden Rhinoceros” is an artifact from:",
+    "possibleAnswers": [
+      "A. Aksum",
+      "B. Mapungubwe",
+      "C. Benin",
+      "D. Ife"
+    ]
+  },
+  "q52": {
+    "question": "The Suez Canal opened in:",
+    "possibleAnswers": [
+      "A. 1848",
+      "B. 1869",
+      "C. 1885",
+      "D. 1902"
+    ]
+  },
+  "q53": {
+    "question": "The Anglo-Egyptian condominium governed:",
+    "possibleAnswers": [
+      "A. Eritrea",
+      "B. Sudan",
+      "C. Libya",
+      "D. Tunisia"
+    ]
+  },
+  "q54": {
+    "question": "The Mande peoples founded which empire?",
+    "possibleAnswers": [
+      "A. Ghana (Wagadou)",
+      "B. Mali",
+      "C. Kanem",
+      "D. Bornu only"
+    ]
+  },
+  "q55": {
+    "question": "The Hausa city-states include:",
+    "possibleAnswers": [
+      "A. Kano and Katsina",
+      "B. Benin and Ife",
+      "C. Oyo and Ijebu",
+      "D. Ibadan and Ogbomosho"
+    ]
+  },
+  "q56": {
+    "question": "The “Great Trek” involved:",
+    "possibleAnswers": [
+      "A. Tuareg to the Nile",
+      "B. Boers to the interior of South Africa",
+      "C. Zulu to Mozambique",
+      "D. Fulani to Morocco"
+    ]
+  },
+  "q57": {
+    "question": "The San rock art is most abundant in:",
+    "possibleAnswers": [
+      "A. North Africa",
+      "B. Southern Africa",
+      "C. West Africa",
+      "D. Madagascar"
+    ]
+  },
+  "q58": {
+    "question": "The “Uthmaniyya” relates to:",
+    "possibleAnswers": [
+      "A. Usman dan Fodio’s followers",
+      "B. Ottoman colonists in Ethiopia",
+      "C. Almoravid scholars",
+      "D. Aksumite merchants"
+    ]
+  },
+  "q59": {
+    "question": "The Aba Women’s War (1929) occurred in:",
+    "possibleAnswers": [
+      "A. Ghana",
+      "B. Nigeria",
+      "C. Kenya",
+      "D. Sierra Leone"
+    ]
+  },
+  "q60": {
+    "question": "The Anglo-Boer War ended in:",
+    "possibleAnswers": [
+      "A. 1895",
+      "B. 1902",
+      "C. 1910",
+      "D. 1914"
+    ]
+  },
+  "q61": {
+    "question": "The Rwandan Kingdom historically belonged to which cultural area?",
+    "possibleAnswers": [
+      "A. Sudanic",
+      "B. Great Lakes region",
+      "C. Maghreb",
+      "D. Sahel"
+    ]
+  },
+  "q62": {
+    "question": "Sonni Ali is associated with the rise of:",
+    "possibleAnswers": [
+      "A. Mali",
+      "B. Songhai",
+      "C. Kanem",
+      "D. Ghana (Wagadou)"
+    ]
+  },
+  "q63": {
+    "question": "The Ife terracotta and bronzes are masterpieces of:",
+    "possibleAnswers": [
+      "A. Ashanti",
+      "B. Yoruba",
+      "C. Igbo",
+      "D. Edo"
+    ]
+  },
+  "q64": {
+    "question": "The Nok culture is best known for:",
+    "possibleAnswers": [
+      "A. Ironworking and terracotta figures",
+      "B. Papyrus making",
+      "C. Silk weaving",
+      "D. Obsidian blades"
+    ]
+  },
+  "q65": {
+    "question": "The Battle of Ksar el-Kebir (1578) involved Morocco and:",
+    "possibleAnswers": [
+      "A. Spain & Portugal (Portuguese king)",
+      "B. Ottoman vassals",
+      "C. France",
+      "D. England"
+    ]
+  },
+  "q66": {
+    "question": "The first successful anti-colonial modern war in Africa that preserved independence was:",
+    "possibleAnswers": [
+      "A. Adwa (Ethiopia vs Italy)",
+      "B. Isandlwana (Zulu vs Britain)",
+      "C. Ulundi (Zulu vs Britain)",
+      "D. Omdurman (Mahdists vs Britain)"
+    ]
+  },
+  "q67": {
+    "question": "The “Maghreb” refers to:",
+    "possibleAnswers": [
+      "A. East Africa",
+      "B. North-west Africa",
+      "C. Southern Africa",
+      "D. Central Africa"
+    ]
+  },
+  "q68": {
+    "question": "The Sousse and Kairouan heritage sites are in:",
+    "possibleAnswers": [
+      "A. Morocco",
+      "B. Tunisia",
+      "C. Algeria",
+      "D. Libya"
+    ]
+  },
+  "q69": {
+    "question": "The “Western Sudanic” empires were powered primarily by:",
+    "possibleAnswers": [
+      "A. Rice farming",
+      "B. Long-distance trade (gold–salt)",
+      "C. Whaling",
+      "D. Olive oil"
+    ]
+  },
+  "q70": {
+    "question": "The Toucouleur Empire was created by:",
+    "possibleAnswers": [
+      "A. Ahmadou Seku",
+      "B. Al Hajj Umar Tall",
+      "C. Samori Touré",
+      "D. Rabih az-Zubayr"
+    ]
+  },
+  "q71": {
+    "question": "The Asante currency weights often shaped like objects are called:",
+    "possibleAnswers": [
+      "A. Cowries",
+      "B. Manillas",
+      "C. Goldweights (abrammuo)",
+      "D. Dirhams"
+    ]
+  },
+  "q72": {
+    "question": "The “Barbary States” were famed for:",
+    "possibleAnswers": [
+      "A. Caravan trade only",
+      "B. Privateering along the Mediterranean",
+      "C. Pearl fishing",
+      "D. Sugar plantations"
+    ]
+  },
+  "q73": {
+    "question": "The Portuguese established Elmina Castle in:",
+    "possibleAnswers": [
+      "A. 1415",
+      "B. 1482",
+      "C. 1505",
+      "D. 1520"
+    ]
+  },
+  "q74": {
+    "question": "The “Carthaginian Peace” phrase originates from Rome’s defeat of:",
+    "possibleAnswers": [
+      "A. Carthage",
+      "B. Greece",
+      "C. Egypt",
+      "D. Numidia"
+    ]
+  },
+  "q75": {
+    "question": "The Numidian cavalry supported which ancient power at times?",
+    "possibleAnswers": [
+      "A. Persia",
+      "B. Rome",
+      "C. China",
+      "D. India"
+    ]
+  },
+  "q76": {
+    "question": "The Almohad capital at times was:",
+    "possibleAnswers": [
+      "A. Marrakesh",
+      "B. Ghadames",
+      "C. Aswan",
+      "D. Agadez"
+    ]
+  },
+  "q77": {
+    "question": "The Mossi kingdoms lay mainly in:",
+    "possibleAnswers": [
+      "A. Burkina Faso",
+      "B. Benin",
+      "C. Togo",
+      "D. Niger Delta"
+    ]
+  },
+  "q78": {
+    "question": "The “Zanj Rebellion” occurred largely in:",
+    "possibleAnswers": [
+      "A. North Africa",
+      "B. Mesopotamia (with East African slaves)",
+      "C. Iberia",
+      "D. India"
+    ]
+  },
+  "q79": {
+    "question": "The “Great Enclosure” is part of:",
+    "possibleAnswers": [
+      "A. Benin City",
+      "B. Great Zimbabwe",
+      "C. Kano Walls",
+      "D. Aksum"
+    ]
+  },
+  "q80": {
+    "question": "The Serer and Wolof peoples are native to:",
+    "possibleAnswers": [
+      "A. Senegal region",
+      "B. Ethiopia",
+      "C. Egypt",
+      "D. Namibia"
+    ]
+  },
+  "q81": {
+    "question": "The Ashanti defeated the British at which early battle?",
+    "possibleAnswers": [
+      "A. Nsamankow",
+      "B. Amoaful (1874 campaign)",
+      "C. Feyiase (vs Denkyira, earlier)",
+      "D. Ulundi"
+    ]
+  },
+  "q82": {
+    "question": "The Cape Colony was first settled by Europeans from:",
+    "possibleAnswers": [
+      "A. Britain",
+      "B. Portugal",
+      "C. Netherlands",
+      "D. France"
+    ]
+  },
+  "q83": {
+    "question": "The “Afrikaans” language developed from:",
+    "possibleAnswers": [
+      "A. German",
+      "B. Dutch",
+      "C. French",
+      "D. Portuguese"
+    ]
+  },
+  "q84": {
+    "question": "The Xhosa cattle-killing movement occurred in the:",
+    "possibleAnswers": [
+      "A. 1750s",
+      "B. 1850s",
+      "C. 1950s",
+      "D. 1650s"
+    ]
+  },
+  "q85": {
+    "question": "The Saadian dynasty ruled:",
+    "possibleAnswers": [
+      "A. Morocco",
+      "B. Algeria",
+      "C. Tunisia",
+      "D. Libya"
+    ]
+  },
+  "q86": {
+    "question": "The Sokoto Caliphate’s capital was:",
+    "possibleAnswers": [
+      "A. Zaria",
+      "B. Kano",
+      "C. Sokoto",
+      "D. Katsina"
+    ]
+  },
+  "q87": {
+    "question": "“Rhodesia” referred historically to territories now mainly in:",
+    "possibleAnswers": [
+      "A. Zambia and Zimbabwe",
+      "B. Botswana and Namibia",
+      "C. Malawi and Mozambique",
+      "D. Kenya and Uganda"
+    ]
+  },
+  "q88": {
+    "question": "The “Front for the Liberation of Mozambique” is:",
+    "possibleAnswers": [
+      "A. UNITA",
+      "B. FRELIMO",
+      "C. MPLA",
+      "D. ZANU"
+    ]
+  },
+  "q89": {
+    "question": "The ANC’s armed wing was called:",
+    "possibleAnswers": [
+      "A. Umkhonto we Sizwe",
+      "B. ZANLA",
+      "C. SWAPO",
+      "D. Renamo"
+    ]
+  },
+  "q90": {
+    "question": "The Algerian War of Independence was primarily against:",
+    "possibleAnswers": [
+      "A. Spain",
+      "B. France",
+      "C. Italy",
+      "D. Britain"
+    ]
+  },
+  "q91": {
+    "question": "Patrice Lumumba was the first PM of:",
+    "possibleAnswers": [
+      "A. Ghana",
+      "B. Congo (Leopoldville)",
+      "C. Guinea",
+      "D. Cameroon"
+    ]
+  },
+  "q92": {
+    "question": "Julius Nyerere promoted:",
+    "possibleAnswers": [
+      "A. Ujamaa (African socialism)",
+      "B. Apartheid",
+      "C. Capital flight",
+      "D. Pan-Arabism"
+    ]
+  },
+  "q93": {
+    "question": "The Biafran War (1967–70) occurred in:",
+    "possibleAnswers": [
+      "A. Sudan",
+      "B. Nigeria",
+      "C. Ethiopia",
+      "D. Angola"
+    ]
+  },
+  "q94": {
+    "question": "The Entebbe raid (1976) involved hostages rescued to:",
+    "possibleAnswers": [
+      "A. Nairobi",
+      "B. Tel Aviv",
+      "C. Cairo",
+      "D. Addis Ababa"
+    ]
+  },
+  "q95": {
+    "question": "The Horn of Africa includes:",
+    "possibleAnswers": [
+      "A. Kenya, Tanzania, Uganda",
+      "B. Ethiopia, Eritrea, Somalia, Djibouti",
+      "C. Sudan, South Sudan, Uganda",
+      "D. Egypt, Libya, Tunisia"
+    ]
+  },
+  "q96": {
+    "question": "Emperor Haile Selassie was overthrown in:",
+    "possibleAnswers": [
+      "A. 1966",
+      "B. 1974",
+      "C. 1979",
+      "D. 1987"
+    ]
+  },
+  "q97": {
+    "question": "The AU replaced the OAU in:",
+    "possibleAnswers": [
+      "A. 1994",
+      "B. 1999",
+      "C. 2002",
+      "D. 2005"
+    ]
+  },
+  "q98": {
+    "question": "The civil war involving the SPLA mainly took place in:",
+    "possibleAnswers": [
+      "A. Ethiopia",
+      "B. Sudan/South Sudan",
+      "C. Uganda",
+      "D. DRC"
+    ]
+  },
+  "q99": {
+    "question": "The “Arab Spring” began in 2010 in:",
+    "possibleAnswers": [
+      "A. Tunisia",
+      "B. Egypt",
+      "C. Libya",
+      "D. Morocco"
+    ]
+  },
+  "q100": {
+    "question": "The TRC (Truth and Reconciliation Commission) is associated with:",
+    "possibleAnswers": [
+      "A. Rwanda",
+      "B. South Africa",
+      "C. Liberia",
+      "D. Sierra Leone"
+    ]
+  },
+  "q101": {
+    "question": "The first female President in Africa elected in 2005 was:",
+    "possibleAnswers": [
+      "A. Joyce Banda",
+      "B. Ellen Johnson Sirleaf",
+      "C. Sahle-Work Zewde",
+      "D. Ameenah Gurib-Fakim"
+    ]
+  },
+  "q102": {
+    "question": "The Ogaden War was fought between Ethiopia and:",
+    "possibleAnswers": [
+      "A. Kenya",
+      "B. Somalia",
+      "C. Eritrea",
+      "D. Djibouti"
+    ]
+  },
+  "q103": {
+    "question": "The “Windhoek Declaration” is linked to:",
+    "possibleAnswers": [
+      "A. Press freedom in Africa",
+      "B. Ending apartheid",
+      "C. Nile water-sharing",
+      "D. ECOWAS trade"
+    ]
+  },
+  "q104": {
+    "question": "The Great Mosque of Djenné is restored annually by:",
+    "possibleAnswers": [
+      "A. Italian masons",
+      "B. Local community plasterers",
+      "C. Ottoman artisans",
+      "D. UN troops"
+    ]
+  },
+  "q105": {
+    "question": "The “Amazigh” refers to:",
+    "possibleAnswers": [
+      "A. Tuareg only",
+      "B. Berber peoples of North Africa",
+      "C. Nubians of Sudan",
+      "D. Copts of Egypt"
+    ]
+  },
+  "q106": {
+    "question": "The Cape-to-Cairo vision is associated with:",
+    "possibleAnswers": [
+      "A. Cecil Rhodes",
+      "B. David Livingstone",
+      "C. Henry Morton Stanley",
+      "D. Bartolomeu Dias"
+    ]
+  },
+  "q107": {
+    "question": "The Kongo monarch who wrote letters condemning the slave trade was:",
+    "possibleAnswers": [
+      "A. Afonso I (Nzinga Mbemba)",
+      "B. Garcia II",
+      "C. Pedro IV",
+      "D. Álvaro I"
+    ]
+  },
+  "q108": {
+    "question": "The Ashanti “Golden Stool” symbolizes:",
+    "possibleAnswers": [
+      "A. Military might",
+      "B. Soul of the nation",
+      "C. Wealth of gold mines",
+      "D. Right to tax"
+    ]
+  },
+  "q109": {
+    "question": "The “Harkening the Horns” refers to festivals of:",
+    "possibleAnswers": [
+      "A. Berber new year",
+      "B. Yoruba masquerade",
+      "C. Ethiopian Timkat",
+      "D. Tuareg Cure Salée"
+    ]
+  },
+  "q110": {
+    "question": "The Tuareg script is called:",
+    "possibleAnswers": [
+      "A. Ge’ez",
+      "B. Ajami",
+      "C. Tifinagh",
+      "D. Nsibidi"
+    ]
+  },
+  "q111": {
+    "question": "The Nile’s source region includes:",
+    "possibleAnswers": [
+      "A. Ethiopian Highlands and Great Lakes",
+      "B. Sahara oases",
+      "C. Drakensberg",
+      "D. Atlas Mountains"
+    ]
+  },
+  "q112": {
+    "question": "The capital of ancient Ghana (Wagadou) is often identified as:",
+    "possibleAnswers": [
+      "A. Koumbi Saleh",
+      "B. Gao",
+      "C. Timbuktu",
+      "D. Niani"
+    ]
+  },
+  "q113": {
+    "question": "The “Hamitic hypothesis” now rejected, once incorrectly credited civilization to:",
+    "possibleAnswers": [
+      "A. Sub-Saharan cultures",
+      "B. A non-existent “Hamite” race",
+      "C. Austronesian settlers",
+      "D. Phoenician colonists only"
+    ]
+  },
+  "q114": {
+    "question": "The “Haratin” are communities associated with:",
+    "possibleAnswers": [
+      "A. Saharan oasis laborers",
+      "B. Nile delta fishermen",
+      "C. Cape farmers",
+      "D. Great Lakes traders"
+    ]
+  },
+  "q115": {
+    "question": "The Almoravids captured which Iberian city?",
+    "possibleAnswers": [
+      "A. Granada",
+      "B. Seville",
+      "C. Cordoba",
+      "D. They intervened across Al-Andalus"
+    ]
+  },
+  "q116": {
+    "question": "The British defeated Italian forces in East Africa during:",
+    "possibleAnswers": [
+      "A. WWI",
+      "B. WWII",
+      "C. Crimean War",
+      "D. Boer War"
+    ]
+  },
+  "q117": {
+    "question": "The “Mfecane” refers to:",
+    "possibleAnswers": [
+      "A. Famine in the Sahel",
+      "B. Upheavals and migrations in southern Africa in the 19th century",
+      "C. Atlantic slave mutinies",
+      "D. Nile floods"
+    ]
+  },
+  "q118": {
+    "question": "The first black African Nobel Peace Prize laureate was:",
+    "possibleAnswers": [
+      "A. Desmond Tutu",
+      "B. Albert Luthuli",
+      "C. Nelson Mandela",
+      "D. Kofi Annan"
+    ]
+  },
+  "q119": {
+    "question": "The Benin Bronzes were largely looted in:",
+    "possibleAnswers": [
+      "A. 1807",
+      "B. 1842",
+      "C. 1897",
+      "D. 1906"
+    ]
+  },
+  "q120": {
+    "question": "The Lamu Archipelago belongs to:",
+    "possibleAnswers": [
+      "A. Tanzania",
+      "B. Kenya",
+      "C. Somalia",
+      "D. Mozambique"
+    ]
+  },
+  "q121": {
+    "question": "The Fula (Fulani) are widespread but originate largely from:",
+    "possibleAnswers": [
+      "A. Central Sahara",
+      "B. West Africa/Sahel",
+      "C. Horn of Africa",
+      "D. Kalahari"
+    ]
+  },
+  "q122": {
+    "question": "The Sahel stretches between the Sahara and:",
+    "possibleAnswers": [
+      "A. Mediterranean",
+      "B. Congo Basin",
+      "C. Sudanian/Savanna belt",
+      "D. Kalahari"
+    ]
+  },
+  "q123": {
+    "question": "The Italo-Turkish War (1911–12) resulted in Italy taking:",
+    "possibleAnswers": [
+      "A. Tunisia",
+      "B. Libya (Tripolitania/Cyrenaica)",
+      "C. Algeria",
+      "D. Morocco"
+    ]
+  },
+  "q124": {
+    "question": "The Ashanti “Kente” weaving town of great renown is:",
+    "possibleAnswers": [
+      "A. Bonwire",
+      "B. Ouidah",
+      "C. Kano",
+      "D. Marrakesh"
+    ]
+  },
+  "q125": {
+    "question": "The Benin monarchy title is:",
+    "possibleAnswers": [
+      "A. Alaafin",
+      "B. Oba",
+      "C. Ooni",
+      "D. Sarki"
+    ]
+  },
+  "q126": {
+    "question": "The Great Ruins at Loropéni are in:",
+    "possibleAnswers": [
+      "A. Togo",
+      "B. Burkina Faso",
+      "C. Niger",
+      "D. Mali"
+    ]
+  },
+  "q127": {
+    "question": "The “Saadian Golden Age” involved trade in:",
+    "possibleAnswers": [
+      "A. Gold and sugar",
+      "B. Tea and silk",
+      "C. Tobacco and cotton",
+      "D. Rubber and tin"
+    ]
+  },
+  "q128": {
+    "question": "The “Mahdist State” capital was:",
+    "possibleAnswers": [
+      "A. Omdurman",
+      "B. Khartoum North",
+      "C. Kassala",
+      "D. Dongola"
+    ]
+  },
+  "q129": {
+    "question": "The Tanganyika Groundnut Scheme was a failed project by:",
+    "possibleAnswers": [
+      "A. France",
+      "B. Britain",
+      "C. Germany",
+      "D. Belgium"
+    ]
+  },
+  "q130": {
+    "question": "The Wagadugu kingdom is associated with the:",
+    "possibleAnswers": [
+      "A. Mossi",
+      "B. Yoruba",
+      "C. Mandinka",
+      "D. Wolof"
+    ]
+  },
+  "q131": {
+    "question": "“Senegambia” historically refers to the region around:",
+    "possibleAnswers": [
+      "A. Senegal and Gambia rivers",
+      "B. Volta basin",
+      "C. Nile delta",
+      "D. Congo estuary"
+    ]
+  },
+  "q132": {
+    "question": "The “Hausa Bakwai” are:",
+    "possibleAnswers": [
+      "A. Seven original Hausa states",
+      "B. Seven Yoruba cities",
+      "C. Seven Tuareg clans",
+      "D. Seven Swahili ports"
+    ]
+  },
+  "q133": {
+    "question": "The Kingdom of Dahomey’s port of slave export was:",
+    "possibleAnswers": [
+      "A. Ouidah (Whydah)",
+      "B. Lagos",
+      "C. Calabar",
+      "D. Elmina"
+    ]
+  },
+  "q134": {
+    "question": "The “Rift Valley” was formed by:",
+    "possibleAnswers": [
+      "A. Glaciation",
+      "B. Tectonic spreading/faulting",
+      "C. Volcanic ash deposition",
+      "D. Meteor impact"
+    ]
+  },
+  "q135": {
+    "question": "The Asmara Modernist architecture is influenced by:",
+    "possibleAnswers": [
+      "A. Italian colonial period",
+      "B. Ottoman baroque",
+      "C. British Victorian",
+      "D. French Gothic"
+    ]
+  },
+  "q136": {
+    "question": "The “Thiaroye massacre” occurred in:",
+    "possibleAnswers": [
+      "A. Ghana",
+      "B. Senegal",
+      "C. Algeria",
+      "D. Egypt"
+    ]
+  },
+  "q137": {
+    "question": "The Herero and Nama genocide occurred in:",
+    "possibleAnswers": [
+      "A. German South West Africa (Namibia)",
+      "B. German East Africa (Tanzania)",
+      "C. Cameroon",
+      "D. Togo"
+    ]
+  },
+  "q138": {
+    "question": "The Maji Maji Rebellion took place in:",
+    "possibleAnswers": [
+      "A. Mozambique",
+      "B. German East Africa (Tanzania)",
+      "C. Angola",
+      "D. Congo"
+    ]
+  },
+  "q139": {
+    "question": "The “Asantehene” title denotes:",
+    "possibleAnswers": [
+      "A. King of Ashanti",
+      "B. Chief priest",
+      "C. War leader only",
+      "D. Merchant guild head"
+    ]
+  },
+  "q140": {
+    "question": "The term “Maghreb al-Aqsa” refers to:",
+    "possibleAnswers": [
+      "A. Western Sahara",
+      "B. Morocco (the far west)",
+      "C. Tunisia",
+      "D. Egypt"
+    ]
+  },
+  "q141": {
+    "question": "The “Sahara Highway” of antiquity mainly used:",
+    "possibleAnswers": [
+      "A. Camel caravans",
+      "B. Horse chariots",
+      "C. Ox-carts",
+      "D. River boats"
+    ]
+  },
+  "q142": {
+    "question": "The “Senegal River” headwaters lie in:",
+    "possibleAnswers": [
+      "A. Fouta Djallon highlands",
+      "B. Tibesti",
+      "C. Atlas Mountains",
+      "D. Ethiopian Highlands"
+    ]
+  },
+  "q143": {
+    "question": "The Cape Verde islands were colonized by:",
+    "possibleAnswers": [
+      "A. Spain",
+      "B. Portugal",
+      "C. France",
+      "D. Britain"
+    ]
+  },
+  "q144": {
+    "question": "The Hausa “Kofar Mata” Dye Pits are in:",
+    "possibleAnswers": [
+      "A. Katsina",
+      "B. Sokoto",
+      "C. Kano",
+      "D. Zaria"
+    ]
+  },
+  "q145": {
+    "question": "The “Trans-Saharan slave trade” largely connected Sub-Saharan Africa to:",
+    "possibleAnswers": [
+      "A. Atlantic islands",
+      "B. North Africa and the Middle East",
+      "C. Scandinavia",
+      "D. East Asia"
+    ]
+  },
+  "q146": {
+    "question": "The “Senegalese Tirailleurs” were colonial troops for:",
+    "possibleAnswers": [
+      "A. Britain",
+      "B. France",
+      "C. Belgium",
+      "D. Germany"
+    ]
+  },
+  "q147": {
+    "question": "The house of Alaafin ruled which empire?",
+    "possibleAnswers": [
+      "A. Benin",
+      "B. Oyo",
+      "C. Kanem",
+      "D. Kongo"
+    ]
+  },
+  "q148": {
+    "question": "The “Kongo Kingdom” converted to Christianity around:",
+    "possibleAnswers": [
+      "A. 1200s",
+      "B. 1500s",
+      "C. 1700s",
+      "D. 1800s"
+    ]
+  },
+  "q149": {
+    "question": "The Ethiopian city that served as an imperial capital and is UNESCO-listed:",
+    "possibleAnswers": [
+      "A. Gondar",
+      "B. Dire Dawa",
+      "C. Harar",
+      "D. Bahir Dar"
+    ]
+  },
+  "q150": {
+    "question": "The “Ashanti Wars” ended in formal annexation in:",
+    "possibleAnswers": [
+      "A. 1874",
+      "B. 1896",
+      "C. 1901",
+      "D. 1914"
+    ]
+  },
+  "q151": {
+    "question": "The “Kano Chronicle” records history of:",
+    "possibleAnswers": [
+      "A. Yoruba kings",
+      "B. Hausa rulers",
+      "C. Tuareg clans",
+      "D. Swahili sheikhs"
+    ]
+  },
+  "q152": {
+    "question": "The “Casamance” region is in:",
+    "possibleAnswers": [
+      "A. Guinea",
+      "B. Senegal",
+      "C. Sierra Leone",
+      "D. Liberia"
+    ]
+  },
+  "q153": {
+    "question": "The “Tripartite struggle” in the Nile Valley mainly involved:",
+    "possibleAnswers": [
+      "A. Aksum, Meroë, Egypt",
+      "B. Ethiopia, Italy, Britain",
+      "C. Fatimids, Ayyubids, Mamluks",
+      "D. Morocco, Spain, Portugal"
+    ]
+  },
+  "q154": {
+    "question": "The “Sabaean” influence in the Horn is seen via:",
+    "possibleAnswers": [
+      "A. South Arabian contacts",
+      "B. Persian colonists",
+      "C. Greek forts",
+      "D. Roman legions"
+    ]
+  },
+  "q155": {
+    "question": "The “Battle of Algiers” refers to urban warfare during:",
+    "possibleAnswers": [
+      "A. WWII",
+      "B. Algerian War",
+      "C. Libyan Civil War",
+      "D. Franco-Prussian War"
+    ]
+  },
+  "q156": {
+    "question": "The “Great Mosque of Kairouan” is in:",
+    "possibleAnswers": [
+      "A. Algeria",
+      "B. Tunisia",
+      "C. Morocco",
+      "D. Libya"
+    ]
+  },
+  "q157": {
+    "question": "The “House of Wonders” (Beit el-Ajaib) is in:",
+    "possibleAnswers": [
+      "A. Lamu",
+      "B. Zanzibar (Stone Town)",
+      "C. Mombasa",
+      "D. Kilwa"
+    ]
+  },
+  "q158": {
+    "question": "The “Igbo-Ukwu” finds are noted for:",
+    "possibleAnswers": [
+      "A. Iron tools only",
+      "B. Early bronze casting sophistication",
+      "C. Papyrus",
+      "D. Silk"
+    ]
+  },
+  "q159": {
+    "question": "The “Walata—Timbuktu—Gao” caravan route is in:",
+    "possibleAnswers": [
+      "A. Sahel/Western Sudan",
+      "B. Congo Basin",
+      "C. Maghreb coast",
+      "D. Horn interior"
+    ]
+  },
+  "q160": {
+    "question": "The “Edo” people are primarily associated with:",
+    "possibleAnswers": [
+      "A. Oyo",
+      "B. Ife",
+      "C. Benin Kingdom",
+      "D. Kanem"
+    ]
+  },
+  "q161": {
+    "question": "The “Sahara Desert” expanded and contracted mainly due to:",
+    "possibleAnswers": [
+      "A. Human irrigation",
+      "B. Orbital (Milankovitch) cycles affecting climate",
+      "C. Volcanoes",
+      "D. Comets"
+    ]
+  },
+  "q162": {
+    "question": "The “Ghadames” oasis is located in:",
+    "possibleAnswers": [
+      "A. Morocco",
+      "B. Libya",
+      "C. Algeria",
+      "D. Niger"
+    ]
+  },
+  "q163": {
+    "question": "The “Fatimid Caliphate” founded:",
+    "possibleAnswers": [
+      "A. Cairo (al-Qahira)",
+      "B. Marrakesh",
+      "C. Tunis",
+      "D. Tripoli"
+    ]
+  },
+  "q164": {
+    "question": "The “Trans-Atlantic slave trade” major West African ports included:",
+    "possibleAnswers": [
+      "A. Ouidah and Elmina",
+      "B. Durban and Maputo",
+      "C. Tripoli and Benghazi",
+      "D. Ceuta and Melilla"
+    ]
+  },
+  "q165": {
+    "question": "The “Igbo Landing” legend relates to:",
+    "possibleAnswers": [
+      "A. Return migration to West Africa",
+      "B. Enslaved Igbo resistance in the Americas",
+      "C. Founding of Lagos",
+      "D. Creation myth"
+    ]
+  },
+  "q166": {
+    "question": "The “Sahara oases” enabled:",
+    "possibleAnswers": [
+      "A. Monsoon agriculture",
+      "B. Caravan resupply and trade nodes",
+      "C. Ice storage",
+      "D. Seafaring"
+    ]
+  },
+  "q167": {
+    "question": "The “Alaafin of Oyo” palace site was at:",
+    "possibleAnswers": [
+      "A. Old Oyo (Oyo-Ile)",
+      "B. Benin City",
+      "C. Ife",
+      "D. Ilorin"
+    ]
+  },
+  "q168": {
+    "question": "The “Sundiata Epic” is from the:",
+    "possibleAnswers": [
+      "A. Mossi",
+      "B. Mandinka",
+      "C. Wolof",
+      "D. Songhai"
+    ]
+  },
+  "q169": {
+    "question": "The “Great Fire of Kano” refers to:",
+    "possibleAnswers": [
+      "A. Colonial burning",
+      "B. A local catastrophe recorded in chronicles",
+      "C. A mining disaster",
+      "D. A camel stampede"
+    ]
+  },
+  "q170": {
+    "question": "The “Sahara salt mines” are famous at:",
+    "possibleAnswers": [
+      "A. Agadez",
+      "B. Taoudenni",
+      "C. El Oued",
+      "D. Tamanrasset"
+    ]
+  },
+  "q171": {
+    "question": "The “Kongo cosmogram” is symbolized by:",
+    "possibleAnswers": [
+      "A. Zigzag",
+      "B. Cross within a circle",
+      "C. Triangles",
+      "D. Spirals only"
+    ]
+  },
+  "q172": {
+    "question": "The “Ethiopian Orthodox Tewahedo” church traces to:",
+    "possibleAnswers": [
+      "A. 20th century",
+      "B. Early Christianity (Axum)",
+      "C. Protestant missions",
+      "D. Islamic caliphate"
+    ]
+  },
+  "q173": {
+    "question": "The “Great Green Wall” is a modern initiative to:",
+    "possibleAnswers": [
+      "A. Halt coastal erosion",
+      "B. Combat Sahel desertification",
+      "C. Divert the Nile",
+      "D. Reforest Congo Basin only"
+    ]
+  },
+  "q174": {
+    "question": "The “Ashur” trade colonies influenced:",
+    "possibleAnswers": [
+      "A. Carthage",
+      "B. Egypt",
+      "C. Nubia",
+      "D. (Mainly Near East, not core African history)"
+    ]
+  },
+  "q175": {
+    "question": "The “Unification of Egypt” is traditionally credited to:",
+    "possibleAnswers": [
+      "A. Narmer (Menes)",
+      "B. Khufu",
+      "C. Ramses II",
+      "D. Akhenaten"
+    ]
+  },
+  "q176": {
+    "question": "The “Tuareg” are often called:",
+    "possibleAnswers": [
+      "A. Desert seafarers",
+      "B. Blue People (for indigo veils)",
+      "C. Sand raiders only",
+      "D. Gold smiths"
+    ]
+  },
+  "q177": {
+    "question": "The “Pharos” stood in:",
+    "possibleAnswers": [
+      "A. Carthage",
+      "B. Alexandria",
+      "C. Tripoli",
+      "D. Tangier"
+    ]
+  },
+  "q178": {
+    "question": "The “Garamantian” civilization flourished in:",
+    "possibleAnswers": [
+      "A. Fezzan (Sahara, Libya)",
+      "B. Cyrenaica",
+      "C. Nile Delta",
+      "D. Atlas foothills"
+    ]
+  },
+  "q179": {
+    "question": "The “Dogon” are famed for:",
+    "possibleAnswers": [
+      "A. Rock dwellings and cosmology",
+      "B. Camel cavalry",
+      "C. Sea trade",
+      "D. Zulu regiments"
+    ]
+  },
+  "q180": {
+    "question": "The “Kushite” pharaohs ruled Egypt during the:",
+    "possibleAnswers": [
+      "A. Old Kingdom",
+      "B. New Kingdom",
+      "C. 25th Dynasty",
+      "D. Ptolemaic period"
+    ]
+  },
+  "q181": {
+    "question": "The “Tuareg confederation of Kel Ahaggar” is in:",
+    "possibleAnswers": [
+      "A. Algeria (Hoggar)",
+      "B. Morocco",
+      "C. Tunisia",
+      "D. Libya coast"
+    ]
+  },
+  "q182": {
+    "question": "The “Kabaka” is the title of the king of:",
+    "possibleAnswers": [
+      "A. Buganda",
+      "B. Rwanda",
+      "C. Burundi",
+      "D. Kongo"
+    ]
+  },
+  "q183": {
+    "question": "The “Zulu defeat of the British” occurred at:",
+    "possibleAnswers": [
+      "A. Rorke’s Drift",
+      "B. Isandlwana",
+      "C. Ulundi",
+      "D. Blood River"
+    ]
+  },
+  "q184": {
+    "question": "The “Sahara Neolithic” rock art indicates:",
+    "possibleAnswers": [
+      "A. Forest elephants only",
+      "B. Past wetter climates with cattle and wildlife",
+      "C. Constant desert since antiquity",
+      "D. Viking caravans"
+    ]
+  },
+  "q185": {
+    "question": "The “Great Dyke” rich in minerals is in:",
+    "possibleAnswers": [
+      "A. Zambia",
+      "B. Zimbabwe",
+      "C. Botswana",
+      "D. Namibia"
+    ]
+  },
+  "q186": {
+    "question": "The “House of Alaafin” rival in Yoruba politics was the:",
+    "possibleAnswers": [
+      "A. Ooni of Ife",
+      "B. Oba of Benin",
+      "C. Sarki of Kano",
+      "D. Mai of Bornu"
+    ]
+  },
+  "q187": {
+    "question": "The “Oromo” expansions significantly changed:",
+    "possibleAnswers": [
+      "A. West African Sahel",
+      "B. Horn of Africa demographics",
+      "C. Maghreb cities",
+      "D. Cape frontier"
+    ]
+  },
+  "q188": {
+    "question": "The “Sidi Ifni” belonged to:",
+    "possibleAnswers": [
+      "A. Portugal",
+      "B. Spain (in Morocco)",
+      "C. France",
+      "D. Italy"
+    ]
+  },
+  "q189": {
+    "question": "The “Nubian” writing used in medieval times was:",
+    "possibleAnswers": [
+      "A. Cuneiform",
+      "B. Old Nubian (Coptic-derived)",
+      "C. Arabic only",
+      "D. Ge’ez"
+    ]
+  },
+  "q190": {
+    "question": "The “Sahara slave routes” often ended in:",
+    "possibleAnswers": [
+      "A. Timbuktu",
+      "B. Fez, Tunis, Cairo",
+      "C. Kilwa",
+      "D. Zanzibar only"
+    ]
+  },
+  "q191": {
+    "question": "The “Swahili doors” of carved teak are iconic in:",
+    "possibleAnswers": [
+      "A. Accra",
+      "B. Stone Town",
+      "C. Luanda",
+      "D. Dakar"
+    ]
+  },
+  "q192": {
+    "question": "The “Harar Jugol” is a walled city in:",
+    "possibleAnswers": [
+      "A. Kenya",
+      "B. Ethiopia",
+      "C. Somalia",
+      "D. Sudan"
+    ]
+  },
+  "q193": {
+    "question": "The “Aïr Mountains” are in:",
+    "possibleAnswers": [
+      "A. Niger",
+      "B. Mali",
+      "C. Algeria",
+      "D. Libya"
+    ]
+  },
+  "q194": {
+    "question": "The “Battle of Al-Alamein” took place in:",
+    "possibleAnswers": [
+      "A. Libya and Egypt (WWII North Africa)",
+      "B. Tunisia only",
+      "C. Morocco",
+      "D. Algeria only"
+    ]
+  },
+  "q195": {
+    "question": "The “Shona states” include:",
+    "possibleAnswers": [
+      "A. Malawi highlands",
+      "B. Mutapa and Rozvi",
+      "C. Oyo and Benin",
+      "D. Kanem and Bornu"
+    ]
+  },
+  "q196": {
+    "question": "The “Sennaar (Sennar) Sultanate” lay along the:",
+    "possibleAnswers": [
+      "A. Blue Nile (Sudan)",
+      "B. Orange River",
+      "C. Congo River",
+      "D. Limpopo"
+    ]
+  },
+  "q197": {
+    "question": "The “Tuareg Tagelmust” is a:",
+    "possibleAnswers": [
+      "A. Sword",
+      "B. Indigo veil",
+      "C. Saddle",
+      "D. Drum"
+    ]
+  },
+  "q198": {
+    "question": "The “Debre Damo” monastery is accessible by:",
+    "possibleAnswers": [
+      "A. Rope climb",
+      "B. Camel ridge",
+      "C. Riverboat",
+      "D. Sand ladder"
+    ]
+  },
+  "q199": {
+    "question": "The “Kano walls” were built to:",
+    "possibleAnswers": [
+      "A. Hold back desert",
+      "B. Fortify the city-state",
+      "C. Channel the river",
+      "D. Store grain only"
+    ]
+  },
+  "q200": {
+    "question": "The ECOWAS Monitoring Group (ECOMOG) intervened notably in:",
+    "possibleAnswers": [
+      "A. Rwanda",
+      "B. Sierra Leone and Liberia",
+      "C. Sudan",
+      "D. Algeria"
+    ]
+  }
+}

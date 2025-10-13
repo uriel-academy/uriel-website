@@ -1,0 +1,482 @@
+{
+  "course_id": "english_b7",
+  "version": "1.0.0",
+  "last_updated_utc": "2025-10-12T00:32:38.431180Z",
+  "unit": {
+    "unit_id": "eng_b7_u7",
+    "title": "Poetry & Expression: Find Your Voice",
+    "overview": "Learners explore poetry as a joyful, meaningful form of expression. They study rhythm, rhyme, images, and sound devices; practise figurative language; and craft, revise, and perform their own poems. Short, interactive lessons minimise fatigue. Moral themes highlight gratitude, humility, and care for others, with British English conventions.",
+    "estimated_duration_min": 210,
+    "competencies": [
+      "Identify rhyme schemes and basic rhythms in short poems.",
+      "Explain and use simile, metaphor, and personification.",
+      "Recognise sound devices (alliteration, assonance, onomatopoeia) and their effects.",
+      "Write, revise, and present an original 8–12 line poem with clear imagery and theme.",
+      "Perform a poem with appropriate pace, intonation, and confidence."
+    ],
+    "values_morals": [
+      "Gratitude for everyday blessings; empathy for others.",
+      "Use words to uplift and encourage (Ephesians 4:29)."
+    ],
+    "xp_total": 200,
+    "streak_bonus_xp": 5,
+    "parent_report_hooks": [
+      "unit_completion_rate",
+      "quiz_accuracy",
+      "writing_submission_status",
+      "speaking_task_submissions",
+      "xp_earned"
+    ],
+    "lessons": [
+      {
+        "lesson_id": "eng_b7_u7_l1",
+        "title": "Poetry Basics: Rhythm & Rhyme",
+        "estimated_time_min": 40,
+        "xp_reward": 40,
+        "objectives": [
+          "Identify simple rhyme schemes (AA, ABAB).",
+          "Feel basic rhythm by clapping syllables and stresses."
+        ],
+        "vocabulary": [
+          {
+            "word": "stanza",
+            "level": "core",
+            "definition": "A group of lines forming a poem section."
+          },
+          {
+            "word": "rhyme scheme",
+            "level": "core",
+            "definition": "A pattern of rhyme marked with letters (e.g., ABAB)."
+          },
+          {
+            "word": "rhythm",
+            "level": "core",
+            "definition": "The pattern of stressed and unstressed syllables."
+          }
+        ],
+        "moral_link": "Poetry can celebrate gratitude and peace.",
+        "content_blocks": [
+          {
+            "type": "text",
+            "body": "Mark the last words of each line with letters to find the rhyme scheme. Clap to feel the rhythm."
+          },
+          {
+            "type": "audio",
+            "src": "/audio/eng_b7/u7/rhythm_clap.mp3",
+            "caption": "Clap along to feel syllable beats."
+          },
+          {
+            "type": "image",
+            "src": "/images/eng_b7/u7/rhyme_scheme.svg",
+            "caption": "Spotting rhyme patterns."
+          }
+        ],
+        "interactive": {
+          "rhyme_tag": {
+            "prompt": "Label the rhyme scheme: \nLine1: home \nLine2: fine \nLine3: roam \nLine4: time",
+            "answer": "ABAB (home–roam; fine–time)",
+            "xp": 10
+          },
+          "quick_check": [
+            {
+              "q": "A group of lines in a poem is called a:",
+              "options": [
+                "paragraph",
+                "stanza",
+                "chapter",
+                "scene"
+              ],
+              "answer_index": 1,
+              "xp": 5
+            }
+          ]
+        },
+        "assets": [
+          "/audio/eng_b7/u7/rhythm_clap.mp3",
+          "/images/eng_b7/u7/rhyme_scheme.svg"
+        ]
+      },
+      {
+        "lesson_id": "eng_b7_u7_l2",
+        "title": "Figurative Language: Simile, Metaphor, Personification",
+        "estimated_time_min": 45,
+        "xp_reward": 40,
+        "objectives": [
+          "Explain the difference between simile and metaphor.",
+          "Write two original lines using personification."
+        ],
+        "vocabulary": [
+          {
+            "word": "simile",
+            "level": "core",
+            "definition": "Comparison using 'like' or 'as' (e.g., brave as a lion)."
+          },
+          {
+            "word": "metaphor",
+            "level": "core",
+            "definition": "Direct comparison without 'like' or 'as' (e.g., Time is a river)."
+          },
+          {
+            "word": "personification",
+            "level": "core",
+            "definition": "Giving human qualities to non-human things."
+          }
+        ],
+        "moral_link": "Use images that honour people and creation.",
+        "content_blocks": [
+          {
+            "type": "text",
+            "body": "Simile: 'Her smile was like sunshine.' Metaphor: 'Her smile was sunshine.' Personification: 'The drums called our feet to dance.'"
+          },
+          {
+            "type": "image",
+            "src": "/images/eng_b7/u7/figurative_examples.svg",
+            "caption": "Three ways to compare."
+          }
+        ],
+        "interactive": {
+          "classify": {
+            "prompt": "Label each as Simile (S), Metaphor (M), or Personification (P).",
+            "items": [
+              {
+                "text": "The night wrapped us in velvet.",
+                "label": "P"
+              },
+              {
+                "text": "Yaw is a rock in hard times.",
+                "label": "M"
+              },
+              {
+                "text": "The river runs like silver thread.",
+                "label": "S"
+              }
+            ],
+            "xp": 10
+          },
+          "ai_task": {
+            "prompt": "Write 2 lines of personification about rain in Accra.",
+            "expected_focus": [
+              "vivid verbs",
+              "sensory detail"
+            ],
+            "xp": 15
+          }
+        },
+        "assets": [
+          "/images/eng_b7/u7/figurative_examples.svg"
+        ]
+      },
+      {
+        "lesson_id": "eng_b7_u7_l3",
+        "title": "Sound Devices: Alliteration, Assonance, Onomatopoeia",
+        "estimated_time_min": 40,
+        "xp_reward": 35,
+        "objectives": [
+          "Identify and use common sound devices.",
+          "Explain how sound supports mood or meaning."
+        ],
+        "vocabulary": [
+          {
+            "word": "alliteration",
+            "level": "adv",
+            "definition": "Repetition of initial consonant sounds (e.g., bold boys)."
+          },
+          {
+            "word": "assonance",
+            "level": "adv",
+            "definition": "Repetition of vowel sounds (e.g., sweet dreams)."
+          },
+          {
+            "word": "onomatopoeia",
+            "level": "core",
+            "definition": "A word that imitates a sound (e.g., buzz, clap)."
+          }
+        ],
+        "moral_link": "Choose sounds that strengthen, not mock or harm.",
+        "content_blocks": [
+          {
+            "type": "text",
+            "body": "Alliteration can make lines musical; assonance can make them smooth; onomatopoeia adds lively effects."
+          },
+          {
+            "type": "audio",
+            "src": "/audio/eng_b7/u7/sound_devices.mp3",
+            "caption": "Hear sound devices in short lines."
+          }
+        ],
+        "interactive": {
+          "quick_check": [
+            {
+              "q": "‘Susu savings soothe stress’ features:",
+              "options": [
+                "assonance",
+                "alliteration",
+                "metaphor",
+                "rhyme"
+              ],
+              "answer_index": 1,
+              "xp": 5
+            },
+            {
+              "q": "‘Rain pattered—pit‑a‑pat—on tin roofs’ is:",
+              "options": [
+                "simile",
+                "onomatopoeia",
+                "hyperbole",
+                "metaphor"
+              ],
+              "answer_index": 1,
+              "xp": 5
+            }
+          ],
+          "ai_task": {
+            "prompt": "Write a 3‑line stanza using at least one sound device.",
+            "expected_focus": [
+              "sound choice",
+              "mood"
+            ],
+            "xp": 10
+          }
+        },
+        "assets": [
+          "/audio/eng_b7/u7/sound_devices.mp3"
+        ]
+      },
+      {
+        "lesson_id": "eng_b7_u7_l4",
+        "title": "Write Your Poem: Imagery & Theme",
+        "estimated_time_min": 45,
+        "xp_reward": 45,
+        "objectives": [
+          "Draft an 8–12 line poem with a clear image pattern and theme.",
+          "Revise for vivid words, line breaks, and cohesion."
+        ],
+        "vocabulary": [
+          {
+            "word": "imagery",
+            "level": "core",
+            "definition": "Language that appeals to the senses."
+          },
+          {
+            "word": "line break",
+            "level": "adv",
+            "definition": "Where a poet chooses to end a line."
+          }
+        ],
+        "moral_link": "Let your poem lift hearts—gratitude, honesty, kindness.",
+        "content_blocks": [
+          {
+            "type": "image",
+            "src": "/images/eng_b7/u7/imagery_web.svg",
+            "caption": "Build an imagery web (sight, sound, touch, taste, smell)."
+          },
+          {
+            "type": "tip",
+            "body": "Cut weak words; prefer precise verbs and concrete nouns."
+          }
+        ],
+        "interactive": {
+          "guided_writing": {
+            "scaffold": [
+              "Choose a theme (gratitude, friendship, diligence).",
+              "List 5 images (one for each sense).",
+              "Draft 8–12 lines using at least one simile or metaphor.",
+              "Revise line breaks for rhythm; add one sound device."
+            ],
+            "submission_type": "text",
+            "ai_feedback": [
+              "Imagery strength",
+              "Figurative language accuracy",
+              "Sound devices",
+              "Cohesion and theme clarity"
+            ],
+            "xp": 25
+          }
+        },
+        "assets": [
+          "/images/eng_b7/u7/imagery_web.svg"
+        ]
+      },
+      {
+        "lesson_id": "eng_b7_u7_l5",
+        "title": "Performance & Reflection",
+        "estimated_time_min": 40,
+        "xp_reward": 40,
+        "objectives": [
+          "Perform your poem with clear voice, pace, and feeling.",
+          "Reflect on how your poem’s theme matters at school or home."
+        ],
+        "vocabulary": [
+          {
+            "word": "recitation",
+            "level": "core",
+            "definition": "Speaking a poem aloud from memory or the page."
+          },
+          {
+            "word": "intonation",
+            "level": "adv",
+            "definition": "Rise and fall of the voice to show feeling."
+          }
+        ],
+        "moral_link": "Share your gift humbly; encourage others.",
+        "content_blocks": [
+          {
+            "type": "text",
+            "body": "Stand steady, breathe deeply, and speak slowly. Pause at line breaks; stress key words."
+          },
+          {
+            "type": "audio",
+            "src": "/audio/eng_b7/u7/recitation_demo.mp3",
+            "caption": "Sample recitation with natural pauses."
+          }
+        ],
+        "interactive": {
+          "speaking_task": {
+            "prompt": "Record a 45–60 second performance of your poem.",
+            "submission_type": "audio",
+            "xp": 20
+          },
+          "reflection": {
+            "prompt": "In 3–4 sentences, explain your poem’s theme and one way to live it out this week.",
+            "submission_type": "text",
+            "xp": 10
+          }
+        },
+        "assets": [
+          "/audio/eng_b7/u7/recitation_demo.mp3"
+        ]
+      }
+    ],
+    "assessments": {
+      "quiz_mcq": [
+        {
+          "id": "u7_q1",
+          "q": "A rhyme scheme of ABAB means:",
+          "options": [
+            "Line 1 rhymes with 3; 2 with 4",
+            "All lines rhyme",
+            "1 with 2; 3 with 4",
+            "No rhyme"
+          ],
+          "answer_index": 0
+        },
+        {
+          "id": "u7_q2",
+          "q": "Which line is a metaphor?",
+          "options": [
+            "Her eyes shine like stars.",
+            "Her eyes are stars in the night.",
+            "Her eyes shine as bright as stars.",
+            "Her eyes shine with hope."
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u7_q3",
+          "q": "‘Market mothers murmur’ shows:",
+          "options": [
+            "assonance",
+            "alliteration",
+            "simile",
+            "personification"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u7_q4",
+          "q": "The best definition of imagery is:",
+          "options": [
+            "Words that only rhyme",
+            "Language appealing to the senses",
+            "Very long lines",
+            "Only sound words"
+          ],
+          "answer_index": 1
+        },
+        {
+          "id": "u7_q5",
+          "q": "A strong performance includes:",
+          "options": [
+            "Fast, flat reading",
+            "Clear pace, intonation, and pauses",
+            "Shouting the whole time",
+            "No eye contact"
+          ],
+          "answer_index": 1
+        }
+      ],
+      "writing_prompt": {
+        "id": "u7_w1",
+        "prompt": "Write an 8–12 line poem on a theme of gratitude or kindness. Include at least one simile or metaphor and one sound device.",
+        "rubric_ref": "rubric_poem_u7"
+      },
+      "speaking_task": {
+        "id": "u7_s1",
+        "prompt": "Perform your poem (45–60 seconds). Focus on voice control, pauses, and feeling.",
+        "rubric_ref": "rubric_recitation_u7"
+      },
+      "rubrics": {
+        "rubric_poem_u7": {
+          "criteria": [
+            {
+              "name": "Imagery & Figurative Language",
+              "scale": 4,
+              "descriptor": "Vivid images; accurate simile/metaphor use."
+            },
+            {
+              "name": "Sound Devices",
+              "scale": 4,
+              "descriptor": "Effective alliteration/assonance/onomatopoeia."
+            },
+            {
+              "name": "Theme & Cohesion",
+              "scale": 4,
+              "descriptor": "Clear theme; lines flow logically; purposeful line breaks."
+            },
+            {
+              "name": "Mechanics (UK)",
+              "scale": 4,
+              "descriptor": "Spelling, punctuation, and layout support meaning."
+            }
+          ],
+          "proficiency_labels": [
+            "Beginning",
+            "Developing",
+            "Proficient",
+            "Advanced"
+          ]
+        },
+        "rubric_recitation_u7": {
+          "criteria": [
+            {
+              "name": "Voice & Intonation",
+              "scale": 4,
+              "descriptor": "Audible, steady pace; expressive tone."
+            },
+            {
+              "name": "Clarity & Pronunciation",
+              "scale": 4,
+              "descriptor": "Words are clear; key words stressed."
+            },
+            {
+              "name": "Engagement",
+              "scale": 4,
+              "descriptor": "Confident posture; eye contact (camera)."
+            },
+            {
+              "name": "Interpretation",
+              "scale": 4,
+              "descriptor": "Performance enhances the poem’s meaning."
+            }
+          ],
+          "proficiency_labels": [
+            "Beginning",
+            "Developing",
+            "Proficient",
+            "Advanced"
+          ]
+        }
+      }
+    }
+  }
+}

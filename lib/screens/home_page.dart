@@ -2,12 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import '../constants/app_styles.dart';
-import 'past_questions_search_page.dart';
+import '../services/connection_service.dart';
+import '../services/auth_service.dart';
+import '../services/xp_service.dart';
+import '../services/leaderboard_rank_service.dart';
+import '../widgets/rank_badge_widget.dart';
+import 'redesigned_all_ranks_page.dart';
+import 'question_collections_page.dart';
 import 'textbooks_page.dart';
-import 'mock_exams_page.dart';
-import 'trivia_page.dart';
+import 'feedback_page.dart';
+import 'trivia_categories_page.dart';
 import 'student_profile_page.dart';
+import 'redesigned_leaderboard_page.dart';
 
 class StudentHomePage extends StatefulWidget {
   const StudentHomePage({super.key});
@@ -24,22 +32,38 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   int _selectedIndex = 0;
   bool _showingProfile = false;
   
-  // User progress data (would come from Firestore in real app)
-  String userName = "Alex";
-  double overallProgress = 76.5;
-  int currentStreak = 12;
-  int weeklyStudyHours = 8;
-  int questionsAnswered = 147;
-  int upcomingExamDays = 45;
+  // User progress data - Live from Firestore
+  String userName = "";
+  String userClass = "JHS Form 3 Student";
+  String? userPhotoUrl;
+  String? userPresetAvatar;
+  double overallProgress = 0.0; // Calculated from quiz results
+  int currentStreak = 0; // Days of consecutive activity
+  int weeklyStudyHours = 0; // Calculated from session time
+  int questionsAnswered = 0; // Total questions from quizzes
+  int beceCountdownDays = 0; // Live countdown to BECE 2026
+  Stream<DocumentSnapshot>? _userStream;
   
-  // Subject progress data
-  final List<SubjectProgress> _subjectProgress = [
-    SubjectProgress('Mathematics', 85.0, Colors.blue),
-    SubjectProgress('English', 72.0, Colors.green),
-    SubjectProgress('Science', 68.0, Colors.orange),
-    SubjectProgress('Social Studies', 90.0, Colors.purple),
-    SubjectProgress('ICT', 78.0, Colors.red),
-  ];
+  // Past Questions tracking
+  int pastQuestionsAnswered = 0;
+  double pastQuestionsProgress = 0.0;
+  
+  // Trivia tracking
+  int triviaQuestionsAnswered = 0;
+  double triviaProgress = 0.0;
+  int triviaCorrect = 0;
+  
+  // Rank tracking
+  int userXP = 0;
+  LeaderboardRank? currentRank;
+  LeaderboardRank? nextRank;
+  
+  // Subject progress data - Live from quiz performance
+  List<SubjectProgress> _subjectProgress = [];
+  
+  // Recent activity data
+  // ignore: unused_field
+  List<Map<String, dynamic>> _recentActivity = [];
 
   @override
   void initState() {
@@ -54,7 +78,105 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     );
     _animationController.forward();
     
+    _calculateBeceCountdown();
     _loadUserData();
+    _loadUserStats();
+    _loadUserRank();
+    _recordDailyActivity();
+    _setupUserStream();
+  }
+  
+  void _loadUserRank() async {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user == null) return;
+    
+    try {
+      final xpService = XPService();
+      final rankService = LeaderboardRankService();
+      
+      // Get user XP
+      final xp = await xpService.getUserTotalXP(user.uid);
+      
+      // Get current and next rank
+      final current = await rankService.getUserRank(xp);
+      final next = await rankService.getNextRank(xp);
+      
+      setState(() {
+        userXP = xp;
+        currentRank = current;
+        nextRank = next;
+      });
+      
+      debugPrint('👑 User Rank: ${current?.name} (Rank #${current?.rank}) - XP: $xp');
+      debugPrint('🖼️ Rank Image URL: ${current?.imageUrl}');
+      if (current?.imageUrl.isEmpty ?? true) {
+        debugPrint('⚠️ WARNING: Rank image URL is empty!');
+      }
+    } catch (e) {
+      debugPrint('❌ Error loading user rank: $e');
+    }
+  }
+  
+  void _setupUserStream() {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user != null) {
+      _userStream = FirebaseFirestore.instance
+          .collection('users')
+          .doc(user.uid)
+          .snapshots();
+      
+      // Listen to changes and update state
+      _userStream!.listen((snapshot) {
+        if (snapshot.exists && mounted) {
+          final data = snapshot.data() as Map<String, dynamic>;
+          debugPrint('🔄 User data updated from Firestore:');
+          debugPrint('  presetAvatar: ${data['presetAvatar']}');
+          debugPrint('  profileImageUrl: ${data['profileImageUrl']}');
+          setState(() {
+            userName = data['firstName'] ?? user.displayName?.split(' ').first ?? _getNameFromEmail(user.email);
+            userClass = data['class'] ?? 'JHS Form 3';
+            userPhotoUrl = data['profileImageUrl'] ?? user.photoURL;
+            userPresetAvatar = data['presetAvatar'];
+          });
+        }
+      });
+    }
+  }
+  
+  ImageProvider? _getAvatarImage() {
+    if (userPresetAvatar != null) {
+      return AssetImage(userPresetAvatar!);
+    } else if (userPhotoUrl != null) {
+      return NetworkImage(userPhotoUrl!);
+    }
+    return null;
+  }
+
+  void _recordDailyActivity() async {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user != null) {
+      try {
+        // Import will be added
+        // final streakResult = await StreakService().recordDailyActivity(user.uid);
+        // Show streak notification if earned XP
+        // if (streakResult['xpEarned'] > 0) {
+        //   _showStreakNotification(streakResult);
+        // }
+      } catch (e) {
+        debugPrint('Error recording daily activity: $e');
+      }
+    }
+  }
+  
+  void _calculateBeceCountdown() {
+    // BECE 2026: May 4 - May 11, 2026
+    final beceStartDate = DateTime(2026, 5, 4);
+    final now = DateTime.now();
+    final difference = beceStartDate.difference(now);
+    
+    setState(() {
+      beceCountdownDays = difference.inDays > 0 ? difference.inDays : 0;
+    });
   }
 
   @override
@@ -84,10 +206,14 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           final data = userDoc.data() as Map<String, dynamic>;
           setState(() {
             userName = data['firstName'] ?? user.displayName?.split(' ').first ?? _getNameFromEmail(user.email);
+            userClass = data['class'] ?? 'JHS Form 3';
+            userPhotoUrl = data['profileImageUrl'] ?? user.photoURL;
+            userPresetAvatar = data['presetAvatar'];
           });
         } else {
           setState(() {
             userName = user.displayName?.split(' ').first ?? _getNameFromEmail(user.email);
+            userClass = 'JHS Form 3';
           });
         }
       } catch (e) {
@@ -97,10 +223,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         });
         
         // Only log the error, don't show it to the user
-        print('Unable to load user data (offline or connection issue): $e');
-        
-        // Optionally, you could show a subtle indicator that the app is offline
-        // but don't interrupt the user experience with error dialogs
+        debugPrint('Unable to load user data (offline or connection issue): $e');
       }
     } else {
       // Set default name when no user is logged in
@@ -108,6 +231,232 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         userName = 'Student';
       });
     }
+  }
+  
+  Future<void> _loadUserStats() async {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user == null) return;
+    
+    try {
+      // Load quiz results for the user
+      final quizSnapshot = await FirebaseFirestore.instance
+          .collection('quizzes')
+          .where('userId', isEqualTo: user.uid)
+          .orderBy('timestamp', descending: true)
+          .limit(100)
+          .get()
+          .timeout(const Duration(seconds: 10));
+      
+      if (quizSnapshot.docs.isEmpty) {
+        // No quiz data yet - show 0%
+        setState(() {
+          questionsAnswered = 0;
+          overallProgress = 0.0;
+          currentStreak = 0;
+          _subjectProgress = [];
+          _recentActivity = [];
+        });
+        return;
+      }
+      
+      // Calculate stats from quiz data
+      int totalQuestions = 0;
+      int totalCorrect = 0;
+      int pastQuestionsTotal = 0;
+      int pastQuestionsCorrect = 0;
+      int triviaTotal = 0;
+      int triviaCorrect = 0;
+      Map<String, List<double>> subjectScores = {};
+      List<DateTime> activityDates = [];
+      List<Map<String, dynamic>> recentQuizzes = [];
+      
+      for (var doc in quizSnapshot.docs) {
+        final data = doc.data();
+        int questions = (data['totalQuestions'] as int?) ?? 0;
+        int correct = (data['correctAnswers'] as int?) ?? 0;
+        
+        totalQuestions += questions;
+        totalCorrect += correct;
+        
+        // Track subject progress
+        String subject = data['subject'] ?? 'Unknown';
+        String quizType = data['quizType'] ?? '';
+        double score = (data['percentage'] as num?)?.toDouble() ?? 0.0;
+        
+        // Separate tracking for past questions (BECE questions)
+        if (quizType.toLowerCase().contains('bece') || 
+            subject.toLowerCase().contains('bece') ||
+            quizType.toLowerCase().contains('past')) {
+          pastQuestionsTotal += questions;
+          pastQuestionsCorrect += correct;
+        }
+        
+        // Separate tracking for trivia
+        if (quizType.toLowerCase().contains('trivia') || 
+            subject.toLowerCase().contains('trivia')) {
+          triviaTotal += questions;
+          triviaCorrect += correct;
+        }
+        
+        if (!subjectScores.containsKey(subject)) {
+          subjectScores[subject] = [];
+        }
+        subjectScores[subject]!.add(score);
+        
+        // Track activity dates for streak
+        if (data['timestamp'] != null) {
+          try {
+            DateTime date;
+            if (data['timestamp'] is Timestamp) {
+              date = (data['timestamp'] as Timestamp).toDate();
+            } else {
+              date = DateTime.parse(data['timestamp'].toString());
+            }
+            activityDates.add(date);
+          } catch (e) {
+            debugPrint('Error parsing timestamp: $e');
+          }
+        }
+        
+        // Recent activity
+        if (recentQuizzes.length < 5) {
+          recentQuizzes.add({
+            'subject': subject,
+            'score': score,
+            'date': data['timestamp'],
+            'questions': data['totalQuestions'] ?? 0,
+          });
+        }
+      }
+      
+      // Calculate overall progress
+      double avgProgress = totalQuestions > 0 
+          ? (totalCorrect / totalQuestions * 100) 
+          : 0.0;
+      
+      // Calculate past questions progress
+      double pastQProgress = pastQuestionsTotal > 0 
+          ? (pastQuestionsCorrect / pastQuestionsTotal * 100) 
+          : 0.0;
+      
+      // Calculate trivia progress
+      double triviaAvg = triviaTotal > 0 
+          ? (triviaCorrect / triviaTotal * 100) 
+          : 0.0;
+      
+      // Calculate streak
+      int streak = _calculateStreak(activityDates);
+      
+      // Calculate study hours (estimate: 2 minutes per question, filtered for this week)
+      final now = DateTime.now();
+      final weekStart = now.subtract(Duration(days: now.weekday - 1));
+      final weekStartDate = DateTime(weekStart.year, weekStart.month, weekStart.day);
+      
+      int weeklyQuestions = 0;
+      for (var doc in quizSnapshot.docs) {
+        final data = doc.data();
+        if (data['timestamp'] != null) {
+          try {
+            DateTime date;
+            if (data['timestamp'] is Timestamp) {
+              date = (data['timestamp'] as Timestamp).toDate();
+            } else {
+              date = DateTime.parse(data['timestamp'].toString());
+            }
+            if (date.isAfter(weekStartDate)) {
+              weeklyQuestions += (data['totalQuestions'] as int?) ?? 0;
+            }
+          } catch (e) {
+            debugPrint('Error parsing timestamp for study hours: $e');
+          }
+        }
+      }
+      
+      int studyHours = (weeklyQuestions * 2 / 60).round(); // 2 minutes per question
+      
+      // Build subject progress list
+      List<SubjectProgress> subjects = [];
+      final colors = [Colors.blue, Colors.green, Colors.orange, Colors.purple, Colors.red, Colors.teal];
+      int colorIndex = 0;
+      
+      subjectScores.forEach((subject, scores) {
+        double avgScore = scores.reduce((a, b) => a + b) / scores.length;
+        subjects.add(SubjectProgress(
+          subject, 
+          avgScore, 
+          colors[colorIndex % colors.length]
+        ));
+        colorIndex++;
+      });
+      
+      setState(() {
+        questionsAnswered = totalQuestions;
+        overallProgress = avgProgress;
+        currentStreak = streak;
+        weeklyStudyHours = studyHours;
+        _subjectProgress = subjects;
+        _recentActivity = recentQuizzes;
+        
+        // Past questions metrics
+        pastQuestionsAnswered = pastQuestionsTotal;
+        pastQuestionsProgress = pastQProgress;
+        
+        // Trivia metrics
+        triviaQuestionsAnswered = triviaTotal;
+        triviaProgress = triviaAvg;
+        triviaCorrect = triviaCorrect;
+      });
+      
+    } catch (e) {
+      debugPrint('Error loading user stats: $e');
+      // Keep default values (0) on error
+    }
+  }
+  
+  int _calculateStreak(List<DateTime> activityDates) {
+    if (activityDates.isEmpty) return 0;
+    
+    // Sort dates
+    activityDates.sort((a, b) => b.compareTo(a));
+    
+    // Check if user was active today or yesterday
+    final now = DateTime.now();
+    final today = DateTime(now.year, now.month, now.day);
+    final yesterday = today.subtract(const Duration(days: 1));
+    
+    final lastActivity = DateTime(
+      activityDates.first.year,
+      activityDates.first.month,
+      activityDates.first.day,
+    );
+    
+    if (lastActivity != today && lastActivity != yesterday) {
+      return 0; // Streak broken
+    }
+    
+    // Count consecutive days
+    int streak = 1;
+    for (int i = 0; i < activityDates.length - 1; i++) {
+      final current = DateTime(
+        activityDates[i].year,
+        activityDates[i].month,
+        activityDates[i].day,
+      );
+      final next = DateTime(
+        activityDates[i + 1].year,
+        activityDates[i + 1].month,
+        activityDates[i + 1].day,
+      );
+      
+      final difference = current.difference(next).inDays;
+      if (difference == 1) {
+        streak++;
+      } else if (difference > 1) {
+        break;
+      }
+    }
+    
+    return streak;
   }
   
   String _getNameFromEmail(String? email) {
@@ -124,60 +473,111 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     final screenWidth = MediaQuery.of(context).size.width;
     final isSmallScreen = screenWidth < 768;
     
-    return AnimatedBuilder(
-      animation: _fadeAnimation,
-      builder: (context, child) {
-        return Scaffold(
-          backgroundColor: const Color(0xFFF8FAFE),
-          body: SafeArea(
-            child: isSmallScreen 
-                ? Column(
-                    children: [
-                      // Mobile Header
-                      _buildMobileHeader(),
-                      
-                      // Mobile Content
-                      Expanded(
-                        child: _showingProfile 
-                            ? const StudentProfilePage()
-                            : IndexedStack(
-                                index: _selectedIndex,
-                                children: [
-                                  _buildDashboard(),
-                                  _buildQuestionsPage(),
-                                  _buildTextbooksPage(),
-                                  _buildMockExamsPage(),
-                                  _buildTriviaPage(),
-                                ],
-                              ),
-                      ),
-                    ],
-                  )
-                : Row(
-                    children: [
-                      // Desktop Sidebar Navigation
-                      _buildSideNavigation(),
-                      
-                      // Desktop Main Content
-                      Expanded(
-                        child: Column(
-                          children: [
-                            // Desktop Header
-                            _buildHeader(context),
-                            
-                            // Desktop Content Area
-                            Expanded(
-                              child: _showingProfile 
-                                  ? const StudentProfilePage()
-                                  : IndexedStack(
-                                      index: _selectedIndex,
-                                      children: [
-                                        _buildDashboard(),
-                                        _buildQuestionsPage(),
-                                        _buildTextbooksPage(),
-                                        _buildMockExamsPage(),
-                                        _buildTriviaPage(),
-                                      ],
+    return PopScope(
+      canPop: false,
+      onPopInvokedWithResult: (bool didPop, dynamic result) async {
+        if (didPop) return;
+        
+        // Prevent going back to landing/login page
+        // Show exit confirmation dialog instead
+        final shouldExit = await showDialog<bool>(
+          context: context,
+          builder: (context) => AlertDialog(
+            title: Text(
+              'Exit App?',
+              style: GoogleFonts.playfairDisplay(
+                fontWeight: FontWeight.bold,
+                color: const Color(0xFF1A1E3F),
+              ),
+            ),
+            content: Text(
+              'Are you sure you want to exit?',
+              style: GoogleFonts.montserrat(),
+            ),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.of(context).pop(false),
+                child: Text(
+                  'Cancel',
+                  style: GoogleFonts.montserrat(color: Colors.grey[600]),
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () => Navigator.of(context).pop(true),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFFD62828),
+                  foregroundColor: Colors.white,
+                ),
+                child: Text('Exit', style: GoogleFonts.montserrat()),
+              ),
+            ],
+          ),
+        ) ?? false;
+        
+        if (shouldExit == true) {
+          if (context.mounted) {
+            Navigator.of(context).pop();
+          }
+        }
+      },
+      child: AnimatedBuilder(
+        animation: _fadeAnimation,
+        builder: (context, child) {
+          return Scaffold(
+            backgroundColor: const Color(0xFFF8FAFE),
+          body: Stack(
+            children: [
+              SafeArea(
+                child: isSmallScreen 
+                    ? Column(
+                        children: [
+                          // Mobile Header
+                          _buildMobileHeader(),
+                          
+                          // Mobile Content
+                          Expanded(
+                            child: _showingProfile 
+                                ? const StudentProfilePage()
+                                : IndexedStack(
+                                    index: _selectedIndex,
+                                    children: [
+                                      _buildDashboard(),
+                                      _buildQuestionsPage(),
+                                      _buildTextbooksPage(),
+                                      _buildTriviaPage(),
+                                      const RedesignedLeaderboardPage(),
+                                      _buildFeedbackPage(),
+                                    ],
+                                  ),
+                          ),
+                        ],
+                      )
+                    : Row(
+                        children: [
+                          // Desktop Sidebar Navigation
+                          _buildSideNavigation(),
+                          
+                          // Desktop Main Content
+                          Expanded(
+                            child: Column(
+                              children: [
+                                // Desktop Header
+                                _buildHeader(context),
+                                
+                                // Desktop Content Area
+                                Expanded(
+                                  child: _showingProfile 
+                                      ? const StudentProfilePage()
+                                      : IndexedStack(
+                                          index: _selectedIndex,
+                                          children: [
+                                            _buildDashboard(),
+                                            _buildQuestionsPage(),
+                                            _buildTextbooksPage(),
+                                            _buildTriviaPage(),
+                                            const RedesignedLeaderboardPage(),
+                                            _buildFeedbackPage(),
+                                          ],
                                     ),
                             ),
                           ],
@@ -185,12 +585,76 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                       ),
                     ],
                   ),
+              ),
+              
+              // Connection Status Indicator
+              StreamBuilder<bool>(
+                stream: ConnectionService().connectionStatus,
+                builder: (context, snapshot) {
+                  if (snapshot.hasData && !snapshot.data!) {
+                    return _buildConnectionBanner();
+                  }
+                  return const SizedBox.shrink();
+                },
+              ),
+            ],
           ),
           
           // Bottom Navigation (Mobile Only)
           bottomNavigationBar: isSmallScreen ? _buildBottomNavigation() : null,
-        );
-      },
+          );
+        },
+      ),
+    );
+  }
+
+  // Connection status banner
+  Widget _buildConnectionBanner() {
+    return Positioned(
+      top: 0,
+      left: 0,
+      right: 0,
+      child: Material(
+        elevation: 4,
+        color: Colors.orange.shade700,
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+          child: Row(
+            children: [
+              const Icon(
+                Icons.wifi_off,
+                color: Colors.white,
+                size: 20,
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Text(
+                  'Connection lost. Reconnecting...',
+                  style: GoogleFonts.montserrat(
+                    color: Colors.white,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+              TextButton(
+                onPressed: () async {
+                  // Attempt manual reconnection
+                  await ConnectionService().forceReconnect();
+                  await AuthService().refreshCurrentUserToken();
+                },
+                child: Text(
+                  'Retry',
+                  style: GoogleFonts.montserrat(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 
@@ -201,7 +665,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -217,60 +681,58 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           
           const Spacer(),
           
-          // Search Icon for mobile
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.grey[100],
-              borderRadius: BorderRadius.circular(8),
-            ),
-            child: IconButton(
-              icon: Icon(Icons.search, color: Colors.grey[600]),
-              onPressed: () => _showMobileSearch(),
-            ),
-          ),
-          
-          const SizedBox(width: 8),
-          
-          // Notifications
-          Container(
-            decoration: BoxDecoration(
-              color: const Color(0xFFD62828).withOpacity(0.1),
-              borderRadius: BorderRadius.circular(8),
-            ),
-            child: IconButton(
-              icon: Stack(
-                children: [
-                  Icon(Icons.notifications_outlined, color: const Color(0xFFD62828), size: 20),
-                  Positioned(
-                    right: 0,
-                    top: 0,
-                    child: Container(
-                      width: 6,
-                      height: 6,
-                      decoration: const BoxDecoration(
-                        color: Color(0xFFD62828),
-                        shape: BoxShape.circle,
-                      ),
-                    ),
+          // User Rank Badge (smaller than profile)
+          GestureDetector(
+            onTap: () => _showRankDialog(),
+            child: Container(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(
+                  color: currentRank != null 
+                      ? currentRank!.getTierColor().withOpacity(0.3)
+                      : Colors.grey.withOpacity(0.3),
+                  width: 1.5,
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: currentRank != null 
+                        ? currentRank!.getTierColor().withOpacity(0.15)
+                        : Colors.grey.withOpacity(0.08),
+                    blurRadius: 6,
+                    offset: const Offset(0, 2),
                   ),
                 ],
               ),
-              onPressed: () => _showNotifications(),
+              child: CircleAvatar(
+                radius: 16,
+                backgroundColor: Colors.white,
+                backgroundImage: currentRank != null && currentRank!.imageUrl.isNotEmpty
+                    ? CachedNetworkImageProvider(currentRank!.imageUrl)
+                    : null,
+                child: currentRank == null || currentRank!.imageUrl.isEmpty
+                    ? Icon(
+                        currentRank != null ? Icons.emoji_events : Icons.emoji_events_outlined,
+                        color: currentRank?.getTierColor() ?? Colors.grey,
+                        size: 16,
+                      )
+                    : null,
+              ),
             ),
           ),
           
           const SizedBox(width: 8),
           
-          // Profile Avatar
+          // Profile Avatar (larger than badge)
           GestureDetector(
             onTap: () => _showProfileMenu(),
             child: CircleAvatar(
-              radius: 16,
+              radius: 18,
               backgroundColor: const Color(0xFF1A1E3F),
-              child: Text(
+              backgroundImage: _getAvatarImage(),
+              child: _getAvatarImage() == null ? Text(
                 userName[0].toUpperCase(),
-                style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14),
-              ),
+                style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),
+              ) : null,
             ),
           ),
         ],
@@ -285,7 +747,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(2, 0),
           ),
@@ -314,10 +776,10 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               margin: const EdgeInsets.symmetric(horizontal: 16),
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: const Color(0xFF1A1E3F).withOpacity(0.05),
+                color: const Color(0xFF1A1E3F).withValues(alpha: 0.05),
                 borderRadius: BorderRadius.circular(16),
                 border: Border.all(
-                  color: const Color(0xFF1A1E3F).withOpacity(0.1),
+                  color: const Color(0xFF1A1E3F).withValues(alpha: 0.1),
                 ),
               ),
               child: Row(
@@ -325,10 +787,11 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   CircleAvatar(
                     radius: 20,
                     backgroundColor: const Color(0xFF1A1E3F),
-                    child: Text(
+                    backgroundImage: _getAvatarImage(),
+                    child: _getAvatarImage() == null ? Text(
                       userName[0].toUpperCase(),
                       style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-                    ),
+                    ) : null,
                   ),
                   const SizedBox(width: 12),
                   Expanded(
@@ -343,7 +806,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                           ),
                         ),
                         Text(
-                          'JHS Form 3 Student',
+                          userClass,
                           style: GoogleFonts.montserrat(
                             fontSize: 12,
                             color: Colors.grey[600],
@@ -366,19 +829,24 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                 children: [
                   _buildNavItem(0, 'Dashboard'),
                   _buildNavItem(1, 'Questions'),
-                  _buildNavItem(2, 'Textbooks'),
-                  _buildNavItem(3, 'Mock Exams'),
-                  _buildNavItem(4, 'Trivia'),
+                  _buildNavItem(2, 'Books'),
+                  _buildNavItem(3, 'Trivia'),
+                  _buildNavItem(4, 'Leaderboard'),
+                  _buildNavItem(5, 'Feedback'),
                   
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                     child: Divider(),
                   ),
                   
-                  _buildNavItem(-1, 'Analytics'),
-                  _buildNavItem(-2, 'Leaderboard'),
-                  _buildNavItem(-3, 'Study Groups'),
-                  _buildNavItem(-4, 'Resources'),
+                  _buildNavItem(-1, 'Pricing'),
+                  _buildNavItem(-7, 'Payment'),
+                  _buildNavItem(-2, 'About Us'),
+                  _buildNavItem(-3, 'Contact'),
+                  _buildNavItem(-4, 'Privacy Policy'),
+                  _buildNavItem(-5, 'Terms of Service'),
+                  _buildNavItem(-6, 'FAQ'),
+                  _buildNavItem(-8, 'All Ranks'),
                 ],
               ),
             ),
@@ -426,61 +894,119 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           ),
         ),
         selected: isSelected,
-        selectedTileColor: const Color(0xFFD62828).withOpacity(0.1),
+        selectedTileColor: const Color(0xFFD62828).withValues(alpha: 0.1),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-        onTap: isMainNav ? () => setState(() {
-          _selectedIndex = index;
-          _showingProfile = false; // Close profile when switching tabs
-        }) : () => _showComingSoon(title),
+        onTap: isMainNav ? () {
+          setState(() {
+            _selectedIndex = index;
+            _showingProfile = false; // Close profile when switching tabs
+          });
+        } : () => _navigateToFooterPage(title),
       ),
     );
   }
+  
+  void _navigateToFooterPage(String pageName) {
+    // Handle All Ranks page separately
+    if (pageName == 'All Ranks') {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => RedesignedAllRanksPage(userXP: userXP),
+        ),
+      );
+      return;
+    }
+    
+    String route;
+    switch (pageName) {
+      case 'Pricing':
+        route = '/pricing';
+        break;
+      case 'Payment':
+        route = '/payment';
+        break;
+      case 'About Us':
+        route = '/about';
+        break;
+      case 'Contact':
+        route = '/contact';
+        break;
+      case 'Privacy Policy':
+        route = '/privacy';
+        break;
+      case 'Terms of Service':
+        route = '/terms';
+        break;
+      case 'FAQ':
+        route = '/faq';
+        break;
+      default:
+        return;
+    }
+    Navigator.pushNamed(context, route);
+  }
 
   Widget _buildBottomNavigation() {
-    final tabs = ['Dashboard', 'Questions', 'Books', 'Mock', 'Trivia'];
+    final tabs = [
+      {'label': 'Dashboard', 'icon': Icons.dashboard_outlined},
+      {'label': 'Questions', 'icon': Icons.quiz_outlined},
+      {'label': 'Books', 'icon': Icons.menu_book_outlined},
+      {'label': 'Trivia', 'icon': Icons.extension_outlined},
+      {'label': 'Leaderboard', 'icon': Icons.emoji_events_outlined},
+      {'label': 'Feedback', 'icon': Icons.feedback_outlined},
+    ];
     
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.1),
+            color: Colors.black.withValues(alpha: 0.1),
             blurRadius: 10,
             offset: const Offset(0, -2),
           ),
         ],
       ),
-      padding: const EdgeInsets.symmetric(vertical: 8),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: List.generate(tabs.length, (index) {
-          final isSelected = _selectedIndex == index;
-          return GestureDetector(
-            onTap: () => setState(() {
-              _selectedIndex = index;
-              _showingProfile = false; // Close profile when switching tabs
-            }),
-            child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-              decoration: BoxDecoration(
-                color: isSelected 
-                    ? const Color(0xFFD62828).withOpacity(0.1)
-                    : Colors.transparent,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Text(
-                tabs[index],
-                style: GoogleFonts.montserrat(
-                  fontSize: 12,
-                  fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
-                  color: isSelected 
-                      ? const Color(0xFFD62828)
-                      : Colors.grey[600],
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+        child: Row(
+          children: List.generate(tabs.length, (index) {
+            final isSelected = _selectedIndex == index;
+            return Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 4),
+              child: GestureDetector(
+                onTap: () => setState(() {
+                  _selectedIndex = index;
+                  _showingProfile = false;
+                }),
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  decoration: BoxDecoration(
+                    color: isSelected 
+                        ? const Color(0xFFD62828).withValues(alpha: 0.1)
+                        : Colors.transparent,
+                    borderRadius: BorderRadius.circular(20),
+                    border: isSelected 
+                        ? Border.all(color: const Color(0xFFD62828).withValues(alpha: 0.3), width: 1)
+                        : null,
+                  ),
+                  child: Text(
+                    tabs[index]['label'] as String,
+                    style: GoogleFonts.montserrat(
+                      fontSize: 12,
+                      fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
+                      color: isSelected 
+                          ? const Color(0xFFD62828)
+                          : Colors.grey[600],
+                    ),
+                  ),
                 ),
               ),
-            ),
-          );
-        }),
+            );
+          }),
+        ),
       ),
     );
   }
@@ -498,7 +1024,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -515,71 +1041,60 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             const SizedBox(width: 16),
           ],
           
-          // Search Bar
-          Expanded(
+          const Spacer(),
+          
+          // User Rank Badge (smaller than profile)
+          GestureDetector(
+            onTap: () => _showRankDialog(),
             child: Container(
-              height: 45,
               decoration: BoxDecoration(
-                color: Colors.grey[100],
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: TextField(
-                decoration: InputDecoration(
-                  hintText: 'Search questions, textbooks, topics...',
-                  hintStyle: GoogleFonts.montserrat(
-                    color: Colors.grey[600],
-                    fontSize: 14,
-                  ),
-                  prefixIcon: Icon(Icons.search, color: Colors.grey[600]),
-                  border: InputBorder.none,
-                  contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                shape: BoxShape.circle,
+                border: Border.all(
+                  color: currentRank != null 
+                      ? currentRank!.getTierColor().withOpacity(0.3)
+                      : Colors.grey.withOpacity(0.3),
+                  width: 1.5,
                 ),
-              ),
-            ),
-          ),
-          
-          const SizedBox(width: 16),
-          
-          // Notifications
-          Container(
-            decoration: BoxDecoration(
-              color: const Color(0xFFD62828).withOpacity(0.1),
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: IconButton(
-              icon: Stack(
-                children: [
-                  const Icon(Icons.notifications_outlined, color: Color(0xFFD62828)),
-                  Positioned(
-                    right: 0,
-                    top: 0,
-                    child: Container(
-                      width: 8,
-                      height: 8,
-                      decoration: const BoxDecoration(
-                        color: Color(0xFFD62828),
-                        shape: BoxShape.circle,
-                      ),
-                    ),
+                boxShadow: [
+                  BoxShadow(
+                    color: currentRank != null 
+                        ? currentRank!.getTierColor().withOpacity(0.15)
+                        : Colors.grey.withOpacity(0.08),
+                    blurRadius: 8,
+                    offset: const Offset(0, 3),
                   ),
                 ],
               ),
-              onPressed: () => _showNotifications(),
+              child: CircleAvatar(
+                radius: 19,
+                backgroundColor: Colors.white,
+                backgroundImage: currentRank != null && currentRank!.imageUrl.isNotEmpty
+                    ? CachedNetworkImageProvider(currentRank!.imageUrl)
+                    : null,
+                child: currentRank == null || currentRank!.imageUrl.isEmpty
+                    ? Icon(
+                        currentRank != null ? Icons.emoji_events : Icons.emoji_events_outlined,
+                        color: currentRank?.getTierColor() ?? Colors.grey,
+                        size: 20,
+                      )
+                    : null,
+              ),
             ),
           ),
           
           const SizedBox(width: 16),
           
-          // Profile Avatar
+          // Profile Avatar (larger than badge)
           GestureDetector(
             onTap: () => _showProfileMenu(),
             child: CircleAvatar(
-              radius: 20,
+              radius: 22,
               backgroundColor: const Color(0xFF1A1E3F),
-              child: Text(
+              backgroundImage: _getAvatarImage(),
+              child: _getAvatarImage() == null ? Text(
                 userName[0].toUpperCase(),
-                style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-              ),
+                style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),
+              ) : null,
             ),
           ),
         ],
@@ -602,22 +1117,68 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  'Welcome back, $userName!',
-                  style: GoogleFonts.playfairDisplay(
-                    fontSize: isSmallScreen ? 22 : 28,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF1A1E3F),
+                if (currentRank != null) ...[
+                  RichText(
+                    text: TextSpan(
+                      style: GoogleFonts.playfairDisplay(
+                        fontSize: isSmallScreen ? 22 : 28,
+                        fontWeight: FontWeight.bold,
+                        color: const Color(0xFF1A1E3F),
+                      ),
+                      children: [
+                        TextSpan(text: 'Hello $userName!\n'),
+                        TextSpan(
+                          text: "You're a ${currentRank!.name} with $userXP XP.\n",
+                          style: GoogleFonts.montserrat(
+                            fontSize: isSmallScreen ? 14 : 16,
+                            fontWeight: FontWeight.normal,
+                            color: Colors.grey[700],
+                          ),
+                        ),
+                        if (nextRank != null) ...[
+                          TextSpan(
+                            text: 'Just ${nextRank!.minXP - userXP} XP left to reach your next rank!\n',
+                            style: GoogleFonts.montserrat(
+                              fontSize: isSmallScreen ? 14 : 16,
+                              fontWeight: FontWeight.normal,
+                              color: Colors.grey[700],
+                            ),
+                          ),
+                        ],
+                        TextSpan(
+                          text: "Keep learning, and let's move up together!",
+                          style: GoogleFonts.montserrat(
+                            fontSize: isSmallScreen ? 14 : 16,
+                            fontWeight: FontWeight.normal,
+                            color: Colors.grey[600],
+                            fontStyle: FontStyle.italic,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-                const SizedBox(height: 8),
-                Text(
-                  'Ready to continue your learning journey?',
-                  style: GoogleFonts.montserrat(
-                    fontSize: isSmallScreen ? 14 : 16,
-                    color: Colors.grey[600],
+                ] else ...[
+                  RichText(
+                    text: TextSpan(
+                      style: GoogleFonts.playfairDisplay(
+                        fontSize: isSmallScreen ? 22 : 28,
+                        fontWeight: FontWeight.bold,
+                        color: const Color(0xFF1A1E3F),
+                      ),
+                      children: [
+                        TextSpan(text: 'Welcome $userName!'),
+                        TextSpan(
+                          text: ' Ready to continue your learning journey?',
+                          style: GoogleFonts.montserrat(
+                            fontSize: isSmallScreen ? 14 : 16,
+                            fontWeight: FontWeight.normal,
+                            color: Colors.grey[600],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
+                ],
               ],
             ),
           ),
@@ -629,15 +1190,35 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           
           SizedBox(height: isSmallScreen ? 16 : 24),
           
+          // Rank Progress Card
+          if (currentRank != null)
+            RankProgressCard(
+              currentRank: currentRank!,
+              nextRank: nextRank,
+              userXP: userXP,
+              onViewAllRanks: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => RedesignedAllRanksPage(userXP: userXP),
+                  ),
+                );
+              },
+            ),
+          
+          SizedBox(height: isSmallScreen ? 16 : 24),
+          
           // Performance Metrics & Subject Progress - Mobile Layout
           if (isSmallScreen) ...[
             _buildSubjectProgressCard(),
             const SizedBox(height: 16),
+            _buildRecentActivityCard(),
+            const SizedBox(height: 16),
+            _buildPastQuestionsCard(),
+            const SizedBox(height: 16),
             _buildQuickStatsCard(),
             const SizedBox(height: 16),
             _buildUpcomingDeadlines(),
-            const SizedBox(height: 16),
-            _buildRecentActivityCard(),
             const SizedBox(height: 16),
             _buildQuickActionsCard(),
           ] else ...[
@@ -652,6 +1233,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                       _buildSubjectProgressCard(),
                       const SizedBox(height: 16),
                       _buildRecentActivityCard(),
+                      const SizedBox(height: 16),
+                      _buildPastQuestionsCard(),
                     ],
                   ),
                 ),
@@ -703,7 +1286,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         borderRadius: BorderRadius.circular(isSmallScreen ? 16 : 20),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF1A1E3F).withOpacity(0.3),
+            color: const Color(0xFF1A1E3F).withValues(alpha: 0.3),
             blurRadius: isSmallScreen ? 15 : 20,
             offset: Offset(0, isSmallScreen ? 6 : 10),
           ),
@@ -726,7 +1309,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
               decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.2),
+                color: Colors.white.withValues(alpha: 0.2),
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Text(
@@ -753,7 +1336,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.2),
+                    color: Colors.white.withValues(alpha: 0.2),
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Text(
@@ -842,9 +1425,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           Container(
             padding: EdgeInsets.all(isSmallScreen ? 12 : 16),
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.1),
+              color: Colors.white.withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: Colors.white.withOpacity(0.2)),
+              border: Border.all(color: Colors.white.withValues(alpha: 0.2)),
             ),
             child: isSmallScreen 
                 ? Column(
@@ -865,7 +1448,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'BECE 2025',
+                                'BECE 2026',
                                 style: GoogleFonts.montserrat(
                                   fontSize: 14,
                                   fontWeight: FontWeight.bold,
@@ -873,7 +1456,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                                 ),
                               ),
                               Text(
-                                '$upcomingExamDays days remaining',
+                                '$beceCountdownDays days remaining',
                                 style: GoogleFonts.montserrat(
                                   fontSize: 12,
                                   color: Colors.white70,
@@ -908,7 +1491,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'BECE 2025',
+                            'BECE 2026',
                             style: GoogleFonts.montserrat(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
@@ -916,7 +1499,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                             ),
                           ),
                           Text(
-                            '$upcomingExamDays days remaining',
+                            '$beceCountdownDays days remaining',
                             style: GoogleFonts.montserrat(
                               fontSize: 14,
                               color: Colors.white70,
@@ -969,7 +1552,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         const SizedBox(height: 8),
         LinearProgressIndicator(
           value: progress,
-          backgroundColor: Colors.white.withOpacity(0.3),
+          backgroundColor: Colors.white.withValues(alpha: 0.3),
           valueColor: const AlwaysStoppedAnimation<Color>(Colors.white),
           minHeight: 4,
         ),
@@ -978,6 +1561,14 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   }
 
   Widget _buildSubjectProgressCard() {
+    // If no subject progress data, show default subjects with 0%
+    final displayProgress = _subjectProgress.isEmpty 
+        ? [
+            SubjectProgress('RME', 0.0, Colors.blue),
+            SubjectProgress('Trivia', 0.0, Colors.green),
+          ]
+        : _subjectProgress;
+    
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
@@ -985,7 +1576,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -1018,7 +1609,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             ],
           ),
           const SizedBox(height: 16),
-          ...(_subjectProgress.map((subject) => _buildSubjectProgressItem(subject)).toList()),
+          ...(displayProgress.map((subject) => _buildSubjectProgressItem(subject)).toList()),
         ],
       ),
     );
@@ -1051,7 +1642,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           const SizedBox(height: 8),
           LinearProgressIndicator(
             value: subject.progress / 100,
-            backgroundColor: subject.color.withOpacity(0.2),
+            backgroundColor: subject.color.withValues(alpha: 0.2),
             valueColor: AlwaysStoppedAnimation<Color>(subject.color),
             minHeight: 6,
           ),
@@ -1068,7 +1659,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -1120,7 +1711,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           Container(
             padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
-              color: color.withOpacity(0.1),
+              color: color.withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(8),
             ),
             child: Icon(icon, size: 16, color: color),
@@ -1160,7 +1751,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -1181,6 +1772,12 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           _buildQuickStatItem('Questions Answered', questionsAnswered.toString(), Icons.quiz),
           _buildQuickStatItem('Average Score', '${(overallProgress * 0.85).toStringAsFixed(1)}%', Icons.trending_up),
           _buildQuickStatItem('Study Streak', '$currentStreak days', Icons.local_fire_department),
+          const Divider(height: 24),
+          _buildQuickStatItem('Past Questions Solved', pastQuestionsAnswered.toString(), Icons.history_edu),
+          _buildQuickStatItem('Past Questions Score', '${pastQuestionsProgress.toStringAsFixed(1)}%', Icons.school),
+          const Divider(height: 24),
+          _buildQuickStatItem('Trivia Answered', triviaQuestionsAnswered.toString(), Icons.emoji_events),
+          _buildQuickStatItem('Trivia Score', '${triviaProgress.toStringAsFixed(1)}%', Icons.stars),
         ],
       ),
     );
@@ -1214,6 +1811,188 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     );
   }
 
+  Widget _buildPastQuestionsCard() {
+    return Container(
+      padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.05),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              const Icon(Icons.history_edu, color: Color(0xFF1A1E3F), size: 20),
+              const SizedBox(width: 8),
+              Text(
+                'Past Questions Progress',
+                style: GoogleFonts.playfairDisplay(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: const Color(0xFF1A1E3F),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 16),
+          
+          // Past Questions Stats
+          Container(
+            padding: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  const Color(0xFF1A1E3F),
+                  const Color(0xFF1A1E3F).withValues(alpha: 0.8),
+                ],
+              ),
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Questions Solved',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 12,
+                            color: Colors.white70,
+                          ),
+                        ),
+                        const SizedBox(height: 4),
+                        Text(
+                          pastQuestionsAnswered.toString(),
+                          style: GoogleFonts.montserrat(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Text(
+                          'Average Score',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 12,
+                            color: Colors.white70,
+                          ),
+                        ),
+                        const SizedBox(height: 4),
+                        Text(
+                          '${pastQuestionsProgress.toStringAsFixed(1)}%',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                            color: const Color(0xFFD62828),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 16),
+                
+                // Progress Bar
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: LinearProgressIndicator(
+                    value: pastQuestionsProgress / 100,
+                    backgroundColor: Colors.white24,
+                    valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFFD62828)),
+                    minHeight: 8,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          
+          const SizedBox(height: 16),
+          
+          // Trivia Stats
+          Container(
+            padding: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [
+                  Colors.orange.shade600,
+                  Colors.orange.shade400,
+                ],
+              ),
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    const Icon(Icons.emoji_events, color: Colors.white, size: 20),
+                    const SizedBox(width: 8),
+                    Text(
+                      'Trivia Challenge',
+                      style: GoogleFonts.playfairDisplay(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 12),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    _buildTriviaStatItem('Answered', triviaQuestionsAnswered.toString()),
+                    Container(width: 1, height: 30, color: Colors.white24),
+                    _buildTriviaStatItem('Score', '${triviaProgress.toStringAsFixed(1)}%'),
+                    Container(width: 1, height: 30, color: Colors.white24),
+                    _buildTriviaStatItem('Correct', triviaCorrect.toString()),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildTriviaStatItem(String label, String value) {
+    return Column(
+      children: [
+        Text(
+          value,
+          style: GoogleFonts.montserrat(
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        ),
+        const SizedBox(height: 4),
+        Text(
+          label,
+          style: GoogleFonts.montserrat(
+            fontSize: 11,
+            color: Colors.white70,
+          ),
+        ),
+      ],
+    );
+  }
+
   Widget _buildUpcomingDeadlines() {
     return Container(
       padding: const EdgeInsets.all(20),
@@ -1222,7 +2001,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -1240,7 +2019,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             ),
           ),
           const SizedBox(height: 16),
-          _buildDeadlineItem('BECE 2025', '$upcomingExamDays days', Colors.red),
+          _buildDeadlineItem('BECE 2026', '$beceCountdownDays days', Colors.red),
           _buildDeadlineItem('Math Quiz', '3 days', Colors.orange),
           _buildDeadlineItem('Science Assignment', '1 week', Colors.blue),
         ],
@@ -1292,7 +2071,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -1315,6 +2094,41 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           _buildQuickActionButton('Take Quiz', Icons.quiz, () => setState(() => _selectedIndex = 1)),
           const SizedBox(height: 8),
           _buildQuickActionButton('Read Books', Icons.menu_book, () => setState(() => _selectedIndex = 2)),
+          const SizedBox(height: 8),
+          // Quick action to take an RME quiz (navigates to question collections filtered to RME)
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => const QuestionCollectionsPage(initialSubject: 'RME'),
+                ),
+              );
+            },
+            borderRadius: BorderRadius.circular(8),
+            child: Container(
+              padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.grey.withValues(alpha: 0.2)),
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: Row(
+                children: [
+                  const Icon(Icons.book, size: 16, color: Color(0xFF6C5CE7)),
+                  const SizedBox(width: 12),
+                  Text(
+                    'Take RME Quiz',
+                    style: GoogleFonts.montserrat(
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black87,
+                    ),
+                  ),
+                  const Spacer(),
+                  Icon(Icons.arrow_forward_ios, size: 12, color: Colors.grey[600]),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );
@@ -1327,7 +2141,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
         decoration: BoxDecoration(
-          border: Border.all(color: Colors.grey.withOpacity(0.2)),
+          border: Border.all(color: Colors.grey.withValues(alpha: 0.2)),
           borderRadius: BorderRadius.circular(8),
         ),
         child: Row(
@@ -1357,7 +2171,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -1400,10 +2214,10 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
-          colors: [color.withOpacity(0.1), color.withOpacity(0.05)],
+          colors: [color.withValues(alpha: 0.1), color.withValues(alpha: 0.05)],
         ),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: color.withOpacity(0.3)),
+        border: Border.all(color: color.withValues(alpha: 0.3)),
       ),
       child: Column(
         children: [
@@ -1442,7 +2256,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFFD62828).withOpacity(0.3),
+            color: const Color(0xFFD62828).withValues(alpha: 0.3),
             blurRadius: 15,
             offset: const Offset(0, 8),
           ),
@@ -1453,7 +2267,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         children: [
           Row(
             children: [
-              Icon(Icons.psychology, color: Colors.white, size: 24),
+              const Icon(Icons.psychology, color: Colors.white, size: 24),
               const SizedBox(width: 12),
               Text(
                 'Study Recommendations',
@@ -1469,7 +2283,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           Text(
             'Based on your recent performance, here are some personalized recommendations:',
             style: GoogleFonts.montserrat(
-              color: Colors.white.withOpacity(0.9),
+              color: Colors.white.withValues(alpha: 0.9),
             ),
           ),
           const SizedBox(height: 12),
@@ -1517,7 +2331,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             child: Text(
               text,
               style: GoogleFonts.montserrat(
-                color: Colors.white.withOpacity(0.9),
+                color: Colors.white.withValues(alpha: 0.9),
                 fontSize: 14,
               ),
             ),
@@ -1529,62 +2343,21 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
 
   // Page implementations for other tabs
   Widget _buildQuestionsPage() {
-    return const PastQuestionsSearchPage();
+    return const QuestionCollectionsPage();
   }
 
-  Widget _buildTextbooksPage() {
-    return const TextbooksPage();
-  }
-
-  Widget _buildMockExamsPage() {
-    return const MockExamsPage();
+Widget _buildTextbooksPage() {
+  // Return the existing TextbooksPage with tabs (All Books, Textbooks, Storybooks)
+  return const TextbooksPage();
+}  Widget _buildFeedbackPage() {
+    return const FeedbackPage();
   }
 
   Widget _buildTriviaPage() {
-    return const TriviaPage();
+    return const TriviaCategoriesPage();
   }
 
   // Helper methods
-  void _showMobileSearch() {
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: Text(
-          'Search',
-          style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),
-        ),
-        content: TextField(
-          decoration: InputDecoration(
-            hintText: 'Search questions, textbooks, topics...',
-            hintStyle: GoogleFonts.montserrat(color: Colors.grey[600]),
-            border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
-            prefixIcon: Icon(Icons.search, color: Colors.grey[600]),
-          ),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: Text(
-              'Cancel',
-              style: GoogleFonts.montserrat(color: Colors.grey[600]),
-            ),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.pop(context);
-              _showComingSoon('Search');
-            },
-            style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFFD62828),
-              foregroundColor: Colors.white,
-            ),
-            child: Text('Search', style: GoogleFonts.montserrat()),
-          ),
-        ],
-      ),
-    );
-  }
-
   void _showMobileMenu() {
     showModalBottomSheet(
       context: context,
@@ -1614,105 +2387,325 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     );
   }
 
-  void _showNotifications() {
+  String _formatXP(int xp) {
+    if (xp >= 1000000) {
+      return '${(xp / 1000000).toStringAsFixed(1)}M';
+    } else if (xp >= 1000) {
+      return '${(xp / 1000).toStringAsFixed(1)}K';
+    }
+    return xp.toString();
+  }
+
+  void _showRankDialog() {
     showDialog(
       context: context,
-      builder: (context) => AlertDialog(
-        title: const Text('Notifications'),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
+      barrierColor: Colors.black.withOpacity(0.01),
+      barrierDismissible: true,
+      builder: (context) {
+        final screenWidth = MediaQuery.of(context).size.width;
+        final isMobile = screenWidth < 768;
+        
+        return Stack(
           children: [
-            ListTile(
-              leading: CircleAvatar(
-                backgroundColor: Colors.blue.withOpacity(0.2),
-                child: const Icon(Icons.quiz, color: Colors.blue),
-              ),
-              title: const Text('New Math Quiz Available'),
-              subtitle: const Text('2 hours ago'),
+            // Invisible barrier to close on outside click
+            GestureDetector(
+              onTap: () => Navigator.pop(context),
+              child: Container(color: Colors.transparent),
             ),
-            ListTile(
-              leading: CircleAvatar(
-                backgroundColor: Colors.green.withOpacity(0.2),
-                child: const Icon(Icons.star, color: Colors.green),
+            // Positioned dropdown below rank badge - Apple style
+            Positioned(
+              top: isMobile ? 56 : 64,
+              right: isMobile ? 44 : 60,
+              child: TweenAnimationBuilder<double>(
+                duration: const Duration(milliseconds: 200),
+                tween: Tween(begin: 0.0, end: 1.0),
+                curve: Curves.easeOutCubic,
+                builder: (context, value, child) {
+                  return Transform.scale(
+                    scale: 0.95 + (0.05 * value),
+                    alignment: Alignment.topRight,
+                    child: Opacity(
+                      opacity: value,
+                      child: child,
+                    ),
+                  );
+                },
+                child: Material(
+                  elevation: 0,
+                  color: Colors.transparent,
+                  borderRadius: BorderRadius.circular(12),
+                  child: Container(
+                    width: 220,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(
+                        color: Colors.grey.shade200,
+                        width: 0.5,
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.08),
+                          blurRadius: 24,
+                          offset: const Offset(0, 8),
+                          spreadRadius: 0,
+                        ),
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.04),
+                          blurRadius: 8,
+                          offset: const Offset(0, 2),
+                          spreadRadius: 0,
+                        ),
+                      ],
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(12),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          // Current Rank - Compact
+                          Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                            child: Text(
+                              '${currentRank?.name.toUpperCase() ?? 'LEARNER'} · ${_formatXP(userXP)}XP',
+                              style: GoogleFonts.inter(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.grey.shade700,
+                                letterSpacing: 0.3,
+                              ),
+                            ),
+                          ),
+                          
+                          // Subtle divider
+                          Container(
+                            height: 0.5,
+                            color: Colors.grey.shade200,
+                          ),
+                          
+                          // All Ranks Button - Minimal
+                          InkWell(
+                            onTap: () {
+                              Navigator.pop(context);
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => RedesignedAllRanksPage(userXP: userXP),
+                                ),
+                              );
+                            },
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Icon(
+                                    Icons.emoji_events_outlined,
+                                    size: 16,
+                                    color: currentRank?.getTierColor() ?? Colors.grey.shade600,
+                                  ),
+                                  const SizedBox(width: 8),
+                                  Text(
+                                    'All Ranks',
+                                    style: GoogleFonts.inter(
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w500,
+                                      color: currentRank?.getTierColor() ?? Colors.grey.shade600,
+                                    ),
+                                  ),
+                                  const Spacer(),
+                                  Icon(
+                                    Icons.chevron_right,
+                                    size: 16,
+                                    color: Colors.grey.shade400,
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
               ),
-              title: const Text('Achievement Unlocked!'),
-              subtitle: const Text('7-Day Study Streak'),
             ),
           ],
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: const Text('Close'),
-          ),
-        ],
-      ),
+        );
+      },
     );
   }
 
   void _showProfileMenu() {
-    showModalBottomSheet(
+    showDialog(
       context: context,
-      builder: (context) => Container(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
+      barrierColor: Colors.transparent,
+      builder: (context) {
+        final screenWidth = MediaQuery.of(context).size.width;
+        final dialogWidth = screenWidth * 0.18; // 50% reduction from typical 36% to 18%
+        
+        return Stack(
           children: [
-            ListTile(
-              leading: CircleAvatar(
-                backgroundColor: const Color(0xFF1A1E3F),
-                child: Text(userName[0].toUpperCase(), style: const TextStyle(color: Colors.white)),
+            // Invisible barrier to close on outside click
+            GestureDetector(
+              onTap: () => Navigator.pop(context),
+              child: Container(color: Colors.transparent),
+            ),
+            // Positioned dialog in top right
+            Positioned(
+              top: 70, // Below header (header height ~60px + spacing)
+              right: 16,
+              child: Material(
+                elevation: 8,
+                borderRadius: BorderRadius.circular(12),
+                child: Container(
+                  width: dialogWidth.clamp(280, 350), // Min 280, max 350
+                  constraints: const BoxConstraints(maxHeight: 600),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(12),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withValues(alpha: 0.1),
+                        blurRadius: 10,
+                        offset: const Offset(0, 4),
+                      ),
+                    ],
+                  ),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        // User Profile Header
+                        Container(
+                          padding: const EdgeInsets.all(16),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFF1A1E3F).withValues(alpha: 0.05),
+                            borderRadius: const BorderRadius.only(
+                              topLeft: Radius.circular(12),
+                              topRight: Radius.circular(12),
+                            ),
+                          ),
+                          child: Row(
+                            children: [
+                              CircleAvatar(
+                                radius: 20,
+                                backgroundColor: const Color(0xFF1A1E3F),
+                                backgroundImage: _getAvatarImage(),
+                                child: _getAvatarImage() == null ? Text(
+                                  userName[0].toUpperCase(),
+                                  style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                                ) : null,
+                              ),
+                              const SizedBox(width: 12),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      userName,
+                                      style: GoogleFonts.montserrat(
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 14,
+                                      ),
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                    Text(
+                                      userClass,
+                                      style: GoogleFonts.montserrat(
+                                        fontSize: 11,
+                                        color: Colors.grey[600],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        
+                        // Menu Items
+                        _buildProfileMenuItem(Icons.person, 'Profile Settings', () {
+                          Navigator.pop(context);
+                          setState(() {
+                            _selectedIndex = 0; // Navigate to Profile tab
+                            _showingProfile = true;
+                          });
+                        }),
+                        
+                        const Divider(height: 1),
+                        
+                        // Footer Pages Section
+                        _buildProfileMenuItem(Icons.attach_money_outlined, 'Pricing', () {
+                          Navigator.pop(context);
+                          Navigator.pushNamed(context, '/pricing');
+                        }),
+                        _buildProfileMenuItem(Icons.payment, 'Payment', () {
+                          Navigator.pop(context);
+                          Navigator.pushNamed(context, '/payment');
+                        }),
+                        _buildProfileMenuItem(Icons.info_outline, 'About Us', () {
+                          Navigator.pop(context);
+                          Navigator.pushNamed(context, '/about');
+                        }),
+                        _buildProfileMenuItem(Icons.phone_outlined, 'Contact', () {
+                          Navigator.pop(context);
+                          Navigator.pushNamed(context, '/contact');
+                        }),
+                        _buildProfileMenuItem(Icons.help_outline, 'FAQ', () {
+                          Navigator.pop(context);
+                          Navigator.pushNamed(context, '/faq');
+                        }),
+                        _buildProfileMenuItem(Icons.privacy_tip_outlined, 'Privacy Policy', () {
+                          Navigator.pop(context);
+                          Navigator.pushNamed(context, '/privacy');
+                        }),
+                        _buildProfileMenuItem(Icons.gavel_outlined, 'Terms of Service', () {
+                          Navigator.pop(context);
+                          Navigator.pushNamed(context, '/terms');
+                        }),
+                        
+                        const Divider(height: 1),
+                        
+                        // Sign Out
+                        _buildProfileMenuItem(
+                          Icons.logout,
+                          'Sign Out',
+                          _handleSignOut,
+                          color: const Color(0xFFD62828),
+                        ),
+                        
+                        const SizedBox(height: 4),
+                      ],
+                    ),
+                  ),
+                ),
               ),
-              title: Text(userName),
-              subtitle: const Text('JHS Form 3 Student'),
             ),
-            const Divider(),
-            ListTile(
-              leading: const Icon(Icons.person),
-              title: const Text('Profile Settings'),
-              onTap: () => _showComingSoon('Profile Settings'),
-            ),
-            ListTile(
-              leading: const Icon(Icons.info_outline),
-              title: const Text('About Uriel Academy'),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.pushNamed(context, '/about');
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.privacy_tip_outlined),
-              title: const Text('Privacy Policy'),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.pushNamed(context, '/privacy');
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.gavel_outlined),
-              title: const Text('Terms of Service'),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.pushNamed(context, '/terms');
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.notifications),
-              title: const Text('Notification Settings'),
-              onTap: () => _showComingSoon('Notification Settings'),
-            ),
-            ListTile(
-              leading: const Icon(Icons.help),
-              title: const Text('Help & Support'),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.pushNamed(context, '/contact');
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.logout, color: Color(0xFFD62828)),
-              title: const Text('Sign Out', style: TextStyle(color: Color(0xFFD62828))),
-              onTap: _handleSignOut,
+          ],
+        );
+      },
+    );
+  }
+  
+  Widget _buildProfileMenuItem(IconData icon, String title, VoidCallback onTap, {Color? color}) {
+    return InkWell(
+      onTap: onTap,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        child: Row(
+          children: [
+            Icon(icon, size: 20, color: color ?? Colors.grey[700]),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Text(
+                title,
+                style: GoogleFonts.montserrat(
+                  fontSize: 13,
+                  color: color ?? Colors.grey[800],
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
             ),
           ],
         ),
@@ -1733,11 +2726,16 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   void _handleSignOut() async {
     try {
       await FirebaseAuth.instance.signOut();
-      Navigator.of(context).pushNamedAndRemoveUntil('/login', (route) => false);
+      // Clear navigation stack and go to landing page
+      if (mounted) {
+        Navigator.of(context).pushNamedAndRemoveUntil('/landing', (route) => false);
+      }
     } catch (e) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Error signing out. Please try again.')),
-      );
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Error signing out. Please try again.')),
+        );
+      }
     }
   }
 }

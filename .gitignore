@@ -73,3 +73,17 @@ functions/node_modules/
 uriel-backend-api/node_modules/
 uriel-backend-api/dist/
 *.log
+
+# Sensitive files - DO NOT COMMIT
+node_modules/
+*-firebase-adminsdk-*.json
+*.key
+users.json
+.firebase/
+*.env
+
+# Large data files
+bece_*_questions.json
+bece_*_answers.json
+rme_*.json
+

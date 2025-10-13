@@ -22,12 +22,12 @@ class UserService {
     Map<String, dynamic>? additionalData,
   }) async {
     try {
-      print('UserService: Creating profile for user: $userId, email: $email, role: $role');
+      debugPrint('UserService: Creating profile for user: $userId, email: $email, role: $role');
       
+      // Don't write 'role' from the client side - roles must be assigned by admin/server.
       final userData = {
         'userId': userId,
         'email': email.toLowerCase(),
-        'role': role.name,
         'name': name,
         'schoolName': schoolName,
         'phoneNumber': phoneNumber,
@@ -39,9 +39,9 @@ class UserService {
       await _usersCollection.doc(userId).set(userData, SetOptions(merge: true))
           .timeout(const Duration(seconds: 10));
           
-      print('UserService: Profile created successfully');
+      debugPrint('UserService: Profile created successfully');
     } catch (e) {
-      print('UserService Error creating user profile: $e');
+      debugPrint('UserService Error creating user profile: $e');
       rethrow;
     }
   }
@@ -55,7 +55,7 @@ class UserService {
       }
       return null;
     } catch (e) {
-      print('Error getting user profile: $e');
+      debugPrint('Error getting user profile: $e');
       return null;
     }
   }
@@ -73,7 +73,7 @@ class UserService {
       }
       return null;
     } catch (e) {
-      print('Error getting user role: $e');
+      debugPrint('Error getting user role: $e');
       return null;
     }
   }
@@ -81,7 +81,7 @@ class UserService {
   /// Get user role by email (for Google sign-in routing)
   Future<UserRole?> getUserRoleByEmail(String email) async {
     try {
-      print('UserService: Looking up role for email: $email');
+      debugPrint('UserService: Looking up role for email: $email');
       
       final querySnapshot = await _usersCollection
           .where('email', isEqualTo: email.toLowerCase())
@@ -89,28 +89,28 @@ class UserService {
           .get()
           .timeout(const Duration(seconds: 10));
 
-      print('UserService: Query returned ${querySnapshot.docs.length} documents');
+      debugPrint('UserService: Query returned ${querySnapshot.docs.length} documents');
 
       if (querySnapshot.docs.isNotEmpty) {
         final userData = querySnapshot.docs.first.data() as Map<String, dynamic>;
         final roleString = userData['role'] as String?;
         
-        print('UserService: Found role string: $roleString');
+        debugPrint('UserService: Found role string: $roleString');
         
         if (roleString != null) {
           final role = UserRole.values.firstWhere(
             (role) => role.name == roleString,
             orElse: () => UserRole.student,
           );
-          print('UserService: Parsed role: $role');
+          debugPrint('UserService: Parsed role: $role');
           return role;
         }
       } else {
-        print('UserService: No user found with email: $email');
+        debugPrint('UserService: No user found with email: $email');
       }
       return null;
     } catch (e) {
-      print('UserService Error getting user role by email: $e');
+      debugPrint('UserService Error getting user role by email: $e');
       return null;
     }
   }
@@ -122,7 +122,7 @@ class UserService {
         'lastLoginAt': FieldValue.serverTimestamp(),
       });
     } catch (e) {
-      print('Error updating last login: $e');
+      debugPrint('Error updating last login: $e');
     }
   }
 
@@ -134,7 +134,7 @@ class UserService {
         'updatedAt': FieldValue.serverTimestamp(),
       });
     } catch (e) {
-      print('Error updating user role: $e');
+      debugPrint('Error updating user role: $e');
       rethrow;
     }
   }
@@ -148,7 +148,7 @@ class UserService {
           .get();
       return querySnapshot.docs.isNotEmpty;
     } catch (e) {
-      print('Error checking if user exists: $e');
+      debugPrint('Error checking if user exists: $e');
       return false;
     }
   }
@@ -176,6 +176,7 @@ class UserService {
     String? institutionCode,
   }) async {
     try {
+      // Do not set 'role' here; role assignment is admin/server responsibility.
       final teacherData = {
         'name': name,
         'email': email.toLowerCase(),
@@ -186,14 +187,13 @@ class UserService {
         'yearsExperience': yearsExperience,
         'teacherId': teacherId,
         'institutionCode': institutionCode,
-        'role': UserRole.teacher.name,
         'createdAt': FieldValue.serverTimestamp(),
         'lastLoginAt': FieldValue.serverTimestamp(),
       };
 
       await _usersCollection.doc(userId).set(teacherData, SetOptions(merge: true));
     } catch (e) {
-      print('Error storing teacher data: $e');
+      debugPrint('Error storing teacher data: $e');
       rethrow;
     }
   }
@@ -212,6 +212,7 @@ class UserService {
     required String guardianPhone,
   }) async {
     try {
+      // Client should not set role; leave role assignment to admin/server.
       final studentData = {
         'name': name,
         'email': email.toLowerCase(),
@@ -222,14 +223,13 @@ class UserService {
         'guardianName': guardianName,
         'guardianEmail': guardianEmail.toLowerCase(),
         'guardianPhone': guardianPhone,
-        'role': UserRole.student.name,
         'createdAt': FieldValue.serverTimestamp(),
         'lastLoginAt': FieldValue.serverTimestamp(),
       };
 
       await _usersCollection.doc(userId).set(studentData, SetOptions(merge: true));
     } catch (e) {
-      print('Error storing student data: $e');
+      debugPrint('Error storing student data: $e');
       rethrow;
     }
   }
@@ -248,6 +248,7 @@ class UserService {
     String? institutionCode,
   }) async {
     try {
+      // Avoid setting 'role' here from the client side.
       final schoolData = {
         'institutionName': institutionName,
         'name': institutionName, // For consistency
@@ -259,14 +260,13 @@ class UserService {
         'studentCount': studentCount,
         'teacherCount': teacherCount,
         'institutionCode': institutionCode,
-        'role': UserRole.school.name,
         'createdAt': FieldValue.serverTimestamp(),
         'lastLoginAt': FieldValue.serverTimestamp(),
       };
 
       await _usersCollection.doc(userId).set(schoolData, SetOptions(merge: true));
     } catch (e) {
-      print('Error storing school data: $e');
+      debugPrint('Error storing school data: $e');
       rethrow;
     }
   }
@@ -283,7 +283,7 @@ class UserService {
           .map((doc) => doc.data() as Map<String, dynamic>)
           .toList();
     } catch (e) {
-      print('Error getting teachers for school: $e');
+      debugPrint('Error getting teachers for school: $e');
       return [];
     }
   }
@@ -300,7 +300,7 @@ class UserService {
           .map((doc) => doc.data() as Map<String, dynamic>)
           .toList();
     } catch (e) {
-      print('Error getting students for school: $e');
+      debugPrint('Error getting students for school: $e');
       return [];
     }
   }

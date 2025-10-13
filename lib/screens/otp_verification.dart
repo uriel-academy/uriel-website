@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:uriel_mainapp/screens/onboarding_walkthrough.dart';
 
 class OTPVerificationPage extends StatefulWidget {
   final String email;
@@ -19,10 +18,11 @@ class _OTPVerificationPageState extends State<OTPVerificationPage> {
     // TODO: Replace with real OTP verification logic
     await Future.delayed(const Duration(seconds: 1));
     if (otpController.text == '123456') {
+      if (!mounted) return;
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => OnboardingWalkthroughPage(),
+          builder: (context) => const OnboardingWalkthroughPage(),
         ),
       );
     } else {
@@ -84,7 +84,7 @@ class OnboardingWalkthroughPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Onboarding Walkthrough')),
-      body: Center(
+      body: const Center(
         child: Text('Welcome to the Onboarding Walkthrough!', style: TextStyle(fontSize: 24)),
       ),
     );

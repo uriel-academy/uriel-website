@@ -34,7 +34,7 @@ class _StorageContentTabState extends State<StorageContentTab> with SingleTicker
         const Duration(seconds: 5),
         onTimeout: () => <String>[],
       );
-      print('Available storage folders: $folders');
+      debugPrint('Available storage folders: $folders');
       
       final questions = await StorageService.getBECERMEQuestions().timeout(
         const Duration(seconds: 5),
@@ -47,11 +47,11 @@ class _StorageContentTabState extends State<StorageContentTab> with SingleTicker
       
       // Silent operation - no error message to user if empty
       if (questions.isEmpty) {
-        print('No RME questions found. Available folders: ${folders.join(", ")}');
+        debugPrint('No RME questions found. Available folders: ${folders.join(", ")}');
       }
     } catch (e) {
       // Silent fallback - don't show error to user
-      print('BECE RME content loading error (handled gracefully): $e');
+      debugPrint('BECE RME content loading error (handled gracefully): $e');
       setState(() {
         _beceRmeQuestions = [];
         _isLoadingBece = false;
@@ -67,7 +67,7 @@ class _StorageContentTabState extends State<StorageContentTab> with SingleTicker
         const Duration(seconds: 5),
         onTimeout: () => <String>[],
       );
-      print('Available storage folders: $folders');
+      debugPrint('Available storage folders: $folders');
       
       final content = await _getTriviaFromStorage().timeout(
         const Duration(seconds: 5),
@@ -80,11 +80,11 @@ class _StorageContentTabState extends State<StorageContentTab> with SingleTicker
       
       // Silent operation - no error message to user if empty
       if (content.isEmpty) {
-        print('No trivia content found. Available folders: ${folders.join(", ")}');
+        debugPrint('No trivia content found. Available folders: ${folders.join(", ")}');
       }
     } catch (e) {
       // Silent fallback - don't show error to user
-      print('Trivia content loading error (handled gracefully): $e');
+      debugPrint('Trivia content loading error (handled gracefully): $e');
       setState(() {
         _triviaContent = [];
         _isLoadingTrivia = false;
@@ -112,7 +112,7 @@ class _StorageContentTabState extends State<StorageContentTab> with SingleTicker
       
       return items;
     } catch (e) {
-      print('Error fetching trivia content: $e');
+      debugPrint('Error fetching trivia content: $e');
       return [];
     }
   }
@@ -258,9 +258,9 @@ class _StorageContentTabState extends State<StorageContentTab> with SingleTicker
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.1),
+        color: color.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: color.withOpacity(0.3)),
+        border: Border.all(color: color.withValues(alpha: 0.3)),
       ),
       child: Row(
         children: [
@@ -308,7 +308,7 @@ class _StorageContentTabState extends State<StorageContentTab> with SingleTicker
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -319,7 +319,7 @@ class _StorageContentTabState extends State<StorageContentTab> with SingleTicker
           Container(
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: color.withOpacity(0.1),
+              color: color.withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(10),
             ),
             child: Icon(icon, color: color, size: 24),
@@ -375,7 +375,7 @@ class _StorageContentTabState extends State<StorageContentTab> with SingleTicker
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                   decoration: BoxDecoration(
-                    color: const Color(0xFF2E7D32).withOpacity(0.1),
+                    color: const Color(0xFF2E7D32).withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(6),
                   ),
                   child: Text(
@@ -478,7 +478,7 @@ class _StorageContentTabState extends State<StorageContentTab> with SingleTicker
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                   decoration: BoxDecoration(
-                    color: const Color(0xFF9C27B0).withOpacity(0.1),
+                    color: const Color(0xFF9C27B0).withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(6),
                   ),
                   child: Text(

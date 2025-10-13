@@ -1,0 +1,1727 @@
+{
+  "subject": "Mathematics",
+  "q1": {
+    "question": "What is (7+8)?",
+    "possibleAnswers": [
+      "A. 13",
+      "B. 14",
+      "C. 15",
+      "D. 16"
+    ]
+  },
+  "q2": {
+    "question": "What is (12 x 11)?",
+    "possibleAnswers": [
+      "A. 121",
+      "B. 122",
+      "C. 132",
+      "D. 142"
+    ]
+  },
+  "q3": {
+    "question": "Evaluate .",
+    "possibleAnswers": [
+      "A. 0",
+      "B. 1",
+      "C. 5",
+      "D. Undefined"
+    ]
+  },
+  "q4": {
+    "question": "Simplify ¾ + ½ .",
+    "possibleAnswers": [
+      "A. 1/4",
+      "B. 3/8",
+      "C. 5/4",
+      "D. 5/8"
+    ]
+  },
+  "q5": {
+    "question": "Solve (2x+5=17).",
+    "possibleAnswers": [
+      "A. 5",
+      "B. 6",
+      "C. 7",
+      "D. 8"
+    ]
+  },
+  "q6": {
+    "question": "Which is prime?",
+    "possibleAnswers": [
+      "A. 21",
+      "B. 33",
+      "C. 37",
+      "D. 51"
+    ]
+  },
+  "q7": {
+    "question": "The mean of 4, 6, 10 is:",
+    "possibleAnswers": [
+      "A. 6",
+      "B. 7",
+      "C. 8",
+      "D. 9"
+    ]
+  },
+  "q8": {
+    "question": "What is the  ?",
+    "possibleAnswers": [
+      "A. 7",
+      "B. 8",
+      "C. 9",
+      "D. 10"
+    ]
+  },
+  "q9": {
+    "question": "Slope of the line through ((2,3)) and ((6,7)):",
+    "possibleAnswers": [
+      "A. 1",
+      "B. 3/4",
+      "C. 4/3",
+      "D. 2"
+    ]
+  },
+  "q10": {
+    "question": "Area of a triangle with base 10 and height 6:",
+    "possibleAnswers": [
+      "A. 30",
+      "B. 60",
+      "C. 16",
+      "D. 36"
+    ]
+  },
+  "q11": {
+    "question": "If (a × b =   -b), then (3 × 5 =)",
+    "possibleAnswers": [
+      "A. 4",
+      "B. 5",
+      "C. 9",
+      "D. –4"
+    ]
+  },
+  "q12": {
+    "question": "Value of sin",
+    "possibleAnswers": [
+      "A. /2",
+      "B. /2",
+      "C. 1/2",
+      "D. /3"
+    ]
+  },
+  "q13": {
+    "question": "=",
+    "possibleAnswers": [
+      "A. 1",
+      "B. 2",
+      "C. 3",
+      "D. 0"
+    ]
+  },
+  "q14": {
+    "question": "The median of 2, 9, 7, 4, 5 is:",
+    "possibleAnswers": [
+      "A. 5",
+      "B. 7",
+      "C. 9",
+      "D. 4"
+    ]
+  },
+  "q15": {
+    "question": "Derivative of  is: A)",
+    "possibleAnswers": [
+      "B. 2",
+      "C. 3",
+      "D. 3x"
+    ]
+  },
+  "q16": {
+    "question": "Solve -9=0.",
+    "possibleAnswers": [
+      "A. x= +/- 3",
+      "B. x=9",
+      "C. x=+/-9",
+      "D. x=3 only"
+    ]
+  },
+  "q17": {
+    "question": "Perimeter of a square with side 7:",
+    "possibleAnswers": [
+      "A. 14",
+      "B. 21",
+      "C. 28",
+      "D. 49"
+    ]
+  },
+  "q18": {
+    "question": "If (f(x)=2x-1), then (f(4)=)",
+    "possibleAnswers": [
+      "A. 7",
+      "B. 6",
+      "C. 5",
+      "D. 9"
+    ]
+  },
+  "q19": {
+    "question": "Convert 0.25 to a fraction:",
+    "possibleAnswers": [
+      "A. 1/4",
+      "B. 1/12",
+      "C. 3/4",
+      "D. 2/5"
+    ]
+  },
+  "q20": {
+    "question": "Which is irrational? A)",
+    "possibleAnswers": [
+      "B. 7/5",
+      "C. 0.125",
+      "D. –3"
+    ]
+  },
+  "q21": {
+    "question": "Solve (3(x-2)=12).",
+    "possibleAnswers": [
+      "A. 2",
+      "B. 4",
+      "C. 6",
+      "D. 8"
+    ]
+  },
+  "q22": {
+    "question": "The next prime after 43 is:",
+    "possibleAnswers": [
+      "A. 45",
+      "B. 47",
+      "C. 49",
+      "D. 51"
+    ]
+  },
+  "q23": {
+    "question": "(|-15|=)",
+    "possibleAnswers": [
+      "A. –15",
+      "B. 0",
+      "C. 1",
+      "D. 15"
+    ]
+  },
+  "q24": {
+    "question": "If (A={1,2,3}), number of subsets is:",
+    "possibleAnswers": [
+      "A. 3",
+      "B. 6",
+      "C. 7",
+      "D. 8"
+    ]
+  },
+  "q25": {
+    "question": "Simplify A) B) C)",
+    "possibleAnswers": [
+      "D. 2"
+    ]
+  },
+  "q26": {
+    "question": "The GCD of 24 and 36 is:",
+    "possibleAnswers": [
+      "A. 6",
+      "B. 8",
+      "C. 12",
+      "D. 18"
+    ]
+  },
+  "q27": {
+    "question": "The LCM of 6 and 8 is:",
+    "possibleAnswers": [
+      "A. 12",
+      "B. 16",
+      "C. 18",
+      "D. 24"
+    ]
+  },
+  "q28": {
+    "question": "Evaluate .",
+    "possibleAnswers": [
+      "A. –8",
+      "B. –1/8",
+      "C. 1/8",
+      "D. 1/2"
+    ]
+  },
+  "q29": {
+    "question": "Solve x/5 = 4.",
+    "possibleAnswers": [
+      "A. 9",
+      "B. 10",
+      "C. 15",
+      "D. 20"
+    ]
+  },
+  "q30": {
+    "question": "Interior angles of a triangle sum to:",
+    "possibleAnswers": [
+      "A. 90",
+      "B. 180",
+      "C. 270",
+      "D. 360"
+    ]
+  },
+  "q31": {
+    "question": "A line with slope 0 is:",
+    "possibleAnswers": [
+      "A. Vertical",
+      "B. Horizontal",
+      "C. Diagonal",
+      "D. Undefined"
+    ]
+  },
+  "q32": {
+    "question": "If (a) and (b) are odd, (a+b) is:",
+    "possibleAnswers": [
+      "A. Odd",
+      "B. Even",
+      "C. Prime",
+      "D. Composite"
+    ]
+  },
+  "q33": {
+    "question": "Distance between ((0,0)) and ((3,4)):",
+    "possibleAnswers": [
+      "A. 5",
+      "B. 6",
+      "C. 7"
+    ]
+  },
+  "q34": {
+    "question": "Simplify  .",
+    "possibleAnswers": [
+      "A. 5",
+      "B. 10",
+      "C. 25",
+      "D. 2"
+    ]
+  },
+  "q35": {
+    "question": "If P(A) =0.3, P(ˉA) =",
+    "possibleAnswers": [
+      "A. 0.3",
+      "B. 0.5",
+      "C. 0.7",
+      "D. 1.3"
+    ]
+  },
+  "q36": {
+    "question": "Evaluate",
+    "possibleAnswers": [
+      "A. 10",
+      "B. 20",
+      "C. 15",
+      "D. 5"
+    ]
+  },
+  "q37": {
+    "question": "Which is equivalent to  ?",
+    "possibleAnswers": [
+      "A. cos x",
+      "B. -cos x",
+      "C. sin x",
+      "D. -sin x"
+    ]
+  },
+  "q38": {
+    "question": "The inverse of a 2 × 2 matrix exists if its determinant is:",
+    "possibleAnswers": [
+      "A. 0",
+      "B. 1",
+      "C. Nonzero",
+      "D. Negative"
+    ]
+  },
+  "q39": {
+    "question": "The mode of 2, 3, 3, 5, 5, 5 is:",
+    "possibleAnswers": [
+      "A. 2",
+      "B. 3",
+      "C. 5",
+      "D. No mode"
+    ]
+  },
+  "q40": {
+    "question": "A right triangle with legs 9 and 12 has hypotenuse:",
+    "possibleAnswers": [
+      "A. 14",
+      "B. 15",
+      "C. 16"
+    ]
+  },
+  "q41": {
+    "question": "Simplify  (x≠0).",
+    "possibleAnswers": [
+      "A. x"
+    ]
+  },
+  "q42": {
+    "question": "What is tan 45°?",
+    "possibleAnswers": [
+      "A. 0",
+      "B. 1"
+    ]
+  },
+  "q43": {
+    "question": "Solve |x-4| = 7.",
+    "possibleAnswers": [
+      "A. x=11 only",
+      "B. x=-3 only",
+      "C. x=11 or x=-3",
+      "D. No solution"
+    ]
+  },
+  "q44": {
+    "question": "Sum of first 10 natural numbers:",
+    "possibleAnswers": [
+      "A. 45",
+      "B. 55",
+      "C. 65",
+      "D. 100"
+    ]
+  },
+  "q45": {
+    "question": "Convert 3/5 to percent.",
+    "possibleAnswers": [
+      "A. 30%",
+      "B. 40%",
+      "C. 50%",
+      "D. 60%"
+    ]
+  },
+  "q46": {
+    "question": "If x:y=3:4 and x=15, then y =",
+    "possibleAnswers": [
+      "A. 15",
+      "B. 18",
+      "C. 20",
+      "D. 25"
+    ]
+  },
+  "q47": {
+    "question": "The probability of getting heads on a fair coin:",
+    "possibleAnswers": [
+      "A. 0.25",
+      "B. 0.5",
+      "C. 0.75",
+      "D. 1"
+    ]
+  },
+  "q48": {
+    "question": "The complement of angle 65° is:",
+    "possibleAnswers": [
+      "A. 25°",
+      "B. 35°",
+      "C. 115°",
+      "D. 45°"
+    ]
+  },
+  "q49": {
+    "question": "Simplify ( (x-2)(x+2)).",
+    "possibleAnswers": [
+      "A. (x^2-4)",
+      "B. (x^2+4)",
+      "C. (x^2-2x+4)",
+      "D. (x^2+2x-4)"
+    ]
+  },
+  "q50": {
+    "question": "If a rectangle has length 9 and diagonal 15, width is:",
+    "possibleAnswers": [
+      "A. 10",
+      "B. 12"
+    ]
+  },
+  "q51": {
+    "question": "Solve (3x-7=2x+5).",
+    "possibleAnswers": [
+      "A. 7",
+      "B. 9",
+      "C. 10",
+      "D. 12"
+    ]
+  },
+  "q52": {
+    "question": "=",
+    "possibleAnswers": [
+      "A. 1/3",
+      "B. 1",
+      "C. 3",
+      "D. 9"
+    ]
+  },
+  "q53": {
+    "question": "Which is equivalent to ln()?",
+    "possibleAnswers": [
+      "A. 1",
+      "B. 5"
+    ]
+  },
+  "q54": {
+    "question": "If (a\\perp b), their slopes (m_a) and (m_b) satisfy:",
+    "possibleAnswers": [
+      "A. (m_a=m_b)",
+      "B. (m_a m_b=-1)",
+      "C. (m_a+m_b=0)",
+      "D. (m_a m_b=1)"
+    ]
+  },
+  "q55": {
+    "question": "A fair die is rolled. P(even) =",
+    "possibleAnswers": [
+      "A. 1/6",
+      "B. 1/3",
+      "C. 1/2",
+      "D. 2/3"
+    ]
+  },
+  "q56": {
+    "question": "Circumference of a circle with radius 7 (π form):",
+    "possibleAnswers": [
+      "A. 7 π",
+      "B. 14 π",
+      "C. 21 π",
+      "D. 49 π"
+    ]
+  },
+  "q57": {
+    "question": "The derivative of ln x is:",
+    "possibleAnswers": [
+      "A. 1",
+      "B. 1/x",
+      "C. x",
+      "D. ln x"
+    ]
+  },
+  "q58": {
+    "question": "Solve (-5x+6=0).",
+    "possibleAnswers": [
+      "A. 2 and 3",
+      "B. –2 and –3",
+      "C. 1 and 6",
+      "D. –1 and –6"
+    ]
+  },
+  "q59": {
+    "question": "If =-1, then  =",
+    "possibleAnswers": [
+      "A. –1",
+      "B. 1",
+      "C. i",
+      "D. –i"
+    ]
+  },
+  "q60": {
+    "question": "Convert 150° to radians.",
+    "possibleAnswers": [
+      "A. π/6",
+      "B. π/3",
+      "C. 5π/6",
+      "D. 3π/2"
+    ]
+  },
+  "q61": {
+    "question": "The arithmetic mean of 10 and 40 is:",
+    "possibleAnswers": [
+      "A. 20",
+      "B. 25",
+      "C. 30",
+      "D. 35"
+    ]
+  },
+  "q62": {
+    "question": "The geometric mean of 4 and 9 is:",
+    "possibleAnswers": [
+      "A. 6"
+    ]
+  },
+  "q63": {
+    "question": "If (f(x)=x^2), then (f'(2)=)",
+    "possibleAnswers": [
+      "A. 2",
+      "B. 4",
+      "C. 8",
+      "D. None"
+    ]
+  },
+  "q64": {
+    "question": "Solve (2^{x}=16).",
+    "possibleAnswers": [
+      "A. 2",
+      "B. 3",
+      "C. 4",
+      "D. 5"
+    ]
+  },
+  "q65": {
+    "question": "The sum of interior angles of a pentagon:",
+    "possibleAnswers": [
+      "A. 360",
+      "B. 540",
+      "C. 720",
+      "D. 900"
+    ]
+  },
+  "q66": {
+    "question": "If a sequence is arithmetic with first term 3 and common difference 5, the 4th term is:",
+    "possibleAnswers": [
+      "A. 13",
+      "B. 18",
+      "C. 23",
+      "D. 28"
+    ]
+  },
+  "q67": {
+    "question": "Factor (x^2-7x+12).",
+    "possibleAnswers": [
+      "A. ((x-4)(x-3))",
+      "B. ((x-6)(x-2))",
+      "C. ((x+4)(x+3))",
+      "D. ((x-12)(x+1))"
+    ]
+  },
+  "q68": {
+    "question": "cos 0°",
+    "possibleAnswers": [
+      "A. –1",
+      "B. 0"
+    ]
+  },
+  "q69": {
+    "question": "If A and B are disjoint events, then P(A U B) =",
+    "possibleAnswers": [
+      "A. (P(A)+P(B))",
+      "B. P(A)+P(B) - P(A ∩ B)",
+      "C. P(A) . P(B))",
+      "D. 1"
+    ]
+  },
+  "q70": {
+    "question": "The midpoint of ((2,8)) and ((10,0)) is:",
+    "possibleAnswers": [
+      "A. (6,4)",
+      "B. (8,4)",
+      "C. (4,4)",
+      "D. (6,–4)"
+    ]
+  },
+  "q71": {
+    "question": "Simplify 6x^2y/3xy (nonzero).",
+    "possibleAnswers": [
+      "A. (2x)",
+      "B. (2xy)",
+      "C. (2x^2)",
+      "D. (2y)"
+    ]
+  },
+  "q72": {
+    "question": "Solve 3/x = 1/4.",
+    "possibleAnswers": [
+      "A. 12",
+      "B. 3/4",
+      "C. 1/12",
+      "D. 7"
+    ]
+  },
+  "q73": {
+    "question": "Evaluate    .",
+    "possibleAnswers": [
+      "A. 10",
+      "B. 12",
+      "C. 15",
+      "D. 20"
+    ]
+  },
+  "q74": {
+    "question": "The range of a constant function is:",
+    "possibleAnswers": [
+      "A. All reals",
+      "B. A single value",
+      "C. Interval ([0,1])",
+      "D. Undefined"
+    ]
+  },
+  "q75": {
+    "question": "If =49, then x=",
+    "possibleAnswers": [
+      "A. 7",
+      "B. –7",
+      "C. +/- 7)",
+      "D. 0 or 7"
+    ]
+  },
+  "q76": {
+    "question": "The equation y=mx+b represents a:",
+    "possibleAnswers": [
+      "A. Parabola",
+      "B. Line",
+      "C. Hyperbola",
+      "D. Circle"
+    ]
+  },
+  "q77": {
+    "question": "The sum of the roots of -4x+1=0 is:",
+    "possibleAnswers": [
+      "A. –4",
+      "B. 1",
+      "C. 4",
+      "D. –1"
+    ]
+  },
+  "q78": {
+    "question": "If (a) varies directly with (b) and (a=12) when (b=3), then when (b=5), (a=)",
+    "possibleAnswers": [
+      "A. 15",
+      "B. 18",
+      "C. 20",
+      "D. 24"
+    ]
+  },
+  "q79": {
+    "question": "The determinant of  is:",
+    "possibleAnswers": [
+      "A. –2",
+      "B. –1",
+      "C. 2",
+      "D. 1"
+    ]
+  },
+  "q80": {
+    "question": "If P(A)=0.6 and (P(B|A) = 0.5, then P(A ∩ B) =",
+    "possibleAnswers": [
+      "A. 0.1",
+      "B. 0.2",
+      "C. 0.3",
+      "D. 0.5"
+    ]
+  },
+  "q81": {
+    "question": "A fair die is rolled twice. P(sum=7) =",
+    "possibleAnswers": [
+      "A. 1/6",
+      "B. 1/9",
+      "C. 1/12",
+      "D. 5/36"
+    ]
+  },
+  "q82": {
+    "question": "The vertex form of a parabola is:",
+    "possibleAnswers": [
+      "A. y = ax + b",
+      "B. y =  + k",
+      "C. y = +bx+c",
+      "D. y = a/x"
+    ]
+  },
+  "q83": {
+    "question": "The inverse function of f(x)=3x+2 is:",
+    "possibleAnswers": [
+      "A. (x) = x-2/3",
+      "B. x+2/3",
+      "C. 3x-2",
+      "D. 3/x-2"
+    ]
+  },
+  "q84": {
+    "question": "If (x) is an even integer, is:",
+    "possibleAnswers": [
+      "A. Even",
+      "B. Odd",
+      "C. Prime",
+      "D. 0"
+    ]
+  },
+  "q85": {
+    "question": "Convert π/3 to degrees.",
+    "possibleAnswers": [
+      "A. 30°",
+      "B. 45°",
+      "C. 60°",
+      "D. 90°"
+    ]
+  },
+  "q86": {
+    "question": "Which is a Pythagorean triple?",
+    "possibleAnswers": [
+      "A. (5,12,13)",
+      "B. (6,8,11)",
+      "C. (7,10,13)",
+      "D. (9,11,15)"
+    ]
+  },
+  "q87": {
+    "question": "If f(x)=  - 1, then f(x+1) - f(x) =",
+    "possibleAnswers": [
+      "A. 2x",
+      "B. 2x+1",
+      "C. 2x+2",
+      "D. x"
+    ]
+  },
+  "q89": {
+    "question": "For complex z = a + bi, |z| =",
+    "possibleAnswers": [
+      "A. a + b"
+    ]
+  },
+  "q90": {
+    "question": "The harmonic mean of 2 and 6 is:",
+    "possibleAnswers": [
+      "A. 3",
+      "B. 4",
+      "C. . 2"
+    ]
+  },
+  "q91": {
+    "question": "If  = 8, then x =",
+    "possibleAnswers": [
+      "A. 2"
+    ]
+  },
+  "q92": {
+    "question": "Simplify  - /a-b (a≠b).",
+    "possibleAnswers": [
+      "A. a + b",
+      "B. a - b",
+      "C. +",
+      "D. ab"
+    ]
+  },
+  "q93": {
+    "question": "Range of f(x)=  for real (x):",
+    "possibleAnswers": [
+      "A. (-∞,∞)",
+      "B. [0,∞)",
+      "C. (0,∞)",
+      "D. ((-∞,0])"
+    ]
+  },
+  "q94": {
+    "question": "If angles of a triangle are in ratio 2:3:4, largest angle is:",
+    "possibleAnswers": [
+      "A. 40°",
+      "B. 60°",
+      "C. 80°",
+      "D. 100°"
+    ]
+  },
+  "q95": {
+    "question": "The sum 1+2+3+ . . . + n =",
+    "possibleAnswers": [
+      "A. n(n+1)/2"
+    ]
+  },
+  "q96": {
+    "question": "If a% of b = b% of a, then:",
+    "possibleAnswers": [
+      "A. Only if a = b",
+      "B. Always true",
+      "C. Never true",
+      "D. Only if ab = 100"
+    ]
+  },
+  "q97": {
+    "question": "=",
+    "possibleAnswers": [
+      "A. + C",
+      "B. 2 + C",
+      "C. ln |x| + C",
+      "D. x + C"
+    ]
+  },
+  "q98": {
+    "question": "The discriminant of a+bx+c is:",
+    "possibleAnswers": [
+      "A. - 4ac",
+      "B. + 4ac",
+      "C. (b - 2a)c",
+      "D. 4- 4ac"
+    ]
+  },
+  "q99": {
+    "question": "If (n) is divisible by 6, then (n) is divisible by:",
+    "possibleAnswers": [
+      "A. 2 only",
+      "B. 3 only",
+      "C. 2 and 3",
+      "D. 4 and 3"
+    ]
+  },
+  "q100": {
+    "question": "The angle between the hands of a clock at 3:00 is:",
+    "possibleAnswers": [
+      "A. 0°",
+      "B. 90°",
+      "C. 180°",
+      "D. 120°"
+    ]
+  },
+  "q101": {
+    "question": "Simplify 5/ A)",
+    "possibleAnswers": [
+      "B. 5",
+      "C. 5",
+      "D. 1/"
+    ]
+  },
+  "q102": {
+    "question": "If  = 2 and  = 3, then  =",
+    "possibleAnswers": [
+      "A. 12",
+      "B. 24",
+      "C. 48",
+      "D. 6"
+    ]
+  },
+  "q103": {
+    "question": "If x + y = 10 and xy = 21, then x, y are roots of:",
+    "possibleAnswers": [
+      "A. - 10t + 21 = 0",
+      "B. + 10t + 21 = 0",
+      "C. - 21t + 10 = 0",
+      "D. + 21t + 10 = 0"
+    ]
+  },
+  "q104": {
+    "question": "-  =",
+    "possibleAnswers": [
+      "A. 0"
+    ]
+  },
+  "q105": {
+    "question": "The derivative of (5) is:",
+    "possibleAnswers": [
+      "A. 0",
+      "B. 1",
+      "C. 5",
+      "D. Undefined"
+    ]
+  },
+  "q106": {
+    "question": "A fair coin tossed 3 times. P(exactly 2 heads) =",
+    "possibleAnswers": [
+      "A. 1/8",
+      "B. 2/8",
+      "C. 3/8",
+      "D. 4/8"
+    ]
+  },
+  "q107": {
+    "question": "If y = 3, then dy/dx at x = 2 is:",
+    "possibleAnswers": [
+      "A. 6",
+      "B. 12",
+      "C. 18",
+      "D. 24"
+    ]
+  },
+  "q108": {
+    "question": "The nth term of arithmetic sequence a, a + d, . . . is:",
+    "possibleAnswers": [
+      "A. = a + nd",
+      "B. = a + (n-)d",
+      "C. = an + d",
+      "D. ="
+    ]
+  },
+  "q109": {
+    "question": "If angle A and angle B are supplementary, angle A + angle B =",
+    "possibleAnswers": [
+      "A. 90°",
+      "B. 120°",
+      "C. 150°",
+      "D. 180°"
+    ]
+  },
+  "q110": {
+    "question": "Solve x-1/x = ½ (x≠0).",
+    "possibleAnswers": [
+      "A. 1",
+      "B. 2",
+      "C. –2",
+      "D. ½"
+    ]
+  },
+  "q111": {
+    "question": "The graph of y = 1/x has:",
+    "possibleAnswers": [
+      "A. A vertical asymptote at x = 0",
+      "B. A hole at x = 0",
+      "C. No asymptotes",
+      "D. A vertical asymptote at y = 0"
+    ]
+  },
+  "q112": {
+    "question": "For f(x) = |x|, f'(0) is:",
+    "possibleAnswers": [
+      "A. 0",
+      "B. 1",
+      "C. –1",
+      "D. Undefined"
+    ]
+  },
+  "q113": {
+    "question": "If (a) and (b) are integers, parity of ab is:",
+    "possibleAnswers": [
+      "A. Even iff at least one is even",
+      "B. Odd iff at least one is odd",
+      "C. Always odd",
+      "D. Always even"
+    ]
+  },
+  "q114": {
+    "question": "Standard deviation measures:",
+    "possibleAnswers": [
+      "A. Center",
+      "B. Spread",
+      "C. Skewness",
+      "D. Kurtosis"
+    ]
+  },
+  "q115": {
+    "question": "If x% of 200 is 50, then x =",
+    "possibleAnswers": [
+      "A. 10",
+      "B. 20",
+      "C. 25",
+      "D. 30"
+    ]
+  },
+  "q116": {
+    "question": "=",
+    "possibleAnswers": [
+      "A. sin x + C",
+      "B. -sin x + C",
+      "C. cos x + C",
+      "D. -cos x + C"
+    ]
+  },
+  "q117": {
+    "question": "The product rule states (fg)' =",
+    "possibleAnswers": [
+      "A. f'g'",
+      "B. f'g + fg'",
+      "C. f'g - fg'",
+      "D. f'g'/2"
+    ]
+  },
+  "q118": {
+    "question": "If A is a subset of or equal to B, then n(A u B) =",
+    "possibleAnswers": [
+      "A. n(A) + n(B)",
+      "B. n(B)",
+      "C. n(A)",
+      "D. n(A)+n(B)-n(A ∩ B)"
+    ]
+  },
+  "q119": {
+    "question": "= / provided:",
+    "possibleAnswers": [
+      "A. ≠ 0",
+      "B. ≠ 0",
+      "C. ≠ 0",
+      "D. Always"
+    ]
+  },
+  "q120": {
+    "question": "The roots of (+1=0) are:",
+    "possibleAnswers": [
+      "A. Real",
+      "B. Imaginary",
+      "C. Rational",
+      "D. Integer"
+    ]
+  },
+  "q122": {
+    "question": "If p(A) = 2/5 and p(B) = 1/2 are independent, p(A ∩ B) =",
+    "possibleAnswers": [
+      "A. 1/10",
+      "B. 1/5",
+      "C. 2/10",
+      "D. 2/5 . 1/2"
+    ]
+  },
+  "q123": {
+    "question": "Evaluate",
+    "possibleAnswers": [
+      "A. 2",
+      "B. 3",
+      "C. 9",
+      "D. 3"
+    ]
+  },
+  "q124": {
+    "question": "If x is real, the maximum of sin x is:",
+    "possibleAnswers": [
+      "A. –1",
+      "B. 0",
+      "C. 1",
+      "D. Depends on x"
+    ]
+  },
+  "q125": {
+    "question": "The matrix  is:",
+    "possibleAnswers": [
+      "A. Zero matrix",
+      "B. Identity matrix",
+      "C. Singular",
+      "D. Skew-symmetric"
+    ]
+  },
+  "q126": {
+    "question": "If a function is one-to-one, it has:",
+    "possibleAnswers": [
+      "A. No inverse",
+      "B. Exactly one inverse",
+      "C. Two inverses",
+      "D. Infinite inverses"
+    ]
+  },
+  "q127": {
+    "question": "Evaluate d/dx(x ln x).",
+    "possibleAnswers": [
+      "A. ln x",
+      "B. 1+ ln x",
+      "C. 1/x",
+      "D. x"
+    ]
+  },
+  "q128": {
+    "question": "The angle sum of a hexagon is:",
+    "possibleAnswers": [
+      "A. 540",
+      "B. 600",
+      "C. 720",
+      "D. 900"
+    ]
+  },
+  "q129": {
+    "question": "Rationalize 1/ A) B)",
+    "possibleAnswers": [
+      "C. 3",
+      "D. 1/3"
+    ]
+  },
+  "q130": {
+    "question": "If  = 3n+2, then =",
+    "possibleAnswers": [
+      "A. 30",
+      "B. 32",
+      "C. 35",
+      "D. 34"
+    ]
+  },
+  "q131": {
+    "question": "A function (f) is increasing if f'(x) is:",
+    "possibleAnswers": [
+      "A. <0",
+      "B. =0",
+      "C. >0",
+      "D. Undefined"
+    ]
+  },
+  "q132": {
+    "question": "Evaluate",
+    "possibleAnswers": [
+      "A. 0",
+      "B. 1",
+      "C. ∞",
+      "D. Does not exist"
+    ]
+  },
+  "q133": {
+    "question": "If x is standard normal, E [x] =",
+    "possibleAnswers": [
+      "A. –1",
+      "B. 0",
+      "C. 1",
+      "D. 2"
+    ]
+  },
+  "q134": {
+    "question": "The derivative of (a>0) is: A)",
+    "possibleAnswers": [
+      "B. ln a",
+      "C. ln a",
+      "D. ln x"
+    ]
+  },
+  "q135": {
+    "question": "Evaluate .",
+    "possibleAnswers": [
+      "A. 3",
+      "B. 4",
+      "C. 5",
+      "D. 6"
+    ]
+  },
+  "q136": {
+    "question": "If f(x) = 1/x, then f'(x) =",
+    "possibleAnswers": [
+      "A. 1",
+      "B. -1/",
+      "C. 1/",
+      "D. -1/x"
+    ]
+  },
+  "q137": {
+    "question": "The solution set of  < 9) is:",
+    "possibleAnswers": [
+      "A. (-3,3)",
+      "B. (-∞, -3) U (3, ∞)",
+      "C. [-3,3]",
+      "D. ( -3,3]"
+    ]
+  },
+  "q138": {
+    "question": "If P(A ∩ B) = 0, events are:",
+    "possibleAnswers": [
+      "A. Independent",
+      "B. Disjoint",
+      "C. Complementary",
+      "D. Exhaustive"
+    ]
+  },
+  "q139": {
+    "question": "The angle between vectors (1,0) and (0,1) is:",
+    "possibleAnswers": [
+      "A. 0°",
+      "B. 45°",
+      "C. 60°",
+      "D. 90°"
+    ]
+  },
+  "q140": {
+    "question": "The dot product (2,3) . (4,1) =",
+    "possibleAnswers": [
+      "A. 8",
+      "B. 11",
+      "C. 14",
+      "D. 16"
+    ]
+  },
+  "q141": {
+    "question": "If |x| < 2, then x lies:",
+    "possibleAnswers": [
+      "A. x < -2",
+      "B. x > 2",
+      "C. -2 < x < 2",
+      "D. x = ± 2"
+    ]
+  },
+  "q142": {
+    "question": "Solve  = 4.",
+    "possibleAnswers": [
+      "A. 12",
+      "B. 27",
+      "C. 64",
+      "D. 81"
+    ]
+  },
+  "q143": {
+    "question": "If A is 2 × 3 and B is 3 × 4, then AB is:",
+    "possibleAnswers": [
+      "A. 2 × 4",
+      "B. 3 × 3",
+      "C. 4 × 2",
+      "D. Not defined"
+    ]
+  },
+  "q144": {
+    "question": "The radius of convergence of a geometric series  is:",
+    "possibleAnswers": [
+      "A. |r| < 0",
+      "B. |r| < 1",
+      "C. |r| ≤ 1",
+      "D. |r| > 1"
+    ]
+  },
+  "q145": {
+    "question": "The derivative of  is:",
+    "possibleAnswers": [
+      "A. 1/",
+      "B. -1/"
+    ]
+  },
+  "q146": {
+    "question": "If a right triangle has legs 5 and 12, area is:",
+    "possibleAnswers": [
+      "A. 30",
+      "B. 60",
+      "C. 17",
+      "D. 13"
+    ]
+  },
+  "q147": {
+    "question": "Evaluate . A)",
+    "possibleAnswers": [
+      "B. n(n+1)",
+      "C. 2n",
+      "D. + n"
+    ]
+  },
+  "q148": {
+    "question": "If f''(x) > 0, the function is:",
+    "possibleAnswers": [
+      "A. Concave up",
+      "B. Concave down",
+      "C. Linear",
+      "D. Discontinuous"
+    ]
+  },
+  "q149": {
+    "question": "The polar coordinates (r,𝚹) of (1, ) with r > 0 and 0 < 𝚹 < π/2) are:",
+    "possibleAnswers": [
+      "A. (2, π 3)",
+      "B. (π /4)",
+      "C. (2, π /6)",
+      "D. (π /3))"
+    ]
+  },
+  "q150": {
+    "question": "If det(A) = 5, then det(2A) = for 2 × 2 A:",
+    "possibleAnswers": [
+      "A. 10",
+      "B. 20",
+      "C. 25",
+      "D. 5"
+    ]
+  },
+  "q151": {
+    "question": "The nth Fibonacci number satisfies  =  with  =1,  = 1. Then  =",
+    "possibleAnswers": [
+      "A. 5",
+      "B. 8",
+      "C. 13",
+      "D. 2"
+    ]
+  },
+  "q152": {
+    "question": "If x ≡ 5 (mod 7), then 2x ≡",
+    "possibleAnswers": [
+      "A. 3 (mod 7)",
+      "B. 10 (mod 7)",
+      "C. 5 (mod 7)",
+      "D. 2 (mod 7)"
+    ]
+  },
+  "q153": {
+    "question": "Solve x-3/x+3 = 0.",
+    "possibleAnswers": [
+      "A. –3",
+      "B. 0",
+      "C. 3",
+      "D. No solution"
+    ]
+  },
+  "q154": {
+    "question": "The binomial coefficient  =",
+    "possibleAnswers": [
+      "A. 0",
+      "B. 1",
+      "C. n",
+      "D. n!"
+    ]
+  },
+  "q155": {
+    "question": "If a > 0, the AM–GM inequality gives:",
+    "possibleAnswers": [
+      "A. x + y/2 ≤",
+      "B. ≤ 2",
+      "C. x + y ≤ 2",
+      "D. xy ≤ x +y"
+    ]
+  },
+  "q156": {
+    "question": "Area of a circle of diameter 10 is:",
+    "possibleAnswers": [
+      "A. 25 π",
+      "B. 50 π",
+      "C. 100 π",
+      "D. 5 π"
+    ]
+  },
+  "q157": {
+    "question": "For y=mx, slope is:",
+    "possibleAnswers": [
+      "A. m",
+      "B. 1/m",
+      "C. 2",
+      "D. m + 1"
+    ]
+  },
+  "q158": {
+    "question": "If vectors are orthogonal, their dot product is:",
+    "possibleAnswers": [
+      "A. 1",
+      "B. –1",
+      "C. 0",
+      "D. Undefined"
+    ]
+  },
+  "q159": {
+    "question": "Solve =1.",
+    "possibleAnswers": [
+      "A. 0",
+      "B. 1",
+      "C. 2",
+      "D. –1"
+    ]
+  },
+  "q160": {
+    "question": "The derivative of cos x is:",
+    "possibleAnswers": [
+      "A. sin x",
+      "B. -sin x",
+      "C. -cos x",
+      "D. cos x"
+    ]
+  },
+  "q161": {
+    "question": "If angle A=90° in triangle ABC, then sin A =",
+    "possibleAnswers": [
+      "A. 0",
+      "B. 1",
+      "C. a/c",
+      "D. b/c"
+    ]
+  },
+  "q162": {
+    "question": "The sum of exterior angles of any convex polygon is:",
+    "possibleAnswers": [
+      "A. 180",
+      "B. 270",
+      "C. 360",
+      "D. Depends on n"
+    ]
+  },
+  "q163": {
+    "question": "If x ∈ (0, π/2), then sin x . cos x is maximized at:",
+    "possibleAnswers": [
+      "A. x = 0",
+      "B. x = π/4",
+      "C. x = π/6",
+      "D. x = π/3"
+    ]
+  },
+  "q164": {
+    "question": "Volume of a cube with edge (a): A) B)",
+    "possibleAnswers": [
+      "C. 3",
+      "D. 6a"
+    ]
+  },
+  "q165": {
+    "question": "If +px+ q = 0 has equal roots, then:",
+    "possibleAnswers": [
+      "A. = 4q",
+      "B. < 4q",
+      "C. > 4q",
+      "D. p = 0"
+    ]
+  },
+  "q166": {
+    "question": "=",
+    "possibleAnswers": [
+      "A. 1",
+      "B. 1/2",
+      "C. 1/4",
+      "D. 0"
+    ]
+  },
+  "q167": {
+    "question": "If (A) is invertible, then det() =",
+    "possibleAnswers": [
+      "A. det(A)",
+      "B. 1/det(A)",
+      "C. -det(A)",
+      "D. 0"
+    ]
+  },
+  "q168": {
+    "question": "Solve  = 5.",
+    "possibleAnswers": [
+      "A. 4",
+      "B. 5",
+      "C. 24",
+      "D. 25"
+    ]
+  },
+  "q169": {
+    "question": "The radius of a circle with area 36π is:",
+    "possibleAnswers": [
+      "A. 3",
+      "B. 6",
+      "C. 9",
+      "D. 12"
+    ]
+  },
+  "q170": {
+    "question": "If a and b are real,   ≥",
+    "possibleAnswers": [
+      "A. 0",
+      "B. 1",
+      "C. –1",
+      "D. ab"
+    ]
+  },
+  "q171": {
+    "question": "The inverse of y =  is:",
+    "possibleAnswers": [
+      "A. y = ln x",
+      "B. y =",
+      "C. y =",
+      "D. y ="
+    ]
+  },
+  "q172": {
+    "question": "The sum of coefficients of  is:",
+    "possibleAnswers": [
+      "A. n"
+    ]
+  },
+  "q173": {
+    "question": "If gcd(30,18) = 6, then lcm (30,18) =",
+    "possibleAnswers": [
+      "A. 60",
+      "B. 72",
+      "C. 90",
+      "D. 108"
+    ]
+  },
+  "q174": {
+    "question": "The measure of one interior angle of a regular octagon is:",
+    "possibleAnswers": [
+      "A. 120°",
+      "B. 135°",
+      "C. 140°",
+      "D. 150°"
+    ]
+  },
+  "q175": {
+    "question": "If f'(x)=0 for all x, then f is:",
+    "possibleAnswers": [
+      "A. Constant",
+      "B. Linear non-constant",
+      "C. Quadratic",
+      "D. Periodic"
+    ]
+  },
+  "q176": {
+    "question": "If x is an integer, solution to x(x-1) = 0 is:",
+    "possibleAnswers": [
+      "A. 0 only",
+      "B. 1 only",
+      "C. 0 or 1",
+      "D. None"
+    ]
+  },
+  "q177": {
+    "question": "The graph of y =  + 4x + 4 has vertex at:",
+    "possibleAnswers": [
+      "A. (–2, 0)",
+      "B. (–2, –4)",
+      "C. (2, 0)",
+      "D. (–4, 0)"
+    ]
+  },
+  "q178": {
+    "question": "If = c, then a =",
+    "possibleAnswers": [
+      "A. bc"
+    ]
+  },
+  "q179": {
+    "question": "Evaluate   .",
+    "possibleAnswers": [
+      "A. 15",
+      "B. 16",
+      "C. 31",
+      "D. 32"
+    ]
+  },
+  "q180": {
+    "question": "If Z  ∼ N(0,1)), then P(Z > 0) =",
+    "possibleAnswers": [
+      "A. 0.25",
+      "B. 0.5",
+      "C. 0.75",
+      "D. 1"
+    ]
+  },
+  "q181": {
+    "question": "A linear system with two lines that are parallel and distinct has:",
+    "possibleAnswers": [
+      "A. One solution",
+      "B. Two solutions",
+      "C. Infinitely many",
+      "D. No solution"
+    ]
+  },
+  "q182": {
+    "question": "The derivative of  for x > 0 is: A)",
+    "possibleAnswers": [
+      "B. (1+ ln x)",
+      "C. ln x",
+      "D. ln x"
+    ]
+  },
+  "q183": {
+    "question": "If A and B are independent, then P(A|B) =",
+    "possibleAnswers": [
+      "A. 0",
+      "B. P(A)",
+      "C. P(B)",
+      "D. P(A)P(B)"
+    ]
+  },
+  "q184": {
+    "question": "The sum of roots of  + bx + c = 0 is:",
+    "possibleAnswers": [
+      "A. -b/a",
+      "B. b/a",
+      "C. – c/a",
+      "D. c/a"
+    ]
+  },
+  "q185": {
+    "question": "If f(x) = |x-3|, minimum value is at x =",
+    "possibleAnswers": [
+      "A. 0",
+      "B. 1",
+      "C. 2",
+      "D. 3"
+    ]
+  },
+  "q186": {
+    "question": "If z =  + i  then  =",
+    "possibleAnswers": [
+      "A. + i",
+      "B. n( + i )",
+      "C. + ni",
+      "D. + i"
+    ]
+  },
+  "q187": {
+    "question": "The sum of the first n terms of geometric series a + ar + . . . is:",
+    "possibleAnswers": [
+      "A. an",
+      "B. a /1-r (r≠1)",
+      "C. a/1-r",
+      "D. a"
+    ]
+  },
+  "q188": {
+    "question": "If (f(x) = , domain is:",
+    "possibleAnswers": [
+      "A. (-∞,∞)",
+      "B. [0,∞)",
+      "C. (0,∞)",
+      "D. (-∞,0]"
+    ]
+  },
+  "q189": {
+    "question": "The angle between lines y = x and y = -x is:",
+    "possibleAnswers": [
+      "A. 45°",
+      "B. 60°",
+      "C. 90°",
+      "D. 120°"
+    ]
+  },
+  "q190": {
+    "question": "If A is symmetric, then  =",
+    "possibleAnswers": [
+      "A. -A",
+      "B. A"
+    ]
+  },
+  "q191": {
+    "question": "The probability of at least one head in two fair coin tosses is:",
+    "possibleAnswers": [
+      "A. 1/4",
+      "B. 1/2",
+      "C. 3/4",
+      "D. 1"
+    ]
+  },
+  "q192": {
+    "question": "If  = , then for n=3 it equals:",
+    "possibleAnswers": [
+      "A. 5",
+      "B. 9",
+      "C. 14",
+      "D. 18"
+    ]
+  },
+  "q193": {
+    "question": "The derivative of ln(sin x) (x in (0,π)) is:",
+    "possibleAnswers": [
+      "A. cot x",
+      "B. -cot x",
+      "C. csc x",
+      "D. -csc x"
+    ]
+  },
+  "q194": {
+    "question": "If x is uniformly distributed on [0,1], E[x] =",
+    "possibleAnswers": [
+      "A. 1\\4",
+      "B. 1\\3",
+      "C. 1\\2",
+      "D. 2\\3"
+    ]
+  },
+  "q195": {
+    "question": "The number of permutations of 5 distinct items is:",
+    "possibleAnswers": [
+      "A. 5"
+    ]
+  },
+  "q196": {
+    "question": "If a, b > 0 , then ln(ab) =",
+    "possibleAnswers": [
+      "A. ln a +ln b",
+      "B. ln a - ln b",
+      "C. ln(a +b)",
+      "D. ln a . ln b"
+    ]
+  },
+  "q197": {
+    "question": "If  -1= (x -1) (+x+1), then a root of (+x+1=0 is:",
+    "possibleAnswers": [
+      "A. 1",
+      "B. -1\\2 ±  i",
+      "C. -1",
+      "D. i"
+    ]
+  },
+  "q198": {
+    "question": "The derivative of |x| for x > 0 is:",
+    "possibleAnswers": [
+      "A. –1",
+      "B. 0",
+      "C. 1",
+      "D. Undefined"
+    ]
+  },
+  "q199": {
+    "question": "If f (x) = , then   = A) B)",
+    "possibleAnswers": [
+      "C. 3"
+    ]
+  },
+  "q200": {
+    "question": "The remainder when  -1 is divided by x - 1 is:",
+    "possibleAnswers": [
+      "A. 0",
+      "B. 1",
+      "C. 99",
+      "D. 100"
+    ]
+  }
+}
