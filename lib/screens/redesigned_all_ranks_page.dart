@@ -110,11 +110,15 @@ class _RedesignedAllRanksPageState extends State<RedesignedAllRanksPage> {
             _buildHeroHeader(isSmallScreen),
             
             // User's Current Rank (if logged in)
-            if (_userCurrentRank != null)
+            if (_userCurrentRank != null) ...[
               _buildUserCurrentRank(isSmallScreen),
-            
+            ],
+
             // Ranks Grid
             _buildRanksGrid(isSmallScreen, isMediumScreen),
+            
+            // XP Economy table placed before the footer
+            _buildXPEconomySection(isSmallScreen),
             
             // Footer CTA
             _buildFooter(isSmallScreen),
@@ -163,6 +167,19 @@ class _RedesignedAllRanksPageState extends State<RedesignedAllRanksPage> {
       ),
       child: Column(
         children: [
+          // Inspirational quote
+          Text(
+            '"Ranks in Uriel aren\'t about competition. They\'re about growth. Every learner\'s path is unique, but the journey is shared."',
+            style: GoogleFonts.inter(
+              fontSize: isSmallScreen ? 16 : 20,
+              fontWeight: FontWeight.w400,
+              color: const Color(0xFF6E6E73),
+              fontStyle: FontStyle.italic,
+              height: 1.4,
+            ),
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 32),
           Text(
             'Climb the Ranks',
             textAlign: TextAlign.center,
@@ -548,6 +565,99 @@ class _RedesignedAllRanksPageState extends State<RedesignedAllRanksPage> {
                 fontSize: isSmallScreen ? 16 : 18,
                 fontWeight: FontWeight.w600,
               ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  /// XP Economy section — shows XP sources and rewards in a compact table
+  Widget _buildXPEconomySection(bool isSmallScreen) {
+    final headerStyle = GoogleFonts.inter(
+      fontSize: isSmallScreen ? 16 : 18,
+      fontWeight: FontWeight.w700,
+      color: const Color(0xFF1D1D1F),
+    );
+
+    final cellStyle = GoogleFonts.inter(
+      fontSize: isSmallScreen ? 13 : 14,
+      color: const Color(0xFF1D1D1F),
+    );
+
+    final noteStyle = GoogleFonts.inter(
+      fontSize: isSmallScreen ? 12 : 13,
+      color: const Color(0xFF6E6E73),
+    );
+
+    Widget row(String action, String reward, String notes) => Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10.0),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(
+                flex: 4,
+                child: Text(action, style: cellStyle),
+              ),
+              Expanded(
+                flex: 2,
+                child: Text(reward, style: cellStyle),
+              ),
+              Expanded(
+                flex: 4,
+                child: Text(notes, style: noteStyle),
+              ),
+            ],
+          ),
+        );
+
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: isSmallScreen ? 24 : 64, vertical: 16),
+      padding: EdgeInsets.all(isSmallScreen ? 16 : 20),
+      decoration: BoxDecoration(
+        color: const Color(0xFFF9FAFB),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: const Color(0xFFECEFF3)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text('📈  XP Economy', style: headerStyle),
+            ],
+          ),
+          const SizedBox(height: 12),
+          // Table header
+          Container(
+            padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 6),
+            decoration: BoxDecoration(
+              color: const Color(0xFFFFFFFF),
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Expanded(flex: 4, child: Text('Action', style: GoogleFonts.inter(fontSize: 13, fontWeight: FontWeight.w700))),
+                    Expanded(flex: 2, child: Text('XP Reward', style: GoogleFonts.inter(fontSize: 13, fontWeight: FontWeight.w700))),
+                    Expanded(flex: 4, child: Text('Notes', style: GoogleFonts.inter(fontSize: 13, fontWeight: FontWeight.w700))),
+                  ],
+                ),
+                const Divider(height: 18),
+                // Rows
+                row('Daily login', '50 XP', ''),
+                row('Completing a quiz (40 questions)', '200 XP', '5 XP per question + completion bonus'),
+                row('Perfect quiz score (≥90%)', '+100 XP bonus', ''),
+                row('Uploading notes', '150 XP', ''),
+                row('Receiving upvotes/downloads on notes', '+10 XP per upvote', ''),
+                row('Completing AI Revision Plan', '500 XP', ''),
+                row('Maintaining 7-day streak', '+300 XP bonus', ''),
+                row('Achieving new badge', '250–500 XP', ''),
+                row('Finishing a full subject module', '1000–2000 XP', ''),
+                row('Monthly contest (winner)', '5000 XP', ''),
+              ],
             ),
           ),
         ],
