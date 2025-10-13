@@ -1117,22 +1117,68 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  'Welcome $userName!',
-                  style: GoogleFonts.playfairDisplay(
-                    fontSize: isSmallScreen ? 22 : 28,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF1A1E3F),
+                if (currentRank != null) ...[
+                  RichText(
+                    text: TextSpan(
+                      style: GoogleFonts.playfairDisplay(
+                        fontSize: isSmallScreen ? 22 : 28,
+                        fontWeight: FontWeight.bold,
+                        color: const Color(0xFF1A1E3F),
+                      ),
+                      children: [
+                        TextSpan(text: 'Hello $userName!\n'),
+                        TextSpan(
+                          text: "You're a ${currentRank!.name} with $userXP XP.\n",
+                          style: GoogleFonts.montserrat(
+                            fontSize: isSmallScreen ? 14 : 16,
+                            fontWeight: FontWeight.normal,
+                            color: Colors.grey[700],
+                          ),
+                        ),
+                        if (nextRank != null) ...[
+                          TextSpan(
+                            text: 'Just ${nextRank!.minXP - userXP} XP left to reach your next rank!\n',
+                            style: GoogleFonts.montserrat(
+                              fontSize: isSmallScreen ? 14 : 16,
+                              fontWeight: FontWeight.normal,
+                              color: Colors.grey[700],
+                            ),
+                          ),
+                        ],
+                        TextSpan(
+                          text: "Keep learning, and let's move up together!",
+                          style: GoogleFonts.montserrat(
+                            fontSize: isSmallScreen ? 14 : 16,
+                            fontWeight: FontWeight.normal,
+                            color: Colors.grey[600],
+                            fontStyle: FontStyle.italic,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-                const SizedBox(height: 8),
-                Text(
-                  'Ready to continue your learning journey?',
-                  style: GoogleFonts.montserrat(
-                    fontSize: isSmallScreen ? 14 : 16,
-                    color: Colors.grey[600],
+                ] else ...[
+                  RichText(
+                    text: TextSpan(
+                      style: GoogleFonts.playfairDisplay(
+                        fontSize: isSmallScreen ? 22 : 28,
+                        fontWeight: FontWeight.bold,
+                        color: const Color(0xFF1A1E3F),
+                      ),
+                      children: [
+                        TextSpan(text: 'Welcome $userName!'),
+                        TextSpan(
+                          text: ' Ready to continue your learning journey?',
+                          style: GoogleFonts.montserrat(
+                            fontSize: isSmallScreen ? 14 : 16,
+                            fontWeight: FontWeight.normal,
+                            color: Colors.grey[600],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
+                ],
               ],
             ),
           ),

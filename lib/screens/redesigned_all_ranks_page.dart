@@ -116,9 +116,6 @@ class _RedesignedAllRanksPageState extends State<RedesignedAllRanksPage> {
             // Ranks Grid
             _buildRanksGrid(isSmallScreen, isMediumScreen),
             
-            // XP Economy Table
-            _buildXPEconomy(isSmallScreen),
-            
             // Footer CTA
             _buildFooter(isSmallScreen),
           ],
@@ -131,6 +128,11 @@ class _RedesignedAllRanksPageState extends State<RedesignedAllRanksPage> {
     return AppBar(
       backgroundColor: Colors.white.withOpacity(_scrollProgress > 0.1 ? 0.95 : 0),
       elevation: _scrollProgress > 0.1 ? 1 : 0,
+      leading: IconButton(
+        icon: const Icon(Icons.arrow_back_ios_new, size: 20),
+        color: const Color(0xFF1D1D1F),
+        onPressed: () => Navigator.pop(context),
+      ),
       title: AnimatedOpacity(
         opacity: _scrollProgress > 0.3 ? 1.0 : 0.0,
         duration: const Duration(milliseconds: 300),
@@ -161,19 +163,6 @@ class _RedesignedAllRanksPageState extends State<RedesignedAllRanksPage> {
       ),
       child: Column(
         children: [
-          // Inspirational Quote
-          Text(
-            '"Ranks in Uriel aren\'t about competition - they\'re about growth. Every learner\'s path is unique, but the journey is shared."',
-            textAlign: TextAlign.center,
-            style: GoogleFonts.inter(
-              fontSize: isSmallScreen ? 16 : 20,
-              fontWeight: FontWeight.w400,
-              fontStyle: FontStyle.italic,
-              color: const Color(0xFF6E6E73),
-              height: 1.6,
-            ),
-          ),
-          const SizedBox(height: 32),
           Text(
             'Climb the Ranks',
             textAlign: TextAlign.center,
@@ -206,8 +195,9 @@ class _RedesignedAllRanksPageState extends State<RedesignedAllRanksPage> {
       orElse: () => _userCurrentRank!,
     );
     final xpNeeded = nextRank.minXP - widget.userXP!;
-    final progressPercent = ((widget.userXP! - _userCurrentRank!.minXP) / 
-        (_userCurrentRank!.maxXP - _userCurrentRank!.minXP) * 100).clamp(0, 100);
+    final progressPercent = _userCurrentRank!.rank == nextRank.rank 
+        ? 100.0 
+        : ((widget.userXP! - _userCurrentRank!.minXP) / (nextRank.minXP - _userCurrentRank!.minXP) * 100).clamp(0.0, 100.0);
     
     return Container(
       margin: EdgeInsets.symmetric(
@@ -341,7 +331,7 @@ class _RedesignedAllRanksPageState extends State<RedesignedAllRanksPage> {
               ),
               const SizedBox(height: 8),
               Text(
-                '${xpNeeded > 0 ? "${_rankService.formatXP(xpNeeded)} XP to next rank" : "Max rank achieved!"}',
+                xpNeeded > 0 ? "${_rankService.formatXP(xpNeeded)} XP to next rank" : "Max rank achieved!",
                 style: GoogleFonts.inter(
                   fontSize: 12,
                   color: const Color(0xFF86868B),
@@ -506,176 +496,6 @@ class _RedesignedAllRanksPageState extends State<RedesignedAllRanksPage> {
             ),
           ],
         ),
-      ),
-    );
-  }
-
-  // XP Economy Table
-  Widget _buildXPEconomy(bool isSmallScreen) {
-    final xpData = [
-      {'action': 'Daily login', 'xp': '50 XP', 'notes': ''},
-      {'action': 'Completing a quiz (40 questions)', 'xp': '200 XP', 'notes': '5 XP per question + completion bonus'},
-      {'action': 'Perfect quiz score (≥90%)', 'xp': '+100 XP bonus', 'notes': ''},
-      {'action': 'Uploading notes', 'xp': '150 XP', 'notes': ''},
-      {'action': 'Receiving upvotes/downloads on notes', 'xp': '+10 XP per upvote', 'notes': ''},
-      {'action': 'Completing AI Revision Plan', 'xp': '500 XP', 'notes': ''},
-      {'action': 'Maintaining 7-day streak', 'xp': '+300 XP bonus', 'notes': ''},
-      {'action': 'Achieving new badge', 'xp': '250–500 XP', 'notes': ''},
-      {'action': 'Finishing a full subject module', 'xp': '1000–2000 XP', 'notes': ''},
-      {'action': 'Monthly contest (winner)', 'xp': '5000 XP', 'notes': ''},
-    ];
-
-    return Container(
-      margin: EdgeInsets.symmetric(
-        horizontal: isSmallScreen ? 24 : 64,
-        vertical: 60,
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            '📈 XP Economy',
-            style: GoogleFonts.inter(
-              fontSize: isSmallScreen ? 28 : 36,
-              fontWeight: FontWeight.w700,
-              color: const Color(0xFF1D1D1F),
-              height: 1.1,
-            ),
-          ),
-          const SizedBox(height: 16),
-          Text(
-            'Understand how you can earn XP and progress through ranks',
-            style: GoogleFonts.inter(
-              fontSize: 16,
-              color: const Color(0xFF6E6E73),
-              height: 1.5,
-            ),
-          ),
-          const SizedBox(height: 32),
-          
-          // Table Container
-          Container(
-            decoration: BoxDecoration(
-              border: Border.all(color: const Color(0xFFE5E5EA)),
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Column(
-              children: [
-                // Table Header
-                Container(
-                  padding: EdgeInsets.all(isSmallScreen ? 16 : 20),
-                  decoration: const BoxDecoration(
-                    color: Color(0xFFF5F5F7),
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(12),
-                      topRight: Radius.circular(12),
-                    ),
-                  ),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        flex: 3,
-                        child: Text(
-                          'ACTION',
-                          style: GoogleFonts.inter(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w700,
-                            color: const Color(0xFF6E6E73),
-                            letterSpacing: 1,
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        flex: 2,
-                        child: Text(
-                          'XP REWARD',
-                          style: GoogleFonts.inter(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w700,
-                            color: const Color(0xFF6E6E73),
-                            letterSpacing: 1,
-                          ),
-                        ),
-                      ),
-                      if (!isSmallScreen)
-                        Expanded(
-                          flex: 3,
-                          child: Text(
-                            'NOTES',
-                            style: GoogleFonts.inter(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w700,
-                              color: const Color(0xFF6E6E73),
-                              letterSpacing: 1,
-                            ),
-                          ),
-                        ),
-                    ],
-                  ),
-                ),
-                
-                // Table Rows
-                ...xpData.asMap().entries.map((entry) {
-                  final index = entry.key;
-                  final row = entry.value;
-                  final isLast = index == xpData.length - 1;
-                  
-                  return Container(
-                    padding: EdgeInsets.all(isSmallScreen ? 16 : 20),
-                    decoration: BoxDecoration(
-                      border: isLast ? null : const Border(
-                        bottom: BorderSide(color: Color(0xFFE5E5EA)),
-                      ),
-                      borderRadius: isLast ? const BorderRadius.only(
-                        bottomLeft: Radius.circular(12),
-                        bottomRight: Radius.circular(12),
-                      ) : null,
-                    ),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Expanded(
-                          flex: 3,
-                          child: Text(
-                            row['action']!,
-                            style: GoogleFonts.inter(
-                              fontSize: 15,
-                              color: const Color(0xFF1D1D1F),
-                              height: 1.5,
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          flex: 2,
-                          child: Text(
-                            row['xp']!,
-                            style: GoogleFonts.firaCode(
-                              fontSize: 15,
-                              fontWeight: FontWeight.w600,
-                              color: const Color(0xFF0071E3),
-                            ),
-                          ),
-                        ),
-                        if (!isSmallScreen)
-                          Expanded(
-                            flex: 3,
-                            child: Text(
-                              row['notes']!,
-                              style: GoogleFonts.inter(
-                                fontSize: 14,
-                                color: const Color(0xFF6E6E73),
-                                height: 1.5,
-                              ),
-                            ),
-                          ),
-                      ],
-                    ),
-                  );
-                }).toList(),
-              ],
-            ),
-          ),
-        ],
       ),
     );
   }
