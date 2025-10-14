@@ -1117,68 +1117,26 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                if (currentRank != null) ...[
-                  RichText(
-                    text: TextSpan(
-                      style: GoogleFonts.playfairDisplay(
-                        fontSize: isSmallScreen ? 22 : 28,
-                        fontWeight: FontWeight.bold,
-                        color: const Color(0xFF1A1E3F),
-                      ),
-                      children: [
-                        TextSpan(text: 'Hello $userName!\n'),
-                        TextSpan(
-                          text: "You're a ${currentRank!.name} with $userXP XP.\n",
-                          style: GoogleFonts.montserrat(
-                            fontSize: isSmallScreen ? 14 : 16,
-                            fontWeight: FontWeight.normal,
-                            color: Colors.grey[700],
-                          ),
-                        ),
-                        if (nextRank != null) ...[
-                          TextSpan(
-                            text: 'Just ${nextRank!.minXP - userXP} XP left to reach your next rank!\n',
-                            style: GoogleFonts.montserrat(
-                              fontSize: isSmallScreen ? 14 : 16,
-                              fontWeight: FontWeight.normal,
-                              color: Colors.grey[700],
-                            ),
-                          ),
-                        ],
-                        TextSpan(
-                          text: "Keep learning, and let's move up together!",
-                          style: GoogleFonts.montserrat(
-                            fontSize: isSmallScreen ? 14 : 16,
-                            fontWeight: FontWeight.normal,
-                            color: Colors.grey[600],
-                            fontStyle: FontStyle.italic,
-                          ),
-                        ),
-                      ],
+                RichText(
+                  text: TextSpan(
+                    style: GoogleFonts.playfairDisplay(
+                      fontSize: isSmallScreen ? 22 : 28,
+                      fontWeight: FontWeight.bold,
+                      color: const Color(0xFF1A1E3F),
                     ),
-                  ),
-                ] else ...[
-                  RichText(
-                    text: TextSpan(
-                      style: GoogleFonts.playfairDisplay(
-                        fontSize: isSmallScreen ? 22 : 28,
-                        fontWeight: FontWeight.bold,
-                        color: const Color(0xFF1A1E3F),
-                      ),
-                      children: [
-                        TextSpan(text: 'Welcome $userName!'),
-                        TextSpan(
-                          text: ' Ready to continue your learning journey?',
-                          style: GoogleFonts.montserrat(
-                            fontSize: isSmallScreen ? 14 : 16,
-                            fontWeight: FontWeight.normal,
-                            color: Colors.grey[600],
-                          ),
+                    children: [
+                      TextSpan(text: 'Welcome $userName!\n'),
+                      TextSpan(
+                        text: 'Ready to rise through the ranks? Earn XP and dominate the leaderboards. Start a quiz now!',
+                        style: GoogleFonts.montserrat(
+                          fontSize: isSmallScreen ? 14 : 16,
+                          fontWeight: FontWeight.normal,
+                          color: Colors.grey[600],
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                ],
+                ),
               ],
             ),
           ),
