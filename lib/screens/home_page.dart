@@ -61,6 +61,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   // Subject progress data - Live from quiz performance
   List<SubjectProgress> _subjectProgress = [];
   
+  // Subject time spent data
+  Map<String, double> _subjectTimeSpent = {};
+  
   // Recent activity data
   // ignore: unused_field
   List<Map<String, dynamic>> _recentActivity = [];
@@ -284,8 +287,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       int pastQuestionsTotal = 0;
       int pastQuestionsCorrect = 0;
       int triviaTotal = 0;
-      int triviaCorrect = 0;
+      int triviaCorrectCount = 0;
       Map<String, List<double>> subjectScores = {};
+      Map<String, double> subjectTimeSpent = {}; // Track time spent per subject
       List<DateTime> activityDates = [];
       List<Map<String, dynamic>> recentQuizzes = [];
       
@@ -310,17 +314,20 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           pastQuestionsCorrect += correct;
         }
         
-        // Separate tracking for trivia
+      // Separate tracking for trivia
         if (quizType.toLowerCase().contains('trivia') || 
             subject.toLowerCase().contains('trivia')) {
           triviaTotal += questions;
-          triviaCorrect += correct;
+          triviaCorrectCount += correct;
         }
         
         if (!subjectScores.containsKey(subject)) {
           subjectScores[subject] = [];
         }
         subjectScores[subject]!.add(score);
+        
+        // Track time spent per subject (estimate: 2 minutes per question)
+        subjectTimeSpent[subject] = (subjectTimeSpent[subject] ?? 0) + (questions * 2.0);
         
         // Track activity dates for streak
         if (data['timestamp'] != null) {
@@ -360,7 +367,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       
       // Calculate trivia progress
       double triviaAvg = triviaTotal > 0 
-          ? (triviaCorrect / triviaTotal * 100) 
+          ? (triviaCorrectCount / triviaTotal * 100) 
           : 0.0;
       
       // Calculate streak
@@ -414,6 +421,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         currentStreak = streak;
         weeklyStudyHours = studyHours;
         _subjectProgress = subjects;
+        _subjectTimeSpent = subjectTimeSpent;
         _recentActivity = recentQuizzes;
         
         // Past questions metrics
@@ -423,7 +431,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         // Trivia metrics
         triviaQuestionsAnswered = triviaTotal;
         triviaProgress = triviaAvg;
-        triviaCorrect = triviaCorrect;
+        triviaCorrect = triviaCorrectCount;
       });
       
       // Generate dynamic activity items
@@ -3272,46 +3280,574 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           
           const SizedBox(height: 16),
           
-          // Trivia Stats
+          // Enhanced Trivia Challenge Card
           Container(
-            padding: const EdgeInsets.all(16),
+            padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
               gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
                 colors: [
-                  Colors.orange.shade600,
-                  Colors.orange.shade400,
+                  Colors.deepPurple.shade600,
+                  Colors.deepPurple.shade400,
+                  Colors.purple.shade400,
                 ],
               ),
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(16),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.deepPurple.withValues(alpha: 0.3),
+                  blurRadius: 15,
+                  offset: const Offset(0, 8),
+                ),
+              ],
             ),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                // Header with icon and title
                 Row(
                   children: [
-                    const Icon(Icons.emoji_events, color: Colors.white, size: 20),
-                    const SizedBox(width: 8),
-                    Text(
-                      'Trivia Challenge',
-                      style: GoogleFonts.playfairDisplay(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
+                    Container(
+                      padding: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        color: Colors.white.withValues(alpha: 0.2),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: const Icon(
+                        Icons.psychology,
                         color: Colors.white,
+                        size: 24,
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Trivia Challenge',
+                            style: GoogleFonts.playfairDisplay(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Text(
+                            'Test your knowledge & earn rewards!',
+                            style: GoogleFonts.montserrat(
+                              fontSize: 12,
+                              color: Colors.white.withValues(alpha: 0.8),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
                 ),
-                const SizedBox(height: 12),
+                const SizedBox(height: 20),
+
+                // Stats Row with enhanced design
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    _buildTriviaStatItem('Answered', triviaQuestionsAnswered.toString()),
-                    Container(width: 1, height: 30, color: Colors.white24),
-                    _buildTriviaStatItem('Score', '${triviaProgress.toStringAsFixed(1)}%'),
-                    Container(width: 1, height: 30, color: Colors.white24),
-                    _buildTriviaStatItem('Correct', triviaCorrect.toString()),
+                    // Answered Questions
+                    Expanded(
+                      child: Container(
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          color: Colors.white.withValues(alpha: 0.1),
+                          borderRadius: BorderRadius.circular(12),
+                          border: Border.all(
+                            color: Colors.white.withValues(alpha: 0.2),
+                          ),
+                        ),
+                        child: Column(
+                          children: [
+                            Text(
+                              triviaQuestionsAnswered.toString(),
+                              style: GoogleFonts.montserrat(
+                                fontSize: 24,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            ),
+                            const SizedBox(height: 4),
+                            Text(
+                              'Questions\nAnswered',
+                              textAlign: TextAlign.center,
+                              style: GoogleFonts.montserrat(
+                                fontSize: 10,
+                                color: Colors.white.withValues(alpha: 0.8),
+                                height: 1.2,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 8),
+
+                    // Score Percentage
+                    Expanded(
+                      child: Container(
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          color: Colors.white.withValues(alpha: 0.1),
+                          borderRadius: BorderRadius.circular(12),
+                          border: Border.all(
+                            color: Colors.white.withValues(alpha: 0.2),
+                          ),
+                        ),
+                        child: Column(
+                          children: [
+                            Text(
+                              '${triviaProgress.toStringAsFixed(1)}%',
+                              style: GoogleFonts.montserrat(
+                                fontSize: 24,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            ),
+                            const SizedBox(height: 4),
+                            Text(
+                              'Average\nScore',
+                              textAlign: TextAlign.center,
+                              style: GoogleFonts.montserrat(
+                                fontSize: 10,
+                                color: Colors.white.withValues(alpha: 0.8),
+                                height: 1.2,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 8),
+
+                    // Current Streak
+                    Expanded(
+                      child: Container(
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          color: Colors.white.withValues(alpha: 0.1),
+                          borderRadius: BorderRadius.circular(12),
+                          border: Border.all(
+                            color: Colors.white.withValues(alpha: 0.2),
+                          ),
+                        ),
+                        child: Column(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                const Icon(
+                                  Icons.local_fire_department,
+                                  color: Colors.orange,
+                                  size: 16,
+                                ),
+                                const SizedBox(width: 4),
+                                Text(
+                                  '3', // This should be dynamic based on actual streak data
+                                  style: GoogleFonts.montserrat(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(height: 4),
+                            Text(
+                              'Day\nStreak',
+                              textAlign: TextAlign.center,
+                              style: GoogleFonts.montserrat(
+                                fontSize: 10,
+                                color: Colors.white.withValues(alpha: 0.8),
+                                height: 1.2,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
                   ],
                 ),
+
+                const SizedBox(height: 20),
+
+                // Progress Bar for next milestone
+                Container(
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withValues(alpha: 0.1),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Next Milestone',
+                            style: GoogleFonts.montserrat(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Text(
+                            '50/100 XP',
+                            style: GoogleFonts.montserrat(
+                              fontSize: 10,
+                              color: Colors.white.withValues(alpha: 0.8),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 8),
+                      LinearProgressIndicator(
+                        value: 0.5, // This should be dynamic
+                        backgroundColor: Colors.white.withValues(alpha: 0.2),
+                        valueColor: const AlwaysStoppedAnimation<Color>(Colors.white),
+                        borderRadius: BorderRadius.circular(4),
+                        minHeight: 6,
+                      ),
+                      const SizedBox(height: 4),
+                      Text(
+                        'Complete 5 more questions to unlock "Trivia Master" badge!',
+                        style: GoogleFonts.montserrat(
+                          fontSize: 10,
+                          color: Colors.white.withValues(alpha: 0.9),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                const SizedBox(height: 20),
+
+                // Call-to-Action Button
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    onPressed: () => setState(() => _selectedIndex = 3), // Navigate to Trivia tab
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      foregroundColor: Colors.deepPurple.shade600,
+                      padding: const EdgeInsets.symmetric(vertical: 14),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                      elevation: 0,
+                      shadowColor: Colors.transparent,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Icon(Icons.play_arrow, size: 18),
+                        const SizedBox(width: 8),
+                        Text(
+                          'Start Trivia Challenge',
+                          style: GoogleFonts.montserrat(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 14,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ],
+            ),
+          ),
+          
+          const SizedBox(height: 16),
+          
+          // Data Analytics Section
+          _buildDataAnalyticsSection(),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildDataAnalyticsSection() {
+    return Container(
+      padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.05),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              const Icon(Icons.analytics, color: Color(0xFF1A1E3F), size: 20),
+              const SizedBox(width: 8),
+              Text(
+                'Performance Analytics',
+                style: GoogleFonts.playfairDisplay(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: const Color(0xFF1A1E3F),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 16),
+          
+          // Charts Row - Responsive layout
+          LayoutBuilder(
+            builder: (context, constraints) {
+              final isSmallScreen = constraints.maxWidth < 600;
+              
+              if (isSmallScreen) {
+                // Mobile: Stack charts vertically
+                return Column(
+                  children: [
+                    _buildSubjectPerformancePieChart(),
+                    const SizedBox(height: 16),
+                    _buildWeeklyProgressBarChart(),
+                    const SizedBox(height: 16),
+                    _buildTriviaPerformanceChart(),
+                  ],
+                );
+              } else {
+                // Desktop: Two charts per row
+                return Column(
+                  children: [
+                    Row(
+                      children: [
+                        Expanded(child: _buildSubjectPerformancePieChart()),
+                        const SizedBox(width: 16),
+                        Expanded(child: _buildWeeklyProgressBarChart()),
+                      ],
+                    ),
+                    const SizedBox(height: 16),
+                    _buildTriviaPerformanceChart(),
+                  ],
+                );
+              }
+            },
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildSubjectPerformancePieChart() {
+    // Simple custom pie chart using basic Flutter widgets
+    return Container(
+      height: 200,
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: Colors.grey.shade50,
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Column(
+        children: [
+          Text(
+            'Study Time by Subject',
+            style: GoogleFonts.montserrat(
+              fontSize: 14,
+              fontWeight: FontWeight.w600,
+              color: const Color(0xFF1A1E3F),
+            ),
+          ),
+          const SizedBox(height: 16),
+          if (_subjectTimeSpent.isEmpty) ...[
+            Expanded(
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.timer, color: Colors.grey, size: 48),
+                    const SizedBox(height: 8),
+                    Text(
+                      'No study time data yet',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 12,
+                        color: Colors.grey[600],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ] else ...[
+            Expanded(
+              child: Row(
+                children: [
+                  // Simple bar representation showing study time
+                  Expanded(
+                    flex: 3,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: _subjectTimeSpent.entries.map((entry) {
+                        final subjectName = entry.key;
+                        final timeSpent = entry.value;
+                        final totalTime = _subjectTimeSpent.values.fold(0.0, (sum, time) => sum + time);
+                        final percentage = totalTime > 0 ? (timeSpent / totalTime) : 0.0;
+                        
+                        // Get color for subject (reuse from subject progress if available)
+                        final subjectProgress = _subjectProgress.firstWhere(
+                          (sp) => sp.name == subjectName,
+                          orElse: () => SubjectProgress(subjectName, 0, Colors.blue),
+                        );
+                        
+                        return Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 2),
+                            child: Row(
+                              children: [
+                                Container(
+                                  width: 12,
+                                  height: 12,
+                                  decoration: BoxDecoration(
+                                    color: subjectProgress.color,
+                                    borderRadius: BorderRadius.circular(2),
+                                  ),
+                                ),
+                                const SizedBox(width: 8),
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        subjectName,
+                                        style: GoogleFonts.montserrat(
+                                          fontSize: 11,
+                                          fontWeight: FontWeight.w500,
+                                          color: Colors.black87,
+                                        ),
+                                      ),
+                                      const SizedBox(height: 2),
+                                      LinearProgressIndicator(
+                                        value: percentage,
+                                        backgroundColor: subjectProgress.color.withOpacity(0.2),
+                                        valueColor: AlwaysStoppedAnimation<Color>(subjectProgress.color),
+                                        minHeight: 4,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                const SizedBox(width: 8),
+                                Text(
+                                  _formatTime(timeSpent),
+                                  style: GoogleFonts.montserrat(
+                                    fontSize: 11,
+                                    fontWeight: FontWeight.bold,
+                                    color: subjectProgress.color,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        );
+                      }).toList(),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ],
+      ),
+    );
+  }
+
+  Widget _buildWeeklyProgressBarChart() {
+    // Generate sample weekly data (in real app, this would come from actual data)
+    final weeklyData = [
+      {'day': 'Mon', 'questions': 5, 'score': 75.0},
+      {'day': 'Tue', 'questions': 8, 'score': 82.0},
+      {'day': 'Wed', 'questions': 3, 'score': 90.0},
+      {'day': 'Thu', 'questions': 12, 'score': 78.0},
+      {'day': 'Fri', 'questions': 6, 'score': 85.0},
+      {'day': 'Sat', 'questions': 15, 'score': 88.0},
+      {'day': 'Sun', 'questions': 4, 'score': 92.0},
+    ];
+
+    return Container(
+      height: 200,
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: Colors.grey.shade50,
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Column(
+        children: [
+          Text(
+            'Weekly Activity',
+            style: GoogleFonts.montserrat(
+              fontSize: 14,
+              fontWeight: FontWeight.w600,
+              color: const Color(0xFF1A1E3F),
+            ),
+          ),
+          const SizedBox(height: 16),
+          Expanded(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: weeklyData.map((data) {
+                final questions = data['questions'] as int;
+                final maxQuestions = weeklyData.map((d) => d['questions'] as int).reduce((a, b) => a > b ? a : b);
+                final height = questions / maxQuestions;
+
+                return Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 2),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Container(
+                          width: double.infinity,
+                          height: 120 * height,
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFD62828),
+                            borderRadius: BorderRadius.circular(4),
+                          ),
+                          child: Center(
+                            child: Text(
+                              questions.toString(),
+                              style: GoogleFonts.montserrat(
+                                fontSize: 10,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 4),
+                        Text(
+                          data['day'] as String,
+                          style: GoogleFonts.montserrat(
+                            fontSize: 10,
+                            color: Colors.grey[600],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                );
+              }).toList(),
+            ),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            'Questions Answered',
+            style: GoogleFonts.montserrat(
+              fontSize: 10,
+              color: Colors.grey[600],
             ),
           ),
         ],
@@ -3319,28 +3855,208 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     );
   }
 
-  Widget _buildTriviaStatItem(String label, String value) {
-    return Column(
-      children: [
-        Text(
-          value,
-          style: GoogleFonts.montserrat(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
+  Widget _buildTriviaPerformanceChart() {
+    // Trivia performance: correct vs incorrect
+    final correct = triviaCorrect.toDouble();
+    final incorrect = (triviaQuestionsAnswered - triviaCorrect).toDouble();
+    
+    // If no trivia data, show placeholder
+    if (triviaQuestionsAnswered == 0) {
+      return Container(
+        height: 150,
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          color: Colors.grey.shade50,
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.emoji_events_outlined, color: Colors.grey, size: 32),
+              const SizedBox(height: 8),
+              Text(
+                'No Trivia Data Yet',
+                style: GoogleFonts.montserrat(
+                  fontSize: 14,
+                  color: Colors.grey[600],
+                ),
+              ),
+              Text(
+                'Complete trivia challenges to see analytics',
+                style: GoogleFonts.montserrat(
+                  fontSize: 12,
+                  color: Colors.grey[500],
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ],
           ),
         ),
-        const SizedBox(height: 4),
-        Text(
-          label,
-          style: GoogleFonts.montserrat(
-            fontSize: 11,
-            color: Colors.white70,
+      );
+    }
+
+    return Container(
+      height: 200,
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: Colors.grey.shade50,
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Column(
+        children: [
+          Text(
+            'Trivia Performance',
+            style: GoogleFonts.montserrat(
+              fontSize: 14,
+              fontWeight: FontWeight.w600,
+              color: const Color(0xFF1A1E3F),
+            ),
           ),
-        ),
-      ],
+          const SizedBox(height: 16),
+          Expanded(
+            child: Row(
+              children: [
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 4),
+                    child: Column(
+                      children: [
+                        Expanded(
+                          child: Container(
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              color: Colors.green.withOpacity(0.2),
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            child: Align(
+                              alignment: Alignment.bottomCenter,
+                              child: Container(
+                                width: double.infinity,
+                                height: 150 * (correct / triviaQuestionsAnswered),
+                                decoration: BoxDecoration(
+                                  color: Colors.green,
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                        Text(
+                          '${((correct / triviaQuestionsAnswered) * 100).toInt()}%',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.green,
+                          ),
+                        ),
+                        Text(
+                          'Correct',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 10,
+                            color: Colors.grey[600],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 4),
+                    child: Column(
+                      children: [
+                        Expanded(
+                          child: Container(
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              color: Colors.red.withOpacity(0.2),
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            child: Align(
+                              alignment: Alignment.bottomCenter,
+                              child: Container(
+                                width: double.infinity,
+                                height: 150 * (incorrect / triviaQuestionsAnswered),
+                                decoration: BoxDecoration(
+                                  color: Colors.red,
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                        Text(
+                          '${((incorrect / triviaQuestionsAnswered) * 100).toInt()}%',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.red,
+                          ),
+                        ),
+                        Text(
+                          'Incorrect',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 10,
+                            color: Colors.grey[600],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 8),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Row(
+                children: [
+                  Container(
+                    width: 8,
+                    height: 8,
+                    color: Colors.green,
+                  ),
+                  const SizedBox(width: 4),
+                  Text(
+                    '$triviaCorrect Correct',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 10,
+                      color: Colors.grey[700],
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(width: 16),
+              Row(
+                children: [
+                  Container(
+                    width: 8,
+                    height: 8,
+                    color: Colors.red,
+                  ),
+                  const SizedBox(width: 4),
+                  Text(
+                    '${triviaQuestionsAnswered - triviaCorrect} Incorrect',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 10,
+                      color: Colors.grey[700],
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ],
+      ),
     );
   }
+
+
 
   Widget _buildUpcomingDeadlines() {
     // Generate dynamic upcoming items based on user behavior
@@ -4218,6 +4934,16 @@ Widget _buildTextbooksPage() {
         ),
       ),
     );
+  }
+
+  String _formatTime(double minutes) {
+    if (minutes < 60) {
+      return '${minutes.toInt()}m';
+    } else {
+      final hours = (minutes / 60).floor();
+      final remainingMinutes = (minutes % 60).toInt();
+      return remainingMinutes > 0 ? '${hours}h ${remainingMinutes}m' : '${hours}h';
+    }
   }
 
   String _formatXP(int xp) {
