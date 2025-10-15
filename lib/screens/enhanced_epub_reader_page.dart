@@ -63,6 +63,11 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
   // TTS
   FlutterTts? _flutterTts;
   bool _isReading = false;
+  
+  // Extracted book content
+  EpubBook? _epubBook;
+  List<String> _chapterTexts = [];
+  List<String> _chapterTitles = [];
 
   @override
   void initState() {
@@ -85,6 +90,10 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
     await _flutterTts?.setPitch(1.0);
 
     _flutterTts?.setCompletionHandler(() {
+      setState(() => _isReading = false);
+    });
+
+    _flutterTts?.setCancelHandler(() {
       setState(() => _isReading = false);
     });
   }
@@ -184,16 +193,6 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
     }
   }
 
-  Future<void> _saveReadingTime() async {
-    if (_sessionStartTime != null) {
-      final sessionDuration = DateTime.now().difference(_sessionStartTime!);
-      _totalReadingTime += sessionDuration;
-      final prefs = await SharedPreferences.getInstance();
-      await prefs.setInt('reading_time_${widget.bookId}', _totalReadingTime.inSeconds);
-      _sessionStartTime = DateTime.now(); // Reset for next session
-    }
-  }
-
   Future<void> _loadEpub() async {
     try {
       setState(() {
@@ -203,6 +202,11 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
 
       final bytes = await rootBundle.load(widget.assetPath);
       
+      // Load EPUB for text extraction
+      _epubBook = await EpubReader.readBook(bytes.buffer.asUint8List());
+      await _extractChapterTexts();
+      
+      // Load EPUB for viewing
       _epubController = EpubController(
         document: EpubDocument.openData(bytes.buffer.asUint8List()),
       );
@@ -226,6 +230,108 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
         _error = e.toString();
       });
     }
+  }
+
+  Future<void> _saveReadingTime() async {
+    if (_sessionStartTime != null) {
+      final sessionDuration = DateTime.now().difference(_sessionStartTime!);
+      _totalReadingTime += sessionDuration;
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setInt('reading_time_${widget.bookId}', _totalReadingTime.inSeconds);
+      _sessionStartTime = DateTime.now(); // Reset for next session
+    }
+  }
+
+  Future<void> _extractChapterTexts() async {
+    if (_epubBook == null) return;
+
+    final chapters = <String>[];
+    final titles = <String>[];
+
+    // Extract text from chapters in reading order
+    for (final chapter in _epubBook!.Chapters ?? []) {
+      final title = chapter.Title ?? chapter.SubChapters?.firstOrNull?.Title ?? 'Chapter ${chapters.length + 1}';
+      final text = _extractTextFromChapter(chapter);
+      
+      if (text.isNotEmpty) {
+        titles.add(title);
+        chapters.add(text);
+      }
+    }
+
+    // If no chapters found, try to extract from the spine
+    if (chapters.isEmpty && _epubBook!.Schema?.Package?.Spine?.Items != null) {
+      for (final spineItem in _epubBook!.Schema!.Package!.Spine!.Items!) {
+        final manifestItem = _epubBook!.Schema!.Package!.Manifest!.Items!
+            .firstWhere((item) => item.Id == spineItem.IdRef);
+        
+        final content = _epubBook!.Content?.AllFiles?[manifestItem.Href];
+        if (content != null) {
+          String text = '';
+          if (content is EpubTextContentFile) {
+            text = content.Content ?? '';
+          } else if (content is EpubByteContentFile) {
+            // Try to decode as text
+            try {
+              text = String.fromCharCodes(content.Content ?? []);
+            } catch (e) {
+              // Skip binary files
+              continue;
+            }
+          }
+          
+          text = _extractTextFromHtml(text);
+          if (text.isNotEmpty) {
+            titles.add('Chapter ${chapters.length + 1}');
+            chapters.add(text);
+          }
+        }
+      }
+    }
+
+    setState(() {
+      _chapterTitles = titles;
+      _chapterTexts = chapters;
+    });
+  }
+
+  String _extractTextFromChapter(EpubChapter chapter) {
+    // Extract text from the chapter content
+    String text = '';
+    
+    if (chapter.HtmlContent != null) {
+      text = _extractTextFromHtml(chapter.HtmlContent!);
+    }
+    
+    // Also check subchapters
+    if (chapter.SubChapters != null) {
+      for (final subChapter in chapter.SubChapters!) {
+        text += ' ${_extractTextFromChapter(subChapter)}';
+      }
+    }
+    
+    return text.trim();
+  }
+
+  String _extractTextFromHtml(String htmlContent) {
+    // Simple HTML text extraction - remove tags and decode entities
+    String text = htmlContent;
+    
+    // Remove HTML tags
+    text = text.replaceAll(RegExp(r'<[^>]*>'), ' ');
+    
+    // Decode common HTML entities
+    text = text.replaceAll('&nbsp;', ' ');
+    text = text.replaceAll('&amp;', '&');
+    text = text.replaceAll('&lt;', '<');
+    text = text.replaceAll('&gt;', '>');
+    text = text.replaceAll('&quot;', '"');
+    text = text.replaceAll('&#39;', "'");
+    
+    // Clean up whitespace
+    text = text.replaceAll(RegExp(r'\s+'), ' ').trim();
+    
+    return text;
   }
 
   void _toggleBars() {
@@ -364,17 +470,35 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
     } else {
       setState(() => _isReading = true);
 
-      // Try to get current chapter text
       try {
-        // For now, use a sample text since full EPUB text extraction is complex
-        final sampleText = "Reading ${widget.bookTitle} by ${widget.author}. You are currently at page ${_currentPage + 1} of approximately $_totalPages pages, which is ${(_progress * 100).toStringAsFixed(0)} percent complete.";
+        String textToRead = '';
 
-        await _flutterTts?.speak(sampleText);
+        // Try to get current chapter text
+        if (_chapterTexts.isNotEmpty) {
+          // Estimate current chapter based on progress
+          final currentChapterIndex = (_progress * _chapterTexts.length).toInt().clamp(0, _chapterTexts.length - 1);
+          textToRead = _chapterTexts[currentChapterIndex];
+        }
+
+        // Fallback to sample text if no chapter text available
+        if (textToRead.isEmpty) {
+          textToRead = "Reading ${widget.bookTitle} by ${widget.author}. You are currently at page ${_currentPage + 1} of approximately $_totalPages pages, which is ${(_progress * 100).toStringAsFixed(0)} percent complete.";
+        }
+
+        // Chunk the text for better TTS performance
+        final chunks = _chunkText(textToRead);
+
+        // Speak each chunk
+        for (final chunk in chunks) {
+          if (!_isReading) break; // Stop if user cancelled
+          await _flutterTts?.speak(chunk);
+          await _waitForSpeechCompletion();
+        }
 
         // Show feedback
         messenger.showSnackBar(
           SnackBar(
-            content: Text('Reading aloud... Full text extraction coming soon', style: GoogleFonts.inter()),
+            content: Text('Reading aloud completed', style: GoogleFonts.inter()),
             behavior: SnackBarBehavior.floating,
             duration: const Duration(seconds: 3),
           ),
@@ -389,6 +513,36 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
         );
         setState(() => _isReading = false);
       }
+    }
+  }
+
+  List<String> _chunkText(String text, {int chunkSize = 1500}) {
+    final chunks = <String>[];
+    var start = 0;
+
+    while (start < text.length) {
+      var end = (start + chunkSize).clamp(0, text.length);
+
+      // Try to break at sentence boundary
+      final sentenceEnd = text.lastIndexOf(RegExp(r'[.!?]\s'), end);
+      if (sentenceEnd > start + 200) {
+        end = sentenceEnd + 1;
+      }
+
+      final chunk = text.substring(start, end).trim();
+      if (chunk.isNotEmpty) {
+        chunks.add(chunk);
+      }
+
+      start = end;
+    }
+
+    return chunks.where((chunk) => chunk.isNotEmpty).toList();
+  }
+
+  Future<void> _waitForSpeechCompletion() async {
+    while (_isReading) {
+      await Future.delayed(const Duration(milliseconds: 100));
     }
   }
 
