@@ -1319,7 +1319,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               children: [
                 Expanded(
                   child: _buildProgressMetric(
-                    'Overall Completion',
+                    'Average Score',
                     '${overallProgress.toStringAsFixed(1)}%',
                     Icons.trending_up,
                     overallProgress / 100,
@@ -1349,7 +1349,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               children: [
                 Expanded(
                   child: _buildProgressMetric(
-                    'Overall Completion',
+                    'Average Score',
                     '${overallProgress.toStringAsFixed(1)}%',
                     Icons.trending_up,
                     overallProgress / 100,

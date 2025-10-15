@@ -110,7 +110,8 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
           displayName = user.displayName ?? user.email?.split('@')[0] ?? 'You';
         }
         if (displayName.isEmpty) {
-          displayName = 'Student $rank';
+          // Try to get from Firebase Auth if available, otherwise use email prefix
+          displayName = data['email']?.split('@')[0] ?? 'Student $rank';
         }
         
         // Get photo URL - prioritize Firestore profileImageUrl > Firebase Auth photoURL
@@ -328,12 +329,12 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
               ),
               decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
+                borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
                 boxShadow: [
                   BoxShadow(
                     color: Colors.black.withOpacity(0.04),
                     blurRadius: 8,
-                    offset: Offset(0, 2),
+                    offset: const Offset(0, 2),
                   ),
                 ],
               ),
@@ -341,7 +342,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                 children: [
                   // Header with Title and Filter
                   Padding(
-                    padding: EdgeInsets.all(16),
+                    padding: const EdgeInsets.all(16),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -357,7 +358,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                           decoration: BoxDecoration(
-                            color: Color(0xFFF2F2F7),
+                            color: const Color(0xFFF2F2F7),
                             borderRadius: BorderRadius.circular(8),
                           ),
                           child: DropdownButton<String>(
@@ -388,7 +389,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                       horizontal: isSmallScreen ? 8 : 16,
                       vertical: isSmallScreen ? 8 : 10,
                     ),
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xFFF2F2F7),
                       border: Border(
                         top: BorderSide(color: Color(0xFFE5E5EA), width: 1),
@@ -405,7 +406,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                             style: GoogleFonts.inter(
                               fontSize: isSmallScreen ? 11 : 12,
                               fontWeight: FontWeight.w600,
-                              color: Color(0xFF8E8E93),
+                              color: const Color(0xFF8E8E93),
                             ),
                             textAlign: TextAlign.center,
                           ),
@@ -422,7 +423,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                             style: GoogleFonts.inter(
                               fontSize: isSmallScreen ? 10 : 11,
                               fontWeight: FontWeight.w600,
-                              color: Color(0xFF8E8E93),
+                              color: const Color(0xFF8E8E93),
                               letterSpacing: 0.5,
                             ),
                           ),
@@ -436,13 +437,13 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                               style: GoogleFonts.inter(
                                 fontSize: 11,
                                 fontWeight: FontWeight.w600,
-                                color: Color(0xFF8E8E93),
+                                color: const Color(0xFF8E8E93),
                                 letterSpacing: 0.5,
                               ),
                               textAlign: TextAlign.left,
                             ),
                           ),
-                          SizedBox(width: 16),
+                          const SizedBox(width: 16),
                         ],
                         // Questions (hide on mobile)
                         if (!isSmallScreen) ...[
@@ -453,12 +454,12 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                               style: GoogleFonts.inter(
                                 fontSize: 11,
                                 fontWeight: FontWeight.w600,
-                                color: Color(0xFF8E8E93),
+                                color: const Color(0xFF8E8E93),
                               ),
                               textAlign: TextAlign.center,
                             ),
                           ),
-                          SizedBox(width: 16),
+                          const SizedBox(width: 16),
                         ],
                         // XP Points
                         SizedBox(
@@ -468,7 +469,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                             style: GoogleFonts.inter(
                               fontSize: isSmallScreen ? 10 : 11,
                               fontWeight: FontWeight.w600,
-                              color: Color(0xFF8E8E93),
+                              color: const Color(0xFF8E8E93),
                             ),
                             textAlign: TextAlign.right,
                           ),
@@ -507,8 +508,8 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                         if (index == _topUsers.length) {
                           // Show separator
                           return Container(
-                            padding: EdgeInsets.symmetric(vertical: 12),
-                            decoration: BoxDecoration(
+                            padding: const EdgeInsets.symmetric(vertical: 12),
+                            decoration: const BoxDecoration(
                               color: Colors.white,
                               border: Border(
                                 bottom: BorderSide(color: Color(0xFFE5E5EA), width: 1),
@@ -516,20 +517,20 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                             ),
                             child: Row(
                               children: [
-                                Expanded(child: Divider(color: Color(0xFFD1D1D6), thickness: 1)),
+                                const Expanded(child: Divider(color: Color(0xFFD1D1D6), thickness: 1)),
                                 Padding(
-                                  padding: EdgeInsets.symmetric(horizontal: 12),
+                                  padding: const EdgeInsets.symmetric(horizontal: 12),
                                   child: Text(
                                     'YOUR POSITION',
                                     style: GoogleFonts.inter(
                                       fontSize: 11,
-                                      color: Color(0xFF8E8E93),
+                                      color: const Color(0xFF8E8E93),
                                       fontWeight: FontWeight.w600,
                                       letterSpacing: 0.5,
                                     ),
                                   ),
                                 ),
-                                Expanded(child: Divider(color: Color(0xFFD1D1D6), thickness: 1)),
+                                const Expanded(child: Divider(color: Color(0xFFD1D1D6), thickness: 1)),
                               ],
                             ),
                           );
@@ -552,7 +553,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
           SliverToBoxAdapter(
             child: Container(
               margin: EdgeInsets.symmetric(horizontal: isSmallScreen ? 16 : 24),
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.vertical(bottom: Radius.circular(12)),
               ),
@@ -571,7 +572,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
   
   Widget _buildHeroSection(bool isSmallScreen) {
     if (_currentUser == null) {
-      return SliverToBoxAdapter(child: SizedBox.shrink());
+      return const SliverToBoxAdapter(child: SizedBox.shrink());
     }
     
     final user = _currentUser!;
@@ -580,13 +581,13 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
       child: Container(
         margin: EdgeInsets.all(isSmallScreen ? 16 : 24),
         decoration: BoxDecoration(
-          color: Color(0xFFD2B48C), // Solid Beige
+          color: const Color(0xFFD2B48C), // Solid Beige
           borderRadius: BorderRadius.circular(20),
           boxShadow: [
             BoxShadow(
-              color: Color(0xFFD2B48C).withOpacity(0.3),
+              color: const Color(0xFFD2B48C).withOpacity(0.3),
               blurRadius: 20,
-              offset: Offset(0, 8),
+              offset: const Offset(0, 8),
             ),
           ],
         ),
@@ -646,12 +647,12 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                                     child: CachedNetworkImage(
                                       imageUrl: snapshot.data!.imageUrl,
                                       fit: BoxFit.cover,
-                                      placeholder: (context, url) => CircularProgressIndicator(),
-                                      errorWidget: (context, url, error) => Icon(Icons.person, size: 35),
+                                      placeholder: (context, url) => const CircularProgressIndicator(),
+                                      errorWidget: (context, url, error) => const Icon(Icons.person, size: 35),
                                     ),
                                   );
                                 }
-                                return Icon(Icons.person, size: 35, color: Color(0xFF8E8E93));
+                                return const Icon(Icons.person, size: 35, color: Color(0xFF8E8E93));
                               },
                             ),
                           ),
@@ -660,9 +661,9 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                             right: -4,
                             bottom: -4,
                             child: Container(
-                              padding: EdgeInsets.all(6),
+                              padding: const EdgeInsets.all(6),
                               decoration: BoxDecoration(
-                                color: Color(0xFF34C759), // iOS Green
+                                color: const Color(0xFF34C759), // iOS Green
                                 shape: BoxShape.circle,
                                 border: Border.all(color: Colors.white, width: 2),
                               ),
@@ -679,7 +680,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                         ],
                       ),
                       
-                      SizedBox(width: 16),
+                      const SizedBox(width: 16),
                       
                       // User Info - Position, Name, Points
                       Expanded(
@@ -699,13 +700,13 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                                   ),
                                 ),
                                 if (user.rankChange != null && user.rankChange != 0) ...[
-                                  SizedBox(width: 6),
+                                  const SizedBox(width: 6),
                                   Container(
-                                    padding: EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                                    padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                                     decoration: BoxDecoration(
                                       color: user.rankChange! > 0 
-                                          ? Color(0xFF34C759).withOpacity(0.3)
-                                          : Color(0xFFFF3B30).withOpacity(0.3),
+                                          ? const Color(0xFF34C759).withOpacity(0.3)
+                                          : const Color(0xFFFF3B30).withOpacity(0.3),
                                       borderRadius: BorderRadius.circular(6),
                                     ),
                                     child: Row(
@@ -716,7 +717,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                                           size: 10,
                                           color: Colors.white,
                                         ),
-                                        SizedBox(width: 2),
+                                        const SizedBox(width: 2),
                                         Text(
                                           '${user.rankChange!.abs()}',
                                           style: GoogleFonts.inter(
@@ -731,7 +732,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                                 ],
                               ],
                             ),
-                            SizedBox(height: 4),
+                            const SizedBox(height: 4),
                             // Name
                             Text(
                               user.displayName,
@@ -743,7 +744,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
                             ),
-                            SizedBox(height: 2),
+                            const SizedBox(height: 2),
                             // Accumulated Points
                             Text(
                               '${user.totalXP} XP Accumulated',
@@ -760,13 +761,13 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                       // Share Button
                       IconButton(
                         onPressed: () => _shareRank(user),
-                        icon: Icon(Icons.ios_share, color: Colors.white),
+                        icon: const Icon(Icons.ios_share, color: Colors.white),
                         tooltip: 'Share',
                       ),
                     ],
                   ),
                   
-                  SizedBox(height: 24),
+                  const SizedBox(height: 24),
                   
                   // XP Progress to Next Rank
                   FutureBuilder<LeaderboardRank?>(
@@ -801,14 +802,14 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                                 ),
                               ],
                             ),
-                            SizedBox(height: 8),
+                            const SizedBox(height: 8),
                             ClipRRect(
                               borderRadius: BorderRadius.circular(10),
                               child: LinearProgressIndicator(
                                 value: progress,
                                 minHeight: 12,
                                 backgroundColor: Colors.white.withOpacity(0.3),
-                                valueColor: AlwaysStoppedAnimation<Color>(
+                                valueColor: const AlwaysStoppedAnimation<Color>(
                                   Color(0xFF34C759), // iOS Green
                                 ),
                               ),
@@ -840,7 +841,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
     return SliverToBoxAdapter(
       child: Container(
         height: 52,
-        margin: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(14),
@@ -848,7 +849,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
             BoxShadow(
               color: Colors.black.withOpacity(0.04),
               blurRadius: 8,
-              offset: Offset(0, 2),
+              offset: const Offset(0, 2),
             ),
           ],
         ),
@@ -856,11 +857,11 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
           controller: _tabController,
           isScrollable: true,
           indicator: BoxDecoration(
-            color: Color(0xFFD2B48C).withOpacity(0.1),
+            color: const Color(0xFFD2B48C).withOpacity(0.1),
             borderRadius: BorderRadius.circular(10),
           ),
-          labelColor: Color(0xFFD2B48C),
-          unselectedLabelColor: Color(0xFF8E8E93),
+          labelColor: const Color(0xFFD2B48C),
+          unselectedLabelColor: const Color(0xFF8E8E93),
           labelStyle: GoogleFonts.inter(
             fontSize: 14,
             fontWeight: FontWeight.w600,
@@ -872,12 +873,12 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
           tabs: _categories.map((cat) {
             return Tab(
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 12),
+                padding: const EdgeInsets.symmetric(horizontal: 12),
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Text(cat['emoji']!),
-                    SizedBox(width: 6),
+                    const SizedBox(width: 6),
                     Text(cat['name']!),
                   ],
                 ),
@@ -909,7 +910,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(16),
               ),
-              child: Center(child: CircularProgressIndicator(color: Color(0xFFD2B48C))),
+              child: const Center(child: CircularProgressIndicator(color: Color(0xFFD2B48C))),
             );
           }
           
@@ -933,7 +934,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                 BoxShadow(
                   color: Colors.black.withOpacity(0.04),
                   blurRadius: 12,
-                  offset: Offset(0, 2),
+                  offset: const Offset(0, 2),
                 ),
               ],
             ),
@@ -945,31 +946,31 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                   style: GoogleFonts.inter(
                     fontSize: 15,
                     fontWeight: FontWeight.w600,
-                    color: Color(0xFF1C1C1E),
+                    color: const Color(0xFF1C1C1E),
                   ),
                 ),
-                SizedBox(height: 16),
+                const SizedBox(height: 16),
                 Row(
                   children: [
                     _buildStatChip(
                       '$questions',
                       'Questions',
                       Icons.quiz_outlined,
-                      Color(0xFFD2B48C),
+                      const Color(0xFFD2B48C),
                     ),
-                    SizedBox(width: 12),
+                    const SizedBox(width: 12),
                     _buildStatChip(
                       '${accuracy.toStringAsFixed(0)}%',
                       'Accuracy',
                       Icons.trending_up,
-                      Color(0xFF34C759),
+                      const Color(0xFF34C759),
                     ),
-                    SizedBox(width: 12),
+                    const SizedBox(width: 12),
                     _buildStatChip(
                       '${user.dailyStreak}',
                       'Day Streak',
                       Icons.local_fire_department,
-                      Color(0xFFFF9500),
+                      const Color(0xFFFF9500),
                     ),
                   ],
                 ),
@@ -984,7 +985,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
   Widget _buildStatChip(String value, String label, IconData icon, Color color) {
     return Expanded(
       child: Container(
-        padding: EdgeInsets.symmetric(vertical: 12, horizontal: 8),
+        padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 8),
         decoration: BoxDecoration(
           color: color.withOpacity(0.08),
           borderRadius: BorderRadius.circular(12),
@@ -993,157 +994,25 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
         child: Column(
           children: [
             Icon(icon, size: 20, color: color),
-            SizedBox(height: 6),
+            const SizedBox(height: 6),
             Text(
               value,
               style: GoogleFonts.inter(
                 fontSize: 18,
                 fontWeight: FontWeight.w700,
-                color: Color(0xFF1C1C1E),
+                color: const Color(0xFF1C1C1E),
               ),
             ),
             Text(
               label,
               style: GoogleFonts.inter(
                 fontSize: 10,
-                color: Color(0xFF8E8E93),
+                color: const Color(0xFF8E8E93),
               ),
               textAlign: TextAlign.center,
             ),
           ],
         ),
-      ),
-    );
-  }
-  
-  Widget _buildPodium(bool isSmallScreen) {
-    if (_topUsers.length < 3) return SliverToBoxAdapter(child: SizedBox.shrink());
-    
-    final first = _topUsers[0];
-    final second = _topUsers[1];
-    final third = _topUsers[2];
-    
-    return SliverToBoxAdapter(
-      child: Container(
-        padding: EdgeInsets.symmetric(
-          horizontal: isSmallScreen ? 16 : 24,
-          vertical: 24,
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            // 2nd Place
-            _buildPodiumCard(second, 2, 130, Color(0xFFC0C0C0)),
-            SizedBox(width: 12),
-            // 1st Place (Taller)
-            _buildPodiumCard(first, 1, 160, Color(0xFFFFD700)),
-            SizedBox(width: 12),
-            // 3rd Place
-            _buildPodiumCard(third, 3, 110, Color(0xFFCD7F32)),
-          ],
-        ),
-      ),
-    );
-  }
-  
-  Widget _buildPodiumCard(LeaderboardUser user, int position, double height, Color color) {
-    final emoji = position == 1 ? '🏆' : position == 2 ? '🥈' : '🥉';
-    
-    return Flexible(
-      child: Column(
-        children: [
-          // Avatar
-          Container(
-            width: position == 1 ? 70 : 60,
-            height: position == 1 ? 70 : 60,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: Colors.white,
-              border: Border.all(color: color, width: 3),
-              boxShadow: [
-                BoxShadow(
-                  color: color.withOpacity(0.3),
-                  blurRadius: 12,
-                  offset: Offset(0, 4),
-                ),
-              ],
-            ),
-            child: FutureBuilder<LeaderboardRank?>(
-              future: LeaderboardRankService().getUserRank(user.totalXP),
-              builder: (context, snapshot) {
-                if (snapshot.data?.imageUrl != null) {
-                  return ClipOval(
-                    child: CachedNetworkImage(
-                      imageUrl: snapshot.data!.imageUrl,
-                      fit: BoxFit.cover,
-                      placeholder: (context, url) => CircularProgressIndicator(),
-                      errorWidget: (context, url, error) => Icon(Icons.person),
-                    ),
-                  );
-                }
-                return Icon(Icons.person, size: position == 1 ? 35 : 30, color: Color(0xFF8E8E93));
-              },
-            ),
-          ),
-          SizedBox(height: 8),
-          // Name
-          Text(
-            user.displayName,
-            style: GoogleFonts.inter(
-              fontSize: position == 1 ? 14 : 12,
-              fontWeight: FontWeight.w600,
-              color: Color(0xFF1C1C1E),
-            ),
-            textAlign: TextAlign.center,
-            maxLines: 1,
-            overflow: TextOverflow.ellipsis,
-          ),
-          SizedBox(height: 2),
-          // XP
-          Text(
-            '${user.totalXP} XP',
-            style: GoogleFonts.inter(
-              fontSize: 11,
-              color: Color(0xFF8E8E93),
-            ),
-          ),
-          SizedBox(height: 8),
-          // Podium
-          Container(
-            width: 90,
-            height: height,
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  color.withOpacity(0.2),
-                  color.withOpacity(0.4),
-                ],
-              ),
-              borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
-              border: Border.all(color: color.withOpacity(0.5), width: 2),
-            ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  emoji,
-                  style: TextStyle(fontSize: position == 1 ? 40 : 32),
-                ),
-                Text(
-                  '#$position',
-                  style: GoogleFonts.inter(
-                    fontSize: position == 1 ? 24 : 20,
-                    fontWeight: FontWeight.w700,
-                    color: Color(0xFF1C1C1E),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
       ),
     );
   }
@@ -1154,13 +1023,13 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
     return Container(
       decoration: BoxDecoration(
         color: isCurrentUser 
-            ? Color(0xFFD2B48C).withOpacity(0.12) 
+            ? const Color(0xFFD2B48C).withOpacity(0.12) 
             : Colors.white,
         border: Border(
           left: isCurrentUser 
-              ? BorderSide(color: Color(0xFFD2B48C), width: 4)
+              ? const BorderSide(color: Color(0xFFD2B48C), width: 4)
               : BorderSide.none,
-          bottom: BorderSide(color: Color(0xFFE5E5EA), width: 1),
+          bottom: const BorderSide(color: Color(0xFFE5E5EA), width: 1),
         ),
       ),
       child: Material(
@@ -1182,7 +1051,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                     style: GoogleFonts.inter(
                       fontSize: isSmallScreen ? 13 : 15,
                       fontWeight: FontWeight.w600,
-                      color: isCurrentUser ? Color(0xFFD2B48C) : Color(0xFF3C3C43),
+                      color: isCurrentUser ? const Color(0xFFD2B48C) : const Color(0xFF3C3C43),
                     ),
                     textAlign: TextAlign.center,
                   ),
@@ -1200,13 +1069,13 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                               : Icons.arrow_drop_down,
                           size: isSmallScreen ? 18 : 20,
                           color: user.rankChange! > 0 
-                              ? Color(0xFF34C759) 
-                              : Color(0xFFFF3B30),
+                              ? const Color(0xFF34C759) 
+                              : const Color(0xFFFF3B30),
                         )
                       : Container(
                           width: 3,
                           height: 3,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Color(0xFFD1D1D6),
                             shape: BoxShape.circle,
                           ),
@@ -1221,9 +1090,9 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                   height: isSmallScreen ? 32 : 40,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: Color(0xFFF2F2F7),
+                    color: const Color(0xFFF2F2F7),
                     border: Border.all(
-                      color: isCurrentUser ? Color(0xFFD2B48C) : Color(0xFFE5E5EA),
+                      color: isCurrentUser ? const Color(0xFFD2B48C) : const Color(0xFFE5E5EA),
                       width: isSmallScreen ? 1.5 : 2,
                     ),
                   ),
@@ -1248,18 +1117,18 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                               style: GoogleFonts.inter(
                                 fontSize: isSmallScreen ? 13 : 14,
                                 fontWeight: FontWeight.w600,
-                                color: Color(0xFF1C1C1E),
+                                color: const Color(0xFF1C1C1E),
                               ),
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
                             ),
                           ),
                           if (isCurrentUser) ...[
-                            SizedBox(width: 4),
+                            const SizedBox(width: 4),
                             Container(
-                              padding: EdgeInsets.symmetric(horizontal: 4, vertical: 1),
+                              padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
                               decoration: BoxDecoration(
-                                color: Color(0xFFD2B48C),
+                                color: const Color(0xFFD2B48C),
                                 borderRadius: BorderRadius.circular(3),
                               ),
                               child: Text(
@@ -1276,12 +1145,12 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                         ],
                       ),
                       if (!isSmallScreen) ...[
-                        SizedBox(height: 2),
+                        const SizedBox(height: 2),
                         Text(
                           user.school,
                           style: GoogleFonts.inter(
                             fontSize: 11,
-                            color: Color(0xFF8E8E93),
+                            color: const Color(0xFF8E8E93),
                           ),
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
@@ -1303,7 +1172,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                           style: GoogleFonts.inter(
                             fontSize: 12,
                             fontWeight: FontWeight.w500,
-                            color: Color(0xFF5856D6),
+                            color: const Color(0xFF5856D6),
                           ),
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
@@ -1311,7 +1180,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                       },
                     ),
                   ),
-                  SizedBox(width: 16),
+                  const SizedBox(width: 16),
                 ],
                 
                 // Questions Answered (hide on very small screens)
@@ -1323,12 +1192,12 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                       style: GoogleFonts.inter(
                         fontSize: 14,
                         fontWeight: FontWeight.w600,
-                        color: Color(0xFF3C3C43),
+                        color: const Color(0xFF3C3C43),
                       ),
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  SizedBox(width: 16),
+                  const SizedBox(width: 16),
                 ],
                 
                 // XP Score
@@ -1339,7 +1208,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                     style: GoogleFonts.inter(
                       fontSize: isSmallScreen ? 14 : 16,
                       fontWeight: FontWeight.w700,
-                      color: Color(0xFFD2B48C),
+                      color: const Color(0xFFD2B48C),
                     ),
                     textAlign: TextAlign.right,
                   ),
@@ -1361,11 +1230,11 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
       context: context,
       backgroundColor: Colors.transparent,
       builder: (context) => Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
         ),
-        padding: EdgeInsets.all(24),
+        padding: const EdgeInsets.all(24),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -1374,17 +1243,17 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
               width: 40,
               height: 4,
               decoration: BoxDecoration(
-                color: Color(0xFFE5E5EA),
+                color: const Color(0xFFE5E5EA),
                 borderRadius: BorderRadius.circular(2),
               ),
             ),
-            SizedBox(height: 24),
+            const SizedBox(height: 24),
             
             // User Avatar
             Container(
               width: 80,
               height: 80,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 color: Color(0xFFF2F2F7),
               ),
@@ -1396,17 +1265,17 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                       child: CachedNetworkImage(
                         imageUrl: snapshot.data!.imageUrl,
                         fit: BoxFit.cover,
-                        placeholder: (context, url) => CircularProgressIndicator(),
-                        errorWidget: (context, url, error) => Icon(Icons.person, size: 40),
+                        placeholder: (context, url) => const CircularProgressIndicator(),
+                        errorWidget: (context, url, error) => const Icon(Icons.person, size: 40),
                       ),
                     );
                   }
-                  return Icon(Icons.person, size: 40, color: Color(0xFF8E8E93));
+                  return const Icon(Icons.person, size: 40, color: Color(0xFF8E8E93));
                 },
               ),
             ),
             
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             
             // User Name
             Text(
@@ -1414,11 +1283,11 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
               style: GoogleFonts.inter(
                 fontSize: 22,
                 fontWeight: FontWeight.w700,
-                color: Color(0xFF1C1C1E),
+                color: const Color(0xFF1C1C1E),
               ),
             ),
             
-            SizedBox(height: 4),
+            const SizedBox(height: 4),
             
             // School & Rank
             FutureBuilder<LeaderboardRank?>(
@@ -1428,13 +1297,13 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                   '${user.school} • ${snapshot.data?.name ?? "Learner"}',
                   style: GoogleFonts.inter(
                     fontSize: 14,
-                    color: Color(0xFF8E8E93),
+                    color: const Color(0xFF8E8E93),
                   ),
                 );
               },
             ),
             
-            SizedBox(height: 24),
+            const SizedBox(height: 24),
             
             // Stats Grid
             Row(
@@ -1445,7 +1314,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
               ],
             ),
             
-            SizedBox(height: 24),
+            const SizedBox(height: 24),
             
             // Challenge Button
             SizedBox(
@@ -1455,15 +1324,15 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                   Navigator.pop(context);
                   _challengeUser(user);
                 },
-                icon: Icon(Icons.bolt, size: 20),
+                icon: const Icon(Icons.bolt, size: 20),
                 label: Text(
                   'Challenge ${user.displayName.split(' ').first}',
                   style: GoogleFonts.inter(fontWeight: FontWeight.w600),
                 ),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xFFD2B48C),
+                  backgroundColor: const Color(0xFFD2B48C),
                   foregroundColor: Colors.white,
-                  padding: EdgeInsets.symmetric(vertical: 16),
+                  padding: const EdgeInsets.symmetric(vertical: 16),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -1479,28 +1348,28 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
   Widget _buildProfileStat(String value, String label, IconData icon) {
     return Expanded(
       child: Container(
-        padding: EdgeInsets.all(12),
+        padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
-          color: Color(0xFFF2F2F7),
+          color: const Color(0xFFF2F2F7),
           borderRadius: BorderRadius.circular(12),
         ),
         child: Column(
           children: [
-            Icon(icon, size: 20, color: Color(0xFFD2B48C)),
-            SizedBox(height: 8),
+            Icon(icon, size: 20, color: const Color(0xFFD2B48C)),
+            const SizedBox(height: 8),
             Text(
               value,
               style: GoogleFonts.inter(
                 fontSize: 16,
                 fontWeight: FontWeight.w700,
-                color: Color(0xFF1C1C1E),
+                color: const Color(0xFF1C1C1E),
               ),
             ),
             Text(
               label,
               style: GoogleFonts.inter(
                 fontSize: 10,
-                color: Color(0xFF8E8E93),
+                color: const Color(0xFF8E8E93),
               ),
               textAlign: TextAlign.center,
             ),
@@ -1519,7 +1388,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
           '⚔️ Challenge ${user.displayName}',
           style: GoogleFonts.inter(
             fontWeight: FontWeight.w700,
-            color: Color(0xFF1C1C1E),
+            color: const Color(0xFF1C1C1E),
           ),
         ),
         content: Text(
@@ -1540,12 +1409,12 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                     '🎯 Challenge sent! Complete a quiz to compete with ${user.displayName}',
                     style: GoogleFonts.inter(),
                   ),
-                  backgroundColor: Color(0xFF34C759),
+                  backgroundColor: const Color(0xFF34C759),
                 ),
               );
             },
             style: ElevatedButton.styleFrom(
-              backgroundColor: Color(0xFFD2B48C),
+              backgroundColor: const Color(0xFFD2B48C),
               foregroundColor: Colors.white,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
@@ -1570,7 +1439,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
           return Icon(
             Icons.person, 
             size: isSmallScreen ? 16 : 20, 
-            color: Color(0xFF8E8E93),
+            color: const Color(0xFF8E8E93),
           );
         },
       );
@@ -1582,12 +1451,12 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
         placeholder: (context, url) => Icon(
           Icons.person, 
           size: isSmallScreen ? 16 : 20, 
-          color: Color(0xFF8E8E93),
+          color: const Color(0xFF8E8E93),
         ),
         errorWidget: (context, url, error) => Icon(
           Icons.person, 
           size: isSmallScreen ? 16 : 20, 
-          color: Color(0xFF8E8E93),
+          color: const Color(0xFF8E8E93),
         ),
       );
     } else {
@@ -1595,7 +1464,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
       return Icon(
         Icons.person, 
         size: isSmallScreen ? 16 : 20, 
-        color: Color(0xFF8E8E93),
+        color: const Color(0xFF8E8E93),
       );
     }
   }
