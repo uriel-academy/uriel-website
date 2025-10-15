@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'dart:async';
 import '../constants/app_styles.dart';
 import '../services/connection_service.dart';
 import '../services/auth_service.dart';
@@ -43,7 +44,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   int weeklyStudyHours = 0; // Calculated from session time
   int questionsAnswered = 0; // Total questions from quizzes
   int beceCountdownDays = 0; // Live countdown to BECE 2026
-  Stream<DocumentSnapshot>? _userStream;
+  StreamSubscription<DocumentSnapshot>? _userStreamSubscription;
   
   // Past Questions tracking
   int pastQuestionsAnswered = 0;
@@ -146,26 +147,32 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   void _setupUserStream() {
     final user = FirebaseAuth.instance.currentUser;
     if (user != null) {
-      _userStream = FirebaseFirestore.instance
+      // Cancel any existing subscription
+      _userStreamSubscription?.cancel();
+      
+      // Create new stream and store the subscription
+      _userStreamSubscription = FirebaseFirestore.instance
           .collection('users')
           .doc(user.uid)
-          .snapshots();
-      
-      // Listen to changes and update state
-      _userStream!.listen((snapshot) {
-        if (snapshot.exists && mounted) {
-          final data = snapshot.data() as Map<String, dynamic>;
-          debugPrint('🔄 User data updated from Firestore:');
-          debugPrint('  presetAvatar: ${data['presetAvatar']}');
-          debugPrint('  profileImageUrl: ${data['profileImageUrl']}');
-          setState(() {
-            userName = data['firstName'] ?? user.displayName?.split(' ').first ?? _getNameFromEmail(user.email);
-            userClass = data['class'] ?? 'JHS Form 3';
-            userPhotoUrl = data['profileImageUrl'] ?? user.photoURL;
-            userPresetAvatar = data['presetAvatar'];
+          .snapshots()
+          .listen((snapshot) {
+            if (snapshot.exists && mounted) {
+              final data = snapshot.data() as Map<String, dynamic>;
+              debugPrint('🔄 User data updated from Firestore:');
+              debugPrint('  presetAvatar: ${data['presetAvatar']}');
+              debugPrint('  profileImageUrl: ${data['profileImageUrl']}');
+              setState(() {
+                userName = data['firstName'] ?? user.displayName?.split(' ').first ?? _getNameFromEmail(user.email);
+                userClass = data['class'] ?? 'JHS Form 3';
+                userPhotoUrl = data['profileImageUrl'] ?? user.photoURL;
+                userPresetAvatar = data['presetAvatar'];
+              });
+            }
           });
-        }
-      });
+    } else {
+      // Cancel subscription if user is null
+      _userStreamSubscription?.cancel();
+      _userStreamSubscription = null;
     }
   }
   
@@ -209,6 +216,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   void dispose() {
     _mainTabController.dispose();
     _animationController.dispose();
+    _userStreamSubscription?.cancel(); // Cancel the user stream subscription to prevent memory leaks and assertion errors
     super.dispose();
   }
 
