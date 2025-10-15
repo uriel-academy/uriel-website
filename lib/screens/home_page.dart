@@ -6,8 +6,9 @@ import 'package:cached_network_image/cached_network_image.dart';
 import '../constants/app_styles.dart';
 import '../services/connection_service.dart';
 import '../services/auth_service.dart';
-import '../services/xp_service.dart';
+import '../services/notification_service.dart';
 import '../services/leaderboard_rank_service.dart';
+import '../services/xp_service.dart';
 import '../widgets/rank_badge_widget.dart';
 import 'redesigned_all_ranks_page.dart';
 import 'question_collections_page.dart';
@@ -63,6 +64,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   
   // Subject time spent data
   Map<String, double> _subjectTimeSpent = {};
+  
+  // Subject question counts data
+  Map<String, int> _subjectQuestionCounts = {};
   
   // Recent activity data
   // ignore: unused_field
@@ -289,6 +293,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       int triviaTotal = 0;
       int triviaCorrectCount = 0;
       Map<String, List<double>> subjectScores = {};
+      Map<String, int> subjectQuestionCounts = {}; // Track actual question counts per subject
       Map<String, double> subjectTimeSpent = {}; // Track time spent per subject
       List<DateTime> activityDates = [];
       List<Map<String, dynamic>> recentQuizzes = [];
@@ -325,6 +330,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           subjectScores[subject] = [];
         }
         subjectScores[subject]!.add(score);
+        
+        // Track actual question counts per subject
+        subjectQuestionCounts[subject] = (subjectQuestionCounts[subject] ?? 0) + questions;
         
         // Track time spent per subject (estimate: 2 minutes per question)
         subjectTimeSpent[subject] = (subjectTimeSpent[subject] ?? 0) + (questions * 2.0);
@@ -422,6 +430,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         weeklyStudyHours = studyHours;
         _subjectProgress = subjects;
         _subjectTimeSpent = subjectTimeSpent;
+        _subjectQuestionCounts = subjectQuestionCounts; // Store actual question counts
         _recentActivity = recentQuizzes;
         
         // Past questions metrics
@@ -1282,7 +1291,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         _userAchievements.add(_createSmartAchievement(
           '${nextRank!.name} Within Reach',
           Icons.emoji_events,
-          nextRank!.getTierColor().withOpacity(0.7),
+          nextRank!.getTierColor().withValues(alpha: 0.7),
           '${xpNeeded}XP to ${nextRank!.name}! Almost there',
           'predictive_rank',
           7,
@@ -2066,15 +2075,15 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                 shape: BoxShape.circle,
                 border: Border.all(
                   color: currentRank != null 
-                      ? currentRank!.getTierColor().withOpacity(0.3)
-                      : Colors.grey.withOpacity(0.3),
+                      ? currentRank!.getTierColor().withValues(alpha: 0.3)
+                      : Colors.grey.withValues(alpha: 0.3),
                   width: 1.5,
                 ),
                 boxShadow: [
                   BoxShadow(
                     color: currentRank != null 
-                        ? currentRank!.getTierColor().withOpacity(0.15)
-                        : Colors.grey.withOpacity(0.08),
+                        ? currentRank!.getTierColor().withValues(alpha: 0.15)
+                        : Colors.grey.withValues(alpha: 0.08),
                     blurRadius: 6,
                     offset: const Offset(0, 2),
                   ),
@@ -2428,15 +2437,15 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                 shape: BoxShape.circle,
                 border: Border.all(
                   color: currentRank != null 
-                      ? currentRank!.getTierColor().withOpacity(0.3)
-                      : Colors.grey.withOpacity(0.3),
+                      ? currentRank!.getTierColor().withValues(alpha: 0.3)
+                      : Colors.grey.withValues(alpha: 0.3),
                   width: 1.5,
                 ),
                 boxShadow: [
                   BoxShadow(
                     color: currentRank != null 
-                        ? currentRank!.getTierColor().withOpacity(0.15)
-                        : Colors.grey.withOpacity(0.08),
+                        ? currentRank!.getTierColor().withValues(alpha: 0.15)
+                        : Colors.grey.withValues(alpha: 0.08),
                     blurRadius: 8,
                     offset: const Offset(0, 3),
                   ),
@@ -2595,8 +2604,13 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           
           SizedBox(height: isSmallScreen ? 16 : 24),
           
-          // Recent Achievements
+          // Recent Achievements - Moved up
           _buildRecentAchievements(),
+          
+          SizedBox(height: isSmallScreen ? 16 : 24),
+          
+          // Messages & Notifications Card
+          _buildMessagesNotificationsCard(),
           
           SizedBox(height: isSmallScreen ? 16 : 24),
           
@@ -2971,17 +2985,6 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   ),
                 ],
               ),
-              TextButton.icon(
-                onPressed: () => _showComingSoon('Detailed Subject Analytics'),
-                icon: Icon(Icons.analytics, size: 16, color: const Color(0xFFD62828)),
-                label: Text(
-                  'Details',
-                  style: GoogleFonts.montserrat(
-                    color: const Color(0xFFD62828),
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-              ),
             ],
           ),
           const SizedBox(height: 20),
@@ -3308,11 +3311,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   }
 
   int _getSubjectQuestionsCount(String subjectName) {
-    // This would ideally come from actual data, but for now we'll estimate
-    final baseQuestions = subjectName == 'RME' ? pastQuestionsAnswered :
-                         subjectName == 'Trivia' ? triviaQuestionsAnswered :
-                         (questionsAnswered ~/ (_subjectProgress.length + 1));
-    return baseQuestions;
+    // Use actual question counts from quiz data
+    return _subjectQuestionCounts[subjectName] ?? 0;
   }
 
   double _calculateSubjectTrend(String subjectName) {
@@ -4043,7 +4043,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                                       const SizedBox(height: 2),
                                       LinearProgressIndicator(
                                         value: percentage,
-                                        backgroundColor: subjectProgress.color.withOpacity(0.2),
+                                        backgroundColor: subjectProgress.color.withValues(alpha: 0.2),
                                         valueColor: AlwaysStoppedAnimation<Color>(subjectProgress.color),
                                         minHeight: 4,
                                       ),
@@ -4236,7 +4236,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                           child: Container(
                             width: double.infinity,
                             decoration: BoxDecoration(
-                              color: Colors.green.withOpacity(0.2),
+                              color: Colors.green.withValues(alpha: 0.2),
                               borderRadius: BorderRadius.circular(8),
                             ),
                             child: Align(
@@ -4281,7 +4281,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                           child: Container(
                             width: double.infinity,
                             decoration: BoxDecoration(
-                              color: Colors.red.withOpacity(0.2),
+                              color: Colors.red.withValues(alpha: 0.2),
                               borderRadius: BorderRadius.circular(8),
                             ),
                             child: Align(
@@ -4954,6 +4954,386 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     );
   }
 
+  Widget _buildMessagesNotificationsCard() {
+    return StreamBuilder<QuerySnapshot>(
+      stream: NotificationService().getUserNotifications(FirebaseAuth.instance.currentUser!.uid),
+      builder: (context, snapshot) {
+        if (snapshot.hasError) {
+          return Container(
+            padding: const EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(16),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withValues(alpha: 0.05),
+                  blurRadius: 10,
+                  offset: const Offset(0, 4),
+                ),
+              ],
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [
+                            const Color(0xFF1A1E3F),
+                            const Color(0xFF1A1E3F).withValues(alpha: 0.8),
+                          ],
+                        ),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: const Icon(Icons.message, color: Colors.white, size: 18),
+                    ),
+                    const SizedBox(width: 12),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Messages & Notifications',
+                          style: GoogleFonts.playfairDisplay(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: const Color(0xFF1A1E3F),
+                          ),
+                        ),
+                        Text(
+                          'Stay updated with important messages',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 12,
+                            color: Colors.grey[600],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 16),
+                Center(
+                  child: Text(
+                    'Unable to load notifications',
+                    style: GoogleFonts.montserrat(
+                      color: Colors.grey[600],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          );
+        }
+
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return Container(
+            padding: const EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(16),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withValues(alpha: 0.05),
+                  blurRadius: 10,
+                  offset: const Offset(0, 4),
+                ),
+              ],
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [
+                            const Color(0xFF1A1E3F),
+                            const Color(0xFF1A1E3F).withValues(alpha: 0.8),
+                          ],
+                        ),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: const Icon(Icons.message, color: Colors.white, size: 18),
+                    ),
+                    const SizedBox(width: 12),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Messages & Notifications',
+                          style: GoogleFonts.playfairDisplay(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: const Color(0xFF1A1E3F),
+                          ),
+                        ),
+                        Text(
+                          'Stay updated with important messages',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 12,
+                            color: Colors.grey[600],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 16),
+                const Center(child: CircularProgressIndicator()),
+              ],
+            ),
+          );
+        }
+
+        final notifications = snapshot.data?.docs ?? [];
+        final unreadCount = notifications.where((doc) => !(doc.data() as Map<String, dynamic>)['read'] ?? false).length;
+
+        // Show only the 3 most recent notifications
+        final recentNotifications = notifications.take(3).toList();
+
+        return Container(
+          padding: const EdgeInsets.all(20),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(16),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withValues(alpha: 0.05),
+                blurRadius: 10,
+                offset: const Offset(0, 4),
+              ),
+            ],
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              const Color(0xFF1A1E3F),
+                              const Color(0xFF1A1E3F).withValues(alpha: 0.8),
+                            ],
+                          ),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: const Icon(Icons.message, color: Colors.white, size: 18),
+                      ),
+                      const SizedBox(width: 12),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Messages & Notifications',
+                            style: GoogleFonts.playfairDisplay(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: const Color(0xFF1A1E3F),
+                            ),
+                          ),
+                          Text(
+                            'Stay updated with important messages',
+                            style: GoogleFonts.montserrat(
+                              fontSize: 12,
+                              color: Colors.grey[600],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  if (unreadCount > 0) ...[
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFD62828),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Text(
+                        '$unreadCount new',
+                        style: GoogleFonts.montserrat(
+                          fontSize: 10,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                  ],
+                ],
+              ),
+              const SizedBox(height: 16),
+              if (recentNotifications.isEmpty) ...[
+                Center(
+                  child: Column(
+                    children: [
+                      Icon(Icons.notifications_none, color: Colors.grey[400], size: 48),
+                      const SizedBox(height: 8),
+                      Text(
+                        'No notifications yet',
+                        style: GoogleFonts.montserrat(
+                          color: Colors.grey[600],
+                        ),
+                      ),
+                      const SizedBox(height: 4),
+                      Text(
+                        'Important messages will appear here',
+                        style: GoogleFonts.montserrat(
+                          fontSize: 12,
+                          color: Colors.grey[500],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ] else ...[
+                ...recentNotifications.map((doc) {
+                  final data = doc.data() as Map<String, dynamic>;
+                  final message = data['message'] as String? ?? 'Notification';
+                  final type = data['type'] as String? ?? 'general';
+                  final timestamp = data['timestamp'] as Timestamp?;
+                  final isRead = data['read'] as bool? ?? false;
+
+                  // Determine icon and color based on notification type
+                  IconData icon;
+                  Color color;
+
+                  switch (type) {
+                    case 'rank_up':
+                      icon = Icons.trending_up;
+                      color = Colors.green;
+                      break;
+                    case 'rank_down':
+                      icon = Icons.trending_down;
+                      color = Colors.red;
+                      break;
+                    case 'milestone_progress':
+                      icon = Icons.flag;
+                      color = Colors.orange;
+                      break;
+                    case 'someone_passed':
+                      icon = Icons.person;
+                      color = Colors.blue;
+                      break;
+                    case 'friend_challenge':
+                      icon = Icons.sports_soccer;
+                      color = Colors.purple;
+                      break;
+                    case 'streak_risk':
+                      icon = Icons.warning;
+                      color = Colors.amber;
+                      break;
+                    case 'comeback':
+                      icon = Icons.celebration;
+                      color = Colors.pink;
+                      break;
+                    default:
+                      icon = Icons.notifications;
+                      color = const Color(0xFF1A1E3F);
+                  }
+
+                  return Padding(
+                    padding: const EdgeInsets.only(bottom: 12),
+                    child: InkWell(
+                      onTap: () async {
+                        // Mark as read when tapped
+                        await NotificationService().markAsRead(doc.id);
+                      },
+                      borderRadius: BorderRadius.circular(8),
+                      child: Container(
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          color: isRead ? Colors.grey.shade50 : color.withValues(alpha: 0.05),
+                          borderRadius: BorderRadius.circular(8),
+                          border: Border.all(
+                            color: isRead ? Colors.grey.shade200 : color.withValues(alpha: 0.2),
+                          ),
+                        ),
+                        child: Row(
+                          children: [
+                            Container(
+                              padding: const EdgeInsets.all(6),
+                              decoration: BoxDecoration(
+                                color: color.withValues(alpha: 0.1),
+                                borderRadius: BorderRadius.circular(6),
+                              ),
+                              child: Icon(icon, size: 16, color: color),
+                            ),
+                            const SizedBox(width: 12),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    message,
+                                    style: GoogleFonts.montserrat(
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.black87,
+                                      fontSize: 13,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 2),
+                                  Text(
+                                    timestamp != null
+                                        ? _getTimeAgo(timestamp.toDate())
+                                        : 'Just now',
+                                    style: GoogleFonts.montserrat(
+                                      fontSize: 11,
+                                      color: Colors.grey[600],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            if (!isRead) ...[
+                              Container(
+                                width: 8,
+                                height: 8,
+                                decoration: BoxDecoration(
+                                  color: color,
+                                  shape: BoxShape.circle,
+                                ),
+                              ),
+                            ],
+                          ],
+                        ),
+                      ),
+                    ),
+                  );
+                }),
+                if (notifications.length > 3) ...[
+                  const SizedBox(height: 8),
+                  Center(
+                    child: TextButton.icon(
+                      onPressed: () => _showComingSoon('Full Notifications Center'),
+                      icon: const Icon(Icons.more_horiz, size: 16),
+                      label: Text(
+                        'View All Notifications',
+                        style: GoogleFonts.montserrat(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ],
+            ],
+          ),
+        );
+      },
+    );
+  }
+
   Widget _buildAchievementBadge(String title, IconData icon, Color color, {String? description}) {
     return Container(
       margin: const EdgeInsets.only(right: 12),
@@ -5270,7 +5650,7 @@ Widget _buildTextbooksPage() {
   void _showRankDialog() {
     showDialog(
       context: context,
-      barrierColor: Colors.black.withOpacity(0.01),
+      barrierColor: Colors.black.withValues(alpha: 0.01),
       barrierDismissible: true,
       builder: (context) {
         final screenWidth = MediaQuery.of(context).size.width;
@@ -5316,13 +5696,13 @@ Widget _buildTextbooksPage() {
                       ),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black.withOpacity(0.08),
+                          color: Colors.black.withValues(alpha: 0.08),
                           blurRadius: 24,
                           offset: const Offset(0, 8),
                           spreadRadius: 0,
                         ),
                         BoxShadow(
-                          color: Colors.black.withOpacity(0.04),
+                          color: Colors.black.withValues(alpha: 0.04),
                           blurRadius: 8,
                           offset: const Offset(0, 2),
                           spreadRadius: 0,
