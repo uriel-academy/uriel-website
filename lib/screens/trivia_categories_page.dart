@@ -1,6 +1,115 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter/services.dart' show rootBundle;
+import 'dart:convert';
 import 'quiz_taker_page.dart';
+
+// Model class for trivia categories
+class TriviaCategory {
+  final String name;
+  final String description;
+  final IconData icon;
+  final Color color;
+  final List<Color> gradient;
+
+  TriviaCategory({
+    required this.name,
+    required this.description,
+    required this.icon,
+    required this.color,
+    required this.gradient,
+  });
+}
+
+// Category configuration mapping
+class _CategoryConfig {
+  static final Map<String, Map<String, dynamic>> configs = {
+    'African History': {
+      'description': 'Explore the rich and diverse history of the African continent',
+      'icon': Icons.history_edu,
+      'color': const Color(0xFF6B7280),
+    },
+    'Art and Culture': {
+      'description': 'Discover the world of art, music, and cultural traditions',
+      'icon': Icons.palette,
+      'color': const Color(0xFFFBBF77),
+    },
+    'Brain Teasers': {
+      'description': 'Challenge your mind with puzzles and logical thinking',
+      'icon': Icons.psychology,
+      'color': const Color(0xFFB4A7D6),
+    },
+    'English': {
+      'description': 'Test your knowledge of English language and literature',
+      'icon': Icons.menu_book,
+      'color': const Color(0xFFA8D8B9),
+    },
+    'General Knowledge': {
+      'description': 'Test your knowledge across various topics and subjects',
+      'icon': Icons.lightbulb,
+      'color': const Color(0xFFFFE599),
+    },
+    'Geography (Africa & World)': {
+      'description': 'Journey through continents, countries, and landmarks',
+      'icon': Icons.map,
+      'color': const Color(0xFF9CD4D4),
+    },
+    'Ghana History': {
+      'description': 'Learn about Ghana\'s rich heritage and independence journey',
+      'icon': Icons.flag,
+      'color': const Color(0xFFFFB84D),
+    },
+    'Mathematics': {
+      'description': 'Sharpen your mathematical skills and problem-solving',
+      'icon': Icons.calculate,
+      'color': const Color(0xFF9BB8E8),
+    },
+    'Pop Culture & Entertainment': {
+      'description': 'Stay updated with movies, music, and entertainment',
+      'icon': Icons.movie,
+      'color': const Color(0xFFFFB3BA),
+    },
+    'Science': {
+      'description': 'Explore physics, chemistry, biology, and more',
+      'icon': Icons.science,
+      'color': const Color(0xFFB5E5CF),
+    },
+    'Sports': {
+      'description': 'Test your sports knowledge from football to athletics',
+      'icon': Icons.sports_soccer,
+      'color': const Color(0xFFD4F1A5),
+    },
+    'Technology': {
+      'description': 'Stay ahead with tech, computers, and innovations',
+      'icon': Icons.computer,
+      'color': const Color(0xFFC1C1C1),
+    },
+    'World History': {
+      'description': 'Journey through civilizations and global historical events',
+      'icon': Icons.public,
+      'color': const Color(0xFFBAC7E8),
+    },
+    'Countries & Capitals': {
+      'description': 'Test your knowledge of world countries and their capitals',
+      'icon': Icons.location_city,
+      'color': const Color(0xFFFFD1DC),
+    },
+  };
+
+  static TriviaCategory? createCategory(String subject, int questionCount) {
+    final config = configs[subject];
+    if (config == null) return null;
+
+    final color = config['color'] as Color;
+    return TriviaCategory(
+      name: subject,
+      description: config['description'] as String,
+      icon: config['icon'] as IconData,
+      color: color,
+      gradient: [color, color],
+    );
+  }
+}
 
 class TriviaCategoriesPage extends StatefulWidget {
   const TriviaCategoriesPage({super.key});
@@ -19,102 +128,7 @@ class _TriviaCategoriesPageState extends State<TriviaCategoriesPage>
   bool isLoading = true;
   String searchQuery = '';
   Map<String, int> categoryCounts = {};
-
-  // 13 trivia categories with pastel colors (no gradients)
-  final List<TriviaCategory> categories = [
-    TriviaCategory(
-      name: 'African History',
-      description: 'Explore the rich and diverse history of the African continent',
-      icon: Icons.history_edu,
-      color: const Color(0xFF6B7280), // Pastel Black (Cool Gray)
-      gradient: const [Color(0xFF6B7280), Color(0xFF6B7280)],
-    ),
-    TriviaCategory(
-      name: 'Art and Culture',
-      description: 'Discover the world of art, music, and cultural traditions',
-      icon: Icons.palette,
-      color: const Color(0xFFFBBF77), // Pastel Peach
-      gradient: const [Color(0xFFFBBF77), Color(0xFFFBBF77)],
-    ),
-    TriviaCategory(
-      name: 'Brain Teasers',
-      description: 'Challenge your mind with puzzles and logical thinking',
-      icon: Icons.psychology,
-      color: const Color(0xFFB4A7D6), // Pastel Purple
-      gradient: const [Color(0xFFB4A7D6), Color(0xFFB4A7D6)],
-    ),
-    TriviaCategory(
-      name: 'English',
-      description: 'Test your knowledge of English language and literature',
-      icon: Icons.menu_book,
-      color: const Color(0xFFA8D8B9), // Pastel Mint Green
-      gradient: const [Color(0xFFA8D8B9), Color(0xFFA8D8B9)],
-    ),
-    TriviaCategory(
-      name: 'General Knowledge',
-      description: 'Test your knowledge across various topics and subjects',
-      icon: Icons.lightbulb,
-      color: const Color(0xFFFFE599), // Pastel Yellow
-      gradient: const [Color(0xFFFFE599), Color(0xFFFFE599)],
-    ),
-    TriviaCategory(
-      name: 'Geography',
-      description: 'Journey through continents, countries, and landmarks',
-      icon: Icons.map,
-      color: const Color(0xFF9CD4D4), // Pastel Teal
-      gradient: const [Color(0xFF9CD4D4), Color(0xFF9CD4D4)],
-    ),
-    TriviaCategory(
-      name: 'Ghana History',
-      description: 'Learn about Ghana\'s rich heritage and independence journey',
-      icon: Icons.flag,
-      color: const Color(0xFFFFB84D), // Pastel Gold/Amber
-      gradient: const [Color(0xFFFFB84D), Color(0xFFFFB84D)],
-    ),
-    TriviaCategory(
-      name: 'Mathematics',
-      description: 'Sharpen your mathematical skills and problem-solving',
-      icon: Icons.calculate,
-      color: const Color(0xFF9BB8E8), // Pastel Blue
-      gradient: const [Color(0xFF9BB8E8), Color(0xFF9BB8E8)],
-    ),
-    TriviaCategory(
-      name: 'Pop Culture and Entertainment',
-      description: 'Stay updated with movies, music, and entertainment',
-      icon: Icons.movie,
-      color: const Color(0xFFFFB3BA), // Pastel Pink
-      gradient: const [Color(0xFFFFB3BA), Color(0xFFFFB3BA)],
-    ),
-    TriviaCategory(
-      name: 'Science',
-      description: 'Explore physics, chemistry, biology, and more',
-      icon: Icons.science,
-      color: const Color(0xFFB5E5CF), // Pastel Sage Green
-      gradient: const [Color(0xFFB5E5CF), Color(0xFFB5E5CF)],
-    ),
-    TriviaCategory(
-      name: 'Sports',
-      description: 'Test your sports knowledge from football to athletics',
-      icon: Icons.sports_soccer,
-      color: const Color(0xFFD4F1A5), // Pastel Lime
-      gradient: const [Color(0xFFD4F1A5), Color(0xFFD4F1A5)],
-    ),
-    TriviaCategory(
-      name: 'Technology',
-      description: 'Stay ahead with tech, computers, and innovations',
-      icon: Icons.computer,
-      color: const Color(0xFFC1C1C1), // Pastel Silver
-      gradient: const [Color(0xFFC1C1C1), Color(0xFFC1C1C1)],
-    ),
-    TriviaCategory(
-      name: 'World History',
-      description: 'Journey through civilizations and global historical events',
-      icon: Icons.public,
-      color: const Color(0xFFBAC7E8), // Pastel Lavender Blue
-      gradient: const [Color(0xFFBAC7E8), Color(0xFFBAC7E8)],
-    ),
-  ];
-
+  List<TriviaCategory> categories = [];
   List<TriviaCategory> filteredCategories = [];
 
   @override
@@ -127,10 +141,9 @@ class _TriviaCategoriesPageState extends State<TriviaCategoriesPage>
     _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
       CurvedAnimation(parent: _animationController, curve: Curves.easeIn),
     );
-    // Filter out Mathematics category (temporarily disabled)
-    filteredCategories = categories.where((cat) => cat.name != 'Mathematics').toList();
     _animationController.forward();
-    _loadQuestionCounts();
+    // Load categories synchronously for testing
+    _loadCategoriesSync();
   }
 
   @override
@@ -140,31 +153,92 @@ class _TriviaCategoriesPageState extends State<TriviaCategoriesPage>
     super.dispose();
   }
 
-  Future<void> _loadQuestionCounts() async {
-    setState(() => isLoading = true);
-    try {
-      // Set question counts for each category (all categories have ~200 questions)
-      for (var category in categories) {
-        categoryCounts[category.name] = 200;
+  void _loadCategoriesSync() {
+    // Load categories from trivia_index.json
+    rootBundle.loadString('assets/trivia/trivia_index.json').then((jsonString) {
+      try {
+        final Map<String, dynamic> data = json.decode(jsonString);
+        final List<dynamic> categoriesData = data['summary'] ?? [];
+
+        final List<TriviaCategory> loadedCategories = [];
+        final Map<String, int> loadedCounts = {};
+
+        debugPrint('📚 Loading ${categoriesData.length} categories from JSON');
+
+        for (final categoryData in categoriesData) {
+          final String subject = categoryData['subject'] ?? '';
+          final int numQuestions = categoryData['num_questions'] ?? 0;
+
+          debugPrint('   Checking category: "$subject"');
+
+          // Create category using config mapping
+          final category = _CategoryConfig.createCategory(subject, numQuestions);
+          if (category != null) {
+            loadedCategories.add(category);
+            loadedCounts[subject] = numQuestions;
+            debugPrint('   ✅ Added category: $subject');
+          } else {
+            debugPrint('   ❌ Failed to create category for: $subject');
+          }
+        }
+
+        debugPrint('📊 Loaded ${loadedCategories.length} categories successfully');
+
+        setState(() {
+          categories = loadedCategories;
+          categoryCounts = loadedCounts;
+          filteredCategories = loadedCategories;
+          isLoading = false;
+        });
+      } catch (e) {
+        debugPrint('❌ Error loading trivia categories: $e');
+        _loadFallbackCategories();
       }
-    } catch (e) {
-      debugPrint('Error loading question counts: $e');
-    } finally {
-      setState(() => isLoading = false);
-    }
+    }).catchError((error) {
+      debugPrint('❌ Error loading trivia_index.json: $error');
+      _loadFallbackCategories();
+    });
+  }
+
+  void _loadFallbackCategories() {
+    final List<TriviaCategory> fallbackCategories = [
+      TriviaCategory(
+        name: 'Countries & Capitals',
+        description: 'Test your knowledge of world countries and their capitals',
+        icon: Icons.location_city,
+        color: const Color(0xFFFFD1DC),
+        gradient: const [Color(0xFFFFD1DC), Color(0xFFFFD1DC)],
+      ),
+      TriviaCategory(
+        name: 'General Knowledge',
+        description: 'Test your knowledge across various topics and subjects',
+        icon: Icons.lightbulb,
+        color: const Color(0xFFFFE599),
+        gradient: const [Color(0xFFFFE599), Color(0xFFFFE599)],
+      ),
+    ];
+
+    final Map<String, int> fallbackCounts = {
+      'Countries & Capitals': 194,
+      'General Knowledge': 200,
+    };
+
+    setState(() {
+      categories = fallbackCategories;
+      categoryCounts = fallbackCounts;
+      filteredCategories = fallbackCategories;
+      isLoading = false;
+    });
   }
 
   void _applySearch() {
     setState(() {
       if (searchQuery.isEmpty) {
-        // Filter out Mathematics category (temporarily disabled)
-        filteredCategories = categories.where((cat) => cat.name != 'Mathematics').toList();
+        filteredCategories = categories;
       } else {
         filteredCategories = categories.where((category) {
-          // Exclude Mathematics and apply search filter
-          return category.name != 'Mathematics' &&
-              (category.name.toLowerCase().contains(searchQuery.toLowerCase()) ||
-              category.description.toLowerCase().contains(searchQuery.toLowerCase()));
+          return category.name.toLowerCase().contains(searchQuery.toLowerCase()) ||
+              category.description.toLowerCase().contains(searchQuery.toLowerCase());
         }).toList();
       }
     });
@@ -513,21 +587,4 @@ class _TriviaCategoriesPageState extends State<TriviaCategoriesPage>
       ),
     );
   }
-}
-
-// Model class for trivia categories
-class TriviaCategory {
-  final String name;
-  final String description;
-  final IconData icon;
-  final Color color;
-  final List<Color> gradient;
-
-  TriviaCategory({
-    required this.name,
-    required this.description,
-    required this.icon,
-    required this.color,
-    required this.gradient,
-  });
 }

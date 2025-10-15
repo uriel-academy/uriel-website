@@ -90,6 +90,13 @@
       "num_answers": 200,
       "questions_file": "world_history_questions.json",
       "answers_file": "world_history_answers.json"
+    },
+    {
+      "subject": "Countries & Capitals",
+      "num_questions": 194,
+      "num_answers": 194,
+      "questions_file": "countries_and_capitals_questions.json",
+      "answers_file": "countries_and_capitals_answers.json"
     }
   ]
 }
