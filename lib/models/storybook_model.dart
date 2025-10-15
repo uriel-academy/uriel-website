@@ -15,6 +15,8 @@ class Storybook {
   final int readCount;
   final String? coverImageUrl;
   final DateTime? createdAt;
+  final String? description;
+  final int? pageCount;
 
   Storybook({
     required this.id,
@@ -31,6 +33,8 @@ class Storybook {
     this.readCount = 0,
     this.coverImageUrl,
     this.createdAt,
+    this.description,
+    this.pageCount,
   });
 
   factory Storybook.fromFirestore(DocumentSnapshot doc) {
@@ -51,6 +55,8 @@ class Storybook {
       readCount: data['readCount'] ?? 0,
       coverImageUrl: data['coverImageUrl'],
       createdAt: (data['createdAt'] as Timestamp?)?.toDate(),
+      description: data['description'],
+      pageCount: data['pageCount'],
     );
   }
 
@@ -70,6 +76,8 @@ class Storybook {
       'readCount': readCount,
       'coverImageUrl': coverImageUrl,
       'createdAt': createdAt != null ? Timestamp.fromDate(createdAt!) : FieldValue.serverTimestamp(),
+      'description': description,
+      'pageCount': pageCount,
     };
   }
 

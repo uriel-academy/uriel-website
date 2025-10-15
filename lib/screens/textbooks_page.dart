@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../models/textbook_model.dart';
 import '../models/storybook_model.dart';
-import '../models/course_models.dart';
 import '../services/textbook_service.dart';
 import '../services/storybook_service.dart';
 import '../services/course_reader_service.dart';
@@ -591,6 +590,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                           width: double.infinity,
                           height: double.infinity,
                           fit: BoxFit.cover,
+                          alignment: Alignment.topCenter,
                           errorBuilder: (context, error, stackTrace) {
                             // Fallback to icon if image fails to load
                             return Container(
@@ -725,6 +725,18 @@ class _TextbooksPageState extends State<TextbooksPage>
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                     ),
+                    if (storybook.description != null && storybook.description!.isNotEmpty) ...[
+                      const SizedBox(height: 4),
+                      Text(
+                        storybook.description!,
+                        style: GoogleFonts.montserrat(
+                          fontSize: isMobile ? 9 : 10,
+                          color: Colors.grey[500],
+                        ),
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ],
                     const Spacer(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -739,7 +751,9 @@ class _TextbooksPageState extends State<TextbooksPage>
                             borderRadius: BorderRadius.circular(4),
                           ),
                           child: Text(
-                            storybook.fileSizeFormatted,
+                            storybook.pageCount != null 
+                              ? '${storybook.pageCount} pages' 
+                              : storybook.fileSizeFormatted,
                             style: GoogleFonts.montserrat(
                               fontSize: 8,
                               fontWeight: FontWeight.w600,
@@ -873,6 +887,18 @@ class _TextbooksPageState extends State<TextbooksPage>
                         color: Colors.grey[600],
                       ),
                     ),
+                    if (storybook.description != null && storybook.description!.isNotEmpty) ...[
+                      const SizedBox(height: 4),
+                      Text(
+                        storybook.description!,
+                        style: GoogleFonts.montserrat(
+                          fontSize: 11,
+                          color: Colors.grey[500],
+                        ),
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ],
                     const SizedBox(height: 8),
                     Row(
                       children: [
@@ -886,7 +912,9 @@ class _TextbooksPageState extends State<TextbooksPage>
                             borderRadius: BorderRadius.circular(6),
                           ),
                           child: Text(
-                            storybook.fileSizeFormatted,
+                            storybook.pageCount != null 
+                              ? '${storybook.pageCount} pages' 
+                              : storybook.fileSizeFormatted,
                             style: GoogleFonts.montserrat(
                               fontSize: 10,
                               fontWeight: FontWeight.w600,

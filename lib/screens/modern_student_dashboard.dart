@@ -159,7 +159,7 @@ class _ModernStudentDashboardState extends State<ModernStudentDashboard> with Ti
           ),
           const SizedBox(height: 8),
           const Text(
-            'Ready to continue your learning journey?',
+            'Ready to rise through the ranks? Earn XP and dominate the leaderboards. Start a quiz now!',
             style: TextStyle(
               fontSize: 16,
               color: Colors.white70,
