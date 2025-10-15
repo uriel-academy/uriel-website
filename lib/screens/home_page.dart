@@ -3850,41 +3850,6 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           _buildQuickActionButton('Take Quiz', Icons.quiz, () => setState(() => _selectedIndex = 1)),
           const SizedBox(height: 8),
           _buildQuickActionButton('Read Books', Icons.menu_book, () => setState(() => _selectedIndex = 2)),
-          const SizedBox(height: 8),
-          // Quick action to take an RME quiz (navigates to question collections filtered to RME)
-          InkWell(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (_) => const QuestionCollectionsPage(initialSubject: 'RME'),
-                ),
-              );
-            },
-            borderRadius: BorderRadius.circular(8),
-            child: Container(
-              padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.grey.withValues(alpha: 0.2)),
-                borderRadius: BorderRadius.circular(8),
-              ),
-              child: Row(
-                children: [
-                  const Icon(Icons.book, size: 16, color: Color(0xFF6C5CE7)),
-                  const SizedBox(width: 12),
-                  Text(
-                    'Take RME Quiz',
-                    style: GoogleFonts.montserrat(
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black87,
-                    ),
-                  ),
-                  const Spacer(),
-                  Icon(Icons.arrow_forward_ios, size: 12, color: Colors.grey[600]),
-                ],
-              ),
-            ),
-          ),
         ],
       ),
     );
@@ -4057,7 +4022,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           ..._studyRecommendations.map((recommendation) => _buildRecommendationItem(recommendation)),
           const SizedBox(height: 16),
           ElevatedButton(
-            onPressed: () => setState(() => _selectedIndex = 4),
+            onPressed: () => setState(() => _selectedIndex = 1),
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.white,
               foregroundColor: const Color(0xFFD62828),
