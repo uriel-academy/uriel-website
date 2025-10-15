@@ -37,6 +37,9 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
   bool _showTOC = false;
   late AnimationController _animationController;
   
+  // TOC State
+  bool _showBookmarksTab = false;
+  
   // Reading Settings
   String _fontFamily = 'Merriweather'; // Serif for classics
   double _fontSize = 18.0;
@@ -46,13 +49,16 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
   String _alignment = 'justified';
   
   // Reading Progress
-  final int _currentPage = 0;
-  final double _progress = 0.0;
+  int _currentPage = 0;
+  double _progress = 0.0;
+  int _totalPages = 0;
   DateTime? _sessionStartTime;
   Duration _totalReadingTime = Duration.zero;
   
   // Bookmarks & Highlights
   List<Map<String, dynamic>> _bookmarks = [];
+  List<Map<String, dynamic>> _highlights = [];
+  List<Map<String, dynamic>> _notes = [];
   
   // TTS
   FlutterTts? _flutterTts;
@@ -99,6 +105,12 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
         _bookmarks = List<Map<String, dynamic>>.from(jsonDecode(bookmarksJson));
       }
       
+      // Load highlights
+      _loadHighlights();
+      
+      // Load notes
+      _loadNotes();
+      
       // Load reading time
       final totalSeconds = prefs.getInt('reading_time_${widget.bookId}') ?? 0;
       _totalReadingTime = Duration(seconds: totalSeconds);
@@ -121,14 +133,55 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
       jsonEncode({
         'page': _currentPage,
         'progress': _progress,
+        'totalPages': _totalPages,
         'timestamp': DateTime.now().toIso8601String(),
       })
     );
   }
 
+  Future<Map<String, dynamic>?> _loadProgress() async {
+    final prefs = await SharedPreferences.getInstance();
+    final lastPosJson = prefs.getString('last_position_${widget.bookId}');
+    
+    if (lastPosJson != null) {
+      try {
+        return jsonDecode(lastPosJson);
+      } catch (e) {
+        // Invalid progress data, ignore and return null
+      }
+    }
+    return null;
+  }
+
   Future<void> _saveBookmarks() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString('bookmarks_${widget.bookId}', jsonEncode(_bookmarks));
+  }
+
+  Future<void> _saveHighlights() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('highlights_${widget.bookId}', jsonEncode(_highlights));
+  }
+
+  Future<void> _saveNotes() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('notes_${widget.bookId}', jsonEncode(_notes));
+  }
+
+  Future<void> _loadNotes() async {
+    final prefs = await SharedPreferences.getInstance();
+    final notesJson = prefs.getString('notes_${widget.bookId}');
+    if (notesJson != null) {
+      _notes = List<Map<String, dynamic>>.from(jsonDecode(notesJson));
+    }
+  }
+
+  Future<void> _loadHighlights() async {
+    final prefs = await SharedPreferences.getInstance();
+    final highlightsJson = prefs.getString('highlights_${widget.bookId}');
+    if (highlightsJson != null) {
+      _highlights = List<Map<String, dynamic>>.from(jsonDecode(highlightsJson));
+    }
   }
 
   Future<void> _saveReadingTime() async {
@@ -154,19 +207,19 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
         document: EpubDocument.openData(bytes.buffer.asUint8List()),
       );
 
-      // Load last position
-      final prefs = await SharedPreferences.getInstance();
-      final lastPosJson = prefs.getString('last_position_${widget.bookId}');
-      
+      // Load saved progress
+      final savedProgress = await _loadProgress();
+      if (savedProgress != null) {
+        setState(() {
+          _currentPage = savedProgress['page'] ?? 0;
+          _progress = savedProgress['progress'] ?? 0.0;
+          _totalPages = savedProgress['totalPages'] ?? 0;
+        });
+      }
+
       setState(() {
         _isLoading = false;
       });
-
-      if (lastPosJson != null) {
-        // TODO: Navigate to last position when EPUB loads
-        // final lastPos = jsonDecode(lastPosJson);
-        // Use lastPos to navigate to the saved position
-      }
     } catch (e) {
       setState(() {
         _isLoading = false;
@@ -188,12 +241,71 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
     }
   }
 
+  void _addNote() {
+    final TextEditingController noteController = TextEditingController();
+    
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text('Add Note', style: GoogleFonts.inter(fontWeight: FontWeight.bold)),
+        content: TextField(
+          controller: noteController,
+          decoration: InputDecoration(
+            hintText: 'Enter your note...',
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(8),
+            ),
+          ),
+          maxLines: 3,
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: Text('Cancel', style: GoogleFonts.inter()),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              if (noteController.text.trim().isNotEmpty) {
+                final note = {
+                  'page': _currentPage,
+                  'progress': _progress,
+                  'text': noteController.text.trim(),
+                  'timestamp': DateTime.now().toIso8601String(),
+                };
+                
+                setState(() {
+                  _notes.add(note);
+                });
+                
+                _saveNotes();
+                Navigator.pop(context);
+                
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text('Note added', style: GoogleFonts.inter()),
+                    behavior: SnackBarBehavior.floating,
+                    duration: const Duration(seconds: 2),
+                  ),
+                );
+              }
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: _getThemeColors()['accent'],
+              foregroundColor: Colors.white,
+            ),
+            child: Text('Add Note', style: GoogleFonts.inter()),
+          ),
+        ],
+      ),
+    );
+  }
+
   void _addBookmark() {
     final bookmark = {
       'page': _currentPage,
       'progress': _progress,
+      'title': 'Page ${_currentPage + 1}',
       'timestamp': DateTime.now().toIso8601String(),
-      'note': '',
     };
     
     setState(() {
@@ -206,7 +318,31 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
       SnackBar(
         content: Text('Bookmark added', style: GoogleFonts.inter()),
         behavior: SnackBarBehavior.floating,
-        backgroundColor: _getThemeColors()['accent'],
+        duration: const Duration(seconds: 2),
+      ),
+    );
+  }
+
+  void _addHighlight() {
+    // For now, highlight the current page
+    // Full text selection highlighting would require more complex EPUB integration
+    final highlight = {
+      'page': _currentPage,
+      'progress': _progress,
+      'text': 'Page ${_currentPage + 1} highlighted',
+      'timestamp': DateTime.now().toIso8601String(),
+    };
+    
+    setState(() {
+      _highlights.add(highlight);
+    });
+    
+    _saveHighlights();
+    
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text('Highlight added', style: GoogleFonts.inter()),
+        behavior: SnackBarBehavior.floating,
         duration: const Duration(seconds: 2),
       ),
     );
@@ -220,12 +356,39 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
   }
 
   Future<void> _toggleReadAloud() async {
+    final messenger = ScaffoldMessenger.of(context);
+
     if (_isReading) {
       await _flutterTts?.stop();
       setState(() => _isReading = false);
     } else {
       setState(() => _isReading = true);
-      await _flutterTts?.speak("Reading chapter aloud. Full implementation requires chapter text extraction.");
+
+      // Try to get current chapter text
+      try {
+        // For now, use a sample text since full EPUB text extraction is complex
+        final sampleText = "Reading ${widget.bookTitle} by ${widget.author}. You are currently at page ${_currentPage + 1} of approximately $_totalPages pages, which is ${(_progress * 100).toStringAsFixed(0)} percent complete.";
+
+        await _flutterTts?.speak(sampleText);
+
+        // Show feedback
+        messenger.showSnackBar(
+          SnackBar(
+            content: Text('Reading aloud... Full text extraction coming soon', style: GoogleFonts.inter()),
+            behavior: SnackBarBehavior.floating,
+            duration: const Duration(seconds: 3),
+          ),
+        );
+      } catch (e) {
+        messenger.showSnackBar(
+          SnackBar(
+            content: Text('Text-to-speech not available', style: GoogleFonts.inter()),
+            behavior: SnackBarBehavior.floating,
+            duration: const Duration(seconds: 2),
+          ),
+        );
+        setState(() => _isReading = false);
+      }
     }
   }
 
@@ -576,7 +739,7 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            '${(_progress * 100).toStringAsFixed(0)}%',
+                            '${(_progress * 100).toStringAsFixed(0)}% Complete',
                             style: GoogleFonts.inter(
                               fontSize: 12,
                               fontWeight: FontWeight.w600,
@@ -584,7 +747,7 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
                             ),
                           ),
                           Text(
-                            _formatReadingTime(_totalReadingTime),
+                            _totalPages > 0 ? 'Chapter ${_currentPage + 1} of $_totalPages' : '',
                             style: GoogleFonts.inter(
                               fontSize: 12,
                               color: theme['secondary'],
@@ -593,13 +756,16 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
                         ],
                       ),
                       const SizedBox(height: 8),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(2),
-                        child: LinearProgressIndicator(
-                          value: _progress,
-                          backgroundColor: theme['text']!.withValues(alpha: 0.1),
-                          valueColor: AlwaysStoppedAnimation<Color>(theme['accent']!),
-                          minHeight: 3,
+                      GestureDetector(
+                        onTapDown: (details) => _seekToPosition(details, context),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(2),
+                          child: LinearProgressIndicator(
+                            value: _progress,
+                            backgroundColor: theme['text']!.withValues(alpha: 0.1),
+                            valueColor: AlwaysStoppedAnimation<Color>(theme['accent']!),
+                            minHeight: 6,
+                          ),
                         ),
                       ),
                     ],
@@ -616,15 +782,6 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      _buildBottomButton(
-                        icon: Icons.menu_book,
-                        label: 'TOC',
-                        theme: theme,
-                        onTap: () => setState(() {
-                          _showTOC = !_showTOC;
-                          if (_showTOC) _showSettings = false;
-                        }),
-                      ),
                       if (isMobile) ...[
                         _buildBottomButton(
                           icon: Icons.bookmark_border,
@@ -633,18 +790,24 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
                           onTap: _addBookmark,
                         ),
                         _buildBottomButton(
+                          icon: Icons.highlight,
+                          label: 'Highlight',
+                          theme: theme,
+                          onTap: _addHighlight,
+                        ),
+                        _buildBottomButton(
+                          icon: Icons.note_add,
+                          label: 'Note',
+                          theme: theme,
+                          onTap: _addNote,
+                        ),
+                        _buildBottomButton(
                           icon: _isReading ? Icons.stop : Icons.volume_up,
                           label: _isReading ? 'Stop' : 'Audio',
                           theme: theme,
                           onTap: _toggleReadAloud,
                         ),
                       ],
-                      _buildBottomButton(
-                        icon: Icons.share,
-                        label: 'Share',
-                        theme: theme,
-                        onTap: _shareBook,
-                      ),
                     ],
                   ),
                 ),
@@ -857,6 +1020,39 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
                       
                       const SizedBox(height: 32),
                       
+                      // Quick Actions
+                      _buildSettingSection(
+                        'Quick Actions',
+                        theme,
+                        child: Column(
+                          children: [
+                            _buildActionButton(
+                              icon: Icons.menu_book,
+                              label: 'Table of Contents',
+                              theme: theme,
+                              onTap: () {
+                                setState(() {
+                                  _showSettings = false;
+                                  _showTOC = true;
+                                });
+                              },
+                            ),
+                            const SizedBox(height: 12),
+                            _buildActionButton(
+                              icon: Icons.share,
+                              label: 'Share Book',
+                              theme: theme,
+                              onTap: () {
+                                setState(() => _showSettings = false);
+                                _shareBook();
+                              },
+                            ),
+                          ],
+                        ),
+                      ),
+                      
+                      const SizedBox(height: 32),
+                      
                       // Reading Statistics
                       Container(
                         padding: const EdgeInsets.all(16),
@@ -916,11 +1112,11 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  'Bookmarks',
+                                  'Notes',
                                   style: GoogleFonts.inter(fontSize: 13, color: theme['secondary']),
                                 ),
                                 Text(
-                                  '${_bookmarks.length}',
+                                  '${_notes.length}',
                                   style: GoogleFonts.inter(
                                     fontSize: 13,
                                     fontWeight: FontWeight.w600,
@@ -1004,34 +1200,44 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
                     child: Row(
                       children: [
                         Expanded(
-                          child: Container(
-                            padding: const EdgeInsets.symmetric(vertical: 8),
-                            decoration: BoxDecoration(
-                              color: theme['accent'],
-                              borderRadius: BorderRadius.circular(6),
-                            ),
-                            child: Text(
-                              'Chapters',
-                              style: GoogleFonts.inter(
-                                fontSize: 13,
-                                fontWeight: FontWeight.w600,
-                                color: Colors.white,
+                          child: InkWell(
+                            onTap: () => setState(() => _showBookmarksTab = false),
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(vertical: 8),
+                              decoration: BoxDecoration(
+                                color: !_showBookmarksTab ? theme['accent'] : Colors.transparent,
+                                borderRadius: BorderRadius.circular(6),
                               ),
-                              textAlign: TextAlign.center,
+                              child: Text(
+                                'Chapters',
+                                style: GoogleFonts.inter(
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w600,
+                                  color: !_showBookmarksTab ? Colors.white : theme['secondary'],
+                                ),
+                                textAlign: TextAlign.center,
+                              ),
                             ),
                           ),
                         ),
                         Expanded(
-                          child: Container(
-                            padding: const EdgeInsets.symmetric(vertical: 8),
-                            child: Text(
-                              'Bookmarks',
-                              style: GoogleFonts.inter(
-                                fontSize: 13,
-                                fontWeight: FontWeight.w600,
-                                color: theme['secondary'],
+                          child: InkWell(
+                            onTap: () => setState(() => _showBookmarksTab = true),
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(vertical: 8),
+                              decoration: BoxDecoration(
+                                color: _showBookmarksTab ? theme['accent'] : Colors.transparent,
+                                borderRadius: BorderRadius.circular(6),
                               ),
-                              textAlign: TextAlign.center,
+                              child: Text(
+                                'Bookmarks',
+                                style: GoogleFonts.inter(
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w600,
+                                  color: _showBookmarksTab ? Colors.white : theme['secondary'],
+                                ),
+                                textAlign: TextAlign.center,
+                              ),
                             ),
                           ),
                         ),
@@ -1040,22 +1246,9 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
                   ),
                 ),
                 
-                // TOC Content (Placeholder)
+                // TOC Content
                 Expanded(
-                  child: ListView(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
-                    children: [
-                      Text(
-                        'Table of contents will be available once EPUB chapter data is extracted.',
-                        style: GoogleFonts.inter(
-                          fontSize: 14,
-                          color: theme['secondary'],
-                          height: 1.6,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                    ],
-                  ),
+                  child: _showBookmarksTab ? _buildBookmarksList(theme) : _buildChaptersList(theme),
                 ),
               ],
             ),
@@ -1081,6 +1274,45 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
         const SizedBox(height: 12),
         child,
       ],
+    );
+  }
+
+  Widget _buildActionButton({
+    required IconData icon,
+    required String label,
+    required Map<String, Color> theme,
+    required VoidCallback onTap,
+  }) {
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(12),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        decoration: BoxDecoration(
+          color: theme['text']!.withValues(alpha: 0.05),
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(
+            color: theme['text']!.withValues(alpha: 0.1),
+            width: 1,
+          ),
+        ),
+        child: Row(
+          children: [
+            Icon(icon, size: 20, color: theme['text']),
+            const SizedBox(width: 12),
+            Text(
+              label,
+              style: GoogleFonts.inter(
+                fontSize: 14,
+                fontWeight: FontWeight.w500,
+                color: theme['text'],
+              ),
+            ),
+            const Spacer(),
+            Icon(Icons.arrow_forward_ios, size: 16, color: theme['secondary']),
+          ],
+        ),
+      ),
     );
   }
 
@@ -1151,6 +1383,185 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _buildBookmarksList(Map<String, Color> theme) {
+    if (_bookmarks.isEmpty) {
+      return ListView(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        children: [
+          const SizedBox(height: 40),
+          Icon(Icons.bookmark_border, size: 48, color: theme['secondary']),
+          const SizedBox(height: 16),
+          Text(
+            'No bookmarks yet',
+            style: GoogleFonts.inter(
+              fontSize: 16,
+              fontWeight: FontWeight.w600,
+              color: theme['text'],
+            ),
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 8),
+          Text(
+            'Tap the bookmark icon while reading to save your place.',
+            style: GoogleFonts.inter(
+              fontSize: 14,
+              color: theme['secondary'],
+              height: 1.5,
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ],
+      );
+    }
+
+    return ListView.builder(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      itemCount: _bookmarks.length,
+      itemBuilder: (context, index) {
+        final bookmark = _bookmarks[index];
+        return InkWell(
+          onTap: () {
+            // Navigate to bookmark position
+            final progress = bookmark['progress'] ?? 0.0;
+            _jumpToProgress(progress);
+            setState(() => _showTOC = false);
+          },
+          child: Container(
+            margin: const EdgeInsets.only(bottom: 12),
+            padding: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              color: theme['text']!.withValues(alpha: 0.05),
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(
+                color: theme['text']!.withValues(alpha: 0.1),
+                width: 1,
+              ),
+            ),
+            child: Row(
+              children: [
+                Icon(Icons.bookmark, size: 20, color: theme['accent']),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        bookmark['title'] ?? 'Bookmark',
+                        style: GoogleFonts.inter(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                          color: theme['text'],
+                        ),
+                      ),
+                      const SizedBox(height: 4),
+                      Text(
+                        'Page ${(bookmark['page'] ?? 0) + 1} • ${((bookmark['progress'] ?? 0.0) * 100).toStringAsFixed(0)}% complete',
+                        style: GoogleFonts.inter(
+                          fontSize: 12,
+                          color: theme['secondary'],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                IconButton(
+                  icon: Icon(Icons.delete_outline, size: 20, color: theme['secondary']),
+                  onPressed: () {
+                    setState(() {
+                      _bookmarks.removeAt(index);
+                    });
+                    _saveBookmarks();
+                  },
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  Widget _buildChaptersList(Map<String, Color> theme) {
+    return ListView(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      children: [
+        const SizedBox(height: 20),
+        Text(
+          'Table of Contents',
+          style: GoogleFonts.inter(
+            fontSize: 16,
+            fontWeight: FontWeight.w600,
+            color: theme['text'],
+          ),
+          textAlign: TextAlign.center,
+        ),
+        const SizedBox(height: 16),
+        Text(
+          'Chapter navigation will be available once EPUB chapter data is extracted from the book file.',
+          style: GoogleFonts.inter(
+            fontSize: 14,
+            color: theme['secondary'],
+            height: 1.6,
+          ),
+          textAlign: TextAlign.center,
+        ),
+        const SizedBox(height: 20),
+        Container(
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            color: theme['accent']!.withValues(alpha: 0.1),
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: Column(
+            children: [
+              Icon(Icons.menu_book, size: 32, color: theme['accent']),
+              const SizedBox(height: 12),
+              Text(
+                'Coming Soon',
+                style: GoogleFonts.inter(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                  color: theme['text'],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
+  void _seekToPosition(TapDownDetails details, BuildContext context) {
+    final RenderBox box = context.findRenderObject() as RenderBox;
+    final localPosition = box.globalToLocal(details.globalPosition);
+    final progressBarWidth = box.size.width - 40; // Account for padding
+    final tapX = localPosition.dx - 20; // Account for left padding
+    
+    if (tapX >= 0 && tapX <= progressBarWidth) {
+      final newProgress = tapX / progressBarWidth;
+      _jumpToProgress(newProgress);
+    }
+  }
+
+  Future<void> _jumpToProgress(double progress) async {
+    // For now, just update the progress visually
+    // Full navigation would require more complex EPUB API integration
+    setState(() {
+      _progress = progress;
+      _currentPage = (_progress * _totalPages).toInt();
+    });
+    _saveProgress();
+    
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text('Navigation to ${(progress * 100).toInt()}% coming soon', 
+          style: GoogleFonts.inter()),
+        behavior: SnackBarBehavior.floating,
+        duration: const Duration(seconds: 2),
       ),
     );
   }
