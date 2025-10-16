@@ -29,6 +29,7 @@ class _LeaderboardPageState extends State<LeaderboardPage> with TickerProviderSt
   List<LeaderboardEntry> _leaderboardData = [];
   LeaderboardEntry? _currentUserEntry;
   bool _isLoading = true;
+  bool _dataLoaded = false;
   
   String _motivationalMessage = '';
   String _milestoneMessage = '';
@@ -148,11 +149,18 @@ class _LeaderboardPageState extends State<LeaderboardPage> with TickerProviderSt
   }
   
   Future<void> _loadLeaderboardData() async {
+    if (_dataLoaded) return; // Prevent duplicate loading
+    
     setState(() => _isLoading = true);
     
     try {
       final user = FirebaseAuth.instance.currentUser;
-      if (user == null) return;
+      if (user == null) {
+        debugPrint('Leaderboard: No authenticated user found');
+        return;
+      }
+      
+      debugPrint('Leaderboard: Loading data for user ${user.uid}');
       
       // Get user's total XP from users collection
       final userDoc = await FirebaseFirestore.instance
@@ -261,6 +269,9 @@ class _LeaderboardPageState extends State<LeaderboardPage> with TickerProviderSt
           _xpToNextTier,
         );
       }
+      
+      _dataLoaded = true;
+      debugPrint('Leaderboard: Data loaded successfully for ${_leaderboardData.length} users');
       
     } catch (e) {
       debugPrint('Error loading leaderboard: $e');
@@ -500,288 +511,312 @@ Join the challenge 👉 $url
   
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
-    final isMobile = screenWidth < 768;
-    
-    // If embedded in home page, don't use Scaffold
-    if (widget.isEmbedded) {
-      return CustomScrollView(
-        slivers: [
-          // Page Title Header (no back button when embedded)
-          SliverToBoxAdapter(
-            child: Container(
-              padding: EdgeInsets.all(isMobile ? 16 : 24),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withValues(alpha: 0.05),
-                    blurRadius: 10,
-                    offset: const Offset(0, 2),
-                  ),
-                ],
+    return StreamBuilder<User?>(
+      stream: FirebaseAuth.instance.authStateChanges(),
+      builder: (context, snapshot) {
+        final user = snapshot.data;
+        
+        // If auth state is loading or no user, show loading
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Scaffold(
+            body: Center(
+              child: CircularProgressIndicator(
+                valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF2ECC71)),
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'Hall of Fame',
-                    style: GoogleFonts.playfairDisplay(
-                      fontWeight: FontWeight.bold,
-                      fontSize: isMobile ? 20 : 24,
-                      color: const Color(0xFF1A1E3F),
+            ),
+          );
+        }
+        
+        // If user is authenticated, load data if not already loaded
+        if (user != null && !_dataLoaded) {
+          debugPrint('Leaderboard: Auth confirmed for user ${user.uid}, loading data');
+          _loadLeaderboardData();
+        }
+        
+        final screenWidth = MediaQuery.of(context).size.width;
+        final isMobile = screenWidth < 768;
+        
+        // If embedded in home page, don't use Scaffold
+        if (widget.isEmbedded) {
+          return CustomScrollView(
+            slivers: [
+              // Page Title Header (no back button when embedded)
+              SliverToBoxAdapter(
+                child: Container(
+                  padding: EdgeInsets.all(isMobile ? 16 : 24),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withValues(alpha: 0.05),
+                        blurRadius: 10,
+                        offset: const Offset(0, 2),
+                      ),
+                    ],
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Hall of Fame',
+                        style: GoogleFonts.playfairDisplay(
+                          fontWeight: FontWeight.bold,
+                          fontSize: isMobile ? 20 : 24,
+                          color: const Color(0xFF1A1E3F),
+                        ),
+                      ),
+                      IconButton(
+                        icon: const Icon(Icons.share, color: Color(0xFFD62828)),
+                        onPressed: _shareRank,
+                        tooltip: 'Share Your Rank',
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              
+              // Your Rank Card
+              if (_currentUserEntry != null)
+                SliverToBoxAdapter(
+                  child: _buildYourRankCard(isMobile),
+                ),
+
+              // Motivational Banner
+              if (_motivationalMessage.isNotEmpty)
+                SliverToBoxAdapter(
+                  child: _buildMotivationalBanner(isMobile),
+                ),
+
+              // Milestone Progress
+              if (_milestoneMessage.isNotEmpty)
+                SliverToBoxAdapter(
+                  child: _buildMilestoneCard(isMobile),
+                ),
+              
+              // Main Category Tab Bar
+              SliverToBoxAdapter(
+                child: Container(
+                  color: Colors.white,
+                  child: TabBar(
+                    controller: _tabController,
+                    isScrollable: true,
+                    tabs: const [
+                      Tab(text: '🏆 Overall'),
+                      Tab(text: '🎯 Trivia'),
+                      Tab(text: '📝 BECE'),
+                      Tab(text: '📚 WASSCE'),
+                      Tab(text: '📖 Stories'),
+                      Tab(text: '📕 Textbooks'),
+                    ],
+                    labelColor: const Color(0xFFD62828), // Uriel Red
+                    unselectedLabelColor: Colors.grey[600],
+                    indicatorColor: const Color(0xFFD62828),
+                    labelStyle: GoogleFonts.montserrat(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 13,
                     ),
                   ),
+                ),
+              ),
+              
+              // Subcategory Tab Bar (for Trivia, BECE, WASSCE)
+              if (_selectedCategory != 'Overall' && _selectedCategory != 'Stories' && _selectedCategory != 'Textbooks')
+                SliverToBoxAdapter(
+                  child: Container(
+                    color: Colors.grey[50],
+                    padding: const EdgeInsets.symmetric(vertical: 8),
+                    child: TabBar(
+                      controller: _categoryTabController,
+                      isScrollable: true,
+                      tabs: _getCurrentSubCategories().map((cat) => Tab(text: cat)).toList(),
+                      labelColor: const Color(0xFF2ECC71), // Green
+                      unselectedLabelColor: Colors.grey[600],
+                      indicatorColor: const Color(0xFF2ECC71),
+                      labelStyle: GoogleFonts.montserrat(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 12,
+                      ),
+                    ),
+                  ),
+                ),
+              
+              // Filters
+              SliverToBoxAdapter(
+                child: _buildFilters(isMobile),
+              ),
+              
+              // Top 3 Podium
+              SliverToBoxAdapter(
+                child: _buildPodium(isMobile),
+              ),
+              
+              // Leaderboard List
+              SliverPadding(
+                padding: EdgeInsets.all(isMobile ? 16 : 24),
+                sliver: _isLoading
+                    ? const SliverToBoxAdapter(
+                        child: Center(
+                          child: CircularProgressIndicator(
+                            valueColor: AlwaysStoppedAnimation<Color>(
+                              Color(0xFF2ECC71),
+                            ),
+                          ),
+                        ),
+                      )
+                    : SliverList(
+                        delegate: SliverChildBuilderDelegate(
+                          (context, index) {
+                            if (index < 3) return const SizedBox.shrink(); // Skip top 3
+                            return _buildLeaderboardItem(
+                              _leaderboardData[index],
+                              isMobile,
+                            );
+                          },
+                          childCount: _leaderboardData.length,
+                        ),
+                      ),
+              ),
+            ],
+          );
+        }
+        
+        // Standalone version with Scaffold and AppBar
+        return Scaffold(
+          backgroundColor: const Color(0xFFF8FAFE),
+          body: CustomScrollView(
+            slivers: [
+              // App Bar with back button
+              SliverAppBar(
+                expandedHeight: 120,
+                pinned: true,
+                backgroundColor: Colors.white,
+                foregroundColor: const Color(0xFF1A1E3F),
+                elevation: 0,
+                leading: IconButton(
+                  icon: const Icon(Icons.arrow_back),
+                  onPressed: () => Navigator.pop(context),
+                ),
+                title: Text(
+                  'Hall of Fame',
+                  style: GoogleFonts.playfairDisplay(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
+                ),
+                actions: [
                   IconButton(
-                    icon: const Icon(Icons.share, color: Color(0xFFD62828)),
+                    icon: const Icon(Icons.share),
                     onPressed: _shareRank,
                     tooltip: 'Share Your Rank',
                   ),
                 ],
               ),
-            ),
-          ),
-          
-          // Your Rank Card
-          if (_currentUserEntry != null)
-            SliverToBoxAdapter(
-              child: _buildYourRankCard(isMobile),
-            ),
-
-          // Motivational Banner
-          if (_motivationalMessage.isNotEmpty)
-            SliverToBoxAdapter(
-              child: _buildMotivationalBanner(isMobile),
-            ),
-
-          // Milestone Progress
-          if (_milestoneMessage.isNotEmpty)
-            SliverToBoxAdapter(
-              child: _buildMilestoneCard(isMobile),
-            ),
-          
-          // Main Category Tab Bar
-          SliverToBoxAdapter(
-            child: Container(
-              color: Colors.white,
-              child: TabBar(
-                controller: _tabController,
-                isScrollable: true,
-                tabs: const [
-                  Tab(text: '🏆 Overall'),
-                  Tab(text: '🎯 Trivia'),
-                  Tab(text: '📝 BECE'),
-                  Tab(text: '📚 WASSCE'),
-                  Tab(text: '📖 Stories'),
-                  Tab(text: '📕 Textbooks'),
-                ],
-                labelColor: const Color(0xFFD62828), // Uriel Red
-                unselectedLabelColor: Colors.grey[600],
-                indicatorColor: const Color(0xFFD62828),
-                labelStyle: GoogleFonts.montserrat(
-                  fontWeight: FontWeight.w600,
-                  fontSize: 13,
+              
+              // Your Rank Card
+              if (_currentUserEntry != null)
+                SliverToBoxAdapter(
+                  child: _buildYourRankCard(isMobile),
                 ),
-              ),
-            ),
-          ),
-          
-          // Subcategory Tab Bar (for Trivia, BECE, WASSCE)
-          if (_selectedCategory != 'Overall' && _selectedCategory != 'Stories' && _selectedCategory != 'Textbooks')
-            SliverToBoxAdapter(
-              child: Container(
-                color: Colors.grey[50],
-                padding: const EdgeInsets.symmetric(vertical: 8),
-                child: TabBar(
-                  controller: _categoryTabController,
-                  isScrollable: true,
-                  tabs: _getCurrentSubCategories().map((cat) => Tab(text: cat)).toList(),
-                  labelColor: const Color(0xFF2ECC71), // Green
-                  unselectedLabelColor: Colors.grey[600],
-                  indicatorColor: const Color(0xFF2ECC71),
-                  labelStyle: GoogleFonts.montserrat(
-                    fontWeight: FontWeight.w600,
-                    fontSize: 12,
+
+              // Motivational Banner
+              if (_motivationalMessage.isNotEmpty)
+                SliverToBoxAdapter(
+                  child: _buildMotivationalBanner(isMobile),
+                ),
+
+              // Milestone Progress
+              if (_milestoneMessage.isNotEmpty)
+                SliverToBoxAdapter(
+                  child: _buildMilestoneCard(isMobile),
+                ),
+              
+              // Main Category Tab Bar
+              SliverToBoxAdapter(
+                child: Container(
+                  color: Colors.white,
+                  child: TabBar(
+                    controller: _tabController,
+                    isScrollable: true,
+                    tabs: const [
+                      Tab(text: '🏆 Overall'),
+                      Tab(text: '🎯 Trivia'),
+                      Tab(text: '📝 BECE'),
+                      Tab(text: '📚 WASSCE'),
+                      Tab(text: '📖 Stories'),
+                      Tab(text: '📕 Textbooks'),
+                    ],
+                    labelColor: const Color(0xFFD62828),
+                    unselectedLabelColor: Colors.grey[600],
+                    indicatorColor: const Color(0xFFD62828),
+                    labelStyle: GoogleFonts.montserrat(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 13,
+                    ),
                   ),
                 ),
               ),
-            ),
-          
-          // Filters
-          SliverToBoxAdapter(
-            child: _buildFilters(isMobile),
-          ),
-          
-          // Top 3 Podium
-          SliverToBoxAdapter(
-            child: _buildPodium(isMobile),
-          ),
-          
-          // Leaderboard List
-          SliverPadding(
-            padding: EdgeInsets.all(isMobile ? 16 : 24),
-            sliver: _isLoading
-                ? const SliverToBoxAdapter(
-                    child: Center(
-                      child: CircularProgressIndicator(
-                        valueColor: AlwaysStoppedAnimation<Color>(
-                          Color(0xFF2ECC71),
-                        ),
+              
+              // Subcategory Tab Bar (for Trivia, BECE, WASSCE)
+              if (_selectedCategory != 'Overall' && _selectedCategory != 'Stories' && _selectedCategory != 'Textbooks')
+                SliverToBoxAdapter(
+                  child: Container(
+                    color: Colors.grey[50],
+                    padding: const EdgeInsets.symmetric(vertical: 8),
+                    child: TabBar(
+                      controller: _categoryTabController,
+                      isScrollable: true,
+                      tabs: _getCurrentSubCategories().map((cat) => Tab(text: cat)).toList(),
+                      labelColor: const Color(0xFF2ECC71), // Green
+                      unselectedLabelColor: Colors.grey[600],
+                      indicatorColor: const Color(0xFF2ECC71),
+                      labelStyle: GoogleFonts.montserrat(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 12,
                       ),
                     ),
-                  )
-                : SliverList(
-                    delegate: SliverChildBuilderDelegate(
-                      (context, index) {
-                        if (index < 3) return const SizedBox.shrink(); // Skip top 3
-                        return _buildLeaderboardItem(
-                          _leaderboardData[index],
-                          isMobile,
-                        );
-                      },
-                      childCount: _leaderboardData.length,
-                    ),
                   ),
-          ),
-        ],
-      );
-    }
-    
-    // Standalone version with Scaffold and AppBar
-    return Scaffold(
-      backgroundColor: const Color(0xFFF8FAFE),
-      body: CustomScrollView(
-        slivers: [
-          // App Bar with back button
-          SliverAppBar(
-            expandedHeight: 120,
-            pinned: true,
-            backgroundColor: Colors.white,
-            foregroundColor: const Color(0xFF1A1E3F),
-            elevation: 0,
-            leading: IconButton(
-              icon: const Icon(Icons.arrow_back),
-              onPressed: () => Navigator.pop(context),
-            ),
-            title: Text(
-              'Hall of Fame',
-              style: GoogleFonts.playfairDisplay(
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
+                ),
+              
+              // Filters
+              SliverToBoxAdapter(
+                child: _buildFilters(isMobile),
               ),
-            ),
-            actions: [
-              IconButton(
-                icon: const Icon(Icons.share),
-                onPressed: _shareRank,
-                tooltip: 'Share Your Rank',
+              
+              // Top 3 Podium
+              SliverToBoxAdapter(
+                child: _buildPodium(isMobile),
+              ),
+              
+              // Leaderboard List
+              SliverPadding(
+                padding: EdgeInsets.all(isMobile ? 16 : 24),
+                sliver: _isLoading
+                    ? const SliverToBoxAdapter(
+                        child: Center(
+                          child: CircularProgressIndicator(
+                            valueColor: AlwaysStoppedAnimation<Color>(
+                              Color(0xFF2ECC71),
+                            ),
+                          ),
+                        ),
+                      )
+                    : SliverList(
+                        delegate: SliverChildBuilderDelegate(
+                          (context, index) {
+                            if (index < 3) return const SizedBox.shrink();
+                            return _buildLeaderboardItem(
+                              _leaderboardData[index],
+                              isMobile,
+                            );
+                          },
+                          childCount: _leaderboardData.length,
+                        ),
+                      ),
               ),
             ],
           ),
-          
-          // Your Rank Card
-          if (_currentUserEntry != null)
-            SliverToBoxAdapter(
-              child: _buildYourRankCard(isMobile),
-            ),
-
-          // Motivational Banner
-          if (_motivationalMessage.isNotEmpty)
-            SliverToBoxAdapter(
-              child: _buildMotivationalBanner(isMobile),
-            ),
-
-          // Milestone Progress
-          if (_milestoneMessage.isNotEmpty)
-            SliverToBoxAdapter(
-              child: _buildMilestoneCard(isMobile),
-            ),
-          
-          // Main Category Tab Bar
-          SliverToBoxAdapter(
-            child: Container(
-              color: Colors.white,
-              child: TabBar(
-                controller: _tabController,
-                isScrollable: true,
-                tabs: const [
-                  Tab(text: '🏆 Overall'),
-                  Tab(text: '🎯 Trivia'),
-                  Tab(text: '📝 BECE'),
-                  Tab(text: '📚 WASSCE'),
-                  Tab(text: '📖 Stories'),
-                  Tab(text: '📕 Textbooks'),
-                ],
-                labelColor: const Color(0xFFD62828),
-                unselectedLabelColor: Colors.grey[600],
-                indicatorColor: const Color(0xFFD62828),
-                labelStyle: GoogleFonts.montserrat(
-                  fontWeight: FontWeight.w600,
-                  fontSize: 13,
-                ),
-              ),
-            ),
-          ),
-          
-          // Subcategory Tab Bar (for Trivia, BECE, WASSCE)
-          if (_selectedCategory != 'Overall' && _selectedCategory != 'Stories' && _selectedCategory != 'Textbooks')
-            SliverToBoxAdapter(
-              child: Container(
-                color: Colors.grey[50],
-                padding: const EdgeInsets.symmetric(vertical: 8),
-                child: TabBar(
-                  controller: _categoryTabController,
-                  isScrollable: true,
-                  tabs: _getCurrentSubCategories().map((cat) => Tab(text: cat)).toList(),
-                  labelColor: const Color(0xFF2ECC71), // Green
-                  unselectedLabelColor: Colors.grey[600],
-                  indicatorColor: const Color(0xFF2ECC71),
-                  labelStyle: GoogleFonts.montserrat(
-                    fontWeight: FontWeight.w600,
-                    fontSize: 12,
-                  ),
-                ),
-              ),
-            ),
-          
-          // Filters
-          SliverToBoxAdapter(
-            child: _buildFilters(isMobile),
-          ),
-          
-          // Top 3 Podium
-          SliverToBoxAdapter(
-            child: _buildPodium(isMobile),
-          ),
-          
-          // Leaderboard List
-          SliverPadding(
-            padding: EdgeInsets.all(isMobile ? 16 : 24),
-            sliver: _isLoading
-                ? const SliverToBoxAdapter(
-                    child: Center(
-                      child: CircularProgressIndicator(
-                        valueColor: AlwaysStoppedAnimation<Color>(
-                          Color(0xFF2ECC71),
-                        ),
-                      ),
-                    ),
-                  )
-                : SliverList(
-                    delegate: SliverChildBuilderDelegate(
-                      (context, index) {
-                        if (index < 3) return const SizedBox.shrink();
-                        return _buildLeaderboardItem(
-                          _leaderboardData[index],
-                          isMobile,
-                        );
-                      },
-                      childCount: _leaderboardData.length,
-                    ),
-                  ),
-          ),
-        ],
-      ),
+        );
+      },
     );
   }
   
