@@ -118,8 +118,10 @@ export const aiChatHttp = functions.https.onRequest((req, res) => {
       }
 
       const providedName = (body?.userName || '').toString().trim();
+      const currentSubject = (body?.currentSubject || '').toString().trim();
       const nameGreeting = providedName ? `Hello ${providedName}! ` : '';
-      const systemPrompt = `${nameGreeting}You are Uriel Academy's study assistant for BECE and WASSCE curriculum in Ghana. Answer in a helpful, age-appropriate way for ages 10-19. When using facts from the provided sources, cite the source id. If unsure, say you don't know and provide guidance to study topics.`;
+      const subjectContext = currentSubject ? `The student is currently studying ${currentSubject}. ` : '';
+      const systemPrompt = `${nameGreeting}${subjectContext}You are Uriel Academy's study assistant for BECE and WASSCE curriculum in Ghana. Answer in a helpful, age-appropriate way for ages 10-19. When using facts from the provided sources, cite the source id. If unsure, say you don't know and provide guidance to study topics.`;
 
       let userPrompt = question;
       if (retrieved && retrieved.length) {
