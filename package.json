@@ -3,6 +3,7 @@
     "adm-zip": "^0.5.16",
     "epubjs": "^0.3.93",
     "firebase-admin": "^13.5.0",
+    "minimist": "^1.2.8",
     "puppeteer": "^24.23.0"
   },
   "name": "uriel_mainapp",
@@ -18,7 +19,18 @@
     "build:web": "flutter build web --release --base-href=/",
     "prerender": "node scripts/prerender.js",
     "copy:favicon": "node scripts/copy_favicon.js",
-    "deploy:web": "npm run copy:favicon && npm run build:web && npm run prerender && firebase deploy --only hosting"
+    "deploy:web": "npm run copy:favicon && npm run build:web && npm run prerender && firebase deploy --only hosting",
+    "ingest:questions": "node scripts/ingest_all_questions.js --batch=100 --pageSize=500",
+    "count:unembedded": "node scripts/count_unembedded.js"
+  },
+  "import": {
+    "questions:assets": "node scripts/import_questions_from_assets.js --dir=assets/bece_rme_1999_2022 --batch=50"
+  },
+  "pinecone": {
+    "upsert": "node scripts/upsert_embeddings_to_pinecone.js --batch=100"
+  },
+  "bin": {
+    "ingest-all-questions": "scripts/ingest_all_questions.js"
   },
   "repository": {
     "type": "git",

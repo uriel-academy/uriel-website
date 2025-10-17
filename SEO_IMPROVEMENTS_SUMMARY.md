@@ -134,7 +134,7 @@ Firebase hosting headers in `firebase.json`:
 - Line 40: Update support email in `contactPoint`
 
 ### 4. Image Optimization for SEO
-**Current:** Using `assets/uriel_logo.png`
+**Current:** Using `assets/favicon.ico`
 **Recommended:**
 1. Create an optimized 1200x630px Open Graph image
 2. Add text overlay: "Uriel Academy - BECE & WASSCE Prep"

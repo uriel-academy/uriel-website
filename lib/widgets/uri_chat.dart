@@ -5,7 +5,8 @@ import 'package:http/http.dart' as http;
 
 class UriChat extends StatefulWidget {
   final String? userName;
-  const UriChat({Key? key, this.userName}) : super(key: key);
+  final String? currentSubject;
+  const UriChat({Key? key, this.userName, this.currentSubject}) : super(key: key);
 
   @override
   UriChatState createState() => UriChatState();
@@ -62,6 +63,7 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
       const url = 'https://us-central1-uriel-academy-41fb0.cloudfunctions.net/aiChatHttp';
       final payload = <String, dynamic>{ 'message': text, 'mode': 'chat' };
       if (widget.userName != null) payload['userName'] = widget.userName;
+      if (widget.currentSubject != null) payload['currentSubject'] = widget.currentSubject;
       final response = await http.post(
         Uri.parse(url),
         headers: {
@@ -145,16 +147,16 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
   Widget _buildSheet(BuildContext context) {
     final isMobile = MediaQuery.of(context).size.width < 600;
     final height = isMobile ? MediaQuery.of(context).size.height * 0.85 : 600.0;
-    final width = isMobile ? MediaQuery.of(context).size.width : 400.0;
+    final width = isMobile ? MediaQuery.of(context).size.width * 0.95 : 400.0;
     return AnimatedContainer(
       duration: const Duration(milliseconds: 300),
       curve: Curves.easeOut,
       width: width,
       height: height,
       margin: EdgeInsets.only(
-        right: isMobile ? 0 : 20,
+        right: isMobile ? MediaQuery.of(context).size.width * 0.025 : 20,
         bottom: isMobile ? 0 : 20,
-        left: isMobile ? 0 : MediaQuery.of(context).size.width - width - 20,
+        left: isMobile ? MediaQuery.of(context).size.width * 0.025 : MediaQuery.of(context).size.width - width - 20,
       ),
       decoration: BoxDecoration(
         color: Theme.of(context).cardColor,
@@ -249,16 +251,38 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
               child: Row(
                 children: [
                   Expanded(
-                    child: TextField(
-                      controller: _ctrl,
-                      textInputAction: TextInputAction.send,
-                      onSubmitted: (_) => _send(),
-                      decoration: InputDecoration(
-                        hintText: 'Ask Uri...',
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(24),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(
+                          color: Colors.grey.shade200,
+                          width: 0.5,
                         ),
-                        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withValues(alpha: 0.08),
+                            blurRadius: 24,
+                            offset: const Offset(0, 8),
+                            spreadRadius: 0,
+                          ),
+                          BoxShadow(
+                            color: Colors.black.withValues(alpha: 0.04),
+                            blurRadius: 8,
+                            offset: const Offset(0, 2),
+                            spreadRadius: 0,
+                          ),
+                        ],
+                      ),
+                      child: TextField(
+                        controller: _ctrl,
+                        textInputAction: TextInputAction.send,
+                        onSubmitted: (_) => _send(),
+                        decoration: const InputDecoration(
+                          hintText: 'Ask Uri...',
+                          border: InputBorder.none,
+                          contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                        ),
                       ),
                     ),
                   ),

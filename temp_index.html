@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Uriel Academy – Home</title>
+  <link rel="canonical" href="https://uriel-academy-41fb0.web.app/">
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Uriel Academy – BECE & WASSCE Prep | Ghana's Premier EdTech Platform">
+  <meta name="description" content="Master BECE & WASSCE exams with quizzes, past questions and personalized study plans.">
+  <meta name="keywords" content="BECE, WASSCE, Ghana education, exam preparation, past questions, RME, mathematics, science, English, social studies, JHS, SHS, online learning">
+  <meta name="author" content="Uriel Academy">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://uriel-academy-41fb0.web.app/">
+  <meta property="og:title" content="Uriel Academy – Home">
+  <meta property="og:description" content="Master BECE & WASSCE exams with quizzes, past questions and personalized study plans.">
+  <meta property="og:image" content="https://uriel-academy-41fb0.web.app/assets/favicon.ico">
+  <meta property="og:image:alt" content="Uriel Academy logo">
+  <meta property="og:locale" content="en_GH">
+  <meta property="og:site_name" content="Uriel Academy">
+  <meta property="og:updated_time" content="2025-10-17T00:00:00Z">
+  <meta property="og:locale" content="en_GH">
+  <meta property="og:site_name" content="Uriel Academy">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://uriel-academy-41fb0.web.app/">
+  <meta property="twitter:title" content="Uriel Academy – Home">
+  <meta property="twitter:description" content="Master BECE & WASSCE exams with quizzes, past questions and personalized study plans.">
+  <meta property="twitter:image" content="https://uriel-academy-41fb0.web.app/assets/favicon.ico">
+  <meta name="twitter:site" content="@urielacademy">
+  <meta name="twitter:creator" content="@urielacademy">
+  
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Uriel Academy",
+    "description": "Ghana's Premier EdTech Platform for BECE & WASSCE Preparation",
+    "url": "https://uriel-academy-41fb0.web.app",
+  "logo": "https://uriel-academy-41fb0.web.app/assets/favicon.ico",
+    "sameAs": [
+      "https://facebook.com/urielacademy",
+      "https://twitter.com/urielacademy"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Support",
+      "email": "support@urielacademy.com"
+    },
+    "areaServed": "GH",
+    "offers": {
+      "@type": "Offer",
+      "category": "Educational Services",
+      "description": "BECE and WASSCE exam preparation with past questions and interactive quizzes"
+    }
+  }
+  </script>
+  
+  <!-- Cache control -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="application-name" content="Uriel Academy">
+  <meta name="apple-mobile-web-app-title" content="Uriel Academy">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#0F172A">
+  <!-- iOS / Safari icons -->
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2">
+  <link rel="apple-touch-startup-image" href="/icons/Icon-512.png?v=2">
+  <!-- Safari pinned tab (mask-icon) -->
+  <link rel="mask-icon" href="/icons/icon.ico?v=2" color="#0F172A">
+  <!-- Microsoft tile -->
+  <meta name="msapplication-TileColor" content="#0F172A">
+  <meta name="msapplication-TileImage" content="/icons/Icon-192.png?v=2">
+
+  <!-- Favicon (versioned to bust cache) -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2"/>
+  <!-- Use single favicon.ico as primary icon -->
+  <!-- PNG icon references removed intentionally; favicon.ico is the only favicon -->
+  <link rel="shortcut icon" href="/favicon.ico?v=2">
+  <link rel="manifest" href="/manifest.json?v=2">
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!-- Firebase JS SDKs removed: FlutterFire handles Firebase initialization -->
+  <style>
+    /* Prevent grey flash - match app background color */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #F8FAFE;
+      overflow: hidden;
+    }
+    
+    /* Loading screen */
+    #loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #F8FAFE;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    
+    .loader {
+      width: 50px;
+      height: 50px;
+      border: 4px solid #E0E0E0;
+      border-top: 4px solid #D62828;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    /* Hide loading once Flutter is ready */
+    .flutter-loaded #loading {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loading">
+    <div class="loader"></div>
+  </div>
+  
+  <script src="flutter_bootstrap.js" async></script>
+  
+  <script>
+    // Hide loading screen once Flutter is ready
+    window.addEventListener('flutter-first-frame', function() {
+      document.body.classList.add('flutter-loaded');
+    });
+  </script>
+</body>
+</html>

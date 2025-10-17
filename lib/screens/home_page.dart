@@ -2241,8 +2241,6 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   _buildNavItem(2, 'Books'),
                   _buildNavItem(3, 'Trivia'),
                   _buildNavItem(4, 'Leaderboard'),
-                  // Chat Uri nav item for testing: opens the collapsible chat
-                  _buildNavItem(98, 'Chat Uri', icon: Icons.chat_bubble_outline),
                   _buildNavItem(5, 'Feedback'),
                   
                   const Padding(
@@ -2309,20 +2307,6 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         selectedTileColor: const Color(0xFFD62828).withValues(alpha: 0.1),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
         onTap: () {
-          // Special handling for Chat Uri nav item
-          if (index == 98) {
-            // Open the UriChat by toggling its open state via key
-            try {
-              final state = _uriChatKey.currentState;
-              if (state != null && state.mounted) {
-                state.setOpen(true);
-              }
-            } catch (e) {
-              debugPrint('Unable to open UriChat: $e');
-            }
-            return;
-          }
-
           if (isMainNav) {
             setState(() {
               _selectedIndex = index;
