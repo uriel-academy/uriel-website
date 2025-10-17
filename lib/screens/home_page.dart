@@ -18,6 +18,7 @@ import 'feedback_page.dart';
 import 'trivia_categories_page.dart';
 import 'student_profile_page.dart';
 import 'redesigned_leaderboard_page.dart';
+import '../widgets/uri_chat.dart';
 
 class StudentHomePage extends StatefulWidget {
   const StudentHomePage({super.key});
@@ -89,8 +90,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   List<Map<String, dynamic>> _upcomingItems = [];
 
   // Performance trend tracking
-  double _previousWeekScore = 0.0;
-  int _previousWeekQuestions = 0;
+  final double _previousWeekScore = 0.0;
+  final int _previousWeekQuestions = 0;
 
   @override
   void initState() {
@@ -112,6 +113,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     _recordDailyActivity();
     _setupUserStream();
   }
+  // Key to control the UriChat widget (open/close programmatically)
+  final GlobalKey<dynamic> _uriChatKey = GlobalKey();
   
   void _loadUserRank() async {
     final user = FirebaseAuth.instance.currentUser;
@@ -692,13 +695,15 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     final hoursAgo = DateTime.now().difference(activityDate).inHours;
 
     // Recency bonus
-    if (hoursAgo < 1) relevance += 3;
-    else if (hoursAgo < 6) relevance += 2;
+    if (hoursAgo < 1) {
+      relevance += 3;
+    } else if (hoursAgo < 6) relevance += 2;
     else if (hoursAgo < 24) relevance += 1;
 
     // Performance bonus
-    if (score >= 90.0) relevance += 2;
-    else if (score >= 80.0) relevance += 1;
+    if (score >= 90.0) {
+      relevance += 2;
+    } else if (score >= 80.0) relevance += 1;
 
     // Subject preference bonus
     final preferredSubjects = userProfile['preferredSubjects'] as List<String>? ?? [];
@@ -744,19 +749,19 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     switch (activityType) {
       case 'trivia':
         title = score >= 80.0 ? '🎯 Trivia Champion!' : '🎮 Trivia Challenge Completed';
-        detail = '${score.toStringAsFixed(0)}% score • ${questions} fun questions';
+        detail = '${score.toStringAsFixed(0)}% score • $questions fun questions';
         break;
       case 'rme':
         title = score >= 85.0 ? '🙏 RME Excellence Achieved' : '📖 RME Study Session';
-        detail = '${score.toStringAsFixed(0)}% score • ${questions} questions explored';
+        detail = '${score.toStringAsFixed(0)}% score • $questions questions explored';
         break;
       case 'past_questions':
         title = score >= 75.0 ? '📚 BECE Mastery Progress' : '📝 Past Questions Practice';
-        detail = '${score.toStringAsFixed(0)}% score • ${questions} exam questions';
+        detail = '${score.toStringAsFixed(0)}% score • $questions exam questions';
         break;
       case 'mastery':
         title = '🏆 Perfect Score Achievement!';
-        detail = 'Outstanding performance in $subject • ${questions} questions mastered';
+        detail = 'Outstanding performance in $subject • $questions questions mastered';
         break;
       case 'strong_performance':
         title = '⭐ Excellent Work in $subject!';
@@ -768,11 +773,11 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         break;
       case 'intensive_study':
         title = '🔥 Intensive Study Session Complete!';
-        detail = 'Covered ${questions} questions in $subject • Impressive dedication';
+        detail = 'Covered $questions questions in $subject • Impressive dedication';
         break;
       default:
         title = '$subject Quiz Completed';
-        detail = '${score.toStringAsFixed(0)}% score • ${questions} questions answered';
+        detail = '${score.toStringAsFixed(0)}% score • $questions questions answered';
     }
 
     return {'title': title, 'detail': detail};
@@ -1369,9 +1374,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       );
 
       if (weakSubjectProgress.progress < 50.0) {
-        _studyRecommendations.add('🚨 Critical Focus: ${primaryWeakArea} needs immediate attention. Dedicate extra study time to improve from ${weakSubjectProgress.progress.toStringAsFixed(0)}%');
+        _studyRecommendations.add('🚨 Critical Focus: $primaryWeakArea needs immediate attention. Dedicate extra study time to improve from ${weakSubjectProgress.progress.toStringAsFixed(0)}%');
       } else {
-        _studyRecommendations.add('📈 Growth Zone: ${primaryWeakArea} shows improvement potential. Targeted practice will yield quick results');
+        _studyRecommendations.add('📈 Growth Zone: $primaryWeakArea shows improvement potential. Targeted practice will yield quick results');
       }
     }
 
@@ -1492,9 +1497,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     if (currentStreak == 0 && questionsAnswered > 0) {
       _studyRecommendations.add('🔥 Streak Starter: Begin a daily study habit. Even short sessions create powerful momentum and build lasting learning habits');
     } else if (currentStreak > 0 && currentStreak < 7) {
-      _studyRecommendations.add('⚡ Momentum Builder: ${currentStreak}-day streak in progress! Each day adds to your learning momentum and confidence');
+      _studyRecommendations.add('⚡ Momentum Builder: $currentStreak-day streak in progress! Each day adds to your learning momentum and confidence');
     } else if (currentStreak >= 7) {
-      _studyRecommendations.add('🏆 Habit Champion: ${currentStreak}-day streak! You\'ve built an impressive learning habit. This consistency will carry you far');
+      _studyRecommendations.add('🏆 Habit Champion: $currentStreak-day streak! You\'ve built an impressive learning habit. This consistency will carry you far');
     }
 
     // 13. Personalized subject focus
@@ -1748,7 +1753,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     final consistency = studyPatterns['consistency'] as String;
 
     if (frequency == 'high' && consistency == 'excellent') {
-      _personalizedContent.add('🔥 Study Master: Your ${currentStreak}-day streak shows incredible discipline! You\'re unstoppable');
+      _personalizedContent.add('🔥 Study Master: Your $currentStreak-day streak shows incredible discipline! You\'re unstoppable');
     } else if (frequency == 'low') {
       _personalizedContent.add('⏰ Study Time: Regular practice (even 15 minutes daily) leads to remarkable improvement');
     }
@@ -1991,6 +1996,16 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   return const SizedBox.shrink();
                 },
               ),
+              // Collapsible URI chat sidebar (far right)
+              Positioned(
+                right: 16,
+                top: 80,
+                bottom: 80,
+                child: Visibility(
+                  visible: true,
+                  child: UriChat(key: _uriChatKey, userName: userName),
+                ),
+              ),
             ],
           ),
           
@@ -2226,6 +2241,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   _buildNavItem(2, 'Books'),
                   _buildNavItem(3, 'Trivia'),
                   _buildNavItem(4, 'Leaderboard'),
+                  // Chat Uri nav item for testing: opens the collapsible chat
+                  _buildNavItem(98, 'Chat Uri', icon: Icons.chat_bubble_outline),
                   _buildNavItem(5, 'Feedback'),
                   
                   const Padding(
@@ -2270,13 +2287,14 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     );
   }
 
-  Widget _buildNavItem(int index, String title) {
+  Widget _buildNavItem(int index, String title, {IconData? icon}) {
     final isSelected = _selectedIndex == index;
     final isMainNav = index >= 0;
     
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 2),
       child: ListTile(
+        leading: icon != null ? Icon(icon, color: isSelected ? const Color(0xFFD62828) : Colors.grey[600]) : null,
         title: Text(
           title,
           style: GoogleFonts.montserrat(
@@ -2290,12 +2308,30 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         selected: isSelected,
         selectedTileColor: const Color(0xFFD62828).withValues(alpha: 0.1),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-        onTap: isMainNav ? () {
-          setState(() {
-            _selectedIndex = index;
-            _showingProfile = false; // Close profile when switching tabs
-          });
-        } : () => _navigateToFooterPage(title),
+        onTap: () {
+          // Special handling for Chat Uri nav item
+          if (index == 98) {
+            // Open the UriChat by toggling its open state via key
+            try {
+              final state = _uriChatKey.currentState;
+              if (state != null && state.mounted) {
+                state.setOpen(true);
+              }
+            } catch (e) {
+              debugPrint('Unable to open UriChat: $e');
+            }
+            return;
+          }
+
+          if (isMainNav) {
+            setState(() {
+              _selectedIndex = index;
+              _showingProfile = false; // Close profile when switching tabs
+            });
+          } else {
+            _navigateToFooterPage(title);
+          }
+        },
       ),
     );
   }
@@ -3006,12 +3042,12 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                gradient: LinearGradient(
+                gradient: const LinearGradient(
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                   colors: [
-                    const Color(0xFF1A1E3F),
-                    const Color(0xFF2A2F5F),
+                    Color(0xFF1A1E3F),
+                    Color(0xFF2A2F5F),
                   ],
                 ),
                 borderRadius: BorderRadius.circular(12),
@@ -3612,12 +3648,12 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           Container(
             padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
-              gradient: LinearGradient(
+              gradient: const LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
                 colors: [
-                  const Color(0xFF1A1E3F),
-                  const Color(0xFF2A2F5F),
+                  Color(0xFF1A1E3F),
+                  Color(0xFF2A2F5F),
                 ],
               ),
               borderRadius: BorderRadius.circular(16),
@@ -3987,7 +4023,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.timer, color: Colors.grey, size: 48),
+                    const Icon(Icons.timer, color: Colors.grey, size: 48),
                     const SizedBox(height: 8),
                     Text(
                       'No study time data yet',
@@ -4191,7 +4227,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(Icons.emoji_events_outlined, color: Colors.grey, size: 32),
+              const Icon(Icons.emoji_events_outlined, color: Colors.grey, size: 32),
               const SizedBox(height: 8),
               Text(
                 'No Trivia Data Yet',
@@ -4716,7 +4752,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           'priority': 'high',
           'estimatedTime': '45 min',
           'difficulty': 'Challenging',
-          'reward': '${nextRank!.name} Rank + ${xpToNext} XP',
+          'reward': '${nextRank!.name} Rank + $xpToNext XP',
         });
       }
     }
