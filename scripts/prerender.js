@@ -12,20 +12,39 @@ if (!fs.existsSync(indexPath)) {
 
 const indexHtml = fs.readFileSync(indexPath, 'utf8');
 
-const routes = [
-  { path: '/', file: 'index.html', title: 'Uriel Academy – Home', desc: 'Master BECE & WASSCE exams with quizzes and past questions.' },
-  { path: '/questions', file: 'questions.html', title: 'Past Questions', desc: 'Search and practice BECE & WASSCE past questions.' },
-  { path: '/leaderboard', file: 'leaderboard.html', title: 'Leaderboard', desc: 'See top students and ranks on Uriel Academy.' },
-  { path: '/profile', file: 'profile.html', title: 'Profile', desc: 'View your progress, ranks, and study recommendations.' }
-];
+// Load route metadata
+const metaPath = path.join(__dirname, 'route-meta.json');
+let routeMeta = {};
+if (fs.existsSync(metaPath)) {
+  routeMeta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
+} else {
+  console.error('route-meta.json not found; using default routes');
+}
+
+const routes = Object.keys(routeMeta).map(routePath => {
+  const filename = routePath === '/' ? 'index.html' : routePath.replace(/^\//, '') + '.html';
+  return {
+    path: routePath,
+    file: filename,
+    meta: routeMeta[routePath]
+  };
+});
 
 routes.forEach(route => {
   let out = indexHtml;
-  out = out.replace(/<title>.*?<\/title>/s, `<title>${route.title}<\/title>`);
-  out = out.replace(/<meta name="description" content=".*?">/s, `<meta name="description" content="${route.desc}">`);
-  // Basic OG replacement
-  out = out.replace(/<meta property="og:title" content=".*?">/s, `<meta property="og:title" content="${route.title}">`);
-  out = out.replace(/<meta property="og:description" content=".*?">/s, `<meta property="og:description" content="${route.desc}">`);
+  const title = route.meta.title || 'Uriel Academy';
+  const desc = route.meta.description || 'Uriel Academy';
+  const image = route.meta.image || 'https://uriel-academy-41fb0.web.app/assets/uriel_logo.png';
+
+  out = out.replace(/<title>.*?<\/title>/s, `<title>${title}<\/title>`);
+  out = out.replace(/<meta name="description" content=".*?">/s, `<meta name="description" content="${desc}">`);
+  out = out.replace(/<meta property="og:title" content=".*?">/s, `<meta property="og:title" content="${title}">`);
+  out = out.replace(/<meta property="og:description" content=".*?">/s, `<meta property="og:description" content="${desc}">`);
+  out = out.replace(/<meta property="og:image" content=".*?">/s, `<meta property="og:image" content="${image}">`);
+  out = out.replace(/<meta property="twitter:title" content=".*?">/s, `<meta property="twitter:title" content="${title}">`);
+  out = out.replace(/<meta property="twitter:description" content=".*?">/s, `<meta property="twitter:description" content="${desc}">`);
+  out = out.replace(/<meta property="twitter:image" content=".*?">/s, `<meta property="twitter:image" content="${image}">`);
+  out = out.replace(/<link rel="canonical" href=".*?">/s, `<link rel="canonical" href="https://uriel-academy-41fb0.web.app${route.path}">`);
 
   const outPath = path.join(buildPath, route.file);
   fs.writeFileSync(outPath, out, 'utf8');

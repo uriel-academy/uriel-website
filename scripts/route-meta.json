@@ -1,0 +1,22 @@
+{
+  "/": {
+    "title": "Uriel Academy – Home",
+    "description": "Master BECE & WASSCE exams with quizzes, past questions and personalized study plans.",
+    "image": "https://uriel-academy-41fb0.web.app/assets/uriel_logo.png"
+  },
+  "/questions": {
+    "title": "Past Questions – Uriel Academy",
+    "description": "Practice thousands of BECE & WASSCE past questions with answers and explanations.",
+    "image": "https://uriel-academy-41fb0.web.app/assets/questions_preview.png"
+  },
+  "/leaderboard": {
+    "title": "Leaderboard – Uriel Academy",
+    "description": "See top students, ranks and earn XP on Uriel Academy.",
+    "image": "https://uriel-academy-41fb0.web.app/assets/leaderboard_preview.png"
+  },
+  "/profile": {
+    "title": "Profile – Uriel Academy",
+    "description": "View your progress, ranks, and personalized study recommendations.",
+    "image": "https://uriel-academy-41fb0.web.app/assets/profile_preview.png"
+  }
+}
