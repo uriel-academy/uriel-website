@@ -94,7 +94,7 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
     return AnimatedPositioned(
       duration: const Duration(milliseconds: 250),
       right: 0,
-      bottom: _open ? (isMobile ? MediaQuery.of(context).size.height * 0.15 : 20) : 20,
+      bottom: _open ? (isMobile ? MediaQuery.of(context).size.height * 0.05 : 20) : 20, // Position higher on mobile for messaging-like experience
       child: MouseRegion(
         cursor: SystemMouseCursors.click,
         child: Column(
@@ -146,24 +146,35 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
 
   Widget _buildSheet(BuildContext context) {
     final isMobile = MediaQuery.of(context).size.width < 600;
-    final height = isMobile ? MediaQuery.of(context).size.height * 0.85 : 600.0;
-    final width = isMobile ? MediaQuery.of(context).size.width * 0.95 : 400.0;
+    final height = isMobile ? MediaQuery.of(context).size.height * 0.9 : 600.0; // Increased mobile height for better messaging experience
+    final width = isMobile ? MediaQuery.of(context).size.width * 0.8075 : 340.0; // 15% reduction from 400
     return AnimatedContainer(
       duration: const Duration(milliseconds: 300),
       curve: Curves.easeOut,
       width: width,
       height: height,
       margin: EdgeInsets.only(
-        right: isMobile ? MediaQuery.of(context).size.width * 0.025 : 20,
+        right: isMobile ? MediaQuery.of(context).size.width * 0.09625 : (MediaQuery.of(context).size.width - width) / 2 + 20, // Center it
         bottom: isMobile ? 0 : 20,
-        left: isMobile ? MediaQuery.of(context).size.width * 0.025 : MediaQuery.of(context).size.width - width - 20,
+        left: isMobile ? MediaQuery.of(context).size.width * 0.09625 : (MediaQuery.of(context).size.width - width) / 2 + 20, // Center it
       ),
       decoration: BoxDecoration(
         color: Theme.of(context).cardColor,
-        borderRadius: isMobile
-            ? const BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20))
-            : BorderRadius.circular(16),
-        boxShadow: const [BoxShadow(color: Colors.black26, blurRadius: 12)],
+        borderRadius: BorderRadius.circular(12), // Consistent 12px radius for both desktop and mobile
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.08),
+            blurRadius: 24,
+            offset: const Offset(0, 8),
+            spreadRadius: 0,
+          ),
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.04),
+            blurRadius: 8,
+            offset: const Offset(0, 2),
+            spreadRadius: 0,
+          ),
+        ],
       ),
       child: Column(
         children: [
@@ -171,9 +182,7 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
             padding: const EdgeInsets.all(16.0),
             decoration: BoxDecoration(
               color: Theme.of(context).primaryColor.withOpacity(0.1),
-              borderRadius: isMobile
-                  ? const BorderRadius.only(topLeft: Radius.circular(20), topRight: Radius.circular(20))
-                  : const BorderRadius.only(topLeft: Radius.circular(16), topRight: Radius.circular(16)),
+              borderRadius: const BorderRadius.only(topLeft: Radius.circular(12), topRight: Radius.circular(12)), // Match the main container
             ),
             child: Row(
               children: [
