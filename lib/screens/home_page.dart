@@ -1997,14 +1997,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                 },
               ),
               // Collapsible URI chat sidebar (far right)
-              Positioned(
-                right: 16,
-                top: 80,
-                bottom: 80,
-                child: Visibility(
-                  visible: true,
-                  child: UriChat(key: _uriChatKey, userName: userName),
-                ),
+              Visibility(
+                visible: true,
+                child: UriChat(key: _uriChatKey, userName: userName),
               ),
             ],
           ),
