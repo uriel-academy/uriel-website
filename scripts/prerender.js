@@ -34,7 +34,7 @@ routes.forEach(route => {
   let out = indexHtml;
   const title = route.meta.title || 'Uriel Academy';
   const desc = route.meta.description || 'Uriel Academy';
-  const image = route.meta.image || 'https://uriel-academy-41fb0.web.app/assets/uriel_logo2.png';
+  const image = route.meta.image || 'https://uriel-academy-41fb0.web.app/assets/favicon.ico';
 
   out = out.replace(/<title>.*?<\/title>/s, `<title>${title}<\/title>`);
   out = out.replace(/<meta name="description" content=".*?">/s, `<meta name="description" content="${desc}">`);

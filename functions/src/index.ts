@@ -3,6 +3,9 @@ import * as admin from 'firebase-admin';
 import { z } from 'zod';
 import { scoreExam } from './lib/scoring';
 import { hasEntitlement, EntitlementType } from './util/entitlement';
+import { aiChat } from './ai/assistant';
+import { ingestDocs } from './ai/ingest';
+import { aiChatHttp } from './ai/http_ai';
 
 admin.initializeApp();
 const db = admin.firestore();
@@ -717,6 +720,9 @@ export const importRMEQuestions = functions.https.onCall(async (data, context) =
   }
 });
 
+// Expose the HTTP wrapper for browsers that need CORS-enabled endpoint
+export { aiChatHttp };
+
 export default { 
   onUserCreate, 
   grantRole, 
@@ -730,4 +736,5 @@ export default {
   importRMEQuestions,
   setAdminRole,
   initialSetupAdmin
+  , aiChat, ingestDocs
 };

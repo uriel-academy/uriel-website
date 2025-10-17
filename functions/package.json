@@ -20,15 +20,16 @@
     "lint:fix": "eslint src --ext .ts --fix"
   },
   "dependencies": {
-    "firebase-admin": "^12.0.0",
-    "firebase-functions": "^4.8.0",
-    "zod": "^3.22.4",
-    "axios": "^1.6.0",
+  "axios": "^1.6.0",
+  "firebase-admin": "^11.11.1",
+  "firebase-functions": "^3.23.0",
+    "openai": "^4.104.0",
     "stripe": "^14.0.0",
-    "twilio": "^4.19.0"
+    "twilio": "^4.19.0",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
-    "typescript": "^5.3.0",
+    "@types/jest": "^29.5.0",
     "@types/node": "^20.10.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
@@ -36,13 +37,15 @@
     "eslint-plugin-import": "^2.29.0",
     "jest": "^29.7.0",
     "ts-jest": "^29.1.0",
-    "@types/jest": "^29.5.0"
+    "typescript": "^5.3.0"
   },
   "private": true,
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node",
-    "testMatch": ["**/?(*.)+(spec|test).[tj]s?(x)"],
+    "testMatch": [
+      "**/?(*.)+(spec|test).[tj]s?(x)"
+    ],
     "collectCoverageFrom": [
       "src/**/*.{ts,tsx}",
       "!src/**/*.d.ts"
