@@ -14,7 +14,11 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:web": "flutter build web --release --base-href=/",
+    "prerender": "node scripts/prerender.js",
+    "copy:favicon": "node scripts/copy_favicon.js",
+    "deploy:web": "npm run copy:favicon && npm run build:web && npm run prerender && firebase deploy --only hosting"
   },
   "repository": {
     "type": "git",
