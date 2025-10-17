@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:cloud_functions/cloud_functions.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
 
 class UriChat extends StatefulWidget {
   final String? userName;
@@ -33,18 +35,30 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
     setState(() { _messages.insert(0, {'role':'user','text':text}); _loading = true; _ctrl.clear(); });
 
     try {
-  // Use region-specific instance to ensure we call the correct function URL
-  final callable = FirebaseFunctions.instanceFor(region: 'us-central1').httpsCallable('aiChat');
+      final user = FirebaseAuth.instance.currentUser;
+      if (user == null) throw Exception('Not signed in');
+      final idToken = await user.getIdToken();
+      final url = 'https://us-central1-uriel-academy-41fb0.cloudfunctions.net/aiChatHttp';
       final payload = <String, dynamic>{ 'message': text, 'mode': 'chat' };
       if (widget.userName != null) payload['userName'] = widget.userName;
-      final resp = await callable.call(payload);
-      final data = resp.data as Map<String, dynamic>;
-      final reply = data['reply'] as String? ?? 'No reply';
-      setState(() { _messages.insert(0, {'role':'bot','text':reply}); });
-    } on FirebaseFunctionsException catch (e) {
-      setState(() { _messages.insert(0, {'role':'bot','text':'AI error: ${e.message ?? e.code}'}); });
+      final response = await http.post(
+        Uri.parse(url),
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer $idToken',
+          'Origin': 'https://uriel.academy', // or get from window.location.origin if needed
+        },
+        body: jsonEncode(payload),
+      );
+      if (response.statusCode == 200) {
+        final data = jsonDecode(response.body) as Map<String, dynamic>;
+        final reply = data['reply'] as String? ?? 'No reply';
+        setState(() { _messages.insert(0, {'role':'bot','text':reply}); });
+      } else {
+        throw Exception('HTTP ${response.statusCode}: ${response.body}');
+      }
     } catch (e) {
-      setState(() { _messages.insert(0, {'role':'bot','text':'Error: ${e.toString()}'}); });
+      setState(() { _messages.insert(0, {'role':'bot','text':'AI error: ${e.toString()}'}); });
     } finally {
       setState(() { _loading = false; });
     }
