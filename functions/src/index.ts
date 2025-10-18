@@ -29,6 +29,24 @@ const corsHandler = cors({
   credentials: false,
 });
 
+// Model identity and cutoff (update when you change models)
+const MODEL = 'gpt-4o-mini';
+const CUTOFF = 'June 2024';
+
+// Simple LaTeX / math cleaner for student-friendly output
+function simplifyMath(text: string) {
+  if (!text) return '';
+  return text
+    .replace(/\\\(|\\\)/g, '')
+    .replace(/\\times/g, '*')
+    .replace(/\\div/g, '/')
+    .replace(/\\cdot/g, '*')
+    .replace(/\\sqrt\{([^}]+)\}/g, 'sqrt($1)')
+    .replace(/\\frac\{([^}]+)\}\{([^}]+)\}/g, '($1)/($2)')
+    .replace(/\s{2,}/g, ' ')
+    .trim();
+}
+
 export const aiChat = functions
   .region('us-central1')
   .https.onRequest((req, res) => {
@@ -46,20 +64,38 @@ export const aiChat = functions
           const userMessage = (req.body?.message ?? '').toString().slice(0, 4000);
 
           const completion = await openai.chat.completions.create({
-            model: 'gpt-4o-mini',
+            model: MODEL,
             temperature: 0.3,
             messages: [
               {
                 role: 'system',
-                content:
-                  "You are Uri, the Uriel Academy study assistant. Be concise, friendly, and Ghana-specific where helpful. If unsure of a fact (e.g., exam dates), say so and ask to use the Facts API.",
+                content: `You are Uri, the friendly Uriel Academy study assistant for JHS and SHS students in Ghana.
+- Model: ${MODEL}
+- Knowledge cutoff: ${CUTOFF}
+
+Your communication goals:
+- Use clear, simple English that a JHS Form 1–3 student can understand.
+- Avoid LaTeX or special math symbols like \\( \\), \\frac, \\times.
+- Write maths in easy format: x^2, 3x + 2, 1/2, 2 * 3, sqrt(9).
+- Always explain symbols in words (x^2 means "x squared").
+- Break explanations into sections: Title; What it means (1 sentence); Steps; Example; Quick check; In short.
+- Keep steps short and numbered; cap to ~5 lines with a "Show more" option in the UI.
+- If asked "what model are you?" answer: "${MODEL}".
+- If asked about knowledge cutoff, answer: "${CUTOFF}".
+- If a user requests live info (dates, breaking news), politely suggest using the Facts API and wait for confirmation.
+- Be friendly, encouraging, and Ghana-specific where examples help (cedis, market items, trotro times).
+When a student gives a wrong answer, first affirm what they got right before explaining the fix.
+Always end with a short motivational line like "Good effort!" or "Keep practising!".`,
               },
               { role: 'user', content: userMessage },
             ],
           });
 
+          const raw = completion.choices?.[0]?.message?.content ?? '';
+          const clean = simplifyMath(raw);
+
           res.set('Access-Control-Allow-Origin', req.headers.origin || '*');
-          res.json({ reply: completion.choices?.[0]?.message?.content ?? '' });
+          res.json({ reply: clean });
         } catch (err: any) {
           console.error('aiChat error:', err);
           try {
@@ -71,6 +107,55 @@ export const aiChat = functions
       })();
     });
   });
+
+// Facts API: web search + answer with citations using Tavily
+export const facts = functions.region('us-central1').https.onRequest((req, res) => {
+  corsHandler(req, res, () => {
+    (async () => {
+      if (req.method === 'OPTIONS') {
+        res.set('Access-Control-Allow-Methods', 'POST, OPTIONS');
+        res.set('Access-Control-Allow-Headers', 'Content-Type');
+        res.status(204).send('');
+        return;
+      }
+
+      try {
+        const q = (req.body?.query ?? '').toString().slice(0, 600);
+        const tavilyKey = functions.config().tavily?.key;
+        if (!tavilyKey) {
+          res.status(500).json({ error: 'Facts provider key not configured' });
+          return;
+        }
+
+        const resp = await fetch('https://api.tavily.com/search', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ api_key: tavilyKey, query: q, max_results: 6, include_answer: true }),
+        });
+        const data = await resp.json();
+
+        const context =
+          (data?.answer ? `Summary: ${data.answer}\n\n` : '') +
+          (data?.results ?? []).map((r: any, i: number) => `[${i + 1}] ${r.title} — ${r.url}\n${r.content}`).join('\n\n');
+
+        const ans = await openai.chat.completions.create({
+          model: MODEL,
+          temperature: 0.1,
+          messages: [
+            { role: 'system', content: 'Use ONLY the provided context. If something is missing, say you can\'t verify it. Include bracketed citations like [1], [2].' },
+            { role: 'user', content: `Question: ${q}\n\nContext:\n${context}` },
+          ],
+        });
+
+        res.set('Access-Control-Allow-Origin', req.headers.origin || '*');
+        res.json({ answer: ans.choices?.[0]?.message?.content ?? '' });
+      } catch (e: any) {
+        console.error('facts error:', e);
+        try { res.status(500).json({ error: e?.message ?? 'Server error' }); } catch (ee) { console.error('facts send failed', ee); }
+      }
+    })();
+  });
+});
 
 /** Optional: a lightweight health check */
 export const ping = functions.region('us-central1').https.onRequest((_, res) => {
