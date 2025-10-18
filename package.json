@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "adm-zip": "^0.5.16",
+    "axios": "^1.12.2",
     "epubjs": "^0.3.93",
     "firebase-admin": "^13.5.0",
     "minimist": "^1.2.8",
