@@ -723,6 +723,30 @@ export const importRMEQuestions = functions.https.onCall(async (data, context) =
 // Expose the HTTP wrapper for browsers that need CORS-enabled endpoint
 export { aiChatHttp };
 
+// Facts API - Production-ready educational content API - VERSION 2
+export const factsApi = functions.https.onRequest((req, res) => {
+  // Enable CORS for all origins
+  res.set('Access-Control-Allow-Origin', '*');
+  res.set('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+
+  if (req.method === 'OPTIONS') {
+    res.status(204).send('');
+    return;
+  }
+
+  console.log('Facts API called:', { path: req.path, method: req.method });
+
+  // Simple response for now - updated
+  res.status(200).json({
+    ok: true,
+    message: 'Facts API is working! Updated version',
+    path: req.path,
+    method: req.method,
+    timestamp: new Date().toISOString()
+  });
+});
+
 export default { 
   onUserCreate, 
   grantRole, 

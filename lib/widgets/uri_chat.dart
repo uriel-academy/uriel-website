@@ -191,6 +191,300 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
     });
   }
 
+  // Query Facts API for verified educational information
+  Future<String?> _queryFactsAPI(String? userMessage, String? idToken) async {
+    if (userMessage == null || userMessage.isEmpty || idToken == null) return null;
+    
+    try {
+      final message = userMessage.toLowerCase();
+
+      // Check for exam dates queries
+      if (message.contains('when') && (message.contains('bece') || message.contains('wassce') || message.contains('exam'))) {
+        final examType = message.contains('bece') ? 'bece' : 'wassce';
+        // Extract year if mentioned
+        final yearMatch = RegExp(r'\b(20\d{2})\b').firstMatch(message);
+        final year = yearMatch?.group(1) ?? '2026'; // Default to next year
+
+        final response = await http.get(
+          Uri.parse('https://us-central1-uriel-academy-41fb0.cloudfunctions.net/factsApi/v1/exams/$examType/$year/dates'),
+          headers: {
+            'Authorization': 'Bearer $idToken',
+            'Origin': 'https://uriel.academy',
+          },
+        );
+
+        if (response.statusCode == 200) {
+          final data = jsonDecode(response.body);
+          if (data['ok'] == true) {
+            final examData = data['data'];
+            String result = '📅 **${examType.toUpperCase()} $year Update**\n\n';
+            result += 'The ${examType.toUpperCase()} will take place from **${examData['start_date'] ?? 'TBD'}** to **${examData['end_date'] ?? 'TBD'}**.\n\n';
+            if (examData['status']) result += 'Status: ${examData['status']}\n';
+            if (examData['note']) result += 'Note: ${examData['note']}\n\n';
+            result += '*Source: ${data['source']['name']} (verified ${data['source']['lastVerifiedISO']?.split('T')?[0] ?? 'Unknown'})*';
+            return result;
+          }
+        }
+      }
+
+      // Check for syllabus queries
+      if (message.contains('syllabus') || message.contains('curriculum')) {
+        // Extract subject from message
+        final subjects = ['english', 'mathematics', 'science', 'social studies', 'rme', 'french', 'ict'];
+        String? subject;
+        for (var s in subjects) {
+          if (message.contains(s)) {
+            subject = s;
+            break;
+          }
+        }
+
+        // Extract level (JHS1, JHS2, etc.)
+        final levelMatch = RegExp(r'\b(jhs\d?|shs\d?)\b', caseSensitive: false).firstMatch(message);
+        final level = levelMatch?.group(1)?.toUpperCase() ?? 'JHS1';
+
+        if (subject != null) {
+          final response = await http.get(
+            Uri.parse('https://us-central1-uriel-academy-41fb0.cloudfunctions.net/factsApi/v1/syllabus/$level/$subject'),
+            headers: {
+              'Authorization': 'Bearer $idToken',
+              'Origin': 'https://uriel.academy',
+            },
+          );
+
+          if (response.statusCode == 200) {
+            final data = jsonDecode(response.body);
+            if (data['ok'] == true) {
+              final syllabus = data['data'];
+              String result = '📚 **${subject.toUpperCase()} Syllabus ($level)**\n\n';
+              result += '${syllabus['description'] ?? 'Official syllabus for $subject'}\n\n';
+              if (syllabus['topics'] != null && syllabus['topics'].isNotEmpty) {
+                result += '**Key Topics:**\n';
+                for (var topic in syllabus['topics'].take(5)) {
+                  result += '• $topic\n';
+                }
+                if (syllabus['topics'].length > 5) {
+                  result += '• ... and ${syllabus['topics'].length - 5} more topics\n';
+                }
+              }
+              result += '\n*Source: ${data['source']['name']} (verified ${data['source']['lastVerifiedISO']?.split('T')?[0] ?? 'Unknown'})*';
+              return result;
+            }
+          }
+        }
+      }
+
+      // Check for past questions queries
+      if ((message.contains('question') || message.contains('past') || message.contains('practice')) &&
+          (message.contains('bece') || message.contains('wassce'))) {
+        // Extract subject and year
+        final subjects = ['english', 'mathematics', 'science', 'social studies', 'rme', 'ict'];
+        String? subject;
+        String? year;
+
+        for (var s in subjects) {
+          if (message.contains(s)) {
+            subject = s;
+            break;
+          }
+        }
+
+        // Extract year (look for 4-digit numbers)
+        final yearMatch = RegExp(r'\b(19|20)\d{2}\b').firstMatch(message);
+        if (yearMatch != null) {
+          year = yearMatch.group(0);
+        }
+
+        final exam = message.contains('bece') ? 'bece' : 'wassce';
+
+        if (subject != null) {
+          final url = 'https://us-central1-uriel-academy-41fb0.cloudfunctions.net/factsApi/v1/questions?exam=$exam&year=${year ?? '2011'}&subject=$subject&type=objective&page=1';
+
+          final response = await http.get(
+            Uri.parse(url),
+            headers: {
+              'Authorization': 'Bearer $idToken',
+              'Origin': 'https://uriel.academy',
+            },
+          );
+
+          if (response.statusCode == 200) {
+            final data = jsonDecode(response.body);
+            if (data['ok'] == true && data['data']['questions'].isNotEmpty) {
+              final questions = data['data']['questions'];
+              String result = '📝 **${subject.toUpperCase()} Past Questions**\n\n';
+              result += 'Found ${questions.length} questions';
+
+              if (year != null) {
+                result += ' from $year';
+              }
+
+              result += ':\n\n';
+
+              // Show first 3 questions as examples
+              for (var i = 0; i < questions.length && i < 3; i++) {
+                final q = questions[i];
+                result += '**Q${q['number'] ?? (i + 1)}:** ${q['question'] ?? 'Question text not available'}\n\n';
+                if (q['options'] != null && q['options'].isNotEmpty) {
+                  for (var j = 0; j < q['options'].length; j++) {
+                    result += '${String.fromCharCode(65 + j)}) ${q['options'][j]}\n';
+                  }
+                  result += '\n**Answer:** ${q['answer'] ?? 'Not available'}\n\n';
+                }
+              }
+
+              if (questions.length > 3) {
+                result += '*... and ${questions.length - 3} more questions available*';
+              }
+
+              result += '\n\n*Source: ${data['source']['name']} (verified ${data['source']['lastVerifiedISO']?.split('T')?[0] ?? 'Unknown'})*';
+              return result;
+            }
+          }
+        }
+      }
+
+      // Check for textbook queries
+      if (message.contains('textbook') || message.contains('book') || message.contains('recommended')) {
+        final subjects = ['english', 'mathematics', 'science', 'social studies', 'rme', 'ict'];
+        String? subject;
+
+        for (var s in subjects) {
+          if (message.contains(s)) {
+            subject = s;
+            break;
+          }
+        }
+
+        if (subject != null) {
+          final response = await http.get(
+            Uri.parse('https://us-central1-uriel-academy-41fb0.cloudfunctions.net/factsApi/v1/textbooks/$subject'),
+            headers: {
+              'Authorization': 'Bearer $idToken',
+              'Origin': 'https://uriel.academy',
+            },
+          );
+
+          if (response.statusCode == 200) {
+            final data = jsonDecode(response.body);
+            if (data['ok'] == true && data['data']['textbooks'].isNotEmpty) {
+              final textbooks = data['data']['textbooks'];
+              String result = '📖 **Recommended ${subject.toUpperCase()} Textbooks**\n\n';
+
+              for (var book in textbooks.take(3)) {
+                result += '**${book['title'] ?? 'Title not available'}**\n';
+                if (book['author'] != null) result += 'Author: ${book['author']}\n';
+                if (book['publisher'] != null) result += 'Publisher: ${book['publisher']}\n';
+                if (book['classLevel'] != null) result += 'Class: ${book['classLevel']}\n';
+                result += '\n';
+              }
+
+              if (textbooks.length > 3) {
+                result += '*... and ${textbooks.length - 3} more recommended textbooks*';
+              }
+
+              result += '\n*Source: ${data['source']['name']} (verified ${data['source']['lastVerifiedISO']?.split('T')?[0] ?? 'Unknown'})*';
+              return result;
+            }
+          }
+        }
+      }
+
+      // Check for NaCCA curriculum queries
+      if (message.contains('nacca') || message.contains('curriculum') || message.contains('competenc')) {
+        final subjects = ['english', 'mathematics', 'science', 'social studies', 'rme', 'french', 'ict'];
+        String? subject;
+
+        for (var s in subjects) {
+          if (message.contains(s)) {
+            subject = s;
+            break;
+          }
+        }
+
+        // Extract level (JHS1, JHS2, etc.)
+        final levelMatch = RegExp(r'\b(jhs\d?|shs\d?)\b', caseSensitive: false).firstMatch(message);
+        final level = levelMatch?.group(1)?.toUpperCase() ?? 'JHS1';
+
+        if (subject != null) {
+          final response = await http.get(
+            Uri.parse('https://us-central1-uriel-academy-41fb0.cloudfunctions.net/factsApi/v1/curriculum/nacca/$level/$subject'),
+            headers: {
+              'Authorization': 'Bearer $idToken',
+              'Origin': 'https://uriel.academy',
+            },
+          );
+
+          if (response.statusCode == 200) {
+            final data = jsonDecode(response.body);
+            if (data['ok'] == true) {
+              final curriculum = data['data'];
+              String result = '🎯 **NaCCA Curriculum: ${subject.toUpperCase()} ($level)**\n\n';
+              result += '${curriculum['description'] ?? 'NaCCA-aligned curriculum for $subject'}\n\n';
+              if (curriculum['competencies'] != null && curriculum['competencies'].isNotEmpty) {
+                result += '**Key Competencies:**\n';
+                for (var competency in curriculum['competencies'].take(5)) {
+                  result += '• $competency\n';
+                }
+                if (curriculum['competencies'].length > 5) {
+                  result += '• ... and ${curriculum['competencies'].length - 5} more competencies\n';
+                }
+              }
+              result += '\n*Source: ${data['source']['name']} (verified ${data['source']['lastVerifiedISO']?.split('T')?[0] ?? 'Unknown'})*';
+              return result;
+            }
+          }
+        }
+      }
+
+      // General search fallback
+      if (message.length > 3) { // Only search if message is substantial
+        final response = await http.get(
+          Uri.parse('https://us-central1-uriel-academy-41fb0.cloudfunctions.net/factsApi/v1/search').replace(queryParameters: {'query': userMessage}),
+          headers: {
+            'Authorization': 'Bearer $idToken',
+            'Origin': 'https://uriel.academy',
+          },
+        );
+
+        if (response.statusCode == 200) {
+          final data = jsonDecode(response.body);
+          if (data['ok'] == true && data['data']['results'].isNotEmpty) {
+            final results = data['data']['results'];
+            String result = '🔍 **Search Results for "${userMessage}"**\n\n';
+
+            for (var item in results.take(3)) {
+              if (item['type'] == 'question') {
+                result += '📝 **Question:** ${item['question'] ?? 'N/A'}\n';
+                if (item['subject'] != null) result += 'Subject: ${item['subject']}\n';
+                if (item['year'] != null) result += 'Year: ${item['year']}\n';
+              } else if (item['type'] == 'syllabus') {
+                result += '📚 **Syllabus:** ${item['title'] ?? 'N/A'}\n';
+                if (item['subject'] != null) result += 'Subject: ${item['subject']}\n';
+              } else if (item['type'] == 'textbook') {
+                result += '📖 **Textbook:** ${item['title'] ?? 'N/A'}\n';
+                if (item['author'] != null) result += 'Author: ${item['author']}\n';
+              }
+              result += '\n';
+            }
+
+            if (results.length > 3) {
+              result += '*... and ${results.length - 3} more results found*';
+            }
+
+            result += '\n*Source: ${data['source']['name']} (verified ${data['source']['lastVerifiedISO']?.split('T')?[0] ?? 'Unknown'})*';
+            return result;
+          }
+        }
+      }
+
+      return null; // No verified facts found, fall back to AI chat
+    } catch (e) {
+      print('Facts API error: $e');
+      return null; // Fall back to AI chat on error
+    }
+  }
+
   Future<void> _send() async {
     final text = _ctrl.text.trim();
     if (text.isEmpty) return;
@@ -208,25 +502,33 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
       final user = FirebaseAuth.instance.currentUser;
       if (user == null) throw Exception('Not signed in');
       final idToken = await user.getIdToken();
-      const url = 'https://us-central1-uriel-academy-41fb0.cloudfunctions.net/aiChatHttp';
-      final payload = <String, dynamic>{ 'message': text, 'mode': 'chat' };
-      if (widget.userName != null) payload['userName'] = widget.userName;
-      if (widget.currentSubject != null) payload['currentSubject'] = widget.currentSubject;
-      final response = await http.post(
-        Uri.parse(url),
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Bearer $idToken',
-          'Origin': 'https://uriel.academy', // or get from window.location.origin if needed
-        },
-        body: jsonEncode(payload),
-      );
-      if (response.statusCode == 200) {
-        final data = jsonDecode(response.body) as Map<String, dynamic>;
-        final reply = data['reply'] as String? ?? 'No reply';
-        setState(() { _messages.insert(0, {'role':'bot','text':reply}); });
+
+      // First, try to get verified facts from the Facts API
+      final factsResponse = await _queryFactsAPI(text, idToken);
+      if (factsResponse != null) {
+        setState(() { _messages.insert(0, {'role':'bot','text':factsResponse}); });
       } else {
-        throw Exception('HTTP ${response.statusCode}: ${response.body}');
+        // Fall back to regular AI chat if no verified facts found
+        const url = 'https://us-central1-uriel-academy-41fb0.cloudfunctions.net/aiChatHttp';
+        final payload = <String, dynamic>{ 'message': text, 'mode': 'chat' };
+        if (widget.userName != null) payload['userName'] = widget.userName;
+        if (widget.currentSubject != null) payload['currentSubject'] = widget.currentSubject;
+        final response = await http.post(
+          Uri.parse(url),
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer $idToken',
+            'Origin': 'https://uriel.academy',
+          },
+          body: jsonEncode(payload),
+        );
+        if (response.statusCode == 200) {
+          final data = jsonDecode(response.body) as Map<String, dynamic>;
+          final reply = data['reply'] as String? ?? 'No reply';
+          setState(() { _messages.insert(0, {'role':'bot','text':reply}); });
+        } else {
+          throw Exception('HTTP ${response.statusCode}: ${response.body}');
+        }
       }
     } catch (e) {
       setState(() { _messages.insert(0, {'role':'bot','text':'AI error: ${e.toString()}'}); });

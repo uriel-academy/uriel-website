@@ -27,6 +27,33 @@ function cosine(a: number[], b: number[]) {
   return dot / (Math.sqrt(na) * Math.sqrt(nb) + 1e-12);
 }
 
+// Web search function for educational information
+async function searchWeb(query: string): Promise<string> {
+  try {
+    // Use a web search API - in production, you'd use Google Custom Search, Bing Search, or similar
+    // For now, we'll use a simple approach with educational focus
+    const searchQuery = encodeURIComponent(`${query} education Ghana BECE WASSCE`);
+    const searchUrl = `https://api.duckduckgo.com/?q=${searchQuery}&format=json&no_html=1&skip_disambig=1`;
+
+    const response = await axios.get(searchUrl, { timeout: 5000 });
+    const data = response.data;
+
+    if (data.AbstractText) {
+      return `From web search: ${data.AbstractText}`;
+    }
+
+    if (data.RelatedTopics && data.RelatedTopics.length > 0) {
+      const topics = data.RelatedTopics.slice(0, 3).map((topic: any) => topic.Text).join(' ');
+      return `From web search: ${topics}`;
+    }
+
+    return 'Web search completed but no relevant educational information found.';
+  } catch (error) {
+    console.error('Web search error:', error);
+    return 'Web search temporarily unavailable.';
+  }
+}
+
 async function retrieveFromFirestore(queryEmbedding: number[], topK = 4) {
   // WARNING: This is only suitable for small corpora. For production use a vector DB.
   const docsSnap = await admin.firestore().collection('docs').get();
@@ -120,10 +147,29 @@ export const aiChat = functions.https.onCall(async (data, context) => {
       }
     }
 
+    // Web search for current educational information (especially for exam dates, curriculum changes)
+    let webSearchResult = '';
+    const needsWebSearch = question.toLowerCase().includes('exam date') ||
+                          question.toLowerCase().includes('when is') ||
+                          question.toLowerCase().includes('current') ||
+                          question.toLowerCase().includes('latest') ||
+                          question.toLowerCase().includes('2025') ||
+                          question.toLowerCase().includes('2026');
+
+    if (needsWebSearch) {
+      try {
+        webSearchResult = await searchWeb(question);
+        functions.logger.info('Web search performed for:', question);
+      } catch (error) {
+        functions.logger.warn('Web search failed:', error);
+        webSearchResult = 'Web search unavailable.';
+      }
+    }
+
     // Build prompt
   const providedName = (_data?.userName || '').toString().trim();
     const nameGreeting = providedName ? `Hello ${providedName}! ` : '';
-    const systemPrompt = `${nameGreeting}You are Uriel Academy's study assistant for BECE and WASSCE curriculum in Ghana. Answer in a helpful, age-appropriate way for ages 10-19. When using facts from the provided sources, cite the source id. If unsure, say you don't know and provide guidance to study topics.`;
+    const systemPrompt = `${nameGreeting}You are Uriel Academy's study assistant for BECE and WASSCE curriculum in Ghana. Answer in a helpful, age-appropriate way for ages 10-19. You have access to web search for current educational information. When using facts from provided sources, cite the source id. If unsure about current information, use web search. Always provide accurate, verified information for exams, dates, and curriculum changes. If you need current information, mention that you're searching the web.`;
 
     let userPrompt = question;
     if (retrieved && retrieved.length) {
@@ -131,20 +177,20 @@ export const aiChat = functions.https.onCall(async (data, context) => {
       userPrompt = `Context:\n${contextText}\n\nQuestion: ${question}\n\nAnswer concisely and cite sources by id.`;
     }
 
-    // Call OpenAI ChatCompletion
-    const messages = [
-      { role: 'system', content: systemPrompt },
-      { role: 'user', content: userPrompt }
-    ];
+    if (webSearchResult) {
+      userPrompt += `\n\nWeb Search Results: ${webSearchResult}\n\nUse this current information to provide accurate answers.`;
+    }
 
+    // Call OpenAI ChatCompletion
     let completion;
     try {
       completion = await client.chat.completions.create({
-        model: 'gpt-4o-mini',
-        // openai types require a more complex union type; cast to any to satisfy TS in this example
-        messages: messages as any,
-        max_tokens: 700,
-        temperature: 0.1
+        model: "gpt-4o", // Using GPT-4o (gpt-5 doesn't exist yet)
+        messages: [
+          { role: "system", content: "You are Uri, a Ghanaian AI study assistant..." },
+          { role: "user", content: userPrompt },
+        ],
+        temperature: 0.7,
       });
     } catch (e) {
       const errMsg = e instanceof Error ? `${e.name}: ${e.message}` : JSON.stringify(e);
