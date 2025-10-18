@@ -274,10 +274,21 @@ export const uploadNote = functions.region('us-central1').https.onRequest((req, 
             const storagePath = `notes/${uid}/${Date.now()}_${fileName}`;
             const bucket = admin.storage().bucket();
             const file = bucket.file(storagePath);
+            // Save the file privately (do NOT make public)
             await file.save(buffer, { contentType: `image/${extension}`, resumable: false });
-            await file.makePublic();
-            const publicUrl = `https://storage.googleapis.com/${bucket.name}/${encodeURIComponent(storagePath)}`;
-            docData.fileUrl = publicUrl;
+            // Generate a signed URL for temporary access (7 days)
+            let signedUrl: string | null = null;
+            try {
+              const expires = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000); // 7 days
+              const [url] = await file.getSignedUrl({ action: 'read', expires });
+              signedUrl = url;
+            } catch (e) {
+              console.warn('Failed to create signed URL for uploaded file', e instanceof Error ? e.message : e);
+            }
+
+            // Store storage path and optional signed URL in metadata (file not public)
+            docData.filePath = storagePath;
+            if (signedUrl) docData.signedUrl = signedUrl;
             docData.fileName = fileName;
             docData.type = 'image';
           } catch (e) {
@@ -310,12 +321,64 @@ export const uploadNote = functions.region('us-central1').https.onRequest((req, 
           console.warn('Failed to award XP', e instanceof Error ? e.message : e);
         }
 
-        res.set('Access-Control-Allow-Origin', req.headers.origin || '*');
-        res.json({ ok: true, noteId: notesRef.id, status: docData.status });
+  res.set('Access-Control-Allow-Origin', req.headers.origin || '*');
+  const responseBody: any = { ok: true, noteId: notesRef.id, status: docData.status };
+  if (docData.signedUrl) responseBody.signedUrl = docData.signedUrl;
+  res.json(responseBody);
         return;
       } catch (err) {
         console.error('uploadNote error', err instanceof Error ? err.stack || err.message : err);
         try { res.status(500).json({ error: 'Internal server error' }); } catch (e) { console.error('Failed to send error response', e); }
+        return;
+      }
+    })();
+  });
+});
+
+// Generate a fresh signed URL for a note's file. POST { noteId?: string, filePath?: string }
+export const getNoteSignedUrl = functions.region('us-central1').https.onRequest((req, res) => {
+  corsHandler(req, res, () => {
+    (async () => {
+      if (req.method === 'OPTIONS') { res.set('Access-Control-Allow-Methods', 'POST, OPTIONS'); res.status(204).send(''); return; }
+      try {
+        const authHeader = req.get('Authorization') || '';
+        if (!authHeader.startsWith('Bearer ')) { res.status(401).json({ error: 'Missing Authorization Bearer token' }); return; }
+        const idToken = authHeader.split(' ')[1];
+        let uid: string | null = null;
+        try { const decoded = await admin.auth().verifyIdToken(idToken); uid = decoded.uid; } catch (e) { res.status(401).json({ error: 'Invalid ID token' }); return; }
+
+        const body = req.body || {};
+        const noteId = (body.noteId || '').toString();
+        const filePath = (body.filePath || '').toString();
+
+        let storagePath = filePath;
+        if (!storagePath && noteId) {
+          const doc = await admin.firestore().collection('notes').doc(noteId).get();
+          if (!doc.exists) { res.status(404).json({ error: 'Note not found' }); return; }
+          const data = doc.data() || {};
+          if (data.userId !== uid) { res.status(403).json({ error: 'Not authorized to access this note' }); return; }
+          storagePath = data.filePath || '';
+        }
+
+        if (!storagePath) { res.status(400).json({ error: 'No filePath or noteId provided' }); return; }
+
+        // Generate signed URL (1 hour)
+        try {
+          const bucket = admin.storage().bucket();
+          const file = bucket.file(storagePath);
+          const expires = new Date(Date.now() + 60 * 60 * 1000); // 1 hour
+          const [url] = await file.getSignedUrl({ action: 'read', expires });
+          res.set('Access-Control-Allow-Origin', req.headers.origin || '*');
+          res.json({ ok: true, signedUrl: url });
+          return;
+        } catch (e) {
+          console.error('Failed to get signed url', e instanceof Error ? e.message : e);
+          res.status(500).json({ error: 'Failed to create signed url' });
+          return;
+        }
+      } catch (e) {
+        console.error('getNoteSignedUrl error', e instanceof Error ? e.stack || e.message : e);
+        try { res.status(500).json({ error: 'Internal server error' }); } catch (ee) { console.error('Failed to send error', ee); }
         return;
       }
     })();

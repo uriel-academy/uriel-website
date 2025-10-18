@@ -24,6 +24,7 @@ import 'screens/pricing_page.dart'; // Import Pricing page
 import 'screens/payment_page.dart'; // Import Payment page
 import 'screens/uri_chat_demo.dart'; // Import URI chat demo
 import 'screens/upload_note_page.dart'; // Upload notes page
+import 'screens/note_viewer_page.dart'; // Note viewer page
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -109,6 +110,12 @@ class MyApp extends StatelessWidget {
         '/rme-debug': (_) => const RMEQuestionsDebugPage(), // Add RME debug route
   '/uri': (_) => const UriChatDemoPage(),
         '/upload_note': (_) => const UploadNotePage(),
+        '/note': (ctx) {
+          final args = ModalRoute.of(ctx)?.settings.arguments as Map<String, dynamic>?;
+          final id = args?['noteId'] as String?;
+          if (id == null) return const LandingPage();
+          return NoteViewerPage(noteId: id);
+        },
         '/comprehensive-admin': (_) => const ComprehensiveAdminDashboard(), // Add comprehensive admin dashboard route
       },
     );

@@ -79,7 +79,7 @@ class NotesTab extends StatelessWidget {
                     title: Text(title.isNotEmpty ? title : 'Untitled', style: GoogleFonts.montserrat(fontSize: 15, fontWeight: FontWeight.w600)),
                     subtitle: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [ if (subject.isNotEmpty) Text(subject, style: GoogleFonts.montserrat(fontSize: 12, color: Colors.grey[700])), if (text.isNotEmpty) Text(text.length > 120 ? '${text.substring(0, 120)}…' : text, style: GoogleFonts.montserrat(fontSize: 13)) ]),
                     onTap: () {
-                      // TODO: open note viewer
+                      Navigator.of(context).pushNamed('/note', arguments: {'noteId': docs[i].id});
                     },
                   );
                 },
