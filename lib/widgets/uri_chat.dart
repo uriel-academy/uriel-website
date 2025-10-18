@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:flutter_tts/flutter_tts.dart';
+import '../services/uri_ai.dart';
 
 // Color constants matching design spec
 class UrielColors {
@@ -28,6 +30,8 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
   bool _loading = false;
   late AnimationController _bounceController;
   late Animation<double> _bounceAnimation;
+  final FlutterTts _tts = FlutterTts();
+  bool _simpleMath = true; // default to student-friendly view
 
   // Suggestion chips
   // Suggestion chips removed per request
@@ -47,6 +51,7 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
 
   @override
   void dispose() {
+    _tts.stop();
     _bounceController.dispose();
     super.dispose();
   }
@@ -505,31 +510,26 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
         setState(() { _messages.insert(0, {'role':'bot','text':factsResponse}); });
       } else {
         // Fall back to regular AI chat if no verified facts found
-        const url = 'https://us-central1-uriel-academy-41fb0.cloudfunctions.net/aiChatHttp';
-        final payload = <String, dynamic>{ 'message': text, 'mode': 'chat' };
-        if (widget.userName != null) payload['userName'] = widget.userName;
-        if (widget.currentSubject != null) payload['currentSubject'] = widget.currentSubject;
-        final response = await http.post(
-          Uri.parse(url),
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearer $idToken',
-            'Origin': 'https://uriel.academy',
-          },
-          body: jsonEncode(payload),
-        );
-        if (response.statusCode == 200) {
-          final data = jsonDecode(response.body) as Map<String, dynamic>;
-          final reply = data['reply'] as String? ?? 'No reply';
-          setState(() { _messages.insert(0, {'role':'bot','text':reply}); });
-        } else {
-          throw Exception('HTTP ${response.statusCode}: ${response.body}');
-        }
+        // Use the UriAI helper which routes queries between aiChat and facts
+        final replyRaw = await UriAI.ask(text);
+        final reply = _simpleMath ? simplifyMath(replyRaw) : replyRaw;
+        setState(() { _messages.insert(0, {'role':'bot','text':reply}); });
       }
     } catch (e) {
       setState(() { _messages.insert(0, {'role':'bot','text':'AI error: ${e.toString()}'}); });
     } finally {
       setState(() { _loading = false; });
+    }
+  }
+
+  Future<void> _speak(String text) async {
+    try {
+      await _tts.setLanguage('en-US');
+      await _tts.setSpeechRate(0.95);
+      await _tts.stop();
+      await _tts.speak(text);
+    } catch (e) {
+      debugPrint('TTS error: $e');
     }
   }
 
