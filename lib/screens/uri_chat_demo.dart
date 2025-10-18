@@ -8,8 +8,8 @@ class UriChatDemoPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('uri — chat demo')),
-      body: Stack(
-        children: const [
+      body: const Stack(
+        children: [
           Center(child: Text('Open the chat using the button at bottom-right.')),
           // The UriChat widget is positioned with AnimatedPositioned and will float above the UI
           UriChat(),

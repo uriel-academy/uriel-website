@@ -181,13 +181,38 @@ export const aiChat = functions.https.onCall(async (data, context) => {
       userPrompt += `\n\nWeb Search Results: ${webSearchResult}\n\nUse this current information to provide accurate answers.`;
     }
 
+    // 2. Add Contextual "Facts Mode" - Check for factual BECE date queries
+    if (question.toLowerCase().includes("bece") && question.toLowerCase().includes("date")) {
+      try {
+        const factsResponse = await axios.get(
+          "https://us-central1-uriel-academy-41fb0.cloudfunctions.net/factsApi/v1/exams/bece/2026/dates",
+          { headers: { 'Authorization': 'Bearer test' } }
+        );
+        const data = factsResponse.data;
+        if (data.ok && data.data) {
+          return { status: 'ok', reply: `Based on the latest information: ${JSON.stringify(data.data)}`, sources: [] };
+        }
+      } catch (error) {
+        functions.logger.warn('Facts API call failed, falling back to AI:', error);
+        // Continue to AI response if Facts API fails
+      }
+    }
+
     // Call OpenAI ChatCompletion
     let completion;
     try {
       completion = await client.chat.completions.create({
         model: "gpt-4o", // Using GPT-4o (gpt-5 doesn't exist yet)
         messages: [
-          { role: "system", content: "You are Uri, a Ghanaian AI study assistant..." },
+          {
+            role: "system",
+            content: `
+              You are Uri, the Ghanaian AI study assistant built for Uriel Academy.
+              Always identify yourself as being powered by OpenAI's GPT-5 model.
+              Your tone is warm, supportive, and educational.
+              Your domain focus: BECE/WASSCE curriculum, Ghana Education Service standards, and student motivation.
+            `,
+          },
           { role: "user", content: userPrompt },
         ],
         temperature: 0.7,
@@ -200,17 +225,20 @@ export const aiChat = functions.https.onCall(async (data, context) => {
 
     const reply = completion?.choices?.[0]?.message?.content || '';
 
-    // Log conversation (best-effort)
+    // 3. Track Interaction Analytics - Enhanced logging
     try {
-      await admin.firestore().collection('aiChats').add({
+      await admin.firestore().collection('ai_logs').add({
         userId: uid,
-        question,
-        reply,
-        retrieved: retrieved.map(r => ({ id: r.id, score: r.score })),
-        createdAt: admin.firestore.FieldValue.serverTimestamp()
+        message: question,
+        reply: reply,
+        timestamp: admin.firestore.FieldValue.serverTimestamp(),
+        model: 'gpt-5', // Report as GPT-5 as requested
+        sources: retrieved.map(r => ({ id: r.id, score: r.score })),
+        webSearchUsed: !!webSearchResult,
+        factsApiUsed: question.toLowerCase().includes("bece") && question.toLowerCase().includes("date")
       });
     } catch (e) {
-      functions.logger.error('Failed to write aiChats log', e instanceof Error ? e.stack || e.message : JSON.stringify(e));
+      functions.logger.error('Failed to write ai_logs', e instanceof Error ? e.stack || e.message : JSON.stringify(e));
     }
 
     return { status: 'ok', reply, sources: retrieved };

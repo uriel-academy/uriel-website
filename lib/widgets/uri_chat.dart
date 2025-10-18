@@ -107,9 +107,9 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
                     // Header
                     Container(
                       padding: const EdgeInsets.all(16),
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: UrielColors.warmWhite,
-                        borderRadius: const BorderRadius.only(
+                        borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(16),
                           topRight: Radius.circular(16),
                         ),
@@ -130,10 +130,10 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
                             ),
                           ),
                           const SizedBox(width: 12),
-                          Expanded(
+                          const Expanded(
                             child: Text(
                               'Ask Uri...',
-                              style: const TextStyle(
+                              style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w600,
                                 color: UrielColors.deepNavy,
@@ -149,7 +149,7 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
                         ],
                       ),
                     ),
-                    Divider(height: 1, color: UrielColors.softGray),
+                    const Divider(height: 1, color: UrielColors.softGray),
                     // Messages area
                     Expanded(
                       child: _messages.isEmpty && !_loading
@@ -451,7 +451,7 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
           final data = jsonDecode(response.body);
           if (data['ok'] == true && data['data']['results'].isNotEmpty) {
             final results = data['data']['results'];
-            String result = '🔍 **Search Results for "${userMessage}"**\n\n';
+            String result = '🔍 **Search Results for "$userMessage"**\n\n';
 
             for (var item in results.take(3)) {
               if (item['type'] == 'question') {
@@ -692,9 +692,9 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
               // Header
               Container(
                 padding: const EdgeInsets.all(16),
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: UrielColors.warmWhite,
-                  borderRadius: const BorderRadius.only(
+                  borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(16),
                     topRight: Radius.circular(16),
                   ),
@@ -715,10 +715,10 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
                       ),
                     ),
                     const SizedBox(width: 12),
-                    Expanded(
+                    const Expanded(
                       child: Text(
                         'Ask Uri...',
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 17,
                           fontWeight: FontWeight.w600,
                           color: UrielColors.deepNavy,
@@ -739,7 +739,7 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
                   ],
                 ),
               ),
-              Divider(height: 1, color: UrielColors.softGray),
+              const Divider(height: 1, color: UrielColors.softGray),
               // Messages area
               Expanded(
                 child: _messages.isEmpty && !_loading
@@ -774,7 +774,7 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            const Text(
               'Hi — ask me anything about BECE & WASSCE subjects.',
               style: TextStyle(
                 fontSize: 16,
@@ -867,7 +867,7 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
   Widget _buildInputArea() {
     return Container(
       padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: UrielColors.warmWhite,
         border: Border(top: BorderSide(color: UrielColors.softGray, width: 1)),
       ),
@@ -937,7 +937,7 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(
+            const Text(
               'Uri is typing',
               style: TextStyle(
                 color: UrielColors.deepNavy,
