@@ -5,6 +5,7 @@
     "epubjs": "^0.3.93",
     "firebase-admin": "^13.5.0",
     "minimist": "^1.2.8",
+    "openai": "^6.5.0",
     "puppeteer": "^24.23.0"
   },
   "name": "uriel_mainapp",

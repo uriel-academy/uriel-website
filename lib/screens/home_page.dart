@@ -16,6 +16,7 @@ import 'question_collections_page.dart';
 import 'textbooks_page.dart';
 import 'feedback_page.dart';
 import 'trivia_categories_page.dart';
+import 'notes_page.dart';
 import 'student_profile_page.dart';
 import 'redesigned_leaderboard_page.dart';
 import '../widgets/uri_chat.dart';
@@ -96,7 +97,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   @override
   void initState() {
     super.initState();
-    _mainTabController = TabController(length: 5, vsync: this);
+  _mainTabController = TabController(length: 7, vsync: this);
     _animationController = AnimationController(
       duration: const Duration(milliseconds: 800),
       vsync: this,
@@ -1944,6 +1945,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                                       _buildQuestionsPage(),
                                       _buildTextbooksPage(),
                                       _buildTriviaPage(),
+                                      const NotesTab(),
                                       const RedesignedLeaderboardPage(),
                                       _buildFeedbackPage(),
                                     ],
@@ -1974,6 +1976,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                                             _buildQuestionsPage(),
                                             _buildTextbooksPage(),
                                             _buildTriviaPage(),
+                                            const NotesTab(),
                                             const RedesignedLeaderboardPage(),
                                             _buildFeedbackPage(),
                                           ],
@@ -2235,8 +2238,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   _buildNavItem(1, 'Questions'),
                   _buildNavItem(2, 'Books'),
                   _buildNavItem(3, 'Trivia'),
-                  _buildNavItem(4, 'Leaderboard'),
-                  _buildNavItem(5, 'Feedback'),
+                  _buildNavItem(4, 'Notes'),
+                  _buildNavItem(5, 'Leaderboard'),
+                  _buildNavItem(6, 'Feedback'),
                   
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
@@ -2362,6 +2366,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       {'label': 'Questions', 'icon': Icons.quiz_outlined},
       {'label': 'Books', 'icon': Icons.menu_book_outlined},
       {'label': 'Trivia', 'icon': Icons.extension_outlined},
+      {'label': 'Notes', 'icon': Icons.note_alt_outlined},
       {'label': 'Leaderboard', 'icon': Icons.emoji_events_outlined},
       {'label': 'Feedback', 'icon': Icons.feedback_outlined},
     ];
