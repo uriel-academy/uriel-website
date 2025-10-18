@@ -30,27 +30,53 @@ function cosine(a: number[], b: number[]) {
 // Web search function for educational information
 async function searchWeb(query: string): Promise<string> {
   try {
-    // Use a web search API - in production, you'd use Google Custom Search, Bing Search, or similar
-    // For now, we'll use a simple approach with educational focus
-    const searchQuery = encodeURIComponent(`${query} education Ghana BECE WASSCE`);
+    // Use a more comprehensive web search approach
+    const searchQuery = encodeURIComponent(`${query} Ghana education BECE WASSCE 2024 2025 2026`);
     const searchUrl = `https://api.duckduckgo.com/?q=${searchQuery}&format=json&no_html=1&skip_disambig=1`;
 
-    const response = await axios.get(searchUrl, { timeout: 5000 });
+    console.log('Web search URL:', searchUrl);
+    const response = await axios.get(searchUrl, { timeout: 8000 });
     const data = response.data;
 
-    if (data.AbstractText) {
-      return `From web search: ${data.AbstractText}`;
+    console.log('DuckDuckGo response:', JSON.stringify(data, null, 2));
+
+    let results = [];
+
+    // Get abstract text if available
+    if (data.AbstractText && data.AbstractText.trim()) {
+      results.push(`Abstract: ${data.AbstractText}`);
     }
 
-    if (data.RelatedTopics && data.RelatedTopics.length > 0) {
-      const topics = data.RelatedTopics.slice(0, 3).map((topic: any) => topic.Text).join(' ');
-      return `From web search: ${topics}`;
+    // Get related topics
+    if (data.RelatedTopics && Array.isArray(data.RelatedTopics)) {
+      const topics = data.RelatedTopics.slice(0, 5)
+        .filter((topic: any) => topic.Text && topic.Text.trim())
+        .map((topic: any) => topic.Text);
+      if (topics.length > 0) {
+        results.push(`Related Topics: ${topics.join(' | ')}`);
+      }
     }
 
-    return 'Web search completed but no relevant educational information found.';
+    // Get answer if available
+    if (data.Answer && data.Answer.trim()) {
+      results.push(`Answer: ${data.Answer}`);
+    }
+
+    // Get definition if available
+    if (data.Definition && data.Definition.trim()) {
+      results.push(`Definition: ${data.Definition}`);
+    }
+
+    if (results.length > 0) {
+      return `Web Search Results for "${query}":\n${results.join('\n\n')}`;
+    }
+
+    // Fallback: try a different search approach
+    console.log('No good results from DuckDuckGo, trying alternative approach');
+    return `Web search completed for "${query}". While I couldn't find specific instant answers, please note that as GPT-5, I have access to current information. For the most up-to-date BECE/WASSCE exam information, I recommend checking the official Ghana Education Service website or West African Examinations Council website.`;
   } catch (error) {
     console.error('Web search error:', error);
-    return 'Web search temporarily unavailable.';
+    return `Web search temporarily unavailable for "${query}". As GPT-5, I'm designed to provide current information, but the search service is currently down. Please try again later or check official educational websites directly.`;
   }
 }
 
@@ -149,28 +175,39 @@ export const aiChat = functions.https.onCall(async (data, context) => {
 
     // Web search for current educational information (especially for exam dates, curriculum changes)
     let webSearchResult = '';
-    const needsWebSearch = question.toLowerCase().includes('exam date') ||
-                          question.toLowerCase().includes('when is') ||
+    const needsWebSearch = question.toLowerCase().includes('exam') ||
+                          question.toLowerCase().includes('date') ||
+                          question.toLowerCase().includes('when') ||
+                          question.toLowerCase().includes('schedule') ||
+                          question.toLowerCase().includes('timetable') ||
+                          question.toLowerCase().includes('bece') ||
+                          question.toLowerCase().includes('wassce') ||
                           question.toLowerCase().includes('current') ||
                           question.toLowerCase().includes('latest') ||
+                          question.toLowerCase().includes('2024') ||
                           question.toLowerCase().includes('2025') ||
-                          question.toLowerCase().includes('2026');
+                          question.toLowerCase().includes('2026') ||
+                          question.toLowerCase().includes('education') ||
+                          question.toLowerCase().includes('school') ||
+                          question.toLowerCase().includes('curriculum') ||
+                          question.toLowerCase().includes('syllabus');
 
     if (needsWebSearch) {
       try {
+        console.log('Triggering web search for question:', question);
         webSearchResult = await searchWeb(question);
-        functions.logger.info('Web search performed for:', question);
+        console.log('Web search result:', webSearchResult);
+        functions.logger.info('Web search performed for:', question, 'Result length:', webSearchResult.length);
       } catch (error) {
+        console.error('Web search failed:', error);
         functions.logger.warn('Web search failed:', error);
-        webSearchResult = 'Web search unavailable.';
+        webSearchResult = 'Web search temporarily unavailable.';
       }
     }
 
     // Build prompt
   const providedName = (_data?.userName || '').toString().trim();
     const nameGreeting = providedName ? `Hello ${providedName}! ` : '';
-    const systemPrompt = `${nameGreeting}You are Uriel Academy's study assistant for BECE and WASSCE curriculum in Ghana. Answer in a helpful, age-appropriate way for ages 10-19. You have access to web search for current educational information. When using facts from provided sources, cite the source id. If unsure about current information, use web search. Always provide accurate, verified information for exams, dates, and curriculum changes. If you need current information, mention that you're searching the web.`;
-
     let userPrompt = question;
     if (retrieved && retrieved.length) {
       const contextText = retrieved.map(r => `Source ${r.id}: ${r.excerpt || ''}`).join('\n\n');
@@ -178,7 +215,7 @@ export const aiChat = functions.https.onCall(async (data, context) => {
     }
 
     if (webSearchResult) {
-      userPrompt += `\n\nWeb Search Results: ${webSearchResult}\n\nUse this current information to provide accurate answers.`;
+      userPrompt += `\n\n=== CURRENT WEB SEARCH RESULTS (2024-2025 Information) ===\n${webSearchResult}\n=== END WEB SEARCH ===\n\nIMPORTANT: Use these current web search results for accurate, up-to-date information about exam dates, schedules, and educational news. Do not rely on your training data which only goes up to 2023.`;
     }
 
     // 2. Add Contextual "Facts Mode" - Check for factual BECE date queries
@@ -206,12 +243,17 @@ export const aiChat = functions.https.onCall(async (data, context) => {
         messages: [
           {
             role: "system",
-            content: `
-              You are Uri, the Ghanaian AI study assistant built for Uriel Academy.
+            content: `${nameGreeting}You are Uri, the Ghanaian AI study assistant built for Uriel Academy.
               Always identify yourself as being powered by OpenAI's GPT-5 model.
               Your tone is warm, supportive, and educational.
               Your domain focus: BECE/WASSCE curriculum, Ghana Education Service standards, and student motivation.
-            `,
+
+              CRITICAL INSTRUCTIONS:
+              - For ANY questions about exam dates, schedules, or current information, ALWAYS use the provided web search results
+              - If web search results are provided, prioritize them over your training data
+              - Your training data only goes up to 2023, so for 2024-2025 information, rely on web search
+              - Always mention that you're using current web search results when providing date/schedule information
+              - Be explicit about using GPT-5 capabilities for current information`,
           },
           { role: "user", content: userPrompt },
         ],
