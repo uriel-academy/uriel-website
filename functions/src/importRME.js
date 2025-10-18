@@ -2,7 +2,7 @@ const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 
 // Initialize admin if not already done
-if (admin.apps.length === 0) {
+if (!admin.apps.length) {
   admin.initializeApp();
 }
 

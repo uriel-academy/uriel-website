@@ -3,7 +3,9 @@ const admin = require('firebase-admin');
 
 // Initialize admin if not already done
 if (admin.apps.length === 0) {
-  admin.initializeApp();
+  if (!admin.apps.length) {
+    admin.initializeApp();
+  }
 }
 
 const db = admin.firestore();

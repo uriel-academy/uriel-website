@@ -16,8 +16,94 @@ if (!OPENAI_KEY) {
   console.warn('OpenAI key not configured: set functions config openai.key');
 }
 
+// Initialize the Admin SDK (important for Firestore, caching, auth)
+if (!admin.apps.length) {
+  admin.initializeApp();
+}
+
 const client = new OpenAI({ apiKey: OPENAI_KEY });
 const secretClient = new SecretManagerServiceClient();
+
+// Resolve preferred model dynamically based on account availability
+async function resolveModel(preferred?: string): Promise<string> {
+  // Prefer list: prefer explicit preference, then config, then a safe list.
+  const preferList = [preferred, functions.config().openai?.model, 'gpt-4.1', 'o4-mini', 'gpt-4o', 'gpt-4o-mini', 'gpt-4'];
+  try {
+    const modelsResp: any = await client.models.list();
+    const available = (modelsResp?.data || []).map((m: any) => m.id || m.name).filter(Boolean);
+    for (const m of preferList) {
+      if (!m) continue;
+      if (available.includes(m)) return m;
+    }
+    // fallback to first available that looks like a chat model
+    if (available.length) return available[0];
+  } catch (e) {
+    console.warn('models.list failed, falling back to config/default', e instanceof Error ? e.message : e);
+  }
+  return preferred || functions.config().openai?.model || 'gpt-4o';
+}
+
+// Build the production system prompt for Uri with runtime model name injection
+function buildSystemPrompt(modelName: string) {
+  return `You are **Uri**, the Ghana-focused study assistant for Uriel Academy (JHS/SHS, BECE/WASSCE).
+Speak clearly, warm and encouraging. Keep answers concise by default; expand only when asked.
+Model disclosure: Always report the actual model name provided by the system as ${modelName} (do not invent or upgrade it).
+Audience: Students in Ghana. Use Ghanaian examples and British spelling.
+
+Freshness & Sources:
+
+- When a question involves dates, schedules, results, policies, prices, curriculum/NaCCA updates, “latest/current/today/this year,” you MUST use the provided Web Results context or Facts API block and cite sources at the end.
+
+- If no Web Results or Facts API are provided, say: "I don’t have live sources for this; here’s the best summary I can give. For the latest, check WAEC/GES." Do NOT guess exam dates.
+
+Style rules:
+
+- Prefer short paragraphs, bullets, and tables for clarity.
+- If you used browsing or facts: end with a Sources section (2–3 citations: title + domain).
+- If you didn’t browse: no Sources section.
+- For calculations: show the working briefly.
+- Safety: refuse cheating, plagiarism, or unsafe requests; offer study guidance instead.
+
+Output headers (when relevant):
+
+- If browsing or facts were used, prepend a small line: Using live info with ${modelName}.
+- For long explanations, add a 1-2 line "Exam-Ready Summary" at the end.
+`;
+}
+
+// Detect whether a question requires fresh/live info (dates, schedules, results, policy, etc.)
+function isFreshnessQuery(text: string) {
+  const q = (text || '').toLowerCase();
+  const kws = ['date', 'dates', 'schedule', 'timetable', 'when', 'latest', 'current', 'today', 'this year', 'result', 'results', 'policy', 'price', 'fee', 'fees', 'curriculum', 'na cca', 'nacca', 'waec', 'ges'];
+  return kws.some(k => q.includes(k));
+}
+
+// Attempt to extract simple citations (title + domain) from a web search result string
+function extractCitationsFromWebResult(text: string, max = 3) {
+  if (!text) return [] as string[];
+  const lines = text.split(/\r?\n/);
+  const citations: string[] = [];
+  for (const line of lines) {
+    // Attempt to find URL
+    const urlMatch = line.match(/https?:\/\/[\w\-._~:/?#[\]@!$&'()*+,;=%]+/);
+    const titleMatch = line.split('—')[0]?.trim();
+    if (urlMatch) {
+      try {
+        const url = new URL(urlMatch[0]);
+        const domain = url.hostname.replace(/^www\./, '');
+        const title = (titleMatch && titleMatch.length < 200) ? titleMatch : domain;
+        citations.push(`${title} — ${domain}`);
+      } catch (e) {
+        // skip
+      }
+    } else if (line.trim().length && citations.length < max) {
+      // fallback: use the line text as a citation stub
+      citations.push(line.trim().slice(0, 120));
+    }
+    if (citations.length >= max) break;
+  }
+  return citations;
+}
 
 // cosine similarity
 function cosine(a: number[], b: number[]) {
@@ -77,11 +163,12 @@ async function searchWeb(query: string): Promise<string> {
   let GOOGLE_API_KEY = await getSecret('GOOGLE_API_KEY', functions.config().google?.api_key);
   let GOOGLE_CX = await getSecret('GOOGLE_CSE_ID', functions.config().google?.cse_id);
 
-  if (GOOGLE_API_KEY && GOOGLE_CX) {
-    try {
-      const gUrl = `https://www.googleapis.com/customsearch/v1?key=${GOOGLE_API_KEY}&cx=${GOOGLE_CX}&q=${encodeURIComponent(searchQuery)}`;
-      console.log('Google CSE URL:', gUrl);
-      const resp = await axios.get(gUrl, { timeout: 10000 });
+    if (GOOGLE_API_KEY && GOOGLE_CX) {
+      try {
+        // Avoid logging secrets/URLs with keys. Log only that a Google CSE request is being made and the cx.
+        const gUrl = `https://www.googleapis.com/customsearch/v1?key=${GOOGLE_API_KEY}&cx=${GOOGLE_CX}&q=${encodeURIComponent(searchQuery)}`;
+        console.log('Google CSE request (key masked), cx=%s', GOOGLE_CX);
+        const resp = await axios.get(gUrl, { timeout: 10000 });
       const d = resp.data;
       console.log('Google CSE response received');
 
@@ -244,39 +331,28 @@ export const aiChat = functions.https.onCall(async (data, context) => {
 
     // Web search for current educational information (especially for exam dates, curriculum changes)
     let webSearchResult = '';
-    const needsWebSearch = question.toLowerCase().includes('exam') ||
-                          question.toLowerCase().includes('date') ||
-                          question.toLowerCase().includes('when') ||
-                          question.toLowerCase().includes('schedule') ||
-                          question.toLowerCase().includes('timetable') ||
-                          question.toLowerCase().includes('bece') ||
-                          question.toLowerCase().includes('wassce') ||
-                          question.toLowerCase().includes('current') ||
-                          question.toLowerCase().includes('latest') ||
-                          question.toLowerCase().includes('2024') ||
-                          question.toLowerCase().includes('2025') ||
-                          question.toLowerCase().includes('2026') ||
-                          question.toLowerCase().includes('education') ||
-                          question.toLowerCase().includes('school') ||
-                          question.toLowerCase().includes('curriculum') ||
-                          question.toLowerCase().includes('syllabus');
+    const qLower = question.toLowerCase();
+    const webKeywords = [
+      'today','yesterday','tomorrow','this year','this month','latest','new','update','announce',
+      'result','results','grade','date','when','schedule','timetable','time','year','current',
+      'bece','wassce','na cca','nacca','nacca','nacca','nacca','curriculum','syllabus','policy','fees','price','cost','news'
+    ];
+    const needsWebSearch = webKeywords.some(k => qLower.includes(k));
 
     if (needsWebSearch) {
       try {
-        console.log('Triggering web search for question:', question);
+        console.log('Triggering web search for question (masked):', question.replace(/\s+/g,' '));
         webSearchResult = await searchWeb(question);
-        console.log('Web search result:', webSearchResult);
-        functions.logger.info('Web search performed for:', question, 'Result length:', webSearchResult.length);
+        // Do not log URLs or secrets — only log that a search was performed and size
+        functions.logger.info('Web search performed', { question: question.slice(0,200), resultLength: webSearchResult.length });
       } catch (error) {
-        console.error('Web search failed:', error);
-        functions.logger.warn('Web search failed:', error);
+        console.error('Web search failed:', (error as any)?.message || error);
+        functions.logger.warn('Web search failed', { err: (error as any)?.message || String(error) });
         webSearchResult = 'Web search temporarily unavailable.';
       }
     }
 
     // Build prompt
-  const providedName = (_data?.userName || '').toString().trim();
-    const nameGreeting = providedName ? `Hello ${providedName}! ` : '';
     let userPrompt = question;
     if (retrieved && retrieved.length) {
       const contextText = retrieved.map(r => `Source ${r.id}: ${r.excerpt || ''}`).join('\n\n');
@@ -284,7 +360,7 @@ export const aiChat = functions.https.onCall(async (data, context) => {
     }
 
     if (webSearchResult) {
-      userPrompt += `\n\n=== CURRENT WEB SEARCH RESULTS (2024-2025 Information) ===\n${webSearchResult}\n=== END WEB SEARCH ===\n\nIMPORTANT: Use these current web search results for accurate, up-to-date information about exam dates, schedules, and educational news. Do not rely on your training data which only goes up to 2023.`;
+      userPrompt += `\n\n=== CURRENT WEB SEARCH RESULTS ===\n${webSearchResult}\n=== END WEB SEARCH ===\n\nIMPORTANT: Use these current web search results for accurate, up-to-date information about exam dates, schedules, and educational news. Prioritize them when answering.`;
     }
 
     // 2. Add Contextual "Facts Mode" - Check for factual BECE date queries
@@ -304,27 +380,41 @@ export const aiChat = functions.https.onCall(async (data, context) => {
       }
     }
 
-    // Call OpenAI ChatCompletion
+    // Call OpenAI ChatCompletion (resolve model at runtime and inject production system prompt)
     let completion;
+    const modelName = await resolveModel();
+    const systemContent = buildSystemPrompt(modelName);
+
+    // Enforce freshness rule: if the question needs fresh info but we have no web/facts, short-circuit
+    const needsFresh = isFreshnessQuery(question);
+    const hasLiveSources = !!webSearchResult || (question.toLowerCase().includes('bece') && question.toLowerCase().includes('date'));
+    if (needsFresh && !hasLiveSources) {
+      // Return the prescribed fallback message without calling the model for potentially misleading answers
+      const fallback = `I don’t have live sources for this; here’s the best summary I can give. For the latest, check WAEC/GES.`;
+      // Log and return
+      try {
+        await admin.firestore().collection('ai_logs').add({
+          userId: uid,
+          message: question,
+          reply: fallback,
+          timestamp: admin.firestore.FieldValue.serverTimestamp(),
+          model: modelName,
+          sources: [],
+          webSearchUsed: !!webSearchResult,
+          factsApiUsed: false
+        });
+      } catch (e) {
+        functions.logger.warn('ai_logs write failed for freshness fallback', e instanceof Error ? e.message : String(e));
+      }
+      return { status: 'ok', reply: fallback, sources: [] };
+    }
+
     try {
       completion = await client.chat.completions.create({
-        model: "gpt-5", // Use GPT-5 as requested
+        model: modelName,
         messages: [
-          {
-            role: "system",
-            content: `${nameGreeting}You are Uri, the Ghanaian AI study assistant built for Uriel Academy.
-              Always identify yourself as being powered by OpenAI's GPT-5 model.
-              Your tone is warm, supportive, and educational.
-              Your domain focus: BECE/WASSCE curriculum, Ghana Education Service standards, and student motivation.
-
-              CRITICAL INSTRUCTIONS:
-              - For ANY questions about exam dates, schedules, or current information, ALWAYS use the provided web search results
-              - If web search results are provided, prioritize them over your training data
-              - Your training data only goes up to 2023, so for 2024-2025 information, rely on web search
-              - Always mention that you're using current web search results when providing date/schedule information
-              - Be explicit about using GPT-5 capabilities for current information`,
-          },
-          { role: "user", content: userPrompt },
+          { role: 'system', content: systemContent },
+          { role: 'user', content: userPrompt }
         ],
         temperature: 0.7,
       });
@@ -334,7 +424,19 @@ export const aiChat = functions.https.onCall(async (data, context) => {
       throw new functions.https.HttpsError('internal', 'AI completion failed');
     }
 
-    const reply = completion?.choices?.[0]?.message?.content || '';
+    let reply = completion?.choices?.[0]?.message?.content || '';
+
+    // Post-process reply: if web/facts used, prepend the Using live info header and append Sources
+    if (hasLiveSources) {
+      try {
+        const citations = extractCitationsFromWebResult(webSearchResult || '');
+        const header = `Using live info with ${modelName}.\n\n`;
+        const sourcesSection = citations.length ? `\n\nSources:\n${citations.slice(0,3).map(c => `- ${c}`).join('\n')}` : '';
+        reply = header + reply + sourcesSection;
+      } catch (e) {
+        functions.logger.warn('Post-process citations failed', e instanceof Error ? e.message : String(e));
+      }
+    }
 
     // 3. Track Interaction Analytics - Enhanced logging
     try {
@@ -343,7 +445,7 @@ export const aiChat = functions.https.onCall(async (data, context) => {
         message: question,
         reply: reply,
         timestamp: admin.firestore.FieldValue.serverTimestamp(),
-        model: 'gpt-5', // Report as GPT-5 as requested
+        model: modelName,
         sources: retrieved.map(r => ({ id: r.id, score: r.score })),
         webSearchUsed: !!webSearchResult,
         factsApiUsed: question.toLowerCase().includes("bece") && question.toLowerCase().includes("date")

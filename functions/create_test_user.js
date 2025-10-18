@@ -5,7 +5,9 @@ const fs = require('fs');
 const keyPath = path.resolve(__dirname, '..', 'uriel-academy-41fb0-firebase-adminsdk-fbsvc-4f2dfa7d5b.json');
 if (!fs.existsSync(keyPath)) { console.error('Service account key not found:', keyPath); process.exit(1); }
 
-admin.initializeApp({ credential: admin.credential.cert(require(keyPath)) });
+if (!admin.apps.length) {
+  admin.initializeApp({ credential: admin.credential.cert(require(keyPath)) });
+}
 const auth = admin.auth();
 const db = admin.firestore();
 

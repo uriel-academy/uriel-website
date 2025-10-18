@@ -3,6 +3,7 @@ const admin = require('firebase-admin');
 // Initialize Firebase Admin
 if (!admin.apps.length) {
   admin.initializeApp({
+    credential: admin.credential.cert(require(keyPath)),
     projectId: process.env.FIREBASE_PROJECT_ID || 'uriel-dev'
   });
 }

@@ -7,7 +7,9 @@ import { aiChat } from './ai/assistant';
 import { ingestDocs } from './ai/ingest';
 import { aiChatHttp } from './ai/http_ai';
 
-admin.initializeApp();
+if (!admin.apps.length) {
+  admin.initializeApp();
+}
 const db = admin.firestore();
 
 // Types and interfaces

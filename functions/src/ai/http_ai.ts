@@ -117,11 +117,15 @@ export const aiChatHttp = functions.https.onRequest((req, res) => {
         }
       }
 
-      const providedName = (body?.userName || '').toString().trim();
-      const currentSubject = (body?.currentSubject || '').toString().trim();
-      const nameGreeting = providedName ? `Hello ${providedName}! ` : '';
-      const subjectContext = currentSubject ? `The student is currently studying ${currentSubject}. ` : '';
-      const systemPrompt = `${nameGreeting}${subjectContext}You are Uriel Academy's study assistant for BECE and WASSCE curriculum in Ghana. Answer in a helpful, age-appropriate way for ages 10-19. When using facts from the provided sources, cite the source id. If unsure, say you don't know and provide guidance to study topics.`;
+  const providedName = (body?.userName || '').toString().trim();
+  const currentSubject = (body?.currentSubject || '').toString().trim();
+  // Do not include a greeting with the user's name in the system prompt itself
+  // because some models may mistakenly adopt that name as their own identity.
+  // Instead, provide the assistant with a short system-level context instruction
+  // that tells it how to greet the user if appropriate and explicitly warns
+  // the assistant not to take the user's name as its own.
+  const subjectContext = currentSubject ? `The student is currently studying ${currentSubject}.` : '';
+  const systemPrompt = `You are Uriel Academy's study assistant for BECE and WASSCE curriculum in Ghana. Answer in a helpful, age-appropriate way for ages 10-19. When using facts from the provided sources, cite the source id. If unsure, say you don't know and provide guidance to study topics. ${subjectContext}`;
 
       let userPrompt = question;
       if (retrieved && retrieved.length) {
@@ -129,10 +133,20 @@ export const aiChatHttp = functions.https.onRequest((req, res) => {
         userPrompt = `Context:\n${contextText}\n\nQuestion: ${question}\n\nAnswer concisely and cite sources by id.`;
       }
 
-      const messages = [
+      // Provide an additional short system instruction about greeting behavior when a
+      // userName is supplied. This avoids placing the user's name directly into the
+      // main system prompt where some models might confuse it for the assistant's own name.
+      const messages: Array<any> = [
         { role: 'system', content: systemPrompt },
-        { role: 'user', content: userPrompt }
       ];
+      if (providedName) {
+        messages.push({
+          role: 'system',
+          content: `User first name: ${providedName}. When greeting, address the user by this first name (e.g. "Hi ${providedName}, ..."). Do NOT adopt or repeat this name as your own. Your name is Uri.`
+        });
+      }
+      // Finally add the user question (and any retrieved context will already be included in userPrompt)
+      messages.push({ role: 'user', content: userPrompt });
 
       let completion;
       try {

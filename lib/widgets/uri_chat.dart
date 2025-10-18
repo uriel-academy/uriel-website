@@ -30,11 +30,7 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
   late Animation<double> _bounceAnimation;
 
   // Suggestion chips
-  final _suggestionChips = [
-    "When is BECE 2026?",
-    "Show revision plan",
-    "Timetable updates"
-  ];
+  // Suggestion chips removed per request
 
   @override
   void initState() {
@@ -480,7 +476,7 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
 
       return null; // No verified facts found, fall back to AI chat
     } catch (e) {
-      print('Facts API error: $e');
+      debugPrint('Facts API error: $e');
       return null; // Fall back to AI chat on error
     }
   }
@@ -768,61 +764,13 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
   }
 
   Widget _buildWelcomeMessage() {
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text(
-              'Hi — ask me anything about BECE & WASSCE subjects.',
-              style: TextStyle(
-                fontSize: 16,
-                color: UrielColors.deepNavy,
-                fontWeight: FontWeight.w500,
-              ),
-              textAlign: TextAlign.center,
-            ),
-            const SizedBox(height: 16),
-            // Suggestion chips
-            Wrap(
-              spacing: 8,
-              runSpacing: 8,
-              alignment: WrapAlignment.center,
-              children: _suggestionChips.map((chip) => _buildSuggestionChip(chip)).toList(),
-            ),
-          ],
-        ),
-      ),
-    );
+    // Welcome message and suggestion chips removed per request.
+    // Return an empty widget so the messages area remains blank when there are no messages.
+    return const SizedBox.shrink();
   }
 
-  Widget _buildSuggestionChip(String text) {
-    return InkWell(
-      onTap: () {
-        setState(() {
-          _ctrl.text = text;
-        });
-        _send();
-      },
-      borderRadius: BorderRadius.circular(10),
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-        decoration: BoxDecoration(
-          color: UrielColors.softGray,
-          borderRadius: BorderRadius.circular(10),
-        ),
-        child: Text(
-          text,
-          style: const TextStyle(
-            fontSize: 13,
-            color: UrielColors.deepNavy,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
-      ),
-    );
-  }
+  // Suggestion chips removed — helper intentionally omitted.
+
 
   Widget _buildMessagesList(double width) {
     return ListView.builder(
