@@ -130,15 +130,33 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
                               size: 16,
                             ),
                           ),
-                          const SizedBox(width: 12),
-                          const Expanded(
-                            child: Text(
-                              'Ask Uri...',
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                                color: UrielColors.deepNavy,
-                              ),
+                          const SizedBox(width: 8),
+                          Expanded(
+                            child: Row(
+                              children: [
+                                const Expanded(
+                                  child: Text(
+                                    'Ask Uri...',
+                                    style: TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w600,
+                                      color: UrielColors.deepNavy,
+                                    ),
+                                  ),
+                                ),
+                                // Simple/Symbols toggle (compact)
+                                Row(
+                                  children: [
+                                    const Text('Simple', style: TextStyle(fontSize: 12, color: UrielColors.deepNavy)),
+                                    Switch(
+                                      value: _simpleMath,
+                                      activeColor: UrielColors.urielRed,
+                                      materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                                      onChanged: (v) => setState(() => _simpleMath = v),
+                                    ),
+                                  ],
+                                ),
+                              ],
                             ),
                           ),
                           IconButton(
@@ -710,15 +728,33 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
                         size: 16,
                       ),
                     ),
-                    const SizedBox(width: 12),
-                    const Expanded(
-                      child: Text(
-                        'Ask Uri...',
-                        style: TextStyle(
-                          fontSize: 17,
-                          fontWeight: FontWeight.w600,
-                          color: UrielColors.deepNavy,
-                        ),
+                    const SizedBox(width: 10),
+                    Expanded(
+                      child: Row(
+                        children: [
+                          const Expanded(
+                            child: Text(
+                              'Ask Uri...',
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                                color: UrielColors.deepNavy,
+                              ),
+                            ),
+                          ),
+                          // Simple/Symbols toggle visible on desktop header
+                          Row(
+                            children: [
+                              const Text('Simple', style: TextStyle(fontSize: 13, color: UrielColors.deepNavy)),
+                              Switch(
+                                value: _simpleMath,
+                                activeColor: UrielColors.urielRed,
+                                materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                                onChanged: (v) => setState(() => _simpleMath = v),
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
                     ),
                     IconButton(
