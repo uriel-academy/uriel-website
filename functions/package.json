@@ -25,6 +25,7 @@
   "firebase-admin": "^11.11.1",
   "firebase-functions": "^3.23.0",
     "openai": "^4.104.0",
+  "@google-cloud/secret-manager": "^3.8.0",
     "stripe": "^14.0.0",
     "twilio": "^4.19.0",
     "zod": "^3.22.4"
