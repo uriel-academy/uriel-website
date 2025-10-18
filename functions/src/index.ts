@@ -30,27 +30,59 @@ const corsHandler = cors({
 });
 
 // Model identity and cutoff (update when you change models)
-const MODEL = 'gpt-4o-mini';
+// Prefer the newest GPT model, fall back to a stable 4.x when unavailable.
+const MODEL_PRIMARY = 'gpt-5';
+const MODEL_FALLBACK = 'gpt-4.1';
 const CUTOFF = 'June 2024';
 
-// Simple LaTeX / math cleaner for student-friendly output
-function simplifyMath(text: string) {
-  if (!text) return '';
-  return text
-    .replace(/\\\(|\\\)/g, '')
-    .replace(/\\times/g, '*')
-    .replace(/\\div/g, '/')
-    .replace(/\\cdot/g, '*')
-    .replace(/\\sqrt\{([^}]+)\}/g, 'sqrt($1)')
-    .replace(/\\frac\{([^}]+)\}\{([^}]+)\}/g, '($1)/($2)')
-    .replace(/\s{2,}/g, ' ')
-    .trim();
+// Use a permissive message type to work with the OpenAI client shape
+async function chatCompletion(messages: any, temperature = 0.3) {
+  // Try primary model first, then fallback if the provider returns an error
+  try {
+  return await openai.chat.completions.create({ model: MODEL_PRIMARY, temperature, messages });
+  } catch (err: any) {
+    console.warn(`Primary model ${MODEL_PRIMARY} failed, falling back to ${MODEL_FALLBACK}:`, err?.message ?? err);
+  return await openai.chat.completions.create({ model: MODEL_FALLBACK, temperature, messages });
+  }
 }
 
+// Legacy: 'needsWeb' was replaced by classifyMode -> 'facts' detection.
+
+function classifyMode(q: string): 'small_talk'|'tutoring'|'facts' {
+  const s = (q || '').toLowerCase().trim();
+  if (/(your name|what'?s your name|who are you|hi|hello|hey|thanks|thank you)\b/.test(s)) return 'small_talk';
+  // include common lookup patterns: who is, what is, when is, where is, and topics that need live info
+  if (/(who is|who was|what is|where is|when is|when was|date|schedule|latest|today|update|news|bece|wassce|president|minister|result|results|2024|2025|2026)\b/.test(s)) return 'facts';
+  return 'tutoring';
+}
+
+async function answerWithFacts(query: string) {
+  const r = await fetch('https://us-central1-uriel-academy-41fb0.cloudfunctions.net/facts', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ query }),
+  });
+  if (!r.ok) throw new Error(`facts ${r.status}: ${await r.text()}`);
+  const j = await r.json();
+  const raw = (j.answer ?? j.reply ?? j.result ?? '').toString();
+  // Sanitize the facts response: remove any 'Sources:' block and bracketed domain citations.
+  // The UI and user requested that the chatbot should not list sources.
+  const lines = raw.split(/\r?\n/);
+  const filtered = [] as string[];
+  for (const line of lines) {
+    const trimmed = line.trim();
+    if (/^sources?:/i.test(trimmed)) continue; // drop 'Sources:' header
+    if (/^\[\d+\]/.test(trimmed)) continue; // drop lines starting with [1], [2]
+    if (/https?:\/\//.test(trimmed)) continue; // drop raw links
+    filtered.push(line);
+  }
+  return filtered.join('\n').trim();
+}
+
+// Main HTTP aiChat handler: routes time-sensitive queries to Facts, otherwise asks the model
 export const aiChat = functions
   .region('us-central1')
   .https.onRequest((req, res) => {
-    // corsHandler expects a synchronous third argument; wrap async logic in an IIFE
     corsHandler(req, res, () => {
       (async () => {
         if (req.method === 'OPTIONS') {
@@ -63,46 +95,60 @@ export const aiChat = functions
         try {
           const userMessage = (req.body?.message ?? '').toString().slice(0, 4000);
 
-          const completion = await openai.chat.completions.create({
-            model: MODEL,
-            temperature: 0.3,
-            messages: [
-              {
-                role: 'system',
-                content: `You are Uri, the friendly Uriel Academy study assistant for JHS and SHS students in Ghana.
-- Model: ${MODEL}
-- Knowledge cutoff: ${CUTOFF}
+          const mode = classifyMode(userMessage);
 
-Your communication goals:
-- Use clear, simple English that a JHS Form 1–3 student can understand.
-- Avoid LaTeX or special math symbols like \\( \\), \\frac, \\times.
-- Write maths in easy format: x^2, 3x + 2, 1/2, 2 * 3, sqrt(9).
-- Always explain symbols in words (x^2 means "x squared").
-- Break explanations into sections: Title; What it means (1 sentence); Steps; Example; Quick check; In short.
-- Keep steps short and numbered; cap to ~5 lines with a "Show more" option in the UI.
-- If asked "what model are you?" answer: "${MODEL}".
-- If asked about knowledge cutoff, answer: "${CUTOFF}".
-- If a user requests live info (dates, breaking news), politely suggest using the Facts API and wait for confirmation.
-- Be friendly, encouraging, and Ghana-specific where examples help (cedis, market items, trotro times).
-When a student gives a wrong answer, first affirm what they got right before explaining the fix.
-Always end with a short motivational line like "Good effort!" or "Keep practising!".`,
-              },
-              { role: 'user', content: userMessage },
-            ],
-          });
+          // If the user is doing short small talk about identity, return a concise identity answer.
+          if (mode === 'small_talk' && /(?:your name|what'?s your name|who are you)\b/i.test(userMessage)) {
+            res.set('Access-Control-Allow-Origin', req.headers.origin || '*');
+            res.json({ reply: 'Uri, the Uriel Academy study assistant for Ghanaian JHS & SHS students.' });
+            return;
+          }
 
-          const raw = completion.choices?.[0]?.message?.content ?? '';
-          const clean = simplifyMath(raw);
+          if (mode === 'facts') {
+            try {
+              const reply = await answerWithFacts(userMessage);
+              res.set('Access-Control-Allow-Origin', req.headers.origin || '*');
+              res.json({ reply });
+              return;
+            } catch (e) {
+              console.warn('facts call failed, falling back to model', e);
+            }
+          }
 
+          const system = `
+You are Uri (Uriel Academy). Formatting rules:
+
+- Structure every tutoring answer with clear sections and short lines:
+  Title
+  What it means
+  Steps (numbered, max 6)
+  Example
+  Quick check
+  In short
+
+- When writing maths/formulas, use KaTeX/MathJax notation ONLY:
+  • Inline: $ ... $
+  • Display (new line, centered): $$ ... $$
+  • Use proper symbols: \\times, \\div, \\sqrt{}, \\frac{a}{b}, superscripts (x^{2}), subscripts (a_{1}).
+
+- Do NOT wrap with \\( \\) or \\[ \\]; do NOT mix plain asterisks for multiplication in formulas.
+- Keep sentences short and student-friendly (JHS level).
+- If a question is time-sensitive (dates, schedules, "latest", "today", years 2024/2025/2026 etc.), say: "Let me check the latest info..." and rely on the Facts tool (web search).
+- If knowledge is older than ${CUTOFF}, say you will check with the Facts tool first.
+`;
+
+          const completion = await chatCompletion([
+            { role: 'system', content: system },
+            { role: 'user', content: `mode=${'tutoring'}\n\n${userMessage}` },
+          ], 0.3);
+
+          const raw = completion?.choices?.[0]?.message?.content ?? '';
+          // return raw (expects KaTeX formatting) so client renders with KaTeX
           res.set('Access-Control-Allow-Origin', req.headers.origin || '*');
-          res.json({ reply: clean });
+          res.json({ reply: raw });
         } catch (err: any) {
           console.error('aiChat error:', err);
-          try {
-            res.status(500).json({ error: err?.message ?? 'Server error' });
-          } catch (e) {
-            console.error('Failed to send error response', e);
-          }
+          try { res.status(500).json({ error: err?.message ?? 'Server error' }); } catch (e) { console.error('Failed to send error response', e); }
         }
       })();
     });
@@ -133,19 +179,28 @@ export const facts = functions.region('us-central1').https.onRequest((req, res) 
           body: JSON.stringify({ api_key: tavilyKey, query: q, max_results: 6, include_answer: true }),
         });
         const data = await resp.json();
+        // If Tavily returned a direct answer, prefer it and attach simple citations.
+        if (data && data.answer && data.answer.toString().trim().length > 0) {
+          const answerText = data.answer.toString();
+          const results = (data.results || []);
+          // Prefer domain-only citations, no direct links
+          const citations = results.slice(0, 3).map((r: any, i: number) => {
+            try { const url = new URL(r.url); return `[${i + 1}] ${r.title} — ${url.hostname.replace(/^www\./,'')}`; } catch (e) { return `[${i + 1}] ${r.title}`; }
+          }).join('\n');
+          const composed = citations ? `${answerText}\n\nSources:\n${citations}` : answerText;
+          res.set('Access-Control-Allow-Origin', req.headers.origin || '*');
+          res.json({ answer: composed });
+          return;
+        }
 
+        // Fallback: if no direct answer, build a context for the model to summarize
         const context =
-          (data?.answer ? `Summary: ${data.answer}\n\n` : '') +
           (data?.results ?? []).map((r: any, i: number) => `[${i + 1}] ${r.title} — ${r.url}\n${r.content}`).join('\n\n');
 
-        const ans = await openai.chat.completions.create({
-          model: MODEL,
-          temperature: 0.1,
-          messages: [
-            { role: 'system', content: 'Use ONLY the provided context. If something is missing, say you can\'t verify it. Include bracketed citations like [1], [2].' },
-            { role: 'user', content: `Question: ${q}\n\nContext:\n${context}` },
-          ],
-        });
+        const ans = await chatCompletion([
+          { role: 'system', content: 'Use ONLY the provided context. If something is missing, say you can\'t verify it. Include bracketed citations like [1], [2].' },
+          { role: 'user', content: `Question: ${q}\n\nContext:\n${context}` },
+        ], 0.1);
 
         res.set('Access-Control-Allow-Origin', req.headers.origin || '*');
         res.json({ answer: ans.choices?.[0]?.message?.content ?? '' });

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'dart:math' as math;
 import 'package:firebase_auth/firebase_auth.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:flutter_tts/flutter_tts.dart';
+import 'package:flutter_math_fork/flutter_math.dart';
 import '../services/uri_ai.dart';
 
 // Color constants matching design spec
@@ -25,13 +27,14 @@ class UriChat extends StatefulWidget {
 
 class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
   bool _open = false;
-  final _messages = <Map<String, String>>[]; // {role: 'user'|'bot', text: '...'}
+  // messages: each message is a map: {role, text, id?, loading?}
+  final _messages = <Map<String, dynamic>>[];
   final _ctrl = TextEditingController();
   bool _loading = false;
   late AnimationController _bounceController;
   late Animation<double> _bounceAnimation;
   final FlutterTts _tts = FlutterTts();
-  bool _simpleMath = true; // default to student-friendly view
+  // messages will always render with KaTeX/Markdown
 
   // Suggestion chips
   // Suggestion chips removed per request
@@ -144,18 +147,7 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
                                     ),
                                   ),
                                 ),
-                                // Simple/Symbols toggle (compact)
-                                Row(
-                                  children: [
-                                    const Text('Simple', style: TextStyle(fontSize: 12, color: UrielColors.deepNavy)),
-                                    Switch(
-                                      value: _simpleMath,
-                                      activeColor: UrielColors.urielRed,
-                                      materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                                      onChanged: (v) => setState(() => _simpleMath = v),
-                                    ),
-                                  ],
-                                ),
+                                // Always render KaTeX/Markdown — no toggle
                               ],
                             ),
                           ),
@@ -511,45 +503,105 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
     // Dismiss keyboard
     FocusManager.instance.primaryFocus?.unfocus();
 
+    // Add user message
     setState(() {
       _messages.insert(0, {'role':'user','text':text});
-      _loading = true;
       _ctrl.clear();
     });
+
+    // Determine client-side mode to avoid wrapping small talk as a lesson
+    final mode = _classifyMode(text);
+
+    // Add a loading placeholder that we will replace when the reply arrives
+    final loadingId = DateTime.now().microsecondsSinceEpoch.toString();
+    setState(() => _messages.insert(0, {'role':'bot','text':'Checking the latest info…','id':loadingId,'loading':true}));
 
     try {
       final user = FirebaseAuth.instance.currentUser;
       if (user == null) throw Exception('Not signed in');
-      final idToken = await user.getIdToken();
 
-      // First, try to get verified facts from the Facts API
-      final factsResponse = await _queryFactsAPI(text, idToken);
-      if (factsResponse != null) {
-        setState(() { _messages.insert(0, {'role':'bot','text':factsResponse}); });
-      } else {
-        // Fall back to regular AI chat if no verified facts found
-        // Use the UriAI helper which routes queries between aiChat and facts
-        final replyRaw = await UriAI.ask(text);
-        final reply = _simpleMath ? simplifyMath(replyRaw) : replyRaw;
-        setState(() { _messages.insert(0, {'role':'bot','text':reply}); });
-      }
+      // If tutoring and a lesson-type request, wrap with style guide; small_talk shouldn't be wrapped
+      final outgoing = (mode == 'tutoring' && _isLessonRequest(text) && !_alreadyHasStyleGuide(text))
+          ? _wrapLessonStyleGuide(text)
+          : text;
+
+      final replyRaw = await UriAI.ask(outgoing);
+
+      // Replace the loading placeholder with final reply
+      setState(() {
+        final idx = _messages.indexWhere((m) => m['id'] == loadingId);
+        if (idx != -1) {
+          _messages[idx] = {'role':'bot','text':replyRaw};
+        } else {
+          _messages.insert(0, {'role':'bot','text':replyRaw});
+        }
+      });
     } catch (e) {
-      setState(() { _messages.insert(0, {'role':'bot','text':'AI error: ${e.toString()}'}); });
+      setState(() {
+        final idx = _messages.indexWhere((m) => m['id'] == loadingId);
+        if (idx != -1) {
+          _messages[idx] = {'role':'bot','text':'Sorry, I couldn\'t fetch the latest info. Please try again.'};
+        } else {
+          _messages.insert(0, {'role':'bot','text':'AI error: ${e.toString()}'});
+        }
+      });
     } finally {
       setState(() { _loading = false; });
     }
   }
 
-  Future<void> _speak(String text) async {
-    try {
-      await _tts.setLanguage('en-US');
-      await _tts.setSpeechRate(0.95);
-      await _tts.stop();
-      await _tts.speak(text);
-    } catch (e) {
-      debugPrint('TTS error: $e');
+  // Detect if a user message should be treated as a lesson request.
+  bool _isLessonRequest(String s) {
+    final t = s.toLowerCase();
+    final triggers = [
+      'lesson',
+      'teach me',
+      'explain',
+      'show me how',
+      'how to',
+      'steps',
+      'format like',
+      'make a lesson',
+      'give me a lesson',
+      'write a lesson',
+    ];
+    for (final tr in triggers) {
+      if (t.contains(tr)) return true;
     }
+    return false;
   }
+
+  // Client-side mode classifier mirrors server classifyMode rules to avoid mis-wrapping small talk
+  String _classifyMode(String s) {
+    final t = s.toLowerCase();
+    if (RegExp(r"(your name|what'?s your name|who are you|hi|hello|hey|thanks|thank you)\b").hasMatch(t)) return 'small_talk';
+    if (RegExp(r"(when|date|schedule|latest|today|update|news|bece|wassce|2024|2025|2026|president)\b").hasMatch(t)) return 'facts';
+    return 'tutoring';
+  }
+
+  bool _alreadyHasStyleGuide(String s) {
+    final marker = 'format like';
+    return s.toLowerCase().contains(marker);
+  }
+
+  String _wrapLessonStyleGuide(String userMessage) {
+    return '''Format like:
+
+Title: <one line>
+What it means: <one line>
+Steps:
+1. ...
+2. ...
+Example:
+Quick check:
+In short:
+
+Now answer:
+${userMessage}
+''';
+  }
+
+  // Text-to-speech helper removed (unused). Keep FlutterTts instance for future use.
 
   @override
   Widget build(BuildContext context) {
@@ -742,18 +794,7 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
                               ),
                             ),
                           ),
-                          // Simple/Symbols toggle visible on desktop header
-                          Row(
-                            children: [
-                              const Text('Simple', style: TextStyle(fontSize: 13, color: UrielColors.deepNavy)),
-                              Switch(
-                                value: _simpleMath,
-                                activeColor: UrielColors.urielRed,
-                                materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                                onChanged: (v) => setState(() => _simpleMath = v),
-                              ),
-                            ],
-                          ),
+                          // Always render KaTeX/Markdown — no toggle
                         ],
                       ),
                     ),
@@ -819,11 +860,13 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
         }
         final m = _messages[i - (_loading ? 1 : 0)];
         final isUser = m['role'] == 'user';
+        // Cap bubble width to max 620px while keeping responsive behavior
+        final cap = math.min(width * 0.8, 620.0);
         return Container(
           margin: const EdgeInsets.symmetric(vertical: 8),
           alignment: isUser ? Alignment.centerRight : Alignment.centerLeft,
           child: Container(
-            constraints: BoxConstraints(maxWidth: width * 0.8),
+            constraints: BoxConstraints(maxWidth: cap),
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
               color: isUser
@@ -835,13 +878,7 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
               ),
               borderRadius: BorderRadius.circular(12),
             ),
-            child: Text(
-              m['text'] ?? '',
-              style: TextStyle(
-                color: isUser ? UrielColors.deepNavy : UrielColors.deepNavy,
-                fontSize: 14,
-              ),
-            ),
+            child: _buildRenderedMessage(m['text'] ?? '', isUser),
           ),
         );
       },
@@ -956,6 +993,58 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  // Render message text as Markdown with KaTeX support.
+  // We look for inline $...$ and block $$...$$ math and render using flutter_math_fork.
+  Widget _buildRenderedMessage(String text, bool isUser) {
+  // If message is short and from user, render plain to keep TTS friendly
+  if (isUser) return Text(text, style: const TextStyle(fontSize: 15, height: 1.5));
+
+    // Simple parser: split by block math $$...$$ first
+  // building InlineSpan children below
+
+    // Helper to parse inline math $...$
+    List<InlineSpan> _parseInline(String segment) {
+      final spans = <InlineSpan>[];
+      final reg = RegExp(r'\$(?!\$)(.+?)\$'); // inline $...$
+      var last = 0;
+      for (final m in reg.allMatches(segment)) {
+        if (m.start > last) spans.add(TextSpan(text: segment.substring(last, m.start)));
+        final expr = m.group(1) ?? '';
+        spans.add(WidgetSpan(child: Math.tex(expr, textStyle: const TextStyle(fontSize: 14))));
+        last = m.end;
+      }
+      if (last < segment.length) spans.add(TextSpan(text: segment.substring(last)));
+      return spans;
+    }
+
+    final blockReg = RegExp(r'\$\$(.+?)\$\$', dotAll: true);
+    var lastBlock = 0;
+    final children = <InlineSpan>[];
+    for (final m in blockReg.allMatches(text)) {
+      if (m.start > lastBlock) {
+        final before = text.substring(lastBlock, m.start);
+        children.addAll(_parseInline(before));
+      }
+      final expr = m.group(1) ?? '';
+      children.add(WidgetSpan(child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 6),
+        child: Math.tex(expr, textStyle: const TextStyle(fontSize: 16)),
+      )));
+      lastBlock = m.end;
+    }
+    if (lastBlock < text.length) {
+      final tail = text.substring(lastBlock);
+      children.addAll(_parseInline(tail));
+    }
+
+    return RichText(
+      text: TextSpan(
+        style: const TextStyle(color: UrielColors.deepNavy, fontSize: 15, height: 1.5),
+        children: children,
       ),
     );
   }

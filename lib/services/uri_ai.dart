@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 const _aiUrl = 'https://us-central1-uriel-academy-41fb0.cloudfunctions.net/aiChat';
-const _factsUrl = 'https://us-central1-uriel-academy-41fb0.cloudfunctions.net/facts';
+// The server-side aiChat will route to Facts when needed, so clients should always call aiChat.
 
 String simplifyMath(String text) {
   return text
@@ -11,8 +11,8 @@ String simplifyMath(String text) {
       .replaceAll(r'\\times', '*')
       .replaceAll(r'\\div', '/')
       .replaceAll(r'\\cdot', '*')
-      .replaceAll(RegExp(r'\\sqrt\{([^}]+)\}'), 'sqrt(\1)')
-      .replaceAll(RegExp(r'\\frac\{([^}]+)\}\{([^}]+)\}'), '(\1)/(\2)')
+      .replaceAll(RegExp(r'\\sqrt\{([^}]+)\}'), 'sqrt(1)')
+      .replaceAll(RegExp(r'\\frac\{([^}]+)\}\{([^}]+)\}'), '(1)/(2)')
       .replaceAll(RegExp(r'\s{2,}'), ' ')
       .trim();
 }
@@ -28,9 +28,8 @@ bool _needsWeb(String q) {
 
 class UriAI {
   static Future<String> ask(String prompt) async {
-    final useFacts = _needsWeb(prompt);
-    final uri = Uri.parse(useFacts ? _factsUrl : _aiUrl);
-    final body = jsonEncode(useFacts ? {'query': prompt} : {'message': prompt});
+    final uri = Uri.parse(_aiUrl);
+    final body = jsonEncode({'message': prompt});
 
     final r = await http.post(
       uri,
@@ -40,7 +39,7 @@ class UriAI {
 
     if (r.statusCode == 200) {
       final data = jsonDecode(r.body) as Map<String, dynamic>;
-      return (data['answer'] ?? data['reply'] ?? '') as String;
+      return (data['reply'] ?? data['answer'] ?? '') as String;
     } else {
       throw Exception('AI error ${r.statusCode}: ${r.body}');
     }

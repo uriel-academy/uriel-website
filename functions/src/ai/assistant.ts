@@ -271,7 +271,7 @@ async function retrieveFromPinecone(queryEmbedding: number[], topK = 4) {
   }
 }
 
-export const aiChat = functions.https.onCall(async (data, context) => {
+export const aiChatCallable = functions.https.onCall(async (data, context) => {
   // Wrap the entire callable in a try/catch so we can log details and return HttpsError with
   // a readable message instead of an opaque internal error on the client.
   try {
@@ -465,4 +465,4 @@ export const aiChat = functions.https.onCall(async (data, context) => {
   }
 });
 
-export default { aiChat };
+export default { aiChatCallable };
