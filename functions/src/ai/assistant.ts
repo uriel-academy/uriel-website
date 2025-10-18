@@ -29,54 +29,76 @@ function cosine(a: number[], b: number[]) {
 
 // Web search function for educational information
 async function searchWeb(query: string): Promise<string> {
+  // Prefer Google Custom Search if configured
+  const GOOGLE_API_KEY = functions.config().google?.api_key;
+  const GOOGLE_CX = functions.config().google?.cse_id; // Custom Search Engine ID
+
+  const searchQuery = `${query} Ghana education BECE WASSCE 2024 2025 2026`;
+
+  if (GOOGLE_API_KEY && GOOGLE_CX) {
+    try {
+      const gUrl = `https://www.googleapis.com/customsearch/v1?key=${GOOGLE_API_KEY}&cx=${GOOGLE_CX}&q=${encodeURIComponent(searchQuery)}`;
+      console.log('Google CSE URL:', gUrl);
+      const resp = await axios.get(gUrl, { timeout: 10000 });
+      const d = resp.data;
+      console.log('Google CSE response received');
+
+      let out = [] as string[];
+      if (d.searchInformation && d.searchInformation.formattedTotalResults) {
+        out.push(`Results: ~${d.searchInformation.formattedTotalResults}`);
+      }
+      if (d.items && Array.isArray(d.items) && d.items.length) {
+        // Take top 3 results
+        const items = d.items.slice(0, 3);
+        items.forEach((it: any, i: number) => {
+          const title = it.title || '';
+          const snippet = it.snippet || '';
+          const link = it.link || it.formattedUrl || '';
+          out.push(`${i + 1}. ${title} — ${snippet} — ${link}`);
+        });
+      }
+
+      if (out.length > 0) {
+        return `🔍 Google Search Results for "${query}":\n\n${out.join('\n\n')}\n\nNote: verify official sources for critical dates.`;
+      }
+
+      // If Google returned no useful items, fallthrough to DuckDuckGo
+      console.log('Google CSE returned no items, falling back to DuckDuckGo');
+    } catch (e) {
+      console.warn('Google CSE error, falling back to DuckDuckGo', e instanceof Error ? e.message : JSON.stringify(e));
+      // fallthrough to DuckDuckGo
+    }
+  }
+
+  // Fallback to DuckDuckGo instant answer
   try {
-    // Use a more comprehensive web search approach
-    const searchQuery = encodeURIComponent(`${query} Ghana education BECE WASSCE 2024 2025 2026`);
-    const searchUrl = `https://api.duckduckgo.com/?q=${searchQuery}&format=json&no_html=1&skip_disambig=1`;
-
-    console.log('Web search URL:', searchUrl);
-    const response = await axios.get(searchUrl, { timeout: 8000 });
+    const ddQuery = encodeURIComponent(searchQuery);
+    const ddUrl = `https://api.duckduckgo.com/?q=${ddQuery}&format=json&no_html=1&skip_disambig=1`;
+    console.log('DuckDuckGo fallback URL:', ddUrl);
+    const response = await axios.get(ddUrl, { timeout: 8000 });
     const data = response.data;
-
-    console.log('DuckDuckGo response:', JSON.stringify(data, null, 2));
-
-    let results = [];
-
-    // Get abstract text if available
+    let results = [] as string[];
     if (data.AbstractText && data.AbstractText.trim()) {
       results.push(`Abstract: ${data.AbstractText}`);
     }
-
-    // Get related topics
-    if (data.RelatedTopics && Array.isArray(data.RelatedTopics)) {
-      const topics = data.RelatedTopics.slice(0, 5)
-        .filter((topic: any) => topic.Text && topic.Text.trim())
-        .map((topic: any) => topic.Text);
-      if (topics.length > 0) {
-        results.push(`Related Topics: ${topics.join(' | ')}`);
-      }
-    }
-
-    // Get answer if available
     if (data.Answer && data.Answer.trim()) {
       results.push(`Answer: ${data.Answer}`);
     }
-
-    // Get definition if available
     if (data.Definition && data.Definition.trim()) {
       results.push(`Definition: ${data.Definition}`);
     }
-
+    if (data.RelatedTopics && Array.isArray(data.RelatedTopics)) {
+      const topics = data.RelatedTopics.slice(0, 5).filter((t: any) => t.Text).map((t: any) => t.Text);
+      if (topics.length) results.push(`Related: ${topics.join(' | ')}`);
+    }
     if (results.length > 0) {
-      return `Web Search Results for "${query}":\n${results.join('\n\n')}`;
+      return `🔎 DuckDuckGo Results for "${query}":\n\n${results.join('\n\n')}\n\nNote: verify official sources for critical dates.`;
     }
 
-    // Fallback: try a different search approach
-    console.log('No good results from DuckDuckGo, trying alternative approach');
-    return `Web search completed for "${query}". While I couldn't find specific instant answers, please note that as GPT-5, I have access to current information. For the most up-to-date BECE/WASSCE exam information, I recommend checking the official Ghana Education Service website or West African Examinations Council website.`;
-  } catch (error) {
-    console.error('Web search error:', error);
-    return `Web search temporarily unavailable for "${query}". As GPT-5, I'm designed to provide current information, but the search service is currently down. Please try again later or check official educational websites directly.`;
+    return `No instant answers found for "${query}". For official BECE/WASSCE dates check the Ghana Education Service or WAEC websites.`;
+  } catch (err) {
+    console.error('DuckDuckGo fallback failed', err);
+    return `Web search temporarily unavailable for "${query}".`;
   }
 }
 
@@ -239,7 +261,7 @@ export const aiChat = functions.https.onCall(async (data, context) => {
     let completion;
     try {
       completion = await client.chat.completions.create({
-        model: "gpt-4o", // Using GPT-4o (gpt-5 doesn't exist yet)
+        model: "gpt-5", // Use GPT-5 as requested
         messages: [
           {
             role: "system",
