@@ -3,9 +3,79 @@ import * as admin from 'firebase-admin';
 import { z } from 'zod';
 import { scoreExam } from './lib/scoring';
 import { hasEntitlement, EntitlementType } from './util/entitlement';
-import { aiChat } from './ai/assistant';
 import { ingestDocs } from './ai/ingest';
 import { aiChatHttp } from './ai/http_ai';
+import { aiChatHttp as aiChatHttpSimple } from './ai/simple_ai_chat';
+import OpenAI from 'openai';
+import cors from 'cors';
+
+// Expose the simple HTTP handler under a new named export so we can deploy it
+export const aiChatSimple = aiChatHttpSimple;
+
+// Lightweight CORS-safe aiChat HTTP endpoint for Flutter Web clients
+// Uses functions.config().openai.key — set with `firebase functions:config:set openai.key="..."`
+const openai = new OpenAI({ apiKey: functions.config().openai?.key });
+
+const corsHandler = cors({
+  origin: [
+    'https://uriel.academy',
+    'https://uriel-academy-41fb0.web.app',
+    'https://uriel-academy-41fb0.firebaseapp.com',
+    'http://localhost:5000',
+    'http://localhost:5173',
+    'http://localhost:4200',
+    'http://localhost:3000'
+  ],
+  credentials: false,
+});
+
+export const aiChat = functions
+  .region('us-central1')
+  .https.onRequest((req, res) => {
+    // corsHandler expects a synchronous third argument; wrap async logic in an IIFE
+    corsHandler(req, res, () => {
+      (async () => {
+        if (req.method === 'OPTIONS') {
+          res.set('Access-Control-Allow-Methods', 'POST, OPTIONS');
+          res.set('Access-Control-Allow-Headers', 'Content-Type');
+          res.status(204).send('');
+          return;
+        }
+
+        try {
+          const userMessage = (req.body?.message ?? '').toString().slice(0, 4000);
+
+          const completion = await openai.chat.completions.create({
+            model: 'gpt-4o-mini',
+            temperature: 0.3,
+            messages: [
+              {
+                role: 'system',
+                content:
+                  "You are Uri, the Uriel Academy study assistant. Be concise, friendly, and Ghana-specific where helpful. If unsure of a fact (e.g., exam dates), say so and ask to use the Facts API.",
+              },
+              { role: 'user', content: userMessage },
+            ],
+          });
+
+          res.set('Access-Control-Allow-Origin', req.headers.origin || '*');
+          res.json({ reply: completion.choices?.[0]?.message?.content ?? '' });
+        } catch (err: any) {
+          console.error('aiChat error:', err);
+          try {
+            res.status(500).json({ error: err?.message ?? 'Server error' });
+          } catch (e) {
+            console.error('Failed to send error response', e);
+          }
+        }
+      })();
+    });
+  });
+
+/** Optional: a lightweight health check */
+export const ping = functions.region('us-central1').https.onRequest((_, res) => {
+  res.status(200).send('pong');
+});
 
 if (!admin.apps.length) {
   admin.initializeApp();
@@ -762,5 +832,6 @@ export default {
   importRMEQuestions,
   setAdminRole,
   initialSetupAdmin
-  , aiChat, ingestDocs
+  , aiChatHttp: aiChatHttpSimple, // expose the simple HTTP handler as aiChatHttp for hosting
+  ingestDocs
 };
