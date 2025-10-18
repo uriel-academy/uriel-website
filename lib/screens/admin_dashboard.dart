@@ -759,7 +759,8 @@ class _AdminDashboardState extends State<AdminDashboard> {
       },
     );
 
-    if (confirmed == true) {
+  if (!mounted) return;
+  if (confirmed == true) {
       // Show loading dialog
       showDialog(
         context: context,
@@ -801,7 +802,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
           // Show success dialog
           if (!mounted) return;
           showDialog(
-            context: context,
+            context: navigator.context,
             builder: (BuildContext context) {
             return AlertDialog(
               shape: RoundedRectangleBorder(
@@ -854,11 +855,11 @@ class _AdminDashboardState extends State<AdminDashboard> {
             );
           },
         );
-        } else {
+          } else {
           // Show error dialog for failed import
           if (!mounted) return;
           showDialog(
-            context: context,
+            context: navigator.context,
             builder: (BuildContext context) {
               return AlertDialog(
                 title: Row(
@@ -894,14 +895,14 @@ class _AdminDashboardState extends State<AdminDashboard> {
             },
           );
         }
-      } catch (e) {
+        } catch (e) {
         // Close loading dialog
         if (!mounted) return;
         navigator.pop();
-        
+
         // Show error dialog
         showDialog(
-          context: context,
+          context: navigator.context,
           builder: (BuildContext context) {
             return AlertDialog(
               shape: RoundedRectangleBorder(

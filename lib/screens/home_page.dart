@@ -6003,15 +6003,17 @@ Widget _buildTextbooksPage() {
   }
 
   void _handleSignOut() async {
+    final navigator = Navigator.of(context);
+    final messenger = ScaffoldMessenger.of(context);
     try {
       await FirebaseAuth.instance.signOut();
       // Clear navigation stack and go to landing page
       if (mounted) {
-        Navigator.of(context).pushNamedAndRemoveUntil('/landing', (route) => false);
+        navigator.pushNamedAndRemoveUntil('/landing', (route) => false);
       }
     } catch (e) {
       if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
+        messenger.showSnackBar(
           const SnackBar(content: Text('Error signing out. Please try again.')),
         );
       }

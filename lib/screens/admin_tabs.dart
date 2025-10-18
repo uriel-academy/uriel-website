@@ -268,7 +268,7 @@ Marks: 10''',
                           final optionIndex = entry.key;
                           final option = entry.value;
                           return Text(
-                            '${String.fromCharCode(65 + optionIndex)}) $option',
+                            '${String.fromCharCode(65 + optionIndex.toInt())}) $option',
                             style: GoogleFonts.montserrat(fontSize: 12),
                           );
                         }),
@@ -402,55 +402,83 @@ Marks: 10''',
 
   Future<void> _parseQuestions() async {
     if (_textController.text.trim().isEmpty) {
-      _showSnackBar('Please enter question data', Colors.orange);
+      // Capture messenger synchronously to avoid using BuildContext after an await
+      final messenger = ScaffoldMessenger.of(context);
+      messenger.showSnackBar(
+        const SnackBar(
+          content: Text('Please enter question data'),
+          backgroundColor: Colors.orange,
+          behavior: SnackBarBehavior.floating,
+        ),
+      );
       return;
     }
 
     setState(() => _isProcessing = true);
 
+    // Capture messenger before the async call to avoid using BuildContext across an async gap
+    final messenger = ScaffoldMessenger.of(context);
     try {
       final questions = await widget.questionService.parseQuestionsFromText(
         _textController.text.trim(),
       );
 
+      if (!mounted) return;
       setState(() => _previewQuestions = questions);
-      _showSnackBar('Parsed ${questions.length} questions successfully!', Colors.green);
-      
+      messenger.showSnackBar(
+        SnackBar(
+          content: Text('Parsed ${questions.length} questions successfully!'),
+          backgroundColor: Colors.green,
+          behavior: SnackBarBehavior.floating,
+        ),
+      );
     } catch (e) {
-      _showSnackBar('Failed to parse questions: $e', Colors.red);
+      if (!mounted) return;
+      messenger.showSnackBar(
+        SnackBar(
+          content: Text('Failed to parse questions: $e'),
+          backgroundColor: Colors.red,
+          behavior: SnackBarBehavior.floating,
+        ),
+      );
     } finally {
-      setState(() => _isProcessing = false);
+      if (mounted) setState(() => _isProcessing = false);
     }
   }
 
   Future<void> _uploadQuestions() async {
     setState(() => _isProcessing = true);
 
+    // Capture messenger before awaiting to avoid using BuildContext after async gaps
+    final messenger = ScaffoldMessenger.of(context);
     try {
       await widget.questionService.addQuestionsBatch(_previewQuestions);
-      
-      _showSnackBar('Uploaded ${_previewQuestions.length} questions successfully!', Colors.green);
-      
+      if (!mounted) return;
+      messenger.showSnackBar(
+        SnackBar(
+          content: Text('Uploaded ${_previewQuestions.length} questions successfully!'),
+          backgroundColor: Colors.green,
+          behavior: SnackBarBehavior.floating,
+        ),
+      );
+
       // Clear the form
       _textController.clear();
-      setState(() => _previewQuestions = []);
-      
+      if (mounted) setState(() => _previewQuestions = []);
     } catch (e) {
-      _showSnackBar('Failed to upload questions: $e', Colors.red);
+      if (!mounted) return;
+      messenger.showSnackBar(
+        SnackBar(
+          content: Text('Failed to upload questions: $e'),
+          backgroundColor: Colors.red,
+          behavior: SnackBarBehavior.floating,
+        ),
+      );
     } finally {
-      setState(() => _isProcessing = false);
+      if (mounted) setState(() => _isProcessing = false);
     }
   }
 
-  void _showSnackBar(String message, Color color) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(message),
-        backgroundColor: color,
-        behavior: SnackBarBehavior.floating,
-      ),
-    );
-  }
 
   String _getSubjectDisplayName(Subject subject) {
     switch (subject) {

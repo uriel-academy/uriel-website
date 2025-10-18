@@ -385,6 +385,36 @@ export const getNoteSignedUrl = functions.region('us-central1').https.onRequest(
   });
 });
 
+// Callable variant: get signed URL for note. Simpler auth via context.auth
+export const getNoteSignedUrlCallable = functions.region('us-central1').https.onCall(async (data, context) => {
+  if (!context.auth) throw new functions.https.HttpsError('unauthenticated', 'Must be signed in');
+  const uid = context.auth.uid;
+  const noteId = (data.noteId || '').toString();
+  const filePath = (data.filePath || '').toString();
+
+  let storagePath = filePath;
+  if (!storagePath && noteId) {
+    const doc = await admin.firestore().collection('notes').doc(noteId).get();
+    if (!doc.exists) throw new functions.https.HttpsError('not-found', 'Note not found');
+    const docData = doc.data() || {};
+    if (docData.userId !== uid) throw new functions.https.HttpsError('permission-denied', 'Not authorized');
+    storagePath = docData.filePath || '';
+  }
+
+  if (!storagePath) throw new functions.https.HttpsError('invalid-argument', 'No filePath or noteId provided');
+
+  try {
+    const bucket = admin.storage().bucket();
+    const file = bucket.file(storagePath);
+    const expires = new Date(Date.now() + 60 * 60 * 1000); // 1 hour
+    const [url] = await file.getSignedUrl({ action: 'read', expires });
+    return { ok: true, signedUrl: url };
+  } catch (e) {
+    console.error('Callable signed url failed', e instanceof Error ? e.message : e);
+    throw new functions.https.HttpsError('internal', 'Failed to create signed url');
+  }
+});
+
 if (!admin.apps.length) {
   admin.initializeApp();
 }

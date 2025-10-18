@@ -71,11 +71,14 @@ class NotesTab extends StatelessWidget {
                   final text = (d['text'] ?? '').toString();
                   final signedUrl = d['signedUrl'] as String?;
                   final filePath = d['filePath'] as String?;
+                  final publicFileUrl = d['fileUrl'] as String?; // legacy public url
 
                   return ListTile(
                     leading: signedUrl != null
                         ? Image.network(signedUrl, width: 64, height: 64, fit: BoxFit.cover)
-                        : (filePath != null ? Icon(Icons.image, size: 48, color: Colors.grey[400]) : Icon(Icons.article, size: 48, color: Colors.grey[400])),
+                        : (publicFileUrl != null
+                            ? Image.network(publicFileUrl, width: 64, height: 64, fit: BoxFit.cover)
+                            : (filePath != null ? Icon(Icons.image, size: 48, color: Colors.grey[400]) : Icon(Icons.article, size: 48, color: Colors.grey[400]))),
                     title: Text(title.isNotEmpty ? title : 'Untitled', style: GoogleFonts.montserrat(fontSize: 15, fontWeight: FontWeight.w600)),
                     subtitle: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [ if (subject.isNotEmpty) Text(subject, style: GoogleFonts.montserrat(fontSize: 12, color: Colors.grey[700])), if (text.isNotEmpty) Text(text.length > 120 ? '${text.substring(0, 120)}…' : text, style: GoogleFonts.montserrat(fontSize: 13)) ]),
                     onTap: () {
