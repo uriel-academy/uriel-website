@@ -217,6 +217,111 @@ export const ping = functions.region('us-central1').https.onRequest((_, res) => 
   res.status(200).send('pong');
 });
 
+// Upload Note: accepts POST with Authorization Bearer <idToken>
+// Body: { title?: string, subject?: string, text?: string, imageBase64?: string, fileName?: string }
+export const uploadNote = functions.region('us-central1').https.onRequest((req, res) => {
+  corsHandler(req, res, () => {
+    (async () => {
+      if (req.method === 'OPTIONS') { res.set('Access-Control-Allow-Methods', 'POST, OPTIONS'); res.status(204).send(''); return; }
+      try {
+        // Auth
+        const authHeader = req.get('Authorization') || '';
+        if (!authHeader.startsWith('Bearer ')) { res.status(401).json({ error: 'Missing Authorization Bearer token' }); return; }
+        const idToken = authHeader.split(' ')[1];
+        let uid: string | null = null;
+        try { const decoded = await admin.auth().verifyIdToken(idToken); uid = decoded.uid; } catch (e) { res.status(401).json({ error: 'Invalid ID token' }); return; }
+
+        const body = req.body || {};
+        const title = (body.title || '').toString().slice(0, 300);
+        const subject = (body.subject || '').toString().slice(0, 200);
+        const text = (body.text || '').toString().slice(0, 20000);
+        const imageBase64 = (body.imageBase64 || '').toString();
+        const fileName = (body.fileName || '').toString() || `note_${Date.now()}`;
+
+        // Basic input validation
+        if (text.isEmpty && imageBase64.isEmpty) { res.status(400).json({ error: 'Empty upload: provide text or image' }); return; }
+
+  // Moderation: require text moderation if text provided
+        try {
+          if (text && text.length > 0) {
+            const mod = await openai.moderations.create({ model: 'omni-moderation-latest', input: text });
+            const flagged = (mod as any).results?.[0]?.flagged;
+            if (flagged) {
+              res.status(403).json({ error: 'Content flagged by moderation' });
+              return;
+            }
+          }
+        } catch (e) {
+          console.warn('Moderation check failed, continuing with pending status', e instanceof Error ? e.message : e);
+        }
+
+        // Decide storage
+        const notesRef = admin.firestore().collection('notes').doc();
+        const createdAt = admin.firestore.FieldValue.serverTimestamp();
+        const docData: any = {
+          title: title || fileName,
+          subject: subject || null,
+          userId: uid,
+          createdAt,
+          status: 'published', // default
+        };
+
+        // If image supplied, upload to storage
+        if (imageBase64 && imageBase64.length > 0) {
+          try {
+            const buffer = Buffer.from(imageBase64, 'base64');
+            const extension = fileName.includes('.') ? fileName.split('.').pop() : 'jpg';
+            const storagePath = `notes/${uid}/${Date.now()}_${fileName}`;
+            const bucket = admin.storage().bucket();
+            const file = bucket.file(storagePath);
+            await file.save(buffer, { contentType: `image/${extension}`, resumable: false });
+            await file.makePublic();
+            const publicUrl = `https://storage.googleapis.com/${bucket.name}/${encodeURIComponent(storagePath)}`;
+            docData.fileUrl = publicUrl;
+            docData.fileName = fileName;
+            docData.type = 'image';
+          } catch (e) {
+            console.error('Image upload failed', e instanceof Error ? e.message : e);
+            res.status(500).json({ error: 'Failed to upload image' });
+            return;
+          }
+        }
+
+        // If text supplied, store as field
+        if (text && text.length > 0) {
+          docData.text = text;
+          docData.type = docData.type ?? 'text';
+        }
+
+        // Write doc
+        try {
+          await notesRef.set(docData);
+        } catch (e) {
+          console.error('Failed to save note metadata', e instanceof Error ? e.message : e);
+          res.status(500).json({ error: 'Failed to save note' });
+          return;
+        }
+
+        // Award XP - simple: increment user's xp in Firestore (non-authoritative)
+        try {
+          const userAggRef = admin.firestore().collection('aggregates').doc('user').collection(uid!).doc('stats');
+          await userAggRef.set({ totalNotesUploaded: admin.firestore.FieldValue.increment(1), xp: admin.firestore.FieldValue.increment(150) }, { merge: true });
+        } catch (e) {
+          console.warn('Failed to award XP', e instanceof Error ? e.message : e);
+        }
+
+        res.set('Access-Control-Allow-Origin', req.headers.origin || '*');
+        res.json({ ok: true, noteId: notesRef.id, status: docData.status });
+        return;
+      } catch (err) {
+        console.error('uploadNote error', err instanceof Error ? err.stack || err.message : err);
+        try { res.status(500).json({ error: 'Internal server error' }); } catch (e) { console.error('Failed to send error response', e); }
+        return;
+      }
+    })();
+  });
+});
+
 if (!admin.apps.length) {
   admin.initializeApp();
 }

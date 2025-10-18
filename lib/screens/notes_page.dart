@@ -48,7 +48,7 @@ class NotesTab extends StatelessWidget {
                 const SizedBox(height: 20),
                 ElevatedButton.icon(
                   onPressed: () {
-                    // TODO: navigate to upload flow
+                    Navigator.of(context).pushNamed('/upload_note');
                   },
                   icon: const Icon(Icons.add),
                   label: const Text('Upload Note'),
