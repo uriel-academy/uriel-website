@@ -1,21 +1,24 @@
 {
-    "name": "Uriel Academy",
-    "short_name": "Uriel Academy",
-    "start_url": "/?source=pwa",
-    "scope": "/",
-    "display": "standalone",
-    "background_color": "#F8FAFE",
-    "theme_color": "#0F172A",
-    "description": "Master BECE & WASSCE exams with thousands of past questions, interactive quizzes, and comprehensive study materials.",
-    "orientation": "portrait-primary",
-    "prefer_related_applications": false,
-    "categories": ["education", "learning"],
-    "lang": "en-GH",
-    "icons": [
-        {
-            "src": "/favicon.ico?v=2",
-            "sizes": "64x64",
-            "type": "image/x-icon"
-        }
-    ]
+  "name": "Uriel Academy - BECE and WASSCE Prep Platform",
+  "short_name": "Uriel Academy",
+  "description": "Ghana's Premier Edtech Platform for BECE and WASSCE Preparation",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#5bbad5",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
 }
