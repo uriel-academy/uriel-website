@@ -1,9 +1,11 @@
 {
-  "name": "Uriel Academy - BECE and WASSCE Prep Platform",
+  "name": "Uriel Academy",
   "short_name": "Uriel Academy",
   "description": "Ghana's Premier Edtech Platform for BECE and WASSCE Preparation",
   "start_url": "/",
   "display": "standalone",
+  "display_override": ["standalone"],
+  "prefer_related_applications": false,
   "background_color": "#ffffff",
   "theme_color": "#5bbad5",
   "orientation": "portrait-primary",
