@@ -127,36 +127,55 @@ class LeaderboardRankService {
   // Cache for rank ranges (lightweight data for client-side calculation)
   List<LeaderboardRank>? _cachedRanks;
 
-  /// Get user's current rank based on XP
+  /// Get user's current rank based on XP with retry logic
   Future<LeaderboardRank?> getUserRank(int userXP) async {
-    try {
-      // Try to use cache first
-      if (_cachedRanks != null && _cachedRanks!.isNotEmpty) {
-        return _getRankFromCache(userXP);
+    const int maxRetries = 3;
+    for (int attempt = 1; attempt <= maxRetries; attempt++) {
+      try {
+        // Try to use cache first
+        if (_cachedRanks != null && _cachedRanks!.isNotEmpty) {
+          return _getRankFromCache(userXP);
+        }
+
+        // Load all ranks and filter client-side (avoids complex Firestore query)
+        await cacheRankRanges();
+        
+        if (_cachedRanks != null && _cachedRanks!.isNotEmpty) {
+          return _getRankFromCache(userXP);
+        }
+
+        // Fallback: Get the first rank (Learner)
+        final fallbackSnapshot = await _firestore
+            .collection('leaderboardRanks')
+            .doc('rank_1')
+            .get();
+
+        if (fallbackSnapshot.exists) {
+          return LeaderboardRank.fromFirestore(fallbackSnapshot);
+        }
+
+        return null;
+      } catch (e) {
+        debugPrint('❌ Error getting user rank (attempt $attempt/$maxRetries): $e');
+        if (attempt == maxRetries) {
+          // Return a default rank on final failure
+          return LeaderboardRank(
+            rank: 1,
+            name: 'Learner',
+            minXP: 0,
+            maxXP: 100,
+            tier: 'Beginner',
+            tierTheme: 'Getting Started',
+            description: 'Welcome to your learning journey!',
+            color: const Color(0xFF4CAF50),
+            imageUrl: '',
+          );
+        }
+        // Wait before retrying
+        await Future.delayed(Duration(milliseconds: 500 * attempt));
       }
-
-      // Load all ranks and filter client-side (avoids complex Firestore query)
-      await cacheRankRanges();
-      
-      if (_cachedRanks != null && _cachedRanks!.isNotEmpty) {
-        return _getRankFromCache(userXP);
-      }
-
-      // Fallback: Get the first rank (Learner)
-      final fallbackSnapshot = await _firestore
-          .collection('leaderboardRanks')
-          .doc('rank_1')
-          .get();
-
-      if (fallbackSnapshot.exists) {
-        return LeaderboardRank.fromFirestore(fallbackSnapshot);
-      }
-
-      return null;
-    } catch (e) {
-      debugPrint('❌ Error getting user rank: $e');
-      return null;
     }
+    return null;
   }
 
   /// Get next rank based on current XP
@@ -184,21 +203,30 @@ class LeaderboardRankService {
     }
   }
 
-  /// Get all ranks (for displaying rank progression)
+  /// Get all ranks (for displaying rank progression) with retry logic
   Future<List<LeaderboardRank>> getAllRanks() async {
-    try {
-      final snapshot = await _firestore
-          .collection('leaderboardRanks')
-          .orderBy('rank')
-          .get();
+    const int maxRetries = 3;
+    for (int attempt = 1; attempt <= maxRetries; attempt++) {
+      try {
+        final snapshot = await _firestore
+            .collection('leaderboardRanks')
+            .orderBy('rank')
+            .get();
 
-      return snapshot.docs
-          .map((doc) => LeaderboardRank.fromFirestore(doc))
-          .toList();
-    } catch (e) {
-      debugPrint('Error getting all ranks: $e');
-      return [];
+        return snapshot.docs
+            .map((doc) => LeaderboardRank.fromFirestore(doc))
+            .toList();
+      } catch (e) {
+        debugPrint('Error getting all ranks (attempt $attempt/$maxRetries): $e');
+        if (attempt == maxRetries) {
+          // Return empty list on final failure
+          return [];
+        }
+        // Wait before retrying
+        await Future.delayed(Duration(milliseconds: 500 * attempt));
+      }
     }
+    return [];
   }
 
   /// Load and cache rank ranges for fast lookup

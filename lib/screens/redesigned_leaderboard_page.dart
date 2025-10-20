@@ -4,7 +4,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:share_plus/share_plus.dart';
-import '../services/xp_service.dart';
 import '../services/leaderboard_rank_service.dart';
 
 /// Apple-inspired Leaderboard Page
@@ -229,78 +228,85 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
   }
   
   Future<Map<String, int>> _getCategoryStats(String userId, String category) async {
-    try {
-      // Handle courses separately (uses lesson_progress)
-      if (category == 'courses') {
-        // Query without the problematic index - just use userId filter
-        final progressSnapshot = await FirebaseFirestore.instance
-            .collection('users')
-            .doc(userId)
-            .collection('lesson_progress')
-            .where('completed', isEqualTo: true)
-            .get();
+    const int maxRetries = 3;
+    for (int attempt = 1; attempt <= maxRetries; attempt++) {
+      try {
+        // Handle courses separately (uses lesson_progress)
+        if (category == 'courses') {
+          // Query without the problematic index - just use userId filter
+          final progressSnapshot = await FirebaseFirestore.instance
+              .collection('users')
+              .doc(userId)
+              .collection('lesson_progress')
+              .where('completed', isEqualTo: true)
+              .get();
+          
+          int totalXP = 0;
+          for (var doc in progressSnapshot.docs) {
+            totalXP += (doc.data()['xpEarned'] as int?) ?? 0;
+          }
+          
+          return {
+            'xp': totalXP,
+            'questions': progressSnapshot.size,
+            'correct': progressSnapshot.size,
+            'completedCourses': 0,
+          };
+        }
+        
+        // Query quizzes collection for quiz-based categories
+        var query = FirebaseFirestore.instance
+            .collection('quizzes')
+            .where('userId', isEqualTo: userId);
+        
+        // Filter by category (overall = all quizzes, no filter)
+        // Note: Firestore stores BECE/WASSCE in uppercase, trivia in lowercase
+        if (category == 'trivia') {
+          query = query.where('quizType', isEqualTo: 'trivia');
+        } else if (category == 'bece') {
+          query = query.where('quizType', isEqualTo: 'BECE'); // Uppercase in Firestore
+        } else if (category == 'wassce') {
+          query = query.where('quizType', isEqualTo: 'WASSCE'); // Uppercase in Firestore
+        }
+        // If category == 'overall', don't add any quizType filter
+        
+        final snapshot = await query.get();
+        
+        debugPrint('Category: $category, Found ${snapshot.size} quizzes for user $userId');
         
         int totalXP = 0;
-        for (var doc in progressSnapshot.docs) {
-          totalXP += (doc.data()['xpEarned'] as int?) ?? 0;
+        int totalQuestions = 0;
+        int totalCorrect = 0;
+        
+        for (var doc in snapshot.docs) {
+          final data = doc.data();
+          debugPrint('Quiz doc: ${doc.id}, quizType: ${data['quizType']}, questions: ${data['totalQuestions']}, correct: ${data['correctAnswers']}');
+          totalXP += (data['xpEarned'] as int?) ?? 0;
+          totalQuestions += (data['totalQuestions'] as int?) ?? 0;
+          totalCorrect += (data['correctAnswers'] as int?) ?? 0;
         }
+        
+        debugPrint('Category $category totals - XP: $totalXP, Questions: $totalQuestions, Correct: $totalCorrect');
         
         return {
           'xp': totalXP,
-          'questions': progressSnapshot.size,
-          'correct': progressSnapshot.size,
+          'questions': totalQuestions,
+          'correct': totalCorrect,
           'completedCourses': 0,
         };
+        
+      } catch (e) {
+        debugPrint('Error getting category stats (attempt $attempt/$maxRetries): $e');
+        if (attempt == maxRetries) {
+          // Return default values on final failure
+          return {'xp': 0, 'questions': 0, 'correct': 0, 'completedCourses': 0};
+        }
+        // Wait before retrying
+        await Future.delayed(Duration(milliseconds: 500 * attempt));
       }
-      
-      // Query quizzes collection for quiz-based categories
-      var query = FirebaseFirestore.instance
-          .collection('quizzes')
-          .where('userId', isEqualTo: userId);
-      
-      // Filter by category (overall = all quizzes, no filter)
-      // Note: Firestore stores BECE/WASSCE in uppercase, trivia in lowercase
-      if (category == 'trivia') {
-        query = query.where('quizType', isEqualTo: 'trivia');
-      } else if (category == 'bece') {
-        query = query.where('quizType', isEqualTo: 'BECE'); // Uppercase in Firestore
-      } else if (category == 'wassce') {
-        query = query.where('quizType', isEqualTo: 'WASSCE'); // Uppercase in Firestore
-      }
-      // If category == 'overall', don't add any quizType filter
-      
-      final snapshot = await query.get();
-      
-      debugPrint('Category: $category, Found ${snapshot.size} quizzes for user $userId');
-      
-      int totalXP = 0;
-      int totalQuestions = 0;
-      int totalCorrect = 0;
-      
-      for (var doc in snapshot.docs) {
-        final data = doc.data();
-        debugPrint('Quiz doc: ${doc.id}, quizType: ${data['quizType']}, questions: ${data['totalQuestions']}, correct: ${data['correctAnswers']}');
-        totalXP += (data['xpEarned'] as int?) ?? 0;
-        totalQuestions += (data['totalQuestions'] as int?) ?? 0;
-        totalCorrect += (data['correctAnswers'] as int?) ?? 0;
-      }
-      
-      debugPrint('Category $category totals - XP: $totalXP, Questions: $totalQuestions, Correct: $totalCorrect');
-      
-      return {
-        'xp': totalXP,
-        'questions': totalQuestions,
-        'correct': totalCorrect,
-        'completedCourses': 0,
-      };
-      
-    } catch (e) {
-      debugPrint('Error getting category stats: $e');
-      return {'xp': 0, 'questions': 0, 'correct': 0, 'completedCourses': 0};
     }
-  }
-  
-  @override
+    return {'xp': 0, 'questions': 0, 'correct': 0, 'completedCourses': 0};
+  }  @override
   Widget build(BuildContext context) {
     final isSmallScreen = MediaQuery.of(context).size.width < 768;
     
