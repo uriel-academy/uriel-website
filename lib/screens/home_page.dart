@@ -1947,7 +1947,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                                       _buildTriviaPage(),
                                       const NotesTab(),
                                       const RedesignedLeaderboardPage(),
-                                      _buildFeedbackPage(),
+                                      _buildUriPage(),
                                     ],
                                   ),
                           ),
@@ -1978,7 +1978,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                                             _buildTriviaPage(),
                                             const NotesTab(),
                                             const RedesignedLeaderboardPage(),
-                                            _buildFeedbackPage(),
+                                            _buildUriPage(),
                                           ],
                                     ),
                             ),
@@ -2001,7 +2001,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               ),
               // Collapsible URI chat sidebar (far right)
               Visibility(
-                visible: true,
+                visible: _selectedIndex != 6, // Hide on Uri page
                 child: UriChat(key: _uriChatKey, userName: userName),
               ),
             ],
@@ -2137,7 +2137,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               backgroundColor: const Color(0xFF1A1E3F),
               backgroundImage: _getAvatarImage(),
               child: _getAvatarImage() == null ? Text(
-                userName[0].toUpperCase(),
+                userName.isNotEmpty ? userName[0].toUpperCase() : '?',
                 style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),
               ) : null,
             ),
@@ -2196,7 +2196,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                     backgroundColor: const Color(0xFF1A1E3F),
                     backgroundImage: _getAvatarImage(),
                     child: _getAvatarImage() == null ? Text(
-                      userName[0].toUpperCase(),
+                      userName.isNotEmpty ? userName[0].toUpperCase() : '?',
                       style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                     ) : null,
                   ),
@@ -2240,7 +2240,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   _buildNavItem(3, 'Trivia'),
                   _buildNavItem(4, 'Notes'),
                   _buildNavItem(5, 'Leaderboard'),
-                  _buildNavItem(6, 'Feedback'),
+                  _buildNavItem(6, 'Uri'),
                   
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
@@ -2368,7 +2368,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       {'label': 'Trivia', 'icon': Icons.extension_outlined},
       {'label': 'Notes', 'icon': Icons.note_alt_outlined},
       {'label': 'Leaderboard', 'icon': Icons.emoji_events_outlined},
-      {'label': 'Feedback', 'icon': Icons.feedback_outlined},
+      {'label': 'Uri', 'icon': Icons.chat_bubble_outline},
     ];
     
     return Container(
@@ -2506,7 +2506,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               backgroundColor: const Color(0xFF1A1E3F),
               backgroundImage: _getAvatarImage(),
               child: _getAvatarImage() == null ? Text(
-                userName[0].toUpperCase(),
+                userName.isNotEmpty ? userName[0].toUpperCase() : '?',
                 style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18),
               ) : null,
             ),
@@ -5626,6 +5626,13 @@ Widget _buildTextbooksPage() {
     return const TriviaCategoriesPage();
   }
 
+  Widget _buildUriPage() {
+    return UriChatInterface(
+      userName: userName,
+      currentSubject: 'General',
+    );
+  }
+
   // Helper methods
   void _showMobileMenu() {
     showModalBottomSheet(
@@ -6017,6 +6024,475 @@ Widget _buildTextbooksPage() {
           const SnackBar(content: Text('Error signing out. Please try again.')),
         );
       }
+    }
+  }
+}
+
+// Uri Chat Interface - Full Page Chat Experience
+class UriChatInterface extends StatefulWidget {
+  final String? userName;
+  final String? currentSubject;
+
+  const UriChatInterface({
+    Key? key,
+    this.userName,
+    this.currentSubject,
+  }) : super(key: key);
+
+  @override
+  State<UriChatInterface> createState() => _UriChatInterfaceState();
+}
+
+class _UriChatInterfaceState extends State<UriChatInterface> with TickerProviderStateMixin {
+  final List<Map<String, dynamic>> _messages = [];
+  final TextEditingController _textController = TextEditingController();
+  final ScrollController _scrollController = ScrollController();
+  final FocusNode _focusNode = FocusNode();
+  bool _isLoading = false;
+  bool _isTyping = false;
+
+  // Animation controllers
+  late AnimationController _fadeController;
+  late Animation<double> _fadeAnimation;
+
+  @override
+  void initState() {
+    super.initState();
+    _fadeController = AnimationController(
+      duration: const Duration(milliseconds: 300),
+      vsync: this,
+    );
+    _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
+      CurvedAnimation(parent: _fadeController, curve: Curves.easeIn),
+    );
+    _fadeController.forward();
+
+    // Add welcome message
+    _addWelcomeMessage();
+  }
+
+  @override
+  void dispose() {
+    _textController.dispose();
+    _scrollController.dispose();
+    _focusNode.dispose();
+    _fadeController.dispose();
+    super.dispose();
+  }
+
+  void _addWelcomeMessage() {
+    setState(() {
+      _messages.add({
+        'role': 'assistant',
+        'content': 'Hello${widget.userName != null ? ' ${widget.userName}' : ''}! 👋\n\nI\'m Uri, your AI learning assistant. I can help you with:\n\n• 📚 Explaining difficult concepts\n• ❓ Answering curriculum questions\n• 📝 Homework and study help\n• 🎯 BECE/WASSCE preparation\n• 📖 Textbook recommendations\n• 📊 Performance insights\n\nWhat would you like to learn about today?',
+        'timestamp': DateTime.now(),
+        'id': 'welcome_${DateTime.now().millisecondsSinceEpoch}',
+      });
+    });
+  }
+
+  Future<void> _sendMessage() async {
+    final message = _textController.text.trim();
+    if (message.isEmpty || _isLoading) return;
+
+    // Clear input and unfocus keyboard
+    _textController.clear();
+    _focusNode.unfocus();
+
+    // Add user message
+    setState(() {
+      _messages.add({
+        'role': 'user',
+        'content': message,
+        'timestamp': DateTime.now(),
+        'id': 'user_${DateTime.now().millisecondsSinceEpoch}',
+      });
+      _isLoading = true;
+    });
+
+    // Scroll to bottom
+    _scrollToBottom();
+
+    try {
+      // Simulate AI response (replace with actual UriAI integration)
+      await Future.delayed(const Duration(seconds: 1));
+
+      // Add typing indicator
+      setState(() => _isTyping = true);
+      _scrollToBottom();
+
+      // Simulate typing delay
+      await Future.delayed(const Duration(milliseconds: 1500));
+
+      // Remove typing indicator and add response
+      setState(() {
+        _isTyping = false;
+        _messages.add({
+          'role': 'assistant',
+          'content': _generateResponse(message),
+          'timestamp': DateTime.now(),
+          'id': 'assistant_${DateTime.now().millisecondsSinceEpoch}',
+        });
+        _isLoading = false;
+      });
+
+      _scrollToBottom();
+    } catch (e) {
+      setState(() {
+        _isTyping = false;
+        _messages.add({
+          'role': 'assistant',
+          'content': 'Sorry, I encountered an error. Please try again.',
+          'timestamp': DateTime.now(),
+          'id': 'error_${DateTime.now().millisecondsSinceEpoch}',
+        });
+        _isLoading = false;
+      });
+    }
+  }
+
+  String _generateResponse(String userMessage) {
+    // Simple response generation - replace with actual UriAI integration
+    final responses = [
+      'That\'s a great question! Let me help you understand this concept better.',
+      'I can see you\'re working on some important material. Here\'s what I think would help:',
+      'Based on what you\'ve asked, I recommend focusing on these key points:',
+      'Let me break this down for you step by step:',
+      'This is actually a really interesting topic! Here\'s my perspective:',
+    ];
+
+    final random = responses[DateTime.now().millisecondsSinceEpoch % responses.length];
+
+    return '$random\n\nWhen studying ${userMessage.toLowerCase().contains('math') ? 'mathematics' : 'this subject'}, remember that consistent practice and understanding the fundamentals are key to success.\n\nWould you like me to elaborate on any specific aspect?';
+  }
+
+  void _scrollToBottom() {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (_scrollController.hasClients) {
+        _scrollController.animateTo(
+          _scrollController.position.maxScrollExtent,
+          duration: const Duration(milliseconds: 300),
+          curve: Curves.easeOut,
+        );
+      }
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final isMobile = MediaQuery.of(context).size.width < 768;
+    final keyboardHeight = MediaQuery.of(context).viewInsets.bottom;
+
+    return FadeTransition(
+      opacity: _fadeAnimation,
+      child: Column(
+        children: [
+          // Messages area
+          Expanded(
+            child: Container(
+              color: const Color(0xFFF8FAFE),
+              child: ListView.builder(
+                controller: _scrollController,
+                padding: EdgeInsets.fromLTRB(
+                  isMobile ? 16 : 24,
+                  16,
+                  isMobile ? 16 : 24,
+                  keyboardHeight > 0 ? 16 : 80,
+                ),
+                itemCount: _messages.length + (_isTyping ? 1 : 0),
+                itemBuilder: (context, index) {
+                  if (_isTyping && index == _messages.length) {
+                    return _buildTypingIndicator();
+                  }
+
+                  final message = _messages[index];
+                  final isUser = message['role'] == 'user';
+
+                  return Padding(
+                    padding: const EdgeInsets.only(bottom: 16),
+                    child: Row(
+                      mainAxisAlignment: isUser ? MainAxisAlignment.end : MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Flexible(
+                          child: Container(
+                            constraints: BoxConstraints(
+                              maxWidth: isMobile ? MediaQuery.of(context).size.width * 0.8 : 600,
+                            ),
+                            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                            decoration: BoxDecoration(
+                              color: isUser
+                                  ? const Color(0xFFD62828)
+                                  : Colors.white,
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(isUser ? 18 : 4),
+                                topRight: Radius.circular(isUser ? 4 : 18),
+                                bottomLeft: const Radius.circular(18),
+                                bottomRight: const Radius.circular(18),
+                              ),
+                              border: !isUser ? Border.all(
+                                color: const Color(0xFFF0F0F0),
+                                width: 1,
+                              ) : null,
+                              boxShadow: isUser ? [
+                                BoxShadow(
+                                  color: const Color(0xFFD62828).withValues(alpha: 0.2),
+                                  blurRadius: 8,
+                                  offset: const Offset(0, 2),
+                                ),
+                              ] : null,
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  message['content'] ?? '',
+                                  style: GoogleFonts.montserrat(
+                                    fontSize: 15,
+                                    height: 1.5,
+                                    color: isUser ? Colors.white : const Color(0xFF1A1E3F),
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ),
+                                const SizedBox(height: 4),
+                                Text(
+                                  _formatTimestamp(message['timestamp']),
+                                  style: GoogleFonts.montserrat(
+                                    fontSize: 11,
+                                    color: isUser
+                                        ? Colors.white.withValues(alpha: 0.7)
+                                        : Colors.grey[500],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              ),
+            ),
+          ),
+
+          // Input area - Mobile messaging app style
+          Container(
+            color: Colors.white,
+            padding: EdgeInsets.only(
+              left: isMobile ? 12 : 24,
+              right: isMobile ? 12 : 24,
+              top: 12,
+              bottom: keyboardHeight > 0 ? keyboardHeight + (isMobile ? 8 : 16) : (isMobile ? 8 : 16),
+            ),
+            child: SafeArea(
+              top: false,
+              child: Center(
+                child: Container(
+                  width: !isMobile ? MediaQuery.of(context).size.width * 0.5 : null, // 50% width on desktop
+                  constraints: BoxConstraints(
+                    maxHeight: isMobile ? 120 : 200, // Limit height on mobile
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(isMobile ? 20 : 24),
+                    border: Border.all(
+                      color: const Color(0xFFE9ECEF),
+                      width: 1,
+                    ),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withValues(alpha: 0.05),
+                        blurRadius: 8,
+                        offset: const Offset(0, 2),
+                      ),
+                    ],
+                  ),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      // Attachment button (placeholder for future features)
+                      if (!isMobile) ...[
+                        Container(
+                          margin: const EdgeInsets.only(left: 8, bottom: 8),
+                          child: IconButton(
+                            icon: Icon(
+                              Icons.attach_file,
+                              color: Colors.grey[500],
+                              size: 20,
+                            ),
+                            onPressed: () {
+                              // Future: attachment functionality
+                            },
+                            padding: EdgeInsets.zero,
+                            constraints: const BoxConstraints(
+                              minWidth: 32,
+                              minHeight: 32,
+                            ),
+                          ),
+                        ),
+                      ],
+
+                      // Text input area
+                      Expanded(
+                        child: TextField(
+                          controller: _textController,
+                          focusNode: _focusNode,
+                          maxLines: null,
+                          maxLength: !isMobile ? 27 : null, // Wrap after 27 chars on desktop
+                          textInputAction: TextInputAction.send,
+                          onSubmitted: (_) => _sendMessage(),
+                          style: GoogleFonts.montserrat(
+                            fontSize: isMobile ? 16 : 16,
+                            color: const Color(0xFF1A1E3F),
+                            height: 1.4,
+                          ),
+                          decoration: InputDecoration(
+                            hintText: isMobile ? 'Message Uri...' : 'Ask Uri anything...',
+                            hintStyle: GoogleFonts.montserrat(
+                              fontSize: isMobile ? 16 : 16,
+                              color: Colors.grey[500],
+                            ),
+                            border: InputBorder.none,
+                            contentPadding: EdgeInsets.symmetric(
+                              horizontal: isMobile ? 16 : 20,
+                              vertical: isMobile ? 12 : 16,
+                            ),
+                            isDense: true,
+                            counterText: '', // Hide character counter
+                          ),
+                        ),
+                      ),
+
+                      // Send button with better mobile styling
+                      Container(
+                        margin: EdgeInsets.only(
+                          right: isMobile ? 4 : 8,
+                          bottom: isMobile ? 4 : 8,
+                        ),
+                        child: Material(
+                          color: _isLoading || _textController.text.trim().isEmpty
+                              ? Colors.grey[300]
+                              : const Color(0xFFD62828),
+                          borderRadius: BorderRadius.circular(isMobile ? 18 : 20),
+                          child: InkWell(
+                            onTap: (_isLoading || _textController.text.trim().isEmpty)
+                                ? null
+                                : _sendMessage,
+                            borderRadius: BorderRadius.circular(isMobile ? 18 : 20),
+                            child: Container(
+                              width: isMobile ? 36 : 40,
+                              height: isMobile ? 36 : 40,
+                              alignment: Alignment.center,
+                              child: _isLoading
+                                  ? SizedBox(
+                                      width: isMobile ? 16 : 20,
+                                      height: isMobile ? 16 : 20,
+                                      child: const CircularProgressIndicator(
+                                        strokeWidth: 2,
+                                        valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                                      ),
+                                    )
+                                  : Icon(
+                                      Icons.send_rounded,
+                                      color: _textController.text.trim().isEmpty
+                                          ? Colors.grey[500]
+                                          : Colors.white,
+                                      size: isMobile ? 18 : 20,
+                                    ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildTypingIndicator() {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 16),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Flexible(
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: const BorderRadius.only(
+                  topLeft: Radius.circular(4),
+                  topRight: Radius.circular(18),
+                  bottomLeft: Radius.circular(18),
+                  bottomRight: Radius.circular(18),
+                ),
+                border: Border.all(
+                  color: const Color(0xFFF0F0F0),
+                  width: 1,
+                ),
+              ),
+              child: Row(
+                children: [
+                  Text(
+                    'Uri is typing',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 14,
+                      color: const Color(0xFF1A1E3F),
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                  SizedBox(
+                    width: 24,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: List.generate(3, (index) {
+                        return AnimatedBuilder(
+                          animation: _fadeController,
+                          builder: (context, child) {
+                            return Opacity(
+                              opacity: (index * 0.3 + (_fadeController.value * 2) % 1.0) % 1.0,
+                              child: Container(
+                                width: 4,
+                                height: 4,
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFFD62828),
+                                  shape: BoxShape.circle,
+                                ),
+                              ),
+                            );
+                          },
+                        );
+                      }),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  String _formatTimestamp(DateTime timestamp) {
+    final now = DateTime.now();
+    final difference = now.difference(timestamp);
+
+    if (difference.inMinutes < 1) {
+      return 'Just now';
+    } else if (difference.inMinutes < 60) {
+      return '${difference.inMinutes}m ago';
+    } else if (difference.inHours < 24) {
+      return '${difference.inHours}h ago';
+    } else {
+      return '${difference.inDays}d ago';
     }
   }
 }

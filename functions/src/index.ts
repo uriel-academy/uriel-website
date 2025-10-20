@@ -3,7 +3,7 @@ import * as admin from 'firebase-admin';
 import { z } from 'zod';
 import { scoreExam } from './lib/scoring';
 import { hasEntitlement, EntitlementType } from './util/entitlement';
-import { ingestDocs } from './ai/ingest';
+import { ingestDocs, ingestPDFs, ingestLocalPDFs, listPDFs } from './ai/ingest';
 import { aiChatHttp } from './ai/http_ai';
 import { aiChatHttp as aiChatHttpSimple } from './ai/simple_ai_chat';
 import OpenAI from 'openai';
@@ -33,7 +33,6 @@ const corsHandler = cors({
 // Prefer the newest GPT model, fall back to a stable 4.x when unavailable.
 const MODEL_PRIMARY = 'gpt-5';
 const MODEL_FALLBACK = 'gpt-4.1';
-const CUTOFF = 'June 2024';
 
 // Use a permissive message type to work with the OpenAI client shape
 async function chatCompletion(messages: any, temperature = 0.3) {
@@ -1177,6 +1176,10 @@ export const importRMEQuestions = functions.https.onCall(async (data, context) =
 // Expose the HTTP wrapper for browsers that need CORS-enabled endpoint
 export { aiChatHttp };
 
+// Expose PDF ingestion functions
+export const ingestLocalPDFsCallable = ingestLocalPDFs;
+export { ingestLocalPDFs };
+
 // Facts API - Production-ready educational content API - VERSION 2
 export const factsApi = functions.https.onRequest((req, res) => {
   // Enable CORS for all origins
@@ -1215,5 +1218,8 @@ export default {
   setAdminRole,
   initialSetupAdmin
   , aiChatHttp: aiChatHttpSimple, // expose the simple HTTP handler as aiChatHttp for hosting
-  ingestDocs
+  ingestDocs,
+  ingestPDFs,
+  ingestLocalPDFs,
+  listPDFs
 };

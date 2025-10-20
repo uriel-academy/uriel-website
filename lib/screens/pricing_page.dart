@@ -485,21 +485,7 @@ class _PricingPageState extends State<PricingPage> {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      final planSelection = SubscriptionPlanSelection(
-                        id: 'school',
-                        name: 'School Plan',
-                        subtitle: 'For Schools & Educational Institutions',
-                        monthlyPrice: 0,
-                        annualPrice: 0,
-                        isAnnual: isAnnual,
-                        isSchoolPlan: true,
-                        features: _schoolFeatures(),
-                      );
-                      Navigator.pushNamed(
-                        context,
-                        '/payment',
-                        arguments: planSelection,
-                      );
+                      Navigator.pushNamed(context, '/contact');
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: urielNavy,

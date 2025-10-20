@@ -34,6 +34,7 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
   late AnimationController _bounceController;
   late Animation<double> _bounceAnimation;
   final FlutterTts _tts = FlutterTts();
+  final ScrollController _scrollController = ScrollController();
   // messages will always render with KaTeX/Markdown
 
   // Suggestion chips
@@ -56,7 +57,21 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
   void dispose() {
     _tts.stop();
     _bounceController.dispose();
+    _scrollController.dispose();
     super.dispose();
+  }
+
+  // Scroll to bottom of chat when new messages are added
+  void _scrollToBottom() {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (_scrollController.hasClients) {
+        _scrollController.animateTo(
+          0.0, // Since reverse: true, position 0 is the bottom
+          duration: const Duration(milliseconds: 300),
+          curve: Curves.easeOut,
+        );
+      }
+    });
   }
 
   // Expose a method so parent can open/close programmatically
@@ -134,10 +149,10 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
                             ),
                           ),
                           const SizedBox(width: 8),
-                          Expanded(
+                          const Expanded(
                             child: Row(
                               children: [
-                                const Expanded(
+                                Expanded(
                                   child: Text(
                                     'Ask Uri...',
                                     style: TextStyle(
@@ -500,53 +515,47 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
     final text = _ctrl.text.trim();
     if (text.isEmpty) return;
 
-    // Dismiss keyboard
-    FocusManager.instance.primaryFocus?.unfocus();
+    // Store the text before clearing
+    final userMessage = text;
 
-    // Add user message
+    // Dismiss keyboard and clear input immediately for better UX
+    FocusManager.instance.primaryFocus?.unfocus();
+    _ctrl.clear();
+
+    // Add user message and set loading state in one atomic update
     setState(() {
-      _messages.insert(0, {'role':'user','text':text});
-      _ctrl.clear();
+      _messages.insert(0, {'role':'user','text':userMessage});
+      _loading = true;
     });
+    _scrollToBottom();
 
     // Determine client-side mode to avoid wrapping small talk as a lesson
-    final mode = _classifyMode(text);
-
-    // Add a loading placeholder that we will replace when the reply arrives
-    final loadingId = DateTime.now().microsecondsSinceEpoch.toString();
-    setState(() => _messages.insert(0, {'role':'bot','text':'Checking the latest info…','id':loadingId,'loading':true}));
+    final mode = _classifyMode(userMessage);
 
     try {
       final user = FirebaseAuth.instance.currentUser;
       if (user == null) throw Exception('Not signed in');
 
       // If tutoring and a lesson-type request, wrap with style guide; small_talk shouldn't be wrapped
-      final outgoing = (mode == 'tutoring' && _isLessonRequest(text) && !_alreadyHasStyleGuide(text))
-          ? _wrapLessonStyleGuide(text)
-          : text;
+      final outgoing = (mode == 'tutoring' && _isLessonRequest(userMessage) && !_alreadyHasStyleGuide(userMessage))
+          ? _wrapLessonStyleGuide(userMessage)
+          : userMessage;
 
       final replyRaw = await UriAI.ask(outgoing);
 
-      // Replace the loading placeholder with final reply
+      // Replace loading state with final reply
       setState(() {
-        final idx = _messages.indexWhere((m) => m['id'] == loadingId);
-        if (idx != -1) {
-          _messages[idx] = {'role':'bot','text':replyRaw};
-        } else {
-          _messages.insert(0, {'role':'bot','text':replyRaw});
-        }
+        _messages.insert(0, {'role':'bot','text':replyRaw});
+        _loading = false;
       });
+      _scrollToBottom();
     } catch (e) {
+      // Handle error and clear loading state
       setState(() {
-        final idx = _messages.indexWhere((m) => m['id'] == loadingId);
-        if (idx != -1) {
-          _messages[idx] = {'role':'bot','text':'Sorry, I couldn\'t fetch the latest info. Please try again.'};
-        } else {
-          _messages.insert(0, {'role':'bot','text':'AI error: ${e.toString()}'});
-        }
+        _messages.insert(0, {'role':'bot','text':'Sorry, I couldn\'t fetch the latest info. Please try again.'});
+        _loading = false;
       });
-    } finally {
-      setState(() { _loading = false; });
+      _scrollToBottom();
     }
   }
 
@@ -580,7 +589,7 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
   }
 
   bool _alreadyHasStyleGuide(String s) {
-    final marker = 'format like';
+    const marker = 'format like';
     return s.toLowerCase().contains(marker);
   }
 
@@ -597,7 +606,7 @@ Quick check:
 In short:
 
 Now answer:
-${userMessage}
+$userMessage
 ''';
   }
 
@@ -781,10 +790,10 @@ ${userMessage}
                       ),
                     ),
                     const SizedBox(width: 10),
-                    Expanded(
+                    const Expanded(
                       child: Row(
                         children: [
-                          const Expanded(
+                          Expanded(
                             child: Text(
                               'Ask Uri...',
                               style: TextStyle(
@@ -851,6 +860,7 @@ ${userMessage}
 
   Widget _buildMessagesList(double width) {
     return ListView.builder(
+      controller: _scrollController,
       reverse: true,
       padding: const EdgeInsets.all(16),
       itemCount: _messages.length + (_loading ? 1 : 0),
@@ -858,7 +868,11 @@ ${userMessage}
         if (_loading && i == 0) {
           return _buildTypingIndicator();
         }
-        final m = _messages[i - (_loading ? 1 : 0)];
+        final messageIndex = i - (_loading ? 1 : 0);
+        if (messageIndex < 0 || messageIndex >= _messages.length) {
+          return const SizedBox.shrink(); // Safety check for invalid indices
+        }
+        final m = _messages[messageIndex];
         final isUser = m['role'] == 'user';
         // Cap bubble width to max 620px while keeping responsive behavior
         final cap = math.min(width * 0.8, 620.0);
@@ -887,40 +901,54 @@ ${userMessage}
 
   Widget _buildInputArea() {
     return Container(
-      padding: const EdgeInsets.all(16),
-      decoration: const BoxDecoration(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      decoration: BoxDecoration(
         color: UrielColors.warmWhite,
         border: Border(top: BorderSide(color: UrielColors.softGray, width: 1)),
       ),
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           Expanded(
             child: Container(
+              constraints: const BoxConstraints(minHeight: 44, maxHeight: 120),
               decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(22),
                 border: Border.all(
-                  color: UrielColors.softGray,
+                  color: UrielColors.softGray.withValues(alpha: 0.3),
                   width: 1,
                 ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withValues(alpha: 0.05),
+                    blurRadius: 8,
+                    offset: const Offset(0, 2),
+                  ),
+                ],
               ),
               child: TextField(
                 controller: _ctrl,
                 textInputAction: TextInputAction.send,
                 onSubmitted: (_) => _send(),
                 autofocus: true,
+                maxLines: null,
+                maxLength: MediaQuery.of(context).size.width >= 600 ? 27 : null, // Wrap after 27 chars on desktop
+                keyboardType: TextInputType.multiline,
                 style: const TextStyle(
-                  fontSize: 15,
+                  fontSize: 16, // Match Uri page font size
                   color: UrielColors.deepNavy,
+                  height: 1.4,
                 ),
                 decoration: InputDecoration(
-                  hintText: 'Ask a question…',
+                  hintText: 'Message Uri...',
                   hintStyle: TextStyle(
                     color: Colors.grey[500],
-                    fontSize: 15,
+                    fontSize: 16, // Match Uri page font size
                   ),
                   border: InputBorder.none,
-                  contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                  contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                  counterText: '', // Hide character counter
                 ),
               ),
             ),
@@ -931,7 +959,14 @@ ${userMessage}
             height: 44,
             decoration: BoxDecoration(
               color: UrielColors.urielRed,
-              borderRadius: BorderRadius.circular(12),
+              borderRadius: BorderRadius.circular(22),
+              boxShadow: [
+                BoxShadow(
+                  color: UrielColors.urielRed.withValues(alpha: 0.3),
+                  blurRadius: 8,
+                  offset: const Offset(0, 2),
+                ),
+              ],
             ),
             child: IconButton(
               icon: const Icon(Icons.send, color: Colors.white, size: 20),
@@ -1007,7 +1042,7 @@ ${userMessage}
   // building InlineSpan children below
 
     // Helper to parse inline math $...$
-    List<InlineSpan> _parseInline(String segment) {
+    List<InlineSpan> parseInline(String segment) {
       final spans = <InlineSpan>[];
       final reg = RegExp(r'\$(?!\$)(.+?)\$'); // inline $...$
       var last = 0;
@@ -1027,7 +1062,7 @@ ${userMessage}
     for (final m in blockReg.allMatches(text)) {
       if (m.start > lastBlock) {
         final before = text.substring(lastBlock, m.start);
-        children.addAll(_parseInline(before));
+        children.addAll(parseInline(before));
       }
       final expr = m.group(1) ?? '';
       children.add(WidgetSpan(child: Padding(
@@ -1038,7 +1073,7 @@ ${userMessage}
     }
     if (lastBlock < text.length) {
       final tail = text.substring(lastBlock);
-      children.addAll(_parseInline(tail));
+      children.addAll(parseInline(tail));
     }
 
     return RichText(
