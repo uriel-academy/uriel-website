@@ -933,7 +933,6 @@ $userMessage
                 onSubmitted: (_) => _send(),
                 autofocus: true,
                 maxLines: null,
-                maxLength: MediaQuery.of(context).size.width >= 600 ? 27 : null, // Wrap after 27 chars on desktop
                 keyboardType: TextInputType.multiline,
                 style: const TextStyle(
                   fontSize: 16, // Match Uri page font size

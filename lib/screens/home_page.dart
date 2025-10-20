@@ -6339,7 +6339,6 @@ class _UriChatInterfaceState extends State<UriChatInterface> with TickerProvider
                           controller: _textController,
                           focusNode: _focusNode,
                           maxLines: null,
-                          maxLength: !isMobile ? 27 : null, // Wrap after 27 chars on desktop
                           textInputAction: TextInputAction.send,
                           onSubmitted: (_) => _sendMessage(),
                           style: GoogleFonts.montserrat(

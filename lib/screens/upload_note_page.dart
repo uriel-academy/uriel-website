@@ -3,8 +3,10 @@ import 'dart:typed_data';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:http/http.dart' as http;
+import '../widgets/uri_chat.dart';
 
 class UploadNotePage extends StatefulWidget {
   const UploadNotePage({super.key});
@@ -68,7 +70,17 @@ class _UploadNotePageState extends State<UploadNotePage> {
         final j = jsonDecode(r.body) as Map<String, dynamic>;
         if (j['ok'] == true) {
           if (!mounted) return;
-          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Note uploaded')));
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text(
+                'Note uploaded successfully!',
+                style: GoogleFonts.montserrat(color: Colors.white),
+              ),
+              backgroundColor: const Color(0xFF2ECC71),
+              behavior: SnackBarBehavior.floating,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+            ),
+          );
           Navigator.of(context).pop();
           return;
         }
@@ -77,7 +89,17 @@ class _UploadNotePageState extends State<UploadNotePage> {
       throw Exception('Upload failed: ${r.statusCode} ${r.body}');
     } catch (e) {
       if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Upload error: $e')));
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              'Upload error: $e',
+              style: GoogleFonts.montserrat(color: Colors.white),
+            ),
+            backgroundColor: const Color(0xFFE74C3C),
+            behavior: SnackBarBehavior.floating,
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+          ),
+        );
       }
     } finally {
       if (mounted) setState(() => _loading = false);
@@ -94,28 +116,281 @@ class _UploadNotePageState extends State<UploadNotePage> {
 
   @override
   Widget build(BuildContext context) {
+    final isMobile = MediaQuery.of(context).size.width < 768;
+
     return Scaffold(
-      appBar: AppBar(title: const Text('Upload Note')),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          children: [
-            TextField(controller: _titleCtrl, decoration: const InputDecoration(labelText: 'Title')),
-            const SizedBox(height: 8),
-            TextField(controller: _subjectCtrl, decoration: const InputDecoration(labelText: 'Subject')),
-            const SizedBox(height: 8),
-            TextField(controller: _textCtrl, decoration: const InputDecoration(labelText: 'Note text'), maxLines: 8),
-            const SizedBox(height: 12),
-            if (_pickedBytes != null) Image.memory(_pickedBytes!, height: 160),
-            Row(
-              children: [
-                ElevatedButton.icon(onPressed: _pickImage, icon: const Icon(Icons.photo), label: const Text('Pick Image')),
-                const SizedBox(width: 12),
-                Expanded(child: ElevatedButton(onPressed: _loading ? null : _submit, child: _loading ? const CircularProgressIndicator() : const Text('Upload'))),
-              ],
-            )
-          ],
+      backgroundColor: const Color(0xFFF8FAFE),
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0,
+        leading: IconButton(
+          icon: const Icon(Icons.close, color: Color(0xFF1A1E3F)),
+          onPressed: () => Navigator.of(context).pop(),
         ),
+        title: Text(
+          'Upload Note',
+          style: GoogleFonts.playfairDisplay(
+            fontSize: 20,
+            fontWeight: FontWeight.w600,
+            color: const Color(0xFF1A1E3F),
+          ),
+        ),
+        centerTitle: true,
+      ),
+      body: Stack(
+        children: [
+          SingleChildScrollView(
+            padding: EdgeInsets.all(isMobile ? 20 : 32),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // Header section
+                Container(
+                  margin: const EdgeInsets.only(bottom: 32),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Share Your Knowledge',
+                        style: GoogleFonts.playfairDisplay(
+                          fontSize: isMobile ? 28 : 32,
+                          fontWeight: FontWeight.bold,
+                          color: const Color(0xFF1A1E3F),
+                          height: 1.2,
+                        ),
+                      ),
+                      const SizedBox(height: 12),
+                      Text(
+                        'Help fellow students by uploading your study notes, summaries, or visual aids. Every contribution makes a difference.',
+                        style: GoogleFonts.montserrat(
+                          fontSize: isMobile ? 16 : 18,
+                          color: Colors.grey[600],
+                          height: 1.6,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                // Form section
+                Container(
+                  padding: const EdgeInsets.all(24),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(16),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withValues(alpha: 0.05),
+                        blurRadius: 20,
+                        offset: const Offset(0, 4),
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // Title field
+                      Text(
+                        'Note Title',
+                        style: GoogleFonts.montserrat(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                          color: const Color(0xFF1A1E3F),
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      TextField(
+                        controller: _titleCtrl,
+                        style: GoogleFonts.montserrat(
+                          fontSize: 16,
+                          color: const Color(0xFF1A1E3F),
+                        ),
+                        decoration: InputDecoration(
+                          hintText: 'e.g., Quadratic Equations Summary',
+                          hintStyle: GoogleFonts.montserrat(
+                            color: Colors.grey[400],
+                          ),
+                          filled: true,
+                          fillColor: const Color(0xFFF8FAFE),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(12),
+                            borderSide: BorderSide.none,
+                          ),
+                          contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                        ),
+                      ),
+                      const SizedBox(height: 24),
+
+                      // Subject field
+                      Text(
+                        'Subject',
+                        style: GoogleFonts.montserrat(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                          color: const Color(0xFF1A1E3F),
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      TextField(
+                        controller: _subjectCtrl,
+                        style: GoogleFonts.montserrat(
+                          fontSize: 16,
+                          color: const Color(0xFF1A1E3F),
+                        ),
+                        decoration: InputDecoration(
+                          hintText: 'e.g., Mathematics',
+                          hintStyle: GoogleFonts.montserrat(
+                            color: Colors.grey[400],
+                          ),
+                          filled: true,
+                          fillColor: const Color(0xFFF8FAFE),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(12),
+                            borderSide: BorderSide.none,
+                          ),
+                          contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                        ),
+                      ),
+                      const SizedBox(height: 24),
+
+                      // Note content field
+                      Text(
+                        'Note Content',
+                        style: GoogleFonts.montserrat(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                          color: const Color(0xFF1A1E3F),
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      TextField(
+                        controller: _textCtrl,
+                        maxLines: 8,
+                        style: GoogleFonts.montserrat(
+                          fontSize: 16,
+                          color: const Color(0xFF1A1E3F),
+                          height: 1.5,
+                        ),
+                        decoration: InputDecoration(
+                          hintText: 'Write your notes here... You can include explanations, formulas, key points, or any helpful information.',
+                          hintStyle: GoogleFonts.montserrat(
+                            color: Colors.grey[400],
+                            height: 1.5,
+                          ),
+                          filled: true,
+                          fillColor: const Color(0xFFF8FAFE),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(12),
+                            borderSide: BorderSide.none,
+                          ),
+                          contentPadding: const EdgeInsets.all(16),
+                        ),
+                      ),
+                      const SizedBox(height: 24),
+
+                      // Image preview
+                      if (_pickedBytes != null) ...[
+                        Text(
+                          'Attached Image',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
+                            color: const Color(0xFF1A1E3F),
+                          ),
+                        ),
+                        const SizedBox(height: 12),
+                        Container(
+                          width: double.infinity,
+                          height: 200,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            image: DecorationImage(
+                              image: MemoryImage(_pickedBytes!),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 24),
+                      ],
+
+                      // Action buttons
+                      Row(
+                        children: [
+                          // Pick image button
+                          Expanded(
+                            child: OutlinedButton.icon(
+                              onPressed: _pickImage,
+                              icon: Icon(
+                                _pickedBytes != null ? Icons.image : Icons.add_photo_alternate,
+                                color: const Color(0xFF1A1E3F),
+                              ),
+                              label: Text(
+                                _pickedBytes != null ? 'Change Image' : 'Add Image',
+                                style: GoogleFonts.montserrat(
+                                  color: const Color(0xFF1A1E3F),
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                              style: OutlinedButton.styleFrom(
+                                padding: const EdgeInsets.symmetric(vertical: 16),
+                                side: const BorderSide(color: Color(0xFF1A1E3F), width: 1.5),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 12),
+                          // Upload button
+                          Expanded(
+                            child: ElevatedButton(
+                              onPressed: _loading ? null : _submit,
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color(0xFF2ECC71), // Uriel green
+                                foregroundColor: Colors.white,
+                                padding: const EdgeInsets.symmetric(vertical: 16),
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                elevation: 0,
+                              ),
+                              child: _loading
+                                  ? const SizedBox(
+                                      width: 20,
+                                      height: 20,
+                                      child: CircularProgressIndicator(
+                                        strokeWidth: 2,
+                                        valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                                      ),
+                                    )
+                                  : Text(
+                                      'Upload Note',
+                                      style: GoogleFonts.montserrat(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w600,
+                                      ),
+                                    ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+
+                // Bottom spacing
+                const SizedBox(height: 32),
+              ],
+            ),
+          ),
+
+          // URI Chat overlay
+          Positioned(
+            right: isMobile ? 16 : 24,
+            bottom: isMobile ? 100 : 24,
+            child: const UriChat(),
+          ),
+        ],
       ),
     );
   }
