@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../widgets/uri_chat.dart';
@@ -38,6 +37,33 @@ class _NotesTabState extends State<NotesTab> {
     ];
   }
 
+  Color _getSubjectColor(String subject) {
+    switch (subject.toLowerCase()) {
+      case 'mathematics':
+        return const Color(0xFF2196F3);
+      case 'english':
+        return const Color(0xFF4CAF50);
+      case 'integrated science':
+        return const Color(0xFFFF9800);
+      case 'social studies':
+        return const Color(0xFF9C27B0);
+      case 'religious and moral education':
+        return const Color(0xFF795548);
+      case 'ghanaian language':
+        return const Color(0xFF607D8B);
+      case 'creative arts':
+        return const Color(0xFFE91E63);
+      case 'french':
+        return const Color(0xFF3F51B5);
+      case 'ict':
+        return const Color(0xFF009688);
+      case 'other':
+        return const Color(0xFF9E9E9E);
+      default:
+        return const Color(0xFF1A1E3F);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final isSmallScreen = MediaQuery.of(context).size.width < 768;
@@ -49,9 +75,9 @@ class _NotesTabState extends State<NotesTab> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Header with title and upload button
+              // Header with title only
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Expanded(
                     child: Column(
@@ -76,38 +102,8 @@ class _NotesTabState extends State<NotesTab> {
                       ],
                     ),
                   ),
-                  if (!isSmallScreen)
-                    ElevatedButton.icon(
-                      onPressed: () => Navigator.of(context).pushNamed('/upload_note'),
-                      icon: const Icon(Icons.add),
-                      label: const Text('Upload Note'),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFF2ECC71), // Uriel green
-                        foregroundColor: Colors.white,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                      ),
-                    ),
                 ],
               ),
-              if (isSmallScreen)
-                Padding(
-                  padding: const EdgeInsets.only(top: 16),
-                  child: ElevatedButton.icon(
-                    onPressed: () => Navigator.of(context).pushNamed('/upload_note'),
-                    icon: const Icon(Icons.add),
-                    label: const Text('Upload Note'),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF2ECC71), // Uriel green
-                      foregroundColor: Colors.white,
-                      minimumSize: const Size(double.infinity, 48),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                    ),
-                  ),
-                ),
               const SizedBox(height: 24),
               // Search and Filter Card
               Container(
@@ -208,11 +204,10 @@ class _NotesTabState extends State<NotesTab> {
                   ],
                 ),
               ),
-              // Real-time list of user's notes with filtering
+              // Real-time list of all notes with filtering
               StreamBuilder<QuerySnapshot>(
                 stream: FirebaseFirestore.instance
                     .collection('notes')
-                    .where('userId', isEqualTo: FirebaseAuth.instance.currentUser?.uid)
                     .orderBy('createdAt', descending: true)
                     .snapshots(),
                 builder: (context, snap) {
@@ -252,13 +247,13 @@ class _NotesTabState extends State<NotesTab> {
                           Icon(Icons.menu_book, size: 72, color: Colors.grey[400]),
                           const SizedBox(height: 16),
                           Text(
-                            docs.isEmpty ? 'No notes yet' : 'No notes match your search',
+                            docs.isEmpty ? 'No notes available' : 'No notes match your search',
                             style: GoogleFonts.montserrat(fontSize: 16, color: Colors.grey[700])
                           ),
                           const SizedBox(height: 8),
                           Text(
                             docs.isEmpty
-                                ? 'Upload text or photo notes to help students across Ghana.'
+                                ? 'Be the first to upload study notes and help fellow students!'
                                 : 'Try adjusting your search or filters.',
                             style: GoogleFonts.montserrat(fontSize: 13, color: Colors.grey[600]),
                             textAlign: TextAlign.center,
@@ -269,48 +264,150 @@ class _NotesTabState extends State<NotesTab> {
                     );
                   }
 
-                  return ListView.separated(
+                  return GridView.builder(
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: isSmallScreen ? 1 : 2,
+                      childAspectRatio: isSmallScreen ? 3.5 : 4.0,
+                      crossAxisSpacing: 12,
+                      mainAxisSpacing: 12,
+                    ),
                     itemCount: filteredDocs.length,
-                    separatorBuilder: (_, __) => const Divider(height: 12),
                     itemBuilder: (context, i) {
                       final d = filteredDocs[i].data() as Map<String, dynamic>;
                       final title = (d['title'] ?? '').toString();
                       final subject = (d['subject'] ?? '').toString();
                       final text = (d['text'] ?? '').toString();
+                      final uploaderName = (d['uploaderName'] ?? 'Anonymous User').toString();
                       final signedUrl = d['signedUrl'] as String?;
                       final filePath = d['filePath'] as String?;
                       final publicFileUrl = d['fileUrl'] as String?; // legacy public url
 
-                      return ListTile(
-                        leading: signedUrl != null
-                            ? Image.network(signedUrl, width: 64, height: 64, fit: BoxFit.cover)
-                            : (publicFileUrl != null
-                                ? Image.network(publicFileUrl, width: 64, height: 64, fit: BoxFit.cover)
-                                : (filePath != null ? Icon(Icons.image, size: 48, color: Colors.grey[400]) : Icon(Icons.article, size: 48, color: Colors.grey[400]))),
-                        title: Text(
-                          title.isNotEmpty ? title : 'Untitled',
-                          style: GoogleFonts.montserrat(fontSize: 15, fontWeight: FontWeight.w600)
+                      return Card(
+                        elevation: 2,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
                         ),
-                        subtitle: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            if (subject.isNotEmpty)
-                              Text(
-                                subject,
-                                style: GoogleFonts.montserrat(fontSize: 12, color: Colors.grey[700])
-                              ),
-                            if (text.isNotEmpty)
-                              Text(
-                                text.length > 120 ? '${text.substring(0, 120)}…' : text,
-                                style: GoogleFonts.montserrat(fontSize: 13)
-                              )
-                          ]
+                        child: InkWell(
+                          borderRadius: BorderRadius.circular(12),
+                          onTap: () {
+                            Navigator.of(context).pushNamed('/note', arguments: {'noteId': filteredDocs[i].id});
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(16),
+                            child: Row(
+                              children: [
+                                // Note preview/thumbnail
+                                Container(
+                                  width: isSmallScreen ? 60 : 80,
+                                  height: isSmallScreen ? 60 : 80,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(8),
+                                    color: const Color(0xFFF8FAFE),
+                                  ),
+                                  child: signedUrl != null
+                                      ? ClipRRect(
+                                          borderRadius: BorderRadius.circular(8),
+                                          child: Image.network(
+                                            signedUrl,
+                                            fit: BoxFit.cover,
+                                            errorBuilder: (context, error, stackTrace) =>
+                                                const Icon(Icons.image, color: Colors.grey),
+                                          ),
+                                        )
+                                      : (publicFileUrl != null
+                                          ? ClipRRect(
+                                              borderRadius: BorderRadius.circular(8),
+                                              child: Image.network(
+                                                publicFileUrl,
+                                                fit: BoxFit.cover,
+                                                errorBuilder: (context, error, stackTrace) =>
+                                                    const Icon(Icons.image, color: Colors.grey),
+                                              ),
+                                            )
+                                          : Icon(
+                                              filePath != null ? Icons.image : Icons.article,
+                                              size: isSmallScreen ? 24 : 32,
+                                              color: Colors.grey[400],
+                                            )),
+                                ),
+                                const SizedBox(width: 16),
+                                // Note details
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      // Title
+                                      Text(
+                                        title.isNotEmpty ? title : 'Untitled',
+                                        style: GoogleFonts.montserrat(
+                                          fontSize: isSmallScreen ? 16 : 18,
+                                          fontWeight: FontWeight.w600,
+                                          color: const Color(0xFF1A1E3F),
+                                        ),
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                      const SizedBox(height: 4),
+                                      // Subject and uploader
+                                      Row(
+                                        children: [
+                                          Container(
+                                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                                            decoration: BoxDecoration(
+                                              color: _getSubjectColor(subject).withValues(alpha: 0.1),
+                                              borderRadius: BorderRadius.circular(6),
+                                            ),
+                                            child: Text(
+                                              subject.isNotEmpty ? subject : 'General',
+                                              style: GoogleFonts.montserrat(
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.w500,
+                                                color: _getSubjectColor(subject),
+                                              ),
+                                            ),
+                                          ),
+                                          const SizedBox(width: 8),
+                                          Expanded(
+                                            child: Text(
+                                              'by $uploaderName',
+                                              style: GoogleFonts.montserrat(
+                                                fontSize: 12,
+                                                color: Colors.grey[600],
+                                              ),
+                                              maxLines: 1,
+                                              overflow: TextOverflow.ellipsis,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      const SizedBox(height: 8),
+                                      // Preview text
+                                      if (text.isNotEmpty)
+                                        Text(
+                                          text.length > 100 ? '${text.substring(0, 100)}…' : text,
+                                          style: GoogleFonts.montserrat(
+                                            fontSize: 13,
+                                            color: Colors.grey[700],
+                                            height: 1.4,
+                                          ),
+                                          maxLines: 2,
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                    ],
+                                  ),
+                                ),
+                                // Action icon
+                                Icon(
+                                  Icons.chevron_right,
+                                  color: Colors.grey[400],
+                                  size: isSmallScreen ? 20 : 24,
+                                ),
+                              ],
+                            ),
+                          ),
                         ),
-                        onTap: () {
-                          Navigator.of(context).pushNamed('/note', arguments: {'noteId': filteredDocs[i].id});
-                        },
                       );
                     },
                   );

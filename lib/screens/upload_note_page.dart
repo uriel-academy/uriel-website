@@ -17,11 +17,27 @@ class UploadNotePage extends StatefulWidget {
 
 class _UploadNotePageState extends State<UploadNotePage> {
   final _titleCtrl = TextEditingController();
-  final _subjectCtrl = TextEditingController();
   final _textCtrl = TextEditingController();
   XFile? _pickedImage;
   Uint8List? _pickedBytes;
   bool _loading = false;
+  String _selectedSubject = 'Mathematics'; // Default subject
+
+  List<String> _getSubjectOptions() {
+    // Common subjects for Ghanaian education system
+    return [
+      'Mathematics',
+      'English',
+      'Integrated Science',
+      'Social Studies',
+      'Religious and Moral Education',
+      'Ghanaian Language',
+      'French',
+      'ICT',
+      'Creative Arts',
+      'Other'
+    ];
+  }
 
   Future<void> _pickImage() async {
     final picker = ImagePicker();
@@ -55,8 +71,9 @@ class _UploadNotePageState extends State<UploadNotePage> {
 
       final body = {
         'title': _titleCtrl.text,
-        'subject': _subjectCtrl.text,
+        'subject': _selectedSubject,
         'text': _textCtrl.text,
+        'uploaderName': user.displayName ?? 'Anonymous User',
         if (imageBase64 != null) 'imageBase64': imageBase64,
         if (fileName.isNotEmpty) 'fileName': fileName,
       };
@@ -109,7 +126,6 @@ class _UploadNotePageState extends State<UploadNotePage> {
   @override
   void dispose() {
     _titleCtrl.dispose();
-    _subjectCtrl.dispose();
     _textCtrl.dispose();
     super.dispose();
   }
@@ -231,14 +247,11 @@ class _UploadNotePageState extends State<UploadNotePage> {
                         ),
                       ),
                       const SizedBox(height: 8),
-                      TextField(
-                        controller: _subjectCtrl,
-                        style: GoogleFonts.montserrat(
-                          fontSize: 16,
-                          color: const Color(0xFF1A1E3F),
-                        ),
+                      DropdownButtonFormField<String>(
+                        value: _selectedSubject,
+                        onChanged: (value) => setState(() => _selectedSubject = value!),
                         decoration: InputDecoration(
-                          hintText: 'e.g., Mathematics',
+                          hintText: 'Select a subject',
                           hintStyle: GoogleFonts.montserrat(
                             color: Colors.grey[400],
                           ),
@@ -250,6 +263,17 @@ class _UploadNotePageState extends State<UploadNotePage> {
                           ),
                           contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                         ),
+                        dropdownColor: Colors.white,
+                        style: GoogleFonts.montserrat(
+                          fontSize: 16,
+                          color: const Color(0xFF1A1E3F),
+                        ),
+                        items: _getSubjectOptions().map((subject) {
+                          return DropdownMenuItem(
+                            value: subject,
+                            child: Text(subject),
+                          );
+                        }).toList(),
                       ),
                       const SizedBox(height: 24),
 
