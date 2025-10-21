@@ -10,6 +10,7 @@ import '../services/auth_service.dart';
 import '../services/notification_service.dart';
 import '../services/uri_ai.dart';
 import '../services/leaderboard_rank_service.dart';
+import '../widgets/uri_chat_input.dart';
 import '../services/xp_service.dart';
 import '../widgets/rank_badge_widget.dart';
 import 'redesigned_all_ranks_page.dart';
@@ -6308,102 +6309,35 @@ class _UriChatInterfaceState extends State<UriChatInterface> with TickerProvider
                       ),
                     ],
                   ),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      // Attachment button (placeholder for future features)
-                      if (!isMobile) ...[
-                        Container(
-                          margin: const EdgeInsets.only(left: 8, bottom: 8),
-                          child: IconButton(
-                            icon: Icon(
-                              Icons.attach_file,
-                              color: Colors.grey[500],
-                              size: 20,
-                            ),
-                            onPressed: () {
-                              // Future: attachment functionality
-                            },
-                            padding: EdgeInsets.zero,
-                            constraints: const BoxConstraints(
-                              minWidth: 32,
-                              minHeight: 32,
-                            ),
-                          ),
-                        ),
-                      ],
+                  child: UriChatInput(
+                    history: _messages.map((m) => {'role': m['role'] as String? ?? 'user', 'content': m['content'] as String? ?? ''}).toList(),
+                    onMessage: (role, content) async {
+                      setState(() {
+                        _messages.add({'role': role, 'content': content, 'timestamp': DateTime.now(), 'id': '${role}_${DateTime.now().millisecondsSinceEpoch}'});
+                        _isLoading = role == 'user' ? true : _isLoading;
+                      });
+                      _scrollToBottom();
 
-                      // Text input area
-                      Expanded(
-                        child: TextField(
-                          controller: _textController,
-                          focusNode: _focusNode,
-                          maxLines: null,
-                          textInputAction: TextInputAction.send,
-                          onSubmitted: (_) => _sendMessage(),
-                          style: GoogleFonts.montserrat(
-                            fontSize: isMobile ? 16 : 16,
-                            color: const Color(0xFF1A1E3F),
-                            height: 1.4,
-                          ),
-                          decoration: InputDecoration(
-                            hintText: isMobile ? 'Message Uri...' : 'Ask Uri anything...',
-                            hintStyle: GoogleFonts.montserrat(
-                              fontSize: isMobile ? 16 : 16,
-                              color: Colors.grey[500],
-                            ),
-                            border: InputBorder.none,
-                            contentPadding: EdgeInsets.symmetric(
-                              horizontal: isMobile ? 16 : 20,
-                              vertical: isMobile ? 12 : 16,
-                            ),
-                            isDense: true,
-                            counterText: '', // Hide character counter
-                          ),
-                        ),
-                      ),
-
-                      // Send button with better mobile styling
-                      Container(
-                        margin: EdgeInsets.only(
-                          right: isMobile ? 4 : 8,
-                          bottom: isMobile ? 4 : 8,
-                        ),
-                        child: Material(
-                          color: _isLoading || _textController.text.trim().isEmpty
-                              ? Colors.grey[300]
-                              : const Color(0xFFD62828),
-                          borderRadius: BorderRadius.circular(isMobile ? 18 : 20),
-                          child: InkWell(
-                            onTap: (_isLoading || _textController.text.trim().isEmpty)
-                                ? null
-                                : _sendMessage,
-                            borderRadius: BorderRadius.circular(isMobile ? 18 : 20),
-                            child: Container(
-                              width: isMobile ? 36 : 40,
-                              height: isMobile ? 36 : 40,
-                              alignment: Alignment.center,
-                              child: _isLoading
-                                  ? SizedBox(
-                                      width: isMobile ? 16 : 20,
-                                      height: isMobile ? 16 : 20,
-                                      child: const CircularProgressIndicator(
-                                        strokeWidth: 2,
-                                        valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
-                                      ),
-                                    )
-                                  : Icon(
-                                      Icons.send_rounded,
-                                      color: _textController.text.trim().isEmpty
-                                          ? Colors.grey[500]
-                                          : Colors.white,
-                                      size: isMobile ? 18 : 20,
-                                    ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
+                      // If user message, call server for assistant reply (UriAI already used elsewhere)
+                      if (role == 'user') {
+                        setState(() => _isTyping = true);
+                        try {
+                          final reply = await UriAI.ask(content);
+                          setState(() {
+                            _isTyping = false;
+                            _messages.add({'role': 'assistant', 'content': reply, 'timestamp': DateTime.now(), 'id': 'assistant_${DateTime.now().millisecondsSinceEpoch}'});
+                            _isLoading = false;
+                          });
+                        } catch (e) {
+                          setState(() {
+                            _isTyping = false;
+                            _messages.add({'role': 'assistant', 'content': 'Sorry, I encountered an error. Please try again.', 'timestamp': DateTime.now(), 'id': 'error_${DateTime.now().millisecondsSinceEpoch}'});
+                            _isLoading = false;
+                          });
+                        }
+                        _scrollToBottom();
+                      }
+                    },
                   ),
                 ),
               ),
