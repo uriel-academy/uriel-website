@@ -71,6 +71,22 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
     }
   }
 
+  /// Returns a subject-specific asset image path for note covers when
+  /// the note has no network image. Returns null if no matching asset.
+  String? _getCoverAssetForSubject(String subject) {
+    final s = subject.toLowerCase();
+    if (s.contains('math')) return 'assets/notes_cover/mathematics_note_cover.png';
+    if (s.contains('english')) return 'assets/notes_cover/english_note_cover.png';
+    if (s.contains('integrated')) return 'assets/notes_cover/integrated_science_note_cover.png';
+    if (s.contains('social')) return 'assets/notes_cover/social_studies_note_cover.png';
+    if (s.contains('relig') || s == 'rme' || s.contains('rme')) return 'assets/notes_cover/rmw_note_cover.png';
+    if (s.contains('ghanaian')) return 'assets/notes_cover/ghanaian_language_note_cover.png';
+    if (s.contains('french')) return 'assets/notes_cover/french_note_cover.png';
+    if (s.contains('ict')) return 'assets/notes_cover/ict_note_cover.png';
+    if (s.contains('creative')) return 'assets/notes_cover/creative_arts_note_cover.png';
+    return null;
+  }
+
   Future<String?> _getCurrentUserSchool() async {
     final user = FirebaseAuth.instance.currentUser;
     if (user == null) return null;
@@ -327,12 +343,18 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
                                   ? Image.network(signedUrl, fit: BoxFit.cover, width: double.infinity, errorBuilder: (_, __, ___) => Container(color: _getSubjectColor(subject)))
                                   : (publicFileUrl != null
                                       ? Image.network(publicFileUrl, fit: BoxFit.cover, width: double.infinity, errorBuilder: (_, __, ___) => Container(color: _getSubjectColor(subject)))
-                                      : Container(
-                                          decoration: BoxDecoration(
-                                            gradient: LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: [_getSubjectColor(subject).withOpacity(0.7), _getSubjectColor(subject)]),
-                                          ),
-                                          child: Center(child: Icon(Icons.sticky_note_2, size: isSmall ? 36 : 44, color: Colors.white)),
-                                        )),
+                                      : (() {
+                                          final asset = _getCoverAssetForSubject(subject);
+                                          if (asset != null) {
+                                            return Image.asset(asset, fit: BoxFit.cover, width: double.infinity);
+                                          }
+                                          return Container(
+                                            decoration: BoxDecoration(
+                                              gradient: LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: [_getSubjectColor(subject).withOpacity(0.7), _getSubjectColor(subject)]),
+                                            ),
+                                            child: Center(child: Icon(Icons.sticky_note_2, size: isSmall ? 36 : 44, color: Colors.white)),
+                                          );
+                                        }())),
                             ),
                           ),
                           Expanded(
