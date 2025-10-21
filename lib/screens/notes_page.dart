@@ -340,13 +340,13 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
                             child: ClipRRect(
                               borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
                               child: signedUrl != null
-                                  ? Image.network(signedUrl, fit: BoxFit.cover, width: double.infinity, errorBuilder: (_, __, ___) => Container(color: _getSubjectColor(subject)))
+                                  ? Image.network(signedUrl, fit: BoxFit.cover, alignment: Alignment.topCenter, width: double.infinity, errorBuilder: (_, __, ___) => Container(color: _getSubjectColor(subject)))
                                   : (publicFileUrl != null
-                                      ? Image.network(publicFileUrl, fit: BoxFit.cover, width: double.infinity, errorBuilder: (_, __, ___) => Container(color: _getSubjectColor(subject)))
+                                      ? Image.network(publicFileUrl, fit: BoxFit.cover, alignment: Alignment.topCenter, width: double.infinity, errorBuilder: (_, __, ___) => Container(color: _getSubjectColor(subject)))
                                       : (() {
                                           final asset = _getCoverAssetForSubject(subject);
                                           if (asset != null) {
-                                            return Image.asset(asset, fit: BoxFit.cover, width: double.infinity);
+                                            return Image.asset(asset, fit: BoxFit.cover, alignment: Alignment.topCenter, width: double.infinity);
                                           }
                                           return Container(
                                             decoration: BoxDecoration(

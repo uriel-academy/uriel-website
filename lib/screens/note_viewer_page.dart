@@ -151,6 +151,7 @@ class _NoteViewerPageState extends State<NoteViewerPage> {
                             child: Image.network(
                               imageUrls[_selectedImageIndex],
                               fit: BoxFit.cover,
+                              alignment: Alignment.topCenter,
                               width: double.infinity,
                               errorBuilder: (_, __, ___) => Container(color: Colors.grey[300]),
                             ),
@@ -270,6 +271,7 @@ class _NoteViewerPageState extends State<NoteViewerPage> {
                                       child: Image.network(
                                         imageUrls[_selectedImageIndex],
                                         fit: BoxFit.contain,
+                                        alignment: Alignment.topCenter,
                                         width: double.infinity,
                                         height: 420,
                                         errorBuilder: (_, __, ___) => Container(color: Colors.grey[200]),
@@ -300,6 +302,7 @@ class _NoteViewerPageState extends State<NoteViewerPage> {
                                                 child: Image.network(
                                                   imageUrls[i],
                                                   fit: BoxFit.cover,
+                                                  alignment: Alignment.topCenter,
                                                   errorBuilder: (_, __, ___) => Container(color: Colors.grey[200]),
                                                 ),
                                               ),
