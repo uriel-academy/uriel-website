@@ -6275,16 +6275,7 @@ class _UriChatInterfaceState extends State<UriChatInterface> with TickerProvider
                                     fontWeight: FontWeight.w400,
                                   ),
                                 ),
-                                const SizedBox(height: 4),
-                                Text(
-                                  _formatTimestamp(message['timestamp']),
-                                  style: GoogleFonts.montserrat(
-                                    fontSize: 11,
-                                    color: isUser
-                                        ? Colors.white.withValues(alpha: 0.7)
-                                        : Colors.grey[500],
-                                  ),
-                                ),
+                                // Timestamps intentionally hidden in chat UI per product request
                               ],
                             ),
                           ),

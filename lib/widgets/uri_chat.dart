@@ -491,30 +491,35 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
           margin: const EdgeInsets.symmetric(vertical: 8),
           alignment: isUser ? Alignment.centerRight : Alignment.centerLeft,
           child: Container(
-            constraints: BoxConstraints(maxWidth: cap),
-            padding: const EdgeInsets.all(12),
-            decoration: BoxDecoration(
-              color: isUser
-                  ? UrielColors.urielRed.withValues(alpha: 0.1) // Light red tint for user
-                  : Colors.white, // White background for bot
-              border: Border.all(
-                color: UrielColors.softGray,
-                width: 1,
+              constraints: BoxConstraints(maxWidth: cap),
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: isUser
+                    ? UrielColors.urielRed.withValues(alpha: 0.1) // Light red tint for user
+                    : Colors.white, // White background for bot
+                border: Border.all(
+                  color: UrielColors.softGray,
+                  width: 1,
+                ),
+                borderRadius: BorderRadius.circular(12),
               ),
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                _buildMessageWithAttachments(m, isUser),
-                // If not user and stream just finished and this is the newest message, show complete
-                if (!isUser && _streamComplete && messageIndex == 0)
-                  Padding(
-                    padding: const EdgeInsets.only(top: 6.0),
-                    child: Text('✓ complete', style: TextStyle(color: Colors.grey[500], fontSize: 11)),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Smooth size changes when the streamed text updates
+                  AnimatedSize(
+                    duration: const Duration(milliseconds: 180),
+                    curve: Curves.easeInOut,
+                    child: _buildMessageWithAttachments(m, isUser),
                   ),
-              ],
-            ),
+                  // If not user and stream just finished and this is the newest message, show complete
+                  if (!isUser && _streamComplete && messageIndex == 0)
+                    Padding(
+                      padding: const EdgeInsets.only(top: 6.0),
+                      child: Text('\u2713 complete', style: TextStyle(color: Colors.grey[500], fontSize: 11)),
+                    ),
+                ],
+              ),
           ),
         );
       },

@@ -64,10 +64,12 @@ class _UriChatInputState extends State<UriChatInput> {
     final history = [...widget.history, {'role': 'user', 'content': text}];
 
   String accumulated = '';
-  widget.onMessage('assistant', ''); // create assistant bubble (will be updated by stream)
+  // create assistant bubble (will be updated by stream). We attach a placeholder
+  // object that can later hold a cancel handle.
+  widget.onMessage('assistant', '');
 
     dynamic cancelHandle;
-    try {
+      try {
       cancelHandle = await _chat.sendStream(
         messages: history,
         imageUrl: uploadedUrl,

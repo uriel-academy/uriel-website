@@ -473,19 +473,30 @@ export const aiChatSSE = functions
     try {
       corsHandler(req, res, async () => {
         if (req.method === 'OPTIONS') {
-          res.set('Access-Control-Allow-Methods', 'POST, OPTIONS');
+          res.set('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
           res.set('Access-Control-Allow-Headers', 'Content-Type');
+          res.set('Access-Control-Allow-Origin', req.headers.origin || '*');
           res.status(204).send('');
           return;
         }
 
-        if (req.method !== 'POST') {
-          res.status(405).json({ error: 'Method not allowed. Use POST.' });
+        // Allow both GET (EventSource-friendly) and POST
+        if (req.method !== 'POST' && req.method !== 'GET') {
+          res.status(405).json({ error: 'Method not allowed. Use GET or POST.' });
           return;
         }
 
-        const rawPrompt = extractPrompt(req.body?.message ?? req.body);
-        const prompt = normalizePrompt(rawPrompt).slice(0, 4000);
+        // For GET, accept prompt in query param 'message' or 'prompt'. For POST, use body.
+        const rawPrompt = req.method === 'GET'
+          ? (req.query?.message || req.query?.prompt || '')
+          : extractPrompt(req.body?.message ?? req.body);
+        // Coerce query types (ParsedQs) into a safe string like we do in aiChatStream
+        const rawPromptStr = (typeof rawPrompt === 'string')
+          ? rawPrompt
+          : Array.isArray(rawPrompt)
+            ? rawPrompt.join(' ')
+            : String(rawPrompt || '');
+        const prompt = normalizePrompt(rawPromptStr).slice(0, 4000);
         if (!prompt) {
           res.status(400).json({ error: 'Empty or invalid message.' });
           return;
