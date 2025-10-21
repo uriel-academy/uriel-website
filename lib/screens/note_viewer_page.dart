@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cloud_functions/cloud_functions.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import 'package:url_launcher/url_launcher.dart';
@@ -33,6 +34,24 @@ class _NoteViewerPageState extends State<NoteViewerPage> {
     final doc = await FirebaseFirestore.instance.collection('notes').doc(widget.noteId).get();
     if (!mounted) return;
     setState(() => _note = doc.data());
+
+    // If running on web, proactively try to fetch a signed URL when there's
+    // a file attached but no public URL/images. This helps the desktop web
+    // viewer load images that are stored in protected Firebase Storage.
+    try {
+      final note = _note;
+      if (kIsWeb && note != null) {
+        final images = note['images'];
+        final hasImages = images is List && images.isNotEmpty;
+        final hasFile = note['filePath'] != null || note['fileUrl'] != null || note['signedUrl'] != null;
+        if (!hasImages && hasFile && _signedUrl == null) {
+          // fire-and-forget; _fetchSignedUrl will set state when done
+          _fetchSignedUrl();
+        }
+      }
+    } catch (_) {
+      // ignore
+    }
   }
 
   Future<void> _fetchSignedUrl() async {
@@ -97,6 +116,7 @@ class _NoteViewerPageState extends State<NoteViewerPage> {
 
   List<String> _collectImageUrls(Map<String, dynamic> note) {
     final urls = <String>[];
+    // prefer signed URL (may be generated server-side), then fileUrl, then any stored images
     if (note['signedUrl'] != null) urls.add(note['signedUrl'] as String);
     if (note['fileUrl'] != null) urls.add(note['fileUrl'] as String);
     final images = note['images'];
