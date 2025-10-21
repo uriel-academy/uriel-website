@@ -5,6 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:cloud_functions/cloud_functions.dart';
 import 'package:http/http.dart' as http;
 import '../widgets/uri_chat.dart';
 
@@ -20,6 +21,7 @@ class _UploadNotePageState extends State<UploadNotePage> {
   final _textCtrl = TextEditingController();
   XFile? _pickedImage;
   Uint8List? _pickedBytes;
+  String? _remoteImageUrl;
   bool _loading = false;
   String _selectedSubject = 'Mathematics'; // Default subject
 
@@ -48,7 +50,53 @@ class _UploadNotePageState extends State<UploadNotePage> {
       setState(() {
         _pickedImage = picked;
         _pickedBytes = bytes;
+        // user selected a local image, clear any remote preview
+        _remoteImageUrl = null;
       });
+    }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+
+    // Prefill when navigated with existing note data
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final args = ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>?;
+      if (args != null) {
+        final title = args['title'] as String?;
+        final text = args['text'] as String?;
+        final subject = args['subject'] as String?;
+        final signedUrl = args['signedUrl'] as String?;
+        final fileUrl = args['fileUrl'] as String?;
+        final filePath = args['filePath'] as String?;
+
+        if (title != null) _titleCtrl.text = title;
+        if (text != null) _textCtrl.text = text;
+        if (subject != null) setState(() => _selectedSubject = subject);
+
+        if (signedUrl != null) {
+          setState(() => _remoteImageUrl = signedUrl);
+        } else if (fileUrl != null) {
+          setState(() => _remoteImageUrl = fileUrl);
+        } else if (filePath != null) {
+          _fetchSignedUrlForFilePath(filePath).then((url) {
+            if (url != null && mounted) setState(() => _remoteImageUrl = url);
+          });
+        }
+      }
+    });
+  }
+
+  Future<String?> _fetchSignedUrlForFilePath(String filePath) async {
+    try {
+      final fn = FirebaseFunctions.instance.httpsCallable('getNoteSignedUrl');
+      final res = await fn.call({'filePath': filePath});
+      final data = res.data as Map<String, dynamic>?;
+      return data?['signedUrl'] as String?;
+    } catch (e) {
+      debugPrint('Failed to fetch signed url for $filePath: $e');
+      return null;
     }
   }
 
@@ -312,8 +360,8 @@ class _UploadNotePageState extends State<UploadNotePage> {
                       ),
                       const SizedBox(height: 24),
 
-                      // Image preview
-                      if (_pickedBytes != null) ...[
+                      // Image preview (local picked or remote)
+                      if (_pickedBytes != null || _remoteImageUrl != null) ...[
                         Text(
                           'Attached Image',
                           style: GoogleFonts.montserrat(
@@ -326,12 +374,12 @@ class _UploadNotePageState extends State<UploadNotePage> {
                         Container(
                           width: double.infinity,
                           height: 200,
-                          decoration: BoxDecoration(
+                          decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
+                          child: ClipRRect(
                             borderRadius: BorderRadius.circular(12),
-                            image: DecorationImage(
-                              image: MemoryImage(_pickedBytes!),
-                              fit: BoxFit.cover,
-                            ),
+                            child: _pickedBytes != null
+                                ? Image.memory(_pickedBytes!, fit: BoxFit.cover, width: double.infinity)
+                                : Image.network(_remoteImageUrl!, fit: BoxFit.cover, width: double.infinity, errorBuilder: (_, __, ___) => const SizedBox.shrink()),
                           ),
                         ),
                         const SizedBox(height: 24),
@@ -345,11 +393,11 @@ class _UploadNotePageState extends State<UploadNotePage> {
                             child: OutlinedButton.icon(
                               onPressed: _pickImage,
                               icon: Icon(
-                                _pickedBytes != null ? Icons.image : Icons.add_photo_alternate,
+                                _pickedBytes != null || _remoteImageUrl != null ? Icons.image : Icons.add_photo_alternate,
                                 color: const Color(0xFF1A1E3F),
                               ),
                               label: Text(
-                                _pickedBytes != null ? 'Change Image' : 'Add Image',
+                                _pickedBytes != null || _remoteImageUrl != null ? 'Change Image' : 'Add Image',
                                 style: GoogleFonts.montserrat(
                                   color: const Color(0xFF1A1E3F),
                                   fontWeight: FontWeight.w500,
