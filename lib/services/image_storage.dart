@@ -6,8 +6,9 @@ class ImageStorage {
   final FirebaseStorage _storage = FirebaseStorage.instance;
 
   Future<String> uploadBytes(Uint8List bytes, String filename) async {
-    if (bytes.lengthInBytes > 5 * 1024 * 1024) {
-      throw Exception('File too large (max 5MB).');
+    // Allow up to 25 MB uploads
+    if (bytes.lengthInBytes > 25 * 1024 * 1024) {
+      throw Exception('File too large (max 25MB).');
     }
 
     final ext = p.extension(filename).toLowerCase();

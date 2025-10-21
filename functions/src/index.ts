@@ -108,7 +108,8 @@ export const aiChat = functions
               if (!allowed.some(a => contentType.toLowerCase().startsWith(a))) {
                 return { ok: false, reason: 'Unsupported image type' };
               }
-              if (contentLength > 5 * 1024 * 1024) {
+              // Allow images up to 25MB
+              if (contentLength > 25 * 1024 * 1024) {
                 return { ok: false, reason: 'Image too large' };
               }
               return { ok: true, contentType, contentLength };
