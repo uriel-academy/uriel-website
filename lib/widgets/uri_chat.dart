@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
-import 'package:firebase_auth/firebase_auth.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:flutter_math_fork/flutter_math.dart';
-import '../services/uri_ai.dart';
+// Note: UriAI and FirebaseAuth were previously used by the older inline _send implementation.
+// The chat input has been moved to `UriChatInput` which handles sending. Keep imports removed to avoid unused warnings.
+import 'uri_chat_input.dart';
 
 // Color constants matching design spec
 class UrielColors {
@@ -29,7 +30,6 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
   bool _open = false;
   // messages: each message is a map: {role, text, id?, loading?}
   final _messages = <Map<String, dynamic>>[];
-  final _ctrl = TextEditingController();
   bool _loading = false;
   late AnimationController _bounceController;
   late Animation<double> _bounceAnimation;
@@ -217,398 +217,10 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
     });
   }
 
-  // Query Facts API for verified educational information
-  Future<String?> _queryFactsAPI(String? userMessage, String? idToken) async {
-    if (userMessage == null || userMessage.isEmpty || idToken == null) return null;
-    
-    try {
-      final message = userMessage.toLowerCase();
+  // Facts API integration removed from the inline chat widget. The modular UriChatInput and server-side aiChat handle facts and persona.
 
-      // Check for exam dates queries
-      if (message.contains('when') && (message.contains('bece') || message.contains('wassce') || message.contains('exam'))) {
-        final examType = message.contains('bece') ? 'bece' : 'wassce';
-        // Extract year if mentioned
-        final yearMatch = RegExp(r'\b(20\d{2})\b').firstMatch(message);
-        final year = yearMatch?.group(1) ?? '2026'; // Default to next year
-
-        final response = await http.get(
-          Uri.parse('https://us-central1-uriel-academy-41fb0.cloudfunctions.net/factsApi/v1/exams/$examType/$year/dates'),
-          headers: {
-            'Authorization': 'Bearer $idToken',
-            'Origin': 'https://uriel.academy',
-          },
-        );
-
-        if (response.statusCode == 200) {
-          final data = jsonDecode(response.body);
-          if (data['ok'] == true) {
-            final examData = data['data'];
-            String result = '📅 **${examType.toUpperCase()} $year Update**\n\n';
-            result += 'The ${examType.toUpperCase()} will take place from **${examData['start_date'] ?? 'TBD'}** to **${examData['end_date'] ?? 'TBD'}**.\n\n';
-            if (examData['status']) result += 'Status: ${examData['status']}\n';
-            if (examData['note']) result += 'Note: ${examData['note']}\n\n';
-            result += '*Source: ${data['source']['name']} (verified ${data['source']['lastVerifiedISO']?.split('T')?[0] ?? 'Unknown'})*';
-            return result;
-          }
-        }
-      }
-
-      // Check for syllabus queries
-      if (message.contains('syllabus') || message.contains('curriculum')) {
-        // Extract subject from message
-        final subjects = ['english', 'mathematics', 'science', 'social studies', 'rme', 'french', 'ict'];
-        String? subject;
-        for (var s in subjects) {
-          if (message.contains(s)) {
-            subject = s;
-            break;
-          }
-        }
-
-        // Extract level (JHS1, JHS2, etc.)
-        final levelMatch = RegExp(r'\b(jhs\d?|shs\d?)\b', caseSensitive: false).firstMatch(message);
-        final level = levelMatch?.group(1)?.toUpperCase() ?? 'JHS1';
-
-        if (subject != null) {
-          final response = await http.get(
-            Uri.parse('https://us-central1-uriel-academy-41fb0.cloudfunctions.net/factsApi/v1/syllabus/$level/$subject'),
-            headers: {
-              'Authorization': 'Bearer $idToken',
-              'Origin': 'https://uriel.academy',
-            },
-          );
-
-          if (response.statusCode == 200) {
-            final data = jsonDecode(response.body);
-            if (data['ok'] == true) {
-              final syllabus = data['data'];
-              String result = '📚 **${subject.toUpperCase()} Syllabus ($level)**\n\n';
-              result += '${syllabus['description'] ?? 'Official syllabus for $subject'}\n\n';
-              if (syllabus['topics'] != null && syllabus['topics'].isNotEmpty) {
-                result += '**Key Topics:**\n';
-                for (var topic in syllabus['topics'].take(5)) {
-                  result += '• $topic\n';
-                }
-                if (syllabus['topics'].length > 5) {
-                  result += '• ... and ${syllabus['topics'].length - 5} more topics\n';
-                }
-              }
-              result += '\n*Source: ${data['source']['name']} (verified ${data['source']['lastVerifiedISO']?.split('T')?[0] ?? 'Unknown'})*';
-              return result;
-            }
-          }
-        }
-      }
-
-      // Check for past questions queries
-      if ((message.contains('question') || message.contains('past') || message.contains('practice')) &&
-          (message.contains('bece') || message.contains('wassce'))) {
-        // Extract subject and year
-        final subjects = ['english', 'mathematics', 'science', 'social studies', 'rme', 'ict'];
-        String? subject;
-        String? year;
-
-        for (var s in subjects) {
-          if (message.contains(s)) {
-            subject = s;
-            break;
-          }
-        }
-
-        // Extract year (look for 4-digit numbers)
-        final yearMatch = RegExp(r'\b(19|20)\d{2}\b').firstMatch(message);
-        if (yearMatch != null) {
-          year = yearMatch.group(0);
-        }
-
-        final exam = message.contains('bece') ? 'bece' : 'wassce';
-
-        if (subject != null) {
-          final url = 'https://us-central1-uriel-academy-41fb0.cloudfunctions.net/factsApi/v1/questions?exam=$exam&year=${year ?? '2011'}&subject=$subject&type=objective&page=1';
-
-          final response = await http.get(
-            Uri.parse(url),
-            headers: {
-              'Authorization': 'Bearer $idToken',
-              'Origin': 'https://uriel.academy',
-            },
-          );
-
-          if (response.statusCode == 200) {
-            final data = jsonDecode(response.body);
-            if (data['ok'] == true && data['data']['questions'].isNotEmpty) {
-              final questions = data['data']['questions'];
-              String result = '📝 **${subject.toUpperCase()} Past Questions**\n\n';
-              result += 'Found ${questions.length} questions';
-
-              if (year != null) {
-                result += ' from $year';
-              }
-
-              result += ':\n\n';
-
-              // Show first 3 questions as examples
-              for (var i = 0; i < questions.length && i < 3; i++) {
-                final q = questions[i];
-                result += '**Q${q['number'] ?? (i + 1)}:** ${q['question'] ?? 'Question text not available'}\n\n';
-                if (q['options'] != null && q['options'].isNotEmpty) {
-                  for (var j = 0; j < q['options'].length; j++) {
-                    result += '${String.fromCharCode(65 + j)}) ${q['options'][j]}\n';
-                  }
-                  result += '\n**Answer:** ${q['answer'] ?? 'Not available'}\n\n';
-                }
-              }
-
-              if (questions.length > 3) {
-                result += '*... and ${questions.length - 3} more questions available*';
-              }
-
-              result += '\n\n*Source: ${data['source']['name']} (verified ${data['source']['lastVerifiedISO']?.split('T')?[0] ?? 'Unknown'})*';
-              return result;
-            }
-          }
-        }
-      }
-
-      // Check for textbook queries
-      if (message.contains('textbook') || message.contains('book') || message.contains('recommended')) {
-        final subjects = ['english', 'mathematics', 'science', 'social studies', 'rme', 'ict'];
-        String? subject;
-
-        for (var s in subjects) {
-          if (message.contains(s)) {
-            subject = s;
-            break;
-          }
-        }
-
-        if (subject != null) {
-          final response = await http.get(
-            Uri.parse('https://us-central1-uriel-academy-41fb0.cloudfunctions.net/factsApi/v1/textbooks/$subject'),
-            headers: {
-              'Authorization': 'Bearer $idToken',
-              'Origin': 'https://uriel.academy',
-            },
-          );
-
-          if (response.statusCode == 200) {
-            final data = jsonDecode(response.body);
-            if (data['ok'] == true && data['data']['textbooks'].isNotEmpty) {
-              final textbooks = data['data']['textbooks'];
-              String result = '📖 **Recommended ${subject.toUpperCase()} Textbooks**\n\n';
-
-              for (var book in textbooks.take(3)) {
-                result += '**${book['title'] ?? 'Title not available'}**\n';
-                if (book['author'] != null) result += 'Author: ${book['author']}\n';
-                if (book['publisher'] != null) result += 'Publisher: ${book['publisher']}\n';
-                if (book['classLevel'] != null) result += 'Class: ${book['classLevel']}\n';
-                result += '\n';
-              }
-
-              if (textbooks.length > 3) {
-                result += '*... and ${textbooks.length - 3} more recommended textbooks*';
-              }
-
-              result += '\n*Source: ${data['source']['name']} (verified ${data['source']['lastVerifiedISO']?.split('T')?[0] ?? 'Unknown'})*';
-              return result;
-            }
-          }
-        }
-      }
-
-      // Check for NaCCA curriculum queries
-      if (message.contains('nacca') || message.contains('curriculum') || message.contains('competenc')) {
-        final subjects = ['english', 'mathematics', 'science', 'social studies', 'rme', 'french', 'ict'];
-        String? subject;
-
-        for (var s in subjects) {
-          if (message.contains(s)) {
-            subject = s;
-            break;
-          }
-        }
-
-        // Extract level (JHS1, JHS2, etc.)
-        final levelMatch = RegExp(r'\b(jhs\d?|shs\d?)\b', caseSensitive: false).firstMatch(message);
-        final level = levelMatch?.group(1)?.toUpperCase() ?? 'JHS1';
-
-        if (subject != null) {
-          final response = await http.get(
-            Uri.parse('https://us-central1-uriel-academy-41fb0.cloudfunctions.net/factsApi/v1/curriculum/nacca/$level/$subject'),
-            headers: {
-              'Authorization': 'Bearer $idToken',
-              'Origin': 'https://uriel.academy',
-            },
-          );
-
-          if (response.statusCode == 200) {
-            final data = jsonDecode(response.body);
-            if (data['ok'] == true) {
-              final curriculum = data['data'];
-              String result = '🎯 **NaCCA Curriculum: ${subject.toUpperCase()} ($level)**\n\n';
-              result += '${curriculum['description'] ?? 'NaCCA-aligned curriculum for $subject'}\n\n';
-              if (curriculum['competencies'] != null && curriculum['competencies'].isNotEmpty) {
-                result += '**Key Competencies:**\n';
-                for (var competency in curriculum['competencies'].take(5)) {
-                  result += '• $competency\n';
-                }
-                if (curriculum['competencies'].length > 5) {
-                  result += '• ... and ${curriculum['competencies'].length - 5} more competencies\n';
-                }
-              }
-              result += '\n*Source: ${data['source']['name']} (verified ${data['source']['lastVerifiedISO']?.split('T')?[0] ?? 'Unknown'})*';
-              return result;
-            }
-          }
-        }
-      }
-
-      // General search fallback
-      if (message.length > 3) { // Only search if message is substantial
-        final response = await http.get(
-          Uri.parse('https://us-central1-uriel-academy-41fb0.cloudfunctions.net/factsApi/v1/search').replace(queryParameters: {'query': userMessage}),
-          headers: {
-            'Authorization': 'Bearer $idToken',
-            'Origin': 'https://uriel.academy',
-          },
-        );
-
-        if (response.statusCode == 200) {
-          final data = jsonDecode(response.body);
-          if (data['ok'] == true && data['data']['results'].isNotEmpty) {
-            final results = data['data']['results'];
-            String result = '🔍 **Search Results for "$userMessage"**\n\n';
-
-            for (var item in results.take(3)) {
-              if (item['type'] == 'question') {
-                result += '📝 **Question:** ${item['question'] ?? 'N/A'}\n';
-                if (item['subject'] != null) result += 'Subject: ${item['subject']}\n';
-                if (item['year'] != null) result += 'Year: ${item['year']}\n';
-              } else if (item['type'] == 'syllabus') {
-                result += '📚 **Syllabus:** ${item['title'] ?? 'N/A'}\n';
-                if (item['subject'] != null) result += 'Subject: ${item['subject']}\n';
-              } else if (item['type'] == 'textbook') {
-                result += '📖 **Textbook:** ${item['title'] ?? 'N/A'}\n';
-                if (item['author'] != null) result += 'Author: ${item['author']}\n';
-              }
-              result += '\n';
-            }
-
-            if (results.length > 3) {
-              result += '*... and ${results.length - 3} more results found*';
-            }
-
-            result += '\n*Source: ${data['source']['name']} (verified ${data['source']['lastVerifiedISO']?.split('T')?[0] ?? 'Unknown'})*';
-            return result;
-          }
-        }
-      }
-
-      return null; // No verified facts found, fall back to AI chat
-    } catch (e) {
-      debugPrint('Facts API error: $e');
-      return null; // Fall back to AI chat on error
-    }
-  }
-
-  Future<void> _send() async {
-    final text = _ctrl.text.trim();
-    if (text.isEmpty) return;
-
-    // Store the text before clearing
-    final userMessage = text;
-
-    // Dismiss keyboard and clear input immediately for better UX
-    FocusManager.instance.primaryFocus?.unfocus();
-    _ctrl.clear();
-
-    // Add user message and set loading state in one atomic update
-    setState(() {
-      _messages.insert(0, {'role':'user','text':userMessage});
-      _loading = true;
-    });
-    _scrollToBottom();
-
-    // Determine client-side mode to avoid wrapping small talk as a lesson
-    final mode = _classifyMode(userMessage);
-
-    try {
-      final user = FirebaseAuth.instance.currentUser;
-      if (user == null) throw Exception('Not signed in');
-
-      // If tutoring and a lesson-type request, wrap with style guide; small_talk shouldn't be wrapped
-      final outgoing = (mode == 'tutoring' && _isLessonRequest(userMessage) && !_alreadyHasStyleGuide(userMessage))
-          ? _wrapLessonStyleGuide(userMessage)
-          : userMessage;
-
-      final replyRaw = await UriAI.ask(outgoing);
-
-      // Replace loading state with final reply
-      setState(() {
-        _messages.insert(0, {'role':'bot','text':replyRaw});
-        _loading = false;
-      });
-      _scrollToBottom();
-    } catch (e) {
-      // Handle error and clear loading state
-      setState(() {
-        _messages.insert(0, {'role':'bot','text':'Sorry, I couldn\'t fetch the latest info. Please try again.'});
-        _loading = false;
-      });
-      _scrollToBottom();
-    }
-  }
-
-  // Detect if a user message should be treated as a lesson request.
-  bool _isLessonRequest(String s) {
-    final t = s.toLowerCase();
-    final triggers = [
-      'lesson',
-      'teach me',
-      'explain',
-      'show me how',
-      'how to',
-      'steps',
-      'format like',
-      'make a lesson',
-      'give me a lesson',
-      'write a lesson',
-    ];
-    for (final tr in triggers) {
-      if (t.contains(tr)) return true;
-    }
-    return false;
-  }
-
-  // Client-side mode classifier mirrors server classifyMode rules to avoid mis-wrapping small talk
-  String _classifyMode(String s) {
-    final t = s.toLowerCase();
-    if (RegExp(r"(your name|what'?s your name|who are you|hi|hello|hey|thanks|thank you)\b").hasMatch(t)) return 'small_talk';
-    if (RegExp(r"(when|date|schedule|latest|today|update|news|bece|wassce|2024|2025|2026|president)\b").hasMatch(t)) return 'facts';
-    return 'tutoring';
-  }
-
-  bool _alreadyHasStyleGuide(String s) {
-    const marker = 'format like';
-    return s.toLowerCase().contains(marker);
-  }
-
-  String _wrapLessonStyleGuide(String userMessage) {
-    return '''Format like:
-
-Title: <one line>
-What it means: <one line>
-Steps:
-1. ...
-2. ...
-Example:
-Quick check:
-In short:
-
-Now answer:
-$userMessage
-''';
-  }
+  // _send() removed - input now uses UriChatInput and routes messages via onMessage
+  // Removed legacy helpers used by previous inline _send implementation. The current input widget handles sending and message mode.
 
   // Text-to-speech helper removed (unused). Keep FlutterTts instance for future use.
 
@@ -900,80 +512,21 @@ $userMessage
   }
 
   Widget _buildInputArea() {
+    // Use the modular UriChatInput widget which handles image picking/upload
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: UrielColors.warmWhite,
         border: Border(top: BorderSide(color: UrielColors.softGray, width: 1)),
       ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: [
-          Expanded(
-            child: Container(
-              constraints: const BoxConstraints(minHeight: 44, maxHeight: 120),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(22),
-                border: Border.all(
-                  color: UrielColors.softGray.withValues(alpha: 0.3),
-                  width: 1,
-                ),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withValues(alpha: 0.05),
-                    blurRadius: 8,
-                    offset: const Offset(0, 2),
-                  ),
-                ],
-              ),
-              child: TextField(
-                controller: _ctrl,
-                textInputAction: TextInputAction.send,
-                onSubmitted: (_) => _send(),
-                autofocus: true,
-                maxLines: null,
-                keyboardType: TextInputType.multiline,
-                style: const TextStyle(
-                  fontSize: 16, // Match Uri page font size
-                  color: UrielColors.deepNavy,
-                  height: 1.4,
-                ),
-                decoration: InputDecoration(
-                  hintText: 'Message Uri...',
-                  hintStyle: TextStyle(
-                    color: Colors.grey[500],
-                    fontSize: 16, // Match Uri page font size
-                  ),
-                  border: InputBorder.none,
-                  contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-                  counterText: '', // Hide character counter
-                ),
-              ),
-            ),
-          ),
-          const SizedBox(width: 8),
-          Container(
-            width: 44,
-            height: 44,
-            decoration: BoxDecoration(
-              color: UrielColors.urielRed,
-              borderRadius: BorderRadius.circular(22),
-              boxShadow: [
-                BoxShadow(
-                  color: UrielColors.urielRed.withValues(alpha: 0.3),
-                  blurRadius: 8,
-                  offset: const Offset(0, 2),
-                ),
-              ],
-            ),
-            child: IconButton(
-              icon: const Icon(Icons.send, color: Colors.white, size: 20),
-              onPressed: _loading ? null : _send,
-              padding: EdgeInsets.zero,
-            ),
-          ),
-        ],
+      child: UriChatInput(
+        history: _messages.map((m) => {'role': m['role'] as String? ?? 'user', 'content': m['text'] as String? ?? ''}).toList(),
+        onMessage: (role, content) {
+          setState(() {
+            _messages.add({'role': role, 'text': content, 'id': '${role}_${DateTime.now().millisecondsSinceEpoch}'});
+          });
+          _scrollToBottom();
+        },
       ),
     );
   }

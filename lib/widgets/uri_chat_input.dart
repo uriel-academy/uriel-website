@@ -1,5 +1,3 @@
-import 'dart:typed_data';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import '../services/chat_service.dart';
@@ -51,8 +49,8 @@ class _UriChatInputState extends State<UriChatInput> {
       final x = await _picker.pickImage(source: source, imageQuality: 85, maxWidth: 2000);
       if (x == null) return;
 
-      final bytes = await x.readAsBytes();
-      final url = await _store.uploadBytes(bytes as Uint8List, x.name);
+  final bytes = await x.readAsBytes();
+  final url = await _store.uploadBytes(bytes, x.name);
 
       widget.onMessage('user', '[Image] $url');
 
