@@ -95,6 +95,45 @@ export const aiChat = functions
           const userMessage = (req.body?.message ?? req.body?.messages ?? '').toString().slice(0, 4000);
           const imageUrl = (req.body?.image_url || req.body?.imageUrl || '').toString();
 
+          // Optional auth/session: if client sends Authorization: Bearer <idToken>, load user memory
+          const authHeader = (req.get('Authorization') || req.get('authorization') || '').toString();
+          let uid: string | null = null;
+          let userProfile: any = null;
+          let sessionId: string | null = null;
+          let sessionRef: any = null;
+          let sessionDoc: any = null;
+          if (authHeader && authHeader.startsWith('Bearer ')) {
+            const idToken = authHeader.split(' ')[1];
+            try {
+              const decoded = await admin.auth().verifyIdToken(idToken);
+              uid = decoded.uid;
+              // load user profile doc (if exists)
+              try {
+                const udoc = await admin.firestore().collection('users').doc(uid).get();
+                userProfile = udoc.exists ? udoc.data() : null;
+              } catch (e) { console.warn('Failed to load user profile', e); }
+
+              // session handling: prefer client-supplied sessionId, else create new
+              if (req.body?.sessionId) {
+                sessionId = req.body.sessionId.toString();
+                sessionRef = admin.firestore().collection('users').doc(uid!).collection('chatSessions').doc(sessionId!);
+                const sdoc = await sessionRef.get();
+                sessionDoc = sdoc.exists ? sdoc.data() : { summary: '', facts: [], recentMessages: [], turns: 0 };
+              } else {
+                // create a new session doc
+                const newRef = admin.firestore().collection('users').doc(uid!).collection('chatSessions').doc();
+                sessionId = newRef.id;
+                sessionRef = newRef;
+                const now = admin.firestore.FieldValue.serverTimestamp();
+                await sessionRef.set({ title: 'Chat session', summary: '', facts: [], openQuestions: [], turns: 0, recentMessages: [], createdAt: now, lastUpdated: now, active: true });
+                sessionDoc = { summary: '', facts: [], recentMessages: [], turns: 0 };
+              }
+            } catch (e) {
+              console.warn('aiChat: auth token verify failed, proceeding unauthenticated', e instanceof Error ? e.message : e);
+              uid = null;
+            }
+          }
+
           // Basic server-side image safety checks: only allow common image mime types and <= 5MB
           async function validateImageUrl(url: string) {
             try {
@@ -139,7 +178,7 @@ export const aiChat = functions
             }
           }
 
-          const system = `
+          let system = `
 You are **Uri**, a friendly, witty, and highly capable study buddy for students aged 10–21.
 
 ## Role
@@ -205,6 +244,22 @@ If \`structured_mode=false\`, block auto headings/numbering; allow at most light
 
 `;
 
+          // Append compact profile and session info when available to keep mid-term memory
+          try {
+            if (userProfile) {
+              const parts: string[] = [];
+              if (userProfile.profile?.firstName) parts.push(`User: ${userProfile.profile.firstName}`);
+              if (userProfile.profile?.level) parts.push(`Level: ${userProfile.profile.level}`);
+              if (userProfile.goals) parts.push(`Goals: ${JSON.stringify(userProfile.goals)}`);
+              if (userProfile.preferences) parts.push(`Preferences: ${JSON.stringify(userProfile.preferences)}`);
+              if (parts.length) system += `\n\n## Known user profile & goals\n` + parts.join('\n') + `\n`;
+            }
+            if (sessionDoc && (sessionDoc.summary || (sessionDoc.facts && sessionDoc.facts.length > 0))) {
+              system += `\n\n## Session summary\n${sessionDoc.summary || ''}\n`;
+              if (sessionDoc.facts && sessionDoc.facts.length > 0) system += `Known facts: ${JSON.stringify(sessionDoc.facts)}\n`;
+            }
+          } catch (e) { console.warn('Failed to append profile/session to system prompt', e); }
+
           // If an image URL is provided, send a multimodal user content array that includes the image
           const userContent = imageUrl && imageUrl.length > 0
             ? `mode=${'tutoring'}\n\n${userMessage}`
@@ -248,8 +303,48 @@ If \`structured_mode=false\`, block auto headings/numbering; allow at most light
 
           const raw = completion?.choices?.[0]?.message?.content ?? '';
           // return raw (expects KaTeX formatting) so client renders with KaTeX
+          // Persist session updates: increment turns, append recentMessages and summarise every 10 turns
+          if (uid && sessionRef) {
+            try {
+              // Update recent messages array (trim to last 50)
+              const recent = (sessionDoc?.recentMessages || []).slice(-40);
+              recent.push({ ts: Date.now(), user: userMessage.slice(0, 200), reply: (raw || '').toString().slice(0, 600) });
+              const newTurns = (sessionDoc?.turns || 0) + 1;
+              await sessionRef.update({ recentMessages: recent.slice(-50), turns: newTurns, lastUpdated: admin.firestore.FieldValue.serverTimestamp() });
+
+              // Run small summariser every 10 turns or if no summary yet
+              if (!sessionDoc?.summary || newTurns % 10 === 0) {
+                const summariserPrompt = [
+                  { role: 'system', content: 'You are a tiny summariser. Produce a short dialogue_summary, a list of facts, and open_questions in JSON format {dialogue_summary:string, facts:[string], open_questions:[string]}. Be concise.' },
+                  { role: 'user', content: `Recent conversation snippets:\n${recent.slice(-20).map((r: any) => `U: ${r.user}\nA: ${r.reply}`).join('\n\n')}` }
+                ];
+                try {
+                  const summ = await chatCompletion(summariserPrompt, 0.0);
+                  const summRaw = summ?.choices?.[0]?.message?.content ?? '';
+                  // Attempt to extract JSON blob from summariser output
+                  const jsonMatch = summRaw.match(/\{[\s\S]*\}/);
+                  if (jsonMatch) {
+                    try {
+                      const parsed = JSON.parse(jsonMatch[0]);
+                      const newSummary = parsed.dialogue_summary || (parsed.summary || '');
+                      const newFacts = parsed.facts || [];
+                      await sessionRef.update({ summary: newSummary.slice(0, 2000), facts: newFacts.slice(0, 50), lastUpdated: admin.firestore.FieldValue.serverTimestamp() });
+                    } catch (e) {
+                      await sessionRef.update({ summary: (summRaw || '').toString().slice(0, 2000), lastUpdated: admin.firestore.FieldValue.serverTimestamp() });
+                    }
+                  } else {
+                    // Fallback: store the raw summariser as the summary
+                    await sessionRef.update({ summary: (summRaw || '').toString().slice(0, 2000), lastUpdated: admin.firestore.FieldValue.serverTimestamp() });
+                  }
+                } catch (e) {
+                  console.warn('Session summariser failed', e);
+                }
+              }
+            } catch (e) { console.warn('Failed to persist session', e); }
+          }
+
           res.set('Access-Control-Allow-Origin', req.headers.origin || '*');
-          res.json({ reply: raw });
+          res.json({ reply: raw, sessionId });
         } catch (err: any) {
           console.error('aiChat error:', err);
           try { res.status(500).json({ error: err?.message ?? 'Server error' }); } catch (e) { console.error('Failed to send error response', e); }
@@ -1265,6 +1360,205 @@ export const factsApi = functions.https.onRequest((req, res) => {
   });
 });
 
+// -------------------------
+// Recommendation engine
+// -------------------------
+
+// Fetch basic user profile (safe - may return null)
+async function fetchUserProfile(uid: string) {
+  try {
+    const doc = await db.collection('users').doc(uid).get();
+    return doc.exists ? doc.data() : null;
+  } catch (e) {
+    console.warn('fetchUserProfile failed', e);
+    return null;
+  }
+}
+
+// Fetch per-user mastery map. Support both users/{uid}/mastery and top-level mastery collection.
+async function fetchMastery(uid: string) {
+  try {
+    const userMasteryRef = db.collection('users').doc(uid).collection('mastery');
+    const snaps = await userMasteryRef.get();
+    if (!snaps.empty) {
+      const map: any = {};
+      snaps.docs.forEach(d => { const dd = d.data(); if (dd.topicId) map[dd.topicId] = dd.score ?? 0; });
+      return map;
+    }
+    // Fallback: top-level 'mastery' collection
+    const top = await db.collection('mastery').doc(uid).get();
+    if (top.exists) return top.data() || {};
+    return {};
+  } catch (e) {
+    console.warn('fetchMastery failed', e);
+    return {};
+  }
+}
+
+// Fetch recent events (attempts, questions, activity) for recency signals
+async function fetchRecentEvents(uid: string, lookback = 90) {
+  try {
+    const since = Date.now() - lookback * 24 * 60 * 60 * 1000;
+    const snaps = await db.collection('events')
+      .where('userId', '==', uid)
+      .where('createdAt', '>=', new Date(since))
+      .orderBy('createdAt', 'desc')
+      .limit(200)
+      .get();
+    return snaps.docs.map(d => d.data());
+  } catch (e) {
+    console.warn('fetchRecentEvents failed', e);
+    return [];
+  }
+}
+
+// Fetch catalog topics for recommendation candidates. Try common collection names.
+async function fetchCatalogTopics(limit = 200) {
+  try {
+    const colNames = ['topics', 'curriculumTopics', 'catalog_topics'];
+    for (const name of colNames) {
+      const c = db.collection(name);
+      try {
+        const snaps = await c.limit(limit).get();
+        if (!snaps.empty) return snaps.docs.map(d => ({ id: d.id, ...(d.data() || {}) }));
+      } catch (e) {
+        // ignore and try next
+      }
+    }
+    // Fallback: sample distinct topic names from pastQuestions
+    const pq = await db.collection('pastQuestions').limit(limit).get();
+    if (!pq.empty) return pq.docs.map(d => ({ id: d.id, title: (d.data() || {}).topic || (d.data() || {}).subject || 'topic' }));
+    return [];
+  } catch (e) {
+    console.warn('fetchCatalogTopics failed', e);
+    return [];
+  }
+}
+
+// Simple ranking function - returns top N recommendation items
+function rankRecommendations(masteryMap: any, catalog: any[], events: any[], limit = 5) {
+  // Build recency map for topics based on events
+  const recentBoost: any = {};
+  for (const ev of events || []) {
+    const t = ev.topic || ev.topicId || ev.subject || ev.name;
+    if (!t) continue;
+    recentBoost[t] = (recentBoost[t] || 0) + 1;
+  }
+
+  const scored = (catalog || []).map((c: any) => {
+    const tid = c.id || c.topicId || (c.title && c.title.toString().toLowerCase());
+    const mastery = (tid && masteryMap[tid]) || (c.defaultMastery ?? 0) || 0; // 0..1
+    const importance = (c.importance || 0.5);
+    const recency = recentBoost[c.id] ? Math.min(1, recentBoost[c.id] / 5) : 0;
+    const score = (1 - mastery) * 0.6 + importance * 0.3 + recency * 0.3;
+    return { topicId: tid || c.id, title: c.title || c.name || c.id, score, mastery, importance };
+  });
+
+  const sorted = scored.sort((a: any, b: any) => b.score - a.score).slice(0, limit);
+  return sorted;
+}
+
+// Use AI to create a short human-friendly explanation of the recommendations (optional)
+async function explainWithAI(profile: any, items: any[]) {
+  try {
+    const userSummary = profile ? `User: ${profile.profile?.firstName || ''}, level: ${profile.profile?.level || 'unknown'}` : 'User: anonymous';
+    const prompt = [
+      { role: 'system', content: 'You are a concise learning recommendations writer. Produce a short paragraph per item explaining why it is recommended and a 1-line actionable next step.' },
+      { role: 'user', content: `Profile: ${userSummary}\n\nRecommendations:\n${items.map((i, idx) => `${idx + 1}. ${i.title} (score: ${Math.round((i.score||0)*100)})`).join('\n')}` }
+    ];
+    const resp = await chatCompletion(prompt, 0.2);
+    return resp?.choices?.[0]?.message?.content || '';
+  } catch (e) {
+    console.warn('explainWithAI failed', e);
+    return '';
+  }
+}
+
+// Write recommendations to Firestore under users/{uid}/recommendations/latest and a history entry
+async function writeRecommendations(uid: string, items: any[], aiSummary?: string) {
+  try {
+    const latestRef = db.collection('users').doc(uid).collection('recommendations').doc('latest');
+    await latestRef.set({ items, aiSummary: aiSummary || null, updatedAt: admin.firestore.FieldValue.serverTimestamp() });
+    const histRef = db.collection('users').doc(uid).collection('recommendationsHistory').doc();
+    await histRef.set({ items, aiSummary: aiSummary || null, generatedAt: admin.firestore.FieldValue.serverTimestamp() });
+    return true;
+  } catch (e) {
+    console.warn('writeRecommendations failed', e);
+    return false;
+  }
+}
+
+// Orchestrator for one user
+async function processUser(uid: string) {
+  try {
+    const profile = await fetchUserProfile(uid);
+    const mastery = await fetchMastery(uid);
+    const events = await fetchRecentEvents(uid, 90);
+    const catalog = await fetchCatalogTopics(200);
+    const ranked = rankRecommendations(mastery || {}, catalog || [], events || [], 6);
+    const aiSummary = await explainWithAI(profile, ranked);
+    await writeRecommendations(uid, ranked, aiSummary);
+    return { ok: true, count: ranked.length };
+  } catch (e) {
+    console.error('processUser failed', e);
+    return { ok: false };
+  }
+}
+
+// Helper to list all user IDs (careful on large installs)
+async function listUserIds(batchSize = 500) {
+  const ids: string[] = [];
+  let last: any = null;
+  // naive full collection scan - for large installs consider exporting user list
+  let q: any = db.collection('users').limit(batchSize);
+  while (true) {
+    if (last) q = q.startAfter(last);
+    const snaps = await q.get();
+    if (snaps.empty) break;
+    for (const d of snaps.docs) ids.push(d.id);
+    last = snaps.docs[snaps.docs.length - 1];
+    if (snaps.size < batchSize) break;
+  }
+  return ids;
+}
+
+// Scheduled daily recommendation generator
+export const recommendationsDaily = functions.pubsub
+  .schedule('30 6 * * *') // Every day at 06:30
+  .timeZone('Africa/Accra')
+  .onRun(async (context) => {
+    console.log('recommendationsDaily: starting run');
+    try {
+      const uids = await listUserIds(200);
+      for (const uid of uids) {
+        try { await processUser(uid); } catch (e) { console.warn('recommendationsDaily processUser failed for', uid, e); }
+      }
+      console.log('recommendationsDaily: completed');
+    } catch (e) {
+      console.error('recommendationsDaily failed', e);
+    }
+  });
+
+// On-demand callable function to run for a particular user (admin or self)
+export const recommendationsRunNow = functions.https.onCall(async (data, context) => {
+  if (!context.auth) throw new functions.https.HttpsError('unauthenticated', 'Must be signed in');
+  const targetUid = (data?.uid && typeof data.uid === 'string') ? data.uid : context.auth.uid;
+  // Only allow others if caller is admin
+  if (targetUid !== context.auth.uid) {
+    const caller = await admin.auth().getUser(context.auth.uid);
+    const claims = caller.customClaims || {};
+    if (!claims || !['super_admin', 'school_admin', 'admin'].includes(claims.role || '')) {
+      throw new functions.https.HttpsError('permission-denied', 'Not authorized to generate for other users');
+    }
+  }
+
+  const r = await processUser(targetUid);
+  if (!r.ok) throw new functions.https.HttpsError('internal', 'Failed to generate recommendations');
+  return { ok: true, count: r.count };
+});
+
+// End recommendation engine
+
 export default { 
   onUserCreate, 
   grantRole, 
@@ -1277,8 +1571,10 @@ export default {
   weeklyReportScheduler,
   importRMEQuestions,
   setAdminRole,
-  initialSetupAdmin
-  , aiChatHttp: aiChatHttpSimple, // expose the simple HTTP handler as aiChatHttp for hosting
+  initialSetupAdmin,
+  recommendationsDaily,
+  recommendationsRunNow,
+  aiChatHttp: aiChatHttpSimple, // expose the simple HTTP handler as aiChatHttp for hosting
   ingestDocs,
   ingestPDFs,
   ingestLocalPDFs,
