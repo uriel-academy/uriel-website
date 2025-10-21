@@ -35,7 +35,7 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
         'English',
         'Integrated Science',
         'Social Studies',
-        'Religious and Moral Education',
+    'RME',
         'Ghanaian Language',
         'French',
         'ICT',
@@ -54,6 +54,7 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
       case 'social studies':
         return const Color(0xFF9C27B0);
       case 'religious and moral education':
+      case 'rme':
         return const Color(0xFF795548);
       case 'ghanaian language':
         return const Color(0xFF607D8B);
@@ -248,78 +249,116 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
                 if (snap.connectionState == ConnectionState.waiting || userSchoolSnapshot.connectionState == ConnectionState.waiting) return const Center(child: CircularProgressIndicator());
                 final docs = snap.data?.docs ?? [];
 
-                return FutureBuilder<List<QueryDocumentSnapshot>>(
-                  future: _filterNotes(docs, currentUser, currentUserSchool, overrideTabIndex: tabIndex),
-                  builder: (context, filterSnapshot) {
-                    if (filterSnapshot.connectionState == ConnectionState.waiting) return const Center(child: CircularProgressIndicator());
-                    final filteredDocs = filterSnapshot.data ?? [];
+                // Synchronous filtering for immediate responsiveness
+                final searchQuery = _searchController.text.toLowerCase();
+                final filteredDocs = <QueryDocumentSnapshot>[];
+                for (final doc in docs) {
+                  final data = doc.data() as Map<String, dynamic>;
+                  final title = (data['title'] ?? '').toString().toLowerCase();
+                  final subject = (data['subject'] ?? '').toString();
+                  final text = (data['text'] ?? '').toString().toLowerCase();
+                  final userId = data['userId'] as String?;
 
-                    if (filteredDocs.isEmpty) {
-                      return Center(child: Column(mainAxisSize: MainAxisSize.min, children: [Icon(Icons.menu_book, size: 72, color: Colors.grey[400]), const SizedBox(height: 12), Text(docs.isEmpty ? 'No notes available' : 'No notes match your search', style: GoogleFonts.montserrat(fontSize: 16, color: Colors.grey[700])), const SizedBox(height: 8), Text(docs.isEmpty ? 'Be the first to upload study notes!' : 'Try adjusting your search or filters.', style: GoogleFonts.montserrat(fontSize: 13, color: Colors.grey[600]), textAlign: TextAlign.center)]));
-                    }
+                  // Tab filtering
+                  if (tabIndex == 1) {
+                    if (userId != currentUser?.uid) continue;
+                  } else if (tabIndex == 2) {
+                    // Prefer a cached uploaderSchool on the note document if present
+                    final uploaderSchool = (data['uploaderSchool'] ?? data['uploader_school']) as String?;
+                    if (currentUserSchool == null) continue;
+                    if (uploaderSchool == null) continue; // cannot determine, skip
+                    if (uploaderSchool != currentUserSchool) continue;
+                  }
 
-                    final isSmall = MediaQuery.of(context).size.width < 768;
-                    final crossAxis = isSmall ? 2 : 4;
-                    final aspect = isSmall ? 0.7 : 0.75;
+                  // Subject filter
+                  if (_selectedSubject != 'All Subjects' && subject != _selectedSubject) continue;
 
-                    return GridView.builder(
-                      padding: const EdgeInsets.all(12),
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: crossAxis, childAspectRatio: aspect, crossAxisSpacing: isSmall ? 12 : 16, mainAxisSpacing: isSmall ? 12 : 16),
-                      itemCount: filteredDocs.length,
-                      itemBuilder: (context, i) {
-                        final d = filteredDocs[i].data() as Map<String, dynamic>;
-                        final title = (d['title'] ?? '').toString();
-                        final subject = (d['subject'] ?? '').toString();
-                        final uploaderName = (d['uploaderName'] ?? 'Anonymous User').toString();
-                        final signedUrl = d['signedUrl'] as String?;
-                        final publicFileUrl = d['fileUrl'] as String?;
-                        final userId = d['userId'] as String?;
-                        final isUserNote = userId == currentUser?.uid;
+                  // Search filter
+                  if (searchQuery.isNotEmpty && !title.contains(searchQuery) && !text.contains(searchQuery)) continue;
 
-                        return Card(
-                          elevation: 3,
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(12),
-                            onTap: () => Navigator.of(context).pushNamed('/note', arguments: {'noteId': filteredDocs[i].id}),
-                            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                              Expanded(
-                                flex: 3,
-                                child: ClipRRect(
-                                  borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
-                                  child: signedUrl != null
-                                      ? Image.network(signedUrl, fit: BoxFit.cover, width: double.infinity, errorBuilder: (_, __, ___) => Container(color: _getSubjectColor(subject)))
-                                      : (publicFileUrl != null
-                                          ? Image.network(publicFileUrl, fit: BoxFit.cover, width: double.infinity, errorBuilder: (_, __, ___) => Container(color: _getSubjectColor(subject)))
-                                          : Container(decoration: BoxDecoration(gradient: LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: [_getSubjectColor(subject).withOpacity(0.7), _getSubjectColor(subject)])), child: Center(child: Icon(Icons.menu_book, size: isSmall ? 40 : 48, color: Colors.white)))),
-                                ),
-                              ),
-                              Expanded(
-                                flex: 2,
-                                child: Padding(
-                                  padding: EdgeInsets.all(isSmall ? 8 : 12),
-                                  child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                                    Row(children: [
-                                      Expanded(child: Text(title.isNotEmpty ? title : 'Untitled', style: GoogleFonts.montserrat(fontSize: isSmall ? 12 : 14, fontWeight: FontWeight.bold, color: const Color(0xFF1A1E3F)), maxLines: 2, overflow: TextOverflow.ellipsis)),
-                                      if (isUserNote) ...[
-                                        IconButton(icon: const Icon(Icons.edit, color: Colors.blue), onPressed: () => _editNote(filteredDocs[i]), iconSize: 18),
-                                        IconButton(icon: const Icon(Icons.delete, color: Colors.red), onPressed: () => _deleteNote(filteredDocs[i]), iconSize: 18),
-                                      ],
-                                    ]),
-                                    const SizedBox(height: 6),
-                                    Text('By $uploaderName', style: GoogleFonts.montserrat(fontSize: isSmall ? 10 : 12, color: Colors.grey[600])),
-                                    const Spacer(),
-                                    Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                                      Container(padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2), decoration: BoxDecoration(color: _getSubjectColor(subject).withOpacity(0.1), borderRadius: BorderRadius.circular(6)), child: Text(subject.isNotEmpty ? subject : 'General', style: GoogleFonts.montserrat(fontSize: 10, fontWeight: FontWeight.w600, color: _getSubjectColor(subject)))),
-                                      const Icon(Icons.chevron_right, color: Color(0xFFD62828)),
-                                    ])
-                                  ]),
-                                ),
-                              ),
-                            ]),
+                  filteredDocs.add(doc);
+                }
+
+                if (filteredDocs.isEmpty) {
+                  return Center(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(Icons.sticky_note_2, size: 72, color: Colors.grey[400]),
+                        const SizedBox(height: 12),
+                        Text(docs.isEmpty ? 'No notes available' : 'No notes match your search', style: GoogleFonts.montserrat(fontSize: 16, color: Colors.grey[700])),
+                        const SizedBox(height: 8),
+                        Text(docs.isEmpty ? 'Be the first to upload study notes!' : 'Try adjusting your search or filters.', style: GoogleFonts.montserrat(fontSize: 13, color: Colors.grey[600]), textAlign: TextAlign.center),
+                      ],
+                    ),
+                  );
+                }
+
+                final isSmall = MediaQuery.of(context).size.width < 768;
+                final crossAxis = isSmall ? 2 : 4;
+                final aspect = isSmall ? 0.65 : 0.75;
+
+                return GridView.builder(
+                  padding: EdgeInsets.all(isSmall ? 8 : 12),
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: crossAxis, childAspectRatio: aspect, crossAxisSpacing: isSmall ? 10 : 16, mainAxisSpacing: isSmall ? 10 : 16),
+                  itemCount: filteredDocs.length,
+                  itemBuilder: (context, i) {
+                    final d = filteredDocs[i].data() as Map<String, dynamic>;
+                    final title = (d['title'] ?? '').toString();
+                    final subject = (d['subject'] ?? '').toString();
+                    final uploaderName = (d['uploaderName'] ?? 'Anonymous User').toString();
+                    final signedUrl = d['signedUrl'] as String?;
+                    final publicFileUrl = d['fileUrl'] as String?;
+                    final userId = d['userId'] as String?;
+                    final isUserNote = userId == currentUser?.uid;
+
+                    return Card(
+                      elevation: 3,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                      child: InkWell(
+                        borderRadius: BorderRadius.circular(12),
+                        onTap: () => Navigator.of(context).pushNamed('/note', arguments: {'noteId': filteredDocs[i].id}),
+                        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                          Expanded(
+                            flex: 3,
+                            child: ClipRRect(
+                              borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
+                              child: signedUrl != null
+                                  ? Image.network(signedUrl, fit: BoxFit.cover, width: double.infinity, errorBuilder: (_, __, ___) => Container(color: _getSubjectColor(subject)))
+                                  : (publicFileUrl != null
+                                      ? Image.network(publicFileUrl, fit: BoxFit.cover, width: double.infinity, errorBuilder: (_, __, ___) => Container(color: _getSubjectColor(subject)))
+                                      : Container(
+                                          decoration: BoxDecoration(
+                                            gradient: LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: [_getSubjectColor(subject).withOpacity(0.7), _getSubjectColor(subject)]),
+                                          ),
+                                          child: Center(child: Icon(Icons.sticky_note_2, size: isSmall ? 36 : 44, color: Colors.white)),
+                                        )),
+                            ),
                           ),
-                        );
-                      },
+                          Expanded(
+                            flex: 2,
+                            child: Padding(
+                              padding: EdgeInsets.all(isSmall ? 8 : 12),
+                              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                                Row(children: [
+                                  Expanded(child: Text(title.isNotEmpty ? title : 'Untitled', style: GoogleFonts.montserrat(fontSize: isSmall ? 12 : 14, fontWeight: FontWeight.bold, color: const Color(0xFF1A1E3F)), maxLines: 2, overflow: TextOverflow.ellipsis)),
+                                  if (isUserNote) ...[
+                                    IconButton(icon: const Icon(Icons.edit, color: Colors.blue), onPressed: () => _editNote(filteredDocs[i]), iconSize: 18),
+                                    IconButton(icon: const Icon(Icons.delete, color: Colors.red), onPressed: () => _deleteNote(filteredDocs[i]), iconSize: 18),
+                                  ],
+                                ]),
+                                const SizedBox(height: 6),
+                                Text('By $uploaderName', style: GoogleFonts.montserrat(fontSize: isSmall ? 10 : 12, color: Colors.grey[600])),
+                                const Spacer(),
+                                Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                                  Container(padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2), decoration: BoxDecoration(color: _getSubjectColor(subject).withOpacity(0.1), borderRadius: BorderRadius.circular(6)), child: Text(subject.isNotEmpty ? subject : 'General', style: GoogleFonts.montserrat(fontSize: 10, fontWeight: FontWeight.w600, color: _getSubjectColor(subject)))),
+                                  const Icon(Icons.chevron_right, color: Color(0xFFD62828)),
+                                ])
+                              ]),
+                            ),
+                          ),
+                        ]),
+                      ),
                     );
                   },
                 );
