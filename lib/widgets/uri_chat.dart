@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
-import 'dart:convert';
-import 'package:http/http.dart' as http;
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:flutter_math_fork/flutter_math.dart';
 // Note: UriAI and FirebaseAuth were previously used by the older inline _send implementation.
@@ -31,6 +29,7 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
   // messages: each message is a map: {role, text, id?, loading?}
   final _messages = <Map<String, dynamic>>[];
   bool _loading = false;
+  bool _streamComplete = false;
   late AnimationController _bounceController;
   late Animation<double> _bounceAnimation;
   final FlutterTts _tts = FlutterTts();
@@ -504,7 +503,18 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
               ),
               borderRadius: BorderRadius.circular(12),
             ),
-            child: _buildRenderedMessage(m['text'] ?? '', isUser),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                _buildMessageWithAttachments(m, isUser),
+                // If not user and stream just finished and this is the newest message, show complete
+                if (!isUser && _streamComplete && messageIndex == 0)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 6.0),
+                    child: Text('✓ complete', style: TextStyle(color: Colors.grey[500], fontSize: 11)),
+                  ),
+              ],
+            ),
           ),
         );
       },
@@ -521,11 +531,32 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
       ),
       child: UriChatInput(
         history: _messages.map((m) => {'role': m['role'] as String? ?? 'user', 'content': m['text'] as String? ?? ''}).toList(),
-        onMessage: (role, content) {
+        onMessage: (role, content, {attachments}) {
           setState(() {
-            _messages.add({'role': role, 'text': content, 'id': '${role}_${DateTime.now().millisecondsSinceEpoch}'});
+            if (role == 'assistant') {
+              // If last message is an assistant bubble, replace its text (stream update)
+              if (_messages.isNotEmpty && _messages.last['role'] == 'assistant') {
+                _messages[_messages.length - 1]['text'] = content;
+              } else {
+                _messages.add({'role': role, 'text': content, 'id': '${role}_${DateTime.now().millisecondsSinceEpoch}', 'attachments': attachments});
+              }
+            } else {
+              _messages.add({'role': role, 'text': content, 'id': '${role}_${DateTime.now().millisecondsSinceEpoch}', 'attachments': attachments});
+            }
           });
           _scrollToBottom();
+        },
+        onStreamStart: (cancelHandle) {
+          setState(() {
+            _loading = true; // show typing indicator
+            _streamComplete = false;
+          });
+        },
+        onStreamEnd: () {
+          setState(() {
+            _loading = false;
+            _streamComplete = true;
+          });
         },
       ),
     );
@@ -586,17 +617,27 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
 
   // Render message text as Markdown with KaTeX support.
   // We look for inline $...$ and block $$...$$ math and render using flutter_math_fork.
+  String normalizeLatex(String s) {
+    return s
+        .replaceAll(r'\\[', r'$$')
+        .replaceAll(r'\\]', r'$$')
+        .replaceAll(r'\\(', r'$')
+        .replaceAll(r'\\)', r'$')
+        .replaceAll(r'\[', r'$$')
+        .replaceAll(r'\]', r'$$')
+        .replaceAll(r'\(', r'$')
+        .replaceAll(r'\)', r'$');
+  }
+
   Widget _buildRenderedMessage(String text, bool isUser) {
-  // If message is short and from user, render plain to keep TTS friendly
-  if (isUser) return Text(text, style: const TextStyle(fontSize: 15, height: 1.5));
+    if (isUser) return Text(text, style: const TextStyle(fontSize: 15, height: 1.5));
 
-    // Simple parser: split by block math $$...$$ first
-  // building InlineSpan children below
+  final normalized = normalizeLatex(text);
 
-    // Helper to parse inline math $...$
+    // helper to parse inline $...$
     List<InlineSpan> parseInline(String segment) {
       final spans = <InlineSpan>[];
-      final reg = RegExp(r'\$(?!\$)(.+?)\$'); // inline $...$
+      final reg = RegExp(r'\$(?!\$)(.+?)\$');
       var last = 0;
       for (final m in reg.allMatches(segment)) {
         if (m.start > last) spans.add(TextSpan(text: segment.substring(last, m.start)));
@@ -611,9 +652,9 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
     final blockReg = RegExp(r'\$\$(.+?)\$\$', dotAll: true);
     var lastBlock = 0;
     final children = <InlineSpan>[];
-    for (final m in blockReg.allMatches(text)) {
+    for (final m in blockReg.allMatches(normalized)) {
       if (m.start > lastBlock) {
-        final before = text.substring(lastBlock, m.start);
+        final before = normalized.substring(lastBlock, m.start);
         children.addAll(parseInline(before));
       }
       final expr = m.group(1) ?? '';
@@ -623,8 +664,8 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
       )));
       lastBlock = m.end;
     }
-    if (lastBlock < text.length) {
-      final tail = text.substring(lastBlock);
+    if (lastBlock < normalized.length) {
+      final tail = normalized.substring(lastBlock);
       children.addAll(parseInline(tail));
     }
 
@@ -633,6 +674,29 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
         style: const TextStyle(color: UrielColors.deepNavy, fontSize: 15, height: 1.5),
         children: children,
       ),
+    );
+  }
+
+  Widget _buildMessageWithAttachments(Map<String, dynamic> m, bool isUser) {
+    final contentWidget = _buildRenderedMessage(m['text'] ?? '', isUser);
+    final attachments = (m['attachments'] as List<dynamic>?)?.cast<Map<String, dynamic>>() ?? [];
+    return Column(
+      crossAxisAlignment: isUser ? CrossAxisAlignment.end : CrossAxisAlignment.start,
+      children: [
+        if ((m['text'] ?? '').toString().trim().isNotEmpty) contentWidget,
+        for (final a in attachments)
+          if ((a['type'] ?? '') == 'image')
+            Padding(
+              padding: const EdgeInsets.only(top: 8),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child: GestureDetector(
+                  onTap: () => showDialog(context: context, builder: (_) => Dialog(child: InteractiveViewer(child: Image.network(a['url'] ?? '')))),
+                  child: Image.network(a['url'] ?? '', height: 160, fit: BoxFit.cover),
+                ),
+              ),
+            ),
+      ],
     );
   }
 }

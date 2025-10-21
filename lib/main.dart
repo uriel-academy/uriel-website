@@ -112,7 +112,12 @@ class MyApp extends StatelessWidget {
         '/upload_note': (_) => const UploadNotePage(),
         '/note': (ctx) {
           final args = ModalRoute.of(ctx)?.settings.arguments as Map<String, dynamic>?;
-          final id = args?['noteId'] as String?;
+          String? id = args?['noteId'] as String?;
+          // If no explicit route arguments, try query params (for shared links)
+          if (id == null) {
+            final q = Uri.base.queryParameters;
+            id = q['noteId'];
+          }
           if (id == null) return const LandingPage();
           return NoteViewerPage(noteId: id);
         },

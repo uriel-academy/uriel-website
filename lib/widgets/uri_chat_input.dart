@@ -1,14 +1,17 @@
 import 'dart:typed_data';
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import '../services/chat_service.dart';
 import '../services/image_storage.dart';
 
 class UriChatInput extends StatefulWidget {
-  final void Function(String role, String content) onMessage;
+  final FutureOr<void> Function(String role, String content, {List<Map<String, String>>? attachments}) onMessage;
   final List<Map<String, String>> history;
+  final void Function(dynamic cancelHandle)? onStreamStart;
+  final void Function()? onStreamEnd;
 
-  const UriChatInput({super.key, required this.onMessage, required this.history});
+  const UriChatInput({super.key, required this.onMessage, required this.history, this.onStreamStart, this.onStreamEnd});
 
   @override
   State<UriChatInput> createState() => _UriChatInputState();
@@ -17,6 +20,7 @@ class UriChatInput extends StatefulWidget {
 class _UriChatInputState extends State<UriChatInput> {
   final _ctrl = TextEditingController();
   bool _sending = false;
+  dynamic _cancelHandle;
   final _picker = ImagePicker();
   final _chat = ChatService();
   final _store = ImageStorage();
@@ -35,7 +39,7 @@ class _UriChatInputState extends State<UriChatInput> {
       try {
         uploadedUrl = await _store.uploadBytes(_pendingImage!, _pendingImageName!);
       } catch (e) {
-        widget.onMessage('assistant', 'Image upload failed. Try a smaller file or different format.');
+  widget.onMessage('assistant', 'Image upload failed. Try a smaller file or different format.', attachments: null);
         setState(() => _sending = false);
         return;
       }
@@ -54,21 +58,50 @@ class _UriChatInputState extends State<UriChatInput> {
       _pendingImageName = null;
     });
 
-    // Send the user message and image URL (if any) to the backend
-    widget.onMessage('user', text + (uploadedUrl != null ? '\n[Image] $uploadedUrl' : ''));
+  // Send the user message and image attachments (if any) to the parent UI
+  final attachments = uploadedUrl != null ? [{'type': 'image', 'name': _pendingImageName ?? 'image', 'url': uploadedUrl}] : null;
+  widget.onMessage('user', text, attachments: attachments);
     final history = [...widget.history, {'role': 'user', 'content': text}];
 
+  String accumulated = '';
+  widget.onMessage('assistant', ''); // create assistant bubble (will be updated by stream)
+
+    dynamic cancelHandle;
     try {
-      final reply = await _chat.send(messages: history, imageUrl: uploadedUrl, channel: 'uri_tab', profile: {
-        'name': 'Student',
-        'level': 'JHS',
-        'locale': 'en-GH',
-      });
-      widget.onMessage('assistant', reply);
+      cancelHandle = await _chat.sendStream(
+        messages: history,
+        imageUrl: uploadedUrl,
+        channel: 'uri_tab',
+        profile: {
+          'name': 'Student',
+          'level': 'JHS',
+          'locale': 'en-GH',
+        },
+        onChunk: (chunk) {
+          accumulated = accumulated + chunk;
+          // send the cumulative text so UI replaces last assistant bubble
+          widget.onMessage('assistant', accumulated);
+        },
+        onDone: () {
+          // finalize — nothing special to do
+        },
+        onError: (err) {
+          widget.onMessage('assistant', 'Sorry, I couldn\'t process that right now.');
+        },
+      );
+      if (cancelHandle != null && widget.onStreamStart != null) {
+        _cancelHandle = cancelHandle;
+        widget.onStreamStart!(cancelHandle);
+      }
     } catch (e) {
       widget.onMessage('assistant', 'Sorry, I couldn\'t process that right now.');
     } finally {
       setState(() => _sending = false);
+      // If we had a cancel handle, clear it and call onStreamEnd
+      if (_cancelHandle != null) {
+        _cancelHandle = null;
+      }
+      if (widget.onStreamEnd != null) widget.onStreamEnd!();
     }
   }
 
@@ -81,7 +114,7 @@ class _UriChatInputState extends State<UriChatInput> {
 
       // If file is too large client-side, prompt user
       if (bytes.lengthInBytes > 25 * 1024 * 1024) {
-        widget.onMessage('assistant', 'Selected file is larger than 25MB. Please choose a smaller image.');
+  widget.onMessage('assistant', 'Selected file is larger than 25MB. Please choose a smaller image.', attachments: null);
         return;
       }
 
@@ -95,7 +128,7 @@ class _UriChatInputState extends State<UriChatInput> {
       _ctrl.text = '${_ctrl.text}${_ctrl.text.isEmpty ? '' : '\n'}[Attached image: ${x.name}]';
       _ctrl.selection = TextSelection.fromPosition(TextPosition(offset: _ctrl.text.length));
     } catch (e) {
-      widget.onMessage('assistant', 'Image pick failed. Try again.');
+  widget.onMessage('assistant', 'Image pick failed. Try again.', attachments: null);
     }
   }
 
@@ -155,8 +188,18 @@ class _UriChatInputState extends State<UriChatInput> {
         ),
 
         IconButton(
-          icon: _sending ? const CircularProgressIndicator() : const Icon(Icons.send),
-          onPressed: _sending ? null : _sendText,
+          icon: _sending
+              ? (_cancelHandle != null ? const Icon(Icons.stop) : const CircularProgressIndicator())
+              : const Icon(Icons.send),
+          onPressed: _sending
+              ? () {
+                  // Cancel stream if available
+                  try {
+                    _cancelHandle?.cancel();
+                  } catch (_) {}
+                  setState(() => _sending = false);
+                }
+              : _sendText,
         ),
       ],
     );

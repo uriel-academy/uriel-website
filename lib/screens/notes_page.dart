@@ -99,6 +99,7 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
     return null;
   }
 
+  // ignore: unused_element
   Future<List<QueryDocumentSnapshot>> _filterNotes(
     List<QueryDocumentSnapshot> docs,
     User? currentUser,

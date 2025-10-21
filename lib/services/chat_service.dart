@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'uri_ai.dart';
 import 'package:http/http.dart' as http;
 
 class ChatService {
@@ -30,5 +31,27 @@ class ChatService {
 
     final decoded = jsonDecode(resp.body);
     return (decoded['reply'] as String?) ?? '';
+  }
+
+  /// Streamed send: calls AI SSE endpoint and invokes onChunk for partial updates.
+  Future<CancelHandle?> sendStream({
+    required List<Map<String, String>> messages,
+    String? imageUrl,
+    Map<String, dynamic>? profile,
+    String channel = 'uri_tab',
+    required void Function(String chunk) onChunk,
+    void Function()? onDone,
+    void Function(Object error)? onError,
+  }) async {
+    final prompt = (messages.isNotEmpty ? messages.last['content'] ?? '' : '');
+    try {
+      final handle = await UriAI.streamAskSSE(prompt, (chunk) {
+        onChunk(chunk);
+      }, onDone: onDone, onError: onError);
+      return handle;
+    } catch (e) {
+      if (onError != null) onError(e);
+      rethrow;
+    }
   }
 }

@@ -93,7 +93,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   List<Map<String, dynamic>> _upcomingItems = [];
 
   // Performance trend tracking
+  // ignore: unused_field
   final double _previousWeekScore = 0.0;
+  // ignore: unused_field
   final int _previousWeekQuestions = 0;
 
   @override
@@ -547,15 +549,19 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       });
 
     for (var activity in sortedActivities) {
-      final subject = activity['subject'] ?? 'General';
-      final score = activity['score'] ?? 0.0;
-      final questions = activity['questions'] ?? 0;
+  // ignore: unused_local_variable
+  final subject = activity['subject'] ?? 'General';
+  final score = activity['score'] ?? 0.0;
+  // ignore: unused_local_variable
+  final questions = activity['questions'] ?? 0;
       final timestamp = activity['date'];
 
       final activityDate = _parseActivityDate(timestamp);
       final timeAgo = _getTimeAgo(activityDate);
-      final isHighScore = score >= 80.0;
-      final isPerfect = score >= 95.0;
+  // ignore: unused_local_variable
+  final isHighScore = score >= 80.0;
+  // ignore: unused_local_variable
+  final isPerfect = score >= 95.0;
       final isRecent = now.difference(activityDate).inHours < 24;
 
       // Enhanced activity type determination with ML insights
@@ -1172,7 +1178,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
 
   void _addSubjectSpecificAchievements() {
     final weakAreas = _userBehaviorProfile['weaknesses'] as List<String>? ?? [];
-    final strengths = _userBehaviorProfile['strengths'] as List<String>? ?? [];
+  // ignore: unused_local_variable
+  final strengths = _userBehaviorProfile['strengths'] as List<String>? ?? [];
 
     // Subject mastery achievements
     for (var subject in _subjectProgress) {
@@ -5120,7 +5127,15 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         }
 
         final notifications = snapshot.data?.docs ?? [];
-        final unreadCount = notifications.where((doc) => !(doc.data() as Map<String, dynamic>)['read'] ?? false).length;
+        // Safely compute unreadCount: handle missing data and missing 'read' field.
+        final unreadCount = notifications.where((doc) {
+          final data = doc.data();
+          if (data is Map<String, dynamic>) {
+            final read = data['read'] as bool?;
+            return !(read ?? false);
+          }
+          return true; // If shape is unexpected, count it as unread
+        }).length;
 
         // Show only the 3 most recent notifications
         final recentNotifications = notifications.take(3).toList();
@@ -5620,9 +5635,12 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
 Widget _buildTextbooksPage() {
   // Return the existing TextbooksPage with tabs (All Books, Textbooks, Storybooks)
   return const TextbooksPage();
-}  Widget _buildFeedbackPage() {
-    return const FeedbackPage();
-  }
+}
+
+// ignore: unused_element
+Widget _buildFeedbackPage() {
+  return const FeedbackPage();
+}
 
   Widget _buildTriviaPage() {
     return const TriviaCategoriesPage();
@@ -6093,6 +6111,7 @@ class _UriChatInterfaceState extends State<UriChatInterface> with TickerProvider
     });
   }
 
+  // ignore: unused_element
   Future<void> _sendMessage() async {
     final message = _textController.text.trim();
     if (message.isEmpty || _isLoading) return;
@@ -6152,6 +6171,7 @@ class _UriChatInterfaceState extends State<UriChatInterface> with TickerProvider
     }
   }
 
+  // ignore: unused_element
   String _generateResponse(String userMessage) {
     // Simple response generation - replace with actual UriAI integration
     final responses = [
@@ -6311,7 +6331,7 @@ class _UriChatInterfaceState extends State<UriChatInterface> with TickerProvider
                   ),
                   child: UriChatInput(
                     history: _messages.map((m) => {'role': m['role'] as String? ?? 'user', 'content': m['content'] as String? ?? ''}).toList(),
-                    onMessage: (role, content) async {
+                    onMessage: (role, content, {attachments}) async {
                       setState(() {
                         _messages.add({'role': role, 'content': content, 'timestamp': DateTime.now(), 'id': '${role}_${DateTime.now().millisecondsSinceEpoch}'});
                         _isLoading = role == 'user' ? true : _isLoading;

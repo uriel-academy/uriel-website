@@ -67,6 +67,7 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
   // Extracted book content
   EpubBook? _epubBook;
   List<String> _chapterTexts = [];
+  // ignore: unused_field
   List<String> _chapterTitles = [];
 
   @override

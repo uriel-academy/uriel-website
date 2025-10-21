@@ -55,6 +55,27 @@ function classifyMode(q: string): 'small_talk'|'tutoring'|'facts' {
   return 'tutoring';
 }
 
+// Robustly extract a plain-text prompt from arbitrary client payloads
+function extractPrompt(body: any): string {
+  try {
+    if (typeof body === 'string') return body as string;
+    const candidates = [body?.text, body?.message, body?.prompt, body?.content, body?.input];
+    for (const c of candidates) {
+      if (typeof c === 'string' && c.trim().length > 0) return c as string;
+    }
+    // fallback to safe stringify so we don't end up with "[object Object]"
+    if (body && typeof body === 'object') return JSON.stringify(body);
+  } catch (e) {
+    // ignore
+  }
+  return '';
+}
+
+function normalizePrompt(raw: string, maxLen = 4000): string {
+  const s = (raw || '').toString().replace(/\s+/g, ' ').trim();
+  return s.length > maxLen ? s.slice(0, maxLen) + ' …' : s;
+}
+
 async function answerWithFacts(query: string) {
   const r = await fetch('https://us-central1-uriel-academy-41fb0.cloudfunctions.net/facts', {
     method: 'POST',
@@ -92,7 +113,8 @@ export const aiChat = functions
         }
 
         try {
-          const userMessage = (req.body?.message ?? req.body?.messages ?? '').toString().slice(0, 4000);
+          const rawPrompt = extractPrompt(req.body?.message ?? req.body);
+          const userMessage = normalizePrompt(rawPrompt).slice(0, 4000);
           const imageUrl = (req.body?.image_url || req.body?.imageUrl || '').toString();
 
           // Optional auth/session: if client sends Authorization: Bearer <idToken>, load user memory
@@ -354,6 +376,172 @@ If \`structured_mode=false\`, block auto headings/numbering; allow at most light
         }
       })();
     });
+  });
+
+// Streaming variant: sends incremental text deltas to the client as they arrive
+export const aiChatStream = functions
+  .region('us-central1')
+  .https.onRequest(async (req, res) => {
+    try {
+      corsHandler(req, res, async () => {
+        // Accept POST and GET (GET for EventSource-friendly clients). Handle CORS preflight.
+        if (req.method === 'OPTIONS') {
+          res.set('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+          res.set('Access-Control-Allow-Headers', 'Content-Type');
+          res.set('Access-Control-Allow-Origin', req.headers.origin || '*');
+          res.status(204).send('');
+          return;
+        }
+
+        if (req.method !== 'POST' && req.method !== 'GET') {
+          res.status(405).json({ error: 'Method not allowed. Use GET or POST.' });
+          return;
+        }
+
+        // For GET, accept prompt in query param 'message' or 'prompt'. For POST, use body.
+        const rawPrompt = req.method === 'GET'
+          ? (req.query?.message || req.query?.prompt || '')
+          : extractPrompt(req.body?.message ?? req.body);
+        // Coerce query types (ParsedQs) into a safe string
+        const rawPromptStr = (typeof rawPrompt === 'string')
+          ? rawPrompt
+          : Array.isArray(rawPrompt)
+            ? rawPrompt.join(' ')
+            : String(rawPrompt || '');
+        const prompt = normalizePrompt(rawPromptStr).slice(0, 4000);
+        if (!prompt) {
+          res.status(400).json({ error: 'Empty or invalid message.' });
+          return;
+        }
+
+        const OPENAI_KEY = functions.config().openai?.key;
+        if (!OPENAI_KEY) {
+          res.status(500).json({ error: 'OpenAI key not configured on server.' });
+          return;
+        }
+
+        // Prepare streaming response headers
+        res.setHeader('Content-Type', 'text/plain; charset=utf-8');
+        res.setHeader('Cache-Control', 'no-cache, no-transform');
+        res.setHeader('Connection', 'keep-alive');
+        res.flushHeaders?.();
+
+        try {
+          const stream = await (openai as any).responses.create({
+            model: functions.config().openai?.model || 'gpt-4o-mini',
+            input: [
+              { role: 'system', content: 'You are Uri, a helpful Ghana-savvy tutor. Keep replies friendly and KaTeX-ready for maths.' },
+              { role: 'user', content: prompt }
+            ],
+            temperature: 0.7,
+            max_output_tokens: 900,
+            stream: true,
+          });
+
+          // Iterate the async stream and write deltas as they arrive
+          for await (const event of stream as any) {
+            try {
+              if (event.type === 'response.output_text.delta' && event.delta) {
+                res.write(event.delta);
+              } else if (event.type === 'response.completed') {
+                break;
+              }
+            } catch (inner) {
+              // ignore per-event errors
+            }
+          }
+
+          res.end();
+          return;
+        } catch (err: any) {
+          console.error('aiChatStream inner error:', err?.response?.data || err);
+          try { res.write('\n\n[Stream error: ' + (err?.message || 'unexpected') + ']'); } catch (_) {}
+          res.end();
+          return;
+        }
+      });
+    } catch (err: any) {
+      console.error('aiChatStream error:', err);
+      try { res.status(500).json({ error: err?.message || 'Unexpected server error.' }); } catch (e) {}
+    }
+  });
+
+// SSE variant for browsers: text/event-stream with `data:` lines so EventSource can consume
+export const aiChatSSE = functions
+  .region('us-central1')
+  .https.onRequest(async (req, res) => {
+    try {
+      corsHandler(req, res, async () => {
+        if (req.method === 'OPTIONS') {
+          res.set('Access-Control-Allow-Methods', 'POST, OPTIONS');
+          res.set('Access-Control-Allow-Headers', 'Content-Type');
+          res.status(204).send('');
+          return;
+        }
+
+        if (req.method !== 'POST') {
+          res.status(405).json({ error: 'Method not allowed. Use POST.' });
+          return;
+        }
+
+        const rawPrompt = extractPrompt(req.body?.message ?? req.body);
+        const prompt = normalizePrompt(rawPrompt).slice(0, 4000);
+        if (!prompt) {
+          res.status(400).json({ error: 'Empty or invalid message.' });
+          return;
+        }
+
+        const OPENAI_KEY = functions.config().openai?.key;
+        if (!OPENAI_KEY) {
+          res.status(500).json({ error: 'OpenAI key not configured on server.' });
+          return;
+        }
+
+        // SSE headers
+        res.setHeader('Content-Type', 'text/event-stream; charset=utf-8');
+        res.setHeader('Cache-Control', 'no-cache, no-transform');
+        res.setHeader('Connection', 'keep-alive');
+        res.setHeader('Access-Control-Allow-Origin', req.headers.origin || '*');
+        res.flushHeaders?.();
+
+        try {
+          const stream = await (openai as any).responses.create({
+            model: functions.config().openai?.model || 'gpt-4o-mini',
+            input: [
+              { role: 'system', content: 'You are Uri, a helpful Ghana-savvy tutor. Keep replies friendly and KaTeX-ready for maths.' },
+              { role: 'user', content: prompt }
+            ],
+            temperature: 0.7,
+            max_output_tokens: 900,
+            stream: true,
+          });
+
+          for await (const event of stream as any) {
+            try {
+              if (event.type === 'response.output_text.delta' && event.delta) {
+                // Emit SSE data line
+                res.write(`data: ${event.delta}\n\n`);
+              } else if (event.type === 'response.completed') {
+                // Send done event
+                res.write('event: done\ndata: {}\n\n');
+                break;
+              }
+            } catch (inner) { /* ignore per-event errors */ }
+          }
+
+          res.end();
+          return;
+        } catch (err: any) {
+          console.error('aiChatSSE inner error:', err?.response?.data || err);
+          try { res.write(`event: error\ndata: ${JSON.stringify({ message: err?.message || 'unexpected' })}\n\n`); } catch (_) {}
+          res.end();
+          return;
+        }
+      });
+    } catch (err: any) {
+      console.error('aiChatSSE error:', err);
+      try { res.status(500).json({ error: err?.message || 'Unexpected server error.' }); } catch (e) {}
+    }
   });
 
 // Facts API: web search + answer with citations using Tavily

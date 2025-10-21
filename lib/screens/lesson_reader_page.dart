@@ -24,9 +24,10 @@ class _LessonReaderPageState extends State<LessonReaderPage> {
   final CourseReaderService _service = CourseReaderService();
   final ScrollController _scrollController = ScrollController();
   
+  // ignore: unused_field
   bool _loading = true;
   LessonProgress? _progress;
-  Map<String, int> _quizAnswers = {}; // question index -> selected answer
+  final Map<String, int> _quizAnswers = {}; // question index -> selected answer
   bool _showVocabulary = false;
   double _readProgress = 0.0;
 
@@ -543,9 +544,9 @@ class _LessonReaderPageState extends State<LessonReaderPage> {
         children: [
           Row(
             children: [
-              Icon(
+              const Icon(
                 Icons.auto_stories,
-                color: const Color(0xFF007AFF),
+                color: Color(0xFF007AFF),
                 size: 20,
               ),
               const SizedBox(width: 8),

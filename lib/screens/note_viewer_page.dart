@@ -8,6 +8,8 @@ import 'package:flutter/foundation.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import 'package:url_launcher/url_launcher.dart';
+import 'package:share_plus/share_plus.dart';
+import '../services/note_service.dart';
 
 class NoteViewerPage extends StatefulWidget {
   final String noteId;
@@ -23,6 +25,10 @@ class _NoteViewerPageState extends State<NoteViewerPage> {
   String? _signedUrl;
   bool _loading = false;
   int _selectedImageIndex = 0;
+  bool _likedByMe = false;
+  int _likeCount = 0;
+  Stream<int>? _likeCountSub;
+  bool _likeAnimating = false;
 
   @override
   void initState() {
@@ -34,6 +40,20 @@ class _NoteViewerPageState extends State<NoteViewerPage> {
     final doc = await FirebaseFirestore.instance.collection('notes').doc(widget.noteId).get();
     if (!mounted) return;
     setState(() => _note = doc.data());
+
+    // subscribe to like count
+    _likeCountSub = NoteService.likeCountStream(widget.noteId);
+    _likeCountSub?.listen((count) {
+      if (!mounted) return;
+      setState(() => _likeCount = count);
+    });
+
+    // check if current user liked
+    final uid = FirebaseAuth.instance.currentUser?.uid;
+    if (uid != null) {
+      final liked = await NoteService.isLikedByUser(widget.noteId, uid);
+      if (mounted) setState(() => _likedByMe = liked);
+    }
 
     // If running on web, proactively try to fetch a signed URL when there's
     // a file attached but no public URL/images. This helps the desktop web
@@ -114,6 +134,48 @@ class _NoteViewerPageState extends State<NoteViewerPage> {
     if (!launched) messenger.showSnackBar(const SnackBar(content: Text('Cannot open file')));
   }
 
+  Future<void> _toggleLike() async {
+    final messenger = ScaffoldMessenger.of(context);
+    final wasLiked = _likedByMe;
+
+    // Optimistic UI update
+    setState(() {
+      _likedByMe = !_likedByMe;
+      _likeCount = (_likeCount + (_likedByMe ? 1 : -1)).clamp(0, 1000000000);
+      _likeAnimating = true;
+    });
+
+    // reset animation after short delay
+    Future.delayed(const Duration(milliseconds: 300), () {
+      if (mounted) setState(() => _likeAnimating = false);
+    });
+
+    try {
+      await NoteService.toggleLike(widget.noteId);
+      if (!mounted) return;
+      messenger.showSnackBar(SnackBar(content: Text(_likedByMe ? 'Saved to My Notes' : 'Removed from My Notes')));
+    } catch (e) {
+      // revert optimistic update on error
+      if (mounted) {
+        setState(() {
+          _likedByMe = wasLiked;
+          _likeCount = (wasLiked ? _likeCount + 1 : (_likeCount - 1)).clamp(0, 1000000000);
+        });
+        messenger.showSnackBar(SnackBar(content: Text('Error updating like: $e')));
+      }
+    }
+  }
+
+  void _shareNote() {
+    final note = _note;
+    if (note == null) return;
+
+    final title = note['title'] ?? 'Note on Uriel Academy';
+    final shareUrl = Uri.base.replace(path: '/note', queryParameters: {'noteId': widget.noteId}).toString();
+    final message = 'Check out this note on uriel.academy:\n$title\n$shareUrl';
+    Share.share(message, subject: title);
+  }
+
   List<String> _collectImageUrls(Map<String, dynamic> note) {
     final urls = <String>[];
     // prefer signed URL (may be generated server-side), then fileUrl, then any stored images
@@ -137,6 +199,32 @@ class _NoteViewerPageState extends State<NoteViewerPage> {
       appBar: AppBar(
         title: Text(note == null ? 'Note' : (note['title'] ?? 'Note')),
         actions: [
+          // Like button with count
+          if (note != null)
+            Row(
+              children: [
+                GestureDetector(
+                  onTap: _toggleLike,
+                  child: AnimatedScale(
+                    scale: _likeAnimating ? 1.2 : 1.0,
+                    duration: const Duration(milliseconds: 200),
+                    child: Icon(
+                      _likedByMe ? Icons.favorite : Icons.favorite_border,
+                      color: _likedByMe ? Colors.redAccent : null,
+                      size: 22,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 8.0),
+                  child: Text('$_likeCount'),
+                ),
+              ],
+            ),
+
+          // Share button
+          if (note != null)
+            IconButton(onPressed: _shareNote, icon: const Icon(Icons.share)),
           if (note != null && (note['filePath'] != null || note['fileUrl'] != null))
             IconButton(onPressed: _loading ? null : _fetchSignedUrl, icon: const Icon(Icons.link)),
           if (_signedUrl != null)
