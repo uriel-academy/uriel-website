@@ -95,6 +95,29 @@ export const aiChat = functions
           const userMessage = (req.body?.message ?? req.body?.messages ?? '').toString().slice(0, 4000);
           const imageUrl = (req.body?.image_url || req.body?.imageUrl || '').toString();
 
+          // Basic server-side image safety checks: only allow common image mime types and <= 5MB
+          async function validateImageUrl(url: string) {
+            try {
+              // Only allow http(s)
+              if (!/^https?:\/\//i.test(url)) return { ok: false, reason: 'Invalid URL' };
+              const head = await fetch(url, { method: 'HEAD' });
+              if (!head.ok) return { ok: false, reason: `Unable to fetch image: ${head.status}` };
+              const contentType = head.headers.get('content-type') || '';
+              const contentLength = parseInt(head.headers.get('content-length') || '0', 10) || 0;
+              const allowed = ['image/png', 'image/jpeg', 'image/jpg', 'image/webp'];
+              if (!allowed.some(a => contentType.toLowerCase().startsWith(a))) {
+                return { ok: false, reason: 'Unsupported image type' };
+              }
+              if (contentLength > 5 * 1024 * 1024) {
+                return { ok: false, reason: 'Image too large' };
+              }
+              return { ok: true, contentType, contentLength };
+            } catch (e) {
+              console.warn('validateImageUrl error', e);
+              return { ok: false, reason: 'Validation failed' };
+            }
+          }
+
           const mode = classifyMode(userMessage);
 
           // If the user is doing short small talk about identity, return a concise identity answer.
@@ -186,20 +209,41 @@ If \`structured_mode=false\`, block auto headings/numbering; allow at most light
             ? `mode=${'tutoring'}\n\n${userMessage}`
             : `mode=${'tutoring'}\n\n${userMessage}`;
 
+          // If image provided, validate it first
+          if (imageUrl && imageUrl.length > 0) {
+            const v = await validateImageUrl(imageUrl);
+            if (!v.ok) {
+              res.set('Access-Control-Allow-Origin', req.headers.origin || '*');
+              res.status(400).json({ error: `Invalid image: ${v.reason || 'unknown'}` });
+              return;
+            }
+          }
+
           // Build messages array; include image information as a separate message part if provided
           const modelMessages: any[] = [
             { role: 'system', content: system },
           ];
 
+          let completion: any = null;
           if (imageUrl && imageUrl.length > 0) {
-            // For models that accept structured multimodal inputs, include image_url as an additional message in the user content
-            // The OpenAI client may accept message content as objects; we wrap as a string instructing the model to analyze the image URL
-            modelMessages.push({ role: 'user', content: `mode=tutoring\n\nPlease analyze this image: ${imageUrl}\n\n${userMessage}` });
+            // Preferred: structured multimodal message (object) if the SDK/model supports it
+            try {
+              modelMessages.push({ role: 'user', content: userContent });
+              modelMessages.push({ role: 'user', name: 'image', content: JSON.stringify({ type: 'image_url', image_url: imageUrl }) });
+              // Ask model with structured object messages
+              completion = await chatCompletion(modelMessages, 0.3);
+            } catch (e) {
+              console.warn('Structured multimodal message failed, falling back to text-inclusion:', e);
+              // Fallback: include image URL inline in text
+              const fallbackMessages = [
+                { role: 'system', content: system },
+                { role: 'user', content: `mode=tutoring\n\nPlease analyze this image: ${imageUrl}\n\n${userMessage}` },
+              ];
+              completion = await chatCompletion(fallbackMessages, 0.3);
+            }
           } else {
-            modelMessages.push({ role: 'user', content: userContent });
+            completion = await chatCompletion(modelMessages.concat([{ role: 'user', content: userContent }]), 0.3);
           }
-
-          const completion = await chatCompletion(modelMessages, 0.3);
 
           const raw = completion?.choices?.[0]?.message?.content ?? '';
           // return raw (expects KaTeX formatting) so client renders with KaTeX
