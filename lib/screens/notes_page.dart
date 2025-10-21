@@ -162,105 +162,112 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
 
     return Stack(
       children: [
-        SingleChildScrollView(
-          padding: const EdgeInsets.all(16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              // Header
-              Text(
-                'Notes Library',
-                style: GoogleFonts.montserrat(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w600,
-                  color: const Color(0xFF1A1E3F),
-                ),
-              ),
-              const SizedBox(height: 8),
-              Text(
-                'Browse, upload, and manage study notes (text, photo, mixed).',
-                style: GoogleFonts.montserrat(fontSize: 14, color: Colors.grey),
-              ),
-              const SizedBox(height: 20),
-
-              // Search & Filter Card
-              Container(
-                margin: const EdgeInsets.only(bottom: 16),
-                padding: const EdgeInsets.all(20),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(16),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withValues(alpha: 0.05),
-                      blurRadius: 10,
-                      offset: const Offset(0, 2),
-                    ),
-                  ],
-                ),
+        CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: const EdgeInsets.all(16),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Search & Filter',
-                      style: GoogleFonts.playfairDisplay(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
+                      'Notes Library',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
                         color: const Color(0xFF1A1E3F),
                       ),
                     ),
-                    const SizedBox(height: 12),
-                    TextField(
-                      controller: _searchController,
-                      onChanged: (_) => setState(() {}),
-                      style: GoogleFonts.montserrat(color: const Color(0xFF1A1E3F)),
-                      decoration: InputDecoration(
-                        hintText: 'Search notes by title or content...',
-                        hintStyle: GoogleFonts.montserrat(color: Colors.grey[400]),
-                        prefixIcon: Icon(Icons.search, color: Colors.grey[600]),
-                        filled: true,
-                        fillColor: const Color(0xFFF8FAFE),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(12),
-                          borderSide: BorderSide.none,
-                        ),
-                      ),
+                    const SizedBox(height: 8),
+                    Text(
+                      'Browse, upload, and manage study notes (text, photo, mixed).',
+                      style: GoogleFonts.montserrat(fontSize: 14, color: Colors.grey),
                     ),
-                    const SizedBox(height: 12),
-                    DropdownButtonFormField<String>(
-                      value: _selectedSubject,
-                      onChanged: (value) => setState(() => _selectedSubject = value!),
-                      decoration: InputDecoration(
-                        labelText: 'Subject',
-                        filled: true,
-                        fillColor: const Color(0xFFF8FAFE),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(12),
-                          borderSide: BorderSide.none,
-                        ),
+                    const SizedBox(height: 16),
+
+                    // Search & Filter Card
+                    Container(
+                      margin: const EdgeInsets.only(bottom: 12),
+                      padding: const EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(16),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withValues(alpha: 0.05),
+                            blurRadius: 10,
+                            offset: const Offset(0, 2),
+                          ),
+                        ],
                       ),
-                      items: _getSubjectOptions().map((subject) => DropdownMenuItem(value: subject, child: Text(subject))).toList(),
-                    ),
-                    const SizedBox(height: 12),
-                    Center(
-                      child: ElevatedButton.icon(
-                        onPressed: () => Navigator.of(context).pushNamed('/upload_note'),
-                        icon: const Icon(Icons.add, size: 20),
-                        label: Text('Upload Notes', style: GoogleFonts.montserrat(fontSize: 16, fontWeight: FontWeight.w600)),
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFF2ECC71),
-                          foregroundColor: Colors.white,
-                          padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 14),
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                        ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Search & Filter',
+                            style: GoogleFonts.playfairDisplay(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: const Color(0xFF1A1E3F),
+                            ),
+                          ),
+                          const SizedBox(height: 12),
+                          TextField(
+                            controller: _searchController,
+                            onChanged: (_) => setState(() {}),
+                            style: GoogleFonts.montserrat(color: const Color(0xFF1A1E3F)),
+                            decoration: InputDecoration(
+                              hintText: 'Search notes by title or content...',
+                              hintStyle: GoogleFonts.montserrat(color: Colors.grey[400]),
+                              prefixIcon: Icon(Icons.search, color: Colors.grey[600]),
+                              filled: true,
+                              fillColor: const Color(0xFFF8FAFE),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(12),
+                                borderSide: BorderSide.none,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 12),
+                          DropdownButtonFormField<String>(
+                            value: _selectedSubject,
+                            onChanged: (value) => setState(() => _selectedSubject = value!),
+                            decoration: InputDecoration(
+                              labelText: 'Subject',
+                              filled: true,
+                              fillColor: const Color(0xFFF8FAFE),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(12),
+                                borderSide: BorderSide.none,
+                              ),
+                            ),
+                            items: _getSubjectOptions().map((subject) => DropdownMenuItem(value: subject, child: Text(subject))).toList(),
+                          ),
+                          const SizedBox(height: 12),
+                          Center(
+                            child: ElevatedButton.icon(
+                              onPressed: () => Navigator.of(context).pushNamed('/upload_note'),
+                              icon: const Icon(Icons.add, size: 20),
+                              label: Text('Upload Notes', style: GoogleFonts.montserrat(fontSize: 16, fontWeight: FontWeight.w600)),
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: const Color(0xFF2ECC71),
+                                foregroundColor: Colors.white,
+                                padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 14),
+                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
                 ),
               ),
+            ),
 
-              // Tabs (3) - swipeable
-              Container(
+            // Tabs
+            SliverToBoxAdapter(
+              child: Container(
                 color: Colors.white,
                 child: TabBar(
                   controller: _tabController,
@@ -275,173 +282,189 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
                   labelStyle: GoogleFonts.montserrat(fontWeight: FontWeight.w600, fontSize: 14),
                 ),
               ),
-              const SizedBox(height: 12),
+            ),
 
-              // Tab content - fixed height to allow inner scrolling
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.62,
-                child: FutureBuilder<String?>(
-                  future: _getCurrentUserSchool(),
-                  builder: (context, userSchoolSnapshot) {
-                    final currentUserSchool = userSchoolSnapshot.data;
-                    final currentUser = FirebaseAuth.instance.currentUser;
+            // Content: each tab is a GridView (swipeable via TabBarView)
+            SliverFillRemaining(
+              child: FutureBuilder<String?>(
+                future: _getCurrentUserSchool(),
+                builder: (context, userSchoolSnapshot) {
+                  final currentUserSchool = userSchoolSnapshot.data;
+                  final currentUser = FirebaseAuth.instance.currentUser;
 
-                    return TabBarView(
-                      controller: _tabController,
-                      children: List.generate(3, (tabIndex) {
-                        return StreamBuilder<QuerySnapshot>(
-                          stream: FirebaseFirestore.instance.collection('notes').orderBy('createdAt', descending: true).snapshots(),
-                          builder: (context, snap) {
-                            if (snap.connectionState == ConnectionState.waiting || userSchoolSnapshot.connectionState == ConnectionState.waiting) {
-                              return const Center(child: CircularProgressIndicator());
-                            }
-                            final docs = snap.data?.docs ?? [];
+                  return TabBarView(
+                    controller: _tabController,
+                    children: List.generate(3, (tabIndex) {
+                      return StreamBuilder<QuerySnapshot>(
+                        stream: FirebaseFirestore.instance.collection('notes').orderBy('createdAt', descending: true).snapshots(),
+                        builder: (context, snap) {
+                          if (snap.connectionState == ConnectionState.waiting || userSchoolSnapshot.connectionState == ConnectionState.waiting) {
+                            return const Center(child: CircularProgressIndicator());
+                          }
+                          final docs = snap.data?.docs ?? [];
 
-                            return FutureBuilder<List<QueryDocumentSnapshot>>(
-                              future: _filterNotes(docs, currentUser, currentUserSchool, overrideTabIndex: tabIndex),
-                              builder: (context, filterSnapshot) {
-                                if (filterSnapshot.connectionState == ConnectionState.waiting) {
-                                  return const Center(child: CircularProgressIndicator());
-                                }
-                                final filteredDocs = filterSnapshot.data ?? [];
+                          return FutureBuilder<List<QueryDocumentSnapshot>>(
+                            future: _filterNotes(docs, currentUser, currentUserSchool, overrideTabIndex: tabIndex),
+                            builder: (context, filterSnapshot) {
+                              if (filterSnapshot.connectionState == ConnectionState.waiting) {
+                                return const Center(child: CircularProgressIndicator());
+                              }
+                              final filteredDocs = filterSnapshot.data ?? [];
 
-                                if (filteredDocs.isEmpty) {
-                                  return Center(
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      children: [
-                                        Icon(Icons.menu_book, size: 72, color: Colors.grey[400]),
-                                        const SizedBox(height: 12),
-                                        Text(
-                                          docs.isEmpty ? 'No notes available' : 'No notes match your search',
-                                          style: GoogleFonts.montserrat(fontSize: 16, color: Colors.grey[700]),
-                                        ),
-                                        const SizedBox(height: 8),
-                                        Text(
-                                          docs.isEmpty ? 'Be the first to upload study notes!' : 'Try adjusting your search or filters.',
-                                          style: GoogleFonts.montserrat(fontSize: 13, color: Colors.grey[600]),
-                                          textAlign: TextAlign.center,
-                                        ),
-                                      ],
-                                    ),
-                                  );
-                                }
+                              if (filteredDocs.isEmpty) {
+                                return Center(
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Icon(Icons.menu_book, size: 72, color: Colors.grey[400]),
+                                      const SizedBox(height: 12),
+                                      Text(
+                                        docs.isEmpty ? 'No notes available' : 'No notes match your search',
+                                        style: GoogleFonts.montserrat(fontSize: 16, color: Colors.grey[700]),
+                                      ),
+                                      const SizedBox(height: 8),
+                                      Text(
+                                        docs.isEmpty ? 'Be the first to upload study notes!' : 'Try adjusting your search or filters.',
+                                        style: GoogleFonts.montserrat(fontSize: 13, color: Colors.grey[600]),
+                                        textAlign: TextAlign.center,
+                                      ),
+                                    ],
+                                  ),
+                                );
+                              }
 
-                                return ListView.separated(
-                                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-                                  physics: const BouncingScrollPhysics(),
-                                  itemCount: filteredDocs.length,
-                                  separatorBuilder: (_, __) => const SizedBox(height: 8),
-                                  itemBuilder: (context, i) {
-                                    final d = filteredDocs[i].data() as Map<String, dynamic>;
-                                    final title = (d['title'] ?? '').toString();
-                                    final subject = (d['subject'] ?? '').toString();
-                                    // final text = (d['text'] ?? '').toString(); // unused, keep if preview needed later
-                                    final uploaderName = (d['uploaderName'] ?? 'Anonymous User').toString();
-                                    final signedUrl = d['signedUrl'] as String?;
-                                    final filePath = d['filePath'] as String?;
-                                    final publicFileUrl = d['fileUrl'] as String?;
-                                    final userId = d['userId'] as String?;
-                                    final isUserNote = userId == currentUser?.uid;
+                              final isSmall = MediaQuery.of(context).size.width < 768;
+                              final crossAxis = isSmall ? 2 : 4;
+                              final aspect = isSmall ? 0.7 : 0.75;
 
-                                    return Card(
-                                      elevation: 2,
-                                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                                      child: InkWell(
-                                        borderRadius: BorderRadius.circular(12),
-                                        onTap: () => Navigator.of(context).pushNamed('/note', arguments: {'noteId': filteredDocs[i].id}),
-                                        child: Padding(
-                                          padding: EdgeInsets.all(isSmallScreen ? 12 : 16),
-                                          child: Row(
-                                            children: [
-                                              Container(
-                                                width: isSmallScreen ? 60 : 80,
-                                                height: isSmallScreen ? 80 : 100,
-                                                decoration: BoxDecoration(
-                                                  borderRadius: BorderRadius.circular(8),
-                                                  gradient: LinearGradient(
-                                                    begin: Alignment.topLeft,
-                                                    end: Alignment.bottomRight,
-                                                    colors: [
-                                                      _getSubjectColor(subject).withValues(alpha: 0.7),
-                                                      _getSubjectColor(subject),
-                                                    ],
-                                                  ),
-                                                ),
-                                                child: Center(
-                                                  child: Icon(
-                                                    signedUrl != null || publicFileUrl != null || filePath != null ? Icons.image : Icons.menu_book,
-                                                    color: Colors.white,
-                                                    size: isSmallScreen ? 24 : 32,
-                                                  ),
-                                                ),
-                                              ),
-                                              const SizedBox(width: 12),
-                                              Expanded(
-                                                child: Column(
-                                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                                  children: [
-                                                    Row(
-                                                      children: [
-                                                        Expanded(
-                                                          child: Text(
-                                                            title.isNotEmpty ? title : 'Untitled',
-                                                            style: GoogleFonts.montserrat(fontSize: isSmallScreen ? 14 : 16, fontWeight: FontWeight.w700, color: const Color(0xFF1A1E3F)),
-                                                            maxLines: 2,
-                                                            overflow: TextOverflow.ellipsis,
-                                                          ),
-                                                        ),
-                                                        if (isUserNote) ...[
-                                                          IconButton(
-                                                            icon: const Icon(Icons.edit, color: Colors.blue),
-                                                            onPressed: () => _editNote(filteredDocs[i]),
-                                                          ),
-                                                          IconButton(
-                                                            icon: const Icon(Icons.delete, color: Colors.red),
-                                                            onPressed: () => _deleteNote(filteredDocs[i]),
-                                                          ),
-                                                        ],
-                                                      ],
-                                                    ),
-                                                    const SizedBox(height: 6),
-                                                    Text('By $uploaderName', style: GoogleFonts.montserrat(fontSize: isSmallScreen ? 12 : 13, color: Colors.grey[600])),
-                                                    const SizedBox(height: 8),
-                                                    Row(
-                                                      children: [
-                                                        Container(
-                                                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                                                          decoration: BoxDecoration(color: _getSubjectColor(subject).withValues(alpha: 0.1), borderRadius: BorderRadius.circular(6)),
-                                                          child: Text(subject.isNotEmpty ? subject : 'General', style: GoogleFonts.montserrat(fontSize: 11, fontWeight: FontWeight.w600, color: _getSubjectColor(subject))),
-                                                        ),
-                                                        const Spacer(),
-                                                        Container(
-                                                          padding: const EdgeInsets.all(8),
-                                                          decoration: BoxDecoration(color: const Color(0xFFD62828).withValues(alpha: 0.1), borderRadius: BorderRadius.circular(8)),
-                                                          child: const Icon(Icons.chevron_right, color: Color(0xFFD62828), size: 20),
-                                                        ),
-                                                      ],
-                                                    ),
+                              return GridView.builder(
+                                padding: const EdgeInsets.all(12),
+                                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                                  crossAxisCount: crossAxis,
+                                  childAspectRatio: aspect,
+                                  crossAxisSpacing: isSmall ? 12 : 16,
+                                  mainAxisSpacing: isSmall ? 12 : 16,
+                                ),
+                                itemCount: filteredDocs.length,
+                                itemBuilder: (context, i) {
+                                  final d = filteredDocs[i].data() as Map<String, dynamic>;
+                                  final title = (d['title'] ?? '').toString();
+                                  final subject = (d['subject'] ?? '').toString();
+                                  final uploaderName = (d['uploaderName'] ?? 'Anonymous User').toString();
+                                  final signedUrl = d['signedUrl'] as String?;
+                                  final filePath = d['filePath'] as String?;
+                                  final publicFileUrl = d['fileUrl'] as String?;
+                                  final userId = d['userId'] as String?;
+                                  final isUserNote = userId == currentUser?.uid;
+
+                                  // Card sized similar to textbooks
+                                  return Card(
+                                    elevation: 3,
+                                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                                    child: InkWell(
+                                      borderRadius: BorderRadius.circular(12),
+                                      onTap: () => Navigator.of(context).pushNamed('/note', arguments: {'noteId': filteredDocs[i].id}),
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          // Cover area
+                                          Expanded(
+                                            flex: 3,
+                                            child: Container(
+                                              width: double.infinity,
+                                              decoration: BoxDecoration(
+                                                borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
+                                                gradient: LinearGradient(
+                                                  begin: Alignment.topLeft,
+                                                  end: Alignment.bottomRight,
+                                                  colors: [
+                                                    _getSubjectColor(subject).withValues(alpha: 0.7),
+                                                    _getSubjectColor(subject),
                                                   ],
                                                 ),
                                               ),
-                                            ],
+                                              child: Center(
+                                                child: Icon(
+                                                  signedUrl != null || publicFileUrl != null || filePath != null ? Icons.image : Icons.menu_book,
+                                                  size: isSmall ? 40 : 48,
+                                                  color: Colors.white,
+                                                ),
+                                              ),
+                                            ),
                                           ),
-                                        ),
+                                          // Details area
+                                          Expanded(
+                                            flex: 2,
+                                            child: Padding(
+                                              padding: EdgeInsets.all(isSmall ? 8 : 12),
+                                              child: Column(
+                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                children: [
+                                                  Row(
+                                                    children: [
+                                                      Expanded(
+                                                        child: Text(
+                                                          title.isNotEmpty ? title : 'Untitled',
+                                                          style: GoogleFonts.montserrat(
+                                                            fontSize: isSmall ? 12 : 14,
+                                                            fontWeight: FontWeight.bold,
+                                                            color: const Color(0xFF1A1E3F),
+                                                          ),
+                                                          maxLines: 2,
+                                                          overflow: TextOverflow.ellipsis,
+                                                        ),
+                                                      ),
+                                                      if (isUserNote) ...[
+                                                        IconButton(
+                                                          icon: const Icon(Icons.edit, color: Colors.blue),
+                                                          onPressed: () => _editNote(filteredDocs[i]),
+                                                          iconSize: 18,
+                                                        ),
+                                                        IconButton(
+                                                          icon: const Icon(Icons.delete, color: Colors.red),
+                                                          onPressed: () => _deleteNote(filteredDocs[i]),
+                                                          iconSize: 18,
+                                                        ),
+                                                      ],
+                                                    ],
+                                                  ),
+                                                  const SizedBox(height: 6),
+                                                  Text(
+                                                    'By $uploaderName',
+                                                    style: GoogleFonts.montserrat(fontSize: isSmall ? 10 : 12, color: Colors.grey[600]),
+                                                  ),
+                                                  const Spacer(),
+                                                  Row(
+                                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                    children: [
+                                                      Container(
+                                                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                                                        decoration: BoxDecoration(color: _getSubjectColor(subject).withValues(alpha: 0.1), borderRadius: BorderRadius.circular(6)),
+                                                        child: Text(subject.isNotEmpty ? subject : 'General', style: GoogleFonts.montserrat(fontSize: 10, fontWeight: FontWeight.w600, color: _getSubjectColor(subject))),
+                                                      ),
+                                                      const Icon(Icons.chevron_right, color: Color(0xFFD62828)),
+                                                    ],
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ],
                                       ),
-                                    );
-                                  },
-                                );
-                              },
-                            );
-                          },
-                        );
-                      }),
-                    );
-                  },
-                ),
+                                    ),
+                                  );
+                                },
+                              );
+                            },
+                          );
+                        },
+                      );
+                    }),
+                  );
+                },
               ),
-            ],
-          ),
+            ),
+          ],
         ),
 
         // URI Chat overlay
