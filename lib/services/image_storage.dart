@@ -1,5 +1,6 @@
 import 'dart:typed_data';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:path/path.dart' as p;
 
 class ImageStorage {
@@ -19,8 +20,10 @@ class ImageStorage {
       '.webp': 'image/webp'
     }[ext] ?? 'application/octet-stream';
 
-    final path = 'uploads/chat/${DateTime.now().millisecondsSinceEpoch}_$filename';
-    final ref = _storage.ref().child(path);
+  // Use current user's UID to scope uploads so storage rules can validate ownership
+  final uid = FirebaseAuth.instance.currentUser?.uid ?? 'anonymous';
+  final path = 'uploads/chat/$uid/${DateTime.now().millisecondsSinceEpoch}_$filename';
+  final ref = _storage.ref().child(path);
 
     await ref.putData(
       bytes,
