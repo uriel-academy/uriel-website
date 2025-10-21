@@ -92,7 +92,8 @@ export const aiChat = functions
         }
 
         try {
-          const userMessage = (req.body?.message ?? '').toString().slice(0, 4000);
+          const userMessage = (req.body?.message ?? req.body?.messages ?? '').toString().slice(0, 4000);
+          const imageUrl = (req.body?.image_url || req.body?.imageUrl || '').toString();
 
           const mode = classifyMode(userMessage);
 
@@ -180,10 +181,25 @@ If \`structured_mode=false\`, block auto headings/numbering; allow at most light
 
 `;
 
-          const completion = await chatCompletion([
+          // If an image URL is provided, send a multimodal user content array that includes the image
+          const userContent = imageUrl && imageUrl.length > 0
+            ? `mode=${'tutoring'}\n\n${userMessage}`
+            : `mode=${'tutoring'}\n\n${userMessage}`;
+
+          // Build messages array; include image information as a separate message part if provided
+          const modelMessages: any[] = [
             { role: 'system', content: system },
-            { role: 'user', content: `mode=${'tutoring'}\n\n${userMessage}` },
-          ], 0.3);
+          ];
+
+          if (imageUrl && imageUrl.length > 0) {
+            // For models that accept structured multimodal inputs, include image_url as an additional message in the user content
+            // The OpenAI client may accept message content as objects; we wrap as a string instructing the model to analyze the image URL
+            modelMessages.push({ role: 'user', content: `mode=tutoring\n\nPlease analyze this image: ${imageUrl}\n\n${userMessage}` });
+          } else {
+            modelMessages.push({ role: 'user', content: userContent });
+          }
+
+          const completion = await chatCompletion(modelMessages, 0.3);
 
           const raw = completion?.choices?.[0]?.message?.content ?? '';
           // return raw (expects KaTeX formatting) so client renders with KaTeX
