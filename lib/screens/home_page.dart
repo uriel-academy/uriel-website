@@ -8,6 +8,7 @@ import '../constants/app_styles.dart';
 import '../services/connection_service.dart';
 import '../services/auth_service.dart';
 import '../services/notification_service.dart';
+import '../services/uri_ai.dart';
 import '../services/leaderboard_rank_service.dart';
 import '../services/xp_service.dart';
 import '../widgets/rank_badge_widget.dart';
@@ -6114,22 +6115,21 @@ class _UriChatInterfaceState extends State<UriChatInterface> with TickerProvider
     _scrollToBottom();
 
     try {
-      // Simulate AI response (replace with actual UriAI integration)
-      await Future.delayed(const Duration(seconds: 1));
-
-      // Add typing indicator
-      setState(() => _isTyping = true);
+      // Show typing indicator
+      setState(() {
+        _isTyping = true;
+      });
       _scrollToBottom();
 
-      // Simulate typing delay
-      await Future.delayed(const Duration(milliseconds: 1500));
+      // Call the shared UriAI service which posts to the functions aiChat endpoint
+      final reply = await UriAI.ask(message);
 
-      // Remove typing indicator and add response
+      // Add assistant reply
       setState(() {
         _isTyping = false;
         _messages.add({
           'role': 'assistant',
-          'content': _generateResponse(message),
+          'content': reply,
           'timestamp': DateTime.now(),
           'id': 'assistant_${DateTime.now().millisecondsSinceEpoch}',
         });
@@ -6460,8 +6460,8 @@ class _UriChatInterfaceState extends State<UriChatInterface> with TickerProvider
                               child: Container(
                                 width: 4,
                                 height: 4,
-                                decoration: BoxDecoration(
-                                  color: const Color(0xFFD62828),
+                                decoration: const BoxDecoration(
+                                  color: Color(0xFFD62828),
                                   shape: BoxShape.circle,
                                 ),
                               ),
