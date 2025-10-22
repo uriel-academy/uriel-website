@@ -323,7 +323,7 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
                     final d = filteredDocs[i].data() as Map<String, dynamic>;
                     final title = (d['title'] ?? '').toString();
                     final subject = (d['subject'] ?? '').toString();
-                    final uploaderName = (d['uploaderName'] ?? 'Anonymous User').toString();
+                    final uploaderName = (d['authorName'] ?? 'Anonymous').toString();
                     final signedUrl = d['signedUrl'] as String?;
                     final publicFileUrl = d['fileUrl'] as String?;
                     final userId = d['userId'] as String?;

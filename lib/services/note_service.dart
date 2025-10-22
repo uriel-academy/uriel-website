@@ -43,7 +43,7 @@ class NoteService {
           'title': noteData['title'] ?? '',
           'subject': noteData['subject'] ?? '',
           'uploaderName': noteData['uploaderName'] ?? '',
-          'thumbnail': (noteData['images'] is List && (noteData['images'] as List).isNotEmpty) ? (noteData['images'] as List).first : (noteData['fileUrl'] ?? noteData['signedUrl'] ?? null),
+          'thumbnail': (noteData['images'] is List && (noteData['images'] as List).isNotEmpty) ? (noteData['images'] as List).first : (noteData['fileUrl'] ?? noteData['signedUrl']),
           'addedAt': FieldValue.serverTimestamp(),
         },
             );
@@ -67,5 +67,37 @@ class NoteService {
       if (v is double) return v.toInt();
       return 0;
     });
+  }
+
+  // Update an existing note instead of creating a new one
+  static Future<void> updateNote(String noteId, Map<String, dynamic> updatedData) async {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user == null) throw Exception('User not authenticated');
+
+    // Preserve existing images unless explicitly removed
+    final existingNote = await _db.collection('notes').doc(noteId).get();
+    final existingImages = existingNote.data()?['images'] ?? [];
+    final newImages = updatedData['images'] ?? [];
+    updatedData['images'] = [...existingImages, ...newImages]; // Merge, assuming newImages are additions
+
+    // Ensure author is set correctly
+    updatedData['authorName'] = user.displayName ?? user.email?.split('@')[0] ?? 'Anonymous';
+    updatedData['authorId'] = user.uid;
+    updatedData['updatedAt'] = FieldValue.serverTimestamp();
+
+    await _db.collection('notes').doc(noteId).update(updatedData);
+  }
+
+  // Create a new note (for reference)
+  static Future<String> createNote(Map<String, dynamic> noteData) async {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user == null) throw Exception('User not authenticated');
+
+    noteData['authorName'] = user.displayName ?? user.email?.split('@')[0] ?? 'Anonymous';
+    noteData['authorId'] = user.uid;
+    noteData['createdAt'] = FieldValue.serverTimestamp();
+
+    final docRef = await _db.collection('notes').add(noteData);
+    return docRef.id;
   }
 }

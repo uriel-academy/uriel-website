@@ -249,6 +249,11 @@ class _NoteViewerPageState extends State<NoteViewerPage> {
                           style: GoogleFonts.montserrat(fontSize: 20, fontWeight: FontWeight.w700),
                         ),
                         const SizedBox(height: 6),
+                        Text(
+                          'By ${note['authorName'] ?? 'Anonymous'}',
+                          style: GoogleFonts.montserrat(fontSize: 14, color: Colors.grey[600]),
+                        ),
+                        const SizedBox(height: 6),
                         if ((note['subject'] ?? '').toString().isNotEmpty)
                           Chip(label: Text(note['subject'], style: GoogleFonts.montserrat(fontSize: 12))),
                         const SizedBox(height: 12),
@@ -366,7 +371,7 @@ class _NoteViewerPageState extends State<NoteViewerPage> {
                                         Chip(label: Text(note['subject'], style: GoogleFonts.montserrat(fontSize: 12))),
                                       const SizedBox(width: 8),
                                       Text(
-                                        'By ${note['uploaderName'] ?? 'Anonymous'}',
+                                        'By ${note['authorName'] ?? 'Anonymous'}',
                                         style: GoogleFonts.montserrat(fontSize: 12, color: Colors.grey[600]),
                                       ),
                                     ],
