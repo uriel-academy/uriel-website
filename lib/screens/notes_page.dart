@@ -145,15 +145,27 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
 
   Widget _buildNotesGrid(List<QueryDocumentSnapshot> filteredDocs, int tabIndex, User? currentUser, String? currentUserSchool) {
     if (filteredDocs.isEmpty) {
+      String message;
+      String subMessage;
+      IconData icon;
+      if (tabIndex == 1) {
+        message = 'No notes in your collection yet';
+        subMessage = 'Upload notes or like notes from others to see them here.';
+        icon = Icons.library_books;
+      } else {
+        message = 'No notes available';
+        subMessage = 'Be the first to upload study notes!';
+        icon = Icons.sticky_note_2;
+      }
       return Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(Icons.sticky_note_2, size: 72, color: Colors.grey[400]),
+            Icon(icon, size: 72, color: Colors.grey[400]),
             const SizedBox(height: 12),
-            Text('No notes available', style: GoogleFonts.montserrat(fontSize: 16, color: Colors.grey[700])),
+            Text(message, style: GoogleFonts.montserrat(fontSize: 16, color: Colors.grey[700])),
             const SizedBox(height: 8),
-            Text('Be the first to upload study notes!', style: GoogleFonts.montserrat(fontSize: 13, color: Colors.grey[600]), textAlign: TextAlign.center),
+            Text(subMessage, style: GoogleFonts.montserrat(fontSize: 13, color: Colors.grey[600]), textAlign: TextAlign.center),
           ],
         ),
       );
@@ -230,117 +242,6 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
               ),
             ]),
           ),
-        );
-      },
-    );
-  }
-
-  Widget _buildMyNotesGrid(AsyncSnapshot<QuerySnapshot> snap, User? currentUser, bool waiting) {
-    if (snap.connectionState == ConnectionState.waiting || waiting) return const Center(child: CircularProgressIndicator());
-    final myNotesDocs = snap.data?.docs ?? [];
-
-    if (myNotesDocs.isEmpty) {
-      return Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(Icons.favorite_border, size: 72, color: Colors.grey[400]),
-            const SizedBox(height: 12),
-            Text('No liked notes yet', style: GoogleFonts.montserrat(fontSize: 16, color: Colors.grey[700])),
-            const SizedBox(height: 8),
-            Text('Like notes to save them here for easy access.', style: GoogleFonts.montserrat(fontSize: 13, color: Colors.grey[600]), textAlign: TextAlign.center),
-          ],
-        ),
-      );
-    }
-
-    // For each my_notes doc, we need to fetch the full note data
-    // Since it's a small list, we'll use FutureBuilder for each item
-    final isSmall = MediaQuery.of(context).size.width < 768;
-    final crossAxis = isSmall ? 2 : 4;
-    final aspect = isSmall ? 0.65 : 0.75;
-
-    return GridView.builder(
-      padding: EdgeInsets.all(isSmall ? 8 : 12),
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: crossAxis, childAspectRatio: aspect, crossAxisSpacing: isSmall ? 10 : 16, mainAxisSpacing: isSmall ? 10 : 16),
-      itemCount: myNotesDocs.length,
-      itemBuilder: (context, i) {
-        final myNoteData = myNotesDocs[i].data() as Map<String, dynamic>;
-        final noteId = myNoteData['noteId'] as String?;
-        if (noteId == null) return const SizedBox.shrink();
-
-        return FutureBuilder<DocumentSnapshot>(
-          future: FirebaseFirestore.instance.collection('notes').doc(noteId).get(),
-          builder: (context, noteSnap) {
-            if (noteSnap.connectionState == ConnectionState.waiting) {
-              return Card(
-                elevation: 3,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                child: const Center(child: CircularProgressIndicator()),
-              );
-            }
-            if (!noteSnap.hasData || !noteSnap.data!.exists) {
-              return const SizedBox.shrink(); // Note deleted
-            }
-            final noteData = noteSnap.data!.data() as Map<String, dynamic>;
-            final title = (noteData['title'] ?? myNoteData['title'] ?? '').toString();
-            final subject = (noteData['subject'] ?? myNoteData['subject'] ?? '').toString();
-            final uploaderName = (noteData['authorName'] ?? myNoteData['uploaderName'] ?? 'Anonymous').toString();
-            final signedUrl = noteData['signedUrl'] as String?;
-            final publicFileUrl = noteData['fileUrl'] as String?;
-            final thumbnail = myNoteData['thumbnail'] as String?;
-
-            return Card(
-              elevation: 3,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-              child: InkWell(
-                borderRadius: BorderRadius.circular(12),
-                onTap: () => Navigator.of(context).pushNamed('/note', arguments: {'noteId': noteId}),
-                child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Expanded(
-                    flex: 3,
-                    child: ClipRRect(
-                      borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
-                      child: signedUrl != null
-                          ? Image.network(signedUrl, fit: BoxFit.cover, alignment: Alignment.topCenter, width: double.infinity, errorBuilder: (_, __, ___) => Container(color: _getSubjectColor(subject)))
-                          : (publicFileUrl != null
-                              ? Image.network(publicFileUrl, fit: BoxFit.cover, alignment: Alignment.topCenter, width: double.infinity, errorBuilder: (_, __, ___) => Container(color: _getSubjectColor(subject)))
-                              : (thumbnail != null
-                                  ? Image.network(thumbnail, fit: BoxFit.cover, alignment: Alignment.topCenter, width: double.infinity, errorBuilder: (_, __, ___) => Container(color: _getSubjectColor(subject)))
-                                  : (() {
-                                      final asset = _getCoverAssetForSubject(subject);
-                                      if (asset != null) {
-                                        return Image.asset(asset, fit: BoxFit.cover, alignment: Alignment.topCenter, width: double.infinity);
-                                      }
-                                      return Container(
-                                        decoration: BoxDecoration(
-                                          gradient: LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: [_getSubjectColor(subject).withOpacity(0.7), _getSubjectColor(subject)]),
-                                        ),
-                                        child: Center(child: Icon(Icons.sticky_note_2, size: isSmall ? 36 : 44, color: Colors.white)),
-                                      );
-                                    }()))),
-                    ),
-                  ),
-                  Expanded(
-                    flex: 2,
-                    child: Padding(
-                      padding: EdgeInsets.all(isSmall ? 8 : 12),
-                      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                        Text(title.isNotEmpty ? title : 'Untitled', style: GoogleFonts.montserrat(fontSize: isSmall ? 12 : 14, fontWeight: FontWeight.bold, color: const Color(0xFF1A1E3F)), maxLines: 2, overflow: TextOverflow.ellipsis),
-                        const SizedBox(height: 6),
-                        Text('By $uploaderName', style: GoogleFonts.montserrat(fontSize: isSmall ? 10 : 12, color: Colors.grey[600])),
-                        const Spacer(),
-                        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                          Container(padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2), decoration: BoxDecoration(color: _getSubjectColor(subject).withOpacity(0.1), borderRadius: BorderRadius.circular(6)), child: Text(subject.isNotEmpty ? subject : 'General', style: GoogleFonts.montserrat(fontSize: 10, fontWeight: FontWeight.w600, color: _getSubjectColor(subject)))),
-                          const Icon(Icons.chevron_right, color: Color(0xFFD62828)),
-                        ])
-                      ]),
-                    ),
-                  ),
-                ]),
-              ),
-            );
-          },
         );
       },
     );
@@ -473,10 +374,38 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
                 }
               ),
             ),
-            // My Notes tab (liked notes)
+            // My Notes tab (uploaded and liked notes)
             StreamBuilder<QuerySnapshot>(
-              stream: currentUser != null ? FirebaseFirestore.instance.collection('users').doc(currentUser.uid).collection('my_notes').orderBy('addedAt', descending: true).snapshots() : const Stream.empty(),
-              builder: (context, snap) => _buildMyNotesGrid(snap, currentUser, userSchoolSnapshot.connectionState == ConnectionState.waiting),
+              stream: FirebaseFirestore.instance.collection('notes').orderBy('createdAt', descending: true).snapshots(),
+              builder: (context, notesSnap) => StreamBuilder<QuerySnapshot>(
+                stream: currentUser != null ? FirebaseFirestore.instance.collection('users').doc(currentUser.uid).collection('my_notes').orderBy('addedAt', descending: true).snapshots() : const Stream.empty(),
+                builder: (context, myNotesSnap) {
+                  if (notesSnap.connectionState == ConnectionState.waiting || myNotesSnap.connectionState == ConnectionState.waiting || userSchoolSnapshot.connectionState == ConnectionState.waiting) return const Center(child: CircularProgressIndicator());
+                  final notesDocs = notesSnap.data?.docs ?? [];
+                  final myNotesDocs = myNotesSnap.data?.docs ?? [];
+                  final myNoteIds = myNotesDocs.map((d) => d['noteId'] as String?).where((id) => id != null).cast<String>().toSet();
+                  final combinedDocs = notesDocs.where((doc) => (doc['userId'] as String?) == currentUser?.uid || myNoteIds.contains(doc.id)).toList();
+                  // Apply search and subject filters
+                  final searchQuery = _searchController.text.toLowerCase();
+                  final selectedSubject = _selectedSubject;
+                  final filteredDocs = combinedDocs.where((doc) {
+                    final data = doc.data() as Map<String, dynamic>;
+                    final title = (data['title'] ?? '').toString().toLowerCase();
+                    final subject = (data['subject'] ?? '').toString();
+                    final text = (data['text'] ?? '').toString().toLowerCase();
+                    if (selectedSubject != 'All Subjects' && subject != selectedSubject) return false;
+                    if (searchQuery.isNotEmpty && !title.contains(searchQuery) && !text.contains(searchQuery)) return false;
+                    return true;
+                  }).toList();
+                  // Sort by createdAt descending
+                  filteredDocs.sort((a, b) {
+                    final aTime = (a['createdAt'] as Timestamp?)?.toDate() ?? DateTime.now();
+                    final bTime = (b['createdAt'] as Timestamp?)?.toDate() ?? DateTime.now();
+                    return bTime.compareTo(aTime);
+                  });
+                  return _buildNotesGrid(filteredDocs, 1, currentUser, currentUserSchool);
+                }
+              ),
             ),
             // School tab
             StreamBuilder<QuerySnapshot>(
