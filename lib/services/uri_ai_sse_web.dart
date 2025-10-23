@@ -9,9 +9,11 @@ class CancelHandle {
   void cancel() => _cancel();
 }
 
-Future<CancelHandle> streamAskSSE_impl(String prompt, void Function(String chunk) onData, {void Function()? onDone, void Function(Object error)? onError}) async {
+Future<CancelHandle> streamAskSSE_impl(String prompt, void Function(String chunk) onData, {void Function()? onDone, void Function(Object error)? onError, String? imageUrl}) async {
+  final params = {'message': prompt};
+  if (imageUrl != null) params['image_url'] = imageUrl;
   final uri = Uri.parse('https://us-central1-uriel-academy-41fb0.cloudfunctions.net/aiChatSSE')
-      .replace(queryParameters: {'message': prompt});
+      .replace(queryParameters: params);
   final es = html.EventSource(uri.toString());
   final sub = es.onMessage.listen((e) {
     final data = e.data ?? '';

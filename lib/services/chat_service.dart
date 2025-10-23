@@ -12,8 +12,10 @@ class ChatService {
     Map<String, dynamic>? profile,
     String channel = 'uri_tab',
   }) async {
+    // Only send the last user message to avoid repetition
+    final lastMessage = messages.isNotEmpty ? messages.last : {'content': ''};
     final body = jsonEncode({
-      'messages': messages,
+      'message': lastMessage['content'] ?? '',
       'image_url': imageUrl,
       'profile': profile ?? {},
       'channel': channel,
@@ -47,7 +49,7 @@ class ChatService {
     try {
       final handle = await UriAI.streamAskSSE(prompt, (chunk) {
         onChunk(chunk);
-      }, onDone: onDone, onError: onError);
+      }, onDone: onDone, onError: onError, imageUrl: imageUrl);
       return handle;
     } catch (e) {
       if (onError != null) onError(e);

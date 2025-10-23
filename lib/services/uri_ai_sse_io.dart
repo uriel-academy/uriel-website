@@ -10,10 +10,10 @@ class CancelHandle {
   void cancel() => _cancel();
 }
 
-Future<CancelHandle> streamAskSSE_impl(String prompt, void Function(String chunk) onData, {void Function()? onDone, void Function(Object error)? onError}) async {
+Future<CancelHandle> streamAskSSE_impl(String prompt, void Function(String chunk) onData, {void Function()? onDone, void Function(Object error)? onError, String? imageUrl}) async {
   final req = http.Request('POST', Uri.parse('https://us-central1-uriel-academy-41fb0.cloudfunctions.net/aiChatSSE'));
   req.headers['Content-Type'] = 'application/json';
-  req.body = jsonEncode({'message': prompt});
+  req.body = jsonEncode({'message': prompt, if (imageUrl != null) 'image_url': imageUrl});
   final streamed = await req.send();
   final controller = StreamController<bool>();
 

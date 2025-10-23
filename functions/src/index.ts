@@ -5,12 +5,17 @@ import { scoreExam } from './lib/scoring';
 import { hasEntitlement, EntitlementType } from './util/entitlement';
 import { ingestDocs, ingestPDFs, ingestLocalPDFs, listPDFs } from './ai/ingest';
 import { aiChatHttp } from './ai/http_ai';
+import { aiChatCallable } from './ai/assistant';
 import { aiChatHttp as aiChatHttpSimple } from './ai/simple_ai_chat';
 import OpenAI from 'openai';
 import cors from 'cors';
 
 // Expose the simple HTTP handler under a new named export so we can deploy it
 export const aiChatSimple = aiChatHttpSimple;
+
+// Export callable aiChat (onCall) implemented in ai/assistant.ts so clients using
+// Firebase Functions SDK can call `httpsCallable('aiChat')`.
+export { aiChatCallable as aiChat };
 
 // Lightweight CORS-safe aiChat HTTP endpoint for Flutter Web clients
 // Uses functions.config().openai.key — set with `firebase functions:config:set openai.key="..."`
@@ -100,7 +105,7 @@ async function answerWithFacts(query: string) {
 }
 
 // Main HTTP aiChat handler: routes time-sensitive queries to Facts, otherwise asks the model
-export const aiChat = functions
+export const aiChatHttpLegacy = functions
   .region('us-central1')
   .https.onRequest((req, res) => {
     corsHandler(req, res, () => {
@@ -117,11 +122,37 @@ export const aiChat = functions
           const userMessage = normalizePrompt(rawPrompt).slice(0, 4000);
           const imageUrl = (req.body?.image_url || req.body?.imageUrl || '').toString();
 
+          // Get sessionId from request or generate new one
+          let sessionId = req.body?.sessionId?.toString();
+          if (!sessionId) {
+            sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+          }
+
+          // Check if this is a user message that needs processing
+          const messageRef = admin.firestore().collection('chats').doc(sessionId).collection('messages').doc();
+          const messageId = messageRef.id;
+
+          // Save user message to Firestore
+          await messageRef.set({
+            id: messageId,
+            role: 'user',
+            text: userMessage,
+            imageUrl: imageUrl || null,
+            createdAt: admin.firestore.FieldValue.serverTimestamp(),
+            status: 'pending'
+          });
+
+          // Check if we should respond (only to user messages with pending status)
+          // For now, always respond since this is called directly
+          // In the future, this could be triggered by Firestore listeners
+
+          // Mark as processing
+          await messageRef.update({ status: 'processing' });
+
           // Optional auth/session: if client sends Authorization: Bearer <idToken>, load user memory
           const authHeader = (req.get('Authorization') || req.get('authorization') || '').toString();
           let uid: string | null = null;
           let userProfile: any = null;
-          let sessionId: string | null = null;
           let sessionRef: any = null;
           let sessionDoc: any = null;
           if (authHeader && authHeader.startsWith('Bearer ')) {
@@ -184,16 +215,40 @@ export const aiChat = functions
 
           // If the user is doing short small talk about identity, return a concise identity answer.
           if (mode === 'small_talk' && /(?:your name|what'?s your name|who are you)\b/i.test(userMessage)) {
+            // Save assistant response
+            const assistantRef = admin.firestore().collection('chats').doc(sessionId).collection('messages').doc();
+            await assistantRef.set({
+              id: assistantRef.id,
+              role: 'assistant',
+              text: 'Uri, the Uriel Academy study assistant for Ghanaian JHS & SHS students.',
+              imageUrl: null,
+              createdAt: admin.firestore.FieldValue.serverTimestamp(),
+              status: 'completed'
+            });
+            // Mark user message as completed
+            await messageRef.update({ status: 'completed' });
             res.set('Access-Control-Allow-Origin', req.headers.origin || '*');
-            res.json({ reply: 'Uri, the Uriel Academy study assistant for Ghanaian JHS & SHS students.' });
+            res.json({ reply: 'Uri, the Uriel Academy study assistant for Ghanaian JHS & SHS students.', sessionId });
             return;
           }
 
           if (mode === 'facts') {
             try {
               const reply = await answerWithFacts(userMessage);
+              // Save assistant response
+              const assistantRef = admin.firestore().collection('chats').doc(sessionId).collection('messages').doc();
+              await assistantRef.set({
+                id: assistantRef.id,
+                role: 'assistant',
+                text: reply,
+                imageUrl: null,
+                createdAt: admin.firestore.FieldValue.serverTimestamp(),
+                status: 'completed'
+              });
+              // Mark user message as completed
+              await messageRef.update({ status: 'completed' });
               res.set('Access-Control-Allow-Origin', req.headers.origin || '*');
-              res.json({ reply });
+              res.json({ reply, sessionId });
               return;
             } catch (e) {
               console.warn('facts call failed, falling back to model', e);
@@ -294,6 +349,7 @@ If \`structured_mode=false\`, block auto headings/numbering; allow at most light
           if (imageUrl && imageUrl.length > 0) {
             const v = await validateImageUrl(imageUrl);
             if (!v.ok) {
+              await messageRef.update({ status: 'completed' });
               res.set('Access-Control-Allow-Origin', req.headers.origin || '*');
               res.status(400).json({ error: `Invalid image: ${v.reason || 'unknown'}` });
               return;
@@ -327,7 +383,20 @@ If \`structured_mode=false\`, block auto headings/numbering; allow at most light
           }
 
           const raw = completion?.choices?.[0]?.message?.content ?? '';
-          // return raw (may contain KaTeX/LaTeX inline $...$ or block $$...$$) so client renders with KaTeX
+
+          // Save assistant response to Firestore
+          const assistantRef = admin.firestore().collection('chats').doc(sessionId).collection('messages').doc();
+          await assistantRef.set({
+            id: assistantRef.id,
+            role: 'assistant',
+            text: raw,
+            imageUrl: null,
+            createdAt: admin.firestore.FieldValue.serverTimestamp(),
+            status: 'completed'
+          });
+
+          // Mark user message as completed
+          await messageRef.update({ status: 'completed' });
           // Persist session updates: increment turns, append recentMessages and summarise every 10 turns
           if (uid && sessionRef) {
             try {

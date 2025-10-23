@@ -22,10 +22,10 @@ bool _needsWeb(String q) {
 }
 
 class UriAI {
-  static Future<String> ask(String prompt) async {
+  static Future<String> ask(String prompt, {String? imageUrl}) async {
     final useFacts = _needsWeb(prompt);
     final uri = Uri.parse(useFacts ? _factsUrl : _aiUrl);
-    final body = jsonEncode(useFacts ? {'query': prompt} : {'message': prompt});
+    final body = jsonEncode(useFacts ? {'query': prompt} : {'message': prompt, if (imageUrl != null) 'image_url': imageUrl});
 
     final r = await http.post(
       uri,
@@ -42,7 +42,7 @@ class UriAI {
   }
 
   // Stream responses token-by-token with aggregation. Returns a CancelHandle.
-  static Future<CancelHandle> streamAskSSE(String prompt, void Function(String chunk) onData, {void Function()? onDone, void Function(Object error)? onError, int flushIntervalMs = 100, int flushThreshold = 40}) async {
+  static Future<CancelHandle> streamAskSSE(String prompt, void Function(String chunk) onData, {void Function()? onDone, void Function(Object error)? onError, int flushIntervalMs = 100, int flushThreshold = 40, String? imageUrl}) async {
     final buffer = StringBuffer();
     Timer? flushTimer;
     bool closed = false;
@@ -79,7 +79,7 @@ class UriAI {
       flushTimer?.cancel();
       closed = true;
       if (onError != null) onError(e);
-    });
+    }, imageUrl: imageUrl);
 
     // Return a wrapper CancelHandle that flushes then cancels underlying
     return CancelHandle(() {

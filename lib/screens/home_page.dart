@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter_math_fork/flutter_math.dart';
 import 'dart:async';
 import '../constants/app_styles.dart';
 import '../services/connection_service.dart';
@@ -21,6 +22,8 @@ import 'trivia_categories_page.dart';
 import 'notes_page.dart';
 import 'student_profile_page.dart';
 import 'redesigned_leaderboard_page.dart';
+import 'package:cloud_functions/cloud_functions.dart';
+import 'package:uuid/uuid.dart';
 import '../widgets/uri_chat.dart';
 
 class StudentHomePage extends StatefulWidget {
@@ -6070,10 +6073,15 @@ class _UriChatInterfaceState extends State<UriChatInterface> with TickerProvider
   final FocusNode _focusNode = FocusNode();
   bool _isLoading = false;
   bool _isTyping = false;
+  bool _isProcessing = false; // debounce
 
   // Animation controllers
   late AnimationController _fadeController;
   late Animation<double> _fadeAnimation;
+
+  final String chatId = 'uri_chat'; // fixed for now
+  StreamSubscription? _sub;
+  final Uuid _uuid = const Uuid();
 
   @override
   void initState() {
@@ -6089,6 +6097,9 @@ class _UriChatInterfaceState extends State<UriChatInterface> with TickerProvider
 
     // Add welcome message
     _addWelcomeMessage();
+
+    // Start message listener
+    _startMessageListener();
   }
 
   @override
@@ -6097,21 +6108,47 @@ class _UriChatInterfaceState extends State<UriChatInterface> with TickerProvider
     _scrollController.dispose();
     _focusNode.dispose();
     _fadeController.dispose();
+    _sub?.cancel();
     super.dispose();
   }
 
-  void _addWelcomeMessage() {
-    setState(() {
-      _messages.add({
-        'role': 'assistant',
-        'content': 'Hello${widget.userName != null ? ' ${widget.userName}' : ''}! 👋\n\nI\'m Uri, your AI learning assistant. I can help you with:\n\n• 📚 Explaining difficult concepts\n• ❓ Answering curriculum questions\n• 📝 Homework and study help\n• 🎯 BECE/WASSCE preparation\n• 📖 Textbook recommendations\n• 📊 Performance insights\n\nWhat would you like to learn about today?',
-        'timestamp': DateTime.now(),
-        'id': 'welcome_${DateTime.now().millisecondsSinceEpoch}',
+  void _startMessageListener() {
+    final messagesRef = FirebaseFirestore.instance
+        .collection('chats')
+        .doc(chatId)
+        .collection('messages')
+        .orderBy('createdAt', descending: false);
+
+    _sub?.cancel();
+    _sub = messagesRef.snapshots().listen((snap) {
+      setState(() {
+        _messages.clear();
+        for (final doc in snap.docs) {
+          final m = doc.data();
+          _messages.add({
+            'role': m['role'],
+            'content': m['text'] ?? '',
+            'timestamp': (m['createdAt'] as Timestamp?)?.toDate() ?? DateTime.now(),
+            'id': doc.id,
+            'attachments': m['imageUrl'] != null ? [{'type': 'image', 'url': m['imageUrl']}] : null,
+          });
+        }
       });
+      _scrollToBottom();
     });
   }
 
-  // ignore: unused_element
+  void _addWelcomeMessage() async {
+    final welcomeId = _uuid.v4();
+    await FirebaseFirestore.instance.collection('chats').doc(chatId).collection('messages').doc(welcomeId).set({
+      'id': welcomeId,
+      'role': 'assistant',
+      'text': 'Hello! I\'m Uri, your AI study companion. I can help you with math, science, English, and all your BECE subjects. I can also analyze images and explain concepts. What would you like to learn today?',
+      'createdAt': FieldValue.serverTimestamp(),
+      'status': 'completed',
+    });
+  }
+
   Future<void> _sendMessage() async {
     final message = _textController.text.trim();
     if (message.isEmpty || _isLoading) return;
@@ -6120,54 +6157,27 @@ class _UriChatInterfaceState extends State<UriChatInterface> with TickerProvider
     _textController.clear();
     _focusNode.unfocus();
 
-    // Add user message
-    setState(() {
-      _messages.add({
-        'role': 'user',
-        'content': message,
-        'timestamp': DateTime.now(),
-        'id': 'user_${DateTime.now().millisecondsSinceEpoch}',
-      });
-      _isLoading = true;
+    // Add user message to Firestore
+    final id = _uuid.v4();
+    await FirebaseFirestore.instance.collection('chats').doc(chatId).collection('messages').doc(id).set({
+      'id': id,
+      'role': 'user',
+      'text': message,
+      'createdAt': FieldValue.serverTimestamp(),
+      'status': 'pending',
     });
 
-    // Scroll to bottom
-    _scrollToBottom();
+    setState(() => _isLoading = true);
 
+    // Call the function
     try {
-      // Show typing indicator
-      setState(() {
-        _isTyping = true;
+      await FirebaseFunctions.instance.httpsCallable('aiChat').call({
+        'chatId': chatId,
+        'messageId': id,
       });
-      _scrollToBottom();
-
-      // Call the shared UriAI service which posts to the functions aiChat endpoint
-      final reply = await UriAI.ask(message);
-
-      // Add assistant reply
-      setState(() {
-        _isTyping = false;
-        _messages.add({
-          'role': 'assistant',
-          'content': reply,
-          'timestamp': DateTime.now(),
-          'id': 'assistant_${DateTime.now().millisecondsSinceEpoch}',
-        });
-        _isLoading = false;
-      });
-
-      _scrollToBottom();
     } catch (e) {
-      setState(() {
-        _isTyping = false;
-        _messages.add({
-          'role': 'assistant',
-          'content': 'Sorry, I encountered an error. Please try again.',
-          'timestamp': DateTime.now(),
-          'id': 'error_${DateTime.now().millisecondsSinceEpoch}',
-        });
-        _isLoading = false;
-      });
+      // Handle error
+      setState(() => _isLoading = false);
     }
   }
 
@@ -6199,6 +6209,66 @@ class _UriChatInterfaceState extends State<UriChatInterface> with TickerProvider
     });
   }
 
+  String normalizeLatex(String s) {
+    return s
+        .replaceAll(r'\\[', r'$$')
+        .replaceAll(r'\\]', r'$$')
+        .replaceAll(r'\\(', r'$')
+        .replaceAll(r'\\)', r'$')
+        .replaceAll(r'\[', r'$$')
+        .replaceAll(r'\]', r'$$')
+        .replaceAll(r'\(', r'$')
+        .replaceAll(r'\)', r'$');
+  }
+
+  Widget _buildRenderedMessage(String text, bool isUser) {
+    if (isUser) return Text(text, style: const TextStyle(fontSize: 15, height: 1.5));
+
+    final normalized = normalizeLatex(text);
+
+    // helper to parse inline $...$
+    List<InlineSpan> parseInline(String segment) {
+      final spans = <InlineSpan>[];
+      final reg = RegExp(r'\$(?!\$)(.+?)\$');
+      var last = 0;
+      for (final m in reg.allMatches(segment)) {
+        if (m.start > last) spans.add(TextSpan(text: segment.substring(last, m.start)));
+        final expr = m.group(1) ?? '';
+        spans.add(WidgetSpan(child: Math.tex(expr, textStyle: const TextStyle(fontSize: 14))));
+        last = m.end;
+      }
+      if (last < segment.length) spans.add(TextSpan(text: segment.substring(last)));
+      return spans;
+    }
+
+    final blockReg = RegExp(r'\$\$(.+?)\$\$', dotAll: true);
+    var lastBlock = 0;
+    final children = <InlineSpan>[];
+    for (final m in blockReg.allMatches(normalized)) {
+      if (m.start > lastBlock) {
+        final before = normalized.substring(lastBlock, m.start);
+        children.addAll(parseInline(before));
+      }
+      final expr = m.group(1) ?? '';
+      children.add(WidgetSpan(child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 6),
+        child: Math.tex(expr, textStyle: const TextStyle(fontSize: 16)),
+      )));
+      lastBlock = m.end;
+    }
+    if (lastBlock < normalized.length) {
+      final tail = normalized.substring(lastBlock);
+      children.addAll(parseInline(tail));
+    }
+
+    return RichText(
+      text: TextSpan(
+        style: const TextStyle(color: Color(0xFF1A1E3F), fontSize: 15, height: 1.5),
+        children: children,
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final isMobile = MediaQuery.of(context).size.width < 768;
@@ -6214,6 +6284,7 @@ class _UriChatInterfaceState extends State<UriChatInterface> with TickerProvider
               color: const Color(0xFFF8FAFE),
               child: ListView.builder(
                 controller: _scrollController,
+                reverse: true,
                 padding: EdgeInsets.fromLTRB(
                   isMobile ? 16 : 24,
                   16,
@@ -6226,7 +6297,7 @@ class _UriChatInterfaceState extends State<UriChatInterface> with TickerProvider
                     return _buildTypingIndicator();
                   }
 
-                  final message = _messages[index];
+                  final message = _messages[_messages.length - 1 - index];
                   final isUser = message['role'] == 'user';
 
                   return Padding(
@@ -6266,15 +6337,32 @@ class _UriChatInterfaceState extends State<UriChatInterface> with TickerProvider
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
-                                  message['content'] ?? '',
-                                  style: GoogleFonts.montserrat(
-                                    fontSize: 15,
-                                    height: 1.5,
-                                    color: isUser ? Colors.white : const Color(0xFF1A1E3F),
-                                    fontWeight: FontWeight.w400,
-                                  ),
-                                ),
+                                _buildRenderedMessage(message['content'] ?? '', isUser),
+                                // Display attachments
+                                if (message['attachments'] != null)
+                                  for (final attachment in message['attachments'] as List<dynamic>)
+                                    if (attachment['type'] == 'image')
+                                      Padding(
+                                        padding: const EdgeInsets.only(top: 8.0),
+                                        child: ClipRRect(
+                                          borderRadius: BorderRadius.circular(12),
+                                          child: GestureDetector(
+                                            onTap: () => showDialog(
+                                              context: context,
+                                              builder: (_) => Dialog(
+                                                child: InteractiveViewer(
+                                                  child: Image.network(attachment['url'] ?? ''),
+                                                ),
+                                              ),
+                                            ),
+                                            child: Image.network(
+                                              attachment['url'] ?? '',
+                                              height: 160,
+                                              fit: BoxFit.cover,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
                                 // Timestamps intentionally hidden in chat UI per product request
                               ],
                             ),
@@ -6323,30 +6411,28 @@ class _UriChatInterfaceState extends State<UriChatInterface> with TickerProvider
                   child: UriChatInput(
                     history: _messages.map((m) => {'role': m['role'] as String? ?? 'user', 'content': m['content'] as String? ?? ''}).toList(),
                     onMessage: (role, content, {attachments}) async {
-                      setState(() {
-                        _messages.add({'role': role, 'content': content, 'timestamp': DateTime.now(), 'id': '${role}_${DateTime.now().millisecondsSinceEpoch}'});
-                        _isLoading = role == 'user' ? true : _isLoading;
-                      });
-                      _scrollToBottom();
-
-                      // If user message, call server for assistant reply (UriAI already used elsewhere)
                       if (role == 'user') {
-                        setState(() => _isTyping = true);
-                        try {
-                          final reply = await UriAI.ask(content);
-                          setState(() {
-                            _isTyping = false;
-                            _messages.add({'role': 'assistant', 'content': reply, 'timestamp': DateTime.now(), 'id': 'assistant_${DateTime.now().millisecondsSinceEpoch}'});
-                            _isLoading = false;
-                          });
-                        } catch (e) {
-                          setState(() {
-                            _isTyping = false;
-                            _messages.add({'role': 'assistant', 'content': 'Sorry, I encountered an error. Please try again.', 'timestamp': DateTime.now(), 'id': 'error_${DateTime.now().millisecondsSinceEpoch}'});
-                            _isLoading = false;
-                          });
+                        final id = _uuid.v4();
+                        String? imageUrl;
+                        if (attachments != null && attachments.isNotEmpty) {
+                          final attachment = attachments.first;
+                          if (attachment['type'] == 'image') {
+                            imageUrl = attachment['url'];
+                          }
                         }
-                        _scrollToBottom();
+                        await FirebaseFirestore.instance.collection('chats').doc(chatId).collection('messages').doc(id).set({
+                          'id': id,
+                          'role': 'user',
+                          'text': content,
+                          'imageUrl': imageUrl,
+                          'createdAt': FieldValue.serverTimestamp(),
+                          'status': 'pending',
+                        });
+                        // Call function
+                        await FirebaseFunctions.instance.httpsCallable('aiChat').call({
+                          'chatId': chatId,
+                          'messageId': id,
+                        });
                       }
                     },
                   ),
@@ -6425,20 +6511,7 @@ class _UriChatInterfaceState extends State<UriChatInterface> with TickerProvider
     );
   }
 
-  String _formatTimestamp(DateTime timestamp) {
-    final now = DateTime.now();
-    final difference = now.difference(timestamp);
 
-    if (difference.inMinutes < 1) {
-      return 'Just now';
-    } else if (difference.inMinutes < 60) {
-      return '${difference.inMinutes}m ago';
-    } else if (difference.inHours < 24) {
-      return '${difference.inHours}h ago';
-    } else {
-      return '${difference.inDays}d ago';
-    }
-  }
 }
 
 // Data model for subject progress

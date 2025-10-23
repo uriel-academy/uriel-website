@@ -1,4 +1,5 @@
 import 'dart:typed_data';
+import 'dart:math' as math;
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -64,13 +65,14 @@ class _UriChatInputState extends State<UriChatInput> {
     final history = [...widget.history, {'role': 'user', 'content': text}];
 
   String accumulated = '';
+  String lastChunk = '';
   // create assistant bubble (will be updated by stream). We attach a placeholder
   // object that can later hold a cancel handle.
   widget.onMessage('assistant', '');
 
     dynamic cancelHandle;
       try {
-      cancelHandle = await _chat.sendStream(
+        cancelHandle = await _chat.sendStream(
         messages: history,
         imageUrl: uploadedUrl,
         channel: 'uri_tab',
@@ -80,7 +82,33 @@ class _UriChatInputState extends State<UriChatInput> {
           'locale': 'en-GH',
         },
         onChunk: (chunk) {
-          accumulated = accumulated + chunk;
+          // Detect whether the incoming chunk is the full cumulative text
+          // (some SSE providers send the entire text so far) or a small delta.
+          // If the new chunk contains the previous chunk, treat it as the
+          // current full text; otherwise append as a delta.
+          final c = chunk.toString();
+          // If server sent a superset (contains previous), use it directly
+          if (lastChunk.isNotEmpty && c.contains(lastChunk)) {
+            accumulated = c;
+          } else if (lastChunk.isNotEmpty) {
+            // Compute longest overlap where a suffix of lastChunk matches a prefix of c
+            int maxOverlap = 0;
+            final maxCheck = math.min(lastChunk.length, c.length);
+            for (int k = maxCheck; k > 0; k--) {
+              if (lastChunk.substring(lastChunk.length - k) == c.substring(0, k)) {
+                maxOverlap = k;
+                break;
+              }
+            }
+            if (maxOverlap > 0) {
+              accumulated = lastChunk + c.substring(maxOverlap);
+            } else {
+              accumulated = lastChunk + c;
+            }
+          } else {
+            accumulated = accumulated + c;
+          }
+          lastChunk = accumulated;
           // send the cumulative text so UI replaces last assistant bubble
           widget.onMessage('assistant', accumulated);
         },
@@ -125,10 +153,6 @@ class _UriChatInputState extends State<UriChatInput> {
         _pendingImage = bytes;
         _pendingImageName = x.name;
       });
-
-      // Insert a short placeholder into the text box so user knows an image is attached
-      _ctrl.text = '${_ctrl.text}${_ctrl.text.isEmpty ? '' : '\n'}[Attached image: ${x.name}]';
-      _ctrl.selection = TextSelection.fromPosition(TextPosition(offset: _ctrl.text.length));
     } catch (e) {
   widget.onMessage('assistant', 'Image pick failed. Try again.', attachments: null);
     }
@@ -180,6 +204,8 @@ class _UriChatInputState extends State<UriChatInput> {
                 decoration: const InputDecoration(
                   hintText: 'Ask Uri anything…',
                   border: OutlineInputBorder(borderSide: BorderSide.none),
+                  filled: true,
+                  fillColor: Colors.white,
                 ),
                 minLines: 1,
                 maxLines: 6,

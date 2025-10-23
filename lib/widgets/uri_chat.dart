@@ -538,15 +538,19 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
         history: _messages.map((m) => {'role': m['role'] as String? ?? 'user', 'content': m['text'] as String? ?? ''}).toList(),
         onMessage: (role, content, {attachments}) {
           setState(() {
+            // We keep the list in newest-first order so with reverse: true the
+            // latest message appears at the bottom of the viewport. Insert at
+            // index 0 for new messages and update index 0 for streaming updates.
             if (role == 'assistant') {
-              // If last message is an assistant bubble, replace its text (stream update)
-              if (_messages.isNotEmpty && _messages.last['role'] == 'assistant') {
-                _messages[_messages.length - 1]['text'] = content;
+              // If first message is an assistant bubble, replace its text (stream update)
+              if (_messages.isNotEmpty && _messages.first['role'] == 'assistant') {
+                _messages[0]['text'] = content;
               } else {
-                _messages.add({'role': role, 'text': content, 'id': '${role}_${DateTime.now().millisecondsSinceEpoch}', 'attachments': attachments});
+                _messages.insert(0, {'role': role, 'text': content, 'id': '${role}_${DateTime.now().millisecondsSinceEpoch}', 'attachments': attachments});
               }
             } else {
-              _messages.add({'role': role, 'text': content, 'id': '${role}_${DateTime.now().millisecondsSinceEpoch}', 'attachments': attachments});
+              // user messages also go at the front (newest-first)
+              _messages.insert(0, {'role': role, 'text': content, 'id': '${role}_${DateTime.now().millisecondsSinceEpoch}', 'attachments': attachments});
             }
           });
           _scrollToBottom();

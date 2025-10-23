@@ -99,17 +99,15 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
     return null;
   }
 
-  // ignore: unused_element
   Future<List<QueryDocumentSnapshot>> _filterNotes(
     List<QueryDocumentSnapshot> docs,
     User? currentUser,
-    String? currentUserSchool, {
-    int? overrideTabIndex,
-  }) async {
-    final searchQuery = _searchController.text.toLowerCase();
+    String? currentUserSchool,
+    int tabIndex,
+    String searchQuery,
+    String selectedSubject,
+  ) async {
     final filteredDocs = <QueryDocumentSnapshot>[];
-    final tabIndex = overrideTabIndex ?? _tabController.index;
-
     for (final doc in docs) {
       final data = doc.data() as Map<String, dynamic>;
       final title = (data['title'] ?? '').toString().toLowerCase();
@@ -135,7 +133,7 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
         }
       }
 
-      if (_selectedSubject != 'All Subjects' && subject != _selectedSubject) continue;
+      if (selectedSubject != 'All Subjects' && subject != selectedSubject) continue;
       if (searchQuery.isNotEmpty) {
         if (!title.contains(searchQuery) && !text.contains(searchQuery)) continue;
       }
@@ -143,6 +141,209 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
     }
 
     return filteredDocs;
+  }
+
+  Widget _buildNotesGrid(List<QueryDocumentSnapshot> filteredDocs, int tabIndex, User? currentUser, String? currentUserSchool) {
+    if (filteredDocs.isEmpty) {
+      return Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(Icons.sticky_note_2, size: 72, color: Colors.grey[400]),
+            const SizedBox(height: 12),
+            Text('No notes available', style: GoogleFonts.montserrat(fontSize: 16, color: Colors.grey[700])),
+            const SizedBox(height: 8),
+            Text('Be the first to upload study notes!', style: GoogleFonts.montserrat(fontSize: 13, color: Colors.grey[600]), textAlign: TextAlign.center),
+          ],
+        ),
+      );
+    }
+
+    final isSmall = MediaQuery.of(context).size.width < 768;
+    final crossAxis = isSmall ? 2 : 4;
+    final aspect = isSmall ? 0.65 : 0.75;
+
+    return GridView.builder(
+      padding: EdgeInsets.all(isSmall ? 8 : 12),
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: crossAxis, childAspectRatio: aspect, crossAxisSpacing: isSmall ? 10 : 16, mainAxisSpacing: isSmall ? 10 : 16),
+      itemCount: filteredDocs.length,
+      itemBuilder: (context, i) {
+        final d = filteredDocs[i].data() as Map<String, dynamic>;
+        final title = (d['title'] ?? '').toString();
+        final subject = (d['subject'] ?? '').toString();
+        final uploaderName = (d['authorName'] ?? 'Anonymous').toString();
+        final signedUrl = d['signedUrl'] as String?;
+        final publicFileUrl = d['fileUrl'] as String?;
+        final userId = d['userId'] as String?;
+        final isUserNote = userId == currentUser?.uid;
+
+        return Card(
+          elevation: 3,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          child: InkWell(
+            borderRadius: BorderRadius.circular(12),
+            onTap: () => Navigator.of(context).pushNamed('/note', arguments: {'noteId': filteredDocs[i].id}),
+            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Expanded(
+                flex: 3,
+                child: ClipRRect(
+                  borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
+                  child: signedUrl != null
+                      ? Image.network(signedUrl, fit: BoxFit.cover, alignment: Alignment.topCenter, width: double.infinity, errorBuilder: (_, __, ___) => Container(color: _getSubjectColor(subject)))
+                      : (publicFileUrl != null
+                          ? Image.network(publicFileUrl, fit: BoxFit.cover, alignment: Alignment.topCenter, width: double.infinity, errorBuilder: (_, __, ___) => Container(color: _getSubjectColor(subject)))
+                          : (() {
+                              final asset = _getCoverAssetForSubject(subject);
+                              if (asset != null) {
+                                return Image.asset(asset, fit: BoxFit.cover, alignment: Alignment.topCenter, width: double.infinity);
+                              }
+                              return Container(
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: [_getSubjectColor(subject).withOpacity(0.7), _getSubjectColor(subject)]),
+                                ),
+                                child: Center(child: Icon(Icons.sticky_note_2, size: isSmall ? 36 : 44, color: Colors.white)),
+                              );
+                            }())),
+                ),
+              ),
+              Expanded(
+                flex: 2,
+                child: Padding(
+                  padding: EdgeInsets.all(isSmall ? 8 : 12),
+                  child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                    Row(children: [
+                      Expanded(child: Text(title.isNotEmpty ? title : 'Untitled', style: GoogleFonts.montserrat(fontSize: isSmall ? 12 : 14, fontWeight: FontWeight.bold, color: const Color(0xFF1A1E3F)), maxLines: 2, overflow: TextOverflow.ellipsis)),
+                      if (isUserNote) ...[
+                        IconButton(icon: const Icon(Icons.edit, color: Colors.blue), onPressed: () => _editNote(filteredDocs[i]), iconSize: 18),
+                        IconButton(icon: const Icon(Icons.delete, color: Colors.red), onPressed: () => _deleteNote(filteredDocs[i]), iconSize: 18),
+                      ],
+                    ]),
+                    const SizedBox(height: 6),
+                    Text('By $uploaderName', style: GoogleFonts.montserrat(fontSize: isSmall ? 10 : 12, color: Colors.grey[600])),
+                    const Spacer(),
+                    Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                      Container(padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2), decoration: BoxDecoration(color: _getSubjectColor(subject).withOpacity(0.1), borderRadius: BorderRadius.circular(6)), child: Text(subject.isNotEmpty ? subject : 'General', style: GoogleFonts.montserrat(fontSize: 10, fontWeight: FontWeight.w600, color: _getSubjectColor(subject)))),
+                      const Icon(Icons.chevron_right, color: Color(0xFFD62828)),
+                    ])
+                  ]),
+                ),
+              ),
+            ]),
+          ),
+        );
+      },
+    );
+  }
+
+  Widget _buildMyNotesGrid(AsyncSnapshot<QuerySnapshot> snap, User? currentUser, bool waiting) {
+    if (snap.connectionState == ConnectionState.waiting || waiting) return const Center(child: CircularProgressIndicator());
+    final myNotesDocs = snap.data?.docs ?? [];
+
+    if (myNotesDocs.isEmpty) {
+      return Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(Icons.favorite_border, size: 72, color: Colors.grey[400]),
+            const SizedBox(height: 12),
+            Text('No liked notes yet', style: GoogleFonts.montserrat(fontSize: 16, color: Colors.grey[700])),
+            const SizedBox(height: 8),
+            Text('Like notes to save them here for easy access.', style: GoogleFonts.montserrat(fontSize: 13, color: Colors.grey[600]), textAlign: TextAlign.center),
+          ],
+        ),
+      );
+    }
+
+    // For each my_notes doc, we need to fetch the full note data
+    // Since it's a small list, we'll use FutureBuilder for each item
+    final isSmall = MediaQuery.of(context).size.width < 768;
+    final crossAxis = isSmall ? 2 : 4;
+    final aspect = isSmall ? 0.65 : 0.75;
+
+    return GridView.builder(
+      padding: EdgeInsets.all(isSmall ? 8 : 12),
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: crossAxis, childAspectRatio: aspect, crossAxisSpacing: isSmall ? 10 : 16, mainAxisSpacing: isSmall ? 10 : 16),
+      itemCount: myNotesDocs.length,
+      itemBuilder: (context, i) {
+        final myNoteData = myNotesDocs[i].data() as Map<String, dynamic>;
+        final noteId = myNoteData['noteId'] as String?;
+        if (noteId == null) return const SizedBox.shrink();
+
+        return FutureBuilder<DocumentSnapshot>(
+          future: FirebaseFirestore.instance.collection('notes').doc(noteId).get(),
+          builder: (context, noteSnap) {
+            if (noteSnap.connectionState == ConnectionState.waiting) {
+              return Card(
+                elevation: 3,
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                child: const Center(child: CircularProgressIndicator()),
+              );
+            }
+            if (!noteSnap.hasData || !noteSnap.data!.exists) {
+              return const SizedBox.shrink(); // Note deleted
+            }
+            final noteData = noteSnap.data!.data() as Map<String, dynamic>;
+            final title = (noteData['title'] ?? myNoteData['title'] ?? '').toString();
+            final subject = (noteData['subject'] ?? myNoteData['subject'] ?? '').toString();
+            final uploaderName = (noteData['authorName'] ?? myNoteData['uploaderName'] ?? 'Anonymous').toString();
+            final signedUrl = noteData['signedUrl'] as String?;
+            final publicFileUrl = noteData['fileUrl'] as String?;
+            final thumbnail = myNoteData['thumbnail'] as String?;
+
+            return Card(
+              elevation: 3,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+              child: InkWell(
+                borderRadius: BorderRadius.circular(12),
+                onTap: () => Navigator.of(context).pushNamed('/note', arguments: {'noteId': noteId}),
+                child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  Expanded(
+                    flex: 3,
+                    child: ClipRRect(
+                      borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
+                      child: signedUrl != null
+                          ? Image.network(signedUrl, fit: BoxFit.cover, alignment: Alignment.topCenter, width: double.infinity, errorBuilder: (_, __, ___) => Container(color: _getSubjectColor(subject)))
+                          : (publicFileUrl != null
+                              ? Image.network(publicFileUrl, fit: BoxFit.cover, alignment: Alignment.topCenter, width: double.infinity, errorBuilder: (_, __, ___) => Container(color: _getSubjectColor(subject)))
+                              : (thumbnail != null
+                                  ? Image.network(thumbnail, fit: BoxFit.cover, alignment: Alignment.topCenter, width: double.infinity, errorBuilder: (_, __, ___) => Container(color: _getSubjectColor(subject)))
+                                  : (() {
+                                      final asset = _getCoverAssetForSubject(subject);
+                                      if (asset != null) {
+                                        return Image.asset(asset, fit: BoxFit.cover, alignment: Alignment.topCenter, width: double.infinity);
+                                      }
+                                      return Container(
+                                        decoration: BoxDecoration(
+                                          gradient: LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: [_getSubjectColor(subject).withOpacity(0.7), _getSubjectColor(subject)]),
+                                        ),
+                                        child: Center(child: Icon(Icons.sticky_note_2, size: isSmall ? 36 : 44, color: Colors.white)),
+                                      );
+                                    }()))),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 2,
+                    child: Padding(
+                      padding: EdgeInsets.all(isSmall ? 8 : 12),
+                      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                        Text(title.isNotEmpty ? title : 'Untitled', style: GoogleFonts.montserrat(fontSize: isSmall ? 12 : 14, fontWeight: FontWeight.bold, color: const Color(0xFF1A1E3F)), maxLines: 2, overflow: TextOverflow.ellipsis),
+                        const SizedBox(height: 6),
+                        Text('By $uploaderName', style: GoogleFonts.montserrat(fontSize: isSmall ? 10 : 12, color: Colors.grey[600])),
+                        const Spacer(),
+                        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                          Container(padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2), decoration: BoxDecoration(color: _getSubjectColor(subject).withOpacity(0.1), borderRadius: BorderRadius.circular(6)), child: Text(subject.isNotEmpty ? subject : 'General', style: GoogleFonts.montserrat(fontSize: 10, fontWeight: FontWeight.w600, color: _getSubjectColor(subject)))),
+                          const Icon(Icons.chevron_right, color: Color(0xFFD62828)),
+                        ])
+                      ]),
+                    ),
+                  ),
+                ]),
+              ),
+            );
+          },
+        );
+      },
+    );
   }
 
   @override
@@ -259,135 +460,37 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
           final currentUserSchool = userSchoolSnapshot.data;
           final currentUser = FirebaseAuth.instance.currentUser;
 
-          return TabBarView(controller: _tabController, children: List.generate(3, (tabIndex) {
-            return StreamBuilder<QuerySnapshot>(
+          return TabBarView(controller: _tabController, children: [
+            // All Notes tab
+            StreamBuilder<QuerySnapshot>(
               stream: FirebaseFirestore.instance.collection('notes').orderBy('createdAt', descending: true).snapshots(),
-              builder: (context, snap) {
-                if (snap.connectionState == ConnectionState.waiting || userSchoolSnapshot.connectionState == ConnectionState.waiting) return const Center(child: CircularProgressIndicator());
-                final docs = snap.data?.docs ?? [];
-
-                // Synchronous filtering for immediate responsiveness
-                final searchQuery = _searchController.text.toLowerCase();
-                final filteredDocs = <QueryDocumentSnapshot>[];
-                for (final doc in docs) {
-                  final data = doc.data() as Map<String, dynamic>;
-                  final title = (data['title'] ?? '').toString().toLowerCase();
-                  final subject = (data['subject'] ?? '').toString();
-                  final text = (data['text'] ?? '').toString().toLowerCase();
-                  final userId = data['userId'] as String?;
-
-                  // Tab filtering
-                  if (tabIndex == 1) {
-                    if (userId != currentUser?.uid) continue;
-                  } else if (tabIndex == 2) {
-                    // Prefer a cached uploaderSchool on the note document if present
-                    final uploaderSchool = (data['uploaderSchool'] ?? data['uploader_school']) as String?;
-                    if (currentUserSchool == null) continue;
-                    if (uploaderSchool == null) continue; // cannot determine, skip
-                    if (uploaderSchool != currentUserSchool) continue;
-                  }
-
-                  // Subject filter
-                  if (_selectedSubject != 'All Subjects' && subject != _selectedSubject) continue;
-
-                  // Search filter
-                  if (searchQuery.isNotEmpty && !title.contains(searchQuery) && !text.contains(searchQuery)) continue;
-
-                  filteredDocs.add(doc);
+              builder: (context, snap) => FutureBuilder<List<QueryDocumentSnapshot>>(
+                future: _filterNotes(snap.data?.docs ?? [], currentUser, currentUserSchool, 0, _searchController.text.toLowerCase(), _selectedSubject),
+                builder: (context, filterSnap) {
+                  if (snap.connectionState == ConnectionState.waiting || userSchoolSnapshot.connectionState == ConnectionState.waiting || filterSnap.connectionState == ConnectionState.waiting) return const Center(child: CircularProgressIndicator());
+                  final filteredDocs = filterSnap.data ?? [];
+                  return _buildNotesGrid(filteredDocs, 0, currentUser, currentUserSchool);
                 }
-
-                if (filteredDocs.isEmpty) {
-                  return Center(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Icon(Icons.sticky_note_2, size: 72, color: Colors.grey[400]),
-                        const SizedBox(height: 12),
-                        Text(docs.isEmpty ? 'No notes available' : 'No notes match your search', style: GoogleFonts.montserrat(fontSize: 16, color: Colors.grey[700])),
-                        const SizedBox(height: 8),
-                        Text(docs.isEmpty ? 'Be the first to upload study notes!' : 'Try adjusting your search or filters.', style: GoogleFonts.montserrat(fontSize: 13, color: Colors.grey[600]), textAlign: TextAlign.center),
-                      ],
-                    ),
-                  );
+              ),
+            ),
+            // My Notes tab (liked notes)
+            StreamBuilder<QuerySnapshot>(
+              stream: currentUser != null ? FirebaseFirestore.instance.collection('users').doc(currentUser.uid).collection('my_notes').orderBy('addedAt', descending: true).snapshots() : const Stream.empty(),
+              builder: (context, snap) => _buildMyNotesGrid(snap, currentUser, userSchoolSnapshot.connectionState == ConnectionState.waiting),
+            ),
+            // School tab
+            StreamBuilder<QuerySnapshot>(
+              stream: FirebaseFirestore.instance.collection('notes').orderBy('createdAt', descending: true).snapshots(),
+              builder: (context, snap) => FutureBuilder<List<QueryDocumentSnapshot>>(
+                future: _filterNotes(snap.data?.docs ?? [], currentUser, currentUserSchool, 2, _searchController.text.toLowerCase(), _selectedSubject),
+                builder: (context, filterSnap) {
+                  if (snap.connectionState == ConnectionState.waiting || userSchoolSnapshot.connectionState == ConnectionState.waiting || filterSnap.connectionState == ConnectionState.waiting) return const Center(child: CircularProgressIndicator());
+                  final filteredDocs = filterSnap.data ?? [];
+                  return _buildNotesGrid(filteredDocs, 2, currentUser, currentUserSchool);
                 }
-
-                final isSmall = MediaQuery.of(context).size.width < 768;
-                final crossAxis = isSmall ? 2 : 4;
-                final aspect = isSmall ? 0.65 : 0.75;
-
-                return GridView.builder(
-                  padding: EdgeInsets.all(isSmall ? 8 : 12),
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: crossAxis, childAspectRatio: aspect, crossAxisSpacing: isSmall ? 10 : 16, mainAxisSpacing: isSmall ? 10 : 16),
-                  itemCount: filteredDocs.length,
-                  itemBuilder: (context, i) {
-                    final d = filteredDocs[i].data() as Map<String, dynamic>;
-                    final title = (d['title'] ?? '').toString();
-                    final subject = (d['subject'] ?? '').toString();
-                    final uploaderName = (d['authorName'] ?? 'Anonymous').toString();
-                    final signedUrl = d['signedUrl'] as String?;
-                    final publicFileUrl = d['fileUrl'] as String?;
-                    final userId = d['userId'] as String?;
-                    final isUserNote = userId == currentUser?.uid;
-
-                    return Card(
-                      elevation: 3,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                      child: InkWell(
-                        borderRadius: BorderRadius.circular(12),
-                        onTap: () => Navigator.of(context).pushNamed('/note', arguments: {'noteId': filteredDocs[i].id}),
-                        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                          Expanded(
-                            flex: 3,
-                            child: ClipRRect(
-                              borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
-                              child: signedUrl != null
-                                  ? Image.network(signedUrl, fit: BoxFit.cover, alignment: Alignment.topCenter, width: double.infinity, errorBuilder: (_, __, ___) => Container(color: _getSubjectColor(subject)))
-                                  : (publicFileUrl != null
-                                      ? Image.network(publicFileUrl, fit: BoxFit.cover, alignment: Alignment.topCenter, width: double.infinity, errorBuilder: (_, __, ___) => Container(color: _getSubjectColor(subject)))
-                                      : (() {
-                                          final asset = _getCoverAssetForSubject(subject);
-                                          if (asset != null) {
-                                            return Image.asset(asset, fit: BoxFit.cover, alignment: Alignment.topCenter, width: double.infinity);
-                                          }
-                                          return Container(
-                                            decoration: BoxDecoration(
-                                              gradient: LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: [_getSubjectColor(subject).withOpacity(0.7), _getSubjectColor(subject)]),
-                                            ),
-                                            child: Center(child: Icon(Icons.sticky_note_2, size: isSmall ? 36 : 44, color: Colors.white)),
-                                          );
-                                        }())),
-                            ),
-                          ),
-                          Expanded(
-                            flex: 2,
-                            child: Padding(
-                              padding: EdgeInsets.all(isSmall ? 8 : 12),
-                              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                                Row(children: [
-                                  Expanded(child: Text(title.isNotEmpty ? title : 'Untitled', style: GoogleFonts.montserrat(fontSize: isSmall ? 12 : 14, fontWeight: FontWeight.bold, color: const Color(0xFF1A1E3F)), maxLines: 2, overflow: TextOverflow.ellipsis)),
-                                  if (isUserNote) ...[
-                                    IconButton(icon: const Icon(Icons.edit, color: Colors.blue), onPressed: () => _editNote(filteredDocs[i]), iconSize: 18),
-                                    IconButton(icon: const Icon(Icons.delete, color: Colors.red), onPressed: () => _deleteNote(filteredDocs[i]), iconSize: 18),
-                                  ],
-                                ]),
-                                const SizedBox(height: 6),
-                                Text('By $uploaderName', style: GoogleFonts.montserrat(fontSize: isSmall ? 10 : 12, color: Colors.grey[600])),
-                                const Spacer(),
-                                Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                                  Container(padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2), decoration: BoxDecoration(color: _getSubjectColor(subject).withOpacity(0.1), borderRadius: BorderRadius.circular(6)), child: Text(subject.isNotEmpty ? subject : 'General', style: GoogleFonts.montserrat(fontSize: 10, fontWeight: FontWeight.w600, color: _getSubjectColor(subject)))),
-                                  const Icon(Icons.chevron_right, color: Color(0xFFD62828)),
-                                ])
-                              ]),
-                            ),
-                          ),
-                        ]),
-                      ),
-                    );
-                  },
-                );
-              },
-            );
-          }));
+              ),
+            ),
+          ]);
         },
       ),
     );
