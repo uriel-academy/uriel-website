@@ -4,6 +4,7 @@ import '../models/question_model.dart';
 import '../models/question_collection_model.dart';
 import '../services/question_service.dart';
 import 'quiz_taker_page.dart';
+import 'dart:math' as math;
 
 /// Page that displays past questions grouped as collections (e.g., "BECE RME 1999 MCQ")
 /// This provides a much cleaner UI when there are hundreds of questions across multiple years
@@ -23,6 +24,9 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
   List<QuestionCollection> _filteredCollections = [];
   bool _isLoading = false;
   bool _randomizeQuestions = false;
+  // Pagination
+  int _currentPage = 0;
+  final int _pageSize = 20;
   
   // Filters
   String _selectedExamType = 'All Types';
@@ -89,6 +93,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
       setState(() {
         _collections = collections;
         _filteredCollections = collections;
+        _currentPage = 0; // reset pagination
         _isLoading = false;
       });
       
@@ -114,6 +119,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
 
   void _applyFilters() {
     setState(() {
+      _currentPage = 0; // reset to first page when filters change
       _filteredCollections = _collections.where((collection) {
         // Exam type filter
         if (_selectedExamType != 'All Types') {
@@ -377,31 +383,66 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
   }
 
   Widget _buildCollectionsList(bool isSmallScreen) {
+    // Compute paginated slice
+    final total = _filteredCollections.length;
+    final totalPages = total == 0 ? 1 : (total / _pageSize).ceil();
+    final start = _currentPage * _pageSize;
+    final end = math.min(start + _pageSize, total);
+    final paged = start < end ? _filteredCollections.sublist(start, end) : <QuestionCollection>[];
+
     return Container(
       padding: EdgeInsets.symmetric(
         horizontal: isSmallScreen ? 16 : 24,
         vertical: 8,
       ),
-      child: isSmallScreen
-          ? Column(
-              children: _filteredCollections.map((collection) {
-                return _buildCollectionCard(collection, isSmallScreen);
-              }).toList(),
-            )
-          : GridView.builder(
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2, // 2 cards per line
-                crossAxisSpacing: 16,
-                mainAxisSpacing: 16,
-                childAspectRatio: 2.1, // 15% height reduction (was 1.8)
-              ),
-              itemCount: _filteredCollections.length,
-              itemBuilder: (context, index) {
-                return _buildCollectionCard(_filteredCollections[index], isSmallScreen);
-              },
+      child: Column(
+        children: [
+          // Collections grid / list
+          isSmallScreen
+              ? Column(
+                  children: paged.map((collection) {
+                    return _buildCollectionCard(collection, isSmallScreen);
+                  }).toList(),
+                )
+              : GridView.builder(
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2, // 2 cards per line
+                    crossAxisSpacing: 16,
+                    mainAxisSpacing: 16,
+                    childAspectRatio: 2.1, // 15% height reduction (was 1.8)
+                  ),
+                  itemCount: paged.length,
+                  itemBuilder: (context, index) {
+                    return _buildCollectionCard(paged[index], isSmallScreen);
+                  },
+                ),
+
+          const SizedBox(height: 12),
+
+          // Pagination controls
+          if (total > _pageSize)
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                TextButton.icon(
+                  onPressed: _currentPage > 0 ? () => setState(() => _currentPage--) : null,
+                  icon: const Icon(Icons.chevron_left),
+                  label: const Text('Previous'),
+                ),
+                const SizedBox(width: 12),
+                Text('Page ${_currentPage + 1} of $totalPages', style: GoogleFonts.montserrat()),
+                const SizedBox(width: 12),
+                TextButton.icon(
+                  onPressed: _currentPage < totalPages - 1 ? () => setState(() => _currentPage++) : null,
+                  icon: const Icon(Icons.chevron_right),
+                  label: const Text('Next'),
+                ),
+              ],
             ),
+        ],
+      ),
     );
   }
 
