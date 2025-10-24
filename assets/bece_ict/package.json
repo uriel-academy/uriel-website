@@ -1,0 +1,17 @@
+{
+  "name": "bece-ict-firestore-import",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Imports BECE ICT questions (2011–2022) and answers into Firestore.",
+  "main": "import_bece_ict.mjs",
+  "scripts": {
+    "import": "node import_bece_ict.mjs",
+    "import:dry": "node import_bece_ict.mjs --dry-run",
+    "lint": "node -e \"console.log('No lint configured')\""
+  },
+  "dependencies": {
+    "firebase-admin": "^12.5.0",
+    "glob": "^11.0.0",
+    "yargs": "^17.7.2"
+  }
+}

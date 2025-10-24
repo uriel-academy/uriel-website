@@ -72,7 +72,11 @@ class QuestionService {
       QuerySnapshot snapshot = await query.get();
       
       if (snapshot.docs.isNotEmpty) {
-        return snapshot.docs.map((doc) => Question.fromJson(doc.data() as Map<String, dynamic>)).toList();
+        // Convert to Question objects and ensure deterministic ordering
+        List<Question> questions = snapshot.docs
+            .map((doc) => Question.fromJson(doc.data() as Map<String, dynamic>))
+            .toList();
+        return _sortQuestions(questions);
       }
       
       // Fallback to sample questions if no data in Firestore
@@ -109,7 +113,7 @@ class QuestionService {
         }).toList();
         
         debugPrint('✅ Successfully converted ${questions.length} RME questions');
-        return questions;
+        return _sortQuestions(questions);
       } else {
         debugPrint('❌ No RME questions found in database');
         return [];
@@ -219,8 +223,8 @@ class QuestionService {
             q.topics.any((topic) => topics.contains(topic))
           ).toList();
         }
-        
-        return questions;
+        // Ensure deterministic ordering before returning
+        return _sortQuestions(questions);
       }
       
       // Fallback to sample questions
@@ -276,6 +280,17 @@ class QuestionService {
       case Subject.trivia:
         return 'trivia';
     }
+  }
+
+  /// Sort questions deterministically by year (numeric) then questionNumber
+  List<Question> _sortQuestions(List<Question> questions) {
+    questions.sort((a, b) {
+      final int ay = int.tryParse(a.year) ?? 0;
+      final int by = int.tryParse(b.year) ?? 0;
+      if (ay != by) return ay.compareTo(by);
+      return a.questionNumber.compareTo(b.questionNumber);
+    });
+    return questions;
   }
 
   /// Get question by ID

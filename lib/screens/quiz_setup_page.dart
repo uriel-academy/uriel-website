@@ -129,6 +129,7 @@ class _QuizSetupPageState extends State<QuizSetupPage> {
           examType: selectedExamType!,
           level: selectedLevel!,
           preloadedQuestions: widget.preloadedQuestions,
+          randomizeQuestions: randomizeQuestions,
           questionCount: selectedQuestionCount,
         ),
       ),

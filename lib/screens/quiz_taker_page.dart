@@ -85,7 +85,7 @@ class _QuizTakerPageState extends State<QuizTakerPage>
       setState(() => isLoading = true);
       
       if (widget.preloadedQuestions != null) {
-        questions = widget.preloadedQuestions!;
+        questions = List<Question>.from(widget.preloadedQuestions!);
       } else {
         // Map display name to Firestore field name
         final subjectEnum = _mapStringToSubject(widget.subject);
@@ -119,6 +119,9 @@ class _QuizTakerPageState extends State<QuizTakerPage>
       // Shuffle questions for randomization (only if enabled)
       if (widget.randomizeQuestions) {
         questions.shuffle();
+      } else {
+        // Ensure deterministic ordering when not randomizing: sort by questionNumber only
+        questions.sort((a, b) => a.questionNumber.compareTo(b.questionNumber));
       }
       
       // Limit to specified question count
