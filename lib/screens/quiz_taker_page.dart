@@ -450,7 +450,14 @@ class _QuizTakerPageState extends State<QuizTakerPage>
       );
     }
 
-    final currentQuestion = questions[currentQuestionIndex];
+  final currentQuestion = questions[currentQuestionIndex];
+  // Determine a descriptive header including year when available so users
+  // remember which year's questions they're solving.
+  final String headerTitle = widget.triviaCategory != null
+    ? widget.triviaCategory!
+    : (currentQuestion.year.isNotEmpty)
+      ? '${widget.subject} (${currentQuestion.year}) Quiz'
+      : '${widget.subject} Quiz';
     final progress = (currentQuestionIndex + 1) / questions.length;
 
     return PopScope(
@@ -492,7 +499,7 @@ class _QuizTakerPageState extends State<QuizTakerPage>
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Text(
-                                widget.triviaCategory ?? '${widget.subject} Quiz',
+                                headerTitle,
                                 style: GoogleFonts.playfairDisplay(
                                   fontSize: isMobile ? 16 : 18,
                                   fontWeight: FontWeight.bold,
