@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import '../models/question_model.dart';
 import '../models/quiz_model.dart';
 import '../services/question_service.dart';
@@ -637,7 +640,103 @@ class _QuizTakerPageState extends State<QuizTakerPage>
     );
   }
 
+  Widget _buildQuestionImageWidget(String imageUrl) {
+    // If the imageUrl looks like a packaged asset path, load from assets.
+    try {
+      if (imageUrl.startsWith('assets/') || !imageUrl.startsWith('http')) {
+        // Support SVG packaged assets as well as raster images.
+        if (imageUrl.toLowerCase().endsWith('.svg')) {
+          return SvgPicture.asset(
+            imageUrl,
+            fit: BoxFit.contain,
+            placeholderBuilder: (context) => Container(
+              color: Colors.grey[100],
+              child: const Center(child: CircularProgressIndicator()),
+            ),
+          );
+        }
+
+        return Image.asset(
+          imageUrl,
+          fit: BoxFit.contain,
+          errorBuilder: (context, error, stack) => Container(
+            color: Colors.grey[200],
+            height: 120,
+            child: const Center(child: Icon(Icons.broken_image)),
+          ),
+        );
+      }
+    } catch (e) {
+      // fall through to network
+    }
+
+    // Otherwise assume network URL
+    return CachedNetworkImage(
+      imageUrl: imageUrl,
+      fit: BoxFit.contain,
+      placeholder: (context, url) => Container(
+        color: Colors.grey[100],
+        child: const Center(child: CircularProgressIndicator()),
+      ),
+      errorWidget: (context, url, error) => Container(
+        color: Colors.grey[200],
+        height: 120,
+        child: const Center(child: Icon(Icons.broken_image)),
+      ),
+    );
+  }
+
+  /// Helper that checks if a bundled asset exists.
+  Future<bool> _assetExists(String assetPath) async {
+    try {
+      await rootBundle.load(assetPath);
+      return true;
+    } catch (_) {
+      return false;
+    }
+  }
+
+  /// Small wrapper that builds the tappable image section used in questions.
+  Widget _buildImageSection(String imgPath, bool isMobile, {bool expand = false}) {
+    final double height = expand ? (isMobile ? 280 : 380) : (isMobile ? 220 : 320);
+    return Center(
+      child: GestureDetector(
+        onTap: () {
+          showDialog(
+            context: context,
+            builder: (context) => Dialog(
+              insetPadding: const EdgeInsets.all(12),
+              child: InteractiveViewer(
+                child: _buildQuestionImageWidget(imgPath),
+              ),
+            ),
+          );
+        },
+        child: SizedBox(
+          height: height,
+          width: double.infinity,
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(12),
+            child: FittedBox(
+              fit: BoxFit.contain,
+              alignment: Alignment.topCenter,
+              child: ConstrainedBox(
+                constraints: BoxConstraints(maxWidth: isMobile ? MediaQuery.of(context).size.width : 700),
+                child: _buildQuestionImageWidget(imgPath),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
   Widget _buildQuestionCard(Question question, bool isMobile) {
+    // Determine image to show: prefer explicit imageUrl. If none, for ICT try a guessed asset
+    // but only render it if the asset actually exists in the bundled assets (avoids blank placeholder).
+    final String? explicitImage = (question.imageUrl != null && question.imageUrl!.isNotEmpty) ? question.imageUrl : null;
+  final String guessedAssetPath = 'assets/bece_ict/bece_ict_${question.year}_q_${question.questionNumber}.png';
+
     return Card(
       elevation: 4,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
@@ -659,6 +758,33 @@ class _QuizTakerPageState extends State<QuizTakerPage>
             ),
             
             const SizedBox(height: 24),
+
+            // Optional question image (asset or network).
+            // If the question doc provides an explicit imageUrl, show it.
+            // Otherwise, for ICT questions we attempt to guess the packaged asset path
+            // but only display it after verifying it exists in the asset bundle to avoid
+            // showing a broken/blank placeholder for questions without images.
+            if (explicitImage != null && explicitImage.isNotEmpty) ...[
+              _buildImageSection(explicitImage, isMobile),
+            ] else if (question.subject == Subject.ict && question.year == '2024' && question.questionNumber == 38) ...[
+              // Only attempt to show the guessed packaged ICT asset for this specific
+              // known question (ICT 2024 Q38). This avoids introducing guessed
+              // image placeholders/thumbnails for other ICT questions.
+              FutureBuilder<bool>(
+                future: _assetExists(guessedAssetPath),
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState != ConnectionState.done) {
+                    return const SizedBox();
+                  }
+                  if (snapshot.hasData && snapshot.data == true) {
+                    // For this specific case, expand the image area so it is visible on mobile.
+                    return _buildImageSection(guessedAssetPath, isMobile, expand: true);
+                  }
+                  return const SizedBox();
+                },
+              ),
+              const SizedBox(height: 24),
+            ],
             
             // Answer options
             ...(question.options ?? []).map((option) {

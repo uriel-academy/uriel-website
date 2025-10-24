@@ -35,6 +35,7 @@ dependencies:
   flutter_math_fork: ^0.7.2
   flutter_markdown: ^0.7.7+1
   uuid: ^4.4.0
+  flutter_svg: ^2.2.0
 
 dev_dependencies:
   flutter_test:
@@ -58,3 +59,4 @@ flutter:
     - assets/storybook_covers/
     - assets/leaderboards_rank/
     - assets/trivia/
+  # Added flutter_svg to support rendering packaged SVG assets for question figures

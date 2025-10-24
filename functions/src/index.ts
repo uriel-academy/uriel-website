@@ -4,18 +4,11 @@ import { z } from 'zod';
 import { scoreExam } from './lib/scoring';
 import { hasEntitlement, EntitlementType } from './util/entitlement';
 import { ingestDocs, ingestPDFs, ingestLocalPDFs, listPDFs } from './ai/ingest';
-import { aiChatHttp } from './ai/http_ai';
-import { aiChatCallable } from './ai/assistant';
-import { aiChatHttp as aiChatHttpSimple } from './ai/simple_ai_chat';
+import { aiChatHttp } from './aiChatHttp';
 import OpenAI from 'openai';
 import cors from 'cors';
 
-// Expose the simple HTTP handler under a new named export so we can deploy it
-export const aiChatSimple = aiChatHttpSimple;
-
-// Export callable aiChat (onCall) implemented in ai/assistant.ts so clients using
-// Firebase Functions SDK can call `httpsCallable('aiChat')`.
-export { aiChatCallable as aiChat };
+// Note: legacy ai handlers removed. Single consolidated HTTP handler `aiChatHttp` is used.
 
 // Lightweight CORS-safe aiChat HTTP endpoint for Flutter Web clients
 // Uses functions.config().openai.key — set with `firebase functions:config:set openai.key="..."`
@@ -1600,7 +1593,7 @@ export const importRMEQuestions = functions.https.onCall(async (data, context) =
   }
 });
 
-// Expose the HTTP wrapper for browsers that need CORS-enabled endpoint
+// Expose the consolidated HTTP handler
 export { aiChatHttp };
 
 // Expose PDF ingestion functions
@@ -1845,7 +1838,7 @@ export default {
   initialSetupAdmin,
   recommendationsDaily,
   recommendationsRunNow,
-  aiChatHttp: aiChatHttpSimple, // expose the simple HTTP handler as aiChatHttp for hosting
+  aiChatHttp: aiChatHttp, // expose the consolidated HTTP handler for hosting
   ingestDocs,
   ingestPDFs,
   ingestLocalPDFs,

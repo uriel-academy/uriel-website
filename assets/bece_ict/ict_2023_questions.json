@@ -1,0 +1,366 @@
+{
+  "year": 2023,
+  "subject": "Information and Communication Technology - ICT",
+  "multiple_choice": {
+    "q1": {
+      "question": "The start button is located on the",
+      "possibleAnswers": [
+        "A. taskbar.",
+        "B. menu bar.",
+        "C. tool bar.",
+        "D. status bar."
+      ]
+    },
+    "q2": {
+      "question": "An application window can be exited using an option on the",
+      "possibleAnswers": [
+        "A. dialogue box.",
+        "B. status bar.",
+        "C. control box.",
+        "D. scroll bar."
+      ]
+    },
+    "q3": {
+      "question": "In a spreadsheet application, when a user presses the tab key on the keyboard, the cursor moves",
+      "possibleAnswers": [
+        "A. below the active cell.",
+        "B. above the active cell.",
+        "C. to the left of the active cell.",
+        "D. to the right of the active cell."
+      ]
+    },
+    "q4": {
+      "question": "The type of alignment that positions the selected text for both left and right margins to be straight is termed",
+      "possibleAnswers": [
+        "A. justify.",
+        "B. center.",
+        "C. right align.",
+        "D. left align."
+      ]
+    },
+    "q5": {
+      "question": "The use of someone's intellectual property and presenting it as yours is called",
+      "possibleAnswers": [
+        "A. copyright infringement.",
+        "B. copyright law.",
+        "C. copyright ethics.",
+        "D. copyright protection."
+      ]
+    },
+    "q6": {
+      "question": "Computer virus can also be classified as computer",
+      "possibleAnswers": [
+        "A. firmware.",
+        "B. liveware.",
+        "C. software.",
+        "D. hardware,"
+      ]
+    },
+    "q7": {
+      "question": "Using two or more keys on the computer keyboard to perform an action is termed",
+      "possibleAnswers": [
+        "A. keyboard skills.",
+        "B. keyboard technology.",
+        "C. keyboard shortcut.",
+        "D. keyboard selection."
+      ]
+    },
+    "q8": {
+      "question": "A wrongly typed text in a word processing document will be prompted by the",
+      "possibleAnswers": [
+        "A. Find and Replace.",
+        "B. Grammar checker.",
+        "C. AutoCorrect.",
+        "D. Spell checker."
+      ]
+    },
+    "q9": {
+      "question": "Which of the following options is not a hardware component of a computer system?",
+      "possibleAnswers": [
+        "A. Input devices",
+        "B. Processing devices",
+        "C. Operating system",
+        "D. Storage devices"
+      ]
+    },
+    "q10": {
+      "question": "A file that is cut is temporarily sent to the",
+      "possibleAnswers": [
+        "A. clipboard.",
+        "B. scissors.",
+        "C. folder.",
+        "D. recycle bin."
+      ]
+    },
+    "q11": {
+      "question": "Which of the following devices provides the function as a pointing object on the screen?",
+      "possibleAnswers": [
+        "A. Digitizer",
+        "B. Bar code reader",
+        "C. Microphone",
+        "D. Touchpad"
+      ]
+    },
+    "q12": {
+      "question": "Numbering and bulleting tool in word processing application is located on the",
+      "possibleAnswers": [
+        "A. View menu.",
+        "B. Edit menu.",
+        "C. Insert menu.",
+        "D. Format menu."
+      ]
+    },
+    "q13": {
+      "question": "The information that a spreadsheet displays when a user inputs incorrect formula is called",
+      "possibleAnswers": [
+        "A. user message.",
+        "B. error message.",
+        "C. notification message.",
+        "D. system message."
+      ]
+    },
+    "q14": {
+      "question": "Which of the following is not a data storage unit in the field of computing?",
+      "possibleAnswers": [
+        "A. DB",
+        "B. GB",
+        "C. MB",
+        "D. KB"
+      ]
+    },
+    "q15": {
+      "question": "In word processing environment, text selection can also be referred to as text",
+      "possibleAnswers": [
+        "A. highlighting.",
+        "B. copying.",
+        "C. formatting.",
+        "D. editing."
+      ]
+    },
+    "q16": {
+      "question": "The platform provided by the operating system for user's interaction is called",
+      "possibleAnswers": [
+        "A. data interface.",
+        "B. computer interface.",
+        "C. image user interface.",
+        "D. graphical user interface."
+      ]
+    },
+    "q17": {
+      "question": "Digital data can be transferred over the telephone lines with the help of",
+      "possibleAnswers": [
+        "A. an adapter.",
+        "B. a wi-fi device.",
+        "C. a transformer.",
+        "D. a modem."
+      ]
+    },
+    "q18": {
+      "question": "The various forms of document view mode in word processing applications is located on the",
+      "possibleAnswers": [
+        "A. title bar.",
+        "B. taskbar.",
+        "C. status bar.",
+        "D. scroll bar."
+      ]
+    },
+    "q19": {
+      "question": "Both the hard disc drive and the floppy disk drive are examples of",
+      "possibleAnswers": [
+        "A. input device.",
+        "B. storage device.",
+        "C. storage media.",
+        "D. output device."
+      ]
+    },
+    "q20": {
+      "question": "The importance of password in an e-mail is to",
+      "possibleAnswers": [
+        "A. be a security measure in accessing the e-mail account.",
+        "B. verify the type of e-mail the user is sending.",
+        "C. provide another way of signing into the e-mail account.",
+        "D. hide the e-mail account from others."
+      ]
+    },
+    "q21": {
+      "question": "To print different pages of a document, enter the page numbers and separate them with a",
+      "possibleAnswers": [
+        "A. comma.",
+        "B. full stop.",
+        "C. question .",
+        "D. dash."
+      ]
+    },
+    "q22": {
+      "question": "One example of an input device is",
+      "possibleAnswers": [
+        "A. printer.",
+        "B. monitor.",
+        "C. stylus.",
+        "D. projector."
+      ]
+    },
+    "q23": {
+      "question": "Which finger is usually placed on the spacebar during typing?",
+      "possibleAnswers": [
+        "A. Index",
+        "B. Thumb",
+        "C. Little",
+        "D. Middle"
+      ]
+    },
+    "q24": {
+      "question": "When a user clicks on the start button, it displays",
+      "possibleAnswers": [
+        "A. deleted applications.",
+        "B. opened applications.",
+        "C. installed applications.",
+        "D. running applications."
+      ]
+    },
+    "q25": {
+      "question": "Working with the computer at the office makes a user more",
+      "possibleAnswers": [
+        "A. attentive.",
+        "B. creative.",
+        "C. active.",
+        "D. productive."
+      ]
+    },
+    "q26": {
+      "question": "The process where a user can save the address of a webpage so that it can be easily visited is called?",
+      "possibleAnswers": [
+        "A. History",
+        "B. Download",
+        "C. Book",
+        "D. Session"
+      ]
+    },
+    "q27": {
+      "question": "The step by step instructions that tell the computer what to do is",
+      "possibleAnswers": [
+        "A. a data.",
+        "B. a software.",
+        "C. an information.",
+        "D. a hardware."
+      ]
+    },
+    "q28": {
+      "question": "Personal images from a mobile phone or digital camera are best stored in",
+      "possibleAnswers": [
+        "A. My pictures.",
+        "B. My downloads.",
+        "C. My computer.",
+        "D. My documents."
+      ]
+    },
+    "q29": {
+      "question": "For a computer to be useful, the hardware must work together with the",
+      "possibleAnswers": [
+        "A. liveware components.",
+        "B. application software.",
+        "C. operating system.",
+        "D. peripheral devices."
+      ]
+    },
+    "q30": {
+      "question": "The process of gaining unauthorized access into a computer system is referred to as",
+      "possibleAnswers": [
+        "A. hacking.",
+        "B. unauthorized entry.",
+        "C. stealing.",
+        "D. unlawful access."
+      ]
+    },
+    "q31": {
+      "question": "To browse through webpages means to",
+      "possibleAnswers": [
+        "A. move through webpages for information.",
+        "B. locate webpages for information.",
+        "C. select webpages for information.",
+        "D. save webpages for information."
+      ]
+    },
+    "q32": {
+      "question": "Which of the following features will display the content of the active cell in a spreadsheet?",
+      "possibleAnswers": [
+        "A. Formula bar",
+        "B. Cell address",
+        "C. Name box",
+        "D. Column header"
+      ]
+    },
+    "q33": {
+      "question": "In computing environment, joystick is generally used to control",
+      "possibleAnswers": [
+        "A. the screen.",
+        "B. video games.",
+        "C. audio games.",
+        "D. the monitor."
+      ]
+    },
+    "q34": {
+      "question": "Which of the following options is not part of a spreadsheet data type?",
+      "possibleAnswers": [
+        "A. Word",
+        "B. Currency",
+        "C. Number",
+        "D. WordText"
+      ]
+    },
+    "q35": {
+      "question": "Which of the following applications makes teaching and learning easy and interesting?",
+      "possibleAnswers": [
+        "A. Word processor",
+        "B. Facebook",
+        "C. Spreadsheet",
+        "D. Educational Software"
+      ]
+    },
+    "q36": {
+      "question": "Information in the computer is represented in",
+      "possibleAnswers": [
+        "A. straight format.",
+        "B. analogue format.",
+        "C. digital format.",
+        "D. continuous format."
+      ]
+    },
+    "q37": {
+      "question": "E-mail messages are sent through",
+      "possibleAnswers": [
+        "A. e-mail account.",
+        "B. e-mail address.",
+        "C. e-mail password.",
+        "D. e-mail username."
+      ]
+    },
+    "q38": {
+      "question": "DVD mostly used in computer is a type of",
+      "possibleAnswers": [
+        "A. magnetic disc.",
+        "B. optical disc.",
+        "C. optical drive.",
+        "D. magnetic drive."
+      ]
+    },
+    "q39": {
+      "question": "Which of the following symbols is not part of a website address?",
+      "possibleAnswers": [
+        "A. :",
+        "B. ''",
+        "C. =",
+        "D. /"
+      ]
+    },
+    "q40": {
+      "question": "The process of pressing and releasing the default mouse button once is best called",
+      "possibleAnswers": [
+        "A. selecting.",
+        "B. clicking.",
+        "C. pointing.",
+        "D. dragging."
+      ]
+    }
+  }
+}

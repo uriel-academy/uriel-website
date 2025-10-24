@@ -1,0 +1,76 @@
+{
+  "totalLines": 25,
+  "processed": 17,
+  "skipped": 8,
+  "errors": [],
+  "created": [
+    {
+      "line": 1,
+      "id": "socialstudies_f9b88381697a873d"
+    },
+    {
+      "line": 3,
+      "id": "socialstudies_d0c934217eab7c02"
+    },
+    {
+      "line": 4,
+      "id": "socialstudies_12c8b0abf7607411"
+    },
+    {
+      "line": 5,
+      "id": "socialstudies_677080c6b2ff9c07"
+    },
+    {
+      "line": 6,
+      "id": "socialstudies_c4905572bbd10dae"
+    },
+    {
+      "line": 7,
+      "id": "socialstudies_a3e7f5e9a0c3e422"
+    },
+    {
+      "line": 8,
+      "id": "socialstudies_7ad63f233b3a6502"
+    },
+    {
+      "line": 9,
+      "id": "socialstudies_27ee32207233774d"
+    },
+    {
+      "line": 10,
+      "id": "socialstudies_6ece1b2574b1695f"
+    },
+    {
+      "line": 12,
+      "id": "socialstudies_4a69682be1f0ce25"
+    },
+    {
+      "line": 13,
+      "id": "socialstudies_bc6275c464415a6e"
+    },
+    {
+      "line": 15,
+      "id": "socialstudies_825b3c0648be2352"
+    },
+    {
+      "line": 16,
+      "id": "socialstudies_ff4bc108fdc2bc3e"
+    },
+    {
+      "line": 18,
+      "id": "socialstudies_a97c923f0b8f5502"
+    },
+    {
+      "line": 20,
+      "id": "socialstudies_1d7fcf94f4ba3734"
+    },
+    {
+      "line": 22,
+      "id": "socialstudies_5e17f34d7e551564"
+    },
+    {
+      "line": 24,
+      "id": "socialstudies_a4ef3306952b00c6"
+    }
+  ]
+}

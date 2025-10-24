@@ -1,0 +1,366 @@
+{
+  "year": 2024,
+  "subject": "Information and Communication Technology - ICT",
+  "multiple_choice": {
+    "q1": {
+      "question": "A student in the computer laboratory wants to change the style, size and colour of a typeface in Microsoft Word application. The appropriate tool to be used is",
+      "possibleAnswers": [
+        "A. font.",
+        "B. styles.",
+        "C. clipboard.",
+        "D. paragraph."
+      ]
+    },
+    "q2": {
+      "question": "A quiz master asked participants to complete the statement: whiles the Internet Explorer is used to access information from the internet, Windows File Explorer is used to",
+      "possibleAnswers": [
+        "A. browse the internet using explorer.",
+        "B. edit files in the explorer window.",
+        "C. Manage and organize files and folders.",
+        "D. Manage and organize music and videos."
+      ]
+    },
+    "q3": {
+      "question": "The concept of Artificial Intelligence's ability to suggest related information to a user who regularly surfs the internet is referred to as",
+      "possibleAnswers": [
+        "A. deep learning.",
+        "B. neural network.",
+        "C. computer vision.",
+        "D. logical reasoning."
+      ]
+    },
+    "q4": {
+      "question": "A blog has many sections. The purpose of the comment section is to",
+      "possibleAnswers": [
+        "A. share personal information with readers.",
+        "B. promote other blogs on the same platform.",
+        "C. engage with readers and encourage discussion.",
+        "D. sell products and services to readers and friends."
+      ]
+    },
+    "q5": {
+      "question": "In a printing industry, the device that uses the mechanism of laying down a transparent dye and melting dots of wax-based ink to produce an output is a",
+      "possibleAnswers": [
+        "A. wax heater.",
+        "B. wax printer.",
+        "C. thermal heater.",
+        "D. thermal printer."
+      ]
+    },
+    "q6": {
+      "question": "Collaborative robot is a category of robots that",
+      "possibleAnswers": [
+        "A. works alongside humans.",
+        "B. paints pictures for commercial sake.",
+        "C. makes both fast and slow movements.",
+        "D. dances to audience for entertainment."
+      ]
+    },
+    "q7": {
+      "question": "A student inserted a picture into a Microsoft PowerPoint presentation and needed to work on the picture to adjust the brightness and contrast to make it more clearer. The best tool to help the student achieve the task is",
+      "possibleAnswers": [
+        "A. Picture Size.",
+        "B. Format Picture.",
+        "C. Picture Layout.",
+        "D. Picture Effects."
+      ]
+    },
+    "q8": {
+      "question": "A student is watching video from a pen drive using a computer. The process the computer uses to access the video from the pen drive is known as",
+      "possibleAnswers": [
+        "A. burning.",
+        "B. caching.",
+        "C. reading.",
+        "D. writing."
+      ]
+    },
+    "q9": {
+      "question": "What does the formula = IF(A1>10,\"Pass\",\"Fail\") do in a Spreadsheet application?",
+      "possibleAnswers": [
+        "A. Checks if the value in cell A1 is equal to 10 and returns Fail",
+        "B. Checks if the value in cell A1 is less than 10 and returns Pass",
+        "C. Checks if the value in cell A1 is greater than 10 and returns Fail",
+        "D. Checks if the value in cell A1 is greater than 10 and returns Pass"
+      ]
+    },
+    "q10": {
+      "question": "A teacher tasked students to demonstrate an activity using a flowchart diagram. The appropriate symbol to use at the processing stage of the activity is",
+      "possibleAnswers": [
+        "A. oval.",
+        "B. rhombus.",
+        "C. rectangle.",
+        "D. parallelogram."
+      ]
+    },
+    "q11": {
+      "question": "Settings and permissions that are specific to a user and determines the activities the user can perform on windows environment on the computer is known as",
+      "possibleAnswers": [
+        "A. log.",
+        "B. account.",
+        "C. customization.",
+        "D. configuration."
+      ]
+    },
+    "q12": {
+      "question": "Good health practice suggests that we take intermittent breaks while working. The importance of taking breaks during prolonged computer use is to",
+      "possibleAnswers": [
+        "A. increase productivity in users.",
+        "B. conserve energy in the computer.",
+        "C. avoid eye strain and muscle fatigue.",
+        "D. increase screen time when working."
+      ]
+    },
+    "q13": {
+      "question": "Four students in a class wrote the following function in Microsoft Excel. Which of the functions written by the students will return an output?",
+      "possibleAnswers": [
+        "A. =SUM(10A:A17)",
+        "B. =SUM(10A:17A)",
+        "C. =SUM(A10:A17)",
+        "D. =SUM(A10:17A)"
+      ]
+    },
+    "q14": {
+      "question": "To demonstrate to a class, the steps to be taken to create a PivotTable from a set of data in Microsoft Excel worksheet, click on",
+      "possibleAnswers": [
+        "A. Home Tab, then PivotTable.",
+        "B. Insert Tab, then PivotTable.",
+        "C. Data Tab, then PivotTable.",
+        "D. View Tab, then PivotTable"
+      ]
+    },
+    "q15": {
+      "question": "In a computer shop, the attendant advised a customer to buy the fifth generation computer due to its feature that uses",
+      "possibleAnswers": [
+        "A. transistors.",
+        "B. vacuum tubes.",
+        "C. microprocessors.",
+        "D. artificial intelligence."
+      ]
+    },
+    "q16": {
+      "question": "The social media platform that allows members to post questions, start a discussion or contribute to various discussions is",
+      "possibleAnswers": [
+        "A. Forums.",
+        "B. Facebook.",
+        "C. Messenger.",
+        "D. WhatsApp"
+      ]
+    },
+    "q17": {
+      "question": "The introduction of Artificial Intelligence as come with its related ethical concerns such as",
+      "possibleAnswers": [
+        "A. job creation.",
+        "B. bias algorithm.",
+        "C. improved healthcare.",
+        "D. increased productivity."
+      ]
+    },
+    "q18": {
+      "question": "A user who selected 4 x 3 in the insert table grid in a Word document will insert",
+      "possibleAnswers": [
+        "A. 4 tables.",
+        "B. 12 tables.",
+        "C. a table of 4 rows and 3 columns.",
+        "D. a table of 4 columns and 3 rows."
+      ]
+    },
+    "q19": {
+      "question": "The Screenshot feature under the Insert Tab of a Microsoft PowerPoint application allows a user to insert a screenshot of",
+      "possibleAnswers": [
+        "A. active application.",
+        "B. opened applications.",
+        "C. foreground applications.",
+        "D. downloaded applications."
+      ]
+    },
+    "q20": {
+      "question": "The examination scores in Computing of a class was entered into a Microsoft Excel worksheet. The appropriate function for finding the largest score in the class is",
+      "possibleAnswers": [
+        "A. AVG.",
+        "B. MIN.",
+        "C. MAX.",
+        "D. SUM."
+      ]
+    },
+    "q21": {
+      "question": "In pseudocode, the keyword FOR indicates",
+      "possibleAnswers": [
+        "A. variables or constants in the code.",
+        "B. input or output structure in the code.",
+        "C. decision control structure in the code.",
+        "D. loop with fixed number of iterations in the code."
+      ]
+    },
+    "q22": {
+      "question": "The central device that communicates with other network devices and manages resources is a",
+      "possibleAnswers": [
+        "A. hub.",
+        "B. client.",
+        "C. server.",
+        "D. switch."
+      ]
+    },
+    "q23": {
+      "question": "A user is to apply predefined formatting styles to texts in Microsoft PowerPoint application. The best features to use is",
+      "possibleAnswers": [
+        "A. WordArt.",
+        "B. Text Effects.",
+        "C. Font Colour.",
+        "D. Quick Styles."
+      ]
+    },
+    "q24": {
+      "question": "The robotic club of a school is to construct a robot to be able to detect objects around it. The most appropriate sensor to be used is",
+      "possibleAnswers": [
+        "A. light sensor.",
+        "B. tactile sensor.",
+        "C. torque sensor.",
+        "D. proximity sensor."
+      ]
+    },
+    "q25": {
+      "question": "A teacher tasked her students to create a date with year, month and day format. The most appropriate Microsoft Excel function to achieve the date format is",
+      "possibleAnswers": [
+        "A. DATE().",
+        "B. DATEDIF().",
+        "C. CURDATE().",
+        "D. DATEVALUE()."
+      ]
+    },
+    "q26": {
+      "question": "cybercriminals can obstruct data in transmission to and from a device or a network using a data threat attack technique called",
+      "possibleAnswers": [
+        "A. fabrication.",
+        "B. interruption.",
+        "C. interception.",
+        "D. modification."
+      ]
+    },
+    "q27": {
+      "question": "A teacher sends class assignment to his students using an e-mail. The protocol used by the e-mail to send the assignment over the internet is",
+      "possibleAnswers": [
+        "A. FTP",
+        "B. TCP",
+        "C. HTTP",
+        "D. SMTP"
+      ]
+    },
+    "q28": {
+      "question": "The Merge & Centre button in a Spreadsheet application is used to",
+      "possibleAnswers": [
+        "A. select multiple cells and center the content.",
+        "B. create a new worksheet and center the content.",
+        "C. combine and center the content of selected cells.",
+        "D. combine and center the content of the worksheet."
+      ]
+    },
+    "q29": {
+      "question": "Arku entered 20 into a computer as quantity of pencils bought. How will the figure be represented in the computer for processing?",
+      "possibleAnswers": [
+        "A. 10010",
+        "B. 10011",
+        "C. 10100",
+        "D. 11001"
+      ]
+    },
+    "q30": {
+      "question": "Cindy was trying to access information from the WAEC website but whenever she enters the URL, it takes her to a different website. Her friend advised that she must ensure the URL entered is correct because it identifies",
+      "possibleAnswers": [
+        "A. ads in the web resource.",
+        "B. the texts of the web resource.",
+        "C. the address of the web resource.",
+        "D. graphics used in the web resource."
+      ]
+    },
+    "q31": {
+      "question": "In Desktop Publishing, a user can create a new document through the following ways except for",
+      "possibleAnswers": [
+        "A. print publication.",
+        "B. built-in template.",
+        "C. blank publication.",
+        "D. featured template."
+      ]
+    },
+    "q32": {
+      "question": "The Desktop Publishing feature that best helps a user to align objects, texts and elements in a publication is called",
+      "possibleAnswers": [
+        "A. ruler.",
+        "B. layout.",
+        "C. guides.",
+        "D. margins."
+      ]
+    },
+    "q33": {
+      "question": "One of your classmates continuously sends threat messages through social media platforms to you. This act is known as",
+      "possibleAnswers": [
+        "A. cyberattack.",
+        "B. cyberstalking.",
+        "C. cybersecurity.",
+        "D. cyberbullying."
+      ]
+    },
+    "q34": {
+      "question": "A computing project work requires students to design a blog for a school. The best item to be used for customizing the blog is the school's",
+      "possibleAnswers": [
+        "A. flag.",
+        "B. logo.",
+        "C. crest.",
+        "D. uniform."
+      ]
+    },
+    "q35": {
+      "question": "Computer manufacturing went through series of developmental stages with each stage characterized by a unique technological advancement. The use of integrated circuits is a characteristics of the",
+      "possibleAnswers": [
+        "A. first generation.",
+        "B. second generation.",
+        "C. third generation.",
+        "D. fourth generation."
+      ]
+    },
+    "q36": {
+      "question": "In computer programming, debugging is a technique used to",
+      "possibleAnswers": [
+        "A. test the code.",
+        "B. fix errors in the code.",
+        "C. create bugs intentionally.",
+        "D. write code to play games."
+      ]
+    },
+    "q37": {
+      "question": "Which of the following services best describes an entrepreneurial opportunity in computer networking?",
+      "possibleAnswers": [
+        "A. Teaching desktop publishing in schools",
+        "B. Developing game applications for schools",
+        "C. Designing websites for businesses and schools",
+        "D. Setting up Wi-Fi networks for cafes and schools"
+      ]
+    },
+    "q38": {
+      "question": "The peripheral device shown in Figure 1 is used to capture",
+      "possibleAnswers": [
+       "A. audio data",
+        "B. video data",
+        "C. image data",
+        "D. textual data"
+      ]
+    },
+    "q39": {
+      "question": "The practice of the use of computers and related electronic resources in an environmentally responsible manner is termed",
+      "possibleAnswers": [
+        "A. ergonomics.",
+        "B. green computing.",
+        "C. safety precautions.",
+        "D. environmental friendliness."
+      ]
+    },
+    "q40": {
+      "question": "Social media users can regulate the type of information they share on their pages. Privacy setting which is one of such activities they can regulate is to",
+      "possibleAnswers": [
+        "A. make posts visible to everyone.",
+        "B. prevent one from using the platform.",
+        "C. automatically share posts with everyone.",
+        "D. control who can see one's posts and information."
+      ]
+    }
+  }
+}

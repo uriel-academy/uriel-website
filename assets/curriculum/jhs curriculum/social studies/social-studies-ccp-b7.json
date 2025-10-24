@@ -1,0 +1,330 @@
+{
+  "curriculum": {
+    "B7": {
+      "Strand 1: Environment": {
+        "Sub-strand 1: Environmental Issues": [
+          {
+            "contentStandardCode": "B7.1.1.1",
+            "contentStandard": "Demonstrate skills in dealing with environmental challenges",
+            "indicators": [
+              {
+                "code": "B7.1.1.1.1",
+                "indicator": "Examine ways of dealing with sanitation challenges in the environment",
+                "exemplars": [
+                  "Explain: (i) Environment (ii) Sanitation",
+                  "Discuss the types of environment (physical and social).",
+                  "Identify some environmental problems, including poor sanitation.",
+                  "Examine cultural practices and their related problems for sanitation in the community.",
+                  "Discuss the effects of poor sanitation practices.",
+                  "Identify different ways of managing sanitation problems.",
+                  "Embark on a project with the aim of managing sanitation problems in the community."
+                ],
+                "coreCompetencies": {
+                  "clusters": [
+                    "Critical Thinking and Problem Solving (CP)",
+                    "Communication and Collaboration (CC)",
+                    "Creativity and Innovation (CI)"
+                  ],
+                  "details": [
+                    "CP 5.1: Ability to combine information and ideas from several sources to reach a conclusion.",
+                    "CP 5.2: Analyse and make distinct judgment about viewpoints expressed in an argument.",
+                    "CP 6.1: Ability to effectively define goals towards solving a problem.",
+                    "CP 6.2: Ability to explain plans for attaining goals.",
+                    "CC 7.1: Identify words or sentences in context appropriately.",
+                    "CC 7.2: Interpret correctly and respond to non-verbal communication such as facial expressions, cues and gestures.",
+                    "CC 8.1: Speak clearly and explain ideas; share a narrative or extended answer while speaking to a group.",
+                    "CI 5.1: Examine alternatives in creating new things.",
+                    "CI 6.1: Exhibit strong memory, intuitive thinking, and respond appropriately.",
+                    "CI 6.4: Imagining and seeing things in a different way."
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "contentStandardCode": "B7.1.1.2",
+            "contentStandard": "Examine the sources of energy and demonstrate the skills of conserving energy in Ghana",
+            "indicators": [
+              {
+                "code": "B7.1.1.2.1",
+                "indicator": "Examine the sources of energy.",
+                "exemplars": [
+                  "Explain energy.",
+                  "Through the use of internet, videos or pictures, describe the sources of energy in Ghana, including fuel wood, hydro, solar and thermal.",
+                  "In groups, categorise sources of energy into renewable and non-renewable."
+                ],
+                "coreCompetencies": {
+                  "clusters": [
+                    "Critical Thinking and Problem Solving (CP)",
+                    "Communication and Collaboration (CC)",
+                    "Personal Development and Leadership (PL)",
+                    "Digital Literacy (DL)"
+                  ],
+                  "details": [
+                    "CP 5.1: Ability to combine information and ideas from several sources to reach a conclusion.",
+                    "CP 5.2: Analyse and make distinct judgment about viewpoints expressed in an argument.",
+                    "CC 8.1: Speak clearly and explain ideas; share a narrative or extended answer while speaking to a group.",
+                    "CC 9.1: Demonstrate behaviour and skills of working towards group goals.",
+                    "PL 6.1: Ability to serve group members effectively.",
+                    "PL 6.3: Ability to manage time effectively.",
+                    "DL 5.1: Ascertain when information is needed and identify, locate, evaluate and effectively use it to solve a problem.",
+                    "DL 6.3: Use digital tools to create novel things."
+                  ]
+                }
+              },
+              {
+                "code": "B7.1.1.2.2",
+                "indicator": "Examine the benefits of using renewable energy.",
+                "exemplars": [],
+                "coreCompetencies": {
+                  "clusters": [
+                    "CP",
+                    "CC",
+                    "CC 9.1"
+                  ],
+                  "details": [
+                    "CP 5.2: Analyse and make distinct judgment about viewpoints expressed in an argument.",
+                    "CC 8.1: Speak clearly and explain ideas; share a narrative or extended answer while speaking to a group.",
+                    "CC 9.1: Demonstrate behaviour and skills of working towards group goals."
+                  ]
+                }
+              },
+              {
+                "code": "B7.1.1.2.3",
+                "indicator": "Examine the benefits of using non-renewable energy sources.",
+                "exemplars": [],
+                "coreCompetencies": {
+                  "clusters": [
+                    "CP",
+                    "CC",
+                    "CC 9.1"
+                  ],
+                  "details": [
+                    "CP 5.2: Analyse and make distinct judgment about viewpoints expressed in an argument.",
+                    "CC 8.1: Speak clearly and explain ideas; share a narrative or extended answer while speaking to a group.",
+                    "CC 9.1: Demonstrate behaviour and skills of working towards group goals."
+                  ]
+                }
+              },
+              {
+                "code": "B7.1.1.2.4",
+                "indicator": "Discuss and design posters to show how different sources of energy are used.",
+                "exemplars": [],
+                "coreCompetencies": {
+                  "clusters": [
+                    "CP",
+                    "CC",
+                    "CC 9.1",
+                    "PL"
+                  ],
+                  "details": [
+                    "CP 5.2: Analyse and make distinct judgment about viewpoints expressed in an argument.",
+                    "CC 8.1: Speak clearly and explain ideas; share a narrative or extended answer while speaking to a group.",
+                    "CC 9.1: Demonstrate behaviour and skills of working towards group goals.",
+                    "PL 6.1: Serve group members effectively.",
+                    "PL 6.3: Manage time effectively."
+                  ]
+                }
+              },
+              {
+                "code": "B7.1.1.2.5",
+                "indicator": "Discuss how sun or wind can be used to heat or perform work.",
+                "exemplars": [],
+                "coreCompetencies": {
+                  "clusters": [
+                    "CP",
+                    "CC",
+                    "CC 9.1",
+                    "PL"
+                  ],
+                  "details": [
+                    "CP 5.2",
+                    "CC 8.1",
+                    "CC 9.1",
+                    "PL 6.1",
+                    "PL 6.3"
+                  ]
+                }
+              },
+              {
+                "code": "B7.1.1.2.6",
+                "indicator": "Identify ways of using energy efficiently.",
+                "exemplars": [],
+                "coreCompetencies": {
+                  "clusters": [
+                    "CP",
+                    "CC",
+                    "CC 9.1"
+                  ],
+                  "details": [
+                    "CP 5.2",
+                    "CC 8.1",
+                    "CC 9.1"
+                  ]
+                }
+              },
+              {
+                "code": "B7.1.1.2.7",
+                "indicator": "Discuss why Ghana sometimes imports energy.",
+                "exemplars": [],
+                "coreCompetencies": {
+                  "clusters": [
+                    "CP",
+                    "CC",
+                    "CC 9.1",
+                    "PL"
+                  ],
+                  "details": [
+                    "CP 5.2",
+                    "CC 8.1",
+                    "CC 9.1",
+                    "PL 6.1",
+                    "PL 6.3"
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "Sub-strand 2: Mapping Skills": [
+          {
+            "contentStandardCode": "B7.1.2.1",
+            "contentStandard": "Demonstrate a range of mapping skills",
+            "indicators": [
+              {
+                "code": "B7.1.2.1.1",
+                "indicator": "Demonstrate skills involved in mapping and locating places in the environment",
+                "exemplars": [
+                  "Explain the following concepts: “maps” and “scale”.",
+                  "Identify types of maps (street maps, landscape/physical maps, national maps) using an atlas.",
+                  "Explore the importance of maps to different people (airline managers, fisherfolk, farmers, a family moving to a city).",
+                  "Identify components of maps: north arrow, scale, key (physical features such as rivers, lakes, mountains, coastline; human features such as settlements, plantations, industrial developments) using names, symbols, colours.",
+                  "Sketch a map of the school compound, marking the main features.",
+                  "Locate important landmarks in the community using maps (e.g., “the bank is 500 metres north of the JHS”)."
+                ],
+                "coreCompetencies": {
+                  "clusters": [
+                    "CP",
+                    "CC",
+                    "PL",
+                    "DL"
+                  ],
+                  "details": [
+                    "CP 5.1: Combine information and ideas from several sources to reach a conclusion.",
+                    "CC 8.1: Speak clearly and explain ideas; share an extended answer to a group.",
+                    "DL 5.1: Identify, locate, evaluate and use information to solve a problem.",
+                    "DL 6.3: Use digital tools to create novel things.",
+                    "DL 5.3: Find and utilise digital content.",
+                    "CI 5.5: Try new alternatives and different approaches.",
+                    "CI 6.3: Select the most effective creative tools and explain choices."
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "Sub-strand 3: Understanding Our Natural World": [
+          {
+            "contentStandardCode": "B7.1.3.1",
+            "contentStandard": "Show understanding of the world around us",
+            "indicators": [
+              {
+                "code": "B7.1.3.1.1",
+                "indicator": "Examine major physical features of the earth",
+                "exemplars": [
+                  "Identify major features of the earth such as mountain ranges, rivers, oceans, hot deserts and tropical rainforest.",
+                  "Using maps, locate: (i) Mountain ranges (Akuapim-Togo, Gambaga, Kwahu, Himalayas, Rockies, Andes, Alps); (ii) Rivers (Bia, Tano, Ankobra, Pra, Densu, Volta, Nile, Niger, Congo, Ganges, Yangtze, Amazon, Mississippi); (iii) Oceans (Atlantic, Arctic, Southern, Indian, Pacific); (iv) Hot deserts (Sahara, Kalahari, Gobi, Arabian); (v) Tropical rainforests (Amazon Rainforest).",
+                  "Discuss human activities that affect mountain ranges, rivers and oceans, and ways of protecting them.",
+                  "Discuss effects of plastic pollution on streams, ponds, rivers, dams, lakes and oceans."
+                ],
+                "coreCompetencies": {
+                  "clusters": [
+                    "CP",
+                    "CI",
+                    "CC",
+                    "DL"
+                  ],
+                  "details": [
+                    "CP 5.6: Demonstrate a thorough understanding of generalised concepts and task-specific facts.",
+                    "CP 5.1: Combine information and ideas from several sources to reach a conclusion.",
+                    "CI 5.4: Visualise alternatives; see possibilities, problems and challenges.",
+                    "CI 6.4: Imagining and seeing things in a different way.",
+                    "CC 8.1: Speak clearly and explain ideas; share extended answers to a group.",
+                    "CC 9.1: Demonstrate skills for working toward group goals.",
+                    "DL 5.1: Identify, locate, evaluate and use information to solve a problem."
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "contentStandardCode": "B7.1.3.2",
+            "contentStandard": "Assess the issue of natural disasters and their management",
+            "indicators": [
+              {
+                "code": "B7.1.3.2.1",
+                "indicator": "Examine natural disasters in the environment",
+                "exemplars": [
+                  "Explain natural disasters.",
+                  "Watch documentaries on natural disasters.",
+                  "Mention examples: flood, drought, landslide, wildfire, earthquake, sea erosion.",
+                  "Identify natural disasters in Ghana.",
+                  "Suggest ways to manage disasters.",
+                  "Discuss the role of GMA and NADMO in early detection and management."
+                ],
+                "coreCompetencies": {
+                  "clusters": [
+                    "CP",
+                    "CI",
+                    "CC",
+                    "DL"
+                  ],
+                  "details": [
+                    "CP 5.6: Thorough understanding of concepts and task-specific facts.",
+                    "CP 5.5: Effectively evaluate success of solutions used to solve complex problems.",
+                    "CC 8.1: Speak clearly and explain ideas; share extended answers to a group.",
+                    "DL 6.5: Recognise societal issues from use of digital technologies."
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "Strand 2: Family Life": {
+        "Sub-strand 1: Adolescent Reproductive Health": [
+          {
+            "contentStandardCode": "B7.2.1.1",
+            "contentStandard": "Demonstrate understanding of adolescent behaviour and reproductive health issues",
+            "indicators": [
+              {
+                "code": "B7.2.1.1.1",
+                "indicator": "Examine issues on adolescent behaviour and reproductive health",
+                "exemplars": [
+                  "Explain the concepts: (i) Adolescence (ii) Reproductive Health",
+                  "Discuss adolescent behaviours, including chastity, that support reproductive health.",
+                  "In groups, discuss why healthy behaviour during adolescence is important for the individual and the country.",
+                  "Invite a resource person (e.g., doctor or nurse) to discuss how some adolescent behaviours can harm reproductive health."
+                ],
+                "coreCompetencies": {
+                  "clusters": [
+                    "CP",
+                    "PL",
+                    "CC"
+                  ],
+                  "details": [
+                    "CP 5.1: Combine information and ideas from several sources to reach a conclusion.",
+                    "CC 8.1: Speak clearly and explain ideas; share extended answers to a group.",
+                    "CC 9.1: Demonstrate behaviour and skills of working towards group goals."
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "Sub-strand 3: Socialisation": [],
+        "Sub-strand 4: Population": []
+      }
+    }
+  }
+}

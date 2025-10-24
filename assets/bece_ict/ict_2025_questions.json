@@ -1,0 +1,366 @@
+{
+  "year": 2025,
+  "subject": "Information and Communication Technology - ICT",
+  "multiple_choice": {
+    "q1": {
+      "question": "A programmer has indented the codes in the program being written. The purpose of the indentation is to",
+      "possibleAnswers": [
+        "A. make the code difficult to read by users.",
+        "B. hide the code from others when writing it.",
+        "C. create bugs in the program to disturb the codes.",
+        "D. show the start and end of a conditional statement."
+      ]
+    },
+    "q2": {
+      "question": "At the Internet cafe, Kofi connected his laptop to the Internet without using cable and Akua also connected her laptop to the Internet using cable. An example of Akua's connection type is",
+      "possibleAnswers": [
+        "A. Infrared",
+        "B. Bluetooth",
+        "C. Wi-Fi adaptor",
+        "D. Ethernet adapter"
+      ]
+    },
+    "q3": {
+      "question": "In a group presentation, a group was to demonstrate how to insert an online video into a slide they have created. The first step to be considered by the group is to click on the",
+      "possibleAnswers": [
+        "A. Insert tab.",
+        "B. Design tab.",
+        "C. Online video.",
+        "D. Download video."
+      ]
+    },
+    "q4": {
+      "question": "A man shared his property to his children and wife in a particular ratio. The most appropriate chart type that can be used to represent the sharing of the property is",
+      "possibleAnswers": [
+        "A. pie chart.",
+        "B. bar chart.",
+        "C. line chart.",
+        "D. scatter chart."
+      ]
+    },
+    "q5": {
+      "question": "Robotic systems have components that relates to the functioning of the human organs. The component of the robot that acts like the human brain is the",
+      "possibleAnswers": [
+        "A. motors.",
+        "B. sensors.",
+        "C. batteries.",
+        "D. controllers."
+      ]
+    },
+    "q6": {
+      "question": "A programmer uses a good algorithm to write a software. The algorithm being used is characterized by the following except",
+      "possibleAnswers": [
+        "A. efficiency.",
+        "B. simplicity.",
+        "C. correctness.",
+        "D. complexity."
+      ]
+    },
+    "q7": {
+      "question": "Miss Fatima, the computing teacher taught the class basic programming terms. Explain to your friend what Miss Fatima said. Pseudocode is",
+      "possibleAnswers": [
+        "A. compiled programming codes.",
+        "B. structured programming symbols.",
+        "C. flowchart decisions using symbols.",
+        "D. step-by-step outline of a program using informal language."
+      ]
+    },
+    "q8": {
+      "question": "The computing teacher during computing class advised the students that, studying computer networking provides entrepreneurial opportunities. Which of the following statements in your opinion justifies the advise given to the students?",
+      "possibleAnswers": [
+        "A. Offering consulting services",
+        "B. Developing video games online",
+        "C. Creating social media platforms",
+        "D. Designing smartphone Apps for schools"
+      ]
+    },
+    "q9": {
+      "question": "In a computing class, a video of a user who gained unauthorized access into an organization's computer system was shown and discussed. The user's act in the video is termed",
+      "possibleAnswers": [
+        "A. hacking.",
+        "B. encryption.",
+        "C. cyberbully.",
+        "D. authentication."
+      ]
+    },
+    "q10": {
+      "question": "To make teaching and learning of computing more interactive, the teacher intends to demonstrate an activity by showing diagrams, images and videos on a large screen in the classroom. The most appropriate device to achieve this objective by the teacher is a",
+      "possibleAnswers": [
+        "A. printer.",
+        "B. plotter.",
+        "C. monitor.",
+        "D. projector."
+      ]
+    },
+    "q11": {
+      "question": "The graphic tablet is a kind of device used to capture",
+      "possibleAnswers": [
+        "A. RFID signals.",
+        "B. QR code scans.",
+        "C. magnetic card data.",
+        "D. handwritings, drawings and inputs."
+      ]
+    },
+    "q12": {
+      "question": "After replacing his old smartphone with a new one, Muba cannot access most of his saved contacts. His friend advised that, he should have saved the contacts in an e-mail environment. The feature that would have allowed Muba to save and organize the contacts in the e-mail environment is referred to as",
+      "possibleAnswers": [
+        "A. draft.",
+        "B. folders.",
+        "C. attach files.",
+        "D. address book."
+      ]
+    },
+    "q13": {
+      "question": "Text formatting options in Word processing applications include",
+      "possibleAnswers": [
+        "A. subscript.",
+        "B. underline.",
+        "C. superscript.",
+        "D. strikethrough."
+      ]
+    },
+    "q14": {
+      "question": "A school prefect approached the computing club to guide him design a presentation using Microsoft PowerPoint. The prefect intends to practice the presentation and record the time spent for each slide to make his presentation run smooth. The best feature the computing club will suggest to the prefect is",
+      "possibleAnswers": [
+        "A. presenter notes.",
+        "B. presenter feature.",
+        "C. rehearse feature.",
+        "D. rehearse timings."
+      ]
+    },
+    "q15": {
+      "question": "Which of the following terminologies is associated with computer network?",
+      "possibleAnswers": [
+        "A. Junk",
+        "B. Trojan",
+        "C. Firewall",
+        "D. Defragmenter"
+      ]
+    },
+    "q16": {
+      "question": "What value will the Microsoft Excel function = COUNT(A1:A10) return?",
+      "possibleAnswers": [
+        "A. 1",
+        "B. 9",
+        "C. 10",
+        "D. 11"
+      ]
+    },
+    "q17": {
+      "question": "The term multimedia is widely used in several areas in the computing environment. What will you tell the computing teacher about function of a multimedia feature in Word processing application?",
+      "possibleAnswers": [
+        "A. It converts texts into audio formats.",
+        "B. It translates texts into different languages.",
+        "C. It removes images from word document.",
+        "D. It adds interactive elements like buttons and links."
+      ]
+    },
+    "q18": {
+      "question": "In a Desktop Publishing project work, a student's work contained more text than it can display. This situation is best described as",
+      "possibleAnswers": [
+        "A. layout.",
+        "B. template.",
+        "C. overflow.",
+        "D. alignment."
+      ]
+    },
+    "q19": {
+      "question": "A designer consistently reminds his staff to use template in Desktop publishing because it helps to",
+      "possibleAnswers": [
+        "A. create documents in unique ways.",
+        "B. provide a starting point for document design.",
+        "C. decorate the document for distribution to others.",
+        "D. provide an opportunity for users to print their work."
+      ]
+    },
+    "q20": {
+      "question": "A quiz master asked participants to complete the statement: while download folder is the default location for downloaded files, my recent folder is the default location for documents",
+      "possibleAnswers": [
+        "A. just printed.",
+        "B. to be saved.",
+        "C. just worked on.",
+        "D. to be worked on."
+      ]
+    },
+    "q21": {
+      "question": "The role of neural networks in Artificial Intelligence in modern technology is to",
+      "possibleAnswers": [
+        "A. control robots within their environment for work and safety.",
+        "B. enhance Internet speed for fast movements of the robots.",
+        "C. create computer virus for robots to find solutions to them.",
+        "D. simulate human brain function for learning and problem-solving."
+      ]
+    },
+    "q22": {
+      "question": "Robots are used in many areas of the society. An example of the application of robots in the society includes",
+      "possibleAnswers": [
+        "A. virtual reality.",
+        "B. machine learning.",
+        "C. artificial intelligence.",
+        "D. autonomous vehicles."
+      ]
+    },
+    "q23": {
+      "question": "The Secretary to the Parliament of Ghana sits on an ergonomic chair to work in the office because it",
+      "possibleAnswers": [
+        "A. ensures proper sitting arrangements.",
+        "B. makes the workplace looks attractive.",
+        "C. aligns the chairs properly with the workstation.",
+        "D. promotes proper body alignment and support."
+      ]
+    },
+    "q24": {
+      "question": "An entry on a blog that contains texts, images or multimedia content is called",
+      "possibleAnswers": [
+        "A. post.",
+        "B. name.",
+        "C. status.",
+        "D. account."
+      ]
+    },
+    "q25": {
+      "question": "A student is very good at converting any integer to binary but finds it difficult to convert from hexadecimal to binary. Help the student to convert the hexadecimal number A216 to binary",
+      "possibleAnswers": [
+        "A. 100001102",
+        "B. 101000102",
+        "C. 100100012",
+        "D. 100010102"
+      ]
+    },
+    "q26": {
+      "question": "A customer gave a new laptop to a technician to set accounts on windows that is required to make changes to all system settings. The best account type that you will advise the technician to consider is",
+      "possibleAnswers": [
+        "A. Guest.",
+        "B. Remote.",
+        "C. Standard.",
+        "D. Administrator."
+      ]
+    },
+    "q27": {
+      "question": "A user intends to create and customize diagrams in Microsoft PowerPoint application for a presentation. The best feature to help the user achieve the task is",
+      "possibleAnswers": [
+        "A. Charts.",
+        "B. Shapes.",
+        "C. WordArt.",
+        "D. SmartArt."
+      ]
+    },
+    "q28": {
+      "question": "Surfing the Internet requires the use of search engines which was designed to help users find",
+      "possibleAnswers": [
+        "A. information on the Internet.",
+        "B. information from e-mail messages.",
+        "C. information from the computer hard disk drive.",
+        "D. information from files and folders on the computer."
+      ]
+    },
+    "q29": {
+      "question": "The purpose of the IF function in Microsoft Excel application is to",
+      "possibleAnswers": [
+        "A. calculate the average of a range of cells.",
+        "B. manipulate text from multiple cells into one cell.",
+        "C. perform a logical test and return a value for a condition.",
+        "D. return the value from a specified row and column intersection."
+      ]
+    },
+    "q30": {
+      "question": "Zalia is very good at posting her pictures and location of where ever she goes on her social media platforms for her friends to see. The potential risk associated with Zalia's activities online is",
+      "possibleAnswers": [
+        "A. identity theft.",
+        "B. learning difficulties.",
+        "C. strengthening friendships.",
+        "D. building a professional network."
+      ]
+    },
+    "q31": {
+      "question": "Computers have become smaller, faster and more reliable due to the use of microprocessor in the",
+      "possibleAnswers": [
+        "A. second generation.",
+        "B. third generation.",
+        "C. fourth generation.",
+        "D. fifth generation."
+      ]
+    },
+    "q32": {
+      "question": "Bello formatted Microsoft Excel worksheet cells with different colours based on specific conditions and it was very beautiful. Which of the given features can a student use to achieve the same results as Bello?",
+      "possibleAnswers": [
+        "A. Conditional sorting",
+        "B. Conditional filtering",
+        "C. Conditional validation",
+        "D. Conditional formatting"
+      ]
+    },
+    "q33": {
+      "question": "After the computing class, a colleague approached you to further explain to him how to reference a worksheet cell in Microsoft Excel. In the explanation, you mentioned that, to reference a cell, one need to use the cell",
+      "possibleAnswers": [
+        "A. value.",
+        "B. address.",
+        "C. content.",
+        "D. function."
+      ]
+    },
+    "q34": {
+      "question": "In the concept of programming, a comment in a program code is used to",
+      "possibleAnswers": [
+        "A. explain portions of the code.",
+        "B. make the program run faster.",
+        "C. change the output of the program.",
+        "D. temporarily remove a line of code."
+      ]
+    },
+    "q35": {
+      "question": "A weekend assignment requires students to create a blog for the school. The best activity needed for the assignment is to",
+      "possibleAnswers": [
+        "A. pick the blog name and niche.",
+        "B. display advertisement of the blog.",
+        "C. provide consulting services to the bloggers.",
+        "D. determine the product to sell on the blog."
+      ]
+    },
+    "q36": {
+      "question": "The most powerful technological innovation made during the development of the fifth-generation computers was the use of",
+      "possibleAnswers": [
+        "A. vacuum tubes.",
+        "B. integrated circuits.",
+        "C. VLSI microprocessors.",
+        "D. ULSI microprocessors."
+      ]
+    },
+    "q37": {
+      "question": "The purpose of a storage device in a computer system is for",
+      "possibleAnswers": [
+        "A. keeping and retrieving data",
+        "B. displaying graphic elements",
+        "C. executing computer programs",
+        "D. connecting devices to the Internet"
+      ]
+    },
+    "q38": {
+      "question": "JHS students were given a project by their computing teacher to create a virtual museum for the storage of electronic artifacts. The possible tool for this assignment is:",
+      "possibleAnswers": [
+        "A. Cloud computing",
+        "B. Social networking",
+        "C. Augmented reality",
+        "D. Artificial intelligence"
+      ]
+    },
+    "q39": {
+      "question": "The correct syntax of the IF function in Microsoft Excel is:",
+      "possibleAnswers": [
+        "A. =IF(logical_test, [value_if_true], [value_if_false])",
+        "B. =IF(logical_test, [value_if_true], [value_if_false])",
+        "C. =IF(logical_test, ([value_if_true]), ([value_if_false]))",
+        "D. =IF(logical_test, TRUE ([value_if_true]), FALSE ([value_if_true]))"
+      ]
+    },
+    "q40": {
+      "question": "To send pictures via email (which students struggle with), the most appropriate email feature is:",
+      "possibleAnswers": [
+        "A. compose",
+        "B. categorize",
+        "C. attach files",
+        "D. draft messages"
+      ]
+    }
+  }
+}
