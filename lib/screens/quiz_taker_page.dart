@@ -16,6 +16,8 @@ class QuizTakerPage extends StatefulWidget {
   final int? questionCount;
   final String? triviaCategory;
   final bool randomizeQuestions;
+  final String? customTitle;
+  final bool isRevisionQuiz;
 
   const QuizTakerPage({
     super.key,
@@ -26,6 +28,8 @@ class QuizTakerPage extends StatefulWidget {
     this.questionCount,
     this.triviaCategory,
     this.randomizeQuestions = false,
+    this.customTitle,
+    this.isRevisionQuiz = false,
   });
 
   @override
@@ -275,7 +279,10 @@ class _QuizTakerPageState extends State<QuizTakerPage>
     // Navigate to results
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
-        builder: (context) => QuizResultsPage(quiz: quiz),
+        builder: (context) => QuizResultsPage(
+          quiz: quiz,
+          isRevisionQuiz: widget.isRevisionQuiz,
+        ),
       ),
     );
   }
@@ -456,11 +463,11 @@ class _QuizTakerPageState extends State<QuizTakerPage>
   final currentQuestion = questions[currentQuestionIndex];
   // Determine a descriptive header including year when available so users
   // remember which year's questions they're solving.
-  final String headerTitle = widget.triviaCategory != null
+  final String headerTitle = widget.customTitle ?? (widget.triviaCategory != null
     ? widget.triviaCategory!
     : (currentQuestion.year.isNotEmpty)
       ? '${widget.subject} (${currentQuestion.year}) Quiz'
-      : '${widget.subject} Quiz';
+      : '${widget.subject} Quiz');
     final progress = (currentQuestionIndex + 1) / questions.length;
 
     return PopScope(

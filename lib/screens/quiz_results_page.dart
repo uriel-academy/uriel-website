@@ -12,10 +12,12 @@ import 'home_page.dart';
 
 class QuizResultsPage extends StatefulWidget {
   final Quiz quiz;
+  final bool isRevisionQuiz;
 
   const QuizResultsPage({
     super.key,
     required this.quiz,
+    this.isRevisionQuiz = false,
   });
 
   @override
@@ -453,19 +455,28 @@ Tap below to try the quiz yourself and see if you can match or top my score. ğŸš
   }
 
   void _backToHome() {
-    // Navigate to home page, clearing all quiz-related pages from the stack
-    // First try to use named route, if that fails, use direct navigation
-    try {
-      Navigator.of(context).pushNamedAndRemoveUntil(
-        '/home',
-        (route) => false, // Remove all previous routes
-      );
-    } catch (e) {
-      // Fallback: Direct navigation to StudentHomePage
-      Navigator.of(context).pushAndRemoveUntil(
-        MaterialPageRoute(builder: (context) => const StudentHomePage()),
-        (route) => false,
-      );
+    // Navigate to revision page if this was a revision quiz, otherwise home page
+    // clearing all quiz-related pages from the stack
+    if (widget.isRevisionQuiz) {
+      // Navigate back to Revision page
+      Navigator.of(context).popUntil((route) {
+        return route.settings.name == '/revision' || route.isFirst;
+      });
+    } else {
+      // Navigate to home page, clearing all quiz-related pages from the stack
+      // First try to use named route, if that fails, use direct navigation
+      try {
+        Navigator.of(context).pushNamedAndRemoveUntil(
+          '/home',
+          (route) => false, // Remove all previous routes
+        );
+      } catch (e) {
+        // Fallback: Direct navigation to StudentHomePage
+        Navigator.of(context).pushAndRemoveUntil(
+          MaterialPageRoute(builder: (context) => const StudentHomePage()),
+          (route) => false,
+        );
+      }
     }
   }
 

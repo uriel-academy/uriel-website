@@ -85,6 +85,8 @@ class _RevisionPageState extends State<RevisionPage> {
             preloadedQuestions: selectedQuestions,
             questionCount: _selectedQuestionCount,
             randomizeQuestions: false, // Already randomized
+            customTitle: '${_getSubjectDisplayName(_selectedSubject!)} Mock Quiz',
+            isRevisionQuiz: true,
           ),
         ),
       );
@@ -108,7 +110,6 @@ class _RevisionPageState extends State<RevisionPage> {
     }
 
     // Create a robust randomization algorithm
-    final random = DateTime.now().millisecondsSinceEpoch;
     final selectedQuestions = <Question>[];
 
     // Shuffle the questions using a seed based on current time and user selections
@@ -145,21 +146,6 @@ class _RevisionPageState extends State<RevisionPage> {
       case Subject.creativeArts:
         return 'Creative Arts';
       case Subject.trivia:
-        return 'Trivia';
-    }
-  }
-
-  String _getExamTypeDisplayName(ExamType examType) {
-    switch (examType) {
-      case ExamType.bece:
-        return 'BECE';
-      case ExamType.wassce:
-        return 'WASSCE';
-      case ExamType.mock:
-        return 'Mock Exam';
-      case ExamType.practice:
-        return 'Practice';
-      case ExamType.trivia:
         return 'Trivia';
     }
   }
