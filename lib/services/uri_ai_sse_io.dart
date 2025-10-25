@@ -21,6 +21,8 @@ Future<CancelHandle> streamAskSSE_impl(
   String? imageUrl,
   String? idToken,
   String? conversationId,
+  bool? useWebSearch,
+  bool? useMathJax,
 }) async {
   final uri = Uri.parse('https://us-central1-uriel-academy-41fb0.cloudfunctions.net/aiChatSSE');
   final req = http.Request('POST', uri);
@@ -33,6 +35,8 @@ Future<CancelHandle> streamAskSSE_impl(
     'message': prompt,
     if (imageUrl != null) 'image_url': imageUrl,
     if (conversationId != null) 'conversationId': conversationId,
+    if (useWebSearch == true) 'useWebSearch': true,
+    if (useMathJax == true) 'useMathJax': true,
   };
   req.body = jsonEncode(body);
 
@@ -40,20 +44,45 @@ Future<CancelHandle> streamAskSSE_impl(
   final controller = StreamController<bool>();
 
   // Listen to response stream and parse SSE-style lines (data: ...)
+  // Simple SSE parser: handle 'event:' and 'data:' lines and dispatch on blank line.
+  String? currentEvent;
+  final sb = StringBuffer();
+
   final sub = streamed.stream.transform(utf8.decoder).listen((chunk) {
-    if (chunk.trim().isEmpty) return;
-    // The server may send partial pieces; split on newlines and handle data: frames.
+    if (chunk.isEmpty) return;
     final lines = chunk.split(RegExp(r'\r?\n'));
     for (final line in lines) {
-      if (line.startsWith('data:')) {
-        final payload = line.substring(5).trim();
+      if (line.startsWith('event:')) {
+        currentEvent = line.substring(6).trim();
+      } else if (line.startsWith('data:')) {
+        sb.write(line.substring(5));
+        sb.write('\n');
+      } else if (line.trim().isEmpty) {
+        // dispatch
+        final payload = sb.toString().trim();
         if (payload.isNotEmpty) {
           try {
-            onData(payload);
-          } catch (_) {
-            // swallow UI errors from onData
-          }
+            if (currentEvent == 'web_verified') {
+              // payload is JSON like { answer: '...' }
+              try {
+                final decoded = jsonDecode(payload);
+                final answer = decoded is Map && decoded['answer'] != null ? decoded['answer'].toString() : payload;
+                onData('[Web-verified answer]\n' + answer);
+              } catch (_) {
+                onData('[Web-verified]\n' + payload);
+              }
+            } else {
+              onData(payload);
+            }
+          } catch (_) {}
         }
+        // reset
+        currentEvent = null;
+        sb.clear();
+      } else {
+        // non-prefixed line - append as-is (some providers send raw chunks)
+        sb.write(line);
+        sb.write('\n');
       }
     }
   }, onDone: () {
