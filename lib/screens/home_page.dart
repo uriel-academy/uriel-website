@@ -16,6 +16,7 @@ import '../services/xp_service.dart';
 import '../widgets/rank_badge_widget.dart';
 import 'redesigned_all_ranks_page.dart';
 import 'question_collections_page.dart';
+import 'revision_page.dart';
 import 'textbooks_page.dart';
 import 'feedback_page.dart';
 import 'trivia_categories_page.dart';
@@ -104,7 +105,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   @override
   void initState() {
     super.initState();
-  _mainTabController = TabController(length: 7, vsync: this);
+  _mainTabController = TabController(length: 8, vsync: this);
     _animationController = AnimationController(
       duration: const Duration(milliseconds: 800),
       vsync: this,
@@ -1955,6 +1956,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                                     children: [
                                       _buildDashboard(),
                                       _buildQuestionsPage(),
+                                      _buildRevisionPage(),
                                       _buildTextbooksPage(),
                                       _buildTriviaPage(),
                                       const NotesTab(),
@@ -1986,6 +1988,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                                           children: [
                                             _buildDashboard(),
                                             _buildQuestionsPage(),
+                                            _buildRevisionPage(),
                                             _buildTextbooksPage(),
                                             _buildTriviaPage(),
                                             const NotesTab(),
@@ -2013,7 +2016,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               ),
               // Collapsible URI chat sidebar (far right)
               Visibility(
-                visible: _selectedIndex != 6, // Hide on Uri page
+                visible: _selectedIndex != 7, // Hide on Uri page
                 child: UriChat(key: _uriChatKey, userName: userName),
               ),
             ],
@@ -2248,11 +2251,12 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                 children: [
                   _buildNavItem(0, 'Dashboard'),
                   _buildNavItem(1, 'Questions'),
-                  _buildNavItem(2, 'Books'),
-                  _buildNavItem(3, 'Trivia'),
-                  _buildNavItem(4, 'Notes'),
-                  _buildNavItem(5, 'Leaderboard'),
-                  _buildNavItem(6, 'Uri'),
+                  _buildNavItem(2, 'Revision'),
+                  _buildNavItem(3, 'Books'),
+                  _buildNavItem(4, 'Trivia'),
+                  _buildNavItem(5, 'Notes'),
+                  _buildNavItem(6, 'Leaderboard'),
+                  _buildNavItem(7, 'Uri'),
                   
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
@@ -2376,6 +2380,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     final tabs = [
       {'label': 'Dashboard', 'icon': Icons.dashboard_outlined},
       {'label': 'Questions', 'icon': Icons.quiz_outlined},
+      {'label': 'Revision', 'icon': Icons.refresh_outlined},
       {'label': 'Books', 'icon': Icons.menu_book_outlined},
       {'label': 'Trivia', 'icon': Icons.extension_outlined},
       {'label': 'Notes', 'icon': Icons.note_alt_outlined},
@@ -5633,6 +5638,10 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   // Page implementations for other tabs
   Widget _buildQuestionsPage() {
     return const QuestionCollectionsPage();
+  }
+
+  Widget _buildRevisionPage() {
+    return const RevisionPage();
   }
 
 Widget _buildTextbooksPage() {
