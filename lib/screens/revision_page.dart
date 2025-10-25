@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../models/question_model.dart';
 import '../services/question_service.dart';
-import 'quiz_taker_page.dart';
+import '../screens/quiz_taker_page.dart';
+import '../screens/flip_card_page.dart';
 
 class RevisionPage extends StatefulWidget {
   const RevisionPage({Key? key}) : super(key: key);
@@ -20,8 +21,8 @@ class _RevisionPageState extends State<RevisionPage> {
   int _selectedQuestionCount = 20;
 
   // Available options
-  List<ExamType> _availableExamTypes = [ExamType.bece, ExamType.wassce];
-  List<Subject> _availableSubjects = [Subject.ict, Subject.religiousMoralEducation]; // Only ICT and RME as per questions page
+  final List<ExamType> _availableExamTypes = [ExamType.bece, ExamType.wassce];
+  final List<Subject> _availableSubjects = [Subject.ict, Subject.religiousMoralEducation]; // Only ICT and RME as per questions page
   bool _isGeneratingQuiz = false;
 
   @override
@@ -55,7 +56,7 @@ class _RevisionPageState extends State<RevisionPage> {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text('No questions found for ${_getSubjectDisplayName(_selectedSubject!)} (${_selectedExamType!.name.toUpperCase()})'),
-            backgroundColor: Color(0xFFD62828),
+            backgroundColor: const Color(0xFFD62828),
           ),
         );
         return;
@@ -102,6 +103,75 @@ class _RevisionPageState extends State<RevisionPage> {
       setState(() => _isGeneratingQuiz = false);
     }
   }
+
+  // TODO: Re-enable when flip card questions source is available
+  // Future<void> _generateFlipCard() async {
+  //   if (_selectedExamType == null || _selectedSubject == null) {
+  //     ScaffoldMessenger.of(context).showSnackBar(
+  //       const SnackBar(
+  //         content: Text('Please select both exam type and subject'),
+  //         backgroundColor: Color(0xFFD62828),
+  //       ),
+  //     );
+  //     return;
+  //   }
+
+  //   setState(() => _isGeneratingQuiz = true);
+
+  //   try {
+  //     // Get all questions for the selected subject and exam type
+  //     final allQuestions = await _questionService.getQuestionsByFilters(
+  //       examType: _selectedExamType,
+  //       subject: _selectedSubject,
+  //       activeOnly: true,
+  //     );
+
+  //     if (allQuestions.isEmpty) {
+  //       ScaffoldMessenger.of(context).showSnackBar(
+  //         SnackBar(
+  //           content: Text('No questions found for ${_getSubjectDisplayName(_selectedSubject!)} (${_selectedExamType!.name.toUpperCase()})'),
+  //           backgroundColor: const Color(0xFFD62828),
+  //         ),
+  //       );
+  //       return;
+  //     }
+
+  //     // Generate robust random selection
+  //     final selectedQuestions = _selectRandomQuestions(allQuestions, _selectedQuestionCount);
+
+  //     if (selectedQuestions.isEmpty) {
+  //       ScaffoldMessenger.of(context).showSnackBar(
+  //         const SnackBar(
+  //           content: Text('Unable to generate flip cards. Please try again.'),
+  //           backgroundColor: Color(0xFFD62828),
+  //         ),
+  //       );
+  //       return;
+  //     }
+
+  //     // Navigate to flip card page
+  //     Navigator.push(
+  //       context,
+  //       MaterialPageRoute(
+  //         builder: (context) => FlipCardPage(
+  //           subject: _getSubjectDisplayName(_selectedSubject!),
+  //           examType: _selectedExamType!.name.toUpperCase(),
+  //           questions: selectedQuestions,
+  //         ),
+  //       ),
+  //     );
+  //   } catch (e) {
+  //     debugPrint('Error generating flip cards: $e');
+  //     ScaffoldMessenger.of(context).showSnackBar(
+  //       const SnackBar(
+  //         content: Text('Error generating flip cards. Please try again.'),
+  //         backgroundColor: Color(0xFFD62828),
+  //       ),
+  //     );
+  //   } finally {
+  //     setState(() => _isGeneratingQuiz = false);
+  //   }
+  // }
 
   List<Question> _selectRandomQuestions(List<Question> allQuestions, int count) {
     if (allQuestions.length <= count) {
