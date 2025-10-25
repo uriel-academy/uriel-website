@@ -100,6 +100,35 @@ async function answerWithFacts(query: string) {
   return filtered.join('\n').trim();
 }
 
+// Lightweight Tavily search helper - returns a composed answer or combined results content
+async function tavilySearch(query: string, maxResults = 6) {
+  try {
+    const tavilyKey = functions.config().tavily?.key;
+    if (!tavilyKey) return '';
+    const resp = await fetch('https://api.tavily.com/search', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ api_key: tavilyKey, query, max_results: maxResults, include_answer: true }),
+    });
+    if (!resp.ok) return '';
+    const data = await resp.json();
+    if (!data) return '';
+    // If Tavily returned a direct answer, prefer it.
+    if (data.answer && data.answer.toString().trim().length > 0) return data.answer.toString();
+    const results = (data.results || []).slice(0, maxResults);
+    const composed = results.map((r: any, i: number) => {
+      const title = r.title || r.headline || '';
+      const url = r.url || '';
+      const content = (r.content || r.snippet || '').toString().slice(0, 2000);
+      return `[${i + 1}] ${title} — ${url}\n${content}`;
+    }).join('\n\n');
+    return composed;
+  } catch (e) {
+    console.warn('tavilySearch failed', e);
+    return '';
+  }
+}
+
 // Main HTTP aiChat handler: routes time-sensitive queries to Facts, otherwise asks the model
 export const aiChatHttpLegacy = functions
   .region('us-central1')
@@ -254,6 +283,8 @@ export const aiChatHttpLegacy = functions
           let system = `
 You are **Uri**, a friendly, witty, and highly capable study buddy for students aged 10–21.
 
+Knowledge cutoff: August 2025. When in doubt about recent events, prefer using the web search results provided by the server (Tavily) instead of inventing dates or claims.
+
 ## Role
 
 * Help with schoolwork (BECE/WASSCE and beyond), creative writing, life advice, and general chats — like the ChatGPT app, but with a warm Ghanaian vibe.
@@ -267,20 +298,20 @@ You are **Uri**, a friendly, witty, and highly capable study buddy for students 
 
 ## Formatting Rules (IMPORTANT)
 
-* **Default = conversational paragraph(s)**. No auto-headings. No auto numbering.
+* **Default = conversational paragraph(s)**. Always break long answers into readable paragraphs — insert a blank line between paragraphs and keep each paragraph to 3–5 sentences when possible.
 * Use short lines, light bullets only when it improves readability.
 * **Only** use headings/numbered steps/tables/outlines **when the user asks** (e.g., "give steps", "outline", "bulleted", "table", "make a plan", "pros/cons", "SOP").
-* For maths or formulas, return the math using standard KaTeX/MathJax notation.
-  - Use inline math with $...$ for short expressions and block math with $$...$$ for multi-line or displayed equations.
-  - Prefer KaTeX-compatible LaTeX (e.g. use \\frac, \\sqrt, ^ for powers, \\times, \\cdot where appropriate).
-  - Do NOT strip or replace LaTeX with plain-text equivalents. The client will render KaTeX/MathJax.
-* If the user says "brief," keep it tight. If they say "full essay," write a well-structured essay.
+* For maths or formulas, DO NOT return LaTeX/KaTeX. Use clear Unicode/math symbols and plain-text notation that reads well in a chat:
+  - Use × for multiplication, ÷ for division, ±, ≤, ≥, ≈, √ for root, superscripts for powers when practical (e.g., x²), and fractional notation like 1/2 when short.
+  - Use monospace or inline code markers for short expressions when needed (e.g., '2 + 2 = 4').
+  - If the user explicitly asks for LaTeX or KaTeX, provide it; otherwise prefer Unicode/math symbols and clear, well-spaced formatting.
+* If the user says "brief," keep it tight. If they say "full essay," write a well-structured essay with paragraphs.
 * End with a supportive nudge when helpful, not every time.
 
 ## Behaviour
 
 * Understand intent first; answer directly before adding helpful extras.
-* Casual chats allowed (football, music, feelings, ideas, etc.).
+* If a question likely requires up-to-date facts, consult the Tavily web-search context (provided by the server) and cite only the context using bracketed citations when asked.
 * Encourage learning and wellness; keep it safe and respectful.
 * Don't define common words or over-explain if the user is just being polite.
 
@@ -303,7 +334,7 @@ You are **Uri**, a friendly, witty, and highly capable study buddy for students 
    *(structured mode only because the user asked for "step-by-step")*
 
 **User:** Write a 900-word essay on climate change causes and solutions (British English)
-**Uri:** *[Produces a well-organised essay with intro, body, conclusion — no numbered headings unless requested]*
+**Uri:** *[Produces a well-organised essay with intro, body, conclusion — with readable paragraphs]*
 
 ---
 
@@ -314,7 +345,7 @@ If you can pass a flag, do this:
 * If user message contains words like: *steps, outline, plan, bullets, list, table, SOP, framework, numbered, headings* → **structured_mode = true**
 * Else → **structured_mode = false** (conversational paragraphs)
 
-If \`structured_mode=false\`, block auto headings/numbering; allow at most light bullets when it clearly improves readability.
+If structured_mode=false, block auto headings/numbering; allow at most light bullets when it clearly improves readability.
 
 ---
 
@@ -515,12 +546,22 @@ export const aiChatStream = functions
         res.flushHeaders?.();
 
         try {
+          // If this is a fact-style query and Tavily is configured, fetch web context
+          const mode = classifyMode(prompt);
+          let webContext = '';
+          try {
+            if (mode === 'facts') webContext = await tavilySearch(prompt, 6);
+          } catch (e) { console.warn('tavilySearch failed for stream', e); }
+
+          const systemStream = `You are Uri, a helpful Ghana-savvy tutor. Knowledge cutoff: August 2025. Use Unicode math symbols (e.g., ×, ÷, ±, ≤, ≥, √, superscripts like x²) and do NOT return LaTeX/KaTeX unless the user asks for it. Break long answers into readable paragraphs.`;
+
+          const inputMessages: any[] = [ { role: 'system', content: systemStream } ];
+          if (webContext && webContext.length > 0) inputMessages.push({ role: 'system', content: `WebSearchResults:\n${webContext}` });
+          inputMessages.push({ role: 'user', content: prompt });
+
           const stream = await (openai as any).responses.create({
             model: functions.config().openai?.model || 'gpt-4o-mini',
-            input: [
-              { role: 'system', content: 'You are Uri, a helpful Ghana-savvy tutor. Keep replies friendly and KaTeX-ready for maths.' },
-              { role: 'user', content: prompt }
-            ],
+            input: inputMessages,
             temperature: 0.7,
             max_output_tokens: 900,
             stream: true,
@@ -627,13 +668,22 @@ export const aiChatSSE = functions
         res.flushHeaders?.();
 
         try {
-          // Call OpenAI and stream responses
+          // Call OpenAI and stream responses. Include Tavily web results for fact queries if available.
+          const mode = classifyMode(prompt);
+          let webContext = '';
+          try {
+            if (mode === 'facts') webContext = await tavilySearch(prompt, 6);
+          } catch (e) { console.warn('tavilySearch failed for sse', e); }
+
+          const systemSse = `You are Uri, a helpful Ghana-savvy tutor. Knowledge cutoff: August 2025. Use Unicode math symbols (e.g., ×, ÷, ±, ≤, ≥, √, superscripts like x²) and do NOT return LaTeX/KaTeX unless the user asks for it. Break long answers into readable paragraphs.`;
+          const inputArray: any[] = [ { role: 'system', content: systemSse } ];
+          if (webContext && webContext.length > 0) inputArray.push({ role: 'system', content: `WebSearchResults:\n${webContext}` });
+          inputArray.push({ role: 'user', content: prompt });
+
+          // Call provider with streaming
           const stream = await (openai as any).responses.create({
             model: functions.config().openai?.model || 'gpt-4o-mini',
-            input: [
-              { role: 'system', content: 'You are Uri, a helpful Ghana-savvy tutor. Keep replies friendly and KaTeX-ready for maths.' },
-              { role: 'user', content: prompt }
-            ],
+            input: inputArray,
             temperature: 0.7,
             max_output_tokens: 900,
             stream: true,
