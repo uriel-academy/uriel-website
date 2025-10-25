@@ -17,7 +17,8 @@ bool _needsWeb(String q) {
   return [
     'when is', 'date', 'schedule', 'deadline', 'latest', 'today', 'this year',
     'bece', 'wassce', 'nacca', 'curriculum update', 'exam timetable',
-    'minister announced', 'news', '2025', '2026'
+    'minister announced', 'news', '2025', '2026',
+    'trivia', 'quiz', 'question', 'answer', 'fact', 'who is', 'what is', 'where is', 'how many'
   ].any((k) => s.contains(k));
 }
 
@@ -43,53 +44,16 @@ class UriAI {
 
   // Stream responses token-by-token with aggregation. Returns a CancelHandle.
   static Future<CancelHandle> streamAskSSE(String prompt, void Function(String chunk) onData, {void Function()? onDone, void Function(Object error)? onError, int flushIntervalMs = 100, int flushThreshold = 40, String? imageUrl}) async {
-    final buffer = StringBuffer();
-    Timer? flushTimer;
-    bool closed = false;
-
-    void flushBuffer() {
-      if (buffer.isEmpty) return;
-      final out = buffer.toString();
-      buffer.clear();
-      try { onData(out); } catch (_) {}
-    }
-
     // Start underlying stream and get a CancelHandle
     final cancelHandle = await streamAskSSE_impl(prompt, (chunk) {
-      if (closed) return;
-      buffer.write(chunk);
-      // If threshold exceeded, flush immediately
-      if (buffer.length >= flushThreshold) {
-        flushTimer?.cancel();
-        flushBuffer();
-      } else {
-        // Ensure a timer exists to flush periodically
-        flushTimer ??= Timer(Duration(milliseconds: flushIntervalMs), () {
-          flushBuffer();
-          flushTimer = null;
-        });
-      }
+      try { onData(chunk); } catch (_) {}
     }, onDone: () {
-      // Flush remaining buffer and call onDone
-      flushTimer?.cancel();
-      flushBuffer();
-      closed = true;
       if (onDone != null) onDone();
     }, onError: (e) {
-      flushTimer?.cancel();
-      closed = true;
       if (onError != null) onError(e);
     }, imageUrl: imageUrl);
 
-    // Return a wrapper CancelHandle that flushes then cancels underlying
-    return CancelHandle(() {
-      if (closed) return;
-      flushTimer?.cancel();
-      flushBuffer();
-      closed = true;
-      try {
-        (cancelHandle as dynamic).cancel();
-      } catch (_) {}
-    });
+    // Return the cancel handle directly
+    return cancelHandle;
   }
 }

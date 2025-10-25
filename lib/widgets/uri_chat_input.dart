@@ -1,10 +1,6 @@
-import 'dart:typed_data';
-import 'dart:math' as math;
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
 import '../services/chat_service.dart';
-import '../services/image_storage.dart';
 
 class UriChatInput extends StatefulWidget {
   final FutureOr<void> Function(String role, String content, {List<Map<String, String>>? attachments}) onMessage;
@@ -22,59 +18,29 @@ class _UriChatInputState extends State<UriChatInput> {
   final _ctrl = TextEditingController();
   bool _sending = false;
   dynamic _cancelHandle;
-  final _picker = ImagePicker();
   final _chat = ChatService();
-  final _store = ImageStorage();
-  Uint8List? _pendingImage;
-  String? _pendingImageName;
 
   Future<void> _sendText() async {
     var text = _ctrl.text.trim();
-    if (text.isEmpty && _pendingImage == null) return;
+    if (text.isEmpty) return;
 
     setState(() => _sending = true);
 
-    String? uploadedUrl;
-    if (_pendingImage != null && _pendingImageName != null) {
-      // Upload the pending image first
-      try {
-        uploadedUrl = await _store.uploadBytes(_pendingImage!, _pendingImageName!);
-      } catch (e) {
-  widget.onMessage('assistant', 'Image upload failed. Try a smaller file or different format.', attachments: null);
-        setState(() => _sending = false);
-        return;
-      }
-    }
-
-    // If user included a placeholder like [Image], remove it before sending
-    if (uploadedUrl != null) {
-      // Append a short hint to the message so server knows to analyze image unless user provided explicit text
-      if (text.isEmpty) text = 'Please analyze this image.';
-    }
-
     // Clear the UI state
     _ctrl.clear();
-    setState(() {
-      _pendingImage = null;
-      _pendingImageName = null;
-    });
 
-  // Send the user message and image attachments (if any) to the parent UI
-  final attachments = uploadedUrl != null ? [{'type': 'image', 'name': _pendingImageName ?? 'image', 'url': uploadedUrl}] : null;
-  widget.onMessage('user', text, attachments: attachments);
+    // Send the user message to the parent UI
+    widget.onMessage('user', text);
     final history = [...widget.history, {'role': 'user', 'content': text}];
 
-  String accumulated = '';
-  String lastChunk = '';
-  // create assistant bubble (will be updated by stream). We attach a placeholder
-  // object that can later hold a cancel handle.
-  widget.onMessage('assistant', '');
+    String accumulated = '';
+    // create assistant bubble (will be updated by stream)
+    widget.onMessage('assistant', '');
 
     dynamic cancelHandle;
-      try {
-        cancelHandle = await _chat.sendStream(
+    try {
+      cancelHandle = await _chat.sendStream(
         messages: history,
-        imageUrl: uploadedUrl,
         channel: 'uri_tab',
         profile: {
           'name': 'Student',
@@ -82,34 +48,7 @@ class _UriChatInputState extends State<UriChatInput> {
           'locale': 'en-GH',
         },
         onChunk: (chunk) {
-          // Detect whether the incoming chunk is the full cumulative text
-          // (some SSE providers send the entire text so far) or a small delta.
-          // If the new chunk contains the previous chunk, treat it as the
-          // current full text; otherwise append as a delta.
-          final c = chunk.toString();
-          // If server sent a superset (contains previous), use it directly
-          if (lastChunk.isNotEmpty && c.contains(lastChunk)) {
-            accumulated = c;
-          } else if (lastChunk.isNotEmpty) {
-            // Compute longest overlap where a suffix of lastChunk matches a prefix of c
-            int maxOverlap = 0;
-            final maxCheck = math.min(lastChunk.length, c.length);
-            for (int k = maxCheck; k > 0; k--) {
-              if (lastChunk.substring(lastChunk.length - k) == c.substring(0, k)) {
-                maxOverlap = k;
-                break;
-              }
-            }
-            if (maxOverlap > 0) {
-              accumulated = lastChunk + c.substring(maxOverlap);
-            } else {
-              accumulated = lastChunk + c;
-            }
-          } else {
-            accumulated = accumulated + c;
-          }
-          lastChunk = accumulated;
-          // send the cumulative text so UI replaces last assistant bubble
+          accumulated += chunk;
           widget.onMessage('assistant', accumulated);
         },
         onDone: () {
@@ -135,83 +74,24 @@ class _UriChatInputState extends State<UriChatInput> {
     }
   }
 
-  Future<void> _pickAndSendImage(ImageSource source) async {
-    try {
-      final x = await _picker.pickImage(source: source, imageQuality: 85, maxWidth: 4000);
-      if (x == null) return;
 
-      final bytes = await x.readAsBytes();
-
-      // If file is too large client-side, prompt user
-      if (bytes.lengthInBytes > 25 * 1024 * 1024) {
-  widget.onMessage('assistant', 'Selected file is larger than 25MB. Please choose a smaller image.', attachments: null);
-        return;
-      }
-
-      // Store pending image and show preview in the input area. Actual upload will occur when user presses send.
-      setState(() {
-        _pendingImage = bytes;
-        _pendingImageName = x.name;
-      });
-    } catch (e) {
-  widget.onMessage('assistant', 'Image pick failed. Try again.', attachments: null);
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        PopupMenuButton<String>(
-          tooltip: 'Attach',
-          icon: const Icon(Icons.attach_file),
-          onSelected: (v) {
-            if (v == 'camera') _pickAndSendImage(ImageSource.camera);
-            if (v == 'gallery') _pickAndSendImage(ImageSource.gallery);
-          },
-          itemBuilder: (ctx) => const [
-            PopupMenuItem(value: 'camera', child: Text('Camera')),
-            PopupMenuItem(value: 'gallery', child: Text('Photo / File')),
-          ],
-        ),
-
         Expanded(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              if (_pendingImage != null)
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 8.0),
-                  child: Row(
-                    children: [
-                      Image.memory(_pendingImage!, width: 64, height: 64, fit: BoxFit.cover),
-                      const SizedBox(width: 8),
-                      Expanded(child: Text(_pendingImageName ?? 'Attached image')),
-                      IconButton(
-                        icon: const Icon(Icons.close),
-                        onPressed: () {
-                          setState(() {
-                            _pendingImage = null;
-                            _pendingImageName = null;
-                          });
-                        },
-                      ),
-                    ],
-                  ),
-                ),
-              TextField(
-                controller: _ctrl,
-                decoration: const InputDecoration(
-                  hintText: 'Ask Uri anything…',
-                  border: OutlineInputBorder(borderSide: BorderSide.none),
-                  filled: true,
-                  fillColor: Colors.white,
-                ),
-                minLines: 1,
-                maxLines: 6,
-                onSubmitted: (_) => _sendText(),
-              ),
-            ],
+          child: TextField(
+            controller: _ctrl,
+            decoration: const InputDecoration(
+              hintText: 'Ask Uri anything…',
+              border: OutlineInputBorder(borderSide: BorderSide.none),
+              filled: true,
+              fillColor: Colors.white,
+            ),
+            minLines: 1,
+            maxLines: 6,
+            onSubmitted: (_) => _sendText(),
           ),
         ),
 

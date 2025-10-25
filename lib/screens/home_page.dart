@@ -9,7 +9,6 @@ import '../constants/app_styles.dart';
 import '../services/connection_service.dart';
 import '../services/auth_service.dart';
 import '../services/notification_service.dart';
-import '../services/uri_ai.dart';
 import '../services/leaderboard_rank_service.dart';
 import '../widgets/uri_chat_input.dart';
 import '../services/xp_service.dart';
@@ -23,7 +22,7 @@ import 'trivia_categories_page.dart';
 import 'notes_page.dart';
 import 'student_profile_page.dart';
 import 'redesigned_leaderboard_page.dart';
-import 'package:cloud_functions/cloud_functions.dart';
+import 'uri_page.dart';
 import 'package:uuid/uuid.dart';
 import '../widgets/uri_chat.dart';
 
@@ -710,22 +709,33 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     // Recency bonus
     if (hoursAgo < 1) {
       relevance += 3;
-    } else if (hoursAgo < 6) relevance += 2;
-    else if (hoursAgo < 24) relevance += 1;
+    } else if (hoursAgo < 6) {
+      relevance += 2;
+    } else if (hoursAgo < 24) {
+      relevance += 1;
+    }
 
     // Performance bonus
     if (score >= 90.0) {
       relevance += 2;
-    } else if (score >= 80.0) relevance += 1;
+    } else if (score >= 80.0) {
+      relevance += 1;
+    }
 
     // Subject preference bonus
     final preferredSubjects = userProfile['preferredSubjects'] as List<String>? ?? [];
-    if (preferredSubjects.contains(subject)) relevance += 2;
+    if (preferredSubjects.contains(subject)) {
+      relevance += 2;
+    }
 
     // Learning style alignment
     final learningStyle = userProfile['learningStyle'] as String? ?? '';
-    if (learningStyle == 'quick_learner' && score >= 85.0) relevance += 1;
-    if (learningStyle == 'challenge_seeker' && score < 70.0) relevance += 1;
+    if (learningStyle == 'quick_learner' && score >= 85.0) {
+      relevance += 1;
+    }
+    if (learningStyle == 'challenge_seeker' && score < 70.0) {
+      relevance += 1;
+    }
 
     return relevance;
   }
@@ -1961,7 +1971,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                                       _buildTriviaPage(),
                                       const NotesTab(),
                                       const RedesignedLeaderboardPage(),
-                                      _buildUriPage(),
+                                      const UriPage(embedded: true),
                                     ],
                                   ),
                           ),
@@ -1993,7 +2003,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                                             _buildTriviaPage(),
                                             const NotesTab(),
                                             const RedesignedLeaderboardPage(),
-                                            _buildUriPage(),
+                                            const UriPage(embedded: true),
                                           ],
                                     ),
                             ),
@@ -3368,7 +3378,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
 
   double _calculateOverallProgress(List<SubjectProgress> subjects) {
     if (subjects.isEmpty) return 0.0;
-    final total = subjects.fold<double>(0, (sum, subject) => sum + subject.progress);
+    final total = subjects.fold<double>(0, (accumulator, subject) => accumulator + subject.progress);
     return total / subjects.length;
   }
 
@@ -4049,7 +4059,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                       children: _subjectTimeSpent.entries.map((entry) {
                         final subjectName = entry.key;
                         final timeSpent = entry.value;
-                        final totalTime = _subjectTimeSpent.values.fold(0.0, (sum, time) => sum + time);
+                        final totalTime = _subjectTimeSpent.values.fold(0.0, (accumulator, time) => accumulator + time);
                         final percentage = totalTime > 0 ? (timeSpent / totalTime) : 0.0;
                         
                         // Get color for subject (reuse from subject progress if available)
@@ -5658,12 +5668,7 @@ Widget _buildFeedbackPage() {
     return const TriviaCategoriesPage();
   }
 
-  Widget _buildUriPage() {
-    return UriChatInterface(
-      userName: userName,
-      currentSubject: 'General',
-    );
-  }
+  
 
   // Helper methods
   void _showMobileMenu() {
@@ -5958,6 +5963,13 @@ Widget _buildFeedbackPage() {
                           Navigator.pop(context);
                           Navigator.pushNamed(context, '/pricing');
                         }),
+                        _buildProfileMenuItem(Icons.chat_bubble_outline, 'Uri AI', () {
+                          Navigator.pop(context);
+                          setState(() {
+                            _showingProfile = false;
+                            _selectedIndex = 7;
+                          });
+                        }),
                         _buildProfileMenuItem(Icons.payment, 'Payment', () {
                           Navigator.pop(context);
                           Navigator.pushNamed(context, '/payment');
@@ -6081,15 +6093,11 @@ class _UriChatInterfaceState extends State<UriChatInterface> with TickerProvider
   final ScrollController _scrollController = ScrollController();
   final FocusNode _focusNode = FocusNode();
   bool _isLoading = false;
-  bool _isTyping = false;
-  bool _isProcessing = false; // debounce
 
   // Animation controllers
   late AnimationController _fadeController;
   late Animation<double> _fadeAnimation;
 
-  final String chatId = 'uri_chat'; // fixed for now
-  StreamSubscription? _sub;
   final Uuid _uuid = const Uuid();
 
   @override
@@ -6104,11 +6112,29 @@ class _UriChatInterfaceState extends State<UriChatInterface> with TickerProvider
     );
     _fadeController.forward();
 
+    // Initialize user-specific chat
+    _initializeChat();
+  }
+
+  Future<void> _initializeChat() async {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user == null) {
+      // User not authenticated - redirect to login or show error
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('Please log in to use the chat feature'),
+            backgroundColor: Color(0xFFD62828),
+          ),
+        );
+        // Navigate back to home or login
+        Navigator.of(context).pop();
+      }
+      return;
+    }
+
     // Add welcome message
     _addWelcomeMessage();
-
-    // Start message listener
-    _startMessageListener();
   }
 
   @override
@@ -6117,100 +6143,23 @@ class _UriChatInterfaceState extends State<UriChatInterface> with TickerProvider
     _scrollController.dispose();
     _focusNode.dispose();
     _fadeController.dispose();
-    _sub?.cancel();
     super.dispose();
   }
 
-  void _startMessageListener() {
-    final messagesRef = FirebaseFirestore.instance
-        .collection('chats')
-        .doc(chatId)
-        .collection('messages')
-        .orderBy('createdAt', descending: false);
-
-    _sub?.cancel();
-    _sub = messagesRef.snapshots().listen((snap) {
-      setState(() {
-        _messages.clear();
-        for (final doc in snap.docs) {
-          final m = doc.data();
-          _messages.add({
-            'role': m['role'],
-            'content': m['text'] ?? '',
-            'timestamp': (m['createdAt'] as Timestamp?)?.toDate() ?? DateTime.now(),
-            'id': doc.id,
-            'attachments': m['imageUrl'] != null ? [{'type': 'image', 'url': m['imageUrl']}] : null,
-          });
-        }
-      });
-      _scrollToBottom();
-    });
-  }
-
-  void _addWelcomeMessage() async {
-    final welcomeId = _uuid.v4();
-    await FirebaseFirestore.instance.collection('chats').doc(chatId).collection('messages').doc(welcomeId).set({
-      'id': welcomeId,
+  void _addWelcomeMessage() {
+    _messages.add({
       'role': 'assistant',
-      'text': 'Hello! I\'m Uri, your AI study companion. I can help you with math, science, English, and all your BECE subjects. I can also analyze images and explain concepts. What would you like to learn today?',
-      'createdAt': FieldValue.serverTimestamp(),
-      'status': 'completed',
+      'content': 'Hello! I\'m Uri, your AI study companion. I can help you with math, science, English, and all your BECE subjects. What would you like to learn today?',
+      'timestamp': DateTime.now(),
+      'id': 'welcome_${_uuid.v4()}',
     });
-  }
-
-  Future<void> _sendMessage() async {
-    final message = _textController.text.trim();
-    if (message.isEmpty || _isLoading) return;
-
-    // Clear input and unfocus keyboard
-    _textController.clear();
-    _focusNode.unfocus();
-
-    // Add user message to Firestore
-    final id = _uuid.v4();
-    await FirebaseFirestore.instance.collection('chats').doc(chatId).collection('messages').doc(id).set({
-      'id': id,
-      'role': 'user',
-      'text': message,
-      'createdAt': FieldValue.serverTimestamp(),
-      'status': 'pending',
-    });
-
-    setState(() => _isLoading = true);
-
-    // Call the function
-    try {
-      await FirebaseFunctions.instance.httpsCallable('aiChat').call({
-        'chatId': chatId,
-        'messageId': id,
-      });
-    } catch (e) {
-      // Handle error
-      setState(() => _isLoading = false);
-    }
-  }
-
-  // ignore: unused_element
-  String _generateResponse(String userMessage) {
-    // Simple response generation - replace with actual UriAI integration
-    final responses = [
-      'That\'s a great question! Let me help you understand this concept better.',
-      'I can see you\'re working on some important material. Here\'s what I think would help:',
-      'Based on what you\'ve asked, I recommend focusing on these key points:',
-      'Let me break this down for you step by step:',
-      'This is actually a really interesting topic! Here\'s my perspective:',
-    ];
-
-    final random = responses[DateTime.now().millisecondsSinceEpoch % responses.length];
-
-    return '$random\n\nWhen studying ${userMessage.toLowerCase().contains('math') ? 'mathematics' : 'this subject'}, remember that consistent practice and understanding the fundamentals are key to success.\n\nWould you like me to elaborate on any specific aspect?';
   }
 
   void _scrollToBottom() {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (_scrollController.hasClients) {
         _scrollController.animateTo(
-          _scrollController.position.maxScrollExtent,
+          0.0, // Since reverse: true, position 0 is the bottom (newest messages)
           duration: const Duration(milliseconds: 300),
           curve: Curves.easeOut,
         );
@@ -6300,9 +6249,9 @@ class _UriChatInterfaceState extends State<UriChatInterface> with TickerProvider
                   isMobile ? 16 : 24,
                   keyboardHeight > 0 ? 16 : 80,
                 ),
-                itemCount: _messages.length + (_isTyping ? 1 : 0),
+                itemCount: _messages.length + (_isLoading ? 1 : 0),
                 itemBuilder: (context, index) {
-                  if (_isTyping && index == _messages.length) {
+                  if (_isLoading && index == _messages.length) {
                     return _buildTypingIndicator();
                   }
 
@@ -6419,30 +6368,40 @@ class _UriChatInterfaceState extends State<UriChatInterface> with TickerProvider
                   ),
                   child: UriChatInput(
                     history: _messages.map((m) => {'role': m['role'] as String? ?? 'user', 'content': m['content'] as String? ?? ''}).toList(),
-                    onMessage: (role, content, {attachments}) async {
-                      if (role == 'user') {
-                        final id = _uuid.v4();
-                        String? imageUrl;
-                        if (attachments != null && attachments.isNotEmpty) {
-                          final attachment = attachments.first;
-                          if (attachment['type'] == 'image') {
-                            imageUrl = attachment['url'];
+                    onMessage: (role, content, {attachments}) {
+                      setState(() {
+                        // We keep the list in reverse order (newest first) for the ListView with reverse: true
+                        if (role == 'assistant') {
+                          // If first message is an assistant bubble, replace its text (stream update)
+                          if (_messages.isNotEmpty && _messages.first['role'] == 'assistant') {
+                            _messages.first['content'] = content;
+                          } else {
+                            _messages.insert(0, {
+                              'role': role,
+                              'content': content,
+                              'timestamp': DateTime.now(),
+                              'id': '${role}_${_uuid.v4()}',
+                              'attachments': attachments
+                            });
                           }
+                        } else {
+                          // User messages also go at the front (newest first)
+                          _messages.insert(0, {
+                            'role': role,
+                            'content': content,
+                            'timestamp': DateTime.now(),
+                            'id': '${role}_${_uuid.v4()}',
+                            'attachments': attachments
+                          });
                         }
-                        await FirebaseFirestore.instance.collection('chats').doc(chatId).collection('messages').doc(id).set({
-                          'id': id,
-                          'role': 'user',
-                          'text': content,
-                          'imageUrl': imageUrl,
-                          'createdAt': FieldValue.serverTimestamp(),
-                          'status': 'pending',
-                        });
-                        // Call function
-                        await FirebaseFunctions.instance.httpsCallable('aiChat').call({
-                          'chatId': chatId,
-                          'messageId': id,
-                        });
-                      }
+                      });
+                      _scrollToBottom();
+                    },
+                    onStreamStart: (cancelHandle) {
+                      setState(() => _isLoading = true);
+                    },
+                    onStreamEnd: () {
+                      setState(() => _isLoading = false);
                     },
                   ),
                 ),

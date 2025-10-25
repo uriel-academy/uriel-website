@@ -22,7 +22,7 @@ import 'screens/contact.dart'; // Import Contact page
 import 'screens/faq.dart'; // Import FAQ page
 import 'screens/pricing_page.dart'; // Import Pricing page
 import 'screens/payment_page.dart'; // Import Payment page
-import 'screens/uri_chat_demo.dart'; // Import URI chat demo
+import 'screens/uri_page.dart'; // New ChatGPT-like full page Uri
 import 'screens/upload_note_page.dart'; // Upload notes page
 import 'screens/note_viewer_page.dart'; // Note viewer page
 
@@ -108,7 +108,7 @@ class MyApp extends StatelessWidget {
         '/admin': (_) => const ComprehensiveAdminDashboard(), // Add comprehensive admin dashboard route
         '/admin-setup': (_) => const AdminSetupPage(), // Add admin setup route
         '/rme-debug': (_) => const RMEQuestionsDebugPage(), // Add RME debug route
-  '/uri': (_) => const UriChatDemoPage(),
+  '/uri': (_) => const UriPage(),
         '/upload_note': (_) => const UploadNotePage(),
         '/note': (ctx) {
           final args = ModalRoute.of(ctx)?.settings.arguments as Map<String, dynamic>?;

@@ -27,6 +27,9 @@ const corsHandler = cors({
   credentials: false,
 });
 
+// Track active SSE streams per conversationId to avoid accidental re-broadcasts
+const activeSseStreams: Map<string, boolean> = new Map();
+
 // Model identity and cutoff (update when you change models)
 // Prefer the newest GPT model, fall back to a stable 4.x when unavailable.
 const MODEL_PRIMARY = 'gpt-5';
@@ -482,6 +485,29 @@ export const aiChatStream = functions
           return;
         }
 
+        // Identify conversationId and verify optional auth token to scope streams per-user
+        const authHeader = (req.get('Authorization') || req.get('authorization') || '').toString();
+        let uid: string | null = null;
+        if (authHeader && authHeader.startsWith('Bearer ')) {
+          const idToken = authHeader.split(' ')[1];
+          try {
+            const decoded = await admin.auth().verifyIdToken(idToken);
+            uid = decoded.uid;
+          } catch (e) {
+            // token verify failed; proceed anonymously but log
+            console.warn('aiChatSSE token verify failed', e);
+          }
+        }
+
+        const conversationId = (req.method === 'GET' ? (req.query?.conversationId as string | undefined) : (req.body?.conversationId as string | undefined)) || uid || `anon_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
+
+        // Prevent concurrent streams for the same conversation to avoid duplicate/replayed outputs
+        if (activeSseStreams.has(conversationId)) {
+          res.status(409).json({ error: 'Another active stream exists for this conversation. Close it before opening a new one.' });
+          return;
+        }
+        activeSseStreams.set(conversationId, true);
+
         // Prepare streaming response headers
         res.setHeader('Content-Type', 'text/plain; charset=utf-8');
         res.setHeader('Cache-Control', 'no-cache, no-transform');
@@ -570,6 +596,29 @@ export const aiChatSSE = functions
           return;
         }
 
+        // Identify conversationId and verify optional auth token to scope streams per-user
+        const authHeader = (req.get('Authorization') || req.get('authorization') || '').toString();
+        let uid: string | null = null;
+        if (authHeader && authHeader.startsWith('Bearer ')) {
+          const idToken = authHeader.split(' ')[1];
+          try {
+            const decoded = await admin.auth().verifyIdToken(idToken);
+            uid = decoded.uid;
+          } catch (e) {
+            // token verify failed; proceed anonymously but log
+            console.warn('aiChatSSE token verify failed', e);
+          }
+        }
+
+        const conversationId = (req.method === 'GET' ? (req.query?.conversationId as string | undefined) : (req.body?.conversationId as string | undefined)) || uid || `anon_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
+
+        // Prevent concurrent streams for the same conversation to avoid duplicate/replayed outputs
+        if (activeSseStreams.has(conversationId)) {
+          res.status(409).json({ error: 'Another active stream exists for this conversation. Close it before opening a new one.' });
+          return;
+        }
+        activeSseStreams.set(conversationId, true);
+
         // SSE headers
         res.setHeader('Content-Type', 'text/event-stream; charset=utf-8');
         res.setHeader('Cache-Control', 'no-cache, no-transform');
@@ -578,6 +627,7 @@ export const aiChatSSE = functions
         res.flushHeaders?.();
 
         try {
+          // Call OpenAI and stream responses
           const stream = await (openai as any).responses.create({
             model: functions.config().openai?.model || 'gpt-4o-mini',
             input: [
@@ -589,17 +639,22 @@ export const aiChatSSE = functions
             stream: true,
           });
 
-          for await (const event of stream as any) {
-            try {
-              if (event.type === 'response.output_text.delta' && event.delta) {
-                // Emit SSE data line
-                res.write(`data: ${event.delta}\n\n`);
-              } else if (event.type === 'response.completed') {
-                // Send done event
-                res.write('event: done\ndata: {}\n\n');
-                break;
-              }
-            } catch (inner) { /* ignore per-event errors */ }
+          try {
+            for await (const event of stream as any) {
+              try {
+                if (event.type === 'response.output_text.delta' && event.delta) {
+                  // Emit SSE data line
+                  res.write(`data: ${event.delta}\n\n`);
+                } else if (event.type === 'response.completed') {
+                  // Send done event
+                  res.write('event: done\ndata: {}\n\n');
+                  break;
+                }
+              } catch (inner) { /* ignore per-event errors */ }
+            }
+          } finally {
+            // Ensure we always clear active stream flag for this conversation
+            try { activeSseStreams.delete(conversationId); } catch (_) {}
           }
 
           res.end();
@@ -607,6 +662,7 @@ export const aiChatSSE = functions
         } catch (err: any) {
           console.error('aiChatSSE inner error:', err?.response?.data || err);
           try { res.write(`event: error\ndata: ${JSON.stringify({ message: err?.message || 'unexpected' })}\n\n`); } catch (_) {}
+          try { activeSseStreams.delete(conversationId); } catch (_) {}
           res.end();
           return;
         }

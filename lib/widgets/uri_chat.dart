@@ -483,7 +483,7 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
         if (messageIndex < 0 || messageIndex >= _messages.length) {
           return const SizedBox.shrink(); // Safety check for invalid indices
         }
-        final m = _messages[messageIndex];
+        final m = _messages[_messages.length - 1 - messageIndex];
         final isUser = m['role'] == 'user';
         // Cap bubble width to max 620px while keeping responsive behavior
         final cap = math.min(width * 0.8, 620.0);
@@ -513,7 +513,7 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
                     child: _buildMessageWithAttachments(m, isUser),
                   ),
                   // If not user and stream just finished and this is the newest message, show complete
-                  if (!isUser && _streamComplete && messageIndex == 0)
+                  if (!isUser && _streamComplete && messageIndex == _messages.length - 1)
                     Padding(
                       padding: const EdgeInsets.only(top: 6.0),
                       child: Text('\u2713 complete', style: TextStyle(color: Colors.grey[500], fontSize: 11)),
