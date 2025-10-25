@@ -516,7 +516,7 @@ export const aiChatStream = functions
           return;
         }
 
-        // Identify conversationId and verify optional auth token to scope streams per-user
+  // Identify conversationId and verify optional auth token to scope streams per-user
         const authHeader = (req.get('Authorization') || req.get('authorization') || '').toString();
         let uid: string | null = null;
         if (authHeader && authHeader.startsWith('Bearer ')) {
@@ -530,7 +530,11 @@ export const aiChatStream = functions
           }
         }
 
-        const conversationId = (req.method === 'GET' ? (req.query?.conversationId as string | undefined) : (req.body?.conversationId as string | undefined)) || uid || `anon_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
+  const conversationId = (req.method === 'GET' ? (req.query?.conversationId as string | undefined) : (req.body?.conversationId as string | undefined)) || uid || `anon_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
+
+  // Optional flags from client
+  const useWebSearch = (req.method === 'GET' ? (req.query?.useWebSearch === 'true') : Boolean(req.body?.useWebSearch));
+  const useMathJax = (req.method === 'GET' ? (req.query?.useMathJax === 'true') : Boolean(req.body?.useMathJax));
 
         // Prevent concurrent streams for the same conversation to avoid duplicate/replayed outputs
         if (activeSseStreams.has(conversationId)) {
@@ -546,14 +550,19 @@ export const aiChatStream = functions
         res.flushHeaders?.();
 
         try {
-          // If this is a fact-style query and Tavily is configured, fetch web context
+          // If this is a fact-style query and Tavily is configured, or client requested it, fetch web context
           const mode = classifyMode(prompt);
           let webContext = '';
           try {
-            if (mode === 'facts') webContext = await tavilySearch(prompt, 6);
+            if (mode === 'facts' || useWebSearch) webContext = await tavilySearch(prompt, 6);
           } catch (e) { console.warn('tavilySearch failed for stream', e); }
 
-          const systemStream = `You are Uri, a helpful Ghana-savvy tutor. Knowledge cutoff: August 2025. Use Unicode math symbols (e.g., ×, ÷, ±, ≤, ≥, √, superscripts like x²) and do NOT return LaTeX/KaTeX unless the user asks for it. Break long answers into readable paragraphs.`;
+          // Build system instruction. Respect client request for MathJax/KaTeX if provided.
+          const mathInstr = useMathJax
+            ? 'When presenting formulas, use LaTeX/KaTeX delimiters ($...$ for inline, $$...$$ for blocks) suitable for MathJax rendering.'
+            : 'Use Unicode math symbols (e.g., ×, ÷, ±, ≤, ≥, √, superscripts like x²) and do NOT return LaTeX/KaTeX unless the user asks for it.';
+
+          const systemStream = `You are Uri, a helpful Ghana-savvy tutor. Knowledge cutoff: August 2025. ${mathInstr} Break long answers into readable paragraphs.`;
 
           const inputMessages: any[] = [ { role: 'system', content: systemStream } ];
           if (webContext && webContext.length > 0) inputMessages.push({ role: 'system', content: `WebSearchResults:\n${webContext}` });
@@ -567,11 +576,14 @@ export const aiChatStream = functions
             stream: true,
           });
 
-          // Iterate the async stream and write deltas as they arrive
+          // Iterate the async stream and write deltas as they arrive. Also accumulate the text to detect low-confidence.
+          let accumulated = '';
           for await (const event of stream as any) {
             try {
               if (event.type === 'response.output_text.delta' && event.delta) {
-                res.write(event.delta);
+                const d = event.delta.toString();
+                accumulated += d;
+                res.write(d);
               } else if (event.type === 'response.completed') {
                 break;
               }
@@ -579,6 +591,34 @@ export const aiChatStream = functions
               // ignore per-event errors
             }
           }
+
+          // After streaming finishes, detect uncertainty. If present and we did not include webContext, run Tavily and produce an improved answer.
+          try {
+            const uncertaintyRegex = /\b(I (don'?t|do not) know|I am not sure|I might be wrong|I cannot verify|as of my knowledge cutoff|I may be mistaken|I don'?t have up-to-date)\b/i;
+            if (uncertaintyRegex.test(accumulated) && !webContext) {
+              // Try to get web context and re-answer
+              const fallbackContext = await tavilySearch(prompt, 6);
+              if (fallbackContext && fallbackContext.length > 0) {
+                // Ask model to produce a concise verified answer using the web context
+                const followUpPrompt = [
+                  { role: 'system', content: systemStream },
+                  { role: 'system', content: `WebSearchResults:\n${fallbackContext}` },
+                  { role: 'user', content: `Please provide a concise, verified answer to the question below using ONLY the WebSearchResults above. If something cannot be verified, say so briefly. Question:\n${prompt}` }
+                ];
+                try {
+                  const follow = await chatCompletion(followUpPrompt, 0.0);
+                  const followText = follow?.choices?.[0]?.message?.content ?? '';
+                  if (followText && followText.length > 0) {
+                    // Send an explicit marker that this is a web-verified supplement
+                    res.write('\n\n[Web-verified answer]\n');
+                    res.write(followText);
+                  }
+                } catch (e) {
+                  console.warn('follow-up re-answer failed', e);
+                }
+              }
+            }
+          } catch (e) { console.warn('uncertainty detect failed', e); }
 
           res.end();
           return;
@@ -651,7 +691,11 @@ export const aiChatSSE = functions
           }
         }
 
-        const conversationId = (req.method === 'GET' ? (req.query?.conversationId as string | undefined) : (req.body?.conversationId as string | undefined)) || uid || `anon_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
+  const conversationId = (req.method === 'GET' ? (req.query?.conversationId as string | undefined) : (req.body?.conversationId as string | undefined)) || uid || `anon_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
+
+  // Optional flags from client
+  const useWebSearch = (req.method === 'GET' ? (req.query?.useWebSearch === 'true') : Boolean(req.body?.useWebSearch));
+  const useMathJax = (req.method === 'GET' ? (req.query?.useMathJax === 'true') : Boolean(req.body?.useMathJax));
 
         // Prevent concurrent streams for the same conversation to avoid duplicate/replayed outputs
         if (activeSseStreams.has(conversationId)) {
@@ -668,14 +712,18 @@ export const aiChatSSE = functions
         res.flushHeaders?.();
 
         try {
-          // Call OpenAI and stream responses. Include Tavily web results for fact queries if available.
+          // Call OpenAI and stream responses. Include Tavily web results for fact queries or when client requested.
           const mode = classifyMode(prompt);
           let webContext = '';
           try {
-            if (mode === 'facts') webContext = await tavilySearch(prompt, 6);
+            if (mode === 'facts' || useWebSearch) webContext = await tavilySearch(prompt, 6);
           } catch (e) { console.warn('tavilySearch failed for sse', e); }
 
-          const systemSse = `You are Uri, a helpful Ghana-savvy tutor. Knowledge cutoff: August 2025. Use Unicode math symbols (e.g., ×, ÷, ±, ≤, ≥, √, superscripts like x²) and do NOT return LaTeX/KaTeX unless the user asks for it. Break long answers into readable paragraphs.`;
+          const mathInstr = useMathJax
+            ? 'When presenting formulas, use LaTeX/KaTeX delimiters ($...$ for inline, $$...$$ for blocks) suitable for MathJax rendering.'
+            : 'Use Unicode math symbols (e.g., ×, ÷, ±, ≤, ≥, √, superscripts like x²) and do NOT return LaTeX/KaTeX unless the user asks for it.';
+
+          const systemSse = `You are Uri, a helpful Ghana-savvy tutor. Knowledge cutoff: August 2025. ${mathInstr} Break long answers into readable paragraphs.`;
           const inputArray: any[] = [ { role: 'system', content: systemSse } ];
           if (webContext && webContext.length > 0) inputArray.push({ role: 'system', content: `WebSearchResults:\n${webContext}` });
           inputArray.push({ role: 'user', content: prompt });
@@ -690,11 +738,15 @@ export const aiChatSSE = functions
           });
 
           try {
+            // Accumulate streamed text to detect uncertainty
+            let acc = '';
             for await (const event of stream as any) {
               try {
                 if (event.type === 'response.output_text.delta' && event.delta) {
+                  const d = event.delta.toString();
+                  acc += d;
                   // Emit SSE data line
-                  res.write(`data: ${event.delta}\n\n`);
+                  res.write(`data: ${d}\n\n`);
                 } else if (event.type === 'response.completed') {
                   // Send done event
                   res.write('event: done\ndata: {}\n\n');
@@ -702,6 +754,32 @@ export const aiChatSSE = functions
                 }
               } catch (inner) { /* ignore per-event errors */ }
             }
+
+            // After stream completes, if the assistant sounded uncertain and we didn't include webContext, fetch web results and send a verified supplement
+            try {
+              const uncertaintyRegex = /\b(I (don'?t|do not) know|I am not sure|I might be wrong|I cannot verify|as of my knowledge cutoff|I may be mistaken|I don'?t have up-to-date)\b/i;
+              if (uncertaintyRegex.test(acc) && !webContext) {
+                const fallbackContext = await tavilySearch(prompt, 6);
+                if (fallbackContext && fallbackContext.length > 0) {
+                  // Ask model to produce a concise verified answer using the web context
+                  const followUpPrompt = [
+                    { role: 'system', content: systemSse },
+                    { role: 'system', content: `WebSearchResults:\n${fallbackContext}` },
+                    { role: 'user', content: `Please provide a concise, verified answer to the question below using ONLY the WebSearchResults above. If something cannot be verified, say so briefly. Question:\n${prompt}` }
+                  ];
+                  try {
+                    const follow = await chatCompletion(followUpPrompt, 0.0);
+                    const followText = follow?.choices?.[0]?.message?.content ?? '';
+                    if (followText && followText.length > 0) {
+                      // Emit as a distinct SSE event so clients can handle it
+                      res.write(`event: web_verified\ndata: ${JSON.stringify({ answer: followText })}\n\n`);
+                    }
+                  } catch (e) {
+                    console.warn('follow-up re-answer failed (sse)', e);
+                  }
+                }
+              }
+            } catch (e) { console.warn('uncertainty detect failed (sse)', e); }
           } finally {
             // Ensure we always clear active stream flag for this conversation
             try { activeSseStreams.delete(conversationId); } catch (_) {}
