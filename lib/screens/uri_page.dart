@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:convert';
 import '../services/uri_ai_sse_io.dart';
+import '../widgets/math_renderer.dart';
 import 'dart:async';
 
 class UriPage extends StatefulWidget {
@@ -49,14 +50,8 @@ class _UriPageState extends State<UriPage> {
 
     setState(() {
       final last = _messages.lastWhere((m) => m.role == Role.assistant, orElse: () => _ChatMessage(role: Role.assistant, text: '', streaming: false));
-      // Add spacing if needed between existing text and new chunk
-      if (last.text.isNotEmpty && text.isNotEmpty) {
-        final endsWithSpace = RegExp(r"\s$").hasMatch(last.text);
-        final startsWithSpace = RegExp(r"^\s").hasMatch(text);
-        if (!endsWithSpace && !startsWithSpace) {
-          last.text += ' ';
-        }
-      }
+      // Append chunk as-is. Avoid inserting automatic spaces between chunks —
+      // chunks may split words and adding spaces causes broken words like "Factor ization".
       last.text += text;
     });
     _scrollToBottom();
@@ -75,8 +70,13 @@ class _UriPageState extends State<UriPage> {
       // not JSON — fall through
     }
 
-    // Remove trailing empty array markers like []
-    if (s.endsWith('[]')) s = s.substring(0, s.length - 2).trimRight();
+      // Remove any NUL bytes that sometimes appear in streams
+      s = s.replaceAll('\u0000', '');
+      // Remove trailing empty-array markers like [] which can appear repeatedly
+      // Example matches: '... text []', '... text [] []  '
+      s = s.replaceAll(RegExp(r'(?:\[\s*\]\s*)+\$?'), '');
+      // As a final cleanup trim trailing whitespace
+      s = s.trimRight();
 
     return s;
   }
@@ -126,6 +126,76 @@ class _UriPageState extends State<UriPage> {
         );
       }
     });
+  }
+
+  // Render message text with LaTeX support.
+  // We look for inline $...$ and block $$...$$ math and render using MathRenderer.
+  String normalizeLatex(String s) {
+    return s
+        .replaceAll(r'\\[', r'$$')
+        .replaceAll(r'\\]', r'$$')
+        .replaceAll(r'\\(', r'$')
+        .replaceAll(r'\\)', r'$')
+        .replaceAll(r'\[', r'$$')
+        .replaceAll(r'\]', r'$$')
+        .replaceAll(r'\(', r'$')
+        .replaceAll(r'\)', r'$');
+  }
+
+  Widget _buildRenderedMessage(String text, bool isUser) {
+    if (isUser) return SelectableText(text, style: GoogleFonts.montserrat(color: isUser ? Colors.white : const Color(0xFF111827), fontSize: 15, height: 1.45));
+
+    final normalized = normalizeLatex(text);
+
+    // helper to parse inline $...$
+    List<InlineSpan> parseInline(String segment) {
+      final spans = <InlineSpan>[];
+      final reg = RegExp(r'\$(?!\$)(.+?)\$');
+      var last = 0;
+      for (final m in reg.allMatches(segment)) {
+        if (m.start > last) spans.add(TextSpan(text: segment.substring(last, m.start)));
+        final expr = m.group(1) ?? '';
+        spans.add(WidgetSpan(child: MathRenderer(
+          texExpression: expr,
+          textStyle: const TextStyle(fontSize: 14),
+          isDisplayMode: false,
+        )));
+        last = m.end;
+      }
+      if (last < segment.length) spans.add(TextSpan(text: segment.substring(last)));
+      return spans;
+    }
+
+    final blockReg = RegExp(r'\$\$(.+?)\$\$', dotAll: true);
+    var lastBlock = 0;
+    final children = <InlineSpan>[];
+    for (final m in blockReg.allMatches(normalized)) {
+      if (m.start > lastBlock) {
+        final before = normalized.substring(lastBlock, m.start);
+        children.addAll(parseInline(before));
+      }
+      final expr = m.group(1) ?? '';
+      children.add(WidgetSpan(child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 6),
+        child: MathRenderer(
+          texExpression: expr,
+          textStyle: const TextStyle(fontSize: 16),
+          isDisplayMode: true,
+        ),
+      )));
+      lastBlock = m.end;
+    }
+    if (lastBlock < normalized.length) {
+      final tail = normalized.substring(lastBlock);
+      children.addAll(parseInline(tail));
+    }
+
+    return SelectableText.rich(
+      TextSpan(
+        style: GoogleFonts.montserrat(color: const Color(0xFF111827), fontSize: 15, height: 1.45),
+        children: children,
+      ),
+    );
   }
 
   Future<void> _send() async {
@@ -178,7 +248,6 @@ class _UriPageState extends State<UriPage> {
     final isUser = m.role == Role.user;
     final alignment = isUser ? CrossAxisAlignment.end : CrossAxisAlignment.start;
     final bg = isUser ? const Color(0xFF0B5FFF) : Colors.white;
-    final textColor = isUser ? Colors.white : const Color(0xFF111827);
     return Column(
       crossAxisAlignment: alignment,
       children: [
@@ -194,10 +263,7 @@ class _UriPageState extends State<UriPage> {
                 : [BoxShadow(color: Colors.black.withOpacity(0.03), blurRadius: 6, offset: const Offset(0, 2))],
             border: !isUser ? Border.all(color: const Color(0xFFE6E9EE), width: 1) : null,
           ),
-          child: SelectableText(
-            m.text,
-            style: GoogleFonts.montserrat(color: textColor, fontSize: 15, height: 1.45),
-          ),
+          child: _buildRenderedMessage(m.text, isUser),
         ),
       ],
     );

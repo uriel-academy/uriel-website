@@ -1,6 +1,7 @@
 // Web-specific SSE implementation
 // Uses dart:html EventSource
 import 'dart:html' as html;
+import 'dart:convert';
 
 /// A simple cancel handle that allows the caller to stop the stream.
 class CancelHandle {

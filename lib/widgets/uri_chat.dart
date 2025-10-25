@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 import 'package:flutter_tts/flutter_tts.dart';
-import 'package:flutter_math_fork/flutter_math.dart';
 // Note: UriAI and FirebaseAuth were previously used by the older inline _send implementation.
 // The chat input has been moved to `UriChatInput` which handles sending. Keep imports removed to avoid unused warnings.
 import 'uri_chat_input.dart';
+import 'math_renderer.dart';
 
 // Color constants matching design spec
 class UrielColors {
@@ -625,7 +625,7 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
   }
 
   // Render message text as Markdown with KaTeX support.
-  // We look for inline $...$ and block $$...$$ math and render using flutter_math_fork.
+  // We look for inline $...$ and block $$...$$ math and render using MathRenderer (MathJax on web, flutter_math_fork on mobile).
   String normalizeLatex(String s) {
     return s
         .replaceAll(r'\\[', r'$$')
@@ -641,7 +641,7 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
   Widget _buildRenderedMessage(String text, bool isUser) {
     if (isUser) return Text(text, style: const TextStyle(fontSize: 15, height: 1.5));
 
-  final normalized = normalizeLatex(text);
+    final normalized = normalizeLatex(text);
 
     // helper to parse inline $...$
     List<InlineSpan> parseInline(String segment) {
@@ -651,7 +651,11 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
       for (final m in reg.allMatches(segment)) {
         if (m.start > last) spans.add(TextSpan(text: segment.substring(last, m.start)));
         final expr = m.group(1) ?? '';
-        spans.add(WidgetSpan(child: Math.tex(expr, textStyle: const TextStyle(fontSize: 14))));
+        spans.add(WidgetSpan(child: MathRenderer(
+          texExpression: expr,
+          textStyle: const TextStyle(fontSize: 14),
+          isDisplayMode: false,
+        )));
         last = m.end;
       }
       if (last < segment.length) spans.add(TextSpan(text: segment.substring(last)));
@@ -669,7 +673,11 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
       final expr = m.group(1) ?? '';
       children.add(WidgetSpan(child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 6),
-        child: Math.tex(expr, textStyle: const TextStyle(fontSize: 16)),
+        child: MathRenderer(
+          texExpression: expr,
+          textStyle: const TextStyle(fontSize: 16),
+          isDisplayMode: true,
+        ),
       )));
       lastBlock = m.end;
     }

@@ -52,7 +52,7 @@ function classifyMode(q: string): 'small_talk'|'tutoring'|'facts' {
   const s = (q || '').toLowerCase().trim();
   if (/(your name|what'?s your name|who are you|hi|hello|hey|thanks|thank you)\b/.test(s)) return 'small_talk';
   // include common lookup patterns: who is, what is, when is, where is, and topics that need live info
-  if (/(who is|who was|what is|where is|when is|when was|date|schedule|latest|today|update|news|bece|wassce|president|minister|result|results|2024|2025|2026)\b/.test(s)) return 'facts';
+  if (/(who is|who was|what is|where is|when is|when was|date|schedule|latest|today|update|news|current|now|bece|wassce|president|minister|result|results|2024|2025|2026)\b/.test(s)) return 'facts';
   return 'tutoring';
 }
 
@@ -283,7 +283,7 @@ export const aiChatHttpLegacy = functions
           let system = `
 You are **Uri**, a friendly, witty, and highly capable study buddy for students aged 10–21.
 
-Knowledge cutoff: August 2025. When in doubt about recent events, prefer using the web search results provided by the server (Tavily) instead of inventing dates or claims.
+Knowledge cutoff: June 2025. When in doubt about recent events, prefer using the web search results provided by the server (Tavily) instead of inventing dates or claims.
 
 ## Role
 
@@ -301,10 +301,7 @@ Knowledge cutoff: August 2025. When in doubt about recent events, prefer using t
 * **Default = conversational paragraph(s)**. Always break long answers into readable paragraphs — insert a blank line between paragraphs and keep each paragraph to 3–5 sentences when possible.
 * Use short lines, light bullets only when it improves readability.
 * **Only** use headings/numbered steps/tables/outlines **when the user asks** (e.g., "give steps", "outline", "bulleted", "table", "make a plan", "pros/cons", "SOP").
-* For maths or formulas, DO NOT return LaTeX/KaTeX. Use clear Unicode/math symbols and plain-text notation that reads well in a chat:
-  - Use × for multiplication, ÷ for division, ±, ≤, ≥, ≈, √ for root, superscripts for powers when practical (e.g., x²), and fractional notation like 1/2 when short.
-  - Use monospace or inline code markers for short expressions when needed (e.g., '2 + 2 = 4').
-  - If the user explicitly asks for LaTeX or KaTeX, provide it; otherwise prefer Unicode/math symbols and clear, well-spaced formatting.
+* For maths or formulas, use LaTeX/KaTeX delimiters ($...$ for inline, $$...$$ for blocks) suitable for MathJax rendering. Use clear Unicode/math symbols and plain-text notation that reads well in a chat when LaTeX is not requested.
 * If the user says "brief," keep it tight. If they say "full essay," write a well-structured essay with paragraphs.
 * End with a supportive nudge when helpful, not every time.
 
@@ -558,11 +555,11 @@ export const aiChatStream = functions
           } catch (e) { console.warn('tavilySearch failed for stream', e); }
 
           // Build system instruction. Respect client request for MathJax/KaTeX if provided.
-          const mathInstr = useMathJax
-            ? 'When presenting formulas, use LaTeX/KaTeX delimiters ($...$ for inline, $$...$$ for blocks) suitable for MathJax rendering.'
+          const mathInstr = !useMathJax
+            ? 'Always use LaTeX/KaTeX delimiters for mathematical expressions: $...$ for inline math, $$...$$ for display math. Do not use Unicode symbols like ×, ÷, ±, ≤, ≥, √, x².'
             : 'Use Unicode math symbols (e.g., ×, ÷, ±, ≤, ≥, √, superscripts like x²) and do NOT return LaTeX/KaTeX unless the user asks for it.';
 
-          const systemStream = `You are Uri, a helpful Ghana-savvy tutor. Knowledge cutoff: August 2025. ${mathInstr} Break long answers into readable paragraphs.`;
+          const systemStream = `You are Uri, a helpful Ghana-savvy tutor. Knowledge cutoff: June 2025. ${mathInstr} Break long answers into readable paragraphs.`;
 
           const inputMessages: any[] = [ { role: 'system', content: systemStream } ];
           if (webContext && webContext.length > 0) inputMessages.push({ role: 'system', content: `WebSearchResults:\n${webContext}` });
@@ -719,11 +716,11 @@ export const aiChatSSE = functions
             if (mode === 'facts' || useWebSearch) webContext = await tavilySearch(prompt, 6);
           } catch (e) { console.warn('tavilySearch failed for sse', e); }
 
-          const mathInstr = useMathJax
-            ? 'When presenting formulas, use LaTeX/KaTeX delimiters ($...$ for inline, $$...$$ for blocks) suitable for MathJax rendering.'
+          const mathInstr = !useMathJax
+            ? 'Always use LaTeX/KaTeX delimiters for mathematical expressions: $...$ for inline math, $$...$$ for display math. Do not use Unicode symbols like ×, ÷, ±, ≤, ≥, √, x².'
             : 'Use Unicode math symbols (e.g., ×, ÷, ±, ≤, ≥, √, superscripts like x²) and do NOT return LaTeX/KaTeX unless the user asks for it.';
 
-          const systemSse = `You are Uri, a helpful Ghana-savvy tutor. Knowledge cutoff: August 2025. ${mathInstr} Break long answers into readable paragraphs.`;
+          const systemSse = `You are Uri, a helpful Ghana-savvy tutor. Knowledge cutoff: June 2025. ${mathInstr} Break long answers into readable paragraphs.`;
           const inputArray: any[] = [ { role: 'system', content: systemSse } ];
           if (webContext && webContext.length > 0) inputArray.push({ role: 'system', content: `WebSearchResults:\n${webContext}` });
           inputArray.push({ role: 'user', content: prompt });
