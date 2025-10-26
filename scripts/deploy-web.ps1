@@ -15,8 +15,8 @@ Write-Host "Running prerender script..."
 node .\scripts\prerender.js
 if ($LASTEXITCODE -ne 0) { throw "prerender failed" }
 
-Write-Host "Deploying to Firebase Hosting..."
-firebase deploy --only hosting
+Write-Host "Deploying to Firebase Hosting and Functions..."
+firebase deploy --only "hosting,functions"
 if ($LASTEXITCODE -ne 0) { throw "firebase deploy failed" }
 
 Write-Host "Deploy complete."

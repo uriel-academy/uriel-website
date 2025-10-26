@@ -41,15 +41,17 @@ class ChatService {
     String? imageUrl,
     Map<String, dynamic>? profile,
     String channel = 'uri_tab',
+    String? conversationId,
     required void Function(String chunk) onChunk,
     void Function()? onDone,
     void Function(Object error)? onError,
   }) async {
+    // Only send the last user message (like URI page does)
     final prompt = (messages.isNotEmpty ? messages.last['content'] ?? '' : '');
     try {
       final handle = await UriAI.streamAskSSE(prompt, (chunk) {
         onChunk(chunk);
-      }, onDone: onDone, onError: onError, imageUrl: imageUrl);
+      }, onDone: onDone, onError: onError, imageUrl: imageUrl, conversationId: conversationId);
       return handle;
     } catch (e) {
       if (onError != null) onError(e);

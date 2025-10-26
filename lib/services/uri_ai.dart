@@ -43,7 +43,7 @@ class UriAI {
   }
 
   // Stream responses token-by-token with aggregation. Returns a CancelHandle.
-  static Future<CancelHandle> streamAskSSE(String prompt, void Function(String chunk) onData, {void Function()? onDone, void Function(Object error)? onError, int flushIntervalMs = 100, int flushThreshold = 40, String? imageUrl}) async {
+  static Future<CancelHandle> streamAskSSE(String prompt, void Function(String chunk) onData, {void Function()? onDone, void Function(Object error)? onError, int flushIntervalMs = 100, int flushThreshold = 40, String? imageUrl, String? conversationId}) async {
     // Start underlying stream and get a CancelHandle
     final cancelHandle = await streamAskSSE_impl(prompt, (chunk) {
       try { onData(chunk); } catch (_) {}
@@ -51,7 +51,7 @@ class UriAI {
       if (onDone != null) onDone();
     }, onError: (e) {
       if (onError != null) onError(e);
-    }, imageUrl: imageUrl);
+    }, imageUrl: imageUrl, conversationId: conversationId);
 
     // Return the cancel handle directly
     return cancelHandle;

@@ -4,7 +4,7 @@ import 'package:flutter_tts/flutter_tts.dart';
 // Note: UriAI and FirebaseAuth were previously used by the older inline _send implementation.
 // The chat input has been moved to `UriChatInput` which handles sending. Keep imports removed to avoid unused warnings.
 import 'uri_chat_input.dart';
-import 'math_renderer.dart';
+import 'latex_markdown_builder.dart';
 
 // Color constants matching design spec
 class UrielColors {
@@ -65,7 +65,7 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (_scrollController.hasClients) {
         _scrollController.animateTo(
-          0.0, // Since reverse: true, position 0 is the bottom
+          _scrollController.position.maxScrollExtent,
           duration: const Duration(milliseconds: 300),
           curve: Curves.easeOut,
         );
@@ -472,18 +472,16 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
   Widget _buildMessagesList(double width) {
     return ListView.builder(
       controller: _scrollController,
-      reverse: true,
       padding: const EdgeInsets.all(16),
       itemCount: _messages.length + (_loading ? 1 : 0),
       itemBuilder: (ctx, i) {
-        if (_loading && i == 0) {
+        if (_loading && i == _messages.length) {
           return _buildTypingIndicator();
         }
-        final messageIndex = i - (_loading ? 1 : 0);
-        if (messageIndex < 0 || messageIndex >= _messages.length) {
-          return const SizedBox.shrink(); // Safety check for invalid indices
+        if (i >= _messages.length) {
+          return const SizedBox.shrink();
         }
-        final m = _messages[_messages.length - 1 - messageIndex];
+        final m = _messages[i];
         final isUser = m['role'] == 'user';
         // Cap bubble width to max 620px while keeping responsive behavior
         final cap = math.min(width * 0.8, 620.0);
@@ -513,7 +511,7 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
                     child: _buildMessageWithAttachments(m, isUser),
                   ),
                   // If not user and stream just finished and this is the newest message, show complete
-                  if (!isUser && _streamComplete && messageIndex == _messages.length - 1)
+                  if (!isUser && _streamComplete && i == _messages.length - 1)
                     Padding(
                       padding: const EdgeInsets.only(top: 6.0),
                       child: Text('\u2713 complete', style: TextStyle(color: Colors.grey[500], fontSize: 11)),
@@ -535,22 +533,23 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
         border: Border(top: BorderSide(color: UrielColors.softGray, width: 1)),
       ),
       child: UriChatInput(
-        history: _messages.map((m) => {'role': m['role'] as String? ?? 'user', 'content': m['text'] as String? ?? ''}).toList(),
+        history: _messages
+            .where((m) => !(m['role'] == 'assistant' && _loading)) // Exclude streaming assistant messages
+            .map((m) => {'role': m['role'] as String? ?? 'user', 'content': m['text'] as String? ?? ''})
+            .toList(),
         onMessage: (role, content, {attachments}) {
           setState(() {
-            // We keep the list in newest-first order so with reverse: true the
-            // latest message appears at the bottom of the viewport. Insert at
-            // index 0 for new messages and update index 0 for streaming updates.
+            // Append messages in chronological order (newest at bottom)
             if (role == 'assistant') {
-              // If first message is an assistant bubble, replace its text (stream update)
-              if (_messages.isNotEmpty && _messages.first['role'] == 'assistant') {
-                _messages[0]['text'] = content;
+              // If last message is an assistant bubble, update its text (stream update)
+              if (_messages.isNotEmpty && _messages.last['role'] == 'assistant') {
+                _messages.last['text'] = content;
               } else {
-                _messages.insert(0, {'role': role, 'text': content, 'id': '${role}_${DateTime.now().millisecondsSinceEpoch}', 'attachments': attachments});
+                _messages.add({'role': role, 'text': content, 'id': '${role}_${DateTime.now().millisecondsSinceEpoch}', 'attachments': attachments});
               }
             } else {
-              // user messages also go at the front (newest-first)
-              _messages.insert(0, {'role': role, 'text': content, 'id': '${role}_${DateTime.now().millisecondsSinceEpoch}', 'attachments': attachments});
+              // User messages also go at the end
+              _messages.add({'role': role, 'text': content, 'id': '${role}_${DateTime.now().millisecondsSinceEpoch}', 'attachments': attachments});
             }
           });
           _scrollToBottom();
@@ -639,58 +638,26 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
   }
 
   Widget _buildRenderedMessage(String text, bool isUser) {
-    if (isUser) return Text(text, style: const TextStyle(fontSize: 15, height: 1.5));
+    // Normalize LaTeX delimiters first
+    final normalizedText = normalizeLatex(text);
 
-    final normalized = normalizeLatex(text);
-
-    // helper to parse inline $...$
-    List<InlineSpan> parseInline(String segment) {
-      final spans = <InlineSpan>[];
-      final reg = RegExp(r'\$(?!\$)(.+?)\$');
-      var last = 0;
-      for (final m in reg.allMatches(segment)) {
-        if (m.start > last) spans.add(TextSpan(text: segment.substring(last, m.start)));
-        final expr = m.group(1) ?? '';
-        spans.add(WidgetSpan(child: MathRenderer(
-          texExpression: expr,
-          textStyle: const TextStyle(fontSize: 14),
-          isDisplayMode: false,
-        )));
-        last = m.end;
-      }
-      if (last < segment.length) spans.add(TextSpan(text: segment.substring(last)));
-      return spans;
+    if (isUser) {
+      return LatexMarkdown(
+        data: normalizedText,
+        textStyle: const TextStyle(fontSize: 15, height: 1.5),
+        selectable: true,
+      );
     }
 
-    final blockReg = RegExp(r'\$\$(.+?)\$\$', dotAll: true);
-    var lastBlock = 0;
-    final children = <InlineSpan>[];
-    for (final m in blockReg.allMatches(normalized)) {
-      if (m.start > lastBlock) {
-        final before = normalized.substring(lastBlock, m.start);
-        children.addAll(parseInline(before));
-      }
-      final expr = m.group(1) ?? '';
-      children.add(WidgetSpan(child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 6),
-        child: MathRenderer(
-          texExpression: expr,
-          textStyle: const TextStyle(fontSize: 16),
-          isDisplayMode: true,
-        ),
-      )));
-      lastBlock = m.end;
-    }
-    if (lastBlock < normalized.length) {
-      final tail = normalized.substring(lastBlock);
-      children.addAll(parseInline(tail));
-    }
-
-    return RichText(
-      text: TextSpan(
-        style: const TextStyle(color: UrielColors.deepNavy, fontSize: 15, height: 1.5),
-        children: children,
+    // For AI responses, use LatexMarkdown with navy color
+    return LatexMarkdown(
+      data: normalizedText,
+      textStyle: const TextStyle(
+        color: UrielColors.deepNavy,
+        fontSize: 15,
+        height: 1.5,
       ),
+      selectable: true,
     );
   }
 
