@@ -148,6 +148,41 @@
   </script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
+  <!-- KaTeX (fast client-side TeX rendering) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js" onload="document.dispatchEvent(new Event('katexLoaded'))"></script>
+
+  <script>
+    // Small helper to render KaTeX into a div with a given id. Used by the
+    // Flutter web KatexRenderer via HtmlElementView. This will try to render
+    // immediately if KaTeX is available, otherwise it waits for the
+    // 'katexLoaded' event.
+    window.renderKatex = function(elementId, tex, displayMode) {
+      function doRender() {
+        try {
+          var el = document.getElementById(elementId);
+          if (!el) return;
+          // Use renderToString for simplicity and set throwOnError:false
+          var html = katex.renderToString(tex || '', {throwOnError: false, displayMode: !!displayMode});
+          el.innerHTML = html;
+        } catch (e) {
+          var el = document.getElementById(elementId);
+          if (el) el.textContent = tex || '';
+        }
+      }
+      if (typeof katex !== 'undefined') {
+        doRender();
+      } else {
+        document.addEventListener('katexLoaded', doRender, {once: true});
+      }
+    };
+
+    // Allow updating an existing element's content
+    window.updateKatex = function(elementId, tex, displayMode) {
+      window.renderKatex(elementId, tex, displayMode);
+    };
+  </script>
+
   <!-- Firebase JS SDKs removed: FlutterFire handles Firebase initialization -->
   <style>
     /* Prevent grey flash - match app background color */
