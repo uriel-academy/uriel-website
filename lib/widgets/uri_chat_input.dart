@@ -69,6 +69,32 @@ class _UriChatInputState extends State<UriChatInput> {
     return '';
   }
 
+  String _normalizeMd(String s) {
+    // Collapse runs of whitespace
+    s = s.replaceAll(RegExp(r'[ \t\f\v]+'), ' ');
+
+    // Remove space *before* punctuation , . ; : ? ! % ) ]
+    s = s.replaceAll(RegExp(r'\s+([,.;:?!%])'), r'$1');
+    s = s.replaceAll(RegExp(r'\s+([\)\]\}])'), r'$1');
+
+    // Remove space *after* opening punctuation ( ( [ {
+    s = s.replaceAll(RegExp(r'([\(\[\{])\s+'), r'$1');
+
+    // Hyphenated compounds: evidence -based  -> evidence-based
+    s = s.replaceAll(RegExp(r'(?<=[A-Za-z])\s*-\s*(?=[A-Za-z])'), '-');
+
+    // Ensure a space after sentence-ending punctuation if followed by a letter/number
+    s = s.replaceAll(RegExp(r'([.!?])([A-Za-z0-9])'), r'$1 $2');
+
+    // Force numbered lists onto new lines: "... points: 1. ..." -> "\n1. ..."
+    s = s.replaceAll(RegExp(r'(?<!^)\s+(\d+)\.\s'), '\n\$1. ');
+
+    // Bullet lists sometimes arrive like "- item" but stuck to previous text
+    s = s.replaceAll(RegExp(r'(?<!^)\s+(-\s+)'), '\n\$1');
+
+    return s.trim();
+  }
+
   Future<void> _sendText() async {
     var text = _ctrl.text.trim();
     if (text.isEmpty) return;
@@ -99,6 +125,8 @@ class _UriChatInputState extends State<UriChatInput> {
           // Normalize incoming chunk like URI page does
           final normalizedChunk = _normalizeChunk(chunk);
           accumulated += normalizedChunk;
+          // Apply markdown normalization to the entire accumulated buffer
+          accumulated = _normalizeMd(accumulated);
           widget.onMessage('assistant', accumulated);
         },
         onDone: () {
