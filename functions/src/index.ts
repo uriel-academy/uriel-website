@@ -56,6 +56,11 @@ function classifyMode(q: string): 'small_talk'|'tutoring'|'facts' {
   return 'tutoring';
 }
 
+function needsWebSearch(q: string): boolean {
+  const s = (q || '').toLowerCase().trim();
+  return /(who is|what is|where is|when is|how much|price|cost|exchange rate|weather|score|fixture|latest|current|now|today|update|news|breaking|recent|new|2024|2025|2026|2027|2028|2029|2030|president|election|government|minister|policy|law|bill|parliament|court|judge|case|crime|accident|disaster|economy|market|stock|currency|inflation|unemployment|population|census|statistics|data|report|survey|study|research|2023|2024)\b/.test(s);
+}
+
 // Robustly extract a plain-text prompt from arbitrary client payloads
 function extractPrompt(body: any): string {
   try {
@@ -257,7 +262,7 @@ export const aiChatHttpLegacy = functions
             return;
           }
 
-          if (mode === 'facts') {
+          if (mode === 'facts' || needsWebSearch(userMessage)) {
             try {
               const reply = await answerWithFacts(userMessage);
               // Save assistant response
@@ -366,11 +371,14 @@ CURIOSITY BEYOND ACADEMICS
 - Promote lifelong learning attitudes
 
 WEB SEARCH & VERIFICATION
-- Use web search for current facts, statistics, and recent developments
-- Verify information through reliable sources
-- Cite sources appropriately for academic integrity
-- Cross-reference information for accuracy
-- Explain when information might be outdated or context-dependent
+- Automatically perform web searches when encountering questions about current events, recent statistics, Ghanaian news, or topics requiring up-to-date information
+- Prioritize Ghanaian sources: Ghana News Agency, Daily Graphic, Ghanaian Times, Ministry of Education websites, and official government portals
+- For international topics, use reliable sources like BBC, Reuters, UNESCO, and WHO
+- Always cite sources using APA format: (Author, Year) or "Source Name (Year)" with full URLs when possible
+- Cross-reference multiple sources to ensure accuracy and avoid misinformation
+- Explain information currency: note if data is from 2023, 2024, or current year
+- If web search fails or returns conflicting information, clearly state limitations and suggest consulting official sources
+- For academic questions, verify against curriculum standards and examination board guidelines
 
 GAMIFICATION AWARENESS
 - Incorporate gamification elements when appropriate (points, levels, achievements)
@@ -620,7 +628,7 @@ export const aiChatStream = functions
           const mode = classifyMode(prompt);
           let webContext = '';
           try {
-            if (mode === 'facts' || useWebSearch) webContext = await tavilySearch(prompt, 6);
+            if (mode === 'facts' || useWebSearch || needsWebSearch(prompt)) webContext = await tavilySearch(prompt, 6);
           } catch (e) { console.warn('tavilySearch failed for stream', e); }
 
           // Build system instruction. Respect client request for MathJax/KaTeX if provided.
@@ -711,11 +719,14 @@ CURIOSITY BEYOND ACADEMICS
 - Promote lifelong learning attitudes
 
 WEB SEARCH & VERIFICATION
-- Use web search for current facts, statistics, and recent developments
-- Verify information through reliable sources
-- Cite sources appropriately for academic integrity
-- Cross-reference information for accuracy
-- Explain when information might be outdated or context-dependent
+- Automatically perform web searches when encountering questions about current events, recent statistics, Ghanaian news, or topics requiring up-to-date information
+- Prioritize Ghanaian sources: Ghana News Agency, Daily Graphic, Ghanaian Times, Ministry of Education websites, and official government portals
+- For international topics, use reliable sources like BBC, Reuters, UNESCO, and WHO
+- Always cite sources using APA format: (Author, Year) or "Source Name (Year)" with full URLs when possible
+- Cross-reference multiple sources to ensure accuracy and avoid misinformation
+- Explain information currency: note if data is from 2023, 2024, or current year
+- If web search fails or returns conflicting information, clearly state limitations and suggest consulting official sources
+- For academic questions, verify against curriculum standards and examination board guidelines
 
 GAMIFICATION AWARENESS
 - Incorporate gamification elements when appropriate (points, levels, achievements)
@@ -793,7 +804,7 @@ FINAL REMINDERS
 
           // After streaming finishes, detect uncertainty. If present and we did not include webContext, run Tavily and produce an improved answer.
           try {
-            const uncertaintyRegex = /\b(I (don'?t|do not) know|I am not sure|I might be wrong|I cannot verify|as of my knowledge cutoff|I may be mistaken|I don'?t have up-to-date)\b/i;
+            const uncertaintyRegex = /\b(I (don'?t|do not) know|I am not sure|I might be wrong|I cannot verify|as of my knowledge cutoff|as of my last update|I may be mistaken|I don'?t have up-to-date)\b/i;
             if (uncertaintyRegex.test(accumulated) && !webContext) {
               // Try to get web context and re-answer
               const fallbackContext = await tavilySearch(prompt, 6);
@@ -914,7 +925,7 @@ export const aiChatSSE = functions
           const mode = classifyMode(prompt);
           let webContext = '';
           try {
-            if (mode === 'facts' || useWebSearch) webContext = await tavilySearch(prompt, 6);
+            if (mode === 'facts' || useWebSearch || needsWebSearch(prompt)) webContext = await tavilySearch(prompt, 6);
           } catch (e) { console.warn('tavilySearch failed for sse', e); }
 
           const systemSse = `ROLE
@@ -1004,11 +1015,15 @@ CURIOSITY BEYOND ACADEMICS
 - Promote lifelong learning attitudes
 
 WEB SEARCH & VERIFICATION
-- Use {useWebSearch} setting to determine search behavior
-- When searching: Verify facts, cite reliable sources
-- Ghana-specific information: Use local educational resources
-- Current events: Cross-reference multiple sources
-- Academic facts: Prefer official curriculum and examination bodies
+- When WebSearchResults are provided, use ONLY those results and do not rely on training data or prior knowledge for current information
+- Automatically perform web searches when encountering questions about current events, recent statistics, Ghanaian news, or topics requiring up-to-date information
+- Prioritize Ghanaian sources: Ghana News Agency, Daily Graphic, Ghanaian Times, Ministry of Education websites, and official government portals
+- For international topics, use reliable sources like BBC, Reuters, UNESCO, and WHO
+- Always cite sources using APA format: (Author, Year) or "Source Name (Year)" with full URLs when possible
+- Cross-reference multiple sources to ensure accuracy and avoid misinformation
+- Explain information currency: note if data is from 2023, 2024, or current year
+- If web search fails or returns conflicting information, clearly state limitations and suggest consulting official sources
+- For academic questions, verify against curriculum standards and examination board guidelines
 
 GAMIFICATION AWARENESS
 - Recognize and support gamified learning elements
@@ -1090,7 +1105,7 @@ FINAL REMINDERS
 
             // After stream completes, if the assistant sounded uncertain and we didn't include webContext, fetch web results and send a verified supplement
             try {
-              const uncertaintyRegex = /\b(I (don'?t|do not) know|I am not sure|I might be wrong|I cannot verify|as of my knowledge cutoff|I may be mistaken|I don'?t have up-to-date)\b/i;
+              const uncertaintyRegex = /\b(I (don'?t|do not) know|I am not sure|I might be wrong|I cannot verify|as of my knowledge cutoff|as of my last update|I may be mistaken|I don'?t have up-to-date)\b/i;
               if (uncertaintyRegex.test(acc) && !webContext) {
                 const fallbackContext = await tavilySearch(prompt, 6);
                 if (fallbackContext && fallbackContext.length > 0) {
