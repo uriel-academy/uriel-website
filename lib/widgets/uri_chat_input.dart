@@ -64,17 +64,41 @@ class _UriChatInputState extends State<UriChatInput> {
   }
 
   String _normalizeMd(String s) {
-    print('Normalizing text: "${s.substring(0, math.min(200, s.length))}"...');
+    print('=== NORMALIZING TEXT ===');
+    print('Input: "${s.substring(0, math.min(300, s.length))}"');
 
-    // First, handle LaTeX expressions - replace various LaTeX markers with proper formatting
+    // Most critical fixes first - handle the exact patterns from AI output
+    s = s.replaceAll(r'$1 .', '1.');
+    s = s.replaceAll(r'$2 .', '2.');
+    s = s.replaceAll(r'$3 .', '3.');
+    s = s.replaceAll(r'$1', '1.');
+    s = s.replaceAll(r'$2', '2.');
+    s = s.replaceAll(r'$3', '3.');
+
+    // Handle LaTeX markers - try multiple variations
     s = s.replaceAll('latex :', r'$');
     s = s.replaceAll('latex:', r'$');
     s = s.replaceAll(r'$$', r'$$');
 
+    // Fix the specific pattern: "1**Text**:" -> "1. **Text**:"
+    s = s.replaceAllMapped(RegExp(r'(\d+)\*\*([^*]+)\*\*:'), (match) => '${match.group(1)}. **${match.group(2)}**:');
+
+    // Fix spacing issues that appear in the output
+    s = s.replaceAll('in to', 'into');
+    s = s.replaceAll('understand ing', 'understanding');
+    s = s.replaceAll('discover ing', 'discovering');
+    s = s.replaceAll('develop ing', 'developing');
+    s = s.replaceAll('act up on', 'act upon');
+
+    // Handle any remaining $ followed by digit patterns
+    s = s.replaceAllMapped(RegExp(r'\$([0-9]+)'), (match) => '${match.group(1)}.');
+
+    print('After critical fixes: "${s.substring(0, math.min(300, s.length))}"');
+
+    // Continue with other normalization...
     // Fix common spacing issues that the AI creates
     // Remove spaces within words that shouldn't have them
     s = s.replaceAll('do ing', 'doing');
-    s = s.replaceAll('in to', 'into');
     s = s.replaceAll('origin al', 'original');
     s = s.replaceAll('theoret ical', 'theoretical');
     s = s.replaceAll('pract ical', 'practical');
@@ -120,14 +144,6 @@ class _UriChatInputState extends State<UriChatInput> {
     s = s.replaceAll('Mrs.', 'Mrs.');
     s = s.replaceAll('Ms.', 'Ms.');
 
-    // Fix the "$1 ." issue - replace with proper numbered lists
-    s = s.replaceAll(r'$1 .', '1.');
-    s = s.replaceAll(r'$1', '1.');
-    s = s.replaceAll(r'$2 .', '2.');
-    s = s.replaceAll(r'$2', '2.');
-    s = s.replaceAll(r'$3 .', '3.');
-    s = s.replaceAll(r'$3', '3.');
-
     // Collapse runs of whitespace
     s = s.replaceAll(RegExp(r'[ \t\f\v]+'), ' ');
 
@@ -154,7 +170,7 @@ class _UriChatInputState extends State<UriChatInput> {
     s = s.replaceAll(r'$', r'$');
     s = s.replaceAll(r'$$', r'$$');
 
-    print('Normalized text: "${s.substring(0, math.min(200, s.length))}"...');
+    print('Final normalized: "${s.substring(0, math.min(300, s.length))}"');
     return s.trim();
   }
 

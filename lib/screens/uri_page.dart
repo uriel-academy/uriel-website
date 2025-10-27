@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:convert';
-import '../services/uri_ai_sse_io.dart';
-import '../widgets/latex_markdown_builder.dart';
-import 'dart:math';
+import '../services/chat_service.dart';
+import 'dart:math' as math;
 import 'package:flutter/services.dart';
 
 class UriPage extends StatefulWidget {
@@ -20,16 +19,44 @@ class _UriPageState extends State<UriPage> {
   final FocusNode _inputFocusNode = FocusNode();
   final ScrollController _scroll = ScrollController();
   final List<_ChatMessage> _messages = [];
-  CancelHandle? _currentCancel;
+  late ChatService _chatService;
+  String _currentAnswer = '';
   bool _sending = false;
   bool _isFirstInteraction = true;
+
+  @override
+  void initState() {
+    super.initState();
+    _chatService = ChatService(Uri.parse("https://us-central1-uriel-academy-41fb0.cloudfunctions.net/aiChatHttp"));
+    _chatService.stream.listen((chunk) {
+      if (chunk.error != null) {
+        setState(() {
+          _messages.add(_ChatMessage(role: Role.system, text: '[Error: ${chunk.error}]'));
+          _sending = false;
+        });
+      } else if (chunk.done) {
+        setState(() {
+          if (_messages.isNotEmpty && _messages.last.role == Role.assistant) {
+            _messages.last.streaming = false;
+          }
+          _sending = false;
+        });
+      } else if (chunk.delta != null) {
+        setState(() => _currentAnswer += chunk.delta!);
+        final normalizedAnswer = _normalizeMd(_currentAnswer);
+        if (_messages.isNotEmpty && _messages.last.role == Role.assistant) {
+          _messages.last.text = normalizedAnswer;
+        }
+      }
+    });
+  }
 
   @override
   void dispose() {
     _controller.dispose();
     _inputFocusNode.dispose();
     _scroll.dispose();
-    _currentCancel?.cancel();
+    _chatService.dispose();
     super.dispose();
   }
 
@@ -43,77 +70,6 @@ class _UriPageState extends State<UriPage> {
   void _addAssistantPlaceholder() {
     setState(() {
       _messages.add(_ChatMessage(role: Role.assistant, text: '', streaming: true));
-    });
-    _scrollToBottom();
-  }
-
-  void _appendToAssistant(String chunk) {
-    // Normalize incoming chunk (server may send JSON fragments like arrays/objects)
-    final text = _normalizeChunk(chunk);
-
-    setState(() {
-      final last = _messages.lastWhere((m) => m.role == Role.assistant, orElse: () => _ChatMessage(role: Role.assistant, text: '', streaming: false));
-      // Append chunk as-is. Avoid inserting automatic spaces between chunks —
-      // chunks may split words and adding spaces causes broken words like "Factor ization".
-      last.text += text;
-    });
-    _scrollToBottom();
-  }
-
-  String _normalizeChunk(String chunk) {
-    // Preserve chunk spacing: do NOT trim here because chunks may split words.
-    // Instead remove only known artifacts (NULs, trailing [] / {} markers) while keeping leading/trailing spaces.
-    var s = chunk;
-
-    // Try to decode JSON and extract text leaves
-    try {
-      final decoded = jsonDecode(s);
-      final extracted = _extractTextFromJson(decoded);
-      if (extracted.isNotEmpty) return extracted;
-    } catch (_) {
-      // not JSON — fall through
-    }
-
-  // Remove any NUL bytes that sometimes appear in streams
-  s = s.replaceAll('\u0000', '');
-  // Remove trailing empty-array/object markers like [] or {} which can appear repeatedly.
-  // Keep surrounding whitespace intact where possible.
-  s = s.replaceAll(RegExp(r'(?:\[\s*\]|\{\s*\})+\s*$'), '');
-
-    return s;
-  }
-
-  String _extractTextFromJson(dynamic node) {
-    if (node == null) return '';
-    if (node is String) return node;
-    if (node is num) return node.toString();
-    if (node is List) {
-      return node.map((e) => _extractTextFromJson(e)).where((t) => t.isNotEmpty).join(' ');
-    }
-    if (node is Map) {
-      // Common fields used by various SSE payloads
-      final candidates = <String>[];
-      if (node.containsKey('text')) candidates.add(node['text'].toString());
-      if (node.containsKey('delta')) candidates.add(node['delta'].toString());
-      if (node.containsKey('content')) candidates.add(node['content'].toString());
-      if (node.containsKey('message')) candidates.add(node['message'].toString());
-      if (node.containsKey('data')) candidates.add(node['data'].toString());
-
-      if (candidates.isNotEmpty) return candidates.where((s) => s.isNotEmpty).join(' ');
-
-      // Otherwise recursively collect
-      return node.values.map((v) => _extractTextFromJson(v)).where((t) => t.isNotEmpty).join(' ');
-    }
-    return '';
-  }
-
-  void _finishAssistant() {
-    setState(() {
-      final idx = _messages.lastIndexWhere((m) => m.role == Role.assistant);
-      if (idx != -1) {
-        _messages[idx].streaming = false;
-      }
-      _sending = false;
     });
     _scrollToBottom();
   }
@@ -133,6 +89,10 @@ class _UriPageState extends State<UriPage> {
   // Render message text with LaTeX support.
   // We look for inline $...$ and block $$...$$ math and render using MathRenderer.
   String normalizeLatex(String s) {
+    // First apply comprehensive text normalization
+    s = _normalizeMd(s);
+
+    // Then normalize LaTeX delimiters
     return s
         .replaceAll(r'\\[', r'$$')
         .replaceAll(r'\\]', r'$$')
@@ -144,40 +104,115 @@ class _UriPageState extends State<UriPage> {
         .replaceAll(r'\)', r'$');
   }
 
-  // Normalize common messy LaTeX fragments produced by some LLM outputs.
-  // This operates only on math content (the argument here is assumed to be
-  // the whole text; we will locate math segments and normalize their inner
-  // content so we don't accidentally change normal prose spacing).
-  String _normalizeMathFragments(String text) {
-    String normalizeContent(String c) {
-      var s = c;
-      // Remove stray backslashes before punctuation like \ ) or \ ] -> ) or ]
-      s = s.replaceAllMapped(RegExp(r'\\\s*([)\]\\}\)])'), (m) => m[1] ?? '');
-      // Remove spaces around ^ and _ (x ^ 2 -> x^2)
-      s = s.replaceAll(RegExp(r'\s*\^\s*'), '^');
-      s = s.replaceAll(RegExp(r'\s*_\s*'), '_');
-      // Remove obvious spaces inside parentheses/braces: ( x -2 ) -> (x-2)
-      s = s.replaceAll(RegExp(r'\(\s+'), '(');
-      s = s.replaceAll(RegExp(r'\s+\)'), ')');
-      s = s.replaceAll(RegExp(r'\{\s+'), '{');
-      s = s.replaceAll(RegExp(r'\s+\}'), '}');
-      // Normalize \ times or spaced ' times ' into \times
-      s = s.replaceAllMapped(RegExp(r'\\?\s*times'), (m) => r'\\times');
-      // Collapse multiple internal spaces
-      s = s.replaceAll(RegExp(r'[ \t\u00A0]{2,}'), ' ');
-      return s.trim();
+  String _normalizeMd(String s) {
+    print('=== NORMALIZING TEXT IN URI PAGE ===');
+    print('Input: "${s.substring(0, math.min(300, s.length))}"');
+
+    // Most critical fixes first - handle the exact patterns from AI output
+    s = s.replaceAll(r'$1 .', '1.');
+    s = s.replaceAll(r'$2 .', '2.');
+    s = s.replaceAll(r'$3 .', '3.');
+    s = s.replaceAll(r'$1', '1.');
+    s = s.replaceAll(r'$2', '2.');
+    s = s.replaceAll(r'$3', '3.');
+
+    // Handle LaTeX markers - try multiple variations
+    s = s.replaceAll('latex :', r'$');
+    s = s.replaceAll('latex:', r'$');
+    s = s.replaceAll(r'$$', r'$$');
+
+    // Fix the specific pattern: "1**Text**:" -> "1. **Text**:"
+    s = s.replaceAllMapped(RegExp(r'(\d+)\*\*([^*]+)\*\*:'), (match) => '${match.group(1)}. **${match.group(2)}**::');
+
+    // Fix spacing issues that appear in the output
+    s = s.replaceAll('in to', 'into');
+    s = s.replaceAll('understand ing', 'understanding');
+    s = s.replaceAll('discover ing', 'discovering');
+    s = s.replaceAll('develop ing', 'developing');
+    s = s.replaceAll('act up on', 'act upon');
+
+    // Handle any remaining $ followed by digit patterns
+    s = s.replaceAllMapped(RegExp(r'\$([0-9]+)'), (match) => '${match.group(1)}.');
+
+    print('After critical fixes: "${s.substring(0, math.min(300, s.length))}"');
+
+    // Continue with other normalization...
+    // Fix common spacing issues that the AI creates
+    // Remove spaces within words that shouldn't have them
+    s = s.replaceAll('do ing', 'doing');
+    s = s.replaceAll('origin al', 'original');
+    s = s.replaceAll('theoret ical', 'theoretical');
+    s = s.replaceAll('pract ical', 'practical');
+    s = s.replaceAll('organ isms', 'organisms');
+    s = s.replaceAll('fundament al', 'fundamental');
+    s = s.replaceAll('conserv ation', 'conservation');
+    s = s.replaceAll('particul ar', 'particular');
+    s = s.replaceAll('express ions', 'expressions');
+    s = s.replaceAll('polynom ial', 'polynomial');
+    s = s.replaceAll('integr ation', 'integration');
+
+    // Insert spaces between words that are run together using multiple strategies
+
+    // Strategy 1: lowercase letter followed by uppercase letter (word boundary)
+    s = s.replaceAllMapped(RegExp(r'([a-z])([A-Z])'), (match) => '${match.group(1)} ${match.group(2)}');
+
+    // Strategy 2: Insert spaces based on common word patterns
+    // Common word endings followed by common word beginnings
+    final wordEndings = ['the', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by', 'from', 'up', 'about', 'into', 'through', 'during', 'before', 'after', 'above', 'below', 'between', 'among', 'is', 'are', 'was', 'were', 'be', 'been', 'being', 'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'could', 'should', 'may', 'might', 'must', 'can', 'shall', 'city', 'capital', 'country', 'region', 'state', 'province', 'district', 'town', 'village'];
+    final wordBeginnings = ['the', 'a', 'an', 'this', 'that', 'these', 'those', 'my', 'your', 'his', 'her', 'its', 'our', 'their', 'what', 'where', 'when', 'why', 'how', 'who', 'which', 'there', 'here', 'then', 'than', 'so', 'because', 'although', 'since', 'while', 'if', 'unless', 'until', 'before', 'after', 'as', 'like', 'unlike', 'capital', 'city', 'country', 'region', 'state', 'province', 'district', 'town', 'village', 'of', 'in', 'on', 'at', 'to', 'for', 'with', 'by', 'from'];
+
+    for (final ending in wordEndings) {
+      for (final beginning in wordBeginnings) {
+        final pattern = '$ending$beginning';
+        final replacement = '$ending $beginning';
+        s = s.replaceAll(pattern, replacement);
+      }
     }
 
-  // Handle $$..$$ blocks first
-  text = text.replaceAllMapped(RegExp(r'\$\$(.+?)\$\$', dotAll: true), (m) => '\$\$${normalizeContent(m[1] ?? '')}\$\$');
-  // Handle \[ ... \]
-  text = text.replaceAllMapped(RegExp(r'\\\[(.+?)\\\]', dotAll: true), (m) => '\\[${normalizeContent(m[1] ?? '')}\\]');
-  // Handle inline $...$
-  text = text.replaceAllMapped(RegExp(r'(?<!\\)\$(?!\$)(.+?)(?<!\\)\$(?!\$)', dotAll: true), (m) => '\$${normalizeContent(m[1] ?? '')}\$');
-  // Handle \(...\)
-  text = text.replaceAllMapped(RegExp(r'\\\((.+?)\\\)', dotAll: true), (m) => '\\(${normalizeContent(m[1] ?? '')}\\)');
+    // Strategy 3: Handle numbers and letters
+    s = s.replaceAllMapped(RegExp(r'([a-zA-Z])([0-9])'), (match) => '${match.group(1)} ${match.group(2)}');
+    s = s.replaceAllMapped(RegExp(r'([0-9])([a-zA-Z])'), (match) => '${match.group(1)} ${match.group(2)}');
 
-    return text;
+    // Strategy 4: Handle contractions and possessives
+    s = s.replaceAllMapped(RegExp(r"([a-z])'([st]|re|ve|ll|m|d)([a-zA-Z])", caseSensitive: false), (match) => "${match.group(1)}'${match.group(2)} ${match.group(3)}");
+
+    // Handle common abbreviations and ensure proper spacing
+    s = s.replaceAll('e.g.', 'e.g.');
+    s = s.replaceAll('i.e.', 'i.e.');
+    s = s.replaceAll('etc.', 'etc.');
+    s = s.replaceAll('Dr.', 'Dr.');
+    s = s.replaceAll('Mr.', 'Mr.');
+    s = s.replaceAll('Mrs.', 'Mrs.');
+    s = s.replaceAll('Ms.', 'Ms.');
+
+    // Collapse runs of whitespace
+    s = s.replaceAll(RegExp(r'[ \t\f\v]+'), ' ');
+
+    // Remove space *before* punctuation , . ; : ? ! % ) ]
+    s = s.replaceAll(RegExp(r'\s+([,.;:?!%])'), r'$1');
+    s = s.replaceAll(RegExp(r'\s+([\)\]\}])'), r'$1');
+
+    // Remove space *after* opening punctuation ( ( [ {
+    s = s.replaceAll(RegExp(r'([\(\[\{])\s+'), r'$1');
+
+    // Hyphenated compounds: evidence -based  -> evidence-based
+    s = s.replaceAll(RegExp(r'(?<=[A-Za-z])\s*-\s*(?=[A-Za-z])'), '-');
+
+    // Ensure a space after sentence-ending punctuation if followed by a letter/number
+    s = s.replaceAll(RegExp(r'([.!?])([A-Za-z0-9])'), r'$1 $2');
+
+    // Force numbered lists onto new lines: "... points: 1. ..." -> "\n1. ..."
+    s = s.replaceAll(RegExp(r'(?<!^)\s+(\d+)\.\s'), '\n\$1. ');
+
+    // Bullet lists sometimes arrive like "- item" but stuck to previous text
+    s = s.replaceAll(RegExp(r'(?<!^)\s+(-\s+)'), '\n\$1');
+
+    // Handle LaTeX expressions - ensure they're properly formatted
+    s = s.replaceAll(r'$', r'$');
+    s = s.replaceAll(r'$$', r'$$');
+
+    print('Final normalized: "${s.substring(0, math.min(300, s.length))}"');
+    return s.trim();
   }
 
   Widget _buildRenderedMessage(String text, bool isUser) {
@@ -195,15 +230,14 @@ class _UriPageState extends State<UriPage> {
     // Normalize LaTeX delimiters first (same as URI chatbot)
     final normalizedText = normalizeLatex(text);
 
-    // For AI responses, use LatexMarkdown with proper styling
-    return LatexMarkdown(
-      data: normalizedText,
-      textStyle: GoogleFonts.montserrat(
+    // For AI responses, use SelectableText with proper styling
+    return SelectableText(
+      normalizedText,
+      style: GoogleFonts.montserrat(
         color: const Color(0xFF111827), 
         fontSize: 15, 
         height: 1.5
       ),
-      selectable: true,
     );
   }
 
@@ -221,40 +255,17 @@ class _UriPageState extends State<UriPage> {
     if (_isFirstInteraction) {
       setState(() => _isFirstInteraction = false);
     }
+    _currentAnswer = '';
     _sending = true;
 
     final user = FirebaseAuth.instance.currentUser;
     final idToken = user != null ? await user.getIdToken() : null;
-    final conversationId = user?.uid ?? DateTime.now().millisecondsSinceEpoch.toString();
 
-    // cancel previous streaming if any
-    _currentCancel?.cancel();
-    try {
-      _currentCancel = await streamAskSSE_impl(
-        text,
-        (chunk) {
-          // SSE may send JSON frames; for safety treat as raw chunk
-          if (chunk == '[DONE]') return;
-          _appendToAssistant(chunk);
-        },
-        onDone: () {
-          _finishAssistant();
-        },
-        onError: (err) {
-          _finishAssistant();
-          setState(() {
-            _messages.add(_ChatMessage(role: Role.system, text: '[Error: $err]'));
-          });
-        },
-        idToken: idToken,
-        conversationId: conversationId,
-      );
-    } catch (e) {
-      _finishAssistant();
-      setState(() {
-        _messages.add(_ChatMessage(role: Role.system, text: '[Error initiating stream]'));
-      });
-    }
+    await _chatService.ask(
+      message: text,
+      history: [],
+      extraHeaders: idToken != null ? {"Authorization": "Bearer $idToken"} : null,
+    );
   }
 
   Widget _buildBubble(_ChatMessage m) {
@@ -271,7 +282,7 @@ class _UriPageState extends State<UriPage> {
           child: Container(
             margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
             padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
-            constraints: BoxConstraints(maxWidth: min(920, MediaQuery.of(context).size.width * 0.68)),
+            constraints: BoxConstraints(maxWidth: math.min(920, MediaQuery.of(context).size.width * 0.68)),
             decoration: BoxDecoration(
               color: bg,
               borderRadius: BorderRadius.circular(14),
@@ -290,7 +301,6 @@ class _UriPageState extends State<UriPage> {
   // Clear local chat (clears on refresh also because state is local)
   void _clearChat() {
     setState(() {
-      _currentCancel?.cancel();
       _messages.clear();
       _sending = false;
     });
