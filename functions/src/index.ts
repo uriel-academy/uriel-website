@@ -51,8 +51,8 @@ async function chatCompletion(messages: any, temperature = 0.3) {
 function classifyMode(q: string): 'small_talk'|'tutoring'|'facts' {
   const s = (q || '').toLowerCase().trim();
   if (/(your name|what'?s your name|who are you|hi|hello|hey|thanks|thank you)\b/.test(s)) return 'small_talk';
-  // include common lookup patterns: who is, what is, when is, where is, and topics that need live info
-  if (/(who is|who was|what is|where is|when is|when was|date|schedule|latest|today|update|news|current|now|bece|wassce|president|minister|result|results|2024|2025|2026)\b/.test(s)) return 'facts';
+  // Simplified regex for time-sensitive queries requiring web search
+  if (/(who is|what is|where is|when is|how much|price|cost|exchange rate|weather|score|fixture|latest|current|now|today|update|news|breaking|recent|new|2024|2025|2026|2027|2028|2029|2030|check the web|search|find out|tell me about)\b/.test(s)) return 'facts';
   return 'tutoring';
 }
 
