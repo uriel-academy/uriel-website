@@ -110,10 +110,14 @@ async function tavilySearch(query: string, maxResults = 6) {
   try {
     const tavilyKey = functions.config().tavily?.key;
     if (!tavilyKey) return '';
+    // Bias the query to prefer Ghanaian official sources when available.
+    // Tavily will still return other results if official sources are not present.
+    const ghanaPref = 'Prefer official Ghanaian sources where applicable: NaCCA, GES, WAEC, Ghana government sites (gov.gh, ghanagov.org), Ghana News Agency, Daily Graphic, Ghanaian Times.';
+    const composedQuery = `${ghanaPref} ${query}`;
     const resp = await fetch('https://api.tavily.com/search', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ api_key: tavilyKey, query, max_results: maxResults, include_answer: true }),
+      body: JSON.stringify({ api_key: tavilyKey, query: composedQuery, max_results: maxResults, include_answer: true }),
     });
     if (!resp.ok) return '';
     const data = await resp.json();
@@ -286,6 +290,7 @@ export const aiChatHttpLegacy = functions
           }
 
           let system = `ROLE
+KNOWLEDGE CUTOFF: August 2025. For any time-sensitive information after this date, perform a web search and prefer verified WebSearchResults.
 You are Uri, an advanced AI study companion designed for Ghanaian students in JHS (Junior High School) and SHS (Senior High School), supporting ages 12-21. You provide comprehensive academic assistance, emotional support, and guidance for holistic development.
 
 STUDENT CONTEXT
@@ -634,6 +639,7 @@ export const aiChatStream = functions
           // Build system instruction. Respect client request for MathJax/KaTeX if provided.
           // Use the standardized SYSTEM PROMPT tailored for young learners
           const systemStream = `ROLE
+KNOWLEDGE CUTOFF: August 2025. For any time-sensitive information after this date, perform a web search and prefer verified WebSearchResults.
 You are Uri, an advanced AI study companion designed for Ghanaian students in JHS (Junior High School) and SHS (Senior High School), supporting ages 12-21. You provide comprehensive academic assistance, emotional support, and guidance for holistic development.
 
 STUDENT CONTEXT
@@ -929,6 +935,7 @@ export const aiChatSSE = functions
           } catch (e) { console.warn('tavilySearch failed for sse', e); }
 
           const systemSse = `ROLE
+KNOWLEDGE CUTOFF: August 2025. For any time-sensitive information after this date, perform a web search and prefer verified WebSearchResults.
 You are Uri, an advanced AI tutor designed specifically for Ghanaian students aged 12-21. You provide comprehensive academic support across all subjects, with special expertise in BECE and WASSCE preparation. You combine educational excellence with emotional intelligence, wellness guidance, and adolescent development support.
 
 STUDENT CONTEXT
