@@ -268,6 +268,17 @@ export const aiChatHttpStreaming = functions.region('us-central1').https.onReque
       messages.push(...(Array.isArray(history) ? history : [])); // [{role:'user'|'assistant', content:string}, ...]
       messages.push({ role: "user", content: message });
 
+      // Emit a small meta SSE event so clients can see whether web search was used
+      try {
+        const meta = {
+          type: 'meta',
+          webSearchUsed: !!webContext,
+          // include a short snippet to help diagnostics (trimmed)
+          tavilySnippet: webContext ? (webContext.length > 800 ? webContext.slice(0, 800) + '…' : webContext) : '',
+        };
+        res.write(`data: ${JSON.stringify(meta)}\n\n`);
+      } catch (e) { console.warn('Failed to write meta SSE event', e); }
+
       const completion = await openai.chat.completions.create({
         model: "gpt-4o-mini", // good + cheap streaming model
         stream: true,

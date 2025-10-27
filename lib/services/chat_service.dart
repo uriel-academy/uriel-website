@@ -6,14 +6,16 @@ class ChatChunk {
   final String? delta;   // new text token
   final bool done;
   final String? error;
+  final Map<String, dynamic>? meta;
 
-  ChatChunk({this.delta, this.done = false, this.error});
+  ChatChunk({this.delta, this.done = false, this.error, this.meta});
 
   factory ChatChunk.fromJson(Map<String, dynamic> map) {
     final type = map['type'];
     if (type == 'text') return ChatChunk(delta: map['delta'] as String?);
     if (type == 'done') return ChatChunk(done: true);
     if (type == 'error') return ChatChunk(error: map['message'] as String?);
+    if (type == 'meta') return ChatChunk(meta: Map<String, dynamic>.from(map));
     return ChatChunk();
   }
 }
@@ -48,7 +50,7 @@ class ChatService {
         if (history.isNotEmpty) "history": history, // [{role, content}]
       });
 
-      print('Sending request to ${endpoint} with body: ${body}');
+      print('Sending request to $endpoint with body: $body');
 
       final request = http.Request('POST', endpoint)
         ..headers.addAll(headers)
