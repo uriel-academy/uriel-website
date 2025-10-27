@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../services/chat_service.dart';
@@ -63,8 +64,27 @@ class _UriChatInputState extends State<UriChatInput> {
   }
 
   String _normalizeMd(String s) {
-    // First, handle LaTeX expressions - replace "latex :" with proper formatting
+    print('Normalizing text: "${s.substring(0, math.min(200, s.length))}"...');
+
+    // First, handle LaTeX expressions - replace various LaTeX markers with proper formatting
     s = s.replaceAll('latex :', r'$');
+    s = s.replaceAll('latex:', r'$');
+    s = s.replaceAll(r'$$', r'$$');
+
+    // Fix common spacing issues that the AI creates
+    // Remove spaces within words that shouldn't have them
+    s = s.replaceAll('do ing', 'doing');
+    s = s.replaceAll('in to', 'into');
+    s = s.replaceAll('origin al', 'original');
+    s = s.replaceAll('theoret ical', 'theoretical');
+    s = s.replaceAll('pract ical', 'practical');
+    s = s.replaceAll('organ isms', 'organisms');
+    s = s.replaceAll('fundament al', 'fundamental');
+    s = s.replaceAll('conserv ation', 'conservation');
+    s = s.replaceAll('particul ar', 'particular');
+    s = s.replaceAll('express ions', 'expressions');
+    s = s.replaceAll('polynom ial', 'polynomial');
+    s = s.replaceAll('integr ation', 'integration');
 
     // Insert spaces between words that are run together using multiple strategies
 
@@ -100,6 +120,14 @@ class _UriChatInputState extends State<UriChatInput> {
     s = s.replaceAll('Mrs.', 'Mrs.');
     s = s.replaceAll('Ms.', 'Ms.');
 
+    // Fix the "$1 ." issue - replace with proper numbered lists
+    s = s.replaceAll(r'$1 .', '1.');
+    s = s.replaceAll(r'$1', '1.');
+    s = s.replaceAll(r'$2 .', '2.');
+    s = s.replaceAll(r'$2', '2.');
+    s = s.replaceAll(r'$3 .', '3.');
+    s = s.replaceAll(r'$3', '3.');
+
     // Collapse runs of whitespace
     s = s.replaceAll(RegExp(r'[ \t\f\v]+'), ' ');
 
@@ -126,6 +154,7 @@ class _UriChatInputState extends State<UriChatInput> {
     s = s.replaceAll(r'$', r'$');
     s = s.replaceAll(r'$$', r'$$');
 
+    print('Normalized text: "${s.substring(0, math.min(200, s.length))}"...');
     return s.trim();
   }
 
