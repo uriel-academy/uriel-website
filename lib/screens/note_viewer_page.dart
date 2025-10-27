@@ -5,11 +5,13 @@ import 'package:cloud_functions/cloud_functions.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import 'package:url_launcher/url_launcher.dart';
 import 'package:share_plus/share_plus.dart';
 import '../services/note_service.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class NoteViewerPage extends StatefulWidget {
   final String noteId;
@@ -23,6 +25,7 @@ class NoteViewerPage extends StatefulWidget {
 class _NoteViewerPageState extends State<NoteViewerPage> {
   Map<String, dynamic>? _note;
   String? _signedUrl;
+  List<String> _imageUrls = [];
   bool _loading = false;
   int _selectedImageIndex = 0;
   bool _likedByMe = false;
@@ -40,6 +43,9 @@ class _NoteViewerPageState extends State<NoteViewerPage> {
     final doc = await FirebaseFirestore.instance.collection('notes').doc(widget.noteId).get();
     if (!mounted) return;
     setState(() => _note = doc.data());
+
+    // Resolve image URLs immediately so images display fast when viewer opens
+    _resolveImageUrls();
 
     // subscribe to like count
     _likeCountSub = NoteService.likeCountStream(widget.noteId);
@@ -177,17 +183,73 @@ class _NoteViewerPageState extends State<NoteViewerPage> {
   }
 
   List<String> _collectImageUrls(Map<String, dynamic> note) {
+    // Keep existing stored sources but prefer resolved, fresher URLs stored in _imageUrls
     final urls = <String>[];
-    // prefer signed URL (may be generated server-side), then fileUrl, then any stored images
-    if (note['signedUrl'] != null) urls.add(note['signedUrl'] as String);
-    if (note['fileUrl'] != null) urls.add(note['fileUrl'] as String);
+    urls.addAll(_imageUrls);
     final images = note['images'];
     if (images is List) {
       for (final it in images) {
         if (it is String && !urls.contains(it)) urls.add(it);
       }
     }
+    if (note['fileUrl'] != null && !urls.contains(note['fileUrl'])) urls.add(note['fileUrl'] as String);
+    if (note['signedUrl'] != null && !urls.contains(note['signedUrl'])) urls.add(note['signedUrl'] as String);
     return urls;
+  }
+
+  Future<void> _resolveImageUrls() async {
+    final note = _note;
+    if (note == null) return;
+    final resolved = <String>[];
+
+    // 1) If explicit images array exists, add them first
+    final images = note['images'];
+    if (images is List) {
+      for (final it in images) if (it is String) resolved.add(it);
+    }
+
+    // 2) If there's a filePath, try to get a Storage download URL (most reliable)
+    try {
+      final filePath = note['filePath'] as String?;
+      if (filePath != null && filePath.isNotEmpty) {
+        try {
+          final url = await FirebaseStorage.instance.ref(filePath).getDownloadURL();
+          if (url.isNotEmpty && !resolved.contains(url)) {
+            resolved.insert(0, url);
+            // Prefetch for snappy display
+            try {
+              await precacheImage(CachedNetworkImageProvider(url), context);
+            } catch (_) {}
+          }
+        } catch (_) {
+          // ignore, will try signedUrl/callable below
+        }
+      }
+    } catch (_) {}
+
+    // 3) If there is a stored signedUrl or fileUrl, add them
+    final signed = note['signedUrl'] as String?;
+    if (signed != null && signed.isNotEmpty && !resolved.contains(signed)) resolved.add(signed);
+    final fileUrl = note['fileUrl'] as String?;
+    if (fileUrl != null && fileUrl.isNotEmpty && !resolved.contains(fileUrl)) resolved.add(fileUrl);
+
+    if (resolved.isEmpty) {
+      // Attempt to call server to mint a signed URL if allowed (fire-and-forget)
+      try {
+        final callable = FirebaseFunctions.instance.httpsCallable('getNoteSignedUrlCallable');
+        final resp = await callable.call(<String, dynamic>{'noteId': widget.noteId});
+        final data = resp.data as Map<String, dynamic>;
+        final url = data['signedUrl'] as String?;
+        if (url != null && url.isNotEmpty) {
+          resolved.add(url);
+        }
+      } catch (_) {}
+    }
+
+    if (!mounted) return;
+    setState(() {
+      _imageUrls = resolved;
+    });
   }
 
   @override
@@ -261,12 +323,13 @@ class _NoteViewerPageState extends State<NoteViewerPage> {
                         if (imageUrls.isNotEmpty) ...[
                           AspectRatio(
                             aspectRatio: 16 / 9,
-                            child: Image.network(
-                              imageUrls[_selectedImageIndex],
+                            child: CachedNetworkImage(
+                              imageUrl: imageUrls[_selectedImageIndex],
                               fit: BoxFit.cover,
                               alignment: Alignment.topCenter,
                               width: double.infinity,
-                              errorBuilder: (_, __, ___) => Container(color: Colors.grey[300]),
+                              placeholder: (_, __) => Container(color: Colors.grey[300]),
+                              errorWidget: (_, __, ___) => Container(color: Colors.grey[300]),
                             ),
                           ),
                           const SizedBox(height: 8),
@@ -289,10 +352,11 @@ class _NoteViewerPageState extends State<NoteViewerPage> {
                                     ),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(6),
-                                      child: Image.network(
-                                        imageUrls[i],
+                                      child: CachedNetworkImage(
+                                        imageUrl: imageUrls[i],
                                         fit: BoxFit.cover,
-                                        errorBuilder: (_, __, ___) => Container(color: Colors.grey[200]),
+                                        placeholder: (_, __) => Container(color: Colors.grey[200]),
+                                        errorWidget: (_, __, ___) => Container(color: Colors.grey[200]),
                                       ),
                                     ),
                                   ),
@@ -381,13 +445,14 @@ class _NoteViewerPageState extends State<NoteViewerPage> {
                                   if (imageUrls.isNotEmpty)
                                     ClipRRect(
                                       borderRadius: BorderRadius.circular(8),
-                                      child: Image.network(
-                                        imageUrls[_selectedImageIndex],
+                                      child: CachedNetworkImage(
+                                        imageUrl: imageUrls[_selectedImageIndex],
                                         fit: BoxFit.contain,
                                         alignment: Alignment.topCenter,
                                         width: double.infinity,
                                         height: 420,
-                                        errorBuilder: (_, __, ___) => Container(color: Colors.grey[200]),
+                                        placeholder: (_, __) => Container(color: Colors.grey[200]),
+                                        errorWidget: (_, __, ___) => Container(color: Colors.grey[200]),
                                       ),
                                     ),
 
@@ -410,13 +475,14 @@ class _NoteViewerPageState extends State<NoteViewerPage> {
                                                 ),
                                                 borderRadius: BorderRadius.circular(8),
                                               ),
-                                              child: ClipRRect(
+                                                child: ClipRRect(
                                                 borderRadius: BorderRadius.circular(6),
-                                                child: Image.network(
-                                                  imageUrls[i],
+                                                child: CachedNetworkImage(
+                                                  imageUrl: imageUrls[i],
                                                   fit: BoxFit.cover,
                                                   alignment: Alignment.topCenter,
-                                                  errorBuilder: (_, __, ___) => Container(color: Colors.grey[200]),
+                                                  placeholder: (_, __) => Container(color: Colors.grey[200]),
+                                                  errorWidget: (_, __, ___) => Container(color: Colors.grey[200]),
                                                 ),
                                               ),
                                             ),

@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cloud_functions/cloud_functions.dart';
 import 'package:flutter/foundation.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -516,6 +517,10 @@ class _NoteThumbnailState extends State<NoteThumbnail> {
           if (storageUrl.isNotEmpty) {
             if (!mounted) return;
             setState(() => _url = storageUrl);
+            // Prefetch into image cache for snappy display
+            try {
+              await precacheImage(CachedNetworkImageProvider(storageUrl), context);
+            } catch (_) {}
             return;
           }
         } catch (e) {
@@ -543,7 +548,14 @@ class _NoteThumbnailState extends State<NoteThumbnail> {
   Widget build(BuildContext context) {
     final urlToShow = _url ?? widget.publicFileUrl;
     if (urlToShow != null) {
-      return Image.network(urlToShow, fit: BoxFit.cover, alignment: Alignment.topCenter, width: double.infinity, errorBuilder: (_, __, ___) => _placeholder());
+      return CachedNetworkImage(
+        imageUrl: urlToShow,
+        fit: BoxFit.cover,
+        alignment: Alignment.topCenter,
+        width: double.infinity,
+        placeholder: (_, __) => Container(color: Colors.grey[200]),
+        errorWidget: (_, __, ___) => _placeholder(),
+      );
     }
     if (widget.assetPath != null) {
       return Image.asset(widget.assetPath!, fit: BoxFit.cover, alignment: Alignment.topCenter, width: double.infinity);
