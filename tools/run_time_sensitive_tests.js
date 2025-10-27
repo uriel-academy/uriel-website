@@ -8,6 +8,9 @@ const tests = [
   { id: 'ghana_president', prompt: 'Who is the president of Ghana?' },
   { id: 'epl_leader', prompt: 'Who is currently leading the EPL table?' },
   { id: 'tokyo_population', prompt: 'What is the current population of Tokyo?' },
+  { id: 'wassce_curriculum_changes', prompt: 'Have there been any WASSCE curriculum changes in 2025? Please cite sources.' },
+  { id: 'nacca_bece_update', prompt: 'Has NaCCA updated the BECE syllabus in 2025? Provide citations if available.' },
+  { id: 'waec_exam_changes', prompt: 'Are there any recent WAEC exam format changes in 2025?' },
   // Add additional time-sensitive queries here
 ];
 
