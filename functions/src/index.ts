@@ -2405,6 +2405,92 @@ export const recommendationsRunNow = functions.https.onCall(async (data, context
 
 // End recommendation engine
 
+// Secure image proxy: streams a Storage file to the client with long cache headers.
+// Expects query param `path` pointing to the storage path (e.g. notes/<uid>/...).
+// Authorization: Bearer <idToken> required. Only the owner (uid) or admins may access.
+export const noteImageProxy = functions.region('us-central1').https.onRequest((req, res) => {
+  corsHandler(req, res, async () => {
+    if (req.method === 'OPTIONS') {
+      res.set('Access-Control-Allow-Methods', 'GET, OPTIONS');
+      res.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+      res.set('Access-Control-Allow-Origin', req.headers.origin || '*');
+      res.status(204).send('');
+      return;
+    }
+
+    try {
+      const storagePath = (req.query?.path || req.body?.path || '').toString();
+      if (!storagePath) {
+        res.status(400).json({ error: 'Missing path parameter' });
+        return;
+      }
+
+      const authHeader = (req.get('Authorization') || req.get('authorization') || '').toString();
+      if (!authHeader || !authHeader.startsWith('Bearer ')) {
+        res.status(401).json({ error: 'Missing Authorization Bearer token' });
+        return;
+      }
+
+      const idToken = authHeader.split(' ')[1];
+      let decoded: any = null;
+      try {
+        decoded = await admin.auth().verifyIdToken(idToken);
+      } catch (e) {
+        res.status(401).json({ error: 'Invalid ID token' });
+        return;
+      }
+
+      // Basic authorization: owner or admin
+      const uid = decoded.uid;
+      const role = decoded.role || decoded['role'] || decoded['admin'] || null;
+      const isAdmin = role === 'super_admin' || role === 'school_admin' || (decoded && decoded['isAdmin']);
+
+      // Allow if the path is under notes/<uid>/ or caller is admin
+      if (!isAdmin) {
+        if (!storagePath.startsWith(`notes/${uid}/`)) {
+          res.status(403).json({ error: 'Not authorized to access this file' });
+          return;
+        }
+      }
+
+      const bucket = admin.storage().bucket();
+      const file = bucket.file(storagePath);
+      const [exists] = await file.exists();
+      if (!exists) {
+        res.status(404).json({ error: 'File not found' });
+        return;
+      }
+
+      // Try to get metadata to set content-type and cache headers
+      try {
+        const [metadata] = await file.getMetadata();
+        const contentType = metadata.contentType || 'application/octet-stream';
+        const etag = metadata.etag || metadata.generation || '';
+        const size = metadata.size ? Number(metadata.size) : undefined;
+
+        res.setHeader('Content-Type', contentType);
+        // Allow CDN and browser caching for 1 day (adjust as needed)
+        res.setHeader('Cache-Control', 'public, max-age=86400, s-maxage=86400');
+        if (etag) res.setHeader('ETag', etag.toString());
+        if (size) res.setHeader('Content-Length', size.toString());
+      } catch (e) {
+        // continue without metadata
+      }
+
+      // Stream the file
+      const stream = file.createReadStream();
+      stream.on('error', (err) => {
+        console.error('noteImageProxy stream error', err);
+        try { res.status(500).end(); } catch (_) {}
+      });
+      stream.pipe(res);
+    } catch (err) {
+      console.error('noteImageProxy error', err);
+      try { res.status(500).json({ error: 'Internal server error' }); } catch (_) {}
+    }
+  });
+});
+
 export default { 
   onUserCreate, 
   grantRole, 
@@ -2424,7 +2510,8 @@ export default {
   ingestDocs,
   ingestPDFs,
   ingestLocalPDFs,
-  listPDFs
+  listPDFs,
+  noteImageProxy
 };
 
 // Export the streaming AI chat function

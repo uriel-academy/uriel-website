@@ -197,6 +197,76 @@ class _NoteViewerPageState extends State<NoteViewerPage> {
     return urls;
   }
 
+  /// Open a full-screen image viewer for the image at [index].
+  /// Ensures a download URL is available (resolves Storage URL or fetches a signed URL)
+  /// and shows a dialog with the image. Shows a loading spinner while resolving.
+  Future<void> _openImageViewer(int index) async {
+    final note = _note;
+    if (note == null) return;
+
+    // Ensure image URLs are resolved
+    if (_imageUrls.isEmpty) {
+      await _resolveImageUrls();
+    }
+
+    String? url;
+    if (index >= 0 && index < _imageUrls.length) url = _imageUrls[index];
+
+    // If not resolved, try to trigger a callable signed URL
+    if ((url == null || url.isEmpty) && (note['filePath'] != null || note['signedUrl'] != null)) {
+      await _fetchSignedUrl();
+      // after fetch, re-run resolve
+      await _resolveImageUrls();
+      if (index >= 0 && index < _imageUrls.length) url = _imageUrls[index];
+    }
+
+    // If still no url, fallback to fileUrl or images array
+    if ((url == null || url.isEmpty)) {
+      final fallback = _collectImageUrls(note);
+      if (index >= 0 && index < fallback.length) url = fallback[index];
+    }
+
+    // Show dialog with image or error
+    await showDialog<void>(
+      context: context,
+      builder: (ctx) {
+        return Dialog(
+          insetPadding: const EdgeInsets.all(8),
+          backgroundColor: Colors.black,
+          child: SizedBox(
+            width: double.infinity,
+            height: double.infinity,
+            child: Stack(
+              children: [
+                if (url == null || url.isEmpty)
+                  const Center(child: CircularProgressIndicator())
+                else
+                  Center(
+                    child: InteractiveViewer(
+                      child: CachedNetworkImage(
+                        imageUrl: url,
+                        fit: BoxFit.contain,
+                        placeholder: (_, __) => const Center(child: CircularProgressIndicator()),
+                        errorWidget: (_, __, ___) => const Center(child: Icon(Icons.broken_image, color: Colors.white, size: 48)),
+                      ),
+                    ),
+                  ),
+                Positioned(
+                  top: 12,
+                  right: 12,
+                  child: IconButton(
+                    icon: const Icon(Icons.close, color: Colors.white),
+                    onPressed: () => Navigator.of(ctx).pop(),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+
   Future<void> _resolveImageUrls() async {
     final note = _note;
     if (note == null) return;
@@ -323,13 +393,16 @@ class _NoteViewerPageState extends State<NoteViewerPage> {
                         if (imageUrls.isNotEmpty) ...[
                           AspectRatio(
                             aspectRatio: 16 / 9,
-                            child: CachedNetworkImage(
-                              imageUrl: imageUrls[_selectedImageIndex],
-                              fit: BoxFit.cover,
-                              alignment: Alignment.topCenter,
-                              width: double.infinity,
-                              placeholder: (_, __) => Container(color: Colors.grey[300]),
-                              errorWidget: (_, __, ___) => Container(color: Colors.grey[300]),
+                            child: GestureDetector(
+                              onTap: () => _openImageViewer(_selectedImageIndex),
+                              child: CachedNetworkImage(
+                                imageUrl: imageUrls[_selectedImageIndex],
+                                fit: BoxFit.cover,
+                                alignment: Alignment.topCenter,
+                                width: double.infinity,
+                                placeholder: (_, __) => Container(color: Colors.grey[300]),
+                                errorWidget: (_, __, ___) => Container(color: Colors.grey[300]),
+                              ),
                             ),
                           ),
                           const SizedBox(height: 8),
@@ -339,7 +412,10 @@ class _NoteViewerPageState extends State<NoteViewerPage> {
                               scrollDirection: Axis.horizontal,
                               itemBuilder: (ctx, i) {
                                 return GestureDetector(
-                                  onTap: () => setState(() => _selectedImageIndex = i),
+                                  onTap: () {
+                                    setState(() => _selectedImageIndex = i);
+                                    _openImageViewer(i);
+                                  },
                                   child: Container(
                                     margin: const EdgeInsets.symmetric(horizontal: 6),
                                     width: 96,
@@ -350,7 +426,7 @@ class _NoteViewerPageState extends State<NoteViewerPage> {
                                       ),
                                       borderRadius: BorderRadius.circular(8),
                                     ),
-                                    child: ClipRRect(
+                                      child: ClipRRect(
                                       borderRadius: BorderRadius.circular(6),
                                       child: CachedNetworkImage(
                                         imageUrl: imageUrls[i],
@@ -445,14 +521,17 @@ class _NoteViewerPageState extends State<NoteViewerPage> {
                                   if (imageUrls.isNotEmpty)
                                     ClipRRect(
                                       borderRadius: BorderRadius.circular(8),
-                                      child: CachedNetworkImage(
-                                        imageUrl: imageUrls[_selectedImageIndex],
-                                        fit: BoxFit.contain,
-                                        alignment: Alignment.topCenter,
-                                        width: double.infinity,
-                                        height: 420,
-                                        placeholder: (_, __) => Container(color: Colors.grey[200]),
-                                        errorWidget: (_, __, ___) => Container(color: Colors.grey[200]),
+                                      child: GestureDetector(
+                                        onTap: () => _openImageViewer(_selectedImageIndex),
+                                        child: CachedNetworkImage(
+                                          imageUrl: imageUrls[_selectedImageIndex],
+                                          fit: BoxFit.contain,
+                                          alignment: Alignment.topCenter,
+                                          width: double.infinity,
+                                          height: 420,
+                                          placeholder: (_, __) => Container(color: Colors.grey[200]),
+                                          errorWidget: (_, __, ___) => Container(color: Colors.grey[200]),
+                                        ),
                                       ),
                                     ),
 
@@ -477,12 +556,18 @@ class _NoteViewerPageState extends State<NoteViewerPage> {
                                               ),
                                                 child: ClipRRect(
                                                 borderRadius: BorderRadius.circular(6),
-                                                child: CachedNetworkImage(
-                                                  imageUrl: imageUrls[i],
-                                                  fit: BoxFit.cover,
-                                                  alignment: Alignment.topCenter,
-                                                  placeholder: (_, __) => Container(color: Colors.grey[200]),
-                                                  errorWidget: (_, __, ___) => Container(color: Colors.grey[200]),
+                                                child: GestureDetector(
+                                                  onTap: () {
+                                                    setState(() => _selectedImageIndex = i);
+                                                    _openImageViewer(i);
+                                                  },
+                                                  child: CachedNetworkImage(
+                                                    imageUrl: imageUrls[i],
+                                                    fit: BoxFit.cover,
+                                                    alignment: Alignment.topCenter,
+                                                    placeholder: (_, __) => Container(color: Colors.grey[200]),
+                                                    errorWidget: (_, __, ___) => Container(color: Colors.grey[200]),
+                                                  ),
                                                 ),
                                               ),
                                             ),

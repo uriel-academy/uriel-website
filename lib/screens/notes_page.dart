@@ -18,6 +18,8 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
   final TextEditingController _searchController = TextEditingController();
   String _selectedSubject = 'All Subjects';
   late final TabController _tabController;
+  // Track which note thumbnails we've prefetched so we don't repeat work
+  final Set<String> _prefetchedNoteIds = <String>{};
 
   @override
   void initState() {
@@ -179,6 +181,11 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
     final crossAxis = isSmall ? 2 : 4;
     final aspect = isSmall ? 0.65 : 0.75;
 
+    // Start a non-blocking prefetch of the top thumbnails visible on screen
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _startPrefetchIfNeeded(filteredDocs);
+    });
+
     return GridView.builder(
       padding: EdgeInsets.all(isSmall ? 8 : 12),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: crossAxis, childAspectRatio: aspect, crossAxisSpacing: isSmall ? 10 : 16, mainAxisSpacing: isSmall ? 10 : 16),
@@ -242,6 +249,67 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
         );
       },
     );
+  }
+
+  void _startPrefetchIfNeeded(List<QueryDocumentSnapshot> docs) {
+    // Prefetch first N items only to avoid overloading the network
+    const int maxToPrefetch = 12;
+    final toPrefetch = <QueryDocumentSnapshot>[];
+    for (final d in docs) {
+      if (toPrefetch.length >= maxToPrefetch) break;
+      if (!_prefetchedNoteIds.contains(d.id)) toPrefetch.add(d);
+    }
+    if (toPrefetch.isEmpty) return;
+    // Run prefetch asynchronously and don't await from UI thread
+    _prefetchThumbnails(toPrefetch);
+  }
+
+  Future<void> _prefetchThumbnails(List<QueryDocumentSnapshot> docs) async {
+    // Limit concurrency to avoid spikes by batching
+    const int concurrency = 3;
+    final remaining = docs.where((d) => !_prefetchedNoteIds.contains(d.id)).toList();
+    Future<void> prefetchOne(QueryDocumentSnapshot doc) async {
+      try {
+        final data = doc.data() as Map<String, dynamic>;
+        final filePath = data['filePath'] as String?;
+        String? url;
+        if (filePath != null && filePath.isNotEmpty) {
+          try {
+            url = await FirebaseStorage.instance.ref(filePath).getDownloadURL();
+          } catch (_) {
+            url = null;
+          }
+        }
+        // If we still don't have a URL, try the callable (non-blocking)
+        if ((url == null || url.isEmpty) && kIsWeb) {
+          try {
+            final callable = FirebaseFunctions.instance.httpsCallable('getNoteSignedUrlCallable');
+            final resp = await callable.call(<String, dynamic>{'noteId': doc.id});
+            final data = resp.data as Map<String, dynamic>;
+            if (data['ok'] == true && data['signedUrl'] != null) url = data['signedUrl'] as String;
+          } catch (_) {}
+        }
+
+        if (url != null && url.isNotEmpty) {
+          try {
+            await precacheImage(CachedNetworkImageProvider(url), context);
+          } catch (_) {}
+        }
+      } catch (e) {
+        // ignore per-item failures
+      } finally {
+        _prefetchedNoteIds.add(doc.id);
+      }
+    }
+
+    for (var i = 0; i < remaining.length; i += concurrency) {
+      final batch = remaining.skip(i).take(concurrency).toList();
+      try {
+        await Future.wait(batch.map((d) => prefetchOne(d)));
+      } catch (_) {
+        // ignore batch errors
+      }
+    }
   }
 
   @override
