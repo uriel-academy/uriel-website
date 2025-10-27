@@ -23,6 +23,11 @@ const corsHandler = cors({
 });
 
 const systemPrompt = `ROLE
+KNOWLEDGE CUTOFF: August 2025. For any time-sensitive information after this date, perform a web search and prefer verified WebSearchResults.
+WEB SEARCH USAGE:
+- When {useWebSearch} = "auto" or the question is time-sensitive, include WebSearchResults (provided below) and use ONLY those for current facts. Do NOT state you cannot browse the web. Instead, rely on and cite WebSearchResults when answering time-sensitive queries.
+- Search broadly; do not restrict results only to Ghanaian official sites. Prioritize reliable Ghanaian sources when present, but include other authoritative sources as needed.
+ROLE
 You are Uri, an advanced AI study companion designed for Ghanaian students in JHS (Junior High School) and SHS (Senior High School), supporting ages 12-21. You provide comprehensive academic assistance, emotional support, and guidance for holistic development.
 
 STUDENT CONTEXT
@@ -216,11 +221,52 @@ export const aiChatHttpStreaming = functions.region('us-central1').https.onReque
         res.write(`: ping ${Date.now()}\n\n`);
       }, 15000);
 
+      // Determine if this query should include web search context
+      function needsWebSearch(q: string) {
+        const s = (q || '').toLowerCase();
+        return /(who is|what is|where is|when is|how much|price|cost|exchange rate|weather|score|fixture|latest|current|now|today|update|news|breaking|recent|new|president|election|government|minister|policy|law|bill|parliament|court|judge|case|crime|accident|disaster|economy|market|stock|currency|inflation|unemployment|population|census|statistics|data|report|survey|study|research)\b/.test(s);
+      }
+
+      async function tavilySearch(query: string, maxResults = 6) {
+        try {
+          const tavilyKey = functions.config().tavily?.key;
+          if (!tavilyKey) return '';
+          const resp = await fetch('https://api.tavily.com/search', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ api_key: tavilyKey, query, max_results: maxResults, include_answer: true }),
+          });
+          if (!resp.ok) return '';
+          const data = await resp.json();
+          if (!data) return '';
+          if (data.answer && data.answer.toString().trim().length > 0) return data.answer.toString();
+          const results = (data.results || []).slice(0, maxResults);
+          const composed = results.map((r: any, i: number) => {
+            const title = r.title || r.headline || '';
+            const url = r.url || '';
+            const content = (r.content || r.snippet || '').toString().slice(0, 2000);
+            return `[${i + 1}] ${title} — ${url}\n${content}`;
+          }).join('\n\n');
+          return composed;
+        } catch (e) {
+          console.warn('tavilySearch failed', e);
+          return '';
+        }
+      }
+
+      let webContext = '';
+      try {
+        if (needsWebSearch(message)) {
+          webContext = await tavilySearch(message, 6);
+        }
+      } catch (e) { console.warn('web context fetch failed', e); }
+
       const messages: OpenAI.Chat.ChatCompletionMessageParam[] = [
         { role: "system", content: systemPrompt },
-        ...(Array.isArray(history) ? history : []), // [{role:'user'|'assistant', content:string}, ...]
-        { role: "user", content: message },
       ];
+      if (webContext && webContext.length > 0) messages.push({ role: 'system', content: `WebSearchResults:\n${webContext}` });
+      messages.push(...(Array.isArray(history) ? history : [])); // [{role:'user'|'assistant', content:string}, ...]
+      messages.push({ role: "user", content: message });
 
       const completion = await openai.chat.completions.create({
         model: "gpt-4o-mini", // good + cheap streaming model
