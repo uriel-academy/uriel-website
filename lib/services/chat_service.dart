@@ -1,61 +1,102 @@
+import 'dart:async';
 import 'dart:convert';
-import 'uri_ai.dart';
 import 'package:http/http.dart' as http;
 
+class ChatChunk {
+  final String? delta;   // new text token
+  final bool done;
+  final String? error;
+
+  ChatChunk({this.delta, this.done = false, this.error});
+
+  factory ChatChunk.fromJson(Map<String, dynamic> map) {
+    final type = map['type'];
+    if (type == 'text') return ChatChunk(delta: map['delta'] as String?);
+    if (type == 'done') return ChatChunk(done: true);
+    if (type == 'error') return ChatChunk(error: map['message'] as String?);
+    return ChatChunk();
+  }
+}
+
 class ChatService {
-  static const String endpoint =
-      'https://us-central1-uriel-academy-41fb0.cloudfunctions.net/aiChat';
+  final _controller = StreamController<ChatChunk>.broadcast();
+  Stream<ChatChunk> get stream => _controller.stream;
 
-  Future<String> send({
-    required List<Map<String, String>> messages,
-    String? imageUrl,
-    Map<String, dynamic>? profile,
-    String channel = 'uri_tab',
+  /// Call your deployed function URL
+  /// Example:
+  ///   https://us-central1-<project-id>.cloudfunctions.net/aiChatHttp
+  final Uri endpoint;
+
+  ChatService(this.endpoint);
+
+  Future<void> ask({
+    required String message,
+    String? system,
+    List<Map<String, String>> history = const [],
+    Map<String, String>? extraHeaders,
   }) async {
-    // Only send the last user message to avoid repetition
-    final lastMessage = messages.isNotEmpty ? messages.last : {'content': ''};
-    final body = jsonEncode({
-      'message': lastMessage['content'] ?? '',
-      'image_url': imageUrl,
-      'profile': profile ?? {},
-      'channel': channel,
-    });
+    print('ChatService.ask called with message: "$message"');
+    try {
+      final headers = <String, String>{
+        'Content-Type': 'application/json',
+        ...?extraHeaders,
+      };
 
-    final resp = await http.post(
-      Uri.parse(endpoint),
-      headers: {'Content-Type': 'application/json'},
-      body: body,
-    );
+      final body = jsonEncode({
+        "message": message,
+        if (system != null) "system": system,
+        if (history.isNotEmpty) "history": history, // [{role, content}]
+      });
 
-    if (resp.statusCode != 200) {
-      throw Exception('AI error: ${resp.statusCode} ${resp.body}');
+      print('Sending request to ${endpoint} with body: ${body}');
+
+      final request = http.Request('POST', endpoint)
+        ..headers.addAll(headers)
+        ..body = body;
+
+      final streamedResponse = await request.send();
+      print('Response status: ${streamedResponse.statusCode}');
+
+      // If not 200/SSE, read and emit error then return
+      if (streamedResponse.statusCode != 200) {
+        final err = await streamedResponse.stream.bytesToString();
+        print('Error response: $err');
+        _controller.add(ChatChunk(error: "HTTP ${streamedResponse.statusCode}: $err"));
+        return;
+      }
+
+      // Parse SSE lines
+      final utf8Stream = streamedResponse.stream.transform(utf8.decoder);
+      final lineStream = const LineSplitter().bind(utf8Stream);
+
+      await for (final line in lineStream) {
+        print('SSE line: "$line"');
+        if (line.startsWith(':')) {
+          // comment/heartbeat -> ignore
+          continue;
+        }
+        if (line.startsWith('data: ')) {
+          final jsonStr = line.substring(6);
+          if (jsonStr.isEmpty) continue;
+          print('Processing data: "$jsonStr"');
+          try {
+            final map = jsonDecode(jsonStr) as Map<String, dynamic>;
+            _controller.add(ChatChunk.fromJson(map));
+          } catch (e) {
+            print('Failed to parse JSON: $e');
+            // ignore malformed chunk
+          }
+        }
+        // blank lines separate events; we don't need special handling
+      }
+      print('SSE stream ended');
+    } catch (e) {
+      print('ChatService error: $e');
+      _controller.add(ChatChunk(error: e.toString()));
     }
-
-    final decoded = jsonDecode(resp.body);
-    return (decoded['reply'] as String?) ?? '';
   }
 
-  /// Streamed send: calls AI SSE endpoint and invokes onChunk for partial updates.
-  Future<CancelHandle?> sendStream({
-    required List<Map<String, String>> messages,
-    String? imageUrl,
-    Map<String, dynamic>? profile,
-    String channel = 'uri_tab',
-    String? conversationId,
-    required void Function(String chunk) onChunk,
-    void Function()? onDone,
-    void Function(Object error)? onError,
-  }) async {
-    // Only send the last user message (like URI page does)
-    final prompt = (messages.isNotEmpty ? messages.last['content'] ?? '' : '');
-    try {
-      final handle = await UriAI.streamAskSSE(prompt, (chunk) {
-        onChunk(chunk);
-      }, onDone: onDone, onError: onError, imageUrl: imageUrl, conversationId: conversationId);
-      return handle;
-    } catch (e) {
-      if (onError != null) onError(e);
-      rethrow;
-    }
+  void dispose() {
+    _controller.close();
   }
 }

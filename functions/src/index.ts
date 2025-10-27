@@ -4,7 +4,7 @@ import { z } from 'zod';
 import { scoreExam } from './lib/scoring';
 import { hasEntitlement, EntitlementType } from './util/entitlement';
 import { ingestDocs, ingestPDFs, ingestLocalPDFs, listPDFs } from './ai/ingest';
-import { aiChatHttp } from './aiChatHttp';
+import { aiChatHttpStreaming } from './aiChatHttp';
 import OpenAI from 'openai';
 import cors from 'cors';
 
@@ -2111,7 +2111,7 @@ export const importRMEQuestions = functions.https.onCall(async (data, context) =
 });
 
 // Expose the consolidated HTTP handler
-export { aiChatHttp };
+// export { aiChatHttp };
 
 // Expose PDF ingestion functions
 export const ingestLocalPDFsCallable = ingestLocalPDFs;
@@ -2355,9 +2355,12 @@ export default {
   initialSetupAdmin,
   recommendationsDaily,
   recommendationsRunNow,
-  aiChatHttp: aiChatHttp, // expose the consolidated HTTP handler for hosting
+  aiChatHttp: aiChatHttpStreaming, // expose the consolidated HTTP handler for hosting
   ingestDocs,
   ingestPDFs,
   ingestLocalPDFs,
   listPDFs
 };
+
+// Export the streaming AI chat function
+export const aiChatHttp = aiChatHttpStreaming;

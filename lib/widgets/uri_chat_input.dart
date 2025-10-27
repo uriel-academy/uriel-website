@@ -1,9 +1,7 @@
 import 'dart:async';
-import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../services/chat_service.dart';
-import '../services/uri_ai_sse_io.dart';
 
 class UriChatInput extends StatefulWidget {
   final FutureOr<void> Function(String role, String content, {List<Map<String, String>>? attachments}) onMessage;
@@ -18,58 +16,90 @@ class UriChatInput extends StatefulWidget {
 }
 
 class _UriChatInputState extends State<UriChatInput> {
-  final _ctrl = TextEditingController();
-  bool _sending = false;
-  dynamic _cancelHandle;
+  final _input = TextEditingController();
+  String _currentAnswer = '';
+  bool _loading = false;
+  String? _error;
+  late ChatService _chatService;
 
-  String _normalizeChunk(String chunk) {
-    // Normalize incoming chunk (server may send JSON fragments like arrays/objects)
-    final text = _extractTextFromJson(chunk);
-    if (text.isNotEmpty) return text;
-
-    // Try to decode JSON and extract text leaves
-    try {
-      final decoded = jsonDecode(chunk);
-      final extracted = _extractTextFromJson(decoded);
-      if (extracted.isNotEmpty) return extracted;
-    } catch (_) {
-      // not JSON — fall through
-    }
-
-    // Remove any NUL bytes that sometimes appear in streams
-    var s = chunk.replaceAll('\u0000', '');
-    // Remove trailing empty-array/object markers like [] or {} which can appear repeatedly.
-    // Keep surrounding whitespace intact where possible.
-    s = s.replaceAll(RegExp(r'(?:\[\s*\]|\{\s*\})+\s*$'), '');
-
-    return s;
+  @override
+  void initState() {
+    super.initState();
+    _chatService = ChatService(Uri.parse(
+      "https://us-central1-uriel-academy-41fb0.cloudfunctions.net/aiChatHttp",
+    ));
+    _chatService.stream.listen((chunk) {
+      print('Received chunk: ${chunk.delta != null ? 'text' : chunk.done ? 'done' : chunk.error != null ? 'error' : 'unknown'}');
+      if (chunk.error != null) {
+        print('Stream error: ${chunk.error}');
+        setState(() {
+          _error = chunk.error;
+          _loading = false;
+        });
+        widget.onMessage('assistant', 'Sorry, I couldn\'t process that right now. Error: ${chunk.error}');
+        return;
+      }
+      if (chunk.done) {
+        print('Stream completed');
+        setState(() => _loading = false);
+        if (widget.onStreamEnd != null) widget.onStreamEnd!();
+        return;
+      }
+      if (chunk.delta != null) {
+        print('Received delta: "${chunk.delta}"');
+        setState(() => _currentAnswer += chunk.delta!);
+        // Apply normalization to the full accumulated answer
+        final normalizedAnswer = _normalizeMd(_currentAnswer);
+        widget.onMessage('assistant', normalizedAnswer);
+      }
+    });
   }
 
-  String _extractTextFromJson(dynamic node) {
-    if (node == null) return '';
-    if (node is String) return node;
-    if (node is num) return node.toString();
-    if (node is List) {
-      return node.map((e) => _extractTextFromJson(e)).where((t) => t.isNotEmpty).join(' ');
-    }
-    if (node is Map) {
-      // Common fields used by various SSE payloads
-      final candidates = <String>[];
-      if (node.containsKey('text')) candidates.add(node['text'].toString());
-      if (node.containsKey('delta')) candidates.add(node['delta'].toString());
-      if (node.containsKey('content')) candidates.add(node['content'].toString());
-      if (node.containsKey('message')) candidates.add(node['message'].toString());
-      if (node.containsKey('data')) candidates.add(node['data'].toString());
-
-      if (candidates.isNotEmpty) return candidates.where((s) => s.isNotEmpty).join(' ');
-
-      // Otherwise recursively collect
-      return node.values.map((v) => _extractTextFromJson(v)).where((t) => t.isNotEmpty).join(' ');
-    }
-    return '';
+  @override
+  void dispose() {
+    _chatService.dispose();
+    _input.dispose();
+    super.dispose();
   }
 
   String _normalizeMd(String s) {
+    // First, handle LaTeX expressions - replace "latex :" with proper formatting
+    s = s.replaceAll('latex :', r'$');
+
+    // Insert spaces between words that are run together using multiple strategies
+
+    // Strategy 1: lowercase letter followed by uppercase letter (word boundary)
+    s = s.replaceAllMapped(RegExp(r'([a-z])([A-Z])'), (match) => '${match.group(1)} ${match.group(2)}');
+
+    // Strategy 2: Insert spaces based on common word patterns
+    // Common word endings followed by common word beginnings
+    final wordEndings = ['the', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by', 'from', 'up', 'about', 'into', 'through', 'during', 'before', 'after', 'above', 'below', 'between', 'among', 'is', 'are', 'was', 'were', 'be', 'been', 'being', 'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'could', 'should', 'may', 'might', 'must', 'can', 'shall', 'city', 'capital', 'country', 'region', 'state', 'province', 'district', 'town', 'village'];
+    final wordBeginnings = ['the', 'a', 'an', 'this', 'that', 'these', 'those', 'my', 'your', 'his', 'her', 'its', 'our', 'their', 'what', 'where', 'when', 'why', 'how', 'who', 'which', 'there', 'here', 'then', 'than', 'so', 'because', 'although', 'since', 'while', 'if', 'unless', 'until', 'before', 'after', 'as', 'like', 'unlike', 'capital', 'city', 'country', 'region', 'state', 'province', 'district', 'town', 'village', 'of', 'in', 'on', 'at', 'to', 'for', 'with', 'by', 'from'];
+
+    for (final ending in wordEndings) {
+      for (final beginning in wordBeginnings) {
+        final pattern = '$ending$beginning';
+        final replacement = '$ending $beginning';
+        s = s.replaceAll(pattern, replacement);
+      }
+    }
+
+    // Strategy 3: Handle numbers and letters
+    s = s.replaceAllMapped(RegExp(r'([a-zA-Z])([0-9])'), (match) => '${match.group(1)} ${match.group(2)}');
+    s = s.replaceAllMapped(RegExp(r'([0-9])([a-zA-Z])'), (match) => '${match.group(1)} ${match.group(2)}');
+
+    // Strategy 4: Handle contractions and possessives
+    s = s.replaceAllMapped(RegExp(r"([a-z])'([st]|re|ve|ll|m|d)([a-zA-Z])", caseSensitive: false), (match) => "${match.group(1)}'${match.group(2)} ${match.group(3)}");
+
+    // Handle common abbreviations and ensure proper spacing
+    s = s.replaceAll('e.g.', 'e.g.');
+    s = s.replaceAll('i.e.', 'i.e.');
+    s = s.replaceAll('etc.', 'etc.');
+    s = s.replaceAll('Dr.', 'Dr.');
+    s = s.replaceAll('Mr.', 'Mr.');
+    s = s.replaceAll('Mrs.', 'Mrs.');
+    s = s.replaceAll('Ms.', 'Ms.');
+
     // Collapse runs of whitespace
     s = s.replaceAll(RegExp(r'[ \t\f\v]+'), ' ');
 
@@ -92,103 +122,79 @@ class _UriChatInputState extends State<UriChatInput> {
     // Bullet lists sometimes arrive like "- item" but stuck to previous text
     s = s.replaceAll(RegExp(r'(?<!^)\s+(-\s+)'), '\n\$1');
 
+    // Handle LaTeX expressions - ensure they're properly formatted
+    s = s.replaceAll(r'$', r'$');
+    s = s.replaceAll(r'$$', r'$$');
+
     return s.trim();
   }
 
-  Future<void> _sendText() async {
-    var text = _ctrl.text.trim();
-    if (text.isEmpty) return;
+  Future<void> _send() async {
+    final text = _input.text.trim();
+    if (text.isEmpty || _loading) return;
 
-    setState(() => _sending = true);
+    _input.clear();
+    setState(() {
+      _currentAnswer = '';
+      _error = null;
+      _loading = true;
+    });
 
-    // Clear the UI state
-    _ctrl.clear();
-
-    // Get Firebase auth token for authentication like URI page
-    final user = FirebaseAuth.instance.currentUser;
-    final idToken = user != null ? await user.getIdToken() : null;
-    final conversationId = user?.uid ?? DateTime.now().millisecondsSinceEpoch.toString();
-
-    // Send the user message to the parent UI
+    // Send user message to UI
     widget.onMessage('user', text);
 
-    String accumulated = '';
-    // create assistant bubble (will be updated by stream)
+    // Initialize assistant message
     widget.onMessage('assistant', '');
 
-    dynamic cancelHandle;
-    try {
-      // Use streamAskSSE_impl directly with authentication like URI page
-      cancelHandle = await streamAskSSE_impl(
-        text, // Only send current message, not full history
-        (chunk) {
-          // Normalize incoming chunk like URI page does
-          final normalizedChunk = _normalizeChunk(chunk);
-          accumulated += normalizedChunk;
-          // Apply markdown normalization to the entire accumulated buffer
-          accumulated = _normalizeMd(accumulated);
-          widget.onMessage('assistant', accumulated);
-        },
-        onDone: () {
-          // finalize — nothing special to do
-        },
-        onError: (err) {
-          widget.onMessage('assistant', 'Sorry, I couldn\'t process that right now.');
-        },
-        idToken: idToken,
-        conversationId: conversationId,
-      );
-      if (cancelHandle != null && widget.onStreamStart != null) {
-        _cancelHandle = cancelHandle;
-        widget.onStreamStart!(cancelHandle);
-      }
-    } catch (e) {
-      widget.onMessage('assistant', 'Sorry, I couldn\'t process that right now.');
-    } finally {
-      setState(() => _sending = false);
-      // If we had a cancel handle, clear it and call onStreamEnd
-      if (_cancelHandle != null) {
-        _cancelHandle = null;
-      }
-      if (widget.onStreamEnd != null) widget.onStreamEnd!();
-    }
+    // Notify stream start
+    if (widget.onStreamStart != null) widget.onStreamStart!(null);
+
+    // Get Firebase auth token
+    final user = FirebaseAuth.instance.currentUser;
+    final idToken = user != null ? await user.getIdToken() : null;
+
+    await _chatService.ask(
+      message: text,
+      history: widget.history,
+      extraHeaders: idToken != null ? {"Authorization": "Bearer $idToken"} : null,
+    );
   }
 
 
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Column(
       children: [
-        Expanded(
-          child: TextField(
-            controller: _ctrl,
-            decoration: const InputDecoration(
-              hintText: 'Ask Uri anything…',
-              border: OutlineInputBorder(borderSide: BorderSide.none),
-              filled: true,
-              fillColor: Colors.white,
-            ),
-            minLines: 1,
-            maxLines: 6,
-            textInputAction: TextInputAction.send,
-            onSubmitted: (_) => _sendText(),
+        if (_error != null)
+          MaterialBanner(
+            backgroundColor: Theme.of(context).colorScheme.errorContainer,
+            content: Text(_error!),
+            actions: [
+              TextButton(onPressed: () => setState(() => _error = null), child: const Text('Dismiss'))
+            ],
           ),
-        ),
-
-        IconButton(
-          icon: _sending
-              ? (_cancelHandle != null ? const Icon(Icons.stop) : const CircularProgressIndicator())
-              : const Icon(Icons.send),
-          onPressed: _sending
-              ? () {
-                  // Cancel stream if available
-                  try {
-                    _cancelHandle?.cancel();
-                  } catch (_) {}
-                  setState(() => _sending = false);
-                }
-              : _sendText,
+        Row(
+          children: [
+            Expanded(
+              child: TextField(
+                controller: _input,
+                minLines: 1,
+                maxLines: 4,
+                decoration: const InputDecoration(
+                  hintText: 'Ask Uri anything…',
+                  border: OutlineInputBorder(borderSide: BorderSide.none),
+                  filled: true,
+                  fillColor: Colors.white,
+                ),
+                onSubmitted: (_) => _send(),
+              ),
+            ),
+            IconButton(
+              icon: _loading ? const CircularProgressIndicator() : const Icon(Icons.send),
+              onPressed: _loading ? null : _send,
+            ),
+          ],
         ),
       ],
     );
