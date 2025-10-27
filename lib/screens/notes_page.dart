@@ -1,4 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:cloud_functions/cloud_functions.dart';
+import 'package:flutter/foundation.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -200,22 +202,14 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
                 flex: 3,
                 child: ClipRRect(
                   borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
-                  child: signedUrl != null
-                      ? Image.network(signedUrl, fit: BoxFit.cover, alignment: Alignment.topCenter, width: double.infinity, errorBuilder: (_, __, ___) => Container(color: _getSubjectColor(subject)))
-                      : (publicFileUrl != null
-                          ? Image.network(publicFileUrl, fit: BoxFit.cover, alignment: Alignment.topCenter, width: double.infinity, errorBuilder: (_, __, ___) => Container(color: _getSubjectColor(subject)))
-                          : (() {
-                              final asset = _getCoverAssetForSubject(subject);
-                              if (asset != null) {
-                                return Image.asset(asset, fit: BoxFit.cover, alignment: Alignment.topCenter, width: double.infinity);
-                              }
-                              return Container(
-                                decoration: BoxDecoration(
-                                  gradient: LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: [_getSubjectColor(subject).withOpacity(0.7), _getSubjectColor(subject)]),
-                                ),
-                                child: Center(child: Icon(Icons.sticky_note_2, size: isSmall ? 36 : 44, color: Colors.white)),
-                              );
-                            }())),
+                  child: NoteThumbnail(
+                    noteId: filteredDocs[i].id,
+                    signedUrl: signedUrl,
+                    publicFileUrl: publicFileUrl,
+                    subject: subject,
+                    placeholderColor: _getSubjectColor(subject),
+                    assetPath: _getCoverAssetForSubject(subject),
+                  ),
                 ),
               ),
               Expanded(
@@ -462,6 +456,88 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
       }
     }
   }
+}
+
+/// Small helper widget that displays a note thumbnail image.
+///
+/// Behavior:
+/// - If `signedUrl` is provided, show it directly.
+/// - Else if running on web, attempt to fetch a signed URL via the
+///   `getNoteSignedUrlCallable` Cloud Function (requires user to be signed in).
+/// - Else, fall back to `publicFileUrl`, then `assetPath`, then a gradient placeholder.
+class NoteThumbnail extends StatefulWidget {
+  final String noteId;
+  final String? signedUrl;
+  final String? publicFileUrl;
+  final String subject;
+  final Color placeholderColor;
+  final String? assetPath;
+
+  const NoteThumbnail({
+    Key? key,
+    required this.noteId,
+    this.signedUrl,
+    this.publicFileUrl,
+    required this.subject,
+    required this.placeholderColor,
+    this.assetPath,
+  }) : super(key: key);
+
+  @override
+  State<NoteThumbnail> createState() => _NoteThumbnailState();
+}
+
+class _NoteThumbnailState extends State<NoteThumbnail> {
+  String? _url;
+  bool _loading = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _url = widget.signedUrl;
+    // If running on web and no signedUrl, try to fetch one
+    if (_url == null && kIsWeb) {
+      _fetchSignedUrl();
+    }
+  }
+
+  Future<void> _fetchSignedUrl() async {
+    if (_loading) return;
+    setState(() => _loading = true);
+    try {
+      final callable = FirebaseFunctions.instance.httpsCallable('getNoteSignedUrlCallable');
+      final resp = await callable.call(<String, dynamic>{'noteId': widget.noteId});
+      final data = resp.data as Map<String, dynamic>;
+      if (data['ok'] == true && data['signedUrl'] != null) {
+        if (!mounted) return;
+        setState(() => _url = data['signedUrl'] as String);
+        return;
+      }
+    } catch (e) {
+      // ignore errors - fallback will be used
+    } finally {
+      if (mounted) setState(() => _loading = false);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final urlToShow = _url ?? widget.publicFileUrl;
+    if (urlToShow != null) {
+      return Image.network(urlToShow, fit: BoxFit.cover, alignment: Alignment.topCenter, width: double.infinity, errorBuilder: (_, __, ___) => _placeholder());
+    }
+    if (widget.assetPath != null) {
+      return Image.asset(widget.assetPath!, fit: BoxFit.cover, alignment: Alignment.topCenter, width: double.infinity);
+    }
+    return _placeholder();
+  }
+
+  Widget _placeholder() => Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: [widget.placeholderColor.withOpacity(0.7), widget.placeholderColor]),
+        ),
+        child: const Center(child: Icon(Icons.sticky_note_2, size: 40, color: Colors.white)),
+      );
 }
 
 class _SliverTabBarDelegate extends SliverPersistentHeaderDelegate {
