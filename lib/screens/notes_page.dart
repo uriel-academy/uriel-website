@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cloud_functions/cloud_functions.dart';
 import 'package:flutter/foundation.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -202,14 +203,15 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
                 flex: 3,
                 child: ClipRRect(
                   borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
-                  child: NoteThumbnail(
-                    noteId: filteredDocs[i].id,
-                    signedUrl: signedUrl,
-                    publicFileUrl: publicFileUrl,
-                    subject: subject,
-                    placeholderColor: _getSubjectColor(subject),
-                    assetPath: _getCoverAssetForSubject(subject),
-                  ),
+                          child: NoteThumbnail(
+                              noteId: filteredDocs[i].id,
+                              signedUrl: signedUrl,
+                              publicFileUrl: publicFileUrl,
+                              filePath: d['filePath'] as String?,
+                              subject: subject,
+                              placeholderColor: _getSubjectColor(subject),
+                              assetPath: _getCoverAssetForSubject(subject),
+                            ),
                 ),
               ),
               Expanded(
@@ -469,6 +471,7 @@ class NoteThumbnail extends StatefulWidget {
   final String noteId;
   final String? signedUrl;
   final String? publicFileUrl;
+  final String? filePath;
   final String subject;
   final Color placeholderColor;
   final String? assetPath;
@@ -478,6 +481,7 @@ class NoteThumbnail extends StatefulWidget {
     required this.noteId,
     this.signedUrl,
     this.publicFileUrl,
+    this.filePath,
     required this.subject,
     required this.placeholderColor,
     this.assetPath,
@@ -505,6 +509,21 @@ class _NoteThumbnailState extends State<NoteThumbnail> {
     if (_loading) return;
     setState(() => _loading = true);
     try {
+      // Try Storage direct download URL first if filePath is available.
+      if (widget.filePath != null && widget.filePath!.isNotEmpty) {
+        try {
+          final storageUrl = await FirebaseStorage.instance.ref(widget.filePath).getDownloadURL();
+          if (storageUrl.isNotEmpty) {
+            if (!mounted) return;
+            setState(() => _url = storageUrl);
+            return;
+          }
+        } catch (e) {
+          // ignore and fall back to callable
+        }
+      }
+
+      // Fallback to Cloud Function to mint a signed URL for private files
       final callable = FirebaseFunctions.instance.httpsCallable('getNoteSignedUrlCallable');
       final resp = await callable.call(<String, dynamic>{'noteId': widget.noteId});
       final data = resp.data as Map<String, dynamic>;
