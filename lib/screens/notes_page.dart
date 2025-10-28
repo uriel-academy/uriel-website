@@ -564,6 +564,8 @@ class NoteThumbnail extends StatefulWidget {
 class _NoteThumbnailState extends State<NoteThumbnail> {
   String? _url;
   bool _loading = false;
+  bool _fetchFailed = false;
+  bool _needsAuth = false;
   Uint8List? _imageBytes;
   // Simple in-memory cache shared across instances to avoid refetching bytes
   static final Map<String, Uint8List> _inMemoryImageCache = <String, Uint8List>{};
@@ -580,7 +582,11 @@ class _NoteThumbnailState extends State<NoteThumbnail> {
 
   Future<void> _fetchSignedUrl() async {
     if (_loading) return;
-    setState(() => _loading = true);
+    setState(() {
+      _loading = true;
+      _fetchFailed = false;
+      _needsAuth = false;
+    });
     try {
       // Try Storage direct download URL first if filePath is available.
       if (widget.filePath != null && widget.filePath!.isNotEmpty) {
@@ -610,8 +616,14 @@ class _NoteThumbnailState extends State<NoteThumbnail> {
           setState(() => _url = data['signedUrl'] as String);
           return;
         }
-      } catch (_) {
-        // If callable failed (not signed in, etc) we will attempt proxy fetch below
+      } catch (e) {
+        // If callable failed due to unauthenticated user, mark needsAuth so UI can prompt sign-in.
+        final user = FirebaseAuth.instance.currentUser;
+        if (user == null) {
+          if (mounted) setState(() => _needsAuth = true);
+          return;
+        }
+        // Otherwise we'll attempt proxy fetch below; record failure state later if needed.
       }
 
       // As a last resort try the new noteImageProxy which requires Authorization.
@@ -639,6 +651,13 @@ class _NoteThumbnailState extends State<NoteThumbnail> {
               if (!mounted) return;
               setState(() {});
               return;
+            } else if (resp.statusCode == 401 || resp.statusCode == 403) {
+              // Authorization required — prompt sign-in / permission
+              if (mounted) setState(() => _needsAuth = true);
+              return;
+            } else {
+              // mark as failed so UI can offer retry
+              if (mounted) setState(() => _fetchFailed = true);
             }
           }
         } catch (e) {
@@ -647,38 +666,81 @@ class _NoteThumbnailState extends State<NoteThumbnail> {
       }
     } catch (e) {
       // ignore errors - fallback will be used
+      if (mounted) setState(() => _fetchFailed = true);
     } finally {
       if (mounted) setState(() => _loading = false);
     }
   }
 
+  void _retryFetch() {
+    if (_loading) return;
+    setState(() {
+      _fetchFailed = false;
+      _needsAuth = false;
+    });
+    _fetchSignedUrl();
+  }
+
   @override
   Widget build(BuildContext context) {
     // Priority: memory bytes (proxy fetch) -> resolved URL (signed/public) -> asset -> placeholder
+    Widget content;
     if (_imageBytes != null) {
-      return Image.memory(
+      content = Image.memory(
         _imageBytes!,
         fit: BoxFit.cover,
         alignment: Alignment.topCenter,
         width: double.infinity,
       );
+    } else {
+      final urlToShow = _url ?? widget.publicFileUrl;
+      if (urlToShow != null) {
+        content = CachedNetworkImage(
+          imageUrl: urlToShow,
+          fit: BoxFit.cover,
+          alignment: Alignment.topCenter,
+          width: double.infinity,
+          placeholder: (_, __) => Container(color: Colors.grey[200]),
+          errorWidget: (_, __, ___) => _placeholder(),
+        );
+      } else if (widget.assetPath != null) {
+        content = Image.asset(widget.assetPath!, fit: BoxFit.cover, alignment: Alignment.topCenter, width: double.infinity);
+      } else {
+        content = _placeholder();
+      }
     }
 
-    final urlToShow = _url ?? widget.publicFileUrl;
-    if (urlToShow != null) {
-      return CachedNetworkImage(
-        imageUrl: urlToShow,
-        fit: BoxFit.cover,
-        alignment: Alignment.topCenter,
-        width: double.infinity,
-        placeholder: (_, __) => Container(color: Colors.grey[200]),
-        errorWidget: (_, __, ___) => _placeholder(),
-      );
-    }
-    if (widget.assetPath != null) {
-      return Image.asset(widget.assetPath!, fit: BoxFit.cover, alignment: Alignment.topCenter, width: double.infinity);
-    }
-    return _placeholder();
+    // Overlay badges for loading / auth required / retry
+    return Stack(children: [
+      Positioned.fill(child: content),
+      Positioned(
+        top: 6,
+        right: 6,
+        child: AnimatedSwitcher(
+          duration: const Duration(milliseconds: 180),
+          child: _loading
+              ? Container(
+                  key: const ValueKey('loading'),
+                  padding: const EdgeInsets.all(6),
+                  decoration: BoxDecoration(color: Colors.black.withOpacity(0.45), shape: BoxShape.circle),
+                  child: const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2, valueColor: AlwaysStoppedAnimation<Color>(Colors.white))),
+                )
+              : _needsAuth
+                  ? InkWell(
+                      key: const ValueKey('auth'),
+                      onTap: () => Navigator.of(context).pushNamed('/signin'),
+                      child: Container(padding: const EdgeInsets.all(6), decoration: BoxDecoration(color: Colors.black.withOpacity(0.45), shape: BoxShape.circle), child: const Icon(Icons.lock, size: 16, color: Colors.white)),
+                    )
+                  : _fetchFailed
+                      ? InkWell(
+                          key: const ValueKey('retry'),
+                          onTap: _retryFetch,
+                          child: Container(padding: const EdgeInsets.all(6), decoration: BoxDecoration(color: Colors.black.withOpacity(0.45), shape: BoxShape.circle), child: const Icon(Icons.refresh, size: 16, color: Colors.white)),
+                        )
+                      : const SizedBox.shrink(),
+        ),
+      ),
+    ]);
   }
 
   Widget _placeholder() => Container(
