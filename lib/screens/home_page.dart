@@ -52,6 +52,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   int questionsAnswered = 0; // Total questions from quizzes
   int beceCountdownDays = 0; // Live countdown to BECE 2026
   StreamSubscription<DocumentSnapshot>? _userStreamSubscription;
+  bool _loadingFullStats = false;
   
   // Past Questions tracking
   int pastQuestionsAnswered = 0;
@@ -116,7 +117,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     
     _calculateBeceCountdown();
     _loadUserData();
-    _loadUserStats();
+  _loadUserStats();
     _loadUserRank();
     _recordDailyActivity();
     _setupUserStream();
@@ -281,19 +282,50 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   Future<void> _loadUserStats() async {
     final user = FirebaseAuth.instance.currentUser;
     if (user == null) return;
-    
+
+    // Phase 1: quick load (small limit) to populate the UI fast
     try {
-      // Load quiz results for the user
-      final quizSnapshot = await FirebaseFirestore.instance
+      final quickSnapshot = await FirebaseFirestore.instance
           .collection('quizzes')
           .where('userId', isEqualTo: user.uid)
           .orderBy('timestamp', descending: true)
-          .limit(100)
+          .limit(20)
           .get()
-          .timeout(const Duration(seconds: 10));
-      
-      if (quizSnapshot.docs.isEmpty) {
-        // No quiz data yet - show 0%
+          .timeout(const Duration(seconds: 6));
+
+  _processQuizSnapshot(quickSnapshot.docs, quick: true);
+    } catch (e) {
+      debugPrint('Quick stats load failed: $e');
+    }
+
+    // Schedule full background refresh (non-blocking)
+    if (!_loadingFullStats) {
+      _loadingFullStats = true;
+      // Give the UI a moment to paint
+      Future.delayed(const Duration(milliseconds: 300), () async {
+        try {
+          final fullSnapshot = await FirebaseFirestore.instance
+              .collection('quizzes')
+              .where('userId', isEqualTo: user.uid)
+              .orderBy('timestamp', descending: true)
+              .limit(100)
+              .get()
+              .timeout(const Duration(seconds: 12));
+
+          _processQuizSnapshot(fullSnapshot.docs, quick: false);
+        } catch (e) {
+          debugPrint('Full stats load failed: $e');
+        } finally {
+          _loadingFullStats = false;
+        }
+      });
+    }
+  }
+
+  // Process a list of quiz documents and update state. If quick==true we apply lightweight updates.
+  void _processQuizSnapshot(List<QueryDocumentSnapshot> docs, {bool quick = false}) {
+    if (docs.isEmpty) {
+      if (quick) {
         setState(() {
           questionsAnswered = 0;
           overallProgress = 0.0;
@@ -301,147 +333,114 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           _subjectProgress = [];
           _recentActivity = [];
         });
-        return;
       }
-      
-      // Calculate stats from quiz data
-      int totalQuestions = 0;
-      int totalCorrect = 0;
-      int pastQuestionsTotal = 0;
-      int pastQuestionsCorrect = 0;
-      int triviaTotal = 0;
-      int triviaCorrectCount = 0;
-      Map<String, List<double>> subjectScores = {};
-      Map<String, int> subjectQuestionCounts = {}; // Track actual question counts per subject
-      Map<String, double> subjectTimeSpent = {}; // Track time spent per subject
-      List<DateTime> activityDates = [];
-      List<Map<String, dynamic>> recentQuizzes = [];
-      
-      for (var doc in quizSnapshot.docs) {
-        final data = doc.data();
-        int questions = (data['totalQuestions'] as int?) ?? 0;
-        int correct = (data['correctAnswers'] as int?) ?? 0;
-        
-        totalQuestions += questions;
-        totalCorrect += correct;
-        
-        // Track subject progress
-        String subject = data['subject'] ?? 'Unknown';
-        String quizType = data['quizType'] ?? '';
-        double score = (data['percentage'] as num?)?.toDouble() ?? 0.0;
-        
-        // Separate tracking for past questions (BECE questions)
-        if (quizType.toLowerCase().contains('bece') || 
-            subject.toLowerCase().contains('bece') ||
-            quizType.toLowerCase().contains('past')) {
-          pastQuestionsTotal += questions;
-          pastQuestionsCorrect += correct;
-        }
-        
-      // Separate tracking for trivia
-        if (quizType.toLowerCase().contains('trivia') || 
-            subject.toLowerCase().contains('trivia')) {
-          triviaTotal += questions;
-          triviaCorrectCount += correct;
-        }
-        
-        if (!subjectScores.containsKey(subject)) {
-          subjectScores[subject] = [];
-        }
-        subjectScores[subject]!.add(score);
-        
-        // Track actual question counts per subject
-        subjectQuestionCounts[subject] = (subjectQuestionCounts[subject] ?? 0) + questions;
-        
-        // Track time spent per subject (estimate: 2 minutes per question)
-        subjectTimeSpent[subject] = (subjectTimeSpent[subject] ?? 0) + (questions * 2.0);
-        
-        // Track activity dates for streak
-        if (data['timestamp'] != null) {
-          try {
-            DateTime date;
-            if (data['timestamp'] is Timestamp) {
-              date = (data['timestamp'] as Timestamp).toDate();
-            } else {
-              date = DateTime.parse(data['timestamp'].toString());
-            }
-            activityDates.add(date);
-          } catch (e) {
-            debugPrint('Error parsing timestamp: $e');
+      return;
+    }
+
+    // Lightweight accumulation
+    int totalQuestions = 0;
+    int totalCorrect = 0;
+    int pastQuestionsTotal = 0;
+    int pastQuestionsCorrect = 0;
+    int triviaTotal = 0;
+    int triviaCorrectCount = 0;
+    Map<String, List<double>> subjectScores = {};
+    Map<String, int> subjectQuestionCounts = {};
+    Map<String, double> subjectTimeSpent = {};
+    List<DateTime> activityDates = [];
+    List<Map<String, dynamic>> recentQuizzes = [];
+
+    for (var doc in docs) {
+      final data = doc.data() as Map<String, dynamic>;
+      int questions = (data['totalQuestions'] as int?) ?? 0;
+      int correct = (data['correctAnswers'] as int?) ?? 0;
+
+      totalQuestions += questions;
+      totalCorrect += correct;
+
+      String subject = data['subject'] ?? 'Unknown';
+      String quizType = data['quizType'] ?? '';
+      double score = (data['percentage'] as num?)?.toDouble() ?? 0.0;
+
+      if (quizType.toLowerCase().contains('bece') ||
+          subject.toLowerCase().contains('bece') ||
+          quizType.toLowerCase().contains('past')) {
+        pastQuestionsTotal += questions;
+        pastQuestionsCorrect += correct;
+      }
+
+      if (quizType.toLowerCase().contains('trivia') || subject.toLowerCase().contains('trivia')) {
+        triviaTotal += questions;
+        triviaCorrectCount += correct;
+      }
+
+      subjectScores.putIfAbsent(subject, () => []).add(score);
+      subjectQuestionCounts[subject] = (subjectQuestionCounts[subject] ?? 0) + questions;
+      subjectTimeSpent[subject] = (subjectTimeSpent[subject] ?? 0) + (questions * 2.0);
+
+      if (data['timestamp'] != null) {
+        try {
+          DateTime date;
+          if (data['timestamp'] is Timestamp) {
+            date = (data['timestamp'] as Timestamp).toDate();
+          } else {
+            date = DateTime.parse(data['timestamp'].toString());
           }
-        }
-        
-        // Recent activity
-        if (recentQuizzes.length < 5) {
-          recentQuizzes.add({
-            'subject': subject,
-            'score': score,
-            'date': data['timestamp'],
-            'questions': data['totalQuestions'] ?? 0,
-          });
+          activityDates.add(date);
+        } catch (e) {
+          debugPrint('Error parsing timestamp: $e');
         }
       }
-      
-      // Calculate overall progress
-      double avgProgress = totalQuestions > 0 
-          ? (totalCorrect / totalQuestions * 100) 
-          : 0.0;
-      
-      // Calculate past questions progress
-      double pastQProgress = pastQuestionsTotal > 0 
-          ? (pastQuestionsCorrect / pastQuestionsTotal * 100) 
-          : 0.0;
-      
-      // Calculate trivia progress
-      double triviaAvg = triviaTotal > 0 
-          ? (triviaCorrectCount / triviaTotal * 100) 
-          : 0.0;
-      
-      // Calculate streak
-      int streak = _calculateStreak(activityDates);
-      
-      // Calculate study hours (estimate: 2 minutes per question, filtered for this week)
-      final now = DateTime.now();
-      final weekStart = now.subtract(Duration(days: now.weekday - 1));
-      final weekStartDate = DateTime(weekStart.year, weekStart.month, weekStart.day);
-      
-      int weeklyQuestions = 0;
-      for (var doc in quizSnapshot.docs) {
-        final data = doc.data();
-        if (data['timestamp'] != null) {
-          try {
-            DateTime date;
-            if (data['timestamp'] is Timestamp) {
-              date = (data['timestamp'] as Timestamp).toDate();
-            } else {
-              date = DateTime.parse(data['timestamp'].toString());
-            }
-            if (date.isAfter(weekStartDate)) {
-              weeklyQuestions += (data['totalQuestions'] as int?) ?? 0;
-            }
-          } catch (e) {
-            debugPrint('Error parsing timestamp for study hours: $e');
+
+      if (recentQuizzes.length < 5) {
+        recentQuizzes.add({
+          'subject': subject,
+          'score': score,
+          'date': data['timestamp'],
+          'questions': data['totalQuestions'] ?? 0,
+        });
+      }
+    }
+
+    double avgProgress = totalQuestions > 0 ? (totalCorrect / totalQuestions * 100) : 0.0;
+    double pastQProgress = pastQuestionsTotal > 0 ? (pastQuestionsCorrect / pastQuestionsTotal * 100) : 0.0;
+    double triviaAvg = triviaTotal > 0 ? (triviaCorrectCount / triviaTotal * 100) : 0.0;
+    int streak = _calculateStreak(activityDates);
+
+    // Weekly study hours (estimate)
+    final now = DateTime.now();
+    final weekStart = now.subtract(Duration(days: now.weekday - 1));
+    final weekStartDate = DateTime(weekStart.year, weekStart.month, weekStart.day);
+    int weeklyQuestions = 0;
+    for (var doc in docs) {
+      final data = doc.data() as Map<String, dynamic>;
+      if (data['timestamp'] != null) {
+        try {
+          DateTime date;
+          if (data['timestamp'] is Timestamp) {
+            date = (data['timestamp'] as Timestamp).toDate();
+          } else {
+            date = DateTime.parse(data['timestamp'].toString());
           }
-        }
+          if (date.isAfter(weekStartDate)) {
+            weeklyQuestions += (data['totalQuestions'] as int?) ?? 0;
+          }
+        } catch (_) {}
       }
-      
-      int studyHours = (weeklyQuestions * 2 / 60).round(); // 2 minutes per question
-      
-      // Build subject progress list
-      List<SubjectProgress> subjects = [];
-      final colors = [Colors.blue, Colors.green, Colors.orange, Colors.purple, Colors.red, Colors.teal];
-      int colorIndex = 0;
-      
-      subjectScores.forEach((subject, scores) {
-        double avgScore = scores.reduce((a, b) => a + b) / scores.length;
-        subjects.add(SubjectProgress(
-          subject, 
-          avgScore, 
-          colors[colorIndex % colors.length]
-        ));
-        colorIndex++;
-      });
-      
+    }
+    int studyHours = (weeklyQuestions * 2 / 60).round();
+
+    List<SubjectProgress> subjects = [];
+    final colors = [Colors.blue, Colors.green, Colors.orange, Colors.purple, Colors.red, Colors.teal];
+    int colorIndex = 0;
+    subjectScores.forEach((subject, scores) {
+      double avgScore = scores.reduce((a, b) => a + b) / scores.length;
+      subjects.add(SubjectProgress(subject, avgScore, colors[colorIndex % colors.length]));
+      colorIndex++;
+    });
+
+    // Apply results to state. If quick, prioritize fast minimal setState to avoid jank.
+    if (quick) {
       setState(() {
         questionsAnswered = totalQuestions;
         overallProgress = avgProgress;
@@ -449,34 +448,41 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         weeklyStudyHours = studyHours;
         _subjectProgress = subjects;
         _subjectTimeSpent = subjectTimeSpent;
-        _subjectQuestionCounts = subjectQuestionCounts; // Store actual question counts
+        _subjectQuestionCounts = subjectQuestionCounts;
         _recentActivity = recentQuizzes;
-        
-        // Past questions metrics
+
         pastQuestionsAnswered = pastQuestionsTotal;
         pastQuestionsProgress = pastQProgress;
-        
-        // Trivia metrics
+
         triviaQuestionsAnswered = triviaTotal;
         triviaProgress = triviaAvg;
         triviaCorrect = triviaCorrectCount;
       });
-      
-      // Generate dynamic activity items
+    } else {
+      // Full update: recompute all derived data and personalization
+      setState(() {
+        questionsAnswered = totalQuestions;
+        overallProgress = avgProgress;
+        currentStreak = streak;
+        weeklyStudyHours = studyHours;
+        _subjectProgress = subjects;
+        _subjectTimeSpent = subjectTimeSpent;
+        _subjectQuestionCounts = subjectQuestionCounts;
+        _recentActivity = recentQuizzes;
+
+        pastQuestionsAnswered = pastQuestionsTotal;
+        pastQuestionsProgress = pastQProgress;
+
+        triviaQuestionsAnswered = triviaTotal;
+        triviaProgress = triviaAvg;
+        triviaCorrect = triviaCorrectCount;
+      });
+
+      // Regenerate dependent computed content
       _generateActivityItems();
-      
-      // Detect user achievements
       _detectAchievements();
-      
-      // Generate intelligent study recommendations
       _generateStudyRecommendations();
-      
-      // Analyze user behavior for ML-powered personalization
       _analyzeUserBehaviorProfile();
-      
-    } catch (e) {
-      debugPrint('Error loading user stats: $e');
-      // Keep default values (0) on error
     }
   }
   
