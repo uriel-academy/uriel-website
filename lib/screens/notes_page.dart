@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -563,6 +564,9 @@ class NoteThumbnail extends StatefulWidget {
 class _NoteThumbnailState extends State<NoteThumbnail> {
   String? _url;
   bool _loading = false;
+  Uint8List? _imageBytes;
+  // Simple in-memory cache shared across instances to avoid refetching bytes
+  static final Map<String, Uint8List> _inMemoryImageCache = <String, Uint8List>{};
 
   @override
   void initState() {
@@ -598,12 +602,48 @@ class _NoteThumbnailState extends State<NoteThumbnail> {
 
       // Fallback to Cloud Function to mint a signed URL for private files
       final callable = FirebaseFunctions.instance.httpsCallable('getNoteSignedUrlCallable');
-      final resp = await callable.call(<String, dynamic>{'noteId': widget.noteId});
-      final data = resp.data as Map<String, dynamic>;
-      if (data['ok'] == true && data['signedUrl'] != null) {
-        if (!mounted) return;
-        setState(() => _url = data['signedUrl'] as String);
-        return;
+      try {
+        final resp = await callable.call(<String, dynamic>{'noteId': widget.noteId});
+        final data = resp.data as Map<String, dynamic>;
+        if (data['ok'] == true && data['signedUrl'] != null) {
+          if (!mounted) return;
+          setState(() => _url = data['signedUrl'] as String);
+          return;
+        }
+      } catch (_) {
+        // If callable failed (not signed in, etc) we will attempt proxy fetch below
+      }
+
+      // As a last resort try the new noteImageProxy which requires Authorization.
+      // This fetches raw bytes and we display them via MemoryImage. This works on
+      // mobile and web and lets us include the Authorization header.
+      if (widget.filePath != null && widget.filePath!.isNotEmpty) {
+        try {
+          // Check in-memory cache first
+          if (_inMemoryImageCache.containsKey(widget.noteId)) {
+            _imageBytes = _inMemoryImageCache[widget.noteId];
+            if (!mounted) return;
+            setState(() {});
+            return;
+          }
+
+          final user = FirebaseAuth.instance.currentUser;
+          final idToken = user == null ? null : await user.getIdToken();
+          if (idToken != null) {
+            final functionsBase = 'https://us-central1-uriel-academy-41fb0.cloudfunctions.net';
+            final proxyUrl = '$functionsBase/noteImageProxy?path=${Uri.encodeComponent(widget.filePath!)}';
+            final resp = await http.get(Uri.parse(proxyUrl), headers: {'Authorization': 'Bearer $idToken'});
+            if (resp.statusCode == 200 && resp.bodyBytes.isNotEmpty) {
+              _imageBytes = resp.bodyBytes;
+              _inMemoryImageCache[widget.noteId] = _imageBytes!;
+              if (!mounted) return;
+              setState(() {});
+              return;
+            }
+          }
+        } catch (e) {
+          // ignore and fall back to publicFileUrl/asset
+        }
       }
     } catch (e) {
       // ignore errors - fallback will be used
@@ -614,6 +654,16 @@ class _NoteThumbnailState extends State<NoteThumbnail> {
 
   @override
   Widget build(BuildContext context) {
+    // Priority: memory bytes (proxy fetch) -> resolved URL (signed/public) -> asset -> placeholder
+    if (_imageBytes != null) {
+      return Image.memory(
+        _imageBytes!,
+        fit: BoxFit.cover,
+        alignment: Alignment.topCenter,
+        width: double.infinity,
+      );
+    }
+
     final urlToShow = _url ?? widget.publicFileUrl;
     if (urlToShow != null) {
       return CachedNetworkImage(
