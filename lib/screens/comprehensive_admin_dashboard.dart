@@ -19,6 +19,8 @@ class ComprehensiveAdminDashboard extends StatefulWidget {
 class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboard> {
   bool _isAuthorized = false;
   bool _isLoading = true;
+  // Performance: lazy-load heavy analytics widgets on desktop to improve initial render
+  bool _analyticsLoaded = false;
   
   bool isSidebarCollapsed = false;
   String selectedModule = 'overview';
@@ -45,6 +47,26 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
   void initState() {
     super.initState();
     _checkAdminAccess();
+    // Defer heavy analytics rendering slightly to prioritize initial UI
+    // We'll load analytics after a short delay on larger screens.
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _maybeLoadAnalytics();
+    });
+  }
+
+  void _maybeLoadAnalytics() {
+    final width = MediaQuery.of(context).size.width;
+    // Only defer (and then load) on wider screens where heavy widgets cause jank
+    if (width >= 768) {
+      // small delay to allow main UI to paint
+      Future.delayed(const Duration(milliseconds: 300), () {
+        if (!mounted) return;
+        setState(() => _analyticsLoaded = true);
+      });
+    } else {
+      // on small screens, load immediately
+      setState(() => _analyticsLoaded = true);
+    }
   }
   
   Future<void> _checkAdminAccess() async {
@@ -1385,6 +1407,31 @@ class _ComprehensiveAdminDashboardState extends State<ComprehensiveAdminDashboar
   }
 
   Widget _buildAnalyticsSection(bool isSmallScreen) {
+    // If analytics not yet loaded (deferred on wider screens), show lightweight
+    // placeholders so initial dashboard paints quickly.
+    if (!_analyticsLoaded) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Analytics Dashboard',
+            style: GoogleFonts.montserrat(
+              fontSize: 20,
+              fontWeight: FontWeight.w700,
+              color: const Color(0xFF1A1E3F),
+            ),
+          ),
+          const SizedBox(height: 16),
+          // simple placeholders
+          Container(height: 200, decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(12), border: Border.all(color: Colors.grey.withOpacity(0.08))), child: const Center(child: Text('Loading revenue chart...'))),
+          const SizedBox(height: 16),
+          Container(height: 160, decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(12), border: Border.all(color: Colors.grey.withOpacity(0.08))), child: const Center(child: Text('Loading usage heatmap...'))),
+          const SizedBox(height: 16),
+          Container(height: 220, decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(12), border: Border.all(color: Colors.grey.withOpacity(0.08))), child: const Center(child: Text('Loading activity feed...'))),
+        ],
+      );
+    }
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
