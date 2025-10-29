@@ -3,7 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 import '../models/question_model.dart';
 import '../services/question_service.dart';
 import '../screens/quiz_taker_page.dart';
-import '../screens/flip_card_page.dart';
 
 class RevisionPage extends StatefulWidget {
   const RevisionPage({Key? key}) : super(key: key);

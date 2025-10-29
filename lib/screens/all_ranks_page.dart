@@ -273,7 +273,7 @@ class _AllRanksPageState extends State<AllRanksPage> with SingleTickerProviderSt
     ];
 
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 16),
+      margin: const EdgeInsets.symmetric(vertical: 16),
       padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
       decoration: BoxDecoration(
         color: Colors.white,

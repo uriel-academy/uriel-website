@@ -10,6 +10,7 @@ import '../services/connection_service.dart';
 import '../services/auth_service.dart';
 import '../services/notification_service.dart';
 import '../services/leaderboard_rank_service.dart';
+import '../services/telemetry_service.dart';
 import '../widgets/uri_chat_input.dart';
 import '../services/xp_service.dart';
 import '../widgets/rank_badge_widget.dart';
@@ -285,6 +286,11 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
 
     // Phase 1: quick load (small limit) to populate the UI fast
     try {
+      // Telemetry: mark quick dashboard load start
+      try {
+        TelemetryService().markStart('dashboard_quick_${user.uid}');
+        TelemetryService().recordEvent('dashboard_load_start', properties: {'phase': 'quick'});
+      } catch (_) {}
       final quickSnapshot = await FirebaseFirestore.instance
           .collection('quizzes')
           .where('userId', isEqualTo: user.uid)
@@ -293,9 +299,17 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           .get()
           .timeout(const Duration(seconds: 6));
 
-  _processQuizSnapshot(quickSnapshot.docs, quick: true);
+      _processQuizSnapshot(quickSnapshot.docs, quick: true);
+
+      // Telemetry: quick load completed (duration measured if start exists)
+      try {
+        await TelemetryService().markEnd('dashboard_quick_${user.uid}', 'dashboard_quick_loaded', properties: {'count': quickSnapshot.docs.length});
+      } catch (_) {}
     } catch (e) {
       debugPrint('Quick stats load failed: $e');
+      try {
+        TelemetryService().recordEvent('dashboard_quick_load_failed', properties: {'error': e.toString()});
+      } catch (_) {}
     }
 
     // Schedule full background refresh (non-blocking)
@@ -304,6 +318,11 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       // Give the UI a moment to paint
       Future.delayed(const Duration(milliseconds: 300), () async {
         try {
+          // Telemetry: mark full dashboard load start
+          try {
+            TelemetryService().markStart('dashboard_full_${user.uid}');
+            TelemetryService().recordEvent('dashboard_load_start', properties: {'phase': 'full'});
+          } catch (_) {}
           final fullSnapshot = await FirebaseFirestore.instance
               .collection('quizzes')
               .where('userId', isEqualTo: user.uid)
@@ -313,8 +332,14 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               .timeout(const Duration(seconds: 12));
 
           _processQuizSnapshot(fullSnapshot.docs, quick: false);
+          try {
+            await TelemetryService().markEnd('dashboard_full_${user.uid}', 'dashboard_full_loaded', properties: {'count': fullSnapshot.docs.length});
+          } catch (_) {}
         } catch (e) {
           debugPrint('Full stats load failed: $e');
+          try {
+            TelemetryService().recordEvent('dashboard_full_load_failed', properties: {'error': e.toString()});
+          } catch (_) {}
         } finally {
           _loadingFullStats = false;
         }

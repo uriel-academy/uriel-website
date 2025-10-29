@@ -275,7 +275,9 @@ class _NoteViewerPageState extends State<NoteViewerPage> {
     // 1) If explicit images array exists, add them first
     final images = note['images'];
     if (images is List) {
-      for (final it in images) if (it is String) resolved.add(it);
+      for (final it in images) {
+        if (it is String) resolved.add(it);
+      }
     }
 
     // 2) If there's a filePath, try to get a Storage download URL (most reliable)

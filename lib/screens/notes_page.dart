@@ -642,7 +642,7 @@ class _NoteThumbnailState extends State<NoteThumbnail> {
           final user = FirebaseAuth.instance.currentUser;
           final idToken = user == null ? null : await user.getIdToken();
           if (idToken != null) {
-            final functionsBase = 'https://us-central1-uriel-academy-41fb0.cloudfunctions.net';
+            const functionsBase = 'https://us-central1-uriel-academy-41fb0.cloudfunctions.net';
             final proxyUrl = '$functionsBase/noteImageProxy?path=${Uri.encodeComponent(widget.filePath!)}';
             final resp = await http.get(Uri.parse(proxyUrl), headers: {'Authorization': 'Bearer $idToken'});
             if (resp.statusCode == 200 && resp.bodyBytes.isNotEmpty) {

@@ -194,7 +194,7 @@ class _CourseUnitListPageState extends State<CourseUnitListPage> {
   void _openUnit(CourseUnit unit) {
     if (unit.lessons.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
+        const SnackBar(
           content: Text('This unit has no lessons yet'),
           backgroundColor: Colors.orange,
         ),

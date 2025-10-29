@@ -188,7 +188,7 @@ class _TeacherDashboardPageState extends State<TeacherDashboardPage> with Ticker
                         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                         decoration: BoxDecoration(
                           color: isSelected 
-                            ? const Color(0xFFD62828).withValues(alpha: 0.2)
+                            ? const Color(0xFFD62828).withOpacity(0.2)
                             : Colors.transparent,
                           borderRadius: BorderRadius.circular(8),
                         ),
@@ -198,7 +198,7 @@ class _TeacherDashboardPageState extends State<TeacherDashboardPage> with Ticker
                               item['icon'],
                               color: isSelected 
                                 ? const Color(0xFFD62828) 
-                                : Colors.white.withValues(alpha: 0.8),
+                                : Colors.white.withOpacity(0.8),
                               size: isMediumScreen ? 20 : 22,
                             ),
                             if (!_sidebarCollapsed) ...[
@@ -210,7 +210,7 @@ class _TeacherDashboardPageState extends State<TeacherDashboardPage> with Ticker
                                     fontSize: 14,
                                     color: isSelected 
                                       ? const Color(0xFFD62828) 
-                                      : Colors.white.withValues(alpha: 0.9),
+                                      : Colors.white.withOpacity(0.9),
                                     fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
                                   ),
                                 ),
@@ -234,14 +234,14 @@ class _TeacherDashboardPageState extends State<TeacherDashboardPage> with Ticker
                 Container(
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
-                    color: Colors.white.withValues(alpha: 0.1),
+                    color: Colors.white.withOpacity(0.1),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Row(
                     children: [
                       Icon(
                         Icons.help_outline,
-                        color: Colors.white.withValues(alpha: 0.8),
+                        color: Colors.white.withOpacity(0.8),
                         size: 16,
                       ),
                       const SizedBox(width: 8),
@@ -249,7 +249,7 @@ class _TeacherDashboardPageState extends State<TeacherDashboardPage> with Ticker
                         'Term 1, 2025',
                         style: GoogleFonts.montserrat(
                           fontSize: 12,
-                          color: Colors.white.withValues(alpha: 0.8),
+                          color: Colors.white.withOpacity(0.8),
                         ),
                       ),
                     ],
@@ -282,7 +282,7 @@ class _TeacherDashboardPageState extends State<TeacherDashboardPage> with Ticker
                     _teacherName,
                     style: GoogleFonts.montserrat(
                       fontSize: 14,
-                      color: Colors.white.withValues(alpha: 0.9),
+                      color: Colors.white.withOpacity(0.9),
                       fontWeight: FontWeight.w600,
                     ),
                     textAlign: TextAlign.center,
@@ -291,7 +291,7 @@ class _TeacherDashboardPageState extends State<TeacherDashboardPage> with Ticker
                     _teacherTitle,
                     style: GoogleFonts.montserrat(
                       fontSize: 12,
-                      color: Colors.white.withValues(alpha: 0.7),
+                      color: Colors.white.withOpacity(0.7),
                     ),
                     textAlign: TextAlign.center,
                     maxLines: 2,
@@ -420,7 +420,7 @@ class _TeacherDashboardPageState extends State<TeacherDashboardPage> with Ticker
                 child: Container(
                   padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                    color: const Color(0xFF2ECC71).withValues(alpha: 0.1),
+                    color: const Color(0xFF2ECC71).withOpacity(0.1),
                     shape: BoxShape.circle,
                   ),
                   child: const Icon(
@@ -633,7 +633,7 @@ class _TeacherDashboardPageState extends State<TeacherDashboardPage> with Ticker
                   'Ready to inspire young minds today? Your students are excited to learn with you!',
                   style: GoogleFonts.montserrat(
                     fontSize: isSmallScreen ? 14 : 16,
-                    color: Colors.white.withValues(alpha: 0.9),
+                    color: Colors.white.withOpacity(0.9),
                   ),
                 ),
                 const SizedBox(height: 12),
@@ -661,7 +661,7 @@ class _TeacherDashboardPageState extends State<TeacherDashboardPage> with Ticker
               width: 80,
               height: 80,
               decoration: BoxDecoration(
-                color: Colors.white.withValues(alpha: 0.2),
+                color: Colors.white.withOpacity(0.2),
                 shape: BoxShape.circle,
               ),
               child: const Icon(
@@ -733,7 +733,7 @@ class _TeacherDashboardPageState extends State<TeacherDashboardPage> with Ticker
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.05),
+            color: Colors.black.withOpacity(0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -747,7 +747,7 @@ class _TeacherDashboardPageState extends State<TeacherDashboardPage> with Ticker
               Container(
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  color: metric['color'].withValues(alpha: 0.1),
+                  color: metric['color'].withOpacity(0.1),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Icon(
@@ -816,7 +816,7 @@ class _TeacherDashboardPageState extends State<TeacherDashboardPage> with Ticker
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.05),
+            color: Colors.black.withOpacity(0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -940,7 +940,7 @@ class _TeacherDashboardPageState extends State<TeacherDashboardPage> with Ticker
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.05),
+            color: Colors.black.withOpacity(0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -1107,7 +1107,7 @@ class _TeacherDashboardPageState extends State<TeacherDashboardPage> with Ticker
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.05),
+            color: Colors.black.withOpacity(0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -1174,7 +1174,7 @@ class _TeacherDashboardPageState extends State<TeacherDashboardPage> with Ticker
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                 decoration: BoxDecoration(
                   color: isOverdue 
-                    ? const Color(0xFFD62828).withValues(alpha: 0.1)
+                    ? const Color(0xFFD62828).withOpacity(0.1)
                     : Colors.grey[100],
                   borderRadius: BorderRadius.circular(12),
                 ),
@@ -1239,7 +1239,7 @@ class _TeacherDashboardPageState extends State<TeacherDashboardPage> with Ticker
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.05),
+            color: Colors.black.withOpacity(0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -1370,7 +1370,7 @@ class _TeacherDashboardPageState extends State<TeacherDashboardPage> with Ticker
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.05),
+            color: Colors.black.withOpacity(0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -1407,7 +1407,7 @@ class _TeacherDashboardPageState extends State<TeacherDashboardPage> with Ticker
           Container(
             padding: const EdgeInsets.all(6),
             decoration: BoxDecoration(
-              color: color.withValues(alpha: 0.1),
+              color: color.withOpacity(0.1),
               shape: BoxShape.circle,
             ),
             child: Icon(icon, color: color, size: 16),
@@ -1481,7 +1481,7 @@ class _TeacherDashboardPageState extends State<TeacherDashboardPage> with Ticker
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.05),
+            color: Colors.black.withOpacity(0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -1542,7 +1542,7 @@ class _TeacherDashboardPageState extends State<TeacherDashboardPage> with Ticker
           Container(
             padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
-              color: getActivityColor(activity['type']).withValues(alpha: 0.1),
+              color: getActivityColor(activity['type']).withOpacity(0.1),
               shape: BoxShape.circle,
             ),
             child: Icon(
