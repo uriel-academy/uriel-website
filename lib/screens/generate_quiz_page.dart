@@ -51,12 +51,16 @@ class _GenerateQuizPageState extends State<GenerateQuizPage> {
 
               Container(
                 width: double.infinity,
-                padding: EdgeInsets.all(isSmall ? 16 : 20),
+                padding: EdgeInsets.all(isSmall ? 20 : 24),
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(16),
                   boxShadow: [
-                    BoxShadow(color: Colors.black.withValues(alpha: 0.04), blurRadius: 8, offset: const Offset(0, 3)),
+                    BoxShadow(
+                      color: Colors.black.withValues(alpha: 0.05),
+                      blurRadius: 10,
+                      offset: const Offset(0, 4),
+                    ),
                   ],
                 ),
                 child: Column(
@@ -65,11 +69,16 @@ class _GenerateQuizPageState extends State<GenerateQuizPage> {
                     const SizedBox(height: 12),
                     _isGenerating
                         ? const CircularProgressIndicator(color: Color(0xFFD62828))
-                        : ElevatedButton.icon(
+                        : ElevatedButton(
                             onPressed: _generateAndShowQuestions,
-                            icon: const Icon(Icons.auto_stories),
-                            label: Text('Generate', style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
-                            style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFFD62828), padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 14), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: const Color(0xFF2ECC71),
+                              foregroundColor: Colors.white,
+                              padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                              minimumSize: const Size(double.infinity, 50),
+                            ),
+                            child: Text('Generate Quiz', style: GoogleFonts.montserrat(fontSize: 16, fontWeight: FontWeight.w600)),
                           ),
                   ],
                 ),
@@ -161,7 +170,10 @@ class _GenerateQuizPageState extends State<GenerateQuizPage> {
         buffer.writeln('Q${i+1}. ${q.questionText}');
         if (q.options != null && q.options!.isNotEmpty) {
           for (var j = 0; j < q.options!.length; j++) {
-            buffer.writeln('   ${String.fromCharCode(65 + j)}. ${q.options![j]}');
+            final rawOpt = q.options![j];
+            // Remove any existing leading letter prefix like "A. " to avoid duplication
+            final cleaned = rawOpt.replaceFirst(RegExp(r'^[A-Za-z]\.[\s]*'), '');
+            buffer.writeln('   ${String.fromCharCode(65 + j)}. $cleaned');
           }
         }
         buffer.writeln('Answer: ${q.correctAnswer}');
@@ -212,10 +224,14 @@ class _GenerateQuizPageState extends State<GenerateQuizPage> {
                           const SizedBox(height: 6),
                           ...List.generate(
                             q.options!.length,
-                            (j) => Padding(
-                              padding: const EdgeInsets.only(left: 8, bottom: 2),
-                              child: Text('${String.fromCharCode(65 + j)}. ${q.options![j]}', style: GoogleFonts.montserrat()),
-                            ),
+                            (j) {
+                              final rawOpt = q.options![j];
+                              final cleaned = rawOpt.replaceFirst(RegExp(r'^[A-Za-z]\.[\s]*'), '');
+                              return Padding(
+                                padding: const EdgeInsets.only(left: 8, bottom: 2),
+                                child: Text('${String.fromCharCode(65 + j)}. $cleaned', style: GoogleFonts.montserrat()),
+                              );
+                            },
                           ),
                         ],
                         const SizedBox(height: 6),
