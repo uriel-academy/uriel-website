@@ -2458,18 +2458,18 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   List<Widget> _homeChildren() {
     final List<Widget> children = [];
     children.add(_buildDashboard());
-    // For teachers we insert a "Students" tab (reusing the students' leaderboard view)
+    // Teacher view: show Leaderboard first, then Students list page
     if (widget.isTeacher) {
-      children.add(const RedesignedLeaderboardPage()); // Students tab for teachers
+      children.add(const RedesignedLeaderboardPage()); // Leaderboard for teachers
+      children.add(const StudentsPage()); // Students list
     } else {
       children.add(_buildQuestionsPage());
       children.add(_buildRevisionPage());
+      children.add(const RedesignedLeaderboardPage());
     }
     children.add(_buildTextbooksPage());
     children.add(_buildTriviaPage());
     children.add(const NotesTab());
-    // Students (leaderboard) is already added for teacher above; students keep their own Leaderboard later
-    if (!widget.isTeacher) children.add(const RedesignedLeaderboardPage());
     children.add(const UriPage(embedded: true));
     return children;
   }
@@ -2482,16 +2482,18 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     // Remove icons for teacher mode (icon: null) so tabs render without icons.
     items.add({'index': idx++, 'label': 'Dashboard', 'icon': widget.isTeacher ? null : Icons.dashboard_outlined});
     if (widget.isTeacher) {
-      // Insert Students tab for teachers (uses leaderboard view)
+      // Leaderboard first for teachers
+      items.add({'index': idx++, 'label': 'Leaderboard', 'icon': null});
+      // Students page (search + list)
       items.add({'index': idx++, 'label': 'Students', 'icon': null});
     } else {
       items.add({'index': idx++, 'label': 'Questions', 'icon': Icons.quiz_outlined});
       items.add({'index': idx++, 'label': 'Revision', 'icon': Icons.refresh_outlined});
+      items.add({'index': idx++, 'label': 'Leaderboard', 'icon': Icons.emoji_events_outlined});
     }
     items.add({'index': idx++, 'label': 'Books', 'icon': widget.isTeacher ? null : Icons.menu_book_outlined});
     items.add({'index': idx++, 'label': 'Trivia', 'icon': widget.isTeacher ? null : Icons.extension_outlined});
     items.add({'index': idx++, 'label': 'Notes', 'icon': widget.isTeacher ? null : Icons.note_alt_outlined});
-    if (!widget.isTeacher) items.add({'index': idx++, 'label': 'Leaderboard', 'icon': Icons.emoji_events_outlined});
     items.add({'index': idx++, 'label': 'Uri', 'icon': widget.isTeacher ? null : Icons.chat_bubble_outline});
     return items;
   }
