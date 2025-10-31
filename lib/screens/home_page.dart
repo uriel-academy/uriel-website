@@ -2490,8 +2490,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     final items = <Map<String, Object?>>[];
     int idx = 0;
     // Remove icons for teacher mode (icon: null) so tabs render without icons.
-    // Dashboard always first
-    items.add({'index': idx++, 'label': 'Dashboard', 'icon': widget.isTeacher ? null : Icons.dashboard_outlined});
+  // Dashboard always first (label-only tab — no icon for teacher or student)
+  items.add({'index': idx++, 'label': 'Dashboard', 'icon': null});
     if (widget.isTeacher) {
       // Teacher order: Students, Generate Quiz, Notes, Uri, Books, Trivia, Leaderboard
       items.add({'index': idx++, 'label': 'Students', 'icon': null});
@@ -2503,13 +2503,14 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       items.add({'index': idx++, 'label': 'Leaderboard', 'icon': null});
     } else {
       // Student order: Questions, Revision, Books, Notes, Trivia, Leaderboard, Uri
-      items.add({'index': idx++, 'label': 'Questions', 'icon': Icons.quiz_outlined});
-      items.add({'index': idx++, 'label': 'Revision', 'icon': Icons.refresh_outlined});
-      items.add({'index': idx++, 'label': 'Books', 'icon': Icons.menu_book_outlined});
-      items.add({'index': idx++, 'label': 'Notes', 'icon': Icons.note_alt_outlined});
-      items.add({'index': idx++, 'label': 'Trivia', 'icon': Icons.extension_outlined});
-      items.add({'index': idx++, 'label': 'Leaderboard', 'icon': Icons.emoji_events_outlined});
-      items.add({'index': idx++, 'label': 'Uri', 'icon': Icons.chat_bubble_outline});
+      // Render label-only tabs for students as requested (no icons)
+      items.add({'index': idx++, 'label': 'Questions', 'icon': null});
+      items.add({'index': idx++, 'label': 'Revision', 'icon': null});
+      items.add({'index': idx++, 'label': 'Books', 'icon': null});
+      items.add({'index': idx++, 'label': 'Notes', 'icon': null});
+      items.add({'index': idx++, 'label': 'Trivia', 'icon': null});
+      items.add({'index': idx++, 'label': 'Leaderboard', 'icon': null});
+      items.add({'index': idx++, 'label': 'Uri', 'icon': null});
     }
     return items;
   }
@@ -2768,11 +2769,20 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           return Center(child: Text('Teacher profile incomplete: missing school or class', style: GoogleFonts.montserrat(color: Colors.grey[700])));
         }
 
+        // Firestore equality is case-sensitive and data may vary slightly; fetch students and filter client-side with normalization
         return FutureBuilder<QuerySnapshot>(
-          future: FirebaseFirestore.instance.collection('users').where('role', isEqualTo: 'student').where('schoolName', isEqualTo: school).where('grade', isEqualTo: grade).get(),
+          future: FirebaseFirestore.instance.collection('users').where('role', isEqualTo: 'student').get(),
           builder: (context, studentsSnap) {
             if (studentsSnap.connectionState == ConnectionState.waiting) return const Center(child: CircularProgressIndicator());
-            final studentDocs = studentsSnap.data?.docs ?? [];
+            final allStudentDocs = studentsSnap.data?.docs ?? [];
+            final normSchool = _normalize(school.toString());
+            final normGrade = _normalize(grade.toString());
+            final studentDocs = allStudentDocs.where((d) {
+              final sd = d.data() as Map<String, dynamic>;
+              final s = _normalize((sd['schoolName'] ?? sd['school'])?.toString() ?? '');
+              final g = _normalize((sd['grade'] ?? sd['class'])?.toString() ?? '');
+              return s == normSchool && g == normGrade;
+            }).toList();
             if (studentDocs.isEmpty) return Center(child: Text('No students found for $grade at $school', style: GoogleFonts.montserrat(color: Colors.grey[700])));
 
             // Aggregate async: fetch XP and quizzes per student
@@ -2786,7 +2796,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                 int totalQuestions = 0;
                 final subjects = <String>{};
                 for (final q in qs.docs) {
-                  final data = q.data() as Map<String, dynamic>;
+                  final data = q.data();
                   if (data['percent'] != null) {
                     final p = (data['percent'] is num) ? (data['percent'] as num).toDouble() : double.tryParse(data['percent'].toString()) ?? 0.0;
                     avgPercent += p;
@@ -2835,12 +2845,15 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                     children: [
                       Text('Class Overview — $grade • $school', style: GoogleFonts.playfairDisplay(fontSize: isSmallScreen ? 20 : 26, fontWeight: FontWeight.bold)),
                       const SizedBox(height: 12),
-                      Text('Averages across ${totalStudents} students in your class', style: GoogleFonts.montserrat(color: Colors.grey[700])),
+                      if (totalStudents == 1)
+                        Text('Only 1 student found in this class. Minimum per class is 1, maximum is 50.', style: GoogleFonts.montserrat(color: Colors.grey[700]))
+                      else
+                        Text('Averages across $totalStudents students in your class', style: GoogleFonts.montserrat(color: Colors.grey[700])),
                       const SizedBox(height: 16),
                       Row(children: [
                         Expanded(child: _buildStatCard('Average XP', avgXP.toStringAsFixed(0))),
                         const SizedBox(width: 12),
-                        Expanded(child: _buildStatCard('Average Score %', avgPercent.toStringAsFixed(1) + '%')),
+                        Expanded(child: _buildStatCard('Average Score %', '${avgPercent.toStringAsFixed(1)}%')),
                         const SizedBox(width: 12),
                         Expanded(child: _buildStatCard('Avg Subjects', avgSubjects.toStringAsFixed(1))),
                         const SizedBox(width: 12),
@@ -2873,6 +2886,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       ]),
     );
   }
+
+  String _normalize(String? s) => s?.toLowerCase().replaceAll(RegExp(r"[^a-z0-9]"), ' ').trim() ?? '';
 
   Widget _buildProgressOverviewCard() {
     final screenWidth = MediaQuery.of(context).size.width;
