@@ -2275,7 +2275,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               child: Column(
                 children: [
                   // Build navigation items dynamically so teacher view can exclude some tabs
-                  for (final item in _navItems()) _buildNavItem(item['index'] as int, item['label'] as String, icon: item['icon'] as IconData),
+                  for (final item in _navItems()) _buildNavItem(item['index'] as int, item['label'] as String, icon: item['icon'] as IconData?),
                   
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
@@ -2458,11 +2458,17 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   List<Widget> _homeChildren() {
     final List<Widget> children = [];
     children.add(_buildDashboard());
-    if (!widget.isTeacher) children.add(_buildQuestionsPage());
-    if (!widget.isTeacher) children.add(_buildRevisionPage());
+    // For teachers we insert a "Students" tab (reusing the students' leaderboard view)
+    if (widget.isTeacher) {
+      children.add(const RedesignedLeaderboardPage()); // Students tab for teachers
+    } else {
+      children.add(_buildQuestionsPage());
+      children.add(_buildRevisionPage());
+    }
     children.add(_buildTextbooksPage());
     children.add(_buildTriviaPage());
     children.add(const NotesTab());
+    // Students (leaderboard) is already added for teacher above; students keep their own Leaderboard later
     if (!widget.isTeacher) children.add(const RedesignedLeaderboardPage());
     children.add(const UriPage(embedded: true));
     return children;
@@ -2470,17 +2476,23 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
 
   /// Build nav item descriptors (index, label, icon) in the order shown in the UI.
   /// Indexes are sequential and must align with the children returned by [_homeChildren()].
-  List<Map<String, Object>> _navItems() {
-    final items = <Map<String, Object>>[];
+  List<Map<String, Object?>> _navItems() {
+    final items = <Map<String, Object?>>[];
     int idx = 0;
-    items.add({'index': idx++, 'label': 'Dashboard', 'icon': Icons.dashboard_outlined});
-    if (!widget.isTeacher) items.add({'index': idx++, 'label': 'Questions', 'icon': Icons.quiz_outlined});
-    if (!widget.isTeacher) items.add({'index': idx++, 'label': 'Revision', 'icon': Icons.refresh_outlined});
-    items.add({'index': idx++, 'label': 'Books', 'icon': Icons.menu_book_outlined});
-    items.add({'index': idx++, 'label': 'Trivia', 'icon': Icons.extension_outlined});
-    items.add({'index': idx++, 'label': 'Notes', 'icon': Icons.note_alt_outlined});
+    // Remove icons for teacher mode (icon: null) so tabs render without icons.
+    items.add({'index': idx++, 'label': 'Dashboard', 'icon': widget.isTeacher ? null : Icons.dashboard_outlined});
+    if (widget.isTeacher) {
+      // Insert Students tab for teachers (uses leaderboard view)
+      items.add({'index': idx++, 'label': 'Students', 'icon': null});
+    } else {
+      items.add({'index': idx++, 'label': 'Questions', 'icon': Icons.quiz_outlined});
+      items.add({'index': idx++, 'label': 'Revision', 'icon': Icons.refresh_outlined});
+    }
+    items.add({'index': idx++, 'label': 'Books', 'icon': widget.isTeacher ? null : Icons.menu_book_outlined});
+    items.add({'index': idx++, 'label': 'Trivia', 'icon': widget.isTeacher ? null : Icons.extension_outlined});
+    items.add({'index': idx++, 'label': 'Notes', 'icon': widget.isTeacher ? null : Icons.note_alt_outlined});
     if (!widget.isTeacher) items.add({'index': idx++, 'label': 'Leaderboard', 'icon': Icons.emoji_events_outlined});
-    items.add({'index': idx++, 'label': 'Uri', 'icon': Icons.chat_bubble_outline});
+    items.add({'index': idx++, 'label': 'Uri', 'icon': widget.isTeacher ? null : Icons.chat_bubble_outline});
     return items;
   }
 
