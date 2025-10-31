@@ -43,6 +43,9 @@ class _SignUpPageState extends State<SignUpPage> {
   final TextEditingController yearsExperienceController = TextEditingController();
   final TextEditingController teacherIdController = TextEditingController();
   final TextEditingController teacherInstitutionCodeController = TextEditingController();
+  // Allowed school (temporary single-school support)
+  final String _allowedSchoolName = 'Ave Maria School';
+  final String _allowedInstitutionCode = 'PRGA03AM71';
   
   // School specific controllers
   final TextEditingController contactPersonController = TextEditingController();
@@ -134,31 +137,57 @@ class _SignUpPageState extends State<SignUpPage> {
       final user = await AuthService().signInWithGoogle();
       if (user == null) {
         _showError('Google sign-up failed. Please try again.');
-      } else {
-        // Check if this is a new user or existing user
-        final existingRole = await UserService().getUserRoleByEmail(user.email!);
-        
-        if (existingRole != null) {
-          // Existing user - route based on role
-          _routeUserBasedOnRole(existingRole);
-        } else {
-          // New user - create profile with default student role and go to home
-          await UserService().createUserProfile(
-            userId: user.uid,
-            email: user.email!,
-            role: UserRole.student,
-            name: user.displayName,
-          );
-          
-          if (!mounted) return;
-          
-          Navigator.pushNamedAndRemoveUntil(
-            context,
-            '/home',
-            (route) => false,
-          );
-        }
+        return;
       }
+
+      // Check if this is an admin email
+      if (user.email == 'studywithuriel@gmail.com') {
+        if (mounted) Navigator.pushReplacementNamed(context, '/admin');
+        return;
+      }
+
+      // Check existing role by email
+      final existingRole = await UserService().getUserRoleByEmail(user.email!);
+
+      if (existingRole != null) {
+        // Existing user - route based on role
+        _routeUserBasedOnRole(existingRole);
+        return;
+      }
+
+      // New user signing up with Google. If user chose teacher, ensure school details match
+      if (selectedUserType == UserType.teacher) {
+        if (!_validateTeacherSchoolCode()) {
+          _showError('To sign up as a teacher with Google please fill the Teacher details (school name and institution code) and ensure they match Ave Maria School code.');
+          return;
+        }
+
+        // Create teacher profile
+        await UserService().storeTeacherData(
+          userId: user.uid,
+          name: user.displayName ?? nameController.text.trim(),
+          email: user.email ?? '',
+          phoneNumber: phoneController.text.trim(),
+          schoolName: teacherSchoolController.text.trim(),
+          teachingGrade: selectedTeachingClasses.isNotEmpty ? selectedTeachingClasses.first : null,
+          institutionCode: teacherInstitutionCodeController.text.trim().toUpperCase(),
+        );
+
+        if (!mounted) return;
+        Navigator.pushNamedAndRemoveUntil(context, '/teacher', (route) => false);
+        return;
+      }
+
+      // Default: create a student profile and route to home
+      await UserService().createUserProfile(
+        userId: user.uid,
+        email: user.email!,
+        role: UserRole.student,
+        name: user.displayName,
+      );
+
+      if (!mounted) return;
+      Navigator.pushNamedAndRemoveUntil(context, '/home', (route) => false);
     } catch (e) {
       _showError('An error occurred during sign-up.');
     } finally {
@@ -180,6 +209,13 @@ class _SignUpPageState extends State<SignUpPage> {
         margin: const EdgeInsets.all(16),
       ),
     );
+  }
+
+  bool _validateTeacherSchoolCode() {
+    final school = teacherSchoolController.text.trim();
+    final code = teacherInstitutionCodeController.text.trim().toUpperCase();
+    if (school.isEmpty || code.isEmpty) return false;
+    return school.toLowerCase() == _allowedSchoolName.toLowerCase() && code == _allowedInstitutionCode;
   }
 
   void _routeUserBasedOnRole(UserRole role) {
@@ -1118,6 +1154,29 @@ class _SignUpPageState extends State<SignUpPage> {
               ),
             ],
           ),
+          const SizedBox(height: 16),
+          // Allow signing up with Google from the auth step as well (useful after filling details)
+          if (selectedUserType != null) ...[
+            const SizedBox(height: 8),
+            Row(
+              children: [
+                Expanded(child: Divider(color: Colors.grey[300])),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 12),
+                  child: Text(
+                    'or',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 14,
+                      color: const Color(0xFF6B7280),
+                    ),
+                  ),
+                ),
+                Expanded(child: Divider(color: Colors.grey[300])),
+              ],
+            ),
+            const SizedBox(height: 12),
+            _buildGoogleSignUpButton(),
+          ],
         ],
       ),
     ),
@@ -1398,6 +1457,13 @@ class _SignUpPageState extends State<SignUpPage> {
     });
 
     try {
+      // If signing up as a teacher ensure school and institution code match allowed school
+      if (selectedUserType == UserType.teacher) {
+        if (!_validateTeacherSchoolCode()) {
+          _showError('Teacher sign up requires a valid school name and institution code for Ave Maria School (PRGA03AM71).');
+          return;
+        }
+      }
       // Create Firebase user account
       final user = await AuthService().registerWithEmail(
         emailController.text.trim(),

@@ -28,7 +28,8 @@ import 'package:uuid/uuid.dart';
 import '../widgets/uri_chat.dart';
 
 class StudentHomePage extends StatefulWidget {
-  const StudentHomePage({super.key});
+  final bool isTeacher;
+  const StudentHomePage({super.key, this.isTeacher = false});
 
   @override
   State<StudentHomePage> createState() => _StudentHomePageState();
@@ -106,7 +107,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   @override
   void initState() {
     super.initState();
-  _mainTabController = TabController(length: 8, vsync: this);
+  final tabLength = widget.isTeacher ? 5 : 8;
+  _mainTabController = TabController(length: tabLength, vsync: this);
     _animationController = AnimationController(
       duration: const Duration(milliseconds: 800),
       vsync: this,
@@ -1992,19 +1994,10 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                           Expanded(
                             child: _showingProfile 
                                 ? const StudentProfilePage()
-                                : IndexedStack(
-                                    index: _selectedIndex,
-                                    children: [
-                                      _buildDashboard(),
-                                      _buildQuestionsPage(),
-                                      _buildRevisionPage(),
-                                      _buildTextbooksPage(),
-                                      _buildTriviaPage(),
-                                      const NotesTab(),
-                                      const RedesignedLeaderboardPage(),
-                                      const UriPage(embedded: true),
-                                    ],
-                                  ),
+                                      : IndexedStack(
+                                          index: _selectedIndex,
+                                          children: _homeChildren(),
+                                    ),
                           ),
                         ],
                       )
@@ -2026,16 +2019,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                                       ? const StudentProfilePage()
                                       : IndexedStack(
                                           index: _selectedIndex,
-                                          children: [
-                                            _buildDashboard(),
-                                            _buildQuestionsPage(),
-                                            _buildRevisionPage(),
-                                            _buildTextbooksPage(),
-                                            _buildTriviaPage(),
-                                            const NotesTab(),
-                                            const RedesignedLeaderboardPage(),
-                                            const UriPage(embedded: true),
-                                          ],
+                                          children: _homeChildren(),
                                     ),
                             ),
                           ],
@@ -2057,7 +2041,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               ),
               // Collapsible URI chat sidebar (far right)
               Visibility(
-                visible: _selectedIndex != 7, // Hide on Uri page
+                visible: _selectedIndex != _uriIndex(), // Hide on Uri page
                 child: UriChat(key: _uriChatKey, userName: userName),
               ),
             ],
@@ -2290,14 +2274,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  _buildNavItem(0, 'Dashboard'),
-                  _buildNavItem(1, 'Questions'),
-                  _buildNavItem(2, 'Revision'),
-                  _buildNavItem(3, 'Books'),
-                  _buildNavItem(4, 'Trivia'),
-                  _buildNavItem(5, 'Notes'),
-                  _buildNavItem(6, 'Leaderboard'),
-                  _buildNavItem(7, 'Uri'),
+                  // Build navigation items dynamically so teacher view can exclude some tabs
+                  for (final item in _navItems()) _buildNavItem(item['index'] as int, item['label'] as String, icon: item['icon'] as IconData),
                   
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
@@ -2418,16 +2396,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   }
 
   Widget _buildBottomNavigation() {
-    final tabs = [
-      {'label': 'Dashboard', 'icon': Icons.dashboard_outlined},
-      {'label': 'Questions', 'icon': Icons.quiz_outlined},
-      {'label': 'Revision', 'icon': Icons.refresh_outlined},
-      {'label': 'Books', 'icon': Icons.menu_book_outlined},
-      {'label': 'Trivia', 'icon': Icons.extension_outlined},
-      {'label': 'Notes', 'icon': Icons.note_alt_outlined},
-      {'label': 'Leaderboard', 'icon': Icons.emoji_events_outlined},
-      {'label': 'Uri', 'icon': Icons.chat_bubble_outline},
-    ];
+    final nav = _navItems();
+    final tabs = nav.map((n) => {'label': n['label'], 'icon': n['icon']}).toList();
     
     return Container(
       decoration: BoxDecoration(
@@ -2482,6 +2452,39 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       ),
     );
   }
+
+  /// Returns the list of widgets used for the main content in the correct order
+  /// The order must match the navigation items generated by [_navItems()].
+  List<Widget> _homeChildren() {
+    final List<Widget> children = [];
+    children.add(_buildDashboard());
+    if (!widget.isTeacher) children.add(_buildQuestionsPage());
+    if (!widget.isTeacher) children.add(_buildRevisionPage());
+    children.add(_buildTextbooksPage());
+    children.add(_buildTriviaPage());
+    children.add(const NotesTab());
+    if (!widget.isTeacher) children.add(const RedesignedLeaderboardPage());
+    children.add(const UriPage(embedded: true));
+    return children;
+  }
+
+  /// Build nav item descriptors (index, label, icon) in the order shown in the UI.
+  /// Indexes are sequential and must align with the children returned by [_homeChildren()].
+  List<Map<String, Object>> _navItems() {
+    final items = <Map<String, Object>>[];
+    int idx = 0;
+    items.add({'index': idx++, 'label': 'Dashboard', 'icon': Icons.dashboard_outlined});
+    if (!widget.isTeacher) items.add({'index': idx++, 'label': 'Questions', 'icon': Icons.quiz_outlined});
+    if (!widget.isTeacher) items.add({'index': idx++, 'label': 'Revision', 'icon': Icons.refresh_outlined});
+    items.add({'index': idx++, 'label': 'Books', 'icon': Icons.menu_book_outlined});
+    items.add({'index': idx++, 'label': 'Trivia', 'icon': Icons.extension_outlined});
+    items.add({'index': idx++, 'label': 'Notes', 'icon': Icons.note_alt_outlined});
+    if (!widget.isTeacher) items.add({'index': idx++, 'label': 'Leaderboard', 'icon': Icons.emoji_events_outlined});
+    items.add({'index': idx++, 'label': 'Uri', 'icon': Icons.chat_bubble_outline});
+    return items;
+  }
+
+  int _uriIndex() => _homeChildren().length - 1;
 
   Widget _buildHeader(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;

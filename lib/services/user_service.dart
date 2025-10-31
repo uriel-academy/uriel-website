@@ -31,6 +31,7 @@ class UserService {
         'name': name,
         'schoolName': schoolName,
         'phoneNumber': phoneNumber,
+        'role': role.name,
         'createdAt': FieldValue.serverTimestamp(),
         'lastLoginAt': FieldValue.serverTimestamp(),
         ...?additionalData,
@@ -178,6 +179,7 @@ class UserService {
     try {
       // Do not set 'role' here; role assignment is admin/server responsibility.
       final teacherData = {
+        'role': UserRole.teacher.name,
         'name': name,
         'email': email.toLowerCase(),
         'phoneNumber': phoneNumber,
@@ -214,6 +216,7 @@ class UserService {
     try {
       // Client should not set role; leave role assignment to admin/server.
       final studentData = {
+        'role': UserRole.student.name,
         'name': name,
         'email': email.toLowerCase(),
         'phoneNumber': phoneNumber,
@@ -250,6 +253,7 @@ class UserService {
     try {
       // Avoid setting 'role' here from the client side.
       final schoolData = {
+        'role': UserRole.school.name,
         'institutionName': institutionName,
         'name': institutionName, // For consistency
         'email': email.toLowerCase(),
