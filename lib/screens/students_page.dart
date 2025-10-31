@@ -3,6 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../services/xp_service.dart';
+// using native widgets for subject progress to avoid chart package compatibility issues
 
 class StudentsPage extends StatefulWidget {
   const StudentsPage({Key? key}) : super(key: key);
@@ -15,6 +16,9 @@ class _StudentsPageState extends State<StudentsPage> {
   final TextEditingController _searchController = TextEditingController();
   String? _schoolName;
   String? _teachingGrade; // teacher's class (e.g., 'JHS 1')
+
+  String? _selectedStudentId;
+  Map<String, dynamic>? _selectedStudentData;
 
   @override
   void initState() {
@@ -72,7 +76,6 @@ class _StudentsPageState extends State<StudentsPage> {
                   const SizedBox(height: 12),
                   Text('Total XP: $xp', style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
                   const SizedBox(height: 8),
-                  // We could fetch more detailed metrics (avg score, streak) by querying quizzes. Keep minimal for performance.
                   const SizedBox(height: 6),
                   ElevatedButton(
                     onPressed: () => Navigator.of(context).pop(),
@@ -91,6 +94,7 @@ class _StudentsPageState extends State<StudentsPage> {
   @override
   Widget build(BuildContext context) {
     final query = _searchController.text.toLowerCase();
+
     return NestedScrollView(
       headerSliverBuilder: (context, inner) => [
         SliverToBoxAdapter(
@@ -110,7 +114,13 @@ class _StudentsPageState extends State<StudentsPage> {
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(12),
-                    boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 10, offset: const Offset(0,2)))],
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.05),
+                        blurRadius: 10,
+                        offset: const Offset(0, 2),
+                      ),
+                    ],
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -166,27 +176,255 @@ class _StudentsPageState extends State<StudentsPage> {
 
           if (filtered.isEmpty) return Center(child: Text('No students found', style: GoogleFonts.montserrat(color: Colors.grey[600])));
 
-          return ListView.separated(
-            padding: const EdgeInsets.all(12),
-            itemBuilder: (context, i) {
-              final d = filtered[i];
-              final data = d.data() as Map<String, dynamic>;
-              final name = '${data['firstName'] ?? ''} ${data['lastName'] ?? ''}'.trim();
-              final grade = data['grade'] ?? data['class'] ?? '';
-              final avatar = data['profileImageUrl'] as String?;
-              return ListTile(
-                onTap: () => _showStudentProgressDialog(d.id, data),
-                leading: CircleAvatar(backgroundImage: avatar != null && avatar.isNotEmpty ? NetworkImage(avatar) : null, child: avatar == null ? Text((data['firstName'] ?? '?').toString().substring(0,1).toUpperCase()) : null),
-                title: Text(name.isNotEmpty ? name : (data['email'] ?? 'Unknown'), style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
-                subtitle: Text(grade ?? '', style: GoogleFonts.montserrat(color: Colors.grey[600])),
-                trailing: const Icon(Icons.chevron_right, color: Color(0xFFD62828)),
+          // default select first if none
+          if (_selectedStudentId == null && filtered.isNotEmpty) {
+            _selectedStudentId = filtered.first.id;
+            _selectedStudentData = filtered.first.data() as Map<String, dynamic>;
+          }
+
+          return LayoutBuilder(
+            builder: (context, constraints) {
+              final isWide = constraints.maxWidth >= 700;
+              if (isWide) {
+                // Two-column layout for large screens
+                return Row(
+                  children: [
+                    Container(
+                      width: 340,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        border: Border(right: BorderSide(color: Colors.grey.shade200)),
+                      ),
+                      child: _buildStudentList(filtered),
+                    ),
+                    Expanded(child: _buildStudentDetail(_selectedStudentId, _selectedStudentData)),
+                  ],
+                );
+              }
+
+              // Mobile / narrow: stacked, each section scrollable
+              return Column(
+                children: [
+                  Expanded(flex: 1, child: _buildStudentList(filtered)),
+                  const Divider(height: 1),
+                  Expanded(flex: 1, child: _buildStudentDetail(_selectedStudentId, _selectedStudentData)),
+                ],
               );
             },
-            separatorBuilder: (_, __) => const Divider(height: 8),
-            itemCount: filtered.length,
           );
         },
       ),
     );
   }
+
+  Widget _buildStudentList(List<QueryDocumentSnapshot> filtered) {
+    return ListView.separated(
+      padding: const EdgeInsets.all(12),
+      itemBuilder: (context, i) {
+        final d = filtered[i];
+        final data = d.data() as Map<String, dynamic>;
+        final name = '${data['firstName'] ?? ''} ${data['lastName'] ?? ''}'.trim();
+        final grade = data['grade'] ?? data['class'] ?? '';
+        final avatar = data['profileImageUrl'] as String?;
+        final isSelected = _selectedStudentId == d.id;
+        return ListTile(
+          onTap: () {
+            setState(() {
+              _selectedStudentId = d.id;
+              _selectedStudentData = data;
+            });
+          },
+          selected: isSelected,
+          leading: CircleAvatar(
+            backgroundImage: avatar != null && avatar.isNotEmpty ? NetworkImage(avatar) : null,
+            child: avatar == null ? Text((data['firstName'] ?? '?').toString().substring(0,1).toUpperCase()) : null,
+          ),
+          title: Text(name.isNotEmpty ? name : (data['email'] ?? 'Unknown'), style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
+          subtitle: Text(grade ?? '', style: GoogleFonts.montserrat(color: Colors.grey[600])),
+          trailing: isSelected ? const Icon(Icons.check_circle, color: Color(0xFFD62828)) : null,
+        );
+      },
+      separatorBuilder: (_, __) => const Divider(height: 8),
+      itemCount: filtered.length,
+    );
+  }
+
+  Widget _buildStudentDetail(String? selectedId, Map<String, dynamic>? selectedData) {
+    if (selectedId == null || selectedData == null) {
+      return Center(child: Text('Select a student to view progress', style: GoogleFonts.montserrat(color: Colors.grey[600])));
+    }
+
+    return SingleChildScrollView(
+      padding: const EdgeInsets.all(16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              CircleAvatar(
+                radius: 32,
+                backgroundImage: (selectedData['profileImageUrl'] as String?)?.isNotEmpty == true
+                    ? NetworkImage(selectedData['profileImageUrl']) as ImageProvider
+                    : null,
+                child: (selectedData['profileImageUrl'] as String?) == null
+                    ? Text((selectedData['firstName'] ?? '?').toString().substring(0,1).toUpperCase(), style: GoogleFonts.montserrat(fontSize: 20))
+                    : null,
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('${selectedData['firstName'] ?? ''} ${selectedData['lastName'] ?? ''}', style: GoogleFonts.playfairDisplay(fontSize: 20, fontWeight: FontWeight.bold)),
+                    const SizedBox(height: 4),
+                    Text('Class: ${selectedData['grade'] ?? selectedData['class'] ?? '-'}', style: GoogleFonts.montserrat()),
+                    Text('School: ${selectedData['schoolName'] ?? selectedData['school'] ?? '-'}', style: GoogleFonts.montserrat()),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 16),
+          FutureBuilder<int>(
+            future: XPService().getUserTotalXP(selectedId),
+            builder: (context, snap) {
+              final xp = snap.data ?? 0;
+              return Card(
+                elevation: 0,
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Progress Overview', style: GoogleFonts.playfairDisplay(fontSize: 18, fontWeight: FontWeight.bold)),
+                      const SizedBox(height: 8),
+                      Text('Total XP: $xp', style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
+                      const SizedBox(height: 8),
+                      Text('Recent activity: (tap for details)', style: GoogleFonts.montserrat(color: Colors.grey[600])),
+                    ],
+                  ),
+                ),
+              );
+            },
+          ),
+          const SizedBox(height: 12),
+          // Recent quizzes snippet (lightweight): show last 5 quiz docs if available
+          FutureBuilder<QuerySnapshot>(
+            future: FirebaseFirestore.instance
+                .collection('quizzes')
+                .where('userId', isEqualTo: selectedId)
+                .orderBy('completedAt', descending: true)
+                .limit(5)
+                .get(),
+            builder: (context, snap) {
+              if (snap.connectionState == ConnectionState.waiting) return const SizedBox();
+              final docs = snap.data?.docs ?? [];
+              if (docs.isEmpty) return Text('No recent quizzes', style: GoogleFonts.montserrat(color: Colors.grey[600]));
+              return Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Recent Quizzes', style: GoogleFonts.playfairDisplay(fontSize: 16, fontWeight: FontWeight.bold)),
+                  const SizedBox(height: 8),
+                  ...docs.map((d) {
+                    final data = d.data() as Map<String, dynamic>;
+                    final score = data['score'] ?? data['percent'] ?? '-';
+                    final title = data['title'] ?? data['collectionName'] ?? 'Quiz';
+                    return ListTile(
+                      contentPadding: EdgeInsets.zero,
+                      title: Text(title.toString(), style: GoogleFonts.montserrat()),
+                      trailing: Text(score.toString(), style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
+                    );
+                  }).toList(),
+                ],
+              );
+            },
+          ),
+          const SizedBox(height: 16),
+          // Per-subject progress chart
+          FutureBuilder<QuerySnapshot>(
+            future: FirebaseFirestore.instance
+                .collection('quizzes')
+                .where('userId', isEqualTo: selectedId)
+                .limit(200)
+                .get(),
+            builder: (context, snap) {
+              if (snap.connectionState == ConnectionState.waiting) return const SizedBox();
+              final quizDocs = snap.data?.docs ?? [];
+              if (quizDocs.isEmpty) return Text('No subject progress available', style: GoogleFonts.montserrat(color: Colors.grey[600]));
+
+              // Compute average percent per subject
+              final Map<String, List<double>> subjectScores = {};
+              for (final q in quizDocs) {
+                final data = q.data() as Map<String, dynamic>;
+                final subject = (data['subject'] ?? data['collectionName'] ?? 'Misc').toString();
+                double? percent;
+                if (data['percent'] != null) {
+                  percent = (data['percent'] is num) ? (data['percent'] as num).toDouble() : double.tryParse(data['percent'].toString());
+                } else if (data['score'] != null && data['total'] != null) {
+                  final score = (data['score'] as num).toDouble();
+                  final total = (data['total'] as num).toDouble();
+                  if (total > 0) percent = (score / total) * 100;
+                } else if (data['score'] != null) {
+                  final score = (data['score'] as num).toDouble();
+                  percent = score; // assume already percentage
+                }
+                if (percent == null) continue;
+                subjectScores.putIfAbsent(subject, () => []).add(percent.clamp(0, 100));
+              }
+
+              final subjects = subjectScores.keys.toList();
+              final averages = subjects.map((s) {
+                final list = subjectScores[s]!;
+                final avg = list.reduce((a, b) => a + b) / list.length;
+                return avg;
+              }).toList();
+
+              if (subjects.isEmpty) return Text('No subject progress available', style: GoogleFonts.montserrat(color: Colors.grey[600]));
+
+              // Render per-subject horizontal progress bars (mobile-friendly)
+              return Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Subject Progress (avg %)', style: GoogleFonts.playfairDisplay(fontSize: 16, fontWeight: FontWeight.bold)),
+                  const SizedBox(height: 8),
+                  ...List.generate(subjects.length, (i) {
+                    final label = subjects[i];
+                    final avg = averages[i];
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 6),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Expanded(child: Text(label, style: GoogleFonts.montserrat(fontSize: 14))),
+                              const SizedBox(width: 8),
+                              Text('${avg.toStringAsFixed(0)}%', style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
+                            ],
+                          ),
+                          const SizedBox(height: 6),
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(8),
+                            child: LinearProgressIndicator(
+                              value: (avg / 100).clamp(0.0, 1.0),
+                              minHeight: 10,
+                              color: const Color(0xFFD62828),
+                              backgroundColor: Colors.grey.shade200,
+                            ),
+                          ),
+                        ],
+                      ),
+                    );
+                  }),
+                ],
+              );
+            },
+          ),
+        ],
+      ),
+    );
+  }
 }
+

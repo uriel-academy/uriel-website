@@ -17,10 +17,12 @@ import '../widgets/rank_badge_widget.dart';
 import 'redesigned_all_ranks_page.dart';
 import 'question_collections_page.dart';
 import 'revision_page.dart';
+import 'generate_quiz_page.dart';
 import 'textbooks_page.dart';
 import 'feedback_page.dart';
 import 'trivia_categories_page.dart';
 import 'notes_page.dart';
+import 'students_page.dart';
 import 'student_profile_page.dart';
 import 'redesigned_leaderboard_page.dart';
 import 'uri_page.dart';
@@ -2462,6 +2464,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     if (widget.isTeacher) {
       children.add(const RedesignedLeaderboardPage()); // Leaderboard for teachers
       children.add(const StudentsPage()); // Students list
+      children.add(const GenerateQuizPage()); // Generate Quiz tab for teachers
     } else {
       children.add(_buildQuestionsPage());
       children.add(_buildRevisionPage());
@@ -2486,6 +2489,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       items.add({'index': idx++, 'label': 'Leaderboard', 'icon': null});
       // Students page (search + list)
       items.add({'index': idx++, 'label': 'Students', 'icon': null});
+      // Generate Quiz (teachers only)
+      items.add({'index': idx++, 'label': 'Generate Quiz', 'icon': null});
     } else {
       items.add({'index': idx++, 'label': 'Questions', 'icon': Icons.quiz_outlined});
       items.add({'index': idx++, 'label': 'Revision', 'icon': Icons.refresh_outlined});
