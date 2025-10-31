@@ -2823,6 +2823,11 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                 final avgSubjects = list.map((e) => (e['subjectsCount'] as int?) ?? 0).fold<int>(0, (p, n) => p + n) / totalStudents;
                 final avgTotalQuestions = list.map((e) => (e['totalQuestions'] as int?) ?? 0).fold<int>(0, (p, n) => p + n) / totalStudents;
 
+                // prepare top performers
+                final topList = List<Map<String, dynamic>>.from(list);
+                topList.sort((a, b) => (((b['xp'] as int?) ?? 0).compareTo((a['xp'] as int?) ?? 0)));
+                final top5 = topList.take(5).toList();
+
                 return SingleChildScrollView(
                   padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
                   child: Column(
@@ -2843,12 +2848,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                       ]),
                       const SizedBox(height: 20),
                       // Optionally list top/low performers
-                      Text('Top 5 students by XP', style: GoogleFonts.playfairDisplay(fontSize: 16, fontWeight: FontWeight.bold)),
-                      const SizedBox(height: 8),
-                      ...list.toList()..sort((a,b) => ((b['xp'] as int?) ?? 0).compareTo((a['xp'] as int?) ?? 0))
-                          .take(5)
-                          .map((s) => ListTile(title: Text('Student ${s['id']}', style: GoogleFonts.montserrat()), subtitle: Text('XP: ${s['xp']} • Avg: ${ (s['avgPercent'] as double).toStringAsFixed(1)}%')))
-                          .toList(),
+            Text('Top 5 students by XP', style: GoogleFonts.playfairDisplay(fontSize: 16, fontWeight: FontWeight.bold)),
+            const SizedBox(height: 8),
+            ...top5.map((s) => ListTile(title: Text('Student ${s['id']}', style: GoogleFonts.montserrat()), subtitle: Text('XP: ${s['xp']} • Avg: ${(s['avgPercent'] as double).toStringAsFixed(1)}%'))).toList(),
                     ],
                   ),
                 );

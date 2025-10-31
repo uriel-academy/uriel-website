@@ -138,14 +138,18 @@ class _StudentsPageState extends State<StudentsPage> {
                           border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide.none),
                         ),
                       ),
-                      const SizedBox(height: 12),
-                      Row(
-                        children: [
-                          Expanded(child: Text('School: ${_schoolName ?? "Loading..."}', style: GoogleFonts.montserrat())),
-                          const SizedBox(width: 12),
-                          Expanded(child: Text('Class: ${_teachingGrade ?? "All"}', style: GoogleFonts.montserrat())),
-                        ],
-                      ),
+                        const SizedBox(height: 12),
+                        // Show school and total students for the teacher's class
+                        Text('School: ${_schoolName ?? "Loading..."}', style: GoogleFonts.montserrat()),
+                        const SizedBox(height: 8),
+                        FutureBuilder<int>(
+                          future: _getStudentsCount(),
+                          builder: (context, snap) {
+                            if (snap.connectionState == ConnectionState.waiting) return Text('Total students: ...', style: GoogleFonts.montserrat(color: Colors.grey[600]));
+                            final count = snap.data ?? 0;
+                            return Text('Total students: $count', style: GoogleFonts.montserrat(color: Colors.grey[700]));
+                          },
+                        ),
                     ],
                   ),
                 ),
@@ -213,7 +217,7 @@ class _StudentsPageState extends State<StudentsPage> {
         constraints: BoxConstraints(minWidth: MediaQuery.of(context).size.width),
         child: Column(
           children: [
-            // Header row
+                // Header row
             Container(
               padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
               color: Colors.grey.shade100,
@@ -224,8 +228,8 @@ class _StudentsPageState extends State<StudentsPage> {
                   SizedBox(width: 260, child: Text('Email', style: TextStyle(fontWeight: FontWeight.w700))),
                   SizedBox(width: 100, child: Text('Rank', style: TextStyle(fontWeight: FontWeight.w700))),
                   SizedBox(width: 100, child: Text('XP', style: TextStyle(fontWeight: FontWeight.w700))),
-                  SizedBox(width: 180, child: Text('Subjects Solved From', style: TextStyle(fontWeight: FontWeight.w700))),
-                  SizedBox(width: 160, child: Text('Total Questions Solved', style: TextStyle(fontWeight: FontWeight.w700))),
+                  SizedBox(width: 160, child: Text('Subject Solved', style: TextStyle(fontWeight: FontWeight.w700))),
+                  SizedBox(width: 160, child: Text('Questions Solved', style: TextStyle(fontWeight: FontWeight.w700))),
                 ],
               ),
             ),
@@ -263,7 +267,7 @@ class _StudentsPageState extends State<StudentsPage> {
                         SizedBox(width: 260, child: Text(email, style: GoogleFonts.montserrat(color: Colors.grey[700]))),
                         SizedBox(width: 100, child: Text(rank.toString(), style: GoogleFonts.montserrat())),
                         SizedBox(width: 100, child: Text(xp.toString(), style: GoogleFonts.montserrat())),
-                        SizedBox(width: 180, child: Text(subjects.toString(), style: GoogleFonts.montserrat(color: Colors.grey[700]))),
+                        SizedBox(width: 160, child: Text((summary != null ? (summary['subjects'] is List ? (summary['subjects'] as List).length : (summary['subjectsCount'] ?? '-')) : '-').toString(), style: GoogleFonts.montserrat())),
                         SizedBox(width: 160, child: Text(totalQuestions.toString(), style: GoogleFonts.montserrat())),
                       ],
                     ),
@@ -275,6 +279,22 @@ class _StudentsPageState extends State<StudentsPage> {
         ),
       ),
     );
+  }
+
+  Future<int> _getStudentsCount() async {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user == null) return 0;
+    try {
+      final doc = await FirebaseFirestore.instance.collection('users').doc(user.uid).get();
+      final data = doc.data();
+      final school = data?['schoolName'] ?? data?['school'];
+      final grade = data?['teachingGrade'] ?? data?['teachingGrade'] ?? data?['grade'] ?? data?['class'];
+      if (school == null || grade == null) return 0;
+      final qs = await FirebaseFirestore.instance.collection('users').where('role', isEqualTo: 'student').where('schoolName', isEqualTo: school).where('grade', isEqualTo: grade).get();
+      return qs.docs.length;
+    } catch (_) {
+      return 0;
+    }
   }
 
   /// Build a small summary for each student: XP, rank (if available), subjects list and total questions solved.
