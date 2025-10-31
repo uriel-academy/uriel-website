@@ -2516,3 +2516,224 @@ export default {
 
 // Export the streaming AI chat function
 export const aiChatHttp = aiChatHttpStreaming;
+
+// -------------------------
+// Server-side aggregation helpers
+// -------------------------
+
+// Callable: getClassAggregates
+// Returns a paginated list of students for a class (teacher or school+grade) with lightweight aggregates
+export const getClassAggregates = functions.https.onCall(async (data, context) => {
+  if (!context.auth) throw new functions.https.HttpsError('unauthenticated', 'Must be signed in');
+
+  const callerRole = (context.auth.token && context.auth.token.role) || '';
+  if (!['teacher', 'school_admin', 'admin', 'super_admin'].includes(callerRole)) {
+    throw new functions.https.HttpsError('permission-denied', 'Only teachers or admins may call this function');
+  }
+
+  try {
+    const teacherId = data?.teacherId;
+    const school = data?.school;
+    const grade = data?.grade;
+    const pageSize = Math.min(Math.max(parseInt(String(data?.pageSize || '50'), 10) || 50, 1), 200);
+    const pageCursor = data?.pageCursor; // document id of last doc from previous page
+
+    if (!teacherId && !(school && grade)) {
+      throw new functions.https.HttpsError('invalid-argument', 'Provide either teacherId or both school and grade');
+    }
+
+    let baseQuery = db.collection('users').where('role', '==', 'student');
+
+    if (teacherId) {
+      baseQuery = baseQuery.where('teacherId', '==', teacherId);
+    } else {
+      // require both school and grade to avoid expensive OR queries
+      baseQuery = baseQuery.where('grade', '==', grade).where('tenant.schoolId', '==', school);
+    }
+
+    // option to include total count (uses aggregation count())
+    const includeCount = !!data?.includeCount;
+
+    // order and paginate by displayName for stable ordering
+    let q: any = baseQuery.orderBy('displayName').limit(pageSize + 1);
+
+    // If includeCount requested, use Firestore count aggregation (server-side)
+    let totalCount: number | null = null;
+    if (includeCount) {
+      try {
+        const agg = await baseQuery.count().get();
+        totalCount = agg.data().count || 0;
+      } catch (err) {
+        // ignore if count aggregation not supported; leave null
+        totalCount = null;
+      }
+    }
+
+    if (pageCursor) {
+      const lastSnap = await db.collection('users').doc(String(pageCursor)).get();
+      if (lastSnap.exists) q = q.startAfter(lastSnap);
+    }
+
+    const snaps = await q.get();
+    const docs = snaps.docs || [];
+
+    // Determine next page cursor
+    let nextPageCursor = null;
+    let pageDocs = docs;
+    if (docs.length > pageSize) {
+      const last = docs[pageSize - 1];
+      nextPageCursor = last.id;
+      pageDocs = docs.slice(0, pageSize);
+    }
+
+  const students = pageDocs.map((d: any) => {
+      const data = d.data() || {};
+      return {
+        uid: d.id,
+        displayName: data.displayName || data.profile?.firstName || null,
+        email: data.email || data.profile?.email || null,
+        avatar: data.photoURL || data.profile?.photoUrl || null,
+        totalXP: data.totalXP || data.xp || 0,
+        rank: data.leaderboardRank || null,
+        subjectsSolved: data.subjectsSolvedCount || data.subjectsSolved || null,
+        questionsSolved: data.questionsSolved || data.questionsSolvedCount || null,
+        raw: data
+      };
+    });
+
+    // Compute simple aggregates over the returned page (cheap)
+    const totalXP = students.reduce((s: number, it: any) => s + (it.totalXP || 0), 0);
+    const avgXP = students.length ? Math.round(totalXP / students.length) : 0;
+
+    return {
+      ok: true,
+      students,
+      pageSize: students.length,
+      nextPageCursor,
+      aggregates: {
+        pageTotalXP: totalXP,
+        pageAvgXP: avgXP
+      }
+      ,
+      totalCount
+    };
+
+  } catch (e: any) {
+    console.error('getClassAggregates error', e);
+    throw new functions.https.HttpsError('internal', e?.message || 'Internal error');
+  }
+});
+
+// Firestore trigger: keep simple materialized class aggregates when attempts are created.
+// This is the start of Option B: materialized aggregates. It's intentionally simple —
+// it updates counters on classAggregates/{schoolId}_{grade}.
+export const onAttemptCreate_updateAggregates = functions.firestore
+  .document('attempts/{attemptId}')
+  .onCreate(async (snap, context) => {
+    try {
+      const attempt = snap.data() || {};
+      const uid = attempt.userId || attempt.uid || attempt.createdBy;
+      if (!uid) return;
+
+      const userRef = db.collection('users').doc(uid);
+      const userSnap = await userRef.get();
+      if (!userSnap.exists) return;
+      const user = userSnap.data() || {};
+
+      const schoolId = user.tenant?.schoolId || user.school || null;
+      const grade = user.grade || user.class || null;
+      if (!schoolId || !grade) return;
+
+      const classId = `${String(schoolId)}_${String(grade)}`;
+      const classRef = db.collection('classAggregates').doc(classId);
+
+      const xpInc = typeof attempt.points === 'number' ? attempt.points : (attempt.xp || 0);
+      await classRef.set({
+        schoolId,
+        grade,
+        totalAttempts: admin.firestore.FieldValue.increment(1),
+        totalXP: admin.firestore.FieldValue.increment(xpInc),
+        updatedAt: admin.firestore.FieldValue.serverTimestamp()
+      }, { merge: true });
+
+      // Optionally update per-student summary
+      const studentSummaryRef = db.collection('studentSummaries').doc(uid);
+      await studentSummaryRef.set({
+        uid,
+        totalXP: admin.firestore.FieldValue.increment(xpInc),
+        questionsSolved: admin.firestore.FieldValue.increment(1),
+        updatedAt: admin.firestore.FieldValue.serverTimestamp()
+      }, { merge: true });
+
+      return true;
+    } catch (err) {
+      console.error('onAttemptCreate_updateAggregates error', err);
+      return null;
+    }
+  });
+
+// Admin callable: backfillClassAggregates
+// Scans users and writes classAggregates and studentSummaries documents. Admin-only.
+export const backfillClassAggregates = functions.https.onCall(async (data, context) => {
+  if (!context.auth) throw new functions.https.HttpsError('unauthenticated', 'Must be signed in');
+  const callerRole = (context.auth.token && context.auth.token.role) || '';
+  const adminEmail = 'studywithuriel@gmail.com';
+  if (!['super_admin', 'admin', 'school_admin'].includes(callerRole) && context.auth.token.email !== adminEmail) {
+    throw new functions.https.HttpsError('permission-denied', 'Only admins may run backfill');
+  }
+
+  try {
+    const batchSize = 500;
+    let last: any = null;
+    const classAcc: Record<string, { schoolId: string; grade: string; totalXP: number; totalStudents: number; totalAttempts: number; }> = {};
+
+    while (true) {
+      let q: any = db.collection('users').where('role', '==', 'student').limit(batchSize);
+      if (last) q = q.startAfter(last);
+      const snap = await q.get();
+      if (snap.empty) break;
+      for (const d of snap.docs) {
+        const u = d.data() || {};
+        const uid = d.id;
+        const schoolId = u.tenant?.schoolId || u.school || null;
+        const grade = u.grade || u.class || null;
+        if (!schoolId || !grade) continue;
+        const classId = `${String(schoolId)}_${String(grade)}`;
+        const xp = (u.totalXP as number) || (u.xp as number) || 0;
+        if (!classAcc[classId]) classAcc[classId] = { schoolId: String(schoolId), grade: String(grade), totalXP: 0, totalStudents: 0, totalAttempts: 0 };
+        classAcc[classId].totalXP += xp;
+        classAcc[classId].totalStudents += 1;
+
+        // Write per-student summary doc
+        await db.collection('studentSummaries').doc(uid).set({
+          uid,
+          totalXP: xp,
+          questionsSolved: (u.questionsSolved as number) || (u.questionsSolvedCount as number) || 0,
+          updatedAt: admin.firestore.FieldValue.serverTimestamp()
+        }, { merge: true });
+      }
+      last = snap.docs[snap.docs.length - 1];
+      if (snap.size < batchSize) break;
+    }
+
+    // Commit class aggregates
+    const writes: Promise<any>[] = [];
+    for (const cid of Object.keys(classAcc)) {
+      const c = classAcc[cid];
+      writes.push(db.collection('classAggregates').doc(cid).set({
+        schoolId: c.schoolId,
+        grade: c.grade,
+        totalXP: c.totalXP,
+        totalStudents: c.totalStudents,
+        updatedAt: admin.firestore.FieldValue.serverTimestamp()
+      }, { merge: true }));
+    }
+
+    await Promise.all(writes);
+
+    return { ok: true, classesUpdated: Object.keys(classAcc).length };
+  } catch (e) {
+    console.error('backfillClassAggregates error', e);
+    throw new functions.https.HttpsError('internal', 'Backfill failed');
+  }
+});

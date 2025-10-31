@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:cloud_functions/cloud_functions.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../services/xp_service.dart';
+import '../services/leaderboard_rank_service.dart';
 // using native widgets for subject progress to avoid chart package compatibility issues
 
 class StudentsPage extends StatefulWidget {
@@ -19,6 +21,13 @@ class _StudentsPageState extends State<StudentsPage> {
 
   String? _selectedStudentId;
   Map<String, dynamic>? _selectedStudentData;
+  // Pagination & caching for server-side aggregates
+  final Map<String, dynamic> _pageCache = {}; // key: cursorKey -> result map
+  String _currentCursorKey = 'start';
+  final Map<String, String?> _nextCursorByKey = {};
+  final int _pageSize = 50;
+  bool _isLoadingPage = false;
+  Future<void>? _pageFuture;
 
   @override
   void initState() {
@@ -37,6 +46,9 @@ class _StudentsPageState extends State<StudentsPage> {
         _schoolName = data?['schoolName'] as String? ?? data?['school'] as String?;
         _teachingGrade = data?['teachingGrade'] as String? ?? data?['teachingGrade'] as String?;
       });
+      // kick off initial page load
+      _pageFuture = _loadPage(null);
+      setState(() {});
     } catch (e) {
       // ignore
     }
@@ -158,47 +170,178 @@ class _StudentsPageState extends State<StudentsPage> {
           ),
         ),
       ],
-      body: StreamBuilder<QuerySnapshot>(
-        stream: FirebaseFirestore.instance.collection('users').where('role', isEqualTo: 'student').snapshots(),
+      body: FutureBuilder<void>(
+        future: _pageFuture,
         builder: (context, snap) {
           if (snap.connectionState == ConnectionState.waiting) return const Center(child: CircularProgressIndicator());
-          final docs = snap.data?.docs ?? [];
 
-          final filtered = docs.where((d) {
-            final data = d.data() as Map<String, dynamic>;
-            // Filter by school (support both schoolName and school fields)
-            final school = (data['schoolName'] ?? data['school']) as String?;
-            if (_schoolName != null && school != _schoolName) return false;
-            // Filter by teaching grade/class if provided
-            if (_teachingGrade != null && _teachingGrade!.isNotEmpty) {
-              final studentGrade = (data['grade'] ?? data['class']) as String?;
-              if (studentGrade == null) return false;
-              if (studentGrade.toLowerCase() != _teachingGrade!.toLowerCase()) return false;
-            }
-            return _matchesFilter(data, query);
-          }).toList();
+          final page = _pageCache[_currentCursorKey] as Map<String, dynamic>?;
+          final students = (page != null ? page['students'] as List<dynamic> : <dynamic>[]);
 
-          if (filtered.isEmpty) return Center(child: Text('No students found', style: GoogleFonts.montserrat(color: Colors.grey[600])));
-
-          // default select first if none
-          if (_selectedStudentId == null && filtered.isNotEmpty) {
-            _selectedStudentId = filtered.first.id;
-            _selectedStudentData = filtered.first.data() as Map<String, dynamic>;
-          }
+          if (students.isEmpty) return Center(child: Text('No students found', style: GoogleFonts.montserrat(color: Colors.grey[600])));
 
           return LayoutBuilder(
             builder: (context, constraints) {
-              final isWide = constraints.maxWidth >= 700;
-              // Always show a single list/table of students for teachers.
-              // The previous detail pane has been removed as requested.
               return Container(
                 color: Colors.white,
                 padding: const EdgeInsets.all(12),
-                child: _buildStudentTable(filtered),
+                child: Column(
+                  children: [
+                    Expanded(child: _buildStudentTableFromList(students)),
+                    const SizedBox(height: 8),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        ElevatedButton(
+                          onPressed: _prevPage,
+                          style: ElevatedButton.styleFrom(backgroundColor: Colors.grey[300], foregroundColor: Colors.black),
+                          child: Text('Prev', style: GoogleFonts.montserrat()),
+                        ),
+                        const SizedBox(width: 8),
+                        ElevatedButton(
+                          onPressed: _nextPage,
+                          style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFFD62828)),
+                          child: Text('Next', style: GoogleFonts.montserrat()),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
               );
             },
           );
         },
+      ),
+    );
+  }
+
+  Future<void> _loadPage(String? pageCursor) async {
+    if (_isLoadingPage) return;
+    _isLoadingPage = true;
+    final key = pageCursor ?? 'start';
+    try {
+      // Skip if cached
+      if (_pageCache.containsKey(key)) return;
+
+      final functions = FirebaseFunctions.instanceFor(region: 'us-central1');
+      final callable = functions.httpsCallable('getClassAggregates');
+
+      final user = FirebaseAuth.instance.currentUser;
+      if (user == null) return;
+
+      final callData = <String, dynamic>{
+        'pageSize': _pageSize,
+        'pageCursor': pageCursor,
+        'includeCount': true,
+      };
+
+      // Prefer teacherId when available
+      final meDoc = await FirebaseFirestore.instance.collection('users').doc(user.uid).get();
+      final me = meDoc.data() ?? {};
+      if ((me['teacherId'] ?? me['role']) == 'teacher') {
+        callData['teacherId'] = user.uid;
+      } else if (_schoolName != null && _teachingGrade != null) {
+        callData['school'] = _schoolName;
+        callData['grade'] = _teachingGrade;
+      }
+
+      final resp = await callable.call(callData);
+      final data = resp.data as Map<String, dynamic>?;
+      if (data == null) return;
+
+      _pageCache[key] = data;
+      _nextCursorByKey[key] = data['nextPageCursor'] as String?;
+      // set current cursor key if starting
+      _currentCursorKey = key;
+    } catch (e) {
+      // ignore - leave cache empty
+    } finally {
+      _isLoadingPage = false;
+    }
+  }
+
+  Future<void> _nextPage() async {
+    final next = _nextCursorByKey[_currentCursorKey];
+    if (next == null) return;
+    // store current key in history with simple naming
+    final nextKey = next;
+    _pageFuture = _loadPage(next);
+    setState(() {});
+    await _pageFuture;
+    // switch to new page
+    _currentCursorKey = nextKey;
+    setState(() {});
+  }
+
+  Future<void> _prevPage() async {
+    // naive previous: reset to start
+    if (_currentCursorKey == 'start') return;
+    _currentCursorKey = 'start';
+    // ensure start loaded
+    _pageFuture = _loadPage(null);
+    setState(() {});
+    await _pageFuture;
+  }
+
+  Widget _buildStudentTableFromList(List<dynamic> students) {
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: ConstrainedBox(
+        constraints: BoxConstraints(minWidth: MediaQuery.of(context).size.width),
+        child: Column(
+          children: [
+            Container(
+              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+              color: Colors.grey.shade100,
+              child: const Row(
+                children: [
+                  SizedBox(width: 340, child: Text('Student', style: TextStyle(fontWeight: FontWeight.w700))),
+                  SizedBox(width: 260, child: Text('Email', style: TextStyle(fontWeight: FontWeight.w700))),
+                  SizedBox(width: 120, child: Text('Rank', style: TextStyle(fontWeight: FontWeight.w700))),
+                  SizedBox(width: 100, child: Text('XP', style: TextStyle(fontWeight: FontWeight.w700))),
+                  SizedBox(width: 160, child: Text('Subject Solved', style: TextStyle(fontWeight: FontWeight.w700))),
+                  SizedBox(width: 160, child: Text('Questions Solved', style: TextStyle(fontWeight: FontWeight.w700))),
+                ],
+              ),
+            ),
+            const Divider(height: 1),
+            ...students.map((s) {
+              final data = s as Map<String, dynamic>;
+              final name = (data['displayName'] ?? '') as String;
+              final email = (data['email'] ?? '') as String;
+              final rank = data['rank'] ?? '-';
+              final xp = data['totalXP'] ?? 0;
+              final subjects = data['subjectsSolved'] ?? data['subjects'] ?? [];
+              final totalQuestions = data['questionsSolved'] ?? data['questionsSolvedCount'] ?? data['questionsSolved'] ?? 0;
+
+              return Container(
+                padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
+                decoration: BoxDecoration(border: Border(bottom: BorderSide(color: Colors.grey.shade200))),
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: 340,
+                      child: Row(children: [
+                        CircleAvatar(
+                          radius: 18,
+                          backgroundImage: (data['avatar'] as String?)?.isNotEmpty == true ? NetworkImage((data['avatar'] as String)) : null,
+                          child: (data['avatar'] as String?) == null ? Text((name.isNotEmpty ? name[0] : '?').toUpperCase()) : null,
+                        ),
+                        const SizedBox(width: 12),
+                        Expanded(child: Text(name.isNotEmpty ? name : email, style: GoogleFonts.montserrat(fontWeight: FontWeight.w600))),
+                      ]),
+                    ),
+                    SizedBox(width: 260, child: Text(email, style: GoogleFonts.montserrat(color: Colors.grey[700]))),
+                    SizedBox(width: 120, child: Text(rank.toString(), style: GoogleFonts.montserrat())),
+                    SizedBox(width: 100, child: Text(xp.toString(), style: GoogleFonts.montserrat())),
+                    SizedBox(width: 160, child: Text((subjects is List ? subjects.length : (subjects ?? '-')).toString(), style: GoogleFonts.montserrat())),
+                    SizedBox(width: 160, child: Text(totalQuestions.toString(), style: GoogleFonts.montserrat())),
+                  ],
+                ),
+              );
+            }).toList(),
+          ],
+        ),
       ),
     );
   }
@@ -221,12 +364,11 @@ class _StudentsPageState extends State<StudentsPage> {
             Container(
               padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
               color: Colors.grey.shade100,
-              child: Row(
-                children: const [
-                  SizedBox(width: 280, child: Text('Student', style: TextStyle(fontWeight: FontWeight.w700))),
-                  SizedBox(width: 100, child: Text('Class', style: TextStyle(fontWeight: FontWeight.w700))),
+              child: const Row(
+                children: [
+                  SizedBox(width: 340, child: Text('Student', style: TextStyle(fontWeight: FontWeight.w700))),
                   SizedBox(width: 260, child: Text('Email', style: TextStyle(fontWeight: FontWeight.w700))),
-                  SizedBox(width: 100, child: Text('Rank', style: TextStyle(fontWeight: FontWeight.w700))),
+                  SizedBox(width: 120, child: Text('Rank', style: TextStyle(fontWeight: FontWeight.w700))),
                   SizedBox(width: 100, child: Text('XP', style: TextStyle(fontWeight: FontWeight.w700))),
                   SizedBox(width: 160, child: Text('Subject Solved', style: TextStyle(fontWeight: FontWeight.w700))),
                   SizedBox(width: 160, child: Text('Questions Solved', style: TextStyle(fontWeight: FontWeight.w700))),
@@ -238,7 +380,6 @@ class _StudentsPageState extends State<StudentsPage> {
             ...filtered.map((d) {
               final data = d.data() as Map<String, dynamic>;
               final name = '${data['firstName'] ?? ''} ${data['lastName'] ?? ''}'.trim();
-              final grade = data['grade'] ?? data['class'] ?? '';
               final email = data['email'] ?? '';
 
               return FutureBuilder<Map<String, dynamic>>(
@@ -256,16 +397,19 @@ class _StudentsPageState extends State<StudentsPage> {
                     child: Row(
                       children: [
                         SizedBox(
-                          width: 280,
+                          width: 340,
                           child: Row(children: [
-                            CircleAvatar(radius: 18, backgroundImage: (data['profileImageUrl'] as String?)?.isNotEmpty == true ? NetworkImage(data['profileImageUrl']) : null, child: (data['profileImageUrl'] == null) ? Text((data['firstName'] ?? '?').toString().substring(0,1).toUpperCase()) : null),
+                            CircleAvatar(
+                              radius: 18,
+                              backgroundImage: (data['profileImageUrl'] as String?)?.isNotEmpty == true ? NetworkImage((data['profileImageUrl'] as String)) : null,
+                              child: (data['profileImageUrl'] as String?) == null ? Text((data['firstName'] ?? '?').toString().substring(0,1).toUpperCase()) : null,
+                            ),
                             const SizedBox(width: 12),
                             Expanded(child: Text(name.isNotEmpty ? name : email, style: GoogleFonts.montserrat(fontWeight: FontWeight.w600))),
                           ]),
                         ),
-                        SizedBox(width: 100, child: Text(grade ?? '', style: GoogleFonts.montserrat())),
                         SizedBox(width: 260, child: Text(email, style: GoogleFonts.montserrat(color: Colors.grey[700]))),
-                        SizedBox(width: 100, child: Text(rank.toString(), style: GoogleFonts.montserrat())),
+                        SizedBox(width: 120, child: Text(rank.toString(), style: GoogleFonts.montserrat())),
                         SizedBox(width: 100, child: Text(xp.toString(), style: GoogleFonts.montserrat())),
                         SizedBox(width: 160, child: Text((summary != null ? (summary['subjects'] is List ? (summary['subjects'] as List).length : (summary['subjectsCount'] ?? '-')) : '-').toString(), style: GoogleFonts.montserrat())),
                         SizedBox(width: 160, child: Text(totalQuestions.toString(), style: GoogleFonts.montserrat())),
@@ -287,15 +431,26 @@ class _StudentsPageState extends State<StudentsPage> {
     try {
       final doc = await FirebaseFirestore.instance.collection('users').doc(user.uid).get();
       final data = doc.data();
-      final school = data?['schoolName'] ?? data?['school'];
-      final grade = data?['teachingGrade'] ?? data?['teachingGrade'] ?? data?['grade'] ?? data?['class'];
+      final school = (data?['schoolName'] ?? data?['school'])?.toString();
+      final grade = (data?['teachingGrade'] ?? data?['grade'] ?? data?['class'])?.toString();
       if (school == null || grade == null) return 0;
-      final qs = await FirebaseFirestore.instance.collection('users').where('role', isEqualTo: 'student').where('schoolName', isEqualTo: school).where('grade', isEqualTo: grade).get();
-      return qs.docs.length;
+      // Firestore queries are case-sensitive; fetch students then filter client-side with normalization to tolerate small variations
+      final allStudents = await FirebaseFirestore.instance.collection('users').where('role', isEqualTo: 'student').get();
+      final normSchool = _normalize(school);
+      final normGrade = _normalize(grade);
+      final matches = allStudents.docs.where((d) {
+        final sd = d.data();
+        final s = _normalize((sd['schoolName'] ?? sd['school'])?.toString() ?? '');
+        final g = _normalize((sd['grade'] ?? sd['class'])?.toString() ?? '');
+        return s == normSchool && g == normGrade;
+      }).toList();
+      return matches.length;
     } catch (_) {
       return 0;
     }
   }
+
+  String _normalize(String? s) => s?.toLowerCase().replaceAll(RegExp(r"[^a-z0-9]"), ' ').trim() ?? '';
 
   /// Build a small summary for each student: XP, rank (if available), subjects list and total questions solved.
   Future<Map<String, dynamic>> _buildStudentSummary(String studentId) async {
@@ -305,7 +460,7 @@ class _StudentsPageState extends State<StudentsPage> {
     final subjectsSet = <String>{};
     int totalQuestions = 0;
     for (final q in qs.docs) {
-      final data = q.data() as Map<String, dynamic>;
+      final data = q.data();
       final subject = (data['subject'] ?? data['collectionName'] ?? '').toString();
       if (subject.isNotEmpty) subjectsSet.add(subject);
       final tq = (data['totalQuestions'] as int?) ?? (data['total'] as int?) ?? 0;
@@ -314,11 +469,21 @@ class _StudentsPageState extends State<StudentsPage> {
     // Attempt to get rank from a user doc field if present
     final userDoc = await FirebaseFirestore.instance.collection('users').doc(studentId).get();
     final userData = userDoc.data();
-    final rank = userData != null ? (userData['rankName'] ?? userData['rank'] ?? '-') : '-';
+    var rank = userData != null ? (userData['rankName'] ?? userData['rank']) : null;
+    // If rank not stored on user doc, derive from XP via LeaderboardRankService
+    if (rank == null) {
+      try {
+        final rankService = LeaderboardRankService();
+        final r = await rankService.getUserRank(xp);
+        rank = r?.name ?? '-';
+      } catch (_) {
+        rank = '-';
+      }
+    }
 
     return {
       'xp': xp,
-      'rank': rank,
+      'rank': rank ?? '-',
       'subjects': subjectsSet.toList(),
       'totalQuestions': totalQuestions,
     };
