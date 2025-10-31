@@ -2610,7 +2610,10 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   Widget _buildDashboard() {
     final screenWidth = MediaQuery.of(context).size.width;
     final isSmallScreen = screenWidth < 768;
-    
+    if (widget.isTeacher) {
+      return _buildTeacherDashboard();
+    }
+
     return SingleChildScrollView(
       padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
       child: Column(
@@ -2745,6 +2748,127 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           if (isSmallScreen) const SizedBox(height: 80),
         ],
       ),
+    );
+  }
+
+  /// Teacher-facing dashboard: aggregates average data of students in teacher's class
+  Widget _buildTeacherDashboard() {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isSmallScreen = screenWidth < 768;
+
+    return FutureBuilder<DocumentSnapshot>(
+      future: FirebaseFirestore.instance.collection('users').doc(FirebaseAuth.instance.currentUser?.uid).get(),
+      builder: (context, teacherSnap) {
+        if (teacherSnap.connectionState == ConnectionState.waiting) return const Center(child: CircularProgressIndicator());
+        final teacherData = teacherSnap.data?.data() as Map<String, dynamic>?;
+        final school = teacherData?['schoolName'] ?? teacherData?['school'];
+        final grade = teacherData?['teachingGrade'] ?? teacherData?['grade'] ?? teacherData?['class'];
+
+        if (school == null || grade == null) {
+          return Center(child: Text('Teacher profile incomplete: missing school or class', style: GoogleFonts.montserrat(color: Colors.grey[700])));
+        }
+
+        return FutureBuilder<QuerySnapshot>(
+          future: FirebaseFirestore.instance.collection('users').where('role', isEqualTo: 'student').where('schoolName', isEqualTo: school).where('grade', isEqualTo: grade).get(),
+          builder: (context, studentsSnap) {
+            if (studentsSnap.connectionState == ConnectionState.waiting) return const Center(child: CircularProgressIndicator());
+            final studentDocs = studentsSnap.data?.docs ?? [];
+            if (studentDocs.isEmpty) return Center(child: Text('No students found for $grade at $school', style: GoogleFonts.montserrat(color: Colors.grey[700])));
+
+            // Aggregate async: fetch XP and quizzes per student
+            return FutureBuilder<List<Map<String, dynamic>>>(
+              future: Future.wait(studentDocs.map((d) async {
+                final sid = d.id;
+                final xp = await XPService().getUserTotalXP(sid);
+                final qs = await FirebaseFirestore.instance.collection('quizzes').where('userId', isEqualTo: sid).get();
+                double avgPercent = 0.0;
+                int countPercent = 0;
+                int totalQuestions = 0;
+                final subjects = <String>{};
+                for (final q in qs.docs) {
+                  final data = q.data() as Map<String, dynamic>;
+                  if (data['percent'] != null) {
+                    final p = (data['percent'] is num) ? (data['percent'] as num).toDouble() : double.tryParse(data['percent'].toString()) ?? 0.0;
+                    avgPercent += p;
+                    countPercent++;
+                  } else if (data['score'] != null && data['total'] != null) {
+                    final score = (data['score'] as num).toDouble();
+                    final total = (data['total'] as num).toDouble();
+                    if (total > 0) {
+                      avgPercent += (score / total) * 100;
+                      countPercent++;
+                    }
+                  }
+                  final subj = (data['subject'] ?? data['collectionName'] ?? '').toString();
+                  if (subj.isNotEmpty) subjects.add(subj);
+                  totalQuestions += (data['totalQuestions'] as int?) ?? (data['total'] as int?) ?? 0;
+                }
+                final studentAvg = countPercent > 0 ? (avgPercent / countPercent) : 0.0;
+                return {
+                  'id': sid,
+                  'xp': xp,
+                  'avgPercent': studentAvg,
+                  'subjectsCount': subjects.length,
+                  'totalQuestions': totalQuestions,
+                };
+              })),
+              builder: (context, aggSnap) {
+                if (aggSnap.connectionState == ConnectionState.waiting) return const Center(child: CircularProgressIndicator());
+                final list = aggSnap.data ?? [];
+                if (list.isEmpty) return Center(child: Text('No aggregated student data', style: GoogleFonts.montserrat(color: Colors.grey[700])));
+
+                final totalStudents = list.length;
+                final avgXP = list.map((e) => (e['xp'] as int?) ?? 0).fold<int>(0, (p, n) => p + n) / totalStudents;
+                final avgPercent = list.map((e) => (e['avgPercent'] as double?) ?? 0.0).fold<double>(0.0, (p, n) => p + n) / totalStudents;
+                final avgSubjects = list.map((e) => (e['subjectsCount'] as int?) ?? 0).fold<int>(0, (p, n) => p + n) / totalStudents;
+                final avgTotalQuestions = list.map((e) => (e['totalQuestions'] as int?) ?? 0).fold<int>(0, (p, n) => p + n) / totalStudents;
+
+                return SingleChildScrollView(
+                  padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Class Overview — $grade • $school', style: GoogleFonts.playfairDisplay(fontSize: isSmallScreen ? 20 : 26, fontWeight: FontWeight.bold)),
+                      const SizedBox(height: 12),
+                      Text('Averages across ${totalStudents} students in your class', style: GoogleFonts.montserrat(color: Colors.grey[700])),
+                      const SizedBox(height: 16),
+                      Row(children: [
+                        Expanded(child: _buildStatCard('Average XP', avgXP.toStringAsFixed(0))),
+                        const SizedBox(width: 12),
+                        Expanded(child: _buildStatCard('Average Score %', avgPercent.toStringAsFixed(1) + '%')),
+                        const SizedBox(width: 12),
+                        Expanded(child: _buildStatCard('Avg Subjects', avgSubjects.toStringAsFixed(1))),
+                        const SizedBox(width: 12),
+                        Expanded(child: _buildStatCard('Avg Questions', avgTotalQuestions.toStringAsFixed(0))),
+                      ]),
+                      const SizedBox(height: 20),
+                      // Optionally list top/low performers
+                      Text('Top 5 students by XP', style: GoogleFonts.playfairDisplay(fontSize: 16, fontWeight: FontWeight.bold)),
+                      const SizedBox(height: 8),
+                      ...list.toList()..sort((a,b) => ((b['xp'] as int?) ?? 0).compareTo((a['xp'] as int?) ?? 0))
+                          .take(5)
+                          .map((s) => ListTile(title: Text('Student ${s['id']}', style: GoogleFonts.montserrat()), subtitle: Text('XP: ${s['xp']} • Avg: ${ (s['avgPercent'] as double).toStringAsFixed(1)}%')))
+                          .toList(),
+                    ],
+                  ),
+                );
+              },
+            );
+          },
+        );
+      },
+    );
+  }
+
+  Widget _buildStatCard(String title, String value) {
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(12), boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.04), blurRadius: 8, offset: const Offset(0,4))]),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Text(title, style: GoogleFonts.montserrat(color: Colors.grey[600])),
+        const SizedBox(height: 8),
+        Text(value, style: GoogleFonts.playfairDisplay(fontSize: 20, fontWeight: FontWeight.bold)),
+      ]),
     );
   }
 

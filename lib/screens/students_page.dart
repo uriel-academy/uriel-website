@@ -32,7 +32,7 @@ class _StudentsPageState extends State<StudentsPage> {
     try {
       final doc = await FirebaseFirestore.instance.collection('users').doc(user.uid).get();
       if (!mounted) return;
-      final data = doc.data() as Map<String, dynamic>?;
+      final data = doc.data();
       setState(() {
         _schoolName = data?['schoolName'] as String? ?? data?['school'] as String?;
         _teachingGrade = data?['teachingGrade'] as String? ?? data?['teachingGrade'] as String?;
@@ -185,30 +185,12 @@ class _StudentsPageState extends State<StudentsPage> {
           return LayoutBuilder(
             builder: (context, constraints) {
               final isWide = constraints.maxWidth >= 700;
-              if (isWide) {
-                // Two-column layout for large screens
-                return Row(
-                  children: [
-                    Container(
-                      width: 340,
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        border: Border(right: BorderSide(color: Colors.grey.shade200)),
-                      ),
-                      child: _buildStudentList(filtered),
-                    ),
-                    Expanded(child: _buildStudentDetail(_selectedStudentId, _selectedStudentData)),
-                  ],
-                );
-              }
-
-              // Mobile / narrow: stacked, each section scrollable
-              return Column(
-                children: [
-                  Expanded(flex: 1, child: _buildStudentList(filtered)),
-                  const Divider(height: 1),
-                  Expanded(flex: 1, child: _buildStudentDetail(_selectedStudentId, _selectedStudentData)),
-                ],
+              // Always show a single list/table of students for teachers.
+              // The previous detail pane has been removed as requested.
+              return Container(
+                color: Colors.white,
+                padding: const EdgeInsets.all(12),
+                child: _buildStudentTable(filtered),
               );
             },
           );
@@ -218,35 +200,108 @@ class _StudentsPageState extends State<StudentsPage> {
   }
 
   Widget _buildStudentList(List<QueryDocumentSnapshot> filtered) {
-    return ListView.separated(
-      padding: const EdgeInsets.all(12),
-      itemBuilder: (context, i) {
-        final d = filtered[i];
-        final data = d.data() as Map<String, dynamic>;
-        final name = '${data['firstName'] ?? ''} ${data['lastName'] ?? ''}'.trim();
-        final grade = data['grade'] ?? data['class'] ?? '';
-        final avatar = data['profileImageUrl'] as String?;
-        final isSelected = _selectedStudentId == d.id;
-        return ListTile(
-          onTap: () {
-            setState(() {
-              _selectedStudentId = d.id;
-              _selectedStudentData = data;
-            });
-          },
-          selected: isSelected,
-          leading: CircleAvatar(
-            backgroundImage: avatar != null && avatar.isNotEmpty ? NetworkImage(avatar) : null,
-            child: avatar == null ? Text((data['firstName'] ?? '?').toString().substring(0,1).toUpperCase()) : null,
-          ),
-          title: Text(name.isNotEmpty ? name : (data['email'] ?? 'Unknown'), style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
-          subtitle: Text(grade ?? '', style: GoogleFonts.montserrat(color: Colors.grey[600])),
-          trailing: isSelected ? const Icon(Icons.check_circle, color: Color(0xFFD62828)) : null,
-        );
-      },
-      separatorBuilder: (_, __) => const Divider(height: 8),
-      itemCount: filtered.length,
+    // kept for backwards compatibility if needed elsewhere
+    return _buildStudentTable(filtered);
+  }
+
+  Widget _buildStudentTable(List<QueryDocumentSnapshot> filtered) {
+    // Render a scrollable table-like list showing the required columns:
+    // Name | Class | Email | Rank | XP | Subjects Solved From | Total Questions Solved
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: ConstrainedBox(
+        constraints: BoxConstraints(minWidth: MediaQuery.of(context).size.width),
+        child: Column(
+          children: [
+            // Header row
+            Container(
+              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+              color: Colors.grey.shade100,
+              child: Row(
+                children: const [
+                  SizedBox(width: 280, child: Text('Student', style: TextStyle(fontWeight: FontWeight.w700))),
+                  SizedBox(width: 100, child: Text('Class', style: TextStyle(fontWeight: FontWeight.w700))),
+                  SizedBox(width: 260, child: Text('Email', style: TextStyle(fontWeight: FontWeight.w700))),
+                  SizedBox(width: 100, child: Text('Rank', style: TextStyle(fontWeight: FontWeight.w700))),
+                  SizedBox(width: 100, child: Text('XP', style: TextStyle(fontWeight: FontWeight.w700))),
+                  SizedBox(width: 180, child: Text('Subjects Solved From', style: TextStyle(fontWeight: FontWeight.w700))),
+                  SizedBox(width: 160, child: Text('Total Questions Solved', style: TextStyle(fontWeight: FontWeight.w700))),
+                ],
+              ),
+            ),
+            const Divider(height: 1),
+            // Rows
+            ...filtered.map((d) {
+              final data = d.data() as Map<String, dynamic>;
+              final name = '${data['firstName'] ?? ''} ${data['lastName'] ?? ''}'.trim();
+              final grade = data['grade'] ?? data['class'] ?? '';
+              final email = data['email'] ?? '';
+
+              return FutureBuilder<Map<String, dynamic>>(
+                future: _buildStudentSummary(d.id),
+                builder: (context, snap) {
+                  final summary = snap.data;
+                  final rank = summary != null ? (summary['rank'] ?? '-') : '-';
+                  final xp = summary != null ? (summary['xp']?.toString() ?? '-') : '-';
+                  final subjects = summary != null ? (summary['subjects']?.join(', ') ?? '-') : '-';
+                  final totalQuestions = summary != null ? (summary['totalQuestions']?.toString() ?? '-') : '-';
+
+                  return Container(
+                    padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
+                    decoration: BoxDecoration(border: Border(bottom: BorderSide(color: Colors.grey.shade200))),
+                    child: Row(
+                      children: [
+                        SizedBox(
+                          width: 280,
+                          child: Row(children: [
+                            CircleAvatar(radius: 18, backgroundImage: (data['profileImageUrl'] as String?)?.isNotEmpty == true ? NetworkImage(data['profileImageUrl']) : null, child: (data['profileImageUrl'] == null) ? Text((data['firstName'] ?? '?').toString().substring(0,1).toUpperCase()) : null),
+                            const SizedBox(width: 12),
+                            Expanded(child: Text(name.isNotEmpty ? name : email, style: GoogleFonts.montserrat(fontWeight: FontWeight.w600))),
+                          ]),
+                        ),
+                        SizedBox(width: 100, child: Text(grade ?? '', style: GoogleFonts.montserrat())),
+                        SizedBox(width: 260, child: Text(email, style: GoogleFonts.montserrat(color: Colors.grey[700]))),
+                        SizedBox(width: 100, child: Text(rank.toString(), style: GoogleFonts.montserrat())),
+                        SizedBox(width: 100, child: Text(xp.toString(), style: GoogleFonts.montserrat())),
+                        SizedBox(width: 180, child: Text(subjects.toString(), style: GoogleFonts.montserrat(color: Colors.grey[700]))),
+                        SizedBox(width: 160, child: Text(totalQuestions.toString(), style: GoogleFonts.montserrat())),
+                      ],
+                    ),
+                  );
+                },
+              );
+            }).toList(),
+          ],
+        ),
+      ),
     );
+  }
+
+  /// Build a small summary for each student: XP, rank (if available), subjects list and total questions solved.
+  Future<Map<String, dynamic>> _buildStudentSummary(String studentId) async {
+    final xp = await XPService().getUserTotalXP(studentId);
+    // Fetch quizzes for this student (limited to 500 for performance)
+    final qs = await FirebaseFirestore.instance.collection('quizzes').where('userId', isEqualTo: studentId).limit(500).get();
+    final subjectsSet = <String>{};
+    int totalQuestions = 0;
+    for (final q in qs.docs) {
+      final data = q.data() as Map<String, dynamic>;
+      final subject = (data['subject'] ?? data['collectionName'] ?? '').toString();
+      if (subject.isNotEmpty) subjectsSet.add(subject);
+      final tq = (data['totalQuestions'] as int?) ?? (data['total'] as int?) ?? 0;
+      totalQuestions += tq;
+    }
+    // Attempt to get rank from a user doc field if present
+    final userDoc = await FirebaseFirestore.instance.collection('users').doc(studentId).get();
+    final userData = userDoc.data();
+    final rank = userData != null ? (userData['rankName'] ?? userData['rank'] ?? '-') : '-';
+
+    return {
+      'xp': xp,
+      'rank': rank,
+      'subjects': subjectsSet.toList(),
+      'totalQuestions': totalQuestions,
+    };
   }
 
   Widget _buildStudentDetail(String? selectedId, Map<String, dynamic>? selectedData) {
