@@ -12,7 +12,14 @@ import cors from 'cors';
 
 // Lightweight CORS-safe aiChat HTTP endpoint for Flutter Web clients
 // Uses functions.config().openai.key — set with `firebase functions:config:set openai.key="..."`
-const openai = new OpenAI({ apiKey: functions.config().openai?.key });
+// Initialize OpenAI lazily to avoid config issues
+let openai: OpenAI | null = null;
+function getOpenAI() {
+  if (!openai) {
+    openai = new OpenAI({ apiKey: functions.config().openai?.key });
+  }
+  return openai;
+}
 
 const corsHandler = cors({
   origin: [
@@ -38,11 +45,12 @@ const MODEL_FALLBACK = 'gpt-4.1';
 // Use a permissive message type to work with the OpenAI client shape
 async function chatCompletion(messages: any, temperature = 0.3) {
   // Try primary model first, then fallback if the provider returns an error
+  const client = getOpenAI();
   try {
-  return await openai.chat.completions.create({ model: MODEL_PRIMARY, temperature, messages });
+  return await client.chat.completions.create({ model: MODEL_PRIMARY, temperature, messages });
   } catch (err: any) {
     console.warn(`Primary model ${MODEL_PRIMARY} failed, falling back to ${MODEL_FALLBACK}:`, err?.message ?? err);
-  return await openai.chat.completions.create({ model: MODEL_FALLBACK, temperature, messages });
+  return await client.chat.completions.create({ model: MODEL_FALLBACK, temperature, messages });
   }
 }
 
@@ -1309,7 +1317,8 @@ export const uploadNote = functions.region('us-central1').https.onRequest((req, 
   // Moderation: require text moderation if text provided
         try {
           if (text && text.length > 0) {
-            const mod = await openai.moderations.create({ model: 'omni-moderation-latest', input: text });
+            const client = getOpenAI();
+            const mod = await client.moderations.create({ model: 'omni-moderation-latest', input: text });
             const flagged = (mod as any).results?.[0]?.flagged;
             if (flagged) {
               res.status(403).json({ error: 'Content flagged by moderation' });

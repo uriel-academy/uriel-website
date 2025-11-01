@@ -6,7 +6,14 @@ import type { Request, Response } from "express";
 
 if (!admin.apps.length) admin.initializeApp();
 
-const openai = new OpenAI({ apiKey: functions.config().openai?.key });
+// Initialize OpenAI lazily to avoid config issues
+let openai: OpenAI | null = null;
+function getOpenAI() {
+  if (!openai) {
+    openai = new OpenAI({ apiKey: functions.config().openai?.key });
+  }
+  return openai;
+}
 
 const corsHandler = cors({
   origin: [
@@ -288,7 +295,8 @@ export const aiChatHttpStreaming = functions.region('us-central1').https.onReque
         res.write(`data: ${JSON.stringify(meta)}\n\n`);
       } catch (e) { console.warn('Failed to write meta SSE event', e); }
 
-      const completion = await openai.chat.completions.create({
+      const client = getOpenAI();
+      const completion = await client.chat.completions.create({
         model: "gpt-4o-mini", // good + cheap streaming model
         stream: true,
         temperature: 0.2,

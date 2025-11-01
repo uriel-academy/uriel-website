@@ -22,10 +22,13 @@ export const generateAIQuiz = onCall(async (request) => {
   const questionCount = Math.min(Math.max(numQuestions, 1), 40);
 
   try {
-    // Initialize OpenAI
-    const apiKey = process.env.OPENAI_API_KEY;
+    // Get the OpenAI API key from environment variable set via Firebase config
+    // The key is automatically available as OPENAI_KEY env var
+    const apiKey = process.env.OPENAI_KEY;
+
     if (!apiKey) {
-      throw new Error('OPENAI_API_KEY not configured');
+      console.error('OPENAI_KEY environment variable not set');
+      throw new Error('OPENAI_KEY not configured. Set with: firebase functions:config:set openai.key="sk-..."');
     }
 
     const openai = new OpenAI({
