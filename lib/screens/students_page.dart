@@ -5,6 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../services/xp_service.dart';
 import '../services/leaderboard_rank_service.dart';
+import '../services/class_aggregates_service.dart';
 // using native widgets for subject progress to avoid chart package compatibility issues
 
 class StudentsPage extends StatefulWidget {
@@ -60,53 +61,29 @@ class _StudentsPageState extends State<StudentsPage> {
     super.dispose();
   }
 
-  bool _matchesFilter(Map<String, dynamic> studentData, String query) {
-    final name = ((studentData['firstName'] ?? '') + ' ' + (studentData['lastName'] ?? '')).toString().toLowerCase();
-    final email = (studentData['email'] ?? '').toString().toLowerCase();
-    if (query.isEmpty) return true;
-    return name.contains(query) || email.contains(query);
-  }
+  /// Show detailed student metrics dialog
+  Future<void> _showStudentDetailDialog(Map<String, dynamic> studentData) async {
+    final studentId = studentData['uid'] as String?;
+    if (studentId == null) return;
 
-  Future<void> _showStudentProgressDialog(String studentId, Map<String, dynamic> studentData) async {
     showDialog(
       context: context,
-      builder: (context) => FutureBuilder<int>(
-        future: XPService().getUserTotalXP(studentId),
-        builder: (context, snap) {
-          final xp = snap.data ?? 0;
-          return AlertDialog(
-            title: Text('${studentData['firstName'] ?? ''} ${studentData['lastName'] ?? ''}', style: GoogleFonts.playfairDisplay(fontWeight: FontWeight.bold)),
-            content: SizedBox(
-              width: 420,
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('Class: ${studentData['grade'] ?? studentData['class'] ?? '-'}', style: GoogleFonts.montserrat()),
-                  const SizedBox(height: 8),
-                  Text('School: ${studentData['schoolName'] ?? studentData['school'] ?? '-'}', style: GoogleFonts.montserrat()),
-                  const SizedBox(height: 12),
-                  Text('Total XP: $xp', style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
-                  const SizedBox(height: 8),
-                  const SizedBox(height: 6),
-                  ElevatedButton(
-                    onPressed: () => Navigator.of(context).pop(),
-                    style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFFD62828)),
-                    child: Text('Close', style: GoogleFonts.montserrat(color: Colors.white)),
-                  ),
-                ],
-              ),
-            ),
-          );
-        },
+      barrierDismissible: true,
+      builder: (context) => Dialog(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        child: Container(
+          width: MediaQuery.of(context).size.width > 700 ? 700 : MediaQuery.of(context).size.width * 0.9,
+          constraints: BoxConstraints(
+            maxHeight: MediaQuery.of(context).size.height * 0.85,
+          ),
+          child: _buildStudentDetail(studentId, studentData),
+        ),
       ),
     );
   }
 
   @override
   Widget build(BuildContext context) {
-    final query = _searchController.text.toLowerCase();
-
     return NestedScrollView(
       headerSliverBuilder: (context, inner) => [
         SliverToBoxAdapter(
@@ -154,11 +131,12 @@ class _StudentsPageState extends State<StudentsPage> {
                         // Show school and total students for the teacher's class
                         Text('School: ${_schoolName ?? "Loading..."}', style: GoogleFonts.montserrat()),
                         const SizedBox(height: 8),
-                        FutureBuilder<int>(
-                          future: _getStudentsCount(),
+                        FutureBuilder<void>(
+                          future: _pageFuture,
                           builder: (context, snap) {
                             if (snap.connectionState == ConnectionState.waiting) return Text('Total students: ...', style: GoogleFonts.montserrat(color: Colors.grey[600]));
-                            final count = snap.data ?? 0;
+                            final page = _pageCache[_currentCursorKey] as Map<String, dynamic>?;
+                            final count = page?['totalCount'] as int? ?? 0;
                             return Text('Total students: $count', style: GoogleFonts.montserrat(color: Colors.grey[700]));
                           },
                         ),
@@ -300,50 +278,134 @@ class _StudentsPageState extends State<StudentsPage> {
             Container(
               padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
               color: Colors.grey.shade100,
-              child: const Row(
+              child: Row(
                 children: [
-                  SizedBox(width: 340, child: Text('Student', style: TextStyle(fontWeight: FontWeight.w700))),
-                  SizedBox(width: 260, child: Text('Email', style: TextStyle(fontWeight: FontWeight.w700))),
-                  SizedBox(width: 120, child: Text('Rank', style: TextStyle(fontWeight: FontWeight.w700))),
-                  SizedBox(width: 100, child: Text('XP', style: TextStyle(fontWeight: FontWeight.w700))),
-                  SizedBox(width: 160, child: Text('Subject Solved', style: TextStyle(fontWeight: FontWeight.w700))),
-                  SizedBox(width: 160, child: Text('Questions Solved', style: TextStyle(fontWeight: FontWeight.w700))),
+                  SizedBox(width: 280, child: Text('Student', style: GoogleFonts.montserrat(fontWeight: FontWeight.w700, fontSize: 13))),
+                  SizedBox(width: 100, child: Text('XP', style: GoogleFonts.montserrat(fontWeight: FontWeight.w700, fontSize: 13))),
+                  SizedBox(width: 120, child: Text('Questions', style: GoogleFonts.montserrat(fontWeight: FontWeight.w700, fontSize: 13))),
+                  SizedBox(width: 100, child: Text('Accuracy', style: GoogleFonts.montserrat(fontWeight: FontWeight.w700, fontSize: 13))),
+                  SizedBox(width: 110, child: Text('Subjects', style: GoogleFonts.montserrat(fontWeight: FontWeight.w700, fontSize: 13))),
+                  SizedBox(width: 110, child: Text('Rank', style: GoogleFonts.montserrat(fontWeight: FontWeight.w700, fontSize: 13))),
                 ],
               ),
             ),
             const Divider(height: 1),
             ...students.map((s) {
               final data = s as Map<String, dynamic>;
+              final raw = data['raw'] as Map<String, dynamic>? ?? {};
+              
+              // Extract comprehensive data
               final name = (data['displayName'] ?? '') as String;
               final email = (data['email'] ?? '') as String;
-              final rank = data['rank'] ?? '-';
-              final xp = data['totalXP'] ?? 0;
-              final subjects = data['subjectsSolved'] ?? data['subjects'] ?? [];
-              final totalQuestions = data['questionsSolved'] ?? data['questionsSolvedCount'] ?? data['questionsSolved'] ?? 0;
+              final rank = data['rank'] ?? raw['leaderboardRank'] ?? '-';
+              final xp = data['totalXP'] ?? raw['totalXP'] ?? 0;
+              
+              // Get accuracy from avgPercent or calculate from totalScoreSum/totalScoreCount
+              double? accuracy;
+              if (raw['avgPercent'] != null) {
+                accuracy = (raw['avgPercent'] is num) ? (raw['avgPercent'] as num).toDouble() : double.tryParse(raw['avgPercent'].toString());
+              } else if (raw['totalScoreSum'] != null && raw['totalScoreCount'] != null) {
+                final sum = (raw['totalScoreSum'] is num) ? (raw['totalScoreSum'] as num).toDouble() : 0.0;
+                final count = (raw['totalScoreCount'] is num) ? (raw['totalScoreCount'] as num).toInt() : 0;
+                if (count > 0) accuracy = sum / count;
+              }
+              
+              final subjectsCount = data['subjectsSolved'] ?? raw['subjectsCount'] ?? raw['subjectsSolvedCount'] ?? 0;
+              final questionsCount = data['questionsSolved'] ?? raw['questionsSolved'] ?? raw['totalQuestions'] ?? 0;
 
-              return Container(
-                padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
-                decoration: BoxDecoration(border: Border(bottom: BorderSide(color: Colors.grey.shade200))),
-                child: Row(
-                  children: [
-                    SizedBox(
-                      width: 340,
-                      child: Row(children: [
-                        CircleAvatar(
-                          radius: 18,
-                          backgroundImage: (data['avatar'] as String?)?.isNotEmpty == true ? NetworkImage((data['avatar'] as String)) : null,
-                          child: (data['avatar'] as String?) == null ? Text((name.isNotEmpty ? name[0] : '?').toUpperCase()) : null,
-                        ),
-                        const SizedBox(width: 12),
-                        Expanded(child: Text(name.isNotEmpty ? name : email, style: GoogleFonts.montserrat(fontWeight: FontWeight.w600))),
-                      ]),
-                    ),
-                    SizedBox(width: 260, child: Text(email, style: GoogleFonts.montserrat(color: Colors.grey[700]))),
-                    SizedBox(width: 120, child: Text(rank.toString(), style: GoogleFonts.montserrat())),
-                    SizedBox(width: 100, child: Text(xp.toString(), style: GoogleFonts.montserrat())),
-                    SizedBox(width: 160, child: Text((subjects is List ? subjects.length : (subjects ?? '-')).toString(), style: GoogleFonts.montserrat())),
-                    SizedBox(width: 160, child: Text(totalQuestions.toString(), style: GoogleFonts.montserrat())),
-                  ],
+              return InkWell(
+                onTap: () => _showStudentDetailDialog(data),
+                child: Container(
+                  padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
+                  decoration: BoxDecoration(border: Border(bottom: BorderSide(color: Colors.grey.shade200))),
+                  child: Row(
+                    children: [
+                      SizedBox(
+                        width: 280,
+                        child: Row(children: [
+                          CircleAvatar(
+                            radius: 18,
+                            backgroundColor: const Color(0xFFD62828).withOpacity(0.1),
+                            backgroundImage: (data['avatar'] as String?)?.isNotEmpty == true ? NetworkImage((data['avatar'] as String)) : null,
+                            child: (data['avatar'] as String?) == null 
+                              ? Text(
+                                  (name.isNotEmpty ? name[0] : '?').toUpperCase(), 
+                                  style: GoogleFonts.montserrat(fontWeight: FontWeight.bold, color: const Color(0xFFD62828))
+                                ) 
+                              : null,
+                          ),
+                          const SizedBox(width: 12),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  name.isNotEmpty ? name : email, 
+                                  style: GoogleFonts.montserrat(fontWeight: FontWeight.w600, fontSize: 13),
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                                if (name.isNotEmpty)
+                                  Text(
+                                    email, 
+                                    style: GoogleFonts.montserrat(fontSize: 11, color: Colors.grey[600]),
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                              ],
+                            ),
+                          ),
+                        ]),
+                      ),
+                      SizedBox(
+                        width: 100, 
+                        child: Text(
+                          xp.toString(), 
+                          style: GoogleFonts.montserrat(fontWeight: FontWeight.w600, color: const Color(0xFFD62828))
+                        )
+                      ),
+                      SizedBox(
+                        width: 120, 
+                        child: Text(
+                          questionsCount.toString(), 
+                          style: GoogleFonts.montserrat()
+                        )
+                      ),
+                      SizedBox(
+                        width: 100, 
+                        child: Text(
+                          accuracy != null ? '${accuracy.toStringAsFixed(1)}%' : '-', 
+                          style: GoogleFonts.montserrat(
+                            color: accuracy != null && accuracy >= 70 ? Colors.green : (accuracy != null && accuracy >= 50 ? Colors.orange : Colors.grey[700]),
+                            fontWeight: accuracy != null && accuracy >= 70 ? FontWeight.w600 : FontWeight.normal,
+                          )
+                        )
+                      ),
+                      SizedBox(
+                        width: 110, 
+                        child: Text(
+                          subjectsCount.toString(), 
+                          style: GoogleFonts.montserrat()
+                        )
+                      ),
+                      SizedBox(
+                        width: 110, 
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                          decoration: BoxDecoration(
+                            color: rank.toString() != '-' ? const Color(0xFFD62828).withOpacity(0.1) : Colors.grey.withOpacity(0.1),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Text(
+                            rank.toString(), 
+                            style: GoogleFonts.montserrat(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w600,
+                              color: rank.toString() != '-' ? const Color(0xFFD62828) : Colors.grey[700],
+                            )
+                          ),
+                        )
+                      ),
+                    ],
+                  ),
                 ),
               );
             }).toList(),
@@ -353,321 +415,336 @@ class _StudentsPageState extends State<StudentsPage> {
     );
   }
 
-  Widget _buildStudentList(List<QueryDocumentSnapshot> filtered) {
-    // kept for backwards compatibility if needed elsewhere
-    return _buildStudentTable(filtered);
-  }
 
-  Widget _buildStudentTable(List<QueryDocumentSnapshot> filtered) {
-    // Render a scrollable table-like list showing the required columns:
-    // Name | Class | Email | Rank | XP | Subjects Solved From | Total Questions Solved
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: ConstrainedBox(
-        constraints: BoxConstraints(minWidth: MediaQuery.of(context).size.width),
-        child: Column(
-          children: [
-                // Header row
-            Container(
-              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
-              color: Colors.grey.shade100,
-              child: const Row(
-                children: [
-                  SizedBox(width: 340, child: Text('Student', style: TextStyle(fontWeight: FontWeight.w700))),
-                  SizedBox(width: 260, child: Text('Email', style: TextStyle(fontWeight: FontWeight.w700))),
-                  SizedBox(width: 120, child: Text('Rank', style: TextStyle(fontWeight: FontWeight.w700))),
-                  SizedBox(width: 100, child: Text('XP', style: TextStyle(fontWeight: FontWeight.w700))),
-                  SizedBox(width: 160, child: Text('Subject Solved', style: TextStyle(fontWeight: FontWeight.w700))),
-                  SizedBox(width: 160, child: Text('Questions Solved', style: TextStyle(fontWeight: FontWeight.w700))),
-                ],
-              ),
-            ),
-            const Divider(height: 1),
-            // Rows
-            ...filtered.map((d) {
-              final data = d.data() as Map<String, dynamic>;
-              final name = '${data['firstName'] ?? ''} ${data['lastName'] ?? ''}'.trim();
-              final email = data['email'] ?? '';
-
-              return FutureBuilder<Map<String, dynamic>>(
-                future: _buildStudentSummary(d.id),
-                builder: (context, snap) {
-                  final summary = snap.data;
-                  final rank = summary != null ? (summary['rank'] ?? '-') : '-';
-                  final xp = summary != null ? (summary['xp']?.toString() ?? '-') : '-';
-                  final subjects = summary != null ? (summary['subjects']?.join(', ') ?? '-') : '-';
-                  final totalQuestions = summary != null ? (summary['totalQuestions']?.toString() ?? '-') : '-';
-
-                  return Container(
-                    padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
-                    decoration: BoxDecoration(border: Border(bottom: BorderSide(color: Colors.grey.shade200))),
-                    child: Row(
-                      children: [
-                        SizedBox(
-                          width: 340,
-                          child: Row(children: [
-                            CircleAvatar(
-                              radius: 18,
-                              backgroundImage: (data['profileImageUrl'] as String?)?.isNotEmpty == true ? NetworkImage((data['profileImageUrl'] as String)) : null,
-                              child: (data['profileImageUrl'] as String?) == null ? Text((data['firstName'] ?? '?').toString().substring(0,1).toUpperCase()) : null,
-                            ),
-                            const SizedBox(width: 12),
-                            Expanded(child: Text(name.isNotEmpty ? name : email, style: GoogleFonts.montserrat(fontWeight: FontWeight.w600))),
-                          ]),
-                        ),
-                        SizedBox(width: 260, child: Text(email, style: GoogleFonts.montserrat(color: Colors.grey[700]))),
-                        SizedBox(width: 120, child: Text(rank.toString(), style: GoogleFonts.montserrat())),
-                        SizedBox(width: 100, child: Text(xp.toString(), style: GoogleFonts.montserrat())),
-                        SizedBox(width: 160, child: Text((summary != null ? (summary['subjects'] is List ? (summary['subjects'] as List).length : (summary['subjectsCount'] ?? '-')) : '-').toString(), style: GoogleFonts.montserrat())),
-                        SizedBox(width: 160, child: Text(totalQuestions.toString(), style: GoogleFonts.montserrat())),
-                      ],
-                    ),
-                  );
-                },
-              );
-            }).toList(),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Future<int> _getStudentsCount() async {
-    final user = FirebaseAuth.instance.currentUser;
-    if (user == null) return 0;
-    try {
-      final doc = await FirebaseFirestore.instance.collection('users').doc(user.uid).get();
-      final data = doc.data();
-      final school = (data?['schoolName'] ?? data?['school'])?.toString();
-      final grade = (data?['teachingGrade'] ?? data?['grade'] ?? data?['class'])?.toString();
-      if (school == null || grade == null) return 0;
-      // Firestore queries are case-sensitive; fetch students then filter client-side with normalization to tolerate small variations
-      final allStudents = await FirebaseFirestore.instance.collection('users').where('role', isEqualTo: 'student').get();
-      final normSchool = _normalize(school);
-      final normGrade = _normalize(grade);
-      final matches = allStudents.docs.where((d) {
-        final sd = d.data();
-        final s = _normalize((sd['schoolName'] ?? sd['school'])?.toString() ?? '');
-        final g = _normalize((sd['grade'] ?? sd['class'])?.toString() ?? '');
-        return s == normSchool && g == normGrade;
-      }).toList();
-      return matches.length;
-    } catch (_) {
-      return 0;
-    }
-  }
-
-  String _normalize(String? s) => s?.toLowerCase().replaceAll(RegExp(r"[^a-z0-9]"), ' ').trim() ?? '';
-
-  /// Build a small summary for each student: XP, rank (if available), subjects list and total questions solved.
-  Future<Map<String, dynamic>> _buildStudentSummary(String studentId) async {
-    final xp = await XPService().getUserTotalXP(studentId);
-    // Fetch quizzes for this student (limited to 500 for performance)
-    final qs = await FirebaseFirestore.instance.collection('quizzes').where('userId', isEqualTo: studentId).limit(500).get();
-    final subjectsSet = <String>{};
-    int totalQuestions = 0;
-    for (final q in qs.docs) {
-      final data = q.data();
-      final subject = (data['subject'] ?? data['collectionName'] ?? '').toString();
-      if (subject.isNotEmpty) subjectsSet.add(subject);
-      final tq = (data['totalQuestions'] as int?) ?? (data['total'] as int?) ?? 0;
-      totalQuestions += tq;
-    }
-    // Attempt to get rank from a user doc field if present
-    final userDoc = await FirebaseFirestore.instance.collection('users').doc(studentId).get();
-    final userData = userDoc.data();
-    var rank = userData != null ? (userData['rankName'] ?? userData['rank']) : null;
-    // If rank not stored on user doc, derive from XP via LeaderboardRankService
-    if (rank == null) {
-      try {
-        final rankService = LeaderboardRankService();
-        final r = await rankService.getUserRank(xp);
-        rank = r?.name ?? '-';
-      } catch (_) {
-        rank = '-';
-      }
-    }
-
-    return {
-      'xp': xp,
-      'rank': rank ?? '-',
-      'subjects': subjectsSet.toList(),
-      'totalQuestions': totalQuestions,
-    };
-  }
 
   Widget _buildStudentDetail(String? selectedId, Map<String, dynamic>? selectedData) {
     if (selectedId == null || selectedData == null) {
       return Center(child: Text('Select a student to view progress', style: GoogleFonts.montserrat(color: Colors.grey[600])));
     }
 
-    return SingleChildScrollView(
+    final raw = selectedData['raw'] as Map<String, dynamic>? ?? {};
+
+    return Column(
+      children: [
+        // Header with close button
+        Container(
+          padding: const EdgeInsets.all(20),
+          decoration: BoxDecoration(
+            gradient: const LinearGradient(
+              colors: [Color(0xFFD62828), Color(0xFFB71C1C)],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+            borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
+          ),
+          child: Row(
+            children: [
+              CircleAvatar(
+                radius: 32,
+                backgroundColor: Colors.white,
+                backgroundImage: (selectedData['avatar'] as String?)?.isNotEmpty == true
+                    ? NetworkImage(selectedData['avatar']) as ImageProvider
+                    : null,
+                child: (selectedData['avatar'] as String?) == null
+                    ? Text(
+                        (selectedData['displayName']?.toString().isNotEmpty == true 
+                          ? selectedData['displayName'][0] 
+                          : '?').toUpperCase(), 
+                        style: GoogleFonts.montserrat(fontSize: 20, color: const Color(0xFFD62828), fontWeight: FontWeight.bold)
+                      )
+                    : null,
+              ),
+              const SizedBox(width: 16),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      selectedData['displayName'] ?? '-', 
+                      style: GoogleFonts.playfairDisplay(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white)
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      selectedData['email'] ?? '-',
+                      style: GoogleFonts.montserrat(fontSize: 13, color: Colors.white.withOpacity(0.9)),
+                    ),
+                  ],
+                ),
+              ),
+              IconButton(
+                icon: const Icon(Icons.close, color: Colors.white),
+                onPressed: () => Navigator.of(context).pop(),
+              ),
+            ],
+          ),
+        ),
+        
+        // Scrollable content
+        Expanded(
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.all(20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // Key metrics grid
+                Row(
+                  children: [
+                    Expanded(
+                      child: _buildMetricCard(
+                        'Total XP',
+                        (selectedData['totalXP'] ?? 0).toString(),
+                        Icons.stars,
+                        const Color(0xFFD62828),
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: _buildMetricCard(
+                        'Questions',
+                        (selectedData['questionsSolved'] ?? raw['questionsSolved'] ?? raw['totalQuestions'] ?? 0).toString(),
+                        Icons.quiz,
+                        Colors.blue,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 12),
+                Row(
+                  children: [
+                    Expanded(
+                      child: _buildMetricCard(
+                        'Accuracy',
+                        () {
+                          double? accuracy;
+                          if (raw['avgPercent'] != null) {
+                            accuracy = (raw['avgPercent'] is num) ? (raw['avgPercent'] as num).toDouble() : double.tryParse(raw['avgPercent'].toString());
+                          } else if (raw['totalScoreSum'] != null && raw['totalScoreCount'] != null) {
+                            final sum = (raw['totalScoreSum'] is num) ? (raw['totalScoreSum'] as num).toDouble() : 0.0;
+                            final count = (raw['totalScoreCount'] is num) ? (raw['totalScoreCount'] as num).toInt() : 0;
+                            if (count > 0) accuracy = sum / count;
+                          }
+                          return accuracy != null ? '${accuracy.toStringAsFixed(1)}%' : '-';
+                        }(),
+                        Icons.trending_up,
+                        Colors.green,
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: _buildMetricCard(
+                        'Subjects',
+                        (selectedData['subjectsSolved'] ?? raw['subjectsCount'] ?? 0).toString(),
+                        Icons.library_books,
+                        Colors.orange,
+                      ),
+                    ),
+                  ],
+                ),
+                // Recent quizzes
+                Text('Recent Quizzes', style: GoogleFonts.playfairDisplay(fontSize: 16, fontWeight: FontWeight.bold)),
+                const SizedBox(height: 12),
+                FutureBuilder<QuerySnapshot>(
+                  future: FirebaseFirestore.instance
+                      .collection('quizzes')
+                      .where('userId', isEqualTo: selectedId)
+                      .orderBy('completedAt', descending: true)
+                      .limit(5)
+                      .get(),
+                  builder: (context, snap) {
+                    if (snap.connectionState == ConnectionState.waiting) {
+                      return const Center(child: CircularProgressIndicator());
+                    }
+                    final docs = snap.data?.docs ?? [];
+                    if (docs.isEmpty) {
+                      return Container(
+                        padding: const EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                          color: Colors.grey[100],
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Text('No recent quizzes', style: GoogleFonts.montserrat(color: Colors.grey[600])),
+                      );
+                    }
+                    return Column(
+                      children: docs.map((d) {
+                        final data = d.data() as Map<String, dynamic>;
+                        final score = data['score'] ?? data['percent'] ?? '-';
+                        final title = data['title'] ?? data['collectionName'] ?? 'Quiz';
+                        return Container(
+                          margin: const EdgeInsets.only(bottom: 8),
+                          padding: const EdgeInsets.all(12),
+                          decoration: BoxDecoration(
+                            color: Colors.grey[50],
+                            borderRadius: BorderRadius.circular(8),
+                            border: Border.all(color: Colors.grey[200]!),
+                          ),
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: Text(
+                                  title.toString(), 
+                                  style: GoogleFonts.montserrat(fontSize: 13),
+                                ),
+                              ),
+                              Text(
+                                score.toString(), 
+                                style: GoogleFonts.montserrat(fontWeight: FontWeight.w600, color: const Color(0xFFD62828)),
+                              ),
+                            ],
+                          ),
+                        );
+                      }).toList(),
+                    );
+                  },
+                ),
+                const SizedBox(height: 20),
+                
+                // Subject progress
+                Text('Subject Progress', style: GoogleFonts.playfairDisplay(fontSize: 16, fontWeight: FontWeight.bold)),
+                const SizedBox(height: 12),
+                FutureBuilder<QuerySnapshot>(
+                  future: FirebaseFirestore.instance
+                      .collection('quizzes')
+                      .where('userId', isEqualTo: selectedId)
+                      .limit(200)
+                      .get(),
+                  builder: (context, snap) {
+                    if (snap.connectionState == ConnectionState.waiting) {
+                      return const Center(child: CircularProgressIndicator());
+                    }
+                    final quizDocs = snap.data?.docs ?? [];
+                    if (quizDocs.isEmpty) {
+                      return Container(
+                        padding: const EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                          color: Colors.grey[100],
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Text('No subject progress available', style: GoogleFonts.montserrat(color: Colors.grey[600])),
+                      );
+                    }
+
+                    // Compute average percent per subject
+                    final Map<String, List<double>> subjectScores = {};
+                    for (final q in quizDocs) {
+                      final data = q.data() as Map<String, dynamic>;
+                      final subject = (data['subject'] ?? data['collectionName'] ?? 'Misc').toString();
+                      double? percent;
+                      if (data['percent'] != null) {
+                        percent = (data['percent'] is num) ? (data['percent'] as num).toDouble() : double.tryParse(data['percent'].toString());
+                      } else if (data['score'] != null && data['total'] != null) {
+                        final score = (data['score'] as num).toDouble();
+                        final total = (data['total'] as num).toDouble();
+                        if (total > 0) percent = (score / total) * 100;
+                      } else if (data['score'] != null) {
+                        final score = (data['score'] as num).toDouble();
+                        percent = score;
+                      }
+                      if (percent == null) continue;
+                      subjectScores.putIfAbsent(subject, () => []).add(percent.clamp(0, 100));
+                    }
+
+                    final subjects = subjectScores.keys.toList();
+                    final averages = subjects.map((s) {
+                      final list = subjectScores[s]!;
+                      final avg = list.reduce((a, b) => a + b) / list.length;
+                      return avg;
+                    }).toList();
+
+                    if (subjects.isEmpty) {
+                      return Container(
+                        padding: const EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                          color: Colors.grey[100],
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Text('No subject progress available', style: GoogleFonts.montserrat(color: Colors.grey[600])),
+                      );
+                    }
+
+                    return Column(
+                      children: List.generate(subjects.length, (i) {
+                        final label = subjects[i];
+                        final avg = averages[i];
+                        return Container(
+                          margin: const EdgeInsets.only(bottom: 12),
+                          padding: const EdgeInsets.all(12),
+                          decoration: BoxDecoration(
+                            color: Colors.grey[50],
+                            borderRadius: BorderRadius.circular(8),
+                            border: Border.all(color: Colors.grey[200]!),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Expanded(child: Text(label, style: GoogleFonts.montserrat(fontSize: 13, fontWeight: FontWeight.w600))),
+                                  const SizedBox(width: 8),
+                                  Text('${avg.toStringAsFixed(1)}%', style: GoogleFonts.montserrat(fontWeight: FontWeight.w600, color: const Color(0xFFD62828))),
+                                ],
+                              ),
+                              const SizedBox(height: 8),
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(8),
+                                child: LinearProgressIndicator(
+                                  value: (avg / 100).clamp(0.0, 1.0),
+                                  minHeight: 8,
+                                  color: const Color(0xFFD62828),
+                                  backgroundColor: Colors.grey.shade200,
+                                ),
+                              ),
+                            ],
+                          ),
+                        );
+                      }),
+                    );
+                  },
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildMetricCard(String label, String value, IconData icon, Color color) {
+    return Container(
       padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: color.withOpacity(0.1),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: color.withOpacity(0.3)),
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
-              CircleAvatar(
-                radius: 32,
-                backgroundImage: (selectedData['profileImageUrl'] as String?)?.isNotEmpty == true
-                    ? NetworkImage(selectedData['profileImageUrl']) as ImageProvider
-                    : null,
-                child: (selectedData['profileImageUrl'] as String?) == null
-                    ? Text((selectedData['firstName'] ?? '?').toString().substring(0,1).toUpperCase(), style: GoogleFonts.montserrat(fontSize: 20))
-                    : null,
-              ),
-              const SizedBox(width: 12),
+              Icon(icon, color: color, size: 20),
+              const SizedBox(width: 8),
               Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('${selectedData['firstName'] ?? ''} ${selectedData['lastName'] ?? ''}', style: GoogleFonts.playfairDisplay(fontSize: 20, fontWeight: FontWeight.bold)),
-                    const SizedBox(height: 4),
-                    Text('Class: ${selectedData['grade'] ?? selectedData['class'] ?? '-'}', style: GoogleFonts.montserrat()),
-                    Text('School: ${selectedData['schoolName'] ?? selectedData['school'] ?? '-'}', style: GoogleFonts.montserrat()),
-                  ],
+                child: Text(
+                  label,
+                  style: GoogleFonts.montserrat(
+                    fontSize: 12,
+                    color: Colors.grey[700],
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
               ),
             ],
           ),
-          const SizedBox(height: 16),
-          FutureBuilder<int>(
-            future: XPService().getUserTotalXP(selectedId),
-            builder: (context, snap) {
-              final xp = snap.data ?? 0;
-              return Card(
-                elevation: 0,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                child: Padding(
-                  padding: const EdgeInsets.all(16),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text('Progress Overview', style: GoogleFonts.playfairDisplay(fontSize: 18, fontWeight: FontWeight.bold)),
-                      const SizedBox(height: 8),
-                      Text('Total XP: $xp', style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
-                      const SizedBox(height: 8),
-                      Text('Recent activity: (tap for details)', style: GoogleFonts.montserrat(color: Colors.grey[600])),
-                    ],
-                  ),
-                ),
-              );
-            },
-          ),
-          const SizedBox(height: 12),
-          // Recent quizzes snippet (lightweight): show last 5 quiz docs if available
-          FutureBuilder<QuerySnapshot>(
-            future: FirebaseFirestore.instance
-                .collection('quizzes')
-                .where('userId', isEqualTo: selectedId)
-                .orderBy('completedAt', descending: true)
-                .limit(5)
-                .get(),
-            builder: (context, snap) {
-              if (snap.connectionState == ConnectionState.waiting) return const SizedBox();
-              final docs = snap.data?.docs ?? [];
-              if (docs.isEmpty) return Text('No recent quizzes', style: GoogleFonts.montserrat(color: Colors.grey[600]));
-              return Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('Recent Quizzes', style: GoogleFonts.playfairDisplay(fontSize: 16, fontWeight: FontWeight.bold)),
-                  const SizedBox(height: 8),
-                  ...docs.map((d) {
-                    final data = d.data() as Map<String, dynamic>;
-                    final score = data['score'] ?? data['percent'] ?? '-';
-                    final title = data['title'] ?? data['collectionName'] ?? 'Quiz';
-                    return ListTile(
-                      contentPadding: EdgeInsets.zero,
-                      title: Text(title.toString(), style: GoogleFonts.montserrat()),
-                      trailing: Text(score.toString(), style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
-                    );
-                  }).toList(),
-                ],
-              );
-            },
-          ),
-          const SizedBox(height: 16),
-          // Per-subject progress chart
-          FutureBuilder<QuerySnapshot>(
-            future: FirebaseFirestore.instance
-                .collection('quizzes')
-                .where('userId', isEqualTo: selectedId)
-                .limit(200)
-                .get(),
-            builder: (context, snap) {
-              if (snap.connectionState == ConnectionState.waiting) return const SizedBox();
-              final quizDocs = snap.data?.docs ?? [];
-              if (quizDocs.isEmpty) return Text('No subject progress available', style: GoogleFonts.montserrat(color: Colors.grey[600]));
-
-              // Compute average percent per subject
-              final Map<String, List<double>> subjectScores = {};
-              for (final q in quizDocs) {
-                final data = q.data() as Map<String, dynamic>;
-                final subject = (data['subject'] ?? data['collectionName'] ?? 'Misc').toString();
-                double? percent;
-                if (data['percent'] != null) {
-                  percent = (data['percent'] is num) ? (data['percent'] as num).toDouble() : double.tryParse(data['percent'].toString());
-                } else if (data['score'] != null && data['total'] != null) {
-                  final score = (data['score'] as num).toDouble();
-                  final total = (data['total'] as num).toDouble();
-                  if (total > 0) percent = (score / total) * 100;
-                } else if (data['score'] != null) {
-                  final score = (data['score'] as num).toDouble();
-                  percent = score; // assume already percentage
-                }
-                if (percent == null) continue;
-                subjectScores.putIfAbsent(subject, () => []).add(percent.clamp(0, 100));
-              }
-
-              final subjects = subjectScores.keys.toList();
-              final averages = subjects.map((s) {
-                final list = subjectScores[s]!;
-                final avg = list.reduce((a, b) => a + b) / list.length;
-                return avg;
-              }).toList();
-
-              if (subjects.isEmpty) return Text('No subject progress available', style: GoogleFonts.montserrat(color: Colors.grey[600]));
-
-              // Render per-subject horizontal progress bars (mobile-friendly)
-              return Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('Subject Progress (avg %)', style: GoogleFonts.playfairDisplay(fontSize: 16, fontWeight: FontWeight.bold)),
-                  const SizedBox(height: 8),
-                  ...List.generate(subjects.length, (i) {
-                    final label = subjects[i];
-                    final avg = averages[i];
-                    return Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 6),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Expanded(child: Text(label, style: GoogleFonts.montserrat(fontSize: 14))),
-                              const SizedBox(width: 8),
-                              Text('${avg.toStringAsFixed(0)}%', style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
-                            ],
-                          ),
-                          const SizedBox(height: 6),
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(8),
-                            child: LinearProgressIndicator(
-                              value: (avg / 100).clamp(0.0, 1.0),
-                              minHeight: 10,
-                              color: const Color(0xFFD62828),
-                              backgroundColor: Colors.grey.shade200,
-                            ),
-                          ),
-                        ],
-                      ),
-                    );
-                  }),
-                ],
-              );
-            },
+          const SizedBox(height: 8),
+          Text(
+            value,
+            style: GoogleFonts.montserrat(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: color,
+            ),
           ),
         ],
       ),

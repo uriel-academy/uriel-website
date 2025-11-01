@@ -28,16 +28,16 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
   bool _isLoading = false;
   bool _isEditingPassword = false;
   String? _profileImageUrl;
-  String _selectedClass = 'JHS Form 1';
+  String _selectedClass = 'JHS FORM 1';
   String? _selectedPresetAvatar; // Track selected preset avatar
   
   final List<String> _classes = [
-    'JHS Form 1',
-    'JHS Form 2',
-    'JHS Form 3',
-    'SHS Form 1',
-    'SHS Form 2',
-    'SHS Form 3'
+    'JHS FORM 1',
+    'JHS FORM 2',
+    'JHS FORM 3',
+    'SHS FORM 1',
+    'SHS FORM 2',
+    'SHS FORM 3'
   ];
 
   @override
@@ -92,7 +92,7 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
             _emailController.text = user.email ?? '';
             _phoneController.text = data['phone'] ?? '';
             _schoolController.text = data['school'] ?? '';
-            _selectedClass = data['class'] ?? 'JHS Form 1';
+            _selectedClass = data['class'] ?? 'JHS FORM 1';
             _profileImageUrl = data['profileImageUrl'];
             _selectedPresetAvatar = data['presetAvatar'];
           });

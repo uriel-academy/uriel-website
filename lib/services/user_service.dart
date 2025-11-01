@@ -11,6 +11,28 @@ class UserService {
   // Collection reference for users
   CollectionReference get _usersCollection => _firestore.collection('users');
 
+  /// Normalize school/class names for matching (same logic as Cloud Functions)
+  /// Removes common noise words and non-alphanumeric characters
+  String? _normalizeSchoolClass(String? raw) {
+    if (raw == null || raw.isEmpty) return null;
+    
+    String s = raw.toLowerCase();
+    
+    // Remove common noise words
+    final noiseWords = ['school', 'college', 'high', 'senior', 'basic', 'jhs', 'shs', 'form', 'the'];
+    for (final word in noiseWords) {
+      s = s.replaceAll(RegExp('\\b$word\\b'), ' ');
+    }
+    
+    // Replace non-alphanumeric with spaces
+    s = s.replaceAll(RegExp(r'[^a-z0-9\s]'), ' ');
+    
+    // Collapse whitespace and replace with underscore
+    s = s.replaceAll(RegExp(r'\s+'), '_').trim();
+    
+    return s.isEmpty ? null : s;
+  }
+
   /// Create or update user profile with role
   Future<void> createUserProfile({
     required String userId,
@@ -166,25 +188,40 @@ class UserService {
   /// Store teacher-specific data
   Future<void> storeTeacherData({
     required String userId,
-    required String name,
+    String? firstName,
+    String? lastName,
+    String? name,
     required String email,
     required String phoneNumber,
     required String schoolName,
-    String? teachingGrade,
+    required String teachingClass, // Changed from teachingGrade to match schema
     List<String>? subjects,
     int? yearsExperience,
     String? teacherId,
     String? institutionCode,
   }) async {
     try {
-      // Do not set 'role' here; role assignment is admin/server responsibility.
+      // Parse firstName and lastName from name if not provided
+      String fName = firstName ?? '';
+      String lName = lastName ?? '';
+      
+      if (fName.isEmpty && lName.isEmpty && name != null && name.isNotEmpty) {
+        final parts = name.trim().split(' ');
+        fName = parts.first;
+        lName = parts.length > 1 ? parts.sublist(1).join(' ') : '';
+      }
+      
       final teacherData = {
         'role': UserRole.teacher.name,
-        'name': name,
+        'firstName': fName,
+        'lastName': lName,
+        'name': name ?? '$fName $lName'.trim(),
         'email': email.toLowerCase(),
         'phoneNumber': phoneNumber,
-        'schoolName': schoolName,
-        'teachingGrade': teachingGrade,
+        'school': schoolName, // Primary field for aggregation
+        'schoolName': schoolName, // Backwards compatibility
+        'class': teachingClass, // Primary field - the class they teach
+        'teachingGrade': teachingClass, // Backwards compatibility
         'subjects': subjects ?? [],
         'yearsExperience': yearsExperience,
         'teacherId': teacherId,
@@ -203,7 +240,9 @@ class UserService {
   /// Store student-specific data
   Future<void> storeStudentData({
     required String userId,
-    required String name,
+    String? firstName,
+    String? lastName,
+    String? name,
     required String email,
     required String phoneNumber,
     required String schoolName,
@@ -214,18 +253,71 @@ class UserService {
     required String guardianPhone,
   }) async {
     try {
+      // Parse firstName and lastName from name if not provided
+      String fName = firstName ?? '';
+      String lName = lastName ?? '';
+      
+      if (fName.isEmpty && lName.isEmpty && name != null && name.isNotEmpty) {
+        final parts = name.trim().split(' ');
+        fName = parts.first;
+        lName = parts.length > 1 ? parts.sublist(1).join(' ') : '';
+      }
+      
+      // Find matching teacher based on normalized school and class
+      String? matchedTeacherId;
+      try {
+        final normalizedSchool = _normalizeSchoolClass(schoolName);
+        final normalizedClass = _normalizeSchoolClass(grade);
+        
+        if (normalizedSchool == null || normalizedClass == null) {
+          debugPrint('Could not normalize school or class: $schoolName, $grade');
+        } else {
+          final teachersQuery = await _usersCollection
+              .where('role', isEqualTo: UserRole.teacher.name)
+              .get();
+          
+          for (var doc in teachersQuery.docs) {
+            final teacherData = doc.data() as Map<String, dynamic>?;
+            if (teacherData == null) continue;
+            
+            final teacherSchool = _normalizeSchoolClass((teacherData['school'] ?? '').toString());
+            final teacherClass = _normalizeSchoolClass((teacherData['class'] ?? '').toString());
+            
+            debugPrint('Comparing: Student($normalizedSchool, $normalizedClass) vs Teacher($teacherSchool, $teacherClass)');
+            
+            if (teacherSchool != null && teacherClass != null &&
+                teacherSchool == normalizedSchool && teacherClass == normalizedClass) {
+              matchedTeacherId = doc.id;
+              debugPrint('✓ Matched student to teacher: ${doc.id} (${teacherData['firstName']} ${teacherData['lastName']})');
+              break;
+            }
+          }
+          
+          if (matchedTeacherId == null) {
+            debugPrint('✗ No teacher found for normalized school: $normalizedSchool, class: $normalizedClass');
+          }
+        }
+      } catch (e) {
+        debugPrint('Error finding matching teacher: $e');
+      }
+      
       // Client should not set role; leave role assignment to admin/server.
       final studentData = {
         'role': UserRole.student.name,
-        'name': name,
+        'firstName': fName,
+        'lastName': lName,
+        'name': name ?? '$fName $lName'.trim(),
         'email': email.toLowerCase(),
         'phoneNumber': phoneNumber,
-        'schoolName': schoolName,
-        'grade': grade,
+        'school': schoolName, // Use 'school' as primary field
+        'schoolName': schoolName, // Keep for backwards compatibility
+        'class': grade, // Use 'class' as primary field
+        'grade': grade, // Keep for backwards compatibility
         'age': age,
         'guardianName': guardianName,
         'guardianEmail': guardianEmail.toLowerCase(),
         'guardianPhone': guardianPhone,
+        'teacherId': matchedTeacherId, // Assign matched teacher
         'createdAt': FieldValue.serverTimestamp(),
         'lastLoginAt': FieldValue.serverTimestamp(),
       };

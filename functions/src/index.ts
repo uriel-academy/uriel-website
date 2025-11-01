@@ -89,7 +89,7 @@ function normalizeSchoolClass(raw: any): string | null {
   try {
     let s = String(raw).toLowerCase();
     // Remove common noise words that don't affect identity
-    s = s.replace(/\b(school|college|high school|senior high school|senior|basic|primary|jhs|shs|the)\b/g, ' ');
+    s = s.replace(/\b(school|college|high school|senior high school|senior|basic|primary|jhs|shs|form|the)\b/g, ' ');
     // Replace non-alphanumeric with spaces
     s = s.replace(/[^a-z0-9\s]/g, ' ');
     // Collapse whitespace
@@ -2195,6 +2195,156 @@ export const importRMEQuestions = functions.https.onCall(async (data, context) =
   }
 });
 
+// ICT Questions Import Function
+export const importICTQuestions = functions.https.onCall(async (data, context) => {
+  try {
+    // Verify that the user is authenticated and is an admin
+    if (!context.auth) {
+      throw new functions.https.HttpsError('unauthenticated', 'User must be authenticated');
+    }
+
+    // Check if user has admin role in custom claims
+    const role = context.auth.token.role as string | undefined;
+    const adminEmail = 'studywithuriel@gmail.com';
+    
+    if (!role || !['admin', 'super_admin'].includes(role)) {
+      if (context.auth.token.email !== adminEmail) {
+        throw new functions.https.HttpsError('permission-denied', 'Only admins can import questions. Please contact support to get admin access.');
+      }
+    }
+
+    console.log('Starting ICT questions import...');
+    
+    const fs = require('fs');
+    const path = require('path');
+    
+    let importedCount = 0;
+    const currentTime = Date.now();
+    const currentDate = new Date().toISOString();
+    
+    // Years to import (2011-2022)
+    const years = Array.from({ length: 12 }, (_, i) => 2011 + i);
+    
+    for (const year of years) {
+      try {
+        // Read questions and answers files
+        const questionsPath = path.join(__dirname, '..', '..', 'assets', 'bece_ict', `bece_ict_${year}_questions.json`);
+        const answersPath = path.join(__dirname, '..', '..', 'assets', 'bece_ict', `bece_ict_${year}_answers_fulltext.json`);
+        
+        // Skip if files don't exist
+        if (!fs.existsSync(questionsPath) || !fs.existsSync(answersPath)) {
+          console.log(`Skipping year ${year} - files not found`);
+          continue;
+        }
+        
+        const questionsData = JSON.parse(fs.readFileSync(questionsPath, 'utf8'));
+        const answersData = JSON.parse(fs.readFileSync(answersPath, 'utf8'));
+        
+        // ICT questions are stored in multiple_choice object with keys like q1, q2, etc.
+        const questionsObj = questionsData.multiple_choice || {};
+        const answersObj = answersData.multiple_choice || {};
+        
+        // Get all question keys and sort them
+        const questionKeys = Object.keys(questionsObj).sort((a, b) => {
+          const numA = parseInt(a.replace('q', ''));
+          const numB = parseInt(b.replace('q', ''));
+          return numA - numB;
+        });
+        
+        console.log(`Processing ${questionKeys.length} ICT questions for year ${year}`);
+        
+        // Import each question
+        for (const qKey of questionKeys) {
+          const question = questionsObj[qKey];
+          const answerText = answersObj[qKey];
+          
+          if (!question || !answerText) {
+            console.warn(`Missing question or answer for ${qKey} in year ${year}`);
+            continue;
+          }
+          
+          // Extract question number from key (e.g., "q1" -> 1)
+          const questionNumber = parseInt(qKey.replace('q', ''));
+          
+          // Extract the correct answer letter from the answer text (e.g., "B. keyboard." -> "B")
+          const correctAnswerLetter = answerText.split('.')[0].trim();
+          
+          const questionDoc = {
+            id: `ict_${year}_q${questionNumber}`,
+            questionText: question.question,
+            type: 'multipleChoice',
+            subject: 'ict',
+            examType: 'bece',
+            year: year.toString(),
+            section: questionsData.variant || 'A',
+            questionNumber: questionNumber,
+            options: question.possibleAnswers || [],
+            correctAnswer: correctAnswerLetter,
+            explanation: `This is question ${questionNumber} from the ${year} BECE ICT exam.`,
+            marks: 1,
+            difficulty: 'medium',
+            topics: ['Information and Communications Technology', 'BECE', year.toString()],
+            createdAt: currentDate,
+            updatedAt: currentDate,
+            createdBy: 'system_import',
+            isActive: true,
+            metadata: {
+              source: `BECE ${year}`,
+              importDate: currentDate,
+              verified: true,
+              timestamp: currentTime
+            }
+          };
+          
+          try {
+            await db.collection('questions').doc(questionDoc.id).set(questionDoc);
+            importedCount++;
+            
+            if (importedCount % 50 === 0) {
+              console.log(`Progress: Imported ${importedCount} questions...`);
+            }
+          } catch (error) {
+            console.error(`Error importing question ${questionNumber} from year ${year}:`, error);
+          }
+        }
+        
+        console.log(`Completed year ${year}: imported ${questionKeys.length} questions`);
+        
+      } catch (yearError) {
+        console.error(`Error processing year ${year}:`, yearError);
+      }
+    }
+    
+    console.log(`Successfully imported ${importedCount} ICT questions to Firestore!`);
+    
+    // Update metadata
+    try {
+      await db.collection('app_metadata').doc('content').set({
+        ictQuestionsImported: true,
+        ictQuestionsCount: importedCount,
+        ictYears: years.map(y => y.toString()),
+        lastIctImportTimestamp: currentTime,
+        lastUpdated: currentDate
+      }, { merge: true });
+      console.log('Updated ICT content metadata');
+    } catch (error) {
+      console.error('Error updating metadata:', error);
+    }
+    
+    return {
+      success: true,
+      message: `Successfully imported ${importedCount} ICT questions!`,
+      questionsImported: importedCount,
+      years: years.map(y => y.toString())
+    };
+    
+  } catch (error) {
+    console.error('Error importing ICT questions:', error);
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    throw new functions.https.HttpsError('internal', `Failed to import ICT questions: ${errorMessage}`);
+  }
+});
+
 // Expose the consolidated HTTP handler
 // export { aiChatHttp };
 
@@ -2661,6 +2811,9 @@ export const onAttemptCreate_updateAggregates = functions.firestore
       const userSnap = await userRef.get();
       if (!userSnap.exists) return;
       const user = userSnap.data() || {};
+
+      // Only process students, not teachers
+      if (user.role !== 'student') return;
 
   const rawSchool = user.tenant?.schoolId || user.school || null;
   const rawGrade = user.grade || user.class || null;

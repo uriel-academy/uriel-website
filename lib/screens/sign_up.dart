@@ -169,7 +169,7 @@ class _SignUpPageState extends State<SignUpPage> {
           email: user.email ?? '',
           phoneNumber: phoneController.text.trim(),
           schoolName: teacherSchoolController.text.trim(),
-          teachingGrade: selectedTeachingClasses.isNotEmpty ? selectedTeachingClasses.first : null,
+          teachingClass: selectedTeachingClasses.isNotEmpty ? selectedTeachingClasses.first : 'JHS FORM 1',
           institutionCode: teacherInstitutionCodeController.text.trim().toUpperCase(),
         );
 
@@ -667,7 +667,7 @@ class _SignUpPageState extends State<SignUpPage> {
         label: 'Grade/Class',
         hint: 'Select your grade',
         icon: Icons.school_outlined,
-        items: ['JHS 1', 'JHS 2', 'JHS 3', 'SHS 1', 'SHS 2', 'SHS 3'],
+        items: ['JHS FORM 1', 'JHS FORM 2', 'JHS FORM 3', 'SHS FORM 1', 'SHS FORM 2', 'SHS FORM 3'],
         onChanged: (value) {
           setState(() {
             selectedGrade = value;
@@ -809,7 +809,7 @@ class _SignUpPageState extends State<SignUpPage> {
         label: 'Grade/Class You Teach',
         hint: 'Select grade you teach',
         icon: Icons.class_outlined,
-        items: ['JHS 1', 'JHS 2', 'JHS 3', 'SHS 1', 'SHS 2', 'SHS 3'],
+        items: ['JHS FORM 1', 'JHS FORM 2', 'JHS FORM 3', 'SHS FORM 1', 'SHS FORM 2', 'SHS FORM 3'],
         onChanged: (value) {
           setState(() {
             if (value != null) {
@@ -1528,7 +1528,7 @@ class _SignUpPageState extends State<SignUpPage> {
           email: emailController.text.trim(),
           phoneNumber: phoneController.text.trim(),
           schoolName: teacherSchoolController.text.trim(),
-          teachingGrade: selectedTeachingClasses.isNotEmpty ? selectedTeachingClasses.first : null,
+          teachingClass: selectedTeachingClasses.isNotEmpty ? selectedTeachingClasses.first : 'JHS FORM 1',
           institutionCode: teacherInstitutionCodeController.text.trim(),
         );
         break;

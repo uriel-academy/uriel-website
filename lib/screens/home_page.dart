@@ -24,6 +24,7 @@ import 'trivia_categories_page.dart';
 import 'notes_page.dart';
 import 'students_page.dart';
 import 'student_profile_page.dart';
+import 'teacher_profile_page.dart';
 import 'redesigned_leaderboard_page.dart';
 import 'uri_page.dart';
 import 'package:uuid/uuid.dart';
@@ -180,7 +181,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               debugPrint('  profileImageUrl: ${data['profileImageUrl']}');
               setState(() {
                 userName = data['firstName'] ?? user.displayName?.split(' ').first ?? _getNameFromEmail(user.email);
-                userClass = data['class'] ?? 'JHS Form 3';
+                final rawClass = data['class'] ?? 'JHS FORM 3';
+                final isTeacher = widget.isTeacher || data['role'] == 'teacher';
+                userClass = isTeacher ? '$rawClass TEACHER' : rawClass;
                 userPhotoUrl = data['profileImageUrl'] ?? user.photoURL;
                 userPresetAvatar = data['presetAvatar'];
               });
@@ -257,14 +260,17 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           final data = userDoc.data() as Map<String, dynamic>;
           setState(() {
             userName = data['firstName'] ?? user.displayName?.split(' ').first ?? _getNameFromEmail(user.email);
-            userClass = data['class'] ?? 'JHS Form 3';
+            final rawClass = data['class'] ?? 'JHS FORM 3';
+            final isTeacher = widget.isTeacher || data['role'] == 'teacher';
+            userClass = isTeacher ? '$rawClass TEACHER' : rawClass;
             userPhotoUrl = data['profileImageUrl'] ?? user.photoURL;
             userPresetAvatar = data['presetAvatar'];
           });
         } else {
           setState(() {
             userName = user.displayName?.split(' ').first ?? _getNameFromEmail(user.email);
-            userClass = 'JHS Form 3';
+            final rawClass = 'JHS FORM 3';
+            userClass = widget.isTeacher ? '$rawClass TEACHER' : rawClass;
           });
         }
       } catch (e) {
@@ -1995,7 +2001,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                           // Mobile Content
                           Expanded(
                             child: _showingProfile 
-                                ? const StudentProfilePage()
+                                ? (widget.isTeacher ? const TeacherProfilePage() : const StudentProfilePage())
                                       : IndexedStack(
                                           index: _selectedIndex,
                                           children: _homeChildren(),
@@ -2018,7 +2024,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                                 // Desktop Content Area
                                 Expanded(
                                   child: _showingProfile 
-                                      ? const StudentProfilePage()
+                                      ? (widget.isTeacher ? const TeacherProfilePage() : const StudentProfilePage())
                                       : IndexedStack(
                                           index: _selectedIndex,
                                           children: _homeChildren(),
@@ -2041,11 +2047,12 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   return const SizedBox.shrink();
                 },
               ),
-              // Collapsible URI chat sidebar (far right)
-              Visibility(
-                visible: _selectedIndex != _uriIndex(), // Hide on Uri page
-                child: UriChat(key: _uriChatKey, userName: userName),
-              ),
+              // Collapsible URI chat sidebar (far right) - Only for students
+              if (!widget.isTeacher)
+                Visibility(
+                  visible: _selectedIndex != _uriIndex(), // Hide on Uri page
+                  child: UriChat(key: _uriChatKey, userName: userName),
+                ),
             ],
           ),
           
@@ -2776,7 +2783,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             String normalizeSchoolClassDart(String raw) {
               if (raw.isEmpty) return '';
               var s = raw.toLowerCase();
-              s = s.replaceAll(RegExp(r"\b(school|college|high school|senior high school|senior|basic|primary|jhs|shs|the)\b"), ' ');
+              s = s.replaceAll(RegExp(r"\b(school|college|high school|senior high school|senior|basic|primary|jhs|shs|form|the)\b"), ' ');
               s = s.replaceAll(RegExp(r'[^a-z0-9\s]'), ' ');
               s = s.replaceAll(RegExp(r'\s+'), ' ').trim();
               if (s.isEmpty) return '';
@@ -2785,7 +2792,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
 
             final normSchool = normalizeSchoolClassDart(school.toString());
             final normGrade = normalizeSchoolClassDart(grade.toString());
-            final classId = '${normSchool}_${normGrade}';
+            final classId = '${normSchool}_$normGrade';
 
             final classDocSnap = await FirebaseFirestore.instance.collection('classAggregates').doc(classId).get();
             final classData = classDocSnap.exists ? (classDocSnap.data() ?? <String, dynamic>{}) : <String, dynamic>{};
@@ -2798,7 +2805,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                 .orderBy('totalXP', descending: true)
                 .limit(5)
                 .get();
-            final top = topQuery.docs.map((d) => d.data() as Map<String, dynamic>).toList();
+            final top = topQuery.docs.map((d) => d.data()).toList();
 
             return {
               'classData': classData,
@@ -2826,7 +2833,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                 children: [
                   Text('Class Overview — $grade • $school', style: GoogleFonts.playfairDisplay(fontSize: isSmallScreen ? 20 : 26, fontWeight: FontWeight.bold)),
                   const SizedBox(height: 12),
-                  Text('Averages across $totalStudents students in your class', style: GoogleFonts.montserrat(color: Colors.grey[700])),
+                  Text('Averages across ${totalStudents == 1 ? '1 student' : '$totalStudents students'} in your class', style: GoogleFonts.montserrat(color: Colors.grey[700])),
                   const SizedBox(height: 16),
                   // Eight performance area cards (some metrics computed from classAggregates)
                   Builder(builder: (context) {
