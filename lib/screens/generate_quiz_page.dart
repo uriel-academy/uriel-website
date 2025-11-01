@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/services.dart';
-import 'package:cloud_functions/cloud_functions.dart';
 import '../models/question_model.dart';
 import '../services/question_service.dart';
 
@@ -19,14 +18,6 @@ class _GenerateQuizPageState extends State<GenerateQuizPage> {
   Subject? _selectedSubject;
   int _selectedQuestionCount = 10;
   bool _isGenerating = false;
-  bool _useAIGeneration = false;
-  final TextEditingController _customTopicController = TextEditingController();
-
-  @override
-  void dispose() {
-    _customTopicController.dispose();
-    super.dispose();
-  }
 
   final List<ExamType> _availableExamTypes = [ExamType.bece, ExamType.wassce];
   final List<Subject> _availableSubjects = [Subject.ict, Subject.religiousMoralEducation];
@@ -56,121 +47,7 @@ class _GenerateQuizPageState extends State<GenerateQuizPage> {
                 isSmallScreen: isSmall,
               ),
 
-              const SizedBox(height: 20),
-
-              // AI Generation Toggle
-              Container(
-                padding: EdgeInsets.all(isSmall ? 16 : 20),
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [
-                      Colors.purple.shade50,
-                      Colors.deepPurple.shade50,
-                    ],
-                  ),
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: Colors.purple.shade200),
-                ),
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        Container(
-                          padding: const EdgeInsets.all(10),
-                          decoration: BoxDecoration(
-                            color: _useAIGeneration ? Colors.purple : Colors.grey.shade300,
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Icon(
-                            Icons.auto_awesome,
-                            color: _useAIGeneration ? Colors.white : Colors.grey.shade600,
-                            size: 24,
-                          ),
-                        ),
-                        const SizedBox(width: 16),
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'AI-Generated Questions',
-                                style: GoogleFonts.montserrat(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w600,
-                                  color: Colors.black87,
-                                ),
-                              ),
-                              const SizedBox(height: 4),
-                              Text(
-                                _useAIGeneration 
-                                    ? 'Questions will be created by AI based on your criteria'
-                                    : 'Questions will be selected from the question bank',
-                                style: GoogleFonts.montserrat(
-                                  fontSize: 13,
-                                  color: Colors.grey[600],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Switch(
-                          value: _useAIGeneration,
-                          onChanged: (value) {
-                            setState(() {
-                              _useAIGeneration = value;
-                            });
-                          },
-                          activeColor: Colors.purple,
-                        ),
-                      ],
-                    ),
-                    
-                    // Custom topic input when AI mode is enabled
-                    if (_useAIGeneration) ...[
-                      const SizedBox(height: 16),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Custom Topic (Optional)',
-                            style: GoogleFonts.montserrat(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.grey[700],
-                            ),
-                          ),
-                          const SizedBox(height: 8),
-                          TextField(
-                            controller: _customTopicController,
-                            decoration: InputDecoration(
-                              hintText: 'e.g., Photosynthesis in plants, Quadratic equations, Computer networks',
-                              hintStyle: GoogleFonts.montserrat(fontSize: 13, color: Colors.grey[400]),
-                              filled: true,
-                              fillColor: Colors.white,
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10),
-                                borderSide: BorderSide(color: Colors.grey[300]!),
-                              ),
-                              enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10),
-                                borderSide: BorderSide(color: Colors.grey[300]!),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10),
-                                borderSide: const BorderSide(color: Colors.purple, width: 2),
-                              ),
-                              contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-                            ),
-                            maxLines: 2,
-                          ),
-                        ],
-                      ),
-                    ],
-                  ],
-                ),
-              ),
-
-              const SizedBox(height: 20),
+              SizedBox(height: isSmall ? 20 : 28),
 
               Container(
                 width: double.infinity,
@@ -196,7 +73,7 @@ class _GenerateQuizPageState extends State<GenerateQuizPage> {
                               const CircularProgressIndicator(color: Color(0xFFD62828)),
                               const SizedBox(height: 12),
                               Text(
-                                _useAIGeneration ? 'AI is generating questions...' : 'Loading questions...',
+                                'Loading questions...',
                                 style: GoogleFonts.montserrat(color: Colors.grey[600]),
                               ),
                             ],
@@ -204,24 +81,15 @@ class _GenerateQuizPageState extends State<GenerateQuizPage> {
                         : ElevatedButton(
                             onPressed: _generateAndShowQuestions,
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: _useAIGeneration ? Colors.purple : const Color(0xFF2ECC71),
+                              backgroundColor: const Color(0xFF2ECC71),
                               foregroundColor: Colors.white,
                               padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
                               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                               minimumSize: const Size(double.infinity, 50),
                             ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                if (_useAIGeneration) ...[
-                                  const Icon(Icons.auto_awesome, size: 20),
-                                  const SizedBox(width: 8),
-                                ],
-                                Text(
-                                  _useAIGeneration ? 'Generate with AI' : 'Generate Quiz',
-                                  style: GoogleFonts.montserrat(fontSize: 16, fontWeight: FontWeight.w600),
-                                ),
-                              ],
+                            child: Text(
+                              'Generate Quiz',
+                              style: GoogleFonts.montserrat(fontSize: 16, fontWeight: FontWeight.w600),
                             ),
                           ),
                   ],
@@ -296,80 +164,17 @@ class _GenerateQuizPageState extends State<GenerateQuizPage> {
 
     setState(() => _isGenerating = true);
     try {
-      List<Question> selected;
-
-      if (_useAIGeneration) {
-        // AI Generation Mode
-        final functions = FirebaseFunctions.instanceFor(region: 'us-central1');
-        final callable = functions.httpsCallable('generateAIQuiz');
-        
-        final subjectName = _getSubjectDisplayName(_selectedSubject!);
-        final examTypeName = _selectedExamType!.name.toUpperCase();
-        final customTopic = _customTopicController.text.trim();
-        
-        final result = await callable.call({
-          'subject': subjectName,
-          'examType': examTypeName,
-          'numQuestions': _selectedQuestionCount,
-          'customTopic': customTopic.isEmpty ? null : customTopic,
-        });
-
-        if (!mounted) return;
-
-        final data = result.data as Map<String, dynamic>;
-        final questionsData = List<Map<String, dynamic>>.from(data['questions'] as List);
-        
-        // Convert AI questions to Question model format
-        selected = questionsData.map((q) {
-          final index = questionsData.indexOf(q);
-          return Question(
-            id: 'ai_${DateTime.now().millisecondsSinceEpoch}_$index',
-            questionText: q['question'] as String,
-            type: QuestionType.multipleChoice,
-            subject: _selectedSubject!,
-            examType: _selectedExamType!,
-            year: 'AI-Generated',
-            section: 'AI',
-            questionNumber: index + 1,
-            options: List<String>.from(q['options'].values),
-            correctAnswer: q['correctAnswer'] as String,
-            explanation: q['explanation'] as String? ?? '',
-            marks: 1,
-            difficulty: q['difficulty'] as String? ?? 'medium',
-            topics: customTopic.isEmpty ? ['General'] : [customTopic],
-            createdAt: DateTime.now(),
-            createdBy: 'AI',
-            isActive: true,
-          );
-        }).toList();
-
-        // Show AI success message
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Row(
-              children: [
-                const Icon(Icons.auto_awesome, color: Colors.white, size: 20),
-                const SizedBox(width: 8),
-                Text('✨ AI generated ${selected.length} questions successfully!'),
-              ],
-            ),
-            backgroundColor: Colors.purple,
-            duration: const Duration(seconds: 3),
-          ),
-        );
-      } else {
-        // Question Bank Mode
-        final all = await _questionService.getQuestionsByFilters(examType: _selectedExamType, subject: _selectedSubject, limit: 500, activeOnly: true);
-        if (!mounted) return;
-        if (all.isEmpty) {
-          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('No questions available for selection'), backgroundColor: Color(0xFFD62828)));
-          return;
-        }
-
-        // shuffle and take desired count
-        final list = List<Question>.from(all)..shuffle();
-        selected = list.take(_selectedQuestionCount.clamp(1, all.length)).toList();
+      // Question Bank Mode
+      final all = await _questionService.getQuestionsByFilters(examType: _selectedExamType, subject: _selectedSubject, limit: 500, activeOnly: true);
+      if (!mounted) return;
+      if (all.isEmpty) {
+        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('No questions available for selection'), backgroundColor: Color(0xFFD62828)));
+        return;
       }
+
+      // shuffle and take desired count
+      final list = List<Question>.from(all)..shuffle();
+      final selected = list.take(_selectedQuestionCount.clamp(1, all.length)).toList();
 
       // Build copyable strings
       final buffer = StringBuffer();
@@ -410,35 +215,6 @@ class _GenerateQuizPageState extends State<GenerateQuizPage> {
                     },
                   )
                 ]),
-                if (_useAIGeneration) ...[
-                  const SizedBox(height: 8),
-                  Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [Colors.purple.shade400, Colors.purple.shade600],
-                      ),
-                      borderRadius: BorderRadius.circular(6),
-                    ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        const Icon(Icons.auto_awesome, color: Colors.white, size: 16),
-                        const SizedBox(width: 6),
-                        Text(
-                          _customTopicController.text.trim().isEmpty
-                              ? 'AI Generated'
-                              : 'AI: ${_customTopicController.text.trim()}',
-                          style: GoogleFonts.montserrat(
-                            color: Colors.white,
-                            fontSize: 12,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
               ],
             ),
             content: SizedBox(
