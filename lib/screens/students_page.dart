@@ -572,6 +572,33 @@ class _StudentsPageState extends State<StudentsPage> {
                     ),
                   ],
                 ),
+                
+                const SizedBox(height: 24),
+                
+                // NEW: Overall Performance
+                _buildOverallPerformance(selectedId),
+                
+                const SizedBox(height: 20),
+                
+                // NEW: Subject Mastery
+                _buildSubjectMastery(selectedId),
+                
+                const SizedBox(height: 20),
+                
+                // NEW: BECE Past Questions Performance
+                _buildBecePastQuestions(selectedId),
+                
+                const SizedBox(height: 20),
+                
+                // NEW: Trivia Performance
+                _buildTriviaPerformance(selectedId),
+                
+                const SizedBox(height: 20),
+                
+                // NEW: Study Time by Subjects
+                _buildStudyTimeBySubjects(selectedId),
+                
+                const SizedBox(height: 20),
                 // Recent quizzes
                 Text('Recent Quizzes', style: GoogleFonts.playfairDisplay(fontSize: 16, fontWeight: FontWeight.bold)),
                 const SizedBox(height: 12),
@@ -776,6 +803,756 @@ class _StudentsPageState extends State<StudentsPage> {
               fontSize: 20,
               fontWeight: FontWeight.bold,
               color: color,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // NEW: Overall Performance Section
+  Widget _buildOverallPerformance(String userId) {
+    return FutureBuilder<QuerySnapshot>(
+      future: FirebaseFirestore.instance
+          .collection('quizzes')
+          .where('userId', isEqualTo: userId)
+          .orderBy('completedAt', descending: true)
+          .get(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Center(child: CircularProgressIndicator());
+        }
+
+        if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
+          return _buildSectionCard(
+            'Overall Performance',
+            Icons.analytics,
+            Colors.purple,
+            const Text('No performance data available', style: TextStyle(color: Colors.grey)),
+          );
+        }
+
+        final quizzes = snapshot.data!.docs;
+        final scores = quizzes.map((doc) {
+          final data = doc.data() as Map<String, dynamic>;
+          return (data['percentage'] ?? 0).toDouble();
+        }).toList();
+
+        final avgScore = scores.isEmpty ? 0.0 : scores.reduce((a, b) => a + b) / scores.length;
+        final excellent = scores.where((s) => s >= 80).length;
+        final good = scores.where((s) => s >= 60 && s < 80).length;
+        final needsImprovement = scores.where((s) => s < 60).length;
+
+        // Calculate trend (last 5 vs previous 5)
+        String trend = 'Stable';
+        Color trendColor = Colors.orange;
+        IconData trendIcon = Icons.trending_flat;
+        
+        if (scores.length >= 10) {
+          final recent5 = scores.sublist(0, 5).reduce((a, b) => a + b) / 5;
+          final previous5 = scores.sublist(5, 10).reduce((a, b) => a + b) / 5;
+          if (recent5 > previous5 + 5) {
+            trend = 'Improving';
+            trendColor = Colors.green;
+            trendIcon = Icons.trending_up;
+          } else if (recent5 < previous5 - 5) {
+            trend = 'Declining';
+            trendColor = Colors.red;
+            trendIcon = Icons.trending_down;
+          }
+        }
+
+        return _buildSectionCard(
+          'Overall Performance',
+          Icons.analytics,
+          Colors.purple,
+          Column(
+            children: [
+              Row(
+                children: [
+                  Expanded(
+                    child: _buildPerformanceStat('Average Score', '${avgScore.toStringAsFixed(1)}%', Colors.purple),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: _buildPerformanceStat('Total Quizzes', '${quizzes.length}', Colors.blue),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 12),
+              Container(
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: trendColor.withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(8),
+                  border: Border.all(color: trendColor.withOpacity(0.3)),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(trendIcon, color: trendColor, size: 20),
+                    const SizedBox(width: 8),
+                    Text(
+                      'Trend: $trend',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        color: trendColor,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 12),
+              Row(
+                children: [
+                  Expanded(
+                    child: _buildPerformanceDistribution('Excellent (≥80%)', excellent, Colors.green),
+                  ),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: _buildPerformanceDistribution('Good (60-79%)', good, Colors.orange),
+                  ),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: _buildPerformanceDistribution('Needs Work (<60%)', needsImprovement, Colors.red),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+  // NEW: Subject Mastery Section
+  Widget _buildSubjectMastery(String userId) {
+    return FutureBuilder<QuerySnapshot>(
+      future: FirebaseFirestore.instance
+          .collection('quizzes')
+          .where('userId', isEqualTo: userId)
+          .get(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Center(child: CircularProgressIndicator());
+        }
+
+        if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
+          return _buildSectionCard(
+            'Subject Mastery',
+            Icons.school,
+            const Color(0xFFD62828),
+            const Text('No subject data available', style: TextStyle(color: Colors.grey)),
+          );
+        }
+
+        final Map<String, List<double>> subjectScores = {};
+        final Map<String, int> subjectAttempts = {};
+
+        for (var doc in snapshot.data!.docs) {
+          final data = doc.data() as Map<String, dynamic>;
+          final subject = data['subject']?.toString() ?? 'Unknown';
+          final percentage = (data['percentage'] ?? 0).toDouble();
+
+          if (!subjectScores.containsKey(subject)) {
+            subjectScores[subject] = [];
+            subjectAttempts[subject] = 0;
+          }
+          subjectScores[subject]!.add(percentage);
+          subjectAttempts[subject] = subjectAttempts[subject]! + 1;
+        }
+
+        final sortedSubjects = subjectScores.keys.toList()
+          ..sort((a, b) {
+            final avgA = subjectScores[a]!.reduce((a, b) => a + b) / subjectScores[a]!.length;
+            final avgB = subjectScores[b]!.reduce((a, b) => a + b) / subjectScores[b]!.length;
+            return avgB.compareTo(avgA);
+          });
+
+        return _buildSectionCard(
+          'Subject Mastery',
+          Icons.school,
+          const Color(0xFFD62828),
+          Column(
+            children: sortedSubjects.map((subject) {
+              final scores = subjectScores[subject]!;
+              final average = scores.reduce((a, b) => a + b) / scores.length;
+              final attempts = subjectAttempts[subject]!;
+              final masteryLevel = average >= 80 ? 'Mastered' : average >= 60 ? 'Proficient' : 'Developing';
+              final masteryColor = average >= 80 ? Colors.green : average >= 60 ? Colors.orange : Colors.red;
+
+              return Padding(
+                padding: const EdgeInsets.only(bottom: 12),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                          child: Text(
+                            subject,
+                            style: GoogleFonts.montserrat(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.black87,
+                            ),
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                          decoration: BoxDecoration(
+                            color: masteryColor.withOpacity(0.1),
+                            borderRadius: BorderRadius.circular(12),
+                            border: Border.all(color: masteryColor.withOpacity(0.3)),
+                          ),
+                          child: Text(
+                            masteryLevel,
+                            style: GoogleFonts.montserrat(
+                              fontSize: 11,
+                              fontWeight: FontWeight.w600,
+                              color: masteryColor,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 4),
+                    Row(
+                      children: [
+                        Text(
+                          '${average.toStringAsFixed(1)}%',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w600,
+                            color: masteryColor,
+                          ),
+                        ),
+                        const SizedBox(width: 8),
+                        Text(
+                          '($attempts attempt${attempts > 1 ? 's' : ''})',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 12,
+                            color: Colors.grey[600],
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 6),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(4),
+                      child: LinearProgressIndicator(
+                        value: average / 100,
+                        minHeight: 8,
+                        backgroundColor: Colors.grey[200],
+                        valueColor: AlwaysStoppedAnimation<Color>(masteryColor),
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            }).toList(),
+          ),
+        );
+      },
+    );
+  }
+
+  // NEW: BECE Past Questions Performance
+  Widget _buildBecePastQuestions(String userId) {
+    return FutureBuilder<QuerySnapshot>(
+      future: FirebaseFirestore.instance
+          .collection('quizzes')
+          .where('userId', isEqualTo: userId)
+          .get(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Center(child: CircularProgressIndicator());
+        }
+
+        if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
+          return _buildSectionCard(
+            'BECE Past Questions',
+            Icons.history_edu,
+            Colors.indigo,
+            const Text('No BECE data available', style: TextStyle(color: Colors.grey)),
+          );
+        }
+
+        // Filter BECE quizzes
+        final beceQuizzes = snapshot.data!.docs.where((doc) {
+          final data = doc.data() as Map<String, dynamic>;
+          final subject = (data['subject'] ?? '').toString().toLowerCase();
+          final collectionName = (data['collectionName'] ?? '').toString().toLowerCase();
+          return subject.contains('bece') || subject.contains('past') || 
+                 collectionName.contains('bece') || collectionName.contains('past');
+        }).toList();
+
+        if (beceQuizzes.isEmpty) {
+          return _buildSectionCard(
+            'BECE Past Questions',
+            Icons.history_edu,
+            Colors.indigo,
+            const Text('No BECE questions attempted yet', style: TextStyle(color: Colors.grey)),
+          );
+        }
+
+        final scores = beceQuizzes.map((doc) {
+          final data = doc.data() as Map<String, dynamic>;
+          return (data['percentage'] ?? 0).toDouble();
+        }).toList();
+
+        final avgScore = scores.reduce((a, b) => a + b) / scores.length;
+        final totalQuestions = beceQuizzes.fold<int>(0, (sum, doc) {
+          final data = doc.data() as Map<String, dynamic>;
+          return sum + ((data['totalQuestions'] ?? 0) as int);
+        });
+
+        // Subject breakdown for BECE
+        final Map<String, List<double>> beceSubjects = {};
+        for (var doc in beceQuizzes) {
+          final data = doc.data() as Map<String, dynamic>;
+          final subject = data['subject']?.toString() ?? 'General';
+          final percentage = (data['percentage'] ?? 0).toDouble();
+
+          if (!beceSubjects.containsKey(subject)) {
+            beceSubjects[subject] = [];
+          }
+          beceSubjects[subject]!.add(percentage);
+        }
+
+        return _buildSectionCard(
+          'BECE Past Questions',
+          Icons.history_edu,
+          Colors.indigo,
+          Column(
+            children: [
+              Row(
+                children: [
+                  Expanded(
+                    child: _buildPerformanceStat('Average Score', '${avgScore.toStringAsFixed(1)}%', Colors.indigo),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: _buildPerformanceStat('Questions Solved', '$totalQuestions', Colors.blue),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 12),
+              Row(
+                children: [
+                  Expanded(
+                    child: _buildPerformanceStat('Quizzes Taken', '${beceQuizzes.length}', Colors.purple),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: _buildPerformanceStat('Subjects', '${beceSubjects.length}', Colors.orange),
+                  ),
+                ],
+              ),
+              if (beceSubjects.isNotEmpty) ...[
+                const SizedBox(height: 16),
+                ...beceSubjects.entries.map((entry) {
+                  final subjectAvg = entry.value.reduce((a, b) => a + b) / entry.value.length;
+                  return Padding(
+                    padding: const EdgeInsets.only(bottom: 8),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          entry.key,
+                          style: GoogleFonts.montserrat(fontSize: 13, color: Colors.black87),
+                        ),
+                        Text(
+                          '${subjectAvg.toStringAsFixed(1)}%',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w600,
+                            color: subjectAvg >= 60 ? Colors.green : Colors.red,
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
+                }).toList(),
+              ],
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+  // NEW: Trivia Performance
+  Widget _buildTriviaPerformance(String userId) {
+    return FutureBuilder<QuerySnapshot>(
+      future: FirebaseFirestore.instance
+          .collection('quizzes')
+          .where('userId', isEqualTo: userId)
+          .get(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Center(child: CircularProgressIndicator());
+        }
+
+        if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
+          return _buildSectionCard(
+            'Trivia Performance',
+            Icons.lightbulb,
+            Colors.amber,
+            const Text('No trivia data available', style: TextStyle(color: Colors.grey)),
+          );
+        }
+
+        // Filter trivia quizzes
+        final triviaQuizzes = snapshot.data!.docs.where((doc) {
+          final data = doc.data() as Map<String, dynamic>;
+          final subject = (data['subject'] ?? '').toString().toLowerCase();
+          final collectionName = (data['collectionName'] ?? '').toString().toLowerCase();
+          return subject.contains('trivia') || collectionName.contains('trivia');
+        }).toList();
+
+        if (triviaQuizzes.isEmpty) {
+          return _buildSectionCard(
+            'Trivia Performance',
+            Icons.lightbulb,
+            Colors.amber,
+            const Text('No trivia attempted yet', style: TextStyle(color: Colors.grey)),
+          );
+        }
+
+        final scores = triviaQuizzes.map((doc) {
+          final data = doc.data() as Map<String, dynamic>;
+          return (data['percentage'] ?? 0).toDouble();
+        }).toList();
+
+        final avgScore = scores.reduce((a, b) => a + b) / scores.length;
+        final bestScore = scores.reduce((a, b) => a > b ? a : b);
+        final totalQuestions = triviaQuizzes.fold<int>(0, (sum, doc) {
+          final data = doc.data() as Map<String, dynamic>;
+          return sum + ((data['totalQuestions'] ?? 0) as int);
+        });
+
+        // Calculate win rate (>= 70%)
+        final wins = scores.where((s) => s >= 70).length;
+        final winRate = (wins / scores.length) * 100;
+
+        return _buildSectionCard(
+          'Trivia Performance',
+          Icons.lightbulb,
+          Colors.amber,
+          Column(
+            children: [
+              Row(
+                children: [
+                  Expanded(
+                    child: _buildPerformanceStat('Average Score', '${avgScore.toStringAsFixed(1)}%', Colors.amber),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: _buildPerformanceStat('Best Score', '${bestScore.toStringAsFixed(1)}%', Colors.green),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 12),
+              Row(
+                children: [
+                  Expanded(
+                    child: _buildPerformanceStat('Quizzes Played', '${triviaQuizzes.length}', Colors.purple),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: _buildPerformanceStat('Win Rate', '${winRate.toStringAsFixed(0)}%', Colors.blue),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 12),
+              Container(
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [Colors.amber.withOpacity(0.2), Colors.orange.withOpacity(0.2)],
+                  ),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Icon(Icons.emoji_events, color: Colors.amber, size: 20),
+                    const SizedBox(width: 8),
+                    Text(
+                      '$totalQuestions Total Questions Answered',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 13,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.black87,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+  // NEW: Study Time by Subjects
+  Widget _buildStudyTimeBySubjects(String userId) {
+    return FutureBuilder<QuerySnapshot>(
+      future: FirebaseFirestore.instance
+          .collection('quizzes')
+          .where('userId', isEqualTo: userId)
+          .orderBy('completedAt', descending: true)
+          .get(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Center(child: CircularProgressIndicator());
+        }
+
+        if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
+          return _buildSectionCard(
+            'Study Time by Subjects',
+            Icons.access_time,
+            Colors.teal,
+            const Text('No study time data available', style: TextStyle(color: Colors.grey)),
+          );
+        }
+
+        // Calculate study time per subject (estimate based on questions and timestamps)
+        final Map<String, Duration> subjectTime = {};
+        final Map<String, int> subjectSessions = {};
+
+        for (var doc in snapshot.data!.docs) {
+          final data = doc.data() as Map<String, dynamic>;
+          final subject = data['subject']?.toString() ?? 'Unknown';
+          final totalQuestions = (data['totalQuestions'] ?? 0) as int;
+          
+          // Estimate: ~30 seconds per question
+          final estimatedMinutes = (totalQuestions * 0.5).round();
+          final duration = Duration(minutes: estimatedMinutes);
+
+          if (!subjectTime.containsKey(subject)) {
+            subjectTime[subject] = Duration.zero;
+            subjectSessions[subject] = 0;
+          }
+          subjectTime[subject] = subjectTime[subject]! + duration;
+          subjectSessions[subject] = subjectSessions[subject]! + 1;
+        }
+
+        final totalMinutes = subjectTime.values.fold<int>(0, (sum, duration) => sum + duration.inMinutes);
+        final sortedSubjects = subjectTime.keys.toList()
+          ..sort((a, b) => subjectTime[b]!.inMinutes.compareTo(subjectTime[a]!.inMinutes));
+
+        return _buildSectionCard(
+          'Study Time by Subjects',
+          Icons.access_time,
+          Colors.teal,
+          Column(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [Colors.teal.withOpacity(0.2), Colors.cyan.withOpacity(0.2)],
+                  ),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Icon(Icons.timer, color: Colors.teal, size: 24),
+                    const SizedBox(width: 8),
+                    Text(
+                      'Total: ${_formatDuration(Duration(minutes: totalMinutes))}',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.teal,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 16),
+              ...sortedSubjects.take(10).map((subject) {
+                final duration = subjectTime[subject]!;
+                final sessions = subjectSessions[subject]!;
+                final percentage = (duration.inMinutes / totalMinutes) * 100;
+
+                return Padding(
+                  padding: const EdgeInsets.only(bottom: 12),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Expanded(
+                            child: Text(
+                              subject,
+                              style: GoogleFonts.montserrat(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.black87,
+                              ),
+                            ),
+                          ),
+                          Text(
+                            _formatDuration(duration),
+                            style: GoogleFonts.montserrat(
+                              fontSize: 13,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.teal,
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 4),
+                      Text(
+                        '$sessions session${sessions > 1 ? 's' : ''} • ${percentage.toStringAsFixed(0)}% of total time',
+                        style: GoogleFonts.montserrat(
+                          fontSize: 11,
+                          color: Colors.grey[600],
+                        ),
+                      ),
+                      const SizedBox(height: 6),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(4),
+                        child: LinearProgressIndicator(
+                          value: percentage / 100,
+                          minHeight: 6,
+                          backgroundColor: Colors.grey[200],
+                          valueColor: const AlwaysStoppedAnimation<Color>(Colors.teal),
+                        ),
+                      ),
+                    ],
+                  ),
+                );
+              }).toList(),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+  // Helper: Format duration
+  String _formatDuration(Duration duration) {
+    if (duration.inHours > 0) {
+      return '${duration.inHours}h ${duration.inMinutes % 60}m';
+    }
+    return '${duration.inMinutes}m';
+  }
+
+  // Helper: Section card wrapper
+  Widget _buildSectionCard(String title, IconData icon, Color color, Widget content) {
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: Colors.grey[300]!),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            padding: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [color.withOpacity(0.1), color.withOpacity(0.05)],
+              ),
+              borderRadius: const BorderRadius.only(
+                topLeft: Radius.circular(12),
+                topRight: Radius.circular(12),
+              ),
+            ),
+            child: Row(
+              children: [
+                Icon(icon, color: color, size: 22),
+                const SizedBox(width: 10),
+                Text(
+                  title,
+                  style: GoogleFonts.montserrat(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black87,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(16),
+            child: content,
+          ),
+        ],
+      ),
+    );
+  }
+
+  // Helper: Performance stat card
+  Widget _buildPerformanceStat(String label, String value, Color color) {
+    return Container(
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: color.withOpacity(0.1),
+        borderRadius: BorderRadius.circular(8),
+        border: Border.all(color: color.withOpacity(0.3)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            label,
+            style: GoogleFonts.montserrat(
+              fontSize: 11,
+              color: Colors.grey[700],
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+          const SizedBox(height: 4),
+          Text(
+            value,
+            style: GoogleFonts.montserrat(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+              color: color,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // Helper: Performance distribution
+  Widget _buildPerformanceDistribution(String label, int count, Color color) {
+    return Container(
+      padding: const EdgeInsets.all(8),
+      decoration: BoxDecoration(
+        color: color.withOpacity(0.1),
+        borderRadius: BorderRadius.circular(8),
+        border: Border.all(color: color.withOpacity(0.3)),
+      ),
+      child: Column(
+        children: [
+          Text(
+            '$count',
+            style: GoogleFonts.montserrat(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              color: color,
+            ),
+          ),
+          const SizedBox(height: 2),
+          Text(
+            label,
+            textAlign: TextAlign.center,
+            style: GoogleFonts.montserrat(
+              fontSize: 10,
+              color: Colors.grey[700],
             ),
           ),
         ],
