@@ -155,9 +155,44 @@ class _StudentsPageState extends State<StudentsPage> {
           if (snap.connectionState == ConnectionState.waiting) return const Center(child: CircularProgressIndicator());
 
           final page = _pageCache[_currentCursorKey] as Map<String, dynamic>?;
-          final students = (page != null ? page['students'] as List<dynamic> : <dynamic>[]);
+          final allStudents = (page != null ? page['students'] as List<dynamic> : <dynamic>[]);
+          
+          // Filter students based on search query
+          final query = _searchController.text.toLowerCase().trim();
+          final students = query.isEmpty 
+            ? allStudents 
+            : allStudents.where((s) {
+                final data = s as Map<String, dynamic>;
+                final name = (data['displayName'] ?? '').toString().toLowerCase();
+                final email = (data['email'] ?? '').toString().toLowerCase();
+                return name.contains(query) || email.contains(query);
+              }).toList();
 
-          if (students.isEmpty) return Center(child: Text('No students found', style: GoogleFonts.montserrat(color: Colors.grey[600])));
+          if (students.isEmpty) {
+            return Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.search_off, size: 64, color: Colors.grey[400]),
+                  const SizedBox(height: 16),
+                  Text(
+                    query.isEmpty ? 'No students found' : 'No students match "$query"',
+                    style: GoogleFonts.montserrat(color: Colors.grey[600], fontSize: 16),
+                  ),
+                  if (query.isNotEmpty) ...[
+                    const SizedBox(height: 8),
+                    TextButton(
+                      onPressed: () {
+                        _searchController.clear();
+                        setState(() {});
+                      },
+                      child: Text('Clear search', style: GoogleFonts.montserrat(color: const Color(0xFFD62828))),
+                    ),
+                  ],
+                ],
+              ),
+            );
+          }
 
           return LayoutBuilder(
             builder: (context, constraints) {
@@ -277,6 +312,7 @@ class _StudentsPageState extends State<StudentsPage> {
           color: Colors.grey.shade100,
           child: Row(
             children: [
+              SizedBox(width: 50, child: Text('No.', style: GoogleFonts.montserrat(fontWeight: FontWeight.w700, fontSize: 13))),
               Expanded(flex: 3, child: Text('Student', style: GoogleFonts.montserrat(fontWeight: FontWeight.w700, fontSize: 13))),
               Expanded(flex: 1, child: Text('XP', style: GoogleFonts.montserrat(fontWeight: FontWeight.w700, fontSize: 13))),
               Expanded(flex: 1, child: Text('Questions', style: GoogleFonts.montserrat(fontWeight: FontWeight.w700, fontSize: 13))),
@@ -287,7 +323,9 @@ class _StudentsPageState extends State<StudentsPage> {
           ),
         ),
             const Divider(height: 1),
-            ...students.map((s) {
+            ...students.asMap().entries.map((entry) {
+              final index = entry.key;
+              final s = entry.value;
               final data = s as Map<String, dynamic>;
               
               // Extract comprehensive data - now properly using API response
@@ -313,6 +351,13 @@ class _StudentsPageState extends State<StudentsPage> {
                   decoration: BoxDecoration(border: Border(bottom: BorderSide(color: Colors.grey.shade200))),
                   child: Row(
                     children: [
+                      SizedBox(
+                        width: 50,
+                        child: Text(
+                          '${index + 1}',
+                          style: GoogleFonts.montserrat(fontWeight: FontWeight.w600, fontSize: 13, color: Colors.grey[700]),
+                        ),
+                      ),
                       Expanded(
                         flex: 3,
                         child: Row(children: [
