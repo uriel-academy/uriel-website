@@ -69,16 +69,15 @@ class _StudentsPageState extends State<StudentsPage> {
     showDialog(
       context: context,
       barrierDismissible: true,
-      builder: (context) => Center(
-        child: Dialog(
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-          child: Container(
-            width: MediaQuery.of(context).size.width > 700 ? 700 : MediaQuery.of(context).size.width * 0.9,
-            constraints: BoxConstraints(
-              maxHeight: MediaQuery.of(context).size.height * 0.85,
-            ),
-            child: _buildStudentDetail(studentId, studentData),
+      builder: (context) => Dialog(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        insetPadding: const EdgeInsets.symmetric(horizontal: 40, vertical: 24),
+        child: ConstrainedBox(
+          constraints: BoxConstraints(
+            maxWidth: 700,
+            maxHeight: MediaQuery.of(context).size.height * 0.85,
           ),
+          child: _buildStudentDetail(studentId, studentData),
         ),
       ),
     );
@@ -271,26 +270,22 @@ class _StudentsPageState extends State<StudentsPage> {
   }
 
   Widget _buildStudentTableFromList(List<dynamic> students) {
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: ConstrainedBox(
-        constraints: BoxConstraints(minWidth: MediaQuery.of(context).size.width),
-        child: Column(
-          children: [
-            Container(
-              padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
-              color: Colors.grey.shade100,
-              child: Row(
-                children: [
-                  SizedBox(width: 280, child: Text('Student', style: GoogleFonts.montserrat(fontWeight: FontWeight.w700, fontSize: 13))),
-                  SizedBox(width: 100, child: Text('XP', style: GoogleFonts.montserrat(fontWeight: FontWeight.w700, fontSize: 13))),
-                  SizedBox(width: 120, child: Text('Questions', style: GoogleFonts.montserrat(fontWeight: FontWeight.w700, fontSize: 13))),
-                  SizedBox(width: 100, child: Text('Accuracy', style: GoogleFonts.montserrat(fontWeight: FontWeight.w700, fontSize: 13))),
-                  SizedBox(width: 110, child: Text('Subjects', style: GoogleFonts.montserrat(fontWeight: FontWeight.w700, fontSize: 13))),
-                  SizedBox(width: 110, child: Text('Rank', style: GoogleFonts.montserrat(fontWeight: FontWeight.w700, fontSize: 13))),
-                ],
-              ),
-            ),
+    return Column(
+      children: [
+        Container(
+          padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+          color: Colors.grey.shade100,
+          child: Row(
+            children: [
+              Expanded(flex: 3, child: Text('Student', style: GoogleFonts.montserrat(fontWeight: FontWeight.w700, fontSize: 13))),
+              Expanded(flex: 1, child: Text('XP', style: GoogleFonts.montserrat(fontWeight: FontWeight.w700, fontSize: 13))),
+              Expanded(flex: 1, child: Text('Questions', style: GoogleFonts.montserrat(fontWeight: FontWeight.w700, fontSize: 13))),
+              Expanded(flex: 1, child: Text('Accuracy', style: GoogleFonts.montserrat(fontWeight: FontWeight.w700, fontSize: 13))),
+              Expanded(flex: 1, child: Text('Subjects', style: GoogleFonts.montserrat(fontWeight: FontWeight.w700, fontSize: 13))),
+              Expanded(flex: 1, child: Text('Rank', style: GoogleFonts.montserrat(fontWeight: FontWeight.w700, fontSize: 13))),
+            ],
+          ),
+        ),
             const Divider(height: 1),
             ...students.map((s) {
               final data = s as Map<String, dynamic>;
@@ -318,8 +313,8 @@ class _StudentsPageState extends State<StudentsPage> {
                   decoration: BoxDecoration(border: Border(bottom: BorderSide(color: Colors.grey.shade200))),
                   child: Row(
                     children: [
-                      SizedBox(
-                        width: 280,
+                      Expanded(
+                        flex: 3,
                         child: Row(children: [
                           CircleAvatar(
                             radius: 18,
@@ -353,22 +348,22 @@ class _StudentsPageState extends State<StudentsPage> {
                           ),
                         ]),
                       ),
-                      SizedBox(
-                        width: 100, 
+                      Expanded(
+                        flex: 1,
                         child: Text(
                           xp.toString(), 
                           style: GoogleFonts.montserrat(fontWeight: FontWeight.w600, color: const Color(0xFFD62828))
                         )
                       ),
-                      SizedBox(
-                        width: 120, 
+                      Expanded(
+                        flex: 1,
                         child: Text(
                           questionsCount.toString(), 
                           style: GoogleFonts.montserrat()
                         )
                       ),
-                      SizedBox(
-                        width: 100, 
+                      Expanded(
+                        flex: 1,
                         child: Text(
                           accuracy != null ? '${accuracy.toStringAsFixed(1)}%' : '-', 
                           style: GoogleFonts.montserrat(
@@ -377,15 +372,15 @@ class _StudentsPageState extends State<StudentsPage> {
                           )
                         )
                       ),
-                      SizedBox(
-                        width: 110, 
+                      Expanded(
+                        flex: 1,
                         child: Text(
                           subjectsCount.toString(), 
                           style: GoogleFonts.montserrat()
                         )
                       ),
-                      SizedBox(
-                        width: 110, 
+                      Expanded(
+                        flex: 1,
                         child: Container(
                           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                           decoration: BoxDecoration(
@@ -407,9 +402,8 @@ class _StudentsPageState extends State<StudentsPage> {
                 ),
               );
             }).toList(),
-          ],
-        ),
-      ),
+        const Divider(height: 1),
+      ],
     );
   }
 
