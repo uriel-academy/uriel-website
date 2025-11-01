@@ -20,11 +20,12 @@
     "lint:fix": "eslint src --ext .ts --fix"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.68.0",
     "@google-cloud/secret-manager": "^3.8.0",
     "axios": "^1.6.0",
     "cors": "^2.8.5",
     "firebase-admin": "^11.11.1",
-  "firebase-functions": "^5.1.0",
+    "firebase-functions": "^5.1.0",
     "openai": "^4.104.0",
     "pdf-parse": "^2.4.3",
     "stripe": "^14.0.0",

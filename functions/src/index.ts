@@ -3228,3 +3228,6 @@ export const backfillClassPage = functions.https.onCall(async (data, context) =>
     throw new functions.https.HttpsError('internal', 'Backfill page failed');
   }
 });
+
+// Export AI Quiz Generation
+export { generateAIQuiz } from './generateAIQuiz';
