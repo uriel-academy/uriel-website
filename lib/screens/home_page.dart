@@ -2470,7 +2470,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     children.add(_buildDashboard());
     if (widget.isTeacher) {
       // Teacher tab order requested:
-      // Dashboard, Students, Generate Quiz, Notes, Uri, Books, Trivia, Leaderboard
+      // Dashboard, Students, Generate Quiz, Notes, Uri, Books, Trivia, Leaderboard, Feedback
       children.add(const StudentsPage());
       children.add(const GenerateQuizPage());
       children.add(const NotesTab());
@@ -2478,9 +2478,10 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       children.add(_buildTextbooksPage());
       children.add(_buildTriviaPage());
       children.add(const RedesignedLeaderboardPage());
+      children.add(_buildFeedbackPage());
     } else {
       // Student tab order requested:
-      // Dashboard, Questions, Revision, Books, Notes, Trivia, Leaderboard, Uri
+      // Dashboard, Questions, Revision, Books, Notes, Trivia, Leaderboard, Uri, Feedback
       children.add(_buildQuestionsPage());
       children.add(_buildRevisionPage());
       children.add(_buildTextbooksPage());
@@ -2488,6 +2489,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       children.add(_buildTriviaPage());
       children.add(const RedesignedLeaderboardPage());
       children.add(const UriPage(embedded: true));
+      children.add(_buildFeedbackPage());
     }
     return children;
   }
@@ -2501,16 +2503,17 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   // Dashboard always first (label-only tab — no icon for teacher or student)
   items.add({'index': idx++, 'label': 'Dashboard', 'icon': null});
     if (widget.isTeacher) {
-      // Teacher order: Students, Generate Quiz, Notes, Uri, Books, Trivia, Leaderboard
+      // Teacher order: Students, Generate Quiz, Notes, Talk to Uri, Books, Trivia, Leaderboard, Feedback
       items.add({'index': idx++, 'label': 'Students', 'icon': null});
       items.add({'index': idx++, 'label': 'Generate Quiz', 'icon': null});
       items.add({'index': idx++, 'label': 'Notes', 'icon': null});
-      items.add({'index': idx++, 'label': 'Uri', 'icon': null});
+      items.add({'index': idx++, 'label': 'Talk to Uri', 'icon': null});
       items.add({'index': idx++, 'label': 'Books', 'icon': null});
       items.add({'index': idx++, 'label': 'Trivia', 'icon': null});
       items.add({'index': idx++, 'label': 'Leaderboard', 'icon': null});
+      items.add({'index': idx++, 'label': 'Feedback', 'icon': null});
     } else {
-      // Student order: Questions, Revision, Books, Notes, Trivia, Leaderboard, Uri
+      // Student order: Questions, Revision, Books, Notes, Trivia, Leaderboard, Talk to Uri, Feedback
       // Render label-only tabs for students as requested (no icons)
       items.add({'index': idx++, 'label': 'Questions', 'icon': null});
       items.add({'index': idx++, 'label': 'Revision', 'icon': null});
@@ -2518,7 +2521,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       items.add({'index': idx++, 'label': 'Notes', 'icon': null});
       items.add({'index': idx++, 'label': 'Trivia', 'icon': null});
       items.add({'index': idx++, 'label': 'Leaderboard', 'icon': null});
-      items.add({'index': idx++, 'label': 'Uri', 'icon': null});
+      items.add({'index': idx++, 'label': 'Talk to Uri', 'icon': null});
+      items.add({'index': idx++, 'label': 'Feedback', 'icon': null});
     }
     return items;
   }
@@ -6913,7 +6917,6 @@ Widget _buildTextbooksPage() {
   return const TextbooksPage();
 }
 
-// ignore: unused_element
 Widget _buildFeedbackPage() {
   return const FeedbackPage();
 }
