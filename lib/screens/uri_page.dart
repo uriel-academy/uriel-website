@@ -341,7 +341,7 @@ class _UriPageState extends State<UriPage> {
                       controller: _controller,
                       textCapitalization: TextCapitalization.sentences,
                       minLines: 1,
-                      maxLines: 6,
+                      maxLines: 3,
                       decoration: InputDecoration(
                         hintText: 'Ask Uri AI...',
                         filled: true,
@@ -407,7 +407,7 @@ class _UriPageState extends State<UriPage> {
                       controller: _controller,
                       textCapitalization: TextCapitalization.sentences,
                       minLines: 1,
-                      maxLines: 4,
+                      maxLines: 2,
                       decoration: InputDecoration(
                         hintText: 'Ask Uri about a topic, question or concept...',
                         filled: true,

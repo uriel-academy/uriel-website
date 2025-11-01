@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../services/chat_service.dart';
 
@@ -222,17 +223,30 @@ class _UriChatInputState extends State<UriChatInput> {
         Row(
           children: [
             Expanded(
-              child: TextField(
-                controller: _input,
-                minLines: 1,
-                maxLines: 4,
-                decoration: const InputDecoration(
-                  hintText: 'Ask Uri anything…',
-                  border: OutlineInputBorder(borderSide: BorderSide.none),
-                  filled: true,
-                  fillColor: Colors.white,
+              child: Shortcuts(
+                shortcuts: const <ShortcutActivator, Intent>{
+                  SingleActivator(LogicalKeyboardKey.enter): ActivateIntent(),
+                },
+                child: Actions(
+                  actions: <Type, Action<Intent>>{
+                    ActivateIntent: CallbackAction(onInvoke: (intent) {
+                      _send();
+                      return null;
+                    }),
+                  },
+                  child: TextField(
+                    controller: _input,
+                    minLines: 1,
+                    maxLines: 2,
+                    decoration: const InputDecoration(
+                      hintText: 'Ask Uri anything…',
+                      border: OutlineInputBorder(borderSide: BorderSide.none),
+                      filled: true,
+                      fillColor: Colors.white,
+                    ),
+                    onSubmitted: (_) => _send(),
+                  ),
                 ),
-                onSubmitted: (_) => _send(),
               ),
             ),
             IconButton(
