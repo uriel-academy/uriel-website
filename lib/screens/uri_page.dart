@@ -403,20 +403,33 @@ class _UriPageState extends State<UriPage> {
               child: Row(
                 children: [
                   Expanded(
-                    child: TextField(
-                      controller: _controller,
-                      textCapitalization: TextCapitalization.sentences,
-                      minLines: 1,
-                      maxLines: 2,
-                      decoration: InputDecoration(
-                        hintText: 'Ask Uri about a topic, question or concept...',
-                        filled: true,
-                        fillColor: isDark ? const Color(0xFF0B1020) : Colors.white,
-                        hintStyle: GoogleFonts.montserrat(fontSize: 14, color: Colors.grey[500]),
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(28), borderSide: BorderSide.none),
-                        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                    child: Shortcuts(
+                      shortcuts: const <ShortcutActivator, Intent>{
+                        SingleActivator(LogicalKeyboardKey.enter): ActivateIntent(),
+                      },
+                      child: Actions(
+                        actions: <Type, Action<Intent>>{
+                          ActivateIntent: CallbackAction(onInvoke: (intent) {
+                            _send();
+                            return null;
+                          }),
+                        },
+                        child: TextField(
+                          controller: _controller,
+                          textCapitalization: TextCapitalization.sentences,
+                          minLines: 1,
+                          maxLines: 2,
+                          decoration: InputDecoration(
+                            hintText: 'Ask Uri about a topic, question or concept...',
+                            filled: true,
+                            fillColor: isDark ? const Color(0xFF0B1020) : Colors.white,
+                            hintStyle: GoogleFonts.montserrat(fontSize: 14, color: Colors.grey[500]),
+                            border: OutlineInputBorder(borderRadius: BorderRadius.circular(28), borderSide: BorderSide.none),
+                            contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                          ),
+                          onSubmitted: (_) => _send(),
+                        ),
                       ),
-                      onSubmitted: (_) => _send(),
                     ),
                   ),
                   const SizedBox(width: 12),

@@ -298,6 +298,19 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
       debugPrint('Saving profile for user: ${user.uid}');
       debugPrint('Data: ${_firstNameController.text}, ${_lastNameController.text}');
       
+      final newSchool = _schoolController.text.trim();
+      final newClass = _selectedClass;
+      
+      // Check if school or class changed
+      final userDoc = await FirebaseFirestore.instance
+          .collection('users')
+          .doc(user.uid)
+          .get();
+      
+      final oldSchool = userDoc.data()?['school'] ?? '';
+      final oldClass = userDoc.data()?['class'] ?? '';
+      final schoolOrClassChanged = (newSchool != oldSchool) || (newClass != oldClass);
+      
       // Update Firestore
       await FirebaseFirestore.instance
           .collection('users')
@@ -306,13 +319,18 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
         'firstName': _firstNameController.text.trim(),
         'lastName': _lastNameController.text.trim(),
         'phone': _phoneController.text.trim(),
-        'school': _schoolController.text.trim(),
-        'class': _selectedClass,
+        'school': newSchool,
+        'class': newClass,
         'profileImageUrl': _profileImageUrl,
         'updatedAt': FieldValue.serverTimestamp(),
       }, SetOptions(merge: true));
       
       debugPrint('Firestore update completed');
+      
+      // If school or class changed, find and assign teacher
+      if (schoolOrClassChanged && newSchool.isNotEmpty && newClass.isNotEmpty) {
+        await _assignTeacher(user.uid, newSchool, newClass);
+      }
       
       // Update Auth profile
       await user.updateDisplayName(
@@ -327,6 +345,69 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
     } finally {
       setState(() => _isLoading = false);
     }
+  }
+
+  Future<void> _assignTeacher(String studentUid, String school, String className) async {
+    try {
+      debugPrint('Looking for teacher with school: $school, class: $className');
+      
+      // Find a teacher with matching school and grade
+      final teachersQuery = await FirebaseFirestore.instance
+          .collection('users')
+          .where('isTeacher', isEqualTo: true)
+          .where('schoolName', isEqualTo: school)
+          .where('grade', isEqualTo: className)
+          .limit(1)
+          .get();
+      
+      if (teachersQuery.docs.isEmpty) {
+        // Try alternate field name 'school' instead of 'schoolName'
+        final altQuery = await FirebaseFirestore.instance
+            .collection('users')
+            .where('isTeacher', isEqualTo: true)
+            .where('school', isEqualTo: school)
+            .where('grade', isEqualTo: className)
+            .limit(1)
+            .get();
+        
+        if (altQuery.docs.isNotEmpty) {
+          final teacherId = altQuery.docs.first.id;
+          await _linkStudentToTeacher(studentUid, teacherId);
+          debugPrint('Student assigned to teacher: $teacherId');
+        } else {
+          debugPrint('No teacher found for school: $school, class: $className');
+        }
+      } else {
+        final teacherId = teachersQuery.docs.first.id;
+        await _linkStudentToTeacher(studentUid, teacherId);
+        debugPrint('Student assigned to teacher: $teacherId');
+      }
+    } catch (e) {
+      debugPrint('Error assigning teacher: $e');
+      // Don't show error to user, this is a background operation
+    }
+  }
+
+  Future<void> _linkStudentToTeacher(String studentUid, String teacherId) async {
+    // Update student's document with teacher reference
+    await FirebaseFirestore.instance
+        .collection('users')
+        .doc(studentUid)
+        .update({
+      'teacherId': teacherId,
+      'teacherAssignedAt': FieldValue.serverTimestamp(),
+    });
+    
+    // Add student to teacher's students collection
+    await FirebaseFirestore.instance
+        .collection('users')
+        .doc(teacherId)
+        .collection('students')
+        .doc(studentUid)
+        .set({
+      'addedAt': FieldValue.serverTimestamp(),
+      'autoAssigned': true,
+    }, SetOptions(merge: true));
   }
 
   Future<void> _changePassword() async {

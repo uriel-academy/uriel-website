@@ -29,7 +29,6 @@ import 'teacher_profile_page.dart';
 import 'redesigned_leaderboard_page.dart';
 import 'uri_page.dart';
 import 'package:uuid/uuid.dart';
-import '../widgets/uri_chat.dart';
 
 class StudentHomePage extends StatefulWidget {
   final bool isTeacher;
@@ -129,8 +128,6 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     _recordDailyActivity();
     _setupUserStream();
   }
-  // Key to control the UriChat widget (open/close programmatically)
-  final GlobalKey<dynamic> _uriChatKey = GlobalKey();
   
   void _loadUserRank() async {
     final user = FirebaseAuth.instance.currentUser;
@@ -2048,12 +2045,6 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   return const SizedBox.shrink();
                 },
               ),
-              // Collapsible URI chat sidebar (far right) - Only for students
-              if (!widget.isTeacher)
-                Visibility(
-                  visible: _selectedIndex != _uriIndex(), // Hide on Uri page
-                  child: UriChat(key: _uriChatKey, userName: userName),
-                ),
             ],
           ),
           
