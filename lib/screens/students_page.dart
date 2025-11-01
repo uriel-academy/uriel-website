@@ -214,8 +214,8 @@ class _StudentsPageState extends State<StudentsPage> {
                         const SizedBox(width: 8),
                         ElevatedButton(
                           onPressed: _nextPage,
-                          style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFFD62828)),
-                          child: Text('Next', style: GoogleFonts.montserrat()),
+                          style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF00C853)),
+                          child: Text('Next', style: GoogleFonts.montserrat(color: Colors.white)),
                         ),
                       ],
                     )
