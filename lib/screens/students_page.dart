@@ -69,14 +69,16 @@ class _StudentsPageState extends State<StudentsPage> {
     showDialog(
       context: context,
       barrierDismissible: true,
-      builder: (context) => Dialog(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-        child: Container(
-          width: MediaQuery.of(context).size.width > 700 ? 700 : MediaQuery.of(context).size.width * 0.9,
-          constraints: BoxConstraints(
-            maxHeight: MediaQuery.of(context).size.height * 0.85,
+      builder: (context) => Center(
+        child: Dialog(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+          child: Container(
+            width: MediaQuery.of(context).size.width > 700 ? 700 : MediaQuery.of(context).size.width * 0.9,
+            constraints: BoxConstraints(
+              maxHeight: MediaQuery.of(context).size.height * 0.85,
+            ),
+            child: _buildStudentDetail(studentId, studentData),
           ),
-          child: _buildStudentDetail(studentId, studentData),
         ),
       ),
     );
@@ -292,26 +294,22 @@ class _StudentsPageState extends State<StudentsPage> {
             const Divider(height: 1),
             ...students.map((s) {
               final data = s as Map<String, dynamic>;
-              final raw = data['raw'] as Map<String, dynamic>? ?? {};
               
-              // Extract comprehensive data
+              // Extract comprehensive data - now properly using API response
               final name = (data['displayName'] ?? '') as String;
               final email = (data['email'] ?? '') as String;
-              final rank = data['rank'] ?? raw['leaderboardRank'] ?? '-';
-              final xp = data['totalXP'] ?? raw['totalXP'] ?? 0;
+              final rank = data['rank'] ?? '-';
+              final xp = data['totalXP'] ?? 0;
               
-              // Get accuracy from avgPercent or calculate from totalScoreSum/totalScoreCount
+              // Get accuracy directly from API response (now calculated in Cloud Function)
               double? accuracy;
-              if (raw['avgPercent'] != null) {
-                accuracy = (raw['avgPercent'] is num) ? (raw['avgPercent'] as num).toDouble() : double.tryParse(raw['avgPercent'].toString());
-              } else if (raw['totalScoreSum'] != null && raw['totalScoreCount'] != null) {
-                final sum = (raw['totalScoreSum'] is num) ? (raw['totalScoreSum'] as num).toDouble() : 0.0;
-                final count = (raw['totalScoreCount'] is num) ? (raw['totalScoreCount'] as num).toInt() : 0;
-                if (count > 0) accuracy = sum / count;
+              if (data['avgPercent'] != null) {
+                final avgPct = data['avgPercent'];
+                accuracy = (avgPct is num) ? avgPct.toDouble() : double.tryParse(avgPct.toString());
               }
               
-              final subjectsCount = data['subjectsSolved'] ?? raw['subjectsCount'] ?? raw['subjectsSolvedCount'] ?? 0;
-              final questionsCount = data['questionsSolved'] ?? raw['questionsSolved'] ?? raw['totalQuestions'] ?? 0;
+              final subjectsCount = data['subjectsSolved'] ?? 0;
+              final questionsCount = data['questionsSolved'] ?? 0;
 
               return InkWell(
                 onTap: () => _showStudentDetailDialog(data),
@@ -422,20 +420,18 @@ class _StudentsPageState extends State<StudentsPage> {
       return Center(child: Text('Select a student to view progress', style: GoogleFonts.montserrat(color: Colors.grey[600])));
     }
 
-    final raw = selectedData['raw'] as Map<String, dynamic>? ?? {};
-
     return Column(
       children: [
         // Header with close button
         Container(
           padding: const EdgeInsets.all(20),
-          decoration: BoxDecoration(
-            gradient: const LinearGradient(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
               colors: [Color(0xFFD62828), Color(0xFFB71C1C)],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
-            borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
+            borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
           ),
           child: Row(
             children: [
@@ -501,7 +497,7 @@ class _StudentsPageState extends State<StudentsPage> {
                     Expanded(
                       child: _buildMetricCard(
                         'Questions',
-                        (selectedData['questionsSolved'] ?? raw['questionsSolved'] ?? raw['totalQuestions'] ?? 0).toString(),
+                        (selectedData['questionsSolved'] ?? 0).toString(),
                         Icons.quiz,
                         Colors.blue,
                       ),
@@ -516,14 +512,11 @@ class _StudentsPageState extends State<StudentsPage> {
                         'Accuracy',
                         () {
                           double? accuracy;
-                          if (raw['avgPercent'] != null) {
-                            accuracy = (raw['avgPercent'] is num) ? (raw['avgPercent'] as num).toDouble() : double.tryParse(raw['avgPercent'].toString());
-                          } else if (raw['totalScoreSum'] != null && raw['totalScoreCount'] != null) {
-                            final sum = (raw['totalScoreSum'] is num) ? (raw['totalScoreSum'] as num).toDouble() : 0.0;
-                            final count = (raw['totalScoreCount'] is num) ? (raw['totalScoreCount'] as num).toInt() : 0;
-                            if (count > 0) accuracy = sum / count;
+                          if (selectedData['avgPercent'] != null) {
+                            final avgPct = selectedData['avgPercent'];
+                            accuracy = (avgPct is num) ? avgPct.toDouble() : double.tryParse(avgPct.toString());
                           }
-                          return accuracy != null ? '${accuracy.toStringAsFixed(1)}%' : '-';
+                          return accuracy != null && accuracy > 0 ? '${accuracy.toStringAsFixed(1)}%' : '-';
                         }(),
                         Icons.trending_up,
                         Colors.green,
@@ -533,7 +526,7 @@ class _StudentsPageState extends State<StudentsPage> {
                     Expanded(
                       child: _buildMetricCard(
                         'Subjects',
-                        (selectedData['subjectsSolved'] ?? raw['subjectsCount'] ?? 0).toString(),
+                        (selectedData['subjectsSolved'] ?? 0).toString(),
                         Icons.library_books,
                         Colors.orange,
                       ),

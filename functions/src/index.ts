@@ -2758,20 +2758,78 @@ export const getClassAggregates = functions.https.onCall(async (data, context) =
       pageDocs = docs.slice(0, pageSize);
     }
 
-  const students = pageDocs.map((d: any) => {
+  const students = await Promise.all(pageDocs.map(async (d: any) => {
       const data = d.data() || {};
+      // Fetch additional user data for rank and other fields
+      let userRank = null;
+      let userAvatar = null;
+      let calculatedAccuracy = data.avgPercent || 0;
+      
+      try {
+        const userDoc = await db.collection('users').doc(d.id).get();
+        if (userDoc.exists) {
+          const userData = userDoc.data() || {};
+          userRank = userData.currentRankName || userData.rankName || userData.rank || null;
+          userAvatar = userData.profileImageUrl || userData.avatar || userData.presetAvatar || null;
+        }
+      } catch (err) {
+        console.warn('Failed to fetch user data for', d.id, err);
+      }
+      
+      // Calculate accuracy from quizzes if avgPercent is 0 or not available
+      if (!calculatedAccuracy || calculatedAccuracy === 0) {
+        try {
+          const quizzesSnap = await db.collection('quizzes')
+            .where('userId', '==', d.id)
+            .limit(50)
+            .get();
+          
+          if (!quizzesSnap.empty) {
+            let totalPercentage = 0;
+            let count = 0;
+            
+            quizzesSnap.docs.forEach((qDoc: any) => {
+              const qData = qDoc.data() || {};
+              let percent = null;
+              
+              if (qData.percentage !== undefined && qData.percentage !== null) {
+                percent = Number(qData.percentage) || 0;
+              } else if (qData.percent !== undefined && qData.percent !== null) {
+                percent = Number(qData.percent) || 0;
+              } else if (qData.correctAnswers !== undefined && qData.totalQuestions !== undefined) {
+                const correct = Number(qData.correctAnswers) || 0;
+                const total = Number(qData.totalQuestions) || 0;
+                if (total > 0) percent = (correct / total) * 100;
+              }
+              
+              if (percent !== null && !isNaN(percent)) {
+                totalPercentage += percent;
+                count++;
+              }
+            });
+            
+            if (count > 0) {
+              calculatedAccuracy = totalPercentage / count;
+            }
+          }
+        } catch (err) {
+          console.warn('Failed to calculate accuracy for', d.id, err);
+        }
+      }
+      
       return {
         uid: d.id,
         displayName: data.firstName && data.lastName ? `${data.firstName} ${data.lastName}` : (data.displayName || data.profile?.firstName || null),
         email: data.email || data.profile?.email || data.email || null,
-        avatar: data.avatar || data.profile?.photoUrl || null,
+        avatar: userAvatar || data.avatar || data.profile?.photoUrl || null,
         totalXP: data.totalXP || data.xp || 0,
-        rank: data.rank || data.leaderboardRank || null,
-        subjectsSolved: data.subjectsSolvedCount || data.subjectsSolved || null,
-        questionsSolved: data.questionsSolved || data.questionsSolvedCount || null,
+        rank: userRank || data.rank || data.leaderboardRank || null,
+        subjectsSolved: data.subjectsCount || data.subjectsSolvedCount || data.subjectsSolved || 0,
+        questionsSolved: data.totalQuestions || data.questionsSolved || data.questionsSolvedCount || 0,
+        avgPercent: calculatedAccuracy,
         raw: data
       };
-    });
+    }));
 
     // Compute simple aggregates over the returned page (cheap)
     const totalXP = students.reduce((s: number, it: any) => s + (it.totalXP || 0), 0);
