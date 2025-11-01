@@ -1,5 +1,5 @@
 import {onCall, HttpsError} from 'firebase-functions/v2/https';
-import Anthropic from '@anthropic-ai/sdk';
+import OpenAI from 'openai';
 
 export const generateAIQuiz = onCall(async (request) => {
   const auth = request.auth;
@@ -22,13 +22,13 @@ export const generateAIQuiz = onCall(async (request) => {
   const questionCount = Math.min(Math.max(numQuestions, 1), 40);
 
   try {
-    // Initialize Claude AI
-    const apiKey = process.env.ANTHROPIC_API_KEY;
+    // Initialize OpenAI
+    const apiKey = process.env.OPENAI_API_KEY;
     if (!apiKey) {
-      throw new Error('ANTHROPIC_API_KEY not configured');
+      throw new Error('OPENAI_API_KEY not configured');
     }
 
-    const anthropic = new Anthropic({
+    const openai = new OpenAI({
       apiKey: apiKey,
     });
 
@@ -51,64 +51,68 @@ Generate ${questionCount} multiple-choice questions following these requirements
 7. For math/science questions, use proper formatting
 8. Ensure questions are culturally relevant to Ghana
 
-Return ONLY a valid JSON array with this exact structure:
-[
-  {
-    "question": "Question text here",
-    "options": {
-      "A": "Option A text",
-      "B": "Option B text",
-      "C": "Option C text",
-      "D": "Option D text"
-    },
-    "correctAnswer": "A",
-    "explanation": "Brief explanation of why this is correct",
-    "difficulty": "${difficultyLevel}",
-    "subject": "${subject}",
-    "topic": "${customTopic || 'General'}"
-  }
-]
+Return a valid JSON object with this exact structure:
+{
+  "questions": [
+    {
+      "question": "Question text here",
+      "options": {
+        "A": "Option A text",
+        "B": "Option B text",
+        "C": "Option C text",
+        "D": "Option D text"
+      },
+      "correctAnswer": "A",
+      "explanation": "Brief explanation of why this is correct",
+      "difficulty": "${difficultyLevel}",
+      "subject": "${subject}",
+      "topic": "${customTopic || 'General'}"
+    }
+  ]
+}`;
 
-CRITICAL: Do not include any markdown formatting, code blocks, or additional text. Return ONLY the JSON array starting with [ and ending with ].`;
+    console.log('Calling OpenAI API for quiz generation...');
 
-    console.log('Calling Claude API for quiz generation...');
-
-    // Call Claude API
-    const message = await anthropic.messages.create({
-      model: 'claude-sonnet-4-20250514',
-      max_tokens: 8192,
-      temperature: 0.7,
+    // Call OpenAI API
+    const completion = await openai.chat.completions.create({
+      model: 'gpt-4o',
       messages: [
+        {
+          role: 'system',
+          content: 'You are an expert Ghanaian educator. Generate educational quiz questions in valid JSON format only, without any markdown or additional text.',
+        },
         {
           role: 'user',
           content: prompt,
         },
       ],
+      temperature: 0.7,
+      max_tokens: 8192,
+      response_format: {type: 'json_object'},
     });
 
     // Extract and parse the response
-    const content = message.content[0];
-    if (content.type !== 'text') {
-      throw new Error('Unexpected response type from Claude');
+    const responseText = completion.choices[0].message.content?.trim() || '';
+    if (!responseText) {
+      throw new Error('Empty response from OpenAI');
     }
 
-    let responseText = content.text.trim();
+    console.log('OpenAI response received, parsing...');
 
-    console.log('Claude response received, parsing...');
-
-    // Remove markdown code blocks if present
-    responseText = responseText.replace(/^```json\s*\n?/i, '').replace(/\n?```$/i, '');
-    responseText = responseText.replace(/^```\s*\n?/i, '').replace(/\n?```$/i, '');
-
-    // Try to parse the response
-    let questions;
+    // Try to parse the response (OpenAI JSON mode returns clean JSON)
+    let parsedResponse;
     try {
-      questions = JSON.parse(responseText);
+      parsedResponse = JSON.parse(responseText);
     } catch (parseError) {
       console.error('JSON parse error:', parseError);
       console.error('Response text:', responseText.substring(0, 500));
       throw new Error('Failed to parse AI response as JSON');
     }
+
+    // OpenAI might wrap the array in an object
+    const questions = Array.isArray(parsedResponse) ? 
+      parsedResponse : 
+      (parsedResponse.questions || parsedResponse.data || []);
 
     if (!Array.isArray(questions) || questions.length === 0) {
       throw new Error('Invalid response format from AI - expected non-empty array');
@@ -162,9 +166,9 @@ CRITICAL: Do not include any markdown formatting, code blocks, or additional tex
         examType,
         numQuestions: validatedQuestions.length,
         customTopic: customTopic || null,
-        generatedBy: 'claude-sonnet-4',
+        generatedBy: 'openai',
         generatedAt: new Date().toISOString(),
-        model: 'claude-sonnet-4-20250514',
+        model: 'gpt-4o',
       },
     };
   } catch (error) {
