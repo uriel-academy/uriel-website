@@ -3260,6 +3260,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   
   // NEW: Students at Risk Section
   Widget _buildStudentsAtRiskSection(List students) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isSmallScreen = screenWidth < 768;
     final now = DateTime.now();
     final sevenDaysAgo = now.subtract(const Duration(days: 7));
     
@@ -3285,7 +3287,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     }).toList();
     
     return Container(
-      padding: const EdgeInsets.all(20),
+      padding: EdgeInsets.all(isSmallScreen ? 16 : 20),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
@@ -3319,13 +3321,13 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                     Text(
                       'Students at Risk',
                       style: GoogleFonts.playfairDisplay(
-                        fontSize: 20,
+                        fontSize: isSmallScreen ? 18 : 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     Text(
                       'Students who may need extra support',
-                      style: GoogleFonts.montserrat(fontSize: 13, color: Colors.grey[600]),
+                      style: GoogleFonts.montserrat(fontSize: isSmallScreen ? 12 : 13, color: Colors.grey[600]),
                     ),
                   ],
                 ),
@@ -3465,6 +3467,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   
   // NEW: Weekly Activity Section
   Widget _buildWeeklyActivitySection(List students) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isSmallScreen = screenWidth < 768;
     final now = DateTime.now();
     final thisWeekStart = now.subtract(Duration(days: now.weekday % 7));
     final lastWeekStart = thisWeekStart.subtract(const Duration(days: 7));
@@ -3493,7 +3497,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     final isImproving = weeklyChange >= 0;
     
     return Container(
-      padding: const EdgeInsets.all(20),
+      padding: EdgeInsets.all(isSmallScreen ? 16 : 20),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
@@ -3517,7 +3521,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   color: const Color(0xFF2196F3).withOpacity(0.1),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: const Icon(Icons.trending_up, color: Color(0xFF2196F3), size: 24),
+                child: Icon(Icons.trending_up, color: const Color(0xFF2196F3), size: isSmallScreen ? 20 : 24),
               ),
               const SizedBox(width: 12),
               Expanded(
@@ -3527,21 +3531,39 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                     Text(
                       'Weekly Activity',
                       style: GoogleFonts.playfairDisplay(
-                        fontSize: 20,
+                        fontSize: isSmallScreen ? 18 : 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     Text(
                       'Student engagement trends',
-                      style: GoogleFonts.montserrat(fontSize: 13, color: Colors.grey[600]),
+                      style: GoogleFonts.montserrat(fontSize: isSmallScreen ? 12 : 13, color: Colors.grey[600]),
                     ),
                   ],
                 ),
               ),
             ],
           ),
-          const SizedBox(height: 20),
-          Row(
+          SizedBox(height: isSmallScreen ? 16 : 20),
+          isSmallScreen
+              ? Column(
+                  children: [
+                    _buildActivityMetric(
+                      'Active This Week',
+                      '$activeThisWeek',
+                      '${students.length} total',
+                      const Color(0xFF2196F3),
+                    ),
+                    const SizedBox(height: 12),
+                    _buildActivityMetric(
+                      'Engagement Rate',
+                      '${engagementRate.toStringAsFixed(0)}%',
+                      isImproving ? '+${weeklyChange.toStringAsFixed(0)}% vs last week' : '${weeklyChange.toStringAsFixed(0)}% vs last week',
+                      isImproving ? const Color(0xFF00C853) : const Color(0xFFFF9800),
+                    ),
+                  ],
+                )
+              : Row(
             children: [
               Expanded(
                 child: _buildActivityMetric(
@@ -3609,8 +3631,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   
   // NEW: Student Engagement Overview
   Widget _buildEngagementOverview(List students) {
-    final now = DateTime.now();
-    final sevenDaysAgo = now.subtract(const Duration(days: 7));
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isSmallScreen = screenWidth < 768;
     
     int improving = 0;
     int declining = 0;
@@ -3630,7 +3652,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     }
     
     return Container(
-      padding: const EdgeInsets.all(20),
+      padding: EdgeInsets.all(isSmallScreen ? 16 : 20),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
@@ -3654,7 +3676,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   color: const Color(0xFF9C27B0).withOpacity(0.1),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: const Icon(Icons.people, color: Color(0xFF9C27B0), size: 24),
+                child: Icon(Icons.people, color: const Color(0xFF9C27B0), size: isSmallScreen ? 20 : 24),
               ),
               const SizedBox(width: 12),
               Expanded(
@@ -3664,20 +3686,20 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                     Text(
                       'Student Performance Trends',
                       style: GoogleFonts.playfairDisplay(
-                        fontSize: 20,
+                        fontSize: isSmallScreen ? 18 : 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     Text(
                       'How your students are progressing',
-                      style: GoogleFonts.montserrat(fontSize: 13, color: Colors.grey[600]),
+                      style: GoogleFonts.montserrat(fontSize: isSmallScreen ? 12 : 13, color: Colors.grey[600]),
                     ),
                   ],
                 ),
               ),
             ],
           ),
-          const SizedBox(height: 20),
+          SizedBox(height: isSmallScreen ? 16 : 20),
           Row(
             children: [
               Expanded(
@@ -3732,6 +3754,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   
   // NEW: Time-Based Progress
   Widget _buildTimeBasedProgress(List students) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isSmallScreen = screenWidth < 768;
     int totalWeeklyXP = 0;
     int activeStreaks = 0;
     
@@ -3747,7 +3771,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     final avgWeeklyXP = students.isNotEmpty ? (totalWeeklyXP / students.length) : 0;
     
     return Container(
-      padding: const EdgeInsets.all(20),
+      padding: EdgeInsets.all(isSmallScreen ? 16 : 20),
       decoration: BoxDecoration(
         gradient: const LinearGradient(
           begin: Alignment.topLeft,
@@ -3768,7 +3792,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         children: [
           Row(
             children: [
-              const Icon(Icons.access_time, color: Colors.white, size: 28),
+              Icon(Icons.access_time, color: Colors.white, size: isSmallScreen ? 24 : 28),
               const SizedBox(width: 12),
               Expanded(
                 child: Column(
@@ -3777,7 +3801,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                     Text(
                       'Time-Based Progress',
                       style: GoogleFonts.playfairDisplay(
-                        fontSize: 20,
+                        fontSize: isSmallScreen ? 18 : 20,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),
@@ -3785,7 +3809,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                     Text(
                       'Weekly growth and consistency metrics',
                       style: GoogleFonts.montserrat(
-                        fontSize: 13,
+                        fontSize: isSmallScreen ? 12 : 13,
                         color: Colors.white.withOpacity(0.9),
                       ),
                     ),
@@ -3794,7 +3818,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               ),
             ],
           ),
-          const SizedBox(height: 20),
+          SizedBox(height: isSmallScreen ? 16 : 20),
           Row(
             children: [
               Expanded(

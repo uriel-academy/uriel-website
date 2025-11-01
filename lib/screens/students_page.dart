@@ -3,9 +3,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cloud_functions/cloud_functions.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../services/xp_service.dart';
-import '../services/leaderboard_rank_service.dart';
-import '../services/class_aggregates_service.dart';
 // using native widgets for subject progress to avoid chart package compatibility issues
 
 class StudentsPage extends StatefulWidget {
@@ -85,22 +82,25 @@ class _StudentsPageState extends State<StudentsPage> {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isSmallScreen = screenWidth < 768;
+    
     return NestedScrollView(
       headerSliverBuilder: (context, inner) => [
         SliverToBoxAdapter(
           child: Padding(
-            padding: const EdgeInsets.all(16),
+            padding: EdgeInsets.all(isSmallScreen ? 12 : 16),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('Students', style: GoogleFonts.playfairDisplay(fontSize: 22, fontWeight: FontWeight.bold)),
+                Text('Students', style: GoogleFonts.playfairDisplay(fontSize: isSmallScreen ? 20 : 22, fontWeight: FontWeight.bold)),
                 const SizedBox(height: 8),
-                Text('Search and view students in your class', style: GoogleFonts.montserrat(color: Colors.grey[600])),
+                Text('Search and view students in your class', style: GoogleFonts.montserrat(fontSize: isSmallScreen ? 13 : 14, color: Colors.grey[600])),
                 const SizedBox(height: 16),
 
                 // Search Card (matches Notes design language)
                 Container(
-                  padding: const EdgeInsets.all(20),
+                  padding: EdgeInsets.all(isSmallScreen ? 16 : 20),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(12),
