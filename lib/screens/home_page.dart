@@ -3228,12 +3228,626 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                       );
                     }).toList(),
                   ],
+                  
+                  // NEW METRICS SECTIONS
+                  const SizedBox(height: 32),
+                  
+                  // Students at Risk Section
+                  _buildStudentsAtRiskSection(students),
+                  
+                  const SizedBox(height: 24),
+                  
+                  // Weekly Activity Trends
+                  _buildWeeklyActivitySection(students),
+                  
+                  const SizedBox(height: 24),
+                  
+                  // Student Engagement Overview
+                  _buildEngagementOverview(students),
+                  
+                  const SizedBox(height: 24),
+                  
+                  // Time-Based Progress
+                  _buildTimeBasedProgress(students),
                 ],
               ),
             );
           },
         );
       },
+    );
+  }
+  
+  // NEW: Students at Risk Section
+  Widget _buildStudentsAtRiskSection(List students) {
+    final now = DateTime.now();
+    final sevenDaysAgo = now.subtract(const Duration(days: 7));
+    
+    final atRiskStudents = students.where((s) {
+      final student = s as Map<String, dynamic>;
+      final accuracy = (student['avgPercent'] as num?) ?? 0;
+      final lastActiveStr = student['lastActive'] as String?;
+      
+      // Low accuracy or inactive
+      final hasLowAccuracy = accuracy > 0 && accuracy < 50;
+      bool isInactive = false;
+      
+      if (lastActiveStr != null) {
+        try {
+          final lastActive = DateTime.parse(lastActiveStr);
+          isInactive = lastActive.isBefore(sevenDaysAgo);
+        } catch (e) {
+          // Invalid date
+        }
+      }
+      
+      return hasLowAccuracy || isInactive;
+    }).toList();
+    
+    return Container(
+      padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: const Color(0xFFD62828).withOpacity(0.2)),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFFD62828).withOpacity(0.05),
+            blurRadius: 10,
+            offset: const Offset(0, 2),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFD62828).withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: const Icon(Icons.warning_amber_rounded, color: Color(0xFFD62828), size: 24),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Students at Risk',
+                      style: GoogleFonts.playfairDisplay(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      'Students who may need extra support',
+                      style: GoogleFonts.montserrat(fontSize: 13, color: Colors.grey[600]),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFD62828),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Text(
+                  '${atRiskStudents.length}',
+                  style: GoogleFonts.montserrat(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          if (atRiskStudents.isEmpty) ...[
+            const SizedBox(height: 16),
+            Container(
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: const Color(0xFF00C853).withOpacity(0.05),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Row(
+                children: [
+                  const Icon(Icons.check_circle, color: Color(0xFF00C853), size: 20),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Text(
+                      'Great! All students are performing well.',
+                      style: GoogleFonts.montserrat(fontSize: 14),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ] else ...[
+            const SizedBox(height: 16),
+            ...atRiskStudents.take(5).map((s) {
+              final student = s as Map<String, dynamic>;
+              final name = student['displayName'] ?? 'Student';
+              final accuracy = (student['avgPercent'] as num?) ?? 0;
+              final questions = (student['questionsSolved'] as int?) ?? 0;
+              final lastActiveStr = student['lastActive'] as String?;
+              
+              String reason = '';
+              if (accuracy > 0 && accuracy < 50) {
+                reason = 'Low accuracy (${accuracy.toStringAsFixed(1)}%)';
+              }
+              if (lastActiveStr != null) {
+                try {
+                  final lastActive = DateTime.parse(lastActiveStr);
+                  if (lastActive.isBefore(sevenDaysAgo)) {
+                    final daysInactive = now.difference(lastActive).inDays;
+                    if (reason.isNotEmpty) reason += ' • ';
+                    reason += 'Inactive ${daysInactive}d';
+                  }
+                } catch (e) {}
+              }
+              
+              return Container(
+                margin: const EdgeInsets.only(bottom: 8),
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: Colors.grey[50],
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Row(
+                  children: [
+                    CircleAvatar(
+                      radius: 18,
+                      backgroundColor: const Color(0xFFD62828).withOpacity(0.1),
+                      child: Text(
+                        name[0].toUpperCase(),
+                        style: GoogleFonts.montserrat(
+                          color: const Color(0xFFD62828),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            name,
+                            style: GoogleFonts.montserrat(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 14,
+                            ),
+                          ),
+                          Text(
+                            reason,
+                            style: GoogleFonts.montserrat(
+                              fontSize: 12,
+                              color: const Color(0xFFD62828),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Text(
+                      '$questions Q',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 12,
+                        color: Colors.grey[600],
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            }).toList(),
+            if (atRiskStudents.length > 5)
+              Padding(
+                padding: const EdgeInsets.only(top: 8),
+                child: Text(
+                  '+${atRiskStudents.length - 5} more students need attention',
+                  style: GoogleFonts.montserrat(
+                    fontSize: 12,
+                    color: Colors.grey[600],
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
+              ),
+          ],
+        ],
+      ),
+    );
+  }
+  
+  // NEW: Weekly Activity Section
+  Widget _buildWeeklyActivitySection(List students) {
+    final now = DateTime.now();
+    final thisWeekStart = now.subtract(Duration(days: now.weekday % 7));
+    final lastWeekStart = thisWeekStart.subtract(const Duration(days: 7));
+    
+    int activeThisWeek = 0;
+    int activeLastWeek = 0;
+    
+    for (final s in students) {
+      final student = s as Map<String, dynamic>;
+      final lastActiveStr = student['lastActive'] as String?;
+      
+      if (lastActiveStr != null) {
+        try {
+          final lastActive = DateTime.parse(lastActiveStr);
+          if (lastActive.isAfter(thisWeekStart)) {
+            activeThisWeek++;
+          } else if (lastActive.isAfter(lastWeekStart) && lastActive.isBefore(thisWeekStart)) {
+            activeLastWeek++;
+          }
+        } catch (e) {}
+      }
+    }
+    
+    final engagementRate = students.isNotEmpty ? (activeThisWeek / students.length * 100) : 0;
+    final weeklyChange = activeLastWeek > 0 ? ((activeThisWeek - activeLastWeek) / activeLastWeek * 100) : 0;
+    final isImproving = weeklyChange >= 0;
+    
+    return Container(
+      padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: Colors.grey[200]!),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.03),
+            blurRadius: 10,
+            offset: const Offset(0, 2),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: const Color(0xFF2196F3).withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: const Icon(Icons.trending_up, color: Color(0xFF2196F3), size: 24),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Weekly Activity',
+                      style: GoogleFonts.playfairDisplay(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      'Student engagement trends',
+                      style: GoogleFonts.montserrat(fontSize: 13, color: Colors.grey[600]),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 20),
+          Row(
+            children: [
+              Expanded(
+                child: _buildActivityMetric(
+                  'Active This Week',
+                  '$activeThisWeek',
+                  '${students.length} total',
+                  const Color(0xFF2196F3),
+                ),
+              ),
+              const SizedBox(width: 16),
+              Expanded(
+                child: _buildActivityMetric(
+                  'Engagement Rate',
+                  '${engagementRate.toStringAsFixed(0)}%',
+                  isImproving ? '+${weeklyChange.toStringAsFixed(0)}% vs last week' : '${weeklyChange.toStringAsFixed(0)}% vs last week',
+                  isImproving ? const Color(0xFF00C853) : const Color(0xFFFF9800),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+  
+  Widget _buildActivityMetric(String label, String value, String subtitle, Color color) {
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: color.withOpacity(0.05),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: color.withOpacity(0.2)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            label,
+            style: GoogleFonts.montserrat(
+              fontSize: 12,
+              color: Colors.grey[700],
+            ),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            value,
+            style: GoogleFonts.playfairDisplay(
+              fontSize: 28,
+              fontWeight: FontWeight.bold,
+              color: color,
+            ),
+          ),
+          const SizedBox(height: 4),
+          Text(
+            subtitle,
+            style: GoogleFonts.montserrat(
+              fontSize: 11,
+              color: Colors.grey[600],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+  
+  // NEW: Student Engagement Overview
+  Widget _buildEngagementOverview(List students) {
+    final now = DateTime.now();
+    final sevenDaysAgo = now.subtract(const Duration(days: 7));
+    
+    int improving = 0;
+    int declining = 0;
+    int stable = 0;
+    
+    for (final s in students) {
+      final student = s as Map<String, dynamic>;
+      final trending = student['isTrending'] as String?;
+      
+      if (trending == 'up') {
+        improving++;
+      } else if (trending == 'down') {
+        declining++;
+      } else {
+        stable++;
+      }
+    }
+    
+    return Container(
+      padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: Colors.grey[200]!),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.03),
+            blurRadius: 10,
+            offset: const Offset(0, 2),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: const Color(0xFF9C27B0).withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: const Icon(Icons.people, color: Color(0xFF9C27B0), size: 24),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Student Performance Trends',
+                      style: GoogleFonts.playfairDisplay(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      'How your students are progressing',
+                      style: GoogleFonts.montserrat(fontSize: 13, color: Colors.grey[600]),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 20),
+          Row(
+            children: [
+              Expanded(
+                child: _buildTrendCard('Improving', improving, const Color(0xFF00C853), Icons.trending_up),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: _buildTrendCard('Stable', stable, Colors.grey[600]!, Icons.trending_flat),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: _buildTrendCard('Declining', declining, const Color(0xFFFF9800), Icons.trending_down),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+  
+  Widget _buildTrendCard(String label, int count, Color color, IconData icon) {
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: color.withOpacity(0.05),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: color.withOpacity(0.2)),
+      ),
+      child: Column(
+        children: [
+          Icon(icon, color: color, size: 28),
+          const SizedBox(height: 8),
+          Text(
+            '$count',
+            style: GoogleFonts.playfairDisplay(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+              color: color,
+            ),
+          ),
+          Text(
+            label,
+            style: GoogleFonts.montserrat(
+              fontSize: 12,
+              color: Colors.grey[700],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+  
+  // NEW: Time-Based Progress
+  Widget _buildTimeBasedProgress(List students) {
+    int totalWeeklyXP = 0;
+    int activeStreaks = 0;
+    
+    for (final s in students) {
+      final student = s as Map<String, dynamic>;
+      final weeklyActivity = (student['weeklyActivity'] as int?) ?? 0;
+      final streak = (student['streak'] as int?) ?? 0;
+      
+      totalWeeklyXP += weeklyActivity * 10; // Rough estimate
+      if (streak > 0) activeStreaks++;
+    }
+    
+    final avgWeeklyXP = students.isNotEmpty ? (totalWeeklyXP / students.length) : 0;
+    
+    return Container(
+      padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        gradient: const LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [Color(0xFFFF9800), Color(0xFFFFB74D)],
+        ),
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFFFF9800).withOpacity(0.3),
+            blurRadius: 15,
+            offset: const Offset(0, 8),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              const Icon(Icons.access_time, color: Colors.white, size: 28),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Time-Based Progress',
+                      style: GoogleFonts.playfairDisplay(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                    Text(
+                      'Weekly growth and consistency metrics',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 13,
+                        color: Colors.white.withOpacity(0.9),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 20),
+          Row(
+            children: [
+              Expanded(
+                child: _buildTimeMetricWhite(
+                  'Avg Weekly XP',
+                  avgWeeklyXP.toStringAsFixed(0),
+                  Icons.stars,
+                ),
+              ),
+              Container(
+                width: 1,
+                height: 60,
+                color: Colors.white.withOpacity(0.3),
+              ),
+              Expanded(
+                child: _buildTimeMetricWhite(
+                  'Active Streaks',
+                  '$activeStreaks/${students.length}',
+                  Icons.local_fire_department,
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+  
+  Widget _buildTimeMetricWhite(String label, String value, IconData icon) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      child: Column(
+        children: [
+          Icon(icon, color: Colors.white, size: 24),
+          const SizedBox(height: 8),
+          Text(
+            value,
+            style: GoogleFonts.playfairDisplay(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+          ),
+          Text(
+            label,
+            style: GoogleFonts.montserrat(
+              fontSize: 12,
+              color: Colors.white.withOpacity(0.9),
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ],
+      ),
     );
   }
 
