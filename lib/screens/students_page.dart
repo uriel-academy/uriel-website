@@ -44,7 +44,7 @@ class _StudentsPageState extends State<StudentsPage> {
       final data = doc.data();
       setState(() {
         _schoolName = data?['schoolName'] as String? ?? data?['school'] as String?;
-        _teachingGrade = data?['teachingGrade'] as String? ?? data?['teachingGrade'] as String?;
+        _teachingGrade = data?['teachingGrade'] as String? ?? data?['grade'] as String? ?? data?['class'] as String?;
       });
       // kick off initial page load
       _pageFuture = _loadPage(null);
@@ -221,7 +221,10 @@ class _StudentsPageState extends State<StudentsPage> {
     final key = pageCursor ?? 'start';
     try {
       // Skip if cached
-      if (_pageCache.containsKey(key)) return;
+      if (_pageCache.containsKey(key)) {
+        _isLoadingPage = false;
+        return;
+      }
 
       final functions = FirebaseFunctions.instanceFor(region: 'us-central1');
       final callable = functions.httpsCallable('getClassAggregates');
@@ -253,8 +256,12 @@ class _StudentsPageState extends State<StudentsPage> {
       _nextCursorByKey[key] = data['nextPageCursor'] as String?;
       // set current cursor key if starting
       _currentCursorKey = key;
-    } catch (e) {
-      // ignore - leave cache empty
+    } catch (e, st) {
+      // Log errors so we can see permission / callable problems in the console
+      // (helps debugging when teacher token hasn't refreshed or rules block access)
+      // ignore: avoid_print
+      print('getClassAggregates error: $e\n$st');
+      // leave cache empty
     } finally {
       _isLoadingPage = false;
     }

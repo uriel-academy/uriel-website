@@ -23,22 +23,39 @@ class AuthGate extends StatelessWidget {
         
         if (snapshot.hasData) {
           // User is logged in, route based on role
+          // Try to resolve the user's role by uid first; if not available, fall back to email lookup.
           return FutureBuilder<UserRole?>(
-            future: UserService().getCurrentUserRole(),
+            future: () async {
+              final user = snapshot.data!;
+              // Try by uid
+              var role = await UserService().getCurrentUserRole();
+              if (role != null) return role;
+              // If missing, try by email as a fallback (helps when user doc exists under a different uid or was just created)
+              try {
+                final email = user.email;
+                if (email != null && email.isNotEmpty) {
+                  final byEmail = await UserService().getUserRoleByEmail(email);
+                  return byEmail;
+                }
+              } catch (e) {
+                // ignore
+              }
+              return null;
+            }(),
             builder: (context, roleSnapshot) {
               if (roleSnapshot.connectionState == ConnectionState.waiting) {
                 return const Scaffold(
                   body: Center(child: CircularProgressIndicator()),
                 );
               }
-              
+
               final userRole = roleSnapshot.data;
-              
+
               // Update last login time
               if (snapshot.data != null) {
                 UserService().updateLastLogin(snapshot.data!.uid);
               }
-              
+
               // Route based on user role
               switch (userRole) {
                 case UserRole.teacher:

@@ -82,6 +82,26 @@ function normalizePrompt(raw: string, maxLen = 4000): string {
   return s.length > maxLen ? s.slice(0, maxLen) + ' …' : s;
 }
 
+// Normalize school/class strings for fuzzy matching.
+// Produces a compact id-like string (lowercase, non-alphanum removed, common words stripped)
+function normalizeSchoolClass(raw: any): string | null {
+  if (!raw && raw !== 0) return null;
+  try {
+    let s = String(raw).toLowerCase();
+    // Remove common noise words that don't affect identity
+    s = s.replace(/\b(school|college|high school|senior high school|senior|basic|primary|jhs|shs|the)\b/g, ' ');
+    // Replace non-alphanumeric with spaces
+    s = s.replace(/[^a-z0-9\s]/g, ' ');
+    // Collapse whitespace
+    s = s.replace(/\s+/g, ' ').trim();
+    if (!s) return null;
+    // Use underscore-delimited token id for stable document ids
+    return s.replace(/\s+/g, '_');
+  } catch (e) {
+    return null;
+  }
+}
+
 async function answerWithFacts(query: string) {
   const r = await fetch('https://us-central1-uriel-academy-41fb0.cloudfunctions.net/facts', {
     method: 'POST',
@@ -2542,20 +2562,22 @@ export const getClassAggregates = functions.https.onCall(async (data, context) =
       throw new functions.https.HttpsError('invalid-argument', 'Provide either teacherId or both school and grade');
     }
 
-    let baseQuery = db.collection('users').where('role', '==', 'student');
-
+    // Prefer reading from materialized studentSummaries where possible (lighter and indexed)
+    let baseQuery: any = null;
     if (teacherId) {
-      baseQuery = baseQuery.where('teacherId', '==', teacherId);
+      baseQuery = db.collection('studentSummaries').where('teacherId', '==', teacherId);
     } else {
       // require both school and grade to avoid expensive OR queries
-      baseQuery = baseQuery.where('grade', '==', grade).where('tenant.schoolId', '==', school);
+      const normSchool = normalizeSchoolClass(school) || String(school);
+      const normGrade = normalizeSchoolClass(grade) || String(grade).toLowerCase().replace(/\s+/g, '_');
+      baseQuery = db.collection('studentSummaries').where('normalizedSchool', '==', normSchool).where('normalizedClass', '==', normGrade);
     }
 
     // option to include total count (uses aggregation count())
     const includeCount = !!data?.includeCount;
 
-    // order and paginate by displayName for stable ordering
-    let q: any = baseQuery.orderBy('displayName').limit(pageSize + 1);
+  // order and paginate by firstName for stable ordering when using studentSummaries
+  let q: any = baseQuery.orderBy('firstName').limit(pageSize + 1);
 
     // If includeCount requested, use Firestore count aggregation (server-side)
     let totalCount: number | null = null;
@@ -2590,11 +2612,11 @@ export const getClassAggregates = functions.https.onCall(async (data, context) =
       const data = d.data() || {};
       return {
         uid: d.id,
-        displayName: data.displayName || data.profile?.firstName || null,
-        email: data.email || data.profile?.email || null,
-        avatar: data.photoURL || data.profile?.photoUrl || null,
+        displayName: data.firstName && data.lastName ? `${data.firstName} ${data.lastName}` : (data.displayName || data.profile?.firstName || null),
+        email: data.email || data.profile?.email || data.email || null,
+        avatar: data.avatar || data.profile?.photoUrl || null,
         totalXP: data.totalXP || data.xp || 0,
-        rank: data.leaderboardRank || null,
+        rank: data.rank || data.leaderboardRank || null,
         subjectsSolved: data.subjectsSolvedCount || data.subjectsSolved || null,
         questionsSolved: data.questionsSolved || data.questionsSolvedCount || null,
         raw: data
@@ -2640,30 +2662,84 @@ export const onAttemptCreate_updateAggregates = functions.firestore
       if (!userSnap.exists) return;
       const user = userSnap.data() || {};
 
-      const schoolId = user.tenant?.schoolId || user.school || null;
-      const grade = user.grade || user.class || null;
-      if (!schoolId || !grade) return;
+  const rawSchool = user.tenant?.schoolId || user.school || null;
+  const rawGrade = user.grade || user.class || null;
+  if (!rawSchool || !rawGrade) return;
 
-      const classId = `${String(schoolId)}_${String(grade)}`;
+  const normSchool = normalizeSchoolClass(rawSchool) || String(rawSchool);
+  const normGrade = normalizeSchoolClass(rawGrade) || String(rawGrade).toLowerCase().replace(/\s+/g, '_');
+  const classId = `${String(normSchool)}_${String(normGrade)}`;
       const classRef = db.collection('classAggregates').doc(classId);
 
       const xpInc = typeof attempt.points === 'number' ? attempt.points : (attempt.xp || 0);
-      await classRef.set({
-        schoolId,
-        grade,
+
+      // determine percent/score and question counts if available
+      let percent: number | null = null;
+      if (typeof attempt.percent === 'number') percent = attempt.percent;
+      else if (attempt.score != null && attempt.total != null && Number(attempt.total) > 0) percent = (Number(attempt.score) / Number(attempt.total)) * 100;
+      const questionsInAttempt = Number(attempt.totalQuestions || attempt.total || (Array.isArray(attempt.items) ? attempt.items.length : 0)) || 0;
+
+      // Update class-level aggregates: increment xp, attempts, and optionally score sums/counts and question counts
+      const classUpdate: any = {
+        schoolId: rawSchool,
+        grade: rawGrade,
+        normalizedSchool: normSchool,
+        normalizedClass: normGrade,
         totalAttempts: admin.firestore.FieldValue.increment(1),
         totalXP: admin.firestore.FieldValue.increment(xpInc),
+        totalQuestions: admin.firestore.FieldValue.increment(questionsInAttempt),
         updatedAt: admin.firestore.FieldValue.serverTimestamp()
-      }, { merge: true });
+      };
+      if (percent !== null && !Number.isNaN(percent)) {
+        classUpdate.totalScoreSum = admin.firestore.FieldValue.increment(percent);
+        classUpdate.totalScoreCount = admin.firestore.FieldValue.increment(1);
+      }
+      await classRef.set(classUpdate, { merge: true });
 
-      // Optionally update per-student summary
+      // Update per-student summary: increment xp, questions solved, and update score aggregates (recompute avgPercent)
       const studentSummaryRef = db.collection('studentSummaries').doc(uid);
-      await studentSummaryRef.set({
-        uid,
-        totalXP: admin.firestore.FieldValue.increment(xpInc),
-        questionsSolved: admin.firestore.FieldValue.increment(1),
-        updatedAt: admin.firestore.FieldValue.serverTimestamp()
-      }, { merge: true });
+      try {
+        // Use transaction to read-modify-write avgPercent reliably
+        await db.runTransaction(async (tx) => {
+          const sdoc = await tx.get(studentSummaryRef);
+          const sdata = sdoc.exists ? sdoc.data() || {} : {};
+          const prevSum = Number(sdata.totalScoreSum || 0);
+          const prevCount = Number(sdata.totalScoreCount || 0);
+          const newSum = prevSum + (percent !== null && !Number.isNaN(percent) ? percent : 0);
+          const newCount = prevCount + (percent !== null && !Number.isNaN(percent) ? 1 : 0);
+
+          const newAvg = newCount > 0 ? (newSum / newCount) : (sdata.avgPercent || 0);
+
+          tx.set(studentSummaryRef, {
+            uid,
+            totalXP: admin.firestore.FieldValue.increment(xpInc),
+            questionsSolved: admin.firestore.FieldValue.increment(1),
+            normalizedSchool: normSchool,
+            normalizedClass: normGrade,
+            totalScoreSum: admin.firestore.FieldValue.increment(percent !== null && !Number.isNaN(percent) ? percent : 0),
+            totalScoreCount: admin.firestore.FieldValue.increment(percent !== null && !Number.isNaN(percent) ? 1 : 0),
+            avgPercent: newAvg,
+            // record last activity
+            updatedAt: admin.firestore.FieldValue.serverTimestamp()
+          }, { merge: true });
+        });
+      } catch (e) {
+        console.warn('Failed to update student summary transactionally', e);
+        // Fallback: best-effort incremental update
+        const sset: any = {
+          uid,
+          totalXP: admin.firestore.FieldValue.increment(xpInc),
+          questionsSolved: admin.firestore.FieldValue.increment(1),
+          normalizedSchool: normSchool,
+          normalizedClass: normGrade,
+          updatedAt: admin.firestore.FieldValue.serverTimestamp()
+        };
+        if (percent !== null && !Number.isNaN(percent)) {
+          sset.totalScoreSum = admin.firestore.FieldValue.increment(percent);
+          sset.totalScoreCount = admin.firestore.FieldValue.increment(1);
+        }
+        await studentSummaryRef.set(sset, { merge: true });
+      }
 
       return true;
     } catch (err) {
@@ -2685,7 +2761,7 @@ export const backfillClassAggregates = functions.https.onCall(async (data, conte
   try {
     const batchSize = 500;
     let last: any = null;
-    const classAcc: Record<string, { schoolId: string; grade: string; totalXP: number; totalStudents: number; totalAttempts: number; }> = {};
+  const classAcc: Record<string, { schoolId: string; grade: string; normalizedSchool?: string | null; normalizedClass?: string | null; totalXP: number; totalStudents: number; totalAttempts: number; totalScoreSum?: number; totalScoreCount?: number; totalQuestions?: number; totalSubjects?: number; }> = {};
 
     while (true) {
       let q: any = db.collection('users').where('role', '==', 'student').limit(batchSize);
@@ -2695,20 +2771,68 @@ export const backfillClassAggregates = functions.https.onCall(async (data, conte
       for (const d of snap.docs) {
         const u = d.data() || {};
         const uid = d.id;
-        const schoolId = u.tenant?.schoolId || u.school || null;
-        const grade = u.grade || u.class || null;
-        if (!schoolId || !grade) continue;
-        const classId = `${String(schoolId)}_${String(grade)}`;
+        const rawSchool = u.tenant?.schoolId || u.school || null;
+        const rawGrade = u.grade || u.class || null;
+        if (!rawSchool || !rawGrade) continue;
+        const normSchool = normalizeSchoolClass(rawSchool) || String(rawSchool);
+        const normGrade = normalizeSchoolClass(rawGrade) || String(rawGrade).toLowerCase().replace(/\s+/g, '_');
+        const classId = `${String(normSchool)}_${String(normGrade)}`;
         const xp = (u.totalXP as number) || (u.xp as number) || 0;
-        if (!classAcc[classId]) classAcc[classId] = { schoolId: String(schoolId), grade: String(grade), totalXP: 0, totalStudents: 0, totalAttempts: 0 };
-        classAcc[classId].totalXP += xp;
-        classAcc[classId].totalStudents += 1;
+        // compute quiz-based metrics for this student (avg percent, subjects count, total questions)
+        let studentAvgPercent = 0;
+        let studentScoreSum = 0;
+        let studentScoreCount = 0;
+        let studentTotalQuestions = 0;
+        const studentSubjects = new Set<string>();
+        try {
+          const qs = await db.collection('quizzes').where('userId', '==', uid).get();
+          for (const qd of qs.docs) {
+            const qdData: any = qd.data() || {};
+            if (qdData.percent != null) {
+              const p = typeof qdData.percent === 'number' ? qdData.percent : parseFloat(String(qdData.percent)) || 0;
+              studentScoreSum += p;
+              studentScoreCount += 1;
+            } else if (qdData.score != null && qdData.total != null) {
+              const score = Number(qdData.score) || 0;
+              const total = Number(qdData.total) || 0;
+              if (total > 0) {
+                const pct = (score / total) * 100;
+                studentScoreSum += pct;
+                studentScoreCount += 1;
+              }
+            }
+            const subj = (qdData.subject || qdData.collectionName || '').toString();
+            if (subj) studentSubjects.add(subj);
+            studentTotalQuestions += Number(qdData.totalQuestions || qdData.total || 0) || 0;
+          }
+          if (studentScoreCount > 0) studentAvgPercent = studentScoreSum / studentScoreCount;
+        } catch (e) {
+          console.warn('Failed to compute quizzes for user', uid, e);
+        }
+  if (!classAcc[classId]) classAcc[classId] = { schoolId: String(rawSchool), grade: String(rawGrade), normalizedSchool: normSchool, normalizedClass: normGrade, totalXP: 0, totalStudents: 0, totalAttempts: 0, totalScoreSum: 0, totalScoreCount: 0, totalQuestions: 0, totalSubjects: 0 };
+  classAcc[classId].totalXP += xp;
+  classAcc[classId].totalStudents += 1;
+  classAcc[classId].totalScoreSum = (classAcc[classId].totalScoreSum || 0) + studentScoreSum;
+  classAcc[classId].totalScoreCount = (classAcc[classId].totalScoreCount || 0) + studentScoreCount;
+  classAcc[classId].totalQuestions = (classAcc[classId].totalQuestions || 0) + studentTotalQuestions;
+  classAcc[classId].totalSubjects = (classAcc[classId].totalSubjects || 0) + studentSubjects.size;
 
-        // Write per-student summary doc
+        // Write per-student summary doc (include computed quiz metrics)
         await db.collection('studentSummaries').doc(uid).set({
           uid,
           totalXP: xp,
           questionsSolved: (u.questionsSolved as number) || (u.questionsSolvedCount as number) || 0,
+          normalizedSchool: normSchool,
+          normalizedClass: normGrade,
+          teacherId: u.teacherId || null,
+          firstName: u.profile?.firstName || u.firstName || null,
+          lastName: u.profile?.lastName || u.lastName || null,
+          email: u.email || u.profile?.email || null,
+          avgPercent: studentAvgPercent,
+          totalScoreSum: studentScoreSum,
+          totalScoreCount: studentScoreCount,
+          subjectsCount: studentSubjects.size,
+          totalQuestions: studentTotalQuestions,
           updatedAt: admin.firestore.FieldValue.serverTimestamp()
         }, { merge: true });
       }
@@ -2723,8 +2847,15 @@ export const backfillClassAggregates = functions.https.onCall(async (data, conte
       writes.push(db.collection('classAggregates').doc(cid).set({
         schoolId: c.schoolId,
         grade: c.grade,
+        normalizedSchool: c.normalizedSchool,
+        normalizedClass: c.normalizedClass,
         totalXP: c.totalXP,
         totalStudents: c.totalStudents,
+        totalScoreSum: c.totalScoreSum || 0,
+        totalScoreCount: c.totalScoreCount || 0,
+        totalQuestions: c.totalQuestions || 0,
+        totalSubjects: c.totalSubjects || 0,
+        avgScorePercent: (c.totalScoreCount && c.totalScoreCount > 0) ? ((c.totalScoreSum || 0) / (c.totalScoreCount || 1)) : 0,
         updatedAt: admin.firestore.FieldValue.serverTimestamp()
       }, { merge: true }));
     }
@@ -2735,5 +2866,154 @@ export const backfillClassAggregates = functions.https.onCall(async (data, conte
   } catch (e) {
     console.error('backfillClassAggregates error', e);
     throw new functions.https.HttpsError('internal', 'Backfill failed');
+  }
+});
+
+// Admin callable: backfill a single page of users. Returns nextCursor for resumable processing.
+export const backfillClassPage = functions.https.onCall(async (data, context) => {
+  if (!context.auth) throw new functions.https.HttpsError('unauthenticated', 'Must be signed in');
+  const callerRole = (context.auth.token && context.auth.token.role) || '';
+  const adminEmail = 'studywithuriel@gmail.com';
+  if (!['super_admin', 'admin', 'school_admin'].includes(callerRole) && context.auth.token.email !== adminEmail) {
+    throw new functions.https.HttpsError('permission-denied', 'Only admins may run backfill');
+  }
+
+  try {
+    const pageSize = Math.min(Math.max(Number(data?.pageSize) || 500, 1), 1000);
+    const lastUid = data?.lastUid || null;
+
+    // Progress tracking doc for resumable backfill
+    const progressRef = db.collection('backfillProgress').doc('studentBackfill');
+    // Read existing cumulative count (if any)
+    const existingProgress = (await progressRef.get()).data() || {};
+    const prevCumulative = Number(existingProgress.cumulativeProcessed || 0);
+    // Mark progress as running for this page
+    await progressRef.set({
+      status: 'running',
+      pageSize,
+      lastRequestedCursor: lastUid || null,
+      lastStartedAt: admin.firestore.FieldValue.serverTimestamp(),
+      processedCount: 0,
+      cumulativeProcessed: prevCumulative
+    }, { merge: true });
+
+    let q: any = db.collection('users').where('role', '==', 'student').orderBy(admin.firestore.FieldPath.documentId()).limit(pageSize);
+    if (lastUid) q = q.startAfter(String(lastUid));
+    const snap = await q.get();
+    if (snap.empty) return { ok: true, processed: 0, nextCursor: null };
+
+    const classAcc: Record<string, { schoolId: string; grade: string; normalizedSchool?: string | null; normalizedClass?: string | null; totalXP: number; totalStudents: number; totalAttempts: number; totalScoreSum?: number; totalScoreCount?: number; totalQuestions?: number; totalSubjects?: number; }> = {};
+
+    for (const d of snap.docs) {
+      const u = d.data() || {};
+      const uid = d.id;
+      const rawSchool = u.tenant?.schoolId || u.school || null;
+      const rawGrade = u.grade || u.class || null;
+      if (!rawSchool || !rawGrade) continue;
+      const normSchool = normalizeSchoolClass(rawSchool) || String(rawSchool);
+      const normGrade = normalizeSchoolClass(rawGrade) || String(rawGrade).toLowerCase().replace(/\s+/g, '_');
+      const classId = `${String(normSchool)}_${String(normGrade)}`;
+      const xp = (u.totalXP as number) || (u.xp as number) || 0;
+
+      // compute quiz metrics for student
+      let studentScoreSum = 0;
+      let studentScoreCount = 0;
+      let studentTotalQuestions = 0;
+      const studentSubjects = new Set<string>();
+      try {
+        const qs = await db.collection('quizzes').where('userId', '==', uid).get();
+        for (const qd of qs.docs) {
+          const qdData = qd.data() || {};
+          if (qdData.percent != null) {
+            const p = typeof qdData.percent === 'number' ? qdData.percent : parseFloat(String(qdData.percent)) || 0;
+            studentScoreSum += p;
+            studentScoreCount += 1;
+          } else if (qdData.score != null && qdData.total != null) {
+            const score = Number(qdData.score) || 0;
+            const total = Number(qdData.total) || 0;
+            if (total > 0) {
+              const pct = (score / total) * 100;
+              studentScoreSum += pct;
+              studentScoreCount += 1;
+            }
+          }
+          const subj = (qdData.subject || qdData.collectionName || '').toString();
+          if (subj) studentSubjects.add(subj);
+          studentTotalQuestions += Number(qdData.totalQuestions || qdData.total || 0) || 0;
+        }
+      } catch (e) { console.warn('backfillClassPage: failed to query quizzes for', uid, e); }
+
+      if (!classAcc[classId]) classAcc[classId] = { schoolId: String(rawSchool), grade: String(rawGrade), normalizedSchool: normSchool, normalizedClass: normGrade, totalXP: 0, totalStudents: 0, totalAttempts: 0, totalScoreSum: 0, totalScoreCount: 0, totalQuestions: 0, totalSubjects: 0 };
+      classAcc[classId].totalXP += xp;
+      classAcc[classId].totalStudents += 1;
+      classAcc[classId].totalScoreSum = (classAcc[classId].totalScoreSum || 0) + studentScoreSum;
+      classAcc[classId].totalScoreCount = (classAcc[classId].totalScoreCount || 0) + studentScoreCount;
+      classAcc[classId].totalQuestions = (classAcc[classId].totalQuestions || 0) + studentTotalQuestions;
+      classAcc[classId].totalSubjects = (classAcc[classId].totalSubjects || 0) + studentSubjects.size;
+
+      // Write per-student summary
+      await db.collection('studentSummaries').doc(uid).set({
+        uid,
+        totalXP: xp,
+        questionsSolved: (u.questionsSolved as number) || (u.questionsSolvedCount as number) || 0,
+        normalizedSchool: normSchool,
+        normalizedClass: normGrade,
+        teacherId: u.teacherId || null,
+        firstName: u.profile?.firstName || u.firstName || null,
+        lastName: u.profile?.lastName || u.lastName || null,
+        email: u.email || u.profile?.email || null,
+        avgPercent: studentScoreCount > 0 ? (studentScoreSum / studentScoreCount) : 0,
+        totalScoreSum: studentScoreSum,
+        totalScoreCount: studentScoreCount,
+        subjectsCount: studentSubjects.size,
+        totalQuestions: studentTotalQuestions,
+        updatedAt: admin.firestore.FieldValue.serverTimestamp()
+      }, { merge: true });
+    }
+
+    // write class aggregates for this page
+    const writes: Promise<any>[] = [];
+    for (const cid of Object.keys(classAcc)) {
+      const c = classAcc[cid];
+      writes.push(db.collection('classAggregates').doc(cid).set({
+        schoolId: c.schoolId,
+        grade: c.grade,
+        normalizedSchool: c.normalizedSchool,
+        normalizedClass: c.normalizedClass,
+        totalXP: c.totalXP,
+        totalStudents: c.totalStudents,
+        totalScoreSum: c.totalScoreSum || 0,
+        totalScoreCount: c.totalScoreCount || 0,
+        totalQuestions: c.totalQuestions || 0,
+        totalSubjects: c.totalSubjects || 0,
+        avgScorePercent: (c.totalScoreCount && c.totalScoreCount > 0) ? ((c.totalScoreSum || 0) / (c.totalScoreCount || 1)) : 0,
+        updatedAt: admin.firestore.FieldValue.serverTimestamp()
+      }, { merge: true }));
+    }
+    await Promise.all(writes);
+
+    const last = snap.docs[snap.docs.length - 1];
+    const nextCursor = last ? last.id : null;
+
+    // Update progress doc with results of this page
+    try {
+      await progressRef.set({
+        status: nextCursor ? 'running' : 'completed',
+        lastProcessedAt: admin.firestore.FieldValue.serverTimestamp(),
+        processedCount: snap.docs.length,
+        cumulativeProcessed: admin.firestore.FieldValue.increment(snap.docs.length),
+        lastCursor: nextCursor || null
+      }, { merge: true });
+    } catch (e) {
+      console.warn('backfillClassPage: failed to update progress doc', e);
+    }
+
+    return { ok: true, processed: snap.docs.length, nextCursor };
+  } catch (e) {
+    console.error('backfillClassPage error', e);
+    try {
+      await db.collection('backfillProgress').doc('studentBackfill').set({ status: 'error', lastError: ((e as any)?.message || String(e)) || 'unknown', lastErrorAt: admin.firestore.FieldValue.serverTimestamp() }, { merge: true });
+    } catch (ee) { console.warn('backfillClassPage: failed to write error progress', ee); }
+    throw new functions.https.HttpsError('internal', 'Backfill page failed');
   }
 });
