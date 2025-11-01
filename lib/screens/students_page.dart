@@ -606,7 +606,7 @@ class _StudentsPageState extends State<StudentsPage> {
                   future: FirebaseFirestore.instance
                       .collection('quizzes')
                       .where('userId', isEqualTo: selectedId)
-                      .orderBy('completedAt', descending: true)
+                      .orderBy('timestamp', descending: true)
                       .limit(5)
                       .get(),
                   builder: (context, snap) {
@@ -627,8 +627,8 @@ class _StudentsPageState extends State<StudentsPage> {
                     return Column(
                       children: docs.map((d) {
                         final data = d.data() as Map<String, dynamic>;
-                        final score = data['score'] ?? data['percent'] ?? '-';
-                        final title = data['title'] ?? data['collectionName'] ?? 'Quiz';
+                        final percentage = (data['percentage'] as num?)?.toDouble() ?? 0.0;
+                        final title = data['title'] ?? data['collectionName'] ?? data['subject'] ?? 'Quiz';
                         return Container(
                           margin: const EdgeInsets.only(bottom: 8),
                           padding: const EdgeInsets.all(12),
@@ -646,118 +646,13 @@ class _StudentsPageState extends State<StudentsPage> {
                                 ),
                               ),
                               Text(
-                                score.toString(), 
+                                '${percentage.toStringAsFixed(1)}%', 
                                 style: GoogleFonts.montserrat(fontWeight: FontWeight.w600, color: const Color(0xFFD62828)),
                               ),
                             ],
                           ),
                         );
                       }).toList(),
-                    );
-                  },
-                ),
-                const SizedBox(height: 20),
-                
-                // Subject progress
-                Text('Subject Progress', style: GoogleFonts.playfairDisplay(fontSize: 16, fontWeight: FontWeight.bold)),
-                const SizedBox(height: 12),
-                FutureBuilder<QuerySnapshot>(
-                  future: FirebaseFirestore.instance
-                      .collection('quizzes')
-                      .where('userId', isEqualTo: selectedId)
-                      .limit(200)
-                      .get(),
-                  builder: (context, snap) {
-                    if (snap.connectionState == ConnectionState.waiting) {
-                      return const Center(child: CircularProgressIndicator());
-                    }
-                    final quizDocs = snap.data?.docs ?? [];
-                    if (quizDocs.isEmpty) {
-                      return Container(
-                        padding: const EdgeInsets.all(16),
-                        decoration: BoxDecoration(
-                          color: Colors.grey[100],
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Text('No subject progress available', style: GoogleFonts.montserrat(color: Colors.grey[600])),
-                      );
-                    }
-
-                    // Compute average percent per subject
-                    final Map<String, List<double>> subjectScores = {};
-                    for (final q in quizDocs) {
-                      final data = q.data() as Map<String, dynamic>;
-                      final subject = (data['subject'] ?? data['collectionName'] ?? 'Misc').toString();
-                      double? percent;
-                      if (data['percent'] != null) {
-                        percent = (data['percent'] is num) ? (data['percent'] as num).toDouble() : double.tryParse(data['percent'].toString());
-                      } else if (data['score'] != null && data['total'] != null) {
-                        final score = (data['score'] as num).toDouble();
-                        final total = (data['total'] as num).toDouble();
-                        if (total > 0) percent = (score / total) * 100;
-                      } else if (data['score'] != null) {
-                        final score = (data['score'] as num).toDouble();
-                        percent = score;
-                      }
-                      if (percent == null) continue;
-                      subjectScores.putIfAbsent(subject, () => []).add(percent.clamp(0, 100));
-                    }
-
-                    final subjects = subjectScores.keys.toList();
-                    final averages = subjects.map((s) {
-                      final list = subjectScores[s]!;
-                      final avg = list.reduce((a, b) => a + b) / list.length;
-                      return avg;
-                    }).toList();
-
-                    if (subjects.isEmpty) {
-                      return Container(
-                        padding: const EdgeInsets.all(16),
-                        decoration: BoxDecoration(
-                          color: Colors.grey[100],
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Text('No subject progress available', style: GoogleFonts.montserrat(color: Colors.grey[600])),
-                      );
-                    }
-
-                    return Column(
-                      children: List.generate(subjects.length, (i) {
-                        final label = subjects[i];
-                        final avg = averages[i];
-                        return Container(
-                          margin: const EdgeInsets.only(bottom: 12),
-                          padding: const EdgeInsets.all(12),
-                          decoration: BoxDecoration(
-                            color: Colors.grey[50],
-                            borderRadius: BorderRadius.circular(8),
-                            border: Border.all(color: Colors.grey[200]!),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Expanded(child: Text(label, style: GoogleFonts.montserrat(fontSize: 13, fontWeight: FontWeight.w600))),
-                                  const SizedBox(width: 8),
-                                  Text('${avg.toStringAsFixed(1)}%', style: GoogleFonts.montserrat(fontWeight: FontWeight.w600, color: const Color(0xFFD62828))),
-                                ],
-                              ),
-                              const SizedBox(height: 8),
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(8),
-                                child: LinearProgressIndicator(
-                                  value: (avg / 100).clamp(0.0, 1.0),
-                                  minHeight: 8,
-                                  color: const Color(0xFFD62828),
-                                  backgroundColor: Colors.grey.shade200,
-                                ),
-                              ),
-                            ],
-                          ),
-                        );
-                      }),
                     );
                   },
                 ),
@@ -816,7 +711,7 @@ class _StudentsPageState extends State<StudentsPage> {
       future: FirebaseFirestore.instance
           .collection('quizzes')
           .where('userId', isEqualTo: userId)
-          .orderBy('completedAt', descending: true)
+          .orderBy('timestamp', descending: true)
           .get(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
@@ -1085,7 +980,9 @@ class _StudentsPageState extends State<StudentsPage> {
           final data = doc.data() as Map<String, dynamic>;
           final subject = (data['subject'] ?? '').toString().toLowerCase();
           final collectionName = (data['collectionName'] ?? '').toString().toLowerCase();
-          return subject.contains('bece') || subject.contains('past') || 
+          final quizType = (data['quizType'] ?? '').toString().toLowerCase();
+          return quizType.contains('bece') || quizType.contains('past') ||
+                 subject.contains('bece') || subject.contains('past') || 
                  collectionName.contains('bece') || collectionName.contains('past');
         }).toList();
 
@@ -1210,7 +1107,8 @@ class _StudentsPageState extends State<StudentsPage> {
           final data = doc.data() as Map<String, dynamic>;
           final subject = (data['subject'] ?? '').toString().toLowerCase();
           final collectionName = (data['collectionName'] ?? '').toString().toLowerCase();
-          return subject.contains('trivia') || collectionName.contains('trivia');
+          final quizType = (data['quizType'] ?? '').toString().toLowerCase();
+          return quizType.contains('trivia') || subject.contains('trivia') || collectionName.contains('trivia');
         }).toList();
 
         if (triviaQuizzes.isEmpty) {
@@ -1305,7 +1203,7 @@ class _StudentsPageState extends State<StudentsPage> {
       future: FirebaseFirestore.instance
           .collection('quizzes')
           .where('userId', isEqualTo: userId)
-          .orderBy('completedAt', descending: true)
+          .orderBy('timestamp', descending: true)
           .get(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
