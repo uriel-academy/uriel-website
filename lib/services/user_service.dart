@@ -211,8 +211,25 @@ class UserService {
         lName = parts.length > 1 ? parts.sublist(1).join(' ') : '';
       }
       
+      // Check if school or class has changed
+      final teacherDoc = await _usersCollection.doc(userId).get();
+      final oldData = teacherDoc.data() as Map<String, dynamic>?;
+      
+      if (oldData != null) {
+        final oldSchool = oldData['school'] ?? oldData['schoolName'] ?? '';
+        final oldClass = oldData['class'] ?? oldData['grade'] ?? oldData['teachingGrade'] ?? '';
+        
+        if (oldSchool != schoolName || oldClass != teachingClass) {
+          debugPrint('Teacher $userId changed from $oldSchool/$oldClass to $schoolName/$teachingClass');
+          
+          // Clean up old student associations
+          await _cleanupOldTeacherAssociations(userId);
+        }
+      }
+      
       final teacherData = {
         'role': UserRole.teacher.name,
+        'isTeacher': true, // Flag for queries
         'firstName': fName,
         'lastName': lName,
         'name': name ?? '$fName $lName'.trim(),
@@ -221,19 +238,170 @@ class UserService {
         'school': schoolName, // Primary field for aggregation
         'schoolName': schoolName, // Backwards compatibility
         'class': teachingClass, // Primary field - the class they teach
+        'grade': teachingClass, // For student-teacher matching
         'teachingGrade': teachingClass, // Backwards compatibility
         'subjects': subjects ?? [],
         'yearsExperience': yearsExperience,
         'teacherId': teacherId,
         'institutionCode': institutionCode,
-        'createdAt': FieldValue.serverTimestamp(),
+        'createdAt': oldData?['createdAt'] ?? FieldValue.serverTimestamp(),
         'lastLoginAt': FieldValue.serverTimestamp(),
+        'updatedAt': FieldValue.serverTimestamp(),
       };
 
       await _usersCollection.doc(userId).set(teacherData, SetOptions(merge: true));
+      
+      // When teacher profile is updated, find and link matching students
+      await _linkMatchingStudents(userId, schoolName, teachingClass);
     } catch (e) {
       debugPrint('Error storing teacher data: $e');
       rethrow;
+    }
+  }
+
+  /// Clean up old teacher-student associations when teacher changes school/class
+  Future<void> _cleanupOldTeacherAssociations(String teacherId) async {
+    try {
+      debugPrint('Cleaning up old associations for teacher $teacherId');
+      
+      // 1. Delete all entries in teacher's students subcollection
+      final studentsSnapshot = await _usersCollection
+          .doc(teacherId)
+          .collection('students')
+          .get();
+      
+      final batch = _firestore.batch();
+      
+      for (var doc in studentsSnapshot.docs) {
+        batch.delete(doc.reference);
+      }
+      
+      // 2. Delete all studentSummaries entries for this teacher
+      final summariesSnapshot = await _firestore
+          .collection('studentSummaries')
+          .where('teacherId', isEqualTo: teacherId)
+          .get();
+      
+      for (var doc in summariesSnapshot.docs) {
+        batch.delete(doc.reference);
+      }
+      
+      // 3. Clear teacherId from all students who had this teacher
+      final studentsWithTeacherSnapshot = await _usersCollection
+          .where('role', isEqualTo: UserRole.student.name)
+          .where('teacherId', isEqualTo: teacherId)
+          .get();
+      
+      for (var doc in studentsWithTeacherSnapshot.docs) {
+        batch.update(doc.reference, {
+          'teacherId': FieldValue.delete(),
+          'updatedAt': FieldValue.serverTimestamp(),
+        });
+      }
+      
+      await batch.commit();
+      debugPrint('Cleaned up ${studentsSnapshot.docs.length} students subcollection entries, '
+          '${summariesSnapshot.docs.length} studentSummaries entries, '
+          'and ${studentsWithTeacherSnapshot.docs.length} student teacherId references');
+    } catch (e) {
+      debugPrint('Error cleaning up old teacher associations: $e');
+    }
+  }
+
+  /// Link students with matching school and grade to this teacher
+  Future<void> _linkMatchingStudents(String teacherId, String schoolName, String teachingClass) async {
+    try {
+      final normalizedSchool = _normalizeSchoolClass(schoolName);
+      final normalizedClass = _normalizeSchoolClass(teachingClass);
+      
+      if (normalizedSchool == null || normalizedClass == null) {
+        debugPrint('Could not normalize teacher school/class: $schoolName, $teachingClass');
+        return;
+      }
+      
+      // Get ALL students and filter by normalized school/class
+      // This ensures we catch all variations of the same school/class name
+      final allStudentsQuery = await _usersCollection
+          .where('role', isEqualTo: UserRole.student.name)
+          .get();
+      
+      debugPrint('Checking ${allStudentsQuery.docs.length} students for matches with $schoolName/$teachingClass');
+      
+      final batch = _firestore.batch();
+      int matchCount = 0;
+      
+      for (var studentDoc in allStudentsQuery.docs) {
+        final studentId = studentDoc.id;
+        final studentData = studentDoc.data() as Map<String, dynamic>?;
+        
+        if (studentData == null) continue;
+        
+        final studentSchool = studentData['school'] ?? '';
+        final studentGrade = studentData['grade'] ?? studentData['class'] ?? '';
+        
+        // Normalize and compare
+        final normalizedStudentSchool = _normalizeSchoolClass(studentSchool);
+        final normalizedStudentGrade = _normalizeSchoolClass(studentGrade);
+        
+        if (normalizedStudentSchool == normalizedSchool && normalizedStudentGrade == normalizedClass) {
+          matchCount++;
+          debugPrint('  ✅ Matching student: ${studentData['firstName']} ${studentData['lastName']} ($studentSchool/$studentGrade)');
+          
+          // Update student's teacherId
+          batch.update(_usersCollection.doc(studentId), {
+            'teacherId': teacherId,
+            'teacherAssignedAt': FieldValue.serverTimestamp(),
+            'updatedAt': FieldValue.serverTimestamp(),
+          });
+          
+          // Add to teacher's students subcollection
+          batch.set(
+            _usersCollection.doc(teacherId).collection('students').doc(studentId),
+            {
+              'firstName': studentData['firstName'] ?? '',
+              'lastName': studentData['lastName'] ?? '',
+              'email': studentData['email'] ?? '',
+              'school': studentSchool,
+              'grade': studentGrade,
+              'linkedAt': FieldValue.serverTimestamp(),
+              'autoAssigned': true,
+            },
+          );
+          
+          // Add to studentSummaries collection with full performance data
+          batch.set(
+            _firestore.collection('studentSummaries').doc(studentId),
+            {
+              'teacherId': teacherId,
+              'firstName': studentData['firstName'] ?? '',
+              'lastName': studentData['lastName'] ?? '',
+              'email': studentData['email'] ?? '',
+              'school': studentSchool,
+              'class': studentGrade,
+              'normalizedSchool': normalizedStudentSchool,
+              'normalizedClass': normalizedStudentGrade,
+              // Include performance data from user document
+              'totalXP': studentData['totalXP'] ?? studentData['xp'] ?? 0,
+              'totalQuestions': studentData['totalQuestions'] ?? studentData['questionsSolved'] ?? 0,
+              'subjectsCount': studentData['subjectsCount'] ?? studentData['subjectsSolved'] ?? 0,
+              'avgPercent': studentData['avgPercent'] ?? studentData['accuracy'] ?? 0,
+              'avatar': studentData['profileImageUrl'] ?? studentData['avatar'] ?? studentData['presetAvatar'],
+              'rank': studentData['currentRankName'] ?? studentData['rankName'] ?? studentData['rank'],
+              'displayName': '${studentData['firstName'] ?? ''} ${studentData['lastName'] ?? ''}'.trim(),
+              'lastUpdated': FieldValue.serverTimestamp(),
+            },
+          );
+        }
+      }
+      
+      if (matchCount > 0) {
+        await batch.commit();
+        debugPrint('Successfully linked $matchCount students to teacher $teacherId');
+      } else {
+        debugPrint('No matching students found for teacher $teacherId');
+      }
+    } catch (e) {
+      debugPrint('Error linking matching students: $e');
     }
   }
 

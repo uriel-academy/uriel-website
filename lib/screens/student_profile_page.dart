@@ -349,10 +349,38 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
 
   Future<void> _assignTeacher(String studentUid, String school, String className) async {
     try {
-      debugPrint('Looking for teacher with school: $school, class: $className');
+      debugPrint('Reassigning student to new teacher. School: $school, class: $className');
       
-      // Find a teacher with matching school and grade
-      final teachersQuery = await FirebaseFirestore.instance
+      // STEP 1: Remove from old teacher if exists
+      final studentDoc = await FirebaseFirestore.instance
+          .collection('users')
+          .doc(studentUid)
+          .get();
+      
+      final oldTeacherId = studentDoc.data()?['teacherId'];
+      if (oldTeacherId != null) {
+        debugPrint('Removing student from old teacher: $oldTeacherId');
+        
+        // Remove from old teacher's students subcollection
+        await FirebaseFirestore.instance
+            .collection('users')
+            .doc(oldTeacherId)
+            .collection('students')
+            .doc(studentUid)
+            .delete();
+        
+        // Remove from studentSummaries collection
+        await FirebaseFirestore.instance
+            .collection('studentSummaries')
+            .doc(studentUid)
+            .delete();
+      }
+      
+      // STEP 2: Find new teacher with matching school and grade
+      debugPrint('Looking for new teacher with school: $school, class: $className');
+      
+      // Try with 'schoolName' field first
+      var teachersQuery = await FirebaseFirestore.instance
           .collection('users')
           .where('isTeacher', isEqualTo: true)
           .where('schoolName', isEqualTo: school)
@@ -360,54 +388,120 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
           .limit(1)
           .get();
       
+      // If not found, try with 'school' field
       if (teachersQuery.docs.isEmpty) {
-        // Try alternate field name 'school' instead of 'schoolName'
-        final altQuery = await FirebaseFirestore.instance
+        teachersQuery = await FirebaseFirestore.instance
             .collection('users')
             .where('isTeacher', isEqualTo: true)
             .where('school', isEqualTo: school)
             .where('grade', isEqualTo: className)
             .limit(1)
             .get();
-        
-        if (altQuery.docs.isNotEmpty) {
-          final teacherId = altQuery.docs.first.id;
-          await _linkStudentToTeacher(studentUid, teacherId);
-          debugPrint('Student assigned to teacher: $teacherId');
-        } else {
-          debugPrint('No teacher found for school: $school, class: $className');
-        }
+      }
+      
+      // STEP 3: Link to new teacher if found
+      if (teachersQuery.docs.isNotEmpty) {
+        final newTeacherId = teachersQuery.docs.first.id;
+        await _linkStudentToTeacher(studentUid, newTeacherId, school, className);
+        debugPrint('✅ Student successfully assigned to new teacher: $newTeacherId');
       } else {
-        final teacherId = teachersQuery.docs.first.id;
-        await _linkStudentToTeacher(studentUid, teacherId);
-        debugPrint('Student assigned to teacher: $teacherId');
+        // No teacher found - clear teacherId from student
+        await FirebaseFirestore.instance
+            .collection('users')
+            .doc(studentUid)
+            .update({
+          'teacherId': FieldValue.delete(),
+          'teacherAssignedAt': FieldValue.delete(),
+        });
+        debugPrint('⚠️ No teacher found for school: $school, class: $className. Cleared teacher assignment.');
       }
     } catch (e) {
-      debugPrint('Error assigning teacher: $e');
+      debugPrint('❌ Error assigning teacher: $e');
       // Don't show error to user, this is a background operation
     }
   }
 
-  Future<void> _linkStudentToTeacher(String studentUid, String teacherId) async {
-    // Update student's document with teacher reference
-    await FirebaseFirestore.instance
-        .collection('users')
-        .doc(studentUid)
-        .update({
+  Future<void> _linkStudentToTeacher(String studentUid, String teacherId, String school, String className) async {
+    final batch = FirebaseFirestore.instance.batch();
+    
+    // Update student's document with new teacher reference
+    final studentRef = FirebaseFirestore.instance.collection('users').doc(studentUid);
+    batch.update(studentRef, {
       'teacherId': teacherId,
       'teacherAssignedAt': FieldValue.serverTimestamp(),
+      'school': school,
+      'class': className,
     });
     
-    // Add student to teacher's students collection
-    await FirebaseFirestore.instance
+    // Add student to new teacher's students subcollection
+    final teacherStudentRef = FirebaseFirestore.instance
         .collection('users')
         .doc(teacherId)
         .collection('students')
+        .doc(studentUid);
+    
+    // Get fresh student data first
+    final studentDocForSubcollection = await FirebaseFirestore.instance
+        .collection('users')
         .doc(studentUid)
-        .set({
+        .get();
+    final studentDataForSubcollection = studentDocForSubcollection.data() ?? {};
+    
+    batch.set(teacherStudentRef, {
+      'firstName': studentDataForSubcollection['firstName'] ?? '',
+      'lastName': studentDataForSubcollection['lastName'] ?? '',
+      'email': studentDataForSubcollection['email'] ?? '',
+      'school': school,
+      'grade': className,
       'addedAt': FieldValue.serverTimestamp(),
       'autoAssigned': true,
     }, SetOptions(merge: true));
+    
+    // Create/update studentSummaries entry for the new teacher
+    final summaryRef = FirebaseFirestore.instance
+        .collection('studentSummaries')
+        .doc(studentUid);
+    
+    // Get student data for summary
+    final studentDoc = await FirebaseFirestore.instance
+        .collection('users')
+        .doc(studentUid)
+        .get();
+    
+    final studentData = studentDoc.data() ?? {};
+    final firstName = studentData['firstName'] ?? '';
+    final lastName = studentData['lastName'] ?? '';
+    final email = studentData['email'] ?? '';
+    
+    batch.set(summaryRef, {
+      'teacherId': teacherId,
+      'firstName': firstName,
+      'lastName': lastName,
+      'displayName': '$firstName $lastName'.trim(),
+      'email': email,
+      'school': school,
+      'class': className,
+      'normalizedSchool': _normalizeText(school),
+      'normalizedClass': _normalizeText(className),
+      // Include full performance data
+      'totalXP': studentData['totalXP'] ?? studentData['xp'] ?? 0,
+      'totalQuestions': studentData['totalQuestions'] ?? studentData['questionsSolved'] ?? 0,
+      'subjectsCount': studentData['subjectsCount'] ?? studentData['subjectsSolved'] ?? 0,
+      'avgPercent': studentData['avgPercent'] ?? studentData['accuracy'] ?? 0,
+      'avatar': studentData['profileImageUrl'] ?? studentData['avatar'] ?? studentData['presetAvatar'],
+      'rank': studentData['currentRankName'] ?? studentData['rankName'] ?? studentData['rank'],
+      'updatedAt': FieldValue.serverTimestamp(),
+    }, SetOptions(merge: true));
+    
+    // Commit all changes atomically
+    await batch.commit();
+  }
+  
+  String _normalizeText(String text) {
+    // Normalize text for matching (lowercase, remove special chars)
+    return text.toLowerCase()
+        .replaceAll(RegExp(r'[^a-z0-9]'), '')
+        .trim();
   }
 
   Future<void> _changePassword() async {
