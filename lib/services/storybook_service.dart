@@ -17,7 +17,7 @@ class StorybookService {
           .map((doc) => Storybook.fromFirestore(doc))
           .toList();
     } catch (e) {
-      print('Error fetching storybooks: $e');
+      debugPrint('Error fetching storybooks: $e');
       return [];
     }
   }
@@ -36,7 +36,7 @@ class StorybookService {
           .map((doc) => Storybook.fromFirestore(doc))
           .toList();
     } catch (e) {
-      print('Error fetching storybooks by category: $e');
+      debugPrint('Error fetching storybooks by category: $e');
       return [];
     }
   }
@@ -55,7 +55,7 @@ class StorybookService {
           .map((doc) => Storybook.fromFirestore(doc))
           .toList();
     } catch (e) {
-      print('Error fetching storybooks by author: $e');
+      debugPrint('Error fetching storybooks by author: $e');
       return [];
     }
   }
@@ -73,7 +73,7 @@ class StorybookService {
             book.author.toLowerCase().contains(searchLower);
       }).toList();
     } catch (e) {
-      print('Error searching storybooks: $e');
+      debugPrint('Error searching storybooks: $e');
       return [];
     }
   }
@@ -85,7 +85,7 @@ class StorybookService {
         'readCount': FieldValue.increment(1),
       });
     } catch (e) {
-      print('Error incrementing read count: $e');
+      debugPrint('Error incrementing read count: $e');
     }
   }
 
@@ -103,7 +103,7 @@ class StorybookService {
           .map((doc) => Storybook.fromFirestore(doc))
           .toList();
     } catch (e) {
-      print('Error fetching featured storybooks: $e');
+      debugPrint('Error fetching featured storybooks: $e');
       return [];
     }
   }
@@ -124,7 +124,7 @@ class StorybookService {
           .map((doc) => Storybook.fromFirestore(doc))
           .toList();
     } catch (e) {
-      print('Error fetching new releases: $e');
+      debugPrint('Error fetching new releases: $e');
       return [];
     }
   }
@@ -137,7 +137,7 @@ class StorybookService {
       authors.sort();
       return authors;
     } catch (e) {
-      print('Error fetching authors: $e');
+      debugPrint('Error fetching authors: $e');
       return [];
     }
   }
@@ -150,7 +150,7 @@ class StorybookService {
       categories.sort();
       return categories;
     } catch (e) {
-      print('Error fetching categories: $e');
+      debugPrint('Error fetching categories: $e');
       return [];
     }
   }
@@ -193,7 +193,7 @@ class StorybookService {
       
       return recommendations.take(limit).toList();
     } catch (e) {
-      print('Error fetching recommended books: $e');
+      debugPrint('Error fetching recommended books: $e');
       return [];
     }
   }
@@ -208,7 +208,7 @@ class StorybookService {
       final currentBook = Storybook.fromFirestore(doc);
       return getRecommendedBooks(currentBook, limit: limit);
     } catch (e) {
-      print('Error fetching related books: $e');
+      debugPrint('Error fetching related books: $e');
       return [];
     }
   }

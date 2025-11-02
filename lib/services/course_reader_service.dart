@@ -13,7 +13,7 @@ class CourseReaderService {
       final snapshot = await _firestore.collection('courses').get();
       return snapshot.docs.map((doc) => Course.fromFirestore(doc)).toList();
     } catch (e) {
-      print('Error fetching courses: $e');
+      debugPrint('Error fetching courses: $e');
       return [];
     }
   }
@@ -27,7 +27,7 @@ class CourseReaderService {
       }
       return null;
     } catch (e) {
-      print('Error fetching course: $e');
+      debugPrint('Error fetching course: $e');
       return null;
     }
   }
@@ -46,7 +46,7 @@ class CourseReaderService {
           .map((doc) => CourseUnit.fromFirestore(doc, courseId))
           .toList();
     } catch (e) {
-      print('Error fetching units: $e');
+      debugPrint('Error fetching units: $e');
       return [];
     }
   }
@@ -66,7 +66,7 @@ class CourseReaderService {
       }
       return null;
     } catch (e) {
-      print('Error fetching unit: $e');
+      debugPrint('Error fetching unit: $e');
       return null;
     }
   }
@@ -93,7 +93,7 @@ class CourseReaderService {
       }
       return null;
     } catch (e) {
-      print('Error fetching lesson progress: $e');
+      debugPrint('Error fetching lesson progress: $e');
       return null;
     }
   }
@@ -139,7 +139,7 @@ class CourseReaderService {
         await _awardXP(xpEarned, 'Completed lesson: $lessonId');
       }
     } catch (e) {
-      print('Error updating lesson progress: $e');
+      debugPrint('Error updating lesson progress: $e');
     }
   }
 
@@ -161,7 +161,7 @@ class CourseReaderService {
       }
       return null;
     } catch (e) {
-      print('Error fetching unit progress: $e');
+      debugPrint('Error fetching unit progress: $e');
       return null;
     }
   }
@@ -220,7 +220,7 @@ class CourseReaderService {
           .doc('${courseId}_$unitId')
           .set(unitProgress.toFirestore(), SetOptions(merge: true));
     } catch (e) {
-      print('Error updating unit progress: $e');
+      debugPrint('Error updating unit progress: $e');
     }
   }
 
@@ -249,7 +249,7 @@ class CourseReaderService {
         'timestamp': FieldValue.serverTimestamp(),
       });
     } catch (e) {
-      print('Error awarding XP: $e');
+      debugPrint('Error awarding XP: $e');
     }
   }
 
@@ -277,7 +277,7 @@ class CourseReaderService {
       }
       return progressMap;
     } catch (e) {
-      print('Error fetching unit lesson progress: $e');
+      debugPrint('Error fetching unit lesson progress: $e');
       return {};
     }
   }
@@ -316,7 +316,7 @@ class CourseReaderService {
         'avg_completion': avgCompletion,
       };
     } catch (e) {
-      print('Error fetching course progress: $e');
+      debugPrint('Error fetching course progress: $e');
       return {};
     }
   }

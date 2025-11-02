@@ -31,7 +31,7 @@ class TelemetryService {
     } catch (e) {
       // Telemetry should not break user experience; log locally.
       // ignore: avoid_print
-      print('Telemetry recordEvent error: $e');
+      debugPrint('Telemetry recordEvent error: $e');
     }
   }
 

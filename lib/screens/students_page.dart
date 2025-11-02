@@ -272,7 +272,7 @@ class _StudentsPageState extends State<StudentsPage> {
       // Log errors so we can see permission / callable problems in the console
       // (helps debugging when teacher token hasn't refreshed or rules block access)
       // ignore: avoid_print
-      print('getClassAggregates error: $e\n$st');
+      debugPrint('getClassAggregates error: $e\n$st');
       // leave cache empty
     } finally {
       _isLoadingPage = false;

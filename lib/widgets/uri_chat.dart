@@ -642,8 +642,8 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
   }
 
   String _normalizeMd(String s) {
-    print('=== NORMALIZING TEXT IN URI CHAT ===');
-    print('Input: "${s.substring(0, math.min(300, s.length))}"');
+    debugPrint('=== NORMALIZING TEXT IN URI CHAT ===');
+    debugPrint('Input: "${s.substring(0, math.min(300, s.length))}"');
 
     // Most critical fixes first - handle the exact patterns from AI output
     s = s.replaceAll(r'$1 .', '1.');
@@ -671,7 +671,7 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
     // Handle any remaining $ followed by digit patterns
     s = s.replaceAllMapped(RegExp(r'\$([0-9]+)'), (match) => '${match.group(1)}.');
 
-    print('After critical fixes: "${s.substring(0, math.min(300, s.length))}"');
+    debugPrint('After critical fixes: "${s.substring(0, math.min(300, s.length))}"');
 
     // Continue with other normalization...
     // Fix common spacing issues that the AI creates
@@ -748,7 +748,7 @@ class UriChatState extends State<UriChat> with SingleTickerProviderStateMixin {
     s = s.replaceAll(r'$', r'$');
     s = s.replaceAll(r'$$', r'$$');
 
-    print('Final normalized: "${s.substring(0, math.min(300, s.length))}"');
+    debugPrint('Final normalized: "${s.substring(0, math.min(300, s.length))}"');
     return s.trim();
   }
 

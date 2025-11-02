@@ -38,7 +38,7 @@ class ChatService {
     List<Map<String, String>> history = const [],
     Map<String, String>? extraHeaders,
   }) async {
-    print('ChatService.ask called with message: "$message"');
+    debugPrint('ChatService.ask called with message: "$message"');
     try {
       final headers = <String, String>{
         'Content-Type': 'application/json',
@@ -52,19 +52,19 @@ class ChatService {
         if (history.isNotEmpty) "history": history, // [{role, content}]
       });
 
-      print('Sending request to $endpoint with body: $body');
+      debugPrint('Sending request to $endpoint with body: $body');
 
       final request = http.Request('POST', endpoint)
         ..headers.addAll(headers)
         ..body = body;
 
       final streamedResponse = await request.send();
-      print('Response status: ${streamedResponse.statusCode}');
+      debugPrint('Response status: ${streamedResponse.statusCode}');
 
       // If not 200/SSE, read and emit error then return
       if (streamedResponse.statusCode != 200) {
         final err = await streamedResponse.stream.bytesToString();
-        print('Error response: $err');
+        debugPrint('Error response: $err');
         _controller.add(ChatChunk(error: "HTTP ${streamedResponse.statusCode}: $err"));
         return;
       }
@@ -74,7 +74,7 @@ class ChatService {
       final lineStream = const LineSplitter().bind(utf8Stream);
 
       await for (final line in lineStream) {
-        print('SSE line: "$line"');
+        debugPrint('SSE line: "$line"');
         if (line.startsWith(':')) {
           // comment/heartbeat -> ignore
           continue;
@@ -82,20 +82,20 @@ class ChatService {
         if (line.startsWith('data: ')) {
           final jsonStr = line.substring(6);
           if (jsonStr.isEmpty) continue;
-          print('Processing data: "$jsonStr"');
+          debugPrint('Processing data: "$jsonStr"');
           try {
             final map = jsonDecode(jsonStr) as Map<String, dynamic>;
             _controller.add(ChatChunk.fromJson(map));
           } catch (e) {
-            print('Failed to parse JSON: $e');
+            debugPrint('Failed to parse JSON: $e');
             // ignore malformed chunk
           }
         }
         // blank lines separate events; we don't need special handling
       }
-      print('SSE stream ended');
+      debugPrint('SSE stream ended');
     } catch (e) {
-      print('ChatService error: $e');
+      debugPrint('ChatService error: $e');
       _controller.add(ChatChunk(error: e.toString()));
     }
   }

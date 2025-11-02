@@ -31,9 +31,9 @@ class _UriChatInputState extends State<UriChatInput> {
       "https://us-central1-uriel-academy-41fb0.cloudfunctions.net/aiChatHttp",
     ));
     _chatService.stream.listen((chunk) {
-      print('Received chunk: ${chunk.delta != null ? 'text' : chunk.done ? 'done' : chunk.error != null ? 'error' : 'unknown'}');
+      debugPrint('Received chunk: ${chunk.delta != null ? 'text' : chunk.done ? 'done' : chunk.error != null ? 'error' : 'unknown'}');
       if (chunk.error != null) {
-        print('Stream error: ${chunk.error}');
+        debugPrint('Stream error: ${chunk.error}');
         setState(() {
           _error = chunk.error;
           _loading = false;
@@ -42,13 +42,13 @@ class _UriChatInputState extends State<UriChatInput> {
         return;
       }
       if (chunk.done) {
-        print('Stream completed');
+        debugPrint('Stream completed');
         setState(() => _loading = false);
         if (widget.onStreamEnd != null) widget.onStreamEnd!();
         return;
       }
       if (chunk.delta != null) {
-        print('Received delta: "${chunk.delta}"');
+        debugPrint('Received delta: "${chunk.delta}"');
         setState(() => _currentAnswer += chunk.delta!);
         // Apply normalization to the full accumulated answer
         final normalizedAnswer = _normalizeMd(_currentAnswer);
@@ -65,8 +65,8 @@ class _UriChatInputState extends State<UriChatInput> {
   }
 
   String _normalizeMd(String s) {
-    print('=== NORMALIZING TEXT ===');
-    print('Input: "${s.substring(0, math.min(300, s.length))}"');
+    debugPrint('=== NORMALIZING TEXT ===');
+    debugPrint('Input: "${s.substring(0, math.min(300, s.length))}"');
 
     // Most critical fixes first - handle the exact patterns from AI output
     s = s.replaceAll(r'$1 .', '1.');
@@ -94,7 +94,7 @@ class _UriChatInputState extends State<UriChatInput> {
     // Handle any remaining $ followed by digit patterns
     s = s.replaceAllMapped(RegExp(r'\$([0-9]+)'), (match) => '${match.group(1)}.');
 
-    print('After critical fixes: "${s.substring(0, math.min(300, s.length))}"');
+    debugPrint('After critical fixes: "${s.substring(0, math.min(300, s.length))}"');
 
     // Continue with other normalization...
     // Fix common spacing issues that the AI creates
@@ -171,7 +171,7 @@ class _UriChatInputState extends State<UriChatInput> {
     s = s.replaceAll(r'$', r'$');
     s = s.replaceAll(r'$$', r'$$');
 
-    print('Final normalized: "${s.substring(0, math.min(300, s.length))}"');
+    debugPrint('Final normalized: "${s.substring(0, math.min(300, s.length))}"');
     return s.trim();
   }
 
