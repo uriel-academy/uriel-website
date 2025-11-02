@@ -43,17 +43,31 @@ String normalizeMd(String s) {
     (m) => '${m.group(1)}   ' // Replace bullet with indent
   );
   
-  // 5) Collapse multiple dots (but not ellipsis intentionally used)
+  // 5) Remove bullets from continuation lines after colons (e.g., "can have:\n - item")
+  // This catches cases where text after a colon lists items with bullets
+  s = s.replaceAllMapped(
+    RegExp(r':\s*\n\s+-\s+', multiLine: true),
+    (m) => ':\n   - ' // Normalize to consistent format
+  );
+  
+  // 6) Fix inconsistent list formatting - ensure all list items under the same parent have bullets
+  // If a paragraph ends with ":" and next lines are mixed bullets, add bullets to all
+  s = s.replaceAllMapped(
+    RegExp(r':\s*\n\s+([A-Z][^\n]+,)\s*\n\s+-\s+', multiLine: true),
+    (m) => ':\n   - ${m.group(1)}\n   - '
+  );
+  
+  // 7) Collapse multiple dots (but not ellipsis intentionally used)
   s = s.replaceAll(RegExp(r'\.{3,}'), '...');
   s = s.replaceAll(RegExp(r'\.{2}(?!\.)'), '.');
 
-  // 6) Contract obvious artifacts
+  // 8) Contract obvious artifacts
   s = s.replaceAll('do ing', 'doing');
 
-  // 7) Remove extra spaces (but preserve newlines)
+  // 9) Remove extra spaces (but preserve newlines)
   s = s.replaceAll(RegExp(r'[ \t\f\v]+'), ' ');
   
-  // 8) Fix spacing around punctuation (but not between numbers/letters and dashes for lists)
+  // 10) Fix spacing around punctuation (but not between numbers/letters and dashes for lists)
   s = s.replaceAllMapped(RegExp(r'\s+([,.;:?!%])'), (m) => m.group(1)!);
   s = s.replaceAllMapped(RegExp(r'([.!?])([A-Za-z0-9])'), (m) => '${m.group(1)} ${m.group(2)}');
 
