@@ -2528,11 +2528,21 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     return items;
   }
 
-  int _uriIndex() => _homeChildren().length - 1;
+  int _uriIndex() {
+    if (widget.isTeacher) {
+      return 4; // Teacher: Dashboard, Students, Generate Quiz, Notes, [Uri]
+    } else {
+      return 6; // Student: Dashboard, Questions, Revision, Books, Notes, Trivia, [Leaderboard], Uri
+    }
+  }
 
-  // Check if Uri button should be shown (not on Uri page and not showing profile)
+  int _feedbackIndex() => _homeChildren().length - 1; // Feedback is always last
+
+  // Check if Uri button should be shown (not on Uri page, not on Feedback page, and not showing profile)
   bool _shouldShowUriButton() {
-    return !_showingProfile && _selectedIndex != _uriIndex();
+    return !_showingProfile && 
+           _selectedIndex != _uriIndex() && 
+           _selectedIndex != _feedbackIndex();
   }
 
   // Build floating Uri chatbot button
@@ -2586,9 +2596,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               // Header
               Container(
                 padding: const EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  color: const Color(0xFF1A1E3F),
-                  borderRadius: const BorderRadius.only(
+                decoration: const BoxDecoration(
+                  color: Color(0xFF1A1E3F),
+                  borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(16),
                     topRight: Radius.circular(16),
                   ),
