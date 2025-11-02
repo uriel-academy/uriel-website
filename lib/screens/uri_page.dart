@@ -143,12 +143,11 @@ class _UriPageState extends State<UriPage> {
   }
 
   // Wrap markdown text in a small constrained MarkdownBody to get
-  // nice formatting (headers, bold, lists). We use selectable=false
-  // because the surrounding bubble provides selection.
+  // nice formatting (headers, bold, lists). Enable selection so users can copy text.
   Widget _markdownSegment(String md) {
     return MarkdownBody(
       data: md,
-      selectable: false,
+      selectable: true,
       styleSheet: MarkdownStyleSheet.fromTheme(Theme.of(context)).copyWith(
         p: GoogleFonts.montserrat(fontSize: 15, height: 1.5, color: const Color(0xFF111827)),
         h3: GoogleFonts.playfairDisplay(fontSize: 18, fontWeight: FontWeight.w600, color: const Color(0xFF1A1E3F)),
@@ -210,7 +209,52 @@ class _UriPageState extends State<UriPage> {
                   : [BoxShadow(color: Colors.black.withOpacity(0.03), blurRadius: 6, offset: const Offset(0, 2))],
               border: !isUser ? Border.all(color: const Color(0xFFE6E9EE), width: 1) : null,
             ),
-            child: _buildRenderedMessage(m.text, isUser),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                _buildRenderedMessage(m.text, isUser),
+                // Add copy button for assistant messages
+                if (!isUser && m.text.isNotEmpty)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 8.0),
+                    child: InkWell(
+                      onTap: () {
+                        Clipboard.setData(ClipboardData(text: m.text));
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: Text('Response copied to clipboard', style: GoogleFonts.montserrat()),
+                            duration: const Duration(seconds: 2),
+                            behavior: SnackBarBehavior.floating,
+                          ),
+                        );
+                      },
+                      borderRadius: BorderRadius.circular(8),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Icon(
+                              Icons.copy,
+                              size: 14,
+                              color: Colors.grey[600],
+                            ),
+                            const SizedBox(width: 4),
+                            Text(
+                              'Copy',
+                              style: GoogleFonts.montserrat(
+                                fontSize: 12,
+                                color: Colors.grey[600],
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+              ],
+            ),
           ),
         ),
       ],
