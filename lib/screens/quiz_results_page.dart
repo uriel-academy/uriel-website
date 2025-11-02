@@ -7,6 +7,7 @@ import '../models/quiz_model.dart';
 import '../services/xp_service.dart';
 import '../services/achievement_service.dart';
 import '../services/leaderboard_rank_service.dart';
+import '../services/student_data_sync_service.dart';
 import '../widgets/rank_badge_widget.dart';
 import 'home_page.dart';
 
@@ -145,6 +146,10 @@ class _QuizResultsPageState extends State<QuizResultsPage>
 
       // Check for newly earned achievements
       await _checkAchievements(user.uid);
+
+      // Sync student data to studentSummaries for teacher dashboard
+      final StudentDataSyncService syncService = StudentDataSyncService();
+      await syncService.syncStudentData(user.uid);
 
     } catch (e) {
       debugPrint('❌ Error saving quiz result: $e');

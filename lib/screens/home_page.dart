@@ -2540,6 +2540,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
 
   // Check if Uri button should be shown (not on Uri page, not on Feedback page, and not showing profile)
   bool _shouldShowUriButton() {
+    // Hide Uri chatbot for teachers
+    if (widget.isTeacher) return false;
+    
     return !_showingProfile && 
            _selectedIndex != _uriIndex() && 
            _selectedIndex != _feedbackIndex();

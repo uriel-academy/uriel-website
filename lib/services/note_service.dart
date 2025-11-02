@@ -48,7 +48,7 @@ class NoteService {
           'noteId': noteId,
           'title': noteData['title'] ?? '',
           'subject': noteData['subject'] ?? '',
-          'uploaderName': noteData['uploaderName'] ?? '',
+          'authorName': noteData['authorName'] ?? noteData['uploaderName'] ?? '',
           'thumbnail': (noteData['images'] is List && (noteData['images'] as List).isNotEmpty) ? (noteData['images'] as List).first : (noteData['fileUrl'] ?? noteData['signedUrl']),
           'addedAt': FieldValue.serverTimestamp(),
         },

@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
 import 'leaderboard_rank_service.dart';
+import 'student_data_sync_service.dart';
 
 class XPService {
   static final XPService _instance = XPService._internal();
@@ -9,6 +10,7 @@ class XPService {
 
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final LeaderboardRankService _rankService = LeaderboardRankService();
+  final StudentDataSyncService _syncService = StudentDataSyncService();
 
   // XP Constants - Quiz & Learning
   static const int XP_PER_CORRECT_ANSWER = 5;
@@ -259,6 +261,9 @@ class XPService {
         await _handleRankUp(userId, oldRank, newRank);
         rankedUp = true;
       }
+
+      // Sync student data to studentSummaries for teacher dashboard
+      await _syncService.syncStudentData(userId);
 
       return {
         'rankedUp': rankedUp,

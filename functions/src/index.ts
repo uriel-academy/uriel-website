@@ -1327,6 +1327,8 @@ export const uploadNote = functions.region('us-central1').https.onRequest((req, 
         const text = (body.text || '').toString().slice(0, 20000);
         const imageBase64 = (body.imageBase64 || '').toString();
         const fileName = (body.fileName || '').toString() || `note_${Date.now()}`;
+        const authorName = (body.authorName || '').toString().slice(0, 200);
+        const authorId = (body.authorId || uid || '').toString();
 
         // Basic input validation
         if (text.isEmpty && imageBase64.isEmpty) { res.status(400).json({ error: 'Empty upload: provide text or image' }); return; }
@@ -1353,6 +1355,8 @@ export const uploadNote = functions.region('us-central1').https.onRequest((req, 
           title: title || fileName,
           subject: subject || null,
           userId: uid,
+          authorName: authorName || null,
+          authorId: authorId || uid,
           createdAt,
           status: 'published', // default
         };

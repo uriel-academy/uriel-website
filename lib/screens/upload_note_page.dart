@@ -102,7 +102,8 @@ class _UploadNotePageState extends State<UploadNotePage> {
         'title': _titleCtrl.text,
         'subject': _selectedSubject,
         'text': _textCtrl.text,
-        'uploaderName': user.displayName ?? 'Anonymous User',
+        'authorName': user.displayName ?? 'Anonymous User',
+        'authorId': user.uid,
         if (imageBase64 != null) 'imageBase64': imageBase64,
         if (fileName.isNotEmpty) 'fileName': fileName,
       };
