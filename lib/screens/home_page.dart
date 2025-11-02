@@ -2560,7 +2560,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             width: 40,
             height: 40,
             padding: const EdgeInsets.all(1), // Minimal white border showing
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.white,
               shape: BoxShape.circle,
             ),
@@ -2618,7 +2618,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                       width: 48,
                       height: 48,
                       padding: const EdgeInsets.all(2), // Minimal white border showing
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Colors.white,
                         shape: BoxShape.circle,
                       ),
@@ -3026,7 +3026,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                 'subjectPerformance': subjectPerformance,
               };
             } catch (e) {
-              print('Error loading dashboard data: $e');
+              debugPrint('Error loading dashboard data: $e');
               return <String, dynamic>{};
             }
           })(),
@@ -3539,7 +3539,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                     if (reason.isNotEmpty) reason += ' • ';
                     reason += 'Inactive ${daysInactive}d';
                   }
-                } catch (e) {}
+                } catch (e) {
+                  // Silently handle date parsing errors
+                }
               }
               
               return Container(
@@ -3637,7 +3639,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           } else if (lastActive.isAfter(lastWeekStart) && lastActive.isBefore(thisWeekStart)) {
             activeLastWeek++;
           }
-        } catch (e) {}
+        } catch (e) {
+          // Silently handle date parsing errors
+        }
       }
     }
     
