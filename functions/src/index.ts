@@ -3259,5 +3259,98 @@ export const backfillClassPage = functions.https.onCall(async (data, context) =>
   }
 });
 
+/**
+ * Auto-assign orphaned students to Ave Maria Form 1 teacher
+ * Triggers when a new student user is created or updated without a teacher
+ */
+export const autoAssignOrphanedStudent = functions.firestore
+  .document('users/{userId}')
+  .onWrite(async (change, context) => {
+    try {
+      // Skip if document was deleted
+      if (!change.after.exists) {
+        return null;
+      }
+      
+      const snap = change.after;
+      const userData = snap.data();
+      const userId = context.params.userId;
+      
+      if (!userData) {
+        return null;
+      }
+      
+      // Only process students
+      if (userData.role !== 'student') {
+        return null;
+      }
+      
+      // Check if student already has a teacher
+      if (userData.teacherId || userData.teacher_id) {
+        return null;
+      }
+      
+      // If this is an update, only process if teacher was just removed
+      if (change.before.exists) {
+        const oldData = change.before.data();
+        if (oldData) {
+          const hadTeacher = oldData.teacherId || oldData.teacher_id;
+          if (!hadTeacher) {
+            // Never had teacher, already processed on create
+            return null;
+          }
+          console.log(`Student ${userId} lost teacher assignment, re-assigning...`);
+        }
+      }
+      
+      console.log(`Auto-assigning orphaned student: ${userId}`);
+      
+      // Find Ave Maria Form 1 teacher (mark morrison)
+      const teachersSnapshot = await db.collection('users')
+        .where('role', '==', 'teacher')
+        .where('school', '==', 'Ave Maria')
+        .limit(1)
+        .get();
+      
+      if (teachersSnapshot.empty) {
+        console.warn('No Ave Maria teacher found for auto-assignment');
+        return null;
+      }
+      
+      const teacherDoc = teachersSnapshot.docs[0];
+      const teacherId = teacherDoc.id;
+      const teacherData = teacherDoc.data();
+      
+      console.log(`Assigning to teacher: ${teacherData.firstName} ${teacherData.lastName} (${teacherId})`);
+      
+      // Update student with teacher assignment
+      await snap.ref.update({
+        teacherId: teacherId,
+        teacher_id: teacherId,
+        school: 'Ave Maria',
+        schoolName: 'Ave Maria',
+        class: 'Form 1',
+        className: 'Form 1',
+        grade: 'Form 1',
+        updatedAt: admin.firestore.FieldValue.serverTimestamp()
+      });
+      
+      // Add to teacher's students subcollection
+      await db.collection('users').doc(teacherId)
+        .collection('students').doc(userId).set({
+          studentId: userId,
+          addedAt: admin.firestore.FieldValue.serverTimestamp(),
+          autoAssigned: true
+        });
+      
+      console.log(`✅ Successfully auto-assigned student ${userId} to teacher ${teacherId}`);
+      
+      return null;
+    } catch (error) {
+      console.error('Error in autoAssignOrphanedStudent:', error);
+      return null;
+    }
+  });
+
 // Export AI Quiz Generation
 export { generateAIQuiz } from './generateAIQuiz';
