@@ -56,11 +56,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Uriel Academy',
-      debugShowCheckedModeBanner: false,
-      home: const AuthGate(), // Start with AuthGate (checks auth state automatically)
-      onGenerateRoute: (settings) {
+    return SelectionArea(
+      child: MaterialApp(
+        title: 'Uriel Academy',
+        debugShowCheckedModeBanner: false,
+        home: const AuthGate(), // Start with AuthGate (checks auth state automatically)
+        onGenerateRoute: (settings) {
         // Check if user is authenticated
         final isAuthenticated = FirebaseAuth.instance.currentUser != null;
         
@@ -124,6 +125,7 @@ class MyApp extends StatelessWidget {
         },
         '/comprehensive-admin': (_) => const ComprehensiveAdminDashboard(), // Add comprehensive admin dashboard route
       },
+      ),
     );
   }
 }
