@@ -329,7 +329,7 @@ class _StudentsPageState extends State<StudentsPage> {
               // Extract comprehensive data - now properly using API response
               final name = (data['displayName'] ?? '') as String;
               final email = (data['email'] ?? '') as String;
-              final rank = data['rank'] ?? '-';
+              final rank = data['rank'] ?? '-';  // API returns rank name in 'rank' field
               final xp = data['totalXP'] ?? 0;
               
               // Get accuracy directly from API response (now calculated in Cloud Function)
