@@ -295,7 +295,7 @@ class _UriPageState extends State<UriPage> {
                       child: Image.memory(
                         m.imageBytes!,
                         fit: BoxFit.contain,
-                        width: 200,
+                        width: 120,
                       ),
                     ),
                   ),
@@ -401,7 +401,7 @@ class _UriPageState extends State<UriPage> {
       appBar: AppBar(
         backgroundColor: isDark ? const Color(0xFF0B1020) : Colors.white,
         elevation: 0.5,
-        title: Text('Uri', style: GoogleFonts.montserrat(color: isDark ? Colors.white : Colors.black, fontWeight: FontWeight.w600)),
+        title: Text('Ask Uri', style: GoogleFonts.montserrat(color: isDark ? Colors.white : Colors.black, fontWeight: FontWeight.w600)),
         actions: [
           IconButton(
             tooltip: _aggressiveClean ? 'Aggressive cleaning: ON' : 'Aggressive cleaning: OFF',

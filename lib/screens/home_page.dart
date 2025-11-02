@@ -2504,17 +2504,17 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   // Dashboard always first (label-only tab — no icon for teacher or student)
   items.add({'index': idx++, 'label': 'Dashboard', 'icon': null});
     if (widget.isTeacher) {
-      // Teacher order: Students, Generate Quiz, Notes, Talk to Uri, Books, Trivia, Leaderboard, Feedback
+      // Teacher order: Students, Generate Quiz, Notes, Ask Uri, Books, Trivia, Leaderboard, Feedback
       items.add({'index': idx++, 'label': 'Students', 'icon': null});
       items.add({'index': idx++, 'label': 'Generate Quiz', 'icon': null});
       items.add({'index': idx++, 'label': 'Notes', 'icon': null});
-      items.add({'index': idx++, 'label': 'Talk to Uri', 'icon': null});
+      items.add({'index': idx++, 'label': 'Ask Uri', 'icon': null});
       items.add({'index': idx++, 'label': 'Books', 'icon': null});
       items.add({'index': idx++, 'label': 'Trivia', 'icon': null});
       items.add({'index': idx++, 'label': 'Leaderboard', 'icon': null});
       items.add({'index': idx++, 'label': 'Feedback', 'icon': null});
     } else {
-      // Student order: Questions, Revision, Books, Notes, Trivia, Leaderboard, Talk to Uri, Feedback
+      // Student order: Questions, Revision, Books, Notes, Trivia, Leaderboard, Ask Uri, Feedback
       // Render label-only tabs for students as requested (no icons)
       items.add({'index': idx++, 'label': 'Questions', 'icon': null});
       items.add({'index': idx++, 'label': 'Revision', 'icon': null});
@@ -2522,7 +2522,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       items.add({'index': idx++, 'label': 'Notes', 'icon': null});
       items.add({'index': idx++, 'label': 'Trivia', 'icon': null});
       items.add({'index': idx++, 'label': 'Leaderboard', 'icon': null});
-      items.add({'index': idx++, 'label': 'Talk to Uri', 'icon': null});
+      items.add({'index': idx++, 'label': 'Ask Uri', 'icon': null});
       items.add({'index': idx++, 'label': 'Feedback', 'icon': null});
     }
     return items;
@@ -2530,9 +2530,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
 
   int _uriIndex() {
     if (widget.isTeacher) {
-      return 4; // Teacher: Dashboard, Students, Generate Quiz, Notes, [Uri]
+      return 4; // Teacher: Dashboard(0), Students(1), Generate Quiz(2), Notes(3), [Ask Uri(4)]
     } else {
-      return 6; // Student: Dashboard, Questions, Revision, Books, Notes, Trivia, [Leaderboard], Uri
+      return 7; // Student: Dashboard(0), Questions(1), Revision(2), Books(3), Notes(4), Trivia(5), Leaderboard(6), [Ask Uri(7)]
     }
   }
 
@@ -2553,11 +2553,24 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           _showUriChat = !_showUriChat;
         });
       },
-      backgroundColor: const Color(0xFF1A1E3F),
-      icon: Icon(
-        _showUriChat ? Icons.close : Icons.chat_bubble,
-        color: Colors.white,
-      ),
+      backgroundColor: const Color(0xFF001F3F), // Navy blue
+      icon: _showUriChat 
+        ? const Icon(Icons.close, color: Colors.white)
+        : Container(
+            width: 40,
+            height: 40,
+            padding: const EdgeInsets.all(1), // Minimal white border showing
+            decoration: BoxDecoration(
+              color: Colors.white,
+              shape: BoxShape.circle,
+            ),
+            child: ClipOval(
+              child: Image.asset(
+                'assets/uri.png',
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
       label: Text(
         _showUriChat ? 'Close Uri' : 'Ask Uri',
         style: GoogleFonts.montserrat(
@@ -2578,17 +2591,17 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       right: isSmallScreen ? 16 : 24,
       bottom: isSmallScreen ? 80 : 24,
       child: Material(
-        elevation: 8,
-        borderRadius: BorderRadius.circular(16),
+        elevation: 12,
+        borderRadius: BorderRadius.circular(24),
+        clipBehavior: Clip.antiAlias, // Ensure clean rounded edges
         child: Container(
           width: isSmallScreen ? MediaQuery.of(context).size.width - 32 : 400,
           height: isSmallScreen ? MediaQuery.of(context).size.height * 0.6 : 600,
           decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: BorderRadius.circular(16),
             border: Border.all(
-              color: const Color(0xFF1A1E3F).withValues(alpha: 0.1),
-              width: 1,
+              color: const Color(0xFF001F3F).withValues(alpha: 0.2), // Navy blue border
+              width: 2,
             ),
           ),
           child: Column(
@@ -2597,20 +2610,23 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               Container(
                 padding: const EdgeInsets.all(16),
                 decoration: const BoxDecoration(
-                  color: Color(0xFF1A1E3F),
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(16),
-                    topRight: Radius.circular(16),
-                  ),
+                  color: Color(0xFF001F3F), // Navy blue header
                 ),
                 child: Row(
                   children: [
-                    const CircleAvatar(
-                      radius: 20,
-                      backgroundColor: Colors.white,
-                      child: Icon(
-                        Icons.smart_toy,
-                        color: Color(0xFF1A1E3F),
+                    Container(
+                      width: 48,
+                      height: 48,
+                      padding: const EdgeInsets.all(2), // Minimal white border showing
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        shape: BoxShape.circle,
+                      ),
+                      child: ClipOval(
+                        child: Image.asset(
+                          'assets/uri.png',
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
                     const SizedBox(width: 12),
@@ -2619,17 +2635,17 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Uri AI Assistant',
+                            'Uri',
                             style: GoogleFonts.montserrat(
                               color: Colors.white,
-                              fontWeight: FontWeight.w600,
+                              fontWeight: FontWeight.bold,
                               fontSize: 16,
                             ),
                           ),
                           Text(
-                            'Ask me anything!',
+                            'Your study companion',
                             style: GoogleFonts.montserrat(
-                              color: Colors.white.withValues(alpha: 0.8),
+                              color: Colors.white.withValues(alpha: 0.9),
                               fontSize: 12,
                             ),
                           ),
@@ -2637,18 +2653,17 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                       ),
                     ),
                     IconButton(
-                      icon: const Icon(Icons.close, color: Colors.white),
                       onPressed: () {
                         setState(() {
                           _showUriChat = false;
                         });
                       },
+                      icon: const Icon(Icons.close, color: Colors.white),
                     ),
                   ],
                 ),
               ),
-              
-              // Chat content
+              // Embedded Uri chat
               const Expanded(
                 child: UriPage(embedded: true),
               ),
