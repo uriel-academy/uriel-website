@@ -238,11 +238,14 @@ export const aiChatHttpStreaming = functions.region('us-central1').https.onReque
         return;
       }
 
-      const { message, history } = req.body || {};
+      const { message, history, imageBase64 } = req.body || {};
       if (!message || typeof message !== "string") {
         res.status(400).json({ error: "Missing 'message' string in body" });
         return;
       }
+      
+      // Check if image is provided
+      const hasImage = imageBase64 && typeof imageBase64 === "string" && imageBase64.length > 0;
 
       // SSE headers
       res.setHeader("Content-Type", "text/event-stream");
@@ -303,7 +306,24 @@ export const aiChatHttpStreaming = functions.region('us-central1').https.onReque
       ];
       if (webContext && webContext.length > 0) messages.push({ role: 'system', content: `WebSearchResults:\n${webContext}` });
       messages.push(...(Array.isArray(history) ? history : [])); // [{role:'user'|'assistant', content:string}, ...]
-      messages.push({ role: "user", content: message });
+      
+      // Construct user message with image if provided (Vision API format)
+      if (hasImage) {
+        messages.push({
+          role: "user",
+          content: [
+            { type: "text", text: message },
+            {
+              type: "image_url",
+              image_url: {
+                url: `data:image/jpeg;base64,${imageBase64}`,
+              },
+            },
+          ],
+        });
+      } else {
+        messages.push({ role: "user", content: message });
+      }
 
       // Emit a small meta SSE event so clients can see whether web search was used
       try {
@@ -317,8 +337,10 @@ export const aiChatHttpStreaming = functions.region('us-central1').https.onReque
       } catch (e) { console.warn('Failed to write meta SSE event', e); }
 
       const client = getOpenAI();
+      // Use gpt-4o for vision requests, gpt-4o-mini for text-only
+      const model = hasImage ? "gpt-4o" : "gpt-4o-mini";
       const completion = await client.chat.completions.create({
-        model: "gpt-4o-mini", // good + cheap streaming model
+        model,
         stream: true,
         temperature: 0.2,
         messages,

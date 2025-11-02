@@ -7,6 +7,11 @@ import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter_math_fork/flutter_math.dart';
 import 'package:flutter/services.dart';
 import '../services/uri_normalizer.dart';
+import 'package:image_picker/image_picker.dart';
+import 'dart:convert';
+import 'dart:typed_data';
+import 'dart:html' as html;
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 class UriPage extends StatefulWidget {
   final bool embedded;
@@ -26,6 +31,9 @@ class _UriPageState extends State<UriPage> {
   bool _sending = false;
   bool _isFirstInteraction = true;
   bool _aggressiveClean = false;
+  final ImagePicker _imagePicker = ImagePicker();
+  Uint8List? _selectedImageBytes;
+  String? _selectedImageName;
 
   @override
   void initState() {
@@ -68,9 +76,9 @@ class _UriPageState extends State<UriPage> {
     super.dispose();
   }
 
-  void _addUserMessage(String text) {
+  void _addUserMessage(String text, {Uint8List? imageBytes}) {
     setState(() {
-      _messages.add(_ChatMessage(role: Role.user, text: text));
+      _messages.add(_ChatMessage(role: Role.user, text: text, imageBytes: imageBytes));
     });
     _scrollToBottom();
   }
@@ -80,6 +88,63 @@ class _UriPageState extends State<UriPage> {
       _messages.add(_ChatMessage(role: Role.assistant, text: '', streaming: true));
     });
     _scrollToBottom();
+  }
+  
+  Future<void> _pickImage() async {
+    try {
+      if (kIsWeb) {
+        // Use HTML file input for web
+        final html.FileUploadInputElement uploadInput = html.FileUploadInputElement();
+        uploadInput.accept = 'image/*';
+        uploadInput.click();
+        
+        uploadInput.onChange.listen((e) async {
+          final files = uploadInput.files;
+          if (files != null && files.isNotEmpty) {
+            final file = files[0];
+            final reader = html.FileReader();
+            
+            reader.readAsArrayBuffer(file);
+            reader.onLoadEnd.listen((e) {
+              final bytes = reader.result as Uint8List;
+              setState(() {
+                _selectedImageBytes = bytes;
+                _selectedImageName = file.name;
+              });
+            });
+          }
+        });
+      } else {
+        // Use image_picker for mobile
+        final XFile? image = await _imagePicker.pickImage(
+          source: ImageSource.gallery,
+          maxWidth: 2048,
+          maxHeight: 2048,
+          imageQuality: 85,
+        );
+        
+        if (image != null) {
+          final bytes = await image.readAsBytes();
+          setState(() {
+            _selectedImageBytes = bytes;
+            _selectedImageName = image.name;
+          });
+        }
+      }
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Error picking image: $e')),
+        );
+      }
+    }
+  }
+  
+  void _clearSelectedImage() {
+    setState(() {
+      _selectedImageBytes = null;
+      _selectedImageName = null;
+    });
   }
 
   void _scrollToBottom() {
@@ -165,10 +230,15 @@ class _UriPageState extends State<UriPage> {
 
   Future<void> _send() async {
     final text = _controller.text.trim();
-    if (text.isEmpty || _sending) return;
+    final imageBytes = _selectedImageBytes;
+    
+    if ((text.isEmpty && imageBytes == null) || _sending) return;
+    
     _controller.clear();
-    _addUserMessage(text);
+    _addUserMessage(text.isEmpty ? '[Image uploaded]' : text, imageBytes: imageBytes);
+    _clearSelectedImage();
     _addAssistantPlaceholder();
+    
     // First interaction has occurred — bring input down to bottom
     if (_isFirstInteraction) {
       setState(() => _isFirstInteraction = false);
@@ -179,8 +249,15 @@ class _UriPageState extends State<UriPage> {
     final user = FirebaseAuth.instance.currentUser;
     final idToken = user != null ? await user.getIdToken() : null;
 
+    // Convert image to base64 if present
+    String? imageBase64;
+    if (imageBytes != null) {
+      imageBase64 = base64Encode(imageBytes);
+    }
+
     await _chatService.ask(
-      message: text,
+      message: text.isEmpty ? 'What do you see in this image?' : text,
+      imageBase64: imageBase64,
       history: [],
       extraHeaders: idToken != null ? {"Authorization": "Bearer $idToken"} : null,
     );
@@ -212,6 +289,19 @@ class _UriPageState extends State<UriPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                // Show image if present (user messages only)
+                if (m.imageBytes != null && isUser)
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 8.0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(8),
+                      child: Image.memory(
+                        m.imageBytes!,
+                        fit: BoxFit.contain,
+                        width: 300,
+                      ),
+                    ),
+                  ),
                 _buildRenderedMessage(m.text, isUser),
                 // Add copy button for assistant messages
                 if (!isUser && m.text.isNotEmpty)
@@ -365,60 +455,128 @@ class _UriPageState extends State<UriPage> {
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-        child: Row(
+        child: Column(
           children: [
-            Expanded(
-              // Shortcuts+Actions: Enter (without Shift) will invoke _send().
-              // Shift+Enter will insert a newline as normal in the multiline TextField.
-              child: Shortcuts(
-                shortcuts: const <ShortcutActivator, Intent>{
-                  // SingleActivator defaults to requiring no modifiers.
-                  SingleActivator(LogicalKeyboardKey.enter): ActivateIntent(),
-                },
-                child: Actions(
-                  actions: <Type, Action<Intent>>{
-                    ActivateIntent: CallbackAction(onInvoke: (intent) {
-                      // Only send when Enter is pressed without Shift. SingleActivator
-                      // ensures Shift is not pressed.
-                      _send();
-                      return null;
-                    }),
-                  },
-                  child: Focus(
-                    focusNode: _inputFocusNode,
-                    child: TextField(
-                      controller: _controller,
-                      textCapitalization: TextCapitalization.sentences,
-                      minLines: 1,
-                      maxLines: 3,
-                      decoration: InputDecoration(
-                        hintText: 'Ask Uri AI...',
-                        filled: true,
-                        fillColor: Theme.of(context).brightness == Brightness.dark ? const Color(0xFF0B1020) : Colors.white,
-                        hintStyle: GoogleFonts.montserrat(fontSize: 14, color: Colors.grey[500]),
-                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(28), borderSide: BorderSide.none),
-                        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            // Image preview if selected
+            if (_selectedImageBytes != null)
+              Container(
+                margin: const EdgeInsets.only(bottom: 8),
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: Theme.of(context).brightness == Brightness.dark 
+                      ? const Color(0xFF1A1E3F) 
+                      : Colors.grey[100],
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(color: Colors.grey[300]!, width: 1),
+                ),
+                child: Row(
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(6),
+                      child: Image.memory(
+                        _selectedImageBytes!,
+                        width: 60,
+                        height: 60,
+                        fit: BoxFit.cover,
                       ),
-                      // onSubmitted kept for platforms that treat enter as submit
-                      onSubmitted: (_) => _send(),
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Text(
+                        _selectedImageName ?? 'Image',
+                        style: GoogleFonts.montserrat(
+                          fontSize: 13,
+                          fontWeight: FontWeight.w500,
+                        ),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                    IconButton(
+                      onPressed: _clearSelectedImage,
+                      icon: const Icon(Icons.close, size: 20),
+                      tooltip: 'Remove image',
+                    ),
+                  ],
+                ),
+              ),
+            // Input row
+            Row(
+              children: [
+                // Image picker button
+                Container(
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).brightness == Brightness.dark 
+                        ? const Color(0xFF1A1E3F) 
+                        : Colors.grey[200],
+                    shape: BoxShape.circle,
+                  ),
+                  child: IconButton(
+                    onPressed: _pickImage,
+                    icon: Icon(
+                      Icons.image_outlined,
+                      color: Theme.of(context).brightness == Brightness.dark 
+                          ? Colors.white70 
+                          : Colors.grey[700],
+                    ),
+                    tooltip: 'Upload image',
+                  ),
+                ),
+                const SizedBox(width: 8),
+                Expanded(
+                  // Shortcuts+Actions: Enter (without Shift) will invoke _send().
+                  // Shift+Enter will insert a newline as normal in the multiline TextField.
+                  child: Shortcuts(
+                    shortcuts: const <ShortcutActivator, Intent>{
+                      // SingleActivator defaults to requiring no modifiers.
+                      SingleActivator(LogicalKeyboardKey.enter): ActivateIntent(),
+                    },
+                    child: Actions(
+                      actions: <Type, Action<Intent>>{
+                        ActivateIntent: CallbackAction(onInvoke: (intent) {
+                          // Only send when Enter is pressed without Shift. SingleActivator
+                          // ensures Shift is not pressed.
+                          _send();
+                          return null;
+                        }),
+                      },
+                      child: Focus(
+                        focusNode: _inputFocusNode,
+                        child: TextField(
+                          controller: _controller,
+                          textCapitalization: TextCapitalization.sentences,
+                          minLines: 1,
+                          maxLines: 3,
+                          decoration: InputDecoration(
+                            hintText: 'Ask Uri AI...',
+                            filled: true,
+                            fillColor: Theme.of(context).brightness == Brightness.dark ? const Color(0xFF0B1020) : Colors.white,
+                            hintStyle: GoogleFonts.montserrat(fontSize: 14, color: Colors.grey[500]),
+                            border: OutlineInputBorder(borderRadius: BorderRadius.circular(28), borderSide: BorderSide.none),
+                            contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                          ),
+                          // onSubmitted kept for platforms that treat enter as submit
+                          onSubmitted: (_) => _send(),
+                        ),
+                      ),
                     ),
                   ),
                 ),
-              ),
-            ),
-            const SizedBox(width: 8),
-            Container(
-              decoration: BoxDecoration(
-                color: const Color(0xFF0B5FFF),
-                shape: BoxShape.circle,
-                boxShadow: [BoxShadow(color: const Color(0xFF0B5FFF).withOpacity(0.14), blurRadius: 8, offset: const Offset(0, 4))],
-              ),
-              child: IconButton(
-                onPressed: _send,
-                icon: _sending
-                    ? const SizedBox(width: 18, height: 18, child: CircularProgressIndicator(strokeWidth: 2.2, valueColor: AlwaysStoppedAnimation(Colors.white)))
-                    : const Icon(Icons.send, color: Colors.white),
-              ),
+                const SizedBox(width: 8),
+                Container(
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF0B5FFF),
+                    shape: BoxShape.circle,
+                    boxShadow: [BoxShadow(color: const Color(0xFF0B5FFF).withOpacity(0.14), blurRadius: 8, offset: const Offset(0, 4))],
+                  ),
+                  child: IconButton(
+                    onPressed: _send,
+                    icon: _sending
+                        ? const SizedBox(width: 18, height: 18, child: CircularProgressIndicator(strokeWidth: 2.2, valueColor: AlwaysStoppedAnimation(Colors.white)))
+                        : const Icon(Icons.send, color: Colors.white),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
@@ -449,51 +607,113 @@ class _UriPageState extends State<UriPage> {
             const SizedBox(height: 18),
             Container(
               constraints: const BoxConstraints(maxWidth: 720),
-              child: Row(
+              child: Column(
                 children: [
-                  Expanded(
-                    child: Shortcuts(
-                      shortcuts: const <ShortcutActivator, Intent>{
-                        SingleActivator(LogicalKeyboardKey.enter): ActivateIntent(),
-                      },
-                      child: Actions(
-                        actions: <Type, Action<Intent>>{
-                          ActivateIntent: CallbackAction(onInvoke: (intent) {
-                            _send();
-                            return null;
-                          }),
-                        },
-                        child: TextField(
-                          controller: _controller,
-                          textCapitalization: TextCapitalization.sentences,
-                          minLines: 1,
-                          maxLines: 2,
-                          decoration: InputDecoration(
-                            hintText: 'Ask Uri about a topic, question or concept...',
-                            filled: true,
-                            fillColor: isDark ? const Color(0xFF0B1020) : Colors.white,
-                            hintStyle: GoogleFonts.montserrat(fontSize: 14, color: Colors.grey[500]),
-                            border: OutlineInputBorder(borderRadius: BorderRadius.circular(28), borderSide: BorderSide.none),
-                            contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                  // Image preview if selected
+                  if (_selectedImageBytes != null)
+                    Container(
+                      margin: const EdgeInsets.only(bottom: 12),
+                      padding: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        color: isDark ? const Color(0xFF1A1E3F) : Colors.grey[100],
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(color: Colors.grey[300]!, width: 1),
+                      ),
+                      child: Row(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(6),
+                            child: Image.memory(
+                              _selectedImageBytes!,
+                              width: 60,
+                              height: 60,
+                              fit: BoxFit.cover,
+                            ),
                           ),
-                          onSubmitted: (_) => _send(),
-                        ),
+                          const SizedBox(width: 12),
+                          Expanded(
+                            child: Text(
+                              _selectedImageName ?? 'Image',
+                              style: GoogleFonts.montserrat(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w500,
+                              ),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+                          IconButton(
+                            onPressed: _clearSelectedImage,
+                            icon: const Icon(Icons.close, size: 20),
+                            tooltip: 'Remove image',
+                          ),
+                        ],
                       ),
                     ),
-                  ),
-                  const SizedBox(width: 12),
-                  Container(
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF0B5FFF),
-                      shape: BoxShape.circle,
-                      boxShadow: [BoxShadow(color: const Color(0xFF0B5FFF).withOpacity(0.14), blurRadius: 8, offset: const Offset(0, 4))],
-                    ),
-                    child: IconButton(
-                      onPressed: _send,
-                      icon: _sending
-                          ? const SizedBox(width: 18, height: 18, child: CircularProgressIndicator(strokeWidth: 2.2, valueColor: AlwaysStoppedAnimation(Colors.white)))
-                          : const Icon(Icons.send, color: Colors.white),
-                    ),
+                  // Input row
+                  Row(
+                    children: [
+                      // Image picker button
+                      Container(
+                        decoration: BoxDecoration(
+                          color: isDark ? const Color(0xFF1A1E3F) : Colors.grey[200],
+                          shape: BoxShape.circle,
+                        ),
+                        child: IconButton(
+                          onPressed: _pickImage,
+                          icon: Icon(
+                            Icons.image_outlined,
+                            color: isDark ? Colors.white70 : Colors.grey[700],
+                          ),
+                          tooltip: 'Upload image',
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: Shortcuts(
+                          shortcuts: const <ShortcutActivator, Intent>{
+                            SingleActivator(LogicalKeyboardKey.enter): ActivateIntent(),
+                          },
+                          child: Actions(
+                            actions: <Type, Action<Intent>>{
+                              ActivateIntent: CallbackAction(onInvoke: (intent) {
+                                _send();
+                                return null;
+                              }),
+                            },
+                            child: TextField(
+                              controller: _controller,
+                              textCapitalization: TextCapitalization.sentences,
+                              minLines: 1,
+                              maxLines: 2,
+                              decoration: InputDecoration(
+                                hintText: 'Ask Uri about a topic, question or concept...',
+                                filled: true,
+                                fillColor: isDark ? const Color(0xFF0B1020) : Colors.white,
+                                hintStyle: GoogleFonts.montserrat(fontSize: 14, color: Colors.grey[500]),
+                                border: OutlineInputBorder(borderRadius: BorderRadius.circular(28), borderSide: BorderSide.none),
+                                contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                              ),
+                              onSubmitted: (_) => _send(),
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 12),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: const Color(0xFF0B5FFF),
+                          shape: BoxShape.circle,
+                          boxShadow: [BoxShadow(color: const Color(0xFF0B5FFF).withOpacity(0.14), blurRadius: 8, offset: const Offset(0, 4))],
+                        ),
+                        child: IconButton(
+                          onPressed: _send,
+                          icon: _sending
+                              ? const SizedBox(width: 18, height: 18, child: CircularProgressIndicator(strokeWidth: 2.2, valueColor: AlwaysStoppedAnimation(Colors.white)))
+                              : const Icon(Icons.send, color: Colors.white),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),
@@ -511,7 +731,8 @@ class _ChatMessage {
   Role role;
   String text;
   bool streaming;
-  _ChatMessage({required this.role, required this.text, this.streaming = false});
+  Uint8List? imageBytes;
+  _ChatMessage({required this.role, required this.text, this.streaming = false, this.imageBytes});
 }
 
 

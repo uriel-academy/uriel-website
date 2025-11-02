@@ -34,6 +34,7 @@ class ChatService {
   Future<void> ask({
     required String message,
     String? system,
+    String? imageBase64,
     List<Map<String, String>> history = const [],
     Map<String, String>? extraHeaders,
   }) async {
@@ -47,6 +48,7 @@ class ChatService {
       final body = jsonEncode({
         "message": message,
         if (system != null) "system": system,
+        if (imageBase64 != null) "imageBase64": imageBase64,
         if (history.isNotEmpty) "history": history, // [{role, content}]
       });
 
