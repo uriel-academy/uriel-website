@@ -7,11 +7,9 @@ import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter_math_fork/flutter_math.dart';
 import 'package:flutter/services.dart';
 import '../services/uri_normalizer.dart';
-import 'package:image_picker/image_picker.dart';
 import 'dart:convert';
 import 'dart:typed_data';
 import 'dart:html' as html;
-import 'package:flutter/foundation.dart' show kIsWeb;
 
 class UriPage extends StatefulWidget {
   final bool embedded;
@@ -31,9 +29,7 @@ class _UriPageState extends State<UriPage> {
   bool _sending = false;
   bool _isFirstInteraction = true;
   bool _aggressiveClean = false;
-  final ImagePicker _imagePicker = ImagePicker();
   Uint8List? _selectedImageBytes;
-  String? _selectedImageName;
 
   @override
   void initState() {
@@ -90,51 +86,52 @@ class _UriPageState extends State<UriPage> {
     _scrollToBottom();
   }
   
-  Future<void> _pickImage() async {
+  Future<void> _pickFile() async {
     try {
-      if (kIsWeb) {
-        // Use HTML file input for web
-        final html.FileUploadInputElement uploadInput = html.FileUploadInputElement();
-        uploadInput.accept = 'image/*';
-        uploadInput.click();
-        
-        uploadInput.onChange.listen((e) async {
-          final files = uploadInput.files;
-          if (files != null && files.isNotEmpty) {
-            final file = files[0];
-            final reader = html.FileReader();
-            
-            reader.readAsArrayBuffer(file);
-            reader.onLoadEnd.listen((e) {
-              final bytes = reader.result as Uint8List;
-              setState(() {
-                _selectedImageBytes = bytes;
-                _selectedImageName = file.name;
-              });
-            });
+      // Use HTML file input for web - only images supported for now
+      final html.FileUploadInputElement uploadInput = html.FileUploadInputElement();
+      uploadInput.accept = 'image/*';
+      uploadInput.click();
+      
+      uploadInput.onChange.listen((e) async {
+        final files = uploadInput.files;
+        if (files != null && files.isNotEmpty) {
+          final file = files[0];
+          final fileName = file.name.toLowerCase();
+          
+          // Check if it's a supported image format
+          if (!fileName.endsWith('.jpg') && !fileName.endsWith('.jpeg') && 
+              !fileName.endsWith('.png') && !fileName.endsWith('.gif') && 
+              !fileName.endsWith('.webp')) {
+            if (mounted) {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text('Please upload an image file (JPG, PNG, GIF, or WebP)', 
+                    style: GoogleFonts.montserrat()),
+                  backgroundColor: Colors.red,
+                  duration: const Duration(seconds: 3),
+                ),
+              );
+            }
+            return;
           }
-        });
-      } else {
-        // Use image_picker for mobile
-        final XFile? image = await _imagePicker.pickImage(
-          source: ImageSource.gallery,
-          maxWidth: 2048,
-          maxHeight: 2048,
-          imageQuality: 85,
-        );
-        
-        if (image != null) {
-          final bytes = await image.readAsBytes();
-          setState(() {
-            _selectedImageBytes = bytes;
-            _selectedImageName = image.name;
+          
+          final reader = html.FileReader();
+          
+          reader.readAsArrayBuffer(file);
+          reader.onLoadEnd.listen((e) {
+            final bytes = reader.result as Uint8List;
+            
+            setState(() {
+              _selectedImageBytes = bytes;
+            });
           });
         }
-      }
+      });
     } catch (e) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Error picking image: $e')),
+          SnackBar(content: Text('Error picking file: $e', style: GoogleFonts.montserrat())),
         );
       }
     }
@@ -143,7 +140,6 @@ class _UriPageState extends State<UriPage> {
   void _clearSelectedImage() {
     setState(() {
       _selectedImageBytes = null;
-      _selectedImageName = null;
     });
   }
 
@@ -235,7 +231,8 @@ class _UriPageState extends State<UriPage> {
     if ((text.isEmpty && imageBytes == null) || _sending) return;
     
     _controller.clear();
-    _addUserMessage(text.isEmpty ? '[Image uploaded]' : text, imageBytes: imageBytes);
+    // Show empty text if only image is sent, or the actual text
+    _addUserMessage(text, imageBytes: imageBytes);
     _clearSelectedImage();
     _addAssistantPlaceholder();
     
@@ -256,7 +253,7 @@ class _UriPageState extends State<UriPage> {
     }
 
     await _chatService.ask(
-      message: text.isEmpty ? 'What do you see in this image?' : text,
+      message: text.isEmpty && imageBytes != null ? 'What do you see in this image?' : text,
       imageBase64: imageBase64,
       history: [],
       extraHeaders: idToken != null ? {"Authorization": "Bearer $idToken"} : null,
@@ -298,11 +295,12 @@ class _UriPageState extends State<UriPage> {
                       child: Image.memory(
                         m.imageBytes!,
                         fit: BoxFit.contain,
-                        width: 300,
+                        width: 200,
                       ),
                     ),
                   ),
-                _buildRenderedMessage(m.text, isUser),
+                if (m.text.isNotEmpty)
+                  _buildRenderedMessage(m.text, isUser),
                 // Add copy button for assistant messages
                 if (!isUser && m.text.isNotEmpty)
                   Padding(
@@ -469,33 +467,33 @@ class _UriPageState extends State<UriPage> {
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(color: Colors.grey[300]!, width: 1),
                 ),
-                child: Row(
+                child: Stack(
                   children: [
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(6),
+                      borderRadius: BorderRadius.circular(8),
                       child: Image.memory(
                         _selectedImageBytes!,
-                        width: 60,
-                        height: 60,
+                        width: 120,
+                        height: 120,
                         fit: BoxFit.cover,
                       ),
                     ),
-                    const SizedBox(width: 12),
-                    Expanded(
-                      child: Text(
-                        _selectedImageName ?? 'Image',
-                        style: GoogleFonts.montserrat(
-                          fontSize: 13,
-                          fontWeight: FontWeight.w500,
+                    Positioned(
+                      top: 4,
+                      right: 4,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.black.withOpacity(0.6),
+                          shape: BoxShape.circle,
                         ),
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
+                        child: IconButton(
+                          onPressed: _clearSelectedImage,
+                          icon: const Icon(Icons.close, size: 18, color: Colors.white),
+                          tooltip: 'Remove file',
+                          padding: EdgeInsets.zero,
+                          constraints: const BoxConstraints(minWidth: 32, minHeight: 32),
+                        ),
                       ),
-                    ),
-                    IconButton(
-                      onPressed: _clearSelectedImage,
-                      icon: const Icon(Icons.close, size: 20),
-                      tooltip: 'Remove image',
                     ),
                   ],
                 ),
@@ -506,18 +504,26 @@ class _UriPageState extends State<UriPage> {
                 // Image picker button
                 Container(
                   decoration: BoxDecoration(
-                    color: Theme.of(context).brightness == Brightness.dark 
-                        ? const Color(0xFF1A1E3F) 
-                        : Colors.grey[200],
+                    gradient: LinearGradient(
+                      colors: [
+                        const Color(0xFF0B5FFF).withOpacity(0.15),
+                        const Color(0xFF0B5FFF).withOpacity(0.08),
+                      ],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
                     shape: BoxShape.circle,
+                    border: Border.all(
+                      color: const Color(0xFF0B5FFF).withOpacity(0.3),
+                      width: 1,
+                    ),
                   ),
                   child: IconButton(
-                    onPressed: _pickImage,
-                    icon: Icon(
-                      Icons.image_outlined,
-                      color: Theme.of(context).brightness == Brightness.dark 
-                          ? Colors.white70 
-                          : Colors.grey[700],
+                    onPressed: _pickFile,
+                    icon: const Icon(
+                      Icons.add_photo_alternate_rounded,
+                      color: Color(0xFF0B5FFF),
+                      size: 22,
                     ),
                     tooltip: 'Upload image',
                   ),
@@ -619,33 +625,33 @@ class _UriPageState extends State<UriPage> {
                         borderRadius: BorderRadius.circular(12),
                         border: Border.all(color: Colors.grey[300]!, width: 1),
                       ),
-                      child: Row(
+                      child: Stack(
                         children: [
                           ClipRRect(
-                            borderRadius: BorderRadius.circular(6),
+                            borderRadius: BorderRadius.circular(8),
                             child: Image.memory(
                               _selectedImageBytes!,
-                              width: 60,
-                              height: 60,
+                              width: 120,
+                              height: 120,
                               fit: BoxFit.cover,
                             ),
                           ),
-                          const SizedBox(width: 12),
-                          Expanded(
-                            child: Text(
-                              _selectedImageName ?? 'Image',
-                              style: GoogleFonts.montserrat(
-                                fontSize: 13,
-                                fontWeight: FontWeight.w500,
+                          Positioned(
+                            top: 4,
+                            right: 4,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: Colors.black.withOpacity(0.6),
+                                shape: BoxShape.circle,
                               ),
-                              maxLines: 1,
-                              overflow: TextOverflow.ellipsis,
+                              child: IconButton(
+                                onPressed: _clearSelectedImage,
+                                icon: const Icon(Icons.close, size: 18, color: Colors.white),
+                                tooltip: 'Remove file',
+                                padding: EdgeInsets.zero,
+                                constraints: const BoxConstraints(minWidth: 32, minHeight: 32),
+                              ),
                             ),
-                          ),
-                          IconButton(
-                            onPressed: _clearSelectedImage,
-                            icon: const Icon(Icons.close, size: 20),
-                            tooltip: 'Remove image',
                           ),
                         ],
                       ),
@@ -656,14 +662,26 @@ class _UriPageState extends State<UriPage> {
                       // Image picker button
                       Container(
                         decoration: BoxDecoration(
-                          color: isDark ? const Color(0xFF1A1E3F) : Colors.grey[200],
+                          gradient: LinearGradient(
+                            colors: [
+                              const Color(0xFF0B5FFF).withOpacity(0.15),
+                              const Color(0xFF0B5FFF).withOpacity(0.08),
+                            ],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                          ),
                           shape: BoxShape.circle,
+                          border: Border.all(
+                            color: const Color(0xFF0B5FFF).withOpacity(0.3),
+                            width: 1,
+                          ),
                         ),
                         child: IconButton(
-                          onPressed: _pickImage,
-                          icon: Icon(
-                            Icons.image_outlined,
-                            color: isDark ? Colors.white70 : Colors.grey[700],
+                          onPressed: _pickFile,
+                          icon: const Icon(
+                            Icons.add_photo_alternate_rounded,
+                            color: Color(0xFF0B5FFF),
+                            size: 22,
                           ),
                           tooltip: 'Upload image',
                         ),
