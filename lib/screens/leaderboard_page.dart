@@ -365,7 +365,7 @@ class _LeaderboardPageState extends State<LeaderboardPage> with TickerProviderSt
           // Show rank badge from Firebase Storage using CircleAvatar
           return CircleAvatar(
             radius: iconSize / 2,
-            backgroundColor: rank.getTierColor().withOpacity(0.1),
+            backgroundColor: rank.getTierColor().withValues(alpha: 0.1),
             backgroundImage: CachedNetworkImageProvider(rank.imageUrl),
             onBackgroundImageError: (exception, stackTrace) {
               // Error handling is done via child fallback
@@ -376,7 +376,7 @@ class _LeaderboardPageState extends State<LeaderboardPage> with TickerProviderSt
           // Fallback to trophy icon
           return CircleAvatar(
             radius: iconSize / 2,
-            backgroundColor: rank?.getTierColor().withOpacity(0.2) ?? Colors.grey[300],
+            backgroundColor: rank?.getTierColor().withValues(alpha: 0.2) ?? Colors.grey[300],
             child: Icon(
               Icons.emoji_events,
               size: iconSize * 0.5,

@@ -176,13 +176,13 @@ class _AllRanksPageState extends State<AllRanksPage> with SingleTickerProviderSt
               gradient: LinearGradient(
                 colors: [
                   _userCurrentRank!.getTierColor(),
-                  _userCurrentRank!.getTierColor().withOpacity(0.7),
+                  _userCurrentRank!.getTierColor().withValues(alpha: 0.7),
                 ],
               ),
               borderRadius: BorderRadius.circular(16),
               boxShadow: [
                 BoxShadow(
-                  color: _userCurrentRank!.color.withOpacity(0.3),
+                  color: _userCurrentRank!.color.withValues(alpha: 0.3),
                   blurRadius: 15,
                   offset: const Offset(0, 8),
                 ),
@@ -219,7 +219,7 @@ class _AllRanksPageState extends State<AllRanksPage> with SingleTickerProviderSt
                         '${_rankService.formatXP(widget.userXP!)} XP',
                         style: GoogleFonts.montserrat(
                           fontSize: 14,
-                          color: Colors.white.withOpacity(0.9),
+                          color: Colors.white.withValues(alpha: 0.9),
                         ),
                       ),
                     ],
@@ -419,7 +419,7 @@ class _AllRanksPageState extends State<AllRanksPage> with SingleTickerProviderSt
           end: Alignment.bottomRight,
           colors: [
             tierInfo['color'] as Color,
-            (tierInfo['color'] as Color).withOpacity(0.7),
+            (tierInfo['color'] as Color).withValues(alpha: 0.7),
           ],
         ),
         borderRadius: BorderRadius.circular(16),
@@ -450,7 +450,7 @@ class _AllRanksPageState extends State<AllRanksPage> with SingleTickerProviderSt
             tierInfo['theme'] as String,
             style: GoogleFonts.montserrat(
               fontSize: 14,
-              color: Colors.white.withOpacity(0.9),
+              color: Colors.white.withValues(alpha: 0.9),
               fontStyle: FontStyle.italic,
             ),
           ),
@@ -459,7 +459,7 @@ class _AllRanksPageState extends State<AllRanksPage> with SingleTickerProviderSt
             tierInfo['description'] as String,
             style: GoogleFonts.montserrat(
               fontSize: 13,
-              color: Colors.white.withOpacity(0.85),
+              color: Colors.white.withValues(alpha: 0.85),
               height: 1.4,
             ),
           ),
@@ -591,7 +591,7 @@ class _RankDetailsSheet extends StatelessWidget {
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 decoration: BoxDecoration(
-                  color: rank.getTierColor().withOpacity(0.2),
+                  color: rank.getTierColor().withValues(alpha: 0.2),
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Text(

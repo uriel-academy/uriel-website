@@ -245,7 +245,7 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
                     Text('By $uploaderName', style: GoogleFonts.montserrat(fontSize: isSmall ? 10 : 12, color: Colors.grey[600])),
                     const Spacer(),
                     Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                      Container(padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2), decoration: BoxDecoration(color: _getSubjectColor(subject).withOpacity(0.1), borderRadius: BorderRadius.circular(6)), child: Text(subject.isNotEmpty ? subject : 'General', style: GoogleFonts.montserrat(fontSize: 10, fontWeight: FontWeight.w600, color: _getSubjectColor(subject)))),
+                      Container(padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2), decoration: BoxDecoration(color: _getSubjectColor(subject).withValues(alpha: 0.1), borderRadius: BorderRadius.circular(6)), child: Text(subject.isNotEmpty ? subject : 'General', style: GoogleFonts.montserrat(fontSize: 10, fontWeight: FontWeight.w600, color: _getSubjectColor(subject)))),
                       const Icon(Icons.chevron_right, color: Color(0xFFD62828)),
                     ])
                   ]),
@@ -364,7 +364,7 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(16),
                     boxShadow: [
-                      BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 10, offset: const Offset(0, 2)),
+                      BoxShadow(color: Colors.black.withValues(alpha: 0.05), blurRadius: 10, offset: const Offset(0, 2)),
                     ],
                   ),
                   child: Column(
@@ -741,20 +741,20 @@ class _NoteThumbnailState extends State<NoteThumbnail> {
               ? Container(
                   key: const ValueKey('loading'),
                   padding: const EdgeInsets.all(6),
-                  decoration: BoxDecoration(color: Colors.black.withOpacity(0.45), shape: BoxShape.circle),
+                  decoration: BoxDecoration(color: Colors.black.withValues(alpha: 0.45), shape: BoxShape.circle),
                   child: const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2, valueColor: AlwaysStoppedAnimation<Color>(Colors.white))),
                 )
               : _needsAuth
                   ? InkWell(
                       key: const ValueKey('auth'),
                       onTap: () => Navigator.of(context).pushNamed('/signin'),
-                      child: Container(padding: const EdgeInsets.all(6), decoration: BoxDecoration(color: Colors.black.withOpacity(0.45), shape: BoxShape.circle), child: const Icon(Icons.lock, size: 16, color: Colors.white)),
+                      child: Container(padding: const EdgeInsets.all(6), decoration: BoxDecoration(color: Colors.black.withValues(alpha: 0.45), shape: BoxShape.circle), child: const Icon(Icons.lock, size: 16, color: Colors.white)),
                     )
                   : _fetchFailed
                       ? InkWell(
                           key: const ValueKey('retry'),
                           onTap: _retryFetch,
-                          child: Container(padding: const EdgeInsets.all(6), decoration: BoxDecoration(color: Colors.black.withOpacity(0.45), shape: BoxShape.circle), child: const Icon(Icons.refresh, size: 16, color: Colors.white)),
+                          child: Container(padding: const EdgeInsets.all(6), decoration: BoxDecoration(color: Colors.black.withValues(alpha: 0.45), shape: BoxShape.circle), child: const Icon(Icons.refresh, size: 16, color: Colors.white)),
                         )
                       : const SizedBox.shrink(),
         ),
@@ -764,7 +764,7 @@ class _NoteThumbnailState extends State<NoteThumbnail> {
 
   Widget _placeholder() => Container(
         decoration: BoxDecoration(
-          gradient: LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: [widget.placeholderColor.withOpacity(0.7), widget.placeholderColor]),
+          gradient: LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: [widget.placeholderColor.withValues(alpha: 0.7), widget.placeholderColor]),
         ),
         child: const Center(child: Icon(Icons.sticky_note_2, size: 40, color: Colors.white)),
       );

@@ -319,7 +319,7 @@ class _LessonReaderPageState extends State<LessonReaderPage> {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.04),
+            color: Colors.black.withValues(alpha: 0.04),
             blurRadius: 12,
             offset: const Offset(0, 4),
           ),
@@ -330,7 +330,7 @@ class _LessonReaderPageState extends State<LessonReaderPage> {
           Container(
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: const Color(0xFF007AFF).withOpacity(0.1),
+              color: const Color(0xFF007AFF).withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(12),
             ),
             child: const Icon(
@@ -390,7 +390,7 @@ class _LessonReaderPageState extends State<LessonReaderPage> {
       decoration: BoxDecoration(
         color: const Color(0xFFF0F4FF),
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: const Color(0xFF007AFF).withOpacity(0.2)),
+        border: Border.all(color: const Color(0xFF007AFF).withValues(alpha: 0.2)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -450,7 +450,7 @@ class _LessonReaderPageState extends State<LessonReaderPage> {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.04),
+            color: Colors.black.withValues(alpha: 0.04),
             blurRadius: 12,
             offset: const Offset(0, 4),
           ),
@@ -537,7 +537,7 @@ class _LessonReaderPageState extends State<LessonReaderPage> {
       decoration: BoxDecoration(
         color: const Color(0xFFF8F9FA),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: const Color(0xFF007AFF).withOpacity(0.2)),
+        border: Border.all(color: const Color(0xFF007AFF).withValues(alpha: 0.2)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -581,7 +581,7 @@ class _LessonReaderPageState extends State<LessonReaderPage> {
       decoration: BoxDecoration(
         color: const Color(0xFFFFF8E1),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: const Color(0xFFFFB300).withOpacity(0.3)),
+        border: Border.all(color: const Color(0xFFFFB300).withValues(alpha: 0.3)),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -611,7 +611,7 @@ class _LessonReaderPageState extends State<LessonReaderPage> {
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.04),
+            color: Colors.black.withValues(alpha: 0.04),
             blurRadius: 8,
             offset: const Offset(0, 2),
           ),
@@ -622,7 +622,7 @@ class _LessonReaderPageState extends State<LessonReaderPage> {
           Container(
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: const Color(0xFF007AFF).withOpacity(0.1),
+              color: const Color(0xFF007AFF).withValues(alpha: 0.1),
               shape: BoxShape.circle,
             ),
             child: const Icon(Icons.play_arrow, color: Color(0xFF007AFF)),
@@ -662,7 +662,7 @@ class _LessonReaderPageState extends State<LessonReaderPage> {
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.04),
+            color: Colors.black.withValues(alpha: 0.04),
             blurRadius: 8,
             offset: const Offset(0, 2),
           ),
@@ -720,7 +720,7 @@ class _LessonReaderPageState extends State<LessonReaderPage> {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.04),
+            color: Colors.black.withValues(alpha: 0.04),
             blurRadius: 12,
             offset: const Offset(0, 4),
           ),
@@ -791,7 +791,7 @@ class _LessonReaderPageState extends State<LessonReaderPage> {
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
                       color: isSelected
-                          ? const Color(0xFF007AFF).withOpacity(0.1)
+                          ? const Color(0xFF007AFF).withValues(alpha: 0.1)
                           : const Color(0xFFFAFAFA),
                       borderRadius: BorderRadius.circular(8),
                       border: Border.all(
@@ -854,7 +854,7 @@ class _LessonReaderPageState extends State<LessonReaderPage> {
       decoration: BoxDecoration(
         color: const Color(0xFFF0F4FF),
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: const Color(0xFF007AFF).withOpacity(0.2)),
+        border: Border.all(color: const Color(0xFF007AFF).withValues(alpha: 0.2)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

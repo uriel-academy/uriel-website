@@ -130,7 +130,7 @@ class _RedesignedAllRanksPageState extends State<RedesignedAllRanksPage> {
 
   PreferredSizeWidget _buildAppBar() {
     return AppBar(
-      backgroundColor: Colors.white.withOpacity(_scrollProgress > 0.1 ? 0.95 : 0),
+      backgroundColor: Colors.white.withValues(alpha: _scrollProgress > 0.1 ? 0.95 : 0),
       elevation: _scrollProgress > 0.1 ? 1 : 0,
       leading: IconButton(
         icon: const Icon(Icons.arrow_back_ios_new, size: 20),
@@ -223,10 +223,10 @@ class _RedesignedAllRanksPageState extends State<RedesignedAllRanksPage> {
       ),
       padding: EdgeInsets.all(isSmallScreen ? 24 : 32),
       decoration: BoxDecoration(
-        color: _userCurrentRank!.getTierColor().withOpacity(0.1),
+        color: _userCurrentRank!.getTierColor().withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
-          color: _userCurrentRank!.getTierColor().withOpacity(0.3),
+          color: _userCurrentRank!.getTierColor().withValues(alpha: 0.3),
           width: 1,
         ),
       ),
@@ -242,7 +242,7 @@ class _RedesignedAllRanksPageState extends State<RedesignedAllRanksPage> {
                   shape: BoxShape.circle,
                   boxShadow: [
                     BoxShadow(
-                      color: _userCurrentRank!.getTierColor().withOpacity(0.3),
+                      color: _userCurrentRank!.getTierColor().withValues(alpha: 0.3),
                       blurRadius: 12,
                       offset: const Offset(0, 4),
                     ),
@@ -402,7 +402,7 @@ class _RedesignedAllRanksPageState extends State<RedesignedAllRanksPage> {
       child: Container(
         decoration: BoxDecoration(
           color: isCurrentRank 
-              ? rank.getTierColor().withOpacity(0.05)
+              ? rank.getTierColor().withValues(alpha: 0.05)
               : Colors.white,
           borderRadius: BorderRadius.circular(12),
           border: Border.all(
@@ -428,7 +428,7 @@ class _RedesignedAllRanksPageState extends State<RedesignedAllRanksPage> {
                       shape: BoxShape.circle,
                       boxShadow: isCurrentRank ? [
                         BoxShadow(
-                          color: rank.getTierColor().withOpacity(0.3),
+                          color: rank.getTierColor().withValues(alpha: 0.3),
                           blurRadius: 16,
                           spreadRadius: 2,
                         ),
@@ -460,7 +460,7 @@ class _RedesignedAllRanksPageState extends State<RedesignedAllRanksPage> {
                     Container(
                       padding: const EdgeInsets.all(8),
                       decoration: BoxDecoration(
-                        color: Colors.black.withOpacity(0.6),
+                        color: Colors.black.withValues(alpha: 0.6),
                         shape: BoxShape.circle,
                       ),
                     ),
@@ -718,7 +718,7 @@ class _RankDetailsSheet extends StatelessWidget {
                 shape: BoxShape.circle,
                 boxShadow: [
                   BoxShadow(
-                    color: rank.getTierColor().withOpacity(0.4),
+                    color: rank.getTierColor().withValues(alpha: 0.4),
                     blurRadius: 24,
                     offset: const Offset(0, 8),
                   ),
@@ -760,7 +760,7 @@ class _RankDetailsSheet extends StatelessWidget {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               decoration: BoxDecoration(
-                color: rank.getTierColor().withOpacity(0.1),
+                color: rank.getTierColor().withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Text(

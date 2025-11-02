@@ -90,7 +90,7 @@ class _CourseLibraryPageState extends State<CourseLibraryPage> {
                   borderRadius: BorderRadius.circular(12),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.04),
+                      color: Colors.black.withValues(alpha: 0.04),
                       blurRadius: 8,
                       offset: const Offset(0, 2),
                     ),
@@ -220,7 +220,7 @@ class _CourseCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.04),
+                color: Colors.black.withValues(alpha: 0.04),
                 blurRadius: 16,
                 offset: const Offset(0, 4),
               ),
@@ -238,7 +238,7 @@ class _CourseCard extends StatelessWidget {
                     end: Alignment.bottomRight,
                     colors: [
                       _getCourseColor(course.subject),
-                      _getCourseColor(course.subject).withOpacity(0.7),
+                      _getCourseColor(course.subject).withValues(alpha: 0.7),
                     ],
                   ),
                   borderRadius: const BorderRadius.only(
@@ -255,7 +255,7 @@ class _CourseCard extends StatelessWidget {
                       child: Icon(
                         _getCourseIcon(course.subject),
                         size: 48,
-                        color: Colors.white.withOpacity(0.3),
+                        color: Colors.white.withValues(alpha: 0.3),
                       ),
                     ),
                     // Level Badge
@@ -269,7 +269,7 @@ class _CourseCard extends StatelessWidget {
                             vertical: 6,
                           ),
                           decoration: BoxDecoration(
-                            color: Colors.white.withOpacity(0.2),
+                            color: Colors.white.withValues(alpha: 0.2),
                             borderRadius: BorderRadius.circular(8),
                           ),
                           child: Text(

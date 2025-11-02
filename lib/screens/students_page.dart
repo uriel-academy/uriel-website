@@ -104,7 +104,7 @@ class _StudentsPageState extends State<StudentsPage> {
                     borderRadius: BorderRadius.circular(12),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black.withOpacity(0.05),
+                        color: Colors.black.withValues(alpha: 0.05),
                         blurRadius: 10,
                         offset: const Offset(0, 2),
                       ),
@@ -361,7 +361,7 @@ class _StudentsPageState extends State<StudentsPage> {
                         child: Row(children: [
                           CircleAvatar(
                             radius: 18,
-                            backgroundColor: const Color(0xFFD62828).withOpacity(0.1),
+                            backgroundColor: const Color(0xFFD62828).withValues(alpha: 0.1),
                             backgroundImage: (data['avatar'] as String?)?.isNotEmpty == true ? NetworkImage((data['avatar'] as String)) : null,
                             child: (data['avatar'] as String?) == null 
                               ? Text(
@@ -427,7 +427,7 @@ class _StudentsPageState extends State<StudentsPage> {
                         child: Container(
                           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                           decoration: BoxDecoration(
-                            color: rank.toString() != '-' ? const Color(0xFFD62828).withOpacity(0.1) : Colors.grey.withOpacity(0.1),
+                            color: rank.toString() != '-' ? const Color(0xFFD62828).withValues(alpha: 0.1) : Colors.grey.withValues(alpha: 0.1),
                             borderRadius: BorderRadius.circular(8),
                           ),
                           child: Text(
@@ -499,7 +499,7 @@ class _StudentsPageState extends State<StudentsPage> {
                     const SizedBox(height: 4),
                     Text(
                       selectedData['email'] ?? '-',
-                      style: GoogleFonts.montserrat(fontSize: 13, color: Colors.white.withOpacity(0.9)),
+                      style: GoogleFonts.montserrat(fontSize: 13, color: Colors.white.withValues(alpha: 0.9)),
                     ),
                   ],
                 ),
@@ -666,9 +666,9 @@ class _StudentsPageState extends State<StudentsPage> {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.1),
+        color: color.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: color.withOpacity(0.3)),
+        border: Border.all(color: color.withValues(alpha: 0.3)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -776,9 +776,9 @@ class _StudentsPageState extends State<StudentsPage> {
               Container(
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
-                  color: trendColor.withOpacity(0.1),
+                  color: trendColor.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(8),
-                  border: Border.all(color: trendColor.withOpacity(0.3)),
+                  border: Border.all(color: trendColor.withValues(alpha: 0.3)),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -896,9 +896,9 @@ class _StudentsPageState extends State<StudentsPage> {
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                           decoration: BoxDecoration(
-                            color: masteryColor.withOpacity(0.1),
+                            color: masteryColor.withValues(alpha: 0.1),
                             borderRadius: BorderRadius.circular(12),
-                            border: Border.all(color: masteryColor.withOpacity(0.3)),
+                            border: Border.all(color: masteryColor.withValues(alpha: 0.3)),
                           ),
                           child: Text(
                             masteryLevel,
@@ -1168,7 +1168,7 @@ class _StudentsPageState extends State<StudentsPage> {
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
-                    colors: [Colors.amber.withOpacity(0.2), Colors.orange.withOpacity(0.2)],
+                    colors: [Colors.amber.withValues(alpha: 0.2), Colors.orange.withValues(alpha: 0.2)],
                   ),
                   borderRadius: BorderRadius.circular(8),
                 ),
@@ -1252,7 +1252,7 @@ class _StudentsPageState extends State<StudentsPage> {
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
-                    colors: [Colors.teal.withOpacity(0.2), Colors.cyan.withOpacity(0.2)],
+                    colors: [Colors.teal.withValues(alpha: 0.2), Colors.cyan.withValues(alpha: 0.2)],
                   ),
                   borderRadius: BorderRadius.circular(8),
                 ),
@@ -1358,7 +1358,7 @@ class _StudentsPageState extends State<StudentsPage> {
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
               gradient: LinearGradient(
-                colors: [color.withOpacity(0.1), color.withOpacity(0.05)],
+                colors: [color.withValues(alpha: 0.1), color.withValues(alpha: 0.05)],
               ),
               borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(12),
@@ -1394,9 +1394,9 @@ class _StudentsPageState extends State<StudentsPage> {
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.1),
+        color: color.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: color.withOpacity(0.3)),
+        border: Border.all(color: color.withValues(alpha: 0.3)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1428,9 +1428,9 @@ class _StudentsPageState extends State<StudentsPage> {
     return Container(
       padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.1),
+        color: color.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: color.withOpacity(0.3)),
+        border: Border.all(color: color.withValues(alpha: 0.3)),
       ),
       child: Column(
         children: [

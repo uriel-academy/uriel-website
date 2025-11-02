@@ -3185,7 +3185,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                           border: Border.all(color: Colors.grey[200]!),
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.black.withOpacity(0.03),
+                              color: Colors.black.withValues(alpha: 0.03),
                               blurRadius: 10,
                               offset: const Offset(0, 2),
                             ),
@@ -3210,10 +3210,10 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                                   decoration: BoxDecoration(
                                     color: avgPerformance >= 70
-                                        ? const Color(0xFF00C853).withOpacity(0.1)
+                                        ? const Color(0xFF00C853).withValues(alpha: 0.1)
                                         : avgPerformance >= 50
-                                            ? const Color(0xFFFF9800).withOpacity(0.1)
-                                            : const Color(0xFFD62828).withOpacity(0.1),
+                                            ? const Color(0xFFFF9800).withValues(alpha: 0.1)
+                                            : const Color(0xFFD62828).withValues(alpha: 0.1),
                                     borderRadius: BorderRadius.circular(8),
                                   ),
                                   child: Text(
@@ -3298,10 +3298,10 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                         margin: const EdgeInsets.only(bottom: 12),
                         padding: const EdgeInsets.all(16),
                         decoration: BoxDecoration(
-                          color: index == 0 ? const Color(0xFFD62828).withOpacity(0.05) : Colors.white,
+                          color: index == 0 ? const Color(0xFFD62828).withValues(alpha: 0.05) : Colors.white,
                           borderRadius: BorderRadius.circular(12),
                           border: Border.all(
-                            color: index == 0 ? const Color(0xFFD62828).withOpacity(0.2) : Colors.grey[200]!,
+                            color: index == 0 ? const Color(0xFFD62828).withValues(alpha: 0.2) : Colors.grey[200]!,
                           ),
                         ),
                         child: Row(
@@ -3333,7 +3333,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                             else
                               CircleAvatar(
                                 radius: 20,
-                                backgroundColor: const Color(0xFFD62828).withOpacity(0.1),
+                                backgroundColor: const Color(0xFFD62828).withValues(alpha: 0.1),
                                 child: Text(
                                   name[0].toUpperCase(),
                                   style: GoogleFonts.montserrat(
@@ -3440,10 +3440,10 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: const Color(0xFFD62828).withOpacity(0.2)),
+        border: Border.all(color: const Color(0xFFD62828).withValues(alpha: 0.2)),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFFD62828).withOpacity(0.05),
+            color: const Color(0xFFD62828).withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -3457,7 +3457,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               Container(
                 padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  color: const Color(0xFFD62828).withOpacity(0.1),
+                  color: const Color(0xFFD62828).withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: const Icon(Icons.warning_amber_rounded, color: Color(0xFFD62828), size: 24),
@@ -3502,7 +3502,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: const Color(0xFF00C853).withOpacity(0.05),
+                color: const Color(0xFF00C853).withValues(alpha: 0.05),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Row(
@@ -3553,7 +3553,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   children: [
                     CircleAvatar(
                       radius: 18,
-                      backgroundColor: const Color(0xFFD62828).withOpacity(0.1),
+                      backgroundColor: const Color(0xFFD62828).withValues(alpha: 0.1),
                       child: Text(
                         name[0].toUpperCase(),
                         style: GoogleFonts.montserrat(
@@ -3653,7 +3653,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         border: Border.all(color: Colors.grey[200]!),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.03),
+            color: Colors.black.withValues(alpha: 0.03),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -3667,7 +3667,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               Container(
                 padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF2196F3).withOpacity(0.1),
+                  color: const Color(0xFF2196F3).withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Icon(Icons.trending_up, color: const Color(0xFF2196F3), size: isSmallScreen ? 20 : 24),
@@ -3742,9 +3742,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.05),
+        color: color.withValues(alpha: 0.05),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: color.withOpacity(0.2)),
+        border: Border.all(color: color.withValues(alpha: 0.2)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -3808,7 +3808,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         border: Border.all(color: Colors.grey[200]!),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.03),
+            color: Colors.black.withValues(alpha: 0.03),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -3822,7 +3822,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               Container(
                 padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF9C27B0).withOpacity(0.1),
+                  color: const Color(0xFF9C27B0).withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Icon(Icons.people, color: const Color(0xFF9C27B0), size: isSmallScreen ? 20 : 24),
@@ -3873,9 +3873,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.05),
+        color: color.withValues(alpha: 0.05),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: color.withOpacity(0.2)),
+        border: Border.all(color: color.withValues(alpha: 0.2)),
       ),
       child: Column(
         children: [
@@ -3930,7 +3930,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFFFF9800).withOpacity(0.3),
+            color: const Color(0xFFFF9800).withValues(alpha: 0.3),
             blurRadius: 15,
             offset: const Offset(0, 8),
           ),
@@ -3959,7 +3959,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                       'Weekly growth and consistency metrics',
                       style: GoogleFonts.montserrat(
                         fontSize: isSmallScreen ? 12 : 13,
-                        color: Colors.white.withOpacity(0.9),
+                        color: Colors.white.withValues(alpha: 0.9),
                       ),
                     ),
                   ],
@@ -3980,7 +3980,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
               Container(
                 width: 1,
                 height: 60,
-                color: Colors.white.withOpacity(0.3),
+                color: Colors.white.withValues(alpha: 0.3),
               ),
               Expanded(
                 child: _buildTimeMetricWhite(
@@ -4015,7 +4015,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             label,
             style: GoogleFonts.montserrat(
               fontSize: 12,
-              color: Colors.white.withOpacity(0.9),
+              color: Colors.white.withValues(alpha: 0.9),
             ),
             textAlign: TextAlign.center,
           ),
@@ -4033,7 +4033,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         border: Border.all(color: Colors.grey[200]!),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.03),
+            color: Colors.black.withValues(alpha: 0.03),
             blurRadius: 10,
             offset: const Offset(0, 2),
           ),
@@ -4045,7 +4045,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           Container(
             padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
-              color: color.withOpacity(0.1),
+              color: color.withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(10),
             ),
             child: Icon(icon, color: color, size: 24),

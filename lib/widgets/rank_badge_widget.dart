@@ -32,7 +32,7 @@ class RankBadgeWidget extends StatelessWidget {
                   shape: BoxShape.circle,
                   boxShadow: [
                     BoxShadow(
-                      color: rank.color.withOpacity(0.4),
+                      color: rank.color.withValues(alpha: 0.4),
                       blurRadius: 20,
                       spreadRadius: 5,
                     ),
@@ -44,7 +44,7 @@ class RankBadgeWidget extends StatelessWidget {
             fit: BoxFit.contain,
             placeholder: (context, url) => CircleAvatar(
               radius: size / 2,
-              backgroundColor: rank.color.withOpacity(0.2),
+              backgroundColor: rank.color.withValues(alpha: 0.2),
               child: Icon(
                 rank.getTierIcon(),
                 color: rank.color,
@@ -124,7 +124,7 @@ class RankProgressCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
-            color: cardColor.withOpacity(0.3),
+            color: cardColor.withValues(alpha: 0.3),
             blurRadius: 15,
             offset: const Offset(0, 8),
           ),
@@ -170,12 +170,12 @@ class RankProgressCard extends StatelessWidget {
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   border: Border.all(
-                    color: Colors.white.withOpacity(0.4),
+                    color: Colors.white.withValues(alpha: 0.4),
                     width: 2,
                   ),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.2),
+                      color: Colors.black.withValues(alpha: 0.2),
                       blurRadius: 8,
                       offset: const Offset(0, 4),
                     ),
@@ -231,7 +231,7 @@ class RankProgressCard extends StatelessWidget {
               borderRadius: BorderRadius.circular(8),
               child: LinearProgressIndicator(
                 value: progress,
-                backgroundColor: Colors.white.withOpacity(0.3),
+                backgroundColor: Colors.white.withValues(alpha: 0.3),
                 valueColor: const AlwaysStoppedAnimation<Color>(Colors.white),
                 minHeight: 8,
               ),
@@ -249,7 +249,7 @@ class RankProgressCard extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.2),
+                color: Colors.white.withValues(alpha: 0.2),
                 borderRadius: BorderRadius.circular(8),
               ),
               child: Row(
@@ -276,7 +276,7 @@ class RankProgressCard extends StatelessWidget {
             currentRank.description,
             style: GoogleFonts.montserrat(
               fontSize: 12,
-              color: Colors.white.withOpacity(0.9),
+              color: Colors.white.withValues(alpha: 0.9),
               height: 1.4,
             ),
           ),
@@ -296,7 +296,7 @@ class RankProgressCard extends StatelessWidget {
                   ),
                 ),
                 style: TextButton.styleFrom(
-                  backgroundColor: Colors.white.withOpacity(0.2),
+                  backgroundColor: Colors.white.withValues(alpha: 0.2),
                   padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
@@ -332,7 +332,7 @@ class RankListTile extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 12),
       decoration: BoxDecoration(
         color: isCurrentRank 
-            ? rank.color.withOpacity(0.1) 
+            ? rank.color.withValues(alpha: 0.1) 
             : Colors.white,
         borderRadius: BorderRadius.circular(16),
         border: isCurrentRank
@@ -340,7 +340,7 @@ class RankListTile extends StatelessWidget {
             : null,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -360,7 +360,7 @@ class RankListTile extends StatelessWidget {
               Positioned.fill(
                 child: Container(
                   decoration: BoxDecoration(
-                    color: Colors.black.withOpacity(0.5),
+                    color: Colors.black.withValues(alpha: 0.5),
                     shape: BoxShape.circle,
                   ),
                   child: const Icon(
@@ -413,7 +413,7 @@ class RankListTile extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                   decoration: BoxDecoration(
-                    color: rank.getTierColor().withOpacity(0.2),
+                    color: rank.getTierColor().withValues(alpha: 0.2),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Text(
@@ -488,13 +488,13 @@ class RankUpDialog extends StatelessWidget {
             end: Alignment.bottomRight,
             colors: [
               newRank.getTierColor(),
-              newRank.getTierColor().withOpacity(0.8),
+              newRank.getTierColor().withValues(alpha: 0.8),
             ],
           ),
           borderRadius: BorderRadius.circular(24),
           boxShadow: [
             BoxShadow(
-              color: newRank.color.withOpacity(0.5),
+              color: newRank.color.withValues(alpha: 0.5),
               blurRadius: 30,
               offset: const Offset(0, 10),
             ),
@@ -527,7 +527,7 @@ class RankUpDialog extends StatelessWidget {
               LeaderboardRankService().getRankUpMessage(newRank),
               style: GoogleFonts.montserrat(
                 fontSize: 14,
-                color: Colors.white.withOpacity(0.9),
+                color: Colors.white.withValues(alpha: 0.9),
               ),
               textAlign: TextAlign.center,
             ),
@@ -561,7 +561,7 @@ class RankUpDialog extends StatelessWidget {
               style: GoogleFonts.montserrat(
                 fontSize: 16,
                 fontWeight: FontWeight.w600,
-                color: Colors.white.withOpacity(0.9),
+                color: Colors.white.withValues(alpha: 0.9),
               ),
             ),
             

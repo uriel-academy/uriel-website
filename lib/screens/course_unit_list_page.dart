@@ -94,7 +94,7 @@ class _CourseUnitListPageState extends State<CourseUnitListPage> {
                     end: Alignment.bottomRight,
                     colors: [
                       _getCourseColor(widget.course.subject),
-                      _getCourseColor(widget.course.subject).withOpacity(0.7),
+                      _getCourseColor(widget.course.subject).withValues(alpha: 0.7),
                     ],
                   ),
                 ),
@@ -115,7 +115,7 @@ class _CourseUnitListPageState extends State<CourseUnitListPage> {
                               vertical: 6,
                             ),
                             decoration: BoxDecoration(
-                              color: Colors.white.withOpacity(0.2),
+                              color: Colors.white.withValues(alpha: 0.2),
                               borderRadius: BorderRadius.circular(8),
                             ),
                             child: Text(
@@ -132,7 +132,7 @@ class _CourseUnitListPageState extends State<CourseUnitListPage> {
                             '${_units.length} Units',
                             style: GoogleFonts.inter(
                               fontSize: 13,
-                              color: Colors.white.withOpacity(0.9),
+                              color: Colors.white.withValues(alpha: 0.9),
                             ),
                           ),
                         ],
@@ -265,7 +265,7 @@ class _UnitCard extends StatelessWidget {
                 : null,
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.04),
+                color: Colors.black.withValues(alpha: 0.04),
                 blurRadius: 12,
                 offset: const Offset(0, 4),
               ),

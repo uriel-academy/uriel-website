@@ -338,7 +338,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                 borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.04),
+                    color: Colors.black.withValues(alpha: 0.04),
                     blurRadius: 8,
                     offset: const Offset(0, 2),
                   ),
@@ -591,7 +591,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
           borderRadius: BorderRadius.circular(20),
           boxShadow: [
             BoxShadow(
-              color: const Color(0xFFD2B48C).withOpacity(0.3),
+              color: const Color(0xFFD2B48C).withValues(alpha: 0.3),
               blurRadius: 20,
               offset: const Offset(0, 8),
             ),
@@ -608,7 +608,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                 height: 150,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.white.withOpacity(0.1),
+                  color: Colors.white.withValues(alpha: 0.1),
                 ),
               ),
             ),
@@ -620,7 +620,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                 height: 100,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.white.withOpacity(0.1),
+                  color: Colors.white.withValues(alpha: 0.1),
                 ),
               ),
             ),
@@ -701,7 +701,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                                   style: GoogleFonts.inter(
                                     fontSize: 13,
                                     fontWeight: FontWeight.w600,
-                                    color: Colors.white.withOpacity(0.85),
+                                    color: Colors.white.withValues(alpha: 0.85),
                                     letterSpacing: 0.5,
                                   ),
                                 ),
@@ -711,8 +711,8 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                                     padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                                     decoration: BoxDecoration(
                                       color: user.rankChange! > 0 
-                                          ? const Color(0xFF34C759).withOpacity(0.3)
-                                          : const Color(0xFFFF3B30).withOpacity(0.3),
+                                          ? const Color(0xFF34C759).withValues(alpha: 0.3)
+                                          : const Color(0xFFFF3B30).withValues(alpha: 0.3),
                                       borderRadius: BorderRadius.circular(6),
                                     ),
                                     child: Row(
@@ -756,7 +756,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                               '${user.totalXP} XP Accumulated',
                               style: GoogleFonts.inter(
                                 fontSize: 13,
-                                color: Colors.white.withOpacity(0.9),
+                                color: Colors.white.withValues(alpha: 0.9),
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
@@ -794,7 +794,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                                   '${user.totalXP} XP',
                                   style: GoogleFonts.inter(
                                     fontSize: 13,
-                                    color: Colors.white.withOpacity(0.9),
+                                    color: Colors.white.withValues(alpha: 0.9),
                                     fontWeight: FontWeight.w600,
                                   ),
                                 ),
@@ -802,7 +802,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                                   '$xpNeeded XP to ${nextRank.name}',
                                   style: GoogleFonts.inter(
                                     fontSize: 13,
-                                    color: Colors.white.withOpacity(0.9),
+                                    color: Colors.white.withValues(alpha: 0.9),
                                     fontWeight: FontWeight.w600,
                                   ),
                                 ),
@@ -814,7 +814,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
                               child: LinearProgressIndicator(
                                 value: progress,
                                 minHeight: 12,
-                                backgroundColor: Colors.white.withOpacity(0.3),
+                                backgroundColor: Colors.white.withValues(alpha: 0.3),
                                 valueColor: const AlwaysStoppedAnimation<Color>(
                                   Color(0xFF34C759), // iOS Green
                                 ),
@@ -853,7 +853,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
           borderRadius: BorderRadius.circular(14),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.04),
+              color: Colors.black.withValues(alpha: 0.04),
               blurRadius: 8,
               offset: const Offset(0, 2),
             ),
@@ -863,7 +863,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
           controller: _tabController,
           isScrollable: true,
           indicator: BoxDecoration(
-            color: const Color(0xFFD2B48C).withOpacity(0.1),
+            color: const Color(0xFFD2B48C).withValues(alpha: 0.1),
             borderRadius: BorderRadius.circular(10),
           ),
           labelColor: const Color(0xFFD2B48C),
@@ -938,7 +938,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
               borderRadius: BorderRadius.circular(16),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.04),
+                  color: Colors.black.withValues(alpha: 0.04),
                   blurRadius: 12,
                   offset: const Offset(0, 2),
                 ),
@@ -993,9 +993,9 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 8),
         decoration: BoxDecoration(
-          color: color.withOpacity(0.08),
+          color: color.withValues(alpha: 0.08),
           borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: color.withOpacity(0.2)),
+          border: Border.all(color: color.withValues(alpha: 0.2)),
         ),
         child: Column(
           children: [
@@ -1029,7 +1029,7 @@ class _RedesignedLeaderboardPageState extends State<RedesignedLeaderboardPage>
     return Container(
       decoration: BoxDecoration(
         color: isCurrentUser 
-            ? const Color(0xFFD2B48C).withOpacity(0.12) 
+            ? const Color(0xFFD2B48C).withValues(alpha: 0.12) 
             : Colors.white,
         border: Border(
           left: isCurrentUser 

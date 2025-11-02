@@ -278,7 +278,7 @@ class _TriviaSingleQuestionTabState extends State<TriviaSingleQuestionTab> {
                 return Chip(
                   label: Text(category),
                   onDeleted: () => _removeCategory(category),
-                  backgroundColor: const Color(0xFF9C27B0).withOpacity(0.1),
+                  backgroundColor: const Color(0xFF9C27B0).withValues(alpha: 0.1),
                   deleteIconColor: const Color(0xFF9C27B0),
                 );
               }).toList(),
@@ -964,7 +964,7 @@ class TriviaManageTab extends StatelessWidget {
           width: 50,
           height: 50,
           decoration: BoxDecoration(
-            color: color.withOpacity(0.1),
+            color: color.withValues(alpha: 0.1),
             borderRadius: BorderRadius.circular(12),
           ),
           child: Icon(icon, color: color, size: 24),

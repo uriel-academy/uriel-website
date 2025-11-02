@@ -279,8 +279,8 @@ class _UriPageState extends State<UriPage> {
               color: bg,
               borderRadius: BorderRadius.circular(14),
               boxShadow: isUser
-                  ? [BoxShadow(color: const Color(0xFF0B5FFF).withOpacity(0.12), blurRadius: 8, offset: const Offset(0, 4))]
-                  : [BoxShadow(color: Colors.black.withOpacity(0.03), blurRadius: 6, offset: const Offset(0, 2))],
+                  ? [BoxShadow(color: const Color(0xFF0B5FFF).withValues(alpha: 0.12), blurRadius: 8, offset: const Offset(0, 4))]
+                  : [BoxShadow(color: Colors.black.withValues(alpha: 0.03), blurRadius: 6, offset: const Offset(0, 2))],
               border: !isUser ? Border.all(color: const Color(0xFFE6E9EE), width: 1) : null,
             ),
             child: Column(
@@ -483,7 +483,7 @@ class _UriPageState extends State<UriPage> {
                       right: 4,
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Colors.black.withOpacity(0.6),
+                          color: Colors.black.withValues(alpha: 0.6),
                           shape: BoxShape.circle,
                         ),
                         child: IconButton(
@@ -506,15 +506,15 @@ class _UriPageState extends State<UriPage> {
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
                       colors: [
-                        const Color(0xFF0B5FFF).withOpacity(0.15),
-                        const Color(0xFF0B5FFF).withOpacity(0.08),
+                        const Color(0xFF0B5FFF).withValues(alpha: 0.15),
+                        const Color(0xFF0B5FFF).withValues(alpha: 0.08),
                       ],
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                     ),
                     shape: BoxShape.circle,
                     border: Border.all(
-                      color: const Color(0xFF0B5FFF).withOpacity(0.3),
+                      color: const Color(0xFF0B5FFF).withValues(alpha: 0.3),
                       width: 1,
                     ),
                   ),
@@ -573,7 +573,7 @@ class _UriPageState extends State<UriPage> {
                   decoration: BoxDecoration(
                     color: const Color(0xFF0B5FFF),
                     shape: BoxShape.circle,
-                    boxShadow: [BoxShadow(color: const Color(0xFF0B5FFF).withOpacity(0.14), blurRadius: 8, offset: const Offset(0, 4))],
+                    boxShadow: [BoxShadow(color: const Color(0xFF0B5FFF).withValues(alpha: 0.14), blurRadius: 8, offset: const Offset(0, 4))],
                   ),
                   child: IconButton(
                     onPressed: _send,
@@ -641,7 +641,7 @@ class _UriPageState extends State<UriPage> {
                             right: 4,
                             child: Container(
                               decoration: BoxDecoration(
-                                color: Colors.black.withOpacity(0.6),
+                                color: Colors.black.withValues(alpha: 0.6),
                                 shape: BoxShape.circle,
                               ),
                               child: IconButton(
@@ -664,15 +664,15 @@ class _UriPageState extends State<UriPage> {
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
                             colors: [
-                              const Color(0xFF0B5FFF).withOpacity(0.15),
-                              const Color(0xFF0B5FFF).withOpacity(0.08),
+                              const Color(0xFF0B5FFF).withValues(alpha: 0.15),
+                              const Color(0xFF0B5FFF).withValues(alpha: 0.08),
                             ],
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                           ),
                           shape: BoxShape.circle,
                           border: Border.all(
-                            color: const Color(0xFF0B5FFF).withOpacity(0.3),
+                            color: const Color(0xFF0B5FFF).withValues(alpha: 0.3),
                             width: 1,
                           ),
                         ),
@@ -722,7 +722,7 @@ class _UriPageState extends State<UriPage> {
                         decoration: BoxDecoration(
                           color: const Color(0xFF0B5FFF),
                           shape: BoxShape.circle,
-                          boxShadow: [BoxShadow(color: const Color(0xFF0B5FFF).withOpacity(0.14), blurRadius: 8, offset: const Offset(0, 4))],
+                          boxShadow: [BoxShadow(color: const Color(0xFF0B5FFF).withValues(alpha: 0.14), blurRadius: 8, offset: const Offset(0, 4))],
                         ),
                         child: IconButton(
                           onPressed: _send,
