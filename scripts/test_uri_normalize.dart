@@ -1,4 +1,3 @@
-import 'dart:math' as math;
 
 String normalizeLatex(String s) {
   // First apply comprehensive text normalization
@@ -16,7 +15,7 @@ String normalizeLatex(String s) {
 
 String _normalizeMd(String s) {
   // Print snippet for debugging
-  final prefix = s.length > 300 ? s.substring(0, 300) + '...' : s;
+  final prefix = s.length > 300 ? '${s.substring(0, 300)}...' : s;
   print('--- Normalization run ---');
   print('Raw input (snippet):');
   print(prefix);
@@ -59,7 +58,7 @@ String _normalizeMd(String s) {
   s = s.replaceAll('do ing', 'doing');
 
   final out = s.trim();
-  final outPrefix = out.length > 300 ? out.substring(0, 300) + '...' : out;
+  final outPrefix = out.length > 300 ? '${out.substring(0, 300)}...' : out;
   print('\nNormalized (snippet):');
   print(outPrefix);
   print('--- End normalization ---\n');
@@ -68,7 +67,7 @@ String _normalizeMd(String s) {
 
 void main() {
   // The malformed AI output (as the user pasted in the conversation)
-  final raw = r'''Factorization is the process of breaking down a number or a polynomial in to its components, known as factors, which, when multiplied together, yield the origin al number or polynomial. This technique is commonly used in mathematics to simplify expressions, solve equations, and understand the properties of numbers.
+  const raw = r'''Factorization is the process of breaking down a number or a polynomial in to its components, known as factors, which, when multiplied together, yield the origin al number or polynomial. This technique is commonly used in mathematics to simplify expressions, solve equations, and understand the properties of numbers.
 
 ### Types of Factorization
 1.. **Number Factorization**: This involves expressing a number as a product of its factors. For example, the number 12 can be factored in to 3 × 4 or 2 ×

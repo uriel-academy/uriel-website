@@ -21,23 +21,29 @@ class NoteService {
       final likeSnap = await tx.get(likeRef);
       final noteSnap = await tx.get(noteRef);
 
+      // Verify note exists before proceeding
+      if (!noteSnap.exists) {
+        throw Exception('Note does not exist');
+      }
+
       if (likeSnap.exists) {
         // remove like
         tx.delete(likeRef);
-        tx.update(noteRef, {'likeCount': FieldValue.increment(-1)});
         tx.delete(myNotesRef);
+        // Use set with merge to ensure field exists before decrementing
+        final currentLikes = (noteSnap.data()?['likeCount'] as num?)?.toInt() ?? 0;
+        final newLikes = (currentLikes - 1).clamp(0, 1000000000);
+        tx.set(noteRef, {'likeCount': newLikes}, SetOptions(merge: true));
       } else {
         // add like
         tx.set(likeRef, {'likedAt': FieldValue.serverTimestamp()});
-        // ensure note has a likeCount field
-        if (!noteSnap.exists) {
-          tx.set(noteRef, {'likeCount': 1}, SetOptions(merge: true));
-        } else {
-          tx.update(noteRef, {'likeCount': FieldValue.increment(1)});
-        }
+        // Use set with merge to safely increment
+        final currentLikes = (noteSnap.data()?['likeCount'] as num?)?.toInt() ?? 0;
+        final newLikes = currentLikes + 1;
+        tx.set(noteRef, {'likeCount': newLikes}, SetOptions(merge: true));
 
         // add lightweight my_notes entry
-        final noteData = noteSnap.exists ? noteSnap.data()! : <String, dynamic>{};
+        final noteData = noteSnap.data()!;
         tx.set(myNotesRef, {
           'noteId': noteId,
           'title': noteData['title'] ?? '',

@@ -1290,6 +1290,12 @@ export const ping = functions.region('us-central1').https.onRequest((_, res) => 
   res.status(200).send('pong');
 });
 
+// Rate limiter for uploadNote: 5 uploads per minute per user
+const uploadNoteRateLimiter = new (require('rate-limiter-flexible').RateLimiterMemory)({
+  points: 5, // 5 requests
+  duration: 60, // per 60 seconds
+});
+
 // Upload Note: accepts POST with Authorization Bearer <idToken>
 // Body: { title?: string, subject?: string, text?: string, imageBase64?: string, fileName?: string }
 export const uploadNote = functions.region('us-central1').https.onRequest((req, res) => {
@@ -1303,6 +1309,17 @@ export const uploadNote = functions.region('us-central1').https.onRequest((req, 
         const idToken = authHeader.split(' ')[1];
         let uid: string | null = null;
         try { const decoded = await admin.auth().verifyIdToken(idToken); uid = decoded.uid; } catch (e) { res.status(401).json({ error: 'Invalid ID token' }); return; }
+
+        // Rate limiting
+        try {
+          await uploadNoteRateLimiter.consume(uid);
+        } catch (rateLimiterRes) {
+          res.status(429).json({ 
+            error: "Too many uploads. Please try again in a minute.",
+            retryAfter: Math.ceil((rateLimiterRes as any).msBeforeNext / 1000)
+          });
+          return;
+        }
 
         const body = req.body || {};
         const title = (body.title || '').toString().slice(0, 300);

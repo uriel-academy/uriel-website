@@ -50,7 +50,7 @@ void printRenderedPreview(String raw) {
       snippet = snippet.replaceAllMapped(RegExp(r'\*(.*?)\*'), (mm) => mm.group(1)!);
       // Lists: ensure bullets line by line
       snippet = snippet.replaceAll(RegExp(r'\n?\s*-\s*'), '\n• ');
-      snippet = snippet.replaceAll(RegExp(r'\n?\s*(\d+)\.\s*'), '\n\1. ');
+      snippet = snippet.replaceAll(RegExp(r'\n?\s*(\d+)\.\s*'), '\n1. ');
       print(snippet);
     }
 
@@ -81,7 +81,7 @@ void printRenderedPreview(String raw) {
 }
 
 void main() {
-  final raw = r'''Factorization is the process of breaking down a number or a polynomial in to its components, known as factors, which, when multiplied together, yield the origin al number or polynomial. This technique is commonly used in mathematics to simplify expressions, solve equations, and understand the properties of numbers.
+  const raw = r'''Factorization is the process of breaking down a number or a polynomial in to its components, known as factors, which, when multiplied together, yield the origin al number or polynomial. This technique is commonly used in mathematics to simplify expressions, solve equations, and understand the properties of numbers.
 
 ### Types of Factorization
 1.. **Number Factorization**: This involves expressing a number as a product of its factors. For example, the number 12 can be factored in to 3 × 4 or 2 ×

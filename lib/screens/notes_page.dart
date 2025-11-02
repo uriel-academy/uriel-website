@@ -150,7 +150,7 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
     return filteredDocs;
   }
 
-  Widget _buildNotesGrid(List<QueryDocumentSnapshot> filteredDocs, int tabIndex, User? currentUser, String? currentUserSchool) {
+  Widget _buildNotesGrid(List<QueryDocumentSnapshot> filteredDocs, int tabIndex, User? currentUser, String? currentUserSchool, {bool showLoadMore = false}) {
     if (filteredDocs.isEmpty) {
       String message;
       String subMessage;
@@ -187,10 +187,16 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
       _startPrefetchIfNeeded(filteredDocs);
     });
 
-    return GridView.builder(
-      padding: EdgeInsets.all(isSmall ? 8 : 12),
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: crossAxis, childAspectRatio: aspect, crossAxisSpacing: isSmall ? 10 : 16, mainAxisSpacing: isSmall ? 10 : 16),
-      itemCount: filteredDocs.length,
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          Padding(
+            padding: EdgeInsets.all(isSmall ? 8 : 12),
+            child: GridView.builder(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: crossAxis, childAspectRatio: aspect, crossAxisSpacing: isSmall ? 10 : 16, mainAxisSpacing: isSmall ? 10 : 16),
+              itemCount: filteredDocs.length,
       itemBuilder: (context, i) {
         final d = filteredDocs[i].data() as Map<String, dynamic>;
         final title = (d['title'] ?? '').toString();
@@ -249,6 +255,19 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
           ),
         );
       },
+            ),
+          ),
+          if (showLoadMore)
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Text(
+                'Showing first 100 notes. Use search or subject filter to narrow results.',
+                style: GoogleFonts.montserrat(fontSize: 13, color: Colors.grey[600]),
+                textAlign: TextAlign.center,
+              ),
+            ),
+        ],
+      ),
     );
   }
 
@@ -430,21 +449,21 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
           return TabBarView(controller: _tabController, children: [
             // All Notes tab
             StreamBuilder<QuerySnapshot>(
-              stream: FirebaseFirestore.instance.collection('notes').orderBy('createdAt', descending: true).snapshots(),
+              stream: FirebaseFirestore.instance.collection('notes').orderBy('createdAt', descending: true).limit(100).snapshots(),
               builder: (context, snap) => FutureBuilder<List<QueryDocumentSnapshot>>(
                 future: _filterNotes(snap.data?.docs ?? [], currentUser, currentUserSchool, 0, _searchController.text.toLowerCase(), _selectedSubject),
                 builder: (context, filterSnap) {
                   if (snap.connectionState == ConnectionState.waiting || userSchoolSnapshot.connectionState == ConnectionState.waiting || filterSnap.connectionState == ConnectionState.waiting) return const Center(child: CircularProgressIndicator());
                   final filteredDocs = filterSnap.data ?? [];
-                  return _buildNotesGrid(filteredDocs, 0, currentUser, currentUserSchool);
+                  return _buildNotesGrid(filteredDocs, 0, currentUser, currentUserSchool, showLoadMore: (snap.data?.docs.length ?? 0) >= 100);
                 }
               ),
             ),
             // My Notes tab (uploaded and liked notes)
             StreamBuilder<QuerySnapshot>(
-              stream: FirebaseFirestore.instance.collection('notes').orderBy('createdAt', descending: true).snapshots(),
+              stream: FirebaseFirestore.instance.collection('notes').orderBy('createdAt', descending: true).limit(100).snapshots(),
               builder: (context, notesSnap) => StreamBuilder<QuerySnapshot>(
-                stream: currentUser != null ? FirebaseFirestore.instance.collection('users').doc(currentUser.uid).collection('my_notes').orderBy('addedAt', descending: true).snapshots() : const Stream.empty(),
+                stream: currentUser != null ? FirebaseFirestore.instance.collection('users').doc(currentUser.uid).collection('my_notes').orderBy('addedAt', descending: true).limit(100).snapshots() : const Stream.empty(),
                 builder: (context, myNotesSnap) {
                   if (notesSnap.connectionState == ConnectionState.waiting || myNotesSnap.connectionState == ConnectionState.waiting || userSchoolSnapshot.connectionState == ConnectionState.waiting) return const Center(child: CircularProgressIndicator());
                   final notesDocs = notesSnap.data?.docs ?? [];
@@ -469,19 +488,19 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
                     final bTime = (b['createdAt'] as Timestamp?)?.toDate() ?? DateTime.now();
                     return bTime.compareTo(aTime);
                   });
-                  return _buildNotesGrid(filteredDocs, 1, currentUser, currentUserSchool);
+                  return _buildNotesGrid(filteredDocs, 1, currentUser, currentUserSchool, showLoadMore: (notesDocs.length >= 100 || myNotesDocs.length >= 100));
                 }
               ),
             ),
             // School tab
             StreamBuilder<QuerySnapshot>(
-              stream: FirebaseFirestore.instance.collection('notes').orderBy('createdAt', descending: true).snapshots(),
+              stream: FirebaseFirestore.instance.collection('notes').orderBy('createdAt', descending: true).limit(100).snapshots(),
               builder: (context, snap) => FutureBuilder<List<QueryDocumentSnapshot>>(
                 future: _filterNotes(snap.data?.docs ?? [], currentUser, currentUserSchool, 2, _searchController.text.toLowerCase(), _selectedSubject),
                 builder: (context, filterSnap) {
                   if (snap.connectionState == ConnectionState.waiting || userSchoolSnapshot.connectionState == ConnectionState.waiting || filterSnap.connectionState == ConnectionState.waiting) return const Center(child: CircularProgressIndicator());
                   final filteredDocs = filterSnap.data ?? [];
-                  return _buildNotesGrid(filteredDocs, 2, currentUser, currentUserSchool);
+                  return _buildNotesGrid(filteredDocs, 2, currentUser, currentUserSchool, showLoadMore: (snap.data?.docs.length ?? 0) >= 100);
                 }
               ),
             ),

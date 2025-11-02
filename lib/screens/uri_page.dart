@@ -36,6 +36,7 @@ class _UriPageState extends State<UriPage> {
         setState(() {
           _messages.add(_ChatMessage(role: Role.system, text: '[Error: ${chunk.error}]'));
           _sending = false;
+          _currentAnswer = ''; // Reset for next message
         });
       } else if (chunk.done) {
         setState(() {
@@ -43,13 +44,17 @@ class _UriPageState extends State<UriPage> {
             _messages.last.streaming = false;
           }
           _sending = false;
+          _currentAnswer = ''; // Reset for next message
         });
       } else if (chunk.delta != null) {
-        setState(() => _currentAnswer += chunk.delta!);
-        final normalizedAnswer = normalizeMd(_currentAnswer);
-        if (_messages.isNotEmpty && _messages.last.role == Role.assistant) {
-          _messages.last.text = normalizedAnswer;
-        }
+        // Accumulate deltas into _currentAnswer
+        setState(() {
+          _currentAnswer += chunk.delta!;
+          final normalizedAnswer = normalizeMd(_currentAnswer);
+          if (_messages.isNotEmpty && _messages.last.role == Role.assistant) {
+            _messages.last.text = normalizedAnswer;
+          }
+        });
       }
     });
   }

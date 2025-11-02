@@ -3,6 +3,7 @@ import * as admin from 'firebase-admin';
 import cors from "cors";
 import OpenAI from "openai";
 import type { Request, Response } from "express";
+import { RateLimiterMemory } from "rate-limiter-flexible";
 
 if (!admin.apps.length) admin.initializeApp();
 
@@ -14,6 +15,12 @@ function getOpenAI() {
   }
   return openai;
 }
+
+// Rate limiter: 10 requests per minute per user/IP
+const rateLimiter = new RateLimiterMemory({
+  points: 10, // 10 requests
+  duration: 60, // per 60 seconds
+});
 
 const corsHandler = cors({
   origin: [
@@ -203,11 +210,13 @@ export const aiChatHttpStreaming = functions.region('us-central1').https.onReque
 
       // Minimal auth guard (optional: check Firebase ID token)
       const authHeader = (req.get('Authorization') || req.get('authorization') || '').toString();
+      let userId = 'anonymous';
 
       if (authHeader.startsWith('Bearer ')) {
         const idToken = authHeader.split(' ')[1];
         try {
-          await admin.auth().verifyIdToken(idToken);
+          const decodedToken = await admin.auth().verifyIdToken(idToken);
+          userId = decodedToken.uid;
         } catch (e) {
           // For now, allow unauthenticated access but log the error
           console.warn('Auth token invalid, proceeding without authentication:', e);
@@ -215,6 +224,18 @@ export const aiChatHttpStreaming = functions.region('us-central1').https.onReque
       } else {
         // Allow unauthenticated access for basic chat functionality
         console.log('No auth token provided, proceeding without authentication');
+      }
+
+      // Rate limiting: Use userId for authenticated users, IP for anonymous
+      const rateLimitKey = userId !== 'anonymous' ? userId : (req.ip || 'unknown');
+      try {
+        await rateLimiter.consume(rateLimitKey);
+      } catch (rateLimiterRes) {
+        res.status(429).json({ 
+          error: "Too many requests. Please try again in a minute.",
+          retryAfter: Math.ceil((rateLimiterRes as any).msBeforeNext / 1000)
+        });
+        return;
       }
 
       const { message, history } = req.body || {};

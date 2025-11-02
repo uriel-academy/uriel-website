@@ -46,6 +46,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   int _selectedIndex = 0;
   bool _showingProfile = false;
   
+  // Uri Chatbot state
+  bool _showUriChat = false;
+  
   // User progress data - Live from Firestore
   String userName = "";
   String userClass = "JHS Form 3 Student";
@@ -2045,11 +2048,18 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                   return const SizedBox.shrink();
                 },
               ),
+              
+              // Uri Chat Overlay (when floating button is clicked)
+              if (_showUriChat && _shouldShowUriButton())
+                _buildUriChatOverlay(isSmallScreen),
             ],
           ),
           
           // Bottom Navigation (Mobile Only)
           bottomNavigationBar: isSmallScreen ? _buildBottomNavigation() : null,
+          
+          // Floating Uri Chatbot Button (show on all pages except Uri page)
+          floatingActionButton: _shouldShowUriButton() ? _buildUriFloatingButton() : null,
           );
         },
       ),
@@ -2519,6 +2529,125 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   }
 
   int _uriIndex() => _homeChildren().length - 1;
+
+  // Check if Uri button should be shown (not on Uri page and not showing profile)
+  bool _shouldShowUriButton() {
+    return !_showingProfile && _selectedIndex != _uriIndex();
+  }
+
+  // Build floating Uri chatbot button
+  Widget _buildUriFloatingButton() {
+    return FloatingActionButton.extended(
+      onPressed: () {
+        setState(() {
+          _showUriChat = !_showUriChat;
+        });
+      },
+      backgroundColor: const Color(0xFF1A1E3F),
+      icon: Icon(
+        _showUriChat ? Icons.close : Icons.chat_bubble,
+        color: Colors.white,
+      ),
+      label: Text(
+        _showUriChat ? 'Close Uri' : 'Ask Uri',
+        style: GoogleFonts.montserrat(
+          color: Colors.white,
+          fontWeight: FontWeight.w600,
+        ),
+      ),
+      elevation: 6,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(30),
+      ),
+    );
+  }
+
+  // Build Uri chat overlay
+  Widget _buildUriChatOverlay(bool isSmallScreen) {
+    return Positioned(
+      right: isSmallScreen ? 16 : 24,
+      bottom: isSmallScreen ? 80 : 24,
+      child: Material(
+        elevation: 8,
+        borderRadius: BorderRadius.circular(16),
+        child: Container(
+          width: isSmallScreen ? MediaQuery.of(context).size.width - 32 : 400,
+          height: isSmallScreen ? MediaQuery.of(context).size.height * 0.6 : 600,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(16),
+            border: Border.all(
+              color: const Color(0xFF1A1E3F).withValues(alpha: 0.1),
+              width: 1,
+            ),
+          ),
+          child: Column(
+            children: [
+              // Header
+              Container(
+                padding: const EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: const Color(0xFF1A1E3F),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(16),
+                    topRight: Radius.circular(16),
+                  ),
+                ),
+                child: Row(
+                  children: [
+                    const CircleAvatar(
+                      radius: 20,
+                      backgroundColor: Colors.white,
+                      child: Icon(
+                        Icons.smart_toy,
+                        color: Color(0xFF1A1E3F),
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Uri AI Assistant',
+                            style: GoogleFonts.montserrat(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 16,
+                            ),
+                          ),
+                          Text(
+                            'Ask me anything!',
+                            style: GoogleFonts.montserrat(
+                              color: Colors.white.withValues(alpha: 0.8),
+                              fontSize: 12,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.close, color: Colors.white),
+                      onPressed: () {
+                        setState(() {
+                          _showUriChat = false;
+                        });
+                      },
+                    ),
+                  ],
+                ),
+              ),
+              
+              // Chat content
+              const Expanded(
+                child: UriPage(embedded: true),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
 
   Widget _buildHeader(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
