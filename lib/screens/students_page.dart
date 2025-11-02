@@ -17,8 +17,6 @@ class _StudentsPageState extends State<StudentsPage> {
   String? _schoolName;
   String? _teachingGrade; // teacher's class (e.g., 'JHS 1')
 
-  String? _selectedStudentId;
-  Map<String, dynamic>? _selectedStudentData;
   // Pagination & caching for server-side aggregates
   final Map<String, dynamic> _pageCache = {}; // key: cursorKey -> result map
   String _currentCursorKey = 'start';
