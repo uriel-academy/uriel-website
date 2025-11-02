@@ -153,7 +153,7 @@ async function populateStudentSummaries() {
         // Write to studentSummaries
         await db.collection('studentSummaries').doc(studentId).set(summaryData);
         
-        console.log(`✅ ${studentData.firstName} ${studentData.lastName}: XP=${performanceData.totalXP}, Questions=${performanceData.totalQuestions}, Subjects=${performanceData.subjectsCount}, Rank=${performanceData.rank || 'N/A'}`);
+        console.log(`✅ ${studentData.firstName} ${studentData.lastName}: XP=${performanceData.totalXP}, Questions=${performanceData.totalQuestions}, Subjects=${performanceData.subjectsCount}, Rank=${performanceData.rankName || performanceData.rank || 'N/A'}`);
         processedCount++;
         
       } catch (error) {

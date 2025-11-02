@@ -21,7 +21,7 @@ class _StudentsPageState extends State<StudentsPage> {
   final Map<String, dynamic> _pageCache = {}; // key: cursorKey -> result map
   String _currentCursorKey = 'start';
   final Map<String, String?> _nextCursorByKey = {};
-  final int _pageSize = 50;
+  final int _pageSize = 10;  // Limit to 10 students per page
   bool _isLoadingPage = false;
   Future<void>? _pageFuture;
 
