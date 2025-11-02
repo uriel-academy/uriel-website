@@ -14,13 +14,8 @@ String normalizeMd(String s) {
   if (s.isEmpty) return s;
 
   // Conservative, safer normalization approach.
-  // 1) Collapse repeated punctuation like "1.." or "..." -> "."
-  s = s.replaceAll(RegExp(r'\.{2,}'), '.');
-
-  // 2) Fix numbered-list artifacts where AI emits extra dots: "1.." -> "1."
-  s = s.replaceAllMapped(RegExp(r'(\d+)\.{1,}'), (m) => '${m.group(1)}.');
-
-  // 3) Common curated split-word fixes
+  
+  // 1) Common curated split-word fixes (do this early)
   const fixes = {
     'in to': 'into',
     'origin al': 'original',
@@ -34,22 +29,33 @@ String normalizeMd(String s) {
   };
   fixes.forEach((k, v) => s = s.replaceAll(k, v));
 
-  // 4) Remove stray dollar-digit patterns like "$1" -> "1." (common AI artifact)
-  s = s.replaceAllMapped(RegExp(r'\$\s*(\d+)'), (m) => '${m.group(1)}.');
+  // 2) Remove stray standalone dots on their own lines (common AI artifact)
+  s = s.replaceAll(RegExp(r'^\s*\.\s*$', multiLine: true), '');
+  
+  // 3) Remove dots before bold headings (artifact like ". **Heading**:")
+  s = s.replaceAll(RegExp(r'\.\s*\n\s*\*\*'), '\n**');
+  s = s.replaceAll(RegExp(r'^\s*\.\s*\*\*', multiLine: true), '**');
+  
+  // 4) Remove leading bullets from sub-items under numbered lists
+  // Pattern: "1. **Title**:\n - text" → "1. **Title**:\n text"
+  s = s.replaceAllMapped(
+    RegExp(r'(\d+\.\s+\*\*[^*]+\*\*:[^\n]*\n)\s*-\s+', multiLine: true),
+    (m) => '${m.group(1)}   ' // Replace bullet with indent
+  );
+  
+  // 5) Collapse multiple dots (but not ellipsis intentionally used)
+  s = s.replaceAll(RegExp(r'\.{3,}'), '...');
+  s = s.replaceAll(RegExp(r'\.{2}(?!\.)'), '.');
 
-  // 5) Ensure numbered lists start on a new line: " ... 1. text" -> "\n1. text"
-  s = s.replaceAllMapped(RegExp(r'\s+(\d+)\.\s'), (m) => '\n${m.group(1)}. ');
+  // 6) Contract obvious artifacts
+  s = s.replaceAll('do ing', 'doing');
 
-  // 6) Bulleted lists: ensure newline before '- ' if it got stuck
-  s = s.replaceAllMapped(RegExp(r'\s+(-\s+)'), (m) => '\n${m.group(1)}');
-
-  // 7) Remove extra spaces and fix spacing around punctuation
+  // 7) Remove extra spaces (but preserve newlines)
   s = s.replaceAll(RegExp(r'[ \t\f\v]+'), ' ');
+  
+  // 8) Fix spacing around punctuation (but not between numbers/letters and dashes for lists)
   s = s.replaceAllMapped(RegExp(r'\s+([,.;:?!%])'), (m) => m.group(1)!);
   s = s.replaceAllMapped(RegExp(r'([.!?])([A-Za-z0-9])'), (m) => '${m.group(1)} ${m.group(2)}');
-
-  // 8) Contract a few obvious artifacts
-  s = s.replaceAll('do ing', 'doing');
 
   return s.trim();
 }
@@ -57,38 +63,11 @@ String normalizeMd(String s) {
 String _aggressiveNormalize(String s) {
   if (s.isEmpty) return s;
 
-  // Remove common junk tokens like repeated '1$1' patterns or lone '$1' fragments
-  s = s.replaceAll(RegExp(r'\b1\$1\b'), '1.');
-  s = s.replaceAll(RegExp(r'\$(?:1|\s*1)\b'), '');
-
-  // Patterns like '2.^2' -> '2^2' (dot before caret)
-  s = s.replaceAllMapped(RegExp(r'(\d+)\.\^(\d+)'), (m) => '${m.group(1)}^${m.group(2)}');
-
-  // Patterns like 'x^2 1$1 $2 x' — try to remove stray numeric-dollar clusters
-  s = s.replaceAll(RegExp(r'\b\d+\$1\b'), '');
-
-  // Remove unmatched single '$' characters while preserving $$...$$ blocks.
-  // Replace all $$...$$ with a placeholder, strip remaining single $, then restore blocks.
-  final blockMatches = <String>[];
-  s = s.replaceAllMapped(RegExp(r'\$\$[\s\S]*?\$\$'), (m) {
-    blockMatches.add(m.group(0)!);
-    return '<<MATHBLOCK${blockMatches.length - 1}>>';
-  });
-
-  // Remove any remaining single $ characters
-  s = s.replaceAll('\u0000', '');
-  s = s.replaceAll(r'$', '');
-
-  // Restore math blocks
-  for (var i = 0; i < blockMatches.length; i++) {
-    s = s.replaceAll('<<MATHBLOCK$i>>', blockMatches[i]);
-  }
-
-  // Collapse duplicated numbered fragments like '1. 1. 2.' -> keep first occurrence
-  s = s.replaceAllMapped(RegExp(r'(\b\d+\.\s+)(\1)+'), (m) => m.group(1)!);
-
-  // Trim stray whitespace again
-  s = s.replaceAll(RegExp(r'[ \t\n\r]+'), ' ').trim();
+  // This is rarely needed - only enable if markdown rendering has major issues
+  // Most normalization should happen in normalizeMd() instead
+  
+  // Remove stray whitespace
+  s = s.replaceAll(RegExp(r'[ \t]+'), ' ').trim();
   return s;
 }
 
