@@ -96,11 +96,21 @@ String normalizeLatex(String s, {bool aggressive = false}) {
   s = normalizeMd(s);
 
   // Normalize some LaTeX delimiter variants conservatively
+  // First, handle escaped backslashes
   s = s.replaceAll(r'\\(', r'\(').replaceAll(r'\\)', r'\)');
   s = s.replaceAll(r'\\[', r'\[').replaceAll(r'\\]', r'\]');
 
-  // Replace \\(...\\) with $...$ when it looks safe
-  s = s.replaceAllMapped(RegExp(r'\\\((.*?)\\\)', dotAll: true), (m) => '\$${m.group(1)}\$');
+  // Replace \(...\) with $...$ (inline math) - dotAll allows matching across newlines
+  s = s.replaceAllMapped(RegExp(r'\\\(([\s\S]*?)\\\)', multiLine: true), (m) {
+    final content = m.group(1)!.replaceAll('\n', ' ').trim();
+    return '\$$content\$';
+  });
+  
+  // Replace \[...\] with $$...$$ (display math)
+  s = s.replaceAllMapped(RegExp(r'\\\[([\s\S]*?)\\\]', multiLine: true), (m) {
+    final content = m.group(1)!.trim();
+    return '\$\$$content\$\$';
+  });
 
   // If aggressive, apply extra cleanups
   if (aggressive) {
