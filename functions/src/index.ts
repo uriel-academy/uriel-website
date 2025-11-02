@@ -3323,7 +3323,32 @@ export const autoAssignOrphanedStudent = functions.firestore
       
       console.log(`Assigning to teacher: ${teacherData.firstName} ${teacherData.lastName} (${teacherId})`);
       
-      // Update student with teacher assignment
+      // Get student's XP to determine rank
+      const studentXP = userData.totalXP || userData.xp || 0;
+      
+      // Find matching rank based on XP
+      const ranksSnapshot = await db.collection('leaderboardRanks')
+        .orderBy('rank')
+        .get();
+      
+      let currentRankName = 'Learner'; // Default rank
+      let currentRank = 1;
+      
+      for (const rankDoc of ranksSnapshot.docs) {
+        const rankData = rankDoc.data();
+        const minXP = rankData.minXP || 0;
+        const maxXP = rankData.maxXP || 999999999;
+        
+        if (studentXP >= minXP && studentXP <= maxXP) {
+          currentRankName = rankData.name;
+          currentRank = rankData.rank;
+          break;
+        }
+      }
+      
+      console.log(`Setting rank for ${userId}: ${currentRankName} (XP: ${studentXP})`);
+      
+      // Update student with teacher assignment AND rank
       await snap.ref.update({
         teacherId: teacherId,
         teacher_id: teacherId,
@@ -3332,6 +3357,8 @@ export const autoAssignOrphanedStudent = functions.firestore
         class: 'Form 1',
         className: 'Form 1',
         grade: 'Form 1',
+        currentRankName: currentRankName,
+        currentRank: currentRank,
         updatedAt: admin.firestore.FieldValue.serverTimestamp()
       });
       

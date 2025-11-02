@@ -3075,9 +3075,10 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             final subjectPerformance = (dashboardData['subjectPerformance'] as Map<String, Map<String, dynamic>>?) ?? {};
             
             final avgXP = totalStudents > 0 ? (totalXP / totalStudents) : 0;
-            final avgQuestions = totalStudents > 0 ? (totalQuestions / totalStudents) : 0;
             final avgAccuracy = studentsWithAccuracy > 0 ? (totalAccuracy / studentsWithAccuracy) : 0;
-            final avgSubjects = totalStudents > 0 ? (totalSubjects / totalStudents) : 0;
+            // Show totals for questions and subjects instead of averages
+            final totalQuestionsCount = totalQuestions;
+            final totalSubjectsCount = totalSubjects;
 
             // Sort students by XP for top performers
             final sortedStudents = List<Map<String, dynamic>>.from(students);
@@ -3127,8 +3128,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                           SizedBox(
                             width: cardWidth,
                             child: _buildModernMetricCard(
-                              'Questions Answered',
-                              avgQuestions.toStringAsFixed(0),
+                              'Total Questions',
+                              totalQuestionsCount.toString(),
                               Icons.quiz_rounded,
                               const Color(0xFF2196F3),
                             ),
@@ -3145,8 +3146,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                           SizedBox(
                             width: cardWidth,
                             child: _buildModernMetricCard(
-                              'Subjects Explored',
-                              avgSubjects.toStringAsFixed(1),
+                              'Total Subjects',
+                              totalSubjectsCount.toString(),
                               Icons.library_books_rounded,
                               const Color(0xFFFF9800),
                             ),

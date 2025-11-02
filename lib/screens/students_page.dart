@@ -199,7 +199,11 @@ class _StudentsPageState extends State<StudentsPage> {
                 padding: const EdgeInsets.all(12),
                 child: Column(
                   children: [
-                    Expanded(child: _buildStudentTableFromList(students)),
+                    Expanded(
+                      child: SingleChildScrollView(
+                        child: _buildStudentTableFromList(students),
+                      ),
+                    ),
                     const SizedBox(height: 8),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
