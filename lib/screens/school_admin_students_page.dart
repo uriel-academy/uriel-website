@@ -122,7 +122,13 @@ class _SchoolAdminStudentsPageState extends State<SchoolAdminStudentsPage> {
 
         for (final doc in summariesSnap.docs) {
           final data = Map<String, dynamic>.from(doc.data());
-          data['studentId'] = doc.id; // Ensure studentId is set
+          data['studentId'] = doc.id;
+          // Map field names for consistency with UI
+          data['studentName'] = data['displayName'] ?? '${data['firstName'] ?? ''} ${data['lastName'] ?? ''}'.trim();
+          data['xp'] = data['totalXP'] ?? 0;
+          data['questionsAnswered'] = data['totalQuestions'] ?? 0;
+          data['accuracy'] = data['avgPercent'] ?? 0;
+          data['subjectsSolved'] = data['subjectsCount'] ?? 0;
           studentsList.add(data);
         }
       }
@@ -243,9 +249,9 @@ class _SchoolAdminStudentsPageState extends State<SchoolAdminStudentsPage> {
                   _buildDetailRow('Current Rank', studentData['rankName'] ?? 'Learner'),
                   _buildDetailRow('Total XP', '${studentData['xp'] ?? 0}'),
                   _buildDetailRow('Questions Answered', '${studentData['questionsAnswered'] ?? 0}'),
-                  _buildDetailRow('Accuracy', studentData['accuracy'] != null ? '${studentData['accuracy'].toStringAsFixed(1)}%' : 'N/A'),
+                  _buildDetailRow('Accuracy', studentData['accuracy'] != null && studentData['accuracy'] > 0 ? '${studentData['accuracy'].toStringAsFixed(1)}%' : 'N/A'),
                   _buildDetailRow('Subjects Solved', '${studentData['subjectsSolved'] ?? 0}'),
-                  _buildDetailRow('Teacher', studentData['teacherName'] ?? 'Unassigned'),
+                  _buildDetailRow('Teacher', studentData['teacherId'] != null ? 'Assigned' : 'Unassigned'),
                 ],
               ),
             ),
