@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-enum UserRole { student, teacher, school, schoolAdmin }
+enum UserRole { student, teacher, schoolAdmin }
 
 class UserService {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
@@ -513,7 +513,7 @@ class UserService {
     try {
       // Avoid setting 'role' here from the client side.
       final schoolData = {
-        'role': UserRole.school.name,
+        'role': UserRole.schoolAdmin.name,
         'institutionName': institutionName,
         'name': institutionName, // For consistency
         'email': email.toLowerCase(),
@@ -577,9 +577,6 @@ class UserService {
         break;
       case UserRole.teacher:
         Navigator.pushReplacementNamed(context, '/teacher');
-        break;
-      case UserRole.school:
-        Navigator.pushReplacementNamed(context, '/school');
         break;
       case UserRole.schoolAdmin:
         Navigator.pushReplacementNamed(context, '/school-admin');

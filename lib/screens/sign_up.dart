@@ -227,10 +227,10 @@ class _SignUpPageState extends State<SignUpPage> {
           (route) => false,
         );
         break;
-      case UserRole.school:
+      case UserRole.schoolAdmin:
         Navigator.pushNamedAndRemoveUntil(
           context,
-          '/school',
+          '/school-admin',
           (route) => false,
         );
         break;
@@ -1500,7 +1500,7 @@ class _SignUpPageState extends State<SignUpPage> {
       case UserType.teacher:
         return UserRole.teacher;
       case UserType.school:
-        return UserRole.school;
+        return UserRole.schoolAdmin;
     }
   }
 

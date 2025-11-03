@@ -20,6 +20,8 @@ class _SignInPageState extends State<SignInPage> {
   bool isLoading = false;
   bool showEmailForm = false;
   bool obscurePassword = true;
+  String selectedRole = 'Student'; // Default role
+  final List<String> roles = ['Student', 'Teacher', 'School Admin'];
 
   @override
   void initState() {
@@ -67,8 +69,8 @@ class _SignInPageState extends State<SignInPage> {
         return;
       }
       
-      // For non-admin users, check role and route
-      await _checkUserRoleAndRoute(user);
+      // For non-admin users, create/update user with selected role
+      await _createOrUpdateUserWithRole(user);
       
     } catch (e) {
       debugPrint('Google Sign-In Error: $e');
@@ -82,51 +84,45 @@ class _SignInPageState extends State<SignInPage> {
     }
   }
   
-  Future<void> _checkUserRoleAndRoute(user) async {
+  Future<void> _createOrUpdateUserWithRole(user) async {
     try {
-      debugPrint('Checking user role for: ${user.email}');
+      debugPrint('Creating/updating user with role: $selectedRole for ${user.email}');
       
-      // Check user role with timeout
-      final userRole = await UserService()
-          .getUserRoleByEmail(user.email!)
-          .timeout(const Duration(seconds: 10));
+      // Convert selected role string to UserRole enum
+      UserRole role;
+      switch (selectedRole) {
+        case 'Teacher':
+          role = UserRole.teacher;
+          break;
+        case 'School Admin':
+          role = UserRole.schoolAdmin;
+          break;
+        case 'Student':
+        default:
+          role = UserRole.student;
+          break;
+      }
       
-      debugPrint('User role found: $userRole');
+      // Create or update user profile with selected role
+      await UserService().createUserProfile(
+        userId: user.uid,
+        email: user.email!,
+        role: role,
+        name: user.displayName,
+      );
       
-      if (userRole != null) {
-        // Update last login time asynchronously (don't wait for it)
-        UserService().updateLastLogin(user.uid).catchError((e) {
-          debugPrint('Failed to update last login: $e');
-        });
-        
-        // Route based on role
-        if (mounted) {
-          _routeUserBasedOnRole(userRole);
-        }
-      } else {
-        debugPrint('No user role found, creating new student profile');
-        
-        // New user - create default student profile asynchronously
-        UserService().createUserProfile(
-          userId: user.uid,
-          email: user.email!,
-          role: UserRole.student,
-          name: user.displayName,
-        ).catchError((e) {
-          debugPrint('Failed to create user profile: $e');
-        });
-        
-        // Route to student home immediately
-        if (mounted) {
-          Navigator.pushReplacementNamed(context, '/home');
-        }
+      debugPrint('User profile created/updated with role: $role');
+      
+      // Update last login time
+      await UserService().updateLastLogin(user.uid);
+      
+      // Route based on role
+      if (mounted) {
+        _routeUserBasedOnRole(role);
       }
     } catch (e) {
-      // If role check fails, default to student dashboard
-      debugPrint('Role check failed: $e');
-      if (mounted) {
-        Navigator.pushReplacementNamed(context, '/home');
-      }
+      debugPrint('Error creating/updating user: $e');
+      _showError('An error occurred setting up your account.');
     }
   }
 
@@ -139,9 +135,9 @@ class _SignInPageState extends State<SignInPage> {
           debugPrint('Routing to teacher dashboard');
           Navigator.pushReplacementNamed(context, '/teacher');
           break;
-        case UserRole.school:
-          debugPrint('Routing to school dashboard');
-          Navigator.pushReplacementNamed(context, '/school');
+        case UserRole.schoolAdmin:
+          debugPrint('Routing to school admin dashboard');
+          Navigator.pushReplacementNamed(context, '/school-admin');
           break;
         case UserRole.student:
         default:
@@ -172,21 +168,8 @@ class _SignInPageState extends State<SignInPage> {
       if (user == null) {
         _showError('Invalid email or password. Please try again.');
       } else {
-        // Skip OTP verification and route based on user role
-        final userRole = await UserService().getUserRoleByEmail(user.email!);
-        
-        if (!mounted) return;
-        
-        if (userRole != null) {
-          // Update last login time
-          await UserService().updateLastLogin(user.uid);
-          
-          // Route based on role
-          _routeUserBasedOnRole(userRole);
-        } else {
-          // Fallback to student home if no role found
-          Navigator.pushReplacementNamed(context, '/home');
-        }
+        // Create or update user with selected role
+        await _createOrUpdateUserWithRole(user);
       }
     } catch (e) {
       _showError('An error occurred during sign-in.');
@@ -349,6 +332,11 @@ class _SignInPageState extends State<SignInPage> {
           ),
           SizedBox(height: isSmallScreen ? 24 : 32),
 
+          // Role selector (prominent)
+          _buildRoleSelector(),
+          
+          SizedBox(height: isSmallScreen ? 20 : 24),
+
           // Google Sign In Button (Prominent)
           _buildGoogleSignInButton(),
           
@@ -379,6 +367,75 @@ class _SignInPageState extends State<SignInPage> {
           if (!showEmailForm) _buildEmailToggleButton(),
           if (showEmailForm) _buildEmailForm(),
         ],
+      ),
+    );
+  }
+
+  Widget _buildRoleSelector() {
+    return Container(
+      padding: const EdgeInsets.all(4),
+      decoration: BoxDecoration(
+        color: Colors.grey[100],
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Row(
+        children: roles.map((role) {
+          final isSelected = selectedRole == role;
+          IconData icon;
+          switch (role) {
+            case 'Teacher':
+              icon = Icons.school;
+              break;
+            case 'School Admin':
+              icon = Icons.admin_panel_settings;
+              break;
+            default:
+              icon = Icons.person;
+          }
+          
+          return Expanded(
+            child: GestureDetector(
+              onTap: () {
+                setState(() {
+                  selectedRole = role;
+                });
+              },
+              child: Container(
+                padding: const EdgeInsets.symmetric(vertical: 12),
+                decoration: BoxDecoration(
+                  color: isSelected ? Colors.white : Colors.transparent,
+                  borderRadius: BorderRadius.circular(10),
+                  boxShadow: isSelected ? [
+                    BoxShadow(
+                      color: Colors.black.withValues(alpha: 0.05),
+                      blurRadius: 4,
+                      offset: const Offset(0, 2),
+                    ),
+                  ] : [],
+                ),
+                child: Column(
+                  children: [
+                    Icon(
+                      icon,
+                      size: 24,
+                      color: isSelected ? const Color(0xFFD62828) : Colors.grey[600],
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      role,
+                      style: GoogleFonts.montserrat(
+                        fontSize: 12,
+                        fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
+                        color: isSelected ? const Color(0xFF1A1E3F) : Colors.grey[600],
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          );
+        }).toList(),
       ),
     );
   }
@@ -526,6 +583,61 @@ class _SignInPageState extends State<SignInPage> {
           ),
           style: GoogleFonts.montserrat(fontSize: 14),
           onSubmitted: (_) => _handleEmailSignIn(),
+        ),
+        const SizedBox(height: 20),
+
+        // Role selector
+        Text(
+          'Sign in as',
+          style: GoogleFonts.montserrat(
+            fontSize: 14,
+            fontWeight: FontWeight.w500,
+            color: const Color(0xFF1A1E3F),
+          ),
+        ),
+        const SizedBox(height: 8),
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.grey[300]!),
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: DropdownButtonHideUnderline(
+            child: DropdownButton<String>(
+              value: selectedRole,
+              isExpanded: true,
+              icon: Icon(Icons.keyboard_arrow_down, color: Colors.grey[400]),
+              style: GoogleFonts.montserrat(
+                fontSize: 14,
+                color: const Color(0xFF1A1E3F),
+              ),
+              items: roles.map((String role) {
+                return DropdownMenuItem<String>(
+                  value: role,
+                  child: Row(
+                    children: [
+                      Icon(
+                        role == 'Teacher' ? Icons.school :
+                        role == 'School Admin' ? Icons.admin_panel_settings :
+                        Icons.person,
+                        size: 20,
+                        color: const Color(0xFFD62828),
+                      ),
+                      const SizedBox(width: 12),
+                      Text(role),
+                    ],
+                  ),
+                );
+              }).toList(),
+              onChanged: (String? newValue) {
+                if (newValue != null) {
+                  setState(() {
+                    selectedRole = newValue;
+                  });
+                }
+              },
+            ),
+          ),
         ),
         const SizedBox(height: 16),
 

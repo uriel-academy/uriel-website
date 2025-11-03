@@ -9,7 +9,6 @@ import 'screens/landing_page.dart'; // Import LandingPage for first load
 import 'screens/sign_in.dart' as sign_in; // Import your sign-in page with alias
 import 'screens/auth_gate.dart'; // Import AuthGate from dedicated file
 import 'screens/home_page.dart'; // Import StudentHomePage
-import 'screens/school_dashboard.dart'; // Import SchoolDashboardPage
 import 'screens/teacher_home_page.dart'; // New TeacherHomePage (student-home replica for teachers)
 import 'screens/school_admin_home_page.dart'; // School Admin Homepage
 import 'screens/parent_dashboard.dart'; // Import ParentDashboardPage
@@ -105,8 +104,7 @@ class MyApp extends StatelessWidget {
         '/auth': (_) => const AuthGate(), // AuthGate for post-login routing
         '/home': (_) => const StudentHomePage(),
         '/dashboard': (_) => const StudentHomePage(),
-        '/school': (_) => const SchoolDashboardPage(), // Add school dashboard route
-  '/teacher': (_) => const TeacherHomePage(), // Route teachers to the new TeacherHomePage
+        '/teacher': (_) => const TeacherHomePage(), // Route teachers to the new TeacherHomePage
         '/school-admin': (_) => const SchoolAdminHomePage(), // Route school admins to the school admin homepage
         '/parent': (_) => const ParentDashboardPage(), // Add parent dashboard route
         '/admin': (_) => const ComprehensiveAdminDashboard(), // Add comprehensive admin dashboard route

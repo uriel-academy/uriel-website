@@ -4,7 +4,6 @@ import '../services/auth_service.dart';
 import '../services/user_service.dart';
 import 'landing_page.dart';
 import 'home_page.dart'; // Import StudentHomePage
-import 'school_dashboard.dart'; // Import SchoolDashboardPage
 import 'teacher_home_page.dart'; // Import TeacherHomePage
 import 'school_admin_home_page.dart'; // Import SchoolAdminHomePage
 
@@ -61,8 +60,6 @@ class AuthGate extends StatelessWidget {
               switch (userRole) {
                 case UserRole.teacher:
                   return const TeacherHomePage();
-                case UserRole.school:
-                  return const SchoolDashboardPage();
                 case UserRole.schoolAdmin:
                   return const SchoolAdminHomePage();
                 case UserRole.student:
