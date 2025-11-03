@@ -117,11 +117,13 @@ class _SchoolAdminStudentsPageState extends State<SchoolAdminStudentsPage> {
         final batch = studentIds.skip(i).take(10).toList();
         final summariesSnap = await FirebaseFirestore.instance
             .collection('studentSummaries')
-            .where('studentId', whereIn: batch)
+            .where(FieldPath.documentId, whereIn: batch)
             .get();
 
         for (final doc in summariesSnap.docs) {
-          studentsList.add(doc.data());
+          final data = Map<String, dynamic>.from(doc.data());
+          data['studentId'] = doc.id; // Ensure studentId is set
+          studentsList.add(data);
         }
       }
 

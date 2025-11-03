@@ -3441,27 +3441,31 @@ export const getSchoolAggregates = functions.https.onCall(async (data, context) 
     for (let i = 0; i < studentIds.length; i += 10) {
       const batch = studentIds.slice(i, i + 10);
       const summariesSnap = await db.collection('studentSummaries')
-        .where('studentId', 'in', batch)
+        .where(admin.firestore.FieldPath.documentId(), 'in', batch)
         .get();
 
       summariesSnap.docs.forEach(doc => {
         const data = doc.data();
-        const xp = data.xp || 0;
+        const xp = data.totalXP || data.xp || 0;
         totalXP += xp;
-        totalQuestions += data.questionsAnswered || 0;
-        totalSubjects += data.subjectsSolved || 0;
+        totalQuestions += data.totalQuestions || data.questionsAnswered || 0;
+        
+        const subjectsCount = data.subjectsCount || data.subjectsSolved || 0;
+        if (subjectsCount > totalSubjects) {
+          totalSubjects = subjectsCount;
+        }
 
-        const acc = data.accuracy;
+        const acc = data.avgPercent || data.accuracy;
         if (acc != null && acc > 0) {
           totalAccuracy += acc;
           studentsWithAccuracy++;
         }
 
         topStudents.push({
-          studentId: data.studentId,
-          studentName: data.studentName || 'Unknown',
+          studentId: doc.id,
+          studentName: `${data.firstName || ''} ${data.lastName || ''}`.trim() || data.studentName || 'Unknown',
           xp: xp,
-          rank: data.rankName || 'Learner',
+          rank: data.rank || data.rankName || 'Learner',
           class: data.class || 'N/A',
         });
       });
