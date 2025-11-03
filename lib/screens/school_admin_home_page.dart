@@ -458,7 +458,7 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
 
   Widget _buildHeader(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
       decoration: BoxDecoration(
         color: Colors.white,
         boxShadow: [
@@ -469,7 +469,49 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
           ),
         ],
       ),
-      child: const SizedBox(height: 16), // Empty header, no page title
+      child: Row(
+        children: [
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Welcome back, ${userName.split(' ').first}',
+                  style: GoogleFonts.montserrat(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                    color: const Color(0xFF1A1E3F),
+                  ),
+                ),
+                const SizedBox(height: 4),
+                Text(
+                  schoolName,
+                  style: GoogleFonts.montserrat(
+                    fontSize: 14,
+                    color: Colors.grey[600],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          // Profile button
+          GestureDetector(
+            onTap: () => setState(() {
+              _showingProfile = !_showingProfile;
+              if (_showingProfile) _selectedIndex = 0;
+            }),
+            child: CircleAvatar(
+              radius: 20,
+              backgroundColor: const Color(0xFF1A1E3F),
+              backgroundImage: _getAvatarImage(),
+              child: _getAvatarImage() == null ? Text(
+                userName.isNotEmpty ? userName[0].toUpperCase() : '?',
+                style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              ) : null,
+            ),
+          ),
+        ],
+      ),
     );
   }
 
