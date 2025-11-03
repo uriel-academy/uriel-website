@@ -336,33 +336,23 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
             ),
           ),
           
-          // Logout Button
-          Padding(
+          // Logout Section
+          Container(
             padding: const EdgeInsets.all(16),
-            child: ElevatedButton(
-              onPressed: _handleLogout,
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF1A1E3F),
-                foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(vertical: 14),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                minimumSize: const Size(double.infinity, 48),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Icon(Icons.logout, size: 20),
-                  const SizedBox(width: 8),
-                  Text(
-                    'Logout',
+            child: Column(
+              children: [
+                ListTile(
+                  leading: Icon(Icons.logout, color: Colors.grey[600]),
+                  title: Text(
+                    'Sign Out',
                     style: GoogleFonts.montserrat(
-                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                      color: Colors.grey[600],
                     ),
                   ),
-                ],
-              ),
+                  onTap: _handleLogout,
+                ),
+              ],
             ),
           ),
         ],
@@ -479,19 +469,7 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
           ),
         ],
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(
-            _getPageTitle(),
-            style: GoogleFonts.montserrat(
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
-              color: const Color(0xFF1A1E3F),
-            ),
-          ),
-        ],
-      ),
+      child: const SizedBox(height: 16), // Empty header, no page title
     );
   }
 
@@ -565,15 +543,6 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
       case 6: return Icons.leaderboard;
       default: return Icons.dashboard;
     }
-  }
-
-  String _getPageTitle() {
-    if (_showingProfile) return 'Profile';
-    final nav = _navItems();
-    if (_selectedIndex < nav.length) {
-      return nav[_selectedIndex]['label'] as String;
-    }
-    return 'Dashboard';
   }
 
   List<Widget> _homeChildren() {
