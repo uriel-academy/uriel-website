@@ -64,6 +64,12 @@ class _SchoolAdminStudentsPageState extends State<SchoolAdminStudentsPage> {
         return;
       }
 
+      // Wait for school name to be loaded
+      if (_schoolName == null || _schoolName!.isEmpty) {
+        _isLoadingPage = false;
+        return;
+      }
+
       final functions = FirebaseFunctions.instanceFor(region: 'us-central1');
       final callable = functions.httpsCallable('getSchoolStudents');
 
@@ -71,7 +77,7 @@ class _SchoolAdminStudentsPageState extends State<SchoolAdminStudentsPage> {
         'pageSize': _pageSize,
         'pageCursor': pageCursor,
         'includeCount': true,
-        'school': _schoolName,
+        'school': _schoolName!,
       };
 
       final resp = await callable.call(callData);
