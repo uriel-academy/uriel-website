@@ -78,8 +78,11 @@ class MyApp extends StatelessWidget {
           '/login',
         ];
         
+        // Routes that should redirect to dashboard if authenticated (login/landing only)
+        final authRedirectRoutes = ['/landing', '/login'];
+        
         // If trying to access landing/login while authenticated, redirect to auth gate
-        if (isAuthenticated && publicRoutes.contains(settings.name)) {
+        if (isAuthenticated && authRedirectRoutes.contains(settings.name)) {
           return MaterialPageRoute(builder: (_) => const AuthGate());
         }
         

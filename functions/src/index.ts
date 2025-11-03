@@ -3527,6 +3527,7 @@ export const getSchoolStudents = functions.https.onCall(async (data, context) =>
   }
 
   const school = data.school as string;
+  const className = data.className as string | undefined;
   const pageSize = data.pageSize as number | undefined || 10;
   const pageCursor = data.pageCursor as string | undefined;
   const includeCount = data.includeCount as boolean | undefined;
@@ -3536,10 +3537,17 @@ export const getSchoolStudents = functions.https.onCall(async (data, context) =>
   }
 
   try {
-    // Get all students in the school
+    // Get all students in the school (including orphaned students without teachers)
     let studentsQuery = db.collection('users')
       .where('role', '==', 'student')
-      .where('school', '==', school)
+      .where('school', '==', school);
+    
+    // Add class filter if specified
+    if (className) {
+      studentsQuery = studentsQuery.where('class', '==', className);
+    }
+    
+    studentsQuery = studentsQuery
       .orderBy('firstName')
       .limit(pageSize);
 
@@ -3598,11 +3606,15 @@ export const getSchoolStudents = functions.https.onCall(async (data, context) =>
     // Get total count if requested
     let totalCount = students.length;
     if (includeCount && !pageCursor) {
-      const countSnap = await db.collection('users')
+      let countQuery = db.collection('users')
         .where('role', '==', 'student')
-        .where('school', '==', school)
-        .count()
-        .get();
+        .where('school', '==', school);
+      
+      if (className) {
+        countQuery = countQuery.where('class', '==', className);
+      }
+      
+      const countSnap = await countQuery.count().get();
       totalCount = countSnap.data().count;
     }
 
