@@ -391,11 +391,14 @@ class _SchoolAdminHomePageState extends State<SchoolAdminHomePage> with TickerPr
           color: isSelected ? const Color(0xFF1A1E3F).withValues(alpha: 0.08) : Colors.transparent,
           borderRadius: BorderRadius.circular(12),
         ),
-        child: Text(
-          label,
-          style: GoogleFonts.montserrat(
-            color: isSelected ? const Color(0xFF1A1E3F) : Colors.grey[700],
-            fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
+        child: Align(
+          alignment: Alignment.centerLeft,
+          child: Text(
+            label,
+            style: GoogleFonts.montserrat(
+              color: isSelected ? const Color(0xFF1A1E3F) : Colors.grey[700],
+              fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
+            ),
           ),
         ),
       ),

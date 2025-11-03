@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:cloud_functions/cloud_functions.dart';
 
 class SchoolAdminDashboard extends StatefulWidget {
   const SchoolAdminDashboard({super.key});
@@ -348,124 +349,71 @@ class _SchoolAdminDashboardState extends State<SchoolAdminDashboard> {
   Future<Map<String, dynamic>> _fetchSchoolDashboardData(
       String schoolName) async {
     try {
-      // Get all students in the school (optionally filtered by class)
-      Query studentsQuery = FirebaseFirestore.instance
-          .collection('users')
-          .where('role', isEqualTo: 'student')
-          .where('school', isEqualTo: schoolName);
-
-      if (_selectedClass != null) {
-        studentsQuery = studentsQuery.where('class', isEqualTo: _selectedClass);
-      }
-
-      final studentsSnap = await studentsQuery.get();
-      final studentIds = studentsSnap.docs.map((d) => d.id).toList();
-
-      // Get all teachers in the school
-      final teachersSnap = await FirebaseFirestore.instance
-          .collection('users')
-          .where('role', isEqualTo: 'teacher')
-          .where('school', isEqualTo: schoolName)
-          .get();
-
-      if (studentIds.isEmpty) {
-        return {
-          'totalStudents': 0,
-          'totalTeachers': teachersSnap.size,
-        };
-      }
-
-      // Calculate metrics from student summaries
-      int totalXP = 0;
-      int totalQuestions = 0;
-      int totalSubjects = 0;
-      double totalAccuracy = 0;
-      int studentsWithAccuracy = 0;
-      Map<String, int> classBreakdown = {};
-      List<Map<String, dynamic>> topStudents = [];
-      Map<String, Map<String, dynamic>> subjectPerformance = {};
-
-      // Get student summaries in batches (Firestore 'in' limit is 10)
-      for (var i = 0; i < studentIds.length; i += 10) {
-        final batch = studentIds.skip(i).take(10).toList();
-        final summariesSnap = await FirebaseFirestore.instance
-            .collection('studentSummaries')
-            .where('studentId', whereIn: batch)
-            .get();
-
-        for (final doc in summariesSnap.docs) {
-          final data = doc.data();
-          final xp = (data['xp'] as int?) ?? 0;
-          totalXP += xp;
-          totalQuestions += (data['questionsAnswered'] as int?) ?? 0;
-          totalSubjects += (data['subjectsSolved'] as int?) ?? 0;
-
-          final acc = data['accuracy'];
-          if (acc != null && acc > 0) {
-            totalAccuracy += (acc is num) ? acc.toDouble() : 0;
-            studentsWithAccuracy++;
-          }
-
-          // Track for top students
-          topStudents.add({
-            'studentId': data['studentId'],
-            'studentName': data['studentName'] ?? 'Unknown',
-            'xp': xp,
-            'rank': data['rankName'] ?? 'Learner',
-            'class': data['class'] ?? 'N/A',
-          });
-        }
-      }
-
-      // Class breakdown
-      for (final doc in studentsSnap.docs) {
-        final data = doc.data() as Map<String, dynamic>?;
-        final className = data?['class'] ?? 'Unassigned';
-        classBreakdown[className] = (classBreakdown[className] ?? 0) + 1;
-      }
-
-      // Get subject performance from quizzes (sample)
-      if (studentIds.isNotEmpty) {
-        final quizzesSnap = await FirebaseFirestore.instance
-            .collection('quizzes')
-            .where('userId', whereIn: studentIds.take(10).toList())
-            .limit(100)
-            .get();
-
-        for (final qDoc in quizzesSnap.docs) {
-          final qData = qDoc.data();
-          final subject =
-              (qData['subject'] ?? qData['collectionName'] ?? 'Other')
-                  .toString();
-          final percentage = (qData['percentage'] as num?) ?? 0;
-
-          if (!subjectPerformance.containsKey(subject)) {
-            subjectPerformance[subject] = {
-              'total': 0.0,
-              'count': 0,
+      // Call Cloud Function to get school aggregates
+      final functions = FirebaseFunctions.instanceFor(region: 'us-central1');
+      final callable = functions.httpsCallable('getSchoolAggregates');
+      
+      final params = {
+        'schoolName': schoolName,
+        if (_selectedClass != null) 'className': _selectedClass,
+      };
+      
+      final result = await callable.call(params);
+      final data = result.data as Map<String, dynamic>;
+      
+      // Convert subject performance map structure
+      final subjectPerfRaw = data['subjectPerformance'] as Map<String, dynamic>?;
+      final subjectPerformance = <String, Map<String, dynamic>>{};
+      
+      if (subjectPerfRaw != null) {
+        subjectPerfRaw.forEach((key, value) {
+          if (value is Map) {
+            subjectPerformance[key] = {
+              'total': (value['total'] as num?)?.toDouble() ?? 0.0,
+              'count': value['count'] as int? ?? 0,
             };
           }
-          subjectPerformance[subject]!['total'] =
-              (subjectPerformance[subject]!['total'] as double) +
-                  percentage.toDouble();
-          subjectPerformance[subject]!['count'] =
-              (subjectPerformance[subject]!['count'] as int) + 1;
+        });
+      }
+      
+      // Convert class breakdown
+      final classBreakdownRaw = data['classBreakdown'] as Map<String, dynamic>?;
+      final classBreakdown = <String, int>{};
+      
+      if (classBreakdownRaw != null) {
+        classBreakdownRaw.forEach((key, value) {
+          classBreakdown[key] = value as int? ?? 0;
+        });
+      }
+      
+      // Convert top students list
+      final topStudentsRaw = data['topStudents'] as List?;
+      final topStudents = <Map<String, dynamic>>[];
+      
+      if (topStudentsRaw != null) {
+        for (final student in topStudentsRaw) {
+          if (student is Map) {
+            topStudents.add({
+              'studentId': student['studentId'],
+              'studentName': student['studentName'],
+              'xp': student['xp'],
+              'rank': student['rank'],
+              'class': student['class'],
+            });
+          }
         }
       }
-
-      // Sort top students by XP
-      topStudents.sort((a, b) => (b['xp'] as int).compareTo(a['xp'] as int));
-
+      
       return {
-        'totalStudents': studentIds.length,
-        'totalTeachers': teachersSnap.size,
-        'totalXP': totalXP,
-        'totalQuestions': totalQuestions,
-        'totalSubjects': totalSubjects,
-        'totalAccuracy': totalAccuracy,
-        'studentsWithAccuracy': studentsWithAccuracy,
+        'totalStudents': data['totalStudents'] as int? ?? 0,
+        'totalTeachers': data['totalTeachers'] as int? ?? 0,
+        'totalXP': data['totalXP'] as int? ?? 0,
+        'totalQuestions': data['totalQuestions'] as int? ?? 0,
+        'totalSubjects': data['totalSubjects'] as int? ?? 0,
+        'totalAccuracy': (data['totalAccuracy'] as num?)?.toDouble() ?? 0.0,
+        'studentsWithAccuracy': data['studentsWithAccuracy'] as int? ?? 0,
         'classBreakdown': classBreakdown,
-        'topStudents': topStudents.take(10).toList(),
+        'topStudents': topStudents,
         'subjectPerformance': subjectPerformance,
       };
     } catch (e) {
