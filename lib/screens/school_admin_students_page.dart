@@ -65,7 +65,7 @@ class _SchoolAdminStudentsPageState extends State<SchoolAdminStudentsPage> {
       }
 
       final functions = FirebaseFunctions.instanceFor(region: 'us-central1');
-      final callable = functions.httpsCallable('getSchoolAggregates');
+      final callable = functions.httpsCallable('getSchoolStudents');
 
       final callData = <String, dynamic>{
         'pageSize': _pageSize,
@@ -83,7 +83,7 @@ class _SchoolAdminStudentsPageState extends State<SchoolAdminStudentsPage> {
       // set current cursor key if starting
       _currentCursorKey = key;
     } catch (e, st) {
-      debugPrint('getSchoolAggregates error: $e\n$st');
+      debugPrint('getSchoolStudents error: $e\n$st');
       // leave cache empty
     } finally {
       _isLoadingPage = false;

@@ -3379,8 +3379,148 @@ export const autoAssignOrphanedStudent = functions.firestore
     }
   });
 
-// School Admin: Get school-wide aggregates
+// School Admin: Get school-wide aggregates (for dashboard)
 export const getSchoolAggregates = functions.https.onCall(async (data, context) => {
+  const uid = context.auth?.uid;
+  if (!uid) {
+    throw new functions.https.HttpsError('unauthenticated', 'Must be logged in');
+  }
+
+  const schoolName = data.schoolName as string;
+  const className = data.className as string | undefined;
+
+  if (!schoolName) {
+    throw new functions.https.HttpsError('invalid-argument', 'schoolName required');
+  }
+
+  try {
+    // Get all students in the school (optionally filtered by class)
+    let studentsQuery = db.collection('users')
+      .where('role', '==', 'student')
+      .where('school', '==', schoolName);
+
+    if (className) {
+      studentsQuery = studentsQuery.where('class', '==', className);
+    }
+
+    const studentsSnap = await studentsQuery.get();
+    const studentIds = studentsSnap.docs.map(d => d.id);
+
+    if (studentIds.length === 0) {
+      return {
+        totalStudents: 0,
+        totalTeachers: 0,
+        totalXP: 0,
+        totalQuestions: 0,
+        totalSubjects: 0,
+        totalAccuracy: 0,
+        studentsWithAccuracy: 0,
+        topStudents: [],
+        classBreakdown: {},
+        subjectPerformance: {},
+      };
+    }
+
+    // Get all teachers in the school
+    const teachersSnap = await db.collection('users')
+      .where('role', '==', 'teacher')
+      .where('school', '==', schoolName)
+      .get();
+
+    // Calculate metrics from student summaries in batches
+    let totalXP = 0;
+    let totalQuestions = 0;
+    let totalSubjects = 0;
+    let totalAccuracy = 0;
+    let studentsWithAccuracy = 0;
+    const topStudents: any[] = [];
+    const classBreakdown: { [key: string]: number } = {};
+    const subjectPerformance: { [key: string]: { total: number; count: number } } = {};
+
+    // Process students in batches of 10 (Firestore 'in' limit)
+    for (let i = 0; i < studentIds.length; i += 10) {
+      const batch = studentIds.slice(i, i + 10);
+      const summariesSnap = await db.collection('studentSummaries')
+        .where(admin.firestore.FieldPath.documentId(), 'in', batch)
+        .get();
+
+      summariesSnap.docs.forEach(doc => {
+        const data = doc.data();
+        const xp = data.totalXP || data.xp || 0;
+        totalXP += xp;
+        totalQuestions += data.totalQuestions || data.questionsAnswered || 0;
+        
+        const subjectsCount = data.subjectsCount || data.subjectsSolved || 0;
+        if (subjectsCount > totalSubjects) {
+          totalSubjects = subjectsCount;
+        }
+
+        const acc = data.avgPercent || data.accuracy;
+        if (acc != null && acc > 0) {
+          totalAccuracy += acc;
+          studentsWithAccuracy++;
+        }
+
+        topStudents.push({
+          studentId: doc.id,
+          studentName: `${data.firstName || ''} ${data.lastName || ''}`.trim() || data.studentName || 'Unknown',
+          xp: xp,
+          rank: data.rank || data.rankName || 'Learner',
+          class: data.class || 'N/A',
+        });
+      });
+    }
+
+    // Class breakdown
+    studentsSnap.docs.forEach(doc => {
+      const data = doc.data();
+      const cls = data.class || 'Unassigned';
+      classBreakdown[cls] = (classBreakdown[cls] || 0) + 1;
+    });
+
+    // Get subject performance from quizzes (sample)
+    if (studentIds.length > 0) {
+      const quizzesSnap = await db.collection('quizzes')
+        .where('userId', 'in', studentIds.slice(0, 10))
+        .limit(100)
+        .get();
+
+      quizzesSnap.docs.forEach(qDoc => {
+        const qData = qDoc.data();
+        const subject = (qData.subject || qData.collectionName || 'Other') as string;
+        const percentage = qData.percentage || 0;
+
+        if (!subjectPerformance[subject]) {
+          subjectPerformance[subject] = { total: 0, count: 0 };
+        }
+        subjectPerformance[subject].total += percentage;
+        subjectPerformance[subject].count += 1;
+      });
+    }
+
+    // Sort top students by XP
+    topStudents.sort((a, b) => b.xp - a.xp);
+
+    return {
+      totalStudents: studentIds.length,
+      totalTeachers: teachersSnap.size,
+      totalXP,
+      totalQuestions,
+      totalSubjects,
+      totalAccuracy,
+      studentsWithAccuracy,
+      topStudents: topStudents.slice(0, 10),
+      classBreakdown,
+      subjectPerformance,
+    };
+  } catch (error) {
+    console.error('Error fetching school aggregates:', error);
+    throw new functions.https.HttpsError('internal', 'Failed to fetch school data');
+  }
+});
+
+// School Admin: Get paginated student list
+export const getSchoolStudents = functions.https.onCall(async (data, context) => {
   const uid = context.auth?.uid;
   if (!uid) {
     throw new functions.https.HttpsError('unauthenticated', 'Must be logged in');
@@ -3477,8 +3617,8 @@ export const getSchoolAggregates = functions.https.onCall(async (data, context) 
       nextPageCursor,
     };
   } catch (error) {
-    console.error('Error fetching school aggregates:', error);
-    throw new functions.https.HttpsError('internal', 'Failed to fetch school data');
+    console.error('Error fetching school students:', error);
+    throw new functions.https.HttpsError('internal', 'Failed to fetch school students');
   }
 });
 
