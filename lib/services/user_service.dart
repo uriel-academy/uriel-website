@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-enum UserRole { student, teacher, school }
+enum UserRole { student, teacher, school, schoolAdmin }
 
 class UserService {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
@@ -580,6 +580,9 @@ class UserService {
         break;
       case UserRole.school:
         Navigator.pushReplacementNamed(context, '/school');
+        break;
+      case UserRole.schoolAdmin:
+        Navigator.pushReplacementNamed(context, '/school-admin');
         break;
       default:
         // Default to student home for unknown roles
