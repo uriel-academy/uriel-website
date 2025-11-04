@@ -76,6 +76,10 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
   List<Map<String, dynamic>> recentActivities = [];
   bool _loadingMetrics = true;
   Timer? _metricsRefreshTimer;
+  // Configurable refresh duration for metrics; null means manual-only
+  Duration? _metricsRefreshDuration = const Duration(minutes: 5);
+  String _metricsRefreshLabel = '5m';
+  DateTime? _lastMetricsRefresh;
   
   @override
   void initState() {
@@ -87,13 +91,8 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
     _animationController.forward();
     _loadAdminProfile();
     _loadAdminMetrics();
-    
-    // Auto-refresh metrics every 30 seconds when on dashboard
-    _metricsRefreshTimer = Timer.periodic(const Duration(seconds: 30), (timer) {
-      if (mounted && _selectedIndex == 0 && !_showingProfile) {
-        _loadAdminMetrics();
-      }
-    });
+    // Start the auto-refresh timer according to the configurable duration
+    _startMetricsRefreshTimer();
   }
 
   @override
@@ -235,7 +234,7 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
       
       if (mounted) {
         // Calculate system health based on successful data fetches
-        final healthScore = 100.0;
+        const healthScore = 100.0;
         
         final studentsCount = (results[0] as AggregateQuerySnapshot).count ?? 0;
         final teachersCount = (results[1] as AggregateQuerySnapshot).count ?? 0;
@@ -266,6 +265,8 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
           systemUptime = 99.9;
           _loadingMetrics = false;
         });
+        // record last successful refresh time
+        _lastMetricsRefresh = DateTime.now();
         
         debugPrint('✅ Metrics loaded successfully!');
       }
@@ -291,6 +292,29 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
     if (difference.inHours > 0) return '${difference.inHours} hour${difference.inHours > 1 ? 's' : ''} ago';
     if (difference.inMinutes > 0) return '${difference.inMinutes} minute${difference.inMinutes > 1 ? 's' : ''} ago';
     return 'Just now';
+  }
+
+  void _startMetricsRefreshTimer() {
+    // cancel any existing timer
+    _metricsRefreshTimer?.cancel();
+
+    final duration = _metricsRefreshDuration;
+    if (duration == null) return; // manual-only
+
+    _metricsRefreshTimer = Timer.periodic(duration, (timer) {
+      if (mounted && _selectedIndex == 0 && !_showingProfile) {
+        _loadAdminMetrics();
+      }
+    });
+  }
+
+  void _setMetricsRefresh(Duration? duration, String label) {
+    setState(() {
+      _metricsRefreshDuration = duration;
+      _metricsRefreshLabel = label;
+    });
+    // restart timer according to new duration
+    _startMetricsRefreshTimer();
   }
   
   IconData _getRoleIcon(String role) {
@@ -976,25 +1000,81 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
           
           const SizedBox(height: 32),
           
-          // Live Activity Feed
+          // Live Activity Feed with refresh controls
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                'Live Activity Feed',
-                style: GoogleFonts.playfairDisplay(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: AppStyles.primaryNavy,
-                ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Live Activity Feed',
+                    style: GoogleFonts.playfairDisplay(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: AppStyles.primaryNavy,
+                    ),
+                  ),
+                  const SizedBox(height: 4),
+                  Text(
+                    _lastMetricsRefresh != null
+                        ? 'Last: ${_getTimeAgo(_lastMetricsRefresh)} • Interval: ${_metricsRefreshLabel}'
+                        : 'Interval: ${_metricsRefreshLabel}',
+                    style: GoogleFonts.montserrat(
+                      fontSize: 12,
+                      color: Colors.grey[600],
+                    ),
+                  ),
+                ],
               ),
-              TextButton.icon(
-                onPressed: _loadAdminMetrics,
-                icon: const Icon(Icons.refresh, size: 18),
-                label: Text(
-                  'Refresh',
-                  style: GoogleFonts.montserrat(fontSize: 14),
-                ),
+              Row(
+                children: [
+                  TextButton.icon(
+                    onPressed: _loadAdminMetrics,
+                    icon: const Icon(Icons.refresh, size: 18),
+                    label: Text(
+                      'Refresh',
+                      style: GoogleFonts.montserrat(fontSize: 14),
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                  PopupMenuButton<String>(
+                    onSelected: (value) {
+                      switch (value) {
+                        case 'Manual':
+                          _setMetricsRefresh(null, 'Manual');
+                          break;
+                        case '30s':
+                          _setMetricsRefresh(const Duration(seconds: 30), '30s');
+                          break;
+                        case '1m':
+                          _setMetricsRefresh(const Duration(minutes: 1), '1m');
+                          break;
+                        case '5m':
+                          _setMetricsRefresh(const Duration(minutes: 5), '5m');
+                          break;
+                        case '15m':
+                          _setMetricsRefresh(const Duration(minutes: 15), '15m');
+                          break;
+                      }
+                    },
+                    itemBuilder: (context) => const [
+                      PopupMenuItem(value: 'Manual', child: Text('Manual')),
+                      PopupMenuItem(value: '30s', child: Text('30 seconds')),
+                      PopupMenuItem(value: '1m', child: Text('1 minute')),
+                      PopupMenuItem(value: '5m', child: Text('5 minutes')),
+                      PopupMenuItem(value: '15m', child: Text('15 minutes')),
+                    ],
+                    child: Row(
+                      children: [
+                        Icon(Icons.timer, size: 18, color: Colors.grey[700]),
+                        const SizedBox(width: 4),
+                        Text(_metricsRefreshLabel, style: GoogleFonts.montserrat(fontSize: 12, color: Colors.grey[700])),
+                        const Icon(Icons.arrow_drop_down, size: 18),
+                      ],
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
@@ -1481,7 +1561,7 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: BorderSide(color: AppStyles.primaryNavy),
+          borderSide: const BorderSide(color: AppStyles.primaryNavy),
         ),
       ),
       style: GoogleFonts.montserrat(),

@@ -2084,6 +2084,98 @@ export const setAdminRole = functions.https.onCall(async (data, context) => {
   }
 });
 
+// Admin: create a Firebase Auth user and corresponding Firestore profile
+export const adminCreateUser = functions.https.onCall(async (data, context) => {
+  if (!context.auth) throw new functions.https.HttpsError('unauthenticated', 'Must be signed in');
+  const callerRole = context.auth.token.role as string | undefined;
+  if (!callerRole || !['admin', 'super_admin', 'school_admin'].includes(callerRole)) {
+    throw new functions.https.HttpsError('permission-denied', 'Only admins can create users');
+  }
+
+  const schema = z.object({
+    email: z.string().email(),
+    password: z.string().min(6),
+    firstName: z.string().optional(),
+    lastName: z.string().optional(),
+    role: z.enum(['student', 'teacher', 'school_admin', 'parent', 'staff']).default('student')
+  });
+
+  const parsed = schema.safeParse(data);
+  if (!parsed.success) throw new functions.https.HttpsError('invalid-argument', 'Invalid payload');
+
+  const { email, password, firstName, lastName, role } = parsed.data;
+
+  try {
+    const userRecord = await admin.auth().createUser({ email, password, displayName: `${firstName ?? ''} ${lastName ?? ''}`.trim() });
+    // set custom claims
+    await admin.auth().setCustomUserClaims(userRecord.uid, { role });
+
+    // create Firestore profile
+    await db.collection('users').doc(userRecord.uid).set({
+      email,
+      firstName: firstName || null,
+      lastName: lastName || null,
+      displayName: userRecord.displayName || null,
+      role,
+      createdAt: admin.firestore.FieldValue.serverTimestamp(),
+      updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+    }, { merge: true });
+
+    // audit
+    await db.collection('audits').add(timestamps({ action: 'admin_create_user', performedBy: context.auth.uid, targetUserId: userRecord.uid, details: { email, role } }));
+
+    return { success: true, uid: userRecord.uid };
+  } catch (e: any) {
+    console.error('adminCreateUser error:', e);
+    throw new functions.https.HttpsError('internal', e?.message || 'Failed to create user');
+  }
+});
+
+// Admin: delete one or more Firebase Auth users and their Firestore profiles
+export const adminDeleteUser = functions.https.onCall(async (data, context) => {
+  if (!context.auth) throw new functions.https.HttpsError('unauthenticated', 'Must be signed in');
+  const callerRole = context.auth.token.role as string | undefined;
+  if (!callerRole || !['admin', 'super_admin', 'school_admin'].includes(callerRole)) {
+    throw new functions.https.HttpsError('permission-denied', 'Only admins can delete users');
+  }
+
+  const schema = z.object({ uids: z.array(z.string()).min(1) });
+  const parsed = schema.safeParse(data);
+  if (!parsed.success) throw new functions.https.HttpsError('invalid-argument', 'Invalid payload');
+
+  const { uids } = parsed.data;
+  const results: Record<string, any> = {};
+
+  // Delete Firestore docs in a batch (profiles + aggregates)
+  const batch = db.batch();
+  for (const uid of uids) {
+    batch.delete(db.collection('users').doc(uid));
+    // aggregates path is aggregates/user/{uid}/stats
+    batch.delete(db.collection('aggregates').doc('user').collection(uid).doc('stats'));
+  }
+
+  try {
+    await batch.commit();
+  } catch (e) {
+    console.warn('Failed to delete some Firestore docs:', e);
+  }
+
+  // Delete auth accounts individually and collect results
+  for (const uid of uids) {
+    try {
+      await admin.auth().deleteUser(uid);
+      results[uid] = { success: true };
+      // audit
+      await db.collection('audits').add(timestamps({ action: 'admin_delete_user', performedBy: context.auth.uid, targetUserId: uid }));
+    } catch (e: any) {
+      console.error('Failed to delete auth user', uid, e);
+      results[uid] = { success: false, error: e?.message || String(e) };
+    }
+  }
+
+  return { results };
+});
+
 // Import RME Questions - Web Compatible Version
 export const importRMEQuestions = functions.https.onCall(async (data, context) => {
   try {
