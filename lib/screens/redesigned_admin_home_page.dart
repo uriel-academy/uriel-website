@@ -5,10 +5,26 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'dart:async';
 import '../constants/app_styles.dart';
-import '../services/auth_service.dart';
 import 'user_management_page.dart';
 import 'content_management_page.dart';
 import 'feedback_page.dart';
+import 'question_collections_page.dart';
+import 'revision_page.dart';
+import 'generate_quiz_page.dart';
+import 'textbooks_page.dart';
+import 'trivia_categories_page.dart';
+import 'notes_page.dart'; // NotesTab
+import 'redesigned_leaderboard_page.dart';
+import 'uri_page.dart';
+import 'school_admin_students_page.dart';
+import 'school_admin_teachers_page.dart';
+import 'pricing_page.dart';
+import 'payment_page.dart';
+import 'terms_of_service.dart';
+import 'privacy_policy.dart';
+import 'contact.dart';
+import 'faq.dart';
+import 'redesigned_all_ranks_page.dart';
 
 class RedesignedAdminHomePage extends StatefulWidget {
   const RedesignedAdminHomePage({super.key});
@@ -19,7 +35,6 @@ class RedesignedAdminHomePage extends StatefulWidget {
 
 class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with TickerProviderStateMixin {
   late AnimationController _animationController;
-  late Animation<double> _fadeAnimation;
   
   int _selectedIndex = 0;
   bool _showingProfile = false;
@@ -30,6 +45,18 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
   String? adminPhotoUrl;
   String? adminPresetAvatar;
   StreamSubscription<DocumentSnapshot>? _adminStreamSubscription;
+  
+  // Profile form controllers
+  final _formKey = GlobalKey<FormState>();
+  final _firstNameController = TextEditingController();
+  final _lastNameController = TextEditingController();
+  final _emailController = TextEditingController();
+  final _phoneController = TextEditingController();
+  final _currentPasswordController = TextEditingController();
+  final _newPasswordController = TextEditingController();
+  final _confirmPasswordController = TextEditingController();
+  bool _isEditingPassword = false;
+  bool _isLoading = false;
   
   // Admin metrics
   int totalUsers = 0;
@@ -45,7 +72,6 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
       duration: const Duration(milliseconds: 300),
       vsync: this,
     );
-    _fadeAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(_animationController);
     _animationController.forward();
     _loadAdminProfile();
     _loadAdminMetrics();
@@ -55,6 +81,13 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
   void dispose() {
     _animationController.dispose();
     _adminStreamSubscription?.cancel();
+    _firstNameController.dispose();
+    _lastNameController.dispose();
+    _emailController.dispose();
+    _phoneController.dispose();
+    _currentPasswordController.dispose();
+    _newPasswordController.dispose();
+    _confirmPasswordController.dispose();
     super.dispose();
   }
 
@@ -73,6 +106,12 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
             adminRole = data['role'] == 'admin' ? 'Super Admin' : 'Admin';
             adminPhotoUrl = data['avatar'];
             adminPresetAvatar = data['presetAvatar'];
+            
+            // Load form data
+            _firstNameController.text = data['firstName'] ?? '';
+            _lastNameController.text = data['lastName'] ?? '';
+            _emailController.text = user.email ?? '';
+            _phoneController.text = data['phone'] ?? '';
           });
         }
       });
@@ -172,16 +211,10 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
             padding: const EdgeInsets.all(24),
             child: Row(
               children: [
-                Container(
+                Image.asset(
+                  'assets/uri.png',
                   width: 40,
                   height: 40,
-                  decoration: BoxDecoration(
-                    gradient: const LinearGradient(
-                      colors: [Color(0xFFD62828), Color(0xFFF77F00)],
-                    ),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: const Icon(Icons.admin_panel_settings, color: Colors.white, size: 24),
                 ),
                 if (!isTablet) ...[
                   const SizedBox(width: 12),
@@ -220,9 +253,13 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
                     child: Divider(),
                   ),
                   
-                  _buildNavItem(-1, 'About Us', isTablet: isTablet),
-                  _buildNavItem(-2, 'Contact', isTablet: isTablet),
-                  _buildNavItem(-3, 'Privacy Policy', isTablet: isTablet),
+                  _buildNavItem(16, 'Pricing', isTablet: isTablet),
+                  _buildNavItem(17, 'Payment', isTablet: isTablet),
+                  _buildNavItem(18, 'All Ranks', isTablet: isTablet),
+                  _buildNavItem(19, 'Terms of Service', isTablet: isTablet),
+                  _buildNavItem(20, 'Privacy Policy', isTablet: isTablet),
+                  _buildNavItem(21, 'Contact', isTablet: isTablet),
+                  _buildNavItem(22, 'FAQ', isTablet: isTablet),
                 ],
               ),
             ),
@@ -261,7 +298,7 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 2),
       child: ListTile(
-        leading: icon != null ? Icon(icon, color: isSelected ? const Color(0xFFD62828) : Colors.grey[600]) : null,
+        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         title: !isTablet
             ? Text(
                 title,
@@ -270,6 +307,7 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
                   fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
                   color: isSelected ? const Color(0xFFD62828) : Colors.grey[700],
                 ),
+                textAlign: TextAlign.left,
               )
             : null,
         selected: isSelected,
@@ -322,16 +360,10 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
         child: Row(
           children: [
             if (isMobile) ...[
-              Container(
+              Image.asset(
+                'assets/uri.png',
                 width: 40,
                 height: 40,
-                decoration: BoxDecoration(
-                  gradient: const LinearGradient(
-                    colors: [Color(0xFFD62828), Color(0xFFF77F00)],
-                  ),
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: const Icon(Icons.admin_panel_settings, color: Colors.white, size: 24),
               ),
               const SizedBox(width: 12),
               Text(
@@ -342,31 +374,9 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
                   color: AppStyles.primaryNavy,
                 ),
               ),
-            ] else ...[
-              Text(
-                _getPageTitle(),
-                style: GoogleFonts.playfairDisplay(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: AppStyles.primaryNavy,
-                ),
-              ),
             ],
             
             const Spacer(),
-            
-            // Notifications icon
-            IconButton(
-              icon: Badge(
-                label: const Text('3'),
-                child: Icon(Icons.notifications_outlined, color: Colors.grey[700]),
-              ),
-              onPressed: () {
-                // TODO: Show notifications
-              },
-            ),
-            
-            const SizedBox(width: 8),
             
             // Profile button
             GestureDetector(
@@ -426,15 +436,6 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
         ),
       ),
     );
-  }
-
-  String _getPageTitle() {
-    if (_showingProfile) return 'Profile Settings';
-    final items = _navItems();
-    if (_selectedIndex >= 0 && _selectedIndex < items.length) {
-      return items[_selectedIndex]['label'] as String;
-    }
-    return 'Dashboard';
   }
 
   // Bottom navigation for mobile
@@ -506,25 +507,52 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
 
   List<Map<String, Object?>> _navItems() {
     return [
-      {'index': 0, 'label': 'Dashboard', 'icon': Icons.dashboard_outlined},
-      {'index': 1, 'label': 'Users', 'icon': Icons.people_outline},
-      {'index': 2, 'label': 'Content', 'icon': Icons.library_books_outlined},
-      {'index': 3, 'label': 'Analytics', 'icon': Icons.analytics_outlined},
-      {'index': 4, 'label': 'Monitoring', 'icon': Icons.monitor_heart_outlined},
-      {'index': 5, 'label': 'Settings', 'icon': Icons.settings_outlined},
-      {'index': 6, 'label': 'Feedback', 'icon': Icons.feedback_outlined},
+      {'index': 0, 'label': 'Dashboard', 'icon': null},
+      {'index': 1, 'label': 'Users', 'icon': null},
+      {'index': 2, 'label': 'Content', 'icon': null},
+      {'index': 3, 'label': 'Analytics', 'icon': null},
+      {'index': 4, 'label': 'Monitoring', 'icon': null},
+      {'index': 5, 'label': 'Settings', 'icon': null},
+      {'index': 6, 'label': 'Questions', 'icon': null},
+      {'index': 7, 'label': 'Revision', 'icon': null},
+      {'index': 8, 'label': 'Books', 'icon': null},
+      {'index': 9, 'label': 'Notes', 'icon': null},
+      {'index': 10, 'label': 'Trivia', 'icon': null},
+      {'index': 11, 'label': 'Leaderboard', 'icon': null},
+      {'index': 12, 'label': 'Ask Uri', 'icon': null},
+      {'index': 13, 'label': 'Students', 'icon': null},
+      {'index': 14, 'label': 'Teachers', 'icon': null},
+      {'index': 15, 'label': 'Generate Quiz', 'icon': null},
+      {'index': 23, 'label': 'Feedback', 'icon': null},
     ];
   }
 
   List<Widget> _homeChildren() {
     return [
-      _buildDashboardTab(),       // 0: Dashboard
-      const UserManagementPage(), // 1: Users
-      const ContentManagementPage(), // 2: Content
-      _buildPlaceholderTab('Analytics'), // 3: Analytics
-      _buildPlaceholderTab('Monitoring'), // 4: Monitoring
-      _buildPlaceholderTab('Settings'), // 5: Settings
-      const FeedbackPage(),       // 6: Feedback
+      _buildDashboardTab(),                 // 0: Dashboard
+      const UserManagementPage(),           // 1: Users
+      const ContentManagementPage(),        // 2: Content
+      _buildPlaceholderTab('Analytics'),    // 3: Analytics
+      _buildPlaceholderTab('Monitoring'),   // 4: Monitoring
+      _buildPlaceholderTab('Settings'),     // 5: Settings
+      const QuestionCollectionsPage(),      // 6: Questions
+      const RevisionPage(),                 // 7: Revision
+      const TextbooksPage(),                // 8: Books
+      const NotesTab(),                     // 9: Notes
+      const TriviaCategoriesPage(),         // 10: Trivia
+      const RedesignedLeaderboardPage(),    // 11: Leaderboard
+      const UriPage(embedded: true),        // 12: Ask Uri
+      const SchoolAdminStudentsPage(),      // 13: Students
+      const SchoolAdminTeachersPage(),      // 14: Teachers
+      const GenerateQuizPage(),             // 15: Generate Quiz
+      const PricingPage(),                  // 16: Pricing
+      const PaymentPage(),                  // 17: Payment
+      const RedesignedAllRanksPage(),       // 18: All Ranks
+      const TermsOfServicePage(),           // 19: Terms of Service
+      const PrivacyPolicyPage(),            // 20: Privacy Policy
+      const ContactPage(),                  // 21: Contact
+      const FAQPage(),                      // 22: FAQ
+      const FeedbackPage(),                 // 23: Feedback
     ];
   }
   
@@ -747,155 +775,475 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
 
   // Profile page
   Widget _buildProfilePage() {
-    return SingleChildScrollView(
-      padding: const EdgeInsets.all(24),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          // Profile header
-          Center(
-            child: Column(
-              children: [
-                CircleAvatar(
-                  radius: 60,
-                  backgroundColor: const Color(0xFFD62828),
-                  backgroundImage: adminPhotoUrl != null
-                      ? CachedNetworkImageProvider(adminPhotoUrl!)
-                      : null,
-                  child: adminPhotoUrl == null
-                      ? Text(
-                          adminName.isNotEmpty ? adminName[0].toUpperCase() : 'A',
-                          style: GoogleFonts.montserrat(
-                            fontSize: 40,
-                            color: Colors.white,
-                            fontWeight: FontWeight.w600,
+    return _isLoading
+        ? const Center(child: CircularProgressIndicator())
+        : SingleChildScrollView(
+            padding: const EdgeInsets.all(24),
+            child: Center(
+              child: ConstrainedBox(
+                constraints: const BoxConstraints(maxWidth: 800),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Profile Header
+                    Container(
+                      padding: const EdgeInsets.all(24),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(16),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withValues(alpha: 0.05),
+                            blurRadius: 10,
+                            offset: const Offset(0, 4),
                           ),
-                        )
-                      : null,
-                ),
-                const SizedBox(height: 16),
-                Text(
-                  'Admin',
-                  style: GoogleFonts.playfairDisplay(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: AppStyles.primaryNavy,
-                  ),
-                ),
-                const SizedBox(height: 4),
-                Text(
-                  adminRole,
-                  style: GoogleFonts.montserrat(
-                    fontSize: 14,
-                    color: Colors.grey[600],
-                  ),
-                ),
-              ],
-            ),
-          ),
-          
-          const SizedBox(height: 32),
-          
-          // Profile settings sections
-          _buildProfileSection(
-            'Account Settings',
-            [
-              _buildProfileItem(Icons.person_outline, 'Edit Profile', () {}),
-              _buildProfileItem(Icons.lock_outline, 'Change Password', () {}),
-              _buildProfileItem(Icons.email_outlined, 'Email Preferences', () {}),
-            ],
-          ),
-          
-          const SizedBox(height: 24),
-          
-          _buildProfileSection(
-            'System',
-            [
-              _buildProfileItem(Icons.notifications_outlined, 'Notifications', () {}),
-              _buildProfileItem(Icons.security_outlined, 'Security', () {}),
-              _buildProfileItem(Icons.backup_outlined, 'Backup & Restore', () {}),
-            ],
-          ),
-          
-          const SizedBox(height: 24),
-          
-          _buildProfileSection(
-            'Support',
-            [
-              _buildProfileItem(Icons.help_outline, 'Help Center', () {}),
-              _buildProfileItem(Icons.description_outlined, 'Documentation', () {}),
-              _buildProfileItem(Icons.bug_report_outlined, 'Report Issue', () {}),
-            ],
-          ),
-          
-          const SizedBox(height: 32),
-          
-          // Sign out button
-          Center(
-            child: ElevatedButton.icon(
-              onPressed: _handleSignOut,
-              icon: const Icon(Icons.logout),
-              label: const Text('Sign Out'),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFFD62828),
-                foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
+                        ],
+                      ),
+                      child: Row(
+                        children: [
+                          CircleAvatar(
+                            radius: 40,
+                            backgroundColor: AppStyles.primaryNavy,
+                            backgroundImage: adminPhotoUrl != null
+                                ? CachedNetworkImageProvider(adminPhotoUrl!)
+                                : null,
+                            child: adminPhotoUrl == null
+                                ? Text(
+                                    _firstNameController.text.isNotEmpty
+                                        ? _firstNameController.text[0]
+                                            .toUpperCase()
+                                        : 'A',
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 32,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  )
+                                : null,
+                          ),
+                          const SizedBox(width: 20),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  '${_firstNameController.text} ${_lastNameController.text}',
+                                  style: GoogleFonts.playfairDisplay(
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                const SizedBox(height: 4),
+                                Text(
+                                  adminRole,
+                                  style: GoogleFonts.montserrat(
+                                    fontSize: 14,
+                                    color: Colors.grey[600],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 24),
+
+                    // Personal Information Section
+                    _buildSectionCard(
+                      title: 'Personal Information',
+                      children: [
+                        Form(
+                          key: _formKey,
+                          child: Column(
+                            children: [
+                              Row(
+                                children: [
+                                  Expanded(
+                                    child: _buildTextField(
+                                      controller: _firstNameController,
+                                      label: 'First Name',
+                                      icon: Icons.person,
+                                      validator: (value) {
+                                        if (value == null || value.isEmpty) {
+                                          return 'Please enter first name';
+                                        }
+                                        return null;
+                                      },
+                                    ),
+                                  ),
+                                  const SizedBox(width: 16),
+                                  Expanded(
+                                    child: _buildTextField(
+                                      controller: _lastNameController,
+                                      label: 'Last Name',
+                                      icon: Icons.person_outline,
+                                      validator: (value) {
+                                        if (value == null || value.isEmpty) {
+                                          return 'Please enter last name';
+                                        }
+                                        return null;
+                                      },
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(height: 16),
+                              _buildTextField(
+                                controller: _emailController,
+                                label: 'Email',
+                                icon: Icons.email,
+                                enabled: false,
+                              ),
+                              const SizedBox(height: 16),
+                              _buildTextField(
+                                controller: _phoneController,
+                                label: 'Phone Number',
+                                icon: Icons.phone,
+                              ),
+                              const SizedBox(height: 24),
+                              ElevatedButton(
+                                onPressed: _isLoading ? null : _saveProfile,
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: AppStyles.primaryNavy,
+                                  foregroundColor: Colors.white,
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: 16, horizontal: 32),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                ),
+                                child: Text(
+                                  'Save Changes',
+                                  style: GoogleFonts.montserrat(
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 24),
+
+                    // Security Section
+                    _buildSectionCard(
+                      title: 'Security',
+                      children: [
+                        if (!_isEditingPassword) ...[
+                          ElevatedButton.icon(
+                            onPressed: () => setState(() {
+                              _isEditingPassword = true;
+                            }),
+                            icon: const Icon(Icons.lock),
+                            label: Text(
+                              'Change Password',
+                              style: GoogleFonts.montserrat(),
+                            ),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.grey.shade200,
+                              foregroundColor: AppStyles.primaryNavy,
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 14, horizontal: 20),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                            ),
+                          ),
+                        ] else ...[
+                          _buildTextField(
+                            controller: _currentPasswordController,
+                            label: 'Current Password',
+                            icon: Icons.lock_outline,
+                            obscureText: true,
+                          ),
+                          const SizedBox(height: 16),
+                          _buildTextField(
+                            controller: _newPasswordController,
+                            label: 'New Password',
+                            icon: Icons.lock,
+                            obscureText: true,
+                          ),
+                          const SizedBox(height: 16),
+                          _buildTextField(
+                            controller: _confirmPasswordController,
+                            label: 'Confirm New Password',
+                            icon: Icons.lock,
+                            obscureText: true,
+                          ),
+                          const SizedBox(height: 24),
+                          Row(
+                            children: [
+                              Expanded(
+                                child: OutlinedButton(
+                                  onPressed: () => setState(() {
+                                    _isEditingPassword = false;
+                                    _currentPasswordController.clear();
+                                    _newPasswordController.clear();
+                                    _confirmPasswordController.clear();
+                                  }),
+                                  style: OutlinedButton.styleFrom(
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 14),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadius.circular(12),
+                                    ),
+                                  ),
+                                  child: Text(
+                                    'Cancel',
+                                    style: GoogleFonts.montserrat(),
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(width: 16),
+                              Expanded(
+                                child: ElevatedButton(
+                                  onPressed:
+                                      _isLoading ? null : _changePassword,
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor:
+                                        AppStyles.primaryNavy,
+                                    foregroundColor: Colors.white,
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 14),
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius:
+                                          BorderRadius.circular(12),
+                                    ),
+                                  ),
+                                  child: Text(
+                                    'Update Password',
+                                    style: GoogleFonts.montserrat(
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ],
+                    ),
+                    const SizedBox(height: 32),
+                    
+                    // Sign out button
+                    Center(
+                      child: ElevatedButton.icon(
+                        onPressed: _handleSignOut,
+                        icon: const Icon(Icons.logout),
+                        label: const Text('Sign Out'),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xFFD62828),
+                          foregroundColor: Colors.white,
+                          padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
+          );
+  }
+
+  Widget _buildSectionCard({
+    required String title,
+    required List<Widget> children,
+  }) {
+    return Container(
+      padding: const EdgeInsets.all(24),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.05),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
           ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            title,
+            style: GoogleFonts.playfairDisplay(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const Divider(height: 24),
+          ...children,
         ],
       ),
     );
   }
 
-  Widget _buildProfileSection(String title, List<Widget> items) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          title,
-          style: GoogleFonts.playfairDisplay(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-            color: AppStyles.primaryNavy,
-          ),
+  Widget _buildTextField({
+    required TextEditingController controller,
+    required String label,
+    required IconData icon,
+    bool obscureText = false,
+    bool enabled = true,
+    String? Function(String?)? validator,
+  }) {
+    return TextFormField(
+      controller: controller,
+      obscureText: obscureText,
+      enabled: enabled,
+      validator: validator,
+      decoration: InputDecoration(
+        labelText: label,
+        prefixIcon: Icon(icon),
+        filled: true,
+        fillColor: enabled ? AppStyles.warmWhite : Colors.grey.shade100,
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: BorderSide.none,
         ),
-        const SizedBox(height: 12),
-        Container(
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(12),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withValues(alpha: 0.05),
-                blurRadius: 10,
-              ),
-            ],
-          ),
-          child: Column(
-            children: items,
-          ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: BorderSide(color: Colors.grey.shade300),
         ),
-      ],
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: BorderSide(color: AppStyles.primaryNavy),
+        ),
+      ),
+      style: GoogleFonts.montserrat(),
     );
   }
 
-  Widget _buildProfileItem(IconData icon, String title, VoidCallback onTap) {
-    return ListTile(
-      leading: Icon(icon, color: const Color(0xFFD62828)),
-      title: Text(
-        title,
-        style: GoogleFonts.montserrat(
-          fontSize: 14,
-          fontWeight: FontWeight.w500,
-          color: AppStyles.primaryNavy,
+  Future<void> _saveProfile() async {
+    if (!_formKey.currentState!.validate()) return;
+
+    final user = FirebaseAuth.instance.currentUser;
+    if (user == null) return;
+
+    setState(() => _isLoading = true);
+
+    try {
+      await FirebaseFirestore.instance
+          .collection('users')
+          .doc(user.uid)
+          .update({
+        'firstName': _firstNameController.text.trim(),
+        'lastName': _lastNameController.text.trim(),
+        'displayName':
+            '${_firstNameController.text.trim()} ${_lastNameController.text.trim()}',
+        'phone': _phoneController.text.trim(),
+        'updatedAt': FieldValue.serverTimestamp(),
+      });
+
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              'Profile updated successfully',
+              style: GoogleFonts.montserrat(),
+            ),
+            backgroundColor: Colors.green,
+          ),
+        );
+      }
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              'Error updating profile: $e',
+              style: GoogleFonts.montserrat(),
+            ),
+            backgroundColor: Colors.red,
+          ),
+        );
+      }
+    } finally {
+      setState(() => _isLoading = false);
+    }
+  }
+
+  Future<void> _changePassword() async {
+    if (_newPasswordController.text != _confirmPasswordController.text) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            'Passwords do not match',
+            style: GoogleFonts.montserrat(),
+          ),
+          backgroundColor: Colors.red,
         ),
-      ),
-      trailing: Icon(Icons.chevron_right, color: Colors.grey[400]),
-      onTap: onTap,
-    );
+      );
+      return;
+    }
+
+    if (_newPasswordController.text.length < 6) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            'Password must be at least 6 characters',
+            style: GoogleFonts.montserrat(),
+          ),
+          backgroundColor: Colors.red,
+        ),
+      );
+      return;
+    }
+
+    final user = FirebaseAuth.instance.currentUser;
+    if (user == null) return;
+
+    setState(() => _isLoading = true);
+
+    try {
+      // Re-authenticate user
+      final credential = EmailAuthProvider.credential(
+        email: user.email!,
+        password: _currentPasswordController.text,
+      );
+      await user.reauthenticateWithCredential(credential);
+
+      // Update password
+      await user.updatePassword(_newPasswordController.text);
+
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              'Password updated successfully',
+              style: GoogleFonts.montserrat(),
+            ),
+            backgroundColor: Colors.green,
+          ),
+        );
+
+        setState(() {
+          _isEditingPassword = false;
+          _currentPasswordController.clear();
+          _newPasswordController.clear();
+          _confirmPasswordController.clear();
+        });
+      }
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              'Error changing password: ${e.toString()}',
+              style: GoogleFonts.montserrat(),
+            ),
+            backgroundColor: Colors.red,
+          ),
+        );
+      }
+    } finally {
+      setState(() => _isLoading = false);
+    }
   }
 }
