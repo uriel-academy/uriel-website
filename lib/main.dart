@@ -13,6 +13,7 @@ import 'screens/teacher_home_page.dart'; // New TeacherHomePage (student-home re
 import 'screens/school_admin_home_page.dart'; // School Admin Homepage
 import 'screens/parent_dashboard.dart'; // Import ParentDashboardPage
 import 'screens/comprehensive_admin_dashboard.dart'; // Import ComprehensiveAdminDashboard
+import 'screens/redesigned_admin_home_page.dart'; // Import Redesigned Admin Homepage
 import 'screens/admin_setup_page.dart'; // Import Admin Setup page
 import 'screens/rme_debug_page.dart'; // Import RME Debug Page
 import 'screens/about_us.dart'; // Import About Us page
@@ -110,7 +111,8 @@ class MyApp extends StatelessWidget {
         '/teacher': (_) => const TeacherHomePage(), // Route teachers to the new TeacherHomePage
         '/school-admin': (_) => const SchoolAdminHomePage(), // Route school admins to the school admin homepage
         '/parent': (_) => const ParentDashboardPage(), // Add parent dashboard route
-        '/admin': (_) => const ComprehensiveAdminDashboard(), // Add comprehensive admin dashboard route
+        '/admin': (_) => const RedesignedAdminHomePage(), // Add redesigned admin dashboard route
+        '/admin-old': (_) => const ComprehensiveAdminDashboard(), // Keep old admin dashboard for reference
         '/admin-setup': (_) => const AdminSetupPage(), // Add admin setup route
         '/rme-debug': (_) => const RMEQuestionsDebugPage(), // Add RME debug route
   '/uri': (_) => const UriPage(),
