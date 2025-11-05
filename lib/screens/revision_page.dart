@@ -159,6 +159,19 @@ class _RevisionPageState extends State<RevisionPage> {
           optionsMap['D']?.toString() ?? '',
         ];
 
+        // Ensure correctAnswer is just the letter (A, B, C, or D)
+        String correctAnswerLetter = (q['correctAnswer'] ?? 'A').toString().toUpperCase();
+        // Extract just the letter if it contains a period (e.g., "A." or "A. Text")
+        if (correctAnswerLetter.contains('.')) {
+          correctAnswerLetter = correctAnswerLetter.split('.')[0].trim();
+        }
+        // Ensure it's a single letter
+        if (correctAnswerLetter.length > 1) {
+          correctAnswerLetter = correctAnswerLetter.substring(0, 1);
+        }
+        
+        debugPrint('✅ AI Question ${i+1}: correctAnswer="${correctAnswerLetter}", options=${optionsList.length}');
+        
         aiQuestions.add(Question(
           id: 'ai_${DateTime.now().millisecondsSinceEpoch}_$i',
           questionText: q['question'] ?? '',
@@ -169,7 +182,7 @@ class _RevisionPageState extends State<RevisionPage> {
           section: 'AI Generated',
           questionNumber: i + 1,
           options: optionsList,
-          correctAnswer: q['correctAnswer'] ?? 'A',
+          correctAnswer: correctAnswerLetter,
           explanation: q['explanation'],
           marks: 1,
           difficulty: q['difficulty'] ?? 'medium',

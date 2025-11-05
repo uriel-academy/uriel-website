@@ -239,16 +239,22 @@ class _QuizTakerPageState extends State<QuizTakerPage>
       if (userAnswer.contains('.')) {
         userAnswerLetter = userAnswer.split('.')[0].trim();
       }
+      // Ensure it's uppercase for comparison
+      userAnswerLetter = userAnswerLetter.toUpperCase();
       
       // Also handle if correctAnswer has the full text
       String correctAnswerLetter = question.correctAnswer;
       if (correctAnswerLetter.contains('.')) {
         correctAnswerLetter = correctAnswerLetter.split('.')[0].trim();
       }
+      // Ensure it's uppercase for comparison
+      correctAnswerLetter = correctAnswerLetter.toUpperCase();
       
       final isCorrect = userAnswerLetter == correctAnswerLetter;
       
       debugPrint('🎯 Quiz Result: Q${i+1} - User: "$userAnswerLetter" vs Correct: "$correctAnswerLetter" = ${isCorrect ? "✅" : "❌"}');
+      debugPrint('   Raw user answer: "$userAnswer"');
+      debugPrint('   Raw correct answer: "${question.correctAnswer}"');
       
       if (isCorrect) correctAnswers++;
       
