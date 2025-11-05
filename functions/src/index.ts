@@ -1770,10 +1770,33 @@ export const submitAttempt = functions.https.onCall(async (data, context) => {
   const badges = userData.badges || { level: 0, points: 0, streak: 0, earned: [] };
   
   badges.points += Math.floor(score / 10); // 10 points per 100% score
-  if (score >= 80) {
-    badges.streak += 1;
-  } else {
-    badges.streak = 0;
+  // Compute streak based on consecutive-day activity (do not reset streak on low score)
+  try {
+    const lastActivityTs = userData.lastActivity || userData.lastActivityDate || null;
+    let daysSinceLast = Number.POSITIVE_INFINITY;
+    if (lastActivityTs) {
+      const last = (lastActivityTs.toDate) ? lastActivityTs.toDate() : new Date(lastActivityTs);
+      const now = new Date();
+      const lastDay = new Date(last.getFullYear(), last.getMonth(), last.getDate());
+      const todayDay = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+      daysSinceLast = Math.floor((todayDay.getTime() - lastDay.getTime()) / (1000 * 60 * 60 * 24));
+    }
+
+    if (score >= 80) {
+      if (lastActivityTs && daysSinceLast === 1) {
+        // Activity on consecutive day -> increment streak
+        badges.streak += 1;
+      } else if (lastActivityTs && daysSinceLast === 0) {
+        // Multiple high-score attempts same day -> do not increment again
+      } else {
+        // New streak starts today
+        badges.streak = 1;
+      }
+    }
+    // Note: we intentionally do NOT reset the streak when a low-score attempt occurs.
+    // Streak should be broken only when a day is missed; other conditions (score) don't reset it.
+  } catch (e) {
+    console.warn('streak compute failed in submitAttempt', e);
   }
   
   // Level up logic
@@ -1784,6 +1807,7 @@ export const submitAttempt = functions.https.onCall(async (data, context) => {
 
   await userRef.update({
     badges,
+    lastActivity: admin.firestore.FieldValue.serverTimestamp(),
     updatedAt: admin.firestore.FieldValue.serverTimestamp()
   });
 

@@ -65,17 +65,26 @@ class QuestionService {
         query = query.where('section', isEqualTo: section);
       }
       
-      if (activeOnly) {
-        query = query.where('isActive', isEqualTo: true);
-      }
+      // Don't add isActive filter to avoid index issues - filter client-side instead
       
       QuerySnapshot snapshot = await query.get();
       
       if (snapshot.docs.isNotEmpty) {
-        // Convert to Question objects and ensure deterministic ordering
-        List<Question> questions = snapshot.docs
-            .map((doc) => Question.fromJson(doc.data() as Map<String, dynamic>))
-            .toList();
+        // Convert to Question objects and filter active/inactive client-side
+        List<Question> questions = [];
+        for (var doc in snapshot.docs) {
+          try {
+            final question = Question.fromJson(doc.data() as Map<String, dynamic>);
+            // Filter inactive if activeOnly is true
+            if (!activeOnly || question.isActive) {
+              questions.add(question);
+            }
+          } catch (e) {
+            debugPrint('❌ Error parsing question ${doc.id}: $e');
+            // Skip this question and continue with others
+            continue;
+          }
+        }
         return _sortQuestions(questions);
       }
       
@@ -174,9 +183,11 @@ class QuestionService {
         query = query.where('section', isEqualTo: section);
       }
       
-      if (activeOnly) {
-        query = query.where('isActive', isEqualTo: true);
-      }
+      // Only add isActive filter if it's the only filter or with single examType/subject
+      // This avoids composite index issues - we'll filter inactive questions client-side
+      // if (activeOnly) {
+      //   query = query.where('isActive', isEqualTo: true);
+      // }
       
       if (difficulty != null) {
         query = query.where('difficulty', isEqualTo: difficulty);
@@ -189,8 +200,9 @@ class QuestionService {
         query = query.limit(limit);
       }
       
-      debugPrint('🔍 QuestionService.getQuestionsByFilters: Querying Firestore with subject=$subjectStr, examType=$examTypeStr, triviaCategory=$triviaCategory, activeOnly=$activeOnly');
+      debugPrint('🔍 QuestionService.getQuestionsByFilters: Querying Firestore with subject=$subjectStr, examType=$examTypeStr, triviaCategory=$triviaCategory, activeOnly=$activeOnly, limit=$limit');
       
+      // Use default get() to avoid cache/server issues
       QuerySnapshot snapshot = await query.get();
       
       debugPrint('📊 QuestionService.getQuestionsByFilters: Found ${snapshot.docs.length} documents');
@@ -198,24 +210,38 @@ class QuestionService {
       if (snapshot.docs.isNotEmpty) {
         List<Question> questions = [];
         
-        // Convert documents to Question objects and filter by triviaCategory if needed
+        // Convert documents to Question objects and apply client-side filters
         for (var doc in snapshot.docs) {
-          final data = doc.data() as Map<String, dynamic>;
-          
-          // If triviaCategory filter is specified, check if this question matches
-          if (triviaCategory != null && triviaCategory.isNotEmpty) {
-            final String? qCategory = data['triviaCategory'] as String?;
-            // Case-insensitive comparison
-            if (qCategory == null || qCategory.toLowerCase().trim() != triviaCategory.toLowerCase().trim()) {
-              debugPrint('   ⏭️ Skipping question with category "$qCategory" (looking for "$triviaCategory")');
-              continue; // Skip questions that don't match the category
+          try {
+            final data = doc.data() as Map<String, dynamic>;
+            
+            // Client-side filter: Skip inactive questions if activeOnly is true
+            if (activeOnly) {
+              final isActive = data['isActive'] ?? false;
+              if (!isActive) {
+                continue;
+              }
             }
+            
+            // If triviaCategory filter is specified, check if this question matches
+            if (triviaCategory != null && triviaCategory.isNotEmpty) {
+              final String? qCategory = data['triviaCategory'] as String?;
+              // Case-insensitive comparison
+              if (qCategory == null || qCategory.toLowerCase().trim() != triviaCategory.toLowerCase().trim()) {
+                debugPrint('   ⏭️ Skipping question with category "$qCategory" (looking for "$triviaCategory")');
+                continue; // Skip questions that don't match the category
+              }
+            }
+            
+            questions.add(Question.fromJson(data));
+          } catch (e) {
+            debugPrint('❌ Error parsing question ${doc.id}: $e');
+            // Skip this question and continue with others
+            continue;
           }
-          
-          questions.add(Question.fromJson(data));
         }
         
-        debugPrint('📊 After triviaCategory filter: ${questions.length} questions${triviaCategory != null ? ' for category "$triviaCategory"' : ''}');
+        debugPrint('📊 After filters: ${questions.length} questions${triviaCategory != null ? ' for category "$triviaCategory"' : ''}');
         
         // Filter by topics if specified
         if (topics != null && topics.isNotEmpty) {

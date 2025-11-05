@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:uriel_mainapp/services/auth_service.dart';
 import 'package:uriel_mainapp/services/user_service.dart';
-import 'package:uriel_mainapp/screens/student_profile_page.dart';
+import 'package:uriel_mainapp/screens/home_page.dart';
+import 'package:uriel_mainapp/screens/landing_page.dart';
 
 /// A simplified, student-only sign up page.
-/// Two steps: 0 = Details (personal + guardian), 1 = Auth (email/password + agreements).
 class SignUpPage extends StatefulWidget {
   const SignUpPage({Key? key}) : super(key: key);
 
@@ -14,8 +14,7 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
-  final _detailsFormKey = GlobalKey<FormState>();
-  final _authFormKey = GlobalKey<FormState>();
+  final _formKey = GlobalKey<FormState>();
 
   // Controllers
   final TextEditingController firstNameController = TextEditingController();
@@ -39,14 +38,12 @@ class _SignUpPageState extends State<SignUpPage> {
   bool obscurePassword = true;
   bool obscureConfirmPassword = true;
   bool isLoading = false;
-
-  int currentStep = 0;
-  final int totalSteps = 2;
+  bool showEmailForm = false;
 
   @override
   void dispose() {
-  firstNameController.dispose();
-  lastNameController.dispose();
+    firstNameController.dispose();
+    lastNameController.dispose();
     ageController.dispose();
     phoneController.dispose();
     schoolNameController.dispose();
@@ -59,17 +56,17 @@ class _SignUpPageState extends State<SignUpPage> {
     super.dispose();
   }
 
-  void _nextStep() => setState(() => currentStep = (currentStep + 1).clamp(0, totalSteps - 1));
-  void _previousStep() => setState(() => currentStep = (currentStep - 1).clamp(0, totalSteps - 1));
-
-  bool _validateCurrentStep() {
-    if (currentStep == 0) return true; // We'll validate details when Next pressed
-    return agreeTerms && agreePrivacy;
-  }
-
   void _showError(String message) {
     if (!mounted) return;
-    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message), backgroundColor: const Color(0xFFD62828)));
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(message),
+        backgroundColor: const Color(0xFFD62828),
+        behavior: SnackBarBehavior.floating,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+        margin: const EdgeInsets.all(16),
+      ),
+    );
   }
 
   Future<void> _handleGoogleSignUp() async {
@@ -97,7 +94,7 @@ class _SignUpPageState extends State<SignUpPage> {
       );
 
       if (!mounted) return;
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const StudentProfilePage()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const StudentHomePage(showProfileOnInit: true)));
     } catch (e) {
       _showError('An error occurred during Google sign up.');
     } finally {
@@ -106,18 +103,26 @@ class _SignUpPageState extends State<SignUpPage> {
   }
 
   Future<void> _handleSignUp() async {
-    setState(() => isLoading = true);
-    try {
-      if (!(_detailsFormKey.currentState?.validate() ?? false)) return;
-      if (!(_authFormKey.currentState?.validate() ?? false)) return;
-      if (!agreeTerms || !agreePrivacy) {
-        _showError('Please agree to terms and privacy');
-        return;
-      }
+    if (!(_formKey.currentState?.validate() ?? false)) {
+      _showError('Please fill in all required fields correctly.');
+      return;
+    }
+    
+    if (!agreeTerms || !agreePrivacy) {
+      _showError('Please agree to Terms of Service and Privacy Policy.');
+      return;
+    }
 
-      final user = await AuthService().registerWithEmail(emailController.text.trim(), passwordController.text.trim());
+    setState(() => isLoading = true);
+    
+    try {
+      final user = await AuthService().registerWithEmail(
+        emailController.text.trim(), 
+        passwordController.text.trim()
+      );
+      
       if (user == null) {
-        _showError('Sign up failed.');
+        _showError('Sign up failed. Please try again.');
         return;
       }
 
@@ -140,183 +145,162 @@ class _SignUpPageState extends State<SignUpPage> {
       if (!mounted) return;
       UserService.navigateToHomePage(context, UserRole.student);
     } catch (e) {
-      _showError('Sign up failed.');
+      _showError('Sign up failed: ${e.toString()}');
     } finally {
       if (mounted) setState(() => isLoading = false);
     }
   }
 
-  Widget _buildTextField({
-    required TextEditingController controller,
-    required String label,
-    required String hint,
-    required IconData icon,
-    TextInputType? keyboardType,
-    bool obscureText = false,
-    Widget? suffixIcon,
-    String? Function(String?)? validator,
-  }) {
-    return TextFormField(
-      controller: controller,
-      keyboardType: keyboardType,
-      obscureText: obscureText,
-      validator: validator,
-      decoration: InputDecoration(
-        labelText: label,
-        hintText: hint,
-        prefixIcon: Icon(icon),
-        suffixIcon: suffixIcon,
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
-        filled: true,
-        fillColor: Colors.grey[50],
+  @override
+  Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isSmallScreen = screenWidth < 768;
+    
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: ConstrainedBox(
+            constraints: BoxConstraints(
+              minHeight: MediaQuery.of(context).size.height - MediaQuery.of(context).padding.top
+            ),
+            child: Column(
+              children: [
+                _buildHeader(context, isSmallScreen),
+                Expanded(
+                  child: Center(
+                    child: Container(
+                      constraints: BoxConstraints(maxWidth: isSmallScreen ? double.infinity : 500),
+                      padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
+                      margin: EdgeInsets.symmetric(horizontal: isSmallScreen ? 16 : 0),
+                      child: _buildSignUpCard(context, isSmallScreen),
+                    ),
+                  ),
+                ),
+                _buildFooter(context, isSmallScreen),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
 
-  Widget _buildDropdownField({
-    required String? value,
-    required String label,
-    required String hint,
-    required IconData icon,
-    required List<String> items,
-    required void Function(String?) onChanged,
-    String? Function(String?)? validator,
-  }) {
-    return DropdownButtonFormField<String>(
-      value: value,
-      onChanged: onChanged,
-      validator: validator,
-      decoration: InputDecoration(labelText: label, hintText: hint, prefixIcon: Icon(icon), border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)), filled: true, fillColor: Colors.grey[50]),
-      items: items.map((e) => DropdownMenuItem(value: e, child: Text(e))).toList(),
-    );
-  }
-
-  Widget _buildDetailsStep() {
-    final screenWidth = MediaQuery.of(context).size.width;
-    final isSmallScreen = screenWidth < 768;
-    return Form(
-      key: _detailsFormKey,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+  Widget _buildHeader(BuildContext context, bool isSmallScreen) {
+    return Container(
+      padding: EdgeInsets.symmetric(
+        horizontal: isSmallScreen ? 16 : 20, 
+        vertical: 16
+      ),
+      child: Row(
         children: [
-          // Heading (use same Montserrat family as sign-in for harmony)
-          Text('Student information', style: GoogleFonts.montserrat(fontSize: 20, fontWeight: FontWeight.w700, color: const Color(0xFF1A1E3F))),
-          const SizedBox(height: 12),
-          Container(
-            padding: EdgeInsets.all( isSmallScreen ? 16 : 20 ),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(12),
-              boxShadow: [
-                BoxShadow(color: Colors.black.withOpacity(0.03), blurRadius: 12, offset: const Offset(0,6)),
-              ],
-              border: Border.all(color: Colors.grey.withOpacity(0.08)),
+          // Logo/Brand
+          GestureDetector(
+            onTap: () => Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (_) => const LandingPage()),
             ),
-            child: Column(
-              children: [
-                // First + Last name fields side-by-side on wide screens, stacked on small screens
-                LayoutBuilder(builder: (ctx, constraints) {
-                  final wide = constraints.maxWidth > 420;
-                  return wide
-                      ? Row(
-                          children: [
-                            Expanded(child: _buildTextField(controller: firstNameController, label: 'First name', hint: 'First name', icon: Icons.person_outline, validator: (v) => (v == null || v.isEmpty) ? 'Required' : null)),
-                            const SizedBox(width: 12),
-                            Expanded(child: _buildTextField(controller: lastNameController, label: 'Last name', hint: 'Last name', icon: Icons.person_outline, validator: (v) => (v == null || v.isEmpty) ? 'Required' : null)),
-                          ],
-                        )
-                      : Column(
-                          children: [
-                            _buildTextField(controller: firstNameController, label: 'First name', hint: 'First name', icon: Icons.person_outline, validator: (v) => (v == null || v.isEmpty) ? 'Required' : null),
-                            const SizedBox(height: 12),
-                            _buildTextField(controller: lastNameController, label: 'Last name', hint: 'Last name', icon: Icons.person_outline, validator: (v) => (v == null || v.isEmpty) ? 'Required' : null),
-                          ],
-                        );
-                }),
-                const SizedBox(height: 12),
-                _buildTextField(controller: ageController, label: 'Age', hint: 'Enter age', icon: Icons.cake_outlined, keyboardType: TextInputType.number, validator: (v) {
-                  if (v == null || v.isEmpty) return 'Age required';
-                  final a = int.tryParse(v);
-                  if (a == null || a < 5) return 'Enter valid age';
-                  return null;
-                }),
-                const SizedBox(height: 12),
-                _buildDropdownField(value: selectedGrade, label: 'Grade/Class', hint: 'Select grade', icon: Icons.school_outlined, items: ['JHS FORM 1', 'JHS FORM 2', 'JHS FORM 3', 'SHS FORM 1', 'SHS FORM 2', 'SHS FORM 3'], onChanged: (v) => setState(() => selectedGrade = v), validator: (v) => v == null ? 'Grade required' : null),
-                const SizedBox(height: 12),
-                _buildTextField(controller: phoneController, label: 'Student Phone', hint: 'Phone', icon: Icons.phone_outlined, keyboardType: TextInputType.phone, validator: (v) => (v == null || v.isEmpty) ? 'Phone required' : null),
-                const SizedBox(height: 12),
-                _buildTextField(controller: schoolNameController, label: 'School Name', hint: 'School', icon: Icons.business_outlined, validator: (v) => (v == null || v.isEmpty) ? 'School required' : null),
-              ],
+            child: Text(
+              'Uriel Academy',
+              style: GoogleFonts.montserrat(
+                fontSize: isSmallScreen ? 18 : 20,
+                fontWeight: FontWeight.w700,
+                color: const Color(0xFF1A1E3F),
+                letterSpacing: -0.5,
+              ),
             ),
           ),
-
-          const SizedBox(height: 20),
-          Text('Parent / Guardian Information', style: GoogleFonts.montserrat(fontSize: 16, fontWeight: FontWeight.w600)),
-          const SizedBox(height: 12),
-          Container(
-            padding: const EdgeInsets.all(16),
-            decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(12)),
-            child: Column(children: [
-              _buildTextField(controller: guardianNameController, label: 'Guardian Name', hint: 'Guardian full name', icon: Icons.family_restroom_outlined, validator: (v) => (v == null || v.isEmpty) ? 'Required' : null),
-              const SizedBox(height: 12),
-                _buildTextField(controller: guardianEmailController, label: 'Guardian Email', hint: 'Email', icon: Icons.email_outlined, keyboardType: TextInputType.emailAddress, validator: (v) {
-                if (v == null || v.isEmpty) return 'Required';
-                // Basic email validation
-                  if (!RegExp(r'^[\w\-.]+@([\w\-]+\.)+[\w]{2,4}$').hasMatch(v)) return 'Invalid email';
-                return null;
-              }),
-              const SizedBox(height: 12),
-              _buildTextField(controller: guardianPhoneController, label: 'Guardian Phone', hint: 'Phone', icon: Icons.phone_outlined, keyboardType: TextInputType.phone, validator: (v) => (v == null || v.isEmpty) ? 'Required' : null),
-            ]),
+          const Spacer(),
+          // Back to landing link
+          if (!isSmallScreen) TextButton(
+            onPressed: () => Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (_) => const LandingPage()),
+            ),
+            child: Text(
+              '← Back to home',
+              style: GoogleFonts.montserrat(
+                fontSize: 14,
+                color: Colors.grey[600],
+                fontWeight: FontWeight.w500,
+              ),
+            ),
           ),
         ],
       ),
     );
   }
 
-  Widget _buildAuthStep() {
-    return Form(
-      key: _authFormKey,
+  Widget _buildSignUpCard(BuildContext context, bool isSmallScreen) {
+    return Container(
+      padding: EdgeInsets.all(isSmallScreen ? 24 : 32),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(isSmallScreen ? 12 : 16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.05),
+            blurRadius: 20,
+            offset: const Offset(0, 8),
+          ),
+        ],
+        border: Border.all(
+          color: Colors.grey.withValues(alpha: 0.1),
+          width: 1,
+        ),
+      ),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
         children: [
-          Text('Account Setup', style: GoogleFonts.playfairDisplay(fontSize: 28, fontWeight: FontWeight.w700)),
-          const SizedBox(height: 12),
-          _buildTextField(controller: emailController, label: 'Email Address', hint: 'Email', icon: Icons.email_outlined, keyboardType: TextInputType.emailAddress, validator: (v) {
-            if (v == null || v.isEmpty) return 'Email required';
-            // Basic email validation
-              if (!RegExp(r'^[\w\-.]+@([\w\-]+\.)+[\w]{2,4}$').hasMatch(v)) return 'Invalid email';
-            return null;
-          }),
-          const SizedBox(height: 12),
-          _buildTextField(controller: passwordController, label: 'Password', hint: 'Password', icon: Icons.lock_outlined, obscureText: obscurePassword, suffixIcon: IconButton(icon: Icon(obscurePassword ? Icons.visibility : Icons.visibility_off), onPressed: () => setState(() => obscurePassword = !obscurePassword)), validator: (v) {
-            if (v == null || v.isEmpty) return 'Password required';
-            if (v.length < 8) return 'At least 8 chars';
-            return null;
-          }),
-          const SizedBox(height: 12),
-          _buildTextField(controller: confirmPasswordController, label: 'Confirm Password', hint: 'Confirm', icon: Icons.lock_outlined, obscureText: obscureConfirmPassword, suffixIcon: IconButton(icon: Icon(obscureConfirmPassword ? Icons.visibility : Icons.visibility_off), onPressed: () => setState(() => obscureConfirmPassword = !obscureConfirmPassword)), validator: (v) {
-            if (v == null || v.isEmpty) return 'Confirm password';
-            if (v != passwordController.text) return 'Passwords do not match';
-            return null;
-          }),
+          // Welcome message
+          Text(
+            'Create your account',
+            style: GoogleFonts.montserrat(
+              fontSize: isSmallScreen ? 20 : 24,
+              fontWeight: FontWeight.w700,
+              color: const Color(0xFF1A1E3F),
+            ),
+          ),
+          SizedBox(height: isSmallScreen ? 6 : 8),
+          Text(
+            'Join thousands of students learning with Uriel',
+            style: GoogleFonts.montserrat(
+              fontSize: isSmallScreen ? 12 : 14,
+              color: Colors.grey[600],
+              fontWeight: FontWeight.w400,
+            ),
+            textAlign: TextAlign.center,
+          ),
+          SizedBox(height: isSmallScreen ? 24 : 32),
 
-          const SizedBox(height: 12),
-          Row(children: [
-            Checkbox(value: agreeTerms, onChanged: (v) => setState(() => agreeTerms = v ?? false)),
-            const SizedBox(width: 8),
-            Expanded(child: Text('I agree to the Terms of Service and Privacy Policy'))
-          ]),
-          Row(children: [
-            Checkbox(value: agreePrivacy, onChanged: (v) => setState(() => agreePrivacy = v ?? false)),
-            const SizedBox(width: 8),
-            const Expanded(child: Text('I consent to processing of my personal data'))
-          ]),
-          Row(children: [
-            Checkbox(value: marketingOptIn, onChanged: (v) => setState(() => marketingOptIn = v ?? false)),
-            const SizedBox(width: 8),
-            const Expanded(child: Text('Receive updates (optional)'))
-          ]),
+          // Google sign-up button
+          if (!showEmailForm) ...[
+            _buildGoogleSignUpButton(),
+            SizedBox(height: isSmallScreen ? 16 : 20),
+            Row(
+              children: [
+                Expanded(child: Divider(color: Colors.grey[300])),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: isSmallScreen ? 12 : 16),
+                  child: Text(
+                    'or',
+                    style: GoogleFonts.montserrat(
+                      fontSize: isSmallScreen ? 12 : 14,
+                      color: Colors.grey[500],
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+                Expanded(child: Divider(color: Colors.grey[300])),
+              ],
+            ),
+            SizedBox(height: isSmallScreen ? 16 : 20),
+            _buildEmailToggleButton(),
+          ],
+
+          // Email form
+          if (showEmailForm) _buildEmailForm(isSmallScreen),
         ],
       ),
     );
@@ -325,129 +309,495 @@ class _SignUpPageState extends State<SignUpPage> {
   Widget _buildGoogleSignUpButton() {
     return SizedBox(
       width: double.infinity,
-      child: ElevatedButton(onPressed: isLoading ? null : _handleGoogleSignUp, child: isLoading ? const CircularProgressIndicator() : const Text('Continue with Google')),
+      height: 48,
+      child: ElevatedButton(
+        onPressed: isLoading ? null : _handleGoogleSignUp,
+        style: ElevatedButton.styleFrom(
+          backgroundColor: const Color(0xFFD62828),
+          foregroundColor: Colors.white,
+          elevation: 0,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
+          disabledBackgroundColor: Colors.grey[300],
+        ),
+        child: isLoading
+            ? const SizedBox(
+                width: 20,
+                height: 20,
+                child: CircularProgressIndicator(
+                  strokeWidth: 2,
+                  valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                ),
+              )
+            : Text(
+                'Continue with Google',
+                style: GoogleFonts.montserrat(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+      ),
     );
   }
 
-  Widget _buildNavigationButtons(bool isSmallScreen) {
-    final canProceed = _validateCurrentStep();
-    return Row(children: [
-      if (currentStep > 0) Expanded(child: OutlinedButton(onPressed: _previousStep, child: const Text('Back'))),
-      if (currentStep > 0) const SizedBox(width: 12),
-      Expanded(child: ElevatedButton(onPressed: (isLoading || !canProceed) ? null : () async {
-        if (currentStep == 0) {
-          if (!(_detailsFormKey.currentState?.validate() ?? false)) return;
-          _nextStep();
-        } else {
-          await _handleSignUp();
-        }
-      }, child: Text(currentStep == 0 ? 'Continue' : 'Create Account'))),
-    ]);
+  Widget _buildEmailToggleButton() {
+    return SizedBox(
+      width: double.infinity,
+      height: 48,
+      child: OutlinedButton(
+        onPressed: () {
+          setState(() {
+            showEmailForm = true;
+          });
+        },
+        style: OutlinedButton.styleFrom(
+          side: BorderSide(color: Colors.grey[300]!),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
+        ),
+        child: Text(
+          'Sign up with email',
+          style: GoogleFonts.montserrat(
+            fontSize: 16,
+            fontWeight: FontWeight.w500,
+            color: const Color(0xFF1A1E3F),
+          ),
+        ),
+      ),
+    );
   }
 
-  @override
-  Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
-    final isSmallScreen = screenWidth < 768;
+  Widget _buildEmailForm(bool isSmallScreen) {
+    return Form(
+      key: _formKey,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // Personal Information Section
+          Text(
+            'Personal Information',
+            style: GoogleFonts.montserrat(
+              fontSize: 16,
+              fontWeight: FontWeight.w600,
+              color: const Color(0xFF1A1E3F),
+            ),
+          ),
+          const SizedBox(height: 16),
 
-    return Scaffold(
-      backgroundColor: const Color(0xFFF8F9FA),
-      appBar: AppBar(
-        title: const Text('Create Account'),
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-        centerTitle: true,
+          // First & Last Name Row
+          Row(
+            children: [
+              Expanded(
+                child: _buildTextField(
+                  label: 'First Name',
+                  controller: firstNameController,
+                  validator: (v) => (v == null || v.isEmpty) ? 'Required' : null,
+                ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: _buildTextField(
+                  label: 'Last Name',
+                  controller: lastNameController,
+                  validator: (v) => (v == null || v.isEmpty) ? 'Required' : null,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 16),
+
+          // Age & Grade Row
+          Row(
+            children: [
+              Expanded(
+                child: _buildTextField(
+                  label: 'Age',
+                  controller: ageController,
+                  keyboardType: TextInputType.number,
+                  validator: (v) {
+                    if (v == null || v.isEmpty) return 'Required';
+                    final age = int.tryParse(v);
+                    if (age == null || age < 5) return 'Invalid age';
+                    return null;
+                  },
+                ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(child: _buildGradeDropdown()),
+            ],
+          ),
+          const SizedBox(height: 16),
+
+          _buildTextField(
+            label: 'Phone Number',
+            controller: phoneController,
+            keyboardType: TextInputType.phone,
+            validator: (v) => (v == null || v.isEmpty) ? 'Required' : null,
+          ),
+          const SizedBox(height: 16),
+
+          _buildTextField(
+            label: 'School Name',
+            controller: schoolNameController,
+            validator: (v) => (v == null || v.isEmpty) ? 'Required' : null,
+          ),
+          const SizedBox(height: 24),
+
+          // Guardian Information Section
+          Text(
+            'Guardian / Parent Information',
+            style: GoogleFonts.montserrat(
+              fontSize: 16,
+              fontWeight: FontWeight.w600,
+              color: const Color(0xFF1A1E3F),
+            ),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            'Required for students under 18',
+            style: GoogleFonts.montserrat(
+              fontSize: 12,
+              color: Colors.grey[600],
+              fontStyle: FontStyle.italic,
+            ),
+          ),
+          const SizedBox(height: 16),
+
+          _buildTextField(
+            label: 'Guardian Name',
+            controller: guardianNameController,
+            validator: (v) => (v == null || v.isEmpty) ? 'Required' : null,
+          ),
+          const SizedBox(height: 16),
+
+          _buildTextField(
+            label: 'Guardian Email',
+            controller: guardianEmailController,
+            keyboardType: TextInputType.emailAddress,
+            validator: (v) {
+              if (v == null || v.isEmpty) return 'Required';
+              if (!RegExp(r'^[\w\-.]+@([\w\-]+\.)+[\w]{2,4}$').hasMatch(v)) {
+                return 'Invalid email';
+              }
+              return null;
+            },
+          ),
+          const SizedBox(height: 16),
+
+          _buildTextField(
+            label: 'Guardian Phone',
+            controller: guardianPhoneController,
+            keyboardType: TextInputType.phone,
+            validator: (v) => (v == null || v.isEmpty) ? 'Required' : null,
+          ),
+          const SizedBox(height: 24),
+
+          // Account Credentials Section
+          Text(
+            'Account Credentials',
+            style: GoogleFonts.montserrat(
+              fontSize: 16,
+              fontWeight: FontWeight.w600,
+              color: const Color(0xFF1A1E3F),
+            ),
+          ),
+          const SizedBox(height: 16),
+
+          _buildTextField(
+            label: 'Email Address',
+            controller: emailController,
+            keyboardType: TextInputType.emailAddress,
+            validator: (v) {
+              if (v == null || v.isEmpty) return 'Required';
+              if (!RegExp(r'^[\w\-.]+@([\w\-]+\.)+[\w]{2,4}$').hasMatch(v)) {
+                return 'Invalid email';
+              }
+              return null;
+            },
+          ),
+          const SizedBox(height: 16),
+
+          _buildTextField(
+            label: 'Password',
+            controller: passwordController,
+            obscureText: obscurePassword,
+            suffixIcon: IconButton(
+              icon: Icon(
+                obscurePassword ? Icons.visibility_off_outlined : Icons.visibility_outlined,
+                color: Colors.grey[400],
+                size: 20,
+              ),
+              onPressed: () => setState(() => obscurePassword = !obscurePassword),
+            ),
+            validator: (v) {
+              if (v == null || v.isEmpty) return 'Required';
+              if (v.length < 8) return 'At least 8 characters';
+              return null;
+            },
+          ),
+          const SizedBox(height: 16),
+
+          _buildTextField(
+            label: 'Confirm Password',
+            controller: confirmPasswordController,
+            obscureText: obscureConfirmPassword,
+            suffixIcon: IconButton(
+              icon: Icon(
+                obscureConfirmPassword ? Icons.visibility_off_outlined : Icons.visibility_outlined,
+                color: Colors.grey[400],
+                size: 20,
+              ),
+              onPressed: () => setState(() => obscureConfirmPassword = !obscureConfirmPassword),
+            ),
+            validator: (v) {
+              if (v == null || v.isEmpty) return 'Required';
+              if (v != passwordController.text) return 'Passwords do not match';
+              return null;
+            },
+          ),
+          const SizedBox(height: 24),
+
+          // Agreements
+          _buildCheckbox(
+            value: agreeTerms,
+            onChanged: (v) => setState(() => agreeTerms = v ?? false),
+            label: 'I agree to the Terms of Service and Privacy Policy',
+          ),
+          const SizedBox(height: 12),
+
+          _buildCheckbox(
+            value: agreePrivacy,
+            onChanged: (v) => setState(() => agreePrivacy = v ?? false),
+            label: 'I consent to processing of my personal data',
+          ),
+          const SizedBox(height: 12),
+
+          _buildCheckbox(
+            value: marketingOptIn,
+            onChanged: (v) => setState(() => marketingOptIn = v ?? false),
+            label: 'Send me updates and learning tips (optional)',
+          ),
+          const SizedBox(height: 24),
+
+          // Sign Up Button
+          SizedBox(
+            width: double.infinity,
+            height: 48,
+            child: ElevatedButton(
+              onPressed: isLoading ? null : _handleSignUp,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFFD62828),
+                foregroundColor: Colors.white,
+                elevation: 0,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                disabledBackgroundColor: Colors.grey[300],
+              ),
+              child: isLoading
+                  ? const SizedBox(
+                      width: 20,
+                      height: 20,
+                      child: CircularProgressIndicator(
+                        strokeWidth: 2,
+                        valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                      ),
+                    )
+                  : Text(
+                      'Create Account',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+            ),
+          ),
+        ],
       ),
-      body: SafeArea(
-        child: Column(
-          children: [
-            // Progress indicator
-            Container(
-              margin: const EdgeInsets.all(16),
-              child: Row(
-                children: List.generate(
-                  totalSteps,
-                  (index) => Expanded(
-                    child: Container(
-                      margin: EdgeInsets.only(right: index < totalSteps - 1 ? 8 : 0),
-                      height: 4,
-                      decoration: BoxDecoration(
-                        color: index <= currentStep ? const Color(0xFF1A1E3F) : const Color(0xFFE5E7EB),
-                        borderRadius: BorderRadius.circular(2),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
+    );
+  }
 
-            // Main content
-            Expanded(
-              child: SingleChildScrollView(
-                padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
-                child: Column(
-                  children: [
-                    Container(
-                      width: double.infinity,
-                      constraints: BoxConstraints(maxWidth: isSmallScreen ? double.infinity : 600),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(16),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(24),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            IndexedStack(index: currentStep, children: [_buildDetailsStep(), _buildAuthStep()]),
-                            const SizedBox(height: 20),
-                            _buildNavigationButtons(isSmallScreen),
-                            if (currentStep == 0) ...[
-                              const SizedBox(height: 16),
-                              Row(children: [
-                                Expanded(child: Divider(color: Colors.grey[300])),
-                                const Padding(padding: EdgeInsets.symmetric(horizontal: 12), child: Text('or')),
-                                Expanded(child: Divider(color: Colors.grey[300])),
-                              ]),
-                              const SizedBox(height: 12),
-                              _buildGoogleSignUpButton(),
-                            ],
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-
-            // Footer
-            Container(
-              padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                border: Border(top: BorderSide(color: Colors.grey[200]!)),
-              ),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Text('Already have an account? '),
-                      GestureDetector(
-                        onTap: () => Navigator.pushReplacementNamed(context, '/login'),
-                        child: const Text('Sign In', style: TextStyle(fontWeight: FontWeight.w600)),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 12),
-                  const Text('Need help? Contact support@uriel.academy'),
-                ],
-              ),
-            ),
-          ],
+  Widget _buildTextField({
+    required String label,
+    required TextEditingController controller,
+    TextInputType? keyboardType,
+    bool obscureText = false,
+    Widget? suffixIcon,
+    String? Function(String?)? validator,
+  }) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          label,
+          style: GoogleFonts.montserrat(
+            fontSize: 14,
+            fontWeight: FontWeight.w500,
+            color: const Color(0xFF1A1E3F),
+          ),
         ),
+        const SizedBox(height: 8),
+        TextFormField(
+          controller: controller,
+          keyboardType: keyboardType,
+          obscureText: obscureText,
+          validator: validator,
+          decoration: InputDecoration(
+            hintText: 'Enter $label',
+            hintStyle: GoogleFonts.montserrat(
+              color: Colors.grey[400],
+              fontSize: 14,
+            ),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(12),
+              borderSide: BorderSide(color: Colors.grey[300]!),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(12),
+              borderSide: const BorderSide(color: Color(0xFFD62828)),
+            ),
+            errorBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(12),
+              borderSide: const BorderSide(color: Color(0xFFD62828)),
+            ),
+            contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            suffixIcon: suffixIcon,
+          ),
+          style: GoogleFonts.montserrat(fontSize: 14),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildGradeDropdown() {
+    final grades = [
+      'JHS FORM 1',
+      'JHS FORM 2',
+      'JHS FORM 3',
+      'SHS FORM 1',
+      'SHS FORM 2',
+      'SHS FORM 3'
+    ];
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Grade/Class',
+          style: GoogleFonts.montserrat(
+            fontSize: 14,
+            fontWeight: FontWeight.w500,
+            color: const Color(0xFF1A1E3F),
+          ),
+        ),
+        const SizedBox(height: 8),
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.grey[300]!),
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: DropdownButtonHideUnderline(
+            child: DropdownButtonFormField<String>(
+              value: selectedGrade,
+              isExpanded: true,
+              icon: Icon(Icons.keyboard_arrow_down, color: Colors.grey[400]),
+              style: GoogleFonts.montserrat(
+                fontSize: 14,
+                color: const Color(0xFF1A1E3F),
+              ),
+              hint: Text(
+                'Select grade',
+                style: GoogleFonts.montserrat(
+                  color: Colors.grey[400],
+                  fontSize: 14,
+                ),
+              ),
+              validator: (v) => v == null ? 'Required' : null,
+              items: grades.map((String grade) {
+                return DropdownMenuItem<String>(
+                  value: grade,
+                  child: Text(grade),
+                );
+              }).toList(),
+              onChanged: (String? newValue) {
+                setState(() => selectedGrade = newValue);
+              },
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildCheckbox({
+    required bool value,
+    required Function(bool?) onChanged,
+    required String label,
+  }) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        SizedBox(
+          width: 24,
+          height: 24,
+          child: Checkbox(
+            value: value,
+            onChanged: onChanged,
+            activeColor: const Color(0xFFD62828),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(4),
+            ),
+          ),
+        ),
+        const SizedBox(width: 12),
+        Expanded(
+          child: GestureDetector(
+            onTap: () => onChanged(!value),
+            child: Text(
+              label,
+              style: GoogleFonts.montserrat(
+                fontSize: 13,
+                color: Colors.grey[700],
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildFooter(BuildContext context, bool isSmallScreen) {
+    return Container(
+      padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        border: Border(top: BorderSide(color: Colors.grey[200]!)),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            'Already have an account? ',
+            style: GoogleFonts.montserrat(
+              fontSize: 14,
+              color: Colors.grey[600],
+            ),
+          ),
+          GestureDetector(
+            onTap: () => Navigator.pushReplacementNamed(context, '/login'),
+            child: Text(
+              'Sign In',
+              style: GoogleFonts.montserrat(
+                fontSize: 14,
+                fontWeight: FontWeight.w600,
+                color: const Color(0xFFD62828),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

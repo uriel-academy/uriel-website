@@ -5,6 +5,7 @@ import 'package:uriel_mainapp/services/user_service.dart';
 import 'package:uriel_mainapp/screens/landing_page.dart';
 import 'package:uriel_mainapp/screens/sign_up.dart';
 import 'package:uriel_mainapp/screens/student_profile_page.dart';
+import 'package:uriel_mainapp/screens/home_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SignInPage extends StatefulWidget {
@@ -82,7 +83,7 @@ class _SignInPageState extends State<SignInPage> {
         return;
       }
 
-      // New user created by Google sign-in: create a minimal student profile and navigate to profile settings
+      // New user created by Google sign-in: create a minimal student profile and navigate to student homepage with profile open
       await UserService().createUserProfile(
         userId: user.uid,
         email: user.email!,
@@ -93,7 +94,7 @@ class _SignInPageState extends State<SignInPage> {
       if (!mounted) return;
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (_) => const StudentProfilePage()),
+        MaterialPageRoute(builder: (_) => const StudentHomePage(showProfileOnInit: true)),
       );
       
     } catch (e) {
@@ -169,8 +170,9 @@ class _SignInPageState extends State<SignInPage> {
             _showError('Your account is not registered as $selectedRole. Contact admin.');
             return;
           }
-          // allow student sign in
-          _routeUserBasedOnRole(UserRole.student);
+          // New student record — navigate to profile settings so they can complete optional info
+          if (!mounted) return;
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const StudentProfilePage(isNewUser: true)));
           return;
         }
 

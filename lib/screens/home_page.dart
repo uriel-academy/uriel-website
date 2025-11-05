@@ -15,6 +15,7 @@ import '../services/telemetry_service.dart';
 import '../widgets/uri_chat_input.dart';
 import '../services/xp_service.dart';
 import '../widgets/rank_badge_widget.dart';
+import '../services/streak_service.dart';
 import 'redesigned_all_ranks_page.dart';
 import 'question_collections_page.dart';
 import 'revision_page.dart';
@@ -32,7 +33,8 @@ import 'package:uuid/uuid.dart';
 
 class StudentHomePage extends StatefulWidget {
   final bool isTeacher;
-  const StudentHomePage({super.key, this.isTeacher = false});
+  final bool showProfileOnInit;
+  const StudentHomePage({super.key, this.isTeacher = false, this.showProfileOnInit = false});
 
   @override
   State<StudentHomePage> createState() => _StudentHomePageState();
@@ -44,7 +46,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   late Animation<double> _fadeAnimation;
   
   int _selectedIndex = 0;
-  bool _showingProfile = false;
+  late bool _showingProfile;
   
   // Uri Chatbot state
   bool _showUriChat = false;
@@ -57,6 +59,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   double overallProgress = 0.0; // Calculated from quiz results
   int currentStreak = 0; // Days of consecutive activity
   int weeklyStudyHours = 0; // Calculated from session time
+  int lifetimeStudyHours = 0; // Lifetime study hours (h)
   int questionsAnswered = 0; // Total questions from quizzes
   int beceCountdownDays = 0; // Live countdown to BECE 2026
   StreamSubscription<DocumentSnapshot>? _userStreamSubscription;
@@ -113,6 +116,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   @override
   void initState() {
     super.initState();
+    _showingProfile = widget.showProfileOnInit;
   final tabLength = widget.isTeacher ? 5 : 8;
   _mainTabController = TabController(length: tabLength, vsync: this);
     _animationController = AnimationController(
@@ -310,7 +314,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
           .get()
           .timeout(const Duration(seconds: 6));
 
-      _processQuizSnapshot(quickSnapshot.docs, quick: true);
+        await _processQuizSnapshot(quickSnapshot.docs, quick: true);
 
       // Telemetry: quick load completed (duration measured if start exists)
       try {
@@ -335,14 +339,20 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             TelemetryService().recordEvent('dashboard_load_start', properties: {'phase': 'full'});
           } catch (_) {}
           final fullSnapshot = await FirebaseFirestore.instance
-              .collection('quizzes')
-              .where('userId', isEqualTo: user.uid)
-              .orderBy('timestamp', descending: true)
-              .limit(100)
-              .get()
-              .timeout(const Duration(seconds: 12));
+                  .collection('quizzes')
+                  .where('userId', isEqualTo: user.uid)
+                  .orderBy('timestamp', descending: true)
+                  .limit(100)
+                  .get()
+                  .timeout(const Duration(seconds: 12));
 
-          _processQuizSnapshot(fullSnapshot.docs, quick: false);
+              await _processQuizSnapshot(fullSnapshot.docs, quick: false);
+              // Compute lifetime study hours in background (paginated to avoid large reads)
+              try {
+                await _computeLifetimeStudyHours(user.uid);
+              } catch (e) {
+                debugPrint('Error computing lifetime study hours: $e');
+              }
           try {
             await TelemetryService().markEnd('dashboard_full_${user.uid}', 'dashboard_full_loaded', properties: {'count': fullSnapshot.docs.length});
           } catch (_) {}
@@ -359,7 +369,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   }
 
   // Process a list of quiz documents and update state. If quick==true we apply lightweight updates.
-  void _processQuizSnapshot(List<QueryDocumentSnapshot> docs, {bool quick = false}) {
+  Future<void> _processQuizSnapshot(List<QueryDocumentSnapshot> docs, {bool quick = false}) async {
     if (docs.isEmpty) {
       if (quick) {
         setState(() {
@@ -442,6 +452,16 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     double pastQProgress = pastQuestionsTotal > 0 ? (pastQuestionsCorrect / pastQuestionsTotal * 100) : 0.0;
     double triviaAvg = triviaTotal > 0 ? (triviaCorrectCount / triviaTotal * 100) : 0.0;
     int streak = _calculateStreak(activityDates);
+    // Prefer persisted streak in case server-side logic (or other clients) maintain it more authoritatively
+    try {
+      final user = FirebaseAuth.instance.currentUser;
+      if (user != null) {
+        final persisted = await StreakService().getCurrentStreak(user.uid);
+        if (persisted > 0) streak = persisted;
+      }
+    } catch (e) {
+      // ignore - fall back to calculated streak
+    }
 
     // Weekly study hours (estimate)
     final now = DateTime.now();
@@ -512,6 +532,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
         triviaQuestionsAnswered = triviaTotal;
         triviaProgress = triviaAvg;
         triviaCorrect = triviaCorrectCount;
+        // lifetimeStudyHours may be set separately by _computeLifetimeStudyHours; if we have an estimate from this page, merge lightly
+        // do not overwrite a computed lifetime value here
       });
 
       // Regenerate dependent computed content
@@ -566,6 +588,38 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     }
     
     return streak;
+  }
+  
+  /// Compute lifetime study hours by paginating through all quizzes for the user.
+  /// This avoids a single huge Firestore read and updates `lifetimeStudyHours`.
+  Future<void> _computeLifetimeStudyHours(String userId) async {
+    try {
+      int totalQuestions = 0;
+      final collection = FirebaseFirestore.instance.collection('quizzes');
+      Query query = collection.where('userId', isEqualTo: userId).orderBy('timestamp', descending: true).limit(500);
+      QuerySnapshot snap = await query.get();
+      while (true) {
+        if (snap.docs.isEmpty) break;
+        for (final d in snap.docs) {
+          try {
+            final data = d.data() as Map<String, dynamic>;
+            totalQuestions += (data['totalQuestions'] as int?) ?? 0;
+          } catch (_) {}
+        }
+        if (snap.docs.length < 500) break;
+        final last = snap.docs.last;
+        snap = await collection.where('userId', isEqualTo: userId).orderBy('timestamp', descending: true).startAfterDocument(last).limit(500).get();
+      }
+
+      final hours = (totalQuestions * 2 / 60).round();
+      if (mounted) {
+        setState(() {
+          lifetimeStudyHours = hours;
+        });
+      }
+    } catch (e) {
+      debugPrint('Error computing lifetimeStudyHours: $e');
+    }
   }
   
   void _generateActivityItems() {
@@ -2002,11 +2056,14 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                           // Mobile Content
                           Expanded(
                             child: _showingProfile 
-                                ? (widget.isTeacher ? const TeacherProfilePage() : const StudentProfilePage())
-                                      : IndexedStack(
-                                          index: _selectedIndex,
-                                          children: _homeChildren(),
-                                    ),
+                                ? Container(
+                                    color: Colors.grey[50],
+                                    child: widget.isTeacher ? const TeacherProfilePage() : const StudentProfilePage(),
+                                  )
+                                : IndexedStack(
+                                    index: _selectedIndex,
+                                    children: _homeChildren(),
+                                  ),
                           ),
                         ],
                       )
@@ -2025,11 +2082,14 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                                 // Desktop Content Area
                                 Expanded(
                                   child: _showingProfile 
-                                      ? (widget.isTeacher ? const TeacherProfilePage() : const StudentProfilePage())
+                                      ? Container(
+                                          color: Colors.grey[50],
+                                          child: widget.isTeacher ? const TeacherProfilePage() : const StudentProfilePage(),
+                                        )
                                       : IndexedStack(
                                           index: _selectedIndex,
                                           children: _homeChildren(),
-                                    ),
+                                        ),
                             ),
                           ],
                         ),
@@ -4902,6 +4962,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
             ),
           ),
           const SizedBox(height: 16),
+          _buildQuickStatItem('Lifetime Study Hours', '${lifetimeStudyHours}h', Icons.access_time),
+          const SizedBox(height: 8),
           _buildQuickStatItem('Questions Answered', questionsAnswered.toString(), Icons.quiz),
           _buildQuickStatItem(
             'Average Score', 

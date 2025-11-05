@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart';
+
 enum QuestionType {
   multipleChoice,
   shortAnswer,
@@ -92,32 +94,41 @@ class Question {
   }
 
   factory Question.fromJson(Map<String, dynamic> json) {
-    return Question(
-      id: json['id'],
-      questionText: json['questionText'],
-      type: QuestionType.values.firstWhere(
-        (e) => e.name == json['type'],
-      ),
-      subject: Subject.values.firstWhere(
-        (e) => e.name == json['subject'],
-      ),
-      examType: ExamType.values.firstWhere(
-        (e) => e.name == json['examType'],
-      ),
-      year: json['year'],
-      section: json['section'],
-      questionNumber: json['questionNumber'],
-      options: json['options'] != null ? List<String>.from(json['options']) : null,
-      correctAnswer: json['correctAnswer'],
-      explanation: json['explanation'],
-      imageUrl: json['imageUrl'],
-      marks: json['marks'],
-      difficulty: json['difficulty'] ?? 'medium',
-      topics: json['topics'] != null ? List<String>.from(json['topics']) : [],
-      createdAt: _parseDateTime(json['createdAt']),
-      createdBy: json['createdBy'],
-      isActive: json['isActive'] ?? true,
-    );
+    try {
+      return Question(
+        id: json['id'] ?? '',
+        questionText: json['questionText'] ?? '',
+        type: QuestionType.values.firstWhere(
+          (e) => e.name == json['type'],
+          orElse: () => QuestionType.multipleChoice,
+        ),
+        subject: Subject.values.firstWhere(
+          (e) => e.name == json['subject'],
+          orElse: () => Subject.mathematics,
+        ),
+        examType: ExamType.values.firstWhere(
+          (e) => e.name == json['examType'],
+          orElse: () => ExamType.practice,
+        ),
+        year: json['year']?.toString() ?? '',
+        section: json['section']?.toString() ?? '',
+        questionNumber: json['questionNumber'] ?? 0,
+        options: json['options'] != null ? List<String>.from(json['options']) : null,
+        correctAnswer: json['correctAnswer'] ?? '',
+        explanation: json['explanation'],
+        imageUrl: json['imageUrl'],
+        marks: json['marks'] ?? 1,
+        difficulty: json['difficulty'] ?? 'medium',
+        topics: json['topics'] != null ? List<String>.from(json['topics']) : [],
+        createdAt: _parseDateTime(json['createdAt']),
+        createdBy: json['createdBy'] ?? '',
+        isActive: json['isActive'] ?? true,
+      );
+    } catch (e) {
+      debugPrint('Error parsing question from JSON: $e');
+      debugPrint('JSON data: $json');
+      rethrow;
+    }
   }
 
   static DateTime _parseDateTime(dynamic dateValue) {

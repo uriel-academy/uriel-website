@@ -51,39 +51,25 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
     try {
       debugPrint('🚀 Loading question collections...');
       
-      // Load all questions with increased timeout
-      final questions = await _questionService.getQuestions().timeout(
-        const Duration(seconds: 30),
+      // Load all active questions without limit
+      final questions = await _questionService.getQuestions(
+        activeOnly: true,
+      ).timeout(
+        const Duration(seconds: 30), // Increased timeout for loading all questions
         onTimeout: () {
-          debugPrint('⏰ Timeout loading general questions');
+          debugPrint('⏰ Timeout loading questions after 30 seconds');
           return <Question>[];
         },
       );
       
-      final rmeQuestions = await _questionService.getRMEQuestions().timeout(
-        const Duration(seconds: 30),
-        onTimeout: () {
-          debugPrint('⏰ Timeout loading RME questions');
-          return <Question>[];
-        },
-      );
+      debugPrint('📊 Loaded ${questions.length} total questions');
       
-      // Merge questions
-      final mergedQuestions = <Question>[...questions];
-      for (final q in rmeQuestions) {
-        if (!mergedQuestions.any((existing) => existing.id == q.id)) {
-          mergedQuestions.add(q);
-        }
-      }
-      
-      debugPrint('📊 Loaded ${mergedQuestions.length} total questions');
-      
-      if (mergedQuestions.isEmpty) {
+      if (questions.isEmpty) {
         debugPrint('⚠️ No questions loaded! Check Firebase connection and data.');
       }
       
       // Group into collections
-      final collections = QuestionCollection.groupQuestions(mergedQuestions);
+      final collections = QuestionCollection.groupQuestions(questions);
       
       // Sort by year (most recent first)
       collections.sort((a, b) => b.year.compareTo(a.year));

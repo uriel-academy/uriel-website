@@ -11,11 +11,16 @@ class StudentProfilePage extends StatefulWidget {
   final String? testUserId;
   final String? testUserEmail;
 
+  /// If [isNewUser] is true the form will be non-blocking (fields are optional)
+  /// and the page will display helpful guidance for first-time users.
+  final bool isNewUser;
+
   const StudentProfilePage({
     Key? key,
     IUserService? userService,
     this.testUserId,
     this.testUserEmail,
+    this.isNewUser = false,
   })  : userService = userService ?? const _DefaultUserService(),
         super(key: key);
 
@@ -154,9 +159,15 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
             _firstNameController.text = data['firstName'] ?? '';
             _lastNameController.text = data['lastName'] ?? '';
             _emailController.text = user.email ?? '';
-            _phoneController.text = data['phone'] ?? '';
-            _schoolController.text = data['school'] ?? '';
-            _selectedClass = data['class'] ?? 'JHS FORM 1';
+            _phoneController.text = data['phoneNumber'] ?? data['phone'] ?? '';
+            _schoolController.text = data['school'] ?? data['schoolName'] ?? '';
+            _selectedClass = data['class'] ?? data['grade'] ?? 'JHS FORM 1';
+            // Only set age if it exists and is not 0
+            final age = data['age'];
+            _ageController.text = (age != null && age != 0) ? age.toString() : '';
+            _guardianNameController.text = data['guardianName'] ?? '';
+            _guardianEmailController.text = data['guardianEmail'] ?? '';
+            _guardianPhoneController.text = data['guardianPhone'] ?? '';
             _profileImageUrl = data['profileImageUrl'];
             _selectedPresetAvatar = data['presetAvatar'];
           });
@@ -344,7 +355,8 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
 
 
   Future<void> _saveProfile() async {
-    if (!_formKey.currentState!.validate()) {
+    // If this is a new user we don't enforce required-field validation here.
+    if (!widget.isNewUser && !_formKey.currentState!.validate()) {
       _showErrorSnackBar('Please fill all required fields correctly');
       return;
     }
@@ -676,81 +688,25 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
               ),
             ),
             const SizedBox(height: 16),
-
-            // Age
-            _buildTextField(
-              controller: _ageController,
-              label: 'Age',
-              icon: Icons.cake,
-              keyboardType: TextInputType.number,
-              validator: (value) {
-                if (value == null || value.trim().isEmpty) {
-                  return 'Please enter your age';
-                }
-                final parsed = int.tryParse(value.trim());
-                if (parsed == null || parsed <= 0 || parsed > 120) {
-                  return 'Please enter a valid age';
-                }
-                return null;
-              },
-            ),
-            const SizedBox(height: 16),
-
-            // Guardian Info
-            Text(
-              'Guardian / Parent Info',
-              style: GoogleFonts.montserrat(
-                fontSize: 14,
-                fontWeight: FontWeight.w600,
-                color: const Color(0xFF1A1E3F),
+            // Informational note for first-time users
+            if (widget.isNewUser) ...[
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                decoration: BoxDecoration(
+                  color: Colors.yellow[50],
+                  borderRadius: BorderRadius.circular(8),
+                  border: Border.all(color: Colors.yellow[200]!),
+                ),
+                child: Text(
+                  'Note: For legal reasons, students under 18 years need to update guardian information. You may fill it now or later in your profile.',
+                  style: GoogleFonts.montserrat(fontSize: 13, color: Colors.black87),
+                  textAlign: TextAlign.center,
+                ),
               ),
-            ),
-            const SizedBox(height: 8),
-
-            _buildTextField(
-              controller: _guardianNameController,
-              label: 'Guardian Name',
-              icon: Icons.person,
-              validator: (value) {
-                if (value == null || value.trim().isEmpty) {
-                  return 'Please enter guardian name';
-                }
-                return null;
-              },
-            ),
-            const SizedBox(height: 16),
-
-            _buildTextField(
-              controller: _guardianEmailController,
-              label: 'Guardian Email',
-              icon: Icons.email,
-              keyboardType: TextInputType.emailAddress,
-              validator: (value) {
-                if (value == null || value.trim().isEmpty) {
-                  return 'Please enter guardian email';
-                }
-                final emailRegex = RegExp(r"^[^@\s]+@[^@\s]+\.[^@\s]+$");
-                if (!emailRegex.hasMatch(value.trim())) {
-                  return 'Please enter a valid email';
-                }
-                return null;
-              },
-            ),
-            const SizedBox(height: 16),
-
-            _buildTextField(
-              controller: _guardianPhoneController,
-              label: 'Guardian Phone (Optional)',
-              icon: Icons.phone,
-              keyboardType: TextInputType.phone,
-              validator: (value) {
-                if (value == null || value.trim().isEmpty) return null;
-                final cleaned = value.replaceAll(RegExp(r'[^0-9]'), '');
-                if (cleaned.length < 7) return 'Please enter a valid phone number';
-                return null;
-              },
-            ),
-            const SizedBox(height: 8),
+              const SizedBox(height: 12),
+            ],
+            
             Text(
               'Manage your account information and preferences',
               style: GoogleFonts.montserrat(
@@ -768,6 +724,11 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
             
             // Profile Information Form
             _buildProfileForm(isSmallScreen),
+            
+            SizedBox(height: isSmallScreen ? 24 : 32),
+            
+            // Guardian/Parent Information Section
+            _buildGuardianInfoSection(isSmallScreen),
             
             SizedBox(height: isSmallScreen ? 24 : 32),
             
@@ -913,6 +874,7 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
               label: 'First Name',
               icon: Icons.person,
               validator: (value) {
+                if (widget.isNewUser) return null;
                 if (value == null || value.trim().isEmpty) {
                   return 'Please enter your first name';
                 }
@@ -928,8 +890,30 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
               label: 'Last Name',
               icon: Icons.person_outline,
               validator: (value) {
+                if (widget.isNewUser) return null;
                 if (value == null || value.trim().isEmpty) {
                   return 'Please enter your last name';
+                }
+                return null;
+              },
+            ),
+            
+            const SizedBox(height: 16),
+            
+            // Age
+            _buildTextField(
+              controller: _ageController,
+              label: 'Age',
+              icon: Icons.cake,
+              keyboardType: TextInputType.number,
+              validator: (value) {
+                if (widget.isNewUser) return null;
+                if (value == null || value.trim().isEmpty) {
+                  return 'Please enter your age';
+                }
+                final parsed = int.tryParse(value.trim());
+                if (parsed == null || parsed <= 0 || parsed > 120) {
+                  return 'Please enter a valid age';
                 }
                 return null;
               },
@@ -964,6 +948,7 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
               label: 'School',
               icon: Icons.school,
               validator: (value) {
+                if (widget.isNewUser) return null;
                 if (value == null || value.trim().isEmpty) {
                   return 'Please enter your school name';
                 }
@@ -1019,6 +1004,100 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _buildGuardianInfoSection(bool isSmallScreen) {
+    return Container(
+      padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.05),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Guardian / Parent Information',
+            style: GoogleFonts.playfairDisplay(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              color: const Color(0xFF1A1E3F),
+            ),
+          ),
+          
+          const SizedBox(height: 8),
+          
+          Text(
+            'For students under 18 years old',
+            style: GoogleFonts.montserrat(
+              fontSize: 12,
+              color: Colors.grey[600],
+              fontStyle: FontStyle.italic,
+            ),
+          ),
+          
+          const SizedBox(height: 24),
+          
+          // Guardian Name
+          _buildTextField(
+            controller: _guardianNameController,
+            label: 'Guardian Name',
+            icon: Icons.person,
+            validator: (value) {
+              if (widget.isNewUser) return null;
+              if (value == null || value.trim().isEmpty) {
+                return 'Please enter guardian name';
+              }
+              return null;
+            },
+          ),
+          
+          const SizedBox(height: 16),
+          
+          // Guardian Email
+          _buildTextField(
+            controller: _guardianEmailController,
+            label: 'Guardian Email',
+            icon: Icons.email,
+            keyboardType: TextInputType.emailAddress,
+            validator: (value) {
+              if (widget.isNewUser) return null;
+              if (value == null || value.trim().isEmpty) {
+                return 'Please enter guardian email';
+              }
+              final emailRegex = RegExp(r"^[^@\s]+@[^@\s]+\.[^@\s]+$");
+              if (!emailRegex.hasMatch(value.trim())) {
+                return 'Please enter a valid email';
+              }
+              return null;
+            },
+          ),
+          
+          const SizedBox(height: 16),
+          
+          // Guardian Phone
+          _buildTextField(
+            controller: _guardianPhoneController,
+            label: 'Guardian Phone (Optional)',
+            icon: Icons.phone,
+            keyboardType: TextInputType.phone,
+            validator: (value) {
+              if (value == null || value.trim().isEmpty) return null;
+              final cleaned = value.replaceAll(RegExp(r'[^0-9]'), '');
+              if (cleaned.length < 7) return 'Please enter a valid phone number';
+              return null;
+            },
+          ),
+        ],
       ),
     );
   }
