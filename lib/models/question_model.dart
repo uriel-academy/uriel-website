@@ -95,6 +95,14 @@ class Question {
 
   factory Question.fromJson(Map<String, dynamic> json) {
     try {
+      // Handle legacy subject field values
+      String? subjectValue = json['subject'];
+      if (subjectValue == 'RME') {
+        subjectValue = 'religiousMoralEducation';
+      } else if (subjectValue == 'unknown') {
+        subjectValue = null; // Will use default
+      }
+      
       return Question(
         id: json['id'] ?? '',
         questionText: json['questionText'] ?? '',
@@ -103,8 +111,8 @@ class Question {
           orElse: () => QuestionType.multipleChoice,
         ),
         subject: Subject.values.firstWhere(
-          (e) => e.name == json['subject'],
-          orElse: () => Subject.mathematics,
+          (e) => e.name == subjectValue,
+          orElse: () => Subject.religiousMoralEducation, // Default to RME instead of mathematics
         ),
         examType: ExamType.values.firstWhere(
           (e) => e.name == json['examType'],

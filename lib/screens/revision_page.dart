@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:cloud_functions/cloud_functions.dart';
 import '../models/question_model.dart';
 import '../services/question_service.dart';
 import '../screens/quiz_taker_page.dart';
@@ -12,24 +13,39 @@ class RevisionPage extends StatefulWidget {
 }
 
 class _RevisionPageState extends State<RevisionPage> {
-  final QuestionService _questionService = QuestionService();
-
   // Selection states
   ExamType? _selectedExamType;
   Subject? _selectedSubject;
   int _selectedQuestionCount = 20;
+  String _customTopic = '';
+  final TextEditingController _topicController = TextEditingController();
+  final QuestionService _questionService = QuestionService();
 
   // Available options
   final List<ExamType> _availableExamTypes = [ExamType.bece, ExamType.wassce];
-  final List<Subject> _availableSubjects = [Subject.ict, Subject.religiousMoralEducation]; // Only ICT and RME as per questions page
+  final List<Subject> _availableSubjects = [
+    Subject.mathematics,
+    Subject.english,
+    Subject.integratedScience,
+    Subject.socialStudies,
+    Subject.ict,
+    Subject.religiousMoralEducation,
+  ];
   bool _isGeneratingQuiz = false;
+  bool _isGeneratingAIQuiz = false;
 
   @override
   void initState() {
     super.initState();
-    // No need to load subjects anymore - they're hardcoded
+  }
+  
+  @override
+  void dispose() {
+    _topicController.dispose();
+    super.dispose();
   }
 
+  // Generate mock exam from database questions
   Future<void> _generateMockExam() async {
     if (_selectedExamType == null || _selectedSubject == null) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -44,62 +60,163 @@ class _RevisionPageState extends State<RevisionPage> {
     setState(() => _isGeneratingQuiz = true);
 
     try {
-      // Get all questions for the selected subject and exam type
-      final allQuestions = await _questionService.getQuestionsByFilters(
+      // Get questions from database
+      final questions = await _questionService.getQuestionsByFilters(
         examType: _selectedExamType,
         subject: _selectedSubject,
         activeOnly: true,
       );
 
-      if (allQuestions.isEmpty) {
+      if (questions.isEmpty) {
+        if (!mounted) return;
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('No questions found for ${_getSubjectDisplayName(_selectedSubject!)} (${_selectedExamType!.name.toUpperCase()})'),
+            content: Text('No questions found for ${_getSubjectDisplayName(_selectedSubject!)}'),
             backgroundColor: const Color(0xFFD62828),
           ),
         );
         return;
       }
 
-      // Generate robust random selection
-      final selectedQuestions = _selectRandomQuestions(allQuestions, _selectedQuestionCount);
+      // Shuffle and select requested number
+      final shuffled = List<Question>.from(questions)..shuffle();
+      final selected = shuffled.take(_selectedQuestionCount.clamp(1, questions.length)).toList();
 
-      if (selectedQuestions.isEmpty) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Unable to generate quiz. Please try again.'),
-            backgroundColor: Color(0xFFD62828),
-          ),
-        );
-        return;
-      }
-
-      // Navigate to quiz taker
+      if (!mounted) return;
       Navigator.push(
         context,
         MaterialPageRoute(
           builder: (context) => QuizTakerPage(
             subject: _getSubjectDisplayName(_selectedSubject!),
             examType: _selectedExamType!.name.toUpperCase(),
-            level: 'JHS 3', // Default level
-            preloadedQuestions: selectedQuestions,
+            level: 'JHS 3',
+            preloadedQuestions: selected,
             questionCount: _selectedQuestionCount,
-            randomizeQuestions: false, // Already randomized
-            customTitle: '${_getSubjectDisplayName(_selectedSubject!)} Mock Quiz',
+            randomizeQuestions: false,
+            customTitle: '${_getSubjectDisplayName(_selectedSubject!)} Mock Exam',
             isRevisionQuiz: true,
           ),
         ),
       );
     } catch (e) {
       debugPrint('Error generating mock exam: $e');
+      if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Error generating quiz. Please try again.'),
-          backgroundColor: Color(0xFFD62828),
+        SnackBar(
+          content: Text('Error generating mock exam: ${e.toString()}'),
+          backgroundColor: const Color(0xFFD62828),
+          duration: const Duration(seconds: 5),
         ),
       );
     } finally {
-      setState(() => _isGeneratingQuiz = false);
+      if (mounted) {
+        setState(() => _isGeneratingQuiz = false);
+      }
+    }
+  }
+
+  // Generate AI-powered mock exam using BECE knowledge and NACCA curriculum
+  Future<void> _generateAIQuestions() async {
+    if (_selectedExamType == null || _selectedSubject == null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Please select both exam type and subject'),
+          backgroundColor: Color(0xFFD62828),
+        ),
+      );
+      return;
+    }
+
+    setState(() => _isGeneratingAIQuiz = true);
+
+    try {
+      // Call the Cloud Function to generate AI questions based on BECE and NACCA curriculum
+      final callable = FirebaseFunctions.instance.httpsCallable('generateAIQuiz');
+      
+      final result = await callable.call({
+        'subject': _getSubjectDisplayName(_selectedSubject!),
+        'examType': _selectedExamType!.name.toUpperCase(),
+        'numQuestions': _selectedQuestionCount,
+        'customTopic': _customTopic.isNotEmpty ? _customTopic : null,
+      });
+
+      final data = result.data;
+      if (data['success'] != true || data['questions'] == null) {
+        throw Exception('Invalid response from AI service');
+      }
+
+      // Convert AI-generated questions to Question objects
+      final List<Question> aiQuestions = [];
+      for (var i = 0; i < (data['questions'] as List).length; i++) {
+        final q = data['questions'][i];
+        
+        // Convert options object to list
+        final optionsMap = q['options'] as Map<String, dynamic>;
+        final optionsList = <String>[
+          optionsMap['A']?.toString() ?? '',
+          optionsMap['B']?.toString() ?? '',
+          optionsMap['C']?.toString() ?? '',
+          optionsMap['D']?.toString() ?? '',
+        ];
+
+        aiQuestions.add(Question(
+          id: 'ai_${DateTime.now().millisecondsSinceEpoch}_$i',
+          questionText: q['question'] ?? '',
+          type: QuestionType.multipleChoice,
+          subject: _selectedSubject!,
+          examType: _selectedExamType!,
+          year: DateTime.now().year.toString(),
+          section: 'AI Generated',
+          questionNumber: i + 1,
+          options: optionsList,
+          correctAnswer: q['correctAnswer'] ?? 'A',
+          explanation: q['explanation'],
+          marks: 1,
+          difficulty: q['difficulty'] ?? 'medium',
+          topics: [q['topic'] ?? 'General'],
+          createdAt: DateTime.now(),
+          createdBy: 'ai',
+          isActive: true,
+        ));
+      }
+
+      if (aiQuestions.isEmpty) {
+        throw Exception('No questions generated');
+      }
+
+      // Navigate to quiz taker with AI-generated questions
+      if (!mounted) return;
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => QuizTakerPage(
+            subject: _getSubjectDisplayName(_selectedSubject!),
+            examType: _selectedExamType!.name.toUpperCase(),
+            level: 'JHS 3',
+            preloadedQuestions: aiQuestions,
+            questionCount: _selectedQuestionCount,
+            randomizeQuestions: false,
+            customTitle: _customTopic.isNotEmpty 
+                ? '${_getSubjectDisplayName(_selectedSubject!)} - $_customTopic'
+                : '${_getSubjectDisplayName(_selectedSubject!)} AI Practice',
+            isRevisionQuiz: true,
+          ),
+        ),
+      );
+    } catch (e) {
+      debugPrint('Error generating AI questions: $e');
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Error generating AI questions: ${e.toString()}'),
+          backgroundColor: const Color(0xFFD62828),
+          duration: const Duration(seconds: 5),
+        ),
+      );
+    } finally {
+      if (mounted) {
+        setState(() => _isGeneratingAIQuiz = false);
+      }
     }
   }
 
@@ -260,7 +377,7 @@ class _RevisionPageState extends State<RevisionPage> {
               ),
               SizedBox(height: isSmallScreen ? 32 : 40),
 
-              // Generate Quiz Button
+              // Generate Quiz Buttons
               Container(
                 width: double.infinity,
                 padding: EdgeInsets.all(isSmallScreen ? 20 : 24),
@@ -278,7 +395,7 @@ class _RevisionPageState extends State<RevisionPage> {
                 child: Column(
                   children: [
                     Text(
-                      'Ready to start your revision?',
+                      'Choose your mock exam type',
                       style: GoogleFonts.montserrat(
                         fontSize: 16,
                         fontWeight: FontWeight.w600,
@@ -286,14 +403,37 @@ class _RevisionPageState extends State<RevisionPage> {
                       ),
                       textAlign: TextAlign.center,
                     ),
-                    const SizedBox(height: 16),
+                    const SizedBox(height: 8),
+                    Text(
+                      'Use database questions or generate fresh AI questions',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 14,
+                        color: Colors.grey[600],
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                    const SizedBox(height: 24),
+                    
+                    // Database Mock Exam Button
                     _isGeneratingQuiz
-                        ? const CircularProgressIndicator(color: Color(0xFFD62828))
+                        ? Column(
+                            children: [
+                              const CircularProgressIndicator(color: Color(0xFF2ECC71)),
+                              const SizedBox(height: 8),
+                              Text(
+                                'Loading questions from database...',
+                                style: GoogleFonts.montserrat(
+                                  fontSize: 14,
+                                  color: Colors.grey[600],
+                                ),
+                              ),
+                            ],
+                          )
                         : ElevatedButton.icon(
                             onPressed: _generateMockExam,
-                            icon: const Icon(Icons.play_arrow, size: 20),
+                            icon: const Icon(Icons.library_books, size: 20),
                             label: Text(
-                              'Generate Mock Exam',
+                              'Generate from Database',
                               style: GoogleFonts.montserrat(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w600,
@@ -309,6 +449,92 @@ class _RevisionPageState extends State<RevisionPage> {
                               minimumSize: const Size(double.infinity, 50),
                             ),
                           ),
+                    
+                    const SizedBox(height: 16),
+                    
+                    // Divider with "OR"
+                    Row(
+                      children: [
+                        Expanded(child: Divider(color: Colors.grey[300], thickness: 1)),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 16),
+                          child: Text(
+                            'OR',
+                            style: GoogleFonts.montserrat(
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.grey[500],
+                            ),
+                          ),
+                        ),
+                        Expanded(child: Divider(color: Colors.grey[300], thickness: 1)),
+                      ],
+                    ),
+                    
+                    const SizedBox(height: 16),
+                    
+                    // AI Mock Exam Button
+                    _isGeneratingAIQuiz
+                        ? Column(
+                            children: [
+                              const CircularProgressIndicator(color: Color(0xFFD62828)),
+                              const SizedBox(height: 8),
+                              Text(
+                                'AI is generating questions...',
+                                style: GoogleFonts.montserrat(
+                                  fontSize: 14,
+                                  color: Colors.grey[600],
+                                ),
+                              ),
+                            ],
+                          )
+                        : ElevatedButton.icon(
+                            onPressed: _generateAIQuestions,
+                            icon: const Icon(Icons.auto_awesome, size: 20),
+                            label: Text(
+                              'Generate with AI',
+                              style: GoogleFonts.montserrat(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: const Color(0xFFD62828),
+                              foregroundColor: Colors.white,
+                              padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              minimumSize: const Size(double.infinity, 50),
+                            ),
+                          ),
+                    
+                    const SizedBox(height: 16),
+                    
+                    // Info card for AI generation
+                    Container(
+                      padding: const EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: Colors.blue[50],
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(color: Colors.blue[200]!),
+                      ),
+                      child: Row(
+                        children: [
+                          Icon(Icons.info_outline, size: 20, color: Colors.blue[700]),
+                          const SizedBox(width: 12),
+                          Expanded(
+                            child: Text(
+                              'AI generates fresh questions based on BECE standards and Ghana NACCA curriculum',
+                              style: GoogleFonts.montserrat(
+                                fontSize: 12,
+                                color: Colors.blue[900],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
