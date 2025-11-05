@@ -18,7 +18,8 @@ class _SignUpPageState extends State<SignUpPage> {
   final _authFormKey = GlobalKey<FormState>();
 
   // Controllers
-  final TextEditingController nameController = TextEditingController();
+  final TextEditingController firstNameController = TextEditingController();
+  final TextEditingController lastNameController = TextEditingController();
   final TextEditingController ageController = TextEditingController();
   String? selectedGrade;
   final TextEditingController phoneController = TextEditingController();
@@ -44,7 +45,8 @@ class _SignUpPageState extends State<SignUpPage> {
 
   @override
   void dispose() {
-    nameController.dispose();
+  firstNameController.dispose();
+  lastNameController.dispose();
     ageController.dispose();
     phoneController.dispose();
     schoolNameController.dispose();
@@ -122,7 +124,9 @@ class _SignUpPageState extends State<SignUpPage> {
       // Persist student data
       await UserService().storeStudentData(
         userId: user.uid,
-        name: nameController.text.trim(),
+        firstName: firstNameController.text.trim(),
+        lastName: lastNameController.text.trim(),
+        name: '${firstNameController.text.trim()} ${lastNameController.text.trim()}'.trim(),
         email: emailController.text.trim(),
         phoneNumber: phoneController.text.trim(),
         schoolName: schoolNameController.text.trim(),
@@ -188,19 +192,47 @@ class _SignUpPageState extends State<SignUpPage> {
   }
 
   Widget _buildDetailsStep() {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final isSmallScreen = screenWidth < 768;
     return Form(
       key: _detailsFormKey,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Student Information', style: GoogleFonts.playfairDisplay(fontSize: 28, fontWeight: FontWeight.w700)),
+          // Heading (use same Montserrat family as sign-in for harmony)
+          Text('Student information', style: GoogleFonts.montserrat(fontSize: 20, fontWeight: FontWeight.w700, color: const Color(0xFF1A1E3F))),
           const SizedBox(height: 12),
           Container(
-            padding: const EdgeInsets.all(16),
-            decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(12)),
+            padding: EdgeInsets.all( isSmallScreen ? 16 : 20 ),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12),
+              boxShadow: [
+                BoxShadow(color: Colors.black.withOpacity(0.03), blurRadius: 12, offset: const Offset(0,6)),
+              ],
+              border: Border.all(color: Colors.grey.withOpacity(0.08)),
+            ),
             child: Column(
               children: [
-                _buildTextField(controller: nameController, label: 'Full Name', hint: 'Enter full name', icon: Icons.person_outline, validator: (v) => (v == null || v.isEmpty) ? 'Name required' : null),
+                // First + Last name fields side-by-side on wide screens, stacked on small screens
+                LayoutBuilder(builder: (ctx, constraints) {
+                  final wide = constraints.maxWidth > 420;
+                  return wide
+                      ? Row(
+                          children: [
+                            Expanded(child: _buildTextField(controller: firstNameController, label: 'First name', hint: 'First name', icon: Icons.person_outline, validator: (v) => (v == null || v.isEmpty) ? 'Required' : null)),
+                            const SizedBox(width: 12),
+                            Expanded(child: _buildTextField(controller: lastNameController, label: 'Last name', hint: 'Last name', icon: Icons.person_outline, validator: (v) => (v == null || v.isEmpty) ? 'Required' : null)),
+                          ],
+                        )
+                      : Column(
+                          children: [
+                            _buildTextField(controller: firstNameController, label: 'First name', hint: 'First name', icon: Icons.person_outline, validator: (v) => (v == null || v.isEmpty) ? 'Required' : null),
+                            const SizedBox(height: 12),
+                            _buildTextField(controller: lastNameController, label: 'Last name', hint: 'Last name', icon: Icons.person_outline, validator: (v) => (v == null || v.isEmpty) ? 'Required' : null),
+                          ],
+                        );
+                }),
                 const SizedBox(height: 12),
                 _buildTextField(controller: ageController, label: 'Age', hint: 'Enter age', icon: Icons.cake_outlined, keyboardType: TextInputType.number, validator: (v) {
                   if (v == null || v.isEmpty) return 'Age required';
