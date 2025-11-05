@@ -32,5 +32,5 @@ void main() async {
   print('✅ Complete!');
   print('Files processed: $filesProcessed');
   print('Total replacements: $totalReplacements');
-  print('${'━' * 40}');
+  print('━' * 40);
 }

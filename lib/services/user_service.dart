@@ -2,9 +2,27 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
+/// Minimal interface to allow injecting/mocking user persistence in tests.
+abstract class IUserService {
+  Future<void> storeStudentData({
+    required String userId,
+    String? firstName,
+    String? lastName,
+    String? name,
+    required String email,
+    required String phoneNumber,
+    required String schoolName,
+    required String grade,
+    required int age,
+    required String guardianName,
+    required String guardianEmail,
+    required String guardianPhone,
+  });
+}
+
 enum UserRole { student, teacher, schoolAdmin }
 
-class UserService {
+class UserService implements IUserService {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final FirebaseAuth _auth = FirebaseAuth.instance;
 

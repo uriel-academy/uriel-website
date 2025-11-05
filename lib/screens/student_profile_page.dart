@@ -2,13 +2,61 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import '../services/user_service.dart';
 class StudentProfilePage extends StatefulWidget {
+  /// Accept an injectable user service (useful for tests).
+  final IUserService userService;
+
+  /// Optional test overrides to avoid touching Firebase in widget tests.
+  final String? testUserId;
+  final String? testUserEmail;
+
   const StudentProfilePage({
     Key? key,
-  }) : super(key: key);
+    IUserService? userService,
+    this.testUserId,
+    this.testUserEmail,
+  })  : userService = userService ?? const _DefaultUserService(),
+        super(key: key);
 
   @override
   State<StudentProfilePage> createState() => _StudentProfilePageState();
+}
+
+// Default concrete implementation wrapper so widget can accept a const default.
+class _DefaultUserService implements IUserService {
+  const _DefaultUserService();
+
+  @override
+  Future<void> storeStudentData({
+    required String userId,
+    String? firstName,
+    String? lastName,
+    String? name,
+    required String email,
+    required String phoneNumber,
+    required String schoolName,
+    required String grade,
+    required int age,
+    required String guardianName,
+    required String guardianEmail,
+    required String guardianPhone,
+  }) {
+    return UserService().storeStudentData(
+      userId: userId,
+      firstName: firstName,
+      lastName: lastName,
+      name: name,
+      email: email,
+      phoneNumber: phoneNumber,
+      schoolName: schoolName,
+      grade: grade,
+      age: age,
+      guardianName: guardianName,
+      guardianEmail: guardianEmail,
+      guardianPhone: guardianPhone,
+    );
+  }
 }
 
 class _StudentProfilePageState extends State<StudentProfilePage> with TickerProviderStateMixin {
@@ -21,6 +69,10 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
   final _emailController = TextEditingController();
   final _phoneController = TextEditingController();
   final _schoolController = TextEditingController();
+  final _ageController = TextEditingController();
+  final _guardianNameController = TextEditingController();
+  final _guardianEmailController = TextEditingController();
+  final _guardianPhoneController = TextEditingController();
   final _currentPasswordController = TextEditingController();
   final _newPasswordController = TextEditingController();
   final _confirmPasswordController = TextEditingController();
@@ -62,6 +114,10 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
     _emailController.dispose();
     _phoneController.dispose();
     _schoolController.dispose();
+    _ageController.dispose();
+    _guardianNameController.dispose();
+    _guardianEmailController.dispose();
+    _guardianPhoneController.dispose();
     _currentPasswordController.dispose();
     _newPasswordController.dispose();
     _confirmPasswordController.dispose();
@@ -69,6 +125,14 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
   }
 
   Future<void> _loadUserData() async {
+    // If testUserId provided, skip Firestore load and use test overrides
+    if (widget.testUserId != null) {
+      setState(() {
+        _emailController.text = widget.testUserEmail ?? '';
+      });
+      return;
+    }
+
     final user = FirebaseAuth.instance.currentUser;
     if (user != null) {
       try {
@@ -288,56 +352,50 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
     setState(() => _isLoading = true);
     
     try {
-      final user = FirebaseAuth.instance.currentUser;
-      if (user == null) {
+      // Determine user id and email (allow test overrides)
+      final userId = widget.testUserId ?? FirebaseAuth.instance.currentUser?.uid;
+      final userEmail = widget.testUserEmail ?? FirebaseAuth.instance.currentUser?.email;
+
+      if (userId == null || userEmail == null) {
         _showErrorSnackBar('User not authenticated');
         setState(() => _isLoading = false);
         return;
       }
-      
-      debugPrint('Saving profile for user: ${user.uid}');
-      debugPrint('Data: ${_firstNameController.text}, ${_lastNameController.text}');
-      
+
+      debugPrint('Saving profile for user: $userId');
+
       final newSchool = _schoolController.text.trim();
       final newClass = _selectedClass;
-      
-      // Check if school or class changed
-      final userDoc = await FirebaseFirestore.instance
-          .collection('users')
-          .doc(user.uid)
-          .get();
-      
-      final oldSchool = userDoc.data()?['school'] ?? '';
-      final oldClass = userDoc.data()?['class'] ?? '';
-      final schoolOrClassChanged = (newSchool != oldSchool) || (newClass != oldClass);
-      
-      // Update Firestore
-      await FirebaseFirestore.instance
-          .collection('users')
-          .doc(user.uid)
-          .set({
-        'firstName': _firstNameController.text.trim(),
-        'lastName': _lastNameController.text.trim(),
-        'phone': _phoneController.text.trim(),
-        'school': newSchool,
-        'class': newClass,
-        'profileImageUrl': _profileImageUrl,
-        'updatedAt': FieldValue.serverTimestamp(),
-      }, SetOptions(merge: true));
-      
-      debugPrint('Firestore update completed');
-      
-      // If school or class changed, find and assign teacher
-      if (schoolOrClassChanged && newSchool.isNotEmpty && newClass.isNotEmpty) {
-        await _assignTeacher(user.uid, newSchool, newClass);
-      }
-      
-      // Update Auth profile
-      await user.updateDisplayName(
-        '${_firstNameController.text.trim()} ${_lastNameController.text.trim()}',
+
+      // Parse age
+      final ageText = _ageController.text.trim();
+      final age = int.tryParse(ageText) ?? 0;
+
+      // Call the injected service to persist student-specific data (handles linking)
+      await widget.userService.storeStudentData(
+        userId: userId,
+        firstName: _firstNameController.text.trim(),
+        lastName: _lastNameController.text.trim(),
+        email: userEmail,
+        phoneNumber: _phoneController.text.trim(),
+        schoolName: newSchool,
+        grade: newClass,
+        age: age,
+        guardianName: _guardianNameController.text.trim(),
+        guardianEmail: _guardianEmailController.text.trim(),
+        guardianPhone: _guardianPhoneController.text.trim(),
       );
-      
-      debugPrint('Auth profile update completed');
+
+      // Update Auth display name if available
+      try {
+        final authUser = FirebaseAuth.instance.currentUser;
+        if (authUser != null) {
+          await authUser.updateDisplayName(
+            '${_firstNameController.text.trim()} ${_lastNameController.text.trim()}',
+          );
+        }
+      } catch (_) {}
+
       _showSuccessSnackBar('Profile updated successfully!');
     } catch (e) {
       debugPrint('Error saving profile: $e');
@@ -616,6 +674,81 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
                 fontWeight: FontWeight.bold,
                 color: const Color(0xFF1A1E3F),
               ),
+            ),
+            const SizedBox(height: 16),
+
+            // Age
+            _buildTextField(
+              controller: _ageController,
+              label: 'Age',
+              icon: Icons.cake,
+              keyboardType: TextInputType.number,
+              validator: (value) {
+                if (value == null || value.trim().isEmpty) {
+                  return 'Please enter your age';
+                }
+                final parsed = int.tryParse(value.trim());
+                if (parsed == null || parsed <= 0 || parsed > 120) {
+                  return 'Please enter a valid age';
+                }
+                return null;
+              },
+            ),
+            const SizedBox(height: 16),
+
+            // Guardian Info
+            Text(
+              'Guardian / Parent Info',
+              style: GoogleFonts.montserrat(
+                fontSize: 14,
+                fontWeight: FontWeight.w600,
+                color: const Color(0xFF1A1E3F),
+              ),
+            ),
+            const SizedBox(height: 8),
+
+            _buildTextField(
+              controller: _guardianNameController,
+              label: 'Guardian Name',
+              icon: Icons.person,
+              validator: (value) {
+                if (value == null || value.trim().isEmpty) {
+                  return 'Please enter guardian name';
+                }
+                return null;
+              },
+            ),
+            const SizedBox(height: 16),
+
+            _buildTextField(
+              controller: _guardianEmailController,
+              label: 'Guardian Email',
+              icon: Icons.email,
+              keyboardType: TextInputType.emailAddress,
+              validator: (value) {
+                if (value == null || value.trim().isEmpty) {
+                  return 'Please enter guardian email';
+                }
+                final emailRegex = RegExp(r"^[^@\s]+@[^@\s]+\.[^@\s]+$");
+                if (!emailRegex.hasMatch(value.trim())) {
+                  return 'Please enter a valid email';
+                }
+                return null;
+              },
+            ),
+            const SizedBox(height: 16),
+
+            _buildTextField(
+              controller: _guardianPhoneController,
+              label: 'Guardian Phone (Optional)',
+              icon: Icons.phone,
+              keyboardType: TextInputType.phone,
+              validator: (value) {
+                if (value == null || value.trim().isEmpty) return null;
+                final cleaned = value.replaceAll(RegExp(r'[^0-9]'), '');
+                if (cleaned.length < 7) return 'Please enter a valid phone number';
+                return null;
+              },
             ),
             const SizedBox(height: 8),
             Text(
@@ -1091,6 +1224,7 @@ class _StudentProfilePageState extends State<StudentProfilePage> with TickerProv
         const SizedBox(height: 8),
         
         TextFormField(
+          key: Key('field_${label.replaceAll(' ', '_')}'),
           controller: controller,
           validator: validator,
           obscureText: obscureText,

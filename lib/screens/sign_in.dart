@@ -4,6 +4,7 @@ import 'package:uriel_mainapp/services/auth_service.dart';
 import 'package:uriel_mainapp/services/user_service.dart';
 import 'package:uriel_mainapp/screens/landing_page.dart';
 import 'package:uriel_mainapp/screens/sign_up.dart';
+import 'package:uriel_mainapp/screens/student_profile_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SignInPage extends StatefulWidget {
@@ -22,6 +23,9 @@ class _SignInPageState extends State<SignInPage> {
   bool obscurePassword = true;
   String selectedRole = 'Student'; // Default role
   final List<String> roles = ['Student', 'Teacher', 'School Admin'];
+  // Sign-in extra fields for School Admin
+  final TextEditingController signInSchoolController = TextEditingController();
+  final TextEditingController signInSchoolCodeController = TextEditingController();
 
   @override
   void initState() {
@@ -69,8 +73,28 @@ class _SignInPageState extends State<SignInPage> {
         return;
       }
       
-      // For non-admin users, create/update user with selected role
-      await _createOrUpdateUserWithRole(user);
+      // For non-admin users, check if they already have a role assigned in Firestore
+      final existingRole = await UserService().getUserRoleByEmail(user.email!);
+      if (existingRole != null) {
+        // Existing user - update last login and route them
+        await UserService().updateLastLogin(user.uid);
+        if (mounted) UserService.navigateToHomePage(context, existingRole);
+        return;
+      }
+
+      // New user created by Google sign-in: create a minimal student profile and navigate to profile settings
+      await UserService().createUserProfile(
+        userId: user.uid,
+        email: user.email!,
+        role: UserRole.student,
+        name: user.displayName,
+      );
+
+      if (!mounted) return;
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (_) => const StudentProfilePage()),
+      );
       
     } catch (e) {
       debugPrint('Google Sign-In Error: $e');
@@ -84,47 +108,7 @@ class _SignInPageState extends State<SignInPage> {
     }
   }
   
-  Future<void> _createOrUpdateUserWithRole(user) async {
-    try {
-      debugPrint('Creating/updating user with role: $selectedRole for ${user.email}');
-      
-      // Convert selected role string to UserRole enum
-      UserRole role;
-      switch (selectedRole) {
-        case 'Teacher':
-          role = UserRole.teacher;
-          break;
-        case 'School Admin':
-          role = UserRole.schoolAdmin;
-          break;
-        case 'Student':
-        default:
-          role = UserRole.student;
-          break;
-      }
-      
-      // Create or update user profile with selected role
-      await UserService().createUserProfile(
-        userId: user.uid,
-        email: user.email!,
-        role: role,
-        name: user.displayName,
-      );
-      
-      debugPrint('User profile created/updated with role: $role');
-      
-      // Update last login time
-      await UserService().updateLastLogin(user.uid);
-      
-      // Route based on role
-      if (mounted) {
-        _routeUserBasedOnRole(role);
-      }
-    } catch (e) {
-      debugPrint('Error creating/updating user: $e');
-      _showError('An error occurred setting up your account.');
-    }
-  }
+  
 
   void _routeUserBasedOnRole(UserRole role) {
     if (!mounted) return;
@@ -168,8 +152,55 @@ class _SignInPageState extends State<SignInPage> {
       if (user == null) {
         _showError('Invalid email or password. Please try again.');
       } else {
-        // Create or update user with selected role
-        await _createOrUpdateUserWithRole(user);
+        // After auth, verify the user's role in Firestore before routing
+        final profile = await UserService().getUserProfile(user.uid);
+
+        // If user selected School Admin, require school code to be provided
+        if (selectedRole == 'School Admin') {
+          if (signInSchoolCodeController.text.trim().isEmpty) {
+            _showError('Please provide your school code to sign in as School Admin');
+            return;
+          }
+        }
+
+        if (profile == null || profile['role'] == null) {
+          // No role assigned — only allow Student sign in by default
+          if (selectedRole != 'Student') {
+            _showError('Your account is not registered as $selectedRole. Contact admin.');
+            return;
+          }
+          // allow student sign in
+          _routeUserBasedOnRole(UserRole.student);
+          return;
+        }
+
+        final roleString = profile['role'] as String;
+        if (selectedRole == 'Teacher' && roleString != UserRole.teacher.name) {
+          _showError('This account is not a Teacher account');
+          return;
+        }
+        if (selectedRole == 'School Admin' && roleString != UserRole.schoolAdmin.name) {
+          _showError('This account is not a School Admin account');
+          return;
+        }
+
+        // If School Admin, verify institution code matches
+        if (selectedRole == 'School Admin') {
+          final storedCode = (profile['institutionCode'] ?? profile['institution_code'] ?? '').toString();
+          final provided = signInSchoolCodeController.text.trim();
+          if (storedCode.isEmpty || provided.isEmpty || storedCode != provided) {
+            _showError('Invalid school code for this account');
+            return;
+          }
+        }
+
+        // All checks passed — route user
+        final role = roleString == UserRole.teacher.name
+            ? UserRole.teacher
+            : roleString == UserRole.schoolAdmin.name
+                ? UserRole.schoolAdmin
+                : UserRole.student;
+        _routeUserBasedOnRole(role);
       }
     } catch (e) {
       _showError('An error occurred during sign-in.');
@@ -334,34 +365,47 @@ class _SignInPageState extends State<SignInPage> {
 
           // Role selector (prominent)
           _buildRoleSelector(),
-          
-          SizedBox(height: isSmallScreen ? 20 : 24),
 
-          // Google Sign In Button (Prominent)
-          _buildGoogleSignInButton(),
-          
-          SizedBox(height: isSmallScreen ? 16 : 24),
+          SizedBox(height: isSmallScreen ? 12 : 16),
 
-          // Divider with "or" text
-          Row(
-            children: [
-              Expanded(child: Divider(color: Colors.grey[300])),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: isSmallScreen ? 12 : 16),
-                child: Text(
-                  'or',
-                  style: GoogleFonts.montserrat(
-                    fontSize: isSmallScreen ? 12 : 14,
-                    color: Colors.grey[500],
-                    fontWeight: FontWeight.w500,
+          // If Student: show Google sign-in button. If Teacher or School Admin: show small explanatory text and hide Google option.
+          if (selectedRole == 'Student') ...[
+            SizedBox(height: isSmallScreen ? 8 : 12),
+            _buildGoogleSignInButton(),
+            SizedBox(height: isSmallScreen ? 12 : 20),
+            Row(
+              children: [
+                Expanded(child: Divider(color: Colors.grey[300])),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: isSmallScreen ? 12 : 16),
+                  child: Text(
+                    'or',
+                    style: GoogleFonts.montserrat(
+                      fontSize: isSmallScreen ? 12 : 14,
+                      color: Colors.grey[500],
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                 ),
+                Expanded(child: Divider(color: Colors.grey[300])),
+              ],
+            ),
+            SizedBox(height: isSmallScreen ? 12 : 20),
+          ] else ...[
+            const SizedBox(height: 8),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 4),
+              child: Text(
+                'Teachers and School Admin cannot sign in with Google. Use email and school credentials below.',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.montserrat(
+                  fontSize: 12,
+                  color: Colors.grey[600],
+                ),
               ),
-              Expanded(child: Divider(color: Colors.grey[300])),
-            ],
-          ),
-
-          SizedBox(height: isSmallScreen ? 16 : 24),
+            ),
+            SizedBox(height: isSmallScreen ? 12 : 20),
+          ],
 
           // Email/Password option
           if (!showEmailForm) _buildEmailToggleButton(),
@@ -641,6 +685,48 @@ class _SignInPageState extends State<SignInPage> {
         ),
         const SizedBox(height: 16),
 
+        // If signing in as School Admin or Teacher, require school and school code fields
+        if (selectedRole == 'School Admin' || selectedRole == 'Teacher') ...[
+          Text(
+            'School Name',
+            style: GoogleFonts.montserrat(
+              fontSize: 14,
+              fontWeight: FontWeight.w500,
+              color: const Color(0xFF1A1E3F),
+            ),
+          ),
+          const SizedBox(height: 8),
+          TextField(
+            controller: signInSchoolController,
+            decoration: InputDecoration(
+              hintText: 'Enter your school name',
+              border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide(color: Colors.grey[300]!)),
+              contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            ),
+            style: GoogleFonts.montserrat(fontSize: 14),
+          ),
+          const SizedBox(height: 12),
+          Text(
+            'School Code',
+            style: GoogleFonts.montserrat(
+              fontSize: 14,
+              fontWeight: FontWeight.w500,
+              color: const Color(0xFF1A1E3F),
+            ),
+          ),
+          const SizedBox(height: 8),
+          TextField(
+            controller: signInSchoolCodeController,
+            decoration: InputDecoration(
+              hintText: 'Enter your school code',
+              border: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: BorderSide(color: Colors.grey[300]!)),
+              contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            ),
+            style: GoogleFonts.montserrat(fontSize: 14),
+          ),
+          const SizedBox(height: 16),
+        ],
+
         // Remember me and forgot password
         Row(
           children: [
@@ -724,24 +810,7 @@ class _SignInPageState extends State<SignInPage> {
         ),
         const SizedBox(height: 16),
 
-        // Back to Google option
-        Center(
-          child: TextButton(
-            onPressed: () {
-              setState(() {
-                showEmailForm = false;
-              });
-            },
-            child: Text(
-              '← Back to Google sign-in',
-              style: GoogleFonts.montserrat(
-                fontSize: 14,
-                color: Colors.grey[600],
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-          ),
-        ),
+        // Note: removed 'Back to Google sign-in' button per requirements
       ],
     );
   }
@@ -835,6 +904,8 @@ class _SignInPageState extends State<SignInPage> {
   void dispose() {
     emailController.dispose();
     passwordController.dispose();
+    signInSchoolController.dispose();
+    signInSchoolCodeController.dispose();
     super.dispose();
   }
 }

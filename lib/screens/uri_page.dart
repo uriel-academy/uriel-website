@@ -8,7 +8,6 @@ import 'package:flutter_math_fork/flutter_math.dart';
 import 'package:flutter/services.dart';
 import '../services/uri_normalizer.dart';
 import 'dart:convert';
-import 'dart:typed_data';
 import 'dart:html' as html;
 
 class UriPage extends StatefulWidget {

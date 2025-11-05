@@ -1018,8 +1018,8 @@ class _RedesignedAdminHomePageState extends State<RedesignedAdminHomePage> with 
                   const SizedBox(height: 4),
                   Text(
                     _lastMetricsRefresh != null
-                        ? 'Last: ${_getTimeAgo(_lastMetricsRefresh)} • Interval: ${_metricsRefreshLabel}'
-                        : 'Interval: ${_metricsRefreshLabel}',
+                        ? 'Last: ${_getTimeAgo(_lastMetricsRefresh)} • Interval: $_metricsRefreshLabel'
+                        : 'Interval: $_metricsRefreshLabel',
                     style: GoogleFonts.montserrat(
                       fontSize: 12,
                       color: Colors.grey[600],

@@ -24,11 +24,14 @@ class _StudentsPageState extends State<StudentsPage> {
   final int _pageSize = 10;  // Limit to 10 students per page
   bool _isLoadingPage = false;
   Future<void>? _pageFuture;
+  // Mobile page controller for horizontal swiping between pages
+  late final PageController _mobilePageController;
 
   @override
   void initState() {
     super.initState();
     _loadTeacherContext();
+    _mobilePageController = PageController();
   }
 
   Future<void> _loadTeacherContext() async {
@@ -53,6 +56,7 @@ class _StudentsPageState extends State<StudentsPage> {
   @override
   void dispose() {
     _searchController.dispose();
+    _mobilePageController.dispose();
     super.dispose();
   }
 
@@ -194,6 +198,90 @@ class _StudentsPageState extends State<StudentsPage> {
 
           return LayoutBuilder(
             builder: (context, constraints) {
+              // Mobile: show stacked cards for each student to avoid horizontal overflow
+              if (isSmallScreen) {
+                // Mobile: two horizontal pages - Students list and Class Overview
+                return Container(
+                  color: Colors.white,
+                  padding: const EdgeInsets.all(12),
+                  child: Column(
+                    children: [
+                      // Small segmented control to switch pages
+                      Row(
+                        children: [
+                          Expanded(
+                            child: GestureDetector(
+                              onTap: () => _mobilePageController.animateToPage(0, duration: const Duration(milliseconds: 300), curve: Curves.easeInOut),
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(vertical: 10),
+                                decoration: BoxDecoration(
+                                  color: Colors.grey[100],
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: Center(child: Text('Students', style: GoogleFonts.montserrat(fontWeight: FontWeight.w600))),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 8),
+                          Expanded(
+                            child: GestureDetector(
+                              onTap: () => _mobilePageController.animateToPage(1, duration: const Duration(milliseconds: 300), curve: Curves.easeInOut),
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(vertical: 10),
+                                decoration: BoxDecoration(
+                                  color: Colors.grey[100],
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: Center(child: Text('Overview', style: GoogleFonts.montserrat(fontWeight: FontWeight.w600))),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 10),
+                      Expanded(
+                        child: PageView(
+                          controller: _mobilePageController,
+                          children: [
+                            // Page 0: Students list (vertical scroll)
+                            ListView.separated(
+                              itemCount: students.length,
+                              separatorBuilder: (_, __) => const SizedBox(height: 10),
+                              itemBuilder: (context, index) {
+                                final s = students[index] as Map<String, dynamic>;
+                                return _buildStudentCardMobile(index, s);
+                              },
+                            ),
+                            // Page 1: Class overview - aggregated metrics
+                            SingleChildScrollView(
+                              child: _buildClassOverview(students, (page?['totalCount'] as int?) ?? students.length),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          ElevatedButton(
+                            onPressed: _prevPage,
+                            style: ElevatedButton.styleFrom(backgroundColor: Colors.grey[300], foregroundColor: Colors.black),
+                            child: Text('Prev', style: GoogleFonts.montserrat()),
+                          ),
+                          const SizedBox(width: 8),
+                          ElevatedButton(
+                            onPressed: _nextPage,
+                            style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF00C853)),
+                            child: Text('Next', style: GoogleFonts.montserrat(color: Colors.white)),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                );
+              }
+
+              // Desktop / large screens: keep table layout
               return Container(
                 color: Colors.white,
                 padding: const EdgeInsets.all(12),
@@ -450,6 +538,168 @@ class _StudentsPageState extends State<StudentsPage> {
               );
             }).toList(),
         const Divider(height: 1),
+      ],
+    );
+  }
+
+  // Mobile card for a single student (compact)
+  Widget _buildStudentCardMobile(int index, Map<String, dynamic> data) {
+    final name = (data['displayName'] ?? '') as String;
+    final email = (data['email'] ?? '') as String;
+    final xp = data['totalXP'] ?? 0;
+    final questionsCount = data['questionsSolved'] ?? 0;
+    double? accuracy;
+    if (data['avgPercent'] != null) {
+      final avgPct = data['avgPercent'];
+      accuracy = (avgPct is num) ? avgPct.toDouble() : double.tryParse(avgPct.toString());
+    }
+    final subjectsCount = data['subjectsSolved'] ?? 0;
+    final rank = data['rank'] ?? '-';
+
+    return InkWell(
+      onTap: () => _showStudentDetailDialog(data),
+      child: Container(
+        padding: const EdgeInsets.all(12),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(color: Colors.grey.shade200),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                CircleAvatar(
+                  radius: 20,
+                  backgroundColor: const Color(0xFFD62828).withValues(alpha: 0.08),
+                  backgroundImage: (data['avatar'] as String?)?.isNotEmpty == true ? NetworkImage((data['avatar'] as String)) : null,
+                  child: (data['avatar'] as String?) == null
+                      ? Text((name.isNotEmpty ? name[0] : '?').toUpperCase(), style: GoogleFonts.montserrat(fontWeight: FontWeight.bold, color: const Color(0xFFD62828)))
+                      : null,
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(name.isNotEmpty ? name : email, style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
+                      if (name.isNotEmpty) Text(email, style: GoogleFonts.montserrat(fontSize: 12, color: Colors.grey[600]), overflow: TextOverflow.ellipsis),
+                    ],
+                  ),
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Text('XP', style: GoogleFonts.montserrat(fontSize: 11, color: Colors.grey[600])),
+                    const SizedBox(height: 4),
+                    Text(xp.toString(), style: GoogleFonts.montserrat(fontWeight: FontWeight.bold, color: const Color(0xFFD62828))),
+                  ],
+                ),
+              ],
+            ),
+            const SizedBox(height: 8),
+            Row(
+              children: [
+                if (accuracy != null)
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                    margin: const EdgeInsets.only(right: 8),
+                    decoration: BoxDecoration(color: Colors.grey[100], borderRadius: BorderRadius.circular(8)),
+                    child: Text('${accuracy.toStringAsFixed(1)}% acc', style: GoogleFonts.montserrat(fontSize: 12)),
+                  ),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                  margin: const EdgeInsets.only(right: 8),
+                  decoration: BoxDecoration(color: Colors.grey[100], borderRadius: BorderRadius.circular(8)),
+                  child: Text('$questionsCount q', style: GoogleFonts.montserrat(fontSize: 12)),
+                ),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                  margin: const EdgeInsets.only(right: 8),
+                  decoration: BoxDecoration(color: Colors.grey[100], borderRadius: BorderRadius.circular(8)),
+                  child: Text('$subjectsCount sub', style: GoogleFonts.montserrat(fontSize: 12)),
+                ),
+                const Spacer(),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                  decoration: BoxDecoration(
+                    color: rank.toString() != '-' ? const Color(0xFFD62828).withValues(alpha: 0.08) : Colors.grey.withValues(alpha: 0.08),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: Text(rank.toString(), style: GoogleFonts.montserrat(fontSize: 12, fontWeight: FontWeight.w600)),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  // Class overview aggregated from the current students page
+  Widget _buildClassOverview(List<dynamic> students, int totalCount) {
+    // compute simple aggregates
+    final totalXP = students.fold<int>(0, (sum, s) => sum + ((s as Map<String, dynamic>)['totalXP'] as int? ?? 0));
+    final avgXP = students.isNotEmpty ? (totalXP / students.length).round() : 0;
+    double totalAccuracy = 0;
+    int accCount = 0;
+    for (var s in students) {
+      final data = s as Map<String, dynamic>;
+      if (data['avgPercent'] != null) {
+        final pct = data['avgPercent'];
+        final val = (pct is num) ? pct.toDouble() : double.tryParse(pct.toString()) ?? 0.0;
+        totalAccuracy += val;
+        accCount++;
+      }
+    }
+    final avgAccuracy = accCount > 0 ? (totalAccuracy / accCount) : 0.0;
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text('Class Overview', style: GoogleFonts.playfairDisplay(fontSize: 18, fontWeight: FontWeight.bold)),
+        const SizedBox(height: 12),
+        _buildSectionCard(
+          'Quick Summary',
+          Icons.group,
+          Colors.blue,
+          Column(
+            children: [
+              Row(
+                children: [
+                  Expanded(child: _buildPerformanceStat('Total Students', '$totalCount', Colors.blue)),
+                  const SizedBox(width: 8),
+                  Expanded(child: _buildPerformanceStat('Average XP', '$avgXP', Colors.purple)),
+                ],
+              ),
+              const SizedBox(height: 12),
+              Row(
+                children: [
+                  Expanded(child: _buildPerformanceStat('Avg Accuracy', '${avgAccuracy.toStringAsFixed(1)}%', Colors.green)),
+                  const SizedBox(width: 8),
+                  Expanded(child: _buildPerformanceStat('Students on Rank', '${students.where((s) => ((s as Map<String,dynamic>)["rank"] ?? "-") != "-").length}', Colors.orange)),
+                ],
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 12),
+        // Top students list snapshot
+        Text('Top students (page)', style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
+        const SizedBox(height: 8),
+        ...students.take(5).map((s) {
+          final data = s as Map<String, dynamic>;
+          final name = (data['displayName'] ?? '') as String;
+          final xp = data['totalXP'] ?? 0;
+          final acc = data['avgPercent'] ?? 0;
+          return ListTile(
+            contentPadding: EdgeInsets.zero,
+            leading: CircleAvatar(backgroundImage: (data['avatar'] as String?)?.isNotEmpty == true ? NetworkImage(data['avatar']) : null, child: (data['avatar'] as String?) == null ? Text((name.isNotEmpty ? name[0] : '?').toUpperCase()) : null),
+            title: Text(name.isNotEmpty ? name : (data['email'] ?? '-'), style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
+            subtitle: Text('XP: $xp • ${acc is num ? (acc as num).toStringAsFixed(1) : acc}%'),
+          );
+        }).toList(),
       ],
     );
   }
