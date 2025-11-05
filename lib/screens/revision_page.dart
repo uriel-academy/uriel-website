@@ -18,7 +18,7 @@ class _RevisionPageState extends State<RevisionPage> {
   ExamType? _selectedExamType;
   Subject? _selectedSubject;
   int _selectedQuestionCount = 20;
-  String _customTopic = '';
+  final String _customTopic = '';
   final TextEditingController _topicController = TextEditingController();
   final TextEditingController _flipCardTopicController = TextEditingController();
   final QuestionService _questionService = QuestionService();
@@ -30,8 +30,11 @@ class _RevisionPageState extends State<RevisionPage> {
     Subject.english,
     Subject.integratedScience,
     Subject.socialStudies,
+    Subject.ghanaianLanguage,
+    Subject.french,
     Subject.ict,
     Subject.religiousMoralEducation,
+    Subject.creativeArts,
   ];
   bool _isGeneratingQuiz = false;
   bool _isGeneratingAIQuiz = false;
@@ -187,7 +190,7 @@ class _RevisionPageState extends State<RevisionPage> {
           orElse: () => optionsList[0],
         );
         
-        debugPrint('✅ AI Question ${i+1}: correctAnswer="${correctAnswerFull}", options=${optionsList.length}');
+        debugPrint('✅ AI Question ${i+1}: correctAnswer="$correctAnswerFull", options=${optionsList.length}');
         
         aiQuestions.add(Question(
           id: 'ai_${DateTime.now().millisecondsSinceEpoch}_$i',

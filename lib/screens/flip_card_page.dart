@@ -375,30 +375,23 @@ class _FlipCardPageState extends State<FlipCardPage> with TickerProviderStateMix
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          // Question icon
+          // Question number badge
           Container(
-            padding: const EdgeInsets.all(16),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             decoration: BoxDecoration(
               color: const Color(0xFFD62828).withValues(alpha: 0.1),
-              shape: BoxShape.circle,
+              borderRadius: BorderRadius.circular(20),
             ),
-            child: const Icon(
-              Icons.question_mark,
-              color: Color(0xFFD62828),
-              size: 32,
+            child: Text(
+              'Question ${question.questionNumber}',
+              style: GoogleFonts.montserrat(
+                color: const Color(0xFFD62828),
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
           const SizedBox(height: 24),
-
-          // Question text
-          Text(
-            'Question',
-            style: GoogleFonts.playfairDisplay(
-              fontSize: isMobile ? 20 : 24,
-              fontWeight: FontWeight.bold,
-              color: const Color(0xFF1A1E3F),
-            ),
-          ),
           const SizedBox(height: 16),
 
           // Question content

@@ -54,51 +54,61 @@ Class Level: ${targetClassLevel}
 Difficulty: ${difficulty}
 ${customTopic ? `Specific Topic: ${customTopic}` : 'General curriculum topics'}
 
-Create ${cardCount} educational flip cards following Ghana NaCCA curriculum standards.
+Create ${cardCount} QUESTION-BASED flip cards following Ghana NaCCA curriculum standards.
 
-CARD FORMATS TO USE (mix them):
-1. **Question-Answer Cards**: Direct questions with concise answers
-   - Example Q: "What is photosynthesis?" 
-   - Example A: "The process by which plants use sunlight to make food from carbon dioxide and water"
+IMPORTANT: Focus on ACTUAL QUESTIONS with direct answers (NOT definitions or "Define:" cards).
 
-2. **Definition Cards**: Key terms and their definitions
-   - Example Q: "Define: Ecosystem"
-   - Example A: "A community of living organisms interacting with their physical environment"
+CARD FORMAT EXAMPLES:
+1. **Factual Questions**: Direct questions requiring specific answers
+   - Q: "How many days are in a week?"
+   - A: "7"
+   
+   - Q: "Who is the current president of Ghana?"
+   - A: "John Dramani Mahama"
+   
+   - Q: "What day did God create man according to the Bible?"
+   - A: "The 6th day"
 
-3. **Concept Cards**: "What is..." or "Explain..." type cards
-   - Example Q: "What are the three states of matter?"
-   - Example A: "Solid, Liquid, and Gas"
+2. **Knowledge Questions**: Testing understanding
+   - Q: "What is a mouse used for in computing?"
+   - A: "To point, click, and interact with items on a computer screen"
+   
+   - Q: "How many regions are in Ghana?"
+   - A: "16 regions"
+   
+   - Q: "What is the capital of Ghana?"
+   - A: "Accra"
 
-4. **Process Cards**: Steps or sequences
-   - Example Q: "List the stages of the water cycle"
-   - Example A: "Evaporation, Condensation, Precipitation, Collection"
+3. **Calculation Questions** (for Math):
+   - Q: "What is 12 × 8?"
+   - A: "96"
+   
+   - Q: "What is the area of a rectangle with length 5cm and width 3cm?"
+   - A: "15 square centimeters"
 
-5. **Comparison Cards**: Distinguish between concepts
-   - Example Q: "Difference between renewable and non-renewable energy?"
-   - Example A: "Renewable: can be replenished (solar, wind). Non-renewable: finite resources (coal, oil)"
-
-6. **Formula/Rule Cards** (for Math/Science):
-   - Example Q: "Area of a circle formula?"
-   - Example A: "A = πr² (where r is the radius)"
+4. **Concept Questions** (use sparingly):
+   - Q: "What happens during photosynthesis?"
+   - A: "Plants use sunlight to convert carbon dioxide and water into glucose and oxygen"
 
 REQUIREMENTS:
+- 90% should be DIRECT QUESTIONS (like quiz questions but no multiple choice)
+- Questions should start with: "What", "Who", "When", "Where", "How many", "Why", etc.
+- Avoid "Define:" format - ask actual questions instead
+- Answers should be concise and direct (1-3 sentences max)
 - Cards MUST be appropriate for ${targetClassLevel} level
 - Follow Ghana NaCCA curriculum for ${subject}
-- Questions should be clear and concise (1-3 sentences max)
-- Answers should be brief but complete (2-5 sentences max)
 - Use Ghanaian context and examples where relevant
 - Difficulty level: ${difficulty}
-- Mix different card formats for variety
-- Include explanations for better understanding
+- Questions should test knowledge, not just memorization of definitions
 
 Return ONLY valid JSON with this exact structure:
 {
   "cards": [
     {
-      "front": "Question or term to define",
-      "back": "Answer or definition",
-      "explanation": "Brief explanation or additional context (optional)",
-      "cardType": "question-answer" | "definition" | "concept" | "process" | "comparison" | "formula",
+      "front": "Direct question here?",
+      "back": "Concise answer here",
+      "explanation": "Brief explanation if needed (optional)",
+      "cardType": "factual" | "knowledge" | "calculation" | "concept",
       "difficulty": "${difficulty}",
       "subject": "${subject}",
       "topic": "${customTopic || 'General'}"
