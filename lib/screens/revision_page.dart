@@ -150,16 +150,16 @@ class _RevisionPageState extends State<RevisionPage> {
       for (var i = 0; i < (data['questions'] as List).length; i++) {
         final q = data['questions'][i];
         
-        // Convert options object to list
+        // Convert options object to list with letter prefixes (A., B., C., D.)
         final optionsMap = q['options'] as Map<String, dynamic>;
         final optionsList = <String>[
-          optionsMap['A']?.toString() ?? '',
-          optionsMap['B']?.toString() ?? '',
-          optionsMap['C']?.toString() ?? '',
-          optionsMap['D']?.toString() ?? '',
+          'A. ${optionsMap['A']?.toString() ?? ''}',
+          'B. ${optionsMap['B']?.toString() ?? ''}',
+          'C. ${optionsMap['C']?.toString() ?? ''}',
+          'D. ${optionsMap['D']?.toString() ?? ''}',
         ];
 
-        // Ensure correctAnswer is just the letter (A, B, C, or D)
+        // Get the correct answer letter (A, B, C, or D)
         String correctAnswerLetter = (q['correctAnswer'] ?? 'A').toString().toUpperCase();
         // Extract just the letter if it contains a period (e.g., "A." or "A. Text")
         if (correctAnswerLetter.contains('.')) {
@@ -170,7 +170,13 @@ class _RevisionPageState extends State<RevisionPage> {
           correctAnswerLetter = correctAnswerLetter.substring(0, 1);
         }
         
-        debugPrint('✅ AI Question ${i+1}: correctAnswer="${correctAnswerLetter}", options=${optionsList.length}');
+        // Build the full correct answer in the format "A. answer text"
+        String correctAnswerFull = optionsList.firstWhere(
+          (opt) => opt.startsWith('$correctAnswerLetter.'),
+          orElse: () => optionsList[0],
+        );
+        
+        debugPrint('✅ AI Question ${i+1}: correctAnswer="${correctAnswerFull}", options=${optionsList.length}');
         
         aiQuestions.add(Question(
           id: 'ai_${DateTime.now().millisecondsSinceEpoch}_$i',
@@ -182,7 +188,7 @@ class _RevisionPageState extends State<RevisionPage> {
           section: 'AI Generated',
           questionNumber: i + 1,
           options: optionsList,
-          correctAnswer: correctAnswerLetter,
+          correctAnswer: correctAnswerFull,
           explanation: q['explanation'],
           marks: 1,
           difficulty: q['difficulty'] ?? 'medium',
