@@ -14,6 +14,7 @@ class GenerateQuizPage extends StatefulWidget {
 
 class _GenerateQuizPageState extends State<GenerateQuizPage> {
   final QuestionService _questionService = QuestionService();
+  final TextEditingController _topicController = TextEditingController();
 
   ExamType? _selectedExamType;
   Subject? _selectedSubject;
@@ -25,10 +26,25 @@ class _GenerateQuizPageState extends State<GenerateQuizPage> {
   // AI-specific options
   String _selectedDifficulty = 'medium';
   String _selectedClassLevel = 'JHS 3';
-  String _customTopic = '';
+
+  @override
+  void dispose() {
+    _topicController.dispose();
+    super.dispose();
+  }
 
   final List<ExamType> _availableExamTypes = [ExamType.bece, ExamType.wassce];
-  final List<Subject> _availableSubjects = [Subject.ict, Subject.religiousMoralEducation];
+  final List<Subject> _availableSubjects = [
+    Subject.mathematics,
+    Subject.english,
+    Subject.integratedScience,
+    Subject.socialStudies,
+    Subject.ghanaianLanguage,
+    Subject.french,
+    Subject.ict,
+    Subject.religiousMoralEducation,
+    Subject.creativeArts,
+  ];
   final List<String> _difficultyLevels = ['easy', 'medium', 'difficult'];
   final List<String> _classLevels = ['JHS 1', 'JHS 2', 'JHS 3', 'SHS 1', 'SHS 2', 'SHS 3'];
 
@@ -221,6 +237,7 @@ class _GenerateQuizPageState extends State<GenerateQuizPage> {
       children: [
         // Topic input field
         TextField(
+          controller: _topicController,
           decoration: InputDecoration(
             labelText: 'Topic (Optional)',
             hintText: 'e.g., Arrays and Loops, Prayer Times, etc.',
@@ -232,7 +249,6 @@ class _GenerateQuizPageState extends State<GenerateQuizPage> {
             ),
             contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
           ),
-          onChanged: (value) => setState(() => _customTopic = value),
         ),
         const SizedBox(height: 10),
         
@@ -282,9 +298,16 @@ class _GenerateQuizPageState extends State<GenerateQuizPage> {
 
   String _getSubjectDisplayName(Subject s) {
     switch (s) {
+      case Subject.mathematics: return 'Mathematics';
+      case Subject.english: return 'English';
+      case Subject.integratedScience: return 'Integrated Science';
+      case Subject.socialStudies: return 'Social Studies';
+      case Subject.ghanaianLanguage: return 'Ghanaian Language';
+      case Subject.french: return 'French';
       case Subject.ict: return 'ICT';
       case Subject.religiousMoralEducation: return 'RME';
-      default: return s.name;
+      case Subject.creativeArts: return 'Creative Arts';
+      case Subject.trivia: return 'Trivia';
     }
   }
 
@@ -302,16 +325,17 @@ class _GenerateQuizPageState extends State<GenerateQuizPage> {
     setState(() => _isGeneratingAI = true);
 
     try {
-      debugPrint('📝 Calling generateAIQuiz with params: subject=${_selectedSubject!.name}, examType=${_selectedExamType!.name}, count=$_selectedQuestionCount, difficulty=$_selectedDifficulty, classLevel=$_selectedClassLevel, topic=$_customTopic');
+      final customTopic = _topicController.text.trim();
+      debugPrint('📝 Calling generateAIQuiz with params: subject=${_selectedSubject!.name}, examType=${_selectedExamType!.name}, count=$_selectedQuestionCount, difficulty=$_selectedDifficulty, classLevel=$_selectedClassLevel, topic=$customTopic');
       
       final callable = FirebaseFunctions.instance.httpsCallable('generateAIQuiz');
       final result = await callable.call({
         'subject': _selectedSubject!.name,
         'examType': _selectedExamType!.name,
-        'questionCount': _selectedQuestionCount,
+        'numQuestions': _selectedQuestionCount, // Changed from questionCount to numQuestions
         'difficultyLevel': _selectedDifficulty,
         'classLevel': _selectedClassLevel,
-        'customTopic': _customTopic.isNotEmpty ? _customTopic : null,
+        'customTopic': customTopic.isNotEmpty ? customTopic : null,
       });
 
       final data = result.data;
@@ -366,7 +390,7 @@ class _GenerateQuizPageState extends State<GenerateQuizPage> {
           explanation: q['explanation'],
           marks: 1,
           difficulty: q['difficulty'] ?? _selectedDifficulty,
-          topics: [q['topic'] ?? _customTopic.isNotEmpty ? _customTopic : 'General'],
+          topics: [q['topic'] ?? (customTopic.isNotEmpty ? customTopic : 'General')],
           createdAt: DateTime.now(),
           createdBy: 'ai',
           isActive: true,

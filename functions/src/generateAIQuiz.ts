@@ -17,6 +17,8 @@ export const generateAIQuiz = functions
     examType,
     numQuestions,
     customTopic,
+    difficultyLevel,
+    classLevel,
   } = data;
 
   if (!subject || !examType || !numQuestions) {
@@ -40,20 +42,24 @@ export const generateAIQuiz = functions
       apiKey: apiKey,
     });
 
-    // Map difficulty based on exam type
-    const difficultyLevel = examType === 'BECE' ? 'medium' : 'hard';
+    // Use provided difficulty level or map based on exam type
+    const difficulty = difficultyLevel || (examType === 'BECE' ? 'medium' : 'hard');
+    const targetClassLevel = classLevel || 'JHS 3';
 
     // Construct detailed prompt for quiz generation with BECE and NACCA curriculum context
     const prompt = `You are an expert Ghanaian educator with deep knowledge of the Ghana National Council for Curriculum and Assessment (NaCCA) standards and BECE examination format.
 
-You are creating a ${examType} level quiz for students in ${subject}.
+You are creating a ${examType} level quiz for ${targetClassLevel} students in ${subject}.
 
 CONTEXT: 
+- Target class level: ${targetClassLevel}
+- Difficulty level: ${difficulty}
 - Follow the Ghana NaCCA curriculum framework for Junior High School (JHS) and Senior High School (SHS)
 - For BECE: Questions should reflect the Basic Education Certificate Examination format and standards
 - For WASSCE: Questions should reflect the West African Senior School Certificate Examination standards
 - Use Ghanaian educational terminology, examples, and context
 - Reference topics from the official NaCCA curriculum where applicable
+- Ensure questions are appropriate for ${targetClassLevel} level students
 
 ${customTopic ? `Focus specifically on the topic: ${customTopic}` : `Cover general curriculum topics for this subject appropriate for Ghanaian ${examType} exams as defined in the NaCCA curriculum.`}
 
@@ -62,13 +68,14 @@ Generate ${questionCount} multiple-choice questions following these requirements
 1. Each question should have exactly 4 options (A, B, C, D)
 2. Mark the correct answer clearly (must be one of: A, B, C, or D)
 3. Include brief explanations for the correct answer
-4. Questions should be appropriate for ${difficultyLevel} difficulty level
-5. Questions MUST align with Ghana NaCCA curriculum standards and ${examType} exam format
-6. Use clear, educational language suitable for Ghanaian JHS/SHS students
-7. For math/science questions, use proper formatting and show working where helpful
-8. Ensure questions are culturally relevant to Ghana (use Ghanaian names, places, contexts)
-9. Question format and difficulty should match authentic past ${examType} questions
-10. Cover key competencies as outlined in the NaCCA framework
+4. Questions should be appropriate for ${difficulty} difficulty level
+5. Questions MUST be suitable for ${targetClassLevel} students
+6. Questions MUST align with Ghana NaCCA curriculum standards and ${examType} exam format
+7. Use clear, educational language suitable for Ghanaian JHS/SHS students
+8. For math/science questions, use proper formatting and show working where helpful
+9. Ensure questions are culturally relevant to Ghana (use Ghanaian names, places, contexts)
+10. Question format and difficulty should match authentic past ${examType} questions
+11. Cover key competencies as outlined in the NaCCA framework
 
 Return a valid JSON object with this exact structure:
 {
@@ -83,7 +90,7 @@ Return a valid JSON object with this exact structure:
       },
       "correctAnswer": "A",
       "explanation": "Brief explanation of why this is correct",
-      "difficulty": "${difficultyLevel}",
+      "difficulty": "${difficulty}",
       "subject": "${subject}",
       "topic": "${customTopic || 'General'}"
     }
