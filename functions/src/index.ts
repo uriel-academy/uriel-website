@@ -3752,3 +3752,6 @@ export const getSchoolStudents = functions.https.onCall(async (data, context) =>
 
 // Export AI Quiz Generation
 export { generateAIQuiz } from './generateAIQuiz';
+
+// Export AI Flip Cards Generation
+export { generateAIFlipCards } from './generateAIFlipCards';

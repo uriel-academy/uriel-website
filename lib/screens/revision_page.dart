@@ -4,6 +4,7 @@ import 'package:cloud_functions/cloud_functions.dart';
 import '../models/question_model.dart';
 import '../services/question_service.dart';
 import '../screens/quiz_taker_page.dart';
+import '../screens/flip_card_page.dart';
 
 class RevisionPage extends StatefulWidget {
   const RevisionPage({Key? key}) : super(key: key);
@@ -19,6 +20,7 @@ class _RevisionPageState extends State<RevisionPage> {
   int _selectedQuestionCount = 20;
   String _customTopic = '';
   final TextEditingController _topicController = TextEditingController();
+  final TextEditingController _flipCardTopicController = TextEditingController();
   final QuestionService _questionService = QuestionService();
 
   // Available options
@@ -33,6 +35,14 @@ class _RevisionPageState extends State<RevisionPage> {
   ];
   bool _isGeneratingQuiz = false;
   bool _isGeneratingAIQuiz = false;
+  bool _isGeneratingFlipCards = false;
+  
+  // Flip card specific options
+  int _selectedCardCount = 20;
+  String _selectedFlipCardDifficulty = 'medium';
+  String _selectedFlipCardClassLevel = 'JHS 3';
+  final List<String> _difficultyLevels = ['easy', 'medium', 'difficult'];
+  final List<String> _classLevels = ['JHS 1', 'JHS 2', 'JHS 3', 'SHS 1', 'SHS 2', 'SHS 3'];
 
   @override
   void initState() {
@@ -42,6 +52,7 @@ class _RevisionPageState extends State<RevisionPage> {
   @override
   void dispose() {
     _topicController.dispose();
+    _flipCardTopicController.dispose();
     super.dispose();
   }
 
@@ -235,6 +246,102 @@ class _RevisionPageState extends State<RevisionPage> {
     } finally {
       if (mounted) {
         setState(() => _isGeneratingAIQuiz = false);
+      }
+    }
+  }
+
+  // Generate AI-powered flip cards
+  Future<void> _generateAIFlipCards() async {
+    if (_selectedExamType == null || _selectedSubject == null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Please select both exam type and subject'),
+          backgroundColor: Color(0xFFD62828),
+        ),
+      );
+      return;
+    }
+
+    setState(() => _isGeneratingFlipCards = true);
+
+    try {
+      final customTopic = _flipCardTopicController.text.trim();
+      debugPrint('📝 Calling generateAIFlipCards with params: subject=${_selectedSubject!.name}, examType=${_selectedExamType!.name}, count=$_selectedCardCount, difficulty=$_selectedFlipCardDifficulty, classLevel=$_selectedFlipCardClassLevel, topic=$customTopic');
+      
+      final callable = FirebaseFunctions.instance.httpsCallable('generateAIFlipCards');
+      final result = await callable.call({
+        'subject': _selectedSubject!.name,
+        'examType': _selectedExamType!.name,
+        'numCards': _selectedCardCount,
+        'difficultyLevel': _selectedFlipCardDifficulty,
+        'classLevel': _selectedFlipCardClassLevel,
+        'customTopic': customTopic.isNotEmpty ? customTopic : null,
+      });
+
+      final data = result.data;
+      if (data['success'] != true || data['cards'] == null) {
+        throw Exception('Invalid response from AI service');
+      }
+
+      // Convert AI-generated cards to Question objects for FlipCardPage
+      final List<Question> flipCardQuestions = [];
+      for (var i = 0; i < (data['cards'] as List).length; i++) {
+        final card = data['cards'][i];
+        
+        debugPrint('✅ AI Flip Card ${i+1}: front="${card['front']}", back="${card['back']}"');
+        
+        // Create a Question object from the flip card data
+        // Front of card = question text, Back = correct answer, explanation remains
+        flipCardQuestions.add(Question(
+          id: 'flipcard_${DateTime.now().millisecondsSinceEpoch}_$i',
+          questionText: card['front'] ?? '',
+          type: QuestionType.shortAnswer,
+          subject: _selectedSubject!,
+          examType: _selectedExamType!,
+          year: DateTime.now().year.toString(),
+          section: 'AI Flip Cards',
+          questionNumber: i + 1,
+          options: null, // No options for flip cards
+          correctAnswer: card['back'] ?? '',
+          explanation: card['explanation'],
+          marks: 1,
+          difficulty: card['difficulty'] ?? _selectedFlipCardDifficulty,
+          topics: [card['topic'] ?? (customTopic.isNotEmpty ? customTopic : 'General')],
+          createdAt: DateTime.now(),
+          createdBy: 'ai',
+          isActive: true,
+        ));
+      }
+
+      if (flipCardQuestions.isEmpty) {
+        throw Exception('No flip cards generated');
+      }
+
+      // Navigate to flip card page with AI-generated cards
+      if (!mounted) return;
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => FlipCardPage(
+            subject: _getSubjectDisplayName(_selectedSubject!),
+            examType: _selectedExamType!.name.toUpperCase(),
+            questions: flipCardQuestions,
+          ),
+        ),
+      );
+    } catch (e) {
+      debugPrint('Error generating AI flip cards: $e');
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Error generating AI flip cards: ${e.toString()}'),
+          backgroundColor: const Color(0xFFD62828),
+          duration: const Duration(seconds: 5),
+        ),
+      );
+    } finally {
+      if (mounted) {
+        setState(() => _isGeneratingFlipCards = false);
       }
     }
   }
@@ -558,6 +665,85 @@ class _RevisionPageState extends State<RevisionPage> {
                 ),
               ),
 
+              SizedBox(height: isSmallScreen ? 32 : 40),
+
+              // AI Flip Cards Section
+              _buildSelectionCard(
+                title: 'AI Flip Cards',
+                subtitle: 'Generate interactive study cards with AI',
+                child: Column(
+                  children: [
+                    // Flip card options
+                    _buildFlipCardOptionsSelector(isSmallScreen),
+                    const SizedBox(height: 24),
+                    
+                    // Generate button
+                    _isGeneratingFlipCards
+                        ? Column(
+                            children: [
+                              const CircularProgressIndicator(color: Color(0xFF9B59B6)),
+                              const SizedBox(height: 8),
+                              Text(
+                                'AI is generating flip cards...',
+                                style: GoogleFonts.montserrat(
+                                  fontSize: 14,
+                                  color: Colors.grey[600],
+                                ),
+                              ),
+                            ],
+                          )
+                        : ElevatedButton.icon(
+                            onPressed: _generateAIFlipCards,
+                            icon: const Icon(Icons.flip_to_front, size: 20),
+                            label: Text(
+                              'Generate AI Flip Cards',
+                              style: GoogleFonts.montserrat(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: const Color(0xFF9B59B6),
+                              foregroundColor: Colors.white,
+                              padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              minimumSize: const Size(double.infinity, 50),
+                            ),
+                          ),
+                    
+                    const SizedBox(height: 16),
+                    
+                    // Info card
+                    Container(
+                      padding: const EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: Colors.purple[50],
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(color: Colors.purple[200]!),
+                      ),
+                      child: Row(
+                        children: [
+                          Icon(Icons.info_outline, size: 20, color: Colors.purple[700]),
+                          const SizedBox(width: 12),
+                          Expanded(
+                            child: Text(
+                              'AI creates various card formats: definitions, questions, concepts, processes, and more',
+                              style: GoogleFonts.montserrat(
+                                fontSize: 12,
+                                color: Colors.purple[900],
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                isSmallScreen: isSmallScreen,
+              ),
+
               // Add bottom padding for mobile
               if (isSmallScreen) const SizedBox(height: 80),
             ],
@@ -683,6 +869,86 @@ class _RevisionPageState extends State<RevisionPage> {
       items: options.map((option) {
         return DropdownMenuItem(value: option, child: Text(option));
       }).toList(),
+    );
+  }
+
+  Widget _buildFlipCardOptionsSelector(bool isSmall) {
+    return Column(
+      children: [
+        // Card count, difficulty, and class level
+        if (isSmall) ...[
+          _buildFilterDropdown(
+            'Number of Cards',
+            _selectedCardCount.toString(),
+            ['10', '20', '30', '40'],
+            (v) => setState(() => _selectedCardCount = int.parse(v!)),
+          ),
+          const SizedBox(height: 12),
+          _buildFilterDropdown(
+            'Difficulty',
+            _selectedFlipCardDifficulty,
+            _difficultyLevels,
+            (v) => setState(() => _selectedFlipCardDifficulty = v!),
+          ),
+          const SizedBox(height: 12),
+          _buildFilterDropdown(
+            'Class Level',
+            _selectedFlipCardClassLevel,
+            _classLevels,
+            (v) => setState(() => _selectedFlipCardClassLevel = v!),
+          ),
+        ] else
+          Row(
+            children: [
+              Expanded(
+                child: _buildFilterDropdown(
+                  'Number of Cards',
+                  _selectedCardCount.toString(),
+                  ['10', '20', '30', '40'],
+                  (v) => setState(() => _selectedCardCount = int.parse(v!)),
+                ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: _buildFilterDropdown(
+                  'Difficulty',
+                  _selectedFlipCardDifficulty,
+                  _difficultyLevels,
+                  (v) => setState(() => _selectedFlipCardDifficulty = v!),
+                ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: _buildFilterDropdown(
+                  'Class Level',
+                  _selectedFlipCardClassLevel,
+                  _classLevels,
+                  (v) => setState(() => _selectedFlipCardClassLevel = v!),
+                ),
+              ),
+            ],
+          ),
+        const SizedBox(height: 12),
+        
+        // Topic input field
+        TextField(
+          controller: _flipCardTopicController,
+          decoration: InputDecoration(
+            labelText: 'Topic (Optional)',
+            hintText: 'e.g., Photosynthesis, Fractions, Ghana History',
+            labelStyle: GoogleFonts.montserrat(color: Colors.grey[600]),
+            hintStyle: GoogleFonts.montserrat(color: Colors.grey[400]),
+            filled: true,
+            fillColor: const Color(0xFFF8FAFE),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(12),
+              borderSide: BorderSide.none,
+            ),
+            contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+          ),
+          style: GoogleFonts.montserrat(color: const Color(0xFF1A1E3F)),
+        ),
+      ],
     );
   }
 
