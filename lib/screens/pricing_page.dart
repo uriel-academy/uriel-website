@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import '../widgets/common_footer.dart';
 import '../constants/app_styles.dart';
 import '../models/subscription_plan_selection.dart';
+import '../utils/navigation_helper.dart';
 
 class PricingPage extends StatefulWidget {
   const PricingPage({Key? key}) : super(key: key);
@@ -55,12 +55,9 @@ class _PricingPageState extends State<PricingPage> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           GestureDetector(
-            onTap: () {
-              final isLoggedIn = FirebaseAuth.instance.currentUser != null;
-              Navigator.pushReplacementNamed(
-                context,
-                isLoggedIn ? '/home' : '/landing',
-              );
+            onTap: () async {
+              final homeRoute = await NavigationHelper.getUserHomeRoute();
+              Navigator.pushReplacementNamed(context, homeRoute);
             },
             child: Text(
               'Uriel Academy',
@@ -69,12 +66,9 @@ class _PricingPageState extends State<PricingPage> {
           ),
           if (!isMobile)
             TextButton(
-              onPressed: () {
-                final isLoggedIn = FirebaseAuth.instance.currentUser != null;
-                Navigator.pushReplacementNamed(
-                  context,
-                  isLoggedIn ? '/home' : '/landing',
-                );
+              onPressed: () async {
+                final homeRoute = await NavigationHelper.getUserHomeRoute();
+                Navigator.pushReplacementNamed(context, homeRoute);
               },
               child: Text(
                 'Back to Home',
