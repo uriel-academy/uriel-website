@@ -1452,7 +1452,7 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
     _lessonObjectivesController.clear();
     _selectedCompetencies.clear();
     _selectedValues.clear();
-    _selectedSubjectForPlanning = _teachingSubjects.isNotEmpty ? _teachingSubjects[0]['name'] : null;
+    _selectedSubjectForPlanning = null;
     
     showDialog(
       context: context,
@@ -1472,9 +1472,9 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
                 // Header
                 Container(
                   padding: const EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                    color: AppStyles.primaryRed,
-                    borderRadius: const BorderRadius.only(
+                  decoration: const BoxDecoration(
+                    color: Color(0xFF2ECC71),
+                    borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(16),
                       topRight: Radius.circular(16),
                     ),
@@ -1520,11 +1520,21 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
                             border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
                             contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                           ),
-                          items: _teachingSubjects.map<DropdownMenuItem<String>>((subject) {
+                          items: const [
+                            // Primary Subjects
+                            'English', 'Mathematics', 'Science', 'Social Studies', 'RME', 
+                            'Creative Arts', 'ICT', 'Ghanaian Language',
+                            // JHS Subjects
+                            'Integrated Science', 'French',
+                            // SHS Subjects
+                            'Core Mathematics', 'Elective Mathematics', 
+                            'Physics', 'Chemistry', 'Biology',
+                            'Economics', 'Geography', 'History', 'Government',
+                          ].map<DropdownMenuItem<String>>((subject) {
                             return DropdownMenuItem<String>(
-                              value: subject['name'] as String,
+                              value: subject,
                               child: Text(
-                                subject['name'] as String,
+                                subject,
                                 style: AppStyles.montserratRegular(),
                               ),
                             );
@@ -1592,7 +1602,7 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
                                 ),
                               ),
                               selected: isSelected,
-                              selectedColor: AppStyles.primaryRed,
+                              selectedColor: const Color(0xFF2ECC71),
                               checkmarkColor: Colors.white,
                               backgroundColor: Colors.grey[200],
                               onSelected: (val) {
@@ -1677,12 +1687,12 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
                         onPressed: _isGeneratingLesson ? null : () async {
                           if (_lessonTitleController.text.isEmpty) {
                             ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(
+                              const SnackBar(
                                 content: Text(
                                   'Please enter a lesson title',
-                                  style: AppStyles.montserratMedium(color: Colors.white),
+                                  style: TextStyle(color: Colors.white),
                                 ),
-                                backgroundColor: AppStyles.primaryRed,
+                                backgroundColor: Color(0xFF2ECC71),
                               ),
                             );
                             return;
@@ -1690,12 +1700,12 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
                           
                           if (_selectedSubjectForPlanning == null) {
                             ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(
+                              const SnackBar(
                                 content: Text(
                                   'Please select a subject',
-                                  style: AppStyles.montserratMedium(color: Colors.white),
+                                  style: TextStyle(color: Colors.white),
                                 ),
-                                backgroundColor: AppStyles.primaryRed,
+                                backgroundColor: Color(0xFF2ECC71),
                               ),
                             );
                             return;
@@ -1705,7 +1715,7 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
                           await _generateLessonPlan();
                         },
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: AppStyles.primaryRed,
+                          backgroundColor: const Color(0xFF2ECC71),
                           foregroundColor: Colors.white,
                           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
                         ),
