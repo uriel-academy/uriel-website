@@ -24,6 +24,8 @@ import 'textbooks_page.dart';
 import 'feedback_page.dart';
 import 'trivia_categories_page.dart';
 import 'notes_page.dart';
+import 'study_plan_page.dart';
+import 'lesson_planner_page.dart';
 import 'students_page.dart';
 import 'student_profile_page.dart';
 import 'teacher_profile_page.dart';
@@ -117,7 +119,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   void initState() {
     super.initState();
     _showingProfile = widget.showProfileOnInit;
-  final tabLength = widget.isTeacher ? 5 : 8;
+  // Teacher: Dashboard, Students, Generate Quiz, Lesson Planner, Notes, Uri, Books, Trivia, Leaderboard, Feedback (10 tabs)
+  // Student: Dashboard, Questions, Revision, Books, Notes, Study Plan, Trivia, Leaderboard, Uri, Feedback (10 tabs)
+  final tabLength = widget.isTeacher ? 10 : 10;
   _mainTabController = TabController(length: tabLength, vsync: this);
     _animationController = AnimationController(
       duration: const Duration(milliseconds: 800),
@@ -2531,9 +2535,10 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     children.add(_buildDashboard());
     if (widget.isTeacher) {
       // Teacher tab order requested:
-      // Dashboard, Students, Generate Quiz, Notes, Uri, Books, Trivia, Leaderboard, Feedback
+      // Dashboard, Students, Generate Quiz, Lesson Planner, Notes, Uri, Books, Trivia, Leaderboard, Feedback
       children.add(const StudentsPage());
       children.add(const GenerateQuizPage());
+      children.add(const LessonPlannerPage());
       children.add(const NotesTab());
       children.add(const UriPage(embedded: true));
       children.add(_buildTextbooksPage());
@@ -2542,11 +2547,12 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       children.add(_buildFeedbackPage());
     } else {
       // Student tab order requested:
-      // Dashboard, Questions, Revision, Books, Notes, Trivia, Leaderboard, Uri, Feedback
+      // Dashboard, Questions, Revision, Books, Notes, Study Plan, Trivia, Leaderboard, Uri, Feedback
       children.add(_buildQuestionsPage());
       children.add(_buildRevisionPage());
       children.add(_buildTextbooksPage());
       children.add(const NotesTab());
+      children.add(const StudyPlanPage());
       children.add(_buildTriviaPage());
       children.add(const RedesignedLeaderboardPage());
       children.add(const UriPage(embedded: true));
@@ -2564,9 +2570,10 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
   // Dashboard always first (label-only tab — no icon for teacher or student)
   items.add({'index': idx++, 'label': 'Dashboard', 'icon': null});
     if (widget.isTeacher) {
-      // Teacher order: Students, Generate Quiz, Notes, Ask Uri, Books, Trivia, Leaderboard, Feedback
+      // Teacher order: Students, Generate Quiz, Lesson Planner, Notes, Ask Uri, Books, Trivia, Leaderboard, Feedback
       items.add({'index': idx++, 'label': 'Students', 'icon': null});
       items.add({'index': idx++, 'label': 'Generate Quiz', 'icon': null});
+      items.add({'index': idx++, 'label': 'Lesson Planner', 'icon': null});
       items.add({'index': idx++, 'label': 'Notes', 'icon': null});
       items.add({'index': idx++, 'label': 'Ask Uri', 'icon': null});
       items.add({'index': idx++, 'label': 'Books', 'icon': null});
@@ -2574,12 +2581,13 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       items.add({'index': idx++, 'label': 'Leaderboard', 'icon': null});
       items.add({'index': idx++, 'label': 'Feedback', 'icon': null});
     } else {
-      // Student order: Questions, Revision, Books, Notes, Trivia, Leaderboard, Ask Uri, Feedback
+      // Student order: Questions, Revision, Books, Notes, Study Plan, Trivia, Leaderboard, Ask Uri, Feedback
       // Render label-only tabs for students as requested (no icons)
       items.add({'index': idx++, 'label': 'Questions', 'icon': null});
       items.add({'index': idx++, 'label': 'Revision', 'icon': null});
       items.add({'index': idx++, 'label': 'Books', 'icon': null});
       items.add({'index': idx++, 'label': 'Notes', 'icon': null});
+      items.add({'index': idx++, 'label': 'Study Plan', 'icon': null});
       items.add({'index': idx++, 'label': 'Trivia', 'icon': null});
       items.add({'index': idx++, 'label': 'Leaderboard', 'icon': null});
       items.add({'index': idx++, 'label': 'Ask Uri', 'icon': null});
@@ -2590,9 +2598,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
 
   int _uriIndex() {
     if (widget.isTeacher) {
-      return 4; // Teacher: Dashboard(0), Students(1), Generate Quiz(2), Notes(3), [Ask Uri(4)]
+      return 5; // Teacher: Dashboard(0), Students(1), Generate Quiz(2), Lesson Planner(3), Notes(4), [Ask Uri(5)]
     } else {
-      return 7; // Student: Dashboard(0), Questions(1), Revision(2), Books(3), Notes(4), Trivia(5), Leaderboard(6), [Ask Uri(7)]
+      return 8; // Student: Dashboard(0), Questions(1), Revision(2), Books(3), Notes(4), Study Plan(5), Trivia(6), Leaderboard(7), [Ask Uri(8)]
     }
   }
 

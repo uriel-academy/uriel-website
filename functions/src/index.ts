@@ -3755,3 +3755,9 @@ export { generateAIQuiz } from './generateAIQuiz';
 
 // Export AI Flip Cards Generation
 export { generateAIFlipCards } from './generateAIFlipCards';
+
+// Export AI Study Plan Generation
+export { generateStudyPlan } from './generateStudyPlan';
+
+// Export AI Lesson Plan Generation
+export { generateLessonPlan } from './generateLessonPlan';
