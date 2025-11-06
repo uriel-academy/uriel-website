@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'dart:convert';
+import 'package:cloud_functions/cloud_functions.dart';
+import '../models/question_model.dart';
 import 'quiz_taker_page.dart';
 
 // Model class for trivia categories
@@ -124,12 +126,19 @@ class _TriviaCategoriesPageState extends State<TriviaCategoriesPage>
   late Animation<double> _fadeAnimation;
 
   final TextEditingController _searchController = TextEditingController();
+  final TextEditingController _triviaTopicController = TextEditingController();
 
   bool isLoading = true;
   String searchQuery = '';
   Map<String, int> categoryCounts = {};
   List<TriviaCategory> categories = [];
   List<TriviaCategory> filteredCategories = [];
+  
+  // AI Trivia Generator state
+  bool _isGeneratingTrivia = false;
+  int _selectedTriviaCount = 10;
+  String _selectedTriviaDifficulty = 'medium';
+  String _selectedTriviaCategory = 'General Knowledge';
 
   @override
   void initState() {
@@ -150,6 +159,7 @@ class _TriviaCategoriesPageState extends State<TriviaCategoriesPage>
   void dispose() {
     _animationController.dispose();
     _searchController.dispose();
+    _triviaTopicController.dispose();
     super.dispose();
   }
 
@@ -390,6 +400,18 @@ class _TriviaCategoriesPageState extends State<TriviaCategoriesPage>
                           ),
               ),
               
+              // AI Trivia Generator Card
+              Container(
+                constraints: BoxConstraints(
+                  maxWidth: isMobile ? double.infinity : 1200,
+                ),
+                padding: EdgeInsets.symmetric(
+                  horizontal: isMobile ? 16 : 24,
+                  vertical: isMobile ? 0 : 16,
+                ),
+                child: _buildAITriviaCard(isMobile),
+              ),
+              
               const SizedBox(height: 80),
             ],
           ),
@@ -585,6 +607,416 @@ class _TriviaCategoriesPageState extends State<TriviaCategoriesPage>
           ],
         ),
       ),
+    );
+  }
+
+  // Generate AI Trivia Questions
+  Future<void> _generateAITrivia() async {
+    if (_selectedTriviaCategory.isEmpty && _triviaTopicController.text.trim().isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            'Please select a category or enter a custom topic',
+            style: GoogleFonts.montserrat(),
+          ),
+          backgroundColor: const Color(0xFFD62828),
+        ),
+      );
+      return;
+    }
+
+    setState(() => _isGeneratingTrivia = true);
+
+    try {
+      final customTopic = _triviaTopicController.text.trim();
+      final topicToUse = customTopic.isNotEmpty ? customTopic : _selectedTriviaCategory;
+
+      debugPrint('🎲 Generating AI Trivia: topic=$topicToUse, count=$_selectedTriviaCount, difficulty=$_selectedTriviaDifficulty');
+
+      final callable = FirebaseFunctions.instance.httpsCallable('generateAIQuiz');
+      final result = await callable.call({
+        'subject': 'General Knowledge',
+        'examType': 'trivia',
+        'questionCount': _selectedTriviaCount,
+        'difficultyLevel': _selectedTriviaDifficulty,
+        'customTopic': topicToUse,
+      });
+
+      final aiGeneratedQuestions = result.data['questions'] as List<dynamic>;
+      debugPrint('✅ Generated ${aiGeneratedQuestions.length} AI trivia questions');
+
+      // Convert to Question objects
+      final List<Question> questions = aiGeneratedQuestions.map((q) {
+        return Question(
+          id: q['id'] ?? 'ai_trivia_${DateTime.now().millisecondsSinceEpoch}',
+          questionText: q['questionText'] ?? '',
+          type: QuestionType.trivia,
+          subject: Subject.trivia,
+          examType: ExamType.trivia,
+          year: 'AI Generated',
+          section: 'General',
+          questionNumber: 0,
+          options: List<String>.from(q['options'] ?? []),
+          correctAnswer: q['correctAnswer']?.toString() ?? '0',
+          difficulty: q['difficulty'] ?? _selectedTriviaDifficulty,
+          explanation: q['explanation'] ?? '',
+          marks: 1,
+          topics: [topicToUse],
+          createdAt: DateTime.now(),
+          createdBy: 'AI',
+        );
+      }).toList();
+
+      if (mounted) {
+        // Navigate to quiz taker with generated questions
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => QuizTakerPage(
+              subject: 'trivia',
+              examType: 'trivia',
+              level: 'General',
+              triviaCategory: topicToUse,
+              questionCount: _selectedTriviaCount,
+              randomizeQuestions: false,
+              preloadedQuestions: questions,
+              customTitle: 'AI Generated Trivia: $topicToUse',
+              isRevisionQuiz: true,
+            ),
+          ),
+        );
+      }
+    } catch (e) {
+      debugPrint('❌ Error generating AI trivia: $e');
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(
+              'Error generating trivia: $e',
+              style: GoogleFonts.montserrat(),
+            ),
+            backgroundColor: const Color(0xFFD62828),
+          ),
+        );
+      }
+    } finally {
+      if (mounted) {
+        setState(() => _isGeneratingTrivia = false);
+      }
+    }
+  }
+
+  Widget _buildAITriviaCard(bool isMobile) {
+    return Container(
+      padding: EdgeInsets.all(isMobile ? 20 : 24),
+      decoration: BoxDecoration(
+        gradient: const LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [Color(0xFF9B59B6), Color(0xFF8E44AD)],
+        ),
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFF9B59B6).withValues(alpha: 0.3),
+            blurRadius: 12,
+            offset: const Offset(0, 6),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // Header
+          Row(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: Colors.white.withValues(alpha: 0.2),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: const Icon(
+                  Icons.auto_awesome,
+                  color: Colors.white,
+                  size: 28,
+                ),
+              ),
+              const SizedBox(width: 16),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'AI Trivia Generator',
+                      style: GoogleFonts.playfairDisplay(
+                        fontSize: isMobile ? 20 : 24,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      'Create custom trivia questions instantly with AI',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 13,
+                        color: Colors.white.withValues(alpha: 0.9),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          
+          const SizedBox(height: 24),
+          
+          // Options Container
+          Container(
+            padding: EdgeInsets.all(isMobile ? 16 : 20),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // Dropdowns
+                if (isMobile) ...[
+                  _buildDropdownField(
+                    'Number of Questions',
+                    _selectedTriviaCount.toString(),
+                    ['10', '20', '40'],
+                    (value) => setState(() => _selectedTriviaCount = int.parse(value!)),
+                    isMobile,
+                  ),
+                  const SizedBox(height: 12),
+                  _buildDropdownField(
+                    'Difficulty',
+                    _selectedTriviaDifficulty,
+                    ['easy', 'medium', 'hard'],
+                    (value) => setState(() => _selectedTriviaDifficulty = value!),
+                    isMobile,
+                  ),
+                  const SizedBox(height: 12),
+                  _buildDropdownField(
+                    'Category',
+                    _selectedTriviaCategory,
+                    [
+                      'General Knowledge',
+                      'Science',
+                      'History',
+                      'Geography',
+                      'Sports',
+                      'Entertainment',
+                      'Technology',
+                      'Art & Culture',
+                    ],
+                    (value) => setState(() => _selectedTriviaCategory = value!),
+                    isMobile,
+                  ),
+                ] else
+                  Row(
+                    children: [
+                      Expanded(
+                        child: _buildDropdownField(
+                          'Number of Questions',
+                          _selectedTriviaCount.toString(),
+                          ['10', '20', '40'],
+                          (value) => setState(() => _selectedTriviaCount = int.parse(value!)),
+                          isMobile,
+                        ),
+                      ),
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: _buildDropdownField(
+                          'Difficulty',
+                          _selectedTriviaDifficulty,
+                          ['easy', 'medium', 'hard'],
+                          (value) => setState(() => _selectedTriviaDifficulty = value!),
+                          isMobile,
+                        ),
+                      ),
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: _buildDropdownField(
+                          'Category',
+                          _selectedTriviaCategory,
+                          [
+                            'General Knowledge',
+                            'Science',
+                            'History',
+                            'Geography',
+                            'Sports',
+                            'Entertainment',
+                            'Technology',
+                            'Art & Culture',
+                          ],
+                          (value) => setState(() => _selectedTriviaCategory = value!),
+                          isMobile,
+                        ),
+                      ),
+                    ],
+                  ),
+                
+                const SizedBox(height: 16),
+                
+                // Custom Topic Field
+                TextField(
+                  controller: _triviaTopicController,
+                  decoration: InputDecoration(
+                    labelText: 'Custom Topic (Optional)',
+                    hintText: 'e.g., Marvel Movies, African Wildlife, Space Exploration',
+                    labelStyle: GoogleFonts.montserrat(color: Colors.grey[600]),
+                    hintStyle: GoogleFonts.montserrat(color: Colors.grey[400]),
+                    filled: true,
+                    fillColor: const Color(0xFFF8FAFE),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide: BorderSide.none,
+                    ),
+                    contentPadding: const EdgeInsets.symmetric(
+                      horizontal: 16,
+                      vertical: 14,
+                    ),
+                  ),
+                  style: GoogleFonts.montserrat(color: const Color(0xFF1A1E3F)),
+                ),
+                
+                const SizedBox(height: 20),
+                
+                // Generate Button
+                SizedBox(
+                  width: double.infinity,
+                  child: _isGeneratingTrivia
+                      ? Column(
+                          children: [
+                            const CircularProgressIndicator(
+                              color: Color(0xFF9B59B6),
+                            ),
+                            const SizedBox(height: 8),
+                            Text(
+                              'AI is generating trivia questions...',
+                              style: GoogleFonts.montserrat(
+                                fontSize: 14,
+                                color: Colors.grey[600],
+                              ),
+                            ),
+                          ],
+                        )
+                      : ElevatedButton.icon(
+                          onPressed: _generateAITrivia,
+                          icon: const Icon(Icons.auto_awesome, size: 20),
+                          label: Text(
+                            'Generate with AI',
+                            style: GoogleFonts.montserrat(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: const Color(0xFF9B59B6),
+                            foregroundColor: Colors.white,
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 32,
+                              vertical: 16,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            minimumSize: const Size(double.infinity, 50),
+                          ),
+                        ),
+                ),
+                
+                const SizedBox(height: 16),
+                
+                // Info Card
+                Container(
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: Colors.purple[50],
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(color: Colors.purple[200]!),
+                  ),
+                  child: Row(
+                    children: [
+                      Icon(Icons.info_outline, size: 20, color: Colors.purple[700]),
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: Text(
+                          'AI generates unique trivia questions based on your selected category and difficulty',
+                          style: GoogleFonts.montserrat(
+                            fontSize: 12,
+                            color: Colors.purple[900],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildDropdownField(
+    String label,
+    String value,
+    List<String> items,
+    void Function(String?) onChanged,
+    bool isMobile,
+  ) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          label,
+          style: GoogleFonts.montserrat(
+            fontSize: 13,
+            fontWeight: FontWeight.w600,
+            color: const Color(0xFF1A1E3F),
+          ),
+        ),
+        const SizedBox(height: 8),
+        Container(
+          decoration: BoxDecoration(
+            color: const Color(0xFFF8FAFE),
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: DropdownButtonFormField<String>(
+            value: value,
+            items: items.map((item) {
+              return DropdownMenuItem(
+                value: item,
+                child: Text(
+                  item,
+                  style: GoogleFonts.montserrat(
+                    color: const Color(0xFF1A1E3F),
+                    fontSize: 14,
+                  ),
+                ),
+              );
+            }).toList(),
+            onChanged: onChanged,
+            decoration: InputDecoration(
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(12),
+                borderSide: BorderSide.none,
+              ),
+              contentPadding: const EdgeInsets.symmetric(
+                horizontal: 16,
+                vertical: 14,
+              ),
+            ),
+            style: GoogleFonts.montserrat(color: const Color(0xFF1A1E3F)),
+            dropdownColor: Colors.white,
+          ),
+        ),
+      ],
     );
   }
 }
