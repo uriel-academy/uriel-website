@@ -42,9 +42,11 @@ export const generateLessonPlan = functions
     });
 
     // Construct the prompt for GES/NaCCA aligned lesson plan
-    const prompt = `You are an expert Ghanaian educator with deep knowledge of the Ghana Education Service (GES) and National Council for Curriculum and Assessment (NaCCA) curriculum standards.
+    const prompt = `You are an expert Ghanaian educator with deep knowledge of the Ghana Education Service (GES) and National Council for Curriculum and Assessment (NaCCA) Common Core Programme (CCP) and Standard-Based Curriculum (SBC).
 
-Create a comprehensive, GES-approved lesson plan with the following details:
+Reference the official GES/NACCA curriculum documents available in the public domain, particularly the Standard-Based Curriculum for ${level} ${subject}.
+
+Create a comprehensive, GES-approved lesson plan based on the SBC/CCP framework with the following details:
 
 LESSON INFORMATION:
 - Subject: ${subject}
@@ -56,38 +58,48 @@ ${indicator ? `- Learning Indicator: ${indicator}` : ''}
 ${title ? `- Lesson Title: ${title}` : ''}
 ${objectives ? `- Learning Objectives: ${objectives}` : ''}
 
-CORE COMPETENCIES TO INTEGRATE:
-${competencies && competencies.length > 0 ? competencies.join(', ') : 'All NaCCA core competencies as applicable'}
+CORE COMPETENCIES TO INTEGRATE (from NaCCA framework):
+${competencies && competencies.length > 0 ? competencies.join(', ') : 'Critical Thinking & Problem Solving, Communication & Collaboration, Cultural Identity & Global Citizenship, Personal Development & Leadership, Creativity & Innovation, Digital Literacy'}
 
-VALUES TO INTEGRATE:
-${values && values.length > 0 ? values.join(', ') : 'Respect, Integrity, Excellence'}
+VALUES TO INTEGRATE (Ghanaian Values):
+${values && values.length > 0 ? values.join(', ') : 'Respect, Integrity, Excellence, Commitment, Teamwork, Patriotism'}
 
-REQUIREMENTS:
-1. Follow the standard GES lesson plan format
-2. Align with NaCCA curriculum standards and learning indicators
-3. Use the 3-part lesson structure:
-   - Introduction/Starter (10-15 min)
-   - Main Activity/Development (30-40 min)
-   - Plenary/Closure (10-15 min)
-4. Include differentiation strategies for mixed-ability classes
-5. Integrate appropriate Teaching Learning Materials (TLMs)
-6. Include formative assessment opportunities
-7. Map to specified core competencies
-8. Integrate Ghanaian cultural values
-9. Provide subject-specific practices (inquiry, problem-solving, etc.)
-10. Include cross-curricular links where relevant
-11. Use Ghanaian educational context and examples
-12. Consider inclusive education principles
+REQUIREMENTS - Follow GES/NACCA SBC Standards:
+1. Use the official GES lesson plan format following SBC guidelines
+2. Align strictly with NaCCA curriculum strands, sub-strands, and content standards
+3. Reference specific learning indicators from the ${subject} curriculum
+4. Use the standard 3-part lesson structure with realistic timing:
+   - Introduction/Starter (5-10 min) - engage, review prior knowledge
+   - Teaching/Exploration & Guided Practice (25-35 min) - main instruction, activities
+   - Plenary/Conclusion (5-10 min) - summary, assessment, homework
+5. Include differentiation for mixed-ability learners (support vs. stretch)
+6. Specify practical Teaching Learning Materials (TLMs) available in Ghanaian schools
+7. Include both formative and summative assessment aligned to SBC
+8. Integrate all 6 NaCCA core competencies naturally
+9. Embed Ghanaian cultural context, examples, and local community relevance
+10. Use subject-specific pedagogies (inquiry-based, problem-solving, activity-based learning)
+11. Include cross-cutting themes: environmental education, citizenship, health
+12. Consider inclusive education for diverse learners and SEN students
+13. Use Ghanaian place names, contexts, and culturally relevant examples
+14. Align assessment to knowledge + skills + attitudes as per CCP emphasis
 
-LESSON PLAN FORMAT:
-Return a detailed lesson plan with:
-- Clear learning outcomes (what students will know, understand, and be able to do)
-- Step-by-step teaching procedures
-- Student activities
-- Assessment methods (formative and summative)
-- Required resources and materials
-- Differentiation strategies
-- Homework/extension activities
+LESSON PLAN FORMAT - Follow GES/NACCA SBC Structure:
+Return a detailed, practical lesson plan that a Ghanaian teacher can use immediately with:
+- Clear learning objectives (what learners will be able to DO by end of lesson)
+- Specific curriculum alignment (strand, sub-strand, content standard, indicator)
+- Realistic step-by-step procedures with actual timing
+- Concrete student activities (not just "discuss" - specify what and how)
+- Practical TLMs that exist in Ghanaian schools
+- Assessment methods aligned to SBC (knowledge, skills, attitudes)
+- Differentiation for support learners and extension/stretch
+- Ghanaian context and examples throughout
+
+EXAMPLE STYLE: Like "Understanding My Community and Environment" - JHS 1 Social Studies (Strand: Environment)
+- Use realistic Ghanaian scenarios and places
+- Include warm-up questions students will actually engage with
+- Specify group work instructions clearly (e.g., "3-4 per group, give chart paper")
+- Name actual activities teachers can do (not vague instructions)
+- Reference real Ghanaian curriculum documents and structure
 
 Return a valid JSON object with this structure:
 {
@@ -116,38 +128,81 @@ Return a valid JSON object with this structure:
   ],
   "lessonStructure": {
     "introduction": {
-      "duration": "10-15 minutes",
-      "teacherActivity": [
-        "Step-by-step what teacher does"
+      "duration": "5-10 minutes",
+      "activities": [
+        "Greet class and state the topic clearly",
+        "Warm-up question to engage students (specify exact question)",
+        "Review prior knowledge briefly",
+        "State learning objectives in student-friendly language",
+        "Explain why this topic matters to their lives"
       ],
-      "studentActivity": [
-        "What students do"
-      ],
-      "assessment": "How to check understanding"
+      "teacherRole": "Facilitator, questioner, engager",
+      "studentRole": "Participate, answer questions, share prior knowledge",
+      "assessment": "Listen to student responses, check prior understanding"
     },
-    "mainActivity": {
-      "duration": "30-40 minutes",
-      "teacherActivity": [
-        "Detailed teaching steps"
+    "teachingAndExploration": {
+      "duration": "15-20 minutes",
+      "activities": [
+        "Present key concepts with definitions (use board/chart)",
+        "Use visual aids, maps, pictures, or real objects",
+        "Explain with Ghanaian examples and local context",
+        "Ask probing questions throughout",
+        "Demonstrate or model if needed",
+        "Check understanding frequently"
       ],
-      "studentActivity": [
-        "Student engagement activities"
+      "teacherRole": "Instructor, explainer, demonstrator",
+      "studentRole": "Listen, observe, ask questions, take notes",
+      "tlmsUsed": ["List specific materials like charts, pictures, local items"],
+      "assessment": "Ask questions during teaching, observe reactions"
+    },
+    "guidedPractice": {
+      "duration": "10-15 minutes",
+      "activities": [
+        "Organize students into groups (specify size: 3-4 students)",
+        "Give clear task with specific deliverable (e.g., chart, list, drawing)",
+        "Provide materials (chart paper, markers, worksheets)",
+        "Circulate among groups asking questions",
+        "Guide groups who are struggling",
+        "Encourage collaboration and all students to participate"
       ],
+      "groupWork": "Specific task with clear instructions and time limit",
       "differentiation": {
-        "support": "For students who need extra help",
-        "stretch": "For advanced students"
+        "supportLearners": "Provide sentence starters, work in pairs, give picture prompts, pre-teach vocabulary",
+        "stretchLearners": "Ask higher-order questions, give leadership roles, add extension tasks"
       },
-      "assessment": "Formative assessment strategies"
+      "assessment": "Observe group participation, check group outputs, ask probing questions"
     },
-    "plenary": {
-      "duration": "10-15 minutes",
-      "teacherActivity": [
-        "Summary and consolidation"
+    "groupReporting": {
+      "duration": "5-10 minutes",
+      "activities": [
+        "Each group presents briefly (1-2 minutes)",
+        "Ask class to comment or ask questions after each",
+        "Summarize key points from all presentations",
+        "Connect presentations to learning objectives"
       ],
-      "studentActivity": [
-        "Reflection and assessment"
+      "assessment": "Evaluate group presentations, check understanding across class"
+    },
+    "individualApplication": {
+      "duration": "3-5 minutes",
+      "activities": [
+        "Students write individually in notebooks",
+        "Reflect on what they learned",
+        "Note one thing they will do or remember",
+        "Connect to their own lives or community"
       ],
-      "assessment": "Exit ticket or quick check"
+      "assessment": "Check notebooks, read reflections"
+    },
+    "conclusion": {
+      "duration": "3-5 minutes",
+      "activities": [
+        "Summarize key learning points from the lesson",
+        "Restate learning objectives - did we achieve them?",
+        "Give positive reinforcement",
+        "Preview next lesson topic",
+        "Assign homework/task with clear instructions"
+      ],
+      "homework": "Specific, achievable task related to the lesson",
+      "assessment": "Quick exit question or reflection"
     }
   },
   "assessment": {
@@ -177,7 +232,19 @@ Return a valid JSON object with this structure:
   ]
 }
 
-Make the lesson plan PRACTICAL, DETAILED, and fully aligned with GES/NaCCA standards for Ghanaian ${level} education.`;
+CRITICAL REQUIREMENTS:
+1. Make the lesson plan PRACTICAL - a teacher should be able to use it tomorrow
+2. Use CONCRETE examples from Ghanaian context (places, names, situations)
+3. SPECIFY exact questions to ask, not just "ask questions"
+4. DETAIL group work instructions (group size, task, materials, time)
+5. Include REALISTIC timing for each section
+6. Reference actual GES/NACCA curriculum strands and indicators for ${subject}
+7. Use Ghanaian educational terminology (learners, TLMs, SBC, CCP)
+8. Align to SBC focus: Knowledge + Skills + Attitudes/Values
+9. Include cross-cutting themes: environment, citizenship, health, etc.
+10. Make assessment authentic and practical (not just "questioning")
+
+Make this lesson plan something a real Ghanaian ${level} teacher can walk into class and use effectively, following official GES/NACCA SBC standards.`;
 
     console.log('Calling OpenAI API for lesson plan generation...');
 
