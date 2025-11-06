@@ -1456,239 +1456,279 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
     
     showDialog(
       context: context,
-      barrierDismissible: false,
+      barrierDismissible: true,
       builder: (dialogContext) => StatefulBuilder(
-        builder: (stateContext, setDialogState) => AlertDialog(
-          title: Text(
-            'Create New Lesson Plan',
-            style: AppStyles.montserratBold(fontSize: 18),
-          ),
-          content: SizedBox(
-            width: MediaQuery.of(context).size.width * 0.8,
-            child: SingleChildScrollView(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  // Subject dropdown
-                  Text(
-                    'Subject *',
-                    style: AppStyles.montserratBold(fontSize: 14),
-                  ),
-                  const SizedBox(height: 8),
-                  DropdownButtonFormField<String>(
-                    value: _selectedSubjectForPlanning,
-                    decoration: InputDecoration(
-                      hintText: 'Select a subject',
-                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
-                      contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+        builder: (stateContext, setDialogState) => Dialog(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+          insetPadding: const EdgeInsets.symmetric(horizontal: 40, vertical: 24),
+          child: ConstrainedBox(
+            constraints: BoxConstraints(
+              maxWidth: 700,
+              maxHeight: MediaQuery.of(context).size.height * 0.85,
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                // Header
+                Container(
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: AppStyles.primaryRed,
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(16),
+                      topRight: Radius.circular(16),
                     ),
-                    items: _teachingSubjects.map<DropdownMenuItem<String>>((subject) {
-                      return DropdownMenuItem<String>(
-                        value: subject['name'] as String,
+                  ),
+                  child: Row(
+                    children: [
+                      Expanded(
                         child: Text(
-                          subject['name'] as String,
+                          'Create New Lesson Plan',
+                          style: AppStyles.montserratBold(
+                            fontSize: 20,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                      IconButton(
+                        icon: const Icon(Icons.close, color: Colors.white),
+                        onPressed: () => Navigator.pop(dialogContext),
+                        padding: EdgeInsets.zero,
+                        constraints: const BoxConstraints(),
+                      ),
+                    ],
+                  ),
+                ),
+                
+                // Content
+                Expanded(
+                  child: SingleChildScrollView(
+                    padding: const EdgeInsets.all(24),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        // Subject dropdown
+                        Text(
+                          'Subject *',
+                          style: AppStyles.montserratBold(fontSize: 14),
+                        ),
+                        const SizedBox(height: 8),
+                        DropdownButtonFormField<String>(
+                          value: _selectedSubjectForPlanning,
+                          decoration: InputDecoration(
+                            hintText: 'Select a subject',
+                            border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
+                            contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                          ),
+                          items: _teachingSubjects.map<DropdownMenuItem<String>>((subject) {
+                            return DropdownMenuItem<String>(
+                              value: subject['name'] as String,
+                              child: Text(
+                                subject['name'] as String,
+                                style: AppStyles.montserratRegular(),
+                              ),
+                            );
+                          }).toList(),
+                          onChanged: (val) {
+                            setDialogState(() {
+                              _selectedSubjectForPlanning = val;
+                            });
+                          },
+                        ),
+                        const SizedBox(height: 16),
+                        
+                        // Lesson Title
+                        Text(
+                          'Lesson Title *',
+                          style: AppStyles.montserratBold(fontSize: 14),
+                        ),
+                        const SizedBox(height: 8),
+                        TextField(
+                          controller: _lessonTitleController,
+                          decoration: InputDecoration(
+                            hintText: 'e.g., Introduction to Algebra',
+                            border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
+                            contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                          ),
                           style: AppStyles.montserratRegular(),
                         ),
-                      );
-                    }).toList(),
-                    onChanged: (val) {
-                      setDialogState(() {
-                        _selectedSubjectForPlanning = val;
-                      });
-                      setState(() {
-                        _selectedSubjectForPlanning = val;
-                      });
-                    },
-                  ),
-                  const SizedBox(height: 16),
-                  
-                  // Lesson Title
-                  Text(
-                    'Lesson Title *',
-                    style: AppStyles.montserratBold(fontSize: 14),
-                  ),
-                  const SizedBox(height: 8),
-                  TextField(
-                    controller: _lessonTitleController,
-                    decoration: InputDecoration(
-                      hintText: 'e.g., Introduction to Algebra',
-                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
-                      contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                    ),
-                    style: AppStyles.montserratRegular(),
-                  ),
-                  const SizedBox(height: 16),
-                  
-                  // Learning Objectives
-                  Text(
-                    'Learning Objectives',
-                    style: AppStyles.montserratBold(fontSize: 14),
-                  ),
-                  const SizedBox(height: 8),
-                  TextField(
-                    controller: _lessonObjectivesController,
-                    maxLines: 3,
-                    decoration: InputDecoration(
-                      hintText: 'What should students learn?',
-                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
-                      contentPadding: const EdgeInsets.all(12),
-                    ),
-                    style: AppStyles.montserratRegular(fontSize: 13),
-                  ),
-                  const SizedBox(height: 16),
-                  
-                  // Core Competencies
-                  Text(
-                    'Core Competencies',
-                    style: AppStyles.montserratBold(fontSize: 14),
-                  ),
-                  const SizedBox(height: 8),
-                  Wrap(
-                    spacing: 8,
-                    runSpacing: 8,
-                    children: _coreCompetencies.map((comp) {
-                      final isSelected = _selectedCompetencies.contains(comp);
-                      return FilterChip(
-                        label: Text(
-                          comp,
-                          style: AppStyles.montserratRegular(
-                            fontSize: 11,
-                            color: isSelected ? Colors.white : Colors.black87,
-                          ),
+                        const SizedBox(height: 16),
+                        
+                        // Learning Objectives
+                        Text(
+                          'Learning Objectives',
+                          style: AppStyles.montserratBold(fontSize: 14),
                         ),
-                        selected: isSelected,
-                        selectedColor: AppStyles.primaryRed,
-                        checkmarkColor: Colors.white,
-                        backgroundColor: Colors.grey[200],
-                        onSelected: (val) {
-                          setDialogState(() {
-                            if (val) {
-                              _selectedCompetencies.add(comp);
-                            } else {
-                              _selectedCompetencies.remove(comp);
-                            }
-                          });
-                          setState(() {
-                            if (val) {
-                              _selectedCompetencies.add(comp);
-                            } else {
-                              _selectedCompetencies.remove(comp);
-                            }
-                          });
-                        },
-                      );
-                    }).toList(),
-                  ),
-                  const SizedBox(height: 16),
-                  
-                  // Values
-                  Text(
-                    'Ghanaian Values',
-                    style: AppStyles.montserratBold(fontSize: 14),
-                  ),
-                  const SizedBox(height: 8),
-                  Wrap(
-                    spacing: 8,
-                    runSpacing: 8,
-                    children: _ghanaianValues.map((val) {
-                      final isSelected = _selectedValues.contains(val);
-                      return FilterChip(
-                        label: Text(
-                          val,
-                          style: AppStyles.montserratRegular(
-                            fontSize: 11,
-                            color: isSelected ? Colors.white : Colors.black87,
+                        const SizedBox(height: 8),
+                        TextField(
+                          controller: _lessonObjectivesController,
+                          maxLines: 3,
+                          decoration: InputDecoration(
+                            hintText: 'What should students learn?',
+                            border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
+                            contentPadding: const EdgeInsets.all(12),
                           ),
+                          style: AppStyles.montserratRegular(fontSize: 13),
                         ),
-                        selected: isSelected,
-                        selectedColor: const Color(0xFF2ECC71),
-                        checkmarkColor: Colors.white,
-                        backgroundColor: Colors.grey[200],
-                        onSelected: (selected) {
-                          setDialogState(() {
-                            if (selected) {
-                              _selectedValues.add(val);
-                            } else {
-                              _selectedValues.remove(val);
-                            }
-                          });
-                          setState(() {
-                            if (selected) {
-                              _selectedValues.add(val);
-                            } else {
-                              _selectedValues.remove(val);
-                            }
-                          });
-                        },
-                      );
-                    }).toList(),
+                        const SizedBox(height: 16),
+                        
+                        // Core Competencies
+                        Text(
+                          'Core Competencies',
+                          style: AppStyles.montserratBold(fontSize: 14),
+                        ),
+                        const SizedBox(height: 8),
+                        Wrap(
+                          spacing: 8,
+                          runSpacing: 8,
+                          children: _coreCompetencies.map((comp) {
+                            final isSelected = _selectedCompetencies.contains(comp);
+                            return FilterChip(
+                              label: Text(
+                                comp,
+                                style: AppStyles.montserratRegular(
+                                  fontSize: 11,
+                                  color: isSelected ? Colors.white : Colors.black87,
+                                ),
+                              ),
+                              selected: isSelected,
+                              selectedColor: AppStyles.primaryRed,
+                              checkmarkColor: Colors.white,
+                              backgroundColor: Colors.grey[200],
+                              onSelected: (val) {
+                                setDialogState(() {
+                                  if (val) {
+                                    _selectedCompetencies.add(comp);
+                                  } else {
+                                    _selectedCompetencies.remove(comp);
+                                  }
+                                });
+                              },
+                            );
+                          }).toList(),
+                        ),
+                        const SizedBox(height: 16),
+                        
+                        // Values
+                        Text(
+                          'Ghanaian Values',
+                          style: AppStyles.montserratBold(fontSize: 14),
+                        ),
+                        const SizedBox(height: 8),
+                        Wrap(
+                          spacing: 8,
+                          runSpacing: 8,
+                          children: _ghanaianValues.map((val) {
+                            final isSelected = _selectedValues.contains(val);
+                            return FilterChip(
+                              label: Text(
+                                val,
+                                style: AppStyles.montserratRegular(
+                                  fontSize: 11,
+                                  color: isSelected ? Colors.white : Colors.black87,
+                                ),
+                              ),
+                              selected: isSelected,
+                              selectedColor: const Color(0xFF2ECC71),
+                              checkmarkColor: Colors.white,
+                              backgroundColor: Colors.grey[200],
+                              onSelected: (selected) {
+                                setDialogState(() {
+                                  if (selected) {
+                                    _selectedValues.add(val);
+                                  } else {
+                                    _selectedValues.remove(val);
+                                  }
+                                });
+                              },
+                            );
+                          }).toList(),
+                        ),
+                      ],
+                    ),
                   ),
-                ],
-              ),
+                ),
+                
+                // Footer with buttons
+                Container(
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: Colors.grey[50],
+                    border: Border(
+                      top: BorderSide(color: Colors.grey[300]!),
+                    ),
+                    borderRadius: const BorderRadius.only(
+                      bottomLeft: Radius.circular(16),
+                      bottomRight: Radius.circular(16),
+                    ),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      TextButton(
+                        onPressed: () => Navigator.pop(dialogContext),
+                        child: Text(
+                          'Cancel',
+                          style: AppStyles.montserratMedium(color: Colors.grey[700]!),
+                        ),
+                      ),
+                      const SizedBox(width: 12),
+                      ElevatedButton(
+                        onPressed: _isGeneratingLesson ? null : () async {
+                          if (_lessonTitleController.text.isEmpty) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text(
+                                  'Please enter a lesson title',
+                                  style: AppStyles.montserratMedium(color: Colors.white),
+                                ),
+                                backgroundColor: AppStyles.primaryRed,
+                              ),
+                            );
+                            return;
+                          }
+                          
+                          if (_selectedSubjectForPlanning == null) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text(
+                                  'Please select a subject',
+                                  style: AppStyles.montserratMedium(color: Colors.white),
+                                ),
+                                backgroundColor: AppStyles.primaryRed,
+                              ),
+                            );
+                            return;
+                          }
+                          
+                          Navigator.pop(dialogContext);
+                          await _generateLessonPlan();
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: AppStyles.primaryRed,
+                          foregroundColor: Colors.white,
+                          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
+                        ),
+                        child: _isGeneratingLesson
+                            ? const SizedBox(
+                                width: 16,
+                                height: 16,
+                                child: CircularProgressIndicator(
+                                  strokeWidth: 2,
+                                  valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                                ),
+                              )
+                            : Text(
+                                'Generate Lesson',
+                                style: AppStyles.montserratBold(),
+                              ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ),
-          actions: [
-            TextButton(
-              onPressed: () {
-                Navigator.pop(dialogContext);
-              },
-              child: Text(
-                'Cancel',
-                style: AppStyles.montserratMedium(color: Colors.grey[700]!),
-              ),
-            ),
-            ElevatedButton(
-              onPressed: _isGeneratingLesson ? null : () async {
-                if (_lessonTitleController.text.isEmpty) {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text(
-                        'Please enter a lesson title',
-                        style: AppStyles.montserratMedium(color: Colors.white),
-                      ),
-                      backgroundColor: AppStyles.primaryRed,
-                    ),
-                  );
-                  return;
-                }
-                
-                if (_selectedSubjectForPlanning == null) {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text(
-                        'Please select a subject',
-                        style: AppStyles.montserratMedium(color: Colors.white),
-                      ),
-                      backgroundColor: AppStyles.primaryRed,
-                    ),
-                  );
-                  return;
-                }
-                
-                Navigator.pop(dialogContext);
-                await _generateLessonPlan();
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: AppStyles.primaryRed,
-                foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-              ),
-              child: _isGeneratingLesson
-                  ? const SizedBox(
-                      width: 16,
-                      height: 16,
-                      child: CircularProgressIndicator(
-                        strokeWidth: 2,
-                        valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
-                      ),
-                    )
-                  : Text(
-                      'Generate',
-                      style: AppStyles.montserratBold(),
-                    ),
-            ),
-          ],
         ),
       ),
     );
