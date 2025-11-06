@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cloud_functions/cloud_functions.dart';
+import 'dart:convert';
+import 'dart:html' as html;
 import '../constants/app_styles.dart';
 
 class LessonPlannerPage extends StatefulWidget {
@@ -1078,7 +1081,7 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
                 setState(() => _currentStep--);
               },
               style: OutlinedButton.styleFrom(
-                side: BorderSide(color: AppStyles.primaryRed),
+                side: const BorderSide(color: AppStyles.primaryRed),
                 padding: EdgeInsets.symmetric(
                   horizontal: isSmallScreen ? 24 : 32,
                   vertical: 16,
@@ -1279,7 +1282,7 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
                                       color: AppStyles.primaryRed.withOpacity(0.1),
                                       borderRadius: BorderRadius.circular(12),
                                     ),
-                                    child: Icon(
+                                    child: const Icon(
                                       Icons.book,
                                       color: AppStyles.primaryRed,
                                       size: 24,
@@ -1744,6 +1747,221 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
     );
   }
   
+  // Helper method to format lesson plan as text
+  String _formatLessonPlanAsText(Map<String, dynamic> lesson) {
+    final lessonPlan = lesson['lessonPlan'] as Map<String, dynamic>?;
+    if (lessonPlan == null) return '';
+    
+    final buffer = StringBuffer();
+    
+    // Header
+    buffer.writeln('═══════════════════════════════════════════════════════');
+    buffer.writeln('GES/NACCA LESSON PLAN');
+    buffer.writeln('═══════════════════════════════════════════════════════\n');
+    
+    // Metadata
+    buffer.writeln('LESSON TITLE: ${lessonPlan['lessonTitle'] ?? 'N/A'}');
+    buffer.writeln('SUBJECT: ${lesson['subject'] ?? 'N/A'}');
+    buffer.writeln('LEVEL: ${lesson['level'] ?? 'N/A'}');
+    buffer.writeln('DURATION: ${lesson['duration'] ?? 'N/A'} minutes\n');
+    
+    if (lessonPlan['metadata'] != null) {
+      final metadata = lessonPlan['metadata'] as Map<String, dynamic>;
+      if (metadata['strand'] != null) buffer.writeln('STRAND: ${metadata['strand']}');
+      if (metadata['subStrand'] != null) buffer.writeln('SUB-STRAND: ${metadata['subStrand']}');
+      if (metadata['indicator'] != null) buffer.writeln('INDICATOR: ${metadata['indicator']}');
+      buffer.writeln();
+    }
+    
+    // Learning Outcomes
+    if (lessonPlan['learningOutcomes'] != null) {
+      buffer.writeln('LEARNING OUTCOMES:');
+      for (var outcome in lessonPlan['learningOutcomes'] as List) {
+        buffer.writeln('  • $outcome');
+      }
+      buffer.writeln();
+    }
+    
+    // Core Competencies
+    if (lessonPlan['coreCompetencies'] != null && (lessonPlan['coreCompetencies'] as List).isNotEmpty) {
+      buffer.writeln('CORE COMPETENCIES:');
+      buffer.writeln('  ${(lessonPlan['coreCompetencies'] as List).join(', ')}');
+      buffer.writeln();
+    }
+    
+    // Values
+    if (lessonPlan['values'] != null && (lessonPlan['values'] as List).isNotEmpty) {
+      buffer.writeln('VALUES:');
+      buffer.writeln('  ${(lessonPlan['values'] as List).join(', ')}');
+      buffer.writeln();
+    }
+    
+    // Prerequisites
+    if (lessonPlan['prerequisites'] != null) {
+      buffer.writeln('PREREQUISITES:');
+      final prereqs = lessonPlan['prerequisites'];
+      if (prereqs is List) {
+        for (var prereq in prereqs) {
+          buffer.writeln('  • $prereq');
+        }
+      } else {
+        buffer.writeln('  $prereqs');
+      }
+      buffer.writeln();
+    }
+    
+    // Teaching Learning Materials
+    if (lessonPlan['teachingLearningMaterials'] != null) {
+      buffer.writeln('TEACHING LEARNING MATERIALS:');
+      final tlms = lessonPlan['teachingLearningMaterials'];
+      if (tlms is List) {
+        for (var tlm in tlms) {
+          buffer.writeln('  • $tlm');
+        }
+      } else {
+        buffer.writeln('  $tlms');
+      }
+      buffer.writeln();
+    }
+    
+    // Lesson Structure
+    if (lessonPlan['lessonStructure'] != null) {
+      buffer.writeln('LESSON STRUCTURE:');
+      buffer.writeln('─────────────────────────────────────────────────────\n');
+      
+      final structure = lessonPlan['lessonStructure'] as Map<String, dynamic>;
+      
+      for (var entry in structure.entries) {
+        final sectionName = entry.key.replaceAllMapped(
+          RegExp(r'([A-Z])'),
+          (match) => ' ${match.group(0)}',
+        ).trim().toUpperCase();
+        
+        buffer.writeln('$sectionName:');
+        
+        final section = entry.value as Map<String, dynamic>;
+        if (section['duration'] != null) {
+          buffer.writeln('  Duration: ${section['duration']}');
+        }
+        
+        if (section['activities'] != null) {
+          buffer.writeln('  Activities:');
+          for (var activity in section['activities'] as List) {
+            buffer.writeln('    • $activity');
+          }
+        }
+        
+        if (section['teacherActivity'] != null) {
+          buffer.writeln('  Teacher Activity:');
+          for (var activity in section['teacherActivity'] as List) {
+            buffer.writeln('    • $activity');
+          }
+        }
+        
+        if (section['studentActivity'] != null) {
+          buffer.writeln('  Student Activity:');
+          for (var activity in section['studentActivity'] as List) {
+            buffer.writeln('    • $activity');
+          }
+        }
+        
+        if (section['differentiation'] != null) {
+          buffer.writeln('  Differentiation:');
+          final diff = section['differentiation'] as Map<String, dynamic>;
+          if (diff['support'] != null) buffer.writeln('    Support: ${diff['support']}');
+          if (diff['stretch'] != null) buffer.writeln('    Stretch: ${diff['stretch']}');
+          if (diff['supportLearners'] != null) buffer.writeln('    Support: ${diff['supportLearners']}');
+          if (diff['stretchLearners'] != null) buffer.writeln('    Stretch: ${diff['stretchLearners']}');
+        }
+        
+        if (section['assessment'] != null) {
+          buffer.writeln('  Assessment: ${section['assessment']}');
+        }
+        
+        buffer.writeln();
+      }
+    }
+    
+    // Assessment
+    if (lessonPlan['assessment'] != null) {
+      buffer.writeln('ASSESSMENT:');
+      final assessment = lessonPlan['assessment'] as Map<String, dynamic>;
+      
+      if (assessment['formative'] != null) {
+        buffer.writeln('  Formative:');
+        for (var item in assessment['formative'] as List) {
+          buffer.writeln('    • $item');
+        }
+      }
+      
+      if (assessment['summative'] != null) {
+        buffer.writeln('  Summative:');
+        for (var item in assessment['summative'] as List) {
+          buffer.writeln('    • $item');
+        }
+      }
+      buffer.writeln();
+    }
+    
+    // Homework
+    if (lessonPlan['homework'] != null) {
+      buffer.writeln('HOMEWORK:');
+      final homework = lessonPlan['homework'];
+      if (homework is List) {
+        for (var hw in homework) {
+          buffer.writeln('  • $hw');
+        }
+      } else {
+        buffer.writeln('  $homework');
+      }
+      buffer.writeln();
+    }
+    
+    buffer.writeln('═══════════════════════════════════════════════════════');
+    buffer.writeln('Generated by Uriel Academy - GES/NACCA Aligned');
+    buffer.writeln('═══════════════════════════════════════════════════════');
+    
+    return buffer.toString();
+  }
+  
+  // Copy lesson plan to clipboard
+  void _copyLessonPlan(BuildContext context, Map<String, dynamic> lesson) {
+    final text = _formatLessonPlanAsText(lesson);
+    Clipboard.setData(ClipboardData(text: text));
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        content: Text('✅ Lesson plan copied to clipboard!'),
+        backgroundColor: Color(0xFF2ECC71),
+        duration: Duration(seconds: 2),
+      ),
+    );
+  }
+  
+  // Download lesson plan as text file
+  void _downloadLessonPlan(BuildContext context, Map<String, dynamic> lesson) {
+    final text = _formatLessonPlanAsText(lesson);
+    final lessonPlan = lesson['lessonPlan'] as Map<String, dynamic>?;
+    final fileName = '${lessonPlan?['lessonTitle'] ?? 'Lesson_Plan'}.txt'
+        .replaceAll(' ', '_')
+        .replaceAll(RegExp(r'[^\w\s-]'), '');
+    
+    final bytes = utf8.encode(text);
+    final blob = html.Blob([bytes]);
+    final url = html.Url.createObjectUrlFromBlob(blob);
+    final anchor = html.AnchorElement(href: url)
+      ..setAttribute('download', fileName)
+      ..click();
+    html.Url.revokeObjectUrl(url);
+    
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text('✅ Downloading $fileName'),
+        backgroundColor: const Color(0xFF2ECC71),
+        duration: const Duration(seconds: 2),
+      ),
+    );
+  }
+  
   void _showLessonDetailsDialog(BuildContext context, Map<String, dynamic> lesson) {
     final lessonPlan = lesson['lessonPlan'] as Map<String, dynamic>?;
     if (lessonPlan == null) return;
@@ -1758,9 +1976,9 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
               // Header
               Container(
                 padding: const EdgeInsets.all(20),
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: AppStyles.primaryRed,
-                  borderRadius: const BorderRadius.only(
+                  borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(16),
                     topRight: Radius.circular(16),
                   ),
@@ -1788,6 +2006,18 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
                           ),
                         ],
                       ),
+                    ),
+                    // Copy button
+                    IconButton(
+                      icon: const Icon(Icons.copy, color: Colors.white),
+                      onPressed: () => _copyLessonPlan(context, lesson),
+                      tooltip: 'Copy to clipboard',
+                    ),
+                    // Download button
+                    IconButton(
+                      icon: const Icon(Icons.download, color: Colors.white),
+                      onPressed: () => _downloadLessonPlan(context, lesson),
+                      tooltip: 'Download as text file',
                     ),
                     IconButton(
                       icon: const Icon(Icons.close, color: Colors.white),
