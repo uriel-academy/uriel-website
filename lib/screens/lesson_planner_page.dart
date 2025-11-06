@@ -1308,6 +1308,17 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
                                       ],
                                     ),
                                   ),
+                                  IconButton(
+                                    icon: Icon(
+                                      Icons.delete_outline,
+                                      color: Colors.red[400],
+                                    ),
+                                    tooltip: 'Delete lesson',
+                                    onPressed: () {
+                                      _showDeleteConfirmationDialog(context, lesson);
+                                    },
+                                  ),
+                                  const SizedBox(width: 8),
                                   Icon(Icons.chevron_right, color: Colors.grey[400]),
                                 ],
                               ),
@@ -1445,136 +1456,262 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
     
     showDialog(
       context: context,
-      builder: (context) => StatefulBuilder(
-        builder: (context, setState) => AlertDialog(
-          title: Text(
-            'Create Lesson Plan',
-            style: AppStyles.montserratBold(fontSize: 18),
-          ),
-          content: SingleChildScrollView(
-            child: SizedBox(
-              width: 500,
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  // Subject dropdown
-                  DropdownButtonFormField<String>(
-                    value: _selectedSubjectForPlanning,
-                    decoration: InputDecoration(
-                      labelText: 'Subject',
-                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
-                    ),
-                    items: _teachingSubjects.map<DropdownMenuItem<String>>((subject) {
-                      return DropdownMenuItem<String>(
-                        value: subject['name'] as String,
-                        child: Text(subject['name'] as String),
-                      );
-                    }).toList(),
-                    onChanged: (val) => setState(() => _selectedSubjectForPlanning = val),
-                  ),
-                  const SizedBox(height: 16),
-                  
-                  // Lesson Title
-                  TextField(
-                    controller: _lessonTitleController,
-                    decoration: InputDecoration(
-                      labelText: 'Lesson Title',
-                      hintText: 'e.g., Introduction to Algebra',
-                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
-                    ),
-                  ),
-                  const SizedBox(height: 16),
-                  
-                  // Learning Objectives
-                  TextField(
-                    controller: _lessonObjectivesController,
-                    maxLines: 3,
-                    decoration: InputDecoration(
-                      labelText: 'Learning Objectives',
-                      hintText: 'What should students learn?',
-                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
-                    ),
-                  ),
-                  const SizedBox(height: 16),
-                  
-                  // Core Competencies
-                  Text('Core Competencies', style: AppStyles.montserratBold()),
-                  const SizedBox(height: 8),
-                  Wrap(
-                    spacing: 8,
-                    children: _coreCompetencies.map((comp) {
-                      final isSelected = _selectedCompetencies.contains(comp);
-                      return FilterChip(
-                        label: Text(comp, style: TextStyle(fontSize: 12)),
-                        selected: isSelected,
-                        onSelected: (val) {
-                          setState(() {
-                            if (val) {
-                              _selectedCompetencies.add(comp);
-                            } else {
-                              _selectedCompetencies.remove(comp);
-                            }
-                          });
-                        },
-                      );
-                    }).toList(),
-                  ),
-                  const SizedBox(height: 16),
-                  
-                  // Values
-                  Text('Ghanaian Values', style: AppStyles.montserratBold()),
-                  const SizedBox(height: 8),
-                  Wrap(
-                    spacing: 8,
-                    children: _ghanaianValues.map((val) {
-                      final isSelected = _selectedValues.contains(val);
-                      return FilterChip(
-                        label: Text(val, style: TextStyle(fontSize: 12)),
-                        selected: isSelected,
-                        onSelected: (selected) {
-                          setState(() {
-                            if (selected) {
-                              _selectedValues.add(val);
-                            } else {
-                              _selectedValues.remove(val);
-                            }
-                          });
-                        },
-                      );
-                    }).toList(),
-                  ),
-                ],
-              ),
+      builder: (dialogContext) => StatefulBuilder(
+        builder: (context, setDialogState) => Dialog(
+          child: Container(
+            constraints: BoxConstraints(
+              maxWidth: MediaQuery.of(context).size.width * 0.9,
+              maxHeight: MediaQuery.of(context).size.height * 0.85,
             ),
-          ),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.pop(context),
-              child: Text('Cancel', style: AppStyles.montserratMedium()),
-            ),
-            ElevatedButton(
-              onPressed: _isGeneratingLesson ? null : () {
-                if (_lessonTitleController.text.isNotEmpty && _selectedSubjectForPlanning != null) {
-                  _generateLessonPlan();
-                }
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: AppStyles.primaryRed,
-                foregroundColor: Colors.white,
-              ),
-              child: _isGeneratingLesson
-                  ? const SizedBox(
-                      width: 16,
-                      height: 16,
-                      child: CircularProgressIndicator(
-                        strokeWidth: 2,
-                        valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+            child: Column(
+              children: [
+                // Header
+                Container(
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: AppStyles.primaryRed,
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(16),
+                      topRight: Radius.circular(16),
+                    ),
+                  ),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Text(
+                          'Create Lesson Plan',
+                          style: AppStyles.montserratBold(
+                            fontSize: 20,
+                            color: Colors.white,
+                          ),
+                        ),
                       ),
-                    )
-                  : Text('Generate', style: AppStyles.montserratBold()),
+                      IconButton(
+                        icon: const Icon(Icons.close, color: Colors.white),
+                        onPressed: () => Navigator.pop(dialogContext),
+                      ),
+                    ],
+                  ),
+                ),
+                // Content
+                Expanded(
+                  child: SingleChildScrollView(
+                    padding: const EdgeInsets.all(24),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        // Subject dropdown
+                        DropdownButtonFormField<String>(
+                          value: _selectedSubjectForPlanning,
+                          decoration: InputDecoration(
+                            labelText: 'Subject *',
+                            border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                            filled: true,
+                            fillColor: Colors.grey[50],
+                          ),
+                          items: _teachingSubjects.map<DropdownMenuItem<String>>((subject) {
+                            return DropdownMenuItem<String>(
+                              value: subject['name'] as String,
+                              child: Text(subject['name'] as String),
+                            );
+                          }).toList(),
+                          onChanged: (val) {
+                            setDialogState(() => _selectedSubjectForPlanning = val);
+                          },
+                        ),
+                        const SizedBox(height: 20),
+                        
+                        // Lesson Title
+                        TextField(
+                          controller: _lessonTitleController,
+                          decoration: InputDecoration(
+                            labelText: 'Lesson Title *',
+                            hintText: 'e.g., Introduction to Algebra',
+                            border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                            filled: true,
+                            fillColor: Colors.grey[50],
+                          ),
+                        ),
+                        const SizedBox(height: 20),
+                        
+                        // Learning Objectives
+                        TextField(
+                          controller: _lessonObjectivesController,
+                          maxLines: 4,
+                          decoration: InputDecoration(
+                            labelText: 'Learning Objectives',
+                            hintText: 'What should students learn by the end of this lesson?',
+                            border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                            filled: true,
+                            fillColor: Colors.grey[50],
+                          ),
+                        ),
+                        const SizedBox(height: 24),
+                        
+                        // Core Competencies
+                        Text(
+                          'Core Competencies',
+                          style: AppStyles.montserratBold(fontSize: 16),
+                        ),
+                        const SizedBox(height: 8),
+                        Text(
+                          'Select competencies this lesson develops',
+                          style: AppStyles.montserratRegular(
+                            fontSize: 12,
+                            color: Colors.grey[600]!,
+                          ),
+                        ),
+                        const SizedBox(height: 12),
+                        Wrap(
+                          spacing: 8,
+                          runSpacing: 8,
+                          children: _coreCompetencies.map((comp) {
+                            final isSelected = _selectedCompetencies.contains(comp);
+                            return FilterChip(
+                              label: Text(
+                                comp,
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: isSelected ? Colors.white : Colors.black87,
+                                ),
+                              ),
+                              selected: isSelected,
+                              selectedColor: AppStyles.primaryRed,
+                              checkmarkColor: Colors.white,
+                              backgroundColor: Colors.grey[200],
+                              onSelected: (val) {
+                                setDialogState(() {
+                                  if (val) {
+                                    _selectedCompetencies.add(comp);
+                                  } else {
+                                    _selectedCompetencies.remove(comp);
+                                  }
+                                });
+                              },
+                            );
+                          }).toList(),
+                        ),
+                        const SizedBox(height: 24),
+                        
+                        // Values
+                        Text(
+                          'Ghanaian Values',
+                          style: AppStyles.montserratBold(fontSize: 16),
+                        ),
+                        const SizedBox(height: 8),
+                        Text(
+                          'Select values this lesson promotes',
+                          style: AppStyles.montserratRegular(
+                            fontSize: 12,
+                            color: Colors.grey[600]!,
+                          ),
+                        ),
+                        const SizedBox(height: 12),
+                        Wrap(
+                          spacing: 8,
+                          runSpacing: 8,
+                          children: _ghanaianValues.map((val) {
+                            final isSelected = _selectedValues.contains(val);
+                            return FilterChip(
+                              label: Text(
+                                val,
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: isSelected ? Colors.white : Colors.black87,
+                                ),
+                              ),
+                              selected: isSelected,
+                              selectedColor: const Color(0xFF2ECC71),
+                              checkmarkColor: Colors.white,
+                              backgroundColor: Colors.grey[200],
+                              onSelected: (selected) {
+                                setDialogState(() {
+                                  if (selected) {
+                                    _selectedValues.add(val);
+                                  } else {
+                                    _selectedValues.remove(val);
+                                  }
+                                });
+                              },
+                            );
+                          }).toList(),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                // Footer
+                Container(
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: Colors.grey[50],
+                    border: Border(
+                      top: BorderSide(color: Colors.grey[300]!),
+                    ),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      TextButton(
+                        onPressed: () => Navigator.pop(dialogContext),
+                        child: Text(
+                          'Cancel',
+                          style: AppStyles.montserratMedium(color: Colors.grey[700]!),
+                        ),
+                      ),
+                      const SizedBox(width: 12),
+                      ElevatedButton(
+                        onPressed: _isGeneratingLesson ? null : () {
+                          if (_lessonTitleController.text.isNotEmpty && 
+                              _selectedSubjectForPlanning != null) {
+                            _generateLessonPlan();
+                          } else {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(
+                                content: Text('Please fill in required fields'),
+                                backgroundColor: Color(0xFFD62828),
+                              ),
+                            );
+                          }
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: AppStyles.primaryRed,
+                          foregroundColor: Colors.white,
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 32,
+                            vertical: 16,
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                        ),
+                        child: _isGeneratingLesson
+                            ? const SizedBox(
+                                width: 20,
+                                height: 20,
+                                child: CircularProgressIndicator(
+                                  strokeWidth: 2,
+                                  valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                                ),
+                              )
+                            : Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  const Icon(Icons.auto_awesome, size: 18),
+                                  const SizedBox(width: 8),
+                                  Text(
+                                    'Generate Lesson',
+                                    style: AppStyles.montserratBold(),
+                                  ),
+                                ],
+                              ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );
@@ -1788,5 +1925,163 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
         ],
       ],
     );
+  }
+  
+  void _showDeleteConfirmationDialog(BuildContext context, Map<String, dynamic> lesson) {
+    final lessonPlan = lesson['lessonPlan'] as Map<String, dynamic>?;
+    final lessonTitle = lessonPlan?['lessonTitle'] ?? lesson['title'] ?? 'this lesson';
+    
+    showDialog(
+      context: context,
+      builder: (dialogContext) => AlertDialog(
+        title: Row(
+          children: [
+            Icon(Icons.warning_amber_rounded, color: Colors.orange[700], size: 28),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Text(
+                'Delete Lesson Plan?',
+                style: AppStyles.montserratBold(fontSize: 18),
+              ),
+            ),
+          ],
+        ),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Are you sure you want to delete "$lessonTitle"?',
+              style: AppStyles.montserratRegular(fontSize: 15),
+            ),
+            const SizedBox(height: 12),
+            Container(
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: Colors.red[50],
+                borderRadius: BorderRadius.circular(8),
+                border: Border.all(color: Colors.red[200]!),
+              ),
+              child: Row(
+                children: [
+                  Icon(Icons.info_outline, size: 18, color: Colors.red[700]),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Text(
+                      'This action cannot be undone.',
+                      style: AppStyles.montserratMedium(
+                        fontSize: 13,
+                        color: Colors.red[700]!,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(dialogContext),
+            child: Text(
+              'Cancel',
+              style: AppStyles.montserratMedium(color: Colors.grey[700]!),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.pop(dialogContext);
+              _deleteLesson(lesson);
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.red[600],
+              foregroundColor: Colors.white,
+              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+            ),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const Icon(Icons.delete, size: 18),
+                const SizedBox(width: 8),
+                Text('Delete', style: AppStyles.montserratBold()),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+  
+  Future<void> _deleteLesson(Map<String, dynamic> lesson) async {
+    try {
+      final user = FirebaseAuth.instance.currentUser;
+      if (user == null) return;
+      
+      final lessonId = lesson['id'] as String?;
+      if (lessonId == null) return;
+      
+      // Delete from Firestore
+      await FirebaseFirestore.instance
+          .collection('lesson_plans')
+          .doc(user.uid)
+          .collection('plans')
+          .doc(lessonId)
+          .delete();
+      
+      // Remove from local state
+      setState(() {
+        _generatedLessons.removeWhere((l) => l['id'] == lessonId);
+      });
+      
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Row(
+              children: [
+                const Icon(Icons.check_circle, color: Colors.white),
+                const SizedBox(width: 12),
+                Text(
+                  'Lesson plan deleted successfully',
+                  style: AppStyles.montserratMedium(color: Colors.white),
+                ),
+              ],
+            ),
+            backgroundColor: const Color(0xFF2ECC71),
+            behavior: SnackBarBehavior.floating,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+          ),
+        );
+      }
+    } catch (e) {
+      debugPrint('Error deleting lesson: $e');
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Row(
+              children: [
+                const Icon(Icons.error_outline, color: Colors.white),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Text(
+                    'Error deleting lesson: $e',
+                    style: AppStyles.montserratMedium(color: Colors.white),
+                  ),
+                ),
+              ],
+            ),
+            backgroundColor: const Color(0xFFD62828),
+            behavior: SnackBarBehavior.floating,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+          ),
+        );
+      }
+    }
   }
 }
