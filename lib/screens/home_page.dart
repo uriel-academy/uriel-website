@@ -2611,6 +2611,9 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     // Hide Uri chatbot for teachers
     if (widget.isTeacher) return false;
     
+    // Hide on Study Plan page (index 5 for students)
+    if (_selectedIndex == 5) return false;
+    
     return !_showingProfile && 
            _selectedIndex != _uriIndex() && 
            _selectedIndex != _feedbackIndex();

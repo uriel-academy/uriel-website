@@ -88,6 +88,10 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
     'Respect', 'Integrity', 'Excellence', 'Commitment', 'Teamwork', 'Patriotism',
   ];
   
+  // Generated Lessons
+  List<Map<String, dynamic>> _generatedLessons = [];
+  Map<String, dynamic>? _currentViewingLesson;
+  
   @override
   void initState() {
     super.initState();
@@ -128,8 +132,24 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
           .get();
       
       if (doc.exists) {
+        // Load existing lesson plans
+        final lessonsSnapshot = await FirebaseFirestore.instance
+            .collection('lesson_plans')
+            .doc(user.uid)
+            .collection('plans')
+            .orderBy('createdAt', descending: true)
+            .get();
+        
+        final lessons = lessonsSnapshot.docs.map((doc) {
+          return {
+            'id': doc.id,
+            ...doc.data(),
+          };
+        }).toList();
+        
         setState(() {
           _hasCompletedSetup = true;
+          _generatedLessons = lessons;
           // Load saved data if needed
         });
       }
@@ -215,14 +235,32 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
       final callable = FirebaseFunctions.instance.httpsCallable('generateLessonPlan');
       final result = await callable.call(lessonData);
       
+      // Extract the lesson plan from the response
+      final lessonPlan = result.data['lessonPlan'];
+      final metadata = result.data['metadata'];
+      
       // Save to Firestore
-      await FirebaseFirestore.instance
+      final docRef = await FirebaseFirestore.instance
           .collection('lesson_plans')
+          .doc(user.uid)
+          .collection('plans')
           .add({
         ...lessonData,
-        'generatedPlan': result.data,
+        'lessonPlan': lessonPlan,
+        'metadata': metadata,
         'createdAt': FieldValue.serverTimestamp(),
         'updatedAt': FieldValue.serverTimestamp(),
+      });
+      
+      // Add to local list
+      setState(() {
+        _generatedLessons.insert(0, {
+          'id': docRef.id,
+          ...lessonData,
+          'lessonPlan': lessonPlan,
+          'metadata': metadata,
+        });
+        _currentViewingLesson = _generatedLessons[0];
       });
       
       if (mounted) {
@@ -232,6 +270,8 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
             backgroundColor: Color(0xFF2ECC71),
           ),
         );
+        // Close dialog
+        Navigator.of(context).pop();
       }
     } catch (e) {
       debugPrint('Error generating lesson: $e');
@@ -1146,7 +1186,7 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
                     Expanded(
                       child: _buildStatCard(
                         'Lesson Plans',
-                        '0',
+                        '${_generatedLessons.length}',
                         Icons.book,
                         AppStyles.primaryRed,
                       ),
@@ -1172,42 +1212,124 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
                   ],
                 ),
                 const SizedBox(height: 32),
-                // Placeholder for lesson plans list
-                Card(
-                  elevation: 2,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(32),
-                    child: Center(
-                      child: Column(
-                        children: [
-                          const Icon(
-                            Icons.description,
-                            size: 64,
-                            color: Colors.grey,
-                          ),
-                          const SizedBox(height: 16),
-                          Text(
-                            'No lesson plans yet',
-                            style: AppStyles.montserratBold(
-                              fontSize: 18,
-                              color: Colors.grey[700]!,
+                // Lesson plans list
+                if (_generatedLessons.isEmpty)
+                  Card(
+                    elevation: 2,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(32),
+                      child: Center(
+                        child: Column(
+                          children: [
+                            const Icon(
+                              Icons.description,
+                              size: 64,
+                              color: Colors.grey,
                             ),
-                          ),
-                          const SizedBox(height: 8),
-                          Text(
-                            'Create your first lesson plan to get started',
-                            style: AppStyles.montserratRegular(
-                              color: Colors.grey[600]!,
+                            const SizedBox(height: 16),
+                            Text(
+                              'No lesson plans yet',
+                              style: AppStyles.montserratBold(
+                                fontSize: 18,
+                                color: Colors.grey[700]!,
+                              ),
                             ),
-                          ),
-                        ],
+                            const SizedBox(height: 8),
+                            Text(
+                              'Create your first lesson plan to get started',
+                              style: AppStyles.montserratRegular(
+                                color: Colors.grey[600]!,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                ),
+                  )
+                else
+                  ..._generatedLessons.map((lesson) {
+                    final lessonPlan = lesson['lessonPlan'] as Map<String, dynamic>?;
+                    return Card(
+                      elevation: 2,
+                      margin: const EdgeInsets.only(bottom: 16),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child: InkWell(
+                        onTap: () {
+                          setState(() {
+                            _currentViewingLesson = lesson;
+                          });
+                          _showLessonDetailsDialog(context, lesson);
+                        },
+                        borderRadius: BorderRadius.circular(16),
+                        child: Padding(
+                          padding: const EdgeInsets.all(20),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    padding: const EdgeInsets.all(12),
+                                    decoration: BoxDecoration(
+                                      color: AppStyles.primaryRed.withOpacity(0.1),
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: Icon(
+                                      Icons.book,
+                                      color: AppStyles.primaryRed,
+                                      size: 24,
+                                    ),
+                                  ),
+                                  const SizedBox(width: 16),
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          lessonPlan?['lessonTitle'] ?? lesson['title'] ?? 'Untitled Lesson',
+                                          style: AppStyles.montserratBold(
+                                            fontSize: 18,
+                                            color: AppStyles.primaryNavy,
+                                          ),
+                                        ),
+                                        const SizedBox(height: 4),
+                                        Text(
+                                          lesson['subject'] ?? '',
+                                          style: AppStyles.montserratMedium(
+                                            fontSize: 14,
+                                            color: Colors.grey[600]!,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  Icon(Icons.chevron_right, color: Colors.grey[400]),
+                                ],
+                              ),
+                              const SizedBox(height: 12),
+                              if (lessonPlan?['learningOutcomes'] != null)
+                                Text(
+                                  (lessonPlan!['learningOutcomes'] as List).isNotEmpty
+                                      ? (lessonPlan['learningOutcomes'] as List)[0].toString()
+                                      : '',
+                                  style: AppStyles.montserratRegular(
+                                    fontSize: 14,
+                                    color: Colors.grey[700]!,
+                                  ),
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    );
+                  }).toList(),
               ],
             ),
           ),
@@ -1315,21 +1437,356 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
   }
   
   void _showCreateLessonDialog(BuildContext context) {
+    _lessonTitleController.clear();
+    _lessonObjectivesController.clear();
+    _selectedCompetencies.clear();
+    _selectedValues.clear();
+    _selectedSubjectForPlanning = _teachingSubjects.isNotEmpty ? _teachingSubjects[0]['name'] : null;
+    
     showDialog(
       context: context,
-      builder: (context) => AlertDialog(
-        title: Text(
-          'Create Lesson Plan',
-          style: AppStyles.montserratBold(fontSize: 18),
+      builder: (context) => StatefulBuilder(
+        builder: (context, setState) => AlertDialog(
+          title: Text(
+            'Create Lesson Plan',
+            style: AppStyles.montserratBold(fontSize: 18),
+          ),
+          content: SingleChildScrollView(
+            child: SizedBox(
+              width: 500,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Subject dropdown
+                  DropdownButtonFormField<String>(
+                    value: _selectedSubjectForPlanning,
+                    decoration: InputDecoration(
+                      labelText: 'Subject',
+                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                    ),
+                    items: _teachingSubjects.map<DropdownMenuItem<String>>((subject) {
+                      return DropdownMenuItem<String>(
+                        value: subject['name'] as String,
+                        child: Text(subject['name'] as String),
+                      );
+                    }).toList(),
+                    onChanged: (val) => setState(() => _selectedSubjectForPlanning = val),
+                  ),
+                  const SizedBox(height: 16),
+                  
+                  // Lesson Title
+                  TextField(
+                    controller: _lessonTitleController,
+                    decoration: InputDecoration(
+                      labelText: 'Lesson Title',
+                      hintText: 'e.g., Introduction to Algebra',
+                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+                  
+                  // Learning Objectives
+                  TextField(
+                    controller: _lessonObjectivesController,
+                    maxLines: 3,
+                    decoration: InputDecoration(
+                      labelText: 'Learning Objectives',
+                      hintText: 'What should students learn?',
+                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+                  
+                  // Core Competencies
+                  Text('Core Competencies', style: AppStyles.montserratBold()),
+                  const SizedBox(height: 8),
+                  Wrap(
+                    spacing: 8,
+                    children: _coreCompetencies.map((comp) {
+                      final isSelected = _selectedCompetencies.contains(comp);
+                      return FilterChip(
+                        label: Text(comp, style: TextStyle(fontSize: 12)),
+                        selected: isSelected,
+                        onSelected: (val) {
+                          setState(() {
+                            if (val) {
+                              _selectedCompetencies.add(comp);
+                            } else {
+                              _selectedCompetencies.remove(comp);
+                            }
+                          });
+                        },
+                      );
+                    }).toList(),
+                  ),
+                  const SizedBox(height: 16),
+                  
+                  // Values
+                  Text('Ghanaian Values', style: AppStyles.montserratBold()),
+                  const SizedBox(height: 8),
+                  Wrap(
+                    spacing: 8,
+                    children: _ghanaianValues.map((val) {
+                      final isSelected = _selectedValues.contains(val);
+                      return FilterChip(
+                        label: Text(val, style: TextStyle(fontSize: 12)),
+                        selected: isSelected,
+                        onSelected: (selected) {
+                          setState(() {
+                            if (selected) {
+                              _selectedValues.add(val);
+                            } else {
+                              _selectedValues.remove(val);
+                            }
+                          });
+                        },
+                      );
+                    }).toList(),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: Text('Cancel', style: AppStyles.montserratMedium()),
+            ),
+            ElevatedButton(
+              onPressed: _isGeneratingLesson ? null : () {
+                if (_lessonTitleController.text.isNotEmpty && _selectedSubjectForPlanning != null) {
+                  _generateLessonPlan();
+                }
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: AppStyles.primaryRed,
+                foregroundColor: Colors.white,
+              ),
+              child: _isGeneratingLesson
+                  ? const SizedBox(
+                      width: 16,
+                      height: 16,
+                      child: CircularProgressIndicator(
+                        strokeWidth: 2,
+                        valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                      ),
+                    )
+                  : Text('Generate', style: AppStyles.montserratBold()),
+            ),
+          ],
         ),
-        content: const Text('Lesson planning interface coming soon!'),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: Text('Close', style: AppStyles.montserratMedium()),
+      ),
+    );
+  }
+  
+  void _showLessonDetailsDialog(BuildContext context, Map<String, dynamic> lesson) {
+    final lessonPlan = lesson['lessonPlan'] as Map<String, dynamic>?;
+    if (lessonPlan == null) return;
+    
+    showDialog(
+      context: context,
+      builder: (context) => Dialog(
+        child: Container(
+          constraints: const BoxConstraints(maxWidth: 800, maxHeight: 700),
+          child: Column(
+            children: [
+              // Header
+              Container(
+                padding: const EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  color: AppStyles.primaryRed,
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(16),
+                    topRight: Radius.circular(16),
+                  ),
+                ),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            lessonPlan['lessonTitle'] ?? 'Lesson Plan',
+                            style: AppStyles.montserratBold(
+                              fontSize: 20,
+                              color: Colors.white,
+                            ),
+                          ),
+                          const SizedBox(height: 4),
+                          Text(
+                            lesson['subject'] ?? '',
+                            style: AppStyles.montserratMedium(
+                              fontSize: 14,
+                              color: Colors.white.withOpacity(0.9),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.close, color: Colors.white),
+                      onPressed: () => Navigator.pop(context),
+                    ),
+                  ],
+                ),
+              ),
+              // Content
+              Expanded(
+                child: SingleChildScrollView(
+                  padding: const EdgeInsets.all(24),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // Learning Outcomes
+                      if (lessonPlan['learningOutcomes'] != null) ...[
+                        Text('Learning Outcomes', style: AppStyles.montserratBold(fontSize: 16)),
+                        const SizedBox(height: 8),
+                        ...(lessonPlan['learningOutcomes'] as List).map((outcome) {
+                          return Padding(
+                            padding: const EdgeInsets.only(bottom: 4, left: 16),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text('• '),
+                                Expanded(child: Text(outcome.toString())),
+                              ],
+                            ),
+                          );
+                        }).toList(),
+                        const SizedBox(height: 16),
+                      ],
+                      
+                      // Prerequisites
+                      if (lessonPlan['prerequisites'] != null) ...[
+                        Text('Prerequisites', style: AppStyles.montserratBold(fontSize: 16)),
+                        const SizedBox(height: 8),
+                        Text(lessonPlan['prerequisites'].toString()),
+                        const SizedBox(height: 16),
+                      ],
+                      
+                      // Teaching Learning Materials
+                      if (lessonPlan['teachingLearningMaterials'] != null) ...[
+                        Text('Teaching Learning Materials', style: AppStyles.montserratBold(fontSize: 16)),
+                        const SizedBox(height: 8),
+                        Text(lessonPlan['teachingLearningMaterials'].toString()),
+                        const SizedBox(height: 16),
+                      ],
+                      
+                      // Lesson Structure
+                      if (lessonPlan['lessonStructure'] != null) ...[
+                        Text('Lesson Structure', style: AppStyles.montserratBold(fontSize: 16)),
+                        const SizedBox(height: 8),
+                        _buildLessonStructureSection(lessonPlan['lessonStructure']),
+                        const SizedBox(height: 16),
+                      ],
+                      
+                      // Assessment
+                      if (lessonPlan['assessment'] != null) ...[
+                        Text('Assessment', style: AppStyles.montserratBold(fontSize: 16)),
+                        const SizedBox(height: 8),
+                        _buildAssessmentSection(lessonPlan['assessment']),
+                        const SizedBox(height: 16),
+                      ],
+                      
+                      // Homework
+                      if (lessonPlan['homework'] != null) ...[
+                        Text('Homework', style: AppStyles.montserratBold(fontSize: 16)),
+                        const SizedBox(height: 8),
+                        Text(lessonPlan['homework'].toString()),
+                        const SizedBox(height: 16),
+                      ],
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+  
+  Widget _buildLessonStructureSection(dynamic structure) {
+    if (structure is! Map) return const SizedBox.shrink();
+    
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        if (structure['intro'] != null) ...[
+          Container(
+            padding: const EdgeInsets.all(12),
+            decoration: BoxDecoration(
+              color: Colors.blue[50],
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('Introduction', style: AppStyles.montserratBold(fontSize: 14)),
+                const SizedBox(height: 8),
+                Text(structure['intro'].toString()),
+              ],
+            ),
+          ),
+          const SizedBox(height: 12),
+        ],
+        if (structure['main'] != null) ...[
+          Container(
+            padding: const EdgeInsets.all(12),
+            decoration: BoxDecoration(
+              color: Colors.green[50],
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('Main Activity', style: AppStyles.montserratBold(fontSize: 14)),
+                const SizedBox(height: 8),
+                Text(structure['main'].toString()),
+              ],
+            ),
+          ),
+          const SizedBox(height: 12),
+        ],
+        if (structure['plenary'] != null) ...[
+          Container(
+            padding: const EdgeInsets.all(12),
+            decoration: BoxDecoration(
+              color: Colors.orange[50],
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('Plenary', style: AppStyles.montserratBold(fontSize: 14)),
+                const SizedBox(height: 8),
+                Text(structure['plenary'].toString()),
+              ],
+            ),
           ),
         ],
-      ),
+      ],
+    );
+  }
+  
+  Widget _buildAssessmentSection(dynamic assessment) {
+    if (assessment is! Map) return Text(assessment.toString());
+    
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        if (assessment['formative'] != null) ...[
+          Text('Formative:', style: AppStyles.montserratBold(fontSize: 14)),
+          Text(assessment['formative'].toString()),
+          const SizedBox(height: 8),
+        ],
+        if (assessment['summative'] != null) ...[
+          Text('Summative:', style: AppStyles.montserratBold(fontSize: 14)),
+          Text(assessment['summative'].toString()),
+        ],
+      ],
     );
   }
 }

@@ -66,6 +66,10 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
   // Generated plan
   Map<String, dynamic>? _generatedPlan;
   
+  // Progress tracking
+  Map<String, Map<int, bool>> _sessionCompletions = {}; // day -> sessionIndex -> completed
+  int _currentWeek = 1;
+  
   @override
   void initState() {
     super.initState();
@@ -100,9 +104,17 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
           .get();
       
       if (doc.exists) {
+        final data = doc.data();
         setState(() {
           _hasExistingPlan = true;
-          _generatedPlan = doc.data();
+          _generatedPlan = data?['studyPlan'];
+          // Load tracking data
+          final tracking = data?['tracking'] as Map<String, dynamic>?;
+          if (tracking != null) {
+            _sessionCompletions = tracking.map((day, sessions) =>
+              MapEntry(day, Map<int, bool>.from(sessions as Map))
+            );
+          }
         });
       }
     } catch (e) {
@@ -137,9 +149,15 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
       final callable = FirebaseFunctions.instance.httpsCallable('generateStudyPlan');
       final result = await callable.call(planData);
       
+      // Extract the studyPlan from the response
+      final studyPlan = result.data['studyPlan'];
+      final metadata = result.data['metadata'];
+      
       setState(() {
-        _generatedPlan = result.data;
+        _generatedPlan = studyPlan;
         _hasExistingPlan = true;
+        // Initialize tracking data
+        _sessionCompletions = {};
       });
       
       // Save to Firestore
@@ -148,7 +166,9 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
           .doc(user.uid)
           .set({
         ...planData,
-        'generatedPlan': result.data,
+        'studyPlan': studyPlan,
+        'metadata': metadata,
+        'tracking': {},
         'createdAt': FieldValue.serverTimestamp(),
         'updatedAt': FieldValue.serverTimestamp(),
       });
@@ -173,6 +193,65 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
       }
     } finally {
       setState(() => _isGeneratingPlan = false);
+    }
+  }
+  
+  Future<void> _toggleSessionCompletion(String day, int sessionIndex) async {
+    setState(() {
+      if (!_sessionCompletions.containsKey(day)) {
+        _sessionCompletions[day] = {};
+      }
+      final currentStatus = _sessionCompletions[day]![sessionIndex] ?? false;
+      _sessionCompletions[day]![sessionIndex] = !currentStatus;
+    });
+    
+    // Save to Firestore
+    try {
+      final user = FirebaseAuth.instance.currentUser;
+      if (user != null) {
+        await FirebaseFirestore.instance
+            .collection('study_plans')
+            .doc(user.uid)
+            .update({
+          'tracking': _sessionCompletions,
+          'updatedAt': FieldValue.serverTimestamp(),
+        });
+      }
+    } catch (e) {
+      debugPrint('Error saving progress: $e');
+    }
+  }
+  
+  Future<void> _createNewPlan() async {
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text('Create New Plan?', style: AppStyles.montserratBold()),
+        content: Text(
+          'This will replace your current study plan. Your progress will be archived.',
+          style: AppStyles.montserratRegular(),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context, false),
+            child: Text('Cancel', style: AppStyles.montserratMedium()),
+          ),
+          ElevatedButton(
+            onPressed: () => Navigator.pop(context, true),
+            style: ElevatedButton.styleFrom(backgroundColor: AppStyles.primaryRed),
+            child: Text('Create New', style: AppStyles.montserratBold(color: Colors.white)),
+          ),
+        ],
+      ),
+    );
+    
+    if (confirmed == true) {
+      setState(() {
+        _hasExistingPlan = false;
+        _generatedPlan = null;
+        _currentStep = 0;
+        _sessionCompletions = {};
+      });
     }
   }
   
@@ -921,96 +1000,412 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
   }
   
   Widget _buildStudyPlanView(bool isSmallScreen) {
+    final weeklySchedule = _generatedPlan?['weeklySchedule'] as Map<String, dynamic>?;
+    final tips = _generatedPlan?['tips'] as List<dynamic>?;
+    final studyTechniques = _generatedPlan?['studyTechniques'] as List<dynamic>?;
+    
+    // Calculate progress
+    int totalSessions = 0;
+    int completedSessions = 0;
+    weeklySchedule?.forEach((day, sessions) {
+      if (sessions is List) {
+        totalSessions += sessions.length;
+        sessions.asMap().forEach((index, session) {
+          if (_sessionCompletions[day]?[index] == true) {
+            completedSessions++;
+          }
+        });
+      }
+    });
+    
+    final progressPercent = totalSessions > 0 ? (completedSessions / totalSessions * 100).toInt() : 0;
+    
     return Container(
       color: AppStyles.warmWhite,
-      child: SingleChildScrollView(
-        padding: EdgeInsets.all(isSmallScreen ? 16 : 32),
-        child: Center(
-          child: Container(
-            constraints: const BoxConstraints(maxWidth: 1200),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+      child: Column(
+        children: [
+          // Header with Create New Plan button
+          Container(
+            padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.05),
+                  blurRadius: 4,
+                  offset: const Offset(0, 2),
+                ),
+              ],
+            ),
+            child: Row(
               children: [
-                Text(
-                  'Your Study Plan',
-                  style: AppStyles.playfairHeading(
-                    fontSize: isSmallScreen ? 28 : 36,
-                    color: AppStyles.primaryNavy,
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Your Study Plan',
+                        style: AppStyles.playfairHeading(
+                          fontSize: isSmallScreen ? 24 : 32,
+                          color: AppStyles.primaryNavy,
+                        ),
+                      ),
+                      const SizedBox(height: 4),
+                      Text(
+                        'Week $_currentWeek • $progressPercent% Complete',
+                        style: AppStyles.montserratMedium(
+                          fontSize: 14,
+                          color: const Color(0xFF2ECC71),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
-                const SizedBox(height: 8),
-                Text(
-                  'Personalized for your goals and schedule',
-                  style: AppStyles.montserratRegular(
-                    fontSize: 16,
-                    color: Colors.grey[600]!,
+                ElevatedButton.icon(
+                  onPressed: _createNewPlan,
+                  icon: const Icon(Icons.add, size: 20),
+                  label: Text(
+                    'Create New',
+                    style: AppStyles.montserratBold(fontSize: 14),
                   ),
-                ),
-                const SizedBox(height: 24),
-                // TODO: Display the generated study plan
-                Card(
-                  elevation: 2,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(24),
-                    child: Column(
-                      children: [
-                        const Icon(
-                          Icons.calendar_today,
-                          size: 64,
-                          color: Color(0xFF2ECC71),
-                        ),
-                        const SizedBox(height: 16),
-                        Text(
-                          'Your plan is ready!',
-                          style: AppStyles.montserratBold(
-                            fontSize: 20,
-                            color: AppStyles.primaryNavy,
-                          ),
-                        ),
-                        const SizedBox(height: 8),
-                        Text(
-                          'Detailed schedule view coming soon',
-                          style: AppStyles.montserratRegular(
-                            color: Colors.grey[600]!,
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                        const SizedBox(height: 24),
-                        ElevatedButton(
-                          onPressed: () {
-                            setState(() {
-                              _hasExistingPlan = false;
-                              _generatedPlan = null;
-                              _currentStep = 0;
-                            });
-                          },
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: AppStyles.primaryRed,
-                            foregroundColor: Colors.white,
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 32,
-                              vertical: 16,
-                            ),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                          ),
-                          child: Text(
-                            'Create New Plan',
-                            style: AppStyles.montserratBold(),
-                          ),
-                        ),
-                      ],
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: AppStyles.primaryRed,
+                    foregroundColor: Colors.white,
+                    padding: EdgeInsets.symmetric(
+                      horizontal: isSmallScreen ? 16 : 24,
+                      vertical: 12,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
                     ),
                   ),
                 ),
               ],
             ),
           ),
-        ),
+          // Scrollable content
+          Expanded(
+            child: SingleChildScrollView(
+              padding: EdgeInsets.all(isSmallScreen ? 16 : 32),
+              child: Center(
+                child: Container(
+                  constraints: const BoxConstraints(maxWidth: 1200),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // Progress Card
+                      Card(
+                        elevation: 2,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(24),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  Container(
+                                    padding: const EdgeInsets.all(12),
+                                    decoration: BoxDecoration(
+                                      color: const Color(0xFF2ECC71).withOpacity(0.1),
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: const Icon(
+                                      Icons.trending_up,
+                                      color: Color(0xFF2ECC71),
+                                      size: 28,
+                                    ),
+                                  ),
+                                  const SizedBox(width: 16),
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          'Your Progress',
+                                          style: AppStyles.montserratBold(
+                                            fontSize: 18,
+                                            color: AppStyles.primaryNavy,
+                                          ),
+                                        ),
+                                        Text(
+                                          '$completedSessions of $totalSessions sessions completed',
+                                          style: AppStyles.montserratRegular(
+                                            fontSize: 14,
+                                            color: Colors.grey[600]!,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  Text(
+                                    '$progressPercent%',
+                                    style: AppStyles.montserratBold(
+                                      fontSize: 32,
+                                      color: const Color(0xFF2ECC71),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(height: 16),
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(8),
+                                child: LinearProgressIndicator(
+                                  value: progressPercent / 100,
+                                  minHeight: 8,
+                                  backgroundColor: Colors.grey[200],
+                                  valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFF2ECC71)),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 24),
+                      
+                      // Weekly Schedule
+                      Text(
+                        'Weekly Schedule',
+                        style: AppStyles.montserratBold(
+                          fontSize: 22,
+                          color: AppStyles.primaryNavy,
+                        ),
+                      ),
+                      const SizedBox(height: 16),
+                      
+                      if (weeklySchedule != null)
+                        ...weeklySchedule.entries.map((entry) {
+                          final day = entry.key;
+                          final sessions = entry.value as List<dynamic>;
+                          
+                          return Card(
+                            elevation: 2,
+                            margin: const EdgeInsets.only(bottom: 16),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(20),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    children: [
+                                      Container(
+                                        padding: const EdgeInsets.all(8),
+                                        decoration: BoxDecoration(
+                                          color: const Color(0xFF6A00F4).withOpacity(0.1),
+                                          borderRadius: BorderRadius.circular(8),
+                                        ),
+                                        child: const Icon(
+                                          Icons.calendar_today,
+                                          color: Color(0xFF6A00F4),
+                                          size: 20,
+                                        ),
+                                      ),
+                                      const SizedBox(width: 12),
+                                      Text(
+                                        day,
+                                        style: AppStyles.montserratBold(
+                                          fontSize: 18,
+                                          color: AppStyles.primaryNavy,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(height: 16),
+                                  ...sessions.asMap().entries.map((sessionEntry) {
+                                    final sessionIndex = sessionEntry.key;
+                                    final session = sessionEntry.value as Map<String, dynamic>;
+                                    final isCompleted = _sessionCompletions[day]?[sessionIndex] ?? false;
+                                    
+                                    return Container(
+                                      margin: const EdgeInsets.only(bottom: 12),
+                                      decoration: BoxDecoration(
+                                        color: isCompleted
+                                            ? const Color(0xFF2ECC71).withOpacity(0.1)
+                                            : Colors.grey[50],
+                                        borderRadius: BorderRadius.circular(12),
+                                        border: Border.all(
+                                          color: isCompleted
+                                              ? const Color(0xFF2ECC71)
+                                              : Colors.grey[300]!,
+                                        ),
+                                      ),
+                                      child: ListTile(
+                                        leading: Checkbox(
+                                          value: isCompleted,
+                                          onChanged: (val) => _toggleSessionCompletion(day, sessionIndex),
+                                          activeColor: const Color(0xFF2ECC71),
+                                        ),
+                                        title: Text(
+                                          session['subject'] ?? 'Study Session',
+                                          style: AppStyles.montserratBold(
+                                            fontSize: 16,
+                                            color: AppStyles.primaryNavy,
+                                          ).copyWith(
+                                            decoration: isCompleted ? TextDecoration.lineThrough : null,
+                                          ),
+                                        ),
+                                        subtitle: Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            const SizedBox(height: 4),
+                                            Text(
+                                              session['topic'] ?? '',
+                                              style: AppStyles.montserratRegular(
+                                                fontSize: 14,
+                                                color: Colors.grey[700]!,
+                                              ),
+                                            ),
+                                            const SizedBox(height: 4),
+                                            Row(
+                                              children: [
+                                                Icon(Icons.access_time, size: 14, color: Colors.grey[600]),
+                                                const SizedBox(width: 4),
+                                                Text(
+                                                  session['time'] ?? '',
+                                                  style: AppStyles.montserratMedium(
+                                                    fontSize: 12,
+                                                    color: Colors.grey[600]!,
+                                                  ),
+                                                ),
+                                                const SizedBox(width: 16),
+                                                Icon(Icons.task_alt, size: 14, color: Colors.grey[600]),
+                                                const SizedBox(width: 4),
+                                                Text(
+                                                  session['activity'] ?? '',
+                                                  style: AppStyles.montserratMedium(
+                                                    fontSize: 12,
+                                                    color: Colors.grey[600]!,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ],
+                                        ),
+                                      ),
+                                    );
+                                  }).toList(),
+                                ],
+                              ),
+                            ),
+                          );
+                        }).toList(),
+                      
+                      const SizedBox(height: 24),
+                      
+                      // Study Techniques
+                      if (studyTechniques != null && studyTechniques.isNotEmpty) ...[
+                        Text(
+                          'Recommended Study Techniques',
+                          style: AppStyles.montserratBold(
+                            fontSize: 22,
+                            color: AppStyles.primaryNavy,
+                          ),
+                        ),
+                        const SizedBox(height: 16),
+                        Card(
+                          elevation: 2,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(20),
+                            child: Column(
+                              children: studyTechniques.map((technique) {
+                                return Padding(
+                                  padding: const EdgeInsets.only(bottom: 12),
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        margin: const EdgeInsets.only(top: 4),
+                                        width: 6,
+                                        height: 6,
+                                        decoration: const BoxDecoration(
+                                          color: Color(0xFF6A00F4),
+                                          shape: BoxShape.circle,
+                                        ),
+                                      ),
+                                      const SizedBox(width: 12),
+                                      Expanded(
+                                        child: Text(
+                                          technique.toString(),
+                                          style: AppStyles.montserratRegular(
+                                            fontSize: 15,
+                                            color: Colors.grey[800]!,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                );
+                              }).toList(),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 24),
+                      ],
+                      
+                      // Tips
+                      if (tips != null && tips.isNotEmpty) ...[
+                        Text(
+                          'Success Tips',
+                          style: AppStyles.montserratBold(
+                            fontSize: 22,
+                            color: AppStyles.primaryNavy,
+                          ),
+                        ),
+                        const SizedBox(height: 16),
+                        Card(
+                          elevation: 2,
+                          color: const Color(0xFF2ECC71).withOpacity(0.1),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(20),
+                            child: Column(
+                              children: tips.map((tip) {
+                                return Padding(
+                                  padding: const EdgeInsets.only(bottom: 12),
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      const Icon(
+                                        Icons.lightbulb_outline,
+                                        color: Color(0xFF2ECC71),
+                                        size: 20,
+                                      ),
+                                      const SizedBox(width: 12),
+                                      Expanded(
+                                        child: Text(
+                                          tip.toString(),
+                                          style: AppStyles.montserratRegular(
+                                            fontSize: 15,
+                                            color: Colors.grey[800]!,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                );
+                              }).toList(),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 24),
+                      ],
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
