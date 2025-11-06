@@ -103,38 +103,43 @@ class _GenerateQuizPageState extends State<GenerateQuizPage> {
                 child: Column(
                   children: [
                     // Toggle between Database and AI
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                    Column(
                       children: [
                         Text(
                           'Question Source:',
                           style: GoogleFonts.montserrat(fontWeight: FontWeight.w600),
                         ),
-                        const SizedBox(width: 16),
-                        ChoiceChip(
-                          label: Text('Database', style: GoogleFonts.montserrat()),
-                          selected: !_useAIGeneration,
-                          onSelected: (selected) {
-                            if (selected) setState(() => _useAIGeneration = false);
-                          },
-                          selectedColor: const Color(0xFF2ECC71),
-                          backgroundColor: Colors.grey[200],
-                          labelStyle: TextStyle(
-                            color: !_useAIGeneration ? Colors.white : Colors.black87,
-                          ),
-                        ),
-                        const SizedBox(width: 8),
-                        ChoiceChip(
-                          label: Text('AI Generated', style: GoogleFonts.montserrat()),
-                          selected: _useAIGeneration,
-                          onSelected: (selected) {
-                            if (selected) setState(() => _useAIGeneration = true);
-                          },
-                          selectedColor: const Color(0xFFD62828),
-                          backgroundColor: Colors.grey[200],
-                          labelStyle: TextStyle(
-                            color: _useAIGeneration ? Colors.white : Colors.black87,
-                          ),
+                        const SizedBox(height: 12),
+                        Wrap(
+                          spacing: 8,
+                          runSpacing: 8,
+                          alignment: WrapAlignment.center,
+                          children: [
+                            ChoiceChip(
+                              label: Text('Database', style: GoogleFonts.montserrat()),
+                              selected: !_useAIGeneration,
+                              onSelected: (selected) {
+                                if (selected) setState(() => _useAIGeneration = false);
+                              },
+                              selectedColor: const Color(0xFF2ECC71),
+                              backgroundColor: Colors.grey[200],
+                              labelStyle: TextStyle(
+                                color: !_useAIGeneration ? Colors.white : Colors.black87,
+                              ),
+                            ),
+                            ChoiceChip(
+                              label: Text('AI Generated', style: GoogleFonts.montserrat()),
+                              selected: _useAIGeneration,
+                              onSelected: (selected) {
+                                if (selected) setState(() => _useAIGeneration = true);
+                              },
+                              selectedColor: const Color(0xFFD62828),
+                              backgroundColor: Colors.grey[200],
+                              labelStyle: TextStyle(
+                                color: _useAIGeneration ? Colors.white : Colors.black87,
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
@@ -374,7 +379,7 @@ class _GenerateQuizPageState extends State<GenerateQuizPage> {
           orElse: () => optionsList[0],
         );
         
-        debugPrint('✅ AI Question ${i+1}: correctAnswer="${correctAnswerFull}", options=${optionsList.length}');
+        debugPrint('✅ AI Question ${i+1}: correctAnswer="$correctAnswerFull", options=${optionsList.length}');
         
         aiQuestions.add(Question(
           id: 'ai_${DateTime.now().millisecondsSinceEpoch}_$i',

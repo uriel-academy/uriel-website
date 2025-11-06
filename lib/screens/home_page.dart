@@ -120,7 +120,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     super.initState();
     _showingProfile = widget.showProfileOnInit;
   // Teacher: Dashboard, Students, Generate Quiz, Lesson Planner, Notes, Uri, Books, Trivia, Leaderboard, Feedback (10 tabs)
-  // Student: Dashboard, Questions, Revision, Books, Notes, Study Plan, Trivia, Leaderboard, Uri, Feedback (10 tabs)
+  // Student: Dashboard, Questions, Revision, Books, Notes, Study Planner, Trivia, Leaderboard, Uri, Feedback (10 tabs)
   final tabLength = widget.isTeacher ? 10 : 10;
   _mainTabController = TabController(length: tabLength, vsync: this);
     _animationController = AnimationController(
@@ -2547,7 +2547,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       children.add(_buildFeedbackPage());
     } else {
       // Student tab order requested:
-      // Dashboard, Questions, Revision, Books, Notes, Study Plan, Trivia, Leaderboard, Uri, Feedback
+      // Dashboard, Questions, Revision, Books, Notes, Study Planner, Trivia, Leaderboard, Uri, Feedback
       children.add(_buildQuestionsPage());
       children.add(_buildRevisionPage());
       children.add(_buildTextbooksPage());
@@ -2581,13 +2581,13 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       items.add({'index': idx++, 'label': 'Leaderboard', 'icon': null});
       items.add({'index': idx++, 'label': 'Feedback', 'icon': null});
     } else {
-      // Student order: Questions, Revision, Books, Notes, Study Plan, Trivia, Leaderboard, Ask Uri, Feedback
+      // Student order: Questions, Revision, Books, Notes, Study Planner, Trivia, Leaderboard, Ask Uri, Feedback
       // Render label-only tabs for students as requested (no icons)
       items.add({'index': idx++, 'label': 'Questions', 'icon': null});
       items.add({'index': idx++, 'label': 'Revision', 'icon': null});
       items.add({'index': idx++, 'label': 'Books', 'icon': null});
       items.add({'index': idx++, 'label': 'Notes', 'icon': null});
-      items.add({'index': idx++, 'label': 'Study Plan', 'icon': null});
+      items.add({'index': idx++, 'label': 'Study Planner', 'icon': null});
       items.add({'index': idx++, 'label': 'Trivia', 'icon': null});
       items.add({'index': idx++, 'label': 'Leaderboard', 'icon': null});
       items.add({'index': idx++, 'label': 'Ask Uri', 'icon': null});
@@ -2600,7 +2600,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     if (widget.isTeacher) {
       return 5; // Teacher: Dashboard(0), Students(1), Generate Quiz(2), Lesson Planner(3), Notes(4), [Ask Uri(5)]
     } else {
-      return 8; // Student: Dashboard(0), Questions(1), Revision(2), Books(3), Notes(4), Study Plan(5), Trivia(6), Leaderboard(7), [Ask Uri(8)]
+      return 8; // Student: Dashboard(0), Questions(1), Revision(2), Books(3), Notes(4), Study Planner(5), Trivia(6), Leaderboard(7), [Ask Uri(8)]
     }
   }
 
@@ -2611,7 +2611,7 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
     // Hide Uri chatbot for teachers
     if (widget.isTeacher) return false;
     
-    // Hide on Study Plan page (index 5 for students)
+    // Hide on Study Planner page (index 5 for students)
     if (_selectedIndex == 5) return false;
     
     return !_showingProfile && 
@@ -2952,21 +2952,14 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
                     ],
                   ),
                 ),
-              ],
-            ),
           ],
-          
-          SizedBox(height: isSmallScreen ? 16 : 24),
-          
-          // Recent Achievements - Moved up
-          _buildRecentAchievements(),
-          
-          SizedBox(height: isSmallScreen ? 16 : 24),
-          
-          // Messages & Notifications Card
-          _buildMessagesNotificationsCard(),
-          
-          SizedBox(height: isSmallScreen ? 16 : 24),
+        ),
+      ],
+      
+      SizedBox(height: isSmallScreen ? 16 : 24),
+      
+      // Messages & Notifications Card
+      _buildMessagesNotificationsCard(),          SizedBox(height: isSmallScreen ? 16 : 24),
           
           // AI Recommendations
           _buildAIRecommendations(),

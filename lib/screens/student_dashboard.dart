@@ -8,6 +8,7 @@ import 'gamification.dart';
 import 'calm_mode.dart';
 import 'profile_analytics.dart';
 import 'student_motivation.dart';
+import '../widgets/grade_prediction_card.dart';
 
 class StudentDashboardPage extends StatefulWidget {
   const StudentDashboardPage({super.key});
@@ -64,6 +65,8 @@ class _StudentDashboardPageState extends State<StudentDashboardPage> {
             _buildQuickActions(context),
             const SizedBox(height: 24),
             _buildAnalyticsCard(),
+            const SizedBox(height: 24),
+            const GradePredictionCard(),
             const SizedBox(height: 24),
             StudentMotivationCard(messages: motivationMessages),
             const SizedBox(height: 24),

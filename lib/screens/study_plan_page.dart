@@ -43,7 +43,7 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
   // Step 3: Subjects
   final List<Map<String, dynamic>> _subjects = [];
   final _subjectController = TextEditingController();
-  String _subjectPriority = 'Medium';
+  final String _subjectPriority = 'Medium';
   
   final List<String> _beceSubjects = [
     'Mathematics',
@@ -68,7 +68,7 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
   
   // Progress tracking
   Map<String, Map<int, bool>> _sessionCompletions = {}; // day -> sessionIndex -> completed
-  int _currentWeek = 1;
+  final int _currentWeek = 1;
   
   @override
   void initState() {
@@ -264,11 +264,12 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
       return const Center(child: CircularProgressIndicator());
     }
     
-    if (_hasExistingPlan && _generatedPlan != null) {
-      return _buildStudyPlanView(isSmallScreen);
-    }
-    
-    return _buildOnboardingFlow(isSmallScreen);
+    // Wrap everything in SafeArea for iOS Safari bars
+    return SafeArea(
+      child: _hasExistingPlan && _generatedPlan != null
+          ? _buildStudyPlanView(isSmallScreen)
+          : _buildOnboardingFlow(isSmallScreen),
+    );
   }
   
   Widget _buildOnboardingFlow(bool isSmallScreen) {
@@ -941,7 +942,7 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
                 setState(() => _currentStep--);
               },
               style: OutlinedButton.styleFrom(
-                side: BorderSide(color: AppStyles.primaryRed),
+                side: const BorderSide(color: AppStyles.primaryRed),
                 padding: EdgeInsets.symmetric(
                   horizontal: isSmallScreen ? 24 : 32,
                   vertical: 16,
@@ -1022,85 +1023,118 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
     
     return Container(
       color: AppStyles.warmWhite,
-      child: Column(
+      child: Stack(
         children: [
-          // Header with Create New Plan button
-          Container(
-            padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.05),
-                  blurRadius: 4,
-                  offset: const Offset(0, 2),
+          Column(
+            children: [
+              // Compact Header
+              Container(
+                padding: EdgeInsets.symmetric(
+                  horizontal: isSmallScreen ? 12 : 24,
+                  vertical: isSmallScreen ? 12 : 20,
                 ),
-              ],
-            ),
-            child: Row(
-              children: [
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Your Study Plan',
-                        style: AppStyles.playfairHeading(
-                          fontSize: isSmallScreen ? 24 : 32,
-                          color: AppStyles.primaryNavy,
-                        ),
-                      ),
-                      const SizedBox(height: 4),
-                      Text(
-                        'Week $_currentWeek • $progressPercent% Complete',
-                        style: AppStyles.montserratMedium(
-                          fontSize: 14,
-                          color: const Color(0xFF2ECC71),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                ElevatedButton.icon(
-                  onPressed: _createNewPlan,
-                  icon: const Icon(Icons.add, size: 20),
-                  label: Text(
-                    'Create New',
-                    style: AppStyles.montserratBold(fontSize: 14),
-                  ),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: AppStyles.primaryRed,
-                    foregroundColor: Colors.white,
-                    padding: EdgeInsets.symmetric(
-                      horizontal: isSmallScreen ? 16 : 24,
-                      vertical: 12,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.05),
+                      blurRadius: 4,
+                      offset: const Offset(0, 2),
                     ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                  ),
+                  ],
                 ),
-              ],
-            ),
-          ),
-          // Scrollable content
-          Expanded(
-            child: SingleChildScrollView(
-              padding: EdgeInsets.all(isSmallScreen ? 16 : 32),
-              child: Center(
-                child: Container(
-                  constraints: const BoxConstraints(maxWidth: 1200),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                child: isSmallScreen
+                    ? Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Your Study Plan',
+                            style: AppStyles.playfairHeading(
+                              fontSize: 20,
+                              color: AppStyles.primaryNavy,
+                            ),
+                          ),
+                          const SizedBox(height: 6),
+                          Row(
+                            children: [
+                              Expanded(
+                                child: Text(
+                                  'Week $_currentWeek • $progressPercent% Complete',
+                                  style: AppStyles.montserratMedium(
+                                    fontSize: 12,
+                                    color: const Color(0xFF2ECC71),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      )
+                    : Row(
+                        children: [
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Your Study Plan',
+                                  style: AppStyles.playfairHeading(
+                                    fontSize: 32,
+                                    color: AppStyles.primaryNavy,
+                                  ),
+                                ),
+                                const SizedBox(height: 4),
+                                Text(
+                                  'Week $_currentWeek • $progressPercent% Complete',
+                                  style: AppStyles.montserratMedium(
+                                    fontSize: 14,
+                                    color: const Color(0xFF2ECC71),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          ElevatedButton.icon(
+                            onPressed: _createNewPlan,
+                            icon: const Icon(Icons.add, size: 20),
+                            label: Text(
+                              'Create New',
+                              style: AppStyles.montserratBold(fontSize: 14),
+                            ),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: AppStyles.primaryRed,
+                              foregroundColor: Colors.white,
+                              minimumSize: const Size(0, 44), // Minimum 44pt tap target
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 24,
+                                vertical: 12,
+                              ),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+              ),
+              // Scrollable content
+              Expanded(
+                child: SingleChildScrollView(
+                  padding: EdgeInsets.all(isSmallScreen ? 12 : 32),
+                  child: Center(
+                    child: Container(
+                      constraints: const BoxConstraints(maxWidth: 1200),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
                       // Progress Card
                       Card(
-                        elevation: 2,
+                        elevation: isSmallScreen ? 1 : 2,
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(16),
+                          borderRadius: BorderRadius.circular(isSmallScreen ? 12 : 16),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.all(24),
+                          padding: EdgeInsets.all(isSmallScreen ? 16 : 24),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -1126,16 +1160,21 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
                                         Text(
                                           'Your Progress',
                                           style: AppStyles.montserratBold(
-                                            fontSize: 18,
+                                            fontSize: isSmallScreen ? 16 : 18,
                                             color: AppStyles.primaryNavy,
                                           ),
+                                          maxLines: 1,
+                                          overflow: TextOverflow.ellipsis,
                                         ),
+                                        const SizedBox(height: 4),
                                         Text(
                                           '$completedSessions of $totalSessions sessions completed',
                                           style: AppStyles.montserratRegular(
-                                            fontSize: 14,
+                                            fontSize: isSmallScreen ? 12 : 14,
                                             color: Colors.grey[600]!,
                                           ),
+                                          maxLines: 2,
+                                          overflow: TextOverflow.ellipsis,
                                         ),
                                       ],
                                     ),
@@ -1181,13 +1220,13 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
                           final sessions = entry.value as List<dynamic>;
                           
                           return Card(
-                            elevation: 2,
-                            margin: const EdgeInsets.only(bottom: 16),
+                            elevation: isSmallScreen ? 1 : 2,
+                            margin: EdgeInsets.only(bottom: isSmallScreen ? 12 : 16),
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(16),
+                              borderRadius: BorderRadius.circular(isSmallScreen ? 12 : 16),
                             ),
                             child: Padding(
-                              padding: const EdgeInsets.all(20),
+                              padding: EdgeInsets.all(isSmallScreen ? 16 : 20),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
@@ -1221,68 +1260,103 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
                                     final session = sessionEntry.value as Map<String, dynamic>;
                                     final isCompleted = _sessionCompletions[day]?[sessionIndex] ?? false;
                                     
-                                    return Container(
-                                      margin: const EdgeInsets.only(bottom: 12),
-                                      decoration: BoxDecoration(
-                                        color: isCompleted
-                                            ? const Color(0xFF2ECC71).withOpacity(0.1)
-                                            : Colors.grey[50],
-                                        borderRadius: BorderRadius.circular(12),
-                                        border: Border.all(
+                                    return InkWell(
+                                      onTap: () => _toggleSessionCompletion(day, sessionIndex),
+                                      borderRadius: BorderRadius.circular(12),
+                                      child: Container(
+                                        margin: EdgeInsets.only(bottom: isSmallScreen ? 8 : 12),
+                                        padding: EdgeInsets.all(isSmallScreen ? 12 : 16),
+                                        decoration: BoxDecoration(
                                           color: isCompleted
-                                              ? const Color(0xFF2ECC71)
-                                              : Colors.grey[300]!,
-                                        ),
-                                      ),
-                                      child: ListTile(
-                                        leading: Checkbox(
-                                          value: isCompleted,
-                                          onChanged: (val) => _toggleSessionCompletion(day, sessionIndex),
-                                          activeColor: const Color(0xFF2ECC71),
-                                        ),
-                                        title: Text(
-                                          session['subject'] ?? 'Study Session',
-                                          style: AppStyles.montserratBold(
-                                            fontSize: 16,
-                                            color: AppStyles.primaryNavy,
-                                          ).copyWith(
-                                            decoration: isCompleted ? TextDecoration.lineThrough : null,
+                                              ? const Color(0xFF2ECC71).withOpacity(0.1)
+                                              : Colors.grey[50],
+                                          borderRadius: BorderRadius.circular(12),
+                                          border: Border.all(
+                                            color: isCompleted
+                                                ? const Color(0xFF2ECC71)
+                                                : Colors.grey[300]!,
                                           ),
                                         ),
-                                        subtitle: Column(
-                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                        child: Row(
+                                          crossAxisAlignment: CrossAxisAlignment.center,
                                           children: [
-                                            const SizedBox(height: 4),
-                                            Text(
-                                              session['topic'] ?? '',
-                                              style: AppStyles.montserratRegular(
-                                                fontSize: 14,
-                                                color: Colors.grey[700]!,
+                                            SizedBox(
+                                              height: 44,
+                                              width: 44,
+                                              child: Checkbox(
+                                                value: isCompleted,
+                                                onChanged: (val) => _toggleSessionCompletion(day, sessionIndex),
+                                                activeColor: const Color(0xFF2ECC71),
                                               ),
                                             ),
-                                            const SizedBox(height: 4),
-                                            Row(
-                                              children: [
-                                                Icon(Icons.access_time, size: 14, color: Colors.grey[600]),
-                                                const SizedBox(width: 4),
-                                                Text(
-                                                  session['time'] ?? '',
-                                                  style: AppStyles.montserratMedium(
-                                                    fontSize: 12,
-                                                    color: Colors.grey[600]!,
+                                            const SizedBox(width: 12),
+                                            Expanded(
+                                              child: Column(
+                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                children: [
+                                                  Text(
+                                                    session['subject'] ?? 'Study Session',
+                                                    style: AppStyles.montserratBold(
+                                                      fontSize: isSmallScreen ? 14 : 16,
+                                                      color: AppStyles.primaryNavy,
+                                                    ).copyWith(
+                                                      decoration: isCompleted ? TextDecoration.lineThrough : null,
+                                                    ),
+                                                    maxLines: 2,
+                                                    overflow: TextOverflow.ellipsis,
                                                   ),
-                                                ),
-                                                const SizedBox(width: 16),
-                                                Icon(Icons.task_alt, size: 14, color: Colors.grey[600]),
-                                                const SizedBox(width: 4),
-                                                Text(
-                                                  session['activity'] ?? '',
-                                                  style: AppStyles.montserratMedium(
-                                                    fontSize: 12,
-                                                    color: Colors.grey[600]!,
+                                                  const SizedBox(height: 4),
+                                                  Text(
+                                                    session['topic'] ?? '',
+                                                    style: AppStyles.montserratRegular(
+                                                      fontSize: isSmallScreen ? 12 : 14,
+                                                      color: Colors.grey[700]!,
+                                                    ),
+                                                    maxLines: 2,
+                                                    overflow: TextOverflow.ellipsis,
                                                   ),
-                                                ),
-                                              ],
+                                                  const SizedBox(height: 6),
+                                                  Wrap(
+                                                    spacing: 12,
+                                                    runSpacing: 4,
+                                                    crossAxisAlignment: WrapCrossAlignment.center,
+                                                    children: [
+                                                      Row(
+                                                        mainAxisSize: MainAxisSize.min,
+                                                        children: [
+                                                          Icon(Icons.access_time, size: 14, color: Colors.grey[600]),
+                                                          const SizedBox(width: 4),
+                                                          Text(
+                                                            session['time'] ?? '',
+                                                            style: AppStyles.montserratMedium(
+                                                              fontSize: 11,
+                                                              color: Colors.grey[600]!,
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                      Row(
+                                                        mainAxisSize: MainAxisSize.min,
+                                                        children: [
+                                                          Icon(Icons.task_alt, size: 14, color: Colors.grey[600]),
+                                                          const SizedBox(width: 4),
+                                                          Flexible(
+                                                            child: Text(
+                                                              session['activity'] ?? '',
+                                                              style: AppStyles.montserratMedium(
+                                                                fontSize: 11,
+                                                                color: Colors.grey[600]!,
+                                                              ),
+                                                              maxLines: 1,
+                                                              overflow: TextOverflow.ellipsis,
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ],
+                                              ),
                                             ),
                                           ],
                                         ),
@@ -1308,12 +1382,12 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
                         ),
                         const SizedBox(height: 16),
                         Card(
-                          elevation: 2,
+                          elevation: isSmallScreen ? 1 : 2,
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(16),
+                            borderRadius: BorderRadius.circular(isSmallScreen ? 12 : 16),
                           ),
                           child: Padding(
-                            padding: const EdgeInsets.all(20),
+                            padding: EdgeInsets.all(isSmallScreen ? 16 : 20),
                             child: Column(
                               children: studyTechniques.map((technique) {
                                 return Padding(
@@ -1399,14 +1473,33 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
                         ),
                         const SizedBox(height: 24),
                       ],
-                    ],
+                      // Add bottom padding for FAB on mobile
+                      if (isSmallScreen) const SizedBox(height: 80),
+                        ],
+                      ),
+                    ),
                   ),
                 ),
               ),
+            ],
+          ),
+        // Floating Action Button for mobile
+        if (isSmallScreen)
+          Positioned(
+            right: 16,
+            bottom: 16,
+            child: FloatingActionButton.extended(
+              onPressed: _createNewPlan,
+              backgroundColor: AppStyles.primaryRed,
+              icon: const Icon(Icons.add, color: Colors.white),
+              label: Text(
+                'New Plan',
+                style: AppStyles.montserratBold(color: Colors.white),
+              ),
             ),
           ),
-        ],
-      ),
+      ],
+    ),
     );
   }
 }

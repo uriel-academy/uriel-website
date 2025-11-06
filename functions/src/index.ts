@@ -3761,3 +3761,10 @@ export { generateStudyPlan } from './generateStudyPlan';
 
 // Export AI Lesson Plan Generation
 export { generateLessonPlan } from './generateLessonPlan';
+
+// Export Question Difficulty Updates
+export { 
+  updateQuestionDifficulties, 
+  manualUpdateDifficulties, 
+  getSubjectDifficultyStats 
+} from './updateQuestionDifficulty';

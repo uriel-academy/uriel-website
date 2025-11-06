@@ -1139,49 +1139,93 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Lesson Planner',
-                            style: AppStyles.playfairHeading(
-                              fontSize: isSmallScreen ? 28 : 36,
-                              color: AppStyles.primaryNavy,
-                            ),
-                          ),
-                          const SizedBox(height: 8),
-                          Text(
-                            'Create GES/NaCCA aligned lesson plans',
-                            style: AppStyles.montserratRegular(
-                              fontSize: 16,
-                              color: Colors.grey[600]!,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    ElevatedButton.icon(
-                      onPressed: () => _showCreateLessonDialog(context),
-                      icon: const Icon(Icons.add),
-                      label: const Text('New Lesson'),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: AppStyles.primaryRed,
-                        foregroundColor: Colors.white,
-                        padding: EdgeInsets.symmetric(
-                          horizontal: isSmallScreen ? 16 : 24,
-                          vertical: isSmallScreen ? 12 : 16,
-                        ),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12),
+                // Responsive header layout
+                if (isSmallScreen)
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Lesson Planner',
+                        style: AppStyles.playfairHeading(
+                          fontSize: 28,
+                          color: AppStyles.primaryNavy,
                         ),
                       ),
-                    ),
-                  ],
-                ),
+                      const SizedBox(height: 8),
+                      Text(
+                        'Create GES/NaCCA aligned lesson plans',
+                        style: AppStyles.montserratRegular(
+                          fontSize: 14,
+                          color: Colors.grey[600]!,
+                        ),
+                      ),
+                      const SizedBox(height: 16),
+                      SizedBox(
+                        width: double.infinity,
+                        child: ElevatedButton.icon(
+                          onPressed: () => _showCreateLessonDialog(context),
+                          icon: const Icon(Icons.add),
+                          label: const Text('New Lesson'),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: AppStyles.primaryRed,
+                            foregroundColor: Colors.white,
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 16,
+                              vertical: 14,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  )
+                else
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Lesson Planner',
+                              style: AppStyles.playfairHeading(
+                                fontSize: 36,
+                                color: AppStyles.primaryNavy,
+                              ),
+                            ),
+                            const SizedBox(height: 8),
+                            Text(
+                              'Create GES/NaCCA aligned lesson plans',
+                              style: AppStyles.montserratRegular(
+                                fontSize: 16,
+                                color: Colors.grey[600]!,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(width: 16),
+                      ElevatedButton.icon(
+                        onPressed: () => _showCreateLessonDialog(context),
+                        icon: const Icon(Icons.add),
+                        label: const Text('New Lesson'),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: AppStyles.primaryRed,
+                          foregroundColor: Colors.white,
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 24,
+                            vertical: 16,
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 const SizedBox(height: 32),
                 // Quick stats
                 Row(
@@ -1937,11 +1981,11 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
     );
   }
   
-  // Download lesson plan as text file
+  // Download lesson plan as formatted text file
   void _downloadLessonPlan(BuildContext context, Map<String, dynamic> lesson) {
     final text = _formatLessonPlanAsText(lesson);
     final lessonPlan = lesson['lessonPlan'] as Map<String, dynamic>?;
-    final fileName = '${lessonPlan?['lessonTitle'] ?? 'Lesson_Plan'}.txt'
+    final fileName = '${lessonPlan?['lessonTitle'] ?? 'Lesson_Plan'}'
         .replaceAll(' ', '_')
         .replaceAll(RegExp(r'[^\w\s-]'), '');
     
@@ -1949,13 +1993,13 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
     final blob = html.Blob([bytes]);
     final url = html.Url.createObjectUrlFromBlob(blob);
     final anchor = html.AnchorElement(href: url)
-      ..setAttribute('download', fileName)
+      ..setAttribute('download', '$fileName.txt')
       ..click();
     html.Url.revokeObjectUrl(url);
     
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text('✅ Downloading $fileName'),
+        content: Text('✅ Downloading $fileName.txt'),
         backgroundColor: const Color(0xFF2ECC71),
         duration: const Duration(seconds: 2),
       ),
