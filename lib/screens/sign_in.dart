@@ -66,6 +66,10 @@ class _SignInPageState extends State<SignInPage> {
         return;
       }
       
+      // Brief delay to allow Firestore to stabilize after authentication
+      // This prevents internal state errors in Firebase SDK 11.x
+      await Future.delayed(const Duration(milliseconds: 500));
+      
       // Check if it's the admin email - bypass database lookup for admin
       if (user.email == 'studywithuriel@gmail.com') {
         if (mounted) {
@@ -75,20 +79,31 @@ class _SignInPageState extends State<SignInPage> {
       }
       
       // For non-admin users, check if they already have a role assigned in Firestore
-      final existingRole = await UserService().getUserRoleByEmail(user.email!);
+      // Retry with exponential backoff if Firestore operation fails
+      final existingRole = await _retryFirestoreOperation(
+        () => UserService().getUserRoleByEmail(user.email!),
+        'get user role',
+      );
+      
       if (existingRole != null) {
         // Existing user - update last login and route them
-        await UserService().updateLastLogin(user.uid);
+        await _retryFirestoreOperation(
+          () => UserService().updateLastLogin(user.uid),
+          'update last login',
+        );
         if (mounted) UserService.navigateToHomePage(context, existingRole);
         return;
       }
 
       // New user created by Google sign-in: create a minimal student profile and navigate to student homepage with profile open
-      await UserService().createUserProfile(
-        userId: user.uid,
-        email: user.email!,
-        role: UserRole.student,
-        name: user.displayName,
+      await _retryFirestoreOperation(
+        () => UserService().createUserProfile(
+          userId: user.uid,
+          email: user.email!,
+          role: UserRole.student,
+          name: user.displayName,
+        ),
+        'create user profile',
       );
 
       if (!mounted) return;
@@ -107,6 +122,35 @@ class _SignInPageState extends State<SignInPage> {
         });
       }
     }
+  }
+  
+  // Retry Firestore operations with exponential backoff to handle transient errors
+  Future<T?> _retryFirestoreOperation<T>(
+    Future<T?> Function() operation,
+    String operationName,
+  ) async {
+    int attempts = 0;
+    const maxAttempts = 3;
+    const initialDelay = Duration(milliseconds: 300);
+    
+    while (attempts < maxAttempts) {
+      try {
+        attempts++;
+        return await operation();
+      } catch (e) {
+        debugPrint('Firestore operation "$operationName" failed (attempt $attempts/$maxAttempts): $e');
+        
+        if (attempts >= maxAttempts) {
+          rethrow;
+        }
+        
+        // Exponential backoff: 300ms, 600ms, 1200ms
+        final delay = initialDelay * (1 << (attempts - 1));
+        await Future.delayed(delay);
+      }
+    }
+    
+    return null;
   }
   
   
@@ -396,7 +440,7 @@ class _SignInPageState extends State<SignInPage> {
           ] else ...[
             const SizedBox(height: 8),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 4),
+              padding: const EdgeInsets.symmetric(horizontal: 4),
               child: Text(
                 'Teachers and School Admin cannot sign in with Google. Use email and school credentials below.',
                 textAlign: TextAlign.center,

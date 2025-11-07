@@ -46,8 +46,45 @@ export const generateAIQuiz = functions
     const difficulty = difficultyLevel || (examType === 'BECE' ? 'medium' : 'hard');
     const targetClassLevel = classLevel || 'JHS 3';
 
-    // Construct detailed prompt for quiz generation with BECE and NACCA curriculum context
-    const prompt = `You are an expert Ghanaian educator with deep knowledge of the Ghana National Council for Curriculum and Assessment (NaCCA) standards and BECE examination format.
+    // Check if this is trivia mode - trivia should be fun, global, and diverse
+    const isTriviaMode = examType === 'trivia' || subject === 'trivia' || subject === 'General Knowledge';
+
+    // Construct prompt based on mode (trivia vs academic)
+    const prompt = isTriviaMode ? 
+    `You are creating a FUN, DIVERSE, and ENGAGING trivia quiz for entertainment and general knowledge.
+
+IMPORTANT TRIVIA REQUIREMENTS:
+- This is NOT an academic exam - it's for FUN and relaxation
+- Questions should be GLOBALLY diverse - cover all continents, countries, cultures
+- NO focus on Ghana or any specific country unless explicitly requested
+- Make questions HIGHLY VARIED and RANDOMIZED across different themes
+- NEVER repeat similar questions or patterns
+- Use unexpected topics, interesting facts, pop culture, history, science, geography, sports, entertainment
+- Questions should be surprising and engaging, not predictable
+- Avoid repetitive question structures
+
+TOPIC: ${customTopic || 'Random Global Trivia'}
+DIFFICULTY: ${difficulty}
+NUMBER OF QUESTIONS: ${questionCount}
+
+DIVERSITY CHECKLIST (ensure questions cover):
+- Different continents and regions (Africa, Asia, Europe, Americas, Oceania)
+- Various time periods (ancient history to modern day)
+- Multiple domains (science, culture, sports, arts, nature, technology, food, entertainment)
+- Mix of famous and lesser-known facts
+- Both serious and fun/quirky questions
+
+${customTopic ? `Focus specifically on: ${customTopic} - but make it globally diverse and surprising!` : `Create MAXIMUM variety - no two questions should feel similar. Cover random interesting topics from around the world.`}
+
+Generate ${questionCount} multiple-choice questions following these requirements:
+1. Each question should have exactly 4 options (A, B, C, D)
+2. Mark the correct answer clearly (must be one of: A, B, C, or D)
+3. Include brief explanations for the correct answer
+4. Questions should be HIGHLY DIVERSE and UNPREDICTABLE
+5. NO repetitive patterns or similar question structures
+6. Cover different regions, time periods, and topics for each question`
+    :
+    `You are an expert Ghanaian educator with deep knowledge of the Ghana National Council for Curriculum and Assessment (NaCCA) standards and BECE examination format.
 
 You are creating a ${examType} level quiz for ${targetClassLevel} students in ${subject}.
 
@@ -64,7 +101,6 @@ CONTEXT:
 ${customTopic ? `Focus specifically on the topic: ${customTopic}` : `Cover general curriculum topics for this subject appropriate for Ghanaian ${examType} exams as defined in the NaCCA curriculum.`}
 
 Generate ${questionCount} multiple-choice questions following these requirements:
-
 1. Each question should have exactly 4 options (A, B, C, D)
 2. Mark the correct answer clearly (must be one of: A, B, C, or D)
 3. Include brief explanations for the correct answer
@@ -105,14 +141,16 @@ Return a valid JSON object with this exact structure:
       messages: [
         {
           role: 'system',
-          content: 'You are an expert Ghanaian educator with comprehensive knowledge of the Ghana NaCCA curriculum, BECE examination standards, and WASSCE requirements. You have extensive experience creating authentic exam questions that align with official Ghana education standards. Generate educational quiz questions in valid JSON format only, without any markdown or additional text.',
+          content: isTriviaMode ? 
+            'You are a creative trivia master with vast knowledge of global facts, pop culture, history, science, and entertainment. Generate highly diverse, surprising, and engaging trivia questions that span all continents, cultures, and topics. Make questions unpredictable and fun. Generate questions in valid JSON format only, without any markdown or additional text.' :
+            'You are an expert Ghanaian educator with comprehensive knowledge of the Ghana NaCCA curriculum, BECE examination standards, and WASSCE requirements. You have extensive experience creating authentic exam questions that align with official Ghana education standards. Generate educational quiz questions in valid JSON format only, without any markdown or additional text.',
         },
         {
           role: 'user',
           content: prompt,
         },
       ],
-      temperature: 0.7,
+      temperature: isTriviaMode ? 1.0 : 0.7, // Higher temperature for trivia = more randomization
       max_tokens: 8192,
       response_format: {type: 'json_object'},
     });

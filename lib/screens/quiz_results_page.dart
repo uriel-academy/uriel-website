@@ -1140,7 +1140,7 @@ Tap below to try the quiz yourself and see if you can match or top my score. ðŸš
             if (!answer.isCorrect) ...[
               _buildAnswerOption(
                 'Correct Answer',
-                answer.correctAnswer,
+                _getFullAnswerText(answer.correctAnswer, answer.options),
                 Colors.green,
                 Icons.check_circle,
               ),
@@ -1149,6 +1149,26 @@ Tap below to try the quiz yourself and see if you can match or top my score. ðŸš
         ),
       ),
     );
+  }
+
+  // Helper method to get full answer text from letter
+  String _getFullAnswerText(String correctAnswer, List<String> options) {
+    // If correctAnswer is just a letter (A, B, C, D), find the matching option
+    String letter = correctAnswer.toUpperCase().trim();
+    if (letter.contains('.')) {
+      // Already has full text like "A. Option"
+      return correctAnswer;
+    }
+    
+    // Find the option that starts with this letter
+    for (var option in options) {
+      if (option.trim().toUpperCase().startsWith(letter)) {
+        return option;
+      }
+    }
+    
+    // Fallback: return the letter itself
+    return correctAnswer;
   }
 
   Widget _buildAnswerOption(String label, String answer, Color color, IconData icon) {

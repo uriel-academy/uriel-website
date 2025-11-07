@@ -802,7 +802,22 @@ class _QuizTakerPageState extends State<QuizTakerPage>
             // Answer options
             ...(question.options ?? []).map((option) {
               final isSelected = selectedAnswer == option;
-              final isCorrect = option == question.correctAnswer;
+              
+              // Extract letter from option for comparison (e.g., "B. Yaren" -> "B")
+              String optionLetter = option;
+              if (option.contains('.')) {
+                optionLetter = option.split('.')[0].trim().toUpperCase();
+              }
+              
+              // Extract letter from correct answer for comparison
+              String correctLetter = question.correctAnswer;
+              if (correctLetter.contains('.')) {
+                correctLetter = correctLetter.split('.')[0].trim().toUpperCase();
+              } else {
+                correctLetter = correctLetter.toUpperCase();
+              }
+              
+              final isCorrect = optionLetter == correctLetter;
               final showCorrect = showExplanation && isCorrect;
               final showIncorrect = showExplanation && isSelected && !isCorrect;
               

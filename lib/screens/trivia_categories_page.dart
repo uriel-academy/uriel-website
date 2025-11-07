@@ -405,10 +405,7 @@ class _TriviaCategoriesPageState extends State<TriviaCategoriesPage>
                 constraints: BoxConstraints(
                   maxWidth: isMobile ? double.infinity : 1200,
                 ),
-                padding: EdgeInsets.symmetric(
-                  horizontal: isMobile ? 16 : 24,
-                  vertical: isMobile ? 0 : 16,
-                ),
+                padding: EdgeInsets.all(isMobile ? 16 : 24),
                 child: _buildAITriviaCard(isMobile),
               ),
               
@@ -612,11 +609,12 @@ class _TriviaCategoriesPageState extends State<TriviaCategoriesPage>
 
   // Generate AI Trivia Questions
   Future<void> _generateAITrivia() async {
-    if (_selectedTriviaCategory.isEmpty && _triviaTopicController.text.trim().isEmpty) {
+    // Validate that custom category has text when selected
+    if (_selectedTriviaCategory == 'Custom' && _triviaTopicController.text.trim().isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text(
-            'Please select a category or enter a custom topic',
+            'Please enter your custom category',
             style: GoogleFonts.montserrat(),
           ),
           backgroundColor: const Color(0xFFD62828),
@@ -628,8 +626,10 @@ class _TriviaCategoriesPageState extends State<TriviaCategoriesPage>
     setState(() => _isGeneratingTrivia = true);
 
     try {
-      final customTopic = _triviaTopicController.text.trim();
-      final topicToUse = customTopic.isNotEmpty ? customTopic : _selectedTriviaCategory;
+      // Use custom text if Custom is selected, otherwise use selected category
+      final topicToUse = _selectedTriviaCategory == 'Custom' 
+          ? _triviaTopicController.text.trim() 
+          : _selectedTriviaCategory;
 
       debugPrint('🎲 Generating AI Trivia: topic=$topicToUse, count=$_selectedTriviaCount, difficulty=$_selectedTriviaDifficulty');
 
@@ -637,7 +637,7 @@ class _TriviaCategoriesPageState extends State<TriviaCategoriesPage>
       final result = await callable.call({
         'subject': 'General Knowledge',
         'examType': 'trivia',
-        'questionCount': _selectedTriviaCount,
+        'numQuestions': _selectedTriviaCount,
         'difficultyLevel': _selectedTriviaDifficulty,
         'customTopic': topicToUse,
       });
@@ -646,26 +646,42 @@ class _TriviaCategoriesPageState extends State<TriviaCategoriesPage>
       debugPrint('✅ Generated ${aiGeneratedQuestions.length} AI trivia questions');
 
       // Convert to Question objects
-      final List<Question> questions = aiGeneratedQuestions.map((q) {
-        return Question(
-          id: q['id'] ?? 'ai_trivia_${DateTime.now().millisecondsSinceEpoch}',
-          questionText: q['questionText'] ?? '',
+      final List<Question> questions = [];
+      for (var i = 0; i < aiGeneratedQuestions.length; i++) {
+        final q = aiGeneratedQuestions[i];
+        
+        // Parse options from {A: "...", B: "...", C: "...", D: "..."} to List
+        // Format with letter prefix to match expected format: "A. Answer", "B. Answer", etc.
+        final optionsMap = q['options'] as Map<String, dynamic>;
+        final optionsList = [
+          'A. ${optionsMap['A']?.toString() ?? ''}',
+          'B. ${optionsMap['B']?.toString() ?? ''}',
+          'C. ${optionsMap['C']?.toString() ?? ''}',
+          'D. ${optionsMap['D']?.toString() ?? ''}',
+        ];
+        
+        // Store correctAnswer as just the letter (A, B, C, D) to match grading logic
+        final correctAnswerLetter = q['correctAnswer']?.toString().toUpperCase() ?? 'A';
+        
+        questions.add(Question(
+          id: 'ai_trivia_${DateTime.now().millisecondsSinceEpoch}_$i',
+          questionText: q['question']?.toString() ?? '',
           type: QuestionType.trivia,
           subject: Subject.trivia,
           examType: ExamType.trivia,
           year: 'AI Generated',
           section: 'General',
-          questionNumber: 0,
-          options: List<String>.from(q['options'] ?? []),
-          correctAnswer: q['correctAnswer']?.toString() ?? '0',
-          difficulty: q['difficulty'] ?? _selectedTriviaDifficulty,
-          explanation: q['explanation'] ?? '',
+          questionNumber: i + 1,
+          options: optionsList,
+          correctAnswer: correctAnswerLetter,
+          difficulty: q['difficulty']?.toString() ?? _selectedTriviaDifficulty,
+          explanation: q['explanation']?.toString() ?? '',
           marks: 1,
-          topics: [topicToUse],
+          topics: [q['topic']?.toString() ?? topicToUse],
           createdAt: DateTime.now(),
           createdBy: 'AI',
-        );
-      }).toList();
+        ));
+      }
 
       if (mounted) {
         // Navigate to quiz taker with generated questions
@@ -803,18 +819,35 @@ class _TriviaCategoriesPageState extends State<TriviaCategoriesPage>
                     'Category',
                     _selectedTriviaCategory,
                     [
-                      'General Knowledge',
-                      'Science',
-                      'History',
-                      'Geography',
-                      'Sports',
-                      'Entertainment',
-                      'Technology',
-                      'Art & Culture',
+                      ..._CategoryConfig.configs.keys.toList()..sort(),
+                      'Custom',
                     ],
                     (value) => setState(() => _selectedTriviaCategory = value!),
                     isMobile,
                   ),
+                  if (_selectedTriviaCategory == 'Custom') ...[
+                    const SizedBox(height: 12),
+                    TextField(
+                      controller: _triviaTopicController,
+                      decoration: InputDecoration(
+                        labelText: 'Enter Your Custom Category',
+                        hintText: 'e.g., Marvel Movies, African Wildlife, Space Exploration',
+                        labelStyle: GoogleFonts.montserrat(color: Colors.grey[600]),
+                        hintStyle: GoogleFonts.montserrat(color: Colors.grey[400]),
+                        filled: true,
+                        fillColor: const Color(0xFFF8FAFE),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12),
+                          borderSide: BorderSide.none,
+                        ),
+                        contentPadding: const EdgeInsets.symmetric(
+                          horizontal: 16,
+                          vertical: 14,
+                        ),
+                      ),
+                      style: GoogleFonts.montserrat(color: const Color(0xFF1A1E3F)),
+                    ),
+                  ],
                 ] else
                   Row(
                     children: [
@@ -843,14 +876,8 @@ class _TriviaCategoriesPageState extends State<TriviaCategoriesPage>
                           'Category',
                           _selectedTriviaCategory,
                           [
-                            'General Knowledge',
-                            'Science',
-                            'History',
-                            'Geography',
-                            'Sports',
-                            'Entertainment',
-                            'Technology',
-                            'Art & Culture',
+                            ..._CategoryConfig.configs.keys.toList()..sort(),
+                            'Custom',
                           ],
                           (value) => setState(() => _selectedTriviaCategory = value!),
                           isMobile,
@@ -859,29 +886,32 @@ class _TriviaCategoriesPageState extends State<TriviaCategoriesPage>
                     ],
                   ),
                 
-                const SizedBox(height: 16),
+                if (_selectedTriviaCategory == 'Custom')
+                  const SizedBox(height: 16),
                 
-                // Custom Topic Field
-                TextField(
-                  controller: _triviaTopicController,
-                  decoration: InputDecoration(
-                    labelText: 'Custom Topic (Optional)',
-                    hintText: 'e.g., Marvel Movies, African Wildlife, Space Exploration',
-                    labelStyle: GoogleFonts.montserrat(color: Colors.grey[600]),
-                    hintStyle: GoogleFonts.montserrat(color: Colors.grey[400]),
-                    filled: true,
-                    fillColor: const Color(0xFFF8FAFE),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
-                      borderSide: BorderSide.none,
+                // Custom Category Field (only show when Custom is selected)
+                if (_selectedTriviaCategory == 'Custom')
+                  TextField(
+                    controller: _triviaTopicController,
+                    decoration: InputDecoration(
+                      labelText: 'Enter Your Custom Category',
+                      hintText: 'e.g., Marvel Movies, African Wildlife, Space Exploration',
+                      labelStyle: GoogleFonts.montserrat(color: Colors.grey[600]),
+                      hintStyle: GoogleFonts.montserrat(color: Colors.grey[400]),
+                      filled: true,
+                      fillColor: const Color(0xFFF8FAFE),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
+                        borderSide: BorderSide.none,
+                      ),
+                      contentPadding: const EdgeInsets.symmetric(
+                        horizontal: 16,
+                        vertical: 14,
+                      ),
+                      prefixIcon: Icon(Icons.edit, color: Colors.grey[600]),
                     ),
-                    contentPadding: const EdgeInsets.symmetric(
-                      horizontal: 16,
-                      vertical: 14,
-                    ),
+                    style: GoogleFonts.montserrat(color: const Color(0xFF1A1E3F)),
                   ),
-                  style: GoogleFonts.montserrat(color: const Color(0xFF1A1E3F)),
-                ),
                 
                 const SizedBox(height: 20),
                 
