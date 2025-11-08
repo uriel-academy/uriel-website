@@ -603,6 +603,94 @@ class _RevisionPageState extends State<RevisionPage> {
                     
                     const SizedBox(height: 16),
                     
+                    // AI-specific options (Difficulty & Topic)
+                    Container(
+                      padding: const EdgeInsets.all(16),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFFFF5F5),
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(color: const Color(0xFFFFCDD2)),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              const Icon(Icons.auto_awesome, size: 20, color: Color(0xFFD62828)),
+                              const SizedBox(width: 8),
+                              Text(
+                                'AI Generation Options',
+                                style: GoogleFonts.montserrat(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w600,
+                                  color: const Color(0xFFD62828),
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 16),
+                          
+                          // Difficulty and Topic fields
+                          if (isSmallScreen) ...[
+                            _buildFilterDropdown('Difficulty', _selectedQuizDifficulty, _difficultyLevels, (value) {
+                              setState(() => _selectedQuizDifficulty = value!);
+                            }),
+                            const SizedBox(height: 12),
+                            TextField(
+                              controller: _topicController,
+                              decoration: InputDecoration(
+                                labelText: 'Topic (Optional)',
+                                hintText: 'e.g., Algebra, Grammar, Electricity',
+                                labelStyle: GoogleFonts.montserrat(color: Colors.grey[600]),
+                                hintStyle: GoogleFonts.montserrat(color: Colors.grey[400]),
+                                filled: true,
+                                fillColor: Colors.white,
+                                border: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(12),
+                                  borderSide: BorderSide.none,
+                                ),
+                                contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                              ),
+                              style: GoogleFonts.montserrat(color: const Color(0xFF1A1E3F)),
+                            ),
+                          ] else
+                            Row(
+                              children: [
+                                Expanded(
+                                  flex: 2,
+                                  child: _buildFilterDropdown('Difficulty', _selectedQuizDifficulty, _difficultyLevels, (value) {
+                                    setState(() => _selectedQuizDifficulty = value!);
+                                  }),
+                                ),
+                                const SizedBox(width: 12),
+                                Expanded(
+                                  flex: 3,
+                                  child: TextField(
+                                    controller: _topicController,
+                                    decoration: InputDecoration(
+                                      labelText: 'Topic (Optional)',
+                                      hintText: 'e.g., Algebra, Grammar, Electricity',
+                                      labelStyle: GoogleFonts.montserrat(color: Colors.grey[600]),
+                                      hintStyle: GoogleFonts.montserrat(color: Colors.grey[400]),
+                                      filled: true,
+                                      fillColor: Colors.white,
+                                      border: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(12),
+                                        borderSide: BorderSide.none,
+                                      ),
+                                      contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                                    ),
+                                    style: GoogleFonts.montserrat(color: const Color(0xFF1A1E3F)),
+                                  ),
+                                ),
+                              ],
+                            ),
+                        ],
+                      ),
+                    ),
+                    
+                    const SizedBox(height: 16),
+                    
                     // AI Mock Exam Button
                     _isGeneratingAIQuiz
                         ? Column(
@@ -655,7 +743,7 @@ class _RevisionPageState extends State<RevisionPage> {
                           const SizedBox(width: 12),
                           Expanded(
                             child: Text(
-                              'AI generates fresh questions based on BECE standards and Ghana NACCA curriculum',
+                              'AI generates fresh, randomized questions based on BECE standards and Ghana NACCA curriculum',
                               style: GoogleFonts.montserrat(
                                 fontSize: 12,
                                 color: Colors.blue[900],
@@ -823,83 +911,29 @@ class _RevisionPageState extends State<RevisionPage> {
               _buildFilterDropdown('Question Count', _selectedQuestionCount.toString(), ['10', '20', '40'], (value) {
                 setState(() => _selectedQuestionCount = int.parse(value!));
               }),
-              const SizedBox(height: 12),
-              _buildFilterDropdown('Difficulty', _selectedQuizDifficulty, _difficultyLevels, (value) {
-                setState(() => _selectedQuizDifficulty = value!);
-              }),
-              const SizedBox(height: 12),
-              TextField(
-                controller: _topicController,
-                decoration: InputDecoration(
-                  labelText: 'Topic (Optional)',
-                  hintText: 'e.g., Algebra, Grammar, Electricity',
-                  labelStyle: GoogleFonts.montserrat(color: Colors.grey[600]),
-                  hintStyle: GoogleFonts.montserrat(color: Colors.grey[400]),
-                  filled: true,
-                  fillColor: const Color(0xFFF8FAFE),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
-                    borderSide: BorderSide.none,
-                  ),
-                  contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-                ),
-                style: GoogleFonts.montserrat(color: const Color(0xFF1A1E3F)),
-              ),
             ],
           )
         else
-          Column(
+          Row(
             children: [
-              Row(
-                children: [
-                  Expanded(
-                    child: _buildFilterDropdown('Exam Type', _selectedExamType?.name.toUpperCase() ?? 'Select Type', _getExamTypeOptions(), (value) {
-                      final examType = value == 'Select Type' ? null : ExamType.values.firstWhere((e) => e.name.toUpperCase() == value);
-                      setState(() => _selectedExamType = examType);
-                    }),
-                  ),
-                  const SizedBox(width: 12),
-                  Expanded(
-                    child: _buildFilterDropdown('Subject', _selectedSubject != null ? _getSubjectDisplayName(_selectedSubject!) : 'Select Subject', _getSubjectOptions(), (value) {
-                      final subject = value == 'Select Subject' ? null : _availableSubjects.firstWhere((s) => _getSubjectDisplayName(s) == value);
-                      setState(() => _selectedSubject = subject);
-                    }),
-                  ),
-                ],
+              Expanded(
+                child: _buildFilterDropdown('Exam Type', _selectedExamType?.name.toUpperCase() ?? 'Select Type', _getExamTypeOptions(), (value) {
+                  final examType = value == 'Select Type' ? null : ExamType.values.firstWhere((e) => e.name.toUpperCase() == value);
+                  setState(() => _selectedExamType = examType);
+                }),
               ),
-              const SizedBox(height: 12),
-              Row(
-                children: [
-                  Expanded(
-                    child: _buildFilterDropdown('Question Count', _selectedQuestionCount.toString(), ['10', '20', '40'], (value) {
-                      setState(() => _selectedQuestionCount = int.parse(value!));
-                    }),
-                  ),
-                  const SizedBox(width: 12),
-                  Expanded(
-                    child: _buildFilterDropdown('Difficulty', _selectedQuizDifficulty, _difficultyLevels, (value) {
-                      setState(() => _selectedQuizDifficulty = value!);
-                    }),
-                  ),
-                ],
+              const SizedBox(width: 12),
+              Expanded(
+                child: _buildFilterDropdown('Subject', _selectedSubject != null ? _getSubjectDisplayName(_selectedSubject!) : 'Select Subject', _getSubjectOptions(), (value) {
+                  final subject = value == 'Select Subject' ? null : _availableSubjects.firstWhere((s) => _getSubjectDisplayName(s) == value);
+                  setState(() => _selectedSubject = subject);
+                }),
               ),
-              const SizedBox(height: 12),
-              TextField(
-                controller: _topicController,
-                decoration: InputDecoration(
-                  labelText: 'Topic (Optional)',
-                  hintText: 'e.g., Algebra, Grammar, Electricity',
-                  labelStyle: GoogleFonts.montserrat(color: Colors.grey[600]),
-                  hintStyle: GoogleFonts.montserrat(color: Colors.grey[400]),
-                  filled: true,
-                  fillColor: const Color(0xFFF8FAFE),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(12),
-                    borderSide: BorderSide.none,
-                  ),
-                  contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-                ),
-                style: GoogleFonts.montserrat(color: const Color(0xFF1A1E3F)),
+              const SizedBox(width: 12),
+              Expanded(
+                child: _buildFilterDropdown('Question Count', _selectedQuestionCount.toString(), ['10', '20', '40'], (value) {
+                  setState(() => _selectedQuestionCount = int.parse(value!));
+                }),
               ),
             ],
           ),

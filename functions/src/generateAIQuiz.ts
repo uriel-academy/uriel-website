@@ -118,13 +118,24 @@ CONTEXT:
 - Reference topics from the official NaCCA curriculum where applicable
 - Ensure questions are appropriate for ${targetClassLevel} level students
 
+RANDOMIZATION REQUIREMENTS:
+- Generate HIGHLY VARIED and DIVERSE questions covering different aspects of the topic
+- AVOID repetitive patterns or similar question structures
+- Mix different question types: conceptual, analytical, application-based, calculation-based
+- Ensure each question tests a DIFFERENT concept or skill
+- Questions should NOT follow predictable patterns
+- Vary the complexity and approach for each question
+
 ${customTopic ? `Focus specifically on the topic: ${customTopic}` : `Cover general curriculum topics for this subject appropriate for Ghanaian ${examType} exams as defined in the NaCCA curriculum.`}
 
 Generate ${questionCount} multiple-choice questions following these requirements:
 1. Each question should have exactly 4 options (A, B, C, D)
 2. Mark the correct answer clearly (must be one of: A, B, C, or D)
 3. Include brief explanations for the correct answer
-4. Questions should be appropriate for ${difficulty} difficulty level
+4. Questions should be appropriate for ${difficulty} difficulty level:
+   ${difficulty === 'easy' ? '- Use straightforward, basic concepts\n   - Questions should test fundamental understanding\n   - Keep language simple and clear' : ''}
+   ${difficulty === 'medium' ? '- Balance between basic and advanced concepts\n   - Include some application and analysis questions\n   - Test both understanding and problem-solving' : ''}
+   ${difficulty === 'difficult' ? '- Use complex, multi-step reasoning\n   - Include advanced concepts and critical thinking\n   - Test higher-order thinking skills and deep understanding' : ''}
 5. Questions MUST be suitable for ${targetClassLevel} students
 6. Questions MUST align with Ghana NaCCA curriculum standards and ${examType} exam format
 7. Use clear, educational language suitable for Ghanaian JHS/SHS students
@@ -132,6 +143,7 @@ Generate ${questionCount} multiple-choice questions following these requirements
 9. Ensure questions are culturally relevant to Ghana (use Ghanaian names, places, contexts)
 10. Question format and difficulty should match authentic past ${examType} questions
 11. Cover key competencies as outlined in the NaCCA framework
+12. ENSURE MAXIMUM VARIETY - no two questions should test the same concept in the same way
 
 Return a valid JSON object with this exact structure:
 {
@@ -170,7 +182,7 @@ Return a valid JSON object with this exact structure:
           content: prompt,
         },
       ],
-      temperature: isTriviaMode ? 1.0 : 0.7, // Higher temperature for trivia = more randomization
+      temperature: isTriviaMode ? 1.0 : (difficulty === 'difficult' ? 0.9 : difficulty === 'easy' ? 0.6 : 0.8), // Higher temperature = more randomization
       max_tokens: 8192,
       response_format: {type: 'json_object'},
     });
