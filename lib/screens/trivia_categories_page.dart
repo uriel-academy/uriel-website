@@ -704,14 +704,32 @@ class _TriviaCategoriesPageState extends State<TriviaCategoriesPage>
       }
     } catch (e) {
       debugPrint('❌ Error generating AI trivia: $e');
+      debugPrint('Error type: ${e.runtimeType}');
+      
+      // Extract more detailed error message
+      String errorMessage = 'Error generating trivia';
+      if (e.toString().contains('invalid question format')) {
+        errorMessage = 'AI generated invalid question format. Please try again.';
+      } else if (e.toString().contains('expected non-empty array')) {
+        errorMessage = 'AI returned empty response. Please try again.';
+      } else if (e.toString().contains('Invalid options format')) {
+        errorMessage = 'AI generated invalid answer options. Please try again.';
+      } else {
+        errorMessage = e.toString().replaceAll('firebase_functions/', '')
+            .replaceAll('[internal]', '')
+            .replaceAll('Exception:', '')
+            .trim();
+      }
+      
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text(
-              'Error generating trivia: $e',
+              errorMessage,
               style: GoogleFonts.montserrat(),
             ),
             backgroundColor: const Color(0xFFD62828),
+            duration: const Duration(seconds: 5),
           ),
         );
       }

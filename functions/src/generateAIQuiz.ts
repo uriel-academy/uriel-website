@@ -82,7 +82,27 @@ Generate ${questionCount} multiple-choice questions following these requirements
 3. Include brief explanations for the correct answer
 4. Questions should be HIGHLY DIVERSE and UNPREDICTABLE
 5. NO repetitive patterns or similar question structures
-6. Cover different regions, time periods, and topics for each question`
+6. Cover different regions, time periods, and topics for each question
+
+Return a valid JSON object with this exact structure:
+{
+  "questions": [
+    {
+      "question": "Question text here",
+      "options": {
+        "A": "Option A text",
+        "B": "Option B text",
+        "C": "Option C text",
+        "D": "Option D text"
+      },
+      "correctAnswer": "A",
+      "explanation": "Brief explanation of why this is correct",
+      "difficulty": "${difficulty}",
+      "subject": "trivia",
+      "topic": "${customTopic || 'General'}"
+    }
+  ]
+}`
     :
     `You are an expert Ghanaian educator with deep knowledge of the Ghana National Council for Curriculum and Assessment (NaCCA) standards and BECE examination format.
 
@@ -162,6 +182,7 @@ Return a valid JSON object with this exact structure:
     }
 
     console.log('OpenAI response received, parsing...');
+    console.log('Response preview:', responseText.substring(0, 200));
 
     // Try to parse the response (OpenAI JSON mode returns clean JSON)
     let parsedResponse;
@@ -173,31 +194,46 @@ Return a valid JSON object with this exact structure:
       throw new Error('Failed to parse AI response as JSON');
     }
 
+    console.log('Parsed response structure:', JSON.stringify(Object.keys(parsedResponse)));
+
     // OpenAI might wrap the array in an object
     const questions = Array.isArray(parsedResponse) ? 
       parsedResponse : 
       (parsedResponse.questions || parsedResponse.data || []);
 
+    console.log(`Found ${questions.length} questions in response`);
+
     if (!Array.isArray(questions) || questions.length === 0) {
+      console.error('Invalid questions array:', parsedResponse);
       throw new Error('Invalid response format from AI - expected non-empty array');
     }
 
     // Validate and sanitize each question
     const validatedQuestions = questions.map((q, index) => {
+      console.log(`Validating question ${index + 1}:`, {
+        hasQuestion: !!q.question,
+        hasOptions: !!q.options,
+        hasCorrectAnswer: !!q.correctAnswer,
+        optionsType: typeof q.options,
+      });
+
       if (!q.question || !q.options || !q.correctAnswer) {
-        throw new Error(`Invalid question format at index ${index}`);
+        console.error(`Invalid question at index ${index}:`, JSON.stringify(q));
+        throw new Error(`Invalid question format at index ${index} - missing required fields`);
       }
 
       // Ensure options is an object with A, B, C, D keys
       const options = q.options;
-      if (!options.A || !options.B || !options.C || !options.D) {
-        throw new Error(`Invalid options format at index ${index}`);
+      if (typeof options !== 'object' || !options.A || !options.B || !options.C || !options.D) {
+        console.error(`Invalid options at index ${index}:`, JSON.stringify(options));
+        throw new Error(`Invalid options format at index ${index} - must have A, B, C, D keys with non-empty values`);
       }
 
       // Validate correct answer is one of A, B, C, D
-      const correctAnswer = q.correctAnswer.toUpperCase();
+      const correctAnswer = q.correctAnswer.toString().trim().toUpperCase();
       if (!['A', 'B', 'C', 'D'].includes(correctAnswer)) {
-        throw new Error(`Invalid correct answer at index ${index}: ${correctAnswer}`);
+        console.error(`Invalid correct answer at index ${index}:`, correctAnswer);
+        throw new Error(`Invalid correct answer at index ${index}: ${correctAnswer} (must be A, B, C, or D)`);
       }
 
       return {
