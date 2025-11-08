@@ -18,7 +18,7 @@ class _RevisionPageState extends State<RevisionPage> {
   ExamType? _selectedExamType;
   Subject? _selectedSubject;
   int _selectedQuestionCount = 20;
-  final String _customTopic = '';
+  String _selectedQuizDifficulty = 'medium';
   final TextEditingController _topicController = TextEditingController();
   final TextEditingController _flipCardTopicController = TextEditingController();
   final QuestionService _questionService = QuestionService();
@@ -151,7 +151,8 @@ class _RevisionPageState extends State<RevisionPage> {
         'subject': _getSubjectDisplayName(_selectedSubject!),
         'examType': _selectedExamType!.name.toUpperCase(),
         'numQuestions': _selectedQuestionCount,
-        'customTopic': _customTopic.isNotEmpty ? _customTopic : null,
+        'difficultyLevel': _selectedQuizDifficulty,
+        'customTopic': _topicController.text.trim().isNotEmpty ? _topicController.text.trim() : null,
       });
 
       final data = result.data;
@@ -229,8 +230,8 @@ class _RevisionPageState extends State<RevisionPage> {
             preloadedQuestions: aiQuestions,
             questionCount: _selectedQuestionCount,
             randomizeQuestions: false,
-            customTitle: _customTopic.isNotEmpty 
-                ? '${_getSubjectDisplayName(_selectedSubject!)} - $_customTopic'
+            customTitle: _topicController.text.trim().isNotEmpty 
+                ? '${_getSubjectDisplayName(_selectedSubject!)} - ${_topicController.text.trim()}'
                 : '${_getSubjectDisplayName(_selectedSubject!)} AI Practice',
             isRevisionQuiz: true,
           ),
@@ -822,29 +823,83 @@ class _RevisionPageState extends State<RevisionPage> {
               _buildFilterDropdown('Question Count', _selectedQuestionCount.toString(), ['10', '20', '40'], (value) {
                 setState(() => _selectedQuestionCount = int.parse(value!));
               }),
+              const SizedBox(height: 12),
+              _buildFilterDropdown('Difficulty', _selectedQuizDifficulty, _difficultyLevels, (value) {
+                setState(() => _selectedQuizDifficulty = value!);
+              }),
+              const SizedBox(height: 12),
+              TextField(
+                controller: _topicController,
+                decoration: InputDecoration(
+                  labelText: 'Topic (Optional)',
+                  hintText: 'e.g., Algebra, Grammar, Electricity',
+                  labelStyle: GoogleFonts.montserrat(color: Colors.grey[600]),
+                  hintStyle: GoogleFonts.montserrat(color: Colors.grey[400]),
+                  filled: true,
+                  fillColor: const Color(0xFFF8FAFE),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: BorderSide.none,
+                  ),
+                  contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                ),
+                style: GoogleFonts.montserrat(color: const Color(0xFF1A1E3F)),
+              ),
             ],
           )
         else
-          Row(
+          Column(
             children: [
-              Expanded(
-                child: _buildFilterDropdown('Exam Type', _selectedExamType?.name.toUpperCase() ?? 'Select Type', _getExamTypeOptions(), (value) {
-                  final examType = value == 'Select Type' ? null : ExamType.values.firstWhere((e) => e.name.toUpperCase() == value);
-                  setState(() => _selectedExamType = examType);
-                }),
+              Row(
+                children: [
+                  Expanded(
+                    child: _buildFilterDropdown('Exam Type', _selectedExamType?.name.toUpperCase() ?? 'Select Type', _getExamTypeOptions(), (value) {
+                      final examType = value == 'Select Type' ? null : ExamType.values.firstWhere((e) => e.name.toUpperCase() == value);
+                      setState(() => _selectedExamType = examType);
+                    }),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: _buildFilterDropdown('Subject', _selectedSubject != null ? _getSubjectDisplayName(_selectedSubject!) : 'Select Subject', _getSubjectOptions(), (value) {
+                      final subject = value == 'Select Subject' ? null : _availableSubjects.firstWhere((s) => _getSubjectDisplayName(s) == value);
+                      setState(() => _selectedSubject = subject);
+                    }),
+                  ),
+                ],
               ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: _buildFilterDropdown('Subject', _selectedSubject != null ? _getSubjectDisplayName(_selectedSubject!) : 'Select Subject', _getSubjectOptions(), (value) {
-                  final subject = value == 'Select Subject' ? null : _availableSubjects.firstWhere((s) => _getSubjectDisplayName(s) == value);
-                  setState(() => _selectedSubject = subject);
-                }),
+              const SizedBox(height: 12),
+              Row(
+                children: [
+                  Expanded(
+                    child: _buildFilterDropdown('Question Count', _selectedQuestionCount.toString(), ['10', '20', '40'], (value) {
+                      setState(() => _selectedQuestionCount = int.parse(value!));
+                    }),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: _buildFilterDropdown('Difficulty', _selectedQuizDifficulty, _difficultyLevels, (value) {
+                      setState(() => _selectedQuizDifficulty = value!);
+                    }),
+                  ),
+                ],
               ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: _buildFilterDropdown('Question Count', _selectedQuestionCount.toString(), ['10', '20', '40'], (value) {
-                  setState(() => _selectedQuestionCount = int.parse(value!));
-                }),
+              const SizedBox(height: 12),
+              TextField(
+                controller: _topicController,
+                decoration: InputDecoration(
+                  labelText: 'Topic (Optional)',
+                  hintText: 'e.g., Algebra, Grammar, Electricity',
+                  labelStyle: GoogleFonts.montserrat(color: Colors.grey[600]),
+                  hintStyle: GoogleFonts.montserrat(color: Colors.grey[400]),
+                  filled: true,
+                  fillColor: const Color(0xFFF8FAFE),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: BorderSide.none,
+                  ),
+                  contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                ),
+                style: GoogleFonts.montserrat(color: const Color(0xFF1A1E3F)),
               ),
             ],
           ),

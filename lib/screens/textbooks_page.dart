@@ -110,25 +110,8 @@ class _TextbooksPageState extends State<TextbooksPage>
 
   void _applyFilters() {
     setState(() {
-      filteredTextbooks = allTextbooks.where((textbook) {
-        final matchesLevel = selectedLevel == 'All' || textbook.level == selectedLevel;
-        final matchesSubject = selectedSubject == 'All' || textbook.subject == selectedSubject;
-        final matchesPublisher = selectedPublisher == 'All' || textbook.publisher == selectedPublisher;
-        final matchesSearch = searchQuery.isEmpty ||
-            textbook.title.toLowerCase().contains(searchQuery.toLowerCase()) ||
-            textbook.subject.toLowerCase().contains(searchQuery.toLowerCase()) ||
-            textbook.author.toLowerCase().contains(searchQuery.toLowerCase());
-
-        return matchesLevel && matchesSubject && matchesPublisher && matchesSearch;
-      }).toList();
-
-      // Sort by relevance and level
-      filteredTextbooks.sort((a, b) {
-        if (selectedLevel != 'All') {
-          return a.level.compareTo(b.level);
-        }
-        return a.subject.compareTo(b.subject);
-      });
+      // Only show Uriel English course, hide all other textbooks
+      filteredTextbooks = [];
     });
   }
 
