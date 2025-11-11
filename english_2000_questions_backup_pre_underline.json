@@ -1,0 +1,730 @@
+{
+  "passages": [],
+  "questions": [
+    {
+      "id": "english_2000_q2",
+      "questionText": "Which of the following is not true of the headmaster?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2000",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 2,
+      "options": [
+        "A. He was hated by the people",
+        "B. He had worked hard",
+        "C. He was happy",
+        "D. He had worked for a long time"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2000_q3",
+      "questionText": "Brief in the passage means",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2000",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 3,
+      "options": [
+        "A. necessary",
+        "B. good",
+        "C. true",
+        "D. short"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2000_q4",
+      "questionText": "According to the passage, Mr. Smith was",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2000",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 4,
+      "options": [
+        "A. liked by many people.",
+        "B. liked by the headmaster only.",
+        "C. a disciplinarian.",
+        "D. a gentleman."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2000_q7",
+      "questionText": "The writer feels that children should",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2000",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 7,
+      "options": [
+        "A. watch television with parents.",
+        "B. do nothing while watching television.",
+        "C. not watch all programmes.",
+        "D. learn about adult life."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2000_q8",
+      "questionText": "Poses in the passage means",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2000",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 8,
+      "options": [
+        "A. solves",
+        "B. increases",
+        "C. presents",
+        "D. determines"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2000_q9",
+      "questionText": "According to the passage, which of the following is not true about television?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2000",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 9,
+      "options": [
+        "A. I is a source of entertainment",
+        "B. It helps us to see unknown places and people",
+        "C. People with little education can also watch it.",
+        "D. Everybody has one"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2000_q12",
+      "questionText": "The <u>attitude</u> of the security officer was very hostile.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2000",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 12,
+      "options": [
+        "A. strange",
+        "B. disturbing",
+        "C. unfriendly",
+        "D. interesting"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2000_q13",
+      "questionText": "After the hard day's work he returned home <u>completely</u> exhausted.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2000",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 13,
+      "options": [
+        "A. disturbed",
+        "B. worn out",
+        "C. unhappy",
+        "D. broken down"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2000_q14",
+      "questionText": "The auditor's job was to go over the accounts <u>carefully</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2000",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 14,
+      "options": [
+        "A. present",
+        "B. calculate",
+        "C. settle",
+        "D. inspect"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2000_q17",
+      "questionText": "Mother buys the best clothes for Patrick <u>because he</u> is the apple of her eye. This means that Patrick is ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2000",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 17,
+      "options": [
+        "A. the one she loves most.",
+        "B. the most hard-working son.",
+        "C. her most respectable son.",
+        "D. her last child."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2000_q18",
+      "questionText": "It is difficult for most <u>people to</u> make ends meet these days. This means most people ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2000",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 18,
+      "options": [
+        "A. live very comfortable.",
+        "B. are unable to eat delicious meals.",
+        "C. are unable to live within their income.",
+        "D. buy expensive clothes."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2000_q19",
+      "questionText": "Esi was so good a leader that we were <u>all encouraged</u> to take a leaf out of her book. This means we were all encouraged to ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2000",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 19,
+      "options": [
+        "A. try and beat her record.",
+        "B. take her advice.",
+        "C. follow her example.",
+        "D. treat her with respect."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2000_q22",
+      "questionText": "It is wise to <u>preserve</u> works of art for the future.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2000",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 22,
+      "options": [
+        "A. produce",
+        "B. destroy",
+        "C. condemn",
+        "D. abolish"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2000_q23",
+      "questionText": "The <u>director</u> engaged Mary as a sales woman.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2000",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 23,
+      "options": [
+        "A. disqualified",
+        "B. exempted",
+        "C. dismissed",
+        "D. excused"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2000_q24",
+      "questionText": "This soil is very fertile for the growing of <u>vegetables</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2000",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 24,
+      "options": [
+        "A. poor",
+        "B. shallow",
+        "C. porous",
+        "D. hard"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2000_q27",
+      "questionText": "The factory had to ...... many workers because of the fall in production.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2000",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 27,
+      "options": [
+        "A. lay down",
+        "B. put off",
+        "C. put away",
+        "D. lay off"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2000_q28",
+      "questionText": "We ...... to play a return match last Friday.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2000",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 28,
+      "options": [
+        "A. have",
+        "B. were",
+        "C. ought",
+        "D. are"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2000_q29",
+      "questionText": "It was not obvious ...... he was pointing to.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2000",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 29,
+      "options": [
+        "A. the one to which",
+        "B. which one",
+        "C. one which",
+        "D. as to that"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2000_q30",
+      "questionText": "I have forgotten all ...... you told me.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2000",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 30,
+      "options": [
+        "A. that",
+        "B. which",
+        "C. what",
+        "D. those"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2000_q31",
+      "questionText": "Selfish people always consider ...... first.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2000",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 31,
+      "options": [
+        "A. oneself",
+        "B. yourselves",
+        "C. themselves",
+        "D. himself"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2000_q32",
+      "questionText": "...... the watch is old, it is still working.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2000",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 32,
+      "options": [
+        "A. Although",
+        "B. Despite",
+        "C. Since",
+        "D. Because"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2000_q33",
+      "questionText": "Teye asked me how ...... French I knew.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2000",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 33,
+      "options": [
+        "A. many",
+        "B. few",
+        "C. little",
+        "D. much"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2000_q34",
+      "questionText": "Kwaku's evidence ...... to be checked.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2000",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 34,
+      "options": [
+        "A. needing",
+        "B. needs",
+        "C. is needing",
+        "D. will have need"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2000_q35",
+      "questionText": "The headmistress said they could not postpone ...... the school any longer.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2000",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 35,
+      "options": [
+        "A. re-opening",
+        "B. re-open",
+        "C. to have re-opened",
+        "D. having re-opened"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2000_q36",
+      "questionText": "You know very well that it was no fault of ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2000",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 36,
+      "options": [
+        "A. my",
+        "B. I",
+        "C. me",
+        "D. mine"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2000_q37",
+      "questionText": "You are not hurt, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2000",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 37,
+      "options": [
+        "A. were you",
+        "B. did you",
+        "C. are you",
+        "D. do you"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2000_q38",
+      "questionText": "I don't mind ...... home early.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2000",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 38,
+      "options": [
+        "A. you go",
+        "B. your go",
+        "C. you to go",
+        "D. your going"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2000_q39",
+      "questionText": "All ...... is good health.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2000",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 39,
+      "options": [
+        "A. what I need",
+        "B. to need",
+        "C. that I need",
+        "D. to be needed"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2000_q40",
+      "questionText": "If anyone greets you, it is polite to return ...... greeting.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2000",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 40,
+      "options": [
+        "A. your",
+        "B. its",
+        "C. their",
+        "D. anyone"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    }
+  ]
+}

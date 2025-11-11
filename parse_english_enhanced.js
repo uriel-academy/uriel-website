@@ -2,13 +2,10 @@ const fs = require('fs');
 const path = require('path');
 
 /**
- * Process extracted raw text and create properly formatted JSON
- * This script parses the raw text more intelligently to extract options
+ * Enhanced parser for BECE English questions
+ * Handles concatenated text from DOCX extraction
  */
 
-// Define section instructions for BECE English
-// Note: Section instructions are extracted from the original DOCX files
-// Add more sections as needed (E, F, etc.)
 const SECTION_INSTRUCTIONS = {
   'A': 'From the alternatives lettered A to D, choose the one which most suitably completes each sentence.',
   'B': 'Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.',
@@ -16,46 +13,44 @@ const SECTION_INSTRUCTIONS = {
   'D': 'From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.',
   'E': 'Read the passage carefully and answer the questions that follow.',
   'F': 'Choose the option that best completes each sentence.',
-  // Add more sections as discovered in other years
 };
 
 function parseEnglishQuestions(rawText, year) {
-  // Pre-process: Add spaces before concatenated sections
-  rawText = rawText.replace(/SECTION\s*([A-Z])/gi, '\nSECTION $1\n');
-  rawText = rawText.replace(/PART\s+(I+|[IV]+)/gi, '\nPART $1\n');
+  // Pre-process: Clean up concatenated text
+  rawText = rawText.replace(/SECTION\s*([A-Z])/gi, '\n\nSECTION $1\n');
+  rawText = rawText.replace(/PART\s+(I+|[IV]+)/gi, '\n\nPART $1\n');
+  
+  // Split options that are concatenated: "A.  textB.  textC.  textD.  text"
+  rawText = rawText.replace(/([A-D])\.\s{2}/g, '\n$1.  ');
   
   const lines = rawText.split('\n').map(l => l.trim()).filter(l => l.length > 0);
   
   const questions = [];
-  const passages = [];
-  
+  let currentSection = 'A';
   let currentQuestion = null;
   let currentOptions = [];
-  let questionNumber = 0;
-  let passageContent = '';
-  let inPassage = false;
-  let passageCount = 0;
-  let currentSection = 'A';
   
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
     
-    // Detect section changes (A-Z)
-    if (/^SECTION\s+([A-Z])$/i.test(line)) {
-      const match = line.match(/^SECTION\s+([A-Z])$/i);
-      currentSection = match[1].toUpperCase();
+    // Skip section instructions and headers
+    if (/^(PART|SECTION|From the alternatives|Choose from|In each of)/i.test(line)) {
+      if (/^SECTION\s+([A-Z])$/i.test(line)) {
+        const match = line.match(/^SECTION\s+([A-Z])$/i);
+        currentSection = match[1].toUpperCase();
+      }
       continue;
     }
     
-    // Check if this is a question number (standalone number followed by a period)
+    // Detect question number (standalone number with period)
     if (/^\d+\.$/.test(line)) {
-      // Save previous question if exists
-      if (currentQuestion && currentOptions.length > 0) {
+      // Save previous question
+      if (currentQuestion && currentOptions.length === 4) {
         currentQuestion.options = currentOptions;
         questions.push(currentQuestion);
       }
       
-      questionNumber = parseInt(line);
+      const questionNumber = parseInt(line);
       currentQuestion = {
         id: `english_${year}_q${questionNumber}`,
         questionText: '',
@@ -78,34 +73,29 @@ function parseEnglishQuestions(rawText, year) {
       continue;
     }
     
-    // Check if this is an option (A., B., C., D.)
-    if (/^([ABCD])\.\s*$/.test(line)) {
-      const optionLetter = line.match(/^([ABCD])\./)[1];
-      // Next line should be the option text
-      if (i + 1 < lines.length) {
-        i++;
-        const optionText = lines[i];
-        currentOptions.push(`${optionLetter}. ${optionText}`);
-      }
+    // Detect option (A., B., C., D. followed by text)
+    if (/^([A-D])\.\s+(.+)/.test(line) && currentQuestion) {
+      const match = line.match(/^([A-D])\.\s+(.+)/);
+      currentOptions.push(`${match[1]}. ${match[2]}`);
       continue;
     }
     
-    // If we have a current question and this isn't an option marker, it's part of the question text
+    // Otherwise, it's part of the question text
     if (currentQuestion && !currentQuestion.questionText) {
       currentQuestion.questionText = line;
-    } else if (currentQuestion && currentQuestion.questionText && !currentOptions.length) {
-      // Still building question text
+    } else if (currentQuestion && line.length > 10) {
+      // Append to question text
       currentQuestion.questionText += ' ' + line;
     }
   }
   
   // Save last question
-  if (currentQuestion && currentOptions.length > 0) {
+  if (currentQuestion && currentOptions.length === 4) {
     currentQuestion.options = currentOptions;
     questions.push(currentQuestion);
   }
   
-  return { passages, questions };
+  return { passages: [], questions };
 }
 
 function processYear(year) {
@@ -132,49 +122,52 @@ function processYear(year) {
   console.log(`✓ Created ${outputPath}`);
   console.log(`  - ${passages.length} passages`);
   console.log(`  - ${questions.length} questions`);
-  console.log(`  - Questions with options: ${questions.filter(q => q.options && q.options.length === 4).length}`);
+  console.log(`  - Questions with 4 options: ${questions.filter(q => q.options && q.options.length === 4).length}`);
   
   return jsonData;
 }
 
-// Process specific years or all
+// Main execution
 const years = process.argv.slice(2);
 
 if (years.length === 0) {
-  console.log('📚 English Questions JSON Generator');
-  console.log('════════════════════════════════════\n');
-  console.log('Usage: node parse_english_to_json.js [years...]');
+  console.log('📚 Enhanced English Questions JSON Generator');
+  console.log('════════════════════════════════════════════\n');
+  console.log('Usage: node parse_english_enhanced.js [years...]');
   console.log('\nExamples:');
-  console.log('  node parse_english_to_json.js 2022');
-  console.log('  node parse_english_to_json.js 2022 2023 2024');
-  console.log('  node parse_english_to_json.js all');
-  console.log('\n💡 Start with one year to review the output format');
+  console.log('  node parse_english_enhanced.js 2018');
+  console.log('  node parse_english_enhanced.js 1990 1995 2000');
+  console.log('  node parse_english_enhanced.js all');
   process.exit(0);
 }
 
 let yearsToProcess = [];
 
 if (years[0] === 'all') {
-  // Process all years from 1990-2025
   for (let y = 1990; y <= 2025; y++) {
-    if (y !== 2021) yearsToProcess.push(y.toString());  // Skip 2021 if missing
+    if (y !== 2021) yearsToProcess.push(y.toString());
   }
 } else {
   yearsToProcess = years;
 }
 
-console.log('📚 English Questions JSON Generator');
-console.log('════════════════════════════════════\n');
+console.log('📚 Enhanced English Questions JSON Generator');
+console.log('════════════════════════════════════════════\n');
 console.log(`Processing ${yearsToProcess.length} years...\n`);
 
 let processed = 0;
 let failed = 0;
+let totalQuestions = 0;
 
 yearsToProcess.forEach(year => {
   try {
     const result = processYear(year);
-    if (result) {
+    if (result && result.questions.length > 0) {
       processed++;
+      totalQuestions += result.questions.length;
+    } else if (result) {
+      console.log(`   ⚠️  No questions extracted for ${year}`);
+      failed++;
     } else {
       failed++;
     }
@@ -184,11 +177,8 @@ yearsToProcess.forEach(year => {
   }
 });
 
-console.log('\n════════════════════════════════════');
+console.log('\n════════════════════════════════════════════');
 console.log('✅ Processing Complete!');
 console.log(`   Successfully processed: ${processed} years`);
-console.log(`   Failed: ${failed} years`);
-console.log('\n⚠️  NEXT STEPS:');
-console.log('   1. Review the generated JSON files');
-console.log('   2. Add correct answers from the answer key PDF');
-console.log('   3. Run import: node import_bece_english.js --file=./english_2022_questions.json');
+console.log(`   Total questions: ${totalQuestions}`);
+console.log(`   Failed/Empty: ${failed} years`);

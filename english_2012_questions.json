@@ -1,0 +1,1005 @@
+{
+  "passages": [],
+  "questions": [
+    {
+      "id": "english_2012_q1",
+      "questionText": "Two people perished............ the spot.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 1,
+      "options": [
+        "A. upon",
+        "B. in",
+        "C. on",
+        "D. through"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q2",
+      "questionText": "Oyo fell ill............. measles.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 2,
+      "options": [
+        "A. at",
+        "B. by",
+        "C. of",
+        "D. with"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q3",
+      "questionText": "The doctor gave............ to the patient.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 3,
+      "options": [
+        "A. some good advice",
+        "B. much good advices",
+        "C. many good advice",
+        "D. some good advices"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q4",
+      "questionText": "All girls were supposed to wear............. during the Speech Day.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 4,
+      "options": [
+        "A. new, white, long, dresses",
+        "B. new, long, white, dresses",
+        "C. long, white, new, dresses",
+        "D. white, new, long, dresses"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q5",
+      "questionText": "'I think you know............. already', said the host to all the participants.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 5,
+      "options": [
+        "A. one another",
+        "B. each other",
+        "C. themselves",
+        "D. ourselves"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q6",
+      "questionText": "The girls asserted that both tennis requests were............",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 6,
+      "options": [
+        "A. of Akologos.",
+        "B. Akologo's",
+        "C. Akologo's own",
+        "D. Akologo"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q7",
+      "questionText": "Children usually take.............. their parents in appearance.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 7,
+      "options": [
+        "A. after",
+        "B. from",
+        "C. to",
+        "D. up"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q8",
+      "questionText": "We haven't had............ rice to eat this week.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 8,
+      "options": [
+        "A. some",
+        "B. little",
+        "C. any",
+        "D. many"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q9",
+      "questionText": "The chief praised the............ during the students' demonstration.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 9,
+      "options": [
+        "A. policemen's behaviours",
+        "B. policemen behaviour",
+        "C. policemen's behaviour",
+        "D. policemens' behaviour"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q10",
+      "questionText": "When the lights went off I............ my supper.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 10,
+      "options": [
+        "A. have eaten",
+        "B. have been eating",
+        "C. am eating",
+        "D. was eating"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q11",
+      "questionText": "The doctor said she............ if she had not kept strictly to her diet.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 11,
+      "options": [
+        "A. has died",
+        "B. will died",
+        "C. would die",
+        "D. take out"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q12",
+      "questionText": "We saw the plane............ for Kumasi.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 12,
+      "options": [
+        "A. take on",
+        "B. take of",
+        "C. take off",
+        "D. take out"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q13",
+      "questionText": "There are many big houses in our area,............?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 13,
+      "options": [
+        "A. isn't it",
+        "B. aren't they",
+        "C. weren't there",
+        "D. aren't there"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q14",
+      "questionText": "You have cut the grass,............?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 14,
+      "options": [
+        "A. haven't you",
+        "B. did you",
+        "C. didn't you",
+        "D. had you"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q15",
+      "questionText": "The new airport............ next year.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 15,
+      "options": [
+        "A. will be completed",
+        "B. shall complete",
+        "C. will be completing",
+        "D. shall have completed"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q16",
+      "questionText": "Walking in the rain is not good,............?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 16,
+      "options": [
+        "A. is not",
+        "B. is it",
+        "C. must not",
+        "D. must it"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q17",
+      "questionText": "Go over your work carefully,............ you?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 17,
+      "options": [
+        "A. do",
+        "B. will",
+        "C. may",
+        "D. shall"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q18",
+      "questionText": "About fifty houses were demolished to make way for the new road.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 18,
+      "options": [
+        "A. removed",
+        "B. attacked",
+        "C. destroyed",
+        "D. display"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q19",
+      "questionText": "The headmaster too drastic action against the culprits.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 19,
+      "options": [
+        "A. bold",
+        "B. dangerous",
+        "C. necessary",
+        "D. severe"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q20",
+      "questionText": "It was forecast that there would be floods this year.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 20,
+      "options": [
+        "A. deduced",
+        "B. predicted",
+        "C. imagined",
+        "D. observed"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q21",
+      "questionText": "Many people revered the old man for his charity to the poor.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 21,
+      "options": [
+        "A. glorified",
+        "B. respected",
+        "C. feared",
+        "D. praised"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q22",
+      "questionText": "When they reached the frontier, the custom officer stopped the car.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 22,
+      "options": [
+        "A. fence",
+        "B. gate",
+        "C. entrance",
+        "D. border"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q23",
+      "questionText": "Awuni normally feels at home in my house. This means that Awuni............ in my house.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 23,
+      "options": [
+        "A. feels comfortable",
+        "B. lives",
+        "C. moves",
+        "D. eats"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q24",
+      "questionText": "The students were advised to stop building castles in the air. This means that the students should............",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 24,
+      "options": [
+        "A. be serious and realistic.",
+        "B. not worry about castles.",
+        "C. be serious and hardworking.",
+        "D. not build any more castles."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q25",
+      "questionText": "The chief told his linguist not to beat about the bush. This means that the linguist must............",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 25,
+      "options": [
+        "A. not stammer.",
+        "B. go straight to the point.",
+        "C. not enter the bush.",
+        "D. cut down the bush."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q26",
+      "questionText": "Immediately Ekuba's mother left the house, she let the cat out the bag. This means that Ekuba............",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 26,
+      "options": [
+        "A. bought a cat.",
+        "B. took the cat from the bag.",
+        "C. left her house.",
+        "D. revealed the secret."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q27",
+      "questionText": "The teacher poured cold water on Sena's suggestion. This means that the teacher............",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 27,
+      "options": [
+        "A. challenged Sena's suggestion.",
+        "B. approved of Sena's Suggestion.",
+        "C. discouraged Sena.",
+        "D. provoked Sena."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q28",
+      "questionText": "He had applied for a permanent job.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 28,
+      "options": [
+        "A. a boring",
+        "B. a dull",
+        "C. an exacting",
+        "D. a temporary"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q29",
+      "questionText": "He has a violent temper.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 29,
+      "options": [
+        "A. mild",
+        "B. natural",
+        "C. flexible",
+        "D. pleasant"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q30",
+      "questionText": "His position made him humble.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 30,
+      "options": [
+        "A. stubborn",
+        "B. wicked",
+        "C. arrogant",
+        "D. selfish"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q31",
+      "questionText": "That is a genuine painting.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 31,
+      "options": [
+        "A. bad",
+        "B. fake",
+        "C. damaged",
+        "D. poor"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q32",
+      "questionText": "The soldier climbed the mountain carefully.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 32,
+      "options": [
+        "A. descended",
+        "B. circled",
+        "C. fell off",
+        "D. looked up"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q33",
+      "questionText": "The main idea in a novel or play is the............",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 33,
+      "options": [
+        "A. suspense",
+        "B. plot",
+        "C. gist",
+        "D. theme"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q34",
+      "questionText": "The three main forms of literature are prose, drama and............",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 34,
+      "options": [
+        "A. novel",
+        "B. satire",
+        "C. poetry",
+        "D. prosody"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q35",
+      "questionText": "Time, like an ever-rolling stream,Bears all its sons away.They fly forgotten, as a dreamDies at the opening day. Question:Time in the stanza is being used as............",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 35,
+      "options": [
+        "A. symbol",
+        "B. simile",
+        "C. synecdoche",
+        "D. personification"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q36",
+      "questionText": "Time, like an ever-rolling stream,Bears all its sons away.They fly forgotten, as a dreamDies at the opening day. Question:The rhyme scheme of the stanza is..............",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 36,
+      "options": [
+        "A. abba",
+        "B. bbaa",
+        "C. abab",
+        "D. baba"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q37",
+      "questionText": "The place and time of the action of a play or novel is its............",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 37,
+      "options": [
+        "A. background.",
+        "B. setting.",
+        "C. scene.",
+        "D. atmosphere."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q38",
+      "questionText": "One of the following helps best to create interest in a work of art:",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 38,
+      "options": [
+        "A. rhythm.",
+        "B. preface",
+        "C. epilogue",
+        "D. suspense"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q39",
+      "questionText": "The main function of imagery in literature is to make readers / listeners............",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 39,
+      "options": [
+        "A. appreciate the great efforts of writers.",
+        "B. understand clearly what writers puts across.",
+        "C. admire how learned writers are.",
+        "D. know literature is different from other uses of language."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2012_q40",
+      "questionText": "A character in a play that opposes the hero or heroine is the............",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2012",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 40,
+      "options": [
+        "A. antagonist",
+        "B. challenger",
+        "C. opponent",
+        "D. protagonist"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    }
+  ]
+}

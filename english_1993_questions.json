@@ -1,0 +1,1043 @@
+{
+  "passages": [
+    {
+      "id": "english_1993_passage_1",
+      "content": "Bako was both intelligent and hardworking so he soon learnt all that Garba taught him of the art of reading and writing. Now he was able to earn a little extra income as a letter-writer and reader to his fellow illiterate labourers. All the people trusted him because he never revealed any information he got from the letters to anyone.Bako's happiest moments came on Saturdays when he received his pay and on Mondays when the labourers returned to work bringing with them all the gossip and laughter of their villages. Unfortunately, a misfortune befell Bako. One day, as he stood gazing proudly at a big tree, which he had just felled, another tree being cut down by a fellow labourer struck him on the head. The branches tore his face and he fell unconscious. His friends carried him to Adom Hospital.The accident changed Bako's life. His handsome face became permanently scarred. He lost his strength and job. At first, he hoped that in time he would regain his strength but Bako grew weaker and weaker.",
+      "title": "PASSAGE I",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "COMPREHENSION",
+      "questionRange": "",
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_passage_2",
+      "content": "We can have close friends for a very long time. But when friendship and duty come into conflict, as I once experienced, many problems may occur.Almost all my friends and I are leading members of our school's Supporters Club. In the beginning of our final year it was time to elect new officers for the club. Everyone stood the chance of being elected.When I was elected as President, I knew it would be a tough job because I would be in charge of my closest friends. The real test would come when the sports season started.Just as I had imagined, there were many disputes. No one listened to what I said. Everyone just wanted to have fun instead of cheering our athletes. I knew I had to motivate them and use discipline and that was exactly what I did.Many of my friends could not understand this. While some of them stopped coming to the games others were not talking to me at all.I finally decided to have a talk with everyone. I frankly admitted that I did not like the job but since I had it, I was determined to do my best. I also told them to leave sports matters on the field because my friends were more important to me than the job. From that little talk, I had everything resolved.",
+      "title": "PASSAGE II",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "COMPREHENSION",
+      "questionRange": "",
+      "createdBy": "admin",
+      "isActive": true
+    }
+  ],
+  "questions": [
+    {
+      "id": "english_1993_q1",
+      "questionText": "According to the passage, Garba taught Bako to ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 1,
+      "options": [
+        "A. use a matchet.",
+        "B. fell trees.",
+        "C. read and write.",
+        "D. gossip and laugh.",
+        "E. read and fell trees."
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q2",
+      "questionText": "Bako got additional income by ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 2,
+      "options": [
+        "A. cutting down trees.",
+        "B. going to the hospital.",
+        "C. meeting his friends on Monday.",
+        "D. working as a letter-writer and reader.",
+        "E. felling trees and reading letters."
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q3",
+      "questionText": "The people trusted Bako because he ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 3,
+      "options": [
+        "A. kept what he knew about them secretly.",
+        "B. wrote and read their letters.",
+        "C. gossiped and laughed with them.",
+        "D. was hardworking and clever.",
+        "E. earned extra income."
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q4",
+      "questionText": "How did the accident affect Bako?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 4,
+      "options": [
+        "A. He lost his senses and job",
+        "B. He could not read and write again",
+        "C. He became weak and jobless",
+        "D. His face was stitched",
+        "E. His friends left him"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q5",
+      "questionText": "Bako liked Mondays because ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 5,
+      "options": [
+        "A. Monday started the week",
+        "B. He met all his friends again",
+        "C. He received his pay",
+        "D. He wrote and read letters",
+        "E. He heard news from other villages"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q6",
+      "questionText": "He fell unconscious means he ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 6,
+      "options": [
+        "A. fell asleep",
+        "B. became mad",
+        "C. lost his confidence",
+        "D. lost awareness of his surroundings",
+        "E. fell down and died"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q7",
+      "questionText": "Why did the writer think his job would be difficult?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 7,
+      "options": [
+        "A. The other members were final year students",
+        "B. He had to control his closest friends",
+        "C. He was inexperienced",
+        "D. He had to work with new officers",
+        "E. Some of his friends stopped talking to him"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true,
+      "passageId": "english_1993_passage_1"
+    },
+    {
+      "id": "english_1993_q8",
+      "questionText": "Which of the following words best describes the behaviour of the writer's friends?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 8,
+      "options": [
+        "A. Uncooperative",
+        "B. Jealous",
+        "C. Insulting",
+        "D. Funny",
+        "E. Talkative"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true,
+      "passageId": "english_1993_passage_1"
+    },
+    {
+      "id": "english_1993_q9",
+      "questionText": "According to the passage which of the following statements is true? The writer",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 9,
+      "options": [
+        "A. settled the misunderstanding between him and his friends.",
+        "B. stopped talking to his friends.",
+        "C. lost all his closest friends.",
+        "D. appointed only his friends as officers.",
+        "E. did not listen to the advice of his friends."
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true,
+      "passageId": "english_1993_passage_1"
+    },
+    {
+      "id": "english_1993_q10",
+      "questionText": "The word disputes means ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 10,
+      "options": [
+        "A. misgiving.",
+        "B. debates.",
+        "C. insults.",
+        "D. wars."
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true,
+      "passageId": "english_1993_passage_1"
+    },
+    {
+      "id": "english_1993_q11",
+      "questionText": "The Manager was dismissed for gross <u>inefficiency</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 11,
+      "options": [
+        "A. laziness",
+        "B. dishonesty",
+        "C. incompetence",
+        "D. misconduct"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q12",
+      "questionText": "Prices of goods have been fairly <u>controlled</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 12,
+      "options": [
+        "A. kept down",
+        "B. kept away",
+        "C. kept off",
+        "D. kept out"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q13",
+      "questionText": "Remember to look over your work when you <u>finish</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 13,
+      "options": [
+        "A. watch",
+        "B. look on",
+        "C. oversee",
+        "D. read through"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q14",
+      "questionText": "Although the labourers agreed to do the work, they did it <u>reluctantly</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 14,
+      "options": [
+        "A. leisurely",
+        "B. nervously",
+        "C. unwillingly",
+        "D. sparingly"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q15",
+      "questionText": "The thief was humiliated when he was <u>caught</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 15,
+      "options": [
+        "A. sentenced",
+        "B. cautioned",
+        "C. beaten up",
+        "D. discouraged"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q16",
+      "questionText": "I don't like Ben. He is <u>always</u> pulling my legs. This means Ben is always ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 16,
+      "options": [
+        "A. pulling me down",
+        "B. gossiping about me",
+        "C. abusing me",
+        "D. borrowing my shoes"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q17",
+      "questionText": "The <u>judge</u> turned a deaf ear to what the murderer said. This means the judge ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 17,
+      "options": [
+        "A. was partially deaf",
+        "B. ignored what the murderer said",
+        "C. favoured the murderer when he heard his story",
+        "D. pretended that he was listening to the murderer's story"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q18",
+      "questionText": "If you don't want to regret, cut your coat according to your cloth. This <u>means</u> ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 18,
+      "options": [
+        "A. live within your means.",
+        "B. use the coat cut from your cloth.",
+        "C. sew your own coat.",
+        "D. put on your cloth and coat."
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q19",
+      "questionText": "Were it not for the <u>policemen</u> the workers would have gone on strike. From this we know the policemen ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 19,
+      "options": [
+        "A. didn't go on strike.",
+        "B. saw the workers on strike.",
+        "C. forced the workers to go on strike.",
+        "D. and the workers were on strike."
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q20",
+      "questionText": "Razak has <u>been</u> in a bad way for several days. This means Razak has been ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 20,
+      "options": [
+        "A. badly treated",
+        "B. unable to eat for many days",
+        "C. misbehaving",
+        "D. quite ill"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q21",
+      "questionText": "Our school is now famous throughout the <u>district</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 21,
+      "options": [
+        "A. popular",
+        "B. anonymous",
+        "C. unknown",
+        "D. irrelevant"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q22",
+      "questionText": "Our new pastor is very modest in his <u>ways</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 22,
+      "options": [
+        "A. friendly",
+        "B. kind",
+        "C. particular",
+        "D. boastful"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q23",
+      "questionText": "Issa was very rude to his <u>teacher</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 23,
+      "options": [
+        "A. respectful",
+        "B. polite",
+        "C. obedient",
+        "D. truthful"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q24",
+      "questionText": "We walked on the smooth side of the <u>pavement</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 24,
+      "options": [
+        "A. hard",
+        "B. rough",
+        "C. coarse",
+        "D. slippery"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q25",
+      "questionText": "The president was denounced by his <u>subjects</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 25,
+      "options": [
+        "A. elected",
+        "B. welcomed",
+        "C. supported",
+        "D. advised"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q26",
+      "questionText": "Our ancestors ...... to us a lot of knowledge about our <u>culture</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 26,
+      "options": [
+        "A. handed in",
+        "B. passed out",
+        "C. passed through",
+        "D. handed down"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q27",
+      "questionText": "The government has set ...... a committee on <u>education</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 27,
+      "options": [
+        "A. apart",
+        "B. up",
+        "C. in",
+        "D. by"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q28",
+      "questionText": "None of the suspects ...... his <u>guilt</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 28,
+      "options": [
+        "A. admit",
+        "B. admits",
+        "C. are admitting",
+        "D. have admitted"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q29",
+      "questionText": "Amidu promised to be patient until his toy ...... <u>repaired</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 29,
+      "options": [
+        "A. has been",
+        "B. will be",
+        "C. was",
+        "D. can be"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q30",
+      "questionText": "The Headmaster, with his assistant ...... inspecting the new school <u>library</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 30,
+      "options": [
+        "A. will have been",
+        "B. are",
+        "C. have been",
+        "D. is"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q31",
+      "questionText": "I would have told you about the <u>wedding</u> if I ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 31,
+      "options": [
+        "A. have known",
+        "B. know",
+        "C. had known",
+        "D. have been knowing"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q32",
+      "questionText": "His writing is so bad that I can't <u>make</u> it ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 32,
+      "options": [
+        "A. on",
+        "B. out",
+        "C. down",
+        "D. in"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q33",
+      "questionText": "You will be ill if you ...... too <u>much</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 33,
+      "options": [
+        "A. are eating",
+        "B. eat",
+        "C. had eaten",
+        "D. ate"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q34",
+      "questionText": "If it ...... necessary, I shall see you again at six o'<u>clock</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 34,
+      "options": [
+        "A. is",
+        "B. had been",
+        "C. is being",
+        "D. was"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q35",
+      "questionText": "If we had not closed down the market, the traders ...... <u>there</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 35,
+      "options": [
+        "A. shall still be",
+        "B. will still be",
+        "C. are still going",
+        "D. would have still been"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q36",
+      "questionText": "Mr. Adu has never been pleased with his children's <u>performance</u>, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 36,
+      "options": [
+        "A. hasn't he",
+        "B. didn't he",
+        "C. has he",
+        "D. did he"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q37",
+      "questionText": "You prefer playing soccer to volley <u>ball</u>, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 37,
+      "options": [
+        "A. do you",
+        "B. will you",
+        "C. won't you",
+        "D. don't you?"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q38",
+      "questionText": "The cashier was rude to his <u>boss</u>, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 38,
+      "options": [
+        "A. was he",
+        "B. wasn't he",
+        "C. did he",
+        "D. didn't he"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q39",
+      "questionText": "These days students are not very interested ...... improving their <u>English</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 39,
+      "options": [
+        "A. on",
+        "B. about",
+        "C. of",
+        "D. in"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1993_q40",
+      "questionText": "Kofi ate ...... food than anyone <u>else</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 40,
+      "options": [
+        "A. more",
+        "B. most",
+        "C. much",
+        "D. too much"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    }
+  ]
+}

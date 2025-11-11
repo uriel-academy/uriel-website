@@ -1,0 +1,1036 @@
+{
+  "passages": [
+    {
+      "id": "english_2001_passage_1",
+      "content": "There stood an enormous tree in the centre of the town. Its big branches and dense foliage gave shelter in all weathers and so it had become a natural meeting place. Benches had been placed round the base of its huge trunk so that the elders of the town might sit in comfort and gossip or talk about serious affairs of the town. This particular morning, three old men were resting on one of the benches. They had chosen the side which overlooks the road entering the town. From there they could see the market, the lorry park and the Main Street.As they watched, a large bus drove into the lorry park. It was surrounded immediately by a jostling crowd. Those who whistled to travel hurried forward and food sellers rushed from all sides struggling to sell their wares. In the general uproar which followed, new passengers tried to get into the bus, whilst those who had reached their destination tried to alight. Others who were not willing to risk losing their seats stood blocking the doorway or leaned out of the bus windows so they bargained with the food sellers.",
+      "title": "PASSAGE I",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "COMPREHENSION",
+      "questionRange": "",
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_passage_2",
+      "content": "As I stood by a street in Accra that late afternoon watching people rushing home from work, I felt very safe. My sense of security came from the fact that Ghanaians are generally kind and hospital people, particularly to strangers. Although I had just arrived from my village, I was a Ghanaian and in my own capital I should not fear anything.Just then, I felt a firm grip on my arm from behind. I did not feel threatened, rather I was relieved. I thought an old schoolmate must have spotted me, James Cuddle, and decided to play our old game on me. How welcome! The good old days are here again.I turned to look at the fellow in the face but the more, I turned to my left the faster he moved to my right as he tightened his grip on my wrist watch. Suddenly he let go of my arm and bolted. I saw him vanish into the thick crowd. Certain, this was not how to welcome a friend. People of the city are surely very strange!Totally confused, I made my way towards the lorry park to leave for my brother's house. In the gathering darkness, I tried to find out what time it was. To my utter surprise, I discovered that my wrist watch was gone.The rascal had made away with it. It was hardly new, not even expensive, yet the rogue found it worth stealing.",
+      "title": "PASSAGE II",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "COMPREHENSION",
+      "questionRange": "",
+      "createdBy": "admin",
+      "isActive": true
+    }
+  ],
+  "questions": [
+    {
+      "id": "english_2001_q1",
+      "questionText": "According to the passage the elders sit under the tree to ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 1,
+      "options": [
+        "A. travel outside.",
+        "B. buy and sell.",
+        "C. discuss matters.",
+        "D. drink palm wine."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q2",
+      "questionText": "Which of the following could the old men not see from where they sat?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 2,
+      "options": [
+        "A. The benches",
+        "B. The market",
+        "C. The lorry",
+        "D. The main street"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q3",
+      "questionText": "Uproar in the passage means",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 3,
+      "options": [
+        "A. fight.",
+        "B. movement.",
+        "C. selling.",
+        "D. confusion."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q4",
+      "questionText": "Some people in the bus tried to alight because they wanted to ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 4,
+      "options": [
+        "A. buy things.",
+        "B. gossip.",
+        "C. rest.",
+        "D. go home."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q5",
+      "questionText": "Some of the passengers blocked the way because they ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 5,
+      "options": [
+        "A. did not like the food sellers.",
+        "B. did not want to lose their seats.",
+        "C. wanted to stop the new passengers.",
+        "D. wanted to see the old men."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q6",
+      "questionText": "The writer thought he was safe in Accra because ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 6,
+      "options": [
+        "A. he saw people rushing home from work.",
+        "B. he had just arrived from his village.",
+        "C. Ghanaians would welcome him.",
+        "D. Ghanaians are famous for their kindness."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true,
+      "passageId": "english_2001_passage_1"
+    },
+    {
+      "id": "english_2001_q7",
+      "questionText": "Spotted in the passage means",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 7,
+      "options": [
+        "A. looked at.",
+        "B. recognized.",
+        "C. marked.",
+        "D. pointed at."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true,
+      "passageId": "english_2001_passage_1"
+    },
+    {
+      "id": "english_2001_q8",
+      "questionText": "The writer turned to his left because he wanted to ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 8,
+      "options": [
+        "A. see the person behind.",
+        "B. keep his wrist watch safe.",
+        "C. welcome his old friend.",
+        "D. play with his schoolmate."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true,
+      "passageId": "english_2001_passage_1"
+    },
+    {
+      "id": "english_2001_q9",
+      "questionText": "According to the passage, the fellow grabbed Cudjoe's arm because ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 9,
+      "options": [
+        "A. he wanted to embrace.",
+        "B. they were mates.",
+        "C. he wanted to steal the watch.",
+        "D. they stood together."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true,
+      "passageId": "english_2001_passage_1"
+    },
+    {
+      "id": "english_2001_q10",
+      "questionText": "Rogue in the passage refers to ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 10,
+      "options": [
+        "A. a worker.",
+        "B. the schoolmate.",
+        "C. the thief.",
+        "D. a citizen."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true,
+      "passageId": "english_2001_passage_1"
+    },
+    {
+      "id": "english_2001_q11",
+      "questionText": "Which of the following is not true according to the passage?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 11,
+      "options": [
+        "A. People in Accra are strange.",
+        "B. People in Accra are classmates.",
+        "C. There are thieves in Accra.",
+        "D. Workers in Accra return home in the evening."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true,
+      "passageId": "english_2001_passage_1"
+    },
+    {
+      "id": "english_2001_q12",
+      "questionText": "The director was humiliated when the theft was detected in his ministry.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 12,
+      "options": [
+        "A. angered",
+        "B. cautioned",
+        "C. discouraged",
+        "D. disgraced"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q13",
+      "questionText": "Nortey was industrious so he was duly rewarded.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 13,
+      "options": [
+        "A. intelligent",
+        "B. hardworking",
+        "C. careful",
+        "D. courageous"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q14",
+      "questionText": "Born and bred in an affluent home, he never experienced any hardships in life.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 14,
+      "options": [
+        "A. respectable",
+        "B. religious",
+        "C. happy",
+        "D. rich"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q15",
+      "questionText": "Dazzled by the bright headlights of the approaching vehicle, our driver drove into the bush.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 15,
+      "options": [
+        "A. disturbed",
+        "B. worried",
+        "C. blinded",
+        "D. discouraged"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q16",
+      "questionText": "He gave a precise definition of the word.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 16,
+      "options": [
+        "A. learned",
+        "B. hasty",
+        "C. accurate",
+        "D. short"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q17",
+      "questionText": "After serving ten years in prison he returned home under a cloud.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 17,
+      "options": [
+        "A. in dull weather",
+        "B. very depressed",
+        "C. in disgrace",
+        "D. very secretly"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q18",
+      "questionText": "His father's death, which was a bolt from the blue, greatly affected his education.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 18,
+      "options": [
+        "A. a disastrous event",
+        "B. a complete surprise",
+        "C. a mournful affair",
+        "D. a blessing in disguise"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q19",
+      "questionText": "Kofi Mensah found it difficult to do away with his habits. This means that Kofi Mensah could not ...... his bad habits.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 19,
+      "options": [
+        "A. continue",
+        "B. hide",
+        "C. stop",
+        "D. talk about"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q20",
+      "questionText": "Many people dislike Abugri because he enjoys blowing his own trumpet. This means that Abugri is ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 20,
+      "options": [
+        "A. boastful.",
+        "B. greedy.",
+        "C. disrespectful.",
+        "D. shameful."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q21",
+      "questionText": "When Susan was caught stealing money, she shed crocodile tears.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 21,
+      "options": [
+        "A. pretended she was sorry",
+        "B. was annoyed",
+        "C. was embarrassed",
+        "D. cried like a crocodile"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q22",
+      "questionText": "The health officer advised the people not to contaminate the water any further.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 22,
+      "options": [
+        "A. fetch",
+        "B. story",
+        "C. purify",
+        "D. use"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q23",
+      "questionText": "Theresa wanted to know the time arrival of the plane.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 23,
+      "options": [
+        "A. scheme",
+        "B. routine",
+        "C. departure",
+        "D. boarding"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q24",
+      "questionText": "I must consent to this proposal.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 24,
+      "options": [
+        "A. ignore",
+        "B. question",
+        "C. disagree",
+        "D. react to"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q25",
+      "questionText": "Yesterday my cousin looked very depressed.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 25,
+      "options": [
+        "A. contented",
+        "B. active",
+        "C. surprised",
+        "D. happy"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q26",
+      "questionText": "The level of the river subsided after the floods.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 26,
+      "options": [
+        "A. outflow",
+        "B. ascended",
+        "C. enlarged",
+        "D. rose"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q27",
+      "questionText": "I suggest that they ...... the piano instead.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 27,
+      "options": [
+        "A. are playing",
+        "B. play",
+        "C. praying",
+        "D. will play"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q28",
+      "questionText": "...... frankly, I hate the idea.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 28,
+      "options": [
+        "A. Speak",
+        "B. Spoken",
+        "C. To speak",
+        "D. For speaking"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q29",
+      "questionText": "I think we ...... Kwesi's offer.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 29,
+      "options": [
+        "A. better taking",
+        "B. had better taken",
+        "C. had better take",
+        "D. better to take"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q30",
+      "questionText": "...... the arable land was under cultivation.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 30,
+      "options": [
+        "A. Most of",
+        "B. Many of",
+        "C. More of",
+        "D. Much of"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q31",
+      "questionText": "In attempting to control us, the headmaster gave ...... a great deal of trouble.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 31,
+      "options": [
+        "A. themselves",
+        "B. himself",
+        "C. ourselves",
+        "D. yourself"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q32",
+      "questionText": "Do you believe in witches?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 32,
+      "options": [
+        "A. Yes, I don't",
+        "B. No I won't",
+        "C. Yes I won't",
+        "D. No, I don't"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q33",
+      "questionText": "Aba insisted that Adjoa ...... to the party.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 33,
+      "options": [
+        "A. to have come",
+        "B. has come",
+        "C. to come",
+        "D. should come"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q34",
+      "questionText": "Esi: I felt rather tired yesterday. Efua: Yes ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 34,
+      "options": [
+        "A. I did too",
+        "B. so I did",
+        "C. so did I",
+        "D. I didn't"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q35",
+      "questionText": "The students complained that there was ...... sugar in their tea.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 35,
+      "options": [
+        "A. plenty",
+        "B. few",
+        "C. little",
+        "D. small"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q36",
+      "questionText": "One of the duties of the police is to ...... traffic.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 36,
+      "options": [
+        "A. lead",
+        "B. regulate",
+        "C. direct",
+        "D. move"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q37",
+      "questionText": "He decided to ...... the entrance examination again.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 37,
+      "options": [
+        "A. have sat",
+        "B. sit",
+        "C. be sitting",
+        "D. have been sitting"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q38",
+      "questionText": "We won the school debate ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 38,
+      "options": [
+        "A. hadn't we",
+        "B. isn't it",
+        "C. couldn't we",
+        "D. didn't we"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q39",
+      "questionText": "The plumber turned the pipe so hard that it ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 39,
+      "options": [
+        "A. will break",
+        "B. breaks",
+        "C. had broken",
+        "D. broke"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2001_q40",
+      "questionText": "He was introduced ...... the directors by his co-worker.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2001",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 40,
+      "options": [
+        "A. by",
+        "B. to",
+        "C. through",
+        "D. from"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    }
+  ]
+}

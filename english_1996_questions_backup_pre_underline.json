@@ -1,0 +1,730 @@
+{
+  "passages": [],
+  "questions": [
+    {
+      "id": "english_1996_q2",
+      "questionText": "The children giggled and murmured because ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 2,
+      "options": [
+        "A. Mr. Mensah turned to write on the board.",
+        "B. they thought Mr. Mensah was funny.",
+        "C. of what they saw in the magazine.",
+        "D. the boy near the window threw the magazine away."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1996_q3",
+      "questionText": "The boys threw the magazine away because ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 3,
+      "options": [
+        "A. they were murmuring and giggling.",
+        "B. the window was open.",
+        "C. the teacher turned quickly.",
+        "D. they did not want the teacher to see it."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1996_q4",
+      "questionText": "The teacher found the magazine because ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 4,
+      "options": [
+        "A. it was thrown onto the veranda.",
+        "B. of his many years of teaching experience.",
+        "C. he walked quickly to the back of the class.",
+        "D. the children gave it to him."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1996_q5",
+      "questionText": "The expression have reared their ugly heads in the passage means have become unpleasantly ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 5,
+      "options": [
+        "A. common.",
+        "B. funny.",
+        "C. troublesome.",
+        "D. ugly."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1996_q8",
+      "questionText": "The expression of all shapes and sizes tells us the pieces of furniture were ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 8,
+      "options": [
+        "A. big.",
+        "B. long.",
+        "C. measured differently.",
+        "D. of different types."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1996_q9",
+      "questionText": "Aboagye was a ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 9,
+      "options": [
+        "A. teacher.",
+        "B. lawyer.",
+        "C. counsellor.",
+        "D. trader."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1996_q10",
+      "questionText": "The word grand means ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 10,
+      "options": [
+        "A. smooth.",
+        "B. solemn.",
+        "C. happy.",
+        "D. noisy."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1996_q13",
+      "questionText": "When you come across a new word look it up in a <u>dictionary</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 13,
+      "options": [
+        "A. examine it",
+        "B. observe it",
+        "C. find the meaning",
+        "D. record the meaning"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1996_q14",
+      "questionText": "The radio won't talk because it is <u>defective</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 14,
+      "options": [
+        "A. dirty",
+        "B. broken",
+        "C. faulty",
+        "D. tuned"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1996_q17",
+      "questionText": "It was a <u>red-letter day.</u> This means it was a ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 17,
+      "options": [
+        "A. day I got a red letter",
+        "B. day I was sad",
+        "C. memorable day",
+        "D. real day"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1996_q18",
+      "questionText": "I have a bone to <u>pick with</u> my prefect for reporting me. This means ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 18,
+      "options": [
+        "A. the prefect and I are going to chat",
+        "B. I have to report the prefect",
+        "C. I have to take the bone to the prefect",
+        "D. I have a quarrel with the prefect"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1996_q19",
+      "questionText": "His failure in the examination <u>came out</u> of the blue. This means his failure was ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 19,
+      "options": [
+        "A. destined",
+        "B. obvious",
+        "C. surprising",
+        "D. sent from the blue"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1996_q22",
+      "questionText": "Moses is on a temporary <u>appointment</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 22,
+      "options": [
+        "A. daily",
+        "B. permanent",
+        "C. probationary",
+        "D. weekly"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1996_q23",
+      "questionText": "The beggar vanished when he saw the <u>policeman</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 23,
+      "options": [
+        "A. showed",
+        "B. defected",
+        "C. jumped",
+        "D. appeared"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1996_q24",
+      "questionText": "The taxi driver drove <u>recklessly</u> throughout the journey.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 24,
+      "options": [
+        "A. speedily",
+        "B. carefully",
+        "C. noisily",
+        "D. leisurely"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1996_q27",
+      "questionText": "After Roderick ...... the dress, he looked round for a pair of shoes that would match it.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 27,
+      "options": [
+        "A. has bought",
+        "B. is buying",
+        "C. had bought",
+        "D. was buying"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1996_q28",
+      "questionText": "I saw him while he ...... the cloth.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 28,
+      "options": [
+        "A. is folding",
+        "B. has been folding",
+        "C. was folding",
+        "D. had been folding"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1996_q29",
+      "questionText": "You can't eat all, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 29,
+      "options": [
+        "A. can't you",
+        "B. do you",
+        "C. can you",
+        "D. don't you"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1996_q30",
+      "questionText": "Not only was she pretty ...... intelligent.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 30,
+      "options": [
+        "A. or",
+        "B. nor",
+        "C. but also",
+        "D. and also"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1996_q31",
+      "questionText": "Neither the headmaster nor his assistant ....... today.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 31,
+      "options": [
+        "A. is working",
+        "B. do work",
+        "C. have worked",
+        "D. are working"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1996_q32",
+      "questionText": "The antelope ...... when the hunter fired.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 32,
+      "options": [
+        "A. is eating",
+        "B. is eaten",
+        "C. was ate",
+        "D. was eating"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1996_q33",
+      "questionText": "There were ...... cars at the beach.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 33,
+      "options": [
+        "A. plenty",
+        "B. most",
+        "C. much",
+        "D. many"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1996_q34",
+      "questionText": "Lucy is the ...... beautiful girl in her class.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 34,
+      "options": [
+        "A. much",
+        "B. very much",
+        "C. very more",
+        "D. most"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1996_q35",
+      "questionText": "He is ...... to fight with a fool.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 35,
+      "options": [
+        "A. too wise a man",
+        "B. too a wise man",
+        "C. a too wise man",
+        "D. a man wise too"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1996_q36",
+      "questionText": "Mantey and Kofi shook hands with ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 36,
+      "options": [
+        "A. each other",
+        "B. each one",
+        "C. one another",
+        "D. themselves"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1996_q37",
+      "questionText": "The school organised a ...... art exhibition.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 37,
+      "options": [
+        "A. two days",
+        "B. two day",
+        "C. two-day",
+        "D. two-days"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1996_q38",
+      "questionText": "We told the stranger we would put him ...... if he wanted.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 38,
+      "options": [
+        "A. down",
+        "B. up",
+        "C. on",
+        "D. over"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1996_q39",
+      "questionText": "In wrestling, it is not wise to take ...... someone twice your size.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 39,
+      "options": [
+        "A. off",
+        "B. in",
+        "C. on",
+        "D. over"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1996_q40",
+      "questionText": "He was sure he gave the pan to ...... else.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 40,
+      "options": [
+        "A. anyone",
+        "B. someone",
+        "C. somebody",
+        "D. everybody"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    }
+  ]
+}

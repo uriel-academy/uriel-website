@@ -1,0 +1,730 @@
+{
+  "passages": [],
+  "questions": [
+    {
+      "id": "english_1998_q2",
+      "questionText": "I began to fend for myself means the speaker ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1998",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 2,
+      "options": [
+        "A. defended himself.",
+        "B. protected his family.",
+        "C. looked after himself.",
+        "D. looked for yams."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1998_q3",
+      "questionText": "Being hard-hearted is to ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1998",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 3,
+      "options": [
+        "A. be solid.",
+        "B. have no kind feeling.",
+        "C. be wild.",
+        "D. refuse to smile."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1998_q4",
+      "questionText": "Nwakibie refused to give yams to some young men because they were ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1998",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 4,
+      "options": [
+        "A. lazy.",
+        "B. stingy.",
+        "C. unable to shoot well.",
+        "D. unable to trust him."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1998_q7",
+      "questionText": "The father was holding his forehead because he ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1998",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 7,
+      "options": [
+        "A. ran.",
+        "B. lay on his back.",
+        "C. did not put on the light.",
+        "D. hit his head against the pillar."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1998_q8",
+      "questionText": "Which of the following statements, according to the passage, is not true?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1998",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 8,
+      "options": [
+        "A. Mother retired as a nursing sister",
+        "B. Mother used Daddy's towel",
+        "C. Mother used iodine and ice-cubes",
+        "D. Mother applied warm water"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1998_q9",
+      "questionText": "How did the tenant die?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1998",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 9,
+      "options": [
+        "A. He was a pathetic scene",
+        "B. He was killed by armed robbers",
+        "C. He was merciless",
+        "D. He had resisted armed robbers"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1998_q12",
+      "questionText": "Our <u>supporters</u> planned to jubilate after the match.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1998",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 12,
+      "options": [
+        "A. embrace the supporters",
+        "B. reward the players",
+        "C. rejoice",
+        "D. feast"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1998_q13",
+      "questionText": "<u>Bullying</u> has been banned in this school.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1998",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 13,
+      "options": [
+        "A. encouraged",
+        "B. forbidden",
+        "C. discussed",
+        "D. introduced"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1998_q14",
+      "questionText": "The penalty for stealing is <u>dismissal</u> from school.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1998",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 14,
+      "options": [
+        "A. trouble",
+        "B. cause",
+        "C. foul",
+        "D. punishment"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1998_q17",
+      "questionText": "Mr. Mensah appears to be an <u>honest worker,</u> but he leads a double life. This means that he ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1998",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 17,
+      "options": [
+        "A. comes to work early",
+        "B. works harder than everybody",
+        "C. leads a bad private life",
+        "D. has two different jobs."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1998_q18",
+      "questionText": "My uncle visits me once <u>in a</u> blue moon. This means that he visits ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1998",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 18,
+      "options": [
+        "A. at the end of the month",
+        "B. rarely",
+        "C. during the night",
+        "D. daily"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1998_q19",
+      "questionText": "Academically the Science Class is <u>second to</u> none in the school. This means that the class ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1998",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 19,
+      "options": [
+        "A. always takes the second position.",
+        "B. does not do very well.",
+        "C. is the best.",
+        "D. is the second largest."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1998_q22",
+      "questionText": "Our <u>teachers</u> always advised us to be humble.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1998",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 22,
+      "options": [
+        "A. arrogant",
+        "B. gentle",
+        "C. hardworking",
+        "D. wicked"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1998_q23",
+      "questionText": "Our <u>headmaster</u> has purchased a lot of books for the library.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1998",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 23,
+      "options": [
+        "A. selected",
+        "B. collected",
+        "C. sold",
+        "D. lent"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1998_q24",
+      "questionText": "The meat I had was <u>tough</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1998",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 24,
+      "options": [
+        "A. big",
+        "B. soft",
+        "C. slippery",
+        "D. rough"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1998_q27",
+      "questionText": "Mr Tawiah regularly ...... late in the night.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1998",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 27,
+      "options": [
+        "A. eat",
+        "B. eats",
+        "C. eaten",
+        "D. eating"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1998_q28",
+      "questionText": "Can you make ...... Issaka in the crowd?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1998",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 28,
+      "options": [
+        "A. of",
+        "B. up",
+        "C. out",
+        "D. away"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1998_q29",
+      "questionText": "The earlier we ...... the work, the better.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1998",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 29,
+      "options": [
+        "A. have done",
+        "B. do",
+        "C. did",
+        "D. had done"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1998_q30",
+      "questionText": "You will pass this examination, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1998",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 30,
+      "options": [
+        "A. don't you",
+        "B. have you",
+        "C. may you",
+        "D. won't you"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1998_q31",
+      "questionText": "He showed me the car ...... knocked him down.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1998",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 31,
+      "options": [
+        "A. who",
+        "B. which",
+        "C. whom",
+        "D. what"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1998_q32",
+      "questionText": "The man is a good friend of ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1998",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 32,
+      "options": [
+        "A. my",
+        "B. me",
+        "C. myself",
+        "D. mine"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1998_q33",
+      "questionText": "The national team is preparing ...... their next match.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1998",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 33,
+      "options": [
+        "A. with",
+        "B. by",
+        "C. on",
+        "D. for"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1998_q34",
+      "questionText": "Look carefully around for those books; they must be ...... in this room.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1998",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 34,
+      "options": [
+        "A. somehow",
+        "B. everywhere",
+        "C. somewhere",
+        "D. anywhere"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1998_q35",
+      "questionText": "Find out who is the ...... of the two boys.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1998",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 35,
+      "options": [
+        "A. most tall",
+        "B. taller",
+        "C. more tall",
+        "D. tallest"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1998_q36",
+      "questionText": "...... boys are very happy with the toys.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1998",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 36,
+      "options": [
+        "A. they",
+        "B. those",
+        "C. this",
+        "D. that"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1998_q37",
+      "questionText": "Julie wants to visit a relative of ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1998",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 37,
+      "options": [
+        "A. hers",
+        "B. herself",
+        "C. themselves",
+        "D. ourselves"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1998_q38",
+      "questionText": "The visitors don't know Krokrobite, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1998",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 38,
+      "options": [
+        "A. is it",
+        "B. haven't they",
+        "C. do they",
+        "D. isn't it"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1998_q39",
+      "questionText": "Was it not your sister who ...... this hole yesterday?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1998",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 39,
+      "options": [
+        "A. has dug",
+        "B. have dug",
+        "C. dig",
+        "D. dug"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1998_q40",
+      "questionText": "I can't hear her; I wish she ...... louder.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1998",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 40,
+      "options": [
+        "A. was speaking",
+        "B. would speak",
+        "C. had spoken",
+        "D. might speak"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    }
+  ]
+}

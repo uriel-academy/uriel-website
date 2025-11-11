@@ -1,0 +1,730 @@
+{
+  "passages": [],
+  "questions": [
+    {
+      "id": "english_2005_q2",
+      "questionText": "For Esinam, It's great to be young means",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2005",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 2,
+      "options": [
+        "A. having everything one wants.",
+        "B. being able to go to school.",
+        "C. having a mum and dad.",
+        "D. being cheerful."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2005_q3",
+      "questionText": "We learnt from the passage that Ayele's parents are ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2005",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 3,
+      "options": [
+        "A. sort of poor.",
+        "B. rich but miserly.",
+        "C. hardworking.",
+        "D. honest and cheerful."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2005_q4",
+      "questionText": "In the passage, Ayele comes across as one who is ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2005",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 4,
+      "options": [
+        "A. proud.",
+        "B. hard to please.",
+        "C. hardworking.",
+        "D. thoughtful."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2005_q7",
+      "questionText": "From the passage we learn that laughter makes people look ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2005",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 7,
+      "options": [
+        "A. strong",
+        "B. healthy",
+        "C. queer",
+        "D. ugly"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2005_q8",
+      "questionText": "People who laugh a lot ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2005",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 8,
+      "options": [
+        "A. look strange.",
+        "B. blame others.",
+        "C. hurt their bodies.",
+        "D. make friends easily."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2005_q9",
+      "questionText": "Societies can use laughter to ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2005",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 9,
+      "options": [
+        "A. create fun.",
+        "B. annoy people.",
+        "C. correct behaviour.",
+        "D. praise people."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2005_q12",
+      "questionText": "A <u>neutral</u> referee handled the final match.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2005",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 12,
+      "options": [
+        "A. foreign",
+        "B. local",
+        "C. impartial",
+        "D. athletic"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2005_q13",
+      "questionText": "The pupils were jubilating because they had passed their <u>examinations</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2005",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 13,
+      "options": [
+        "A. singing",
+        "B. shouting",
+        "C. dancing",
+        "D. rejoicing"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2005_q14",
+      "questionText": "Kuuki's dream is to become a <u>celebrated</u> musician.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2005",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 14,
+      "options": [
+        "A. gospel",
+        "B. rich",
+        "C. famous",
+        "D. reggae"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2005_q17",
+      "questionText": "Ama was the only one <u>who was</u> close-lipped about the theft. This means that Ama ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2005",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 17,
+      "options": [
+        "A. did not cry.",
+        "B. was serious.",
+        "C. did not talk.",
+        "D. was relaxed."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2005_q18",
+      "questionText": "Issah was asked to toe the <u>line or</u> quit the team. This means that Issah was asked to",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2005",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 18,
+      "options": [
+        "A. apologize.",
+        "B. resign.",
+        "C. change.",
+        "D. obey."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2005_q19",
+      "questionText": "The students were advised to give <u>up smoking.</u> This means that the students were asked to ...... smoking.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2005",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 19,
+      "options": [
+        "A. suspend",
+        "B. stop",
+        "C. prevent",
+        "D. hate"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2005_q22",
+      "questionText": "I consented to his <u>suggestion</u> because it was useful.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2005",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 22,
+      "options": [
+        "A. disagreed",
+        "B. submitted",
+        "C. replied",
+        "D. applied"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2005_q23",
+      "questionText": "A sharp cutlass is one of the items on the <u>prospectus</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2005",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 23,
+      "options": [
+        "A. new",
+        "B. used",
+        "C. short",
+        "D. blunt"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2005_q24",
+      "questionText": "The J.S.S students are reading the abridged versions of <u>Shakespeare</u>'s Macbeth.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2005",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 24,
+      "options": [
+        "A. old",
+        "B. original",
+        "C. cheap",
+        "D. paperback"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2005_q27",
+      "questionText": "...... students were present.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2005",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 27,
+      "options": [
+        "A. The whole",
+        "B. The several",
+        "C. Much of the",
+        "D. All the"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2005_q28",
+      "questionText": "Jenny has ...... on her head.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2005",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 28,
+      "options": [
+        "A. plenty hair",
+        "B. a lot of hair",
+        "C. many hairs",
+        "D. much hairs"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2005_q29",
+      "questionText": "Korkoi is a ...... of twelve",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2005",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 29,
+      "options": [
+        "A. tall, shapely, girl",
+        "B. shapely, tall, girl",
+        "C. girl, shapely, tall",
+        "D. tall, girl, shapely"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2005_q30",
+      "questionText": "The man of God preached that we should love ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2005",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 30,
+      "options": [
+        "A. another.",
+        "B. each other.",
+        "C. one another.",
+        "D. one other."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2005_q31",
+      "questionText": "Mansah is ...... beautiful than any of her three sisters.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2005",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 31,
+      "options": [
+        "A. very",
+        "B. most",
+        "C. more",
+        "D. much"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2005_q32",
+      "questionText": "Appiah was appointed prefect of his class, ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2005",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 32,
+      "options": [
+        "A. wasn't it?",
+        "B. didn't he?",
+        "C. isn't he?",
+        "D. wasn't he?"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2005_q33",
+      "questionText": "Anytime Ataa went to school, she ...... into trouble.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2005",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 33,
+      "options": [
+        "A. got",
+        "B. gets",
+        "C. is getting",
+        "D. has got"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2005_q34",
+      "questionText": "My dream school is for ...... only",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2005",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 34,
+      "options": [
+        "A. boy",
+        "B. boy's",
+        "C. boys",
+        "D. boys'"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2005_q35",
+      "questionText": "Sam, have you ever ...... in this river?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2005",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 35,
+      "options": [
+        "A. swam",
+        "B. swum",
+        "C. swim",
+        "D. swims"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2005_q36",
+      "questionText": "Susie and Tim are friends; they like ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2005",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 36,
+      "options": [
+        "A. each other",
+        "B. themselves",
+        "C. the other",
+        "D. one another"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2005_q37",
+      "questionText": "Aunt Ekuwa ...... be able to solve the problem.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2005",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 37,
+      "options": [
+        "A. can",
+        "B. has",
+        "C. will",
+        "D. ought"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2005_q38",
+      "questionText": "For one week I went to school ...... foot.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2005",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 38,
+      "options": [
+        "A. by",
+        "B. on",
+        "C. at",
+        "D. in"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2005_q39",
+      "questionText": "The committee has been meeting over the case ...... 2pm.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2005",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 39,
+      "options": [
+        "A. over",
+        "B. by",
+        "C. since",
+        "D. until"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2005_q40",
+      "questionText": "I hope you are not ...... tired to run an errand for me.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2005",
+      "section": "E",
+      "sectionInstructions": "Read the passage carefully and answer the questions that follow.",
+      "questionNumber": 40,
+      "options": [
+        "A. very",
+        "B. so",
+        "C. as",
+        "D. too"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    }
+  ]
+}

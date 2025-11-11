@@ -23,7 +23,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence."
     },
     {
       "id": "english_2022_q2",
@@ -47,7 +48,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence."
     },
     {
       "id": "english_2022_q3",
@@ -71,7 +73,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence."
     },
     {
       "id": "english_2022_q4",
@@ -95,7 +98,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence."
     },
     {
       "id": "english_2022_q5",
@@ -119,7 +123,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence."
     },
     {
       "id": "english_2022_q6",
@@ -143,7 +148,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence."
     },
     {
       "id": "english_2022_q7",
@@ -167,7 +173,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence."
     },
     {
       "id": "english_2022_q8",
@@ -191,7 +198,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence."
     },
     {
       "id": "english_2022_q9",
@@ -215,7 +223,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence."
     },
     {
       "id": "english_2022_q10",
@@ -239,7 +248,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence."
     },
     {
       "id": "english_2022_q11",
@@ -263,7 +273,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence."
     },
     {
       "id": "english_2022_q12",
@@ -287,7 +298,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence."
     },
     {
       "id": "english_2022_q13",
@@ -311,7 +323,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence."
     },
     {
       "id": "english_2022_q14",
@@ -335,7 +348,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence."
     },
     {
       "id": "english_2022_q15",
@@ -359,11 +373,12 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence."
     },
     {
       "id": "english_2022_q16",
-      "questionText": "Her ambition is to own a private jet.",
+      "questionText": "Her <u>ambition</u> is to own a private jet.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -383,11 +398,12 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence."
     },
     {
       "id": "english_2022_q17",
-      "questionText": "Have you enough money to buy a house?",
+      "questionText": "Have you <u>enough</u> money to buy a house?",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -407,11 +423,12 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence."
     },
     {
       "id": "english_2022_q18",
-      "questionText": "Mr Nunyah slaughtered some of his bulls.",
+      "questionText": "Mr Nunyah <u>slaughtered</u> some of his bulls.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -431,11 +448,12 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence."
     },
     {
       "id": "english_2022_q19",
-      "questionText": "Soraya is very lively today.",
+      "questionText": "<u>Soraya</u> is very lively today.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -455,11 +473,12 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence."
     },
     {
       "id": "english_2022_q20",
-      "questionText": "The welfare of their students should be the concern of teachers.",
+      "questionText": "The welfare of their <u>students</u> should be the concern of teachers.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -479,11 +498,12 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence."
     },
     {
       "id": "english_2022_q21",
-      "questionText": "Paul shed crocodile tears when his friend failed the exam. This means that Paul",
+      "questionText": "Paul <u>shed crocodile tears</u> when his friend failed the exam. This means that Paul",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -503,11 +523,12 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words."
     },
     {
       "id": "english_2022_q22",
-      "questionText": "When the old woman heard the sound of the gun-shots, her hair stood on end. This means that the old woman",
+      "questionText": "When the old woman heard the sound of the gun-shots, her <u>hair stood on end</u>. This means that the old woman",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -527,11 +548,12 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words."
     },
     {
       "id": "english_2022_q23",
-      "questionText": "That tailor always takes pains over his sewing. This means that the tailor",
+      "questionText": "That tailor always takes <u>pains over</u> his sewing. This means that the tailor",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -551,11 +573,12 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words."
     },
     {
       "id": "english_2022_q24",
-      "questionText": "These herbs grow here in leaps and bounds. This means that the herbs grow",
+      "questionText": "These herbs grow here <u>in leaps</u> and bounds. This means that the herbs grow",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -575,11 +598,12 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words."
     },
     {
       "id": "english_2022_q25",
-      "questionText": "Kim is full of himself. This means that Kim is",
+      "questionText": "Kim is full <u>of himself.</u> This means that Kim is",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -599,11 +623,12 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words."
     },
     {
       "id": "english_2022_q26",
-      "questionText": "Evans wakes up early because he does not sleep much.",
+      "questionText": "Evans wakes up <u>early because</u> he does not sleep much.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -623,11 +648,12 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words."
     },
     {
       "id": "english_2022_q27",
-      "questionText": "Dora was exhausted after the exercise.",
+      "questionText": "Dora was <u>exhausted after</u> the exercise.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -647,11 +673,12 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words."
     },
     {
       "id": "english_2022_q28",
-      "questionText": "The demolition of the bridge surprised everyone.",
+      "questionText": "The demolition <u>of the</u> bridge surprised everyone.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -671,11 +698,12 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words."
     },
     {
       "id": "english_2022_q29",
-      "questionText": "They said the film was ancient but I found it",
+      "questionText": "They said the <u>film was</u> ancient but I found it",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -695,11 +723,12 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words."
     },
     {
       "id": "english_2022_q30",
-      "questionText": "The animal will perish under this condition.",
+      "questionText": "The animal <u>will perish</u> under this condition.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -719,7 +748,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words."
     }
   ]
 }

@@ -938,16 +938,8 @@ class _QuizTakerPageState extends State<QuizTakerPage>
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Question text
-                Text(
-                  question.questionText,
-                  style: GoogleFonts.playfairDisplay(
-                    fontSize: isMobile ? 18 : 20,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.white, // White text
-                    height: 1.4,
-                  ),
-                ),
+                // Question text with underline support
+                _buildQuestionText(question.questionText, isMobile),
             
             const SizedBox(height: 24),
 
@@ -1121,6 +1113,69 @@ class _QuizTakerPageState extends State<QuizTakerPage>
       ),
     ),
       ],
+    );
+  }
+
+  /// Build question text with underline support
+  /// Parses <u>text</u> markers and displays underlined text
+  Widget _buildQuestionText(String questionText, bool isMobile) {
+    // Check if the text contains underline markers
+    if (!questionText.contains('<u>') && !questionText.contains('</u>')) {
+      // No underlines, return simple Text widget
+      return Text(
+        questionText,
+        style: GoogleFonts.playfairDisplay(
+          fontSize: isMobile ? 18 : 20,
+          fontWeight: FontWeight.w600,
+          color: Colors.white,
+          height: 1.4,
+        ),
+      );
+    }
+
+    // Parse the text and create TextSpans with underlines
+    final List<TextSpan> spans = [];
+    final RegExp underlineRegex = RegExp(r'<u>(.*?)</u>');
+    int lastIndex = 0;
+
+    for (final match in underlineRegex.allMatches(questionText)) {
+      // Add text before the underlined part
+      if (match.start > lastIndex) {
+        spans.add(TextSpan(
+          text: questionText.substring(lastIndex, match.start),
+        ));
+      }
+
+      // Add the underlined text
+      spans.add(TextSpan(
+        text: match.group(1),
+        style: const TextStyle(
+          decoration: TextDecoration.underline,
+          decorationColor: Colors.white,
+          decorationThickness: 2,
+        ),
+      ));
+
+      lastIndex = match.end;
+    }
+
+    // Add remaining text after the last underlined part
+    if (lastIndex < questionText.length) {
+      spans.add(TextSpan(
+        text: questionText.substring(lastIndex),
+      ));
+    }
+
+    return RichText(
+      text: TextSpan(
+        style: GoogleFonts.playfairDisplay(
+          fontSize: isMobile ? 18 : 20,
+          fontWeight: FontWeight.w600,
+          color: Colors.white,
+          height: 1.4,
+        ),
+        children: spans,
+      ),
     );
   }
 

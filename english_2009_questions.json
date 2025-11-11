@@ -1,0 +1,1035 @@
+{
+  "passages": [
+    {
+      "id": "english_2009_passage_1",
+      "content": "We were suddenly awakened at dawn by the screams of the tenants in our home. They were making a lot of commotion in the yard. Daddy quickly jumped from his bed and made for the door. Not long after, we heard him scream. We ran to the hall, switched on the lights and saw him lying flat on his back holding his forehead.In his haste to get to the hall door, he must have forgotten to switch on the lights thus running straight and crashing his head into the pillar in the middle of the hall. When we examined his forehead, we saw a big lump and blood oozing from a deep cut near his eyebrow.Mummy, a retired nursing sister, shouted instructions to me to get the first-aid box, some ice cubes and Daddy's towel. When the items were brought, she set to work first on the cut. She put some ice cubes in the towel and pressed the towel on the cut for about two minutes. She then wiped the blood gently. Afterwards, she put a little iodine on a piece of gauze, placed it on the cut and bandaged it. Turning to the lump, she massaged it with some ice cubes, which reduced the swelling.She then opened the front door and we beheld a pathetic scene. Lying in the middle of the house was the motionless body of one of the tenants. Trying to resist an attack from armed robbers, he had been butchered mercilessly and his body left in the middle of the house.",
+      "title": "PASSAGE I",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "COMPREHENSION",
+      "questionRange": "",
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_passage_2",
+      "content": "Where is the musical performance of songbirds held? It is not in any concert hall but rather on trees, fences and telephone wires. It is from these places that little feathered creatures blend their voices in some of the most melodious songs sung in the world.Songbirds do not just make noise. The male voices in the choir, for instance, have two different messages. Firstly, it is a warning to other males not to come near their partners. Secondly, it is an invitation from the bachelors to the female birds. The most interesting songs which are sung with a lot of vigour are produced during the breeding season by the males to impress the lady birds.Songbirds are very remarkable. They sing three or four notes at a time. To the human ear it sounds like one beat but the birds can identify the different notes because of their keen sense of hearing. At times, what is heard may not be a song of our winged friends but simply an instruction to keep the flock together. It may also be a warning of an approaching danger.Just how birds compose their songs is an interesting subject. Some birds have their songs fixed in their brains at birth. Whilst some imitate others, other birds try to compose songs which are unique. They will never copy what they hear others sing.",
+      "title": "PASSAGE II",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "COMPREHENSION",
+      "questionRange": "",
+      "createdBy": "admin",
+      "isActive": true
+    }
+  ],
+  "questions": [
+    {
+      "id": "english_2009_q1",
+      "questionText": "What made the writer wake up?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 1,
+      "options": [
+        "A. The father crashing into the pillar",
+        "B. The noise made by his father",
+        "C. The attack by the armed robbers",
+        "D. The shouting of the tenants"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q2",
+      "questionText": "The writer's father was holding his forehead because he",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 2,
+      "options": [
+        "A. had fallen flat on his back.",
+        "B. had hit his head against the pillar.",
+        "C. wanted to stop the blood from flowing.",
+        "D. was thinking of what to do."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q3",
+      "questionText": "The purpose of the ice cubes was to",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 3,
+      "options": [
+        "A. stop the bleeding.",
+        "B. heal the cut.",
+        "C. manage the cut.",
+        "D. reduce the swelling."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q4",
+      "questionText": "Pathetic in the passage means",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 4,
+      "options": [
+        "A. naughty.",
+        "B. merciless.",
+        "C. sad.",
+        "D. strange."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q5",
+      "questionText": "What happened to the tenant?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 5,
+      "options": [
+        "A. He opened the door.",
+        "B. He was killed by the robbers.",
+        "C. He fell down heavily.",
+        "D. He saw a pathetic scene."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q6",
+      "questionText": "According to the passage, members of the choir can sing without difficulty because they",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 6,
+      "options": [
+        "A. are born good singers.",
+        "B. easily learn to sing.",
+        "C. have good songs.",
+        "D. have to sing."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true,
+      "passageId": "english_2009_passage_1"
+    },
+    {
+      "id": "english_2009_q7",
+      "questionText": "The male songbirds sing",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 7,
+      "options": [
+        "A. to instruct others.",
+        "B. four notes at a time.",
+        "C. to attract the females.",
+        "D. what others have composed."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true,
+      "passageId": "english_2009_passage_1"
+    },
+    {
+      "id": "english_2009_q8",
+      "questionText": "According to the passage, birds sing",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 8,
+      "options": [
+        "A. only in the breeding season.",
+        "B. some of the sweetest songs.",
+        "C. to invite the bachelors.",
+        "D. only one note."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true,
+      "passageId": "english_2009_passage_1"
+    },
+    {
+      "id": "english_2009_q9",
+      "questionText": "Unique in the passage means",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 9,
+      "options": [
+        "A. suitable.",
+        "B. similar.",
+        "C. exciting.",
+        "D. special."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true,
+      "passageId": "english_2009_passage_1"
+    },
+    {
+      "id": "english_2009_q10",
+      "questionText": "The writer suggest that",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 10,
+      "options": [
+        "A. human beings sing better than birds.",
+        "B. birds can interpret notes better.",
+        "C. birds make louder noise than human beings.",
+        "D. birds compose more interesting songs."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true,
+      "passageId": "english_2009_passage_1"
+    },
+    {
+      "id": "english_2009_q11",
+      "questionText": "The house by sea has been abandoned.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 11,
+      "options": [
+        "A. deserted",
+        "B. destroyed",
+        "C. infested",
+        "D. robbed"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q12",
+      "questionText": "Most Ghanaians were optimistic about the Black Stars winning the African Cup.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 12,
+      "options": [
+        "A. reasonable",
+        "B. happy",
+        "C. concerned",
+        "D. hopeful"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q13",
+      "questionText": "The indigenous people provided the labour during the building of the school.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 13,
+      "options": [
+        "A. skilled",
+        "B. native",
+        "C. expatriate",
+        "D. urban"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q14",
+      "questionText": "The effort of the watchman which led to the arrest of the thieves was laudable.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 14,
+      "options": [
+        "A. quick",
+        "B. real",
+        "C. constant",
+        "D. praiseworthy"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q15",
+      "questionText": "Our parents deserve our appreciation.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 15,
+      "options": [
+        "A. assistance",
+        "B. gratitude",
+        "C. concern",
+        "D. encouragement"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q16",
+      "questionText": "Mr. Taiwoo took the clerk to task for losing the letters. This means that Mr. Taiwoo",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 16,
+      "options": [
+        "A. sacked the clerk.",
+        "B. blamed the clerk.",
+        "C. called the clerk a criminal.",
+        "D. gave the clerk another work."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q17",
+      "questionText": "The quarrel got out of hand. This means that the quarrel",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 17,
+      "options": [
+        "A. became uncontrollable.",
+        "B. was prolonged.",
+        "C. became boring.",
+        "D. was unhealthy."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q18",
+      "questionText": "On seeing the headmaster, the girl took to her heels. This means that the girl",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 18,
+      "options": [
+        "A. fainted.",
+        "B. felt frightened.",
+        "C. ran away.",
+        "D. hid herself."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q19",
+      "questionText": "Joseph lives within a stone's throw from the station. This means that Joseph",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 19,
+      "options": [
+        "A. lives in a stony house.",
+        "B. lives very close to the station.",
+        "C. goes to the station.",
+        "D. often throws stones at the station."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q20",
+      "questionText": "All his plans for building a new theatre came to naught. This means that",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 20,
+      "options": [
+        "A. the theatre was built.",
+        "B. his plans were unsuccessful.",
+        "C. the building collapsed.",
+        "D. there was nothing in the theatre."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q21",
+      "questionText": "My father has a cordial relationship with all his neighbours.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 21,
+      "options": [
+        "A. harsh",
+        "B. hostile",
+        "C. scornful",
+        "D. different"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q22",
+      "questionText": "John's latest play is rather dull.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 22,
+      "options": [
+        "A. interesting.",
+        "B. informative.",
+        "C. sensible.",
+        "D. educative."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q23",
+      "questionText": "The feeble old man spoke for about three hours.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 23,
+      "options": [
+        "A. bold",
+        "B. strong",
+        "C. bright",
+        "D. successful"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q24",
+      "questionText": "The thief descended the stairs hurriedly.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 24,
+      "options": [
+        "A. consciously",
+        "B. lazily",
+        "C. slowly",
+        "D. noisily"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q25",
+      "questionText": "The diligent student won a prize.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 25,
+      "options": [
+        "A. careless",
+        "B. lucky",
+        "C. playful",
+        "D. proud"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q26",
+      "questionText": "My father wanted to find out how Abu was getting ...... at school.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 26,
+      "options": [
+        "A. on",
+        "B. down",
+        "C. back",
+        "D. up"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q27",
+      "questionText": "If the boat had been maintained properly it ...... capsized.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 27,
+      "options": [
+        "A. have not",
+        "B. will not have",
+        "C. would not have",
+        "D. might have not"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q28",
+      "questionText": "The white horse is ...... than the black one.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 28,
+      "options": [
+        "A. faster",
+        "B. very fast",
+        "C. fast",
+        "D. more fast"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q29",
+      "questionText": "They thought he would become a businesswoman, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 29,
+      "options": [
+        "A. wouldn't they",
+        "B. didn't they",
+        "C. wasn't they",
+        "D. isn't they"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q30",
+      "questionText": "There were only two of us who ...... any idea of the answer.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 30,
+      "options": [
+        "A. have",
+        "B. had",
+        "C. has",
+        "D. would"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q31",
+      "questionText": "He had boarded a taxi, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 31,
+      "options": [
+        "A. wouldn't he",
+        "B. hadn't he",
+        "C. isn't it",
+        "D. won't he"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q32",
+      "questionText": "Mrs. Mensah ...... in Saltpond since 1970.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 32,
+      "options": [
+        "A. was living",
+        "B. has been living",
+        "C. has lived",
+        "D. is living"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q33",
+      "questionText": "The booking clerk made him ...... a deposit.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 33,
+      "options": [
+        "A. to pay",
+        "B. paid",
+        "C. to be paying",
+        "D. pay"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q34",
+      "questionText": "Although all the dresses were beautiful, she liked ...... of them.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 34,
+      "options": [
+        "A. any",
+        "B. none",
+        "C. neither",
+        "D. both"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q35",
+      "questionText": "Kwesi and Ama are in love with ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 35,
+      "options": [
+        "A. themselves.",
+        "B. one another.",
+        "C. each other.",
+        "D. ourselves."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q36",
+      "questionText": "It is ...... to attempt in one day.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 36,
+      "options": [
+        "A. too long and difficult a journey",
+        "B. the journey too long and difficult",
+        "C. long and difficult too a journey",
+        "D. too long and difficult the journey"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q37",
+      "questionText": "The rain shouldn't deter you ...... going out.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 37,
+      "options": [
+        "A. for",
+        "B. on",
+        "C. by",
+        "D. from"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q38",
+      "questionText": "Ben is leaving ...... Takoradi this morning.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 38,
+      "options": [
+        "A. for",
+        "B. to",
+        "C. by",
+        "D. from"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q39",
+      "questionText": "Yesterday I met the man ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 39,
+      "options": [
+        "A. the car of whom I bought.",
+        "B. whose car I bought.",
+        "C. I bought his car.",
+        "D. whom I bought his car."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2009_q40",
+      "questionText": "No sooner had the Minister opened the bank ...... he bank was filled to capacity.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 40,
+      "options": [
+        "A. when",
+        "B. for",
+        "C. as",
+        "D. than"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    }
+  ]
+}

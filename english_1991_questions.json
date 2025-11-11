@@ -1,0 +1,1048 @@
+{
+  "passages": [
+    {
+      "id": "english_1991_passage_1",
+      "content": "When Mr. Appiah looked at the two happy faces of his nephews, he forgot about his aching feet and smiled. He had spent the whole day showing Asare and Attah, who came from the village, around Accra. He was satisfied that they were happy. It was not until they were seated on a bench in the public garden that he realized how hot, tired and dusty he was.It was a long time since he had walked so much. Like many other successful men, Mr. Appiah had acquired the habit of going everywhere in his car, so that day's sight-seeing expedition had worn him out.\"Well, what do you think of Accra?\"He asked the boys.\"Oh!\" exclaimed Attah. \"it's a wonderful place!\"\"I didn't imagine any place could be like this, Uncle\" said Asare, \"Everything is so splendid. The roads are very wide and the buildings magnificent\".\"Boys, don't get the wrong impression. Today you've seen the best parts of our city, but there are bad areas with buildings falling apart, narrow streets and insanitary conditions. However, these buildings are being demolished\", said Mr. Appiah.",
+      "title": "PASSAGE I",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "COMPREHENSION",
+      "questionRange": "",
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_passage_2",
+      "content": "The Akosombo Dam and the great Volta Lake are famous over the world. The two main reasons for building the dam were, to generate electricity and to use the electricity for the production of aluminium from bauxite.Aluminium is used throughout the world; so both the production of electricity and the production of aluminium are of great value to Ghana.It may seem strange to talk about producing electricity by building a dam, but in fact a lot of dams have been built all over the world for this purpose. What happens is that a concrete wall, called a dam, is constructed across a river at a narrow point. A large lake then develops behind the wall. Tunnels are made in the dam so that water from the lake can rush fiercely through them. This powerful flow of water is used to drive huge machines called turbines, to generate electricity. All that the engineers need is the water rushing down from the lake, and all this costs them nothing! But of course the building of the dam and the fixing of the machines cost a great deal of money.Big dams have been built in many parts of the world. The Akosombo Dam is one of the biggest. However, the lake, which has been formed, is in fact the biggest man-made lake in the world.",
+      "title": "PASSAGE II",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "COMPREHENSION",
+      "questionRange": "",
+      "createdBy": "admin",
+      "isActive": true
+    }
+  ],
+  "questions": [
+    {
+      "id": "english_1991_q1",
+      "questionText": "Mr. Appiah was hot, tired and dusty because ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 1,
+      "options": [
+        "A. he had gone to bring his nephews from the village",
+        "B. he had taken his nephews to the high buildings",
+        "C. he had shown the boys around the city of Accra",
+        "D. he had helped them to demolish the buildings",
+        "E. he had been satisfied that the boys were happy"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q2",
+      "questionText": "Where were the boys living before visiting Accra?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 2,
+      "options": [
+        "A. In the high buildings",
+        "B. In the village",
+        "C. In the big houses",
+        "D. In the public gardens",
+        "E. In the building falling apart"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q3",
+      "questionText": "Everything is so splendid means everything is ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 3,
+      "options": [
+        "A. satisfactory",
+        "B. magnificent",
+        "C. important",
+        "D. brilliant",
+        "E. special"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q4",
+      "questionText": "According to the passage many successful men are used to ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 4,
+      "options": [
+        "A. walking around Accra",
+        "B. bringing their nephews from the village to Accra",
+        "C. going on sight-seeing in the city of Accra",
+        "D. talking with boys in the public gardens",
+        "E. riding in cars wherever they go"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q5",
+      "questionText": "Which of the following statements is not true according to the passage?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 5,
+      "options": [
+        "A. Every part of the city is wonderful and splendid",
+        "B. Mr. Appiah normally rides in his car",
+        "C. Asare and Attah are in Accra for the first time",
+        "D. The boys rested in the public gardens",
+        "E. The boys as well as Mr. Appiah must have been hot, tired and dusty."
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q6",
+      "questionText": "Insanitary conditions in the last paragraph means ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 6,
+      "options": [
+        "A. some people in Accra are insane",
+        "B. some places in Accra are dirty and unclean",
+        "C. insanitary is seen in all conditions in the city",
+        "D. unsatisfactory reports about the city",
+        "E. there are many sanitary inspectors in Accra"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q7",
+      "questionText": "Demolished as used in the passage means",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 7,
+      "options": [
+        "A. replaced",
+        "B. repaired",
+        "C. painted",
+        "D. pulled down",
+        "E. hire out"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q8",
+      "questionText": "The main reasons why Akosombo Dam was built were ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 8,
+      "options": [
+        "A. to produce electricity to manufacture aluminium",
+        "B. to produce electricity from aluminium and bauxite",
+        "C. to find the mineral called bauxite and use it",
+        "D. to use aluminium and electricity",
+        "E. to make aluminium, bauxite and electricity"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true,
+      "passageId": "english_1991_passage_1"
+    },
+    {
+      "id": "english_1991_q9",
+      "questionText": "Aluminium is produced from ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 9,
+      "options": [
+        "A. dams",
+        "B. electricity",
+        "C. bauxite",
+        "D. machine",
+        "E. tunnels"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true,
+      "passageId": "english_1991_passage_1"
+    },
+    {
+      "id": "english_1991_q10",
+      "questionText": "From the passage, dams are built all over the world mainly to ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 10,
+      "options": [
+        "A. produce aluminium from bauxite",
+        "B. provide water for the generation of electricity",
+        "C. extract bauxite from lakes",
+        "D. provide water for drinking",
+        "E. make electricity cheap"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true,
+      "passageId": "english_1991_passage_1"
+    },
+    {
+      "id": "english_1991_q11",
+      "questionText": "Which of the following statements is not true according to the passage?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 11,
+      "options": [
+        "A. The Akosombo Dam is the biggest in the world",
+        "B. The production of both electricity and aluminium is of great value to Ghana",
+        "C. Water from the lake runs fiercely through tunnels",
+        "D. The Akosombo dam is valuable to Ghana",
+        "E. A great collection of water running through tunnels can produce electricity anywhere in the world"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true,
+      "passageId": "english_1991_passage_1"
+    },
+    {
+      "id": "english_1991_q12",
+      "questionText": "According to the passage which of the following statements is true?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 12,
+      "options": [
+        "A. In building dams rivers are blocked at their broadcast points",
+        "B. Water is used to produce electricity",
+        "C. Building the dam and fixing machines to produce electricity cost nothing at all",
+        "D. In producing electricity engineers need a lot of petrol to drive the machines",
+        "E. Turbines are used in the production of electricity"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true,
+      "passageId": "english_1991_passage_1"
+    },
+    {
+      "id": "english_1991_q13",
+      "questionText": "The most suitable title for the",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 13,
+      "options": [
+        "A. Akosombo and Bauxite",
+        "B. Electricity from water",
+        "C. Dams of the world",
+        "D. Electricity and power"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true,
+      "passageId": "english_1991_passage_1"
+    },
+    {
+      "id": "english_1991_q14",
+      "questionText": "Your dress <u>material</u> is inferior to what I bought from the shop. This means that your dress material is ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 14,
+      "options": [
+        "A. of poor quality",
+        "B. very beautiful",
+        "C. brightly coloured",
+        "D. expensive"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q15",
+      "questionText": "The girl is a spendthrift: she used all her pocket money to buy a pair of shoes. This <u>means</u> ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 15,
+      "options": [
+        "A. careless",
+        "B. bold",
+        "C. extravagant",
+        "D. kind"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q16",
+      "questionText": "The pupils in the town often <u>help</u> in communal activities. This means that they help in ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 16,
+      "options": [
+        "A. all activities",
+        "B. interesting activities",
+        "C. public activities",
+        "D. usual activities"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q17",
+      "questionText": "The aroma of Kate's <u>food</u> made everyone hungry. This means the food ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 17,
+      "options": [
+        "A. smells good",
+        "B. is tasty",
+        "C. is spicy",
+        "D. is valuable"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q18",
+      "questionText": "He wasn't at the scene of the <u>accident</u>, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 18,
+      "options": [
+        "A. wasn't he",
+        "B. isn't it",
+        "C. did he",
+        "D. was he"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q19",
+      "questionText": "You don't speak <u>Chinese</u>, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 19,
+      "options": [
+        "A. do you",
+        "B. can you",
+        "C. don't you",
+        "D. won't you"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q20",
+      "questionText": "We worked hard in our final <u>year</u>, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 20,
+      "options": [
+        "A. did we",
+        "B. isn't it",
+        "C. aren't we",
+        "D. didn't we"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q21",
+      "questionText": "They have lost the <u>match</u>, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 21,
+      "options": [
+        "A. didn't they",
+        "B. isn't it",
+        "C. haven't they",
+        "D. is it"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q22",
+      "questionText": "He has <u>stolen</u> the box ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 22,
+      "options": [
+        "A. in which we kept the gold chain",
+        "B. which we kept in the gold chain",
+        "C. we kept the gold chain",
+        "D. where we kept the gold chain"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q23",
+      "questionText": "...... hard he tried, Adansi came last in the <u>test</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 23,
+      "options": [
+        "A. Whatever",
+        "B. How",
+        "C. Whenever",
+        "D. However"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q24",
+      "questionText": "Akwetey did the <u>exercise</u> ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 24,
+      "options": [
+        "A. even though he was sick",
+        "B. during which he was sick",
+        "C. but he was sick",
+        "D. for which he was sick"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q25",
+      "questionText": "We are not <u>allowed</u> ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 25,
+      "options": [
+        "A. to walk at the lawn",
+        "B. to be walking across the lawn",
+        "C. walking across the lawn",
+        "D. to walk across the lawn"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q26",
+      "questionText": "Everybody was pleased ...... the pastor's <u>sermon</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 26,
+      "options": [
+        "A. for",
+        "B. in",
+        "C. with",
+        "D. at"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q27",
+      "questionText": "John's father congratulated him ...... his success in the <u>examination</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 27,
+      "options": [
+        "A. on",
+        "B. during",
+        "C. at",
+        "D. to"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q28",
+      "questionText": "The patient is generally recovering ...... his <u>illness</u>",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 28,
+      "options": [
+        "A. from",
+        "B. with",
+        "C. for",
+        "D. during"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q29",
+      "questionText": "We have been in this school ...... three <u>years</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 29,
+      "options": [
+        "A. since",
+        "B. in",
+        "C. by",
+        "D. for"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q30",
+      "questionText": "It would be unwise to ...... the chance of making extra <u>money</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 30,
+      "options": [
+        "A. throw away",
+        "B. throw in",
+        "C. throw over",
+        "D. throw by"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q31",
+      "questionText": "Koku was sad when he lost his mother but he will <u>soon</u> ...... it",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 31,
+      "options": [
+        "A. get along",
+        "B. get on",
+        "C. get by",
+        "D. get over"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q32",
+      "questionText": "...... these words in your <u>dictionary</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 32,
+      "options": [
+        "A. Look around",
+        "B. Look on",
+        "C. Look up",
+        "D. Look about"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q33",
+      "questionText": "If he ...... the elections he would have become an <u>assemblyman</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 33,
+      "options": [
+        "A. won",
+        "B. has won",
+        "C. had won",
+        "D. should win"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q34",
+      "questionText": "If he continues to work hard, he ...... his examination with <u>ease</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 34,
+      "options": [
+        "A. will pass",
+        "B. is passing",
+        "C. has passed",
+        "D. would pass"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q35",
+      "questionText": "The news he <u>brought</u> ...... bad",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 35,
+      "options": [
+        "A. are",
+        "B. were",
+        "C. has been",
+        "D. was"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q36",
+      "questionText": "The headmaster thanked his teachers for a wonderful job <u>done</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 36,
+      "options": [
+        "A. quick",
+        "B. difficult",
+        "C. big",
+        "D. bad"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q37",
+      "questionText": "The present day youth still indulge in all forms of drug <u>abuse</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 37,
+      "options": [
+        "A. avoid",
+        "B. increase",
+        "C. discourage",
+        "D. disallow"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q38",
+      "questionText": "Some people prefer to eat lean <u>meat</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 38,
+      "options": [
+        "A. uncooked",
+        "B. fatty",
+        "C. spoilt",
+        "D. bloody"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q39",
+      "questionText": "Kojo's teacher was reluctant to accept his explanation for being late to <u>school</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 39,
+      "options": [
+        "A. willing",
+        "B. afraid",
+        "C. unable",
+        "D. planning"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_1991_q40",
+      "questionText": "The workers wanted their director to hold the <u>meeting</u>.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 40,
+      "options": [
+        "A. continue",
+        "B. delay",
+        "C. cancel",
+        "D. support"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    }
+  ]
+}
