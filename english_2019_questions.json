@@ -2,20 +2,20 @@
   "passages": [],
   "questions": [
     {
-      "id": "english_2022_q1",
-      "questionText": "If the family house had been maintained properly, it ....... collapsed.",
+      "id": "english_2019_q1",
+      "questionText": "One of the balls............ from the herd.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
-      "year": "2022",
+      "year": "2019",
       "section": "A",
       "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
       "questionNumber": 1,
       "options": [
-        "A. will not have",
-        "B. has not",
-        "C. had not",
-        "D. would not have"
+        "A. have been strayed",
+        "B. has been strayed",
+        "C. have strayed",
+        "D. has strayed"
       ],
       "correctAnswer": "",
       "marks": 1,
@@ -27,20 +27,20 @@
       "isActive": true
     },
     {
-      "id": "english_2022_q2",
-      "questionText": "She bakes bread as a means ........ making an extra income.",
+      "id": "english_2019_q2",
+      "questionText": "I saw the dog.......... out of the house.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
-      "year": "2022",
+      "year": "2019",
       "section": "A",
       "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
       "questionNumber": 2,
       "options": [
-        "A. for",
-        "B. in",
-        "C. to",
-        "D. of"
+        "A. run",
+        "B. is running",
+        "C. ran",
+        "D. was running"
       ],
       "correctAnswer": "",
       "marks": 1,
@@ -52,119 +52,19 @@
       "isActive": true
     },
     {
-      "id": "english_2022_q3",
-      "questionText": "Deon said he heard the parrot .....",
+      "id": "english_2019_q3",
+      "questionText": "Habib goes to school............ train.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
-      "year": "2022",
+      "year": "2019",
       "section": "A",
       "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
       "questionNumber": 3,
       "options": [
-        "A. sing",
-        "B. sang",
-        "C. sung",
-        "D. to sing"
-      ],
-      "correctAnswer": "",
-      "marks": 1,
-      "difficulty": "medium",
-      "topics": [
-        "Grammar"
-      ],
-      "createdBy": "admin",
-      "isActive": true
-    },
-    {
-      "id": "english_2022_q4",
-      "questionText": "People who live in unhygienic environments easily ... Cholera.",
-      "type": "multipleChoice",
-      "subject": "english",
-      "examType": "bece",
-      "year": "2022",
-      "section": "A",
-      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
-      "questionNumber": 4,
-      "options": [
-        "A. catch",
-        "B. attract",
-        "C. capture",
-        "D. contract"
-      ],
-      "correctAnswer": "",
-      "marks": 1,
-      "difficulty": "medium",
-      "topics": [
-        "Grammar"
-      ],
-      "createdBy": "admin",
-      "isActive": true
-    },
-    {
-      "id": "english_2022_q5",
-      "questionText": "There is ... water in the fridge.",
-      "type": "multipleChoice",
-      "subject": "english",
-      "examType": "bece",
-      "year": "2022",
-      "section": "A",
-      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
-      "questionNumber": 5,
-      "options": [
-        "A. a few",
-        "B. few",
-        "C. a lot",
-        "D. a little"
-      ],
-      "correctAnswer": "",
-      "marks": 1,
-      "difficulty": "medium",
-      "topics": [
-        "Grammar"
-      ],
-      "createdBy": "admin",
-      "isActive": true
-    },
-    {
-      "id": "english_2022_q6",
-      "questionText": "Remy looks forward to .... Jane at the party.",
-      "type": "multipleChoice",
-      "subject": "english",
-      "examType": "bece",
-      "year": "2022",
-      "section": "A",
-      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
-      "questionNumber": 6,
-      "options": [
-        "A. seeing",
-        "B. see",
-        "C. have been seeing",
-        "D. be seeing"
-      ],
-      "correctAnswer": "",
-      "marks": 1,
-      "difficulty": "medium",
-      "topics": [
-        "Grammar"
-      ],
-      "createdBy": "admin",
-      "isActive": true
-    },
-    {
-      "id": "english_2022_q7",
-      "questionText": "The students did not give any reason ...... being late",
-      "type": "multipleChoice",
-      "subject": "english",
-      "examType": "bece",
-      "year": "2022",
-      "section": "A",
-      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
-      "questionNumber": 7,
-      "options": [
-        "A. to",
-        "B. of",
-        "C. for",
+        "A. by",
+        "B. on",
+        "C. with",
         "D. in"
       ],
       "correctAnswer": "",
@@ -177,20 +77,20 @@
       "isActive": true
     },
     {
-      "id": "english_2022_q8",
-      "questionText": "What ..... Kwadwo and Adwoa doing when you left the shop?",
+      "id": "english_2019_q4",
+      "questionText": "This phone is not mine; it is............",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
-      "year": "2022",
+      "year": "2019",
       "section": "A",
       "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
-      "questionNumber": 8,
+      "questionNumber": 4,
       "options": [
-        "A. are",
-        "B. were",
-        "C. was",
-        "D. is"
+        "A. mine uncle's",
+        "B. my uncle's",
+        "C. my uncles",
+        "D. mine uncles"
       ],
       "correctAnswer": "",
       "marks": 1,
@@ -202,20 +102,20 @@
       "isActive": true
     },
     {
-      "id": "english_2022_q9",
-      "questionText": "Selfish people always consider .... first.",
+      "id": "english_2019_q5",
+      "questionText": "Their sister wore a............ dress to the party.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
-      "year": "2022",
+      "year": "2019",
       "section": "A",
       "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
-      "questionNumber": 9,
+      "questionNumber": 5,
       "options": [
-        "A. herself",
-        "B. ourselves",
-        "C. myself",
-        "D. themselves"
+        "A. silk blue beautiful",
+        "B. beautiful blue silk",
+        "C. blue beautiful silk",
+        "D. beautiful silk blue"
       ],
       "correctAnswer": "",
       "marks": 1,
@@ -227,20 +127,20 @@
       "isActive": true
     },
     {
-      "id": "english_2022_q10",
-      "questionText": "Enyonam asked her friend to ..... her a pen.",
+      "id": "english_2019_q6",
+      "questionText": "I wish I............ my friend next week.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
-      "year": "2022",
+      "year": "2019",
       "section": "A",
       "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
-      "questionNumber": 10,
+      "questionNumber": 6,
       "options": [
-        "A. lend",
-        "B. spare",
-        "C. borrow",
-        "D. excuse"
+        "A. can visit",
+        "B. am visiting",
+        "C. shall visit",
+        "D. could visit"
       ],
       "correctAnswer": "",
       "marks": 1,
@@ -252,19 +152,19 @@
       "isActive": true
     },
     {
-      "id": "english_2022_q11",
-      "questionText": "The accident occurred ...... the driver's mistakes.",
+      "id": "english_2019_q7",
+      "questionText": "Aba took............ her mother to many ways.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
-      "year": "2022",
+      "year": "2019",
       "section": "A",
       "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
-      "questionNumber": 11,
+      "questionNumber": 7,
       "options": [
-        "A. from",
-        "B. on",
-        "C. through",
+        "A. after",
+        "B. up",
+        "C. on",
         "D. by"
       ],
       "correctAnswer": "",
@@ -277,20 +177,120 @@
       "isActive": true
     },
     {
-      "id": "english_2022_q12",
-      "questionText": "I know you are ......, Esi.",
+      "id": "english_2019_q8",
+      "questionText": "That girl is allergic............ dust.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
-      "year": "2022",
+      "year": "2019",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 8,
+      "options": [
+        "A. with",
+        "B. to",
+        "C. against",
+        "D. about"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2019_q9",
+      "questionText": "My brother, with his children, ............ travelling to Salaga next week.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2019",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 9,
+      "options": [
+        "A. is",
+        "B. are",
+        "C. was",
+        "D. were"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2019_q10",
+      "questionText": "It is high time we............ for the meeting.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2019",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 10,
+      "options": [
+        "A. left",
+        "B. leave",
+        "C. have to leave",
+        "D. will leave"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2019_q11",
+      "questionText": "The accused person refused to appear before the............ pane.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2019",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 11,
+      "options": [
+        "A. five-man's",
+        "B. five-man",
+        "C. five-men",
+        "D. five-men's"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2019_q12",
+      "questionText": "The stories her children told her made her............",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2019",
       "section": "A",
       "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
       "questionNumber": 12,
       "options": [
-        "A. taller",
-        "B. tallest",
-        "C. the taller",
-        "D. the tall"
+        "A. to laugh",
+        "B. laughing",
+        "C. laughed",
+        "D. laugh"
       ],
       "correctAnswer": "",
       "marks": 1,
@@ -302,20 +302,20 @@
       "isActive": true
     },
     {
-      "id": "english_2022_q13",
-      "questionText": "Akesi's mother was not satisfied ... his explanation.",
+      "id": "english_2019_q13",
+      "questionText": "They have not bought............ of the two prescribed books.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
-      "year": "2022",
+      "year": "2019",
       "section": "A",
       "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
       "questionNumber": 13,
       "options": [
-        "A. in",
-        "B. to",
-        "C. with",
-        "D. on"
+        "A. neither",
+        "B. either",
+        "C. none",
+        "D. all"
       ],
       "correctAnswer": "",
       "marks": 1,
@@ -327,20 +327,20 @@
       "isActive": true
     },
     {
-      "id": "english_2022_q14",
-      "questionText": "I have been in this country ....... three years.",
+      "id": "english_2019_q14",
+      "questionText": "The boy found the assignment............ to do.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
-      "year": "2022",
+      "year": "2019",
       "section": "A",
       "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
       "questionNumber": 14,
       "options": [
-        "A. through",
-        "B. within",
-        "C. for",
-        "D. since"
+        "A. much too difficult",
+        "B. difficult too much",
+        "C. too much difficult",
+        "D. much too difficult"
       ],
       "correctAnswer": "",
       "marks": 1,
@@ -352,20 +352,20 @@
       "isActive": true
     },
     {
-      "id": "english_2022_q15",
-      "questionText": "Their gardener was ..... old to work.",
+      "id": "english_2019_q15",
+      "questionText": "The oxen lay on bare floor,............?",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
-      "year": "2022",
+      "year": "2019",
       "section": "A",
       "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
       "questionNumber": 15,
       "options": [
-        "A. even",
-        "B. so",
-        "C. too",
-        "D. very"
+        "A. didn't they",
+        "B. don't they",
+        "C. didn't it",
+        "D. isn't it"
       ],
       "correctAnswer": "",
       "marks": 1,
@@ -377,20 +377,20 @@
       "isActive": true
     },
     {
-      "id": "english_2022_q16",
-      "questionText": "Her ambition is to own a private jet.",
+      "id": "english_2019_q16",
+      "questionText": "The officials made a sudden visit to the school.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
-      "year": "2022",
+      "year": "2019",
       "section": "B",
       "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
       "questionNumber": 16,
       "options": [
-        "A. target",
-        "B. joy",
-        "C. plan",
-        "D. desire"
+        "A. an usual",
+        "B. a strange",
+        "C. a quick",
+        "D. an unexpected"
       ],
       "correctAnswer": "",
       "marks": 1,
@@ -402,20 +402,20 @@
       "isActive": true
     },
     {
-      "id": "english_2022_q17",
-      "questionText": "Have you enough money to buy a house?",
+      "id": "english_2019_q17",
+      "questionText": "Some of the students grumbled about the assignment.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
-      "year": "2022",
+      "year": "2019",
       "section": "B",
       "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
       "questionNumber": 17,
       "options": [
-        "A. plenty",
-        "B. much",
-        "C. sufficient",
-        "D. full"
+        "A. questioned",
+        "B. talked",
+        "C. complained",
+        "D. bothered"
       ],
       "correctAnswer": "",
       "marks": 1,
@@ -427,20 +427,20 @@
       "isActive": true
     },
     {
-      "id": "english_2022_q18",
-      "questionText": "Mr Nunyah slaughtered some of his bulls.",
+      "id": "english_2019_q18",
+      "questionText": "It is impolite to talk loudly in the presence of the elderly.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
-      "year": "2022",
+      "year": "2019",
       "section": "B",
       "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
       "questionNumber": 18,
       "options": [
-        "A. killed",
-        "B. treated",
-        "C. examined",
-        "D. castrated"
+        "A. incorrect",
+        "B. improper",
+        "C. unwise",
+        "D. rude"
       ],
       "correctAnswer": "",
       "marks": 1,
@@ -452,20 +452,20 @@
       "isActive": true
     },
     {
-      "id": "english_2022_q19",
-      "questionText": "Soraya is very lively today.",
+      "id": "english_2019_q19",
+      "questionText": "She is fond of talking about trivial matters.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
-      "year": "2022",
+      "year": "2019",
       "section": "B",
       "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
       "questionNumber": 19,
       "options": [
-        "A. smart",
-        "B. active",
-        "C. friendly",
-        "D. serious"
+        "A. unpleasant",
+        "B. unimportant",
+        "C. unexciting",
+        "D. unacceptable"
       ],
       "correctAnswer": "",
       "marks": 1,
@@ -477,20 +477,20 @@
       "isActive": true
     },
     {
-      "id": "english_2022_q20",
-      "questionText": "The welfare of their students should be the concern of teachers.",
+      "id": "english_2019_q20",
+      "questionText": "The curious child likes to ask a lot of questions.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
-      "year": "2022",
+      "year": "2019",
       "section": "B",
       "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
       "questionNumber": 20,
       "options": [
-        "A. wealth",
-        "B. happiness",
-        "C. well-being",
-        "D. growth"
+        "A. inquisitive",
+        "B. pompous",
+        "C. intelligent",
+        "D. talkative"
       ],
       "correctAnswer": "",
       "marks": 1,
@@ -502,20 +502,20 @@
       "isActive": true
     },
     {
-      "id": "english_2022_q21",
-      "questionText": "Paul shed crocodile tears when his friend failed the exam. This means that Paul",
+      "id": "english_2019_q21",
+      "questionText": "Araba's visit was a bolt from the blue. This means that the was..........",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
-      "year": "2022",
+      "year": "2019",
       "section": "C",
       "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
       "questionNumber": 21,
       "options": [
-        "A. was genuinely sorry for his friend.",
-        "B. felt very sad but did not cry.",
-        "C. pretended he was sorry for his friend.",
-        "D. cried uncontrollably."
+        "A. a most welcome one.",
+        "B. short.",
+        "C. a complete surprise.",
+        "D. timely."
       ],
       "correctAnswer": "",
       "marks": 1,
@@ -527,20 +527,20 @@
       "isActive": true
     },
     {
-      "id": "english_2022_q22",
-      "questionText": "When the old woman heard the sound of the gun-shots, her hair stood on end. This means that the old woman",
+      "id": "english_2019_q22",
+      "questionText": "My uncle loves to cast his bread upon waters. This means that my uncle..........",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
-      "year": "2022",
+      "year": "2019",
       "section": "C",
       "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
       "questionNumber": 22,
       "options": [
-        "A. started crying.",
-        "B. became inactive.",
-        "C. was frightened.",
-        "D. was worried."
+        "A. behaves strangely",
+        "B. feeds his fish with bread.",
+        "C. is wasteful.",
+        "D. loves to help people."
       ],
       "correctAnswer": "",
       "marks": 1,
@@ -552,20 +552,20 @@
       "isActive": true
     },
     {
-      "id": "english_2022_q23",
-      "questionText": "That tailor always takes pains over his sewing. This means that the tailor",
+      "id": "english_2019_q23",
+      "questionText": "When he lost his job. Yaro was left to sink or swim. That means that Yaro..........",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
-      "year": "2022",
+      "year": "2019",
       "section": "C",
       "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
       "questionNumber": 23,
       "options": [
-        "A. does his sewing with great care.",
-        "B. finds sewing very painful.",
-        "C. is not happy sewing.",
-        "D. is often ill and cannot sew."
+        "A. was depressed.",
+        "B. shouted for help",
+        "C. had to find another job.",
+        "D. had to survive on his own"
       ],
       "correctAnswer": "",
       "marks": 1,
@@ -577,20 +577,20 @@
       "isActive": true
     },
     {
-      "id": "english_2022_q24",
-      "questionText": "These herbs grow here in leaps and bounds. This means that the herbs grow",
+      "id": "english_2019_q24",
+      "questionText": "I was informed at the eleventh hour about his decision to leave. This means that I heard about his decision...........",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
-      "year": "2022",
+      "year": "2019",
       "section": "C",
       "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
       "questionNumber": 24,
       "options": [
-        "A. gradually and in small numbers.",
-        "B. in big circular heaps.",
-        "C. in both cold and hot weather.",
-        "D. quickly and greatly."
+        "A. immediately.",
+        "B. at eleven o'clock",
+        "C. in good time",
+        "D. very late"
       ],
       "correctAnswer": "",
       "marks": 1,
@@ -602,20 +602,20 @@
       "isActive": true
     },
     {
-      "id": "english_2022_q25",
-      "questionText": "Kim is full of himself. This means that Kim is",
+      "id": "english_2019_q25",
+      "questionText": "John had to eat his words when our team won the match. This means that John..........",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
-      "year": "2022",
+      "year": "2019",
       "section": "C",
       "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
       "questionNumber": 25,
       "options": [
-        "A. arrogant.",
-        "B. dangerous.",
-        "C. greedy.",
-        "D. quarrelsome."
+        "A. became very much surprised.",
+        "B. admitted he was wrong.",
+        "C. denied all that he had said.",
+        "D. lost appetite."
       ],
       "correctAnswer": "",
       "marks": 1,
@@ -627,20 +627,20 @@
       "isActive": true
     },
     {
-      "id": "english_2022_q26",
-      "questionText": "Evans wakes up early because he does not sleep much.",
+      "id": "english_2019_q26",
+      "questionText": "The girl intentionally tore her dress.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
-      "year": "2022",
+      "year": "2019",
       "section": "D",
       "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
       "questionNumber": 26,
       "options": [
-        "A. often",
-        "B. at home",
-        "C. late",
-        "D. on his bed"
+        "A. carelessly",
+        "B. accidentally",
+        "C. willingly",
+        "D. foolishly"
       ],
       "correctAnswer": "",
       "marks": 1,
@@ -652,20 +652,20 @@
       "isActive": true
     },
     {
-      "id": "english_2022_q27",
-      "questionText": "Dora was exhausted after the exercise.",
+      "id": "english_2019_q27",
+      "questionText": "We initiated several projects last year.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
-      "year": "2022",
+      "year": "2019",
       "section": "D",
       "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
       "questionNumber": 27,
       "options": [
-        "A. A. cheerful",
-        "B. active",
-        "C. refreshed",
-        "D. strong"
+        "A. funded",
+        "B. completed",
+        "C. executed",
+        "D. organized"
       ],
       "correctAnswer": "",
       "marks": 1,
@@ -677,20 +677,20 @@
       "isActive": true
     },
     {
-      "id": "english_2022_q28",
-      "questionText": "The demolition of the bridge surprised everyone.",
+      "id": "english_2019_q28",
+      "questionText": "Most of the rules were observed.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
-      "year": "2022",
+      "year": "2019",
       "section": "D",
       "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
       "questionNumber": 28,
       "options": [
-        "A. construction",
-        "B. creation",
-        "C. erection",
-        "D. relocation"
+        "A. violated",
+        "B. cancelled",
+        "C. lessened",
+        "D. excluded"
       ],
       "correctAnswer": "",
       "marks": 1,
@@ -702,20 +702,20 @@
       "isActive": true
     },
     {
-      "id": "english_2022_q29",
-      "questionText": "They said the film was ancient but I found it",
+      "id": "english_2019_q29",
+      "questionText": "The results will be released very soon.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
-      "year": "2022",
+      "year": "2019",
       "section": "D",
       "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
       "questionNumber": 29,
       "options": [
-        "A. relaxing.",
-        "B. modern.",
-        "C. difficult.",
-        "D. interesting."
+        "A. withheld",
+        "B. confirmed",
+        "C. withdraw",
+        "D. cancelled"
       ],
       "correctAnswer": "",
       "marks": 1,
@@ -727,20 +727,20 @@
       "isActive": true
     },
     {
-      "id": "english_2022_q30",
-      "questionText": "The animal will perish under this condition.",
+      "id": "english_2019_q30",
+      "questionText": "No one enjoyed the old man's humourless stories",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
-      "year": "2022",
+      "year": "2019",
       "section": "D",
       "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
       "questionNumber": 30,
       "options": [
-        "A. graze",
-        "B. survive",
-        "C. starve",
-        "D. remain"
+        "A. funny",
+        "B. peculiar",
+        "C. familiar",
+        "D. cheerful"
       ],
       "correctAnswer": "",
       "marks": 1,

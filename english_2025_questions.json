@@ -1,0 +1,1029 @@
+{
+  "passages": [
+    {
+      "id": "english_2025_passage_section_e",
+      "title": "SECTION E - Cloze Test",
+      "content": "Akuba was trained as an accountant. After graduation, she went out to ---31--- employment. She visited several firms but was ---32--- in securing a job. Afiba, her friend, finally advised her to read the newspapers for ---33--- of vacant positions. Fortunately, a reputable company was looking for a ---34--- accountant who was ---35--- in financial reporting. Akuba immediately submitted her application, attended an interview and within a week, she received an appointment letter. Her patience and perseverance had finally paid off.",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "E",
+      "questionRange": [
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    }
+  ],
+  "questions": [
+    {
+      "id": "english_2025_q1",
+      "questionText": "Our dog ...... barking since the stranger entered the house.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 1,
+      "options": [
+        "A. has been",
+        "B. is",
+        "C. was",
+        "D. would be"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q2",
+      "questionText": "Enrolment has increased ...... the new classroom was built.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 2,
+      "options": [
+        "A. since",
+        "B. until",
+        "C. when",
+        "D. while"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q3",
+      "questionText": "To ...... did you deliver the message?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 3,
+      "options": [
+        "A. who",
+        "B. whoever",
+        "C. whom",
+        "D. whomever"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q4",
+      "questionText": "Put the books on the shelf, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 4,
+      "options": [
+        "A. do you",
+        "B. have you",
+        "C. will you",
+        "D. may you"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q5",
+      "questionText": "Amina prepared a delicious meal for her ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 5,
+      "options": [
+        "A. sisters-in-law",
+        "B. sister's-in-law",
+        "C. sisters-in-laws",
+        "D. sisters'-in-law"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q6",
+      "questionText": "We always ...... the lights before going to bed.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 6,
+      "options": [
+        "A. off",
+        "B. put off",
+        "C. put out",
+        "D. out"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q7",
+      "questionText": "We saw ...... people in the room.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 7,
+      "options": [
+        "A. a little",
+        "B. much",
+        "C. plenty",
+        "D. many"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q8",
+      "questionText": "The laptop is ...... than the other two.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 8,
+      "options": [
+        "A. expensive more rather",
+        "B. expensive rather more",
+        "C. more expensive rather",
+        "D. rather more expensive"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q9",
+      "questionText": "The gardener was ..... old to work.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 9,
+      "options": [
+        "A. even",
+        "B. so",
+        "C. too",
+        "D. very"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q10",
+      "questionText": "The coach advised the two players to cooperate with ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 10,
+      "options": [
+        "A. each other",
+        "B. each one",
+        "C. ourselves",
+        "D. themselves"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q11",
+      "questionText": "If it rained, the farmer ...... his seeds.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 11,
+      "options": [
+        "A. will have sowed",
+        "B. will sow",
+        "C. would have sowed",
+        "D. would sow"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q12",
+      "questionText": "Although there were ten beautiful bags in the shop, Sandra liked ...... of them.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 12,
+      "options": [
+        "A. both",
+        "B. each",
+        "C. neither",
+        "D. none"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q13",
+      "questionText": "Selfish people always consider ...... first.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 13,
+      "options": [
+        "A. herself",
+        "B. myself",
+        "C. ourselves",
+        "D. Themselves"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q14",
+      "questionText": "Amarh asked Tettey, \"did you see the new student yesterday?\"Amarh asked Tettey ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 14,
+      "options": [
+        "A. did he see the new student the previous day",
+        "B. whether he saw the new student yesterday",
+        "C. if he had seen the new student the previous day",
+        "D. if he had seen the new student yesterday"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q15",
+      "questionText": "Had they completed the project before the deadline?...... the project been completed by them before the deadline?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 15,
+      "options": [
+        "A. Were",
+        "B. Has",
+        "C. Had",
+        "D. Was"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q16",
+      "questionText": "His dubious attitude has made him lose all his good friends.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 16,
+      "options": [
+        "A. deceitful",
+        "B. disrespectful",
+        "C. untrue",
+        "D. unforgiving"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q17",
+      "questionText": "The boy's account of the incident was elaborate.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 17,
+      "options": [
+        "A. clear.",
+        "B. detailed.",
+        "C. interesting.",
+        "D. realistic."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q18",
+      "questionText": "Nobody paid any attention to the workers' demands.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 18,
+      "options": [
+        "A. agitations.",
+        "B. complaints.",
+        "C. objections.",
+        "D. requests."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q19",
+      "questionText": "It was forecast that there would be thunderstorm in the evening.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 19,
+      "options": [
+        "A. broadcast",
+        "B. calculated",
+        "C. observed",
+        "D. predicted"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q20",
+      "questionText": "Paul purposely left the door open.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 20,
+      "options": [
+        "A. carelessly",
+        "B. hurriedly",
+        "C. intentionally",
+        "D. occasionally"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q21",
+      "questionText": "On seeing the angry mob approaching the school, our school prefect told us to take to our heels. This means that the prefect told us to ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 21,
+      "options": [
+        "A. hurry up",
+        "B. join them",
+        "C. run away",
+        "D. walk gracefully"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q22",
+      "questionText": "The two boys have often been at loggerheads with each other. This means that they ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 22,
+      "options": [
+        "A. are usually seen walking together",
+        "B. have often exchanged ideas",
+        "C. have often had strong disagreements",
+        "D. usually have the same views on issues"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q23",
+      "questionText": "I learnt to paddle my own canoe. This means that I ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 23,
+      "options": [
+        "A. am independent and need no help from others",
+        "B. do not interfere in other people's matters",
+        "C. have no help in my fishing business",
+        "D. work hard to feed myself and my family"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q24",
+      "questionText": "She tried to throw dust in our eyes. This means that she tried to ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 24,
+      "options": [
+        "A. cheat us",
+        "B. deceive us",
+        "C. fight us",
+        "D. make us blind"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q25",
+      "questionText": "Aminu is full of himself. This means that Aminu is ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 25,
+      "options": [
+        "A. arrogant",
+        "B. dangerous",
+        "C. greedy",
+        "D. quarrelsome"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q26",
+      "questionText": "He loves taking hasty decisions so he never makes ...... moves.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 26,
+      "options": [
+        "A. calculated",
+        "B. smart",
+        "C. delayed",
+        "D. final"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q27",
+      "questionText": "Though we expected ......, the judge handled the case with partiality.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 27,
+      "options": [
+        "A. fairness",
+        "B. happiness",
+        "C. patience",
+        "D. seriousness"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q28",
+      "questionText": "The policeman was reported to have concealed the evidence, but ...... it to the Jury.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 28,
+      "options": [
+        "A. disclosed",
+        "B. gathered",
+        "C. found",
+        "D. planted"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q29",
+      "questionText": "The minister publicly rebukes his assistant and always ...... his secretary.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 29,
+      "options": [
+        "A. advises",
+        "B. commends",
+        "C. embraces",
+        "D. harasses"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q30",
+      "questionText": "Those children think their uncle is miserly yet he is ...... to strangers.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "COMP",
+      "sectionInstructions": "Read the following passages carefully and answer the questions that follow.",
+      "questionNumber": 30,
+      "options": [
+        "A. friendly",
+        "B. generous",
+        "C. strict",
+        "D. Wicked"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Comprehension"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q31",
+      "questionText": "Choose the word that best fills gap 31",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 31,
+      "options": [
+        "A. seek",
+        "B. request",
+        "C. search",
+        "D. look"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true,
+      "passageId": "english_2025_passage_section_e"
+    },
+    {
+      "id": "english_2025_q32",
+      "questionText": "Choose the word that best fills gap 32",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 32,
+      "options": [
+        "A. unlucky",
+        "B. disappointed",
+        "C. unfortunate",
+        "D. unsuccessful"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true,
+      "passageId": "english_2025_passage_section_e"
+    },
+    {
+      "id": "english_2025_q33",
+      "questionText": "Choose the word that best fills gap 33",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 33,
+      "options": [
+        "A. advertisements",
+        "B. announcements",
+        "C. information",
+        "D. notices"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true,
+      "passageId": "english_2025_passage_section_e"
+    },
+    {
+      "id": "english_2025_q34",
+      "questionText": "Choose the word that best fills gap 34",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 34,
+      "options": [
+        "A. professional",
+        "B. certified",
+        "C. skilled",
+        "D. responsible"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true,
+      "passageId": "english_2025_passage_section_e"
+    },
+    {
+      "id": "english_2025_q35",
+      "questionText": "Choose the word that best fills gap 35",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 35,
+      "options": [
+        "A. proficient",
+        "B. specialized",
+        "C. knowledgeable",
+        "D. competent"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true,
+      "passageId": "english_2025_passage_section_e"
+    },
+    {
+      "id": "english_2025_q36",
+      "questionText": "She received a beautiful psalm.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 36,
+      "options": [
+        "A. shall",
+        "B. palm",
+        "C. sand",
+        "D. page"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q37",
+      "questionText": "The car sped around the curve.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 37,
+      "options": [
+        "A. chain",
+        "B. cell",
+        "C. ciao",
+        "D. colonel"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q38",
+      "questionText": "We won the game easily.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 38,
+      "options": [
+        "A. giant",
+        "B. general",
+        "C. gentle",
+        "D. goat"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q39",
+      "questionText": "The city grew quieter with each passing hour.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 39,
+      "options": [
+        "A. bowl",
+        "B. your",
+        "C. tour",
+        "D. owl"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2025_q40",
+      "questionText": "The queue moved slowly, yet no one seemed to mind.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 40,
+      "options": [
+        "A. fee",
+        "B. cool",
+        "C. quest",
+        "D. few"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    }
+  ]
+}

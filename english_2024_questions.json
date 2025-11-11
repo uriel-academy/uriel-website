@@ -1,4 +1,1029 @@
 {
-  "passages": [],
-  "questions": []
+  "passages": [
+    {
+      "id": "english_2024_passage_section_e",
+      "title": "SECTION E - Cloze Test",
+      "content": "The meeting began with the reading of the minutes of the previous meeting. The Chairman asked if there were any corrections to be made to the minutes. Then one member complained that after checking the ---31--- list, he realised that his name had been wrongly spelt. The Chairman apologised for the error and the matter was resolved. Two ---32--- were proposed and voted on.\n\nAt the end of the discussion, the Chairman asked a member to ---33--- for the closure of the meeting. Tetteh Oko did and he was ---34--- by Adjoa Mansa. The meeting was then ---35--- to a new date.",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "E",
+      "questionRange": [
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    }
+  ],
+  "questions": [
+    {
+      "id": "english_2024_q1",
+      "questionText": "If Azameti had won gold, Ghanaians ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 1,
+      "options": [
+        "A. will have jubilated",
+        "B. will jubilate",
+        "C. would have jubilated",
+        "D. would jubilate"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q2",
+      "questionText": "We were served a ...... meal at that cozy restaurant.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 2,
+      "options": [
+        "A. Spanish delicious spicy",
+        "B. delicious spicy Spanish",
+        "C. delicious Spanish spicy",
+        "D. spicy Spanish delicious"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q3",
+      "questionText": "Ali's parents have not bought ...... of the two recommended books.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 3,
+      "options": [
+        "A. any",
+        "B. none",
+        "C. neither",
+        "D. either"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q4",
+      "questionText": "Adwoa's daughter is allergic ...... dust.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 4,
+      "options": [
+        "A. about",
+        "B. against",
+        "C. with",
+        "D. to"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q5",
+      "questionText": "Dauda saw the thief ...... out of the shop.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 5,
+      "options": [
+        "A. was running",
+        "B. is running",
+        "C. run",
+        "D. ran"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q6",
+      "questionText": "Konlaan suggested that it was time they ...... for the meeting",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 6,
+      "options": [
+        "A. have to leave",
+        "B. left",
+        "C. had to leave",
+        "D. leave"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q7",
+      "questionText": "Last Wednesday, it rained heavily ...... the match was played.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 7,
+      "options": [
+        "A. and",
+        "B. so",
+        "C. for",
+        "D. yet"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q8",
+      "questionText": "You haven't met each other before, ...... you?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 8,
+      "options": [
+        "A. hadn't",
+        "B. have",
+        "C. haven't",
+        "D. had"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q9",
+      "questionText": "At my last interview, I faced ...... panel.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 9,
+      "options": [
+        "A. seven-members'",
+        "B. a seven-member",
+        "C. a seven-member's",
+        "D. seven-members"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q10",
+      "questionText": "Which of the ...... fragrance(s) is milder?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 10,
+      "options": [
+        "A. two",
+        "B. one",
+        "C. most",
+        "D. all"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q11",
+      "questionText": "Last month, there was ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 11,
+      "options": [
+        "A. an eclipse of a sun",
+        "B. the eclipse of a sun",
+        "C. an eclipse of the sun",
+        "D. the eclipse of the sun"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q12",
+      "questionText": "Among the participants for the competition, Eugenia got here ...... early.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 12,
+      "options": [
+        "A. very",
+        "B. only",
+        "C. often",
+        "D. most"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q13",
+      "questionText": "Afida's aunt, ...... lives in Tamale spoke to us very courteously.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 13,
+      "options": [
+        "A. who",
+        "B. whom",
+        "C. that",
+        "D. which"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q14",
+      "questionText": "\"I will keep my word\", promised Kende.The correct reported speech for the sentence above is",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 14,
+      "options": [
+        "A. Kende promise to keep her word.",
+        "B. Kende is promising to keep her word.",
+        "C. Kende promises to keep her word.",
+        "D. Kende promised to keep her word."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q15",
+      "questionText": "For winning the first position in the Essay Competition, the school gave Linda a laptop.The correct passive form of the sentence above isFor winning the first position in the Essay Competition, Linda ...... given a laptop by the school.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence.",
+      "questionNumber": 15,
+      "options": [
+        "A. is",
+        "B. has been",
+        "C. was",
+        "D. is being"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q16",
+      "questionText": "Little Asabea wondered why her grandfather walked so slowly.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 16,
+      "options": [
+        "A. was saddened that",
+        "B. felt frustrated that",
+        "C. was curious about why",
+        "D. thought about why"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q17",
+      "questionText": "We're so excited because Amuzu's proposal has been accepted.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 17,
+      "options": [
+        "A. suggestion",
+        "B. offer",
+        "C. opinion",
+        "D. view"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q18",
+      "questionText": "Mama said, \"You can only fight off bullies if you are assertive\".",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 18,
+      "options": [
+        "A. muscular",
+        "B. strong",
+        "C. smart",
+        "D. bold"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q19",
+      "questionText": "The rampant destruction of property must be checked.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 19,
+      "options": [
+        "A. common",
+        "B. regular",
+        "C. unpleasant",
+        "D. uncontrolled"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q20",
+      "questionText": "The salient points of the topic have been thoroughly discussed.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "B",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 20,
+      "options": [
+        "A. highlighted",
+        "B. chosen",
+        "C. important",
+        "D. interesting"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q21",
+      "questionText": "The chief advised his subjects not to allow anger to get the better of them.This means that they should not let anger ...... them.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 21,
+      "options": [
+        "A. divide",
+        "B. sadden",
+        "C. control",
+        "D. deceive"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q22",
+      "questionText": "\"Do not be such a wet blanket, Afua. Your brother needs all the support you can give him\", Auntie Araba chided her daughter.This means that Afua ...... her brother.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 22,
+      "options": [
+        "A. didn't care about",
+        "B. couldn't wash for",
+        "C. was too weak to help",
+        "D. liked to discourage"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q23",
+      "questionText": "Asua had to eat his words when Asante Kotoko lost to Tano Bofoakwa FC.This means that Asuo ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 23,
+      "options": [
+        "A. admitted that he was wrong",
+        "B. denied everything he had said",
+        "C. became very ashamed",
+        "D. lost his appetite"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q24",
+      "questionText": "The fraudster was paid back in his own coinsThis means that he was ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 24,
+      "options": [
+        "A. given a hot chase",
+        "B. swindled",
+        "C. punished",
+        "D. given new coins"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q25",
+      "questionText": "Yaaba hit the nail on the head when she told us that we could only succeed through hardworking.This means that Yaaba ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "C",
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.",
+      "questionNumber": 25,
+      "options": [
+        "A. was a good hairdresser",
+        "B. told us the truth",
+        "C. tried to deceive us",
+        "D. showed that she disliked us"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q26",
+      "questionText": "Due to ongoing road construction, our shops have been temporarily closed down.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 26,
+      "options": [
+        "A. permanently",
+        "B. legally",
+        "C. deliberately",
+        "D. constantly"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q27",
+      "questionText": "Some exercises may seem easy in theoretical terms but can be really difficult in ...... aspects",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 27,
+      "options": [
+        "A. practical",
+        "B. natural",
+        "C. logical",
+        "D. actual"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q28",
+      "questionText": "It is good to get a cure for a disease, but it is better to ...... the disease.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 28,
+      "options": [
+        "A. prevent",
+        "B. protect",
+        "C. avoid",
+        "D. counter"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q29",
+      "questionText": "It is hard to tell when this began or where it will ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 29,
+      "options": [
+        "A. fall",
+        "B. cease",
+        "C. reside",
+        "D. remain"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q30",
+      "questionText": "Regions with abundant rainfall are different from those having ...... moisture.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "D",
+      "sectionInstructions": "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.",
+      "questionNumber": 30,
+      "options": [
+        "A. unpredictable",
+        "B. scanty",
+        "C. uncertain",
+        "D. Reduced"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q31",
+      "questionText": "Choose the word that best fills gap 31",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 31,
+      "options": [
+        "A. register",
+        "B. compiled",
+        "C. present",
+        "D. attendance"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true,
+      "passageId": "english_2024_passage_section_e"
+    },
+    {
+      "id": "english_2024_q32",
+      "questionText": "Choose the word that best fills gap 32",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 32,
+      "options": [
+        "A. motions",
+        "B. ideas",
+        "C. decisions",
+        "D. intentions"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true,
+      "passageId": "english_2024_passage_section_e"
+    },
+    {
+      "id": "english_2024_q33",
+      "questionText": "Choose the word that best fills gap 33",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 33,
+      "options": [
+        "A. declare",
+        "B. call",
+        "C. recommend",
+        "D. move"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true,
+      "passageId": "english_2024_passage_section_e"
+    },
+    {
+      "id": "english_2024_q34",
+      "questionText": "Choose the word that best fills gap 34",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 34,
+      "options": [
+        "A. approved",
+        "B. seconded",
+        "C. upheld",
+        "D. supported"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true,
+      "passageId": "english_2024_passage_section_e"
+    },
+    {
+      "id": "english_2024_q35",
+      "questionText": "PART B",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 35,
+      "options": [
+        "A. adjourned",
+        "B. postponed",
+        "C. deferred",
+        "D. shifted"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true,
+      "passageId": "english_2024_passage_section_e"
+    },
+    {
+      "id": "english_2024_q36",
+      "questionText": "Those two are arch rivals.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 36,
+      "options": [
+        "A. splash",
+        "B. patch",
+        "C. path",
+        "D. spark"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q37",
+      "questionText": "Prosper is the new chef.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 37,
+      "options": [
+        "A. chord",
+        "B. chair",
+        "C. shield",
+        "D. scheme"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q38",
+      "questionText": "Lariba sprang to her feet.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 38,
+      "options": [
+        "A. sprayed",
+        "B. struck",
+        "C. slew",
+        "D. splashed"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q39",
+      "questionText": "Whole grains are healthier than polished ones.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 39,
+      "options": [
+        "A. Gill",
+        "B. Goal",
+        "C. Gaul",
+        "D. Gaol"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2024_q40",
+      "questionText": "The heir to the British throne was the Duke of Cornwall.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "E",
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.",
+      "questionNumber": 40,
+      "options": [
+        "A. here",
+        "B. hail",
+        "C. air",
+        "D. hew"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    }
+  ]
 }
