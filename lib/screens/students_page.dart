@@ -697,7 +697,7 @@ class _StudentsPageState extends State<StudentsPage> {
             contentPadding: EdgeInsets.zero,
             leading: CircleAvatar(backgroundImage: (data['avatar'] as String?)?.isNotEmpty == true ? NetworkImage(data['avatar']) : null, child: (data['avatar'] as String?) == null ? Text((name.isNotEmpty ? name[0] : '?').toUpperCase()) : null),
             title: Text(name.isNotEmpty ? name : (data['email'] ?? '-'), style: GoogleFonts.montserrat(fontWeight: FontWeight.w600)),
-            subtitle: Text('XP: $xp • ${acc is num ? (acc as num).toStringAsFixed(1) : acc}%'),
+            subtitle: Text('XP: $xp • ${acc is num ? (acc).toStringAsFixed(1) : acc}%'),
           );
         }).toList(),
       ],

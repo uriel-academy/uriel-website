@@ -1583,8 +1583,10 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
         return 'Creative Arts';
       case Subject.french:
         return 'French';
-      case Subject.ghanaianLanguage:
-        return 'Twi';
+      case Subject.ga:
+        return 'Ga';
+      case Subject.asanteTwi:
+        return 'Asante Twi';
       default:
         return 'Religious and Moral Education';
     }
@@ -1619,8 +1621,11 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
         return Subject.religiousMoralEducation;
       case 'social studies':
         return Subject.socialStudies;
-      case 'ghanaian language':
-        return Subject.ghanaianLanguage;
+      case 'ga':
+        return Subject.ga;
+      case 'asante twi':
+      case 'twi':
+        return Subject.asanteTwi;
       case 'french':
         return Subject.french;
       case 'ict':

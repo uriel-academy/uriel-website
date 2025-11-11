@@ -81,12 +81,12 @@ class _GradePredictionCardState extends State<GradePredictionCard> {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
-          gradient: LinearGradient(
+          gradient: const LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              const Color(0xFF1A1E3F),
-              const Color(0xFF2A3150),
+              Color(0xFF1A1E3F),
+              Color(0xFF2A3150),
             ],
           ),
         ),
@@ -212,7 +212,7 @@ class _GradePredictionCardState extends State<GradePredictionCard> {
         padding: const EdgeInsets.all(32.0),
         child: Column(
           children: [
-            Icon(Icons.quiz_outlined, color: Colors.white70, size: 48),
+            const Icon(Icons.quiz_outlined, color: Colors.white70, size: 48),
             const SizedBox(height: 16),
             Text(
               'Start practicing to see your predictions!',

@@ -1,0 +1,213 @@
+{
+  "passages": [
+    {
+      "id": "english_2022_passage_1",
+      "title": "The Farmer's Son",
+      "content": "Once upon a time, there lived a hardworking farmer in a small village. He had three sons who were very lazy. The farmer was worried about his sons' future. One day, he called them and told them that he had hidden a treasure in his field. After the farmer's death, the sons started digging the field day and night in search of the treasure. They dug the entire field but found no treasure. However, because the field was well plowed, they decided to sow seeds. That year, they had a great harvest. The sons finally understood what their father meant by 'treasure.' The treasure was the result of hard work.",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "A",
+      "questionRange": [1, 2, 3, 4, 5]
+    },
+    {
+      "id": "english_2022_passage_2",
+      "title": "The Importance of Education",
+      "content": "Education is the key to success in life. It opens doors to opportunities and helps individuals develop critical thinking skills. Through education, people learn to communicate effectively, solve problems, and make informed decisions. In Ghana, the government has made significant efforts to improve access to quality education for all children. Schools have been built in rural areas, and scholarships are provided to students from disadvantaged backgrounds. However, there is still work to be done to ensure that every child receives a good education.",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "B",
+      "questionRange": [15, 16, 17, 18, 19, 20]
+    }
+  ],
+  "questions": [
+    {
+      "id": "english_2022_q1",
+      "questionText": "From the passage, what was the farmer worried about?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "A",
+      "questionNumber": 1,
+      "passageId": "english_2022_passage_1",
+      "options": [
+        "A. His health",
+        "B. His sons' laziness",
+        "C. His crops",
+        "D. His neighbors"
+      ],
+      "correctAnswer": "B",
+      "marks": 1,
+      "difficulty": "easy",
+      "topics": ["Reading Comprehension", "Inference"],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q2",
+      "questionText": "What did the sons find when they dug the field?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "A",
+      "questionNumber": 2,
+      "passageId": "english_2022_passage_1",
+      "options": [
+        "A. Gold coins",
+        "B. Nothing",
+        "C. Seeds",
+        "D. Water"
+      ],
+      "correctAnswer": "B",
+      "marks": 1,
+      "difficulty": "easy",
+      "topics": ["Reading Comprehension", "Literal Understanding"],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q3",
+      "questionText": "The word 'plowed' in the passage means:",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "A",
+      "questionNumber": 3,
+      "passageId": "english_2022_passage_1",
+      "options": [
+        "A. Watered",
+        "B. Dug and turned over",
+        "C. Burned",
+        "D. Planted"
+      ],
+      "correctAnswer": "B",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": ["Vocabulary", "Word Meaning"],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q4",
+      "questionText": "What lesson did the sons learn from their father?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "A",
+      "questionNumber": 4,
+      "passageId": "english_2022_passage_1",
+      "options": [
+        "A. Money is everything",
+        "B. Hard work pays off",
+        "C. Farming is easy",
+        "D. Treasure hunting is fun"
+      ],
+      "correctAnswer": "B",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": ["Reading Comprehension", "Theme"],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q5",
+      "questionText": "Which of the following best describes the sons at the beginning of the story?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "A",
+      "questionNumber": 5,
+      "passageId": "english_2022_passage_1",
+      "options": [
+        "A. Hardworking",
+        "B. Intelligent",
+        "C. Lazy",
+        "D. Caring"
+      ],
+      "correctAnswer": "C",
+      "marks": 1,
+      "difficulty": "easy",
+      "topics": ["Reading Comprehension", "Character Analysis"],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q30",
+      "questionText": "Choose the word that is closest in meaning to 'critical' as used in the passage.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "B",
+      "questionNumber": 30,
+      "sectionInstructions": "From questions 30 to 35, choose the word closest in meaning to the underlined word.",
+      "relatedQuestions": [30, 31, 32, 33, 34, 35],
+      "options": [
+        "A. Unimportant",
+        "B. Essential",
+        "C. Negative",
+        "D. Optional"
+      ],
+      "correctAnswer": "B",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": ["Vocabulary", "Synonyms"],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q31",
+      "questionText": "Choose the word that is closest in meaning to 'significant' as used in the passage.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "B",
+      "questionNumber": 31,
+      "sectionInstructions": "From questions 30 to 35, choose the word closest in meaning to the underlined word.",
+      "relatedQuestions": [30, 31, 32, 33, 34, 35],
+      "options": [
+        "A. Small",
+        "B. Important",
+        "C. Difficult",
+        "D. Easy"
+      ],
+      "correctAnswer": "B",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": ["Vocabulary", "Synonyms"],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q40",
+      "questionText": "The teacher asked the students to _____ their homework on time.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "C",
+      "questionNumber": 40,
+      "sectionInstructions": "From questions 40 to 50, choose the option that best completes each sentence.",
+      "relatedQuestions": [40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50],
+      "options": [
+        "A. submit",
+        "B. submits",
+        "C. submitted",
+        "D. submitting"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "easy",
+      "topics": ["Grammar", "Verb Forms"],
+      "createdBy": "admin",
+      "isActive": true
+    }
+  ]
+}

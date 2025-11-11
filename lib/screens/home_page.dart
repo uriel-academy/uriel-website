@@ -4821,7 +4821,8 @@ class _StudentHomePageState extends State<StudentHomePage> with TickerProviderSt
       'BDT': {'icon': Icons.build, 'description': 'Basic Design & Technology'},
       'Home Economics': {'icon': Icons.kitchen, 'description': 'Home Economics'},
       'Visual Arts': {'icon': Icons.palette, 'description': 'Visual Arts'},
-      'Ghanaian Language': {'icon': Icons.record_voice_over, 'description': 'Ghanaian Language'},
+      'Ga': {'icon': Icons.record_voice_over, 'description': 'Ga Language'},
+      'Asante Twi': {'icon': Icons.record_voice_over, 'description': 'Asante Twi Language'},
       'Trivia': {'icon': Icons.emoji_events, 'description': 'General Knowledge'},
     };
 

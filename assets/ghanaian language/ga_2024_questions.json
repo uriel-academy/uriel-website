@@ -1,0 +1,367 @@
+{
+  "year": 2024,
+  "subject": "Ghanaian Language - Ga",
+  "multiple_choice": {
+    "q1": {
+      "question": "Mɛɛ gbɛi akɛhaa otsi lɛ naagbee lɛ?",
+      "possibleAnswers": [
+        "A. Ju",
+        "B. Hɔgbaa",
+        "C. Sohaa",
+        "D. Hɔɔ"
+      ]
+    },
+    "q2": {
+      "question": "Mɛɛ be mli ashiɔ Ga fɔmɔ bi ko otofo? Kɛji mɔ lɛ ...",
+      "possibleAnswers": [
+        "A. etee eklɛŋklɛŋ tsui asɛɛ",
+        "B. eklɛŋklɛŋ bɔlɛ",
+        "C. egbe sukuu naa",
+        "D. ele nihoomɔ"
+      ]
+    },
+    "q3": {
+      "question": "Kɛji awo otofo yoo loo nuu ko tsuŋ lɛ, atsɔɔ lɛ nibii babaoo. Nibii nɛɛ eko ji ...",
+      "possibleAnswers": [
+        "A. bɔ ni akɛ wu loo ŋa hiɔ shi",
+        "B. bɔ ni ahiɔ ŋmaa",
+        "C. bɔ ni atsuɔ nii",
+        "D. bɔ ni abuɔ mɔ"
+      ]
+    },
+    "q4": {
+      "question": "Afeɔ kusumi nɛɛ ateŋ ekome ahaa gbekɛ nuu ko ni eshɛ nuu.",
+      "possibleAnswers": [
+        "A. Otseŋtse",
+        "B. Yishɛɛ",
+        "C. Kɔihamɔ",
+        "D. Dɛŋtuwoo"
+      ]
+    },
+    "q5": {
+      "question": "Yɛ Gamɛi asateŋ lɛ, kɛji gbekɛ yoo loo nuu ko tsɔ otofoshii kusum lɛ mli pɛ, akpaa gbɛ akɛ eshɛ mɔ ni baanyɛ ...",
+      "possibleAnswers": [
+        "A. ebote gbala mli",
+        "B. etao nitsumɔ",
+        "C. ena bɔlɛ",
+        "D. ena shika"
+      ]
+    },
+    "q6": {
+      "question": "Yɛ Gamɛi akusum naa lɛ afeɔ gbalamlibotemɔ kusum lɛ yɛ ...",
+      "possibleAnswers": [
+        "A. ŋa lɛ tsɛ shia",
+        "B. ŋa lɛ nyɛ shia",
+        "C. wu lɛ tsɛ shia",
+        "D. wu lɛ nyɛ shia"
+      ]
+    },
+    "q7": {
+      "question": "Naa Ayele wekumɛi bɔi tɔkemɔ akɛ Ayelenyɛ miifite kusum be mli ni amɛna akɛ jeee Ayeletsɛ ni kɛ Ayele ha Nii Yemo gbala lɛ. Mɛni ha wekumɛi lɛ bɔi tɔkemɔ lɛ? Ejaakɛ ...",
+      "possibleAnswers": [
+        "A. Ayeletsɛ ekwɛɛɛ lɛ kɛjɛ egbekɛbii ashi tɔɔ.",
+        "B. Ayele tsɛ ni sa akɛ ekɛ lɛ aha.",
+        "C. Ayele tsɛ egbo.",
+        "D. Ayele tsɛ efa gbɛ."
+      ]
+    },
+    "q8": {
+      "question": "Nibii nɛɛ ateŋ ekome fata nɔ hewɔ ni aboteɔ gbla mli.",
+      "possibleAnswers": [
+        "A. Etsɔɔ akɛ oshɛ",
+        "B. Mpoatswaa",
+        "C. Shwiewoo",
+        "D. Ayeee nii yɛ maŋ mli ja shia"
+      ]
+    },
+    "q9": {
+      "question": "Akrɔ madeo kpoo ji sablaŋ ni akɛyoɔ ...",
+      "possibleAnswers": [
+        "A. Gamashimɛi",
+        "B. Osumɛi",
+        "C. Lamɛi",
+        "D. Tɛshimɛi"
+      ]
+    },
+    "q10": {
+      "question": "Yɛ Ga afiyeli gbɛjianɔtoo naa lɛ ... ji klɛŋklɛŋ atutso ni yeɔ Hɔmɔwɔ.",
+      "possibleAnswers": [
+        "A. Gamashi",
+        "B. Osu",
+        "C. La",
+        "D. Nungua"
+      ]
+    },
+    "q11": {
+      "question": "Namɔ yeɔ sane ni ebaka wekumuu fɛɛ hiɛ?",
+      "possibleAnswers": [
+        "A. Tsɛ",
+        "B. Nii",
+        "C. Wekunukpa",
+        "D. Jasetsɛ"
+      ]
+    },
+    "q12": {
+      "question": "Ataa Oblite kɛ Naa Lamiɔkɔ yɛ akɛ wekumɛi shi amɛjɛɛɛ musu kome mli. Mɛni osusuɔ akɛ fee amɛ wekumɛi?",
+      "possibleAnswers": [
+        "A. Shika",
+        "B. Naanyobɔɔ",
+        "C. Gbalashihilɛ",
+        "D. Niyeli"
+      ]
+    },
+    "q13": {
+      "question": "Shia enyiɛ ayɔɔ yɛ Asɛrɛ?",
+      "possibleAnswers": [
+        "A. 14",
+        "B. 13",
+        "C. 12",
+        "D. 11"
+      ]
+    },
+    "q14": {
+      "question": "Akutsei enyiɛ ayɔɔ yɛ Ga mashi?",
+      "possibleAnswers": [
+        "A. 5",
+        "B. 6",
+        "C. 7",
+        "D. 8"
+      ]
+    },
+    "q15": {
+      "question": "Mɛni akɛyoɔ wulɔmɔ yɛ maŋlumɛi ateŋ?",
+      "possibleAnswers": [
+        "A. Afli ka enineŋ shi.",
+        "B. Etswa akwajaŋ.",
+        "C. Ekɛ ni yɛŋ pɛ ni saa ehe.",
+        "D. Lɛ ewieɔ yɛ gwabɔɔ mli."
+      ]
+    },
+    "q16": {
+      "question": "Wulɔmɔ gbatsu lɛ nihii nii kome ...",
+      "possibleAnswers": [
+        "A. nuu ni afeko lɛ hii anii eyaaa mli",
+        "B. yoo ni eku ewao mli pɛ yaa jɛmɛ",
+        "C. mɔ ni wooo tokota boteee jɛmɔ",
+        "D. mɔ ni awo lɛ kromɔ tsuŋ pɛ boteɔ jɛmɛ"
+      ]
+    },
+    "q17": {
+      "question": "Mɛi ni baa nɛɛ fɛɛ waa kɛtsɛseɔ maŋtsɛ hee ni awolɛ bɛja ...",
+      "possibleAnswers": [
+        "A. jaasetsɛ",
+        "B. otsaamɛ",
+        "C. wulɔmɔ",
+        "D. maŋkralo"
+      ]
+    },
+    "q18": {
+      "question": "Akpaa gbɛ akɛ otsaamɛ afee mɔ ko ni naa tse ejaakɛ ...",
+      "possibleAnswers": [
+        "A. ewieɔ maŋtsɛ lɛ naa yɛ gwabɔɔ ko mli",
+        "B. eyeɔ maŋtsɛ yɛ saneyeli mli",
+        "C. esa akɛ ewiemɔ lɛ fɛɛ afee agwaseaŋ nɔ sɔŋŋ",
+        "D. wɔsɛɛ lɛ ebaaye maŋtsɛ lɛ sɛɛ"
+      ]
+    },
+    "q19": {
+      "question": "Wuolɛatsɛ ji lumɛi lɛ ateŋ mɔ ni ...",
+      "possibleAnswers": [
+        "A. kwɛɔ ŋshɔnaa kɛ ŋshɔ he nitsumɔi fɛɛ",
+        "B. ejawara maŋ lɛ",
+        "C. yeɔ sane",
+        "D. kojoɔ maŋtsɛ kɛji efee nɔ ni esaaa"
+      ]
+    },
+    "q20": {
+      "question": "Mɛni ji nibii nɛɛ ekome nɔni akwɛɔ kɛwoɔ mɔ ko akɛ maŋtsɛ? Akwɛɔ kɛji mɔ lɛ",
+      "possibleAnswers": [
+        "A. eyɛ hefatalɔ",
+        "B. etee sukuu",
+        "C. eyɛ shika",
+        "D. kɛji ejɛ maŋtsɛyeli shia"
+      ]
+    },
+    "q21": {
+      "question": "Nitsumɔ kome ni akɛyoɔ Akwashɔŋtsɛ ji akɛ lɛ ...",
+      "possibleAnswers": [
+        "A. enyiɛɔ asafoŋbii lɛ ahiɛ yɛ ta be amli.",
+        "B. lɛ ji maŋtsɛ lɛ kpasalɔ",
+        "C. lɛ ehuɔ mumuŋ tai fɛɛ haa adesa",
+        "D. lɛ ekojoɔ maŋ saji ni kɔɔ wɔji kɛ wulɔmɔ lɛ he."
+      ]
+    },
+    "q22": {
+      "question": "Nɔ ko ni kla tsuɔ yɛ maŋtsɛ he ji, esaa maŋtsɛ lɛ niyenii naa dani maŋtsɛ lɛ yeɔ. Mɛni osusuɔ akɛ eji nɔ hewɔ? Ejaakɛ ...",
+      "possibleAnswers": [
+        "A. maŋtsɛ lɛ wala yɛ edɛŋ",
+        "B. lɛ ekwɛɔ maŋtsɛ lɛ",
+        "C. be fɛɛ be lɛ, esa akɛ lɛ egbo eha maŋtsɛ lɛ",
+        "D. ebɛje lɛ jogbaŋŋ kɛ tsofa"
+      ]
+    },
+    "q23": {
+      "question": "Anaa kɔnsonati okadii nɛɛ fɛɛ yɛ Ga mli bɛja ...",
+      "possibleAnswers": [
+        "A. /b/",
+        "B. /g/",
+        "C. /c/",
+        "D. /f/"
+      ]
+    },
+    "q24": {
+      "question": "Te obaajara wiemɔ akpokplonto mli oha onyɛmi fioo ni miikase Ga wiemɔ tɛŋŋ?",
+      "possibleAnswers": [
+        "A. Akpo-kplo-n-to",
+        "B. Akpo-kpl-on-to",
+        "C. Ak-po-kpl-on-to",
+        "D. A-kpo-kplo-n-to"
+      ]
+    },
+    "q25": {
+      "question": "Yɛ Gamɛi asateŋ lɛ onukpa ŋaa gbekɛ akɛ ...",
+      "possibleAnswers": [
+        "A. he manye",
+        "B. ha manye",
+        "C. baa manye",
+        "D. naa manye"
+      ]
+    },
+    "q26": {
+      "question": "Anuɔ wiemɔ ni baa nɛɛ fɛɛ yɛ ŋkpaiyeli gbɛjianɔtoo bɛ ja ...",
+      "possibleAnswers": [
+        "A. alɔnte diŋŋ ko akafo wɔteŋ",
+        "B. gbɔ ni ba lɛ esɛɛ tuŋŋ ehiɛ faŋŋ",
+        "C. wɔyɛ wɔnu wɔkɔji anɔ ajɔ wɔ",
+        "D. afi aya ni enanina wɔ"
+      ]
+    },
+    "q27": {
+      "question": "Be ni anu akɛ Adukwei efɔ lɛ, shiaŋbii lɛ eko tee eyasra lɛ ni ekɛɛ akɛ; onine nɔ ayilɔ. Enɛ tsɔɔ akɛ",
+      "possibleAnswers": [
+        "A. eye kunim",
+        "B. eye beŋ",
+        "C. efɔ nuu",
+        "D. efɔ yoo"
+      ]
+    },
+    "q28": {
+      "question": "Be mli ni ayabɔ emaniɛ lɛ eta lɛ, nɔni wekunukpa lɛ kɛɛ lɛ ji, kpoo akɛɛ nɔ ko. Mɛni ha akɛɛ lɛ nakai lɛ?",
+      "possibleAnswers": [
+        "A. Emɔ ko etsɔ esɛɛ.",
+        "B. Ojotswalɔi etswa lɛ ojo.",
+        "C. Ena tsɔnemli oshra.",
+        "D. Ashwie lɛ yɛ nitsumɔ mli."
+      ]
+    },
+    "q29": {
+      "question": "Hulu ni tsoɔ waa lɛ ha atadei ni aka lɛ yɛ ...",
+      "possibleAnswers": [
+        "A. sakoo",
+        "B. hiahia",
+        "C. waa",
+        "D. jogbaŋŋ"
+      ]
+    },
+    "q30": {
+      "question": "Moi nanemɛi lɛ fɛɛ bɔi lɛ ŋmɔlɔ be mli ni ana akɛ ekɛ ebɛku ni yeɔ nii lɛ. Tsɔɔmɔ nɔ heɔ ni amɛŋmɔɔ lɛ lɛ?",
+      "possibleAnswers": [
+        "A. Akɛ abɛku yeee nii",
+        "B. Akɛ abɛku juɔ he pɛ",
+        "C. Akɛ abɛku kpaa muu",
+        "D. Akɛ abɛku ŋaa mɔ"
+      ]
+    },
+    "q31": {
+      "question": "Taataatee ji lala ko ni alaa ahaa ...",
+      "possibleAnswers": [
+        "A. abifao kɛji emiifo",
+        "B. gbekɛ ni epila",
+        "C. kɛji ahɔɔ nii",
+        "D. kɛfoɔ adesa mli"
+      ]
+    },
+    "q32": {
+      "question": "Kooloi nɛɛ fɛɛ ahe fɔɔ kaa yɛ adesatamɔ mli bɛja ...",
+      "possibleAnswers": [
+        "A. anaanu",
+        "B. jata",
+        "C. too",
+        "D. onufu"
+      ]
+    },
+    "q33": {
+      "question": "Nɔ kome ni akɛyoɔ wojiaŋsane ji akɛ ...",
+      "possibleAnswers": [
+        "A. ehiɛ tsakeɔ be fɛɛ be",
+        "B. ayɛ nɔtsɛ",
+        "C. ayɛ mɛi pɔtɛɛ ni ŋmaa",
+        "D. ayɛ mɛi pɔtɛɛ ni kaneɔ"
+      ]
+    },
+    "q34": {
+      "question": "Kaa fɔɔɔ looflɔ ji wiemɔ ko ni jeɔ kpo yɛ agwaseaŋ kɛji ...",
+      "possibleAnswers": [
+        "A. akɛ no ko miito nɔ kroko he",
+        "B. aawie mɔ ko he",
+        "C. aawɔ mɔ ko yi",
+        "D. aajie mɔ ko yi"
+      ]
+    },
+    "q35": {
+      "question": "Wojiaŋsane hiɛ sui nɛɛ fɛɛ bɛja ...",
+      "possibleAnswers": [
+        "A. ayɛ be ni aŋma",
+        "B. ayɛ mɔni ŋma",
+        "C. ayɛ wolo lɛ yitso",
+        "D. ahɔɔ kɛ jarawalɛ"
+      ]
+    },
+    "q36": {
+      "question": "Tsɔɔmɔ nibii ni baa nɛɛ ateŋ nɔ ni he hiaa jogbaŋŋ yɛ abifao kpojiemɔ mli.",
+      "possibleAnswers": [
+        "A. Daaŋ",
+        "B. Niyenii",
+        "C. Gbɛi",
+        "D. Saa"
+      ]
+    },
+    "q37": {
+      "question": "Ŋmɛnɛŋmɛnɛ lumɔyeli tamɔɔɔ blemabii anɔ lɛ ejaakɛ ...",
+      "possibleAnswers": [
+        "A. akɛ shikasuɔmɔ titri ni woleɔ amɛ ŋmɛnɛ",
+        "B. akwɛɔ mɔ pɔtɛɛ ni mɔ lɛ ji",
+        "C. akwɛɔ kɛji kpa ko yɛ egbɔmɔtso lɛ he",
+        "D. akwɛɔ nii ni eyɔɔ"
+      ]
+    },
+    "q38": {
+      "question": "Tsɔɔmɔ nitsumɔ ni mligbalalɔ tsuɔ yɛ sanemuu mli.",
+      "possibleAnswers": [
+        "A. Egbalaa gbɛiwiemɔ lɛ mli",
+        "B. Egbalaa feemɔwiemɔ lɛ mli",
+        "C. Egbalaa feemɔ kɛ gbɛi lɛ mli",
+        "D. Egbalaa gbɛi kɛ sutsɔɔlɔ lɛ mli"
+      ]
+    },
+    "q39": {
+      "question": "Mɛni wiemɔ weku mli akɛ wiemɔ ni afo shishi lɛ baa wo. Mɛɛle yaa sulemɔ daa Hɔgbaa.",
+      "possibleAnswers": [
+        "A. Gbɛiwiemɔ",
+        "B. Sutsɔɔlɔ",
+        "C. Tsalɔ",
+        "D. Feemɔwiemɔ"
+      ]
+    },
+    "q40": {
+      "question": "Nibii ni baa nɛɛ fɛɛ he fɔɔ kaa yɛ sukuu bɛja ...",
+      "possibleAnswers": [
+        "A. gbɛnaa hiɛmɔ",
+        "B. tsɔsemɔ",
+        "C. nikasemɔ",
+        "D. niyeli"
+      ]
+    }
+  },
+  "essay": {}
+}

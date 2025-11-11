@@ -3,8 +3,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/question_model.dart';
 import '../models/quiz_model.dart';
+import '../models/passage_model.dart';
 import '../services/question_service.dart';
 import 'quiz_results_page.dart';
 
@@ -57,6 +59,11 @@ class _QuizTakerPageState extends State<QuizTakerPage>
   
   bool showExplanation = false;
   bool isPracticeMode = false;
+  
+  // Passage support
+  Map<String, Passage> passageCache = {}; // Cache passages by ID to avoid refetching
+  bool isLoadingPassage = false;
+  bool isPassageExpanded = true; // Start with passage expanded
 
   @override
   void initState() {
@@ -167,6 +174,34 @@ class _QuizTakerPageState extends State<QuizTakerPage>
     setState(() {
       selectedAnswer = answer;
     });
+  }
+
+  Future<Passage?> _fetchPassage(String passageId) async {
+    // Check cache first
+    if (passageCache.containsKey(passageId)) {
+      return passageCache[passageId];
+    }
+
+    try {
+      setState(() => isLoadingPassage = true);
+      
+      final doc = await FirebaseFirestore.instance
+          .collection('passages')
+          .doc(passageId)
+          .get();
+
+      if (doc.exists) {
+        final passage = Passage.fromJson({...doc.data()!, 'id': doc.id});
+        passageCache[passageId] = passage; // Cache it
+        setState(() => isLoadingPassage = false);
+        return passage;
+      }
+    } catch (e) {
+      debugPrint('Error fetching passage: $e');
+    }
+    
+    setState(() => isLoadingPassage = false);
+    return null;
   }
 
   Future<void> _nextQuestion() async {
@@ -744,31 +779,175 @@ class _QuizTakerPageState extends State<QuizTakerPage>
     );
   }
 
+  Widget _buildPassageSection(Passage passage, bool isMobile) {
+    return Card(
+      elevation: 2,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      color: const Color(0xFFF5F5F5), // Light background for readability
+      margin: const EdgeInsets.only(bottom: 20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // Header with expand/collapse
+          InkWell(
+            onTap: () {
+              setState(() => isPassageExpanded = !isPassageExpanded);
+            },
+            borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
+            child: Container(
+              padding: EdgeInsets.all(isMobile ? 16 : 20),
+              decoration: BoxDecoration(
+                color: const Color(0xFF1A1E3F).withValues(alpha: 0.05),
+                borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
+              ),
+              child: Row(
+                children: [
+                  Icon(
+                    isPassageExpanded ? Icons.menu_book : Icons.menu_book_outlined,
+                    color: const Color(0xFF1A1E3F),
+                    size: 24,
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Text(
+                      passage.title,
+                      style: GoogleFonts.playfairDisplay(
+                        fontSize: isMobile ? 16 : 18,
+                        fontWeight: FontWeight.w700,
+                        color: const Color(0xFF1A1E3F),
+                      ),
+                    ),
+                  ),
+                  Icon(
+                    isPassageExpanded ? Icons.expand_less : Icons.expand_more,
+                    color: const Color(0xFF1A1E3F),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          // Passage content (collapsible)
+          if (isPassageExpanded) ...[
+            Padding(
+              padding: EdgeInsets.all(isMobile ? 16 : 24),
+              child: Text(
+                passage.content,
+                style: GoogleFonts.montserrat(
+                  fontSize: isMobile ? 14 : 16,
+                  color: const Color(0xFF2C2C2C),
+                  height: 1.6,
+                  letterSpacing: 0.2,
+                ),
+              ),
+            ),
+          ],
+        ],
+      ),
+    );
+  }
+
+  Widget _buildSectionInstructions(String instructions, bool isMobile) {
+    return Container(
+      margin: const EdgeInsets.only(bottom: 16),
+      padding: EdgeInsets.all(isMobile ? 12 : 16),
+      decoration: BoxDecoration(
+        color: const Color(0xFFFFF9E6), // Soft yellow for instructions
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(
+          color: const Color(0xFFFFD700).withValues(alpha: 0.3),
+          width: 1,
+        ),
+      ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Icon(
+            Icons.info_outline,
+            color: const Color(0xFFD97706),
+            size: isMobile ? 20 : 22,
+          ),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Text(
+              instructions,
+              style: GoogleFonts.montserrat(
+                fontSize: isMobile ? 13 : 15,
+                color: const Color(0xFF78350F),
+                fontWeight: FontWeight.w600,
+                height: 1.4,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
   Widget _buildQuestionCard(Question question, bool isMobile) {
     // Determine image to show: prefer explicit imageUrl. If none, for ICT try a guessed asset
     // but only render it if the asset actually exists in the bundled assets (avoids blank placeholder).
     final String? explicitImage = (question.imageUrl != null && question.imageUrl!.isNotEmpty) ? question.imageUrl : null;
   final String guessedAssetPath = 'assets/bece_ict/bece_ict_${question.year}_q_${question.questionNumber}.png';
 
-    return Card(
-      elevation: 4,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-      color: const Color(0xFF1A1E3F), // Uriel blue background
-      child: Padding(
-        padding: EdgeInsets.all(isMobile ? 20 : 24),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Question text
-            Text(
-              question.questionText,
-              style: GoogleFonts.playfairDisplay(
-                fontSize: isMobile ? 18 : 20,
-                fontWeight: FontWeight.w600,
-                color: Colors.white, // White text
-                height: 1.4,
-              ),
-            ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        // Passage section (if question has a passage)
+        if (question.passageId != null) ...[
+          FutureBuilder<Passage?>(
+            future: _fetchPassage(question.passageId!),
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return Card(
+                  elevation: 2,
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                  color: const Color(0xFFF5F5F5),
+                  margin: const EdgeInsets.only(bottom: 20),
+                  child: Padding(
+                    padding: EdgeInsets.all(isMobile ? 40 : 60),
+                    child: const Center(
+                      child: CircularProgressIndicator(
+                        valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF1A1E3F)),
+                      ),
+                    ),
+                  ),
+                );
+              }
+              
+              if (snapshot.hasData && snapshot.data != null) {
+                return _buildPassageSection(snapshot.data!, isMobile);
+              }
+              
+              return const SizedBox.shrink();
+            },
+          ),
+        ],
+        
+        // Section instructions (if present)
+        if (question.sectionInstructions != null && question.sectionInstructions!.isNotEmpty) ...[
+          _buildSectionInstructions(question.sectionInstructions!, isMobile),
+        ],
+        
+        // Question card
+        Card(
+          elevation: 4,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+          color: const Color(0xFF1A1E3F), // Uriel blue background
+          child: Padding(
+            padding: EdgeInsets.all(isMobile ? 20 : 24),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // Question text
+                Text(
+                  question.questionText,
+                  style: GoogleFonts.playfairDisplay(
+                    fontSize: isMobile ? 18 : 20,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.white, // White text
+                    height: 1.4,
+                  ),
+                ),
             
             const SizedBox(height: 24),
 
@@ -940,6 +1119,8 @@ class _QuizTakerPageState extends State<QuizTakerPage>
           ],
         ),
       ),
+    ),
+      ],
     );
   }
 
@@ -967,9 +1148,12 @@ class _QuizTakerPageState extends State<QuizTakerPage>
       case 'french':
         return Subject.french;
       case 'twi':
+      case 'asante twi':
+        return Subject.asanteTwi;
       case 'ga':
+        return Subject.ga;
       case 'ewe':
-        return Subject.ghanaianLanguage;
+        return Subject.religiousMoralEducation; // Fallback for Ewe
       default:
         return Subject.religiousMoralEducation;
     }

@@ -45,8 +45,8 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
   int _periodsPerWeek = 20;
   
   final Map<String, List<String>> _levelSubjects = {
-    'Primary': ['English', 'Mathematics', 'Science', 'Social Studies', 'RME', 'Creative Arts', 'ICT', 'Ghanaian Language'],
-    'JHS': ['English', 'Mathematics', 'Integrated Science', 'Social Studies', 'RME', 'Creative Arts', 'ICT', 'Ghanaian Language', 'French'],
+    'Primary': ['English', 'Mathematics', 'Science', 'Social Studies', 'RME', 'Creative Arts', 'ICT', 'Ga', 'Asante Twi'],
+    'JHS': ['English', 'Mathematics', 'Integrated Science', 'Social Studies', 'RME', 'Creative Arts', 'ICT', 'Ga', 'Asante Twi', 'French'],
     'SHS': ['Core Mathematics', 'Elective Mathematics', 'English', 'Integrated Science', 'Social Studies', 'Physics', 'Chemistry', 'Biology', 'Economics', 'Geography', 'History', 'Government', 'ICT'],
   };
   
@@ -1570,7 +1570,7 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
                           items: const [
                             // Primary Subjects
                             'English', 'Mathematics', 'Science', 'Social Studies', 'RME', 
-                            'Creative Arts', 'ICT', 'Ghanaian Language',
+                            'Creative Arts', 'ICT', 'Ga', 'Asante Twi',
                             // JHS Subjects
                             'Integrated Science', 'French',
                             // SHS Subjects

@@ -1,0 +1,277 @@
+{
+  "year": 2024,
+  "subject": "Ghanaian Language - Asante Twi",
+  "multiple_choice": {
+    "q1": {
+      "question": "Sɛ wɔwo obi Fiada a ɛyɛ dabɔne a, wɔbefrɛ no sɛn?",
+      "possibleAnswers": [
+        "A. Kofi Firi",
+        "B. Kofi Fofie",
+        "C. Kofi Fori",
+        "D. Kofi Fɔdwoɔ"
+      ]
+    },
+    "q2": {
+      "question": "Adɛn nti na abɔfra di nnawɔtwe ansa na wɔato ne din? Wɔgye di sɛ saa berɛ no na ...",
+      "possibleAnswers": [
+        "A. ɔtumi didi",
+        "B. wahunu ne maame yie",
+        "C. wanyini",
+        "D. waba asetena"
+      ]
+    },
+    "q3": {
+      "question": "Edin yi mu deɛ ɛwɔ he na ɛyɛ kradin?",
+      "possibleAnswers": [
+        "A. Agyei",
+        "B. Badu",
+        "C. Dɔnkɔ",
+        "D. Kwabena"
+      ]
+    },
+    "q4": {
+      "question": "Nnoɔma a ɛdidi soɔ yi mu deɛ ɛwɔ he na sɛ abarimaa duru ne mpanin mfeɛ so a, wɔde ma no?",
+      "possibleAnswers": [
+        "A. Asɔ ne etuo",
+        "B. Sekan ne asɔ",
+        "C. Sekan ne kɛntɛn",
+        "D. Sekan ne etuo"
+      ]
+    },
+    "q5": {
+      "question": "Nnoɔma a wɔde ma abarimaa a waduru ne mpanin mfeɛ so no, ɛdeɛn na ɛsɛ sɛ ɔde yɛ?",
+      "possibleAnswers": [
+        "A. Ɔbɛtɔn.",
+        "B. Ɔde bɛbɔ bra.",
+        "C. Ɔde bɛkyɛ ne nnamfonom.",
+        "D. Ɔde bɛma ne yere."
+      ]
+    },
+    "q6": {
+      "question": "Sɛ Akanfoɔ ka sɛ, abaayewa bi kɔ afikyire a, na ɛkyerɛ sɛn?",
+      "possibleAnswers": [
+        "A. Ɔne ne fiefoɔ anya akasakasa.",
+        "B. Wakɔtena ne fie no akyi.",
+        "C. Watu afiri ne fie a ɔte mu.",
+        "D. Wayɛ bra."
+      ]
+    },
+    "q7": {
+      "question": "Adɛn nti na ɛnsɛ sɛ asakyima no de ne se ka kosua a wɔde bɛka n'ano no mu? Sɛ ɔka mu a, ...",
+      "possibleAnswers": [
+        "A. ɛbɛma wayare",
+        "B. ɛde mmusuo bɛba no so",
+        "C. ɔrennya kunu pa",
+        "D. ɔrentena ase nkyɛ"
+      ]
+    },
+    "q8": {
+      "question": "Ɛdeɛn pɔtee na abusuafoɔ hwɛ ho de ɔbaa ma abarima bi awareɛ? Sɛ ɔbarima no ...",
+      "possibleAnswers": [
+        "A. asisi adan",
+        "B. ho yɛ fɛ",
+        "C. wɔ agyapadeɛ pii",
+        "D. wɔ suban pa"
+      ]
+    },
+    "q9": {
+      "question": "Kyerɛ deɛ nti a Akanfoɔ mpɛ koratwe. Ɛde ...",
+      "possibleAnswers": [
+        "A. mogyafra ba abusua mu",
+        "B. mmɔnnaatoɔ ba ɔman mu",
+        "C. mmusuo ba abusua mu",
+        "D. ntɔkwa ba awarefoɔ ntam"
+      ]
+    },
+    "q10": {
+      "question": "Amanneɛ bɛn na wɔyɛ de gya owufoɔ kwan korakora wɔ Akanman mu?",
+      "possibleAnswers": [
+        "A. Wɔdeda no.",
+        "B. Wɔdware no.",
+        "C. Wɔsie no.",
+        "D. Wɔyɛ no ayie."
+      ]
+    },
+    "q11": {
+      "question": "Akanman mu no, adɛn nti na obi rewu a, wɔgu n'anom nsuo? Wɔgye di sɛ ...",
+      "possibleAnswers": [
+        "A. osukɔn de no",
+        "B. ɔrekɔforɔ bepɔ enti ɔbia nsuo",
+        "C. ɔrennom nsuo bio",
+        "D. ne ho nsuo nyinaa asa."
+      ]
+    },
+    "q12": {
+      "question": "Kukuo a okunafoɔ bɔ no kurotia no kyerɛ sɛn?",
+      "possibleAnswers": [
+        "A. Ɔmpɛ kukuo no bio.",
+        "B. Ɔne ne kunu adi nte emu.",
+        "C. Ɔrennidi bio.",
+        "D. Ne bo afu ne kunu nɔ."
+      ]
+    },
+    "q13": {
+      "question": "Hwan ne wo wɔfa? Obi a ɔyɛ wo ...",
+      "possibleAnswers": [
+        "A. maame nuabarima",
+        "B. nana nuabarima",
+        "C. papa nuabarima",
+        "D. sewaa nuabarima"
+      ]
+    },
+    "q14": {
+      "question": "Wo papa nana yɛ wo deɛn? Wo ...",
+      "possibleAnswers": [
+        "A. Nana",
+        "B. Nanakansoa",
+        "C. Papa",
+        "D. Wɔfa"
+      ]
+    },
+    "q15": {
+      "question": "Sɛ ɔbaa ware a, ne kunu nuabarima mma yɛ ne deɛn?",
+      "possibleAnswers": [
+        "A. Koramma",
+        "B. Mma",
+        "C. Mmanoma",
+        "D. Nananom"
+      ]
+    },
+    "q16": {
+      "question": "Sɛ awofoɔ bi brɛ ansa na wɔawo abɔfra a, wɔtaa frɛ no sɛn?",
+      "possibleAnswers": [
+        "A. Abayie",
+        "B. Abɛbrɛsɛ",
+        "C. Afiriyie",
+        "D. Akyirem"
+      ]
+    },
+    "q17": {
+      "question": "Sɛ abɔfra bi de Asaaseasa a, na aseɛ ne sɛn?",
+      "possibleAnswers": [
+        "A. Ne maame di awommawuo.",
+        "B. Ɔnyɛ Ɔkanni ba.",
+        "C. Ɔrennya baabi nteni wɔ wiase.",
+        "D. Ɔyɛ ɔdehyeɛ."
+      ]
+    },
+    "q18": {
+      "question": "Sɛ ɔbaa bi wo ntaa na sɛ ɛyɛ ɔbaa ne ɔbarima a, yɛfrɛ wɔn sɛn?",
+      "possibleAnswers": [
+        "A. Ahum ne Aham",
+        "B. Ntaten",
+        "C. Sika ne Ahweneɛ",
+        "D. Takyi ne Kuro"
+      ]
+    },
+    "q19": {
+      "question": "Abusua bɛn na wɔn akraboa ne wɔn din sɛ?",
+      "possibleAnswers": [
+        "A. Aduana",
+        "B. Agona",
+        "C. Asona",
+        "D. Ɛkoɔna"
+      ]
+    },
+    "q20": {
+      "question": "Deɛ ɛdidi soɔ yi mu deɛ ɛwɔ he na wɔhwɛ so yi ɔhene? Obi a ...",
+      "possibleAnswers": [
+        "A. ɔnim nwoma na ɔwɔ sika",
+        "B. ɔwɔ adan na ne ho yɛ den",
+        "C. Ɔwɔ sika na ne ho yɛ fɛ",
+        "D. Ɔyɛ ɔdehyeɛ na ɔwɔ suban pa"
+      ]
+    },
+    "q21": {
+      "question": "Sɛ wɔyi ɔhene foforɔ a, ɛdeɛn na ɔyɛ kyerɛ ne manfoɔ?",
+      "possibleAnswers": [
+        "A. Ɔkasa kyerɛ ne manfoɔ.",
+        "B. Ɔnante wɔ ahemfie.",
+        "C. Ɔsa kyerɛ ne manfoɔ.",
+        "D. Ɔsuae kyerɛ ne manfoɔ."
+      ]
+    },
+    "q22": {
+      "question": "Amanneɛ bɛn na wɔyɛ de kyerɛ sɛ wɔatu ɔhene bi adeɛ so?",
+      "possibleAnswers": [
+        "A. Yɛgye n'afena.",
+        "B. Yɛgye n'akyeampoma.",
+        "C. Yɛgye n'apakan.",
+        "D. Yɛworɔ ne nan mu mpaboa."
+      ]
+    },
+    "q23": {
+      "question": "Mpanimfoɔ a ɔhene ne wɔn bu man no, wɔfrɛ wɔn sɛn?",
+      "possibleAnswers": [
+        "A. Adikurofoɔ",
+        "B. Ahemfo",
+        "C. Atenankonnwa",
+        "D. Mpapahwekwaa"
+      ]
+    },
+    "q24": {
+      "question": "Akanfoɔ mu no, wɔdi asɛm wie a, sika a wɔde ma wɔn a wɔdi asɛm no, wɔfrɛ no sɛn?",
+      "possibleAnswers": [
+        "A. Agyinamudeɛ",
+        "B. Badwadeɛ",
+        "C. Mpatadeɛ",
+        "D. Sikatua"
+      ]
+    },
+    "q25": {
+      "question": "Sɛ Akanfoɔ retu agyina wɔ asɛnnie mu a, ɛkyerɛ sɛn?",
+      "possibleAnswers": [
+        "A. Wɔregye wɔn ahome.",
+        "B. Wɔrekɔdidi aba.",
+        "C. Wɔrekɔfa adwene.",
+        "D. Wɔatu asɛm no ahyɛ da."
+      ]
+    },
+    "q26": {
+      "question": "Deɛ ɛdidi soɔ yi mu baako nka deɛ Akanfoɔ yɛ no wɔ asɛnnie mu no ho.",
+      "possibleAnswers": [
+        "A. Wɔde deɛ ɔdi fɔ no to afiase.",
+        "B. Wɔfrɛ adansefoɔ",
+        "C. Wɔtu agyina.",
+        "D. Wɔtu wɔn nan si asɛm no so."
+      ]
+    },
+    "q27": {
+      "question": "Toa ɛbɛ yi so; abɔfra bɔ nwa na ...",
+      "possibleAnswers": [
+        "A. ɔmmɔ akyekyedeɛ",
+        "B. ɔnkum ɔsono",
+        "C. ɔnkyere kusie",
+        "D. ɔnsoa kɔkɔte"
+      ]
+    },
+    "q28": {
+      "question": "Mpanimfoɔ se; ɔpanin dware wie a, na ...",
+      "possibleAnswers": [
+        "A. asɛm asa",
+        "B. dwaresɛn abɔ",
+        "C. ne yere ho atɔ no",
+        "D. nsuo asa"
+      ]
+    },
+    "q29": {
+      "question": "Dwuma bɛn na mmɛ tumi di wɔ ɔkasa mu?",
+      "possibleAnswers": [
+        "A. Ɛda kasa adi.",
+        "B. Ɛkyerɛ kasa pa.",
+        "C. Ɛma kasa yɛ dɛ.",
+        "D. Ɛma kasa yɛ tenten."
+      ]
+    },
+    "q30": {
+      "question": "Adɛn nti na sɛ obi reyɛ adwuma a, ɔto dwom? Sɛdeɛ ...",
+      "possibleAnswers": [
+        "A. nkurɔfoɔ bɛte ne nka",
+        "B. nnipa bɛhunu sɛ ɔwɔ hɔ",
+        "C. Ɔbɛnya aboafoɔ",
+        "D. ɔrente brɛ"
+      ]
+    }
+  },
+  "essay": {}
+}

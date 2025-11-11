@@ -2498,6 +2498,209 @@ export const importICTQuestions = functions.https.onCall(async (data, context) =
 export const ingestLocalPDFsCallable = ingestLocalPDFs;
 export { ingestLocalPDFs };
 
+// Import Ghanaian Language questions from local assets (flexible).
+// This callable function attempts to locate JSON files under common asset paths
+// and import them into the `questions` collection with subject 'ghanaianLanguage'.
+export const importGhanaianLanguageQuestions = functions.https.onCall(async (data, context) => {
+  try {
+    console.log('Starting Ghanaian Language import...');
+    const fs = require('fs');
+    const path = require('path');
+
+    // Allow caller to pass a custom assets directory (relative to project root)
+    const provided = (data && data.assetsDir) ? data.assetsDir.toString() : '';
+    const candidates = [] as string[];
+    if (provided && provided.length > 0) {
+      // If a path is provided, prefer it first (accept both absolute and relative)
+      candidates.push(provided);
+    }
+
+    // Common locations we check for Ghanaian language assets
+    candidates.push(path.join(__dirname, '..', '..', 'assets', 'bece_ghanaian_language'));
+    candidates.push(path.join(__dirname, '..', '..', 'assets', 'bece_ghanaian'));
+    candidates.push(path.join(__dirname, '..', '..', 'assets', 'ghanaian_language'));
+    candidates.push(path.join(__dirname, '..', '..', 'assets', 'curriculum', 'jhs curriculum'));
+
+    let foundDir: string | null = null;
+    for (const c of candidates) {
+      try {
+        if (fs.existsSync(c) && fs.lstatSync(c).isDirectory()) { foundDir = c; break; }
+      } catch (e) { /* ignore */ }
+    }
+
+    if (!foundDir) {
+      console.log('Ghanaian language assets directory not found. Candidates:', candidates);
+      return { success: false, message: 'Assets directory not found. Provide assetsDir param or add files under assets/bece_ghanaian_language' };
+    }
+
+    // Collect JSON files either from Cloud Storage (recommended) or local filesystem (fallback)
+    const filesToProcess: { fileName: string; contentStr: string }[] = [];
+    const bucketName = (data && data.bucket) ? String(data.bucket) : (process.env.GHANA_ASSETS_BUCKET || '');
+    const prefix = (data && data.prefix) ? String(data.prefix) : 'ghanaian_language/';
+
+    if (bucketName) {
+      console.log('Reading Ghanaian JSON assets from bucket', bucketName, 'prefix', prefix);
+      try {
+        const bucket = admin.storage().bucket(bucketName);
+        const [files] = await bucket.getFiles({ prefix });
+        const jsonFiles = (files || []).filter((f: any) => f.name.toLowerCase().endsWith('.json'));
+        if (jsonFiles.length === 0) {
+          console.log('No JSON files found in storage', bucketName, prefix);
+          return { success: false, message: 'No JSON files found in storage ' + bucketName + '/' + prefix };
+        }
+
+        for (const f of jsonFiles) {
+          try {
+            const [buf] = await f.download();
+            filesToProcess.push({ fileName: f.name, contentStr: buf.toString('utf8') });
+          } catch (e) {
+            console.warn('Failed to download', f.name, e);
+          }
+        }
+      } catch (e) {
+        console.warn('Failed to list/download from storage', bucketName, prefix, e);
+        return { success: false, message: 'Failed to read from storage: ' + String(e) };
+      }
+    } else {
+      // Fallback to local filesystem (useful for testing with assets packaged into function)
+      const allFiles = fs.readdirSync(foundDir || '.');
+      const jsonFiles = allFiles.filter((f: string) => f.toLowerCase().endsWith('.json'));
+      if (jsonFiles.length === 0) {
+        console.log('No JSON files found in', foundDir);
+        return { success: false, message: 'No JSON files found in ' + foundDir };
+      }
+      for (const fileName of jsonFiles) {
+        const filePath = path.join(foundDir!, fileName);
+        try {
+          const contentStr = fs.readFileSync(filePath, 'utf8');
+          filesToProcess.push({ fileName, contentStr });
+        } catch (e) {
+          console.warn('Failed to read', filePath, e);
+        }
+      }
+    }
+
+    let importedCount = 0;
+    const currentTime = Date.now();
+    const currentDate = new Date().toISOString();
+
+    for (const fileObj of filesToProcess) {
+      const fileName = fileObj.fileName;
+      try {
+        const content = JSON.parse(fileObj.contentStr);
+
+        // Case A: content.multiple_choice mapping (q1, q2, ...)
+        if (content && content.multiple_choice && typeof content.multiple_choice === 'object') {
+          const mc = content.multiple_choice;
+          const keys = Object.keys(mc).sort((a, b) => {
+            const na = parseInt(a.replace(/\D/g, '')) || 0;
+            const nb = parseInt(b.replace(/\D/g, '')) || 0;
+            return na - nb;
+          });
+
+          // Try to find answers inside the same file under 'answers' or accept external mapping via data.answersMap
+          const answersMap = (content.answers && typeof content.answers === 'object') ? content.answers : (data && data.answersMap) || {};
+
+          for (const k of keys) {
+            try {
+              const q = mc[k];
+              const qnum = parseInt(k.replace(/\D/g, '')) || importedCount + 1;
+              const yearStr = (content.year && String(content.year)) || (fileName.match(/(19|20)\d{2}/)?.[0]) || '';
+              const docId = `ghanaian_${yearStr || 'unknown'}_q${qnum}`;
+              const correct = (answersMap && answersMap[k]) || '';
+
+              const doc: any = {
+                id: docId,
+                questionText: q.question || q.text || '',
+                type: 'multipleChoice',
+                subject: 'ghanaianLanguage',
+                examType: content.examType || 'bece',
+                year: yearStr || '',
+                section: content.variant || null,
+                questionNumber: qnum,
+                options: q.possibleAnswers || q.options || [],
+                correctAnswer: correct || '',
+                explanation: q.explanation || '',
+                marks: 1,
+                difficulty: q.difficulty || 'medium',
+                topics: q.topics || ['Ghanaian Language', 'BECE', yearStr || ''],
+                createdAt: currentDate,
+                updatedAt: currentDate,
+                createdBy: 'system_import',
+                isActive: true,
+                metadata: { source: fileName, importDate: currentDate, timestamp: currentTime }
+              };
+
+              await db.collection('questions').doc(doc.id).set(doc);
+              importedCount++;
+            } catch (inner) {
+              console.warn('Failed to import question key', k, 'from file', fileName, inner);
+            }
+          }
+
+        } else if (content && Array.isArray(content.questions || content.items)) {
+          // Case B: top-level array of question objects under 'questions' or 'items'
+          const arr = content.questions || content.items;
+          for (let i = 0; i < arr.length; i++) {
+            const q = arr[i];
+            try {
+              const yearStr = (content.year && String(content.year)) || (fileName.match(/(19|20)\d{2}/)?.[0]) || '';
+              const qnum = q.questionNumber || (q.number || i + 1);
+              const docId = `ghanaian_${yearStr || 'unknown'}_q${qnum}`;
+              const doc: any = {
+                id: docId,
+                questionText: q.question || q.text || q.prompt || '',
+                type: q.type || 'multipleChoice',
+                subject: 'ghanaianLanguage',
+                examType: q.examType || content.examType || 'bece',
+                year: yearStr || '',
+                questionNumber: qnum,
+                options: q.options || q.choices || q.possibleAnswers || [],
+                correctAnswer: q.correctAnswer || q.answer || '',
+                explanation: q.explanation || '',
+                marks: q.marks || 1,
+                difficulty: q.difficulty || 'medium',
+                topics: q.topics || ['Ghanaian Language', yearStr || ''],
+                createdAt: currentDate,
+                updatedAt: currentDate,
+                createdBy: 'system_import',
+                isActive: true,
+                metadata: { source: fileName, importDate: currentDate, timestamp: currentTime }
+              };
+              await db.collection('questions').doc(doc.id).set(doc);
+              importedCount++;
+            } catch (inner) {
+              console.warn('Failed to import question index', i, 'from file', fileName, inner);
+            }
+          }
+
+        } else {
+          console.log('Unrecognized JSON structure in', fileName, '- skipping');
+        }
+
+      } catch (e) {
+        console.warn('Failed to process file', fileName, e instanceof Error ? e.message : e);
+      }
+    }
+
+    // Update app metadata
+    try {
+      await db.collection('app_metadata').doc('content').set({
+        ghQuestionsImported: true,
+        ghQuestionsCount: importedCount,
+        lastGhanaianImportTimestamp: currentTime,
+        lastUpdated: currentDate
+      }, { merge: true });
+    } catch (e) { console.warn('Failed to update metadata', e); }
+
+    console.log(`Imported ${importedCount} Ghanaian language questions`);
+    return { success: true, imported: importedCount };
+  } catch (err) {
+    console.error('importGhanaianLanguageQuestions error:', err);
+    throw new functions.https.HttpsError('internal', (err instanceof Error) ? err.message : 'Unknown error');
+  }
+});
+
 // Facts API - Production-ready educational content API - VERSION 2
 export const factsApi = functions.https.onRequest((req, res) => {
   // Enable CORS for all origins

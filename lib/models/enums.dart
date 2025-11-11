@@ -4,7 +4,8 @@ enum Subject {
   english,
   integratedScience,
   socialStudies,
-  ghanaianLanguage,
+  ga,
+  asanteTwi,
   french,
   ict,
   religiousMoralEducation,
@@ -25,8 +26,10 @@ extension SubjectX on Subject {
         return 'Integrated Science';
       case Subject.socialStudies:
         return 'Social Studies';
-      case Subject.ghanaianLanguage:
-        return 'Ghanaian Language';
+      case Subject.ga:
+        return 'Ga';
+      case Subject.asanteTwi:
+        return 'Asante Twi';
       case Subject.french:
         return 'French';
       case Subject.ict:

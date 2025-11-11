@@ -295,8 +295,10 @@ class QuestionService {
         return 'socialStudies';
       case Subject.religiousMoralEducation:
         return 'religiousMoralEducation';
-      case Subject.ghanaianLanguage:
-        return 'ghanaianLanguage';
+      case Subject.ga:
+        return 'ga';
+      case Subject.asanteTwi:
+        return 'asanteTwi';
       case Subject.french:
         return 'french';
       case Subject.ict:

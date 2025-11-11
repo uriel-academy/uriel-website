@@ -43,7 +43,8 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
         'Integrated Science',
         'Social Studies',
     'RME',
-        'Ghanaian Language',
+        'Ga',
+        'Asante Twi',
         'French',
         'ICT',
         'Creative Arts',
@@ -63,8 +64,10 @@ class _NotesTabState extends State<NotesTab> with TickerProviderStateMixin {
       case 'religious and moral education':
       case 'rme':
         return const Color(0xFF795548);
-      case 'ghanaian language':
+      case 'ga':
         return const Color(0xFF607D8B);
+      case 'asante twi':
+        return const Color(0xFF5D4037);
       case 'creative arts':
         return const Color(0xFFE91E63);
       case 'french':

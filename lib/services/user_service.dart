@@ -424,6 +424,7 @@ class UserService implements IUserService {
   }
 
   /// Store student-specific data
+  @override
   Future<void> storeStudentData({
     required String userId,
     String? firstName,

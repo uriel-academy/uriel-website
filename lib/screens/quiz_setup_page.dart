@@ -643,9 +643,12 @@ class _QuizSetupPageState extends State<QuizSetupPage> {
       case 'French':
         return Subject.french;
       case 'Twi':
+      case 'Asante Twi':
+        return Subject.asanteTwi;
       case 'Ga':
+        return Subject.ga;
       case 'Ewe':
-        return Subject.ghanaianLanguage;
+        return Subject.religiousMoralEducation; // Fallback for Ewe
       default:
         return Subject.religiousMoralEducation; // Default fallback
     }

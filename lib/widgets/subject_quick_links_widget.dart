@@ -133,8 +133,10 @@ class SubjectQuickLinksWidget extends StatelessWidget {
         return const Color(0xFF7B1FA2);
       case Subject.religiousMoralEducation:
         return const Color(0xFFD32F2F);
-      case Subject.ghanaianLanguage:
+      case Subject.ga:
         return const Color(0xFF795548);
+      case Subject.asanteTwi:
+        return const Color(0xFF5D4037);
       case Subject.french:
         return const Color(0xFF3F51B5);
       case Subject.ict:
@@ -160,8 +162,10 @@ class SubjectQuickLinksWidget extends StatelessWidget {
         return Icons.public;
       case Subject.religiousMoralEducation:
         return Icons.church;
-      case Subject.ghanaianLanguage:
+      case Subject.ga:
         return Icons.language;
+      case Subject.asanteTwi:
+        return Icons.record_voice_over;
       case Subject.french:
         return Icons.translate;
       case Subject.ict:
@@ -187,8 +191,10 @@ class SubjectQuickLinksWidget extends StatelessWidget {
         return 'Social Studies';
       case Subject.religiousMoralEducation:
         return 'RME';
-      case Subject.ghanaianLanguage:
-        return 'Ghanaian Lang.';
+      case Subject.ga:
+        return 'Ga';
+      case Subject.asanteTwi:
+        return 'Asante Twi';
       case Subject.french:
         return 'French';
       case Subject.ict:

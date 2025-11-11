@@ -579,8 +579,10 @@ class _SingleQuestionInputTabState extends State<SingleQuestionInputTab> {
         return 'Integrated Science';
       case Subject.socialStudies:
         return 'Social Studies';
-      case Subject.ghanaianLanguage:
-        return 'Ghanaian Language';
+      case Subject.ga:
+        return 'Ga';
+      case Subject.asanteTwi:
+        return 'Asante Twi';
       case Subject.french:
         return 'French';
       case Subject.ict:

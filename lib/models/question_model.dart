@@ -13,7 +13,8 @@ enum Subject {
   english,
   integratedScience,
   socialStudies,
-  ghanaianLanguage,
+  ga,
+  asanteTwi,
   french,
   ict,
   religiousMoralEducation,
@@ -48,6 +49,11 @@ class Question {
   final DateTime createdAt;
   final String createdBy;
   final bool isActive;
+  
+  // Optional fields for comprehension questions
+  final String? passageId; // Reference to passage in 'passages' collection
+  final String? sectionInstructions; // e.g., "Choose the word closest in meaning"
+  final List<int>? relatedQuestions; // Question numbers that share same passage/instructions
 
   Question({
     required this.id,
@@ -68,6 +74,9 @@ class Question {
     required this.createdAt,
     required this.createdBy,
     this.isActive = true,
+    this.passageId,
+    this.sectionInstructions,
+    this.relatedQuestions,
   });
 
   Map<String, dynamic> toJson() {
@@ -90,6 +99,9 @@ class Question {
       'createdAt': createdAt.toIso8601String(),
       'createdBy': createdBy,
       'isActive': isActive,
+      if (passageId != null) 'passageId': passageId,
+      if (sectionInstructions != null) 'sectionInstructions': sectionInstructions,
+      if (relatedQuestions != null) 'relatedQuestions': relatedQuestions,
     };
   }
 
@@ -131,6 +143,11 @@ class Question {
         createdAt: _parseDateTime(json['createdAt']),
         createdBy: json['createdBy'] ?? '',
         isActive: json['isActive'] ?? true,
+        passageId: json['passageId'],
+        sectionInstructions: json['sectionInstructions'],
+        relatedQuestions: json['relatedQuestions'] != null 
+            ? List<int>.from(json['relatedQuestions']) 
+            : null,
       );
     } catch (e) {
       debugPrint('Error parsing question from JSON: $e');
