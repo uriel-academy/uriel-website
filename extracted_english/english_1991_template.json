@@ -1,0 +1,989 @@
+{
+  "year": "1991",
+  "examType": "bece",
+  "subject": "english",
+  "metadata": {
+    "totalQuestions": 36,
+    "sections": [
+      {
+        "name": "SECTION B",
+        "position": 5591
+      },
+      {
+        "name": "SECTION C",
+        "position": 6375
+      }
+    ],
+    "extractedAt": "2025-11-11T14:26:00.497Z",
+    "needsManualReview": true,
+    "notes": "This is auto-extracted. Please review and complete missing fields."
+  },
+  "passages": [
+    {
+      "id": "english_1991_passage_1",
+      "title": "Passage 1",
+      "content": "Mr. Appiah was hot, tired and dusty because ......A.  he had gone to bring his nephews from the villageB.  he had taken his nephews to the high buildingsC.  he had shown the boys around the city of AccraD.  he had helped them to demolish the buildingsE.  he had been satisfied that the boys were happy",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "A",
+      "questionRange": [],
+      "createdBy": "auto-extract",
+      "isActive": true
+    }
+  ],
+  "questions": [
+    {
+      "id": "english_1991_q1",
+      "questionText": "Mr. Appiah was hot, tired and dusty because ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "A",
+      "questionNumber": 1,
+      "options": [
+        "A. he had gone to bring his nephews from the village",
+        "B. he had taken his nephews to the high buildings",
+        "C. he had shown the boys around the city of Accra",
+        "D. he had helped them to demolish the buildingsE.  he had been satisfied that the boys were happy"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q2",
+      "questionText": "Where were the boys living before visiting Accra?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "A",
+      "questionNumber": 2,
+      "options": [
+        "A. In the high buildings",
+        "B. In the village",
+        "C. In the big houses",
+        "D. In the public gardensE.  In the building falling apart"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q3",
+      "questionText": "Everything is so splendid means everything is ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "A",
+      "questionNumber": 3,
+      "options": [
+        "A. satisfactory",
+        "B. magnificent",
+        "C. important",
+        "D. brilliantE.  special"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q4",
+      "questionText": "According to the passage many successful men are used to ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "A",
+      "questionNumber": 4,
+      "options": [
+        "A. walking around Accra",
+        "B. bringing their nephews from the village to Accra",
+        "C. going on sight-seeing in the city of Accra",
+        "D. talking with boys in the public gardensE.  riding in cars wherever they go"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q5",
+      "questionText": "Which of the following statements is not true according to the passage?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "A",
+      "questionNumber": 5,
+      "options": [
+        "A. Every part of the city is wonderful and splendid",
+        "B. Mr. Appiah normally rides in his car",
+        "C. Asare and Attah are in Accra for the first time",
+        "D. The boys rested in the public gardensE.  The boys as well as Mr. Appiah must have been hot, tired and dusty."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q6",
+      "questionText": "Insanitary conditions in the last paragraph means ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "A",
+      "questionNumber": 6,
+      "options": [
+        "A. some people in Accra are insane",
+        "B. some places in Accra are dirty and unclean",
+        "C. insanitary is seen in all conditions in the city",
+        "D. unsatisfactory reports about the cityE.  there are many sanitary inspectors in Accra"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q7",
+      "questionText": "Demolished as used in the passage means",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "A",
+      "questionNumber": 7,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q9",
+      "questionText": "Aluminium is produced from ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "A",
+      "questionNumber": 9,
+      "options": [
+        "A. dams",
+        "B. electricity",
+        "C. bauxite",
+        "D. machineE.  tunnels"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q10",
+      "questionText": "From the passage, dams are built all over the world mainly to ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "A",
+      "questionNumber": 10,
+      "options": [
+        "A. produce aluminium from bauxite",
+        "B. provide water for the generation of electricity",
+        "C. extract bauxite from lakes",
+        "D. provide water for drinkingE.  make electricity cheap"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q11",
+      "questionText": "Which of the following statements is not true according to the passage?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "A",
+      "questionNumber": 11,
+      "options": [
+        "A. The Akosombo Dam is the biggest in the world",
+        "B. The production of both electricity and aluminium is of great value to Ghana",
+        "C. Water from the lake runs fiercely through tunnels",
+        "D. The Akosombo dam is valuable to GhanaE.  A great collection of water running through tunnels can produce electricity anywhere in the world"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q12",
+      "questionText": "According to the passage which of the following statements is true?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "A",
+      "questionNumber": 12,
+      "options": [
+        "A. In building dams rivers are blocked at their broadcast points",
+        "B. Water is used to produce electricity",
+        "C. Building the dam and fixing machines to produce electricity cost nothing at all",
+        "D. In producing electricity engineers need a lot of petrol to drive the machinesE.  Turbines are used in the production of electricity"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q13",
+      "questionText": "The most suitable title for the passage is",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "A",
+      "questionNumber": 13,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q15",
+      "questionText": "The girl is a spendthrift: she used all her pocket money to buy a pair of shoes. This means ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "A",
+      "questionNumber": 15,
+      "options": [
+        "A. careless",
+        "B. bold",
+        "C. extravagant",
+        "D. kind"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q16",
+      "questionText": "The pupils in the town often help in communal activities. This means that they help in ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "B",
+      "questionNumber": 16,
+      "options": [
+        "A. all activities",
+        "B. interesting activities",
+        "C. public activities",
+        "D. usual activities"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q17",
+      "questionText": "The aroma of Kate's food made everyone hungry. This means the food ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "B",
+      "questionNumber": 17,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q19",
+      "questionText": "You don't speak Chinese, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "B",
+      "questionNumber": 19,
+      "options": [
+        "A. do you",
+        "B. can you",
+        "C. don't you",
+        "D. won't you"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q20",
+      "questionText": "We worked hard in our final year, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "B",
+      "questionNumber": 20,
+      "options": [
+        "A. did we",
+        "B. isn't it",
+        "C. aren't we",
+        "D. didn't we"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q21",
+      "questionText": "They have lost the match, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "B",
+      "questionNumber": 21,
+      "options": [
+        "A. didn't they",
+        "B. isn't it",
+        "C. haven't they",
+        "D. is it"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q22",
+      "questionText": "He has stolen the box ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "B",
+      "questionNumber": 22,
+      "options": [
+        "A. in which we kept the gold chain",
+        "B. which we kept in the gold chain",
+        "C. we kept the gold chain",
+        "D. where we kept the gold chain"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q23",
+      "questionText": "...... hard he tried, Adansi came last in the test.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "B",
+      "questionNumber": 23,
+      "options": [
+        "A. Whatever",
+        "B. How",
+        "C. Whenever",
+        "D. However"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q24",
+      "questionText": "Akwetey did the exercise ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "B",
+      "questionNumber": 24,
+      "options": [
+        "A. even though he was sick",
+        "B. during which he was sick",
+        "C. but he was sick",
+        "D. for which he was sick"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q25",
+      "questionText": "We are not allowed ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "B",
+      "questionNumber": 25,
+      "options": [
+        "A. to walk at the lawn",
+        "B. to be walking across the lawn",
+        "C. walking across the lawn",
+        "D. to walk across the lawn"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q26",
+      "questionText": "Everybody was pleased ...... the pastor's sermon.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "B",
+      "questionNumber": 26,
+      "options": [
+        "A. for",
+        "B. in",
+        "C. with",
+        "D. at"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q27",
+      "questionText": "John's father congratulated him ...... his success in the examination.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "B",
+      "questionNumber": 27,
+      "options": [
+        "A. on",
+        "B. during",
+        "C. at",
+        "D. to"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q28",
+      "questionText": "The patient is generally recovering ...... his illness",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "B",
+      "questionNumber": 28,
+      "options": [
+        "A. from",
+        "B. with",
+        "C. for",
+        "D. during"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q29",
+      "questionText": "We have been in this school ...... three years.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "B",
+      "questionNumber": 29,
+      "options": [
+        "A. since",
+        "B. in",
+        "C. by",
+        "D. for"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q30",
+      "questionText": "It would be unwise to ...... the chance of making extra money.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "B",
+      "questionNumber": 30,
+      "options": [
+        "A. throw away",
+        "B. throw in",
+        "C. throw over",
+        "D. throw by"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q31",
+      "questionText": "Koku was sad when he lost his mother but he will soon ...... it",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "B",
+      "questionNumber": 31,
+      "options": [
+        "A. get along",
+        "B. get on",
+        "C. get by",
+        "D. get over"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q32",
+      "questionText": "...... these words in your dictionary.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "B",
+      "questionNumber": 32,
+      "options": [
+        "A. Look around",
+        "B. Look on",
+        "C. Look up",
+        "D. Look about"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q33",
+      "questionText": "If he ...... the elections he would have become an assemblyman.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "B",
+      "questionNumber": 33,
+      "options": [
+        "A. won",
+        "B. has won",
+        "C. had won",
+        "D. should win"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q34",
+      "questionText": "If he continues to work hard, he ...... his examination with ease.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "B",
+      "questionNumber": 34,
+      "options": [
+        "A. will pass",
+        "B. is passing",
+        "C. has passed",
+        "D. would pass"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q35",
+      "questionText": "The news he brought ...... bad",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "B",
+      "questionNumber": 35,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q37",
+      "questionText": "The present day youth still indulge in all forms of drug abuse.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "B",
+      "questionNumber": 37,
+      "options": [
+        "A. avoid",
+        "B. increase",
+        "C. discourage",
+        "D. disallowE.  discontinue"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q38",
+      "questionText": "Some people prefer to eat lean meat.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "B",
+      "questionNumber": 38,
+      "options": [
+        "A. uncooked",
+        "B. fatty",
+        "C. spoilt",
+        "D. bloodyE.  tasty"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q39",
+      "questionText": "Kojo's teacher was reluctant to accept his explanation for being late to school.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "B",
+      "questionNumber": 39,
+      "options": [
+        "A. willing",
+        "B. afraid",
+        "C. unable",
+        "D. planningE.  likely"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1991_q40",
+      "questionText": "The workers wanted their director to hold the meeting.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1991",
+      "section": "B",
+      "questionNumber": 40,
+      "options": [
+        "A. continue",
+        "B. delay",
+        "C. cancel",
+        "D. supportE.  interrupt"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    }
+  ]
+}

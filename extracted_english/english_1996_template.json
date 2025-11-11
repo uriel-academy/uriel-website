@@ -1,0 +1,957 @@
+{
+  "year": "1996",
+  "examType": "bece",
+  "subject": "english",
+  "metadata": {
+    "totalQuestions": 35,
+    "sections": [
+      {
+        "name": "SECTION B",
+        "position": 4411
+      },
+      {
+        "name": "SECTION C",
+        "position": 4989
+      }
+    ],
+    "extractedAt": "2025-11-11T14:26:01.803Z",
+    "needsManualReview": true,
+    "notes": "This is auto-extracted. Please review and complete missing fields."
+  },
+  "passages": [
+    {
+      "id": "english_1996_passage_1",
+      "title": "Passage 1",
+      "content": "According to the passage, Mr. Mensah was determined to ......A.  find the trouble makers.B.  write on the board.C.  insult the class.D.  talk to the three big boys.",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "A",
+      "questionRange": [],
+      "createdBy": "auto-extract",
+      "isActive": true
+    }
+  ],
+  "questions": [
+    {
+      "id": "english_1996_q1",
+      "questionText": "According to the passage, Mr. Mensah was determined to ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "A",
+      "questionNumber": 1,
+      "options": [
+        "A. find the trouble makers.",
+        "B. write on the board.",
+        "C. insult the class.",
+        "D. talk to the three big boys."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q2",
+      "questionText": "The children giggled and murmured because ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "A",
+      "questionNumber": 2,
+      "options": [
+        "A. Mr. Mensah turned to write on the board.",
+        "B. they thought Mr. Mensah was funny.",
+        "C. of what they saw in the magazine.",
+        "D. the boy near the window threw the magazine away."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q3",
+      "questionText": "The boys threw the magazine away because ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "A",
+      "questionNumber": 3,
+      "options": [
+        "A. they were murmuring and giggling.",
+        "B. the window was open.",
+        "C. the teacher turned quickly.",
+        "D. they did not want the teacher to see it."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q4",
+      "questionText": "The teacher found the magazine because ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "A",
+      "questionNumber": 4,
+      "options": [
+        "A. it was thrown onto the veranda.",
+        "B. of his many years of teaching experience.",
+        "C. he walked quickly to the back of the class.",
+        "D. the children gave it to him."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q5",
+      "questionText": "The expression have reared their ugly heads in the passage means have become unpleasantly ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "A",
+      "questionNumber": 5,
+      "options": [
+        "A. common.",
+        "B. funny.",
+        "C. troublesome.",
+        "D. ugly."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q6",
+      "questionText": "The word fumed in the passage means ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "A",
+      "questionNumber": 6,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q8",
+      "questionText": "The expression of all shapes and sizes tells us the pieces of furniture were ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "A",
+      "questionNumber": 8,
+      "options": [
+        "A. big.",
+        "B. long.",
+        "C. measured differently.",
+        "D. of different types."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q9",
+      "questionText": "Aboagye was a ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "A",
+      "questionNumber": 9,
+      "options": [
+        "A. teacher.",
+        "B. lawyer.",
+        "C. counsellor.",
+        "D. trader."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q10",
+      "questionText": "The word grand means ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "A",
+      "questionNumber": 10,
+      "options": [
+        "A. smooth.",
+        "B. solemn.",
+        "C. happy.",
+        "D. noisy."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q11",
+      "questionText": "Which of the following is not true according to the passage?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "A",
+      "questionNumber": 11,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q13",
+      "questionText": "When you come across a new word look it up in a dictionary.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "A",
+      "questionNumber": 13,
+      "options": [
+        "A. examine it",
+        "B. observe it",
+        "C. find the meaning",
+        "D. record the meaning"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q14",
+      "questionText": "The radio won't talk because it is defective.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "A",
+      "questionNumber": 14,
+      "options": [
+        "A. dirty",
+        "B. broken",
+        "C. faulty",
+        "D. tuned"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q15",
+      "questionText": "Our team was eliminated at the semi-final stage.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "A",
+      "questionNumber": 15,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q17",
+      "questionText": "It was a red-letter day. This means it was a ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "B",
+      "questionNumber": 17,
+      "options": [
+        "A. day I got a red letter",
+        "B. day I was sad",
+        "C. memorable day",
+        "D. real day"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q18",
+      "questionText": "I have a bone to pick with my prefect for reporting me. This means ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "B",
+      "questionNumber": 18,
+      "options": [
+        "A. the prefect and I are going to chat",
+        "B. I have to report the prefect",
+        "C. I have to take the bone to the prefect",
+        "D. I have a quarrel with the prefect"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q19",
+      "questionText": "His failure in the examination came out of the blue. This means his failure was ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "B",
+      "questionNumber": 19,
+      "options": [
+        "A. destined",
+        "B. obvious",
+        "C. surprising",
+        "D. sent from the blue"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q20",
+      "questionText": "Efua behaves like a fish out of water among boys. This means Efua ...... among boys.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "B",
+      "questionNumber": 20,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q22",
+      "questionText": "Moses is on a temporary appointment.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "B",
+      "questionNumber": 22,
+      "options": [
+        "A. daily",
+        "B. permanent",
+        "C. probationary",
+        "D. weekly"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q23",
+      "questionText": "The beggar vanished when he saw the policeman.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "B",
+      "questionNumber": 23,
+      "options": [
+        "A. showed",
+        "B. defected",
+        "C. jumped",
+        "D. appeared"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q24",
+      "questionText": "The taxi driver drove recklessly throughout the journey.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "B",
+      "questionNumber": 24,
+      "options": [
+        "A. speedily",
+        "B. carefully",
+        "C. noisily",
+        "D. leisurely"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q25",
+      "questionText": "Those machines are not genuine brands.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "B",
+      "questionNumber": 25,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q27",
+      "questionText": "After Roderick ...... the dress, he looked round for a pair of shoes that would match it.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "B",
+      "questionNumber": 27,
+      "options": [
+        "A. has bought",
+        "B. is buying",
+        "C. had bought",
+        "D. was buying"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q28",
+      "questionText": "I saw him while he ...... the cloth.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "B",
+      "questionNumber": 28,
+      "options": [
+        "A. is folding",
+        "B. has been folding",
+        "C. was folding",
+        "D. had been folding"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q29",
+      "questionText": "You can't eat all, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "B",
+      "questionNumber": 29,
+      "options": [
+        "A. can't you",
+        "B. do you",
+        "C. can you",
+        "D. don't you"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q30",
+      "questionText": "Not only was she pretty ...... intelligent.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "B",
+      "questionNumber": 30,
+      "options": [
+        "A. or",
+        "B. nor",
+        "C. but also",
+        "D. and also"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q31",
+      "questionText": "Neither the headmaster nor his assistant ....... today.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "B",
+      "questionNumber": 31,
+      "options": [
+        "A. is working",
+        "B. do work",
+        "C. have worked",
+        "D. are working"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q32",
+      "questionText": "The antelope ...... when the hunter fired.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "B",
+      "questionNumber": 32,
+      "options": [
+        "A. is eating",
+        "B. is eaten",
+        "C. was ate",
+        "D. was eating"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q33",
+      "questionText": "There were ...... cars at the beach.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "B",
+      "questionNumber": 33,
+      "options": [
+        "A. plenty",
+        "B. most",
+        "C. much",
+        "D. many"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q34",
+      "questionText": "Lucy is the ...... beautiful girl in her class.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "B",
+      "questionNumber": 34,
+      "options": [
+        "A. much",
+        "B. very much",
+        "C. very more",
+        "D. most"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q35",
+      "questionText": "He is ...... to fight with a fool.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "B",
+      "questionNumber": 35,
+      "options": [
+        "A. too wise a man",
+        "B. too a wise man",
+        "C. a too wise man",
+        "D. a man wise too"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q36",
+      "questionText": "Mantey and Kofi shook hands with ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "B",
+      "questionNumber": 36,
+      "options": [
+        "A. each other",
+        "B. each one",
+        "C. one another",
+        "D. themselves"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q37",
+      "questionText": "The school organised a ...... art exhibition.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "B",
+      "questionNumber": 37,
+      "options": [
+        "A. two days",
+        "B. two day",
+        "C. two-day",
+        "D. two-days"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q38",
+      "questionText": "We told the stranger we would put him ...... if he wanted.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "B",
+      "questionNumber": 38,
+      "options": [
+        "A. down",
+        "B. up",
+        "C. on",
+        "D. over"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q39",
+      "questionText": "In wrestling, it is not wise to take ...... someone twice your size.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "B",
+      "questionNumber": 39,
+      "options": [
+        "A. off",
+        "B. in",
+        "C. on",
+        "D. over"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1996_q40",
+      "questionText": "He was sure he gave the pan to ...... else.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1996",
+      "section": "B",
+      "questionNumber": 40,
+      "options": [
+        "A. anyone",
+        "B. someone",
+        "C. somebody",
+        "D. everybody"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    }
+  ]
+}

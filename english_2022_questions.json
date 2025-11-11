@@ -1,0 +1,725 @@
+{
+  "passages": [],
+  "questions": [
+    {
+      "id": "english_2022_q1",
+      "questionText": "If the family house had been maintained properly, it ....... collapsed.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "A",
+      "questionNumber": 1,
+      "options": [
+        "A. will not have",
+        "B. has not",
+        "C. had not",
+        "D. would not have"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q2",
+      "questionText": "She bakes bread as a means ........ making an extra income.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "A",
+      "questionNumber": 2,
+      "options": [
+        "A. for",
+        "B. in",
+        "C. to",
+        "D. of"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q3",
+      "questionText": "Deon said he heard the parrot .....",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "A",
+      "questionNumber": 3,
+      "options": [
+        "A. sing",
+        "B. sang",
+        "C. sung",
+        "D. to sing"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q4",
+      "questionText": "People who live in unhygienic environments easily ... Cholera.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "A",
+      "questionNumber": 4,
+      "options": [
+        "A. catch",
+        "B. attract",
+        "C. capture",
+        "D. contract"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q5",
+      "questionText": "There is ... water in the fridge.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "A",
+      "questionNumber": 5,
+      "options": [
+        "A. a few",
+        "B. few",
+        "C. a lot",
+        "D. a little"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q6",
+      "questionText": "Remy looks forward to .... Jane at the party.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "A",
+      "questionNumber": 6,
+      "options": [
+        "A. seeing",
+        "B. see",
+        "C. have been seeing",
+        "D. be seeing"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q7",
+      "questionText": "The students did not give any reason ...... being late",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "A",
+      "questionNumber": 7,
+      "options": [
+        "A. to",
+        "B. of",
+        "C. for",
+        "D. in"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q8",
+      "questionText": "What ..... Kwadwo and Adwoa doing when you left the shop?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "A",
+      "questionNumber": 8,
+      "options": [
+        "A. are",
+        "B. were",
+        "C. was",
+        "D. is"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q9",
+      "questionText": "Selfish people always consider .... first.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "A",
+      "questionNumber": 9,
+      "options": [
+        "A. herself",
+        "B. ourselves",
+        "C. myself",
+        "D. themselves"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q10",
+      "questionText": "Enyonam asked her friend to ..... her a pen.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "A",
+      "questionNumber": 10,
+      "options": [
+        "A. lend",
+        "B. spare",
+        "C. borrow",
+        "D. excuse"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q11",
+      "questionText": "The accident occurred ...... the driver's mistakes.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "A",
+      "questionNumber": 11,
+      "options": [
+        "A. from",
+        "B. on",
+        "C. through",
+        "D. by"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q12",
+      "questionText": "I know you are ......, Esi.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "A",
+      "questionNumber": 12,
+      "options": [
+        "A. taller",
+        "B. tallest",
+        "C. the taller",
+        "D. the tall"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q13",
+      "questionText": "Akesi's mother was not satisfied ... his explanation.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "A",
+      "questionNumber": 13,
+      "options": [
+        "A. in",
+        "B. to",
+        "C. with",
+        "D. on"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q14",
+      "questionText": "I have been in this country ....... three years.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "A",
+      "questionNumber": 14,
+      "options": [
+        "A. through",
+        "B. within",
+        "C. for",
+        "D. since"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q15",
+      "questionText": "Their gardener was ..... old to work.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "A",
+      "questionNumber": 15,
+      "options": [
+        "A. even",
+        "B. so",
+        "C. too",
+        "D. very"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q16",
+      "questionText": "Her ambition is to own a private jet.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "B",
+      "questionNumber": 16,
+      "options": [
+        "A. target",
+        "B. joy",
+        "C. plan",
+        "D. desire"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q17",
+      "questionText": "Have you enough money to buy a house?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "B",
+      "questionNumber": 17,
+      "options": [
+        "A. plenty",
+        "B. much",
+        "C. sufficient",
+        "D. full"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q18",
+      "questionText": "Mr Nunyah slaughtered some of his bulls.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "B",
+      "questionNumber": 18,
+      "options": [
+        "A. killed",
+        "B. treated",
+        "C. examined",
+        "D. castrated"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q19",
+      "questionText": "Soraya is very lively today.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "B",
+      "questionNumber": 19,
+      "options": [
+        "A. smart",
+        "B. active",
+        "C. friendly",
+        "D. serious"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q20",
+      "questionText": "The welfare of their students should be the concern of teachers.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "B",
+      "questionNumber": 20,
+      "options": [
+        "A. wealth",
+        "B. happiness",
+        "C. well-being",
+        "D. growth"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q21",
+      "questionText": "Paul shed crocodile tears when his friend failed the exam. This means that Paul",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "C",
+      "questionNumber": 21,
+      "options": [
+        "A. was genuinely sorry for his friend.",
+        "B. felt very sad but did not cry.",
+        "C. pretended he was sorry for his friend.",
+        "D. cried uncontrollably."
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q22",
+      "questionText": "When the old woman heard the sound of the gun-shots, her hair stood on end. This means that the old woman",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "C",
+      "questionNumber": 22,
+      "options": [
+        "A. started crying.",
+        "B. became inactive.",
+        "C. was frightened.",
+        "D. was worried."
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q23",
+      "questionText": "That tailor always takes pains over his sewing. This means that the tailor",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "C",
+      "questionNumber": 23,
+      "options": [
+        "A. does his sewing with great care.",
+        "B. finds sewing very painful.",
+        "C. is not happy sewing.",
+        "D. is often ill and cannot sew."
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q24",
+      "questionText": "These herbs grow here in leaps and bounds. This means that the herbs grow",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "C",
+      "questionNumber": 24,
+      "options": [
+        "A. gradually and in small numbers.",
+        "B. in big circular heaps.",
+        "C. in both cold and hot weather.",
+        "D. quickly and greatly."
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q25",
+      "questionText": "Kim is full of himself. This means that Kim is",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "C",
+      "questionNumber": 25,
+      "options": [
+        "A. arrogant.",
+        "B. dangerous.",
+        "C. greedy.",
+        "D. quarrelsome."
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q26",
+      "questionText": "Evans wakes up early because he does not sleep much.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "C",
+      "questionNumber": 26,
+      "options": [
+        "A. often",
+        "B. at home",
+        "C. late",
+        "D. on his bed"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q27",
+      "questionText": "Dora was exhausted after the exercise.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "C",
+      "questionNumber": 27,
+      "options": [
+        "A. A. cheerful",
+        "B. active",
+        "C. refreshed",
+        "D. strong"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q28",
+      "questionText": "The demolition of the bridge surprised everyone.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "C",
+      "questionNumber": 28,
+      "options": [
+        "A. construction",
+        "B. creation",
+        "C. erection",
+        "D. relocation"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q29",
+      "questionText": "They said the film was ancient but I found it",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "C",
+      "questionNumber": 29,
+      "options": [
+        "A. relaxing.",
+        "B. modern.",
+        "C. difficult.",
+        "D. interesting."
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    },
+    {
+      "id": "english_2022_q30",
+      "questionText": "The animal will perish under this condition.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2022",
+      "section": "C",
+      "questionNumber": 30,
+      "options": [
+        "A. graze",
+        "B. survive",
+        "C. starve",
+        "D. remain"
+      ],
+      "correctAnswer": "A",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "Grammar"
+      ],
+      "createdBy": "admin",
+      "isActive": true
+    }
+  ]
+}

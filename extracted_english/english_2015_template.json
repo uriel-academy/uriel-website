@@ -1,0 +1,993 @@
+{
+  "year": "2015",
+  "examType": "bece",
+  "subject": "english",
+  "metadata": {
+    "totalQuestions": 36,
+    "sections": [
+      {
+        "name": "SECTION A",
+        "position": 27
+      },
+      {
+        "name": "SECTION B",
+        "position": 1833
+      },
+      {
+        "name": "SECTION C",
+        "position": 2477
+      }
+    ],
+    "extractedAt": "2025-11-11T14:26:05.965Z",
+    "needsManualReview": true,
+    "notes": "This is auto-extracted. Please review and complete missing fields."
+  },
+  "passages": [
+    {
+      "id": "english_2015_passage_1",
+      "title": "Passage 1",
+      "content": "So fair art thou my bonnie lassSo deep in luve am IAnd I will luve thee still my dearTill all the sea gang dry  The last line is a/an............A.  litotesB.  hyperboleC.  euphemismD.  understatement",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "A",
+      "questionRange": [],
+      "createdBy": "auto-extract",
+      "isActive": true
+    }
+  ],
+  "questions": [
+    {
+      "id": "english_2015_q1",
+      "questionText": "Ntim's careless driving resulted............. a fatal road accident.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "A",
+      "questionNumber": 1,
+      "options": [
+        "A. in",
+        "B. to",
+        "C. into",
+        "D. with"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q2",
+      "questionText": "Abibatu takes............ her mother in many years.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "A",
+      "questionNumber": 2,
+      "options": [
+        "A. by",
+        "B. on",
+        "C. up",
+        "D. after"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q3",
+      "questionText": "Araba goes to school............ foot.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "A",
+      "questionNumber": 3,
+      "options": [
+        "A. by",
+        "B. in",
+        "C. on",
+        "D. with"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q4",
+      "questionText": "The doctor advised the patient to abstain............ smoking.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "A",
+      "questionNumber": 4,
+      "options": [
+        "A. by",
+        "B. from",
+        "C. upon",
+        "D. with"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q5",
+      "questionText": "The relationship............. group A and group B is cordial.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "A",
+      "questionNumber": 5,
+      "options": [
+        "A. of",
+        "B. with",
+        "C. among",
+        "D. between"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q6",
+      "questionText": "Edwin prefers fish............ meat.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "A",
+      "questionNumber": 6,
+      "options": [
+        "A. to",
+        "B. for",
+        "C. from",
+        "D. than"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q7",
+      "questionText": "His neighbor complained that the radio was............ loud.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "A",
+      "questionNumber": 7,
+      "options": [
+        "A. far",
+        "B. too",
+        "C. much",
+        "D. enough"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q8",
+      "questionText": "The white horse is............ than the black one.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "A",
+      "questionNumber": 8,
+      "options": [
+        "A. the fastest",
+        "B. very faster",
+        "C. much the faster",
+        "D. very much faster"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q9",
+      "questionText": "I............ him; then I changed my mind.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "A",
+      "questionNumber": 9,
+      "options": [
+        "A. had told",
+        "B. have told",
+        "C. am telling",
+        "D. was going to tell"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q10",
+      "questionText": "By the end of the day I............ the house.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "A",
+      "questionNumber": 10,
+      "options": [
+        "A. shall paint",
+        "B. shall be painting",
+        "C. shall have painted",
+        "D. shall have been painting"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q11",
+      "questionText": "You are a member of the society,............?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "A",
+      "questionNumber": 11,
+      "options": [
+        "A. isn't it",
+        "B. are you",
+        "C. aren't you",
+        "D. weren't you"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q12",
+      "questionText": "Our captain is not a very reliable person,............?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "A",
+      "questionNumber": 12,
+      "options": [
+        "A. is he",
+        "B. isn't he",
+        "C. does he",
+        "D. doesn't he"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q13",
+      "questionText": "You have been to Lagos,.............",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "A",
+      "questionNumber": 13,
+      "options": [
+        "A. did you",
+        "B. have you",
+        "C. didn't you",
+        "D. haven't you"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q14",
+      "questionText": "Joseph is the............ in the class.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "A",
+      "questionNumber": 14,
+      "options": [
+        "A. cleverer",
+        "B. cleverest",
+        "C. more clever",
+        "D. very clever"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q15",
+      "questionText": "The triplets love............ very much.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "A",
+      "questionNumber": 15,
+      "options": [
+        "A. each other",
+        "B. themselves",
+        "C. their selves",
+        "D. their selves"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q16",
+      "questionText": "............ the watch is old, it is still working.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "B",
+      "questionNumber": 16,
+      "options": [
+        "A. Since",
+        "B. Besides",
+        "C. Although",
+        "D. However"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q17",
+      "questionText": "The students set............ early on their journey.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "B",
+      "questionNumber": 17,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q19",
+      "questionText": "As john waited for the interview, he was very nervous.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "B",
+      "questionNumber": 19,
+      "options": [
+        "A. sad",
+        "B. afraid",
+        "C. alarmed",
+        "D. uneasy"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q20",
+      "questionText": "Patricia was satisfied with the result of the examination.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "B",
+      "questionNumber": 20,
+      "options": [
+        "A. pleased",
+        "B. convinced",
+        "C. pampered",
+        "D. encouraged"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q21",
+      "questionText": "The attitude of the gateman was very hostile.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "B",
+      "questionNumber": 21,
+      "options": [
+        "A. harsh",
+        "B. strange",
+        "C. abusive",
+        "D. unfriendly"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q22",
+      "questionText": "It was not his intension to hurt his younger brother.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "B",
+      "questionNumber": 22,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q24",
+      "questionText": "Bob lives within a stone's throw of the Jubilee Park. This means that Bob",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "B",
+      "questionNumber": 24,
+      "options": [
+        "A. travels on the stony road",
+        "B. live in s hut in the park",
+        "C. live very close to the park",
+        "D. often throws stone at the park"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q25",
+      "questionText": "When James heard the sound of gun-shot, his hair stood on end. This means that James..........",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "B",
+      "questionNumber": 25,
+      "options": [
+        "A. was worried.",
+        "B. started crying.",
+        "C. was frightened.",
+        "D. became inactive."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q26",
+      "questionText": "Mary has gone to cheer up her friend. This means that Mary has gone to..........",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "B",
+      "questionNumber": 26,
+      "options": [
+        "A. shout at her",
+        "B. give her gifts",
+        "C. tell her stories",
+        "D. make her happy"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q27",
+      "questionText": "The teacher's abrupt question threw the pupil off balance. This means that the pupil was..........",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "B",
+      "questionNumber": 27,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q29",
+      "questionText": "Imported rice is expensive these days.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "B",
+      "questionNumber": 29,
+      "options": [
+        "A. free",
+        "B. cheap",
+        "C. testy",
+        "D. scarce"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q30",
+      "questionText": "The student was condemned for these days.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "B",
+      "questionNumber": 30,
+      "options": [
+        "A. cheered",
+        "B. praised",
+        "C. rewarded",
+        "D. recommended"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q31",
+      "questionText": "Although he had applied for a permanentpost, he was only given a............ one.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "B",
+      "questionNumber": 31,
+      "options": [
+        "A. useful",
+        "B. boring",
+        "C. labouring",
+        "D. temporary"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q32",
+      "questionText": "Some people pay much attention to their physical needs.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "B",
+      "questionNumber": 32,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q34",
+      "questionText": "The main female character in a play is............",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "B",
+      "questionNumber": 34,
+      "options": [
+        "A. hero",
+        "B. chorus",
+        "C. heroine",
+        "D. persona"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q35",
+      "questionText": "Expressions that appeal to the senses are collectively called............",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "B",
+      "questionNumber": 35,
+      "options": [
+        "A. irony",
+        "B. device",
+        "C. pictures",
+        "D. imagery"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q36",
+      "questionText": "The purpose of a comic relief is to............",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "B",
+      "questionNumber": 36,
+      "options": [
+        "A. reduce tension",
+        "B. teach a moral lesson",
+        "C. set a moral standard",
+        "D. compound a character's problems"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q37",
+      "questionText": "A play is better enjoyed when............",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "B",
+      "questionNumber": 37,
+      "options": [
+        "A. acted",
+        "B. read",
+        "C. discussed",
+        "D. memorized"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q38",
+      "questionText": "A narrative poem usually............",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "B",
+      "questionNumber": 38,
+      "options": [
+        "A. praises actions",
+        "B. tells a story",
+        "C. mourns the dead",
+        "D. condemns actions"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q39",
+      "questionText": "Read the following extract below and answer question below..\n\nSo fair art thou my bonnie lassSo deep in luve am IAnd I will luve thee still my dearTill all the sea gang dry\n\nThe last line is a/an............",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "B",
+      "questionNumber": 39,
+      "options": [
+        "A. litotes",
+        "B. hyperbole",
+        "C. euphemism",
+        "D. understatement"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2015_q40",
+      "questionText": "Read the followimg extract below and answer question below..\n\nSo fair art thou my bonnie lassSo deep in luve am IAnd I will luve thee still my dearTill all the sea gang dry\n\nThe rhyme scheme of the stanza is............",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2015",
+      "section": "B",
+      "questionNumber": 40,
+      "options": [
+        "A. abcd",
+        "B. abca",
+        "C. abcb",
+        "D. abba"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    }
+  ]
+}

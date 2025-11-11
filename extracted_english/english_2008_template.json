@@ -1,0 +1,925 @@
+{
+  "year": "2008",
+  "examType": "bece",
+  "subject": "english",
+  "metadata": {
+    "totalQuestions": 34,
+    "sections": [
+      {
+        "name": "SECTION B",
+        "position": 4210
+      },
+      {
+        "name": "SECTION C",
+        "position": 4858
+      }
+    ],
+    "extractedAt": "2025-11-11T14:26:04.304Z",
+    "needsManualReview": true,
+    "notes": "This is auto-extracted. Please review and complete missing fields."
+  },
+  "passages": [
+    {
+      "id": "english_2008_passage_1",
+      "title": "Passage 1",
+      "content": "When were the residential structures built at Kpota?A.  When the hospital was begun.B.  Long before the hospital was started.C.  After the hospital had been built.D.  They were built together with the hospital.",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "A",
+      "questionRange": [],
+      "createdBy": "auto-extract",
+      "isActive": true
+    }
+  ],
+  "questions": [
+    {
+      "id": "english_2008_q1",
+      "questionText": "When were the residential structures built at Kpota?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "A",
+      "questionNumber": 1,
+      "options": [
+        "A. When the hospital was begun.",
+        "B. Long before the hospital was started.",
+        "C. After the hospital had been built.",
+        "D. They were built together with the hospital."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q2",
+      "questionText": "Dr. Grant did not give the plan to Mr. Akpaloo because",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "A",
+      "questionNumber": 2,
+      "options": [
+        "A. the houses belonged to him.",
+        "B. Mr. Akpaloo can make a design for himself.",
+        "C. it was not a wise thing to do.",
+        "D. the caretaker had the plan."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q3",
+      "questionText": "What did Mr. Akpaloo do when he was ready to build a house? He",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "A",
+      "questionNumber": 3,
+      "options": [
+        "A. made a sketch of the building.",
+        "B. sent a plan to Dr. Grant.",
+        "C. looked for the plan of the house.",
+        "D. made sure he had enough money."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q4",
+      "questionText": "The word magnificent means",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "A",
+      "questionNumber": 4,
+      "options": [
+        "A. massive.",
+        "B. beautiful.",
+        "C. good.",
+        "D. expensive."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q5",
+      "questionText": "... One particular cluster of houses took the fancy of Mr. Akpaloo ... This means Mr. Akpaloo",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "A",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q7",
+      "questionText": "What is the genie?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "A",
+      "questionNumber": 7,
+      "options": [
+        "A. A big fish",
+        "B. A copper pot",
+        "C. Smoke",
+        "D. A spirit"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q8",
+      "questionText": "The word captivity in the passage, means",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "A",
+      "questionNumber": 8,
+      "options": [
+        "A. loss.",
+        "B. birth.",
+        "C. imprisonment.",
+        "D. defeat."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q9",
+      "questionText": "How many times did the genie swear?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "A",
+      "questionNumber": 9,
+      "options": [
+        "A. Once",
+        "B. Twice",
+        "C. Three times",
+        "D. Four times"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q10",
+      "questionText": "According to the passage, the",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "A",
+      "questionNumber": 10,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q12",
+      "questionText": "The talented footballer scored three goals.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "A",
+      "questionNumber": 12,
+      "options": [
+        "A. trained",
+        "B. serious",
+        "C. gifted",
+        "D. skilled"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q13",
+      "questionText": "Araba was saddened because she failed to win the beauty contest.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "A",
+      "questionNumber": 13,
+      "options": [
+        "A. furious",
+        "B. amazed",
+        "C. excited",
+        "D. sorrowful"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q14",
+      "questionText": "Charles behaved in an unruly manner towards the teacher.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "A",
+      "questionNumber": 14,
+      "options": [
+        "A. impolite",
+        "B. strange",
+        "C. indecent",
+        "D. wicked"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q15",
+      "questionText": "My mother is very enthusiastic about my success.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "A",
+      "questionNumber": 15,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q17",
+      "questionText": "The teacher advised us to go over our work before submitting them. This means the teacher asked us to ...... our work.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "B",
+      "questionNumber": 17,
+      "options": [
+        "A. rewrite.",
+        "B. remember.",
+        "C. repeat.",
+        "D. review."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q18",
+      "questionText": "You didn't have to be so high and mighty about your own opinion. This means",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "B",
+      "questionNumber": 18,
+      "options": [
+        "A. positive.",
+        "B. confused.",
+        "C. strong.",
+        "D. arrogant."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q19",
+      "questionText": "Mr. Ala urged Peter and Paul to mend their fences. This means Peter and Paul should",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "B",
+      "questionNumber": 19,
+      "options": [
+        "A. repair their broken fences.",
+        "B. make peace.",
+        "C. be careful.",
+        "D. defend themselves."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q20",
+      "questionText": "He was asked not to attend the party but he turned a deaf ear to the advice. This means that he ...... the advice.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "B",
+      "questionNumber": 20,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q22",
+      "questionText": "The headmaster rebuked the students who came in late.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "B",
+      "questionNumber": 22,
+      "options": [
+        "A. admitted",
+        "B. praised",
+        "C. admired",
+        "D. embraced"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q23",
+      "questionText": "Naa answered the questions with confidence.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "B",
+      "questionNumber": 23,
+      "options": [
+        "A. joy",
+        "B. firmness",
+        "C. timidity",
+        "D. uncertainty"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q24",
+      "questionText": "Judges are expected to be impartial.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "B",
+      "questionNumber": 24,
+      "options": [
+        "A. biased",
+        "B. proud",
+        "C. disrespectful",
+        "D. bold"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q25",
+      "questionText": "Our father advised us not to exalt ourselves.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "B",
+      "questionNumber": 25,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q27",
+      "questionText": "If Kofi ...... me, I would have helped him.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "B",
+      "questionNumber": 27,
+      "options": [
+        "A. had asked",
+        "B. asks",
+        "C. has asked",
+        "D. asked"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q28",
+      "questionText": "Let's leave now, Akosua, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "B",
+      "questionNumber": 28,
+      "options": [
+        "A. may we",
+        "B. can we",
+        "C. must we",
+        "D. shall we"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q29",
+      "questionText": "Adjo is ...... young to marry.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "B",
+      "questionNumber": 29,
+      "options": [
+        "A. so",
+        "B. very",
+        "C. too",
+        "D. much"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q30",
+      "questionText": "Give that book of ...... to Mansah.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "B",
+      "questionNumber": 30,
+      "options": [
+        "A. their",
+        "B. yours",
+        "C. my",
+        "D. your's"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q31",
+      "questionText": "...... the warning of the weatherman, the fishermen went to sea.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "B",
+      "questionNumber": 31,
+      "options": [
+        "A. In spite of",
+        "B. Apart from",
+        "C. In case of",
+        "D. Instead of"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q32",
+      "questionText": "We've been living here ...... 2001.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "B",
+      "questionNumber": 32,
+      "options": [
+        "A. since",
+        "B. by",
+        "C. in",
+        "D. for"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q33",
+      "questionText": "Kofi told the court that he had met the suspect two days ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "B",
+      "questionNumber": 33,
+      "options": [
+        "A. before",
+        "B. ago",
+        "C. now",
+        "D. then"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q34",
+      "questionText": "Kwame has been accused ...... stealing the money.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "B",
+      "questionNumber": 34,
+      "options": [
+        "A. with",
+        "B. for",
+        "C. of",
+        "D. on"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q35",
+      "questionText": "This is the man ...... I met at the bus stop.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "B",
+      "questionNumber": 35,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q37",
+      "questionText": "I hear the programme was interesting; I wish I ...... there.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "B",
+      "questionNumber": 37,
+      "options": [
+        "A. am",
+        "B. were",
+        "C. was",
+        "D. have been"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q38",
+      "questionText": "Our pastor is now the ...... senior of the pastors in the church.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "B",
+      "questionNumber": 38,
+      "options": [
+        "A. much",
+        "B. more",
+        "C. most",
+        "D. far"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q39",
+      "questionText": "I prefer oranges ...... mangoes.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "B",
+      "questionNumber": 39,
+      "options": [
+        "A. to",
+        "B. than",
+        "C. against",
+        "D. from"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2008_q40",
+      "questionText": "I hope the team ...... perform better next year.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2008",
+      "section": "B",
+      "questionNumber": 40,
+      "options": [
+        "A. would",
+        "B. will",
+        "C. should",
+        "D. shall"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    }
+  ]
+}

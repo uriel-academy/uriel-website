@@ -1,0 +1,957 @@
+{
+  "year": "1994",
+  "examType": "bece",
+  "subject": "english",
+  "metadata": {
+    "totalQuestions": 35,
+    "sections": [
+      {
+        "name": "SECTION B",
+        "position": 4831
+      },
+      {
+        "name": "SECTION C",
+        "position": 5457
+      }
+    ],
+    "extractedAt": "2025-11-11T14:26:01.372Z",
+    "needsManualReview": true,
+    "notes": "This is auto-extracted. Please review and complete missing fields."
+  },
+  "passages": [
+    {
+      "id": "english_1994_passage_1",
+      "title": "Passage 1",
+      "content": "Why did men not complain about their condition? Because they ......A.  thought fire was too hot.B.  were afraid of Eagle.C.  were satisfied with what they had.D.  enjoyed darkness.E.  did not like water.",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "A",
+      "questionRange": [],
+      "createdBy": "auto-extract",
+      "isActive": true
+    }
+  ],
+  "questions": [
+    {
+      "id": "english_1994_q1",
+      "questionText": "Why did men not complain about their condition? Because they ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "A",
+      "questionNumber": 1,
+      "options": [
+        "A. thought fire was too hot.",
+        "B. were afraid of Eagle.",
+        "C. were satisfied with what they had.",
+        "D. enjoyed darkness.E.  did not like water."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q2",
+      "questionText": "Crow released the stolen treasure to the world in the following order:",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "A",
+      "questionNumber": 2,
+      "options": [
+        "A. sun, moon, water, fire",
+        "B. sun, fire, water, moon",
+        "C. moon, water, fire, sun",
+        "D. sun, water, moon, fireE.  sun, moon, fire, water"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q3",
+      "questionText": "Which of the following actions was a deliberate one by Crow? The ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "A",
+      "questionNumber": 3,
+      "options": [
+        "A. dropping of water to the ground",
+        "B. appearance of violent winds",
+        "C. burning of his beak",
+        "D. hanging of the sun in the skyE.  blowing of smoke over his feathers"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q4",
+      "questionText": "Thrilled in the passage means ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "A",
+      "questionNumber": 4,
+      "options": [
+        "A. afraid.",
+        "B. excited.",
+        "C. surprised.",
+        "D. thankful.E.  popular."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q5",
+      "questionText": "Eagle's action can best be described as",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "A",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q7",
+      "questionText": "The handsome stranger stopped at the writer's house because ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "A",
+      "questionNumber": 7,
+      "options": [
+        "A. he did not know the way to his village.",
+        "B. he was hungry.",
+        "C. it was very late in the night.",
+        "D. there was no transport.E.  he wanted to meet her family."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q8",
+      "questionText": "Their customary generosity in the passage tell us that the parents were usually ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "A",
+      "questionNumber": 8,
+      "options": [
+        "A. proud.",
+        "B. strict.",
+        "C. attentive.",
+        "D. kind.E.  inquisitive."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q9",
+      "questionText": "How many people had their meal in the dining room?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "A",
+      "questionNumber": 9,
+      "options": [
+        "A. four",
+        "B. five",
+        "C. six",
+        "D. sevenE.  eight"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q10",
+      "questionText": "Which of the following is true according to the order in which the roasted chicken was shared in the passage?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "A",
+      "questionNumber": 10,
+      "options": [
+        "A. head, feet, wings, body, neck",
+        "B. head, wings, neck, body, feet",
+        "C. head, neck, wings, feet, body",
+        "D. head, neck, feet, wings, bodyE.  head, feet, wings, neck, body"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q11",
+      "questionText": "Mr. Anang's behaviour can best be described as ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "A",
+      "questionNumber": 11,
+      "options": [
+        "A. mean and clever.",
+        "B. talkative but generous.",
+        "C. honest and generous.",
+        "D. jovial but proud.E.  interesting but fooling."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q12",
+      "questionText": "How did the writer's family respond to the way the roasted chicken was shared? They ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "A",
+      "questionNumber": 12,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q14",
+      "questionText": "There is no need to do rash work.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "A",
+      "questionNumber": 14,
+      "options": [
+        "A. speedy",
+        "B. lazy",
+        "C. busy",
+        "D. hastyE.  funny"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q15",
+      "questionText": "Kofi spent all his time staring at the madman.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "A",
+      "questionNumber": 15,
+      "options": [
+        "A. smiling",
+        "B. shouting",
+        "C. laughing",
+        "D. hootingE.  gazing"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q16",
+      "questionText": "This mountain is rather too risky to climb",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "B",
+      "questionNumber": 16,
+      "options": [
+        "A. rough",
+        "B. steep",
+        "C. difficult",
+        "D. dangerousE.  broad"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q17",
+      "questionText": "This thief will have to plead for mercy.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "B",
+      "questionNumber": 17,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q19",
+      "questionText": "Even though I don't talk to her, I give the devil his due. This means I will ...... her.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "B",
+      "questionNumber": 19,
+      "options": [
+        "A. agree with",
+        "B. confess to",
+        "C. reward",
+        "D. be kind toE.  forgive"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q20",
+      "questionText": "Kwasi is head over heels in love with Ama. This means ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "B",
+      "questionNumber": 20,
+      "options": [
+        "A. Kwasi looks at his heels when he sees Ama.",
+        "B. Kwasi's love for Ama is abnormal.",
+        "C. Kwasi can't control himself when he sees Ama.",
+        "D. Kwasi is deeply in love with Ama.E.  Kwasi has hurt his head and heel by following Ama."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q21",
+      "questionText": "The chief told his linguist not to beat about the bush. This means the linguist must ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "B",
+      "questionNumber": 21,
+      "options": [
+        "A. not stammer.",
+        "B. go straight to the point.",
+        "C. not enter the bush.",
+        "D. conclude the case.E.  clear the bush."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q22",
+      "questionText": "When mother returned, Kwame let the cat out of the bag. This means that Kwame ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "B",
+      "questionNumber": 22,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q24",
+      "questionText": "This baby is very energetic for his age.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "B",
+      "questionNumber": 24,
+      "options": [
+        "A. dull",
+        "B. simple",
+        "C. bulky",
+        "D. tall"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q25",
+      "questionText": "The flower is made from artificial materials.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "B",
+      "questionNumber": 25,
+      "options": [
+        "A. natural",
+        "B. preserved",
+        "C. wonderful",
+        "D. new"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q26",
+      "questionText": "All the accused persons were convicted.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "B",
+      "questionNumber": 26,
+      "options": [
+        "A. executed",
+        "B. identified",
+        "C. addressed",
+        "D. freed"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q27",
+      "questionText": "There are guards on our border because the government wants to eliminate smuggling.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "B",
+      "questionNumber": 27,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q29",
+      "questionText": "We should always be proud ...... our motherland.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "B",
+      "questionNumber": 29,
+      "options": [
+        "A. in",
+        "B. of",
+        "C. for",
+        "D. by"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q30",
+      "questionText": "...... hearing the news, he jumped high for joy.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "B",
+      "questionNumber": 30,
+      "options": [
+        "A. Over",
+        "B. On",
+        "C. With",
+        "D. In"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q31",
+      "questionText": "A thief was caught ...... the house yesterday.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "B",
+      "questionNumber": 31,
+      "options": [
+        "A. through",
+        "B. up",
+        "C. outside",
+        "D. over"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q32",
+      "questionText": "I object ...... your joining our school team.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "B",
+      "questionNumber": 32,
+      "options": [
+        "A. to",
+        "B. by",
+        "C. at",
+        "D. on"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q33",
+      "questionText": "The lady did not see ...... in the house.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "B",
+      "questionNumber": 33,
+      "options": [
+        "A. somebody",
+        "B. no one",
+        "C. anybody",
+        "D. someone"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q34",
+      "questionText": "This is the book ...... I picked from the floor.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "B",
+      "questionNumber": 34,
+      "options": [
+        "A. whom",
+        "B. whose",
+        "C. what",
+        "D. which"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q35",
+      "questionText": "The man ...... house was burnt down is in hospital.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "B",
+      "questionNumber": 35,
+      "options": [
+        "A. who's",
+        "B. whom",
+        "C. whose",
+        "D. which"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q36",
+      "questionText": "...... boys are very happy with the toys.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "B",
+      "questionNumber": 36,
+      "options": [
+        "A. They",
+        "B. These",
+        "C. That",
+        "D. This"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q37",
+      "questionText": "Have a bottle of coke, will you? No, ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "B",
+      "questionNumber": 37,
+      "options": [
+        "A. I don't",
+        "B. please",
+        "C. thank you",
+        "D. I won't"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q38",
+      "questionText": "Let's go out and play, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "B",
+      "questionNumber": 38,
+      "options": [
+        "A. shall we",
+        "B. do we",
+        "C. will we",
+        "D. would we"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q39",
+      "questionText": "Kofi will not meet his father at home if he ...... not here by 5:00 p.m.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "B",
+      "questionNumber": 39,
+      "options": [
+        "A. was",
+        "B. were",
+        "C. isn't",
+        "D. is"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1994_q40",
+      "questionText": "The baby needs a bath, doesn't it? ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1994",
+      "section": "B",
+      "questionNumber": 40,
+      "options": [
+        "A. no, it needs",
+        "B. no, it does",
+        "C. yes, it doesn't",
+        "D. yes, it does"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    }
+  ]
+}

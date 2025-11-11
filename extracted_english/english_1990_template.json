@@ -1,0 +1,957 @@
+{
+  "year": "1990",
+  "examType": "bece",
+  "subject": "english",
+  "metadata": {
+    "totalQuestions": 35,
+    "sections": [
+      {
+        "name": "SECTION B",
+        "position": 4868
+      },
+      {
+        "name": "SECTION C",
+        "position": 5493
+      }
+    ],
+    "extractedAt": "2025-11-11T14:26:00.292Z",
+    "needsManualReview": true,
+    "notes": "This is auto-extracted. Please review and complete missing fields."
+  },
+  "passages": [
+    {
+      "id": "english_1990_passage_1",
+      "title": "Passage 1",
+      "content": "The classroom was quiet because the pupils ......A.  wanted the lesson to end quickly.B.  did not understand the lesson.C.  were preparing for their final examination.D.  had stolen some pawpaw.E.  had heard that Mr. Odumba had fallen down.",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "A",
+      "questionRange": [],
+      "createdBy": "auto-extract",
+      "isActive": true
+    }
+  ],
+  "questions": [
+    {
+      "id": "english_1990_q1",
+      "questionText": "If he comes, I shall be happy;2. If you abused him, he would beat you;3. Amo could have won the race if he had trained harderWe all found it difficult to understand the formula for each sentence. We had problems with the tenses but as our final examinations were so near we really had to master them. We were, however, interrupted by the noise of a bucket and heavy footsteps on the veranda. Then Mr. Odumba's big head came round the door.Sorry to interrupt, he told our teacher. We all looked up, highly pleased at the welcomed interruption. Who knows, Mr. Odumba might fall down again and what could be more pleasing than that in the middle of a difficult lesson?\"Can I have a word with you alone, please?\" Mr. Odumba asked our teacher who followed him to the veranda. Mr. Odumba, looking uncomfortable, took a deep breath and said that some pawpaw he had marked in the morning had been stolen from his garden.Finally, he asked our teacher, \"would you mind if I went round to find out which of your pupils\" hands smell of pawpaw?1.\n\nThe classroom was quiet because the pupils ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "A",
+      "questionNumber": 1,
+      "options": [
+        "A. wanted the lesson to end quickly.",
+        "B. did not understand the lesson.",
+        "C. were preparing for their final examination.",
+        "D. had stolen some pawpaw.E.  had heard that Mr. Odumba had fallen down."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q2",
+      "questionText": "Mr. Odumba came to the school ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "A",
+      "questionNumber": 2,
+      "options": [
+        "A. because he wanted to beat one of the pupils.",
+        "B. to search for those who had stolen his pawpaw.",
+        "C. to return the bucket to the school.",
+        "D. to converse with one of the teachers.E.  to learn about 'if' clauses."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q3",
+      "questionText": "How did Mr. Odumba's visit to the school affect the pupils?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "A",
+      "questionNumber": 3,
+      "options": [
+        "A. They were frightened",
+        "B. He disturbed them",
+        "C. They were happy",
+        "D. They felt sorry for himE.  They were ashamed"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q4",
+      "questionText": "Which of the following statements is not true according to the passage?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "A",
+      "questionNumber": 4,
+      "options": [
+        "A. The pupils were weak in grammar",
+        "B. Mr. Odumba fell down once",
+        "C. The lesson was not understood",
+        "D. The pupils' hands smelt of pawpawE.  Mr. Odumba kept a garden"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q5",
+      "questionText": "Mr. Odumba's big head came round the door. This means Mr. Odumba's head",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "A",
+      "questionNumber": 5,
+      "options": [
+        "A. appeared at the entrance.",
+        "B. hit the door.",
+        "C. blocked the entrance.",
+        "D. pushed the door open.E.  turned round at the door."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q6",
+      "questionText": "The expression, Can I have a word with you? means, let me ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "A",
+      "questionNumber": 6,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q8",
+      "questionText": "The spectators thought Whisky had won the fight because he ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "A",
+      "questionNumber": 8,
+      "options": [
+        "A. had once attacked and defeated a lizard.",
+        "B. knew how to fight.",
+        "C. was able to jump higher than Sandy.",
+        "D. pushed Sandy to the ground.E.  showed his sharp teeth."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q9",
+      "questionText": "Whisky was defeated because Sandy ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "A",
+      "questionNumber": 9,
+      "options": [
+        "A. had the support of the crowd.",
+        "B. bit his legs.",
+        "C. held his throat.",
+        "D. turned the tide.E.  attacked first."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q10",
+      "questionText": "Sandy played it cool means that Sandy ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "A",
+      "questionNumber": 10,
+      "options": [
+        "A. enjoyed the fight.",
+        "B. felt very cold.",
+        "C. did not bark.",
+        "D. remained undisturbed.E.  stopped fighting."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q11",
+      "questionText": "The tide turned as used in the passage means ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "A",
+      "questionNumber": 11,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q13",
+      "questionText": "The boxer displayed a high degree of bravery in the fight.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "A",
+      "questionNumber": 13,
+      "options": [
+        "A. speed",
+        "B. cowardice",
+        "C. alertness",
+        "D. competenceE.  skill"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q14",
+      "questionText": "It is a fact that Zaibu often gives accurate answers to questions.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "A",
+      "questionNumber": 14,
+      "options": [
+        "A. long",
+        "B. silly",
+        "C. interesting",
+        "D. quickE.  wrong"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q15",
+      "questionText": "The students rejected the prefect chosen by the staff.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "A",
+      "questionNumber": 15,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q17",
+      "questionText": "\"It's only 2 o'clock, Martin. You needn't go yet\". This means that Martin ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "B",
+      "questionNumber": 17,
+      "options": [
+        "A. doesn't go out.",
+        "B. can't go yet.",
+        "C. doesn't have to go yet.",
+        "D. isn't going yet.E.  doesn't want to go."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q18",
+      "questionText": "He feared that his father would ask where he had been. This means that ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "B",
+      "questionNumber": 18,
+      "options": [
+        "A. he was afraid when his father asked him where he had been.",
+        "B. he would be afraid if his father asked him where he had been.",
+        "C. he was afraid of his father so he did not tell him where he had been.",
+        "D. he was afraid that his father would want to know where he had been.E.  he was frightened by the way his father asked him where he had been."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q19",
+      "questionText": "I don't like people who blow their own trumpet. This means I dislike people who ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "B",
+      "questionNumber": 19,
+      "options": [
+        "A. are noisy.",
+        "B. are selfish.",
+        "C. blow trumpets.",
+        "D. are quarrelsome.E.  are boastful."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q20",
+      "questionText": "If Mantey had passed the examination his father would have bought him a present. This means Mantey ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "B",
+      "questionNumber": 20,
+      "options": [
+        "A. failed the examination so he had no present.",
+        "B. did not usually do well in examination.",
+        "C. would be given a present for being successful in the examination.",
+        "D. usually received presents from his father after examinations.E.  knew that his father would buy him a present to help pass examination."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q21",
+      "questionText": "\"Put this money aside against a rainy day, Kwesi\". Kwesi is being told ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "B",
+      "questionNumber": 21,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q23",
+      "questionText": "You shouldn't work so late, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "B",
+      "questionNumber": 23,
+      "options": [
+        "A. won't you",
+        "B. do you",
+        "C. should you",
+        "D. don't you"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q24",
+      "questionText": "You'll travel by train to Kumasi, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "B",
+      "questionNumber": 24,
+      "options": [
+        "A. won't you",
+        "B. can't you",
+        "C. shouldn't you",
+        "D. wouldn't you"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q25",
+      "questionText": "You are not afraid of snakes, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "B",
+      "questionNumber": 25,
+      "options": [
+        "A. aren't you",
+        "B. are you",
+        "C. do you",
+        "D. won't you"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q26",
+      "questionText": "I can go to bed now because I ...... my assignment.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "B",
+      "questionNumber": 26,
+      "options": [
+        "A. am finishing",
+        "B. will finished",
+        "C. finished",
+        "D. have finished"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q27",
+      "questionText": "No one can be expected to ...... such bad behaviour.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "B",
+      "questionNumber": 27,
+      "options": [
+        "A. put up with",
+        "B. put in for",
+        "C. put across to",
+        "D. put down against"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q28",
+      "questionText": "I can't hear him; I wish he ...... louder.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "B",
+      "questionNumber": 28,
+      "options": [
+        "A. will speak",
+        "B. is speaking",
+        "C. would speak",
+        "D. had spoken"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q29",
+      "questionText": "If Sampson had spoken the truth the teacher ...... him.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "B",
+      "questionNumber": 29,
+      "options": [
+        "A. shouldn't have punished",
+        "B. won't have punished",
+        "C. wouldn't have punished",
+        "D. wouldn't punish"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q30",
+      "questionText": "The head teacher advised the students to ...... if they wanted to do well in their examination.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "B",
+      "questionNumber": 30,
+      "options": [
+        "A. sit back",
+        "B. sit by",
+        "C. sit on",
+        "D. sit up"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q31",
+      "questionText": "At these words, the students ...... laughter.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "B",
+      "questionNumber": 31,
+      "options": [
+        "A. burst with",
+        "B. burst into",
+        "C. burst for",
+        "D. burst in"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q32",
+      "questionText": "My uncle will go on a short course before he ...... his new job.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "B",
+      "questionNumber": 32,
+      "options": [
+        "A. takes to",
+        "B. takes up",
+        "C. takes out",
+        "D. takes in"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q33",
+      "questionText": "The prefect made the boy ...... the assembly hall.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "B",
+      "questionNumber": 33,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q35",
+      "questionText": "Everybody should have a goal in life.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "B",
+      "questionNumber": 35,
+      "options": [
+        "A. a choice",
+        "B. a skill",
+        "C. an opinion",
+        "D. an aimE.  a result"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q36",
+      "questionText": "Mr. Mensah was worn out after walking up the hill.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "B",
+      "questionNumber": 36,
+      "options": [
+        "A. tired",
+        "B. sweating",
+        "C. hungry",
+        "D. worriedE.  sleepy"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q37",
+      "questionText": "Elephants are becoming rare in some parts of Africa.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "B",
+      "questionNumber": 37,
+      "options": [
+        "A. unimportant",
+        "B. uncommon",
+        "C. unknown",
+        "D. exposedE.  destructive"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q38",
+      "questionText": "On the doctor's advice, Mr. Smith cut out smoking altogether.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "B",
+      "questionNumber": 38,
+      "options": [
+        "A. stopped",
+        "B. dismissed",
+        "C. postponed",
+        "D. interruptedE.  decreased"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q39",
+      "questionText": "The old man told us a tall story about a soldier who fought a war with a spoon.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "B",
+      "questionNumber": 39,
+      "options": [
+        "A. a sad story",
+        "B. an adventurous",
+        "C. a funny story",
+        "D. a long storyE.  an incredible story"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1990_q40",
+      "questionText": "All my clothes are outmoded.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1990",
+      "section": "B",
+      "questionNumber": 40,
+      "options": [
+        "A. worn out",
+        "B. old-fashioned",
+        "C. handmade",
+        "D. ready-madeE.  specially made"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    }
+  ]
+}

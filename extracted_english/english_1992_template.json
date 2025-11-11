@@ -1,0 +1,957 @@
+{
+  "year": "1992",
+  "examType": "bece",
+  "subject": "english",
+  "metadata": {
+    "totalQuestions": 35,
+    "sections": [
+      {
+        "name": "SECTION B",
+        "position": 4386
+      },
+      {
+        "name": "SECTION C",
+        "position": 5123
+      }
+    ],
+    "extractedAt": "2025-11-11T14:26:00.829Z",
+    "needsManualReview": true,
+    "notes": "This is auto-extracted. Please review and complete missing fields."
+  },
+  "passages": [
+    {
+      "id": "english_1992_passage_1",
+      "title": "Passage 1",
+      "content": "Njoman was on the path because he wanted to ......A.  cross the streamB.  bath in the streamC.  spy on the womenD.  meet RaginiE.  meet Putu",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "A",
+      "questionRange": [],
+      "createdBy": "auto-extract",
+      "isActive": true
+    }
+  ],
+  "questions": [
+    {
+      "id": "english_1992_q1",
+      "questionText": "Njoman was on the path because he wanted to ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "A",
+      "questionNumber": 1,
+      "options": [
+        "A. cross the stream",
+        "B. bath in the stream",
+        "C. spy on the women",
+        "D. meet RaginiE.  meet Putu"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q2",
+      "questionText": "How did Ragini behave when she was invited by Njoman?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "A",
+      "questionNumber": 2,
+      "options": [
+        "A. She pretended she was in great pain and misery.",
+        "B. She talked to the women furiously",
+        "C. She just walked off with her basket of fruits",
+        "D. She greeted the women noisilyE.  She danced about with joy"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q3",
+      "questionText": "Which of the following is not true according to the passage?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "A",
+      "questionNumber": 3,
+      "options": [
+        "A. The women teased Njoman",
+        "B. Putu held Ragini's hand",
+        "C. All the women definitely knew his reason for coming",
+        "D. Njoman waited for sometime before Ragini arrivedE.  Njoman had a secret plan to follow"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q4",
+      "questionText": "The expression pretending not to know means",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "A",
+      "questionNumber": 4,
+      "options": [
+        "A. not knowing what to do.",
+        "B. behaving well after knowing.",
+        "C. behaving as if everybody knew what to say.",
+        "D. behaving as if one did not know something was happening.E.  not knowing how to behave."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q5",
+      "questionText": "The expression feigned distress means",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "A",
+      "questionNumber": 5,
+      "options": [
+        "A. fainted upon seeing the women.",
+        "B. pretended to be upset and having pain.",
+        "C. pretended to be very hungry on seeing the fruits.",
+        "D. fell down with flushed face.E.  stood still and watched the women."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q6",
+      "questionText": "The word abductor means",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "A",
+      "questionNumber": 6,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q8",
+      "questionText": "Which of the following statements is not true according to the passage?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "A",
+      "questionNumber": 8,
+      "options": [
+        "A. Children must eat roots only",
+        "B. Old people think meat makes boys thieves",
+        "C. Children who are given milk and eggs will grow well",
+        "D. The intelligent mother has to do away with some bad traditionsE.  Grains do not contain much protein"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q9",
+      "questionText": "Cow milk is expensive means it is",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "A",
+      "questionNumber": 9,
+      "options": [
+        "A. sweet",
+        "B. white",
+        "C. good",
+        "D. strongE.  dear"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q10",
+      "questionText": "What happens to children who are not given food containing proteins regularly?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "A",
+      "questionNumber": 10,
+      "options": [
+        "A. They often become liars",
+        "B. They often become thieves",
+        "C. They often become ill",
+        "D. They should preserve traditionE.  Their traditions often help them"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q11",
+      "questionText": "What advice did the writer give to mothers?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "A",
+      "questionNumber": 11,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q13",
+      "questionText": "Sindi was brought up by a very strict woman",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "A",
+      "questionNumber": 13,
+      "options": [
+        "A. saved",
+        "B. reared",
+        "C. born",
+        "D. taughtE.  beaten"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q14",
+      "questionText": "Janet promised to attend to her mother-in-law who was ill.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "A",
+      "questionNumber": 14,
+      "options": [
+        "A. look after",
+        "B. look at",
+        "C. look into",
+        "D. look forE.  look on"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q15",
+      "questionText": "The printing company has over a thousand agents here.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "A",
+      "questionNumber": 15,
+      "options": [
+        "A. vendors",
+        "B. caretakers",
+        "C. deputies",
+        "D. correspondentsE.  representatives"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q16",
+      "questionText": "The police Inspector asked all drivers to obey the speed-limit regulations.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "B",
+      "questionNumber": 16,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q18",
+      "questionText": "Since the thief came out of prison he has turned over a new leaf. This means he has",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "B",
+      "questionNumber": 18,
+      "options": [
+        "A. changed his style of stealing",
+        "B. started growing flowers",
+        "C. changed for the better",
+        "D. grown even more stubbornE.  got a new job"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q19",
+      "questionText": "When the army stormed the village, all the inhabitants took to their heels. This means ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "B",
+      "questionNumber": 19,
+      "options": [
+        "A. the army came to the village in the storm",
+        "B. the inhabitants were frightened and stood still",
+        "C. the inhabitants had their shoes removed",
+        "D. the inhabitants danced around on their heelsE.  the inhabitants were frightened and so ran away"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q20",
+      "questionText": "Berko is in two minds about resigning from his job. This means that Berko has",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "B",
+      "questionNumber": 20,
+      "options": [
+        "A. not really decided to resign",
+        "B. written his resignation letter",
+        "C. decided not to resign",
+        "D. withdrawn his resignation letterE.  been advised to resign"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q21",
+      "questionText": "The teacher advised Kofi not to beat about the bush. This means Kofi was asked to ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "B",
+      "questionNumber": 21,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q23",
+      "questionText": "The police officer was harsh on the criminal",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "B",
+      "questionNumber": 23,
+      "options": [
+        "A. soft to",
+        "B. lenient with",
+        "C. mild with",
+        "D. cruel toE.  rough"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q24",
+      "questionText": "Musa was arrested for printing counterfeit cedi notes",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "B",
+      "questionNumber": 24,
+      "options": [
+        "A. correct",
+        "B. new",
+        "C. acceptable",
+        "D. genuineE.  fine"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q25",
+      "questionText": "My father was a very stout man",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "B",
+      "questionNumber": 25,
+      "options": [
+        "A. handsome",
+        "B. short",
+        "C. lean",
+        "D. illE.  weak"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q26",
+      "questionText": "I agreed to everything Lucy said.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "B",
+      "questionNumber": 26,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q28",
+      "questionText": "Kwasi, you are coming to see me tomorrow, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "B",
+      "questionNumber": 28,
+      "options": [
+        "A. isn't it",
+        "B. aren't you",
+        "C. won't you",
+        "D. don't you"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q29",
+      "questionText": "If Mary had known she wouldn't have come, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "B",
+      "questionNumber": 29,
+      "options": [
+        "A. wasn't it",
+        "B. hadn't she",
+        "C. did she",
+        "D. would she"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q30",
+      "questionText": "She dances so beautifully, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "B",
+      "questionNumber": 30,
+      "options": [
+        "A. not so",
+        "B. can't she",
+        "C. doesn't she",
+        "D. isn't it"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q31",
+      "questionText": "JSS students work hard, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "B",
+      "questionNumber": 31,
+      "options": [
+        "A. don't they",
+        "B. shouldn't they",
+        "C. can't they",
+        "D. haven't they"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q32",
+      "questionText": "The chief with his linguists ...... coming to the durbar ground.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "B",
+      "questionNumber": 32,
+      "options": [
+        "A. is",
+        "B. are",
+        "C. were",
+        "D. have been"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q33",
+      "questionText": "Most people find it hard to live up ...... their ideals.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "B",
+      "questionNumber": 33,
+      "options": [
+        "A. by",
+        "B. to",
+        "C. for",
+        "D. with"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q34",
+      "questionText": "The football match was put ...... until next week.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "B",
+      "questionNumber": 34,
+      "options": [
+        "A. in",
+        "B. out",
+        "C. off",
+        "D. away"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q35",
+      "questionText": "These days, students are not keen ...... improving their English.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "B",
+      "questionNumber": 35,
+      "options": [
+        "A. with",
+        "B. of",
+        "C. about",
+        "D. on"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q36",
+      "questionText": "When the plane arrived Kofi ...... nowhere to be found.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "B",
+      "questionNumber": 36,
+      "options": [
+        "A. will be",
+        "B. had been",
+        "C. was",
+        "D. would have been"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q37",
+      "questionText": "The boys swore that the books were ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "B",
+      "questionNumber": 37,
+      "options": [
+        "A. his",
+        "B. theirs",
+        "C. their's",
+        "D. theirs'"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q38",
+      "questionText": "Unless your father reports at the police station we ...... all be whipped",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "B",
+      "questionNumber": 38,
+      "options": [
+        "A. will",
+        "B. shall",
+        "C. should",
+        "D. would"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q39",
+      "questionText": "The bell will go ...... the next ten minutes",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "B",
+      "questionNumber": 39,
+      "options": [
+        "A. between",
+        "B. under",
+        "C. from within",
+        "D. within"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1992_q40",
+      "questionText": "The heavy rains have ...... early this year.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1992",
+      "section": "B",
+      "questionNumber": 40,
+      "options": [
+        "A. set in",
+        "B. set out",
+        "C. set up",
+        "D. set on"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    }
+  ]
+}

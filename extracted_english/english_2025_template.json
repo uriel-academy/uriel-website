@@ -1,0 +1,739 @@
+{
+  "year": "2025",
+  "examType": "bece",
+  "subject": "english",
+  "metadata": {
+    "totalQuestions": 27,
+    "sections": [],
+    "extractedAt": "2025-11-11T14:26:07.907Z",
+    "needsManualReview": true,
+    "notes": "This is auto-extracted. Please review and complete missing fields."
+  },
+  "passages": [],
+  "questions": [
+    {
+      "id": "english_2025_q1",
+      "questionText": "Our dog ...... barking since the stranger entered the house.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "A",
+      "questionNumber": 1,
+      "options": [
+        "A. has been",
+        "B. is",
+        "C. was",
+        "D. would be"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2025_q2",
+      "questionText": "Enrolment has increased ...... the new classroom was built.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "A",
+      "questionNumber": 2,
+      "options": [
+        "A. since",
+        "B. until",
+        "C. when",
+        "D. while"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2025_q3",
+      "questionText": "To ...... did you deliver the message?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "A",
+      "questionNumber": 3,
+      "options": [
+        "A. who",
+        "B. whoever",
+        "C. whom",
+        "D. whomever"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2025_q4",
+      "questionText": "Put the books on the shelf, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "A",
+      "questionNumber": 4,
+      "options": [
+        "A. do you",
+        "B. have you",
+        "C. will you",
+        "D. may you"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2025_q5",
+      "questionText": "Amina prepared a delicious meal for her ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "A",
+      "questionNumber": 5,
+      "options": [
+        "A. sisters-in-law",
+        "B. sister's-in-law",
+        "C. sisters-in-laws",
+        "D. sisters'-in-law"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2025_q6",
+      "questionText": "We always ...... the lights before going to bed.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "A",
+      "questionNumber": 6,
+      "options": [
+        "A. off",
+        "B. put off",
+        "C. put out",
+        "D. out"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2025_q7",
+      "questionText": "We saw ...... people in the room.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "A",
+      "questionNumber": 7,
+      "options": [
+        "A. a little",
+        "B. much",
+        "C. plenty",
+        "D. many"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2025_q8",
+      "questionText": "The laptop is ...... than the other two.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "A",
+      "questionNumber": 8,
+      "options": [
+        "A. expensive more rather",
+        "B. expensive rather more",
+        "C. more expensive rather",
+        "D. rather more expensive"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2025_q9",
+      "questionText": "The gardener was ..... old to work.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "A",
+      "questionNumber": 9,
+      "options": [
+        "A. even",
+        "B. so",
+        "C. too",
+        "D. very"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2025_q10",
+      "questionText": "The coach advised the two players to cooperate with ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "A",
+      "questionNumber": 10,
+      "options": [
+        "A. each other",
+        "B. each one",
+        "C. ourselves",
+        "D. themselves"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2025_q11",
+      "questionText": "If it rained, the farmer ...... his seeds.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "A",
+      "questionNumber": 11,
+      "options": [
+        "A. will have sowed",
+        "B. will sow",
+        "C. would have sowed",
+        "D. would sow"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2025_q12",
+      "questionText": "Although there were ten beautiful bags in the shop, Sandra liked ...... of them.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "A",
+      "questionNumber": 12,
+      "options": [
+        "A. both",
+        "B. each",
+        "C. neither",
+        "D. none"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2025_q13",
+      "questionText": "Selfish people always consider ...... first.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "A",
+      "questionNumber": 13,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2025_q17",
+      "questionText": "The boy's account of the incident was elaborate.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "B",
+      "questionNumber": 17,
+      "options": [
+        "A. clear.",
+        "B. detailed.",
+        "C. interesting.",
+        "D. realistic."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2025_q18",
+      "questionText": "Nobody paid any attention to the workers' demands.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "B",
+      "questionNumber": 18,
+      "options": [
+        "A. agitations.",
+        "B. complaints.",
+        "C. objections.",
+        "D. requests."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2025_q19",
+      "questionText": "It was forecast that there would be thunderstorm in the evening.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "B",
+      "questionNumber": 19,
+      "options": [
+        "A. broadcast",
+        "B. calculated",
+        "C. observed",
+        "D. predicted"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2025_q20",
+      "questionText": "Paul purposely left the door open.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "B",
+      "questionNumber": 20,
+      "options": [
+        "A. carelessly",
+        "B. hurriedly",
+        "C. intentionally",
+        "D. occasionally"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2025_q21",
+      "questionText": "On seeing the angry mob approaching the school, our school prefect told us to take to our heels. This means that the prefect told us to ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "B",
+      "questionNumber": 21,
+      "options": [
+        "A. hurry up",
+        "B. join them",
+        "C. run away",
+        "D. walk gracefully"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2025_q22",
+      "questionText": "The two boys have often been at loggerheads with each other. This means that they ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "B",
+      "questionNumber": 22,
+      "options": [
+        "A. are usually seen walking together",
+        "B. have often exchanged ideas",
+        "C. have often had strong disagreements",
+        "D. usually have the same views on issues"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2025_q23",
+      "questionText": "I learnt to paddle my own canoe. This means that I ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "B",
+      "questionNumber": 23,
+      "options": [
+        "A. am independent and need no help from others",
+        "B. do not interfere in other people's matters",
+        "C. have no help in my fishing business",
+        "D. work hard to feed myself and my family"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2025_q24",
+      "questionText": "She tried to throw dust in our eyes. This means that she tried to ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "B",
+      "questionNumber": 24,
+      "options": [
+        "A. cheat us",
+        "B. deceive us",
+        "C. fight us",
+        "D. make us blind"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2025_q25",
+      "questionText": "Aminu is full of himself. This means that Aminu is ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "B",
+      "questionNumber": 25,
+      "options": [
+        "A. arrogant",
+        "B. dangerous",
+        "C. greedy",
+        "D. quarrelsome"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2025_q26",
+      "questionText": "He loves taking hasty decisions so he never makes ...... moves.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "B",
+      "questionNumber": 26,
+      "options": [
+        "A. calculated",
+        "B. smart",
+        "C. delayed",
+        "D. final"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2025_q27",
+      "questionText": "Though we expected ......, the judge handled the case with partiality.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "B",
+      "questionNumber": 27,
+      "options": [
+        "A. fairness",
+        "B. happiness",
+        "C. patience",
+        "D. seriousness"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2025_q28",
+      "questionText": "The policeman was reported to have concealed the evidence, but ...... it to the Jury.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "B",
+      "questionNumber": 28,
+      "options": [
+        "A. disclosed",
+        "B. gathered",
+        "C. found",
+        "D. planted"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2025_q29",
+      "questionText": "The minister publicly rebukes his assistant and always ...... his secretary.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "B",
+      "questionNumber": 29,
+      "options": [
+        "A. advises",
+        "B. commends",
+        "C. embraces",
+        "D. harasses"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2025_q30",
+      "questionText": "Those children think their uncle is miserly yet he is ...... to strangers.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2025",
+      "section": "B",
+      "questionNumber": 30,
+      "options": [
+        "A. friendly",
+        "B. generous",
+        "C. strict",
+        "D. wicked"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    }
+  ]
+}

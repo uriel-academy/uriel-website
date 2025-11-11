@@ -1,0 +1,957 @@
+{
+  "year": "2006",
+  "examType": "bece",
+  "subject": "english",
+  "metadata": {
+    "totalQuestions": 35,
+    "sections": [
+      {
+        "name": "SECTION B",
+        "position": 3766
+      },
+      {
+        "name": "SECTION C",
+        "position": 4384
+      }
+    ],
+    "extractedAt": "2025-11-11T14:26:03.881Z",
+    "needsManualReview": true,
+    "notes": "This is auto-extracted. Please review and complete missing fields."
+  },
+  "passages": [
+    {
+      "id": "english_2006_passage_1",
+      "title": "Passage 1",
+      "content": "MaaTee suspended everything she was doing becauseA.  she did not believe what Amma said.B.  Amma had annoyed her.C.  She wanted to take Amma to the hospital.D.  Amma wanted to go to the hospital.",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "A",
+      "questionRange": [],
+      "createdBy": "auto-extract",
+      "isActive": true
+    }
+  ],
+  "questions": [
+    {
+      "id": "english_2006_q1",
+      "questionText": "MaaTee suspended everything she was doing because",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "A",
+      "questionNumber": 1,
+      "options": [
+        "A. she did not believe what Amma said.",
+        "B. Amma had annoyed her.",
+        "C. She wanted to take Amma to the hospital.",
+        "D. Amma wanted to go to the hospital."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q2",
+      "questionText": "The word daft in the passage means",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "A",
+      "questionNumber": 2,
+      "options": [
+        "A. disobedient.",
+        "B. good.",
+        "C. strange.",
+        "D. unintelligent."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q3",
+      "questionText": "According to the passage, Amma",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "A",
+      "questionNumber": 3,
+      "options": [
+        "A. was very ill.",
+        "B. enjoyed sweeping.",
+        "C. was ordered to go and sweep.",
+        "D. was really not ill."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q4",
+      "questionText": "From the passage, it can be said that MaaTee was a ...... mother.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "A",
+      "questionNumber": 4,
+      "options": [
+        "A. bad",
+        "B. caring",
+        "C. strong",
+        "D. weak"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q5",
+      "questionText": "Amma rushed out of the consulting room because she",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "A",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q7",
+      "questionText": "People ...... Grandpa.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "A",
+      "questionNumber": 7,
+      "options": [
+        "A. fear",
+        "B. admire",
+        "C. dislike",
+        "D. tolerate"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q8",
+      "questionText": "devoid of in the passage means",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "A",
+      "questionNumber": 8,
+      "options": [
+        "A. unless",
+        "B. despite",
+        "C. against",
+        "D. without"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q9",
+      "questionText": "According to the passage, the mirror ...... what a person is.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "A",
+      "questionNumber": 9,
+      "options": [
+        "A. reproduces",
+        "B. changes",
+        "C. enlarges",
+        "D. extends"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q10",
+      "questionText": "Grandpa advises us to be true to ourselves in order",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "A",
+      "questionNumber": 10,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q12",
+      "questionText": "The parent who donated the books to our school wants to remain anonymous.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "A",
+      "questionNumber": 12,
+      "options": [
+        "A. quiet",
+        "B. rich",
+        "C. unimportant",
+        "D. unknown"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q13",
+      "questionText": "Kofi is the most popular man in the village.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "A",
+      "questionNumber": 13,
+      "options": [
+        "A. wanted",
+        "B. respected",
+        "C. liked",
+        "D. feared"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q14",
+      "questionText": "The P.T.A meeting has been postponed.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "A",
+      "questionNumber": 14,
+      "options": [
+        "A. delayed",
+        "B. cancelled",
+        "C. announced",
+        "D. held"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q15",
+      "questionText": "Issah is gentle but his sister is arrogant.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "A",
+      "questionNumber": 15,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q17",
+      "questionText": "Fatimah warned her brother that his friend had a loose tongue. This means his friend",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "B",
+      "questionNumber": 17,
+      "options": [
+        "A. could not keep quiet.",
+        "B. could not keep secrets.",
+        "C. was a stammerer.",
+        "D. was dishonest."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q18",
+      "questionText": "Adzo's bad manners make her the black sheep of the family. This means Adzo is a",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "B",
+      "questionNumber": 18,
+      "options": [
+        "A. bully.",
+        "B. destroyer.",
+        "C. disgrace.",
+        "D. liar."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q19",
+      "questionText": "When I went to Accra, Mr. Asah put me up for the night. This means Mr. Asah",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "B",
+      "questionNumber": 19,
+      "options": [
+        "A. received me.",
+        "B. entertained me very well.",
+        "C. gave me a place to sleep.",
+        "D. was angry with me."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q20",
+      "questionText": "The Education Ministry takes the lion's share of the budget. This means that the Education Ministry",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "B",
+      "questionNumber": 20,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q22",
+      "questionText": "Abiola complained that the work was tedious.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "B",
+      "questionNumber": 22,
+      "options": [
+        "A. boring",
+        "B. dirty",
+        "C. good",
+        "D. easy"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q23",
+      "questionText": "The students rushed towards the nearest entrance.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "B",
+      "questionNumber": 23,
+      "options": [
+        "A. closure",
+        "B. opening",
+        "C. exit",
+        "D. departure"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q24",
+      "questionText": "I believe that Fusena is guilty of the crime.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "B",
+      "questionNumber": 24,
+      "options": [
+        "A. ignorant",
+        "B. aware",
+        "C. innocent",
+        "D. careless"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q25",
+      "questionText": "Mrs. Addo is our hostess for the show.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "B",
+      "questionNumber": 25,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q27",
+      "questionText": "Abukari prefers dancing ...... swimming.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "B",
+      "questionNumber": 27,
+      "options": [
+        "A. by",
+        "B. for",
+        "C. than",
+        "D. to"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q28",
+      "questionText": "All ...... you are saying is true.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "B",
+      "questionNumber": 28,
+      "options": [
+        "A. what",
+        "B. that",
+        "C. which",
+        "D. as"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q29",
+      "questionText": "My boss says you are ...... for his liking.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "B",
+      "questionNumber": 29,
+      "options": [
+        "A. slow",
+        "B. much slow",
+        "C. slower",
+        "D. too slow"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q30",
+      "questionText": "Panyin is ...... taller than Kakra.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "B",
+      "questionNumber": 30,
+      "options": [
+        "A. more",
+        "B. much",
+        "C. so",
+        "D. too"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q31",
+      "questionText": "Baby Tee has been missing ...... Saturday.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "B",
+      "questionNumber": 31,
+      "options": [
+        "A. since",
+        "B. from",
+        "C. until",
+        "D. for"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q32",
+      "questionText": "Akua could you ...... me your English book?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "B",
+      "questionNumber": 32,
+      "options": [
+        "A. lend",
+        "B. borrow",
+        "C. afford",
+        "D. buy"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q33",
+      "questionText": "Kofi insisted ...... painting the house for us.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "B",
+      "questionNumber": 33,
+      "options": [
+        "A. in",
+        "B. at",
+        "C. on",
+        "D. with"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q34",
+      "questionText": "This book is mine and that is ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "B",
+      "questionNumber": 34,
+      "options": [
+        "A. your",
+        "B. yours'",
+        "C. your's",
+        "D. yours"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q35",
+      "questionText": "If Asi had gone to Beseasi, she ...... her mother.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "B",
+      "questionNumber": 35,
+      "options": [
+        "A. would meet",
+        "B. would have met",
+        "C. will meet",
+        "D. had met"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q36",
+      "questionText": "You had too much to eat, ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "B",
+      "questionNumber": 36,
+      "options": [
+        "A. didn't you?",
+        "B. don't you?",
+        "C. haven't you?",
+        "D. isn't it?"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q37",
+      "questionText": "He came in while I ...... my dinner.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "B",
+      "questionNumber": 37,
+      "options": [
+        "A. am having",
+        "B. had",
+        "C. have",
+        "D. was having"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q38",
+      "questionText": "The prisoner would neither talk ...... eat.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "B",
+      "questionNumber": 38,
+      "options": [
+        "A. yet",
+        "B. but",
+        "C. or",
+        "D. nor"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q39",
+      "questionText": "Afote gave his friend ...... of his bread.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "B",
+      "questionNumber": 39,
+      "options": [
+        "A. little",
+        "B. few",
+        "C. some",
+        "D. any"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2006_q40",
+      "questionText": "John and Anita have always loved ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2006",
+      "section": "B",
+      "questionNumber": 40,
+      "options": [
+        "A. each other",
+        "B. one another",
+        "C. themselves.",
+        "D. each one."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    }
+  ]
+}

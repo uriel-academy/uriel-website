@@ -1,0 +1,957 @@
+{
+  "year": "1993",
+  "examType": "bece",
+  "subject": "english",
+  "metadata": {
+    "totalQuestions": 35,
+    "sections": [
+      {
+        "name": "SECTION B",
+        "position": 4212
+      },
+      {
+        "name": "SECTION C",
+        "position": 4959
+      }
+    ],
+    "extractedAt": "2025-11-11T14:26:01.202Z",
+    "needsManualReview": true,
+    "notes": "This is auto-extracted. Please review and complete missing fields."
+  },
+  "passages": [
+    {
+      "id": "english_1993_passage_1",
+      "title": "Passage 1",
+      "content": "According to the passage, Garba taught Bako to ......A.  use a matchet.B.  fell trees.C.  read and write.D.  gossip and laugh.E.  read and fell trees.",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "A",
+      "questionRange": [],
+      "createdBy": "auto-extract",
+      "isActive": true
+    }
+  ],
+  "questions": [
+    {
+      "id": "english_1993_q1",
+      "questionText": "According to the passage, Garba taught Bako to ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "A",
+      "questionNumber": 1,
+      "options": [
+        "A. use a matchet.",
+        "B. fell trees.",
+        "C. read and write.",
+        "D. gossip and laugh.E.  read and fell trees."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q2",
+      "questionText": "Bako got additional income by ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "A",
+      "questionNumber": 2,
+      "options": [
+        "A. cutting down trees.",
+        "B. going to the hospital.",
+        "C. meeting his friends on Monday.",
+        "D. working as a letter-writer and reader.E.  felling trees and reading letters."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q3",
+      "questionText": "The people trusted Bako because he ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "A",
+      "questionNumber": 3,
+      "options": [
+        "A. kept what he knew about them secretly.",
+        "B. wrote and read their letters.",
+        "C. gossiped and laughed with them.",
+        "D. was hardworking and clever.E.  earned extra income."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q4",
+      "questionText": "How did the accident affect Bako?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "A",
+      "questionNumber": 4,
+      "options": [
+        "A. He lost his senses and job",
+        "B. He could not read and write again",
+        "C. He became weak and jobless",
+        "D. His face was stitchedE.  His friends left him"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q5",
+      "questionText": "Bako liked Mondays because ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "A",
+      "questionNumber": 5,
+      "options": [
+        "A. Monday started the week",
+        "B. He met all his friends again",
+        "C. He received his pay",
+        "D. He wrote and read lettersE.  He heard news from other villages"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q6",
+      "questionText": "He fell unconscious means he ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "A",
+      "questionNumber": 6,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q8",
+      "questionText": "Which of the following words best describes the behaviour of the writer's friends?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "A",
+      "questionNumber": 8,
+      "options": [
+        "A. Uncooperative",
+        "B. Jealous",
+        "C. Insulting",
+        "D. FunnyE.  Talkative"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q9",
+      "questionText": "According to the passage which of the following statements is true? The writer",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "A",
+      "questionNumber": 9,
+      "options": [
+        "A. settled the misunderstanding between him and his friends.",
+        "B. stopped talking to his friends.",
+        "C. lost all his closest friends.",
+        "D. appointed only his friends as officers.E.  did not listen to the advice of his friends."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q10",
+      "questionText": "The word disputes means ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "A",
+      "questionNumber": 10,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q12",
+      "questionText": "Prices of goods have been fairly controlled.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "A",
+      "questionNumber": 12,
+      "options": [
+        "A. kept down",
+        "B. kept away",
+        "C. kept off",
+        "D. kept outE.  kept hanging"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q13",
+      "questionText": "Remember to look over your work when you finish.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "A",
+      "questionNumber": 13,
+      "options": [
+        "A. watch",
+        "B. look on",
+        "C. oversee",
+        "D. read throughE.  overlook"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q14",
+      "questionText": "Although the labourers agreed to do the work, they did it reluctantly.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "A",
+      "questionNumber": 14,
+      "options": [
+        "A. leisurely",
+        "B. nervously",
+        "C. unwillingly",
+        "D. sparinglyE.  angrily"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q15",
+      "questionText": "The thief was humiliated when he was caught.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "A",
+      "questionNumber": 15,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q17",
+      "questionText": "The judge turned a deaf ear to what the murderer said. This means the judge ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "B",
+      "questionNumber": 17,
+      "options": [
+        "A. was partially deaf",
+        "B. ignored what the murderer said",
+        "C. favoured the murderer when he heard his story",
+        "D. pretended that he was listening to the murderer's storyE.  was asleep when the murderer gave his evidence"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q18",
+      "questionText": "If you don't want to regret, cut your coat according to your cloth. This means ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "B",
+      "questionNumber": 18,
+      "options": [
+        "A. live within your means.",
+        "B. use the coat cut from your cloth.",
+        "C. sew your own coat.",
+        "D. put on your cloth and coat.E.  do not worry about the problems of others."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q19",
+      "questionText": "Were it not for the policemen the workers would have gone on strike. From this we know the policemen ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "B",
+      "questionNumber": 19,
+      "options": [
+        "A. didn't go on strike.",
+        "B. saw the workers on strike.",
+        "C. forced the workers to go on strike.",
+        "D. and the workers were on strike.E.  prevented the workers from going on strike."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q20",
+      "questionText": "Razak has been in a bad way for several days. This means Razak has been ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "B",
+      "questionNumber": 20,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q22",
+      "questionText": "Our new pastor is very modest in his ways.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "B",
+      "questionNumber": 22,
+      "options": [
+        "A. friendly",
+        "B. kind",
+        "C. particular",
+        "D. boastfulE.  fashionable"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q23",
+      "questionText": "Issa was very rude to his teacher.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "B",
+      "questionNumber": 23,
+      "options": [
+        "A. respectful",
+        "B. polite",
+        "C. obedient",
+        "D. truthfulE.  gentle"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q24",
+      "questionText": "We walked on the smooth side of the pavement.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "B",
+      "questionNumber": 24,
+      "options": [
+        "A. hard",
+        "B. rough",
+        "C. coarse",
+        "D. slipperyE.  narrow"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q25",
+      "questionText": "The president was denounced by his subjects.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "B",
+      "questionNumber": 25,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q27",
+      "questionText": "The government has set ...... a committee on education.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "B",
+      "questionNumber": 27,
+      "options": [
+        "A. apart",
+        "B. up",
+        "C. in",
+        "D. by"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q28",
+      "questionText": "None of the suspects ...... his guilt.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "B",
+      "questionNumber": 28,
+      "options": [
+        "A. admit",
+        "B. admits",
+        "C. are admitting",
+        "D. have admitted"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q29",
+      "questionText": "Amidu promised to be patient until his toy ...... repaired.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "B",
+      "questionNumber": 29,
+      "options": [
+        "A. has been",
+        "B. will be",
+        "C. was",
+        "D. can be"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q30",
+      "questionText": "The Headmaster, with his assistant ...... inspecting the new school library.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "B",
+      "questionNumber": 30,
+      "options": [
+        "A. will have been",
+        "B. are",
+        "C. have been",
+        "D. is"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q31",
+      "questionText": "I would have told you about the wedding if I ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "B",
+      "questionNumber": 31,
+      "options": [
+        "A. have known",
+        "B. know",
+        "C. had known",
+        "D. have been knowing"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q32",
+      "questionText": "His writing is so bad that I can't make it ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "B",
+      "questionNumber": 32,
+      "options": [
+        "A. on",
+        "B. out",
+        "C. down",
+        "D. in"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q33",
+      "questionText": "You will be ill if you ...... too much.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "B",
+      "questionNumber": 33,
+      "options": [
+        "A. are eating",
+        "B. eat",
+        "C. had eaten",
+        "D. ate"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q34",
+      "questionText": "If it ...... necessary, I shall see you again at six o'clock.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "B",
+      "questionNumber": 34,
+      "options": [
+        "A. is",
+        "B. had been",
+        "C. is being",
+        "D. was"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q35",
+      "questionText": "If we had not closed down the market, the traders ...... there.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "B",
+      "questionNumber": 35,
+      "options": [
+        "A. shall still be",
+        "B. will still be",
+        "C. are still going",
+        "D. would have still been"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q36",
+      "questionText": "Mr. Adu has never been pleased with his children's performance, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "B",
+      "questionNumber": 36,
+      "options": [
+        "A. hasn't he",
+        "B. didn't he",
+        "C. has he",
+        "D. did he"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q37",
+      "questionText": "You prefer playing soccer to volley ball, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "B",
+      "questionNumber": 37,
+      "options": [
+        "A. do you",
+        "B. will you",
+        "C. won't you",
+        "D. don't you?"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q38",
+      "questionText": "The cashier was rude to his boss, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "B",
+      "questionNumber": 38,
+      "options": [
+        "A. was he",
+        "B. wasn't he",
+        "C. did he",
+        "D. didn't he"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q39",
+      "questionText": "These days students are not very interested ...... improving their English.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "B",
+      "questionNumber": 39,
+      "options": [
+        "A. on",
+        "B. about",
+        "C. of",
+        "D. in"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_1993_q40",
+      "questionText": "Kofi ate ...... food than anyone else.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "1993",
+      "section": "B",
+      "questionNumber": 40,
+      "options": [
+        "A. more",
+        "B. most",
+        "C. much",
+        "D. too much"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    }
+  ]
+}

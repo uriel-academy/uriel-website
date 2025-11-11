@@ -1,0 +1,746 @@
+{
+  "year": "2024",
+  "examType": "bece",
+  "subject": "english",
+  "metadata": {
+    "totalQuestions": 27,
+    "sections": [
+      {
+        "name": "SECTION A",
+        "position": 27
+      },
+      {
+        "name": "SECTION B",
+        "position": 2076
+      },
+      {
+        "name": "SECTION C",
+        "position": 2804
+      },
+      {
+        "name": "PART A",
+        "position": 2
+      }
+    ],
+    "extractedAt": "2025-11-11T14:26:07.730Z",
+    "needsManualReview": true,
+    "notes": "This is auto-extracted. Please review and complete missing fields."
+  },
+  "passages": [],
+  "questions": [
+    {
+      "id": "english_2024_q1",
+      "questionText": "If Azameti had won gold, Ghanaians ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "questionNumber": 1,
+      "options": [
+        "A. will have jubilated",
+        "B. will jubilate",
+        "C. would have jubilated",
+        "D. would jubilate"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2024_q2",
+      "questionText": "We were served a ...... meal at that cozy restaurant.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "questionNumber": 2,
+      "options": [
+        "A. Spanish delicious spicy",
+        "B. delicious spicy Spanish",
+        "C. delicious Spanish spicy",
+        "D. spicy Spanish delicious"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2024_q3",
+      "questionText": "Ali's parents have not bought ...... of the two recommended books.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "questionNumber": 3,
+      "options": [
+        "A. any",
+        "B. none",
+        "C. neither",
+        "D. either"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2024_q4",
+      "questionText": "Adwoa's daughter is allergic ...... dust.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "questionNumber": 4,
+      "options": [
+        "A. about",
+        "B. against",
+        "C. with",
+        "D. to"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2024_q5",
+      "questionText": "Dauda saw the thief ...... out of the shop.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "questionNumber": 5,
+      "options": [
+        "A. was running",
+        "B. is running",
+        "C. run",
+        "D. ran"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2024_q6",
+      "questionText": "Konlaan suggested that it was time they ...... for the meeting",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "questionNumber": 6,
+      "options": [
+        "A. have to leave",
+        "B. left",
+        "C. had to leave",
+        "D. leave"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2024_q7",
+      "questionText": "Last Wednesday, it rained heavily ...... the match was played.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "questionNumber": 7,
+      "options": [
+        "A. and",
+        "B. so",
+        "C. for",
+        "D. yet"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2024_q8",
+      "questionText": "You haven't met each other before, ...... you?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "questionNumber": 8,
+      "options": [
+        "A. hadn't",
+        "B. have",
+        "C. haven't",
+        "D. had"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2024_q9",
+      "questionText": "At my last interview, I faced ...... panel.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "questionNumber": 9,
+      "options": [
+        "A. seven-members'",
+        "B. a seven-member",
+        "C. a seven-member's",
+        "D. seven-members"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2024_q10",
+      "questionText": "Which of the ...... fragrance(s) is milder?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "questionNumber": 10,
+      "options": [
+        "A. two",
+        "B. one",
+        "C. most",
+        "D. all"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2024_q11",
+      "questionText": "Last month, there was ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "questionNumber": 11,
+      "options": [
+        "A. an eclipse of a sun",
+        "B. the eclipse of a sun",
+        "C. an eclipse of the sun",
+        "D. the eclipse of the sun"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2024_q12",
+      "questionText": "Among the participants for the competition, Eugenia got here ...... early.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "questionNumber": 12,
+      "options": [
+        "A. very",
+        "B. only",
+        "C. often",
+        "D. most"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2024_q13",
+      "questionText": "Afida's aunt, ...... lives in Tamale spoke to us very courteously.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "questionNumber": 13,
+      "options": [
+        "A. who",
+        "B. whom",
+        "C. that",
+        "D. which"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2024_q14",
+      "questionText": "\"I will keep my word\", promised Kende.The correct reported speech for the sentence above is",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "questionNumber": 14,
+      "options": [
+        "A. Kende promise to keep her word.",
+        "B. Kende is promising to keep her word.",
+        "C. Kende promises to keep her word.",
+        "D. Kende promised to keep her word."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2024_q15",
+      "questionText": "For winning the first position in the Essay Competition, the school gave Linda a laptop.The correct passive form of the sentence above isFor winning the first position in the Essay Competition, Linda ...... given a laptop by the school.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "A",
+      "questionNumber": 15,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2024_q17",
+      "questionText": "We're so excited because Amuzu's proposal has been accepted.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "B",
+      "questionNumber": 17,
+      "options": [
+        "A. suggestion",
+        "B. offer",
+        "C. opinion",
+        "D. view"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2024_q18",
+      "questionText": "Mama said, \"You can only fight off bullies if you are assertive\".",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "B",
+      "questionNumber": 18,
+      "options": [
+        "A. muscular",
+        "B. strong",
+        "C. smart",
+        "D. bold"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2024_q19",
+      "questionText": "The rampant destruction of property must be checked.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "B",
+      "questionNumber": 19,
+      "options": [
+        "A. common",
+        "B. regular",
+        "C. unpleasant",
+        "D. uncontrolled"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2024_q20",
+      "questionText": "The salient points of the topic have been thoroughly discussed.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "B",
+      "questionNumber": 20,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2024_q22",
+      "questionText": "\"Do not be such a wet blanket, Afua. Your brother needs all the support you can give him\", Auntie Araba chided her daughter.This means that Afua ...... her brother.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "B",
+      "questionNumber": 22,
+      "options": [
+        "A. didn't care about",
+        "B. couldn't wash for",
+        "C. was too weak to help",
+        "D. liked to discourage"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2024_q23",
+      "questionText": "Asua had to eat his words when Asante Kotoko lost to Tano Bofoakwa F",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "B",
+      "questionNumber": 23,
+      "options": [
+        "A. admitted that he was wrong",
+        "B. denied everything he had said",
+        "C. became very ashamed",
+        "D. lost his appetite"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2024_q24",
+      "questionText": "The fraudster was paid back in his own coinsThis means that he was ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "B",
+      "questionNumber": 24,
+      "options": [
+        "A. given a hot chase",
+        "B. swindled",
+        "C. punished",
+        "D. given new coins"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2024_q25",
+      "questionText": "Yaaba hit the nail on the head when she told us that we could only succeed through hardworking.This means that Yaaba ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "B",
+      "questionNumber": 25,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2024_q27",
+      "questionText": "Some exercises may seem easy in theoretical terms but can be really difficult in ...... aspects",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "B",
+      "questionNumber": 27,
+      "options": [
+        "A. practical",
+        "B. natural",
+        "C. logical",
+        "D. actual"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2024_q28",
+      "questionText": "It is good to get a cure for a disease, but it is better to ...... the disease.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "B",
+      "questionNumber": 28,
+      "options": [
+        "A. prevent",
+        "B. protect",
+        "C. avoid",
+        "D. counter"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2024_q29",
+      "questionText": "It is hard to tell when this began or where it will ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "B",
+      "questionNumber": 29,
+      "options": [
+        "A. fall",
+        "B. cease",
+        "C. reside",
+        "D. remain"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2024_q30",
+      "questionText": "Regions with abundant rainfall are different from those having ...... moisture.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2024",
+      "section": "B",
+      "questionNumber": 30,
+      "options": [
+        "A. unpredictable",
+        "B. scanty",
+        "C. uncertain",
+        "D. reduced"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    }
+  ]
+}

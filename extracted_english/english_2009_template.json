@@ -1,0 +1,957 @@
+{
+  "year": "2009",
+  "examType": "bece",
+  "subject": "english",
+  "metadata": {
+    "totalQuestions": 35,
+    "sections": [
+      {
+        "name": "SECTION B",
+        "position": 4193
+      },
+      {
+        "name": "SECTION C",
+        "position": 4901
+      }
+    ],
+    "extractedAt": "2025-11-11T14:26:04.504Z",
+    "needsManualReview": true,
+    "notes": "This is auto-extracted. Please review and complete missing fields."
+  },
+  "passages": [
+    {
+      "id": "english_2009_passage_1",
+      "title": "Passage 1",
+      "content": "What made the writer wake up?A.  The father crashing into the pillarB.  The noise made by his fatherC.  The attack by the armed robbersD.  The shouting of the tenants",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "A",
+      "questionRange": [],
+      "createdBy": "auto-extract",
+      "isActive": true
+    }
+  ],
+  "questions": [
+    {
+      "id": "english_2009_q1",
+      "questionText": "What made the writer wake up?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "A",
+      "questionNumber": 1,
+      "options": [
+        "A. The father crashing into the pillar",
+        "B. The noise made by his father",
+        "C. The attack by the armed robbers",
+        "D. The shouting of the tenants"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q2",
+      "questionText": "The writer's father was holding his forehead because he",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "A",
+      "questionNumber": 2,
+      "options": [
+        "A. had fallen flat on his back.",
+        "B. had hit his head against the pillar.",
+        "C. wanted to stop the blood from flowing.",
+        "D. was thinking of what to do."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q3",
+      "questionText": "The purpose of the ice cubes was to",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "A",
+      "questionNumber": 3,
+      "options": [
+        "A. stop the bleeding.",
+        "B. heal the cut.",
+        "C. manage the cut.",
+        "D. reduce the swelling."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q4",
+      "questionText": "Pathetic in the passage means",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "A",
+      "questionNumber": 4,
+      "options": [
+        "A. naughty.",
+        "B. merciless.",
+        "C. sad.",
+        "D. strange."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q5",
+      "questionText": "What happened to the tenant?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "A",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q7",
+      "questionText": "The male songbirds sing",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "A",
+      "questionNumber": 7,
+      "options": [
+        "A. to instruct others.",
+        "B. four notes at a time.",
+        "C. to attract the females.",
+        "D. what others have composed."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q8",
+      "questionText": "According to the passage, birds sing",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "A",
+      "questionNumber": 8,
+      "options": [
+        "A. only in the breeding season.",
+        "B. some of the sweetest songs.",
+        "C. to invite the bachelors.",
+        "D. only one note."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q9",
+      "questionText": "Unique in the passage means",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "A",
+      "questionNumber": 9,
+      "options": [
+        "A. suitable.",
+        "B. similar.",
+        "C. exciting.",
+        "D. special."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q10",
+      "questionText": "The writer suggest that",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "A",
+      "questionNumber": 10,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q12",
+      "questionText": "Most Ghanaians were optimistic about the Black Stars winning the African Cup.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "A",
+      "questionNumber": 12,
+      "options": [
+        "A. reasonable",
+        "B. happy",
+        "C. concerned",
+        "D. hopeful"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q13",
+      "questionText": "The indigenous people provided the labour during the building of the school.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "A",
+      "questionNumber": 13,
+      "options": [
+        "A. skilled",
+        "B. native",
+        "C. expatriate",
+        "D. urban"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q14",
+      "questionText": "The effort of the watchman which led to the arrest of the thieves was laudable.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "A",
+      "questionNumber": 14,
+      "options": [
+        "A. quick",
+        "B. real",
+        "C. constant",
+        "D. praiseworthy"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q15",
+      "questionText": "Our parents deserve our appreciation.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "A",
+      "questionNumber": 15,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q17",
+      "questionText": "The quarrel got out of hand. This means that the quarrel",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "B",
+      "questionNumber": 17,
+      "options": [
+        "A. became uncontrollable.",
+        "B. was prolonged.",
+        "C. became boring.",
+        "D. was unhealthy."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q18",
+      "questionText": "On seeing the headmaster, the girl took to her heels. This means that the girl",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "B",
+      "questionNumber": 18,
+      "options": [
+        "A. fainted.",
+        "B. felt frightened.",
+        "C. ran away.",
+        "D. hid herself."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q19",
+      "questionText": "Joseph lives within a stone's throw from the station. This means that Joseph",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "B",
+      "questionNumber": 19,
+      "options": [
+        "A. lives in a stony house.",
+        "B. lives very close to the station.",
+        "C. goes to the station.",
+        "D. often throws stones at the station."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q20",
+      "questionText": "All his plans for building a new theatre came to naught. This means that",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "B",
+      "questionNumber": 20,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q22",
+      "questionText": "John's latest play is rather dull.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "B",
+      "questionNumber": 22,
+      "options": [
+        "A. interesting.",
+        "B. informative.",
+        "C. sensible.",
+        "D. educative."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q23",
+      "questionText": "The feeble old man spoke for about three hours.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "B",
+      "questionNumber": 23,
+      "options": [
+        "A. bold",
+        "B. strong",
+        "C. bright",
+        "D. successful"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q24",
+      "questionText": "The thief descended the stairs hurriedly.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "B",
+      "questionNumber": 24,
+      "options": [
+        "A. consciously",
+        "B. lazily",
+        "C. slowly",
+        "D. noisily"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q25",
+      "questionText": "The diligent student won a prize.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "B",
+      "questionNumber": 25,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q27",
+      "questionText": "If the boat had been maintained properly it ...... capsized.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "B",
+      "questionNumber": 27,
+      "options": [
+        "A. have not",
+        "B. will not have",
+        "C. would not have",
+        "D. might have not"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q28",
+      "questionText": "The white horse is ...... than the black one.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "B",
+      "questionNumber": 28,
+      "options": [
+        "A. faster",
+        "B. very fast",
+        "C. fast",
+        "D. more fast"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q29",
+      "questionText": "They thought he would become a businesswoman, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "B",
+      "questionNumber": 29,
+      "options": [
+        "A. wouldn't they",
+        "B. didn't they",
+        "C. wasn't they",
+        "D. isn't they"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q30",
+      "questionText": "There were only two of us who ...... any idea of the answer.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "B",
+      "questionNumber": 30,
+      "options": [
+        "A. have",
+        "B. had",
+        "C. has",
+        "D. would"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q31",
+      "questionText": "He had boarded a taxi, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "B",
+      "questionNumber": 31,
+      "options": [
+        "A. wouldn't he",
+        "B. hadn't he",
+        "C. isn't it",
+        "D. won't he"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q32",
+      "questionText": "Mrs. Mensah ...... in Saltpond since 1970.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "B",
+      "questionNumber": 32,
+      "options": [
+        "A. was living",
+        "B. has been living",
+        "C. has lived",
+        "D. is living"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q33",
+      "questionText": "The booking clerk made him ...... a deposit.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "B",
+      "questionNumber": 33,
+      "options": [
+        "A. to pay",
+        "B. paid",
+        "C. to be paying",
+        "D. pay"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q34",
+      "questionText": "Although all the dresses were beautiful, she liked ...... of them.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "B",
+      "questionNumber": 34,
+      "options": [
+        "A. any",
+        "B. none",
+        "C. neither",
+        "D. both"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q35",
+      "questionText": "Kwesi and Ama are in love with ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "B",
+      "questionNumber": 35,
+      "options": [
+        "A. themselves.",
+        "B. one another.",
+        "C. each other.",
+        "D. ourselves."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q36",
+      "questionText": "It is ...... to attempt in one day.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "B",
+      "questionNumber": 36,
+      "options": [
+        "A. too long and difficult a journey",
+        "B. the journey too long and difficult",
+        "C. long and difficult too a journey",
+        "D. too long and difficult the journey"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q37",
+      "questionText": "The rain shouldn't deter you ...... going out.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "B",
+      "questionNumber": 37,
+      "options": [
+        "A. for",
+        "B. on",
+        "C. by",
+        "D. from"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q38",
+      "questionText": "Ben is leaving ...... Takoradi this morning.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "B",
+      "questionNumber": 38,
+      "options": [
+        "A. for",
+        "B. to",
+        "C. by",
+        "D. from"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q39",
+      "questionText": "Yesterday I met the man ......",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "B",
+      "questionNumber": 39,
+      "options": [
+        "A. the car of whom I bought.",
+        "B. whose car I bought.",
+        "C. I bought his car.",
+        "D. whom I bought his car."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2009_q40",
+      "questionText": "No sooner had the Minister opened the bank ...... he bank was filled to capacity.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2009",
+      "section": "B",
+      "questionNumber": 40,
+      "options": [
+        "A. when",
+        "B. for",
+        "C. as",
+        "D. than"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    }
+  ]
+}

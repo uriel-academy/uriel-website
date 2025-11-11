@@ -1,0 +1,742 @@
+{
+  "year": "2023",
+  "examType": "bece",
+  "subject": "english",
+  "metadata": {
+    "totalQuestions": 27,
+    "sections": [
+      {
+        "name": "SECTION A",
+        "position": 27
+      },
+      {
+        "name": "SECTION B",
+        "position": 1624
+      },
+      {
+        "name": "SECTION C",
+        "position": 2234
+      }
+    ],
+    "extractedAt": "2025-11-11T14:26:07.550Z",
+    "needsManualReview": true,
+    "notes": "This is auto-extracted. Please review and complete missing fields."
+  },
+  "passages": [],
+  "questions": [
+    {
+      "id": "english_2023_q1",
+      "questionText": "All work and no play makes Jack a dull boy, ......?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2023",
+      "section": "A",
+      "questionNumber": 1,
+      "options": [
+        "A. shan't it",
+        "B. isn't it",
+        "C. doesn't it",
+        "D. can't it"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2023_q2",
+      "questionText": "You cannot swim in the sea, ...... you?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2023",
+      "section": "A",
+      "questionNumber": 2,
+      "options": [
+        "A. couldn't",
+        "B. can",
+        "C. don't",
+        "D. did"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2023_q3",
+      "questionText": "It is no use ...... over spilt milk.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2023",
+      "section": "A",
+      "questionNumber": 3,
+      "options": [
+        "A. cry",
+        "B. of crying",
+        "C. crying",
+        "D. to cry"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2023_q4",
+      "questionText": "Some of the pineapples are ...... sour to be eaten.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2023",
+      "section": "A",
+      "questionNumber": 4,
+      "options": [
+        "A. more so",
+        "B. more too",
+        "C. much too",
+        "D. much so"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2023_q5",
+      "questionText": "......, learners must behave well.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2023",
+      "section": "A",
+      "questionNumber": 5,
+      "options": [
+        "A. The last but not least",
+        "B. The last but not the least",
+        "C. Last but not least",
+        "D. Last but not the least"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2023_q6",
+      "questionText": "Where ...... Asana and Betty spending their next holidays?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2023",
+      "section": "A",
+      "questionNumber": 6,
+      "options": [
+        "A. is",
+        "B. are",
+        "C. were",
+        "D. was"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2023_q7",
+      "questionText": "The messenger did not ...... anyone in the house.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2023",
+      "section": "A",
+      "questionNumber": 7,
+      "options": [
+        "A. meet",
+        "B. met",
+        "C. meets",
+        "D. meeting"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2023_q8",
+      "questionText": "She lives in her ...... house.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2023",
+      "section": "A",
+      "questionNumber": 8,
+      "options": [
+        "A. father-in-laws'",
+        "B. fathers-in-laws'",
+        "C. father's-in-law's",
+        "D. father-in-law's"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2023_q9",
+      "questionText": "Their sister wore a ...... to the party.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2023",
+      "section": "A",
+      "questionNumber": 9,
+      "options": [
+        "A. beautiful silk pink dress",
+        "B. silk pink beautiful dress",
+        "C. pink beautiful silk dress",
+        "D. beautiful pink silk dress"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2023_q10",
+      "questionText": "It was ...... late to go out alone.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2023",
+      "section": "A",
+      "questionNumber": 10,
+      "options": [
+        "A. too",
+        "B. very",
+        "C. much",
+        "D. so"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2023_q11",
+      "questionText": "This is the boy ...... rescued us.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2023",
+      "section": "A",
+      "questionNumber": 11,
+      "options": [
+        "A. whose",
+        "B. which",
+        "C. whom",
+        "D. who"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2023_q12",
+      "questionText": "The nurse made me ...... a lot of water.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2023",
+      "section": "A",
+      "questionNumber": 12,
+      "options": [
+        "A. drink",
+        "B. drank",
+        "C. drunk",
+        "D. to drink"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2023_q13",
+      "questionText": "It is not easy to identify ...... voice it was.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2023",
+      "section": "A",
+      "questionNumber": 13,
+      "options": [
+        "A. who",
+        "B. whom",
+        "C. who's",
+        "D. whose"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2023_q14",
+      "questionText": "Neither the parents nor the child ..... at home yesterday.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2023",
+      "section": "A",
+      "questionNumber": 14,
+      "options": [
+        "A. are",
+        "B. is",
+        "C. were",
+        "D. was"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2023_q15",
+      "questionText": "Her clothes would look better if she ...... them.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2023",
+      "section": "A",
+      "questionNumber": 15,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2023_q17",
+      "questionText": "The commotion at the stadium was avoidable.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2023",
+      "section": "B",
+      "questionNumber": 17,
+      "options": [
+        "A. trouble",
+        "B. confusion",
+        "C. issue",
+        "D. violence"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2023_q18",
+      "questionText": "What transpired between them remains a secret.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2023",
+      "section": "B",
+      "questionNumber": 18,
+      "options": [
+        "A. manifested",
+        "B. translated",
+        "C. existed",
+        "D. happened"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2023_q19",
+      "questionText": "Lance only talks about trivial matters.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2023",
+      "section": "B",
+      "questionNumber": 19,
+      "options": [
+        "A. unimportant",
+        "B. unpleasant",
+        "C. unacceptable",
+        "D. unexciting"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2023_q20",
+      "questionText": "The robbers ransacked the house.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2023",
+      "section": "B",
+      "questionNumber": 20,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2023_q22",
+      "questionText": "We tried all we could to amuse her but she kept a straight face. This means that she",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2023",
+      "section": "B",
+      "questionNumber": 22,
+      "options": [
+        "A. did not listen to us.",
+        "B. looked straight ahead.",
+        "C. refused to laugh.",
+        "D. cried all the more."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2023_q23",
+      "questionText": "When we went to Nina's house, we were told that she had gone away bag and baggage. This means that Nina had gone away",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2023",
+      "section": "B",
+      "questionNumber": 23,
+      "options": [
+        "A. leaving all her children.",
+        "B. leaving all her belongings.",
+        "C. without informing anyone.",
+        "D. with all her belongings."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2023_q24",
+      "questionText": "Samantha's main problem is that she can see no further than her nose. This means that Samantha",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2023",
+      "section": "B",
+      "questionNumber": 24,
+      "options": [
+        "A. lacks foresight.",
+        "B. is easily deceived.",
+        "C. has a long nose.",
+        "D. cannot think"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2023_q25",
+      "questionText": "When he lost his job, Yaro was left to sink or swim. This means that Yaro",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2023",
+      "section": "B",
+      "questionNumber": 25,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2023_q27",
+      "questionText": "The story was written in simple language.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2023",
+      "section": "B",
+      "questionNumber": 27,
+      "options": [
+        "A. foreign",
+        "B. strange",
+        "C. local",
+        "D. complex"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2023_q28",
+      "questionText": "The arrogant storekeeper lost all his customers.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2023",
+      "section": "B",
+      "questionNumber": 28,
+      "options": [
+        "A. respectful",
+        "B. obedient",
+        "C. modest",
+        "D. sympathetic"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2023_q29",
+      "questionText": "We finished several projects last year.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2023",
+      "section": "B",
+      "questionNumber": 29,
+      "options": [
+        "A. initiated",
+        "B. concluded",
+        "C. stopped",
+        "D. organized"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2023_q30",
+      "questionText": "The unfavourable weather affected their health.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2023",
+      "section": "B",
+      "questionNumber": 30,
+      "options": [
+        "A. beautiful",
+        "B. pleasant",
+        "C. cool",
+        "D. promising"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    }
+  ]
+}

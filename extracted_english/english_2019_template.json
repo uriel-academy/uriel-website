@@ -1,0 +1,742 @@
+{
+  "year": "2019",
+  "examType": "bece",
+  "subject": "english",
+  "metadata": {
+    "totalQuestions": 27,
+    "sections": [
+      {
+        "name": "SECTION A",
+        "position": 27
+      },
+      {
+        "name": "SECTION B",
+        "position": 1719
+      },
+      {
+        "name": "SECTION C",
+        "position": 2398
+      }
+    ],
+    "extractedAt": "2025-11-11T14:26:06.691Z",
+    "needsManualReview": true,
+    "notes": "This is auto-extracted. Please review and complete missing fields."
+  },
+  "passages": [],
+  "questions": [
+    {
+      "id": "english_2019_q1",
+      "questionText": "One of the balls............ from the herd.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2019",
+      "section": "A",
+      "questionNumber": 1,
+      "options": [
+        "A. have been strayed",
+        "B. has been strayed",
+        "C. have strayed",
+        "D. has strayed"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2019_q2",
+      "questionText": "I saw the dog.......... out of the house.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2019",
+      "section": "A",
+      "questionNumber": 2,
+      "options": [
+        "A. run",
+        "B. is running",
+        "C. ran",
+        "D. was running"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2019_q3",
+      "questionText": "Habib goes to school............ train.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2019",
+      "section": "A",
+      "questionNumber": 3,
+      "options": [
+        "A. by",
+        "B. on",
+        "C. with",
+        "D. in"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2019_q4",
+      "questionText": "This phone is not mine; it is............",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2019",
+      "section": "A",
+      "questionNumber": 4,
+      "options": [
+        "A. mine uncle's",
+        "B. my uncle's",
+        "C. my uncles",
+        "D. mine uncles"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2019_q5",
+      "questionText": "Their sister wore a............ dress to the party.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2019",
+      "section": "A",
+      "questionNumber": 5,
+      "options": [
+        "A. silk blue beautiful",
+        "B. beautiful blue silk",
+        "C. blue beautiful silk",
+        "D. beautiful silk blue"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2019_q6",
+      "questionText": "I wish I............ my friend next week.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2019",
+      "section": "A",
+      "questionNumber": 6,
+      "options": [
+        "A. can visit",
+        "B. am visiting",
+        "C. shall visit",
+        "D. could visit"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2019_q7",
+      "questionText": "Aba took............ her mother to many ways.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2019",
+      "section": "A",
+      "questionNumber": 7,
+      "options": [
+        "A. after",
+        "B. up",
+        "C. on",
+        "D. by"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2019_q8",
+      "questionText": "That girl is allergic............ dust.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2019",
+      "section": "A",
+      "questionNumber": 8,
+      "options": [
+        "A. with",
+        "B. to",
+        "C. against",
+        "D. about"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2019_q9",
+      "questionText": "My brother, with his children, ............ travelling to Salaga next week.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2019",
+      "section": "A",
+      "questionNumber": 9,
+      "options": [
+        "A. is",
+        "B. are",
+        "C. was",
+        "D. were"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2019_q10",
+      "questionText": "It is high time we............ for the meeting.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2019",
+      "section": "A",
+      "questionNumber": 10,
+      "options": [
+        "A. left",
+        "B. leave",
+        "C. have to leave",
+        "D. will leave"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2019_q11",
+      "questionText": "The accused person refused to appear before the............ pane.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2019",
+      "section": "A",
+      "questionNumber": 11,
+      "options": [
+        "A. five-man's",
+        "B. five-man",
+        "C. five-men",
+        "D. five-men's"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2019_q12",
+      "questionText": "The stories her children told her made her............",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2019",
+      "section": "A",
+      "questionNumber": 12,
+      "options": [
+        "A. to laugh",
+        "B. laughing",
+        "C. laughed",
+        "D. laugh"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2019_q13",
+      "questionText": "They have not bought............ of the two prescribed books.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2019",
+      "section": "A",
+      "questionNumber": 13,
+      "options": [
+        "A. neither",
+        "B. either",
+        "C. none",
+        "D. all"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2019_q14",
+      "questionText": "The boy found the assignment............ to do.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2019",
+      "section": "A",
+      "questionNumber": 14,
+      "options": [
+        "A. much too difficult",
+        "B. difficult too much",
+        "C. too much difficult",
+        "D. much too difficult"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2019_q15",
+      "questionText": "The oxen lay on bare floor,............?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2019",
+      "section": "A",
+      "questionNumber": 15,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2019_q17",
+      "questionText": "Some of the students grumbled about the assignment.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2019",
+      "section": "B",
+      "questionNumber": 17,
+      "options": [
+        "A. questioned",
+        "B. talked",
+        "C. complained",
+        "D. bothered"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2019_q18",
+      "questionText": "It is impolite to talk loudly in the presence of the elderly.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2019",
+      "section": "B",
+      "questionNumber": 18,
+      "options": [
+        "A. incorrect",
+        "B. improper",
+        "C. unwise",
+        "D. rude"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2019_q19",
+      "questionText": "She is fond of talking about trivial matters.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2019",
+      "section": "B",
+      "questionNumber": 19,
+      "options": [
+        "A. unpleasant",
+        "B. unimportant",
+        "C. unexciting",
+        "D. unacceptable"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2019_q20",
+      "questionText": "The curious child likes to ask a lot of questions.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2019",
+      "section": "B",
+      "questionNumber": 20,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2019_q22",
+      "questionText": "My uncle loves to cast his bread upon waters. This means that my uncle..........",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2019",
+      "section": "B",
+      "questionNumber": 22,
+      "options": [
+        "A. behaves strangely",
+        "B. feeds his fish with bread.",
+        "C. is wasteful.",
+        "D. loves to help people."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2019_q23",
+      "questionText": "When he lost his job. Yaro was left to sink or swim. That means that Yaro..........",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2019",
+      "section": "B",
+      "questionNumber": 23,
+      "options": [
+        "A. was depressed.",
+        "B. shouted for help",
+        "C. had to find another job.",
+        "D. had to survive on his own"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2019_q24",
+      "questionText": "I was informed at the eleventh hour about his decision to leave. This means that I heard about his decision...........",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2019",
+      "section": "B",
+      "questionNumber": 24,
+      "options": [
+        "A. immediately.",
+        "B. at eleven o'clock",
+        "C. in good time",
+        "D. very late"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2019_q25",
+      "questionText": "John had to eat his words when our team won the match. This means that John..........",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2019",
+      "section": "B",
+      "questionNumber": 25,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2019_q27",
+      "questionText": "We initiated several projects last year.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2019",
+      "section": "B",
+      "questionNumber": 27,
+      "options": [
+        "A. funded",
+        "B. completed",
+        "C. executed",
+        "D. organized"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2019_q28",
+      "questionText": "Most of the rules were observed.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2019",
+      "section": "B",
+      "questionNumber": 28,
+      "options": [
+        "A. violated",
+        "B. cancelled",
+        "C. lessened",
+        "D. excluded"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2019_q29",
+      "questionText": "The results will be released very soon.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2019",
+      "section": "B",
+      "questionNumber": 29,
+      "options": [
+        "A. withheld",
+        "B. confirmed",
+        "C. withdraw",
+        "D. cancelled"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2019_q30",
+      "questionText": "No one enjoyed the old man's humourless stories",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2019",
+      "section": "B",
+      "questionNumber": 30,
+      "options": [
+        "A. funny",
+        "B. peculiar",
+        "C. familiar",
+        "D. cheerful"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    }
+  ]
+}

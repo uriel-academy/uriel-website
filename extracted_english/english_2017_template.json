@@ -1,0 +1,742 @@
+{
+  "year": "2017",
+  "examType": "bece",
+  "subject": "english",
+  "metadata": {
+    "totalQuestions": 27,
+    "sections": [
+      {
+        "name": "SECTION A",
+        "position": 27
+      },
+      {
+        "name": "SECTION B",
+        "position": 1544
+      },
+      {
+        "name": "SECTION C",
+        "position": 2219
+      }
+    ],
+    "extractedAt": "2025-11-11T14:26:06.363Z",
+    "needsManualReview": true,
+    "notes": "This is auto-extracted. Please review and complete missing fields."
+  },
+  "passages": [],
+  "questions": [
+    {
+      "id": "english_2017_q1",
+      "questionText": "John has given............ smoking.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2017",
+      "section": "A",
+      "questionNumber": 1,
+      "options": [
+        "A. in",
+        "B. off",
+        "C. out",
+        "D. up"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2017_q2",
+      "questionText": "The crowd was............ large that the Director became frightened.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2017",
+      "section": "A",
+      "questionNumber": 2,
+      "options": [
+        "A. quite",
+        "B. so",
+        "C. too",
+        "D. very"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2017_q3",
+      "questionText": "When we got there, the buses............ left.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2017",
+      "section": "A",
+      "questionNumber": 3,
+      "options": [
+        "A. are",
+        "B. had",
+        "C. have",
+        "D. were"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2017_q4",
+      "questionText": "The book was............ to me.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2017",
+      "section": "A",
+      "questionNumber": 4,
+      "options": [
+        "A. gave",
+        "B. given",
+        "C. giving",
+        "D. to give"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2017_q5",
+      "questionText": "Aunties is the lady to............ I gave the list.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2017",
+      "section": "A",
+      "questionNumber": 5,
+      "options": [
+        "A. who",
+        "B. whom",
+        "C. which",
+        "D. whose"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2017_q6",
+      "questionText": "He's your friend,............?",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2017",
+      "section": "A",
+      "questionNumber": 6,
+      "options": [
+        "A. doesn't he",
+        "B. does he",
+        "C. isn't he",
+        "D. isn't it"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2017_q7",
+      "questionText": "Kay: You didn't go to Accra, did you?Lee:............",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2017",
+      "section": "A",
+      "questionNumber": 7,
+      "options": [
+        "A. No, I did",
+        "B. No, I didn't",
+        "C. Yes, did I",
+        "D. Yes, I didn't"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2017_q8",
+      "questionText": "You had better............ now.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2017",
+      "section": "A",
+      "questionNumber": 8,
+      "options": [
+        "A. left",
+        "B. leave",
+        "C. be leaving",
+        "D. to leave"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2017_q9",
+      "questionText": "Kwame asked his friend to............. him a pen.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2017",
+      "section": "A",
+      "questionNumber": 9,
+      "options": [
+        "A. borrow",
+        "B. excuse",
+        "C. lend",
+        "D. spare"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2017_q10",
+      "questionText": "She ended the letter,............",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2017",
+      "section": "A",
+      "questionNumber": 10,
+      "options": [
+        "A. 'Yours sincerely'",
+        "B. 'Your's sincerely'",
+        "C. 'Yours' sincerely'",
+        "D. 'Your sincerely'"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2017_q11",
+      "questionText": "The woman refused to sell me............ kerosene.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2017",
+      "section": "A",
+      "questionNumber": 11,
+      "options": [
+        "A. any",
+        "B. little",
+        "C. plenty",
+        "D. some"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2017_q12",
+      "questionText": "'Yes,............ a book,' he said.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2017",
+      "section": "A",
+      "questionNumber": 12,
+      "options": [
+        "A. is",
+        "B. its",
+        "C. it's",
+        "D. it"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2017_q13",
+      "questionText": "I know you are much............. than Esi.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2017",
+      "section": "A",
+      "questionNumber": 13,
+      "options": [
+        "A. tall",
+        "B. taller",
+        "C. tallest",
+        "D. the taller"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2017_q14",
+      "questionText": "Neither John nor his friend,............ a play to the end.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2017",
+      "section": "A",
+      "questionNumber": 14,
+      "options": [
+        "A. watch",
+        "B. watches",
+        "C. was watching",
+        "D. were watching"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2017_q15",
+      "questionText": "Araba and Osei are a devoted couple who love............",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2017",
+      "section": "A",
+      "questionNumber": 15,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2017_q17",
+      "questionText": "He said the practice was alien to him.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2017",
+      "section": "B",
+      "questionNumber": 17,
+      "options": [
+        "A. boring",
+        "B. new",
+        "C. modern",
+        "D. unfamiliar"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2017_q18",
+      "questionText": "He said the story wasfictitious.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2017",
+      "section": "B",
+      "questionNumber": 18,
+      "options": [
+        "A. artificial",
+        "B. false",
+        "C. interesting",
+        "D. real"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2017_q19",
+      "questionText": "The man placed an order for rice and stew at the restaurant.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2017",
+      "section": "B",
+      "questionNumber": 19,
+      "options": [
+        "A. a command",
+        "B. a demand",
+        "C. a request",
+        "D. a directive"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2017_q20",
+      "questionText": "There is nothing with which to compare the infinite knowledge and power of Providence.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2017",
+      "section": "B",
+      "questionNumber": 20,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2017_q22",
+      "questionText": "Manna lay aside some money for Baaba's party. This means that Manna............",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2017",
+      "section": "B",
+      "questionNumber": 22,
+      "options": [
+        "A. refused to host the party.",
+        "B. saved money for the party.",
+        "C. spent money on the party.",
+        "D. took a loan to organise the party."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2017_q23",
+      "questionText": "Mary described the occasion as a red-letter day. This means that the occassion was...........",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2017",
+      "section": "B",
+      "questionNumber": 23,
+      "options": [
+        "A. bloody",
+        "B. enjoyable",
+        "C. memorable",
+        "D. rough"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2017_q24",
+      "questionText": "George has been relieved of his post. This means that George has been............",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2017",
+      "section": "B",
+      "questionNumber": 24,
+      "options": [
+        "A. dismissed.",
+        "B. given another assignment.",
+        "C. demoted.",
+        "D. promoted."
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2017_q25",
+      "questionText": "Foli and Adzovi hit it off quite well. This means they............",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2017",
+      "section": "B",
+      "questionNumber": 25,
+      "options": [],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2017_q27",
+      "questionText": "Fishes are plentiful in the pond.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2017",
+      "section": "B",
+      "questionNumber": 27,
+      "options": [
+        "A. little",
+        "B. scarce",
+        "C. small",
+        "D. unusual"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2017_q28",
+      "questionText": "The price of petrol has fallen for no reason.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2017",
+      "section": "B",
+      "questionNumber": 28,
+      "options": [
+        "A. aggravated",
+        "B. doubled",
+        "C. risen",
+        "D. weakened"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2017_q29",
+      "questionText": "Cann worked hard to stock the shop.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2017",
+      "section": "B",
+      "questionNumber": 29,
+      "options": [
+        "A. decorate",
+        "B. empty",
+        "C. fill",
+        "D. reinforce"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    },
+    {
+      "id": "english_2017_q30",
+      "questionText": "There was mayhem as the crowd scattered.",
+      "type": "multipleChoice",
+      "subject": "english",
+      "examType": "bece",
+      "year": "2017",
+      "section": "B",
+      "questionNumber": 30,
+      "options": [
+        "A. anger",
+        "B. fear",
+        "C. order",
+        "D. riot"
+      ],
+      "correctAnswer": "",
+      "marks": 1,
+      "difficulty": "medium",
+      "topics": [
+        "To be categorized"
+      ],
+      "createdBy": "auto-extract",
+      "isActive": true,
+      "passageId": null,
+      "sectionInstructions": null,
+      "relatedQuestions": null
+    }
+  ]
+}
