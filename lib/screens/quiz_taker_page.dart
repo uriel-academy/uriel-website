@@ -62,7 +62,6 @@ class _QuizTakerPageState extends State<QuizTakerPage>
   
   // Passage support
   Map<String, Passage> passageCache = {}; // Cache passages by ID to avoid refetching
-  bool isLoadingPassage = false;
   bool isPassageExpanded = true; // Start with passage expanded
 
   @override
@@ -153,6 +152,9 @@ class _QuizTakerPageState extends State<QuizTakerPage>
       
       debugPrint('📊 QuizTaker: Final question count: ${questions.length} (max: $maxQuestions for ${widget.examType})');
       
+      // Pre-load all passages for questions that have them
+      await _preloadPassages();
+      
       // If no questions loaded, create a fallback or just continue silently
       if (questions.isNotEmpty) {
         quizStartTime = DateTime.now();
@@ -170,38 +172,54 @@ class _QuizTakerPageState extends State<QuizTakerPage>
     }
   }
 
+  Future<void> _preloadPassages() async {
+    // Collect unique passage IDs from all questions
+    final passageIds = questions
+        .where((q) => q.passageId != null)
+        .map((q) => q.passageId!)
+        .toSet();
+    
+    if (passageIds.isEmpty) {
+      debugPrint('📖 No passages to preload');
+      return;
+    }
+
+    debugPrint('📖 Preloading ${passageIds.length} passages...');
+    
+    // Fetch all passages in parallel
+    await Future.wait(
+      passageIds.map((passageId) async {
+        try {
+          final doc = await FirebaseFirestore.instance
+              .collection('passages')
+              .doc(passageId)
+              .get();
+
+          if (doc.exists) {
+            final passage = Passage.fromJson({...doc.data()!, 'id': doc.id});
+            passageCache[passageId] = passage;
+            debugPrint('✅ Loaded passage: $passageId');
+          } else {
+            debugPrint('⚠️ Passage not found: $passageId');
+          }
+        } catch (e) {
+          debugPrint('❌ Error loading passage $passageId: $e');
+        }
+      }),
+    );
+    
+    debugPrint('📖 Preloaded ${passageCache.length} passages successfully');
+  }
+
   void _selectAnswer(String answer) {
     setState(() {
       selectedAnswer = answer;
     });
   }
 
-  Future<Passage?> _fetchPassage(String passageId) async {
-    // Check cache first
-    if (passageCache.containsKey(passageId)) {
-      return passageCache[passageId];
-    }
-
-    try {
-      setState(() => isLoadingPassage = true);
-      
-      final doc = await FirebaseFirestore.instance
-          .collection('passages')
-          .doc(passageId)
-          .get();
-
-      if (doc.exists) {
-        final passage = Passage.fromJson({...doc.data()!, 'id': doc.id});
-        passageCache[passageId] = passage; // Cache it
-        setState(() => isLoadingPassage = false);
-        return passage;
-      }
-    } catch (e) {
-      debugPrint('Error fetching passage: $e');
-    }
-    
-    setState(() => isLoadingPassage = false);
-    return null;
+  Passage? _getPassage(String passageId) {
+    // Simply return from cache (already pre-loaded)
+    return passageCache[passageId];
   }
 
   Future<void> _nextQuestion() async {
@@ -894,30 +912,12 @@ class _QuizTakerPageState extends State<QuizTakerPage>
       children: [
         // Passage section (if question has a passage)
         if (question.passageId != null) ...[
-          FutureBuilder<Passage?>(
-            future: _fetchPassage(question.passageId!),
-            builder: (context, snapshot) {
-              if (snapshot.connectionState == ConnectionState.waiting) {
-                return Card(
-                  elevation: 2,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                  color: const Color(0xFFF5F5F5),
-                  margin: const EdgeInsets.only(bottom: 20),
-                  child: Padding(
-                    padding: EdgeInsets.all(isMobile ? 40 : 60),
-                    child: const Center(
-                      child: CircularProgressIndicator(
-                        valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF1A1E3F)),
-                      ),
-                    ),
-                  ),
-                );
+          Builder(
+            builder: (context) {
+              final passage = _getPassage(question.passageId!);
+              if (passage != null) {
+                return _buildPassageSection(passage, isMobile);
               }
-              
-              if (snapshot.hasData && snapshot.data != null) {
-                return _buildPassageSection(snapshot.data!, isMobile);
-              }
-              
               return const SizedBox.shrink();
             },
           ),

@@ -35,6 +35,7 @@ function parseEnglishQuestions(rawText, year) {
   const passages = [];
   let currentSection = 'COMPREHENSION';
   let currentPassage = null;
+  let currentPassageId = null; // Track the passage ID for questions to reference
   let collectingPassage = false;
   let passageLines = [];
   let currentQuestion = null;
@@ -59,8 +60,9 @@ function parseEnglishQuestions(rawText, year) {
     if (/^PASSAGE\s+(I+|[IV]+)$/i.test(line)) {
       // Save previous passage if exists
       if (passageLines.length > 0) {
+        const passageId = `english_${year}_passage_${passages.length + 1}`;
         passages.push({
-          id: `english_${year}_passage_${passages.length + 1}`,
+          id: passageId,
           content: passageLines.join(' ').trim(),
           title: currentPassage || `Passage ${passages.length + 1}`,
           subject: 'english',
@@ -75,6 +77,10 @@ function parseEnglishQuestions(rawText, year) {
       currentPassage = line;
       passageLines = [];
       collectingPassage = true;
+      
+      // Store the ID for the NEXT passage that will be created
+      // so questions can reference it before it's actually saved
+      currentPassageId = `english_${year}_passage_${passages.length + 1}`;
       continue;
     }
     
@@ -114,8 +120,8 @@ function parseEnglishQuestions(rawText, year) {
       };
       
       // Link to passage if in comprehension section
-      if (currentSection === 'COMPREHENSION' && passages.length > 0) {
-        currentQuestion.passageId = passages[passages.length - 1].id;
+      if (currentSection === 'COMPREHENSION' && currentPassageId) {
+        currentQuestion.passageId = currentPassageId;
       }
       
       currentOptions = [];
