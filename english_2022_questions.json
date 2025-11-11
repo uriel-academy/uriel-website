@@ -23,7 +23,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence."
     },
     {
       "id": "english_2022_q2",
@@ -47,7 +48,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence."
     },
     {
       "id": "english_2022_q3",
@@ -71,7 +73,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence."
     },
     {
       "id": "english_2022_q4",
@@ -95,7 +98,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence."
     },
     {
       "id": "english_2022_q5",
@@ -119,7 +123,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence."
     },
     {
       "id": "english_2022_q6",
@@ -143,7 +148,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence."
     },
     {
       "id": "english_2022_q7",
@@ -167,7 +173,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence."
     },
     {
       "id": "english_2022_q8",
@@ -191,7 +198,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence."
     },
     {
       "id": "english_2022_q9",
@@ -215,7 +223,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence."
     },
     {
       "id": "english_2022_q10",
@@ -239,7 +248,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence."
     },
     {
       "id": "english_2022_q11",
@@ -263,7 +273,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence."
     },
     {
       "id": "english_2022_q12",
@@ -287,7 +298,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence."
     },
     {
       "id": "english_2022_q13",
@@ -311,7 +323,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence."
     },
     {
       "id": "english_2022_q14",
@@ -335,7 +348,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence."
     },
     {
       "id": "english_2022_q15",
@@ -359,7 +373,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "From the alternatives lettered A to D, choose the one which most suitably completes each sentence."
     },
     {
       "id": "english_2022_q16",
@@ -383,7 +398,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence."
     },
     {
       "id": "english_2022_q17",
@@ -407,7 +423,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence."
     },
     {
       "id": "english_2022_q18",
@@ -431,7 +448,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence."
     },
     {
       "id": "english_2022_q19",
@@ -455,7 +473,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence."
     },
     {
       "id": "english_2022_q20",
@@ -479,7 +498,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence."
     },
     {
       "id": "english_2022_q21",
@@ -503,7 +523,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words."
     },
     {
       "id": "english_2022_q22",
@@ -527,7 +548,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words."
     },
     {
       "id": "english_2022_q23",
@@ -551,7 +573,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words."
     },
     {
       "id": "english_2022_q24",
@@ -575,7 +598,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words."
     },
     {
       "id": "english_2022_q25",
@@ -599,7 +623,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words."
     },
     {
       "id": "english_2022_q26",
@@ -623,7 +648,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words."
     },
     {
       "id": "english_2022_q27",
@@ -647,7 +673,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words."
     },
     {
       "id": "english_2022_q28",
@@ -671,7 +698,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words."
     },
     {
       "id": "english_2022_q29",
@@ -695,7 +723,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words."
     },
     {
       "id": "english_2022_q30",
@@ -719,7 +748,8 @@
         "Grammar"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "sectionInstructions": "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words."
     }
   ]
 }

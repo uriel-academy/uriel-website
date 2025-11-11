@@ -5,8 +5,60 @@
 **Imported:** 30 English questions from 2022  
 **Live on:** https://uriel-academy-41fb0.web.app  
 **⚠️ Note:** All answers are currently set to 'A' as placeholders - MUST BE UPDATED!
+**✅ Section Instructions:** Added to all 2022 questions (tells students what to do in each section)
 
-## 📁 Available Resources
+## � Section Instructions Feature
+
+### What are Section Instructions?
+Section instructions tell students what to do in each section of the exam. For example:
+- **Section A:** Complete the sentences
+- **Section B:** Find words with nearest meaning
+- **Section C:** Explain underlined phrases
+- **Section D:** Find opposite meanings
+
+### Currently Supported Sections
+Based on extracted BECE English papers (1990-2025):
+
+| Section | Instruction | Years Found |
+|---------|------------|-------------|
+| A | From the alternatives lettered A to D, choose the one which most suitably completes each sentence. | 2011, 2020, 2022 |
+| B | Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence. | 2011, 2020, 2022 |
+| C | In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words. | 2011, 2020, 2022 |
+| D | From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence. | 2011, 2020, 2022 |
+
+### Adding New Sections (E, F, G, etc.)
+If you discover additional sections in other years:
+
+1. **Extract the instruction** from the raw text file:
+   ```powershell
+   node extract_section_instructions.js 2023
+   ```
+
+2. **Update all three scripts** with the new section:
+   - `add_section_instructions.js`
+   - `batch_add_section_instructions.js`
+   - `parse_english_to_json.js`
+   
+   Add to the `SECTION_INSTRUCTIONS` object:
+   ```javascript
+   const SECTION_INSTRUCTIONS = {
+     // ... existing sections ...
+     'E': 'Your new section instruction here',
+   };
+   ```
+
+3. **Re-run the script** to update existing JSON files:
+   ```powershell
+   node batch_add_section_instructions.js
+   ```
+
+### Important Notes
+- ✅ Scripts support sections A-Z (not limited to A-D)
+- ✅ Underlined words in original documents are preserved in question text
+- ✅ Section instructions are automatically added during JSON parsing
+- ⚠️ Some years (1990-2010, 2012-2019, 2023-2025) may have extraction issues where section headers weren't properly separated
+
+## �📁 Available Resources
 
 ### Question Files (DOCX)
 - `assets/bece English/bece english 1990-2025 questions.docx` (35 files)
@@ -47,12 +99,39 @@ Example for 2022 (if you have the answer key):
 1D 2D 3A 4D 5D 6A 7C 8B 9A 10C 11D 12B 13C 14A 15D 16B 17A 18C 19D 20A
 ```
 
+### Step 2.5: Add Section Instructions (IMPORTANT!)
+
+Section instructions tell students what to do in each section (A, B, C, D).
+
+#### For Single File:
+```powershell
+node add_section_instructions.js english_2022_questions.json
+```
+
+#### For All Existing Files:
+```powershell
+node batch_add_section_instructions.js
+```
+
+**Section Instructions:**
+- **Section A:** "From the alternatives lettered A to D, choose the one which most suitably completes each sentence."
+- **Section B:** "Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence."
+- **Section C:** "In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words."
+- **Section D:** "From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence."
+- **Section E+:** If you encounter additional sections (E, F, etc.) in other years, add them to the `SECTION_INSTRUCTIONS` object in the scripts
+
+**Note:** 
+- The updated `parse_english_to_json.js` script now automatically adds section instructions to new extractions
+- The scripts support sections A-Z (not limited to A-D only)
+- Underlined words in the original documents are preserved in the question text
+
 #### Method B: Direct JSON Edit
 Open `english_2022_questions.json` and update:
 ```json
 {
   "id": "english_2022_q1",
   "correctAnswer": "D",  // Change from "A" to correct answer
+  "sectionInstructions": "From the alternatives lettered A to D...",
   ...
 }
 ```

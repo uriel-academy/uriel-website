@@ -6,6 +6,19 @@ const path = require('path');
  * This script parses the raw text more intelligently to extract options
  */
 
+// Define section instructions for BECE English
+// Note: Section instructions are extracted from the original DOCX files
+// Add more sections as needed (E, F, etc.)
+const SECTION_INSTRUCTIONS = {
+  'A': 'From the alternatives lettered A to D, choose the one which most suitably completes each sentence.',
+  'B': 'Choose from the alternatives lettered A to D the one which is nearest in meaning to the underlined word in each sentence.',
+  'C': 'In each of the following sentences a group of words has been underlined. Choose from the alternatives lettered A to D the one that best explains the underlined group of words.',
+  'D': 'From the list of words lettered A to D, choose the one that is most nearly opposite in meaning to the word underlined in each sentence.',
+  'E': 'Read the passage carefully and answer the questions that follow.',
+  'F': 'Choose the option that best completes each sentence.',
+  // Add more sections as discovered in other years
+};
+
 function parseEnglishQuestions(rawText, year) {
   const lines = rawText.split('\n').map(l => l.trim()).filter(l => l.length > 0);
   
@@ -23,10 +36,10 @@ function parseEnglishQuestions(rawText, year) {
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
     
-    // Detect section changes
-    if (/SECTION\s+([ABC])/i.test(line)) {
-      const match = line.match(/SECTION\s+([ABC])/i);
-      currentSection = match[1];
+    // Detect section changes (A-Z)
+    if (/SECTION\s+([A-Z])/i.test(line)) {
+      const match = line.match(/SECTION\s+([A-Z])/i);
+      currentSection = match[1].toUpperCase();
       continue;
     }
     
@@ -47,6 +60,7 @@ function parseEnglishQuestions(rawText, year) {
         examType: 'bece',
         year: year,
         section: currentSection,
+        sectionInstructions: SECTION_INSTRUCTIONS[currentSection] || '',
         questionNumber: questionNumber,
         options: [],
         correctAnswer: '',
