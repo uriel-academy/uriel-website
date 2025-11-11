@@ -60,9 +60,7 @@ class Passage {
         ),
         year: json['year']?.toString() ?? '',
         section: json['section']?.toString() ?? '',
-        questionRange: json['questionRange'] != null 
-            ? List<int>.from(json['questionRange']) 
-            : [],
+        questionRange: _parseQuestionRange(json['questionRange']),
         createdAt: _parseDateTime(json['createdAt']),
         createdBy: json['createdBy'] ?? '',
         isActive: json['isActive'] ?? true,
@@ -72,6 +70,23 @@ class Passage {
       debugPrint('JSON data: $json');
       rethrow;
     }
+  }
+
+  static List<int> _parseQuestionRange(dynamic value) {
+    if (value == null) return [];
+    if (value is List) {
+      return value.map((e) => e is int ? e : int.tryParse(e.toString()) ?? 0).toList();
+    }
+    if (value is String) {
+      if (value.isEmpty) return [];
+      // Try to parse comma-separated numbers
+      try {
+        return value.split(',').map((e) => int.parse(e.trim())).toList();
+      } catch (e) {
+        return [];
+      }
+    }
+    return [];
   }
 
   static DateTime _parseDateTime(dynamic dateValue) {
