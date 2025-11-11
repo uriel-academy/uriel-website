@@ -33,7 +33,9 @@ function parseEnglishQuestions(rawText, year) {
   
   const questions = [];
   const passages = [];
-  let currentSection = 'COMPREHENSION';
+  // Default to Section A for years 2019+ that don't have COMPREHENSION section
+  const hasComprehension = rawText.includes('COMPREHENSION') || rawText.includes('PASSAGE');
+  let currentSection = hasComprehension ? 'COMPREHENSION' : 'A';
   let currentPassage = null;
   let currentPassageId = null; // Track the passage ID for questions to reference
   let collectingPassage = false;
@@ -100,6 +102,17 @@ function parseEnglishQuestions(rawText, year) {
       
       collectingPassage = false;
       const questionNumber = parseInt(line);
+      
+      // Auto-detect section based on question number for newer formats (2019+)
+      // Typical structure: Q1-15=A, Q16-20=B, Q21-25=C, Q26-30=D, Q31-35=E
+      if (!hasComprehension && year >= 2019) {
+        if (questionNumber >= 1 && questionNumber <= 15) currentSection = 'A';
+        else if (questionNumber >= 16 && questionNumber <= 20) currentSection = 'B';
+        else if (questionNumber >= 21 && questionNumber <= 25) currentSection = 'C';
+        else if (questionNumber >= 26 && questionNumber <= 30) currentSection = 'D';
+        else if (questionNumber >= 31 && questionNumber <= 40) currentSection = 'E';
+      }
+      
       currentQuestion = {
         id: `english_${year}_q${questionNumber}`,
         questionText: '',
