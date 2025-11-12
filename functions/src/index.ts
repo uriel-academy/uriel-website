@@ -3971,3 +3971,197 @@ export {
   manualUpdateDifficulties, 
   getSubjectDifficultyStats 
 } from './updateQuestionDifficulty';
+
+// Import Social Studies Questions
+export const importSocialStudiesQuestions = functions.https.onCall(async (data, context) => {
+  try {
+    // Verify that the user is authenticated and is an admin
+    if (!context.auth) {
+      throw new functions.https.HttpsError('unauthenticated', 'User must be authenticated');
+    }
+
+    // Check if user has admin role in custom claims
+    const role = context.auth.token.role as string | undefined;
+    const adminEmail = 'studywithuriel@gmail.com';
+    
+    if (!role || !['admin', 'super_admin'].includes(role)) {
+      if (context.auth.token.email !== adminEmail) {
+        throw new functions.https.HttpsError('permission-denied', 'Only admins can import questions');
+      }
+    }
+
+    console.log('Starting Social Studies questions import...');
+    
+    const fs = require('fs');
+    const path = require('path');
+    
+    const questionsPath = path.join(__dirname, '..', '..', 'assets', 'bece_json', 'bece_social_studies_questions.json');
+    
+    if (!fs.existsSync(questionsPath)) {
+      throw new functions.https.HttpsError('not-found', 'Social Studies questions file not found');
+    }
+    
+    const questionsData = JSON.parse(fs.readFileSync(questionsPath, 'utf8'));
+    const currentDate = new Date().toISOString();
+    
+    console.log(`Processing ${questionsData.length} Social Studies questions`);
+    
+    let importedCount = 0;
+    const batch = db.batch();
+    
+    for (const question of questionsData) {
+      const docId = `social_studies_${question.year}_q${question.questionNumber}`;
+      const docRef = db.collection('questions').doc(docId);
+      
+      const questionDoc = {
+        id: docId,
+        questionText: question.questionText,
+        type: 'multipleChoice',
+        subject: 'socialStudies',
+        examType: 'bece',
+        year: question.year,
+        section: 'A',
+        questionNumber: question.questionNumber,
+        options: question.options,
+        correctAnswer: question.correctAnswer || null,
+        explanation: `This is question ${question.questionNumber} from the ${question.year} BECE Social Studies exam.`,
+        marks: 1,
+        difficulty: 'medium',
+        topics: ['Social Studies', 'BECE', question.year],
+        createdAt: currentDate,
+        updatedAt: currentDate,
+        createdBy: 'system_import',
+        isActive: true,
+        metadata: {
+          source: `BECE ${question.year}`,
+          importDate: currentDate,
+          verified: true
+        }
+      };
+      
+      batch.set(docRef, questionDoc);
+      importedCount++;
+      
+      // Commit batch every 500 documents (Firestore limit is 500)
+      if (importedCount % 500 === 0) {
+        await batch.commit();
+        console.log(`Committed batch at ${importedCount} questions`);
+      }
+    }
+    
+    // Commit remaining questions
+    if (importedCount % 500 !== 0) {
+      await batch.commit();
+    }
+    
+    console.log(`Successfully imported ${importedCount} Social Studies questions!`);
+    
+    return {
+      success: true,
+      message: `Successfully imported ${importedCount} Social Studies questions!`,
+      questionsImported: importedCount
+    };
+    
+  } catch (error) {
+    console.error('Error importing Social Studies questions:', error);
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    throw new functions.https.HttpsError('internal', `Failed to import Social Studies questions: ${errorMessage}`);
+  }
+});
+
+// Import Integrated Science Questions
+export const importIntegratedScienceQuestions = functions.https.onCall(async (data, context) => {
+  try {
+    // Verify that the user is authenticated and is an admin
+    if (!context.auth) {
+      throw new functions.https.HttpsError('unauthenticated', 'User must be authenticated');
+    }
+
+    // Check if user has admin role in custom claims
+    const role = context.auth.token.role as string | undefined;
+    const adminEmail = 'studywithuriel@gmail.com';
+    
+    if (!role || !['admin', 'super_admin'].includes(role)) {
+      if (context.auth.token.email !== adminEmail) {
+        throw new functions.https.HttpsError('permission-denied', 'Only admins can import questions');
+      }
+    }
+
+    console.log('Starting Integrated Science questions import...');
+    
+    const fs = require('fs');
+    const path = require('path');
+    
+    const questionsPath = path.join(__dirname, '..', '..', 'assets', 'bece_json', 'bece_integrated_science_questions.json');
+    
+    if (!fs.existsSync(questionsPath)) {
+      throw new functions.https.HttpsError('not-found', 'Integrated Science questions file not found');
+    }
+    
+    const questionsData = JSON.parse(fs.readFileSync(questionsPath, 'utf8'));
+    const currentDate = new Date().toISOString();
+    
+    console.log(`Processing ${questionsData.length} Integrated Science questions`);
+    
+    let importedCount = 0;
+    const batch = db.batch();
+    
+    for (const question of questionsData) {
+      const docId = `integrated_science_${question.year}_q${question.questionNumber}`;
+      const docRef = db.collection('questions').doc(docId);
+      
+      const questionDoc = {
+        id: docId,
+        questionText: question.questionText,
+        type: 'multipleChoice',
+        subject: 'integratedScience',
+        examType: 'bece',
+        year: question.year,
+        section: 'A',
+        questionNumber: question.questionNumber,
+        options: question.options,
+        correctAnswer: question.correctAnswer || null,
+        explanation: `This is question ${question.questionNumber} from the ${question.year} BECE Integrated Science exam.`,
+        marks: 1,
+        difficulty: 'medium',
+        topics: ['Integrated Science', 'BECE', question.year],
+        createdAt: currentDate,
+        updatedAt: currentDate,
+        createdBy: 'system_import',
+        isActive: true,
+        metadata: {
+          source: `BECE ${question.year}`,
+          importDate: currentDate,
+          verified: true
+        }
+      };
+      
+      batch.set(docRef, questionDoc);
+      importedCount++;
+      
+      // Commit batch every 500 documents (Firestore limit is 500)
+      if (importedCount % 500 === 0) {
+        await batch.commit();
+        console.log(`Committed batch at ${importedCount} questions`);
+      }
+    }
+    
+    // Commit remaining questions
+    if (importedCount % 500 !== 0) {
+      await batch.commit();
+    }
+    
+    console.log(`Successfully imported ${importedCount} Integrated Science questions!`);
+    
+    return {
+      success: true,
+      message: `Successfully imported ${importedCount} Integrated Science questions!`,
+      questionsImported: importedCount
+    };
+    
+  } catch (error) {
+    console.error('Error importing Integrated Science questions:', error);
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    throw new functions.https.HttpsError('internal', `Failed to import Integrated Science questions: ${errorMessage}`);
+  }
+});

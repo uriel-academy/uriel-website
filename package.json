@@ -7,6 +7,7 @@
     "mammoth": "^1.11.0",
     "minimist": "^1.2.8",
     "openai": "^6.5.0",
+    "pdf-parse": "^2.4.5",
     "puppeteer": "^24.26.1"
   },
   "name": "uriel_mainapp",

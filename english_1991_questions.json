@@ -43,14 +43,15 @@
         "D. he had helped them to demolish the buildings",
         "E. he had been satisfied that the boys were happy"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1991_passage_1"
     },
     {
       "id": "english_1991_q2",
@@ -69,14 +70,15 @@
         "D. In the public gardens",
         "E. In the building falling apart"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1991_passage_1"
     },
     {
       "id": "english_1991_q3",
@@ -95,14 +97,15 @@
         "D. brilliant",
         "E. special"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1991_passage_1"
     },
     {
       "id": "english_1991_q4",
@@ -121,14 +124,15 @@
         "D. talking with boys in the public gardens",
         "E. riding in cars wherever they go"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1991_passage_1"
     },
     {
       "id": "english_1991_q5",
@@ -147,14 +151,15 @@
         "D. The boys rested in the public gardens",
         "E. The boys as well as Mr. Appiah must have been hot, tired and dusty."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1991_passage_1"
     },
     {
       "id": "english_1991_q6",
@@ -173,14 +178,15 @@
         "D. unsatisfactory reports about the city",
         "E. there are many sanitary inspectors in Accra"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1991_passage_1"
     },
     {
       "id": "english_1991_q7",
@@ -199,14 +205,15 @@
         "D. pulled down",
         "E. hire out"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1991_passage_1"
     },
     {
       "id": "english_1991_q8",
@@ -225,7 +232,7 @@
         "D. to use aluminium and electricity",
         "E. to make aluminium, bauxite and electricity"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -233,7 +240,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1991_passage_1"
+      "passageId": "english_1991_passage_2"
     },
     {
       "id": "english_1991_q9",
@@ -252,7 +259,7 @@
         "D. machine",
         "E. tunnels"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -260,7 +267,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1991_passage_1"
+      "passageId": "english_1991_passage_2"
     },
     {
       "id": "english_1991_q10",
@@ -279,7 +286,7 @@
         "D. provide water for drinking",
         "E. make electricity cheap"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -287,7 +294,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1991_passage_1"
+      "passageId": "english_1991_passage_2"
     },
     {
       "id": "english_1991_q11",
@@ -306,7 +313,7 @@
         "D. The Akosombo dam is valuable to Ghana",
         "E. A great collection of water running through tunnels can produce electricity anywhere in the world"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -314,7 +321,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1991_passage_1"
+      "passageId": "english_1991_passage_2"
     },
     {
       "id": "english_1991_q12",
@@ -333,7 +340,7 @@
         "D. In producing electricity engineers need a lot of petrol to drive the machines",
         "E. Turbines are used in the production of electricity"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -341,7 +348,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1991_passage_1"
+      "passageId": "english_1991_passage_2"
     },
     {
       "id": "english_1991_q13",
@@ -359,7 +366,7 @@
         "C. Dams of the world",
         "D. Electricity and power"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -367,11 +374,11 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1991_passage_1"
+      "passageId": "english_1991_passage_2"
     },
     {
       "id": "english_1991_q14",
-      "questionText": "Your dress <u>material</u> is inferior to what I bought from the shop. This means that your dress material is ......",
+      "questionText": "Your dress material is inferior to what I bought from the shop. This means that your dress material is ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -385,7 +392,7 @@
         "C. brightly coloured",
         "D. expensive"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -396,7 +403,7 @@
     },
     {
       "id": "english_1991_q15",
-      "questionText": "The girl is a spendthrift: she used all her pocket money to buy a pair of shoes. This <u>means</u> ......",
+      "questionText": "The girl is a spendthrift: she used all her pocket money to buy a pair of shoes. This means ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -410,7 +417,7 @@
         "C. extravagant",
         "D. kind"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -421,7 +428,7 @@
     },
     {
       "id": "english_1991_q16",
-      "questionText": "The pupils in the town often <u>help</u> in communal activities. This means that they help in ......",
+      "questionText": "The pupils in the town often help in communal activities. This means that they help in ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -435,7 +442,7 @@
         "C. public activities",
         "D. usual activities"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -446,7 +453,7 @@
     },
     {
       "id": "english_1991_q17",
-      "questionText": "The aroma of Kate's <u>food</u> made everyone hungry. This means the food ......",
+      "questionText": "The aroma of Kate's food made everyone hungry. This means the food ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -460,7 +467,7 @@
         "C. is spicy",
         "D. is valuable"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -471,7 +478,7 @@
     },
     {
       "id": "english_1991_q18",
-      "questionText": "He wasn't at the scene of the <u>accident</u>, ......?",
+      "questionText": "He wasn't at the scene of the accident, ......?",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -485,7 +492,7 @@
         "C. did he",
         "D. was he"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -496,7 +503,7 @@
     },
     {
       "id": "english_1991_q19",
-      "questionText": "You don't speak <u>Chinese</u>, ......?",
+      "questionText": "You don't speak Chinese, ......?",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -510,7 +517,7 @@
         "C. don't you",
         "D. won't you"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -521,7 +528,7 @@
     },
     {
       "id": "english_1991_q20",
-      "questionText": "We worked hard in our final <u>year</u>, ......?",
+      "questionText": "We worked hard in our final year, ......?",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -535,7 +542,7 @@
         "C. aren't we",
         "D. didn't we"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -546,7 +553,7 @@
     },
     {
       "id": "english_1991_q21",
-      "questionText": "They have lost the <u>match</u>, ......?",
+      "questionText": "They have lost the match, ......?",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -560,7 +567,7 @@
         "C. haven't they",
         "D. is it"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -571,7 +578,7 @@
     },
     {
       "id": "english_1991_q22",
-      "questionText": "He has <u>stolen</u> the box ......",
+      "questionText": "He has stolen the box ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -585,7 +592,7 @@
         "C. we kept the gold chain",
         "D. where we kept the gold chain"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -596,7 +603,7 @@
     },
     {
       "id": "english_1991_q23",
-      "questionText": "...... hard he tried, Adansi came last in the <u>test</u>.",
+      "questionText": "...... hard he tried, Adansi came last in the test.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -610,7 +617,7 @@
         "C. Whenever",
         "D. However"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -621,7 +628,7 @@
     },
     {
       "id": "english_1991_q24",
-      "questionText": "Akwetey did the <u>exercise</u> ......",
+      "questionText": "Akwetey did the exercise ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -635,7 +642,7 @@
         "C. but he was sick",
         "D. for which he was sick"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -646,7 +653,7 @@
     },
     {
       "id": "english_1991_q25",
-      "questionText": "We are not <u>allowed</u> ......",
+      "questionText": "We are not allowed ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -660,7 +667,7 @@
         "C. walking across the lawn",
         "D. to walk across the lawn"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -671,7 +678,7 @@
     },
     {
       "id": "english_1991_q26",
-      "questionText": "Everybody was pleased ...... the pastor's <u>sermon</u>.",
+      "questionText": "Everybody was pleased ...... the pastor's sermon.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -685,7 +692,7 @@
         "C. with",
         "D. at"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -696,7 +703,7 @@
     },
     {
       "id": "english_1991_q27",
-      "questionText": "John's father congratulated him ...... his success in the <u>examination</u>.",
+      "questionText": "John's father congratulated him ...... his success in the examination.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -710,7 +717,7 @@
         "C. at",
         "D. to"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -721,7 +728,7 @@
     },
     {
       "id": "english_1991_q28",
-      "questionText": "The patient is generally recovering ...... his <u>illness</u>",
+      "questionText": "The patient is generally recovering ...... his illness",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -735,7 +742,7 @@
         "C. for",
         "D. during"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -746,7 +753,7 @@
     },
     {
       "id": "english_1991_q29",
-      "questionText": "We have been in this school ...... three <u>years</u>.",
+      "questionText": "We have been in this school ...... three years.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -760,7 +767,7 @@
         "C. by",
         "D. for"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -771,7 +778,7 @@
     },
     {
       "id": "english_1991_q30",
-      "questionText": "It would be unwise to ...... the chance of making extra <u>money</u>.",
+      "questionText": "It would be unwise to ...... the chance of making extra money.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -785,7 +792,7 @@
         "C. throw over",
         "D. throw by"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -796,7 +803,7 @@
     },
     {
       "id": "english_1991_q31",
-      "questionText": "Koku was sad when he lost his mother but he will <u>soon</u> ...... it",
+      "questionText": "Koku was sad when he lost his mother but he will soon ...... it",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -810,7 +817,7 @@
         "C. get by",
         "D. get over"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -821,7 +828,7 @@
     },
     {
       "id": "english_1991_q32",
-      "questionText": "...... these words in your <u>dictionary</u>.",
+      "questionText": "...... these words in your dictionary.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -835,7 +842,7 @@
         "C. Look up",
         "D. Look about"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -846,7 +853,7 @@
     },
     {
       "id": "english_1991_q33",
-      "questionText": "If he ...... the elections he would have become an <u>assemblyman</u>.",
+      "questionText": "If he ...... the elections he would have become an assemblyman.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -860,7 +867,7 @@
         "C. had won",
         "D. should win"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -871,7 +878,7 @@
     },
     {
       "id": "english_1991_q34",
-      "questionText": "If he continues to work hard, he ...... his examination with <u>ease</u>.",
+      "questionText": "If he continues to work hard, he ...... his examination with ease.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -885,7 +892,7 @@
         "C. has passed",
         "D. would pass"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -896,7 +903,7 @@
     },
     {
       "id": "english_1991_q35",
-      "questionText": "The news he <u>brought</u> ...... bad",
+      "questionText": "The news he brought ...... bad",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -910,7 +917,7 @@
         "C. has been",
         "D. was"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -921,7 +928,7 @@
     },
     {
       "id": "english_1991_q36",
-      "questionText": "The headmaster thanked his teachers for a wonderful job <u>done</u>.",
+      "questionText": "The headmaster thanked his teachers for a wonderful job done.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -935,7 +942,7 @@
         "C. big",
         "D. bad"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -946,7 +953,7 @@
     },
     {
       "id": "english_1991_q37",
-      "questionText": "The present day youth still indulge in all forms of drug <u>abuse</u>.",
+      "questionText": "The present day youth still indulge in all forms of drug abuse.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -960,7 +967,7 @@
         "C. discourage",
         "D. disallow"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -971,7 +978,7 @@
     },
     {
       "id": "english_1991_q38",
-      "questionText": "Some people prefer to eat lean <u>meat</u>.",
+      "questionText": "Some people prefer to eat lean meat.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -985,7 +992,7 @@
         "C. spoilt",
         "D. bloody"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -996,7 +1003,7 @@
     },
     {
       "id": "english_1991_q39",
-      "questionText": "Kojo's teacher was reluctant to accept his explanation for being late to <u>school</u>.",
+      "questionText": "Kojo's teacher was reluctant to accept his explanation for being late to school.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -1010,7 +1017,7 @@
         "C. unable",
         "D. planning"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -1021,7 +1028,7 @@
     },
     {
       "id": "english_1991_q40",
-      "questionText": "The workers wanted their director to hold the <u>meeting</u>.",
+      "questionText": "The workers wanted their director to hold the meeting.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -1035,7 +1042,7 @@
         "C. cancel",
         "D. support"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [

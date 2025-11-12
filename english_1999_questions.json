@@ -42,14 +42,15 @@
         "C. the students saw the headmaster standing before them",
         "D. they did not expect the bell to ring at that time"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1999_passage_1"
     },
     {
       "id": "english_1999_q2",
@@ -67,14 +68,15 @@
         "C. bell rang many times.",
         "D. bell rang at the normal time."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1999_passage_1"
     },
     {
       "id": "english_1999_q3",
@@ -92,14 +94,15 @@
         "C. Akwesi Ameko surprised them.",
         "D. Akwasi Osei the cripple was also involved."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1999_passage_1"
     },
     {
       "id": "english_1999_q4",
@@ -117,14 +120,15 @@
         "C. confused.",
         "D. surprised."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1999_passage_1"
     },
     {
       "id": "english_1999_q5",
@@ -142,14 +146,15 @@
         "C. sent them home to call their parents.",
         "D. asked them to stay away from school."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1999_passage_1"
     },
     {
       "id": "english_1999_q6",
@@ -167,7 +172,7 @@
         "C. his new dress.",
         "D. his embroidery."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -175,7 +180,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1999_passage_1"
+      "passageId": "english_1999_passage_2"
     },
     {
       "id": "english_1999_q7",
@@ -193,7 +198,7 @@
         "C. made noise.",
         "D. looked very beautiful."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -201,7 +206,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1999_passage_1"
+      "passageId": "english_1999_passage_2"
     },
     {
       "id": "english_1999_q8",
@@ -219,7 +224,7 @@
         "C. wanted to display their dresses.",
         "D. preferred sitting to standing."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -227,7 +232,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1999_passage_1"
+      "passageId": "english_1999_passage_2"
     },
     {
       "id": "english_1999_q9",
@@ -245,7 +250,7 @@
         "C. in order to relieve himself.",
         "D. so that he could wear his cap."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -253,7 +258,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1999_passage_1"
+      "passageId": "english_1999_passage_2"
     },
     {
       "id": "english_1999_q10",
@@ -271,7 +276,7 @@
         "C. wearing new clothes.",
         "D. celebrating."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -279,7 +284,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1999_passage_1"
+      "passageId": "english_1999_passage_2"
     },
     {
       "id": "english_1999_q11",
@@ -297,7 +302,7 @@
         "C. play happily.",
         "D. sing melodiously."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -305,11 +310,11 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1999_passage_1"
+      "passageId": "english_1999_passage_2"
     },
     {
       "id": "english_1999_q12",
-      "questionText": "The team's performance made the coach very <u>anxious</u>",
+      "questionText": "The team's performance made the coach very anxious",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -323,7 +328,7 @@
         "C. jealous",
         "D. worried"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -334,7 +339,7 @@
     },
     {
       "id": "english_1999_q13",
-      "questionText": "The Disciplinary Committee was asked to investigate the <u>theft</u>.",
+      "questionText": "The Disciplinary Committee was asked to investigate the theft.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -348,7 +353,7 @@
         "C. determine",
         "D. look for"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -359,7 +364,7 @@
     },
     {
       "id": "english_1999_q14",
-      "questionText": "The class teacher could not bear the <u>noise</u>.",
+      "questionText": "The class teacher could not bear the noise.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -373,7 +378,7 @@
         "C. take in",
         "D. make out"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -384,7 +389,7 @@
     },
     {
       "id": "english_1999_q15",
-      "questionText": "Due to anger the pupil spoke to the teacher in an <u>impolite</u> way.",
+      "questionText": "Due to anger the pupil spoke to the teacher in an impolite way.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -398,7 +403,7 @@
         "C. brave",
         "D. rude"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -409,7 +414,7 @@
     },
     {
       "id": "english_1999_q16",
-      "questionText": "Florence Nightingale was a renowned <u>nurse</u>.",
+      "questionText": "Florence Nightingale was a renowned nurse.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -423,7 +428,7 @@
         "C. brave",
         "D. famous"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -434,7 +439,7 @@
     },
     {
       "id": "english_1999_q17",
-      "questionText": "The news of the inspector's visit kept the <u>pupils</u> on their toes. This means the pupils ......",
+      "questionText": "The news of the inspector's visit kept the pupils on their toes. This means the pupils ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -448,7 +453,7 @@
         "C. were alert.",
         "D. were fatigued."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -459,7 +464,7 @@
     },
     {
       "id": "english_1999_q18",
-      "questionText": "During my preparation for the examination, I left no stone unturned. This means <u>that</u> I ......",
+      "questionText": "During my preparation for the examination, I left no stone unturned. This means that I ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -473,7 +478,7 @@
         "C. was sure to pass.",
         "D. took all the stones away."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -484,7 +489,7 @@
     },
     {
       "id": "english_1999_q19",
-      "questionText": "For the sake of peace <u>Kofi</u> gave in to his friend after their bitter quarrel. This means that Kofi",
+      "questionText": "For the sake of peace Kofi gave in to his friend after their bitter quarrel. This means that Kofi",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -498,7 +503,7 @@
         "C. Kofi's friend abandoned him.",
         "D. Kofi's friend was defeated."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -509,7 +514,7 @@
     },
     {
       "id": "english_1999_q20",
-      "questionText": "John was far ahead of our class but we soon caught up with him. This means <u>that</u> ......",
+      "questionText": "John was far ahead of our class but we soon caught up with him. This means that ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -523,7 +528,7 @@
         "C. we soon found John in front of us.",
         "D. we reached the same level with John."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -534,7 +539,7 @@
     },
     {
       "id": "english_1999_q21",
-      "questionText": "<u>Kwadwo</u> turned a deaf ear to his mother's advice. This means that Kwadwo ......",
+      "questionText": "Kwadwo turned a deaf ear to his mother's advice. This means that Kwadwo ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -548,7 +553,7 @@
         "C. stopped his ear.",
         "D. could not hear well."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -559,7 +564,7 @@
     },
     {
       "id": "english_1999_q22",
-      "questionText": "She is hopeful of passing the English Language <u>test</u>.",
+      "questionText": "She is hopeful of passing the English Language test.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -573,7 +578,7 @@
         "C. careful",
         "D. doubtful"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -584,7 +589,7 @@
     },
     {
       "id": "english_1999_q23",
-      "questionText": "The Headmaster condemned the Prefect's <u>behaviour</u>.",
+      "questionText": "The Headmaster condemned the Prefect's behaviour.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -598,7 +603,7 @@
         "C. confirmed",
         "D. praised"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -609,7 +614,7 @@
     },
     {
       "id": "english_1999_q24",
-      "questionText": "Mary looked very attractive in her new <u>dress</u>.",
+      "questionText": "Mary looked very attractive in her new dress.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -623,7 +628,7 @@
         "C. happy",
         "D. proud"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -634,7 +639,7 @@
     },
     {
       "id": "english_1999_q25",
-      "questionText": "The melodious song put the baby to <u>sleep</u>.",
+      "questionText": "The melodious song put the baby to sleep.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -648,7 +653,7 @@
         "C. strange",
         "D. discordant"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -659,7 +664,7 @@
     },
     {
       "id": "english_1999_q26",
-      "questionText": "My father was indifferent to my brother's <u>suffering</u>.",
+      "questionText": "My father was indifferent to my brother's suffering.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -673,7 +678,7 @@
         "C. stern",
         "D. kind"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -684,7 +689,7 @@
     },
     {
       "id": "english_1999_q27",
-      "questionText": "We always look ...... our parents for <u>help</u>.",
+      "questionText": "We always look ...... our parents for help.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -698,7 +703,7 @@
         "C. at",
         "D. up for"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -709,7 +714,7 @@
     },
     {
       "id": "english_1999_q28",
-      "questionText": "Finish the work quickly and ...... your exercise <u>books</u>.",
+      "questionText": "Finish the work quickly and ...... your exercise books.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -723,7 +728,7 @@
         "C. hand down",
         "D. hand over"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -734,7 +739,7 @@
     },
     {
       "id": "english_1999_q29",
-      "questionText": "You don't believe <u>that</u>, ......?",
+      "questionText": "You don't believe that, ......?",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -748,7 +753,7 @@
         "C. won't you",
         "D. don't you"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -759,7 +764,7 @@
     },
     {
       "id": "english_1999_q30",
-      "questionText": "Amina is a good <u>girl</u>, ......?",
+      "questionText": "Amina is a good girl, ......?",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -773,7 +778,7 @@
         "C. does she",
         "D. isn't she"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -784,7 +789,7 @@
     },
     {
       "id": "english_1999_q31",
-      "questionText": "Don't pay him ...... he finishes the <u>work</u>.",
+      "questionText": "Don't pay him ...... he finishes the work.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -798,7 +803,7 @@
         "C. as",
         "D. yet"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -809,7 +814,7 @@
     },
     {
       "id": "english_1999_q32",
-      "questionText": "This is the boy ...... book I <u>took</u>.",
+      "questionText": "This is the boy ...... book I took.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -823,7 +828,7 @@
         "C. who",
         "D. whose"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -834,7 +839,7 @@
     },
     {
       "id": "english_1999_q33",
-      "questionText": "She ...... when her father <u>called</u> her.",
+      "questionText": "She ...... when her father called her.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -848,7 +853,7 @@
         "C. has swept",
         "D. was sweeping"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -859,7 +864,7 @@
     },
     {
       "id": "english_1999_q34",
-      "questionText": "After the fight, the two boxers <u>congratulated</u> ......",
+      "questionText": "After the fight, the two boxers congratulated ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -873,7 +878,7 @@
         "C. one other",
         "D. each another"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -884,7 +889,7 @@
     },
     {
       "id": "english_1999_q35",
-      "questionText": "Everybody said my father was the ...... hardworking man in the <u>village</u>.",
+      "questionText": "Everybody said my father was the ...... hardworking man in the village.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -898,7 +903,7 @@
         "C. most",
         "D. more"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -909,7 +914,7 @@
     },
     {
       "id": "english_1999_q36",
-      "questionText": "The chief went to the durbar grounds ...... <u>horseback</u>.",
+      "questionText": "The chief went to the durbar grounds ...... horseback.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -923,7 +928,7 @@
         "C. from",
         "D. above"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -934,7 +939,7 @@
     },
     {
       "id": "english_1999_q37",
-      "questionText": "Nii isn't in his office; he is ...... near this <u>place</u>.",
+      "questionText": "Nii isn't in his office; he is ...... near this place.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -948,7 +953,7 @@
         "C. somewhat",
         "D. nowhere"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -959,7 +964,7 @@
     },
     {
       "id": "english_1999_q38",
-      "questionText": "Kweku discovered later that ...... has many <u>advantages</u>.",
+      "questionText": "Kweku discovered later that ...... has many advantages.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -973,7 +978,7 @@
         "C. having told the truth",
         "D. telling the truth"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -984,7 +989,7 @@
     },
     {
       "id": "english_1999_q39",
-      "questionText": "The Oseis are our neighbours; they ...... near us for twenty <u>years</u> now.",
+      "questionText": "The Oseis are our neighbours; they ...... near us for twenty years now.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -998,7 +1003,7 @@
         "C. stayed",
         "D. have stayed"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -1009,7 +1014,7 @@
     },
     {
       "id": "english_1999_q40",
-      "questionText": "He was sure he gave the pan to ...... <u>else</u>.",
+      "questionText": "He was sure he gave the pan to ...... else.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -1023,7 +1028,7 @@
         "C. somebody",
         "D. everybody"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [

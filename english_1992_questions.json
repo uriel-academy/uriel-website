@@ -43,14 +43,15 @@
         "D. meet Ragini",
         "E. meet Putu"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1992_passage_1"
     },
     {
       "id": "english_1992_q2",
@@ -69,14 +70,15 @@
         "D. She greeted the women noisily",
         "E. She danced about with joy"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1992_passage_1"
     },
     {
       "id": "english_1992_q3",
@@ -95,14 +97,15 @@
         "D. Njoman waited for sometime before Ragini arrived",
         "E. Njoman had a secret plan to follow"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1992_passage_1"
     },
     {
       "id": "english_1992_q4",
@@ -121,14 +124,15 @@
         "D. behaving as if one did not know something was happening.",
         "E. not knowing how to behave."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1992_passage_1"
     },
     {
       "id": "english_1992_q5",
@@ -147,14 +151,15 @@
         "D. fell down with flushed face.",
         "E. stood still and watched the women."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1992_passage_1"
     },
     {
       "id": "english_1992_q6",
@@ -173,14 +178,15 @@
         "D. a kidnapper",
         "E. a murderer"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1992_passage_1"
     },
     {
       "id": "english_1992_q7",
@@ -199,7 +205,7 @@
         "D. give us energy",
         "E. help to maintain our tradition"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -207,7 +213,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1992_passage_1"
+      "passageId": "english_1992_passage_2"
     },
     {
       "id": "english_1992_q8",
@@ -226,7 +232,7 @@
         "D. The intelligent mother has to do away with some bad traditions",
         "E. Grains do not contain much protein"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -234,7 +240,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1992_passage_1"
+      "passageId": "english_1992_passage_2"
     },
     {
       "id": "english_1992_q9",
@@ -253,7 +259,7 @@
         "D. strong",
         "E. dear"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -261,7 +267,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1992_passage_1"
+      "passageId": "english_1992_passage_2"
     },
     {
       "id": "english_1992_q10",
@@ -280,7 +286,7 @@
         "D. They should preserve tradition",
         "E. Their traditions often help them"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -288,7 +294,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1992_passage_1"
+      "passageId": "english_1992_passage_2"
     },
     {
       "id": "english_1992_q11",
@@ -306,7 +312,7 @@
         "C. They should do away with bad traditions",
         "D. They should preserve traditions"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -314,11 +320,11 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1992_passage_1"
+      "passageId": "english_1992_passage_2"
     },
     {
       "id": "english_1992_q12",
-      "questionText": "Adiza's mother prepares very palatable <u>dishes</u>",
+      "questionText": "Adiza's mother prepares very palatable dishes",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -332,7 +338,7 @@
         "C. tasty",
         "D. colourful"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -343,7 +349,7 @@
     },
     {
       "id": "english_1992_q13",
-      "questionText": "Sindi was brought up by a very strict <u>woman</u>",
+      "questionText": "Sindi was brought up by a very strict woman",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -357,7 +363,7 @@
         "C. born",
         "D. taught"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -368,7 +374,7 @@
     },
     {
       "id": "english_1992_q14",
-      "questionText": "Janet promised to attend to her <u>mother</u>-in-law who was ill.",
+      "questionText": "Janet promised to attend to her mother-in-law who was ill.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -382,7 +388,7 @@
         "C. look into",
         "D. look for"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -393,7 +399,7 @@
     },
     {
       "id": "english_1992_q15",
-      "questionText": "The printing company has over a thousand agents <u>here</u>.",
+      "questionText": "The printing company has over a thousand agents here.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -407,7 +413,7 @@
         "C. deputies",
         "D. correspondents"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -418,7 +424,7 @@
     },
     {
       "id": "english_1992_q16",
-      "questionText": "The police Inspector asked all drivers to obey the speed-limit <u>regulations</u>.",
+      "questionText": "The police Inspector asked all drivers to obey the speed-limit regulations.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -432,7 +438,7 @@
         "C. recognize",
         "D. observe"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -443,7 +449,7 @@
     },
     {
       "id": "english_1992_q17",
-      "questionText": "It is very difficult for many workers to make ends <u>meet</u>.",
+      "questionText": "It is very difficult for many workers to make ends meet.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -457,7 +463,7 @@
         "C. live within their means",
         "D. feed two people"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -468,7 +474,7 @@
     },
     {
       "id": "english_1992_q18",
-      "questionText": "Since the thief came out of prison he has turned over a new leaf. This <u>means</u> he has",
+      "questionText": "Since the thief came out of prison he has turned over a new leaf. This means he has",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -482,7 +488,7 @@
         "C. changed for the better",
         "D. grown even more stubborn"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -493,7 +499,7 @@
     },
     {
       "id": "english_1992_q19",
-      "questionText": "When the army stormed the village, all the inhabitants took to their heels. This <u>means</u> ......",
+      "questionText": "When the army stormed the village, all the inhabitants took to their heels. This means ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -507,7 +513,7 @@
         "C. the inhabitants had their shoes removed",
         "D. the inhabitants danced around on their heels"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -518,7 +524,7 @@
     },
     {
       "id": "english_1992_q20",
-      "questionText": "<u>Berko</u> is in two minds about resigning from his job. This means that Berko has",
+      "questionText": "Berko is in two minds about resigning from his job. This means that Berko has",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -532,7 +538,7 @@
         "C. decided not to resign",
         "D. withdrawn his resignation letter"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -543,7 +549,7 @@
     },
     {
       "id": "english_1992_q21",
-      "questionText": "The teacher advised Kofi not to beat about the bush. This means Kofi was <u>asked</u> to ......",
+      "questionText": "The teacher advised Kofi not to beat about the bush. This means Kofi was asked to ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -557,7 +563,7 @@
         "C. go straight to the point",
         "D. waste no more time"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -568,7 +574,7 @@
     },
     {
       "id": "english_1992_q22",
-      "questionText": "He seldom comes <u>here</u>.",
+      "questionText": "He seldom comes here.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -582,7 +588,7 @@
         "C. rarely",
         "D. nearly"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -593,7 +599,7 @@
     },
     {
       "id": "english_1992_q23",
-      "questionText": "The police officer was harsh on the <u>criminal</u>",
+      "questionText": "The police officer was harsh on the criminal",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -607,7 +613,7 @@
         "C. mild with",
         "D. cruel to"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -618,7 +624,7 @@
     },
     {
       "id": "english_1992_q24",
-      "questionText": "Musa was arrested for printing counterfeit cedi <u>notes</u>",
+      "questionText": "Musa was arrested for printing counterfeit cedi notes",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -632,7 +638,7 @@
         "C. acceptable",
         "D. genuine"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -643,7 +649,7 @@
     },
     {
       "id": "english_1992_q25",
-      "questionText": "My father was a very <u>stout</u> man",
+      "questionText": "My father was a very stout man",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -657,7 +663,7 @@
         "C. lean",
         "D. ill"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -668,7 +674,7 @@
     },
     {
       "id": "english_1992_q26",
-      "questionText": "I agreed to everything Lucy <u>said</u>.",
+      "questionText": "I agreed to everything Lucy said.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -682,7 +688,7 @@
         "C. interfered with",
         "D. took in"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -693,7 +699,7 @@
     },
     {
       "id": "english_1992_q27",
-      "questionText": "Help him to pay his <u>fees</u>, ......?",
+      "questionText": "Help him to pay his fees, ......?",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -707,7 +713,7 @@
         "C. can't you",
         "D. won't you"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -718,7 +724,7 @@
     },
     {
       "id": "english_1992_q28",
-      "questionText": "Kwasi, you are coming to see me <u>tomorrow</u>, ......?",
+      "questionText": "Kwasi, you are coming to see me tomorrow, ......?",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -732,7 +738,7 @@
         "C. won't you",
         "D. don't you"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -743,7 +749,7 @@
     },
     {
       "id": "english_1992_q29",
-      "questionText": "If Mary had known she wouldn't have <u>come</u>, ......?",
+      "questionText": "If Mary had known she wouldn't have come, ......?",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -757,7 +763,7 @@
         "C. did she",
         "D. would she"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -768,7 +774,7 @@
     },
     {
       "id": "english_1992_q30",
-      "questionText": "She dances so <u>beautifully</u>, ......?",
+      "questionText": "She dances so beautifully, ......?",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -782,7 +788,7 @@
         "C. doesn't she",
         "D. isn't it"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -793,7 +799,7 @@
     },
     {
       "id": "english_1992_q31",
-      "questionText": "JSS students work <u>hard</u>, ......?",
+      "questionText": "JSS students work hard, ......?",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -807,7 +813,7 @@
         "C. can't they",
         "D. haven't they"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -818,7 +824,7 @@
     },
     {
       "id": "english_1992_q32",
-      "questionText": "The chief with his linguists ...... coming to the durbar <u>ground</u>.",
+      "questionText": "The chief with his linguists ...... coming to the durbar ground.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -832,7 +838,7 @@
         "C. were",
         "D. have been"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -843,7 +849,7 @@
     },
     {
       "id": "english_1992_q33",
-      "questionText": "Most people find it hard to live up ...... their <u>ideals</u>.",
+      "questionText": "Most people find it hard to live up ...... their ideals.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -857,7 +863,7 @@
         "C. for",
         "D. with"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -868,7 +874,7 @@
     },
     {
       "id": "english_1992_q34",
-      "questionText": "The football match was put ...... until next <u>week</u>.",
+      "questionText": "The football match was put ...... until next week.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -882,7 +888,7 @@
         "C. off",
         "D. away"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -893,7 +899,7 @@
     },
     {
       "id": "english_1992_q35",
-      "questionText": "These days, students are not keen ...... improving their <u>English</u>.",
+      "questionText": "These days, students are not keen ...... improving their English.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -907,7 +913,7 @@
         "C. about",
         "D. on"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -918,7 +924,7 @@
     },
     {
       "id": "english_1992_q36",
-      "questionText": "When the plane arrived Kofi ...... nowhere to be <u>found</u>.",
+      "questionText": "When the plane arrived Kofi ...... nowhere to be found.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -932,7 +938,7 @@
         "C. was",
         "D. would have been"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -943,7 +949,7 @@
     },
     {
       "id": "english_1992_q37",
-      "questionText": "The boys swore that the books <u>were</u> ......",
+      "questionText": "The boys swore that the books were ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -957,7 +963,7 @@
         "C. their's",
         "D. theirs'"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -968,7 +974,7 @@
     },
     {
       "id": "english_1992_q38",
-      "questionText": "Unless your father reports at the police station we ...... all be <u>whipped</u>",
+      "questionText": "Unless your father reports at the police station we ...... all be whipped",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -982,7 +988,7 @@
         "C. should",
         "D. would"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -993,7 +999,7 @@
     },
     {
       "id": "english_1992_q39",
-      "questionText": "The bell will go ...... the next ten <u>minutes</u>",
+      "questionText": "The bell will go ...... the next ten minutes",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -1007,7 +1013,7 @@
         "C. from within",
         "D. within"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -1018,7 +1024,7 @@
     },
     {
       "id": "english_1992_q40",
-      "questionText": "The heavy rains have ...... early this <u>year</u>.",
+      "questionText": "The heavy rains have ...... early this year.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -1032,7 +1038,7 @@
         "C. set up",
         "D. set on"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [

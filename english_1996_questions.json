@@ -42,14 +42,15 @@
         "C. insult the class.",
         "D. talk to the three big boys."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1996_passage_1"
     },
     {
       "id": "english_1996_q2",
@@ -67,14 +68,15 @@
         "C. of what they saw in the magazine.",
         "D. the boy near the window threw the magazine away."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1996_passage_1"
     },
     {
       "id": "english_1996_q3",
@@ -92,14 +94,15 @@
         "C. the teacher turned quickly.",
         "D. they did not want the teacher to see it."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1996_passage_1"
     },
     {
       "id": "english_1996_q4",
@@ -117,14 +120,15 @@
         "C. he walked quickly to the back of the class.",
         "D. the children gave it to him."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1996_passage_1"
     },
     {
       "id": "english_1996_q5",
@@ -142,14 +146,15 @@
         "C. troublesome.",
         "D. ugly."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1996_passage_1"
     },
     {
       "id": "english_1996_q6",
@@ -167,14 +172,15 @@
         "C. smoked.",
         "D. became very angry."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1996_passage_1"
     },
     {
       "id": "english_1996_q7",
@@ -192,7 +198,7 @@
         "C. witness a ceremony.",
         "D. hear Mr. Aboagye"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -200,7 +206,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1996_passage_1"
+      "passageId": "english_1996_passage_2"
     },
     {
       "id": "english_1996_q8",
@@ -218,7 +224,7 @@
         "C. measured differently.",
         "D. of different types."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -226,7 +232,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1996_passage_1"
+      "passageId": "english_1996_passage_2"
     },
     {
       "id": "english_1996_q9",
@@ -244,7 +250,7 @@
         "C. counsellor.",
         "D. trader."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -252,7 +258,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1996_passage_1"
+      "passageId": "english_1996_passage_2"
     },
     {
       "id": "english_1996_q10",
@@ -270,7 +276,7 @@
         "C. happy.",
         "D. noisy."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -278,7 +284,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1996_passage_1"
+      "passageId": "english_1996_passage_2"
     },
     {
       "id": "english_1996_q11",
@@ -296,7 +302,7 @@
         "C. The first elder did not know the name of the child",
         "D. The ceremony was well attended"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -304,11 +310,11 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1996_passage_1"
+      "passageId": "english_1996_passage_2"
     },
     {
       "id": "english_1996_q12",
-      "questionText": "The thieves who raided the house last night have been <u>rounded</u> up.",
+      "questionText": "The thieves who raided the house last night have been rounded up.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -322,7 +328,7 @@
         "C. arrested",
         "D. wounded"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -333,7 +339,7 @@
     },
     {
       "id": "english_1996_q13",
-      "questionText": "When you come across a new word look it up in a <u>dictionary</u>.",
+      "questionText": "When you come across a new word look it up in a dictionary.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -347,7 +353,7 @@
         "C. find the meaning",
         "D. record the meaning"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -358,7 +364,7 @@
     },
     {
       "id": "english_1996_q14",
-      "questionText": "The radio won't talk because it is <u>defective</u>.",
+      "questionText": "The radio won't talk because it is defective.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -372,7 +378,7 @@
         "C. faulty",
         "D. tuned"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -383,7 +389,7 @@
     },
     {
       "id": "english_1996_q15",
-      "questionText": "Our team was eliminated at the semi-final <u>stage</u>.",
+      "questionText": "Our team was eliminated at the semi-final stage.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -397,7 +403,7 @@
         "C. wiped off",
         "D. promoted"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -408,7 +414,7 @@
     },
     {
       "id": "english_1996_q16",
-      "questionText": "The boy, reluctant to go on the errand, <u>walked</u> at a snail's pace. This means that the boy walked ......",
+      "questionText": "The boy, reluctant to go on the errand, walked at a snail's pace. This means that the boy walked ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -422,7 +428,7 @@
         "C. noisily",
         "D. carelessly"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -433,7 +439,7 @@
     },
     {
       "id": "english_1996_q17",
-      "questionText": "It was a red-letter day. This <u>means</u> it was a ......",
+      "questionText": "It was a red-letter day. This means it was a ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -447,7 +453,7 @@
         "C. memorable day",
         "D. real day"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -458,7 +464,7 @@
     },
     {
       "id": "english_1996_q18",
-      "questionText": "I have a bone to pick with my prefect for reporting me. This <u>means</u> ......",
+      "questionText": "I have a bone to pick with my prefect for reporting me. This means ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -472,7 +478,7 @@
         "C. I have to take the bone to the prefect",
         "D. I have a quarrel with the prefect"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -483,7 +489,7 @@
     },
     {
       "id": "english_1996_q19",
-      "questionText": "His <u>failure</u> in the examination came out of the blue. This means his failure was ......",
+      "questionText": "His failure in the examination came out of the blue. This means his failure was ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -497,7 +503,7 @@
         "C. surprising",
         "D. sent from the blue"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -508,7 +514,7 @@
     },
     {
       "id": "english_1996_q20",
-      "questionText": "Efua behaves like a fish out of water among <u>boys</u>. This means Efua ...... among boys.",
+      "questionText": "Efua behaves like a fish out of water among boys. This means Efua ...... among boys.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -522,7 +528,7 @@
         "C. swims better",
         "D. looks quite happy"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -533,7 +539,7 @@
     },
     {
       "id": "english_1996_q21",
-      "questionText": "These fruits are stale; please take them <u>away</u>.",
+      "questionText": "These fruits are stale; please take them away.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -547,7 +553,7 @@
         "C. fresh",
         "D. nice"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -558,7 +564,7 @@
     },
     {
       "id": "english_1996_q22",
-      "questionText": "Moses is on a temporary <u>appointment</u>.",
+      "questionText": "Moses is on a temporary appointment.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -572,7 +578,7 @@
         "C. probationary",
         "D. weekly"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -583,7 +589,7 @@
     },
     {
       "id": "english_1996_q23",
-      "questionText": "The beggar vanished when he saw the <u>policeman</u>.",
+      "questionText": "The beggar vanished when he saw the policeman.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -597,7 +603,7 @@
         "C. jumped",
         "D. appeared"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -608,7 +614,7 @@
     },
     {
       "id": "english_1996_q24",
-      "questionText": "The taxi driver drove recklessly throughout the <u>journey</u>.",
+      "questionText": "The taxi driver drove recklessly throughout the journey.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -622,7 +628,7 @@
         "C. noisily",
         "D. leisurely"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -633,7 +639,7 @@
     },
     {
       "id": "english_1996_q25",
-      "questionText": "Those machines are not genuine <u>brands</u>.",
+      "questionText": "Those machines are not genuine brands.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -647,7 +653,7 @@
         "C. fake",
         "D. new"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -658,7 +664,7 @@
     },
     {
       "id": "english_1996_q26",
-      "questionText": "I am free to sleep now, I ...... my <u>work</u>.",
+      "questionText": "I am free to sleep now, I ...... my work.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -672,7 +678,7 @@
         "C. have completed",
         "D. complete"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -683,7 +689,7 @@
     },
     {
       "id": "english_1996_q27",
-      "questionText": "After Roderick ...... the dress, he looked round for a pair of shoes that would <u>match</u> it.",
+      "questionText": "After Roderick ...... the dress, he looked round for a pair of shoes that would match it.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -697,7 +703,7 @@
         "C. had bought",
         "D. was buying"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -708,7 +714,7 @@
     },
     {
       "id": "english_1996_q28",
-      "questionText": "I saw him while he ...... the <u>cloth</u>.",
+      "questionText": "I saw him while he ...... the cloth.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -722,7 +728,7 @@
         "C. was folding",
         "D. had been folding"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -747,7 +753,7 @@
         "C. can you",
         "D. don't you"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -758,7 +764,7 @@
     },
     {
       "id": "english_1996_q30",
-      "questionText": "Not only was she pretty ...... <u>intelligent</u>.",
+      "questionText": "Not only was she pretty ...... intelligent.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -772,7 +778,7 @@
         "C. but also",
         "D. and also"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -783,7 +789,7 @@
     },
     {
       "id": "english_1996_q31",
-      "questionText": "Neither the headmaster nor his assistant ....... <u>today</u>.",
+      "questionText": "Neither the headmaster nor his assistant ....... today.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -797,7 +803,7 @@
         "C. have worked",
         "D. are working"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -808,7 +814,7 @@
     },
     {
       "id": "english_1996_q32",
-      "questionText": "The antelope ...... when the hunter <u>fired</u>.",
+      "questionText": "The antelope ...... when the hunter fired.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -822,7 +828,7 @@
         "C. was ate",
         "D. was eating"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -833,7 +839,7 @@
     },
     {
       "id": "english_1996_q33",
-      "questionText": "There were ...... cars at the <u>beach</u>.",
+      "questionText": "There were ...... cars at the beach.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -847,7 +853,7 @@
         "C. much",
         "D. many"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -858,7 +864,7 @@
     },
     {
       "id": "english_1996_q34",
-      "questionText": "Lucy is the ...... beautiful girl in her <u>class</u>.",
+      "questionText": "Lucy is the ...... beautiful girl in her class.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -872,7 +878,7 @@
         "C. very more",
         "D. most"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -883,7 +889,7 @@
     },
     {
       "id": "english_1996_q35",
-      "questionText": "He is ...... to fight with a <u>fool</u>.",
+      "questionText": "He is ...... to fight with a fool.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -897,7 +903,7 @@
         "C. a too wise man",
         "D. a man wise too"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -908,7 +914,7 @@
     },
     {
       "id": "english_1996_q36",
-      "questionText": "Mantey and Kofi shook hands <u>with</u> ......",
+      "questionText": "Mantey and Kofi shook hands with ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -922,7 +928,7 @@
         "C. one another",
         "D. themselves"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -933,7 +939,7 @@
     },
     {
       "id": "english_1996_q37",
-      "questionText": "The school organised a ...... art <u>exhibition</u>.",
+      "questionText": "The school organised a ...... art exhibition.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -947,7 +953,7 @@
         "C. two-day",
         "D. two-days"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -958,7 +964,7 @@
     },
     {
       "id": "english_1996_q38",
-      "questionText": "We told the stranger we would put him ...... if he <u>wanted</u>.",
+      "questionText": "We told the stranger we would put him ...... if he wanted.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -972,7 +978,7 @@
         "C. on",
         "D. over"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -983,7 +989,7 @@
     },
     {
       "id": "english_1996_q39",
-      "questionText": "In wrestling, it is not wise to take ...... someone twice your <u>size</u>.",
+      "questionText": "In wrestling, it is not wise to take ...... someone twice your size.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -997,7 +1003,7 @@
         "C. on",
         "D. over"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -1008,7 +1014,7 @@
     },
     {
       "id": "english_1996_q40",
-      "questionText": "He was sure he gave the pan to ...... <u>else</u>.",
+      "questionText": "He was sure he gave the pan to ...... else.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -1022,7 +1028,7 @@
         "C. somebody",
         "D. everybody"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [

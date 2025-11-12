@@ -43,14 +43,15 @@
         "D. had stolen some pawpaw.",
         "E. had heard that Mr. Odumba had fallen down."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1990_passage_1"
     },
     {
       "id": "english_1990_q2",
@@ -69,14 +70,15 @@
         "D. to converse with one of the teachers.",
         "E. to learn about 'if' clauses."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1990_passage_1"
     },
     {
       "id": "english_1990_q3",
@@ -95,14 +97,15 @@
         "D. They felt sorry for him",
         "E. They were ashamed"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1990_passage_1"
     },
     {
       "id": "english_1990_q4",
@@ -121,14 +124,15 @@
         "D. The pupils' hands smelt of pawpaw",
         "E. Mr. Odumba kept a garden"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1990_passage_1"
     },
     {
       "id": "english_1990_q5",
@@ -147,14 +151,15 @@
         "D. pushed the door open.",
         "E. turned round at the door."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1990_passage_1"
     },
     {
       "id": "english_1990_q6",
@@ -173,14 +178,15 @@
         "D. have my pawpaw back.",
         "E. speak to you."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1990_passage_1"
     },
     {
       "id": "english_1990_q7",
@@ -199,7 +205,7 @@
         "D. must shout to separate them.",
         "E. becomes both sorry and happy."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -207,7 +213,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1990_passage_1"
+      "passageId": "english_1990_passage_2"
     },
     {
       "id": "english_1990_q8",
@@ -226,7 +232,7 @@
         "D. pushed Sandy to the ground.",
         "E. showed his sharp teeth."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -234,7 +240,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1990_passage_1"
+      "passageId": "english_1990_passage_2"
     },
     {
       "id": "english_1990_q9",
@@ -253,7 +259,7 @@
         "D. turned the tide.",
         "E. attacked first."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -261,7 +267,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1990_passage_1"
+      "passageId": "english_1990_passage_2"
     },
     {
       "id": "english_1990_q10",
@@ -280,7 +286,7 @@
         "D. remained undisturbed.",
         "E. stopped fighting."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -288,7 +294,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1990_passage_1"
+      "passageId": "english_1990_passage_2"
     },
     {
       "id": "english_1990_q11",
@@ -306,7 +312,7 @@
         "C. the weather became more violent.",
         "D. the fight became more violent."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -314,11 +320,11 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1990_passage_1"
+      "passageId": "english_1990_passage_2"
     },
     {
       "id": "english_1990_q12",
-      "questionText": "The traders agreed to pay extra money to the <u>council</u>.",
+      "questionText": "The traders agreed to pay extra money to the council.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -332,7 +338,7 @@
         "C. refused",
         "D. remembered"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -343,7 +349,7 @@
     },
     {
       "id": "english_1990_q13",
-      "questionText": "The boxer displayed a high degree of bravery in the <u>fight</u>.",
+      "questionText": "The boxer displayed a high degree of bravery in the fight.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -357,7 +363,7 @@
         "C. alertness",
         "D. competence"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -368,7 +374,7 @@
     },
     {
       "id": "english_1990_q14",
-      "questionText": "It is a fact that Zaibu often gives accurate answers to <u>questions</u>.",
+      "questionText": "It is a fact that Zaibu often gives accurate answers to questions.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -382,7 +388,7 @@
         "C. interesting",
         "D. quick"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -393,7 +399,7 @@
     },
     {
       "id": "english_1990_q15",
-      "questionText": "The students rejected the prefect chosen by the <u>staff</u>.",
+      "questionText": "The students rejected the prefect chosen by the staff.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -407,7 +413,7 @@
         "C. relied on",
         "D. accepted"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -418,7 +424,7 @@
     },
     {
       "id": "english_1990_q16",
-      "questionText": "At the end of the investigations the police said the hands of the accused were clean. This <u>means</u> ......",
+      "questionText": "At the end of the investigations the police said the hands of the accused were clean. This means ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -432,7 +438,7 @@
         "C. accused had washed his hands.",
         "D. police saw the accused's fingerprints."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -443,7 +449,7 @@
     },
     {
       "id": "english_1990_q17",
-      "questionText": "\"It's only 2 o'clock, <u>Martin</u>. You needn't go yet\". This means that Martin ......",
+      "questionText": "\"It's only 2 o'clock, Martin. You needn't go yet\". This means that Martin ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -457,7 +463,7 @@
         "C. doesn't have to go yet.",
         "D. isn't going yet."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -468,7 +474,7 @@
     },
     {
       "id": "english_1990_q18",
-      "questionText": "He feared <u>that</u> his father would ask where he had been. This means that ......",
+      "questionText": "He feared that his father would ask where he had been. This means that ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -482,7 +488,7 @@
         "C. he was afraid of his father so he did not tell him where he had been.",
         "D. he was afraid that his father would want to know where he had been."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -493,7 +499,7 @@
     },
     {
       "id": "english_1990_q19",
-      "questionText": "I don't like <u>people</u> who blow their own trumpet. This means I dislike people who ......",
+      "questionText": "I don't like people who blow their own trumpet. This means I dislike people who ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -507,7 +513,7 @@
         "C. blow trumpets.",
         "D. are quarrelsome."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -518,7 +524,7 @@
     },
     {
       "id": "english_1990_q20",
-      "questionText": "If <u>Mantey</u> had passed the examination his father would have bought him a present. This means Mantey ......",
+      "questionText": "If Mantey had passed the examination his father would have bought him a present. This means Mantey ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -532,7 +538,7 @@
         "C. would be given a present for being successful in the examination.",
         "D. usually received presents from his father after examinations."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -543,7 +549,7 @@
     },
     {
       "id": "english_1990_q21",
-      "questionText": "\"Put this money aside against a rainy day, Kwesi\". Kwesi is being <u>told</u> ......",
+      "questionText": "\"Put this money aside against a rainy day, Kwesi\". Kwesi is being told ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -557,7 +563,7 @@
         "C. not to waste money when it rains.",
         "D. to put all his money in the bank."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -568,7 +574,7 @@
     },
     {
       "id": "english_1990_q22",
-      "questionText": "Eshun is a good <u>singer</u>, ......?",
+      "questionText": "Eshun is a good singer, ......?",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -582,7 +588,7 @@
         "C. is he",
         "D. isn't he"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -593,7 +599,7 @@
     },
     {
       "id": "english_1990_q23",
-      "questionText": "You shouldn't work so <u>late</u>, ......?",
+      "questionText": "You shouldn't work so late, ......?",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -607,7 +613,7 @@
         "C. should you",
         "D. don't you"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -618,7 +624,7 @@
     },
     {
       "id": "english_1990_q24",
-      "questionText": "You'll travel by train to <u>Kumasi</u>, ......?",
+      "questionText": "You'll travel by train to Kumasi, ......?",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -632,7 +638,7 @@
         "C. shouldn't you",
         "D. wouldn't you"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -643,7 +649,7 @@
     },
     {
       "id": "english_1990_q25",
-      "questionText": "You are not afraid of <u>snakes</u>, ......?",
+      "questionText": "You are not afraid of snakes, ......?",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -657,7 +663,7 @@
         "C. do you",
         "D. won't you"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -668,7 +674,7 @@
     },
     {
       "id": "english_1990_q26",
-      "questionText": "I can go to bed now because I ...... my <u>assignment</u>.",
+      "questionText": "I can go to bed now because I ...... my assignment.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -682,7 +688,7 @@
         "C. finished",
         "D. have finished"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -693,7 +699,7 @@
     },
     {
       "id": "english_1990_q27",
-      "questionText": "No one can be expected to ...... such bad <u>behaviour</u>.",
+      "questionText": "No one can be expected to ...... such bad behaviour.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -707,7 +713,7 @@
         "C. put across to",
         "D. put down against"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -718,7 +724,7 @@
     },
     {
       "id": "english_1990_q28",
-      "questionText": "I can't hear him; I wish he ...... <u>louder</u>.",
+      "questionText": "I can't hear him; I wish he ...... louder.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -732,7 +738,7 @@
         "C. would speak",
         "D. had spoken"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -743,7 +749,7 @@
     },
     {
       "id": "english_1990_q29",
-      "questionText": "If Sampson had spoken the truth the <u>teacher</u> ...... him.",
+      "questionText": "If Sampson had spoken the truth the teacher ...... him.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -757,7 +763,7 @@
         "C. wouldn't have punished",
         "D. wouldn't punish"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -768,7 +774,7 @@
     },
     {
       "id": "english_1990_q30",
-      "questionText": "The head teacher advised the students to ...... if they wanted to do well in their <u>examination</u>.",
+      "questionText": "The head teacher advised the students to ...... if they wanted to do well in their examination.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -782,7 +788,7 @@
         "C. sit on",
         "D. sit up"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -793,7 +799,7 @@
     },
     {
       "id": "english_1990_q31",
-      "questionText": "At these words, the students ...... <u>laughter</u>.",
+      "questionText": "At these words, the students ...... laughter.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -807,7 +813,7 @@
         "C. burst for",
         "D. burst in"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -818,7 +824,7 @@
     },
     {
       "id": "english_1990_q32",
-      "questionText": "My uncle will go on a short course <u>before</u> he ...... his new job.",
+      "questionText": "My uncle will go on a short course before he ...... his new job.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -832,7 +838,7 @@
         "C. takes out",
         "D. takes in"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -843,7 +849,7 @@
     },
     {
       "id": "english_1990_q33",
-      "questionText": "The prefect made the boy ...... the assembly <u>hall</u>.",
+      "questionText": "The prefect made the boy ...... the assembly hall.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -857,7 +863,7 @@
         "C. to sweep",
         "D. sweep"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -868,7 +874,7 @@
     },
     {
       "id": "english_1990_q34",
-      "questionText": "It is not always good to believe all newspaper <u>accounts</u>.",
+      "questionText": "It is not always good to believe all newspaper accounts.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -882,7 +888,7 @@
         "C. reports",
         "D. jokes"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -893,7 +899,7 @@
     },
     {
       "id": "english_1990_q35",
-      "questionText": "Everybody should have a goal in <u>life</u>.",
+      "questionText": "Everybody should have a goal in life.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -907,7 +913,7 @@
         "C. an opinion",
         "D. an aim"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -918,7 +924,7 @@
     },
     {
       "id": "english_1990_q36",
-      "questionText": "Mr. Mensah was worn out after walking up the <u>hill</u>.",
+      "questionText": "Mr. Mensah was worn out after walking up the hill.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -932,7 +938,7 @@
         "C. hungry",
         "D. worried"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -943,7 +949,7 @@
     },
     {
       "id": "english_1990_q37",
-      "questionText": "Elephants are becoming rare in some parts of <u>Africa</u>.",
+      "questionText": "Elephants are becoming rare in some parts of Africa.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -957,7 +963,7 @@
         "C. unknown",
         "D. exposed"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -968,7 +974,7 @@
     },
     {
       "id": "english_1990_q38",
-      "questionText": "On the doctor's advice, Mr. Smith cut out smoking <u>altogether</u>.",
+      "questionText": "On the doctor's advice, Mr. Smith cut out smoking altogether.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -982,7 +988,7 @@
         "C. postponed",
         "D. interrupted"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -993,7 +999,7 @@
     },
     {
       "id": "english_1990_q39",
-      "questionText": "The old man told us a tall story about a soldier who fought a war with a <u>spoon</u>.",
+      "questionText": "The old man told us a tall story about a soldier who fought a war with a spoon.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -1007,7 +1013,7 @@
         "C. a funny story",
         "D. a long story"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -1018,7 +1024,7 @@
     },
     {
       "id": "english_1990_q40",
-      "questionText": "All my clothes are <u>outmoded</u>.",
+      "questionText": "All my clothes are outmoded.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -1032,7 +1038,7 @@
         "C. handmade",
         "D. ready-made"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [

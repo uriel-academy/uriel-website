@@ -42,14 +42,15 @@
         "C. have good songs.",
         "D. are born good singers."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1995_passage_1"
     },
     {
       "id": "english_1995_q2",
@@ -67,14 +68,15 @@
         "C. entertain others.",
         "D. praise nature."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1995_passage_1"
     },
     {
       "id": "english_1995_q3",
@@ -92,14 +94,15 @@
         "C. during mating periods.",
         "D. in the evening."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1995_passage_1"
     },
     {
       "id": "english_1995_q4",
@@ -117,14 +120,15 @@
         "C. exciting.",
         "D. special."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1995_passage_1"
     },
     {
       "id": "english_1995_q5",
@@ -142,14 +146,15 @@
         "C. make too much noise.",
         "D. are ridiculous."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1995_passage_1"
     },
     {
       "id": "english_1995_q6",
@@ -167,7 +172,7 @@
         "C. were not common.",
         "D. had covered the sky."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -175,7 +180,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1995_passage_1"
+      "passageId": "english_1995_passage_2"
     },
     {
       "id": "english_1995_q7",
@@ -193,7 +198,7 @@
         "C. did not like darkness.",
         "D. were feeling sleepy."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -201,7 +206,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1995_passage_1"
+      "passageId": "english_1995_passage_2"
     },
     {
       "id": "english_1995_q8",
@@ -219,7 +224,7 @@
         "C. blind.",
         "D. bold."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -227,7 +232,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1995_passage_1"
+      "passageId": "english_1995_passage_2"
     },
     {
       "id": "english_1995_q9",
@@ -245,7 +250,7 @@
         "C. cried aloud.",
         "D. came out."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -253,7 +258,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1995_passage_1"
+      "passageId": "english_1995_passage_2"
     },
     {
       "id": "english_1995_q10",
@@ -271,7 +276,7 @@
         "C. unfamiliar sight",
         "D. slow-moving mass"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -279,7 +284,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1995_passage_1"
+      "passageId": "english_1995_passage_2"
     },
     {
       "id": "english_1995_q11",
@@ -297,7 +302,7 @@
         "C. The locusts come only in the dry season",
         "D. The locusts created a beautiful sight"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -305,11 +310,11 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1995_passage_2"
+      "passageId": "english_1995_passage_3"
     },
     {
       "id": "english_1995_q12",
-      "questionText": "The government has banned the use of hard drugs in the <u>country</u>.",
+      "questionText": "The government has banned the use of hard drugs in the country.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -323,7 +328,7 @@
         "C. controlled",
         "D. reduced"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -334,7 +339,7 @@
     },
     {
       "id": "english_1995_q13",
-      "questionText": "Our Headmaster invited many prominent citizens to our <u>speech</u> day.",
+      "questionText": "Our Headmaster invited many prominent citizens to our speech day.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -348,7 +353,7 @@
         "C. distinguished",
         "D. good"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -359,7 +364,7 @@
     },
     {
       "id": "english_1995_q14",
-      "questionText": "The dry season is <u>imminent</u>.",
+      "questionText": "The dry season is imminent.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -373,7 +378,7 @@
         "C. severe",
         "D. gone"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -384,7 +389,7 @@
     },
     {
       "id": "english_1995_q15",
-      "questionText": "The meeting was postponed to another <u>date</u>.",
+      "questionText": "The meeting was postponed to another date.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -398,7 +403,7 @@
         "C. called",
         "D. shifted"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -409,7 +414,7 @@
     },
     {
       "id": "english_1995_q16",
-      "questionText": "The man was furious when his son failed the <u>examination</u>.",
+      "questionText": "The man was furious when his son failed the examination.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -423,7 +428,7 @@
         "C. shocked",
         "D. frightened"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -434,7 +439,7 @@
     },
     {
       "id": "english_1995_q17",
-      "questionText": "By the end of the lesson, we <u>were</u> completely at sea. This means that we were ......",
+      "questionText": "By the end of the lesson, we were completely at sea. This means that we were ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -448,7 +453,7 @@
         "C. quite disturbed",
         "D. very inspired"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -459,7 +464,7 @@
     },
     {
       "id": "english_1995_q18",
-      "questionText": "She did her best to keep on the right side of her <u>teacher</u>. This means she did her best not to ...... her teacher.",
+      "questionText": "She did her best to keep on the right side of her teacher. This means she did her best not to ...... her teacher.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -473,7 +478,7 @@
         "C. misunderstand",
         "D. offend"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -484,7 +489,7 @@
     },
     {
       "id": "english_1995_q19",
-      "questionText": "You shouldn't have hit <u>Kuuku</u> so hard; it was rather unkind of you. From this we know that Kuuku was ......",
+      "questionText": "You shouldn't have hit Kuuku so hard; it was rather unkind of you. From this we know that Kuuku was ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -498,7 +503,7 @@
         "C. kind.",
         "D. hit."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -509,7 +514,7 @@
     },
     {
       "id": "english_1995_q20",
-      "questionText": "If we hadn't gone to the beach so early, we would have met our visitor. This means <u>that</u> ......",
+      "questionText": "If we hadn't gone to the beach so early, we would have met our visitor. This means that ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -523,7 +528,7 @@
         "C. our visitor waited for us.",
         "D. we met our visitor at the beach."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -534,7 +539,7 @@
     },
     {
       "id": "english_1995_q21",
-      "questionText": "There are guards on our border because the government wants to eliminate <u>smuggling</u>.",
+      "questionText": "There are guards on our border because the government wants to eliminate smuggling.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -548,7 +553,7 @@
         "C. encourage",
         "D. investigate"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -559,7 +564,7 @@
     },
     {
       "id": "english_1995_q22",
-      "questionText": "The candidate worked the problem with a great deal of <u>precision</u>.",
+      "questionText": "The candidate worked the problem with a great deal of precision.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -573,7 +578,7 @@
         "C. inaccuracy",
         "D. detail"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -584,7 +589,7 @@
     },
     {
       "id": "english_1995_q23",
-      "questionText": "My grandmother likes old fashioned <u>clothes</u>.",
+      "questionText": "My grandmother likes old fashioned clothes.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -598,7 +603,7 @@
         "C. modern",
         "D. stylish"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -609,7 +614,7 @@
     },
     {
       "id": "english_1995_q24",
-      "questionText": "I am going to arrange the books in the <u>cupboard</u>.",
+      "questionText": "I am going to arrange the books in the cupboard.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -623,7 +628,7 @@
         "C. list",
         "D. spill"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -634,7 +639,7 @@
     },
     {
       "id": "english_1995_q25",
-      "questionText": "Most of the men were sacked by the <u>company</u>.",
+      "questionText": "Most of the men were sacked by the company.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -648,7 +653,7 @@
         "C. warned employed",
         "D. employed"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -659,7 +664,7 @@
     },
     {
       "id": "english_1995_q26",
-      "questionText": "It's a pity I have hardly ...... food to <u>give</u> you.",
+      "questionText": "It's a pity I have hardly ...... food to give you.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -673,7 +678,7 @@
         "C. some",
         "D. any"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -684,7 +689,7 @@
     },
     {
       "id": "english_1995_q27",
-      "questionText": "I was <u>given</u> ...... money than you were given.",
+      "questionText": "I was given ...... money than you were given.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -698,7 +703,7 @@
         "C. much",
         "D. many more"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -709,7 +714,7 @@
     },
     {
       "id": "english_1995_q28",
-      "questionText": "The book you gave me was not ...... than the one I had <u>before</u>.",
+      "questionText": "The book you gave me was not ...... than the one I had before.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -723,7 +728,7 @@
         "C. any good",
         "D. very better"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -734,7 +739,7 @@
     },
     {
       "id": "english_1995_q29",
-      "questionText": "Are you sure ...... shirts on that table were the ones I <u>gave</u> you?",
+      "questionText": "Are you sure ...... shirts on that table were the ones I gave you?",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -748,7 +753,7 @@
         "C. those",
         "D. some"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -759,7 +764,7 @@
     },
     {
       "id": "english_1995_q30",
-      "questionText": "Give me the book ...... I lent you <u>yesterday</u>.",
+      "questionText": "Give me the book ...... I lent you yesterday.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -773,7 +778,7 @@
         "C. whose",
         "D. which"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -784,7 +789,7 @@
     },
     {
       "id": "english_1995_q31",
-      "questionText": "Of the three <u>girls</u>, Awo is the ......",
+      "questionText": "Of the three girls, Awo is the ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -798,7 +803,7 @@
         "C. most short",
         "D. shortest"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -809,7 +814,7 @@
     },
     {
       "id": "english_1995_q32",
-      "questionText": "The soldier was promoted because he was the ...... <u>among</u> the lot.",
+      "questionText": "The soldier was promoted because he was the ...... among the lot.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -823,7 +828,7 @@
         "C. more courageous",
         "D. much courageous"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -834,7 +839,7 @@
     },
     {
       "id": "english_1995_q33",
-      "questionText": "Your nephew could not pass the interview because he was not ...... before the panel <u>members</u>.",
+      "questionText": "Your nephew could not pass the interview because he was not ...... before the panel members.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -848,7 +853,7 @@
         "C. confident enough",
         "D. confident somehow"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -859,7 +864,7 @@
     },
     {
       "id": "english_1995_q34",
-      "questionText": "Mr. Amakye has been robbed ...... his <u>property</u>.",
+      "questionText": "Mr. Amakye has been robbed ...... his property.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -873,7 +878,7 @@
         "C. by",
         "D. of"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -884,7 +889,7 @@
     },
     {
       "id": "english_1995_q35",
-      "questionText": "The patient went ...... a lot of body <u>exercises</u>",
+      "questionText": "The patient went ...... a lot of body exercises",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -898,7 +903,7 @@
         "C. through",
         "D. ahead"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -909,7 +914,7 @@
     },
     {
       "id": "english_1995_q36",
-      "questionText": "Can I have a <u>chat</u> ...... you?",
+      "questionText": "Can I have a chat ...... you?",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -923,7 +928,7 @@
         "C. by",
         "D. on"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -934,7 +939,7 @@
     },
     {
       "id": "english_1995_q37",
-      "questionText": "Kwesi learnt harder so he ...... the <u>examination</u>",
+      "questionText": "Kwesi learnt harder so he ...... the examination",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -948,7 +953,7 @@
         "C. can pass",
         "D. passes"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -959,7 +964,7 @@
     },
     {
       "id": "english_1995_q38",
-      "questionText": "Let's go out and <u>play</u>,......?",
+      "questionText": "Let's go out and play,......?",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -973,7 +978,7 @@
         "C. would we",
         "D. shall we"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -984,7 +989,7 @@
     },
     {
       "id": "english_1995_q39",
-      "questionText": "Can I come to your house on <u>Saturday</u>,......?",
+      "questionText": "Can I come to your house on Saturday,......?",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -998,7 +1003,7 @@
         "C. certainly",
         "D. please"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -1009,7 +1014,7 @@
     },
     {
       "id": "english_1995_q40",
-      "questionText": "You aren't <u>hungry</u>, are you?",
+      "questionText": "You aren't hungry, are you?",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -1023,7 +1028,7 @@
         "C. No, I am not",
         "D. No, I am"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [

@@ -43,14 +43,15 @@
         "D. gossip and laugh.",
         "E. read and fell trees."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1993_passage_1"
     },
     {
       "id": "english_1993_q2",
@@ -69,14 +70,15 @@
         "D. working as a letter-writer and reader.",
         "E. felling trees and reading letters."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1993_passage_1"
     },
     {
       "id": "english_1993_q3",
@@ -95,14 +97,15 @@
         "D. was hardworking and clever.",
         "E. earned extra income."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1993_passage_1"
     },
     {
       "id": "english_1993_q4",
@@ -121,14 +124,15 @@
         "D. His face was stitched",
         "E. His friends left him"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1993_passage_1"
     },
     {
       "id": "english_1993_q5",
@@ -147,14 +151,15 @@
         "D. He wrote and read letters",
         "E. He heard news from other villages"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1993_passage_1"
     },
     {
       "id": "english_1993_q6",
@@ -173,14 +178,15 @@
         "D. lost awareness of his surroundings",
         "E. fell down and died"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1993_passage_1"
     },
     {
       "id": "english_1993_q7",
@@ -199,7 +205,7 @@
         "D. He had to work with new officers",
         "E. Some of his friends stopped talking to him"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -207,7 +213,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1993_passage_1"
+      "passageId": "english_1993_passage_2"
     },
     {
       "id": "english_1993_q8",
@@ -226,7 +232,7 @@
         "D. Funny",
         "E. Talkative"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -234,7 +240,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1993_passage_1"
+      "passageId": "english_1993_passage_2"
     },
     {
       "id": "english_1993_q9",
@@ -253,7 +259,7 @@
         "D. appointed only his friends as officers.",
         "E. did not listen to the advice of his friends."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -261,7 +267,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1993_passage_1"
+      "passageId": "english_1993_passage_2"
     },
     {
       "id": "english_1993_q10",
@@ -279,7 +285,7 @@
         "C. insults.",
         "D. wars."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -287,11 +293,11 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1993_passage_1"
+      "passageId": "english_1993_passage_2"
     },
     {
       "id": "english_1993_q11",
-      "questionText": "The Manager was dismissed for gross <u>inefficiency</u>.",
+      "questionText": "The Manager was dismissed for gross inefficiency.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -305,7 +311,7 @@
         "C. incompetence",
         "D. misconduct"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -316,7 +322,7 @@
     },
     {
       "id": "english_1993_q12",
-      "questionText": "Prices of goods have been fairly <u>controlled</u>.",
+      "questionText": "Prices of goods have been fairly controlled.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -330,7 +336,7 @@
         "C. kept off",
         "D. kept out"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -341,7 +347,7 @@
     },
     {
       "id": "english_1993_q13",
-      "questionText": "Remember to look over your work when you <u>finish</u>.",
+      "questionText": "Remember to look over your work when you finish.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -355,7 +361,7 @@
         "C. oversee",
         "D. read through"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -366,7 +372,7 @@
     },
     {
       "id": "english_1993_q14",
-      "questionText": "Although the labourers agreed to do the work, they did it <u>reluctantly</u>.",
+      "questionText": "Although the labourers agreed to do the work, they did it reluctantly.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -380,7 +386,7 @@
         "C. unwillingly",
         "D. sparingly"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -391,7 +397,7 @@
     },
     {
       "id": "english_1993_q15",
-      "questionText": "The thief was humiliated when he was <u>caught</u>.",
+      "questionText": "The thief was humiliated when he was caught.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -405,7 +411,7 @@
         "C. beaten up",
         "D. discouraged"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -416,7 +422,7 @@
     },
     {
       "id": "english_1993_q16",
-      "questionText": "I don't like Ben. He is <u>always</u> pulling my legs. This means Ben is always ......",
+      "questionText": "I don't like Ben. He is always pulling my legs. This means Ben is always ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -430,7 +436,7 @@
         "C. abusing me",
         "D. borrowing my shoes"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -441,7 +447,7 @@
     },
     {
       "id": "english_1993_q17",
-      "questionText": "The <u>judge</u> turned a deaf ear to what the murderer said. This means the judge ......",
+      "questionText": "The judge turned a deaf ear to what the murderer said. This means the judge ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -455,7 +461,7 @@
         "C. favoured the murderer when he heard his story",
         "D. pretended that he was listening to the murderer's story"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -466,7 +472,7 @@
     },
     {
       "id": "english_1993_q18",
-      "questionText": "If you don't want to regret, cut your coat according to your cloth. This <u>means</u> ......",
+      "questionText": "If you don't want to regret, cut your coat according to your cloth. This means ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -480,7 +486,7 @@
         "C. sew your own coat.",
         "D. put on your cloth and coat."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -491,7 +497,7 @@
     },
     {
       "id": "english_1993_q19",
-      "questionText": "Were it not for the <u>policemen</u> the workers would have gone on strike. From this we know the policemen ......",
+      "questionText": "Were it not for the policemen the workers would have gone on strike. From this we know the policemen ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -505,7 +511,7 @@
         "C. forced the workers to go on strike.",
         "D. and the workers were on strike."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -516,7 +522,7 @@
     },
     {
       "id": "english_1993_q20",
-      "questionText": "Razak has <u>been</u> in a bad way for several days. This means Razak has been ......",
+      "questionText": "Razak has been in a bad way for several days. This means Razak has been ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -530,7 +536,7 @@
         "C. misbehaving",
         "D. quite ill"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -541,7 +547,7 @@
     },
     {
       "id": "english_1993_q21",
-      "questionText": "Our school is now famous throughout the <u>district</u>.",
+      "questionText": "Our school is now famous throughout the district.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -555,7 +561,7 @@
         "C. unknown",
         "D. irrelevant"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -566,7 +572,7 @@
     },
     {
       "id": "english_1993_q22",
-      "questionText": "Our new pastor is very modest in his <u>ways</u>.",
+      "questionText": "Our new pastor is very modest in his ways.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -580,7 +586,7 @@
         "C. particular",
         "D. boastful"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -591,7 +597,7 @@
     },
     {
       "id": "english_1993_q23",
-      "questionText": "Issa was very rude to his <u>teacher</u>.",
+      "questionText": "Issa was very rude to his teacher.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -605,7 +611,7 @@
         "C. obedient",
         "D. truthful"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -616,7 +622,7 @@
     },
     {
       "id": "english_1993_q24",
-      "questionText": "We walked on the smooth side of the <u>pavement</u>.",
+      "questionText": "We walked on the smooth side of the pavement.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -630,7 +636,7 @@
         "C. coarse",
         "D. slippery"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -641,7 +647,7 @@
     },
     {
       "id": "english_1993_q25",
-      "questionText": "The president was denounced by his <u>subjects</u>.",
+      "questionText": "The president was denounced by his subjects.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -655,7 +661,7 @@
         "C. supported",
         "D. advised"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -666,7 +672,7 @@
     },
     {
       "id": "english_1993_q26",
-      "questionText": "Our ancestors ...... to us a lot of knowledge about our <u>culture</u>.",
+      "questionText": "Our ancestors ...... to us a lot of knowledge about our culture.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -680,7 +686,7 @@
         "C. passed through",
         "D. handed down"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -691,7 +697,7 @@
     },
     {
       "id": "english_1993_q27",
-      "questionText": "The government has set ...... a committee on <u>education</u>.",
+      "questionText": "The government has set ...... a committee on education.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -705,7 +711,7 @@
         "C. in",
         "D. by"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -716,7 +722,7 @@
     },
     {
       "id": "english_1993_q28",
-      "questionText": "None of the suspects ...... his <u>guilt</u>.",
+      "questionText": "None of the suspects ...... his guilt.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -730,7 +736,7 @@
         "C. are admitting",
         "D. have admitted"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -741,7 +747,7 @@
     },
     {
       "id": "english_1993_q29",
-      "questionText": "Amidu promised to be patient until his toy ...... <u>repaired</u>.",
+      "questionText": "Amidu promised to be patient until his toy ...... repaired.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -755,7 +761,7 @@
         "C. was",
         "D. can be"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -766,7 +772,7 @@
     },
     {
       "id": "english_1993_q30",
-      "questionText": "The Headmaster, with his assistant ...... inspecting the new school <u>library</u>.",
+      "questionText": "The Headmaster, with his assistant ...... inspecting the new school library.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -780,7 +786,7 @@
         "C. have been",
         "D. is"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -791,7 +797,7 @@
     },
     {
       "id": "english_1993_q31",
-      "questionText": "I would have told you about the <u>wedding</u> if I ......",
+      "questionText": "I would have told you about the wedding if I ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -805,7 +811,7 @@
         "C. had known",
         "D. have been knowing"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -816,7 +822,7 @@
     },
     {
       "id": "english_1993_q32",
-      "questionText": "His writing is so bad that I can't <u>make</u> it ......",
+      "questionText": "His writing is so bad that I can't make it ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -830,7 +836,7 @@
         "C. down",
         "D. in"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -841,7 +847,7 @@
     },
     {
       "id": "english_1993_q33",
-      "questionText": "You will be ill if you ...... too <u>much</u>.",
+      "questionText": "You will be ill if you ...... too much.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -855,7 +861,7 @@
         "C. had eaten",
         "D. ate"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -866,7 +872,7 @@
     },
     {
       "id": "english_1993_q34",
-      "questionText": "If it ...... necessary, I shall see you again at six o'<u>clock</u>.",
+      "questionText": "If it ...... necessary, I shall see you again at six o'clock.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -880,7 +886,7 @@
         "C. is being",
         "D. was"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -891,7 +897,7 @@
     },
     {
       "id": "english_1993_q35",
-      "questionText": "If we had not closed down the market, the traders ...... <u>there</u>.",
+      "questionText": "If we had not closed down the market, the traders ...... there.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -905,7 +911,7 @@
         "C. are still going",
         "D. would have still been"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -916,7 +922,7 @@
     },
     {
       "id": "english_1993_q36",
-      "questionText": "Mr. Adu has never been pleased with his children's <u>performance</u>, ......?",
+      "questionText": "Mr. Adu has never been pleased with his children's performance, ......?",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -930,7 +936,7 @@
         "C. has he",
         "D. did he"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -941,7 +947,7 @@
     },
     {
       "id": "english_1993_q37",
-      "questionText": "You prefer playing soccer to volley <u>ball</u>, ......?",
+      "questionText": "You prefer playing soccer to volley ball, ......?",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -955,7 +961,7 @@
         "C. won't you",
         "D. don't you?"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -966,7 +972,7 @@
     },
     {
       "id": "english_1993_q38",
-      "questionText": "The cashier was rude to his <u>boss</u>, ......?",
+      "questionText": "The cashier was rude to his boss, ......?",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -980,7 +986,7 @@
         "C. did he",
         "D. didn't he"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -991,7 +997,7 @@
     },
     {
       "id": "english_1993_q39",
-      "questionText": "These days students are not very interested ...... improving their <u>English</u>.",
+      "questionText": "These days students are not very interested ...... improving their English.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -1005,7 +1011,7 @@
         "C. of",
         "D. in"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -1016,7 +1022,7 @@
     },
     {
       "id": "english_1993_q40",
-      "questionText": "Kofi ate ...... food than anyone <u>else</u>.",
+      "questionText": "Kofi ate ...... food than anyone else.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -1030,7 +1036,7 @@
         "C. much",
         "D. too much"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [

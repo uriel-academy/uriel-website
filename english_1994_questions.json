@@ -43,14 +43,15 @@
         "D. enjoyed darkness.",
         "E. did not like water."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1994_passage_1"
     },
     {
       "id": "english_1994_q2",
@@ -69,14 +70,15 @@
         "D. sun, water, moon, fire",
         "E. sun, moon, fire, water"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1994_passage_1"
     },
     {
       "id": "english_1994_q3",
@@ -95,14 +97,15 @@
         "D. hanging of the sun in the sky",
         "E. blowing of smoke over his feathers"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1994_passage_1"
     },
     {
       "id": "english_1994_q4",
@@ -121,14 +124,15 @@
         "D. thankful.",
         "E. popular."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1994_passage_1"
     },
     {
       "id": "english_1994_q5",
@@ -147,14 +151,15 @@
         "D. kindly.",
         "E. selfish."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1994_passage_1"
     },
     {
       "id": "english_1994_q6",
@@ -173,7 +178,7 @@
         "D. their usual supper.",
         "E. a family."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -181,7 +186,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1994_passage_1"
+      "passageId": "english_1994_passage_2"
     },
     {
       "id": "english_1994_q7",
@@ -200,7 +205,7 @@
         "D. there was no transport.",
         "E. he wanted to meet her family."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -208,7 +213,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1994_passage_1"
+      "passageId": "english_1994_passage_2"
     },
     {
       "id": "english_1994_q8",
@@ -227,7 +232,7 @@
         "D. kind.",
         "E. inquisitive."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -235,7 +240,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1994_passage_1"
+      "passageId": "english_1994_passage_2"
     },
     {
       "id": "english_1994_q9",
@@ -254,7 +259,7 @@
         "D. seven",
         "E. eight"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -262,7 +267,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1994_passage_1"
+      "passageId": "english_1994_passage_2"
     },
     {
       "id": "english_1994_q10",
@@ -281,7 +286,7 @@
         "D. head, neck, feet, wings, body",
         "E. head, feet, wings, neck, body"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -289,7 +294,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1994_passage_1"
+      "passageId": "english_1994_passage_2"
     },
     {
       "id": "english_1994_q11",
@@ -308,7 +313,7 @@
         "D. jovial but proud.",
         "E. interesting but fooling."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -316,7 +321,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1994_passage_1"
+      "passageId": "english_1994_passage_2"
     },
     {
       "id": "english_1994_q12",
@@ -334,7 +339,7 @@
         "C. were shocked.",
         "D. disagreed."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -342,11 +347,11 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1994_passage_1"
+      "passageId": "english_1994_passage_2"
     },
     {
       "id": "english_1994_q13",
-      "questionText": "It is always good to be modest in your <u>demands</u>.",
+      "questionText": "It is always good to be modest in your demands.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -360,7 +365,7 @@
         "C. pleasant",
         "D. smart"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -371,7 +376,7 @@
     },
     {
       "id": "english_1994_q14",
-      "questionText": "There is no need to do rash <u>work</u>.",
+      "questionText": "There is no need to do rash work.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -385,7 +390,7 @@
         "C. busy",
         "D. hasty"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -396,7 +401,7 @@
     },
     {
       "id": "english_1994_q15",
-      "questionText": "Kofi spent all his time staring at the <u>madman</u>.",
+      "questionText": "Kofi spent all his time staring at the madman.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -410,7 +415,7 @@
         "C. laughing",
         "D. hooting"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -421,7 +426,7 @@
     },
     {
       "id": "english_1994_q16",
-      "questionText": "This mountain is rather too risky to <u>climb</u>",
+      "questionText": "This mountain is rather too risky to climb",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -435,7 +440,7 @@
         "C. difficult",
         "D. dangerous"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -446,7 +451,7 @@
     },
     {
       "id": "english_1994_q17",
-      "questionText": "This thief will have to plead for <u>mercy</u>.",
+      "questionText": "This thief will have to plead for mercy.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -460,7 +465,7 @@
         "C. apply",
         "D. stand"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -471,7 +476,7 @@
     },
     {
       "id": "english_1994_q18",
-      "questionText": "The students were advised to stop building castles in the air. This means that the students <u>should</u> ......",
+      "questionText": "The students were advised to stop building castles in the air. This means that the students should ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -485,7 +490,7 @@
         "C. not worry about castles.",
         "D. be serious and hardworking"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -496,7 +501,7 @@
     },
     {
       "id": "english_1994_q19",
-      "questionText": "Even though I don't talk to her, I give the devil his due. This means I <u>will</u> ...... her.",
+      "questionText": "Even though I don't talk to her, I give the devil his due. This means I will ...... her.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -510,7 +515,7 @@
         "C. reward",
         "D. be kind to"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -521,7 +526,7 @@
     },
     {
       "id": "english_1994_q20",
-      "questionText": "Kwasi is head over heels in love with Ama. This <u>means</u> ......",
+      "questionText": "Kwasi is head over heels in love with Ama. This means ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -535,7 +540,7 @@
         "C. Kwasi can't control himself when he sees Ama.",
         "D. Kwasi is deeply in love with Ama."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -546,7 +551,7 @@
     },
     {
       "id": "english_1994_q21",
-      "questionText": "The chief told his linguist not to beat about the bush. This means the linguist <u>must</u> ......",
+      "questionText": "The chief told his linguist not to beat about the bush. This means the linguist must ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -560,7 +565,7 @@
         "C. not enter the bush.",
         "D. conclude the case."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -571,7 +576,7 @@
     },
     {
       "id": "english_1994_q22",
-      "questionText": "When mother returned, <u>Kwame</u> let the cat out of the bag. This means that Kwame ......",
+      "questionText": "When mother returned, Kwame let the cat out of the bag. This means that Kwame ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -585,7 +590,7 @@
         "C. told mother what had happened.",
         "D. removed the cat from the bag."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -596,7 +601,7 @@
     },
     {
       "id": "english_1994_q23",
-      "questionText": "This <u>room</u> is too dim.",
+      "questionText": "This room is too dim.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -610,7 +615,7 @@
         "C. bright",
         "D. light"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -621,7 +626,7 @@
     },
     {
       "id": "english_1994_q24",
-      "questionText": "This baby is very <u>energetic</u> for his age.",
+      "questionText": "This baby is very energetic for his age.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -635,7 +640,7 @@
         "C. bulky",
         "D. tall"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -646,7 +651,7 @@
     },
     {
       "id": "english_1994_q25",
-      "questionText": "The flower is made from artificial <u>materials</u>.",
+      "questionText": "The flower is made from artificial materials.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -660,7 +665,7 @@
         "C. wonderful",
         "D. new"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -671,7 +676,7 @@
     },
     {
       "id": "english_1994_q26",
-      "questionText": "All the accused persons were <u>convicted</u>.",
+      "questionText": "All the accused persons were convicted.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -685,7 +690,7 @@
         "C. addressed",
         "D. freed"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -696,7 +701,7 @@
     },
     {
       "id": "english_1994_q27",
-      "questionText": "There are guards on our border because the government wants to eliminate <u>smuggling</u>.",
+      "questionText": "There are guards on our border because the government wants to eliminate smuggling.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -710,7 +715,7 @@
         "C. manage with",
         "D. investigate"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -721,7 +726,7 @@
     },
     {
       "id": "english_1994_q28",
-      "questionText": "It all depends ...... your being <u>hardworking</u>.",
+      "questionText": "It all depends ...... your being hardworking.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -735,7 +740,7 @@
         "C. in",
         "D. upon"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -746,7 +751,7 @@
     },
     {
       "id": "english_1994_q29",
-      "questionText": "We should always be proud ...... our <u>motherland</u>.",
+      "questionText": "We should always be proud ...... our motherland.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -760,7 +765,7 @@
         "C. for",
         "D. by"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -771,7 +776,7 @@
     },
     {
       "id": "english_1994_q30",
-      "questionText": "...... hearing the news, he jumped <u>high</u> for joy.",
+      "questionText": "...... hearing the news, he jumped high for joy.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -785,7 +790,7 @@
         "C. With",
         "D. In"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -796,7 +801,7 @@
     },
     {
       "id": "english_1994_q31",
-      "questionText": "A thief was caught ...... the house <u>yesterday</u>.",
+      "questionText": "A thief was caught ...... the house yesterday.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -810,7 +815,7 @@
         "C. outside",
         "D. over"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -821,7 +826,7 @@
     },
     {
       "id": "english_1994_q32",
-      "questionText": "I object ...... your joining our school <u>team</u>.",
+      "questionText": "I object ...... your joining our school team.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -835,7 +840,7 @@
         "C. at",
         "D. on"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -846,7 +851,7 @@
     },
     {
       "id": "english_1994_q33",
-      "questionText": "The lady did not see ...... in the <u>house</u>.",
+      "questionText": "The lady did not see ...... in the house.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -860,7 +865,7 @@
         "C. anybody",
         "D. someone"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -871,7 +876,7 @@
     },
     {
       "id": "english_1994_q34",
-      "questionText": "This is the book ...... I picked from the <u>floor</u>.",
+      "questionText": "This is the book ...... I picked from the floor.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -885,7 +890,7 @@
         "C. what",
         "D. which"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -896,7 +901,7 @@
     },
     {
       "id": "english_1994_q35",
-      "questionText": "The man ...... house was burnt down is in <u>hospital</u>.",
+      "questionText": "The man ...... house was burnt down is in hospital.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -910,7 +915,7 @@
         "C. whose",
         "D. which"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -921,7 +926,7 @@
     },
     {
       "id": "english_1994_q36",
-      "questionText": "...... boys are very happy with the <u>toys</u>.",
+      "questionText": "...... boys are very happy with the toys.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -935,7 +940,7 @@
         "C. That",
         "D. This"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -946,7 +951,7 @@
     },
     {
       "id": "english_1994_q37",
-      "questionText": "Have a bottle of coke, <u>will</u> you? No, ......",
+      "questionText": "Have a bottle of coke, will you? No, ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -960,7 +965,7 @@
         "C. thank you",
         "D. I won't"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -971,7 +976,7 @@
     },
     {
       "id": "english_1994_q38",
-      "questionText": "Let's go out and <u>play</u>, ......?",
+      "questionText": "Let's go out and play, ......?",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -985,7 +990,7 @@
         "C. will we",
         "D. would we"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -996,7 +1001,7 @@
     },
     {
       "id": "english_1994_q39",
-      "questionText": "Kofi will not meet his father at home if he ...... not <u>here</u> by 5:00 p.m.",
+      "questionText": "Kofi will not meet his father at home if he ...... not here by 5:00 p.m.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -1010,7 +1015,7 @@
         "C. isn't",
         "D. is"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -1021,7 +1026,7 @@
     },
     {
       "id": "english_1994_q40",
-      "questionText": "The baby needs a bath, <u>doesn</u>'t it? ......",
+      "questionText": "The baby needs a bath, doesn't it? ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -1035,7 +1040,7 @@
         "C. yes, it doesn't",
         "D. yes, it does"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [

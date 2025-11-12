@@ -42,14 +42,15 @@
         "C. they hadn't seen a car before.",
         "D. the car was marvellous."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1997_passage_1"
     },
     {
       "id": "english_1997_q2",
@@ -67,14 +68,15 @@
         "C. Mr Opiah had told them about it.",
         "D. The children ran to Mr Opiah's house."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1997_passage_1"
     },
     {
       "id": "english_1997_q3",
@@ -92,14 +94,15 @@
         "C. thought Akwasi Seth would not recognize them.",
         "D. were surprised at how greatly Akwasi Seth had changed."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1997_passage_1"
     },
     {
       "id": "english_1997_q4",
@@ -117,14 +120,15 @@
         "C. shed tears of joy.",
         "D. was loved very much."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1997_passage_1"
     },
     {
       "id": "english_1997_q5",
@@ -142,14 +146,15 @@
         "C. wondered.",
         "D. entered."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1997_passage_1"
     },
     {
       "id": "english_1997_q6",
@@ -167,14 +172,15 @@
         "C. she was very happy.",
         "D. Akwasi remembered his culture."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
         "Comprehension"
       ],
       "createdBy": "admin",
-      "isActive": true
+      "isActive": true,
+      "passageId": "english_1997_passage_1"
     },
     {
       "id": "english_1997_q7",
@@ -192,7 +198,7 @@
         "C. near Mr Kodwo Twum.",
         "D. with the houses."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -200,7 +206,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1997_passage_1"
+      "passageId": "english_1997_passage_2"
     },
     {
       "id": "english_1997_q8",
@@ -218,7 +224,7 @@
         "C. the best schools.",
         "D. the village."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -226,7 +232,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1997_passage_1"
+      "passageId": "english_1997_passage_2"
     },
     {
       "id": "english_1997_q9",
@@ -244,7 +250,7 @@
         "C. He was hated by many people",
         "D. He was liked by all his people"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -252,7 +258,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1997_passage_1"
+      "passageId": "english_1997_passage_2"
     },
     {
       "id": "english_1997_q10",
@@ -270,7 +276,7 @@
         "C. disrespectful.",
         "D. lazy."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -278,7 +284,7 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1997_passage_1"
+      "passageId": "english_1997_passage_2"
     },
     {
       "id": "english_1997_q11",
@@ -296,7 +302,7 @@
         "C. very good neighbours.",
         "D. members of the church."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -304,11 +310,11 @@
       ],
       "createdBy": "admin",
       "isActive": true,
-      "passageId": "english_1997_passage_1"
+      "passageId": "english_1997_passage_2"
     },
     {
       "id": "english_1997_q12",
-      "questionText": "She is very sincere <u>with</u> the people she works with.",
+      "questionText": "She is very sincere with the people she works with.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -322,7 +328,7 @@
         "C. good",
         "D. honest"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -333,7 +339,7 @@
     },
     {
       "id": "english_1997_q13",
-      "questionText": "We could not stand the <u>scent</u> in the et.",
+      "questionText": "We could not stand the scent in the et.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -347,7 +353,7 @@
         "C. smell",
         "D. noise"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -358,7 +364,7 @@
     },
     {
       "id": "english_1997_q14",
-      "questionText": "My brother needs somebody to assist him complete the <u>work</u>.",
+      "questionText": "My brother needs somebody to assist him complete the work.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -372,7 +378,7 @@
         "C. join",
         "D. guide"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -383,7 +389,7 @@
     },
     {
       "id": "english_1997_q15",
-      "questionText": "The chief's palace was demolished by the <u>rainstorm</u>.",
+      "questionText": "The chief's palace was demolished by the rainstorm.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -397,7 +403,7 @@
         "C. destroyed",
         "D. painted"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -408,7 +414,7 @@
     },
     {
       "id": "english_1997_q16",
-      "questionText": "The visitors were happy about the calm nature of the <u>village</u>.",
+      "questionText": "The visitors were happy about the calm nature of the village.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -422,7 +428,7 @@
         "C. lovely",
         "D. peaceful"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -433,7 +439,7 @@
     },
     {
       "id": "english_1997_q17",
-      "questionText": "Ekua visits her <u>grandmother</u> once in a blue moon. This means Ekua visits her grandmother ......",
+      "questionText": "Ekua visits her grandmother once in a blue moon. This means Ekua visits her grandmother ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -447,7 +453,7 @@
         "C. occasionally",
         "D. often"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -458,7 +464,7 @@
     },
     {
       "id": "english_1997_q18",
-      "questionText": "Joana is a clever girl and will come out of her examination with flying colours. This <u>means</u> ......",
+      "questionText": "Joana is a clever girl and will come out of her examination with flying colours. This means ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -472,7 +478,7 @@
         "C. her results will be very good.",
         "D. she will work hard."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -483,7 +489,7 @@
     },
     {
       "id": "english_1997_q19",
-      "questionText": "The <u>manager</u> hit the nail on the head in his speech to his workers. This means the manager ......",
+      "questionText": "The Manager hit the nail on the head in his speech to his workers. This means the manager ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -497,7 +503,7 @@
         "C. spoke harshly.",
         "D. was not happy with his workers."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -508,7 +514,7 @@
     },
     {
       "id": "english_1997_q20",
-      "questionText": "Akosua will go to the cinema if Adjei will foot the bill. This means Akosua will go to the film <u>show</u> if ......",
+      "questionText": "Akosua will go to the cinema if Adjei will foot the bill. This means Akosua will go to the film show if ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -522,7 +528,7 @@
         "C. Adjei will pay for her.",
         "D. she will walk there with others."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -533,7 +539,7 @@
     },
     {
       "id": "english_1997_q21",
-      "questionText": "The Pastor advised Yaw and <u>Mensah</u> to bury the hatchet. This means Yaw and Mensah are to ......",
+      "questionText": "The Pastor advised Yaw and Mensah to bury the hatchet. This means Yaw and Mensah are to ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -547,7 +553,7 @@
         "C. forget about their quarrel.",
         "D. bury their old cutlass."
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -558,7 +564,7 @@
     },
     {
       "id": "english_1997_q22",
-      "questionText": "This <u>room</u> is too dim.",
+      "questionText": "This room is too dim.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -572,7 +578,7 @@
         "C. clear",
         "D. lit"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -583,7 +589,7 @@
     },
     {
       "id": "english_1997_q23",
-      "questionText": "That box contains very expensive <u>jewellery</u>.",
+      "questionText": "That box contains very expensive jewellery.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -597,7 +603,7 @@
         "C. better",
         "D. fine"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -608,7 +614,7 @@
     },
     {
       "id": "english_1997_q24",
-      "questionText": "They are waiting in the arrival <u>hall</u>.",
+      "questionText": "They are waiting in the arrival hall.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -622,7 +628,7 @@
         "C. acceptance",
         "D. common"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -633,7 +639,7 @@
     },
     {
       "id": "english_1997_q25",
-      "questionText": "It is very unlikely that he will report before <u>Saturday</u>.",
+      "questionText": "It is very unlikely that he will report before Saturday.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -647,7 +653,7 @@
         "C. close",
         "D. possible"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -658,7 +664,7 @@
     },
     {
       "id": "english_1997_q26",
-      "questionText": "This is made from artificial <u>materials</u>.",
+      "questionText": "This is made from artificial materials.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -672,7 +678,7 @@
         "C. wonderful",
         "D. natural"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -683,7 +689,7 @@
     },
     {
       "id": "english_1997_q27",
-      "questionText": "I object ...... your joining our school <u>team</u>.",
+      "questionText": "I object ...... your joining our school team.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -697,7 +703,7 @@
         "C. at",
         "D. to"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -708,7 +714,7 @@
     },
     {
       "id": "english_1997_q28",
-      "questionText": "This secret should <u>remain</u> ...... you and me.",
+      "questionText": "This secret should remain ...... you and me.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -722,7 +728,7 @@
         "C. in",
         "D. between"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -733,7 +739,7 @@
     },
     {
       "id": "english_1997_q29",
-      "questionText": "The kind woman gave ...... a box of <u>sweets</u>.",
+      "questionText": "The kind woman gave ...... a box of sweets.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -747,7 +753,7 @@
         "C. each and all",
         "D. each and everyone"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -758,7 +764,7 @@
     },
     {
       "id": "english_1997_q30",
-      "questionText": "Tokyo is the ...... expensive city in the <u>world</u>.",
+      "questionText": "Tokyo is the ...... expensive city in the world.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -772,7 +778,7 @@
         "C. more",
         "D. very"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -783,7 +789,7 @@
     },
     {
       "id": "english_1997_q31",
-      "questionText": "You have to help your <u>parents</u> ......?",
+      "questionText": "You have to help your parents ......?",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -797,7 +803,7 @@
         "C. isn't it",
         "D. don't you"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -808,7 +814,7 @@
     },
     {
       "id": "english_1997_q32",
-      "questionText": "The car my uncle <u>bought</u> was the ......",
+      "questionText": "The car my uncle bought was the ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -822,7 +828,7 @@
         "C. latest model of the Benz",
         "D. latest Benz of the model"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -833,7 +839,7 @@
     },
     {
       "id": "english_1997_q33",
-      "questionText": "I will wash my clothes when I ...... <u>home</u>.",
+      "questionText": "I will wash my clothes when I ...... home.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -847,7 +853,7 @@
         "C. could go",
         "D. go"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -858,7 +864,7 @@
     },
     {
       "id": "english_1997_q34",
-      "questionText": "She is very jovial ...... she is an <u>orphan</u>.",
+      "questionText": "She is very jovial ...... she is an orphan.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -872,7 +878,7 @@
         "C. though",
         "D. even"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -883,7 +889,7 @@
     },
     {
       "id": "english_1997_q35",
-      "questionText": "If you ...... more attentive you wouldn't have been in such a bad <u>situation</u>.",
+      "questionText": "If you ...... more attentive you wouldn't have been in such a bad situation.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -897,7 +903,7 @@
         "C. had been",
         "D. could"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -908,7 +914,7 @@
     },
     {
       "id": "english_1997_q36",
-      "questionText": "Kwabena often ...... his grandfather after <u>school</u>.",
+      "questionText": "Kwabena often ...... his grandfather after school.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -922,7 +928,7 @@
         "C. has visited",
         "D. visit"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -933,7 +939,7 @@
     },
     {
       "id": "english_1997_q37",
-      "questionText": "The farmer had saved ...... money for his son's <u>education</u>.",
+      "questionText": "The farmer had saved ...... money for his son's education.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -947,7 +953,7 @@
         "C. most",
         "D. plenty"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -958,7 +964,7 @@
     },
     {
       "id": "english_1997_q38",
-      "questionText": "This is my book; <u>that</u> one is ......",
+      "questionText": "This is my book; that one is ......",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -972,7 +978,7 @@
         "C. yours",
         "D. yours'"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -983,7 +989,7 @@
     },
     {
       "id": "english_1997_q39",
-      "questionText": "Birds fly, don't <u>they</u>?",
+      "questionText": "Birds fly, don't they?",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -997,7 +1003,7 @@
         "C. Yes, they do",
         "D. Yes, they can't"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
@@ -1008,7 +1014,7 @@
     },
     {
       "id": "english_1997_q40",
-      "questionText": "The rains had ...... stopped <u>when</u> we set off.",
+      "questionText": "The rains had ...... stopped when we set off.",
       "type": "multipleChoice",
       "subject": "english",
       "examType": "bece",
@@ -1022,7 +1028,7 @@
         "C. already",
         "D. now"
       ],
-      "correctAnswer": "A",
+      "correctAnswer": "",
       "marks": 1,
       "difficulty": "medium",
       "topics": [
