@@ -1,14 +1,58 @@
+# robots.txt for Uriel Academy
+# Optimized for fast crawling and better SEO
+
 # Allow all search engines to crawl the site
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://uriel-academy-41fb0.web.app/sitemap.xml
+Sitemap: https://uriel.academy/sitemap.xml
 
-# Disallow crawling of private/admin areas
+# No crawl delay for faster indexing
+Crawl-delay: 0
+
+# Allow important public pages
+Allow: /about
+Allow: /contact
+Allow: /features
+Allow: /pricing
+Allow: /faq
+Allow: /privacy
+Allow: /terms
+Allow: /landing
+
+# Disallow private/admin areas
 Disallow: /admin
 Disallow: /admin-setup
+Disallow: /admin-old
 Disallow: /rme-debug
+Disallow: /teacher
+Disallow: /parent
+Disallow: /school-admin
+Disallow: /comprehensive-admin
 
-# Crawl delay (optional, in seconds)
-Crawl-delay: 1
+# Allow static assets for better indexing
+Allow: /assets/
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.svg
+Allow: /*.ico
+Allow: /*.webp
+
+# Optimize crawling for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /assets/
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.svg
+Allow: /*.webp
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
