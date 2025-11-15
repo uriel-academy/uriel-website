@@ -83,7 +83,7 @@ class DefaultFirebaseOptions {
     appId: '1:391331682365:web:bdb1126fd5ff9b6be43254',
     messagingSenderId: '391331682365',
     projectId: 'uriel-academy-41fb0',
-    authDomain: 'uriel-academy-41fb0.firebaseapp.com',
+    authDomain: 'uriel.academy',
     storageBucket: 'uriel-academy-41fb0.firebasestorage.app',
     measurementId: 'G-BP8DM4YXLD',
   );
