@@ -27,6 +27,7 @@ import 'screens/payment_page.dart'; // Import Payment page
 import 'screens/uri_page.dart'; // New ChatGPT-like full page Uri
 import 'screens/upload_note_page.dart'; // Upload notes page
 import 'screens/note_viewer_page.dart'; // Note viewer page
+import 'screens/study_planner_page.dart'; // Study planner page
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -126,6 +127,7 @@ class MyApp extends StatelessWidget {
         '/rme-debug': (_) => const RMEQuestionsDebugPage(), // Add RME debug route
   '/uri': (_) => const UriPage(),
         '/upload_note': (_) => const UploadNotePage(),
+        '/study-planner': (_) => const StudyPlannerPage(), // Study planner route
         '/note': (ctx) {
           final args = ModalRoute.of(ctx)?.settings.arguments as Map<String, dynamic>?;
           String? id = args?['noteId'] as String?;

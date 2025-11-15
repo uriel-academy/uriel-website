@@ -9,6 +9,7 @@ import 'calm_mode.dart';
 import 'profile_analytics.dart';
 import 'student_motivation.dart';
 import '../widgets/grade_prediction_card.dart';
+import '../widgets/study_goals_card.dart';
 
 class StudentDashboardPage extends StatefulWidget {
   const StudentDashboardPage({super.key});
@@ -63,6 +64,8 @@ class _StudentDashboardPageState extends State<StudentDashboardPage> {
             _buildSubjectGrid(),
             const SizedBox(height: 24),
             _buildQuickActions(context),
+            const SizedBox(height: 24),
+            const StudyGoalsCard(),
             const SizedBox(height: 24),
             _buildAnalyticsCard(),
             const SizedBox(height: 24),

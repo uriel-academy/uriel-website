@@ -1,7 +1,7 @@
 {
   "name": "Uriel Academy",
   "short_name": "Uriel Academy",
-  "description": "Ghana's Premier Edtech Platform for BECE and WASSCE Preparation",
+  "description": "Smart Study Platform with Past Questions, AI Tools, Textbooks & Personalized Learning",
   "start_url": "/",
   "display": "standalone",
   "display_override": ["standalone"],

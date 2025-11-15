@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+﻿import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../constants/app_styles.dart';
 import '../widgets/common_footer.dart';
@@ -48,28 +48,21 @@ class LandingPage extends StatelessWidget {
         ],
       ),
       child: SafeArea(
-        child: LayoutBuilder(
-          builder: (context, constraints) {
-            final isDesktop = constraints.maxWidth > 768;
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            // Logo
+            Text(
+              'Uriel Academy',
+              style: AppStyles.brandNameLight(fontSize: 22),
+            ),
             
-            return Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            const Spacer(),
+            
+            // Auth Buttons
+            Row(
               children: [
-                // Logo
-                Text(
-                  'Uriel Academy',
-                  style: AppStyles.brandNameLight(fontSize: 22),
-                ),
-                
-                // Desktop Navigation - removed for cleaner look
-                if (isDesktop) ...[
-                  const SizedBox(width: 32),
-                ],
-                
-                // Auth Buttons
-                Row(
-                  children: [
-                    TextButton(
+                TextButton(
                       onPressed: () => Navigator.push(
                         context,
                         MaterialPageRoute(builder: (_) => const SignInPage()),
@@ -112,8 +105,6 @@ class LandingPage extends StatelessWidget {
                   ],
                 ),
               ],
-            );
-          }
         ),
       ),
     );
@@ -144,7 +135,7 @@ class LandingPage extends StatelessWidget {
               const SizedBox(height: 16),
               // Subheadline
               Text(
-                'Ace BECE & WASSCE with Uriel.',
+                'Study Smarter, Not Harder',
                 textAlign: TextAlign.center,
                 style: GoogleFonts.playfairDisplay(
                   fontSize: isDesktop ? 24 : 20,
@@ -156,9 +147,9 @@ class LandingPage extends StatelessWidget {
               const SizedBox(height: 32),
               // Simplified value proposition
               Container(
-                constraints: const BoxConstraints(maxWidth: 500),
+                constraints: const BoxConstraints(maxWidth: 600),
                 child: Text(
-                  'Master BECE & WASSCE with 10,000+ past questions, approved textbooks, and smart AI tools.',
+                  'Your complete study companion with 10,000+ past questions, AI-powered tools, approved textbooks, interactive trivia, flashcards, and personalized study plans. Study smarter, achieve more.',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 18,
@@ -240,17 +231,17 @@ class LandingPage extends StatelessWidget {
                 children: [
                   _buildFeatureCard(
                     title: '10,000+ Past Questions',
-                    description: 'Comprehensive collection of BECE and WASSCE questions with detailed answers',
+                    description: 'Access BECE, WASSCE, and NOVDEC past questions with comprehensive answers and explanations',
                     width: isDesktop ? (constraints.maxWidth - 40) / 3 : constraints.maxWidth,
                   ),
                   _buildFeatureCard(
-                    title: 'NACCA Aligned Textbooks',
-                    description: 'Curated digital textbooks aligned with Ghana Education Service curriculum',
+                    title: 'Complete Study Toolkit',
+                    description: 'Approved textbooks, interactive flashcards, educational trivia, and smart revision notes',
                     width: isDesktop ? (constraints.maxWidth - 40) / 3 : constraints.maxWidth,
                   ),
                   _buildFeatureCard(
-                    title: 'Smart AI Tools',
-                    description: 'Personalized quizzes, revision plans, and intelligent progress tracking',
+                    title: 'AI-Powered Learning',
+                    description: 'Personalized study plans, intelligent progress tracking, and adaptive quiz generation',
                     width: isDesktop ? (constraints.maxWidth - 40) / 3 : constraints.maxWidth,
                   ),
                 ],
@@ -342,7 +333,7 @@ class LandingPage extends StatelessWidget {
                     context: context,
                     title: 'Free',
                     subtitle: 'Get Started',
-                    price: '₵0',
+                    price: 'â‚µ0',
                     period: '/month',
                     features: [
                       'Trivia & gamification',
@@ -359,7 +350,7 @@ class LandingPage extends StatelessWidget {
                     context: context,
                     title: 'Standard',
                     subtitle: 'Everything You Need',
-                    price: '₵9.99',
+                    price: 'â‚µ9.99',
                     period: '/month',
                     features: [
                       'All textbooks - JHS 1-3',
@@ -375,7 +366,7 @@ class LandingPage extends StatelessWidget {
                     context: context,
                     title: 'Premium',
                     subtitle: 'Learn 2x Faster with AI',
-                    price: '₵14.99',
+                    price: 'â‚µ14.99',
                     period: '/month',
                     features: [
                       'Everything in Standard, plus:',
