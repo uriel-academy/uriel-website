@@ -261,41 +261,73 @@ class LandingPage extends StatelessWidget {
   }) {
     return Container(
       width: width,
-      padding: const EdgeInsets.all(24),
+      padding: const EdgeInsets.all(28),
       decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(16),
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            Colors.white,
+            const Color(0xFFF8F9FA),
+          ],
+        ),
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(
+          color: const Color(0xFFD62828).withValues(alpha: 0.1),
+          width: 1,
+        ),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.05),
-            blurRadius: 10,
-            offset: const Offset(0, 4),
+            color: const Color(0xFFD62828).withValues(alpha: 0.08),
+            blurRadius: 20,
+            offset: const Offset(0, 8),
+            spreadRadius: 2,
           ),
         ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          Container(
+            padding: const EdgeInsets.all(12),
+            decoration: BoxDecoration(
+              color: const Color(0xFFD62828).withValues(alpha: 0.1),
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Icon(
+              _getIconForTitle(title),
+              color: const Color(0xFFD62828),
+              size: 28,
+            ),
+          ),
+          const SizedBox(height: 20),
           Text(
             title,
             style: const TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.w700,
+              fontSize: 22,
+              fontWeight: FontWeight.w800,
               color: Color(0xFF1A1E3F),
             ),
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 12),
           Text(
             description,
             style: TextStyle(
               fontSize: 16,
-              color: Colors.grey[600],
-              height: 1.5,
+              color: Colors.grey[700],
+              height: 1.6,
             ),
           ),
         ],
       ),
     );
+  }
+
+  IconData _getIconForTitle(String title) {
+    if (title.contains('Past Questions')) return Icons.quiz;
+    if (title.contains('Study Toolkit')) return Icons.auto_stories;
+    if (title.contains('AI-Powered')) return Icons.psychology;
+    return Icons.school;
   }
 
   Widget _buildPricingSection(BuildContext context) {
@@ -333,7 +365,7 @@ class LandingPage extends StatelessWidget {
                     context: context,
                     title: 'Free',
                     subtitle: 'Get Started',
-                    price: 'â‚µ0',
+                    price: 'GHS 0',
                     period: '/month',
                     features: [
                       'Trivia & gamification',
@@ -350,7 +382,7 @@ class LandingPage extends StatelessWidget {
                     context: context,
                     title: 'Standard',
                     subtitle: 'Everything You Need',
-                    price: 'â‚µ9.99',
+                    price: 'GHS 9.99',
                     period: '/month',
                     features: [
                       'All textbooks - JHS 1-3',
@@ -366,7 +398,7 @@ class LandingPage extends StatelessWidget {
                     context: context,
                     title: 'Premium',
                     subtitle: 'Learn 2x Faster with AI',
-                    price: 'â‚µ14.99',
+                    price: 'GHS 14.99',
                     period: '/month',
                     features: [
                       'Everything in Standard, plus:',
