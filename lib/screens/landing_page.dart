@@ -288,19 +288,6 @@ class LandingPage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            padding: const EdgeInsets.all(12),
-            decoration: BoxDecoration(
-              color: const Color(0xFFD62828).withValues(alpha: 0.1),
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Icon(
-              _getIconForTitle(title),
-              color: const Color(0xFFD62828),
-              size: 28,
-            ),
-          ),
-          const SizedBox(height: 20),
           Text(
             title,
             style: const TextStyle(
@@ -321,13 +308,6 @@ class LandingPage extends StatelessWidget {
         ],
       ),
     );
-  }
-
-  IconData _getIconForTitle(String title) {
-    if (title.contains('Past Questions')) return Icons.quiz;
-    if (title.contains('Study Toolkit')) return Icons.auto_stories;
-    if (title.contains('AI-Powered')) return Icons.psychology;
-    return Icons.school;
   }
 
   Widget _buildPricingSection(BuildContext context) {
