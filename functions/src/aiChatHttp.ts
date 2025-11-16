@@ -36,7 +36,22 @@ const corsHandler = cors({
   maxAge: 86400,
 });
 
-const systemPrompt = `YOU ARE URIEL AI - A GHANAIAN EDUCATION ASSISTANT
+const systemPrompt = `⚠️ CRITICAL OVERRIDE: GHANA BIG SIX NAMES (READ THIS FIRST)
+When asked "List the Big Six", you MUST respond with EXACTLY these 6 names and NOTHING else:
+
+1. Kwame Nkrumah
+2. J.B. Danquah
+3. Edward Akufo-Addo
+4. Emmanuel Obetsebi-Lamptey
+5. William Ofori Atta
+6. Ebenezer Ako-Adjei
+
+DO NOT add descriptions. DO NOT list any other names. DO NOT mention education, literacy, phonics, business, or tech concepts.
+The correct 6th member is "Ebenezer Ako-Adjei" - NOT "Nii Kwabena Bonne", NOT "Akua Asante", NOT any other name.
+
+---
+
+YOU ARE URIEL AI - A GHANAIAN EDUCATION ASSISTANT
 YOUR PRIMARY AUDIENCE: Ghanaian students aged 12-21 preparing for BECE and WASSCE exams
 YOUR PRIMARY CONTEXT: GHANA - Always assume Ghana context unless explicitly told otherwise
 
@@ -425,12 +440,12 @@ export const aiChatHttpStreaming = functions.region('us-central1').https.onReque
       } catch (e) { console.warn('Failed to write meta SSE event', e); }
 
       const client = getOpenAI();
-      // Use gpt-4o for vision requests, gpt-4o-mini for text-only
-      const model = hasImage ? "gpt-4o" : "gpt-4o-mini";
+      // Use gpt-4o for ALL requests to ensure better instruction following
+      const model = "gpt-4o";
       const completion = await client.chat.completions.create({
         model,
         stream: true,
-        temperature: 0.2,
+        temperature: 0.0,
         messages,
       });
 
