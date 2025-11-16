@@ -367,7 +367,40 @@ export const aiChatHttpStreaming = functions.region('us-central1').https.onReque
       // Determine if this query should include web search context
       function needsWebSearch(q: string) {
         const s = (q || '').toLowerCase();
-        return /(who is|what is|where is|when is|how much|price|cost|exchange rate|weather|score|fixture|latest|current|now|today|update|news|breaking|recent|new|president|election|government|minister|policy|law|bill|parliament|court|judge|case|crime|accident|disaster|economy|market|stock|currency|inflation|unemployment|population|census|statistics|data|report|survey|study|research)\b/.test(s);
+        
+        // CRITICAL: Force Tavily search for ALL factual queries to prevent hallucinations
+        // Trigger patterns for factual information requests:
+        const factualPatterns = [
+          // Question words (who, what, when, where, why, how)
+          /\b(who|what|when|where|why|how)\s+(is|are|was|were|did|does|do|has|have|had|will|would|can|could|should)\b/i,
+          
+          // List/Name requests
+          /\b(list|name|identify|mention|state|give|provide|tell)\s+(the|me|us|all|some)\b/i,
+          
+          // Specific factual queries
+          /\b(big\s*six|president|prime minister|minister|leader|founder|independence|history|date|year|price|cost|population|capital|currency|flag)\b/i,
+          
+          // Current/Recent information
+          /\b(latest|current|now|today|recent|new|update|breaking)\b/i,
+          
+          // Statistics and data
+          /\b(how much|how many|statistics|data|number|percentage|rate|count)\b/i,
+          
+          // Government/Politics/Law
+          /\b(election|government|parliament|court|judge|case|law|bill|policy|constitution)\b/i,
+          
+          // Economics/Business
+          /\b(economy|market|stock|exchange rate|inflation|unemployment|gdp|trade)\b/i,
+          
+          // Events/News
+          /\b(news|event|accident|disaster|crisis|war|conflict|peace|treaty)\b/i,
+          
+          // Education/Academic facts
+          /\b(definition|meaning|explain|describe|summary|overview)\b/i,
+        ];
+        
+        // Check if any pattern matches
+        return factualPatterns.some(pattern => pattern.test(s));
       }
 
       async function tavilySearch(query: string, maxResults = 6) {
@@ -400,7 +433,23 @@ export const aiChatHttpStreaming = functions.region('us-central1').https.onReque
       let webContext = '';
       try {
         if (needsWebSearch(message)) {
-          webContext = await tavilySearch(message, 6);
+          // Enhance search query for Ghana-specific queries to get accurate local context
+          let searchQuery = message;
+          
+          // Big Six query enhancement
+          if (/\b(big\s*six)\b/i.test(message)) {
+            searchQuery = "Ghana Big Six independence leaders 1948 names Kwame Nkrumah";
+          }
+          // Ghana history/government queries
+          else if (/\b(president|prime minister|government|independence)\b/i.test(message) && !/\b(usa|america|uk|britain|nigeria|kenya)\b/i.test(message)) {
+            searchQuery = `Ghana ${message}`;
+          }
+          // Education queries (default to Ghana context)
+          else if (/\b(bece|wassce|shs|jhs|rme|education|school|exam)\b/i.test(message)) {
+            searchQuery = `Ghana ${message}`;
+          }
+          
+          webContext = await tavilySearch(searchQuery, 6);
         }
       } catch (e) { console.warn('web context fetch failed', e); }
 
@@ -408,12 +457,15 @@ export const aiChatHttpStreaming = functions.region('us-central1').https.onReque
         { role: "system", content: systemPrompt },
       ];
       
-      // Add few-shot example for Big Six question to enforce correct answer
-      messages.push({ role: "user", content: "List the Big Six" });
-      messages.push({ role: "assistant", content: "1. Kwame Nkrumah\n2. J.B. Danquah\n3. Edward Akufo-Addo\n4. Emmanuel Obetsebi-Lamptey\n5. William Ofori Atta\n6. Ebenezer Ako-Adjei" });
-      
       if (webContext && webContext.length > 0) messages.push({ role: 'system', content: `WebSearchResults:\n${webContext}` });
       messages.push(...(Array.isArray(history) ? history : [])); // [{role:'user'|'assistant', content:string}, ...]
+      
+      // Add few-shot example ONLY if user is asking about Big Six (to enforce correct answer)
+      const isBigSixQuery = /\b(big\s*six|list\s+the\s+big\s+six|who\s+are\s+the\s+big\s+six|ghana\s+big\s+six)\b/i.test(message);
+      if (isBigSixQuery) {
+        messages.push({ role: "user", content: "List the Big Six" });
+        messages.push({ role: "assistant", content: "1. Kwame Nkrumah\n2. J.B. Danquah\n3. Edward Akufo-Addo\n4. Emmanuel Obetsebi-Lamptey\n5. William Ofori Atta\n6. Ebenezer Ako-Adjei" });
+      }
       
       // Construct user message with image if provided (Vision API format)
       if (hasImage) {
