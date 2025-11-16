@@ -407,6 +407,11 @@ export const aiChatHttpStreaming = functions.region('us-central1').https.onReque
       const messages: OpenAI.Chat.ChatCompletionMessageParam[] = [
         { role: "system", content: systemPrompt },
       ];
+      
+      // Add few-shot example for Big Six question to enforce correct answer
+      messages.push({ role: "user", content: "List the Big Six" });
+      messages.push({ role: "assistant", content: "1. Kwame Nkrumah\n2. J.B. Danquah\n3. Edward Akufo-Addo\n4. Emmanuel Obetsebi-Lamptey\n5. William Ofori Atta\n6. Ebenezer Ako-Adjei" });
+      
       if (webContext && webContext.length > 0) messages.push({ role: 'system', content: `WebSearchResults:\n${webContext}` });
       messages.push(...(Array.isArray(history) ? history : [])); // [{role:'user'|'assistant', content:string}, ...]
       
