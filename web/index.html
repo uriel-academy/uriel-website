@@ -55,10 +55,15 @@
        widgets use Math.tex. If you intentionally require the DOM-based
        KaTeX renderer (HtmlElementView), re-add the scripts here. -->
   
-  <!-- Favicons -->
+  <!-- Favicons - Multiple sizes for better browser support -->
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-  <link rel="icon" type="image/png" href="/assets/uriel_favicon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/android-chrome-512x512.png">
   <link rel="shortcut icon" href="/assets/favicon.ico">
+  
+  <!-- Apple Touch Icons for iOS -->
+  <link rel="apple-touch-icon" sizes="192x192" href="/assets/android-chrome-192x192.png">
+  <link rel="apple-touch-icon" sizes="512x512" href="/assets/android-chrome-512x512.png">
 
   <!-- Web App Manifest -->
   <link rel="manifest" href="/manifest.json">
@@ -71,7 +76,6 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Uriel Academy">
-  <link rel="apple-touch-icon" href="assets/android-chrome-512x512.png">
   
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RHLKB5VW3M"></script>

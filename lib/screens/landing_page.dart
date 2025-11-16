@@ -429,6 +429,15 @@ class LandingPage extends StatelessWidget {
     required bool isPopular,
     required double width,
   }) {
+    // Mobile-responsive font sizes
+    final isMobile = width < 200;
+    final titleSize = isMobile ? 16.0 : 18.0;
+    final subtitleSize = isMobile ? 11.0 : 13.0;
+    final priceSize = isMobile ? 20.0 : 24.0;
+    final periodSize = isMobile ? 12.0 : 14.0;
+    final featureSize = isMobile ? 12.0 : 14.0;
+    final cardPadding = isMobile ? 12.0 : 20.0;
+    
     return Container(
       width: width,
       decoration: BoxDecoration(
@@ -448,11 +457,12 @@ class LandingPage extends StatelessWidget {
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
         children: [
           if (isPopular)
             Container(
               width: double.infinity,
-              padding: const EdgeInsets.all(8),
+              padding: EdgeInsets.all(isMobile ? 6 : 8),
               decoration: const BoxDecoration(
                 color: Color(0xFFD62828),
                 borderRadius: BorderRadius.only(
@@ -460,83 +470,93 @@ class LandingPage extends StatelessWidget {
                   topRight: Radius.circular(15),
                 ),
               ),
-              child: const Text(
+              child: Text(
                 'Most Popular',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w600,
-                  fontSize: 12,
+                  fontSize: isMobile ? 10 : 12,
                 ),
               ),
             ),
           Padding(
-            padding: const EdgeInsets.all(20),
+            padding: EdgeInsets.all(cardPadding),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
                   title,
-                  style: const TextStyle(
-                    fontSize: 18,
+                  style: TextStyle(
+                    fontSize: titleSize,
                     fontWeight: FontWeight.w700,
-                    color: Color(0xFF1A1E3F),
+                    color: const Color(0xFF1A1E3F),
                   ),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                 ),
-                const SizedBox(height: 4),
+                SizedBox(height: isMobile ? 2 : 4),
                 Text(
                   subtitle,
                   style: TextStyle(
-                    fontSize: 13,
+                    fontSize: subtitleSize,
                     color: Colors.grey[600],
                   ),
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
                 ),
-                const SizedBox(height: 12),
+                SizedBox(height: isMobile ? 8 : 12),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    Text(
-                      price,
-                      style: const TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.w900,
-                        color: Color(0xFF1A1E3F),
+                    Flexible(
+                      child: Text(
+                        price,
+                        style: TextStyle(
+                          fontSize: priceSize,
+                          fontWeight: FontWeight.w900,
+                          color: const Color(0xFF1A1E3F),
+                        ),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                       ),
                     ),
                     if (period.isNotEmpty)
                       Text(
                         period,
                         style: TextStyle(
-                          fontSize: 14,
+                          fontSize: periodSize,
                           color: Colors.grey[600],
                         ),
                       ),
                   ],
                 ),
-                const SizedBox(height: 20),
+                SizedBox(height: isMobile ? 12 : 20),
                 ...features.map((feature) => Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 4),
+                  padding: EdgeInsets.symmetric(vertical: isMobile ? 2 : 4),
                   child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Icon(
+                      Icon(
                         Icons.check_circle,
-                        color: Color(0xFF4CAF50),
-                        size: 16,
+                        color: const Color(0xFF4CAF50),
+                        size: isMobile ? 14 : 16,
                       ),
-                      const SizedBox(width: 8),
+                      SizedBox(width: isMobile ? 6 : 8),
                       Expanded(
                         child: Text(
                           feature,
-                          style: const TextStyle(
-                            fontSize: 14,
-                            color: Color(0xFF1A1E3F),
+                          style: TextStyle(
+                            fontSize: featureSize,
+                            color: Colors.grey[800],
                           ),
                         ),
                       ),
                     ],
                   ),
                 )),
-                const SizedBox(height: 20),
+                SizedBox(height: isMobile ? 12 : 20),
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
@@ -550,15 +570,16 @@ class LandingPage extends StatelessWidget {
                       backgroundColor: isPopular ? const Color(0xFFD62828) : const Color(0xFF1A1E3F),
                       foregroundColor: Colors.white,
                       elevation: 0,
-                      padding: const EdgeInsets.symmetric(vertical: 12),
+                      padding: EdgeInsets.symmetric(vertical: isMobile ? 10 : 12),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                       ),
                     ),
-                    child: const Text(
+                    child: Text(
                       'Get Started',
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
+                        fontSize: isMobile ? 13 : 14,
                       ),
                     ),
                   ),

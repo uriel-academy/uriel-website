@@ -7,7 +7,7 @@
   "display_override": ["standalone"],
   "prefer_related_applications": false,
   "background_color": "#ffffff",
-  "theme_color": "#5bbad5",
+  "theme_color": "#1A1E3F",
   "orientation": "portrait-primary",
   "icons": [
     {
@@ -21,6 +21,11 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
     }
   ]
 }

@@ -1,42 +1,4 @@
-import * as functions from "firebase-functions";
-import * as admin from 'firebase-admin';
-import cors from "cors";
-import OpenAI from "openai";
-import type { Request, Response } from "express";
-import { RateLimiterMemory } from "rate-limiter-flexible";
-
-if (!admin.apps.length) admin.initializeApp();
-
-// Initialize OpenAI lazily to avoid config issues
-let openai: OpenAI | null = null;
-function getOpenAI() {
-  if (!openai) {
-    openai = new OpenAI({ apiKey: functions.config().openai?.key });
-  }
-  return openai;
-}
-
-// Rate limiter: 10 requests per minute per user/IP
-const rateLimiter = new RateLimiterMemory({
-  points: 10, // 10 requests
-  duration: 60, // per 60 seconds
-});
-
-const corsHandler = cors({
-  origin: [
-    "https://uriel.academy",
-    "https://uriel-academy-41fb0.web.app",
-    "https://uriel-academy-41fb0.firebaseapp.com",
-    "http://localhost:5173",
-    "http://localhost:8080",
-    "http://localhost:3000",
-  ],
-  methods: ["POST", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"],
-  maxAge: 86400,
-});
-
-const systemPrompt = `# URIEL AI – COMPREHENSIVE SYSTEM PROMPT
+# URIEL AI – COMPREHENSIVE SYSTEM PROMPT
 KNOWLEDGE CUTOFF: August 2025
 
 ## 1. DEFAULT CONTEXT – GHANA FIRST
@@ -80,7 +42,7 @@ Rules:
 - If still unsure after web search → say: "I'm not fully certain about this. Please clarify or cross-check your notes."
 - Use anchor facts (Big Six, independence dates) without searching
 - Keep responses concise, exam-oriented, British English
-- Show step-by-step solutions for Math with LaTeX: $inline$ or $display$
+- Show step-by-step solutions for Math with LaTeX: $inline$ or $$display$$
 - NEVER invent names, dates, historical events, or scientific claims
 
 ### MODE B: CREATIVE MODE (For storytelling & entertainment)
@@ -155,7 +117,7 @@ NEVER:
 ## 6. MATHEMATICS FORMATTING
 - Use LaTeX/KaTeX compatible with flutter_math_fork:
   - $inline math$ for expressions in text
-  - $display math$ for standalone equations
+  - $$display math$$ for standalone equations
 - Write fractions as \frac{a}{b}
 - Show step-by-step solutions with clear numbering
 - Provide multiple solution methods when beneficial
@@ -164,7 +126,7 @@ NEVER:
 ## 7. TEXT FORMATTING (NO MARKDOWN)
 - Use conversational paragraphs with proper spacing
 - Blank lines between paragraphs for readability
-- NEVER use markdown: no asterisks, underscores, hashes, dashes, backticks, pipes, etc.
+- NEVER use markdown: no *, **, _, __, #, ##, -, +, `, ```, >, |
 - Numbered lists or bullets ONLY when they genuinely improve clarity
 - Keep responses concise but comprehensive
 
@@ -189,8 +151,8 @@ Only ask clarification when:
 - The choice would MATERIALLY change the answer
 
 Be specific when clarifying:
-GOOD: "Are you asking about the Big Six of Ghanaian independence, or a different Big Six?"
-BAD: "What do you mean?"
+✅ "Are you asking about the Big Six of Ghanaian independence, or a different Big Six?"
+❌ "What do you mean?"
 
 After clarification, MOVE FORWARD – never stall with "I still don't understand."
 
@@ -254,186 +216,4 @@ When student uploads an image:
 
 ---
 WEB SEARCH STATUS: {useWebSearch} = "auto"
-When WebSearchResults are provided below, prioritize them for factual verification.`;
-
-export const aiChatHttpStreaming = functions.region('us-central1').https.onRequest(async (req: Request, res: Response) => {
-  console.log('aiChatHttp function called with method:', req.method);
-  // CORS preflight
-  if (req.method === "OPTIONS") {
-    corsHandler(req, res, () => res.status(204).end());
-    return;
-  }
-
-  corsHandler(req, res, async () => {
-    console.log('Processing aiChatHttp request');
-    try {
-      if (req.method !== "POST") {
-        res.status(405).json({ error: "Method not allowed" });
-        return;
-      }
-
-      // Minimal auth guard (optional: check Firebase ID token)
-      const authHeader = (req.get('Authorization') || req.get('authorization') || '').toString();
-      let userId = 'anonymous';
-
-      if (authHeader.startsWith('Bearer ')) {
-        const idToken = authHeader.split(' ')[1];
-        try {
-          const decodedToken = await admin.auth().verifyIdToken(idToken);
-          userId = decodedToken.uid;
-        } catch (e) {
-          // For now, allow unauthenticated access but log the error
-          console.warn('Auth token invalid, proceeding without authentication:', e);
-        }
-      } else {
-        // Allow unauthenticated access for basic chat functionality
-        console.log('No auth token provided, proceeding without authentication');
-      }
-
-      // Rate limiting: Use userId for authenticated users, IP for anonymous
-      const rateLimitKey = userId !== 'anonymous' ? userId : (req.ip || 'unknown');
-      try {
-        await rateLimiter.consume(rateLimitKey);
-      } catch (rateLimiterRes) {
-        res.status(429).json({ 
-          error: "Too many requests. Please try again in a minute.",
-          retryAfter: Math.ceil((rateLimiterRes as any).msBeforeNext / 1000)
-        });
-        return;
-      }
-
-      const { message, history, imageBase64 } = req.body || {};
-      if (!message || typeof message !== "string") {
-        res.status(400).json({ error: "Missing 'message' string in body" });
-        return;
-      }
-      
-      // Check if image is provided
-      const hasImage = imageBase64 && typeof imageBase64 === "string" && imageBase64.length > 0;
-
-      // SSE headers
-      res.setHeader("Content-Type", "text/event-stream");
-      res.setHeader("Cache-Control", "no-cache, no-transform");
-      res.setHeader("Connection", "keep-alive");
-      res.flushHeaders?.();
-
-      // Send a comment to open the stream
-      res.write(`: connected\n\n`);
-
-      // Heartbeat every 15s so proxies don't close the stream
-      const heartbeat = setInterval(() => {
-        res.write(`: ping ${Date.now()}\n\n`);
-      }, 15000);
-
-      // Determine if this query should include web search context
-      function needsWebSearch(q: string) {
-        const s = (q || '').toLowerCase();
-        return /(who is|what is|where is|when is|how much|price|cost|exchange rate|weather|score|fixture|latest|current|now|today|update|news|breaking|recent|new|president|election|government|minister|policy|law|bill|parliament|court|judge|case|crime|accident|disaster|economy|market|stock|currency|inflation|unemployment|population|census|statistics|data|report|survey|study|research)\b/.test(s);
-      }
-
-      async function tavilySearch(query: string, maxResults = 6) {
-        try {
-          const tavilyKey = functions.config().tavily?.key;
-          if (!tavilyKey) return '';
-          const resp = await fetch('https://api.tavily.com/search', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ api_key: tavilyKey, query, max_results: maxResults, include_answer: true }),
-          });
-          if (!resp.ok) return '';
-          const data = await resp.json();
-          if (!data) return '';
-          if (data.answer && data.answer.toString().trim().length > 0) return data.answer.toString();
-          const results = (data.results || []).slice(0, maxResults);
-          const composed = results.map((r: any, i: number) => {
-            const title = r.title || r.headline || '';
-            const url = r.url || '';
-            const content = (r.content || r.snippet || '').toString().slice(0, 2000);
-            return `[${i + 1}] ${title} — ${url}\n${content}`;
-          }).join('\n\n');
-          return composed;
-        } catch (e) {
-          console.warn('tavilySearch failed', e);
-          return '';
-        }
-      }
-
-      let webContext = '';
-      try {
-        if (needsWebSearch(message)) {
-          webContext = await tavilySearch(message, 6);
-        }
-      } catch (e) { console.warn('web context fetch failed', e); }
-
-      const messages: OpenAI.Chat.ChatCompletionMessageParam[] = [
-        { role: "system", content: systemPrompt },
-      ];
-      if (webContext && webContext.length > 0) messages.push({ role: 'system', content: `WebSearchResults:\n${webContext}` });
-      messages.push(...(Array.isArray(history) ? history : [])); // [{role:'user'|'assistant', content:string}, ...]
-      
-      // Construct user message with image if provided (Vision API format)
-      if (hasImage) {
-        messages.push({
-          role: "user",
-          content: [
-            { type: "text", text: message },
-            {
-              type: "image_url",
-              image_url: {
-                url: `data:image/jpeg;base64,${imageBase64}`,
-              },
-            },
-          ],
-        });
-      } else {
-        messages.push({ role: "user", content: message });
-      }
-
-      // Emit a small meta SSE event so clients can see whether web search was used
-      try {
-        const meta = {
-          type: 'meta',
-          webSearchUsed: !!webContext,
-          // include a short snippet to help diagnostics (trimmed)
-          tavilySnippet: webContext ? (webContext.length > 800 ? webContext.slice(0, 800) + '…' : webContext) : '',
-        };
-        res.write(`data: ${JSON.stringify(meta)}\n\n`);
-      } catch (e) { console.warn('Failed to write meta SSE event', e); }
-
-      const client = getOpenAI();
-      // Use gpt-4o for vision requests, gpt-4o-mini for text-only
-      const model = hasImage ? "gpt-4o" : "gpt-4o-mini";
-      const completion = await client.chat.completions.create({
-        model,
-        stream: true,
-        temperature: 0.2,
-        messages,
-      });
-
-      console.log('OpenAI completion created, starting stream...');
-
-      for await (const part of completion) {
-        const delta = part.choices?.[0]?.delta?.content ?? "";
-        console.log('Received delta:', delta);
-        if (delta) {
-          // Each token/chunk goes as an SSE 'data:' line
-          res.write(`data: ${JSON.stringify({ type: "text", delta })}\n\n`);
-        }
-      }
-
-      console.log('Stream completed');
-      // Signal completion
-      res.write(`data: ${JSON.stringify({ type: "done" })}\n\n`);
-      clearInterval(heartbeat);
-      res.end();
-    } catch (err: any) {
-      // Make sure we always end the stream with an error message
-      const msg = err?.message ?? "Unknown error";
-      try {
-        res.write(`data: ${JSON.stringify({ type: "error", message: msg })}\n\n`);
-      } catch {}
-      res.end();
-    }
-  });
-});
-
+When WebSearchResults are provided below, prioritize them for factual verification.
