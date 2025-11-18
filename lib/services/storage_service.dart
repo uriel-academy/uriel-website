@@ -78,8 +78,12 @@ class StorageService {
         }
       }
       
-      // Sort by year (newest first)
-      questions.sort((a, b) => b.year.compareTo(a.year));
+      // Sort by year (newest first) - handle string years
+      questions.sort((a, b) {
+        final aYear = int.tryParse(a.year) ?? 0;
+        final bYear = int.tryParse(b.year) ?? 0;
+        return bYear.compareTo(aYear);
+      });
       
       return questions;
     } catch (e) {
@@ -208,8 +212,12 @@ class StorageService {
         ));
       }
       
-      // Sort by year (newest first)
-      questions.sort((a, b) => b.year.compareTo(a.year));
+      // Sort by year (newest first) - handle string years
+      questions.sort((a, b) {
+        final aYear = int.tryParse(a.year) ?? 0;
+        final bYear = int.tryParse(b.year) ?? 0;
+        return bYear.compareTo(aYear);
+      });
       
       return questions;
     } catch (e) {

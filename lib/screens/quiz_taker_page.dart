@@ -134,7 +134,13 @@ class _QuizTakerPageState extends State<QuizTakerPage>
         questions.shuffle();
       } else {
         // Ensure deterministic ordering when not randomizing: sort by questionNumber only
-        questions.sort((a, b) => a.questionNumber.compareTo(b.questionNumber));
+        // Handle null-safe comparison
+        questions.sort((a, b) {
+          final aNum = a.questionNumber;
+          final bNum = b.questionNumber;
+          if (aNum == bNum) return 0;
+          return aNum.compareTo(bNum);
+        });
       }
       
       // Limit to specified question count

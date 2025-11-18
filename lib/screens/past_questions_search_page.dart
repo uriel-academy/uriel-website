@@ -229,10 +229,25 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
         questions.sort((a, b) => a.createdAt.compareTo(b.createdAt));
         break;
       case 'By Year (Newest)':
-        questions.sort((a, b) => b.year.compareTo(a.year));
+        questions.sort((a, b) {
+          // Handle year comparison safely (year is stored as String)
+          final aYear = int.tryParse(a.year) ?? 0;
+          final bYear = int.tryParse(b.year) ?? 0;
+          return bYear.compareTo(aYear);
+        });
         break;
       case 'By Difficulty':
-        questions.sort((a, b) => b.difficulty.compareTo(a.difficulty));
+        questions.sort((a, b) {
+          // Handle null difficulty values
+          final aDiff = a.difficulty;
+          final bDiff = b.difficulty;
+          if (aDiff == bDiff) return 0;
+          if (aDiff == 'hard') return -1;
+          if (bDiff == 'hard') return 1;
+          if (aDiff == 'medium') return -1;
+          if (bDiff == 'medium') return 1;
+          return 0;
+        });
         break;
     }
   }
