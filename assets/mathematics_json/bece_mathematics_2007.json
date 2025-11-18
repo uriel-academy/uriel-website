@@ -1,0 +1,402 @@
+{
+  "year": "2007",
+  "subject": "mathematics",
+  "multiple_choice": {
+    "q1": {
+      "question": " List the members of the set P = {factors of 30 which are odd}. P = {2, 3, 5} P = {1, 2, 3, 5} P = {1, 3, 5, 15} P = {2, 6, 10, 30}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q2": {
+      "question": " M = {g, o, q, s} and W = {h, p, r, t}. Find W U W. {q, r, s, t} {g, h, o, q, r} {g, h, o, q, r, t} {g, h, o, p, q, r, s, t}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q3": {
+      "question": " Name the geometrical figure shown in the diagram below. Cuboid Cone Pyramid Sphere",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q4": {
+      "question": " Express as a decimal fraction.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q5": {
+      "question": " If y = - x + 6, find y when x = 4.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q6": {
+      "question": " The marks obtained by 13 candidates in a test are 5, 7, 2, 9, 11, 10, 2, 12, 2, 9, 3, 18 and 2. Use this information to answer the question below. What is the mode?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q7": {
+      "question": "44 x 104",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q8": {
+      "question": " The pie chart above shows the distribution of 360 pupils to various houses in a school. Use it to answer the question below Find the value of the angle marked X°. 100° 150°",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q9": {
+      "question": " The pie chart above shows the distribution of 360 pupils to various houses in a school. Use it to answer the question below How many more students are in Yellow House than in Blue House?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q10": {
+      "question": " Express 242 as a product of prime factors. 22 x 112 2 x 112 22 x 11 2 x 11",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q11": {
+      "question": " Change 110011two to number in base ten.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q12": {
+      "question": " A boy throws a die once. What is the probability of getting the number 4?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q13": {
+      "question": " Arrange the following fractions from the highest to the lowest:",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q14": {
+      "question": " Solve the inequality 3x + 6 ≤ 5x - 2. x ≤ 2 x ≥ 2 x ≤ 4 x ≥ 4",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q15": {
+      "question": " If 8x - 3(2x - 4) = 4, find the value of x.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q16": {
+      "question": " Use the diagram below to answer the question below. Find the size of angle y. 100° 105°",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q17": {
+      "question": " Use the diagram below to answer the question below. Angles NTZ and QZT are alternate angles. corresponding angles complementary angles supplementary angles",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q18": {
+      "question": " Factorize px2 + px(x + 2) px(x + x + 2) px(x + 2)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q19": {
+      "question": " Jojo and Fiifi shared an amount of money in the ratio 3 : 4 respectively. If Fiifi had ₵ 140, 000 how much was shared? ₵ 200,000.00 ₵ 220,000.00 ₵ 245,000.00 ₵ 280,000.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q20": {
+      "question": " Simplify 6(7a + 4) - 3(8a + 9) 18a - 3 18a + 51 42a - 27 66a -3",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q21": {
+      "question": " A man invested ₵ 500,000.00 at 15% simple interest per annum for 2 years. Calculate the amount at the end of the period. ₵ 350,000.00 ₵ 650,000.00 ₵ 750,000.00 ₵ 800,000.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q22": {
+      "question": " Make m the subject of p = 3m + 1 m = 3p + 1 m = p - 3 p - 3 3p + 1",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q23": {
+      "question": " Simplify 200 x 0.01 x 372 leaving your answer in standard form.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q74": {
+      "question": "4 x 101",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q24": {
+      "question": " What percentage of 5 is 0.25?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q25": {
+      "question": " Calculate the area of the figure ABCD above. 72 cm2 90 cm2 108 cm2 126 cm2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q26": {
+      "question": " In which of the following constructions is P equidistant from the points A and B?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q27": {
+      "question": " If a : 27 = 6 : 18, find a.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q28": {
+      "question": " The diagram below shows a circle center O. If A and B are points on the circle, what name is given to the shaded region? Chord Segment Sector",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q29": {
+      "question": " An amount of ₵ 5, 400.00 is shared among three sisters in the ratio of their ages. Their ages are 10 years, 6 years and 2 years. Find the share of the youngest sister. ₵ 300.00 ₵ 600.00 ₵ 1,200.00 ₵ 1,800.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q30": {
+      "question": " Find the Least Common Multiple(L.C.M) of 4, 5 and 6.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q31": {
+      "question": " Expand (a + 2b)(a - 2b) a2 - 4ab - 4b2 a2 + 4ab - 4b2 a2 - 4b2 a2 + 4b2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q32": {
+      "question": " If a woman was paid ₵180,000.00 for working for 4 days, how much would she be paid for one day? ₵40,000.00 ₵45,000.00 ₵54,000.00 ₵81,000.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q33": {
+      "question": " Express 0.68 as a fraction in its lowest term.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q34": {
+      "question": " Write down all the integers within the interval 21 < y ≤ 27. {21, 22, 23, 24, 25, 26, 27} {22, 23, 24, 25, 26, 27} {21, 22, 23, 24, 25, 26} {22, 23, 24, 25, 26}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q35": {
+      "question": " Simplify (26 x 34) ÷ (24 x 32) 22 x 32 22 x 36 210 x 32 210 x 36",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q36": {
+      "question": " Which of the following is represented by vector AB in the diagram above? (5 cm, 045°) (5 cm, 135°) (5 cm, 180°) (5 cm, 225°)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q37": {
+      "question": " Solve for y, if 3 + 3y = 1 - 13y",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q38": {
+      "question": " Convert 37ten to a base two numeral. 100101 100111 101101 110101",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q39": {
+      "question": " The length of a rectangular playing field is 5 metres longer than its width. If the perimeter of the field is 150 metres, find its width. 30 metres 35 metres 40 metres 45 metres",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q40": {
+      "question": " If the vector m = and n = , find m - 2n.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    }
+  }
+}

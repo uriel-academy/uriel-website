@@ -1,0 +1,405 @@
+{
+  "year": "1994",
+  "subject": "mathematics",
+  "multiple_choice": {
+    "q1": {
+      "question": " Which of the following is the set of factors of 12? {12, 6, 4, 3, 2, 1} {12, 6, 4, 3, 2} {12, 6, 4, 2} {6, 4, 2, 1} {6, 4, 3, 2}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q2": {
+      "question": " Which of the following describes the relationship between the sets A and B in the Venn diagram below? A ⊂ B A ∩ B = 5 A ∩ B = ∅ A ∪ B = {1, 2, 3, 4, 5, 6, 7} B ⊂ A",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q3": {
+      "question": " Mark is 30 years old. Yaw is half as old as Mark. Paul is 10 years older than Yaw. How old is Paul? 30 years 25 years 20 years 15 years 10 years",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q4": {
+      "question": "3216 x 104",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q5": {
+      "question": " Which of the following is not a prime number?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q6": {
+      "question": " If x = {1, 2, 3, 4, 5}, find the truth set of 2x + 1 < 7 {1, 2} {2, 3} {1, 2, 3}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q7": {
+      "question": " In how many years will ₵5,000.00 yield a simple interest of ₵1,000.00 at a rate of 5% per annum. 4 years 5 years 10 years 25 years 30 years",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q8": {
+      "question": " Make m the subject of the relation f = fs - t m = f - m = -f -",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q9": {
+      "question": " Which property of arithmetic operation is illustrated by the statement: a × (b + c) = ab + ac? Addition Association Commutative Multiplication Distributive",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q10": {
+      "question": " Simplify 159 ÷ 157",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q11": {
+      "question": " , find x.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q12": {
+      "question": " Calculate the size of an exterior angle of a regular pentagon. 108° 360° 540°",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q13": {
+      "question": " Factorize x2 – 5x + 6 (x + 3)(x – 2) (x – 2)(x – 3) (x + 1)(x –6) (x + 2)(x + 3) (x + 6)(x – 1)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q14": {
+      "question": " Kwame, Atsu and Kojo shared a profit of ₵500,000.00 in the ratio 1 : 4 : 3 respectively. How much did Atsu get? ₵62,500.00 ₵125,000.00 ₵187,500.00 ₵250,000.00 ₵312,500.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q15": {
+      "question": " Use the identity a2 – b2 = (a + b)(a – b) to evaluate 832 - 172 6,600 7,178 7,600 8,317",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q16": {
+      "question": " What is the probability of obtaining a prime number when a fair die is thrown once?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q17": {
+      "question": " The following are the scores obtained by girls in a beauty contest: 12, 16, 19, 14, 17, 8, 11, 19. What is the probability of obtaining a score of 19?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q18": {
+      "question": " Express 25 as a percentage of 75. 300% 100%",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q33": {
+      "question": " Three boys weeded a piece of land in 4 hours. How long would it take 18 boys to weed the same piece of land weeding at the same rate? hour hours 22 hours 24 hours",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q19": {
+      "question": " Find the value of m given that m = (36 ÷ 34) × 27",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q20": {
+      "question": " Express 0.0043216 in standard form.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q21": {
+      "question": " Given that a = 2 and b = 3, evaluate (2a + b) (a – 2b)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q22": {
+      "question": " Which of the following is illustrated on the number line above? –1 < x < –1 ≤ x < –1 ≤ x ≤ –1 < x ≤ ≤ x ≤ –1",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q23": {
+      "question": " In the diagram above, A is the centre of the circle with radius 20 cm. If angle BAC is 90°, find the perimeter of the shaded sector. [Take π =",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q31": {
+      "question": " How many faces has a cuboid?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q40": {
+      "question": " If a number is selected at random from the table below, what is the probability that the number is 5? Number Frequency",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q51": {
+      "question": "4 cm",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q71": {
+      "question": "4 cm",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q24": {
+      "question": " In triangle ABC, |AB| = |BC| = 5 cm, and |AC| = 8 cm. Find |BD|. 3 cm 4 cm 9 cm 33 cm 41 cm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q25": {
+      "question": " Write ₵35,632.00 correct to the nearest thousand cedis. ₵40,000.00 ₵36,000.00 ₵35,600.00 ₵35,000.00 ₵30,000.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q26": {
+      "question": " Solve for x if 2x + 5 = 3x – 7",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q27": {
+      "question": " Evaluate",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q28": {
+      "question": " A boy walked 7 km on a bearing 060°. Which of the following diagrams shows his direction.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q29": {
+      "question": " In the diagram, G1OH1 is an enlargement of triangle GOH with scale factor k. If |GG1| = 5cm, |GO| = 2 cm and |G1H1| = 1 cm, what is the value of k?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q30": {
+      "question": " If 14x = 9ten, find x. Nine Eight Seven Five",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q32": {
+      "question": " Which of the following is a factor of the expression ac – 2bc + ad – 2bd? c – d a – 2b a + b a + 2b c + 2d",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q34": {
+      "question": " Find the size of the angle marked a in the diagram above. 120° 180°",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q35": {
+      "question": " Which of the following is the net of a cube?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q36": {
+      "question": " Use the mapping below to answer the question below 5 → 10five 10 → 20five 20 → 40five 40 → xfive y → 310five Find the value of x 30five 100five 110five 120five 130five",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q37": {
+      "question": " In the diagram below, find the size of the angle marked e°. 108° 128°",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q38": {
+      "question": " If the area of the figure above is 60 cm2, find x. 8 cm 9 cm 12 cm 16 cm 20 cm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q39": {
+      "question": " The mean of the numbers 4, 3, 3, x is 5, find x",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    }
+  }
+}

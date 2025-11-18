@@ -1,0 +1,381 @@
+{
+  "year": "2024",
+  "subject": "mathematics",
+  "multiple_choice": {
+    "q1": {
+      "question": "750 kg",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q2": {
+      "question": "5 cm",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q3": {
+      "question": " Which of the following is an example of quantitative data? Colour Gender Marital status Length",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q4": {
+      "question": " In the diagram, P and Q are two sets and U is the universal set. Use the information to answer the question below Find P ∩ Q. {c, d, e} {a, b} {c, b, c, d, e} {f, g, h}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q5": {
+      "question": "0 cm",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q6": {
+      "question": " Amadu walked to a point such that he is always the same distance from two villages P and Q. Which of the following best describes the locus of Amadu? An arc passing through line PQ A circle passing through line PQ Straight line PQ Perpendicular bisector of line PQ",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q7": {
+      "question": " A bag of rice weighs 2 kg. If the empty bag weights 150 g, find the weight of the rice. [1 kg = 1,000 g]",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q8": {
+      "question": " Andrews drew three lines such that the length of the first one is 10 cm, the second is 15 cm longer than the first one and the third is 9 cm less than the second. Find the length of the third line. 4 cm 14 cm 34 cm 16 cm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q9": {
+      "question": " Find the truth set of 2x - 4 < 6 + 3x. {x : x < 2} {x : x > -2} {x : x > -10} {x : x < 10}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q10": {
+      "question": "0 cm",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q11": {
+      "question": " Evaluate:",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q12": {
+      "question": "0 cm",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q13": {
+      "question": " A hawker is carrying a basket load of three types of fruits: oranges, mangoes and pears. of the fruits are oranges and mangoes, what percentage of the fruits are pears? 18 % 64 % 36 %",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q14": {
+      "question": " The diagram shows the graph of a linear relation of the form y = mx + c. Use the graph to answer the question below Find the slope of the relation.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q15": {
+      "question": " The diagram shows the graph of a linear relation of the form y = mx + c. Use the graph to answer the question below Find the equation of the relation. y = -2x + 3 y = -2x + 2 y = 2x + 3 y = 2x - 3",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q16": {
+      "question": " Araba is 3 years younger than her sister. If the sum of their ages is 17 years, find Araba's age. 7 years 8 years 10 years 9 years",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q17": {
+      "question": " A number of oranges are shared among 50 students and each got 15 oranges. If the same number of oranges are shared equally among 30 students, how many will each student get?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q18": {
+      "question": " If the bearing of Q from P is 120°, find the bearing of P from Q. 060° 210° 300° 240°",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q19": {
+      "question": " Given the vectors m = and n = , find 2m + n.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q20": {
+      "question": " Simplify: m + 1 m + 2 32m - 1 32m + 2 32m + 1",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q21": {
+      "question": " There are 15 white and 25 black identical balls in a box. If a ball is selected at random from the box, find the probability that it is white.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q22": {
+      "question": " The area of a rectangle is 18 cm2. If the width is 2 cm, find its perimeter. 18 cm 20 cm 36 cm 22 cm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q23": {
+      "question": " Find the interest on GH₵ 400.00 for 2 years at 10% simple interest per annum. GH₵ 8.00 GH₵ 40.00 GH₵ 80.00 GH₵ 60.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q24": {
+      "question": " One of the factors of the expression 4m2 + 12m - 8m - 24 is (4m - 8). Find the other factor. m - 3 m + 3 2m + 3 2m - 3",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q25": {
+      "question": " An article which cost GH₵ 600.00 was sold at a discount of 10%. Find the selling price. GH₵ 60.00 GH₵ 504.00 GH₵ 560.00 GH₵ 540.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q26": {
+      "question": " Make m the subject of the relation r + p r - p r - p r + p",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q27": {
+      "question": " The point P(-2, 3) is translated by a vector to a point R. Find the coordinates R. (6, -2) (-3, 6) (-3, -6) (-1, 0)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q28": {
+      "question": " A frog leaps in such a way that its distance, in metres, from its starting position after each leap is given by 4, 7, 10, ... Find its distance from the starting position after the 10th leap.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q29": {
+      "question": " A bus departed from Elmina at 9:15 pm and arrived in Accra at 2:45 am the next day. How long did the journey take? 4 hours 20 minutes 4 hours 30 minutes 5 hours 30 minutes 5 hours 20 minutes",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q30": {
+      "question": " Simplify: 3x - 2(3 + 2x) + x(2x + 4). 2x2 + 11x - 6 2x2 + 3x - 6 2x2 - 4x - 6 2x2 + 4x - 6",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q31": {
+      "question": " In the diagram, ∠ QPR = 30° and |QR| = 5 cm. [Take sin 30° = Find the length of PQ.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q32": {
+      "question": " A fair coin and a fair die are rolled together once. Find the probability of obtaining a tail and an odd number.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q33": {
+      "question": " If the gradient of a straight line is zero, then the line is vertical. is horizontal. falls to the right. rises to the right.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q34": {
+      "question": " Madam Nancy wants to know which of the teachers in her school is liked best by most of the students. Which of the following methods is most suitable for collecting the data? Experiment Database Questionnaire Observation",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q35": {
+      "question": " Mensah packed 1,800 apples into a number of boxes. If each box contained 120 apples, how many boxes were fully packed?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q36": {
+      "question": " The cost of three items at a shop are GH₵ 72.00, GH₵ 1,105.00 and GH₵ 216.00. If a customer bought all the three items and received a change of GH₵ 107.00, how much did he initially give the shopkeeper? GH₵ 1,300.00 GH₵ 1,400.00 GH₵ 2,000.00 GH₵ 1,500.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q37": {
+      "question": " Number on die Frequency The table shows the results when a student tossed a die many times. Use the information to answer the question below Find the mode.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q38": {
+      "question": " Number on die Frequency The table shows the results when a student tossed a die many times. Use the information to answer the question below How many times did the student throw the die?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q39": {
+      "question": " Find the image of the point (-3, 5) when it is rotated through 360° about the origin. (5, -3) (-3, 5) (-5, 3) (-3, -5)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q40": {
+      "question": " A story book contains 50 pages. If a student reads 10 pages per hour, find the relationship between the number of unread pages (N) and time (t). N = 10t + 50 N = -10t + 50 N = - t + 5 N = 10t - 50",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    }
+  }
+}

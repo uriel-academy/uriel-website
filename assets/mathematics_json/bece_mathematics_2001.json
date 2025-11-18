@@ -1,0 +1,401 @@
+{
+  "year": "2001",
+  "subject": "mathematics",
+  "multiple_choice": {
+    "q1": {
+      "question": " R = {1, 3, 5, 7} and S = {2, 4, 6, 8}. Find R ∪ S. {1,2,3,5,6,8} {1,2,3,4,5,7,8} {1,2,3,4,5,6,7,8} {1,2,3,4,5,6,7,8,9,10}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q2": {
+      "question": "345 x 105",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q3": {
+      "question": " What property of addition is defined by (a + b)+ c = a + (b + c)? Union Inverse Commutative Distributive Associative",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q4": {
+      "question": "50",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q5": {
+      "question": "75",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q6": {
+      "question": "00",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q7": {
+      "question": " Find the sum of all even numbers between 70 and 80.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q8": {
+      "question": "75",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q9": {
+      "question": " Evaluate 0.25 x 0.006, correct to three decimal places",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q10": {
+      "question": "00",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q11": {
+      "question": " The following are the angles formed at the centre of a circle: 30°, 70°, 120°, 2x and 5x. Find the value of x.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q12": {
+      "question": " On a map 1 cm represents 4.5 km. What is the actual distance between two towns which are 4 cm apart on the map? 9 km 16 km 18 km 19 km 21 km",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q13": {
+      "question": " If 2y = 6 – 3x, find y when x = 0",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q14": {
+      "question": " How many lines of symmetry has an isosceles triangle?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q16": {
+      "question": " A point P (3, 4) is rotated through an angle of 90° anticlockwise about the origin O. Find the image P1 of rotation (3, -4) (4, -3) (-3, 4) (-4, 3) (-4, -3)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q17": {
+      "question": " Which of the following is not quadrilateral? square rectangle rhombus triangle parallelogram",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q18": {
+      "question": " Express 2345 in standard form.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q19": {
+      "question": " Solve the inequality 3(x – 1) ≤ 12 x ≤ -5 x ≤ -3 x ≤ 3 x ≤ 5",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q20": {
+      "question": " Kofi and Ama shared an amount of money in the ratio 3 : 2 respectively. If Kofi had ₵60,000.00, how much was shared? ₵36,000.00 ₵40,000.00 ₵90,000.00 ₵100,000.00 ₵120,000.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q15": {
+      "question": " Kofi's age in the next ten years will be four times his age five years ago. How old is Kofi now?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q21": {
+      "question": " Workers are required to pay 4 % of their salaries into an educational fund. A worker’s salary is ₵120,000.00. How much does he pay into the educational fund? ₵5,332.00 ₵5,400.00 ₵6,000.00 ₵10,800.00 ₵11,500.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q22": {
+      "question": " Araba bought an electric cooker for ₵540,000.00 at a discount of 10%. Find the actual price of the electric cooker. ₵469,000.00 ₵496,000.00 ₵594,000.00 ₵600,000.00 ₵605,000.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q23": {
+      "question": " Given that = p x q, find the value of a, if a =",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q24": {
+      "question": " A mapping is defined by n → 2n – 3. What is the image of –2 under the mapping?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q25": {
+      "question": " Simplify 4p + 6p2 – 2p + 2p2 2p + 8p2 6p + 8p2 2p – 8p2 6p – 8p2 –4 + 10p",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q26": {
+      "question": " Make q the subject of the relation w = n - q n - 1 n + 1 n + 2 1 + w w + 1 w - 1",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q27": {
+      "question": " Given that E = mc2, find E when m = 10 and c = 4",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q28": {
+      "question": " Use the information below to answer the question below The scores obtained by 8 pupils in a test are 2, 3, 4, 5, 7, 8, 8 and 9 What is the median score?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q29": {
+      "question": " Use the information below to answer the question below The scores obtained by 8 pupils in a test are 2, 3, 4, 5, 7, 8, 8 and 9 Find the mean score.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q30": {
+      "question": " Use the information below to answer the question below The scores obtained by 8 pupils in a test are 2, 3, 4, 5, 7, 8, 8 and 9 What is the probability that a pupil chosen at random scores 8 marks?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q31": {
+      "question": " Use the graph of the straight line below to answer the question below Determine the value of x when y is 3.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q32": {
+      "question": " Use the graph of the straight line below to answer the question below Find the gradient of line MN.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q33": {
+      "question": " State the rule of the following mapping: x→2x x→3x x→x2 x→x3",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q34": {
+      "question": " The area of a rectangle is 18 cm2 . One of its sides is 9 cm long. Find its perimeter. 11 cm 18 cm 22 cm 36 cm 54 cm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q35": {
+      "question": " Calculate the area of figure PQRST",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q112": {
+      "question": "5 cm2",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q135": {
+      "question": "0 cm2",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q180": {
+      "question": "0 cm2",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q215": {
+      "question": "0 cm2",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q315": {
+      "question": "0 cm2",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q36": {
+      "question": " In an enlargement with scale factor k, which of the following statements is not true? Each length is multiplied by k Each angle remains the same The shape of the figure does not change The size of the figure does not change Corresponding lines are parallel",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q37": {
+      "question": " Use the diagram above to answer the question below. Find the angle MON.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q38": {
+      "question": " Use the diagram above to answer the question below. Angle MON and PMO are Alternate angles vertically opposite angles Corresponding angles adjacent angles Complementary angles",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q39": {
+      "question": " If u = and v = , find 2u + 3v.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q40": {
+      "question": " Which of the following statements best describes the construction below? Construction of a horizontal line CD Construction of a line parallel to AB Construction of the bisector of AB. Construction of a top line Construction of a vertical line.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    }
+  }
+}

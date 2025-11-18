@@ -1,0 +1,378 @@
+{
+  "year": "1999",
+  "subject": "mathematics",
+  "multiple_choice": {
+    "q1": {
+      "question": "342 x 104",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q2": {
+      "question": " M = {multiples of 3 between 10 and 20}N = {even numbers between 10 and 20}. Find M ∩ N. {12, 18} {12, 15, 18} {12, 14, 16, 18} {12, 14, 15, 16, 18} {10, 12, 14, 15, 18, 20}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q3": {
+      "question": "5 m",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q4": {
+      "question": "5 m",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q5": {
+      "question": " Change 10111two to base ten.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q6": {
+      "question": "0 m",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q13": {
+      "question": " Simplify: 2 × 32 × 34 2 × 35 2 × 36 2 × 38 2 × 96 2 × 98",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q7": {
+      "question": "62",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q8": {
+      "question": " A ribbon is 4 m long. How many pieces, each 30 cm long, can be cut from the ribbon?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q9": {
+      "question": "0 m",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q10": {
+      "question": " Calculate, correct to two decimal places, 0.61 ÷ 0.8",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q16": {
+      "question": " A car is travelling at 40 km per hour. How far does it travel in 2 hours? 16 km 80 km 90 km 100 km 140 km",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q17": {
+      "question": " There are 6 girls and 18 boys in a class. What percentage of the class are girls?",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q18": {
+      "question": " Find the missing numbers in the sequence 4, 8, 12, _ , _ , _ , 28 14, 16, 22 14, 18, 22 6, 18, 22 16, 20, 24 16, 22, 24",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q19": {
+      "question": " A shop increased all its prices by 10%. Calculate the new price for an article which previously sold for ₵7,500.00 ₵6,750.00 ₵7,575.00 ₵7,800.00 ₵8,250.00 ₵8,350.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q11": {
+      "question": " The diagram below shows a circle with centre O, S and T are points on the circle. Use it to answer the question below What name is given to the shaded region? sector segment radii cone",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q12": {
+      "question": " The diagram below shows a circle with centre O, S and T are points on the circle. Use it to answer the question below The line ST is called an arc a chord a diameter a radius a segment",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q14": {
+      "question": "40%",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q15": {
+      "question": " The sum of the ages of a man and his wife is 81 years. The ratio of their ages is 5:4. Find the age of the younger person. 30 years 36 years 45 years 51 years 65 years",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q25": {
+      "question": " In the diagram below, K is an enlargement of J. Use it to answer the question below. Calculate the scale factor",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q33": {
+      "question": " Factorize 3r2s – 9rs2 rs(3r – s) 3rs(s – 3r) 3rs(r - 3s) r2s2(3r – 9s) 3r2s2(s – 3r)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q66": {
+      "question": "67%",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q75": {
+      "question": "00%",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q20": {
+      "question": " Simplify: 7(y + 1) – 2(2y + 3) 3y – 5 3y – 2 3y + 1 3y + 4 3y + 13",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q21": {
+      "question": " The table below shows the average monthly rainfall at Nankese from March, 1996 to August, 1996. Month Rainfall (mm) Use it to answer the question below. Which month recorded the highest amount of rainfall? March April June July",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q22": {
+      "question": " The table below shows the average monthly rainfall at Nankese from March, 1996 to August, 1996. Month Rainfall (mm) Use it to answer the question below. What was the total amount of rainfall recorded in April, May and July? 422 mm 639 mm 72 mm 994 mm 1,139 mm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q23": {
+      "question": " Find the median of the following numbers: 1, -1, -5, 3 and -4",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q24": {
+      "question": " There are 15 red and 25 black balls in a bag. Find the probability of selecting a black ball from the bag.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q26": {
+      "question": " In the diagram below, K is an enlargement of J. Use it to answer the question below. Find the value of x.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q27": {
+      "question": " A trader received a commission of 25% on the sales he made in a month. His commission was ₵180,000.00. Find his total sales for the month. ₵135,000.00 ₵150,000.00 ₵240,000.00 ₵540,000.00 ₵720,000.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q28": {
+      "question": " Kwame travelled from Accra to Kumasi. He travelled of the journey by lorry, of the journey by taxi and the rest by train. What fraction of the journey did he travel by train?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q29": {
+      "question": " If 4(m + 4) = 18, find the value of m.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q30": {
+      "question": " Use the mapping below to answer the question below What is the rule for the mapping? x→ 4 - x x→ x - 2 x→2x x→2x + 1 x→3x",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q31": {
+      "question": " Use the mapping below to answer the question below Find the value of y when x is 7.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q32": {
+      "question": " A square of side 6cm has the same area as a rectangle of length 9 cm. Find the breadth of the rectangle. 3 cm 4 cm 6 cm 24 cm 36 cm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q34": {
+      "question": " The average mass of 4 boys is 45 kg. When a fifth boy joins them, the average mass changes to 40 kg. What is the mass of the fifth boy? 5 kg B 10 kg 15 kg 20 kg 25 kg",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q35": {
+      "question": " E is the point (4, 2) and F the point (2, 1). Calculate the gradient of the straight line EF.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q36": {
+      "question": " and K = Find L + K.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q37": {
+      "question": " In the diagram, ML and PQ are parallel lines. Find the value of v 140° 180°",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q38": {
+      "question": " Given the relation Which of the following expressions is equal to y? c + x c + x c + x",
+      "possibleAnswers": {
+        "A": "p>c + x",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q39": {
+      "question": " The figure above is the net of a cylinder a triangle a pyramid a cone a sphere",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q40": {
+      "question": " In the diagram below, MNO is a triangle. Angle MON = 72° and angle OMN = 68°. Find angle ONP. 112° 140°",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    }
+  }
+}

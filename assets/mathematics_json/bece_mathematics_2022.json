@@ -1,0 +1,427 @@
+{
+  "year": "2022",
+  "subject": "mathematics",
+  "multiple_choice": {
+    "q1": {
+      "question": "93054 X 102",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q2": {
+      "question": " A football match starts at 2.20 p.m. and lasts for 1 hour 50 minutes. At what time will the game end?",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q3": {
+      "question": " Which of the following is not a quadrilateral? Rhombus Parallelogram Rectangle Triangle",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q4": {
+      "question": " Solve: 5x - (7x - 3) ≤ 9. x ≥ -3 x ≤ -3 x ≥ -6 x ≤ 3",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q5": {
+      "question": " Simplify",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q6": {
+      "question": " Given that find,",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q7": {
+      "question": " The point S(4, 3) is reflected in the y-axis, Find the coordinates of the image of S. (-3,4) (4,-3) (3,-4) (-4,3)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q8": {
+      "question": " Solve:",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q9": {
+      "question": " The longest chord of a circle is the segment. sector. circumference. diameter.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q10": {
+      "question": " Factorize completely xy - xm - my + m2. (m-y)(x-m) (x-m)(y-m) (m-y)(m-x) (y-m)(m-x)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q11": {
+      "question": " Given that P(3,-2) and Q(-2,4) are points in a plane, find the gradient of the line joining P to Q. -6⁄5 -5⁄6",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q12": {
+      "question": "00cm",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q17": {
+      "question": " A certain number is subtracted from 12 and the result is multiplied by 3. If the answer is 21, find the number.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q18": {
+      "question": " In the diagram, AB is parallel to DE, angle ABC = 81o and angle DCE = 20o. Use the information to answer the equestion below: What is the value of x? 101o",
+      "possibleAnswers": {
+        "A": "20o",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q13": {
+      "question": " The rule of mapping is x → 2x2 - 1. What number does x = 2 map to?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q14": {
+      "question": " , find x when a = 2, b = -4 and c = -2.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q15": {
+      "question": "00cm",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q16": {
+      "question": " A shop is rented at GH₵ 9.00 per month. How much money is paid in 1½ years? GH₵ 162.00 GH₵ 135.00 GH₵ 6.00 GH₵ 13.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q19": {
+      "question": " In the diagram, AB is parallel to DE, angle ABC = 81o and angle DCE = 20o. Use the information to answer the equestion below: Find the value of y. 101o",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q20": {
+      "question": " Adjoa travelled 12km due north and 5km due east. How much far was she from her starting point? 60km 17km 13km",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q21": {
+      "question": " Which of the following is the largest set? {Whole numbers} {Composite} {Natural numbers} {Integers}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q22": {
+      "question": " Write 1930.54 in standard form.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q23": {
+      "question": " Expand: (2a - b)(a - b) 2a2 + 3ab - b 2a2 - 3ab - b2 2a2 + 3ab + b 2a2 - 3ab + b2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q24": {
+      "question": " The stem and leaf plot shows the weights (kg) of cocoa bags weighed in a week. Use the information to answer the question below: Stem Leaf 0,5,7,9 1,3,4,5,7,8 0,2,3,4,4,4,4,5,6,8 1,2,3,4,5,8,8,9 2,3,5,6,9 How many bags of cocoa were weighed in the week?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q25": {
+      "question": " The stem and leaf plot shows the weights (kg) of cocoa bags weighed in a week. Use the information to answer the question below: Stem Leaf 0,5,7,9 1,3,4,5,7,8 0,2,3,4,4,4,4,5,6,8 1,2,3,4,5,8,8,9 2,3,5,6,9 What is the median weight of the bags of cocoa? 62 kg 65 kg 61 kg 68 kg",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q26": {
+      "question": " The stem and leaf plot shows the weights (kg) of cocoa bags weighed in a week. Use the information to answer the question below: Stem Leaf 0,5,7,9 1,3,4,5,7,8 0,2,3,4,4,4,4,5,6,8 1,2,3,4,5,8,8,9 2,3,5,6,9 What is the modal weight of the bags of cocoa? 68 kg 60 kg 64 kg 65 kg",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q27": {
+      "question": " If a = and b = , find a + b",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q28": {
+      "question": " For what value of x is 3x = 81?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q29": {
+      "question": "06%",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q30": {
+      "question": " Express 3/8 as a decimal fraction.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q41": {
+      "question": "50%",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q42": {
+      "question": "375",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q43": {
+      "question": "365",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q44": {
+      "question": "625",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q31": {
+      "question": " What is the length of the side of a square of area 225 cm2?",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q112": {
+      "question": "50cm",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q56": {
+      "question": "25cm",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q32": {
+      "question": " What is the probability that a number greater than 5 shows up when a die is thrown?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q33": {
+      "question": " Given that 117(12+18) = 117(15+k), find the value of k - 15",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q34": {
+      "question": " A mother has GH₵ 5.00 and gives each of her 3 children GH₵ 1.50 as pocket money. How much is left for her? GH₵ 3.50 GH₵ 4.5 GH₵ 0.15 GH₵ 0.50",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q35": {
+      "question": " A car travels 36 kilometres in an hour. Find its speed in metres per second. 10 ms-1 100 ms-1 20 ms-1 200 ms-1",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q36": {
+      "question": " Peter had GH₵ 200.00 and spent GH₵ 83.00. What percentage of the money is left?",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q70": {
+      "question": "94%",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q58": {
+      "question": "50%",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q37": {
+      "question": " If a trader made a profit of 10% in selling a shirt for GH₵ 44.00, find the cost price GH₵ 39.60 GH₵ 38.50 GH₵ 48.40 GH₵ 40.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q38": {
+      "question": " Express 15 : 12 in the form 1 : n. 1 : 0.8 1 : 12 1 : 15 1 : 1.2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q39": {
+      "question": " The ratio of farmers to children in a village is 13 : 11. If there were 312 farmers in the village, how many children were there?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q40": {
+      "question": " The volume of a cylinder is 40Π cm3. If the height of the cylinder is 10 cm, find the base radius 1 cm 4 cm 2 cm 3 cm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    }
+  }
+}

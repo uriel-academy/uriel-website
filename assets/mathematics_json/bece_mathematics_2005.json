@@ -1,0 +1,379 @@
+{
+  "year": "2005",
+  "subject": "mathematics",
+  "multiple_choice": {
+    "q1": {
+      "question": " In the diagram above, A and B are two intersecting sets. How many members are in the set B?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q2": {
+      "question": " Which of the following is not a factor of 18?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q3": {
+      "question": "3 x 103",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q4": {
+      "question": "2",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q5": {
+      "question": " If a = 64 and b = 22, find",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q6": {
+      "question": " Arrange the following numbers from the highest to the lowest: , -7, 0. -7, 0, , -7 , 0, -7",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q7": {
+      "question": " Simplify 22 × 32 × 23 × 34. 22 × 36 24 × 37 25 × 36 26 × 38",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q8": {
+      "question": " In an examination 40% of the students failed. The number of students that passed was 180. How many students failed?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q9": {
+      "question": " Evaluate [(5 – 1) – (2 – 7)]",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q10": {
+      "question": " If 6n + 4 = 16, find the value of n.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q11": {
+      "question": " What is the next term in the following set of numbers: {1, 3, 7, 15, 31, ...} ?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q12": {
+      "question": "5%",
+      "possibleAnswers": {
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q13": {
+      "question": " Simplify 3a2 × 2ab × 4bc 9a3b2c 12a2b2c 24a2b2c 24a3b2c",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q14": {
+      "question": " Expand 3 (2a + 3b) 2a +9b 5a + 6b 6a + 3b 6a + 9b",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q15": {
+      "question": " Find the area of a circle whose diameter is 28 cm. [Take π = 44 cm2 88 cm2 352 cm2 616 cm2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q16": {
+      "question": "4%",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q17": {
+      "question": " If c = + 4r , find c when b = 3, r = 4 and a = 5",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q18": {
+      "question": " A woman bought a sewing machine for ₵800,000.00 and sold it for ₵920,000.00. Find the percentage profit",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q19": {
+      "question": " What is the rule for the following mapping? y = x + 5 y = 4x + 5 y = 5x + 4 y = 6x + 1",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q20": {
+      "question": " Find the volume of a cuboid of sides 15 m by 12 m by 3 m. 36 m3 45 m3 180 m3 540 m3",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q21": {
+      "question": " A bag contains 4 blue and 8 red balls. What is the probability of picking a blue ball at random from the bag?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q22": {
+      "question": " Find the size of the angle marked y in the diagram.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q23": {
+      "question": " An equilateral triangle has side 16cm. A square has the same perimeter as the equilateral triangle. What is the area of the square? 48 cm2 96 cm2 144 cm2 256 cm2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q24": {
+      "question": " Kofi deposited ₵500,000.00 with a bank for 2 years at a rate of 10% per annum. Find the simple interest ₵10,000.00 ₵20,000.00 ₵50,000.00 ₵100,000.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q25": {
+      "question": " Make T the subject of the relation l2 =",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q26": {
+      "question": " Evaluate",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q32": {
+      "question": " Kofi had 100 mangoes and sold 80 of them. What is the percentage of mangoes left?",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q33": {
+      "question": " Find the median of the following marks: 2, 4, 10, 3, 6, 12.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q34": {
+      "question": " In a class of 20 pupils, 8 pupils read Mathematics, 13 read English and 3 read both Mathematics and English. Use this information to answer the question below. How many pupils read English only?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q35": {
+      "question": " In a class of 20 pupils, 8 pupils read Mathematics, 13 read English and 3 read both Mathematics and English. Use this information to answer the question below. How many pupils do not read either Mathematics or English?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q27": {
+      "question": " Eric and Ebo are to share an amount of ₵800,000.00 in the ratio 5:3 respectively. What will be Ebo's share? ₵30,000.00 ₵50,000.00 ₵300,000.00 ₵500,000.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q28": {
+      "question": " How many faces has a rectangular pyramid?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q29": {
+      "question": " The perimeter of a rectangle is 24 cm. If the breadth of the rectangle is 4 cm, find the area of the rectangle. 32 cm2 48 cm2 64 cm2 144 cm2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q30": {
+      "question": " Factorize 4ab2 – 20ba2 4a(b2 – 5b) 4b(b – 5a) 4ab(b - 5a) 4ab(a - 5b)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q31": {
+      "question": " Solve the equation (x - 3) = (x + 6).",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q36": {
+      "question": " Calculate 82.5 ÷ 0.25, expressing the answer in the standard form",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q37": {
+      "question": " The price of a gas cooker costing ₵450,000.00 was increased by 10%. Find its new price. ₵45,000.00 ₵49,000.00 ₵405,000.00 ₵495,000.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q38": {
+      "question": " What is the number of all possible outcomes of tossing a die?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q39": {
+      "question": " In the diagram, QRS is a triangle. Angle QRS = 50° and angle RST = 120°. Find angle RQS.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q40": {
+      "question": " If r = and s = , find r + 2s.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    }
+  }
+}

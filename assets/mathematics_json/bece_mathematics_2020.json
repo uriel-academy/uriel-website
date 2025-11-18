@@ -1,0 +1,392 @@
+{
+  "year": "2020",
+  "subject": "mathematics",
+  "multiple_choice": {
+    "q1": {
+      "question": " Simplify",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q2": {
+      "question": "184",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q3": {
+      "question": "904",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q43": {
+      "question": "8293 x 102",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q4": {
+      "question": "282",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q5": {
+      "question": " Subtract (7x-3) from (5-3x). 10x-8 4x-8 8-10x 2-10x",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q6": {
+      "question": "200",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q7": {
+      "question": " Which of the following inequalities is represented on the number line? -2>y>2 -2≤ y < 2 -2 ≥ y > 2 -2 < y ≤ 2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q8": {
+      "question": " Simplify: (2ab2)2 x 3a3b. 6a4b5 12a3b4 12a6b4 12a5b5",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q9": {
+      "question": " Which of the following polygons does not have a line of symmetry? Kite Isosceles triangle Trapezium Rhombus",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q10": {
+      "question": " A trader sold a radio set for GH₵ 72.00 making a profit of 8%. Find, correct to the nearest Ghana cedi, the cost of the radio set. GH₵ 66.00 GH₵ 67.00 GH₵ 77.00 GH₵ 78.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q11": {
+      "question": "0 m",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q12": {
+      "question": " If (x-3)2 = 16, find the positive value of x",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q13": {
+      "question": " Find the image of the point (-2,3) under a reflection in the y-axis. (2,-3) (-3,2) (2,3) (3,2)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q14": {
+      "question": " What fraction of 3 weeks is 18 days? 9⁄11",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q15": {
+      "question": " What is the median of the following numbers:4,16,13,18,3,20,6,7,15,2,10,12?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q16": {
+      "question": " If w/3 = 3(w-1)-1, find the value of w.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q17": {
+      "question": " Use the diagram below to answer the question below Find the value of x. 112o 124o",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q18": {
+      "question": " Use the diagram below to answer the question below Find the value of y. 112o 124o",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q19": {
+      "question": " A car used 8 hours to travel from town A to town B at a speed of 18 km/h. Find the distance travelled.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q22": {
+      "question": " Two sides of a parallelogram are 5.8 m and 8.2 m long. Find its perimeter",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q20": {
+      "question": " The pie chart shows the household budget of a family. Use the information to answer the question below Find the angle for INSURANCE AND TAXES.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q21": {
+      "question": " The pie chart shows the household budget of a family. Use the information to answer the question below If the family's income was GH₵ 40,000.00, how much was spent on clothing? GH₵ 1,600.00 GH₵ 2,000.00 GH₵ 3,200.00 GH₵ 4,400.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q36": {
+      "question": " Two sides of a rectangle are 10 cm and 6 cm. Calculate the area of a square with the same perimeter as that of the rectangle. 16 cm2 30 cm2 60 cm2 64 cm2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q28": {
+      "question": " Add the following numbers: 2.4,0.042,1.12 and 0.342.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q47": {
+      "question": "6 m",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q23": {
+      "question": " A man earned an interest of GH₵ 240.00 in 4 years at 20% per annum simple interest. Calculate the principal GH₵ 300.00 GH₵ 450.00 GH₵ 480.00 GH₵ 1,200.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q24": {
+      "question": " A labourer worked for 20½ hours. If he was paid GH₵ 2.50 per hour, what was his total wage? GH₵ 51.00 GH₵ 51.25 GH₵ 512.00 GH₵ 512.25",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q25": {
+      "question": " If 480 pupils in a school are boys representing 80% of the school's enrolment. Find the total number of pupils in the school.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q26": {
+      "question": " What is the rule for the mapping? x→ 3x2-1 x→ 5x2-3 x→ x2+1 x→ 4x-2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q27": {
+      "question": " Find the value of t in the diagram.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q29": {
+      "question": " Solve: 4x = 32.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q30": {
+      "question": " Find the equation of the straight line passing through the points (-3,5) and (6,8) y = ⅓x y = ⅓x+6 y = ⅓x-10 y = ⅓x+14",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q31": {
+      "question": " There are 15 females in a debating club. If the ratio of females to males is 3:2, how many members are in the club?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q32": {
+      "question": " If P1(4,-5) is the image of P(x,y) translated by r = ( -2 3), find the values of x and y. (-6,8) (-6,-8) (6,-8) (6,8)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q33": {
+      "question": " If 2y = 1-3x2+4x, find y when x = -1",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q34": {
+      "question": " Given that p = {1,2,3,4,5,6,7,8,9,10,11,12}, what is the probability of selecting a prime number from the set? 7⁄12 5⁄12",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q35": {
+      "question": " Solve: 3 - (3x+4) ≤ -4 x ≤ 1 x ≥ 1 x ≥ 1⅔ x < 1½",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q37": {
+      "question": " Make n the subject of the relation n = x(y+1) n = y(x+1)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q38": {
+      "question": " Expand and simplify: (a-2)(2a+3) a2 - a + 6 2a2 + 7a - 6 2a2 - a - 6 2a2 - 12a + 6",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q39": {
+      "question": " Simplify 22 x 27 ÷ 24",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q40": {
+      "question": " If P = {7,11,13} and Q = {9,11,13}, find P ∪ Q {7,9,11,13} {7,9} {11,13} {9,13}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    }
+  }
+}

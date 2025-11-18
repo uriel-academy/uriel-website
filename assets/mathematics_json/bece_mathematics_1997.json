@@ -1,0 +1,402 @@
+{
+  "year": "1997",
+  "subject": "mathematics",
+  "multiple_choice": {
+    "q1": {
+      "question": "5",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q2": {
+      "question": " P = {2, 4, 6, 8} and Q = {even counting numbers less than 12}. What is the relationship between P and Q? P = Q P ⊂ Q P < Q Q ⊂ P P ∈ Q",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q3": {
+      "question": " In the diagram below, P is the set of numbers in the circle and Q is the set of numbers in the triangle. What is P ∩ Q? {1, 2, 4} {5, 6} {1, 2, 4, 5, 6, 7}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q4": {
+      "question": "0",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q341": {
+      "question": "3841",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q5": {
+      "question": "4",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q7": {
+      "question": " Simplify 3(6b – 9a) + 7(6a – 5b) 17b + 6a -17b + 6a 17b + 48a 15a – 17b 17b – 15a",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q6": {
+      "question": "4",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q66": {
+      "question": "7%",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q8": {
+      "question": " Arrange the following fractions in descending order , 0.62 , 0.62,",
+      "possibleAnswers": {
+        "A": "",
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q14": {
+      "question": " In the following figure below, triangle M′ON′ is an enlargement of triangle MON, with centre O. Use this information to answer the question below Find OM",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q15": {
+      "question": " Find the image of the point (6, 3) when translated by the vector (-2, -2) (2, -2) (-2, 2) (2, 2) (10, 4)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q9": {
+      "question": "0",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q10": {
+      "question": " 18 = 2 x 32; 42 = 2 x 3 x 7; 90 = 2 x 32 x 5 Use the information above to answer the question below. What is the HCF of 18, 42 and 90?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q11": {
+      "question": " Simplify",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q12": {
+      "question": "1 m 25 m 121 m 250 m 2500 m",
+      "possibleAnswers": {
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q13": {
+      "question": " In the following figure below, triangle M′ON′ is an enlargement of triangle MON, with centre O. Use this information to answer the question below Find the scale factor of the enlargement",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q16": {
+      "question": " A student spends of his pocket money on transport and fruits. He spends of the remainder on sweets. What fraction of his pocket money does he spend on sweets?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q17": {
+      "question": " In the diagram above, PQ is parallel to RS and |PR| = |QR|. Use the diagram to answer the question below. What is a?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q18": {
+      "question": " In the diagram above, PQ is parallel to RS and |PR| = |QR|. Use the diagram to answer the question below. Find b.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q19": {
+      "question": " In the diagram above, PQ is parallel to RS and |PR| = |QR|. Use the diagram to answer the question below. Find the value of c.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q20": {
+      "question": " If p = 7, q = 5 and r = 3, find the value of p2 + q – r3.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q21": {
+      "question": " Simplify 35x5y3 ÷ 7xy2 5x6y5 5x4y 5x6y 5x4y5 5x4y",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q22": {
+      "question": " The sum of two numbers is 240. If one of them is y, find the other number. 120y 240 + y 240 – y 240y 240/y",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q23": {
+      "question": " Make n the subject of the relation 2n + 5 = 7a (7a + 5) (7a - 5) n = 2(7a + 5) n = 2(7a - 5) n = 7a - 5",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q24": {
+      "question": " Find the bearing of Q from P in the diagram above. 030° 060° 070° 090° 150°",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q25": {
+      "question": " The figure above is made up of a rectangle and a triangle. The dimensions of the rectangle are 8 cm and 6 cm. The triangle has 6 cm as its base and 3 cm as its height. Find the area of the figure. 33 cm2 48 cm2 51 cm2 57 cm2 66 cm2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q26": {
+      "question": " The marks obtained by 10 boys in a test are 0, 1, 3, 3, 5, 7, 8, 9, 9, 9. Use this information to answer the question below Find the median score.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q27": {
+      "question": " The marks obtained by 10 boys in a test are 0, 1, 3, 3, 5, 7, 8, 9, 9, 9. Use this information to answer the question below Calculate the mean score.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q28": {
+      "question": " The marks obtained by 10 boys in a test are 0, 1, 3, 3, 5, 7, 8, 9, 9, 9. Use this information to answer the question below What is the probability that a boy chosen at random scored 3?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q29": {
+      "question": " Express 57ten as a base two (binary) numeral. 101011two 100111two 11010two 110111two 111001two",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q30": {
+      "question": " The scale of a map is 1 : 100,000. What is the distance (in km) between two towns 4 cm apart on the map?",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q45": {
+      "question": "04",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q46": {
+      "question": "4",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q31": {
+      "question": " If 22% of a rope is 55 m long, find the full length of the rope.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q32": {
+      "question": " Adwoa and Ama share an amount of ₵6,000.00 in the ratio 3 : 2. Find Adwoa's share. ₵2,000.00 ₵2,400.00 ₵3,000.00 ₵3,600.00 ₵4,000.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q33": {
+      "question": " Find the truth set of 5x – 8 ≤ 2x + 4. {x ≥ 4} {x ≥ -4} {x ≤ 4} {x ≤ -4} {x = 4}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q34": {
+      "question": " The diameter of a circular tray is 28 cm. Find the area of the tray. [Take π = 44 cm2 88 cm2 154 cm2 616 cm2 2464 cm2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q35": {
+      "question": " If a = and b = , find a + b.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q36": {
+      "question": " What is the rule for the mapping above? x→x + 3 x→x + 1 x→x - 1 x→x + 2 x→x2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q37": {
+      "question": " If 50 oranges cost ₵2,500.00 how many oranges can be bought for ₵15,000.00?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q38": {
+      "question": " A farmer has 1853 pineapple suckers. He plants 17 pineapples in a row. How many rows can he plant?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q39": {
+      "question": " In triangle PQR, |PQ| = |QR|, and angle PQR = 90°. Find x. 180°",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q40": {
+      "question": " If a × b × c = 1197 and a = 21, b = 3, find c.",
+      "possibleAnswers": {
+        "A": "",
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q49": {
+      "question": "9",
+      "possibleAnswers": {
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    }
+  }
+}

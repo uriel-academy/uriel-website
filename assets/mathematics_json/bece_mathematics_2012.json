@@ -1,0 +1,386 @@
+{
+  "year": "2012",
+  "subject": "mathematics",
+  "multiple_choice": {
+    "q1": {
+      "question": "0 cm",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q2": {
+      "question": "00",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q3": {
+      "question": "5 cm",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q4": {
+      "question": "00",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q5": {
+      "question": "0 km",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q6": {
+      "question": "0 kg",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q8": {
+      "question": " Simplify",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q7": {
+      "question": "2 kg",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q9": {
+      "question": " A tank contains 400 litres of water. If 100 litres is used, what percentage is left?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q10": {
+      "question": " Triangle ABC is a right-angled triangle. Find the length of AC. 1 cm 5 cm 7 cm 12 cm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q11": {
+      "question": " Arrange the following fractions in descending order of magnitude:",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q12": {
+      "question": " Find the image of 3 under the mapping, x → 10 - 2x.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q13": {
+      "question": " Simplify",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q14": {
+      "question": "0 cm",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q15": {
+      "question": " The table below shows the day and night temperatures of a town during a week. Use it to answer the question below. Week Temperature (oC) Night Monday Tuesday Wednesday Thursday Friday Saturday Sunday Find, correct to one decimal place, the average day temperature for the week.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q24": {
+      "question": " Kofi invested GH₵ 150,000 at 2.5% per annum simple interest. How long will it take this amount to yield an interest of GH₵11,250.00? 2 years 3 years 4 years 5 years",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q30": {
+      "question": " A printing machine prints 600 books in 3 hours. How many books will the machine print in 5 hours? 360 books 1000 books 1800 books 3000 books",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q31": {
+      "question": " The bearing of Atoru from Busase is 275°. What is the bearing of Busase from Atoru? 180° 175° 095° 075°",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q32": {
+      "question": " In a class of 24 pupils, 10 study French only and 8 study English only. If each pupil studies at least one of the two subjects, how many study English?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q16": {
+      "question": " The table below shows the day and night temperatures of a town during a week. Use it to answer the question below. Week Temperature (oC) Night Monday Tuesday Wednesday Thursday Friday Saturday Sunday On which day was the change in temperature the least? Monday Saturday Sunday Tuesday",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q17": {
+      "question": " A box contains 30 identical balls of which 16 are white and the rest yellow. If a girl picks a ball at random from the box, what is the probability that it is a yellow ball?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q18": {
+      "question": " Find the truth set of (x + 3) ≤ 2x - 1. {x:x ≤ -3} {x:x ≤ -1} {x:x ≥ 1} {x:x ≥ -3}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q19": {
+      "question": " The perimeter of the figure below is 71 cm. Find the diameter of the semi-circumference portion. [Take π =",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q20": {
+      "question": " Simplify x - y 5x - 4y 13x - 4y 5x + 4y 13x + 4y",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q21": {
+      "question": " Kojo is 20% heavier than Afua. If Kojo weighs 6 kg, what is Afua’s weight?",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q22": {
+      "question": "50 kg",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q23": {
+      "question": " Given the points S(5, -2) and T(3, 2), calculate the gradient of the line ST.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q25": {
+      "question": " Express 3.75 as a mixed fraction.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q26": {
+      "question": " A map is drawn to the scale 1:100,000. What distance in kilometres is represented by 5 cm on the map?",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q44": {
+      "question": "5 km",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q50": {
+      "question": "0 km",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q500": {
+      "question": "0 km",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q27": {
+      "question": " Given that r = and s = , find r - 2s.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q28": {
+      "question": " Esi went to the market and bought 500 g of meat, 850 g of fish and 900 g of eggs. What is the total weight of the items she bought in kilograms?",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q29": {
+      "question": " A watch gains 1 minutes per hour. What is the total time gained from 12 noon to 12 midnight in a day? 9 minutes 15 minutes 18 minutes 36 minutes",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q33": {
+      "question": " Convert 84 to a base five numeral. 4130five 3014five 314five 114five",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q34": {
+      "question": " In the diagrams below, triangle A1B1C1 is an enlargement of triangle ABC. Determine the scale factor.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q60": {
+      "question": "50",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q61": {
+      "question": "75",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q35": {
+      "question": " Find the least number that must be added to 308 to make it divisible by 19.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q36": {
+      "question": " In a school of 940 pupils, the number of girls exceeds the number of boys by 150. How many girls are there in the school?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q37": {
+      "question": " Which of the following fractions is equivalent to",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q38": {
+      "question": " (38) In the diagram below, line PQ is parallel to RS and UV is a line drawn through PQ and RS. Use the diagram to answer the question below. Find angle a. 135o 145o",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q39": {
+      "question": " In the diagram below, line PQ is parallel to RS and UV is a line drawn through PQ and RS. Use the diagram to answer the question below. Angle b and angle c are alternate angles. vertically opposite angles. corresponding angles. interior opposite angles.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q40": {
+      "question": " Expand – x(3 – 2x). -2x2 - 3x 2x2 - 3x -2x2 + 3x 2x2 + 3x",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    }
+  }
+}

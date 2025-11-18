@@ -1,0 +1,421 @@
+{
+  "year": "2019",
+  "subject": "mathematics",
+  "multiple_choice": {
+    "q1": {
+      "question": "8 m",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q2": {
+      "question": "5 % 10 % 25 %",
+      "possibleAnswers": {
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q3": {
+      "question": " Which of the following numbers is the largest?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q4": {
+      "question": " Correct 0.024561 to three significant figures.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q9": {
+      "question": " There are 12 boys and 18 girls in a class Find the fraction of boys in the class.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q10": {
+      "question": " Express 30% as a fraction in its lowest term. 7⁄10 3⁄20 7⁄20 3⁄10",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q11": {
+      "question": " Make k the subject of the relation, ky - k = y2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q12": {
+      "question": "5 % 15 % 16⅔ % 20 %",
+      "possibleAnswers": {
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q5": {
+      "question": "0 m",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q6": {
+      "question": "5 %",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q7": {
+      "question": " Solve the equation",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q8": {
+      "question": " Factorize: kx+2xt-4k-8t. (k-2t)(x+4) (k+2t)(x+4) (k+t)(x-4) (k+2t)(x-4)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q13": {
+      "question": " Find the rule of the mapping y = 2x + 2 y = -2x + 2 y = 4x y = -2x + 5",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q14": {
+      "question": " The two sides of a parallelogram are 4.8 m and 7.2 m long. Find its perimeter.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q48": {
+      "question": "0 m",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q34": {
+      "question": " In a class of 23 students, the girls were 7 more than the boys. How many boys were in the class?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q24": {
+      "question": " Find the diameter of a circle whose circumference is 88 cm. [Take π = 22⁄7] 14 cm 22 cm 28 cm 82 cm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q17": {
+      "question": " Find the truth set of the inequality 2y + 5 < 4y - 5. {y:y > 5} {y:y < 5} {y:y > 1} {y:y > 0}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q15": {
+      "question": " A tank in the form of a cuboid has length 6 m and breadth 4 m. If the volume of the tank is 36 m3, find the height.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q28": {
+      "question": " A trader sold 90 oranges at 3 for GH₵ 0.75. How much did she get from selling all the oranges? GH₵ 22.50 GH₵ 67.50 GH₵ 75.00 GH₵ 225.50",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q16": {
+      "question": " If the bearing of A from B is 240o, find the bearing of B from A 040o 060o 120o 300o",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q18": {
+      "question": " Find the gradient of the straight line which passes through the points (-3,4) and (3,-2).",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q19": {
+      "question": " If 6:8 = r:48, find the value of r",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q20": {
+      "question": " Find ∠QPS in the diagram.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q21": {
+      "question": " A man travelled a distance of 8 km in an hour. How long will it take him to cover a distance of 12 km, travelling at the same speed? 1⅓ hrs 1½ hrs 1¾ hrs 2 hrs",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q22": {
+      "question": " A number is selected at random from: 25,26,27,28,...,35. Find the probability that the number selected is a prime number. 6⁄11 3⁄11 2⁄11 1⁄11",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q23": {
+      "question": " Express 12/25 in decimal fraction.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q40": {
+      "question": " In the Venn diagram M and N are the subsets of the universal set U. Use this information to answer the question below. How many members are in the set N?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q41": {
+      "question": "048",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q42": {
+      "question": "408",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q43": {
+      "question": "48",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q25": {
+      "question": " When twelve is subtracted from three times a certain number and the result is divided by four, the answer is eighteen. Find the number.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q26": {
+      "question": " In the diagram, line MN is parallel to line TU, line TS cuts line MN at O and ∠MOS = 115o. Find ∠OTU.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q27": {
+      "question": " Given that r = and t = find r + t",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q29": {
+      "question": " Express 72 as a product of prime factors. 23 x 32 22 x 33 22 x 32 2 x 3",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q30": {
+      "question": " Simplify: 3a x 24ab. 27ab2 27a2b 72ab2 72a2b",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q31": {
+      "question": " Simplify:",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q32": {
+      "question": " Multiply 247 by 32. 6916 7804 7904 1235",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q33": {
+      "question": " Evaluate: (0.07 x 0.02) ÷ 14.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q54": {
+      "question": "01",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q55": {
+      "question": "001",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q56": {
+      "question": "0001",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q57": {
+      "question": "00001",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q35": {
+      "question": "5",
+      "possibleAnswers": {
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q36": {
+      "question": " Find the Least Common Multiple (L.C.M) of 2, 3 and 5.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q37": {
+      "question": " The simple interest on GH₵ 450.00 for 4 years is GH₵ 45.00, find the rate of interest",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q38": {
+      "question": " Find the median of the following numbers: 46, 68, 34, 37, 76 and 81.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q39": {
+      "question": " In the Venn diagram M and N are the subsets of the universal set U. Use this information to answer the question below. Find M ∩ N {2,7} {3,5,8} {1,2,3,4,5,6,7,8,9}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    }
+  }
+}

@@ -1,0 +1,422 @@
+{
+  "year": "2021",
+  "subject": "mathematics",
+  "multiple_choice": {
+    "q1": {
+      "question": "8 cm",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q2": {
+      "question": " If P = {4, 8, 12, 16, 20}, Q = {16, 4, 12, k, 20} and P = Q, find the value of k.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q3": {
+      "question": "6 cm",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q7352465": {
+      "question": "8",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q7352": {
+      "question": "47 7350",
+      "possibleAnswers": {
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q4": {
+      "question": " Find the difference between the values of (2d)2 and 2d2, when d = 3.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q5": {
+      "question": "05",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q6": {
+      "question": "50",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q7": {
+      "question": " Find the next two terms of the sequence: 2, 5, 10, 17, ....., ...... 24, 35 26, 35 26, 37 27, 38",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q8": {
+      "question": " Express 134.78 correct to the nearest tenth",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q130": {
+      "question": "0",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q134": {
+      "question": "8",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q135": {
+      "question": "0",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q9": {
+      "question": " Kofi and Ama shared an amount of GH₵ 3,000.00 in the ratio 2:3. Find the amount received by Kofi. GH₵ 1,000.00 GH₵ 1,200.00 GH₵ 1,500.00 GH₵ 1,800.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q10": {
+      "question": " If 2x – 1 = 5, find the value of x.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q11": {
+      "question": " Solve: (1-x)÷3 < 4. x < -11 x > -11 x < 11 x >11",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q12": {
+      "question": " The area of a rectangle is 18 cm2. If one of its sides is 2cm long, find its perimeter. 18 cm 20 cm 22 cm 36 cm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q13": {
+      "question": " A bag contains 5 red and 7 black balls of the same size. What is the probability of picking a black ball?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q14": {
+      "question": " On a map, 1⁄3 cm represents 5km. If two towns A and B are 18 cm apart on the map, what is the actual distance between them? 27 km 30 km 240 km 270 km",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q15": {
+      "question": " What is the rule for the above mapping? y = x + 4 y = 3x + 2 y = 4x + 1 y = 5x + 1",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q16": {
+      "question": " Find x when y = 37 for the above mapping",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q17": {
+      "question": " Esi bought a television set for GH₵ 1,500.00. If she sold it at a profit of 20%, find the selling price. GH₵ 1,200.00 GH₵ 1,500.00 GH₵ 1,750.00 GH₵ 1,800.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q18": {
+      "question": " In the diagram, line AB is parallel to line PD. Find the value of x. 100o 120o",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q19": {
+      "question": " Make h the subject of the relation V = πr2h.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q20": {
+      "question": " Find the simple interest on GH₵ 600.00 which was saved for 8 months at 5% per annum. GH₵ 20.00 GH₵ 40.00 GH₵ 45.00 GH₵ 240.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q21": {
+      "question": " Priscila's age i k years while Mary's age is b years. If Mary is 15 years older than Priscila, Which of the following statements is correct? 2k + b = 15 b - k = 15 k - b = 15 2b + k = 15",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q22": {
+      "question": " What is the Highest Common Factor (HCF) of 24, 32 and 64?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q23": {
+      "question": " Factorize: 3ax + 6a - x - 2 (3a+1)(x+2) (3a+1)(x-2) 3a(x-2) (3a-1)(x+2)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q24": {
+      "question": " A car covered a distance of 150 km at a speed of 18 km/h. Find the time taken. 7 hours 33 minutes 7 hours 53 minutes 8 hours 13 minutes 8 hours 20 minutes",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q25": {
+      "question": " Simplify 10y + 3 10y - 3",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q26": {
+      "question": " Divide 0.5445 by 0.09.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q60": {
+      "question": "50",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q27": {
+      "question": " If the median of the numbers 9,10,12,x, 20 and 25 is 14, find the value of x.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q28": {
+      "question": " Expand (7r - 5)(3r+4). 21r2 + 13r - 20 21r2 - 13r - 20 21r2 - 43r - 20 21r2 + 43r - 20",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q29": {
+      "question": " Find the gradient of the line that joins the points A(-3,5) and B(7,-2).",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q30": {
+      "question": " The area of a trapezium is 36 cm2. If the parallel sides are 10.5 cm and 9.5 cm, calculate the distance between the two parallel sides.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q31": {
+      "question": " If the average of 5,6,7 and x is 8, find the value of x",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q32": {
+      "question": " An amount of GH₵ 375,000.00 was needed to build a clinic for a community of twelve towns. Each community contributed GH₵ 25,000.00. If the District Assembly also contributed GH₵ 30,500.00, how much more is needed to build the clinic? GH₵ 44,500.00 GH₵ 45,500.00 GH₵ 35,500.00 GH₵ 75,000.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q33": {
+      "question": " Which property of arithmetic is shown in the equation (6 + x) + 5 = 6 + (x + 5) Commutative Associative Closure Distributive",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q34": {
+      "question": " A trader bought 100 tubers of yam for GH₵ n each. All the yams were sold at GH₵ m each. Find the profit. GH₵ 100(m - n) GH₵ 100(m + n) GH₵ 100(n - m) GH₵ 100( nm )",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q35": {
+      "question": " A box can take 12 pencils. If 156 pencils are packed into such boxes, how many boxes will be fully packed?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q36": {
+      "question": " Given that x = 4, y = 7, evaluate 2xy + 3(x+y)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q37": {
+      "question": " Simplify",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q38": {
+      "question": " Given that x = 8, what type of angle is (9x + 8)o? Straight angle Obtuse angle Acute angle Right angle",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q39": {
+      "question": " Express 0.725 as a fraction in its lowest term.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q40": {
+      "question": " Simplify 3(5a2 + 2c) - 2a(1 - 3a) - 6c. 21a2 - 2a - 6c 13a2 - 2a - 12c 13a2 - 2a 21a2 - 2a",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    }
+  }
+}

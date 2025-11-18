@@ -1,0 +1,404 @@
+{
+  "year": "2010",
+  "subject": "mathematics",
+  "multiple_choice": {
+    "q1": {
+      "question": " Which of the following sets is well defined? {Man, Kofi, Red, 14} {Ink, Mango, Green, Nail} {Car, Road, Glass, Book} {Seth, Mary, Jacob, Evelyn}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q2": {
+      "question": "5%",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q3": {
+      "question": " The least common multiple (L.C.M) of 16, 30 and 36 is",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q4": {
+      "question": "037 x 104",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q5": {
+      "question": "0 %",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q6": {
+      "question": " Write down all the integers in the set A = {-10, -4, 0, , 45, 100} {-10, -4, 0, 45, 100} {-10, -4} {0, 45, 100}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q7": {
+      "question": "5%",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q8": {
+      "question": " Simplify: -27 + 18 - (10 - 14) - (-2)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q9": {
+      "question": " Arrange the following numbers from the lowest to the highest: 0.5, 3, -5, 0. 0, 0.5, -5, 3 0, -5, 0.5, 3 -5, 0, 0.5, 3 -5, 0.5, 0, 3",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q10": {
+      "question": "0 %",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q11": {
+      "question": "7%",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q198": {
+      "question": "7",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q892": {
+      "question": "4",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q12": {
+      "question": "5%",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q13": {
+      "question": " It takes 6 students 1 hour to sweep their school compound. How long will it take 15 students to sweep the same compound? 24 minutes 12 minutes 3 hours 2 hours",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q14": {
+      "question": " A housing agent makes a commission of GH₵ 103,500 when he sells a house for GH₵ 690,000. Calculate the percentage of his commission.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q15": {
+      "question": " A simple interest of GH₵ 37,500.00 is earned on an amount of GH₵ 500,000.00 for 3 years. Calculate the percentage rate.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q20": {
+      "question": " Find the value of x, if + 1 = 5.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q16": {
+      "question": " Simplify: (8x2y3)( xy4) 3x3y7 3x2y7 3x3y4",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q17": {
+      "question": " The scores of 10 students in an examination are given as follows: 45, 12, 75, 81, 54, 51, 24, 67, 19 and 39. What is the median of the scores?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q18": {
+      "question": " The pie chart is to be drawn from the data in the following table: Cassava Plantain Maize What will be the value of the angle of the sector for maize?",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q126": {
+      "question": "0 o",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q100": {
+      "question": "8 o",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q72": {
+      "question": "0 o",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q61": {
+      "question": "2 o",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q19": {
+      "question": " Eighteen cards are numbered from 11 to 29. If one card is chosen at random, what is the probability that it contains the digit 2?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q21": {
+      "question": " Factorize: xy + 5x + 2y + 10. (x + 5)(2y + 10) (x + 2)(y + 10) (x + 5)(y + 2) (x + 2)(y + 5)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q22": {
+      "question": " If x ∈ {2, 3, 4, 5}, find the truth set of 2x + 1 < 8 {2, 3, 4} {2, 3} {3, 4} {4, 5}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q23": {
+      "question": " Solve the inequality: 7x - (10x + 3) ≥ -9 x ≥ 2 x ≤ 4 x ≥ 4 x ≤ 2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q24": {
+      "question": " Find the rule of the mapping: .... .... x → 4x - 3 x → 3 - 4x x → 4x + 3 x → 4x + 5",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q25": {
+      "question": " Find the circumference of a circle whose area is equal to 64 π cm2. 32 π cm 16 π cm 8 π cm 4 π cm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q26": {
+      "question": " Which of the following geometric figures is the plane shape of a cube? Circle Rectangle Square Triangle",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q27": {
+      "question": " How many lines of symmetry has a rectangle?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q28": {
+      "question": " A rectangular box has length 20 cm, width 6 cm and height 4 cm. Find how many cubes of size 2 cm that will fit into the box.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q29": {
+      "question": " The interior angle of a regular polygon is 120o. How many sides has the polygon?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q30": {
+      "question": " In the diagram above, length of PS = Length of SQ and angle SQR = 112o. Find the value of x.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q31": {
+      "question": " XYZ is a right-angled triangle with length of sides as shown. Which of the following equations gives the value of z2? z2 = (x2 + y2) z2 = (x - y) z2 = (y2 - y2) z2 = (x2 - y2)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q32": {
+      "question": " Express 7 min. 30 sec. as a percentage of 1 hour.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q33": {
+      "question": " The point (4, 5) is translated to the point (3, 1). What is the translation vector?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q34": {
+      "question": " In the diagram below, triangle QRT is the enlargement of QST. Which side of triangle QRT corresponds to side QT of triangle QST?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q35": {
+      "question": " In the diagrams above Fig. I is an enlargement of Fig. II. Find the side EF of Fig. II. 20 cm 5 cm 4 cm 3 cm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q36": {
+      "question": " Express 4037 in standard form.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q37": {
+      "question": " Which of the following angles can be constructed by using the arcs at point C in the diagram below?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q38": {
+      "question": " Given that vector a = and b = Find the value of x if a = b.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q39": {
+      "question": " In the diagram above, the bearing of point B from A is 340o 220o 140o",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q40": {
+      "question": " Ama is 9 years older than Kwame. If Kwame is 18 years old, find the ratio of the age of Kwame to that of Ama. 3 : 2 1 : 3 2 : 3 2 : 1",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    }
+  }
+}

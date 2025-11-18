@@ -1,0 +1,386 @@
+{
+  "year": "2003",
+  "subject": "mathematics",
+  "multiple_choice": {
+    "q1": {
+      "question": " P = {3, 6, 9, 12, 15}. Which of the following best describes the set P? The set of multiples of 3 less than 18 The set of multiples of 3 The set of odd numbers The set of odd numbers less than 16",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q2": {
+      "question": "590",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q3": {
+      "question": "2",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q4": {
+      "question": "2",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q7": {
+      "question": " If 3t – 2 (t + 12) = 11, find the value of t.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q5": {
+      "question": " Find the least common multiple (LCM) of 12 and 20.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q6": {
+      "question": " Express 72 as a product of prime factors. 22×32 22×33 23×32",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q8": {
+      "question": "3x104",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q9": {
+      "question": " Find the product of 17 and 121. 1,751 2,057 8,591",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q10": {
+      "question": " Araba owes ₵550,000.00 at the bank. She goes to pay ₵150,000.00. How much does Araba owe the bank now? ₵700,000.00 ₵600,000.00 ₵500,000.00 ₵400,000.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q11": {
+      "question": " Evaluate",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q16": {
+      "question": " Express as a percentage.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q25": {
+      "question": " Which of the following statements is true? 8+4 < 10 7+4 < 10 6+4 < 10 5+4 < 10",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q259": {
+      "question": "000",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q12": {
+      "question": " Express 1.25 as a mixed fraction in its lowest form.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q13": {
+      "question": " The total number of match sticks in 6 match boxes was 270. Find the total number of sticks in 20 similar boxes.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q14": {
+      "question": " A car travels at an average speed of 45 km per hour. What distance does it cover in 12 hours? 450 km 500 km 540 km",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q15": {
+      "question": " Calculate the simple interest on ₵130,000.00 for 2 years at 12% per annum. ₵78,000.00 ₵39,000.00 ₵36,000.00 ₵31,200.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q17": {
+      "question": " Kwame gets a commission of 20% on bread sold. In one week, Kwame's commission was ₵45,000.00. How much bread did he sell during that week? ₵205,000.00 ₵220,000.00 ₵225,000.00 ₵235,000.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q18": {
+      "question": " Write 83000 in standard form.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q19": {
+      "question": " The following marks are the marks obtained by pupils in a test: 2, 3, 5, 2, 3, 4, 2, 3, 5, 3. Use the information above to answer the question below. What is the mode?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q20": {
+      "question": " The following marks are the marks obtained by pupils in a test: 2, 3, 5, 2, 3, 4, 2, 3, 5, 3. Use the information above to answer the question below. Calculate the mean",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q21": {
+      "question": " There are 12 red and 8 blue balls in a bag. If a ball is selected at random from the bag, what is the probability that it is red?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q22": {
+      "question": " If y = (x - 2) express x in terms of y. x = 3y - 2 3y + 2 x = -",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q23": {
+      "question": " Simplify 6a2 × 4a2b2 10a4b2 24a2b2 24a4b2 24a2b4",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q24": {
+      "question": " Change 17ten to a base two numeral. 1001 1000 10001",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q26": {
+      "question": " Find the set of integers within the interval -2 < x < 2 {-2,-1,2} {-2,-1,0} {-1,0,1} {-1,1,2}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q27": {
+      "question": " Use the mapping below to answer the question below. What is the rule for this mapping? x→ 2(x - 3) x→ x - 5 x→ 2(x - 2) x→ 2x-3",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q28": {
+      "question": " Use the mapping below to answer the question below. Find m.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q29": {
+      "question": " Which of the following represents the net of a pyramid?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q30": {
+      "question": " A rectangular tank has dimensions 2.5 m by 4 m by 5 m. It is filled with water to the brim. If 35 m3 of the water is used, how much water is left in the tank? 50 m3 35 m3 25 m3 15 m3",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q31": {
+      "question": " In the triangle XYZ, angle XZY = 90°, |XY| = 13 cm and |YZ| = 5cm. What is the length of XZ? 4 cm 8 cm 12 cm 65 cm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q32": {
+      "question": " How many lines of symmetry has an equilateral triangle?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q33": {
+      "question": " The value of an obtuse angle lies between 0° and 90° 90° and 180° 90° and 270° 180° and 360°",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q34": {
+      "question": " In the diagram above, AB is parallel to CD. Angles x and y are alternate angles corresponding angles vertically opposite angles co-interior angles",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q35": {
+      "question": " If a = and b = , find 2a + b.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q36": {
+      "question": " Find the size of the angle marked f, in the diagram above 108° 128°",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q37": {
+      "question": " The dimensions of a cuboid are 2 cm, P cm and 5 cm. Which of the following is an expression for the volume of the cuboid? 7P cm3 (7 + P) cm3 10P cm3 (10 + P) cm3",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q38": {
+      "question": " Simplify 5(3t + 1) – 6(t – 1). 9t + 11 9t + 7 9t + 1 9t – 5",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q39": {
+      "question": " Simplify: (",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q40": {
+      "question": " The point P moves in a plane such that it is always at equal distance from two fixed points, A and B in the same plane. Which of these is the locus of the point P? The bisector of angle PAB A circle centre B and radius AB A circle with AB as the diameter The perpendicular bisector of line AB.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    }
+  }
+}

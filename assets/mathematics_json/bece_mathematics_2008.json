@@ -1,0 +1,393 @@
+{
+  "year": "2008",
+  "subject": "mathematics",
+  "multiple_choice": {
+    "q1": {
+      "question": " M = {1, 2, 3, 4, 5, ..., 20} Q = {3, 4, 5, 6, 7, 8} and R = {2, 3, 5, 7} If Q and R are subsets of M, find Q ∩ R. {3, 5} {5, 7} {{3, 5, 7} {2, 3, 5, 7}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q2": {
+      "question": " List the members of the set {2 ≤ x ≤ 5}. {2, 5} {2, 3, 4} {2, 3, 5} {2, 3, 4, 5}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q3": {
+      "question": "41 x 10",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q4": {
+      "question": " Write 98 as a product of its prime factors. 2 x 7 22 x 7 2 x 72 22 x 72",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q5": {
+      "question": " Evaluate 4(8 - 2) + 5(3 - 8).",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q6": {
+      "question": " Arrange the following in descending order of magnitude:",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q7": {
+      "question": " The ratio 8 : 12 is equivalent to y : 9. What is the value of y.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q8": {
+      "question": " Write 0.55 as a fraction in its lowest term.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q9": {
+      "question": " Which of the following can be made from the net below? Triangular prism Square pyramid Triangular pyramid Cuboid",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q10": {
+      "question": " Simplify 5w + 7p2 - 4w + 3p2 9w + 10p2 w + 10p2 w + 4p2 9w + 4p2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q11": {
+      "question": " Osei bought a hat for GH₵ 5.00. He sold it to Yaovi at a profit of 20%. How much did Yaovi pay for the hat? GH₵ 4.80 GH₵ 5.50 GH₵ 6.00 GH₵ 7.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q12": {
+      "question": " Simplify 29 ÷ 23",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q13": {
+      "question": " Find the image of -3 under the mapping x → 2(x + 3).",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q14": {
+      "question": " A football field is 120 m long and 75 m wide. What is the perimeter of the field? 195 m 390 m 780 m 900 m",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q15": {
+      "question": " A tank holds 240 litres of water. How much water is in the tank when it is full? 60 litres 132 litres 192 litres 240 litres",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q16": {
+      "question": " A man has 6x sheep and 5y goats. He sells 3x sheep and 2y goats. How many animals are left after the sales? 3x - 3y 3x + 3y 9x - 5y 9x + 5y",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q17": {
+      "question": " The table below shows the average rainfall in a town from March 2003 to August 2003. Use it to answer the question below. Month March April June July August Rainfall (mm) What was the total amount of rainfall in May, June and July? 696 mm 930 mm 998 mm 1020 mm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q18": {
+      "question": " The table below shows the average rainfall in a town from March 2003 to August 2003. Use it to answer the question below. Month March April June July August Rainfall (mm) What was the mean rainfall in the town over the six months? 230 mm 281 mm 366 mm 452 mm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q19": {
+      "question": " A trader buys a dozen pens at GH₵ 4.80 and sells them at 48 Gp each. Find her percentage profit.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q20": {
+      "question": " Find the angle through which the minute hand of a clock moves from 5.15 p.m. to 5.25 p.m. 120°",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q21": {
+      "question": " If E = {prime numbers between 10 and 20} and F = {odd numbers between 0 and 16},find E ∩ F. {11} {11, 13} {3, 11, 13} {3, 11, 13, 15}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q22": {
+      "question": " Write 17ten in base two numeral. 1001 10001 11001 11011",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q23": {
+      "question": " What fraction of a revolution is 72°?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q24": {
+      "question": " Express 6 days is to 3 weeks as a ratio in its simplest form. 1 : 2 2 : 1 2 : 7 7 : 2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q25": {
+      "question": " The letters in the word HIPPOPOTAMUS are placed in a box. What is the probability of taking out a letter that is a vowel?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q26": {
+      "question": " Find the perimeter of the kite below. 38 cm 64 cm 76 cm 88 cm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q27": {
+      "question": " Illustrate 3 < x < 5 on the number line, where x ∈ {rational numbers}.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q28": {
+      "question": " How many lines of symmetry has an equilateral triangle?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q29": {
+      "question": " If p = and q = , find 4p - 2q.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q30": {
+      "question": " Which of the following is not a quadrilateral? Hexagon Kite Rectangle Trapezium",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q31": {
+      "question": " Use the figure below to answer the question below. Find the value of x.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q32": {
+      "question": " Use the figure below to answer the question below. What is the value of f?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q33": {
+      "question": " Solve = 12.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q34": {
+      "question": " Expand (a + 4)(a + 6) 2a + 24 a2 + 6a + 10 a2 + 10a + 10 a2 + 10a + 24",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q35": {
+      "question": " Find 12 % of GH₵ 80.00 GH₵ 8.00 GH₵ 10.00 GH₵ 12.00 GH₵ 12.50",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q36": {
+      "question": " Write the number 34.1 in standard form.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q37": {
+      "question": " Simplify 5(-2)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q38": {
+      "question": " Find the highest common factor of 15 and 21.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q39": {
+      "question": " The difference between two numbers is 168. If the smaller number is 113, find the other number.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q40": {
+      "question": " If r = and t = , evaluate r + t.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    }
+  }
+}

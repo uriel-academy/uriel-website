@@ -1,0 +1,428 @@
+{
+  "year": "1995",
+  "subject": "mathematics",
+  "multiple_choice": {
+    "q1": {
+      "question": "375 km",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q2": {
+      "question": "2 km",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q3": {
+      "question": "5607 x 10-2",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q4": {
+      "question": " Express 34m 5cm 6mm in millimetres 340506 mm 342506 mm 34056 mm 30456 mm 34565 mm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q5": {
+      "question": " Write 356.07 in standard form.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q35": {
+      "question": " In the figure below, triangle ABC is an enlargement of triangle ADE. If |AE| = 20 cm and |EC| = 10 cm. What is the scale factor of the enlargement?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q10": {
+      "question": " What is the rule for the mapping below? y = 2x + 2 y = 2x y = x + 2 y = x + 1 y = 2x",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q6": {
+      "question": " Divide",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q7": {
+      "question": " Which property is illustrated by the statement a × (b + c) = a × b + a × c? Inverse Identity Commutative Distributive Associative",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q8": {
+      "question": " How many edges has a cube?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q9": {
+      "question": " What is the mode of the following numbers: 4, 5, 3, 3, 4, 2, 7, 6, 5, 4, 4, 1?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q11": {
+      "question": " Solve 4x – 6 < -2 x < 1 x > 1 x < -1 x > -1 x < 4",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q12": {
+      "question": "02 km",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q13": {
+      "question": "25 km",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q14": {
+      "question": " Kofi throws a die. What is the probability that he throws the number 2?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q15": {
+      "question": " What is the image of -4 under the mapping x → x - 2?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q16": {
+      "question": " Find the value of p in the diagram below.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q17": {
+      "question": " Make a subject of the relation P = 2(a + b) P - 2b P + 2b 2b - P P - b P - 2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q18": {
+      "question": " What is the value of x in the relation 5x = 125?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q19": {
+      "question": " Calculate the length of QR in triangle PQR",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q20": {
+      "question": " Five cards are numbered one to five. A card is picked at random. What is the probability that it has an even number?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q21": {
+      "question": " If u = and v = , find 3u + 2v.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q22": {
+      "question": " Arrange the following fractions in descending order",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q23": {
+      "question": " How many lines of symmetry has a square?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q24": {
+      "question": " If (x, y) → (x, 2y), find the image of (2 , -2) (2, -2) (2, - (2, 2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q25": {
+      "question": " The ages in years of eight boys are: 14, 14.5, 15, 12, 11.5, 13, 10.5, 13.5. What is their average age?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q26": {
+      "question": " Convert 133five to a base ten numeral.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q27": {
+      "question": " Find the simple interest on ₵15,000.00 at rate of 20% per annum for 5 years. ₵10,000.00 ₵15,000.00 ₵30,000.00 ₵50,000.00 ₵90,000.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q28": {
+      "question": " List all members of the set {x: 2 < x < 8, x is an integer} {3, 4, 5} {2, 3, 4, 5, 6, 7, 8} {2, 2 , 3, 4, 5, 6, 7, 8} {3, 3 , 3, 4, 5, 6, 7, 8} {3, 4, 5, 6, 7}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q29": {
+      "question": " Simplify 348.94 - 188.34",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q60": {
+      "question": "68",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q160": {
+      "question": "60",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q200": {
+      "question": "60",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q206": {
+      "question": "60",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q30": {
+      "question": " Find the difference between the values of (2d)2 and 2d2 when d = 3",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q31": {
+      "question": " The heights of two boys are in the ratio 4 : 5. The shorter boy is 80 cm. What is the height of the taller boy? 100 cm 150 cm 164 cm 180 cm 200 cm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q32": {
+      "question": " Factorize completely 5xy + 10ny 5y(x + n) 5y(x + 2n) 5xy(1 + 2n) 5(xy + 2ny) x(5x + 10n)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q33": {
+      "question": " If 13x – 12 = 5x + 60, find x",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q34": {
+      "question": " The length of a spring when a mass of n kg is hung on it is L = (74 + 15n) mm. What is the length of the spring when a mass of 1.20kg is hanged on it?",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q75": {
+      "question": "20 mm",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q89": {
+      "question": "00 mm",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q92": {
+      "question": "00 mm",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q97": {
+      "question": "00 mm",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q104": {
+      "question": "00 mm",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q36": {
+      "question": " Which of the number lines below represents the inequality 2 < x ≤ 6?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q37": {
+      "question": " A cylinder has a radius 6 cm and height 7 cm. Find its volume. [Take π = 132 cm3 264 cm3 294 cm3 792 cm3 924 cm3",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q38": {
+      "question": " The angles a and b in the figure above are interior opposite corresponding vertically opposite acute alternate",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q39": {
+      "question": " A man travelled a distance of 1.2 km in 30 minutes. What distance can he cover in 55 minutes travelling at the same speed?",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q40": {
+      "question": " In the diagram above, ∆ABC is an isosceles triangle. ∠ABD is 108°. Find the value of y.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    }
+  }
+}

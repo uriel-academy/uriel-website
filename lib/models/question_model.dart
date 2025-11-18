@@ -42,7 +42,10 @@ class Question {
   final List<String>? options; // For multiple choice
   final String correctAnswer;
   final String? explanation;
-  final String? imageUrl;
+  final String? imageUrl; // Legacy field - now prefer imageAfterQuestion
+  final String? imageBeforeQuestion; // Image shown before question text (e.g., diagram for context)
+  final String? imageAfterQuestion; // Image shown after question text (e.g., figure to analyze)
+  final Map<String, String>? optionImages; // Map of option letter to image URL (e.g., {"A": "url1", "B": "url2"})
   final int marks;
   final String difficulty; // "easy", "medium", "hard"
   final List<String> topics;
@@ -68,6 +71,9 @@ class Question {
     required this.correctAnswer,
     this.explanation,
     this.imageUrl,
+    this.imageBeforeQuestion,
+    this.imageAfterQuestion,
+    this.optionImages,
     required this.marks,
     required this.difficulty,
     required this.topics,
@@ -93,6 +99,9 @@ class Question {
       'correctAnswer': correctAnswer,
       'explanation': explanation,
       'imageUrl': imageUrl,
+      'imageBeforeQuestion': imageBeforeQuestion,
+      'imageAfterQuestion': imageAfterQuestion,
+      'optionImages': optionImages,
       'marks': marks,
       'difficulty': difficulty,
       'topics': topics,
@@ -137,6 +146,11 @@ class Question {
         correctAnswer: json['correctAnswer'] ?? '',
         explanation: json['explanation'],
         imageUrl: json['imageUrl'],
+        imageBeforeQuestion: json['imageBeforeQuestion'],
+        imageAfterQuestion: json['imageAfterQuestion'],
+        optionImages: json['optionImages'] != null 
+            ? Map<String, String>.from(json['optionImages'])
+            : null,
         marks: json['marks'] ?? 1,
         difficulty: json['difficulty'] ?? 'medium',
         topics: json['topics'] != null ? List<String>.from(json['topics']) : [],

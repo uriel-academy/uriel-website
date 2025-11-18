@@ -1,0 +1,380 @@
+{
+  "year": "2002",
+  "subject": "mathematics",
+  "multiple_choice": {
+    "q1": {
+      "question": "5",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q2": {
+      "question": " Simplify 0.1 x 0.02 x 0.003 (leaving your answer in standard form) 6x10-7 6x10-6 6x105 6x106",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q3": {
+      "question": "6",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q4": {
+      "question": "9 m 22 m 24 m",
+      "possibleAnswers": {
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q5": {
+      "question": " How many faces has a cube?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q6": {
+      "question": "3",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q7": {
+      "question": " The Venn diagram below shows the number of pupils in a class of 40, who speak Twi or Ga or neither. Use it to answer the question below. How many pupils speak Twi and Ga?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q8": {
+      "question": " Use it to answer the question below. How many pupils speak neither Twi nor Ga?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q9": {
+      "question": " Find the least common multiple (LCM) of the numbers 10, 15 and 25.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q10": {
+      "question": " Which of the following expression is illustrated on the number line above? x < -3 x ≤ -3 x > -3 x ≥ -3",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q11": {
+      "question": " Simplify (a - b) a + 3b a - 3b a - b 7a - 3b",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q12": {
+      "question": " Correct 0.00025 to one significant figure.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q17": {
+      "question": " Arrange the following fractions in descending order of magnitude:",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q18": {
+      "question": " Which of the following best describes the construction below? Constructing an angle of 60° Constructing the perpendicular bisector of AB Constructing a circle about the midpoint of AB Constructing an angle of 180°",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q19": {
+      "question": " Find the image of the point K (3, 5) when it is reflected in the x-axis. (3, 5) (5, 3) (3, -5) (-3, -5)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q20": {
+      "question": " A set of furniture was sold for ₵300,000.00 at a profit of 20%. Find the cost price. ₵250,000 ₵240,000 ₵200,000 ₵180,000",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q13": {
+      "question": " If y : 28 = 5 : 7, find y.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q31": {
+      "question": " The s obtained by 9 students in a test are 3, 3, 4, 5, 6, 7, 7, 7, 8. Use this information to answer the question below. Find the median",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q37": {
+      "question": " A rod 200 cm long is broken into two parts. The shorter part is one-quarter of the length of the rod. Express the shorter part as a percentage of the longer part.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q14": {
+      "question": " Convert 121five to a base ten numeral.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q15": {
+      "question": " Find the image of 4 under the following mapping.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q16": {
+      "question": " The point K(3, 4) is rotated through 180° about the origin. Find its image. (-3, 4) (-4, 3) (-3, -4) (3, -4)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q21": {
+      "question": " Make x the subject of the relation, v2 = u2 + 2ax. x = u2 + 2av2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q22": {
+      "question": " Three baskets contain 95 oranges, x oranges and 2x oranges. How many oranges are in the three baskets? 95 + 3x 95 + 2x2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q23": {
+      "question": " The pie chart shows the distribution of programmes offered by 720 students at Kofikrom. Use this information to answer the question below. Find the value of the angle marked y. 100° 110° 120°",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q24": {
+      "question": "5 m",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q25": {
+      "question": " Kofi is two years older than Ama. If the sum of their ages is 16, find Ama's age. 7 years 9 years 14 years 18 years",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q26": {
+      "question": " mv2, If v = 4 and J = 12, find m",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q27": {
+      "question": " PQR is a right-angled triangle. The area of the triangle is 6 cm2 and |QR| = 3 cm. Find |PR|. 2 cm 3 cm 5 cm 6 cm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q28": {
+      "question": " A rectangle has a length of 8 cm and a breadth of 6 cm. How long is its diagonal?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q29": {
+      "question": " Simplify",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q30": {
+      "question": " A man divided his 360 cattle among his three sons in the ratio 7 : 6 : 5. How many cattle did the one who had the smallest share receive?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q32": {
+      "question": " The marks obtained by 9 students in a test are 3, 3, 4, 5, 6, 7, 7, 7, 8. Use this information to answer the question below. What is the mode?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q33": {
+      "question": "33%",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q34": {
+      "question": " 30 men dig a pit in 21 days. How many days will 14 men take to dig the pit, working at the same rate?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q35": {
+      "question": " A bag contains 6 white and 8 red balls. What is the probability that a ball picked at random will be a white ball?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q36": {
+      "question": " The figure below is a cuboid wih dimensions x cm by y cm by z cm. Find the area of the face PQRV. xy cm2 yz cm2 x2 cm2 xz cm2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q66": {
+      "question": "67%",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q38": {
+      "question": " In the figure below, MN and PQ are straight lines. Find the value of the angle marked x in the figure. 155°",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q39": {
+      "question": " Find the value of x in the equation",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q40": {
+      "question": " The circumference of a circular track is 15.4 m. Find the diameter of the track. [Take π =",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    }
+  }
+}

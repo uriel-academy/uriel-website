@@ -1,0 +1,404 @@
+{
+  "year": "1992",
+  "subject": "mathematics",
+  "multiple_choice": {
+    "q1": {
+      "question": "2",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q2": {
+      "question": "4 cm 7 cm 13 cm 17 cm 60 cm",
+      "possibleAnswers": {
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q3": {
+      "question": "5",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q4": {
+      "question": "9",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q5": {
+      "question": " Convert 39ten to a base five numeral. 100111 1110",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q6": {
+      "question": "25",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q7": {
+      "question": " Simplify 2 x (3",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q8": {
+      "question": " If 8.51 ÷ 2.3 = 3.7, find the value of 85.1 ÷ 2.3",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q14": {
+      "question": " The bar chart shows the distances of 5 villages, P, Q, R, S and T from a market town. Use it to answer the question below. How much farther is village Q than village R from the market town? 2 km 3 km 4 km 5 km 6 km",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q15": {
+      "question": " There are 20 beads in a box. Some are red and some green. The chance that one bead taken at random from the box is red is . Find the number of red beads in the box.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q9": {
+      "question": " Express 0.625 as a fraction in its lowest term.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q10": {
+      "question": " An amount of money is shared between Kofi and Ama in the ratio 3 : 5. If Ama received ₵4,650.00, what is Kofi's share? ₵930.00 ₵1,550.00 ₵1,743.75 ₵2,790.00 ₵2,906.25",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q11": {
+      "question": " If $1.00 = ₵340.00, what was the cedi value of an article which cost $6.50? ₵6,630.00 ₵2,380.00 ₵2,210.00 ₵346.50 ₵333.50",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q12": {
+      "question": " Find the simple interest on ₵28,000.00 at 3 % per annum for 6 months. ₵490.00 ₵560.00 ₵980.00 ₵4,000.00 ₵5,880.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q13": {
+      "question": "9%",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q16": {
+      "question": "7%",
+      "possibleAnswers": {
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q17": {
+      "question": " Find the value of p2 – 6p + 9 when p = -2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q18": {
+      "question": " If x = 2, find the value of q in the equation 3x – 4 = x + q.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q19": {
+      "question": " Which of the following inequalities is shown on the number line above, where p is a real number? p ≥ 2 p > 2 p = 2 p ≤ 2 p < 2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q20": {
+      "question": " Use the mapping below to answer the question below ...... ...... Find the value of x",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q21": {
+      "question": " Use the mapping below to answer the question below ...... ...... Find the value of y",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q22": {
+      "question": " In the diagram below, find the bearing of P from Q 045° 090° 135° 180° 270°",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q23": {
+      "question": " A polygon has 10 sides. Which of the following gives the sum of its interior angles? 2 x 180° 4 x 180° 6 x 180° 8 x 180° 10 x 180°",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q24": {
+      "question": " The diagram shows the conversion graph for miles and kilometres. Use it to answer the question below Find in kilometres, the equivalent of 4 miles.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q25": {
+      "question": " The diagram shows the conversion graph for miles and kilometres. Use it to answer the question below Express 4 kilometres in miles.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q26": {
+      "question": " The diagram below is a right-angled triangle. Use it to answer the question below Find |XZ|",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q27": {
+      "question": " The diagram below is a right-angled triangle. Use it to answer the question below Find tan ∠YXZ",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q28": {
+      "question": " The diagram below shows two points P and Q in the number plane. Find the vector PQ.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q29": {
+      "question": " Find the length of the vector p =",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q30": {
+      "question": " In the diagram, square P1Q1R1S1 is an enlargement of square PQRS from centre O. The area of PQRS is 4 cm2 and the area of P1Q1R1S1 is 9 cm2. Find the scale factor of the enlargement.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q31": {
+      "question": " The volume of a cube is 27 cm3. Find the area of one of its faces. 3 cm2 6 cm2 9 cm2 18 cm2 54 cm2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q32": {
+      "question": " A cylinder is of height 3 cm and radius 2 cm. Find its curved surface area. [Take π = 3.142] 7 cm2 12 cm2 18 cm2 38 cm2 54 cm2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q33": {
+      "question": " Find the area of the parallelogram PQRS 20 cm2 21 cm2 48 cm2 60 cm2 240 cm2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q34": {
+      "question": " If one-third of a number is added to one-fifth of the same number, the result is 8. Find the number.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q35": {
+      "question": " If 1 : x is equivalent to 6 : 25, find x.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q36": {
+      "question": " Express as a percentage.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q53": {
+      "question": "373%",
+      "possibleAnswers": {
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q37": {
+      "question": " Akosua buys 480 pineapples for ₵24,000.00. She sells all the pineapples for ₵28,000.00. Find her profit percent.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q83": {
+      "question": "3 ha",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q38": {
+      "question": " How many edges has a cuboid?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q39": {
+      "question": " The pie chart shows the distribution of crops on a farm of area 250 hectares. Use it to answer the question below. Find the area of the plot with corn.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q48": {
+      "question": "6",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q55": {
+      "question": "3",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q62": {
+      "question": "5 ha",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q125": {
+      "question": "0 ha",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q40": {
+      "question": " The pie chart shows the distribution of crops on a farm of area 250 hectares. Use it to answer the question below. What fraction of the farm is planted with pepper?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    }
+  }
+}

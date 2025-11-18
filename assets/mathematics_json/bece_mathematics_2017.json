@@ -1,0 +1,396 @@
+{
+  "year": "2017",
+  "subject": "mathematics",
+  "multiple_choice": {
+    "q1": {
+      "question": "5(5x + y)",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q2": {
+      "question": "94 kg",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q3": {
+      "question": "90 kg",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q4": {
+      "question": "3 x 10",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q5": {
+      "question": " If A = {2,6,8} and B = {4,6,8,10}, which of the following statements is true? A ⊂ B A ∩ B = {2,6,8} A ∪ B = {2,4,6,8,10} A ⊃ B",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q6": {
+      "question": " Find the product of 4xy4 and x2yz. 4x3y4z 4x3y5z 4x2y4z 4x2y4",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q7": {
+      "question": " The sum of the interior angles of a regular polygon with 10 sides is 144o. 900o. 1,440o. 1,800o.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q8": {
+      "question": "50 kg",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q9": {
+      "question": " The ages of the members of a social club are 20 years, 55 years, 60 years and 25 years. Find the mean age of the members of the club. 20 years 30 years 40 years 50 years",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q10": {
+      "question": " Evelyn saved GH₵ 35.48 every month for 8 months. How much did she save? GH₵ 183.60 GH₵ 280.63 GH₵ 283.20 GH₵ 283.84",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q11": {
+      "question": " Evaluate",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q12": {
+      "question": " A woman deposited an amount of GH₵ 50,000.00 at a bank for 2 years at a rate of 20% per annum. Find the simple interest. GH₵ 1,000.00 GH₵ 2,000.00 GH₵ 10,000.00 GH₵ 20,000.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q13": {
+      "question": " What is the total cost of x shirts at GH₵ 5.00 each and y shirts at GH₵ 1.50 each? 5y + 1.5x 5(x + 1.5y)",
+      "possibleAnswers": {
+        "A": "5x + 1.5y",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q14": {
+      "question": " At a meeting attended by 23 people, the females were 7 more than the males. How many males were there?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q15": {
+      "question": " Find the value of x in the diagram.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q16": {
+      "question": " How many lines of symmetry does a rhombus have?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q17": {
+      "question": " In 1995, 215 boys and 185 girls were admitted into a Senior Secondary School. Find, correct to the nearest whole number, the percentage of girls admitted.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q18": {
+      "question": " Simplify",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q19": {
+      "question": " Solve 25x + 450 ≤ 3000. x ≥ 102 x ≤ 102 x ≥ 138 x ≤ 138",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q20": {
+      "question": " Give that find a + b.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q21": {
+      "question": " Mr. Agyekum has 11 of the GH₵ 20.00 notes, 15 of the GH₵ 10.00 notes and 6 of the GH₵ 5.00 notes. How much does Mr. Agyekum have altogether? GH₵ 280.00 GH₵ 320.00 GH₵ 360.00 GH₵ 400.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q22": {
+      "question": " A man travelled a distance of 1.5 km in 30 minutes. What distance can he cover in 50 minutes, travelling at the same speed?",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q23": {
+      "question": " In the diagram, UVW is an isosceles triangle. |UV| = |UW| and angle VUW = 70o. Find angle UVW.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q24": {
+      "question": " Arrange the following in descending order:",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q25": {
+      "question": " The point D (4,3) is reflected in the y-axis. Find the coordinates of its image. (-4,-3) (-3,4) (-4,3) (3,-4)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q26": {
+      "question": " Simplify:",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q27": {
+      "question": " Divide 64.5 by 0.015, leaving the answer in standard form.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q28": {
+      "question": " The point Q(-2,3) is rotated anticlockwise about the origin through an angle of 90o. Find the coordinates of its image. (-3,-2) (-3,2) (3,-2) (3,2)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q29": {
+      "question": " Elias bought five books. Their mean price was GH₵ 3.25. The total cost for four of the books was GH₵ 11.75. What was the cost of the fifth book? GH₵ 3.50 GH₵ 4.00 GH₵ 4.20 GH₵ 4.50",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q30": {
+      "question": " Tins of milk each of volume 77 cm3 and weight 170 g were packed into an empty carton of volume 1540 cm3 and weight 500 g. How many tins of milk can be packed to fill the carton?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q31": {
+      "question": " Tins of milk each of volume 77 cm3 and weight 170 g were packed into an empty carton of volume 1540 cm3 and weight 500 g. What is the weight of the carton when packed with the tins of milk?",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q32": {
+      "question": " A piece of cloth is 8.4 m long. If 30 cm is needed to sew a napkin, how many napkins can be sewn from this piece of cloth?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q33": {
+      "question": " Express as a decimal fraction.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q51": {
+      "question": "3200",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q52": {
+      "question": "3125",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q53": {
+      "question": "3676",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q54": {
+      "question": "3222",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q34": {
+      "question": " A match box contains 40 sticks. If 15 of them are spolit, find the probability that a stick chosen at random is not spoilt?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q35": {
+      "question": " The number of pupils who attended hospital from eight classes on a particular day are: 1,5,3,1,7,5,1,1. Find the median number.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q36": {
+      "question": " The number of pupils who attended hospital from eight classes on a particular day are: 1,5,3,1,7,5,1,1. What is the modal number?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q37": {
+      "question": " The number of pupils who attended hospital from eight classes on a particular day are: 1,5,3,1,7,5,1,1. Calculate the mean",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q38": {
+      "question": " The distance from the centre of a circle to any point on it is called circumference. diameter. radius. sector.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q39": {
+      "question": " Express 1352 as a product of prime factors. 23 x 133 23 x 132 22 x 133 22 x 132",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q40": {
+      "question": " Which of the following statements about sets is true? Every set is a subset of the null set. The universal set is the subset of the null set. The intersection of two sets is always null set. The universal set is the union of all its subsets.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    }
+  }
+}

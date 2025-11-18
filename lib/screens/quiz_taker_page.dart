@@ -902,10 +902,21 @@ class _QuizTakerPageState extends State<QuizTakerPage>
   }
 
   Widget _buildQuestionCard(Question question, bool isMobile) {
-    // Determine image to show: prefer explicit imageUrl. If none, for ICT try a guessed asset
-    // but only render it if the asset actually exists in the bundled assets (avoids blank placeholder).
-    final String? explicitImage = (question.imageUrl != null && question.imageUrl!.isNotEmpty) ? question.imageUrl : null;
-  final String guessedAssetPath = 'assets/bece_ict/bece_ict_${question.year}_q_${question.questionNumber}.png';
+    // Priority order for images:
+    // 1. imageBeforeQuestion - shown at the very top
+    // 2. imageAfterQuestion - shown after question text
+    // 3. imageUrl (legacy) - shown after question text if no imageAfterQuestion
+    // 4. optionImages - shown with each option
+    
+    final String? imageBeforeQ = (question.imageBeforeQuestion != null && question.imageBeforeQuestion!.isNotEmpty) 
+        ? question.imageBeforeQuestion 
+        : null;
+    final String? imageAfterQ = (question.imageAfterQuestion != null && question.imageAfterQuestion!.isNotEmpty) 
+        ? question.imageAfterQuestion 
+        : (question.imageUrl != null && question.imageUrl!.isNotEmpty) 
+            ? question.imageUrl 
+            : null;
+    final String guessedAssetPath = 'assets/bece_ict/bece_ict_${question.year}_q_${question.questionNumber}.png';
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -938,37 +949,40 @@ class _QuizTakerPageState extends State<QuizTakerPage>
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                // Image before question (for context/diagrams shown above)
+                if (imageBeforeQ != null) ...[
+                  _buildImageSection(imageBeforeQ, isMobile),
+                  const SizedBox(height: 16),
+                ],
+                
                 // Question text with underline support
                 _buildQuestionText(question.questionText, isMobile),
             
-            const SizedBox(height: 24),
+                const SizedBox(height: 24),
 
-            // Optional question image (asset or network).
-            // If the question doc provides an explicit imageUrl, show it.
-            // Otherwise, for ICT questions we attempt to guess the packaged asset path
-            // but only display it after verifying it exists in the asset bundle to avoid
-            // showing a broken/blank placeholder for questions without images.
-            if (explicitImage != null && explicitImage.isNotEmpty) ...[
-              _buildImageSection(explicitImage, isMobile),
-            ] else if (question.subject == Subject.ict && question.year == '2024' && question.questionNumber == 38) ...[
-              // Only attempt to show the guessed packaged ICT asset for this specific
-              // known question (ICT 2024 Q38). This avoids introducing guessed
-              // image placeholders/thumbnails for other ICT questions.
-              FutureBuilder<bool>(
-                future: _assetExists(guessedAssetPath),
-                builder: (context, snapshot) {
-                  if (snapshot.connectionState != ConnectionState.done) {
-                    return const SizedBox();
-                  }
-                  if (snapshot.hasData && snapshot.data == true) {
-                    // For this specific case, expand the image area so it is visible on mobile.
-                    return _buildImageSection(guessedAssetPath, isMobile, expand: true);
-                  }
-                  return const SizedBox();
-                },
-              ),
-              const SizedBox(height: 24),
-            ],
+                // Image after question (for figures/graphs shown below question text)
+                if (imageAfterQ != null) ...[
+                  _buildImageSection(imageAfterQ, isMobile),
+                  const SizedBox(height: 24),
+                ] else if (question.subject == Subject.ict && question.year == '2024' && question.questionNumber == 38) ...[
+                  // Fallback: Only attempt to show the guessed packaged ICT asset for this specific
+                  // known question (ICT 2024 Q38). This avoids introducing guessed
+                  // image placeholders/thumbnails for other ICT questions.
+                  FutureBuilder<bool>(
+                    future: _assetExists(guessedAssetPath),
+                    builder: (context, snapshot) {
+                      if (snapshot.connectionState != ConnectionState.done) {
+                        return const SizedBox();
+                      }
+                      if (snapshot.hasData && snapshot.data == true) {
+                        // For this specific case, expand the image area so it is visible on mobile.
+                        return _buildImageSection(guessedAssetPath, isMobile, expand: true);
+                      }
+                      return const SizedBox();
+                    },
+                  ),
+                  const SizedBox(height: 24),
+                ],
             
             // Answer options
             ...(question.options ?? []).map((option) {
@@ -991,6 +1005,9 @@ class _QuizTakerPageState extends State<QuizTakerPage>
               final isCorrect = optionLetter == correctLetter;
               final showCorrect = showExplanation && isCorrect;
               final showIncorrect = showExplanation && isSelected && !isCorrect;
+              
+              // Check if this option has an image
+              final String? optionImageUrl = question.optionImages?[optionLetter];
               
               return Container(
                 margin: const EdgeInsets.only(bottom: 12),
@@ -1019,50 +1036,80 @@ class _QuizTakerPageState extends State<QuizTakerPage>
                                   ? const Color(0xFFD62828) // Uriel red for selected
                                   : Colors.white.withValues(alpha: 0.9), // White with slight transparency
                     ),
-                    child: Row(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Container(
-                          width: 24,
-                          height: 24,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border: Border.all(
-                              color: showCorrect 
-                                  ? Colors.green 
-                                  : showIncorrect 
-                                      ? Colors.red
-                                      : isSelected 
-                                          ? Colors.white 
-                                          : Colors.grey[400]!,
-                              width: 2,
+                        Row(
+                          children: [
+                            Container(
+                              width: 24,
+                              height: 24,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                border: Border.all(
+                                  color: showCorrect 
+                                      ? Colors.green 
+                                      : showIncorrect 
+                                          ? Colors.red
+                                          : isSelected 
+                                              ? Colors.white 
+                                              : Colors.grey[400]!,
+                                  width: 2,
+                                ),
+                                color: isSelected || showCorrect 
+                                    ? (showCorrect ? Colors.green : Colors.white)
+                                    : Colors.white,
+                              ),
+                              child: isSelected || showCorrect 
+                                  ? Icon(
+                                      showCorrect ? Icons.check : Icons.circle,
+                                      size: 12,
+                                      color: showCorrect ? Colors.white : const Color(0xFFD62828),
+                                    )
+                                  : null,
                             ),
-                            color: isSelected || showCorrect 
-                                ? (showCorrect ? Colors.green : Colors.white)
-                                : Colors.white,
-                          ),
-                          child: isSelected || showCorrect 
-                              ? Icon(
-                                  showCorrect ? Icons.check : Icons.circle,
-                                  size: 12,
-                                  color: showCorrect ? Colors.white : const Color(0xFFD62828),
-                                )
-                              : null,
+                            const SizedBox(width: 16),
+                            Expanded(
+                              child: Text(
+                                option,
+                                style: GoogleFonts.montserrat(
+                                  fontSize: isMobile ? 14 : 16,
+                                  color: isSelected ? Colors.white : const Color(0xFF1A1E3F), // White text when selected
+                                  fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                            if (showCorrect) ...[
+                              const Icon(Icons.check_circle, color: Colors.green),
+                            ] else if (showIncorrect) ...[
+                              const Icon(Icons.cancel, color: Colors.red),
+                            ],
+                          ],
                         ),
-                        const SizedBox(width: 16),
-                        Expanded(
-                          child: Text(
-                            option,
-                            style: GoogleFonts.montserrat(
-                              fontSize: isMobile ? 14 : 16,
-                              color: isSelected ? Colors.white : const Color(0xFF1A1E3F), // White text when selected
-                              fontWeight: isSelected ? FontWeight.w600 : FontWeight.w500,
+                        // Option image (if present)
+                        if (optionImageUrl != null && optionImageUrl.isNotEmpty) ...[
+                          const SizedBox(height: 12),
+                          GestureDetector(
+                            onTap: () {
+                              showDialog(
+                                context: context,
+                                builder: (context) => Dialog(
+                                  insetPadding: const EdgeInsets.all(12),
+                                  child: InteractiveViewer(
+                                    child: _buildQuestionImageWidget(optionImageUrl),
+                                  ),
+                                ),
+                              );
+                            },
+                            child: SizedBox(
+                              height: 150,
+                              width: double.infinity,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(8),
+                                child: _buildQuestionImageWidget(optionImageUrl),
+                              ),
                             ),
                           ),
-                        ),
-                        if (showCorrect) ...[
-                          const Icon(Icons.check_circle, color: Colors.green),
-                        ] else if (showIncorrect) ...[
-                          const Icon(Icons.cancel, color: Colors.red),
                         ],
                       ],
                     ),

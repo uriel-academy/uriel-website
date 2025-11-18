@@ -1,0 +1,388 @@
+{
+  "year": "2009",
+  "subject": "mathematics",
+  "multiple_choice": {
+    "q1": {
+      "question": "34",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q2": {
+      "question": "5",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q3": {
+      "question": "34",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q4": {
+      "question": " Subtract 125.47 from 203.90",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q78": {
+      "question": "43 -121.57 -122.38",
+      "possibleAnswers": {
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q5": {
+      "question": " Simplify (5m + 3n)-(2m-n). 5m - 4n 3m + 4n 3m - 2n 7m + 4n",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q6": {
+      "question": " Which of the following sets is equal to {1, 2, 3, 4}? {2, 4, 1, 5} {2, 1, 4, 3} {1, 2, 3, 4, ...} {2, 3, 4, 5, ...}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q7": {
+      "question": "5 cm 8 cm 9 cm 12 cm",
+      "possibleAnswers": {
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q8": {
+      "question": " What set does the following graph represent? {x:x < 2} {x:x ≤ 2} {x:x > 2} {x:x ≥ 2}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q9": {
+      "question": " The pie chart below shows the performance of Kate in her final examination. Use the diagram to answer the question below. What is the angle for French? 120o 100o",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q10": {
+      "question": "9",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q11": {
+      "question": " A teacher is to be chosen at random from a group of 6 male and 2 female teachers for a patron of a Mathematics Club. What is the probability that a female teacher is chosen?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q12": {
+      "question": " Solve the equation: 2x -3(x - 1) = 6",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q13": {
+      "question": "4",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q14": {
+      "question": " Which of the following sets of angles form the interior angles of a right angled triangle? {20°, 50°, 90°} {80°, 60°, 90°} {45°, 45°, 90°} {65°, 90°, 35°}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q15": {
+      "question": " State the rule for the mapping",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q16": {
+      "question": " A rectangle has an area of 36 cm2 and a width of 3 cm. Find its perimeter. 12 cm 18 cm 24 cm 30 cm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q17": {
+      "question": " Find the value of 4 + x0.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q18": {
+      "question": " A van travels 154 km in 1 hours. Find its speed in km/h. 77 km/h 88 km/h 100 km/h",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q269": {
+      "question": "5 km/h",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q19": {
+      "question": " In the figure below, PQ and RS are straight lines. Find the value of the angle marked w°. 127°",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q20": {
+      "question": " If x + 5 = -7, find the value of",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q21": {
+      "question": " In the following diagram, rectangle OABC is enlarged into rectangle OA1B1C1 from center O. OC = 5 cm, OA = 2 cm and AA1 = 1 cm. Use the diagram to answer the question below. Find the scale factor of the enlargement.",
+      "possibleAnswers": {
+        "A": "",
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q22": {
+      "question": " In the following diagram, rectangle OABC is enlarged into rectangle OA1B1C1 from center O. OC = 5 cm, OA = 2 cm and AA1 = 1 cm. Use the diagram to answer the question below. Calculate OC1.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q23": {
+      "question": " The height of a flag pole in a scale drawing is 5 cm. If the scale is 1 cm to 3 m, what is the actual height of the pole? 10 m 15 m",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q24": {
+      "question": " Factorize ax + 3x + a + 3 x(a + x) (x - a)(x + 3) x(a - x) (a + 3)(x + 1)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q25": {
+      "question": " If y = x + 8 x - 4 , find the value of y when x = 2.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q26": {
+      "question": " Find the Greatest Common Factor (GCF) of 90, 126 and 72.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q27": {
+      "question": " Given that 1 : 3 = x : 21, find the value of x.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q28": {
+      "question": " Find the difference between 432five and 143five 234five 334five 1130five 1310five",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q29": {
+      "question": " Simplify: 14",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q30": {
+      "question": " Nine bottles of equal capacity hold 4 litres of water. How much do x bottles hold? x litres 2x litres x litres x litres",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q31": {
+      "question": " A sales girl receives a 5 % commission on all she sells. Find how much she has to sell to receive GH₵ 15.00. GH₵ 750.00 GH₵ 300.00 GH₵ 75.00 GH₵ 30.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q32": {
+      "question": " Arrangle the following fractions in ascending order:",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q33": {
+      "question": " Add 2.5 to the product of 4.2 and 0.2",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q34": {
+      "question": " What is the value of four in the number 7073.48? four tenth four forty four hundred",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q35": {
+      "question": " The table below shows the ages of children at a birthday party. Ages(years) No. of Children Use this table to answer the question below. What is the modal age?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q36": {
+      "question": " The table below shows the ages of children at a birthday party. Ages(years) No. of Children Use this table to answer the question below. A child is selected at random, what is the probability that he or she is 4 years old?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q37": {
+      "question": " The table below shows the ages of children at a birthday party. Ages(years) No. of Children Use this table to answer the question below. How many children are 7 or more years old?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q38": {
+      "question": " Write the vector 6 cm W 4 cm S using cartesian components.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q39": {
+      "question": " Simplify: 5 - 7 + 2(3 - 8)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q40": {
+      "question": " If r = and n = , find n + r.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    }
+  }
+}

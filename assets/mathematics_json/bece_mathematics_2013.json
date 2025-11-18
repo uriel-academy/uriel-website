@@ -1,0 +1,387 @@
+{
+  "year": "2013",
+  "subject": "mathematics",
+  "multiple_choice": {
+    "q1": {
+      "question": "239 × 105",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q2": {
+      "question": " Express 1.25 as a percentage. 125% 175%",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q3": {
+      "question": "68 km",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q4": {
+      "question": "69 km",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q5": {
+      "question": " Given that A = {a, e, i, o, u} and B = {r, s, t}, how many elements are in A∩B?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q6": {
+      "question": " Convert 2114five to a base ten numeral.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q7": {
+      "question": " Simplify",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q8": {
+      "question": " A car uses 150 litres of petrol in 45 mins. How many litres of petrol will it use in 1 hour? 375 litres 230 litres 225 litres 200 litres",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q9": {
+      "question": " Simplify 4abx",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q10": {
+      "question": " Find the rule of the mapping: x + 2 x + 4 2x + 3 3x + 2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q11": {
+      "question": " Given that –1 = 2 – m, find m",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q12": {
+      "question": " The perimeter of a rectangle is 48 cm. if the length is 14 cm, find its width. 24 cm 20 cm 10 cm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q13": {
+      "question": " Make d the subject of the relation n = 2d + 3 n + 3 n - 3 3 - n",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q14": {
+      "question": " Calculate the gradient of the straight line joining the points A(3,5) and B(–2,3).",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q15": {
+      "question": " Use the diagram below to answer the question below. Find the angle marked a.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q16": {
+      "question": " Use the diagram below to answer the question below. Find the angle marked b. 150o 140o 110o 100o",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q17": {
+      "question": " If S = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, find the probability that a number selected at random from S is odd.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q18": {
+      "question": " Find the vector which translates the point (4, –5) to (3, –2)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q19": {
+      "question": " Factorize completely the expression 2xy – 6y + 7x – 21 (x – 3)(2y + 7) (x + 3)(2y – 7) (y – 3) (2x +7) (y + 3) (2x – 7)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q20": {
+      "question": " The area of a circle is 154 cm2. Find the diameter. (Take π = 7 cm 14 cm 21 cm 49 cm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q21": {
+      "question": " Mame Esi rides her bicycle to school and back everyday. If the distance from her home to the school is 2345 m, how many kilometers does she cover everyday?",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q22": {
+      "question": " The length of a rectangular fence is 25 m. The ratio of the length to the width is 5:3. Find the width of the rectangular fence. 13 m 15 m 16 m",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q23": {
+      "question": " Evaluate - b, if a = 30 and b = 1.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q24": {
+      "question": " How many 15Gp Christmas cards can be bought with GH₵18.00?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q25": {
+      "question": " If u = and v = , find u + v.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q26": {
+      "question": " If 4956 × 25 = 123,900, evaluate 495.6 × 2.5 leaving the answer in standard form.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q27": {
+      "question": " Which of the following expressions is illustrated on the number line. x ≤ -2 x < -2 x ≥ -2 x > -2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q28": {
+      "question": " If 180 oranges were shared among Kwame and Ama in the ratio 7:5, respectively, how many oranges did Ama receive?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q29": {
+      "question": " Calculate the simple interest on GH₵450.00 for 2 years at 12% per annum. GH₵ 191.00 GH₵ 108.00 GH₵ 54.00 GH₵ 27.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q30": {
+      "question": " If 15% of the length of a rope is 75 cm, find half of the length of the rope. 500 cm 250 cm 150 cm 100 cm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q31": {
+      "question": " In an office, of the telephone bill is paid by Tom, by Azuma and the remaining by Tina. What fraction is paid by Tina?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q32": {
+      "question": " Which of the following best describes the construction? Constructing a perpendicular at P Constructing the bisector of line PQ Constructing an angle of 30o at P Constructing an angle of 45o at P",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q33": {
+      "question": " Express 0.055 as a common fraction",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q34": {
+      "question": " The table below shows the distribution of workers in some trades. Trade Shoe making Mining Road transport Agriculture Manufacturing goods Number of workers 300,000 25,000 160,000 225,000 165,000 Use this information to answer the question below. Which trade employed the most number of workers? Agriculture Manufacturing Shoe making Road transport",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q35": {
+      "question": " The table below shows the distribution of workers in some trades. Trade Shoe making Mining Road transport Agriculture Manufacturing goods Number of workers 300,000 25,000 160,000 225,000 165,000 Use this information to answer the question below. How many people are employed under all the trade? 325,000 485,000 650,000 875,000",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q36": {
+      "question": " Aba bought a carton of fish at GHC 80.00 and sold it at a profit of GHC 13.60. Find the selling price. GH₵ 66.40 GH₵ 93.60 GH₵ 103.60 GH₵ 144.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q37": {
+      "question": " If the two figures ABCD and PQRS are similar, find the value of b. 60 cm 40 cm 33 cm 30 cm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q38": {
+      "question": " A man shared an amount of money between his two children, Esi and Ato in the ratio 2:3 respectively. If Ato received GH₵ 45.00, what was the total amount shared? GH₵ 18.00 GH₵ 27.50 GH₵ 75.00 GH₵ 112.50",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q39": {
+      "question": " How many edges has a cuboid?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q40": {
+      "question": " Two sets whose intersection is an empty set are disjoint sets. equivalent sets. finite sets. empty sets.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    }
+  }
+}

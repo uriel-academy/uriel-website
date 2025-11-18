@@ -1,0 +1,426 @@
+{
+  "year": "1996",
+  "subject": "mathematics",
+  "multiple_choice": {
+    "q1": {
+      "question": "75 litres",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q2": {
+      "question": "0",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q3": {
+      "question": "5",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q4": {
+      "question": "0",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q5": {
+      "question": "2",
+      "possibleAnswers": {
+        "A": "",
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q6": {
+      "question": "60",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q7": {
+      "question": " Kojo, Ebo and Ama share ₵14,000.00 among themselves. Kojo had twice as much as Ebo and Ebo also had twice as much as Ama. How much did Ebo get? ₵8,000.00 ₵6,000.00 ₵4,000.00 ₵3,000.00 ₵2,000.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q8": {
+      "question": "125 x 10",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q9": {
+      "question": " Simplify",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q10": {
+      "question": "0",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q11": {
+      "question": " Use the following information to answer the question below. The relation between the Celsius (C) and Fahrenheit (F) scale of temperature is given by:C = (F - 32). If C is 40, F will be",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q104": {
+      "question": "0",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q78": {
+      "question": "4",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q72": {
+      "question": "17 litres",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q65": {
+      "question": "6",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q40": {
+      "question": " In the diagram above, PQSR is a trapezium. PQ is parallel to RS. ∠PQR = ∠QRS. What type of triangle is triangle RQS? Isosceles Scalene Equilateral Right–angled Obtuse-angled",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q12": {
+      "question": " Use the following information to answer the question below. The relation between the Celsius (C) and Fahrenheit (F) scale of temperature is given by:C = (F - 32). If C is –40, find the value of F –104.0 –78.4 –72.0 –65.6 –40.0",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q13": {
+      "question": " Use the information below to answer the question below. The ages in years of 9 children at a birthday party are 2, 3, 3, 3, 4, 5, 5, 5, 6. What is the mean age?",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q14": {
+      "question": " Use the information below to answer the question below. The ages in years of 9 children at a birthday party are 2, 3, 3, 3, 4, 5, 5, 5, 6. What is the median age?",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q15": {
+      "question": " Use the information below to answer the question below. The ages in years of 9 children at a birthday party are 2, 3, 3, 3, 4, 5, 5, 5, 6. If a child is picked at random, what is the probability that he is 5 years old?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q16": {
+      "question": " P(2, 5) and Q(-2, 3) are points in the Cartesian plane, find the vector PQ",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q17": {
+      "question": "5 litres",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q18": {
+      "question": " In the above diagram, |RS| = |RT|. Find a 146°",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q19": {
+      "question": " If a2 – b2 = (a + b)(a – b), evaluate 9.322 – 0.682",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q87": {
+      "question": "32",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q86": {
+      "question": "4",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q74": {
+      "question": "65",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q20": {
+      "question": " Simplify",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q21": {
+      "question": " The sum of the ages of Kwaku and Kojo is 30 years. Kwaku is 4 years older than Kojo. How old is Kojo?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q22": {
+      "question": " What type of triangle is ∆PQR? Equilateral Isosceles Scalene Right-angled Obtuse-angled",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q23": {
+      "question": " Use the equation y = (x + 2)(x - 2) to answer the question below If x = -1, find y.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q24": {
+      "question": " Use the equation y = (x + 2)(x - 2) to answer the question below Find the set of values of x for which y is zero. {0,2} {0,-2} {-2,2}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q25": {
+      "question": " Use the information below to answer the question below In the diagram above, the cylinder has diameter 4 cm and length 14 cm. [Take π = Find the circumference of the base. 44 cm 176 cm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q26": {
+      "question": " Use the information below to answer the question below In the diagram above, the cylinder has diameter 4 cm and length 14 cm. [Take π = The area of the base is 176 cm2 44 cm2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q27": {
+      "question": " Use the information below to answer the question below In the diagram above, the cylinder has diameter 4 cm and length 14 cm. [Take π = What is the volume of the cylinder? 176 cm3 44 cm3",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q28": {
+      "question": " A woman bought 210 oranges for ₵650.00. She sold all of them at 3 for ₵20.00. How much profit did she make? ₵350.00 ₵450.00 ₵550.00 ₵650.00 ₵750.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q29": {
+      "question": " The ratio of boys to girls in a school is 9 : 11. If there are 400 pupils in the school, how many boys are there?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q30": {
+      "question": " Express the product of 162.5 x 0.5 in standard form.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q81": {
+      "question": "25 x 10",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q55": {
+      "question": "8125 x 10-2",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q31": {
+      "question": " What is 16% of ₵500,000.00? ₵8,000 ₵80,000 ₵420,000 ₵492,000",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q32": {
+      "question": " Simplify",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q58": {
+      "question": "24 x 14.3",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q61": {
+      "question": "70",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q62": {
+      "question": "66",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q63": {
+      "question": "60",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q33": {
+      "question": "33 kmh-1 25 kmh-1 20 kmh-1",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q34": {
+      "question": " Use the graph below to answer the question below. The travel graph describes the journey of a cyclist from Town X to Town Y. What was the average speed for the return journey from town Y to town X 100 kmh-1 50 kmh-1",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q35": {
+      "question": " Use the graph below to answer the question below. The travel graph describes the journey of a cyclist from Town X to Town Y. State the period within which he travelled to town Y after his first rest? 1:00 – 2:00 pm 1:00 – 4:00 pm 1:15 – 1:30 pm 1:30 – 2:00 pm 2:00 – 4:00 pm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q36": {
+      "question": " Use the graph below to answer the question below. The travel graph describes the journey of a cyclist from Town X to Town Y. How many minutes did the cyclist spend at town Y? 15 minutes 20 minutes 30 minutes 45 minutes 60 minutes",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q37": {
+      "question": " 200 bottles of equal capacity hold 350 litres of water. How much water does each bottle hold? 1750 litres 175 litres",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q38": {
+      "question": " Find the solution set of 2x + 4 > -6 {x = -5} {x < 5} {x > 5} {x < -5} {x > -5}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q39": {
+      "question": " A rectangular field 50 metres wide and x metres long requires 260 metres of fencing. Which of the following statements is true? x + 100 = 260 2x + 50 = 260 4x + 200 = 260 2x + 100 = 260 4x + 100 = 260",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    }
+  }
+}

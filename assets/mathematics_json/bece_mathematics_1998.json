@@ -1,0 +1,392 @@
+{
+  "year": "1998",
+  "subject": "mathematics",
+  "multiple_choice": {
+    "q1": {
+      "question": "8 m",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q2": {
+      "question": "0",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q3": {
+      "question": "0",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q4": {
+      "question": "5",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q5": {
+      "question": " Write 1101101two in base ten",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q6": {
+      "question": "0 m",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q7": {
+      "question": " If n2 + 1 = 50, find n",
+      "possibleAnswers": {
+        "A": "",
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q24": {
+      "question": " A graph of a straight line AB is shown below. Use it to answer the question below Find the gradient of the line AB",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q8": {
+      "question": " Evaluate",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q14": {
+      "question": " On a map, two towns P and Q are 15.5 cm apart. The scale of the map is 1 cm: 4 km. Calculate the actual distance between P and Q.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q9": {
+      "question": " In the relation , if R1 = 1 and R2 = 3,find R",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q16": {
+      "question": " Mansah obtained 150 marks out of 240 marks in an English test. What was her percentage score?",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q17": {
+      "question": " The marks obtained by six boys in a test are: 14, 20, 25, 15, 28 and 16. Find the mean mark.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q18": {
+      "question": " Which of the following is equivalent to 22 × 62 2 × 34 22 × 32 22 × 34 24 × 3 24 × 32",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q10": {
+      "question": "5",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q11": {
+      "question": " The total numbers of goals scored each month by a football team are:3, 4, 8, 2, 4, 6, 4, 8, 7 and 6.What is the mode?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q12": {
+      "question": " A trader sold 90 oranges at 3 for ₵50.00. How much did she get from selling all the oranges? ₵1,500.00 ₵4,500.00 ₵6,000.00 ₵15,000.00 ₵45,000.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q13": {
+      "question": " A man bought a car for ₵5.5 million and sold it for ₵6.5 million. Find the percentage gain.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q15": {
+      "question": " Expand the expression 2(3a + 2b) 6a + 2b 5a + 4b 6a + 4b 10ab 12ab",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q84": {
+      "question": "44%",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q33": {
+      "question": " How many lines of symmetry has a rhombus?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q37": {
+      "question": " In the diagram above, rectangle AEFG is an enlargement of the rectangle ABCD. If |AB| = 5 cm and |AE| = 15 cm. What is the scale factor of the enlargement?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q41": {
+      "question": "67%",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q62": {
+      "question": "5%",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q79": {
+      "question": "1%",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q19": {
+      "question": " Kwaku had 300 mangoes. He sold 240 of them. What is the percentage of the mangoes left?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q22": {
+      "question": " What is the image of 3 in the mapping x → 3x + 7?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q23": {
+      "question": " How many faces has a closed cylindrical object?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q26": {
+      "question": " A man deposited an amount of ₵50,000.00 at a bank for 2 years at a rate of 20%. Find the simple interest. ₵1,000.00 ₵2,000.00 ₵10,000.00 ₵20,000.00 ₵200,000.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q28": {
+      "question": " Calculate the bearing of town P from town K in the diagram below. 005° 085° 095° 265° 275°",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q20": {
+      "question": " A bag contains 5 black and 6 white balls. What is the probability of picking a white ball?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q21": {
+      "question": " Solve for h in the equation 15 – 2h = 6 –10.5 –9.0 –4.5",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q25": {
+      "question": " A graph of a straight line AB is shown below. Use it to answer the question below Find the coordinates of the point at which the line cuts the y-axis. (1, 0) (0, 1) (-1, 0) (0, -1) (0, 0)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q27": {
+      "question": " Kofi received ₵800.00 commission on the sales he made on a particular day. This commission is 20% of sales he made. Calculate his total sales for the day. ₵1,200.00 ₵2,400.00 ₵3,200.00 ₵4,000.00 ₵4,800.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q29": {
+      "question": " In the diagram below, PQR is an isosceles triangle. |PQ| = |PR|, ∠QPR = 40° and QRS is a straight line. Find angle PRS. 100° 110° 140°",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q30": {
+      "question": " Factorize completely the expression 2xy – 8x + 5y - 20. (2x + 5)(y – 4) (2x – 5)(y + 4) (2x – 5)(y – 4) (2x + 5)(y + 4) (x + 5)(y – 4)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q31": {
+      "question": " Ama is facing east. Through how many degrees should she turn clockwise to face north? 135° 180° 225° 270°",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q32": {
+      "question": " In the triangle RST, ∠RST is 90°, |RS| = 4 cm and |ST| = 3 cm. What is the length of RT? 2 cm 3 cm 4 cm 5 cm 7 cm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q34": {
+      "question": " Given that a = and b = Find b - a.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q35": {
+      "question": " If u = and v = , find 2u + v.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q36": {
+      "question": " The volume of water in a cuboid is 9 m3. The length of the cuboid is 3 m and the breadth is 2 m. Calculate the depth of water in the cuboid.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q66": {
+      "question": "15 m",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q67": {
+      "question": "18 m",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q38": {
+      "question": " In the diagram, O is the centre of the circle and r is its radius. Calculate the area of the shaded region.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q39": {
+      "question": " Which of the following best describes the statement: \"The locus of points 6 cm from a fixed point O?\" A parallel line 6 cm from O A vertical line 6 cm from point O A horizontal line 6 cm from point O An equilateral triangle of side 6 cm A circle with centre O and radius 6 cm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q40": {
+      "question": " OPQR is a trapezium whose height is 20 cm. What is the area? 460 cm2 600 cm2 920 cm2 960 cm2 1000 cm2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    }
+  }
+}

@@ -1,0 +1,389 @@
+{
+  "year": "2018",
+  "subject": "mathematics",
+  "multiple_choice": {
+    "q1": {
+      "question": " Which of the following is arranged in ascending order? -25, -64, 4, 17 -64, -25, 4, 17 -64, -25, 17, 4 17, 4, -25, -64",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q2": {
+      "question": " If P = {x:x is an even number greater than two and less or equal to twelve}, list the members of P {2, 4, 2, 8, 10, 12} {3,4,6,8,10,12} {2, 4, 6, 8, 10} {4, 6, 8, 10, 12}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q3": {
+      "question": "0 cm",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q4": {
+      "question": " Find the H.C.F. of 18, 36 and 60. 22 x 32 x 5 22 x 32 2 x 3 x 5 2 x 3",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q5": {
+      "question": " Write two hundred and two million, two thousand, two hundred and two in figures. 202,002,202 202,020,202 202,022,202 202,200,202",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q6": {
+      "question": " Find the least number that can be added to 207 to make the sum divisible by 17.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q7": {
+      "question": " If P = {factors of 36} and Q = {multiples of 4 less than 40}, find the number of subsets in P∩Q",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q8": {
+      "question": "0 cm",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q9": {
+      "question": "0 cm",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q10": {
+      "question": " Arrange in ascending order.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q11": {
+      "question": " Find the simple interest on GH₵ 600.00 saved for 2 years 8 months at 5% per anum. GH₵ 64.00 GH₵ 80.00 GH₵ 84.00 GH₵ 92.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q12": {
+      "question": " The number of girls in a mixed school is 420. If the ratio of boys to girls in the school is 3:2, how many students are in the school? 1050 1470 1630 1680",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q13": {
+      "question": " Mary had a chance to select a number from 1 to 20 randomly. What is the probability that the number is divisible by 3?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q14": {
+      "question": " Ama bought a pair of sandals for GH₵ 20.00 and solid it at GH₵ 24.00. Find the percentage profit. 17 % 20 % 44 %",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q15": {
+      "question": " 8 men can do a piece of work in 12 days. How long will 6 men take to do the same work if they work at the same rate? 14 days 16 days 18 days 20 days",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q16": {
+      "question": " In the diagram, QP is parallel to ST, angle QPR = 68o and angle SRT = 40o. Use the information to answer the question below: Find the value of angle PQR. 108o",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q17": {
+      "question": " In the diagram, QP is parallel to ST, angle QPR = 68o and angle SRT = 40o. Use the information to answer the question below: Find the value of angle TSR. 112o",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q18": {
+      "question": " A train is travelling at a speed of 60 km/h. What distance will it cover from 10.45 am to 12.15 pm? 75 km 87 km 90 km 150 km",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q19": {
+      "question": "2 cm",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q20": {
+      "question": " Find the slope of the line 3x - 6y = 33.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q21": {
+      "question": " If y = c + bx2, find y when c = , b = and x = 2.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q22": {
+      "question": " The volume of a cylinder is 20 π cm3. If the height of the cylinder is 5 cm, find the base radius. 1 cm 2 cm 3 cm 4 cm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q23": {
+      "question": " Not drawn to scale In the diagram, PQR is a right-angled triangle with |PR| = 15 cm and |QR| = 12 cm. Find the length PQ.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q24": {
+      "question": " How many edges has a triangular prism?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q25": {
+      "question": " Make m the subject of the relation: (m + n)h m = 3q - hn m = 3q + hn",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q26": {
+      "question": " Simplify 162 x 82",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q27": {
+      "question": " simplify: 4a - 9b -2(2a - 3b). 8a + 3b 8a - 3b -15b",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q28": {
+      "question": " If u = and v = , evaluate 6v + 2u.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q29": {
+      "question": " Find the image of the point (2,5) under the transformation 2 - y (2,-3) (2,2) (2,3) (2,7)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q30": {
+      "question": " Find the image of Q(-4,5) when rotated anticlockwise through 90o about the origin. Q1(-5,4) Q1(-5,-4) Q1(4,-5) Q1(4,5)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q31": {
+      "question": " The following data show the marks of students in a test: 10,4,1,4,3,3,2,1,1,7,8. Use the information to answer the question below. If the pass mark is 4, find the number of students who scored more than the pass mark.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q32": {
+      "question": " The following data show the marks of students in a test: 10,4,1,4,3,3,2,1,1,7,8. Use the information to answer the question below. Find the mean mark",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q33": {
+      "question": " How many lines of symmetry has a rhombus?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q34": {
+      "question": " In an enlargement length AB = 3 cm and the length of its image A1B1 = 15 cm. Calculate the scale factor.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q35": {
+      "question": " Find the rule of the mapping: y → x - 2 y → x2 - 2 y → 2x - 2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q36": {
+      "question": " Solve the inequality: (3x - 1) + 1 ≤ 7 + 2x. x ≥ -14 x ≤ -14 x ≥ -13 x ≤ -13",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q37": {
+      "question": " If 4 - x = 3(4x + 5), find the value of x.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q38": {
+      "question": " In a class, there are 12 girls and 48 boys. Find the percentage of boys in the class.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q39": {
+      "question": " The bearing of P from Q is 060o. Find the bearing of Q from P 120o 150o 210o 240o",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q40": {
+      "question": " Which of the following statements best describes the construction below? Construction of line AB from P. Construction of perpendicular from P to meet line AB. Construction of an arc of a circle with center P. Construction of the bisector of line AB.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    }
+  }
+}

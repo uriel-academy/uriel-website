@@ -1,0 +1,416 @@
+{
+  "year": "2011",
+  "subject": "mathematics",
+  "multiple_choice": {
+    "q1": {
+      "question": " Which of the following is the set of prime factors of 12? {2, 3} {1, 2, 3} {1, 2, 4, 6} {2, 3, 4, 6}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q2": {
+      "question": " Expand 3a(a – 4b) 3a – 12ab 3a2 – 12ab 3a2 – 12b 3a2 – 12a",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q3": {
+      "question": "56 x 104",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q4": {
+      "question": "60",
+      "possibleAnswers": {
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q5": {
+      "question": " The ratio of mangoes to oranges in a basket is 3:2. If there are 36 mangoes, how many oranges are in the basket?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q6": {
+      "question": " Express 0.125 as a fraction in its lowest form.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q7": {
+      "question": " Convert 222five to a number in base ten.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q8": {
+      "question": " If A = {18, 19, 20} and B = {15, 16, 17}, find A∩B. {15, 16, 17, 18, 19, 20} {15, 16, 18, 19} {18, 19}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q9": {
+      "question": " Simplify 39 ÷ 33",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q10": {
+      "question": " An article which costs GH¢ 25.00 was sold for GH¢ 35.00. Find the percentage profit made.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q11": {
+      "question": " Factorize completely b2 + fb – mb – fm. (b – f)(b – m) (b + f)(b – m) (b + f)(m – b) (b + f)(m + b)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q12": {
+      "question": " Simplify: -13 – (-3) + (-10).",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q13": {
+      "question": " Find the HCF of 33 × 52 and 32 × 54. 32 × 52 33 × 52 32 × 54 35× 56",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q14": {
+      "question": " State the rule for the mapping x → 15x x → 15 + x x → 10 + 5x",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q15": {
+      "question": " Solve the inequality x - - x.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q16": {
+      "question": " Find the area of a square, if its perimeter is 28 cm. 784 cm2 196 cm2 49 cm2 14 cm2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q17": {
+      "question": " Simplify:",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q18": {
+      "question": " Make n the subject of the relation θ = 180 - θ + 180 θ - 180 180 − θ 180 + θ",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q19": {
+      "question": " If R = , find R when d = 8 and h = 6.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q20": {
+      "question": " Eight copies of a book cost GH₵ 16.00. Find the cost of 5 copies. GH₵ 2.00 GH₵ 3.20 GH₵ 5.00 GH₵ 10.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q21": {
+      "question": " Solve the equation (2 + y) = (y -1).",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q22": {
+      "question": " The gradient of the straight line that passes through points A(3,2) and B(4,8) is",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q23": {
+      "question": " A car is travelling at 60 km per hour. How far does it travel in 2 hours? 30 km 60 km 120 km 150 km",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q24": {
+      "question": " In the following diagram RS and WV are parallel lines. The value of the angle marked α is",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q25": {
+      "question": " Given that a = and b = 2n -1 If a = b, find the value of n.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q26": {
+      "question": " Find the volume of a cube of side 5 cm. 10 cm3 15 cm3 25 cm3 125 cm3",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q27": {
+      "question": " In the diagram below, AB and CD are two intersecting straight lines. Find the value of the angle marked y. 130o 115o",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q28": {
+      "question": " Kwame and Ama shared an amount of money in the ratio 5:4 respectively. If Kwame had GH₵ 9.00, how much did they share? GH₵ 16.20 GH₵ 36.00 GH₵ 45.00 GH₵ 81.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q29": {
+      "question": " The area of the trapezium above is 120 cm2 180 cm2 256 cm2 360 cm2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q30": {
+      "question": " If r = and s = , calculate 2r - 3s.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q31": {
+      "question": " There are 10 red and 15 green balls in a bag. Find the probability of selecting at random a red ball from the bag.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q32": {
+      "question": " The table below gives the distribution of ages of students in a class. Use it to answer the question below. Ages (years) Number of students How many students are in the class?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q33": {
+      "question": " The table below gives the distribution of ages of students in a class. Use it to answer the question below. Ages (years) Number of students What is the modal age?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q34": {
+      "question": " The table below gives the distribution of ages of students in a class. Use it to answer the question below. Ages (years) Number of students If a student is selected at random from the class, what is the probability that the student is 15 years old?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q35": {
+      "question": " A length of a ribbon is 16.8 m long. How many ribbons 0.36 m long can be cut from it?",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q36": {
+      "question": " A refrigerator was sold for GH₵ 200.00 at a loss of 10%. Find the cost price. GH₵ 180.00 GH₵ 190.48 GH₵ 220.00 GH₵ 222.22",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q37": {
+      "question": " The diagram above is the net of a cone. cuboid. rectangular prism. pyramid",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q38": {
+      "question": " What is the value of 7 in the number 832713? Seven thousand Seven hundred Seventy Seven",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q39": {
+      "question": " Write 3560 in standard form.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q40": {
+      "question": " Correct 0.02751 to three decimal places.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q47": {
+      "question": "027",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q48": {
+      "question": "028",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q49": {
+      "question": "03",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q50": {
+      "question": "28",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    }
+  }
+}

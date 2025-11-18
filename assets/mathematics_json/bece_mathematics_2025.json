@@ -1,0 +1,399 @@
+{
+  "year": "2025",
+  "subject": "mathematics",
+  "multiple_choice": {
+    "q1": {
+      "question": " What is the missing number in the sequence: -5, -2, 1, ..., 7?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q2": {
+      "question": " The population of a town is 56782. What is this number to three significant figures? 56700 56800",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q3": {
+      "question": " When 0.24 is expresed in the lowest form as , the denominator is",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q4": {
+      "question": " A farmer feeds 20 goats with 500 kg of cassava. How many goats can be fed with 200 kg of cassava?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q5": {
+      "question": " A man spends GH₵ 560.0 out of his weekly wage of GH₵ 700.00 and saves the rest. What percentage did he save?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q6": {
+      "question": " Two interior angles of a triangle are (3x - 10)° and (4x + 20)°. Find an expression for the third angle. (170 - 7x)° (150 - 5x)° (120 - 7x)° (100 - 5x)°",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q7": {
+      "question": " Ama has 4 one cedi notes and orders an ice cream for GH₵ 1.75 and two toffees at 50 GP each. How much does she have left? GH₵ 1.25 GH₵ 1.75 GH₵ 2.25 GH₵ 2.75",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q8": {
+      "question": "0",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q9": {
+      "question": " Find the rule for the mapping: t → 10t - 1 t → 8t + 1 t → 11t - 2 t → 7t + 2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q10": {
+      "question": "0 minutes",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q12": {
+      "question": " Solve 2x = 8 x 20. x = 3 x = 2 x = -2 x = -3",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q11": {
+      "question": " A boy walked round a circular pond once. If the radius of the pond is 28 m, find the distance covered. [Take π = 44 m 88 m 176 m 252 m",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q13": {
+      "question": " A survey shows that 28% of all the men in a village are vegetarian. What is the probability that a man selected at random from the village is a vegetarian?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q14": {
+      "question": " A trader received a commission of 5% on goods sold at GH₵ 25,000.00. Find the commission. GH₵ 1,250.00 GH₵ 1,200.00 GH₵ 1,100.00 GH₵ 1,000.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q15": {
+      "question": " Which of the following inequalities is represented on the number line? x < 2 x ≤ 3 x > 3 x ≥ 2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q16": {
+      "question": " It costs a carpenter GH₵ 25.00 to make a chair. How much should it be sold to make a profit of 40%? GH₵ 15.00 GH₵ 35.00 GH₵ 40.00 GH₵ 50.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q17": {
+      "question": " The area of a rectangular card is 15 cm2. If each side of the card is enlarged by a scale factor 3, find the area of the enlarged card. 45 cm2 75 cm2 90 cm2 135 cm2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q18": {
+      "question": " Ama is three times as old as Kofi. The sum of their ages is 40. How old is Ama? 10 years 30 years 37 years 43 years",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q19": {
+      "question": " Expand and simplify: 2(3a + 1) - 3(4a - 3). 11 - 5a 11 - 6a 11 + 5a 11 + 6a",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q20": {
+      "question": " Given that 0.03 x y = 2.4, find the value of y.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q25": {
+      "question": " If 2y = 5 - 3x, find x when y = 1.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q26": {
+      "question": " Esi made sales of 15 twenty cedi notes, 14 ten cedi notes and 15 two cedi notes. Find her total sales. GH₵ 305.00 GH₵ 440.00 GH₵ 470.00 GH₵ 740.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q80": {
+      "question": "0",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q21": {
+      "question": " Charles and Helen started a business with an amount of GH₵ 7,000.00. If their contributions were in the ratio 4:3 respectively, find Helen's contribution. GH₵ 2,500.00 GH₵ 3,000.00 GH₵ 4,000.00 GH₵ 5,000.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q22": {
+      "question": " A box contains 10 green and 8 white balls of the same size. If a ball is selected at random from the box, what is the probability that it is green?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q23": {
+      "question": " Solve: 4x - 2(x + 5) = -10. x = -10 x = 0 x = 2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q24": {
+      "question": " A trader sold half of a piece of cloth and used two-fifths of the remaining to sew a dress. What fraction of the cloth was left?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q27": {
+      "question": " A point (-2, 3) is reflected in the x-axis. Find the image of the point. (-3, -2) (-3, 2) (-2, -3) (-2, 3)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q28": {
+      "question": " Solve: 3(x - 5) > 15 - 4(8 - x). x > -32 x > -2 x > 2 x > 32",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q29": {
+      "question": " Express 36 as a product of primes. 2 x 3 22 x 32 22 x 33 23 x 32",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q30": {
+      "question": " The points M(1, 3) and N(4, 5) are in the number plane. Find the vector MN",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q31": {
+      "question": " Anowa scored an average of 53 in Science and Mathematics. If she scored 50 and 60 in English Language and Social Studies respectively, find her mean score in all the four subjects.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q32": {
+      "question": " Given that P = {4, 8, 12, 16, 20} and Q = {2, 4, 6, 8, 10}, find the product of the members of (P ∩ Q).",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q33": {
+      "question": " A rectangular container with dimensions 5 m by 3 m by 4 m is two-third full of water. Find the volume occupied by the water in the container. 50 m3 40 m3 30 m3 20 m3",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q34": {
+      "question": " Find the gradient of the line which passes through the points (2, 3) and (-4, 5).",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q35": {
+      "question": " Mr Adu bought 400 bags of maize for his farm animals. If he used 120 bags to feed the animals, find the percentage of the maize left.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q36": {
+      "question": " Find the largest value of these numbers: -1, 0, -6, -3.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q37": {
+      "question": " How long will the simple interest on GH₵ 550.00 AT 12% per annum be GH₵ 132.00? 1 year 2 years 4 years 12 years",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q38": {
+      "question": " Factorize: 5ay - by + 15a - 3b. (y + 3)(5a - b) (y + 5)(3a - b) (y - 3)(5a + b) (y - 5)(3a + b)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q39": {
+      "question": " Describe the set of M = {2, 3, 5, 7, 11, 13, 17, 19} in words. M = {odd numbers less than 20} M = {factors of 19} M = {prime numbers less than 20} M = {whole numbers less than 20}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q40": {
+      "question": " Multiply (8s - 7) by (8s + 7). 64s2 + 49 64s2 - 49 16s2 + 42 16s2 + 42",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    }
+  }
+}

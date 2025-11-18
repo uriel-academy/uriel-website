@@ -1,0 +1,410 @@
+{
+  "year": "2016",
+  "subject": "mathematics",
+  "multiple_choice": {
+    "q1": {
+      "question": " Which of the following is a finite set? {2,4,6,8,...} {1,2,3,4,...} {...,2,3,5,7} {3,6,9,12}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q2": {
+      "question": "2281",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q3": {
+      "question": "0",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q4": {
+      "question": "5",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q5": {
+      "question": " Find the Least Common Multiple (LCM) of the numbers 5,10 and 12. 2 x 3 x 5 2 x 32 x 5 22 x 3 x 5 22 x 32 x 52",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q6": {
+      "question": " Correct 48,947.2547 to the nearest hundred. 48,900 48,950 49,000",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q7": {
+      "question": " Simplify: 16 + 5.6 + 0.681",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q22": {
+      "question": " When a number is doubled and the result is decreased by 9, the answer is 19. Find the number.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q222": {
+      "question": "81",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q2228": {
+      "question": "1",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q8": {
+      "question": " Evaluate",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q9": {
+      "question": " Arrange the following integers from the least to the highest -4,9,-10,-7,and 2. -10,-7,-4,2,9 -10,9,-7,-4,2 -4,-7,-10,2,9 2,-4,-7,9,-10",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q10": {
+      "question": " Simplify: (46 x 102) + (102 x 54) 1,020 10,200 102,000 1,020,000",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q11": {
+      "question": "0",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q5178": {
+      "question": "35",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q12": {
+      "question": " Find the simple interest on GH₵120,000.00 for 5 months at 12% per annum. GH₵6,000.00 GH₵7,200.00 GH₵50,000.00 GH₵72,000.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q13": {
+      "question": " Fifteen boys took 12 hours to weed a plot of land. If nine boys work at the same rate, how long will it take them to weed the plot of land? 6 hours 20 hours",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q14": {
+      "question": " A car costs GH₵12,500.00. A discount of 9% is given for cash payment. Find the cost of the car when payment is made by cash. GH₵10,250.00 GH₵11,250.00 GH₵11,375.00 GH₵13,625.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q15": {
+      "question": " Simplify:52 x 22 x 52 x 2 22 x 52 22 x 54 23 x 52 23 x 54",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q16": {
+      "question": " The table shows the marks of some students in a test. Use the information to answer the question below. Marks Number of students What is the modal mark?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q17": {
+      "question": " The table shows the marks of some students in a test. Use the information to answer the question below. Marks Number of students How many students failed the test, if the pass mark was 4?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q18": {
+      "question": " What is the probability of obtaining 4, when a fair die is tossed once?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q19": {
+      "question": " Make P the subject of the relation, R = (P+Q) P = Q - 2R P = 2R - Q P = 2R + Q P = 2Q + R",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q20": {
+      "question": " Given that t = p2 + 1, find p when t = 10.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q81": {
+      "question": "0",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q21": {
+      "question": " Simplify: 4(x + 2)-3(x +1). x + 5 x + 11 7x + 5 7x + 11",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q23": {
+      "question": " Solve the inequality 2x + 10 ≥ x - 5. x ≥ 10 x ≤ 10 x ≤ 40 x ≥ 40",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q24": {
+      "question": " Find the image of 5, under the mapping x → 4x - 7.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q25": {
+      "question": " An angle which is greater than 180o but less than 360o is a right angle. an acute angle. an obtuse angle. a reflex angle.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q26": {
+      "question": " How many lines of symmetry has a rectangle?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q27": {
+      "question": " The perimeter of an isosceles triangle is 45 cm. Find the length of the third side, if each of the equal sizes is 14 cm long. 11 cm 14 cm 17 cm 31 cm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q28": {
+      "question": " Find the area of a circle whose diameter is 7 cm. [Take π = 11 cm2 54 cm2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q29": {
+      "question": " The mean of three number is 12. If two of the numbers are 14 and 16, find the third number.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q30": {
+      "question": " The sum of the interior angles of a regular polygon is 540o. Find the number of sides of the polygon.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q31": {
+      "question": " The figure QPR is an equilateral triangle. If angle PRS = (2x - 10)o, find the value of x.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q32": {
+      "question": " The diagonal of a rectangle is 10 cm long. If the length of the rectangle is 8cm, find its breadth. 2 cm 3 cm 5 cm 6 cm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q33": {
+      "question": " In an enlargement, XY → X1Y1. If |XY| = 24 cm and |X1Y1| = 8 cm, calculate the scale factor of the enlargement.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q34": {
+      "question": " Study the triangle of odd numbers and use it to answer the question below. Evaluate: 13 + b + c + 19.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q35": {
+      "question": " Study the triangle of odd numbers and use it to answer the question below. Evaluate: a + b + c",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q36": {
+      "question": " Simplify",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q37": {
+      "question": " The bearing of X from Y is 196o. What is the bearing of Y from X? 016o 074o 106o 244o",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q38": {
+      "question": " If a = -4 and b = 3, evaluate 3a + 2b",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q39": {
+      "question": " The point P(-3,7) is reflected in the x-axis. Find its image. (-3,-7) (-3,7) (-7,3) (3,-7)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q40": {
+      "question": " The instrument used to measure the angle between two lines that meet at a point is known as a pair of compasses. set-square. protractor. pair of dividers.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    }
+  }
+}

@@ -1,0 +1,378 @@
+{
+  "year": "2015",
+  "subject": "mathematics",
+  "multiple_choice": {
+    "q1": {
+      "question": " List the members of the set Q = {Prime factors of 30} {2,3,5} {2,6,10} {3,5,15} {3,6,15}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q2": {
+      "question": " Given that set P = {m,n,o,p}, find the number of subsets of P.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q3": {
+      "question": " If M = {Multiples of 4 between 10 and 25} and N = {even numbers between 11 and 23}, find M∪N. {12,16,20} {14,18,22} {12,14,16,18,22} {12,14,16,18,20,22,24}",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q4": {
+      "question": "03",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q5": {
+      "question": " Find the Highest Common Factor of 24, 42 and 72",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q6": {
+      "question": "2513 x 104",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q7": {
+      "question": " If p x q x r = 1197, and p = 19, q = 3, find r.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q8": {
+      "question": " How many integers are within the interval -5 < x < 7?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q9": {
+      "question": " Divide 1.612 by 0.4.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q12": {
+      "question": " If 5 boys took 14 days to cultivate a piece of land, how long will it take 7 boys working at the same rate to cultivate the land? 14 days 12 days 10 days 8 days",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q13": {
+      "question": " A man invested GH₵800.00 in a bank at a simple interest rate of 5% per annum. Find his total amount in the bank at the end of one year. GH₵840.00 GH₵860.00 GH₵900.00 GH₵960.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q10": {
+      "question": " Arrange the following fractions in ascending order:",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q11": {
+      "question": " Abena spent of her money on sweets, on provisions and the rest on gari. What fraction of her money did she spend on gari?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q14": {
+      "question": "5",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q15": {
+      "question": "5",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q16": {
+      "question": " Express 625.13 in standard form.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q17": {
+      "question": " Find the median of the numbers 17,12,15,16,8,18,13 and 14.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q18": {
+      "question": " The ages in years of 10 children at a party are 2,3,3,3,4,4,5,5,5 and 6. If a child is chosen at random, what is the probability that he or she is not less than 5 years old?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q19": {
+      "question": " Expand (2x + y)(2x - y). 2x2 - y2 4x2 - y2 2x2 + 4xy - y2 4x2 + 4xy - y2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q20": {
+      "question": " Find the value of n, if",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q25": {
+      "question": " How many vertices has a cuboid?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q32": {
+      "question": " Kwame is facing west. Through how many degrees should he turn anti-clockwise to face north? 180o 270o 360o",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q33": {
+      "question": " Given that vectors u = and v = , calculate 2v - u.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q34": {
+      "question": " What is the name of the figure above? Cuboid Kite Triangle Pyramid",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q35": {
+      "question": " Use the magic square above to answer the question below Find the value of F.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q21": {
+      "question": " Evaluate (3m)2 - 3m2, when m = 2.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q22": {
+      "question": " A write watch is priced GH₵2,000.00. A shopkeeper allows a discount of 2% on the cost price. Find the discount on 20 of such wrist watches. GH₵500.00 GH₵600.00 GH₵800.00 GH₵1,000.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q23": {
+      "question": " Find the value of m if 4(m + 4) = -8.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q24": {
+      "question": " Find the rule for the following mapping: y → x + 2 y → 2x y → x2 y → 2x + 2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q26": {
+      "question": " The circumference of a circle is 440 m. Find the area of the circle. [Take π = 14,400 m2 15,400 m2 16,400 m2 18,000 m2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q27": {
+      "question": " What name is given to a triangle which has all its sides equal? Isosceles triangle Scalene triangle Equilateral triangle Right-angle triangle",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q28": {
+      "question": " At eight O'clock, which of the following is the angle between the hour and the minute hands of the clock? 150o 120o",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q29": {
+      "question": " A rectangular field 50 m wide and y m long requires 260 m of fencing. Find y 15 m 40 m 80 m 105 m",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q30": {
+      "question": " Which of the following best describes the statement: \"The locus of a point which moves so that its distance from two fixed points are always equal\"? Bisector of angle Perpendicular bisector Circle Two parallel lines",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q31": {
+      "question": " The point K(1,5) is rotated through 90o anti-clockwise about the origin. Find the coordinates of the image of K. (5,-1) (-5,1) (-1,5) (1,-5)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q36": {
+      "question": " Use the magic square above to answer the question below Find the value of E.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q37": {
+      "question": " Use the magic square above to answer the question below Evaluate E + G.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q38": {
+      "question": " The hypotenuse and a side of a right-angled triangle are 13 cm and 5 cm respectively. Find the length of the third side. 8 cm 9 cm 12 cm 17 cm",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q39": {
+      "question": " Find the missing number in the sequence below: 11,16,22,29,-,46,56.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q40": {
+      "question": " A hall which is 20 m long is represented on a diagram as 10 cm long. What is the scale of the diagram? 1:200 1:250 1:400 1:500",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    }
+  }
+}

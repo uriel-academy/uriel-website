@@ -1,0 +1,387 @@
+{
+  "year": "1991",
+  "subject": "mathematics",
+  "multiple_choice": {
+    "q1": {
+      "question": "8 m",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q2": {
+      "question": " If Y = {house, tree} and V = {cat, house, tree} which of the following is true of Y and V? Y = V Y ⊂ V V ⊂ Y V ∈ Y Y ∈ V",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q3": {
+      "question": " The following addition is in base ten. Find the missing addend. 1300 1720 2765 4065 9500",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q4": {
+      "question": "68702 x 103",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q5": {
+      "question": "4",
+      "possibleAnswers": {
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q46": {
+      "question": "8702 x 104",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q10": {
+      "question": "756",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q6": {
+      "question": " Convert 11001two to a decimal numeral.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q7": {
+      "question": "2 m",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q8": {
+      "question": " The product of three numbers is 1197. Two of the numbers are 3 and 19. Find the third number. 1175",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q9": {
+      "question": " Find the GCF (HCF) of 23 × 32 and 23 × 34.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q11": {
+      "question": " Use the diagram below to answer the question below. What is the value of b°? 105° 112° 124°",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q12": {
+      "question": "1 cm 25 cm 121 cm 250 cm 2500 cm",
+      "possibleAnswers": {
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q13": {
+      "question": " Simplify 2ab2 × 3a2b 5a3b3 5a2b2 6a3b3 5a2b2 36ab",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q14": {
+      "question": " In the relation v = u+ at, find v when u = 6, a = 10 and t = 2",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q15": {
+      "question": " The marks obtained by 10 children in a mental drill are: 0, 1, 3, 3, 5, 7, 8, 9, 9, 9. Use this information to answer the question below. What is the modal mark?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q16": {
+      "question": " The marks obtained by 10 children in a mental drill are: 0, 1, 3, 3, 5, 7, 8, 9, 9, 9. Use this information to answer the question below. Find the median mark.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q17": {
+      "question": " The marks obtained by 10 children in a mental drill are: 0, 1, 3, 3, 5, 7, 8, 9, 9, 9. Use this information to answer the question below. Calculate the mean mark.",
+      "possibleAnswers": {
+        "A": "",
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q18": {
+      "question": " The marks obtained by 10 children in a mental drill are: 0, 1, 3, 3, 5, 7, 8, 9, 9, 9. Use this information to answer the question below. What is the probability that a child chosen at random scored 3 marks?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q19": {
+      "question": " A trader received a commission of 12 % on sales made in a month. His commission was ₵35,000.00. Find his total sales for the month. ₵36,250.00 ₵59,750.00 ₵245,000.00 ₵280,000.00 ₵315,000.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q20": {
+      "question": " A map of a large town is drawn to the scale of 1 : 100,000. What is the distance in kilometres (km) represented by a line segment 4 cm along the map?",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q27": {
+      "question": " If r = and s = , calculate 6(r + 2s).",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q28": {
+      "question": " Which of the following would you use to measure an angle? Ruler A pair of compasses A set square A protractor",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q21": {
+      "question": " Adjoa and Ama share ₵600.00 between them in the ratio 3 : 2. Find Adjoa's share. ₵200.00 ₵240.00 ₵300.00 ₵360.00 ₵400.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q22": {
+      "question": " Simplify: a - b a - 3 a - 3b a + 3b a + 3b a - b",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q23": {
+      "question": " If a6 ÷ a4 = 64. Find a",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q24": {
+      "question": " Find one-hundredth of 1.0756",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q107": {
+      "question": "56",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q35": {
+      "question": " In a secondary school class, 23 pupils study Economics, 6 pupils study both Government and Economics. 48 pupils study either Government or Economics or both. Use this information to answer the question below. How many pupils study only Government?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q36": {
+      "question": " In a secondary school class, 23 pupils study Economics, 6 pupils study both Government and Economics. 48 pupils study either Government or Economics or both. Use this information to answer the question below. How many pupils study only Economics?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q37": {
+      "question": " When a certain number is subtracted from 10 and the result is multiplied by 2, the final result is 4. Find the number.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q25": {
+      "question": " What is the rule for this mapping? x→2x - 1 x→2(x - 1) x→2x + 1 x→2(x + 1) x→2x - 1",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q26": {
+      "question": " The circumference of a circular track is 440 m. Find the diameter of this track. [Take π = 70 m 140 m 280 m 690 m 1400 m",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q29": {
+      "question": " Express the ratio of 64 cm to 48 cm in its simplest form. 3 : 4 4 : 3 16 : 12 12 : 16 64 : 48",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q30": {
+      "question": " In the diagram, P→P1, Q→Q1, R→R1, where P1Q1R1 is an enlargement. What is the scale factor of this enlargement?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q31": {
+      "question": " In the diagram, P→P1, Q→Q1, R→R1, where P1Q1R1 is an enlargement. If |PR| = 3.6 m, what is |P1R1|? –7.2 m –1.8 m",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q32": {
+      "question": " Find the tangent of the angle marked y in the diagram below.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q33": {
+      "question": " Kojo paid ₵270,000.00 for a TV set after he had been given a discount of 10%. Find the marked price. ₵300,000.00 ₵297,000.00 ₵280,000.00 ₵260,000.00 ₵243,000.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q34": {
+      "question": " In a secondary school class, 23 pupils study Economics, 6 pupils study both Government and Economics. 48 pupils study either Government or Economics or both. Use this information to answer the question below. What is the total number of pupils who study Government?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q38": {
+      "question": " From the diagram below, calculate the bearing of point X from Y. 035° 045° 135° 145° 225°",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q39": {
+      "question": " If 22% of the length of a rope is 55 cm, find the full length of the rope.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q40": {
+      "question": " Which of these best describes the given construction? Bisecting a line Constructing the bisector of a line segment Constructing the perpendicular to a line Constructing a perpendicular to a given line from a point outside the line Constructing a perpendicular to a given line through a point on the line",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    }
+  }
+}

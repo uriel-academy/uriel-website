@@ -1,0 +1,400 @@
+{
+  "year": "2023",
+  "subject": "mathematics",
+  "multiple_choice": {
+    "q1": {
+      "question": "88, ,1.88,",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q2": {
+      "question": " What is the value of 3x2 + 2x - 7 when x = -3?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q3": {
+      "question": "14 cm2",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q4": {
+      "question": "00 cm2",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q5": {
+      "question": " Given that m = - t, make t the subject. b - 2m 2m - b 2b - m b + 2m",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q6": {
+      "question": "28 cm2",
+      "possibleAnswers": {
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q7": {
+      "question": " If n(E) = 15, n(F) = 20 and n(E∩F) = 6, find n(E∪F).",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q8": {
+      "question": " Tony shared of his plot of land equally among his three sons. What fraction of the plot did each get?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q9": {
+      "question": " Araba and Ama share 20 oranges in such a way that Ama receives 12 oranges. Find the ratio of Araba's share to that of Ama.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q10": {
+      "question": " Solve: 3(x - 2) - + 6 > 0. x < 0 x > 0 x > 3",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q11": {
+      "question": " The stem and leaf plot shows the marks scored by students in a French test. Use the information to answer the question below. Stem Leaf 0    2    5    7    8 2    7    9 3    5    5    5 4    6    6    8 3    5    7 0    6 What is the modal mark?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q12": {
+      "question": "56 cm2",
+      "possibleAnswers": {},
+      "correctAnswer": "A"
+    },
+    "q13": {
+      "question": " The stem and leaf plot shows the marks scored by students in a French test. Use the information to answer the question below. Stem Leaf 0    2    5    7    8 2    7    9 3    5    5    5 4    6    6    8 3    5    7 0    6 Find the median mark.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q14": {
+      "question": " Which of the following is an even prime number?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q15": {
+      "question": " If 2n - 5 = n, find the value of n.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q16": {
+      "question": " Find the simple interest on GH₵ 350.00 for 4 years at 5% per annum. GH₵ 20.00 GH₵ 35.00 GH₵ 70.00 GH₵ 140.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q17": {
+      "question": " A straight line passes through the points P(-5,-3) and Q(-4,-7). Find the gradient of the line PQ.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q18": {
+      "question": " Given that 1 kilometre = mile, what is 240 miles in kilometres? 150 km 190 km 384 km 390 km",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q19": {
+      "question": " John walks for 22 minutes and runs 7 minutes to school. What percentage of the total time does he spend walking?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q20": {
+      "question": " Kobby is 5 years older than his brother. If Kobby is 13 years old, how old is his brother? 7 years 8 years 10 years 18 years",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q21": {
+      "question": " Find the rule for the mapping: y = 2x + 2 y = -2x + 2 y = 4x y = -2x + 6",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q22": {
+      "question": " Arrange the following numbers in ascending order: ,1.88, ,1.88 ,1.88,",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q23": {
+      "question": " Simplify: (x - 1)2 - 1. x2 - 2x x2 + 2x x2 - 2x - 1 x2 - 2x + 1",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q24": {
+      "question": " A bag contains 20 oranges of which 6 are bad. Find the probability of picking a good orange from the bag.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q25": {
+      "question": " In the diagram, AB is parallel to CD, Angle AGE is 80o, angle CFG = 5k and angle CFE = r. Use the information to answer the question below. What is the value of r? 160o",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q26": {
+      "question": " In the diagram, AB is parallel to CD, Angle AGE is 80o, angle CFG = 5k and angle CFE = r. Use the information to answer the question below. Find the value of k 160o",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q27": {
+      "question": " Simplify:",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q28": {
+      "question": " Factorize 2pq + 6p -6q - 18. 2(p - 3)(q - 3) 2(p + 3)(q + 3) 2(p - 3)(q + 3) 2(p + 3)(q - 3)",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q29": {
+      "question": " The diagram is a square of side 2 cm in which is inscribed a circle with center O. Use the information to answer the question below. Find the area of the shaded portion. [Take π =",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q35": {
+      "question": " Find the vector which translate the point (2,6) to (5,4).",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q30": {
+      "question": " The diagram is a square of side 2 cm in which is inscribed a circle with center O. Use the information to answer the question below. Find the area of the circle. [Take π =",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q31": {
+      "question": " A man can take 12 hours to do a piece of work. How long will it take 6 men working at the same rate to do the work? 6 hours 3 hours 2 hours 72 hours",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q32": {
+      "question": " Convert 12.03 metres to centimetres.",
+      "possibleAnswers": {
+        "A": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q46": {
+      "question": "1203 cm",
+      "possibleAnswers": {
+        "B": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q120": {
+      "question": "3 1203 cm 12030 cm",
+      "possibleAnswers": {
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q33": {
+      "question": " A quadrilateral with one pair of opposite sides parallel is called kite. rectangle. square. trapezium.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q34": {
+      "question": " A book was sold for GH₵ 48.00 at a profit of 20%. Find the cost price. GH₵ 38.40 GH₵ 40.00 GH₵ 60.00 GH₵ 57.00",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q36": {
+      "question": " Cement and sand were mixed in the ratio 2:5. How many kilograms of cement was contained in the 35 kg of the mixture? 7 kg 10 kg 14 kg 88 kg",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q37": {
+      "question": " Which of the following is not an integer?",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q53": {
+      "question": "5",
+      "possibleAnswers": {
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q38": {
+      "question": " Simplify:",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q39": {
+      "question": " The height of a cylinder is 5 cm and the radius 7 cm. Find the volume of the cylinder. [Take π = 770 cm3 700 cm3 154 cm3 110 cm3",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    },
+    "q40": {
+      "question": " If q = and r = , find q - r.",
+      "possibleAnswers": {
+        "A": "",
+        "B": "",
+        "C": "",
+        "D": ""
+      },
+      "correctAnswer": "A"
+    }
+  }
+}

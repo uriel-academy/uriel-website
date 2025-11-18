@@ -1,0 +1,133 @@
+{
+  "year": "2024",
+  "subject": "mathematics",
+  "multiple_choice": {
+    "q1": {
+      "question": "If 3x + 5 = 20, what is the value of x?",
+      "possibleAnswers": {
+        "A": "3",
+        "B": "5",
+        "C": "7",
+        "D": "15"
+      },
+      "correctAnswer": "B",
+      "explanation": "3x + 5 = 20\n3x = 20 - 5\n3x = 15\nx = 15 ÷ 3\nx = 5"
+    },
+    "q2": {
+      "question": "Calculate the area of the triangle ABC shown above.",
+      "imageBeforeQuestion": "assets/mathematics/math_2024_q2_before.png",
+      "possibleAnswers": {
+        "A": "12 cm²",
+        "B": "24 cm²",
+        "C": "36 cm²",
+        "D": "48 cm²"
+      },
+      "correctAnswer": "B",
+      "explanation": "Area of triangle = ½ × base × height\nFrom the diagram: base = 6 cm, height = 8 cm\nArea = ½ × 6 × 8 = ½ × 48 = 24 cm²"
+    },
+    "q3": {
+      "question": "Study the graph shown and determine the y-intercept of the line.",
+      "imageAfterQuestion": "assets/mathematics/math_2024_q3_after.png",
+      "possibleAnswers": {
+        "A": "0",
+        "B": "2",
+        "C": "3",
+        "D": "5"
+      },
+      "correctAnswer": "C",
+      "explanation": "The y-intercept is the point where the line crosses the y-axis (where x = 0). From the graph, this occurs at y = 3."
+    },
+    "q4": {
+      "question": "Which of the following shapes is a parallelogram?",
+      "optionImages": {
+        "A": "assets/mathematics/math_2024_q4_optionA.png",
+        "B": "assets/mathematics/math_2024_q4_optionB.png",
+        "C": "assets/mathematics/math_2024_q4_optionC.png",
+        "D": "assets/mathematics/math_2024_q4_optionD.png"
+      },
+      "possibleAnswers": {
+        "A": "Shape A",
+        "B": "Shape B",
+        "C": "Shape C",
+        "D": "Shape D"
+      },
+      "correctAnswer": "C",
+      "explanation": "A parallelogram has opposite sides that are parallel and equal in length. Shape C satisfies this property."
+    },
+    "q5": {
+      "question": "The diagram shows a circle with center O and radius 7 cm. Calculate the area of the shaded region.",
+      "imageBeforeQuestion": "assets/mathematics/math_2024_q5_before.png",
+      "possibleAnswers": {
+        "A": "38.5 cm²",
+        "B": "77 cm²",
+        "C": "154 cm²",
+        "D": "308 cm²"
+      },
+      "correctAnswer": "C",
+      "explanation": "Area of circle = πr²\nUsing π = 22/7 and r = 7 cm:\nArea = 22/7 × 7 × 7 = 22 × 7 = 154 cm²"
+    },
+    "q6": {
+      "question": "Simplify: (2x + 3)(x - 4)",
+      "possibleAnswers": {
+        "A": "2x² - 5x - 12",
+        "B": "2x² - 8x - 12",
+        "C": "2x² + 5x - 12",
+        "D": "2x² - 5x + 12"
+      },
+      "correctAnswer": "A",
+      "explanation": "Using FOIL method:\nFirst: 2x × x = 2x²\nOuter: 2x × (-4) = -8x\nInner: 3 × x = 3x\nLast: 3 × (-4) = -12\nCombine: 2x² - 8x + 3x - 12 = 2x² - 5x - 12"
+    },
+    "q7": {
+      "question": "Refer to the bar chart showing monthly rainfall. What was the total rainfall for the first quarter (January to March)?",
+      "imageAfterQuestion": "assets/mathematics/math_2024_q7_after.png",
+      "possibleAnswers": {
+        "A": "150 mm",
+        "B": "200 mm",
+        "C": "250 mm",
+        "D": "300 mm"
+      },
+      "correctAnswer": "C",
+      "explanation": "From the chart:\nJanuary = 80 mm\nFebruary = 90 mm\nMarch = 80 mm\nTotal = 80 + 90 + 80 = 250 mm"
+    },
+    "q8": {
+      "question": "Convert 0.75 to a fraction in its simplest form.",
+      "possibleAnswers": {
+        "A": "3/4",
+        "B": "7/10",
+        "C": "15/20",
+        "D": "75/100"
+      },
+      "correctAnswer": "A",
+      "explanation": "0.75 = 75/100\nDivide both numerator and denominator by their GCD (25):\n75 ÷ 25 = 3\n100 ÷ 25 = 4\nTherefore, 0.75 = 3/4"
+    },
+    "q9": {
+      "question": "Which angle is a right angle in the diagram?",
+      "imageBeforeQuestion": "assets/mathematics/math_2024_q9_before.png",
+      "optionImages": {
+        "A": "assets/mathematics/math_2024_q9_optionA.png",
+        "B": "assets/mathematics/math_2024_q9_optionB.png",
+        "C": "assets/mathematics/math_2024_q9_optionC.png",
+        "D": "assets/mathematics/math_2024_q9_optionD.png"
+      },
+      "possibleAnswers": {
+        "A": "Angle A",
+        "B": "Angle B",
+        "C": "Angle C",
+        "D": "Angle D"
+      },
+      "correctAnswer": "B",
+      "explanation": "A right angle measures exactly 90°. From the diagram, Angle B is marked with a small square, indicating it is a right angle."
+    },
+    "q10": {
+      "question": "If a car travels 120 km in 2 hours, what is its average speed?",
+      "possibleAnswers": {
+        "A": "40 km/h",
+        "B": "50 km/h",
+        "C": "60 km/h",
+        "D": "80 km/h"
+      },
+      "correctAnswer": "C",
+      "explanation": "Speed = Distance ÷ Time\nSpeed = 120 km ÷ 2 hours = 60 km/h"
+    }
+  }
+}
