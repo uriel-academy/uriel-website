@@ -1,0 +1,470 @@
+[
+  {
+    "subject": "french",
+    "year": "2013",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 1,
+    "questionText": "Le panier est …………………………..la table",
+    "options": [
+      "autour",
+      "en",
+      "près",
+      "sur"
+    ],
+    "displayOptions": [
+      "A. autour",
+      "B. en",
+      "C. près",
+      "D. sur"
+    ],
+    "correctAnswer": "A",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2013  questions.docx",
+      "importedAt": "2025-11-21T09:25:06.854Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2013",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 2,
+    "questionText": "Monsieur Kojo ………………………ouvert les boîtes",
+    "options": [
+      "a",
+      "as",
+      "es",
+      "est"
+    ],
+    "displayOptions": [
+      "A. a",
+      "B. as",
+      "C. es",
+      "D. est"
+    ],
+    "correctAnswer": "C",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2013  questions.docx",
+      "importedAt": "2025-11-21T09:25:06.854Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2013",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 3,
+    "questionText": "……………………..légumes sont dans une assiette",
+    "options": [
+      "L’",
+      "La",
+      "Le",
+      "Les"
+    ],
+    "displayOptions": [
+      "A. L’",
+      "B. La",
+      "C. Le",
+      "D. Les"
+    ],
+    "correctAnswer": "D",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2013  questions.docx",
+      "importedAt": "2025-11-21T09:25:06.854Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2013",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 4,
+    "questionText": "– ………………………………va ton frère?– Il va bien",
+    "options": [
+      "Où",
+      "Quand",
+      "Comment",
+      "Pourquoi"
+    ],
+    "displayOptions": [
+      "A. Où",
+      "B. Quand",
+      "C. Comment",
+      "D. Pourquoi"
+    ],
+    "correctAnswer": "A",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2013  questions.docx",
+      "importedAt": "2025-11-21T09:25:06.854Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2013",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 5,
+    "questionText": "Il y a trop ………………………..mouches ici",
+    "options": [
+      "de",
+      "de la",
+      "des",
+      "du"
+    ],
+    "displayOptions": [
+      "A. de",
+      "B. de la",
+      "C. des",
+      "D. du"
+    ],
+    "correctAnswer": "A",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2013  questions.docx",
+      "importedAt": "2025-11-21T09:25:06.854Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2013",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 6,
+    "questionText": "……………………matière enseigne Monsieur Banford ?",
+    "options": [
+      "Quel",
+      "Quelle",
+      "Quelles",
+      "Quels"
+    ],
+    "displayOptions": [
+      "A. Quel",
+      "B. Quelle",
+      "C. Quelles",
+      "D. Quels"
+    ],
+    "correctAnswer": "D",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2013  questions.docx",
+      "importedAt": "2025-11-21T09:25:06.854Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2013",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 7,
+    "questionText": "– …………………………..s’appelle cette rue ?– Elle s’appelle ‘Black Stars street’",
+    "options": [
+      "Combien",
+      "Comment",
+      "Que",
+      "Qui"
+    ],
+    "displayOptions": [
+      "A. Combien",
+      "B. Comment",
+      "C. Que",
+      "D. Qui"
+    ],
+    "correctAnswer": "B",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2013  questions.docx",
+      "importedAt": "2025-11-21T09:25:06.854Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2013",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 8,
+    "questionText": "Victor et Marie ont de …………………yeux",
+    "options": [
+      "beau",
+      "beaux",
+      "belle",
+      "belles"
+    ],
+    "displayOptions": [
+      "A. beau",
+      "B. beaux",
+      "C. belle",
+      "D. belles"
+    ],
+    "correctAnswer": "A",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2013  questions.docx",
+      "importedAt": "2025-11-21T09:25:06.854Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2013",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 9,
+    "questionText": "Tu arrives trop tard ; le train ……………….de partir",
+    "options": [
+      "venez",
+      "viennent",
+      "viens",
+      "vient"
+    ],
+    "displayOptions": [
+      "A. venez",
+      "B. viennent",
+      "C. viens",
+      "D. vient"
+    ],
+    "correctAnswer": "B",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2013  questions.docx",
+      "importedAt": "2025-11-21T09:25:06.854Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2013",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 21,
+    "questionText": "Le père d’Akua habite à ……………………..",
+    "options": [
+      "la capitale",
+      "Prampram",
+      "Oguaa",
+      "la gare"
+    ],
+    "displayOptions": [
+      "A. la capitale",
+      "B. Prampram",
+      "C. Oguaa",
+      "D. la gare"
+    ],
+    "correctAnswer": "B",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2013  questions.docx",
+      "importedAt": "2025-11-21T09:25:06.854Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2013",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 22,
+    "questionText": "– Qu’est-ce qu’Akua fait avant de rendre visite à son père ?– Elle envoie",
+    "options": [
+      "un message télégraphique",
+      "un message téléphonique",
+      "un messager",
+      "une lettre"
+    ],
+    "displayOptions": [
+      "A. un message télégraphique",
+      "B. un message téléphonique",
+      "C. un messager",
+      "D. une lettre"
+    ],
+    "correctAnswer": "C",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2013  questions.docx",
+      "importedAt": "2025-11-21T09:25:06.854Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2013",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 23,
+    "questionText": "Quand est-ce qu’Akua se lève le jour de son voyage ?",
+    "options": [
+      "De bonne heure",
+      "A l’après midi",
+      "Tard dans la nuit",
+      "Vers le soir"
+    ],
+    "displayOptions": [
+      "A. De bonne heure",
+      "B. A l’après midi",
+      "C. Tard dans la nuit",
+      "D. Vers le soir"
+    ],
+    "correctAnswer": "A",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2013  questions.docx",
+      "importedAt": "2025-11-21T09:25:06.854Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2013",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 24,
+    "questionText": "Akua voyage ……………………",
+    "options": [
+      "en train",
+      "en voiture",
+      "par avion",
+      "par bateau"
+    ],
+    "displayOptions": [
+      "A. en train",
+      "B. en voiture",
+      "C. par avion",
+      "D. par bateau"
+    ],
+    "correctAnswer": "B",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2013  questions.docx",
+      "importedAt": "2025-11-21T09:25:06.854Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2013",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 25,
+    "questionText": "A la gare, on voit……………..Voitures",
+    "options": [
+      "quelques",
+      "deux",
+      "trois",
+      "plusieurs"
+    ],
+    "displayOptions": [
+      "A. quelques",
+      "B. deux",
+      "C. trois",
+      "D. plusieurs"
+    ],
+    "correctAnswer": "B",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2013  questions.docx",
+      "importedAt": "2025-11-21T09:25:06.854Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2013",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 26,
+    "questionText": "Qui conduit la voiture ?",
+    "options": [
+      "Akua",
+      "Papa",
+      "Le chauffeur",
+      "Les voyageurs"
+    ],
+    "displayOptions": [
+      "A. Akua",
+      "B. Papa",
+      "C. Le chauffeur",
+      "D. Les voyageurs"
+    ],
+    "correctAnswer": "D",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2013  questions.docx",
+      "importedAt": "2025-11-21T09:25:06.854Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2013",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 27,
+    "questionText": "Le voyage commence …………………",
+    "options": [
+      "après trois heures",
+      "après quatre heures",
+      "immédiatement",
+      "plus tard"
+    ],
+    "displayOptions": [
+      "A. après trois heures",
+      "B. après quatre heures",
+      "C. immédiatement",
+      "D. plus tard"
+    ],
+    "correctAnswer": "B",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2013  questions.docx",
+      "importedAt": "2025-11-21T09:25:06.854Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2013",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 28,
+    "questionText": "‘Il est plein de joie.’ Cela veut dire que Papa est ………….",
+    "options": [
+      "confus",
+      "content",
+      "triste",
+      "surpris"
+    ],
+    "displayOptions": [
+      "A. confus",
+      "B. content",
+      "C. triste",
+      "D. surpris"
+    ],
+    "correctAnswer": "B",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2013  questions.docx",
+      "importedAt": "2025-11-21T09:25:06.854Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2013",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 29,
+    "questionText": "Papa remercie Akua parce qu’il ……………….",
+    "options": [
+      "achète des choses",
+      "rend visite aux amis",
+      "mange avec Akua",
+      "reçoit un cadeau"
+    ],
+    "displayOptions": [
+      "A. achète des choses",
+      "B. rend visite aux amis",
+      "C. mange avec Akua",
+      "D. reçoit un cadeau"
+    ],
+    "correctAnswer": "B",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2013  questions.docx",
+      "importedAt": "2025-11-21T09:25:06.854Z"
+    }
+  }
+]

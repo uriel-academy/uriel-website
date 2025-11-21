@@ -1,0 +1,470 @@
+[
+  {
+    "subject": "french",
+    "year": "2014",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 1,
+    "questionText": "Tout les élèves ………pendant la récréation.",
+    "options": [
+      "dort",
+      "dorment",
+      "dormez",
+      "dors"
+    ],
+    "displayOptions": [
+      "A. dort",
+      "B. dorment",
+      "C. dormez",
+      "D. dors"
+    ],
+    "correctAnswer": "A",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2014  questions.docx",
+      "importedAt": "2025-11-21T09:25:07.066Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2014",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 2,
+    "questionText": "Kofi, va chercher …………………..chaise !",
+    "options": [
+      "un",
+      "le",
+      "de",
+      "une"
+    ],
+    "displayOptions": [
+      "A. un",
+      "B. le",
+      "C. de",
+      "D. une"
+    ],
+    "correctAnswer": "C",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2014  questions.docx",
+      "importedAt": "2025-11-21T09:25:07.066Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2014",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 3,
+    "questionText": "Les filles mangent ……………………..pain.",
+    "options": [
+      "de",
+      "la",
+      "du",
+      "une"
+    ],
+    "displayOptions": [
+      "A. de",
+      "B. la",
+      "C. du",
+      "D. une"
+    ],
+    "correctAnswer": "D",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2014  questions.docx",
+      "importedAt": "2025-11-21T09:25:07.066Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2014",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 4,
+    "questionText": "Ama écoute attentivement ………………leçon.",
+    "options": [
+      "la",
+      "au",
+      "à la",
+      "de la"
+    ],
+    "displayOptions": [
+      "A. la",
+      "B. au",
+      "C. à la",
+      "D. de la"
+    ],
+    "correctAnswer": "A",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2014  questions.docx",
+      "importedAt": "2025-11-21T09:25:07.066Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2014",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 5,
+    "questionText": "– Cet homme vend des chemises et des robes– Il est ……………",
+    "options": [
+      "maçon",
+      "pêcheur",
+      "tailleur",
+      "commerçant"
+    ],
+    "displayOptions": [
+      "A. maçon",
+      "B. pêcheur",
+      "C. tailleur",
+      "D. commerçant"
+    ],
+    "correctAnswer": "A",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2014  questions.docx",
+      "importedAt": "2025-11-21T09:25:07.066Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2014",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 6,
+    "questionText": "Quel âge as-tu ?",
+    "options": [
+      "J’ai froid",
+      "Je vais bien",
+      "J’ai dix ans",
+      "Je mange bien"
+    ],
+    "displayOptions": [
+      "A. J’ai froid",
+      "B. Je vais bien",
+      "C. J’ai dix ans",
+      "D. Je mange bien"
+    ],
+    "correctAnswer": "D",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2014  questions.docx",
+      "importedAt": "2025-11-21T09:25:07.066Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2014",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 7,
+    "questionText": "J’ai tellement faim. Je veux …………..",
+    "options": [
+      "parler",
+      "manger",
+      "courir",
+      "dormir"
+    ],
+    "displayOptions": [
+      "A. parler",
+      "B. manger",
+      "C. courir",
+      "D. dormir"
+    ],
+    "correctAnswer": "B",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2014  questions.docx",
+      "importedAt": "2025-11-21T09:25:07.066Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2014",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 8,
+    "questionText": "………….allons au champ après les cours.",
+    "options": [
+      "Vous",
+      "Elles",
+      "Ils",
+      "Nous"
+    ],
+    "displayOptions": [
+      "A. Vous",
+      "B. Elles",
+      "C. Ils",
+      "D. Nous"
+    ],
+    "correctAnswer": "A",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2014  questions.docx",
+      "importedAt": "2025-11-21T09:25:07.066Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2014",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 9,
+    "questionText": "Les professeurs corrigent les ……………..des élèves.",
+    "options": [
+      "classes",
+      "devoirs",
+      "bancs",
+      "tableaux"
+    ],
+    "displayOptions": [
+      "A. classes",
+      "B. devoirs",
+      "C. bancs",
+      "D. tableaux"
+    ],
+    "correctAnswer": "B",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2014  questions.docx",
+      "importedAt": "2025-11-21T09:25:07.066Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2014",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 21,
+    "questionText": "La famille va au cinéma ……………..",
+    "options": [
+      "tous les jours",
+      "tous les soirs",
+      "une fois par mois",
+      "une fois par semaine"
+    ],
+    "displayOptions": [
+      "A. tous les jours",
+      "B. tous les soirs",
+      "C. une fois par mois",
+      "D. une fois par semaine"
+    ],
+    "correctAnswer": "B",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2014  questions.docx",
+      "importedAt": "2025-11-21T09:25:07.066Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2014",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 22,
+    "questionText": "Le jour en question, la famille va au cinéma sans …………….",
+    "options": [
+      "Adzo",
+      "Kwami",
+      "le père",
+      "la femme"
+    ],
+    "displayOptions": [
+      "A. Adzo",
+      "B. Kwami",
+      "C. le père",
+      "D. la femme"
+    ],
+    "correctAnswer": "C",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2014  questions.docx",
+      "importedAt": "2025-11-21T09:25:07.066Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2014",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 23,
+    "questionText": "La personne qui reste à la maison ………………",
+    "options": [
+      "se repose",
+      "est fatiguée",
+      "a du travail",
+      "a sommeil"
+    ],
+    "displayOptions": [
+      "A. se repose",
+      "B. est fatiguée",
+      "C. a du travail",
+      "D. a sommeil"
+    ],
+    "correctAnswer": "A",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2014  questions.docx",
+      "importedAt": "2025-11-21T09:25:07.066Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2014",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 24,
+    "questionText": "Qu’est-ce que Kwami porte pour aller au cinéma ?",
+    "options": [
+      "De beaux vêtements",
+      "De nouveaux vêtements",
+      "Des vêtements propres",
+      "Des vêtements mouillés"
+    ],
+    "displayOptions": [
+      "A. De beaux vêtements",
+      "B. De nouveaux vêtements",
+      "C. Des vêtements propres",
+      "D. Des vêtements mouillés"
+    ],
+    "correctAnswer": "B",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2014  questions.docx",
+      "importedAt": "2025-11-21T09:25:07.066Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2014",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 25,
+    "questionText": "– Quand est-ce que les membres de la famille arrivent au cinéma ?– Ils arrivent ………….",
+    "options": [
+      "tard",
+      "le matin",
+      "à l’heure",
+      "l’après –midi"
+    ],
+    "displayOptions": [
+      "A. tard",
+      "B. le matin",
+      "C. à l’heure",
+      "D. l’après –midi"
+    ],
+    "correctAnswer": "B",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2014  questions.docx",
+      "importedAt": "2025-11-21T09:25:07.066Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2014",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 26,
+    "questionText": "La famille achète des billets pour ……………",
+    "options": [
+      "porter de jolis habits",
+      "rester à la maison",
+      "préparer l’examen",
+      "entrer dans la salle"
+    ],
+    "displayOptions": [
+      "A. porter de jolis habits",
+      "B. rester à la maison",
+      "C. préparer l’examen",
+      "D. entrer dans la salle"
+    ],
+    "correctAnswer": "D",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2014  questions.docx",
+      "importedAt": "2025-11-21T09:25:07.066Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2014",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 27,
+    "questionText": "Dans la salle du cinéma",
+    "options": [
+      "il n’y a personne",
+      "il y a quelques gens",
+      "il y a une personne",
+      "il y a plusieurs gens"
+    ],
+    "displayOptions": [
+      "A. il n’y a personne",
+      "B. il y a quelques gens",
+      "C. il y a une personne",
+      "D. il y a plusieurs gens"
+    ],
+    "correctAnswer": "B",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2014  questions.docx",
+      "importedAt": "2025-11-21T09:25:07.066Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2014",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 28,
+    "questionText": "La femme devant le narrateur à beaucoup de …………",
+    "options": [
+      "robes",
+      "cheveux",
+      "chapeaux",
+      "foulards"
+    ],
+    "displayOptions": [
+      "A. robes",
+      "B. cheveux",
+      "C. chapeaux",
+      "D. foulards"
+    ],
+    "correctAnswer": "B",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2014  questions.docx",
+      "importedAt": "2025-11-21T09:25:07.066Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2014",
+    "examType": "bece",
+    "section": "COMPREHENSION",
+    "questionNumber": 29,
+    "questionText": "Pourquoi le narrateur est triste ?",
+    "options": [
+      "Le film ne commence pas",
+      "Il ne peut pas voir le film",
+      "La femme est très belle pour lui",
+      "Beaucoup de gens sont devant lui."
+    ],
+    "displayOptions": [
+      "A. Le film ne commence pas",
+      "B. Il ne peut pas voir le film",
+      "C. La femme est très belle pour lui",
+      "D. Beaucoup de gens sont devant lui."
+    ],
+    "correctAnswer": "B",
+    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 2014  questions.docx",
+      "importedAt": "2025-11-21T09:25:07.066Z"
+    }
+  }
+]
