@@ -149,7 +149,9 @@ class _QuizTakerPageState extends State<QuizTakerPage>
       if (widget.examType.toLowerCase() == 'trivia') {
         maxQuestions = widget.questionCount ?? 20; // Trivia default: 20 questions
       } else {
-        maxQuestions = widget.questionCount ?? (questions.length > 50 ? 50 : questions.length);
+        // For other exams, cap at 50 questions maximum, regardless of requested count
+        int requested = widget.questionCount ?? questions.length;
+        maxQuestions = requested > 50 ? 50 : requested;
       }
       
       if (questions.length > maxQuestions) {
@@ -1253,6 +1255,8 @@ class _QuizTakerPageState extends State<QuizTakerPage>
         return Subject.ict;
       case 'creative arts':
         return Subject.creativeArts;
+      case 'career technology':
+        return Subject.careerTechnology;
       case 'french':
         return Subject.french;
       case 'twi':

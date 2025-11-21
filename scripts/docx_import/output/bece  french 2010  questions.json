@@ -1,0 +1,607 @@
+[
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 1,
+    "questionText": "Kofi me donne beaucoup ……………oranges tous les jours.",
+    "options": [
+      "d’",
+      "du",
+      "des",
+      "de l’"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 2,
+    "questionText": "Jojo n’aime pas ……………bonbon.",
+    "options": [
+      "du",
+      "de",
+      "des",
+      "de la"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 3,
+    "questionText": "Papa reviendra de Tamale ……………….15 juin.",
+    "options": [
+      "à",
+      "en",
+      "sur",
+      "le"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 4,
+    "questionText": "Apaloo divise la canne à sucre ……………deux parties.",
+    "options": [
+      "dans",
+      "par",
+      "en",
+      "à"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 5,
+    "questionText": "Voici ma culotte, où est ……………….. ?",
+    "options": [
+      "la tienne",
+      "le tien",
+      "les tiens",
+      "les tiennes"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 6,
+    "questionText": "Je ne trouve pas mon chapeau ; où est-………….. ?",
+    "options": [
+      "elle",
+      "le",
+      "il",
+      "la"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 7,
+    "questionText": "Beaucoup d’étudiants …………..que l’examen est facile",
+    "options": [
+      "pense",
+      "penses",
+      "pensez",
+      "pensent"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 8,
+    "questionText": "Abiba n’a ……………….bonbon dans son sac",
+    "options": [
+      "rien",
+      "plus",
+      "pas",
+      "aucun"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 9,
+    "questionText": "Naaki a un frère mais moi j’en ……………trois.",
+    "options": [
+      "ont",
+      "as",
+      "ai",
+      "a"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 10,
+    "questionText": "Il y a des animaux sauvages dans la foret ……………. se trouve près du village. The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the options the correct word(s) that will fit each numbered space and shade on your answer sheet the letter of the answer you have chosen. Paul est Malade Paul Quansah est malade. Maman l’emmène_____11_____. Il y a beaucoup de monde dans la salle _____12______. Maman lui fait son carnet de santé au service de consultation. Vers dix _______13_____ , c’est le tour de Paul. Paul et sa mère _____14____ dans le cabinet du médecin. – ‘Ce n’____15____ pas grave,’ dit le _____16____, Paul a une légère ______17_____ et il lui faut du _____18_____. Il faut aussi lui donner beaucoup de ____19____. Voici la liste des _______20_____ que vous devez acheter.",
+    "options": [
+      "qui",
+      "que",
+      "dont",
+      "laquelle",
+      "B C D"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 11,
+    "questionText": "à l’école à l’hôpital à l’hôtel à la plage",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 12,
+    "questionText": "d’attente de classe d’école de professeur",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 13,
+    "questionText": "temps saisons heures jours",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 14,
+    "questionText": "entres entrez entrons entrent",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 15,
+    "questionText": "est es êtes êtres",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 16,
+    "questionText": "professeur docteur maçon pêcheur",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 17,
+    "questionText": "fièvre joujou faim soif",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 18,
+    "questionText": "travail saut vent repos",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 19,
+    "questionText": "bijoux fruits bonbons devoirs",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 20,
+    "questionText": "médicaments marchandises médecins maladies PART III Read the passage below carefully and answer the questions that follow by shading on your answer sheet the letter which corresponds with the correct answer La Vie à Ladou Ladou est une grande ville qui se trouve au bord de la mer comme la ville d’Accra. Il y a environs vingt milles habitants. La plupart des habitants sont travailleurs : pêcheurs, commerçants, mécaniciens et avocats. Chaque matin, les habitants quittent la maison de bonne heure pour le travail : les pêcheurs vont pêcher, les commerçants vont au marché, les mécaniciens ouvrent leurs garages et les avocats vont à la cour de justice. Il y a aussi beaucoup d’élèves qui vont à l’école. Tout le monde est pressé. des marchandises comme des chaussures, des habits, de la nourriture, des livres et des cahiers. Il y a aussi des voitures qui transportent des passagers, des marchandises et des produits agricoles. Au centre de la ville, on a des salles de cinéma, un stade, un jardin public et d’autres sites touristiques. Le week-end, les gens visitent ces lieux importants pour s’amuser. La vie à Ladou est très intéressante.",
+    "options": [
+      "Ladou, il y a de grandes maisons à étage et des supermarchés. Dans ces supermarchés, on peut acheter"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 21,
+    "questionText": "Comme Accra, Ladou est située au bord de la ……………..",
+    "options": [
+      "lagune",
+      "rivière",
+      "forêt",
+      "mer"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 22,
+    "questionText": "Ladou compte ………….habitants.",
+    "options": [
+      "2000",
+      "5000",
+      "10000",
+      "20000"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 23,
+    "questionText": "Certains habitants de Ladou sont …………….",
+    "options": [
+      "pêcheurs et cultivateurs",
+      "avocats et chasseurs",
+      "commerçants et avocats",
+      "mécaniciens et journalistes"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 24,
+    "questionText": "Les habitants vont au travail…………..",
+    "options": [
+      "très tôt le matin",
+      "à l’heure",
+      "dans l’après –midi",
+      "le soir"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 25,
+    "questionText": "Selon le passage, où travaillent-ils, les mécaniciens ?",
+    "options": [
+      "Au marché",
+      "A la mer",
+      "A l’école",
+      "Au garage"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 26,
+    "questionText": "Pourquoi est-ce que les habitants de Ladou sont pressés ? Ils vont ……………..",
+    "options": [
+      "au cinéma",
+      "au travail",
+      "au stade",
+      "au jardin"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 27,
+    "questionText": "Quel type de bâtiments se trouve à Ladou ?",
+    "options": [
+      "Maison à étage",
+      "Stade",
+      "Jardin public",
+      "Garage"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 28,
+    "questionText": "Où est-ce qu’on peut acheter des chaussures et des habits, selon le texte ?",
+    "options": [
+      "Dans une maison à étage",
+      "dans un site touristique",
+      "Au stade",
+      "Au supermarché"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 29,
+    "questionText": "Comment certains habitants passent-ils le week-end ?",
+    "options": [
+      "Ils achètent des marchandises",
+      "Ils vont à la cour de justices",
+      "Ils vont au cinéma",
+      "Ils travaillent au bureau"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 30,
+    "questionText": "Selon le passage, les habitants…….. Below are ten sentences with blank spaces followed by four options lettered A to D. Choose from the options the most correct answer that will fit into each blank space and shade on your answer sheet the letter of the answer you have chosen",
+    "options": [
+      "aiment vivre à Ladou",
+      "détestent la vie à Ladou",
+      "n’aiment pas travailler",
+      "ne vont pas en voiture"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 31,
+    "questionText": "Chaque matin, pour aller à l’école, l’élève met ses livres dans son ……….",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 32,
+    "questionText": "Aujourd’hui, c’est lundi ; demain ce sera………….",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 33,
+    "questionText": "Je vais boire de l’eau parce que j’ai……………….",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 34,
+    "questionText": "Nous allons au …………………pour voir un match de football entre le Ghana et le Togo",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 35,
+    "questionText": "Les professeurs se reposent …………….la récréation.",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 36,
+    "questionText": "Maman achète de la viande chez……………….",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 37,
+    "questionText": "Nous avons cultivé beaucoup de ……………dans notre jardin",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 38,
+    "questionText": "Le petit garçon met ses chaussures …………..le banc.",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 39,
+    "questionText": "La femme danse parce qu’elle est ………………",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 40,
+    "questionText": "Kojo marche lentement parce qu’il a mal au ……………………",
+    "options": [
+      "B C D"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 31,
+    "questionText": "banc panier portefeuille cartable",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 32,
+    "questionText": "dimanche mardi jeudi samedi",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 33,
+    "questionText": "froid soif peur sommeil",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 34,
+    "questionText": "camp champ port stade",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 35,
+    "questionText": "quand pendant alors selon",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 36,
+    "questionText": "le boucher l’épicier le boulanger le fleuriste",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 37,
+    "questionText": "livres cahiers chaussures mais",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 38,
+    "questionText": "depuis sans sur près",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 39,
+    "questionText": "heureuse pressée occupée faible",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2010",
+    "examType": "bece",
+    "questionNumber": 40,
+    "questionText": "Bras nez menton pied",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  }
+]

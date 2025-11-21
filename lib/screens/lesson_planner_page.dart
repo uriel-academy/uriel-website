@@ -4,7 +4,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cloud_functions/cloud_functions.dart';
 import 'dart:convert';
-import 'dart:html' as html;
+import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:share_plus/share_plus.dart';
+import 'package:universal_html/html.dart' as html;
 import '../constants/app_styles.dart';
 
 class LessonPlannerPage extends StatefulWidget {
@@ -1989,17 +1991,26 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
         .replaceAll(' ', '_')
         .replaceAll(RegExp(r'[^\w\s-]'), '');
     
-    final bytes = utf8.encode(text);
-    final blob = html.Blob([bytes]);
-    final url = html.Url.createObjectUrlFromBlob(blob);
-    final anchor = html.AnchorElement(href: url)
-      ..setAttribute('download', '$fileName.txt')
-      ..click();
-    html.Url.revokeObjectUrl(url);
+    if (kIsWeb) {
+      // Web implementation using HTML
+      final bytes = utf8.encode(text);
+      final blob = html.Blob([bytes]);
+      final url = html.Url.createObjectUrlFromBlob(blob);
+      final anchor = html.AnchorElement(href: url)
+        ..setAttribute('download', '$fileName.txt')
+        ..click();
+      html.Url.revokeObjectUrl(url);
+    } else {
+      // Mobile implementation using share_plus
+      Share.shareXFiles(
+        [XFile.fromData(utf8.encode(text), name: '$fileName.txt', mimeType: 'text/plain')],
+        subject: 'Lesson Plan: ${lessonPlan?['lessonTitle'] ?? 'Lesson Plan'}',
+      );
+    }
     
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text('✅ Downloading $fileName.txt'),
+        content: Text('✅ ${kIsWeb ? 'Downloading' : 'Sharing'} $fileName.txt'),
         backgroundColor: const Color(0xFF2ECC71),
         duration: const Duration(seconds: 2),
       ),

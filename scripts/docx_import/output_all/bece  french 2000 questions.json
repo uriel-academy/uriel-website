@@ -1,0 +1,602 @@
+[
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 1,
+    "questionText": "Pendant la récréation, les élèves sortent ………….classe",
+    "options": [
+      "de",
+      "du",
+      "de la",
+      "d’"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 2,
+    "questionText": "Papa et Maman …………beaucoup.",
+    "options": [
+      "s’aimait",
+      "s’aime",
+      "s’aiment",
+      "s’aimer"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 3,
+    "questionText": "Où est la robe de …………sœur ?",
+    "options": [
+      "mon",
+      "ma",
+      "son",
+      "ses"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 4,
+    "questionText": "Dans ………….magasin de Papa il y a beaucoup de choses.",
+    "options": [
+      "la",
+      "le",
+      "de",
+      "du"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 5,
+    "questionText": "Le samedi les paysans vont …………..champ.",
+    "options": [
+      "a",
+      "aux",
+      "au",
+      "en"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 6,
+    "questionText": "Kofi et Ama ………….de bons amis",
+    "options": [
+      "sommes",
+      "es",
+      "êtes",
+      "sont"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 7,
+    "questionText": "Dis-moi à …………… heure arrive le bus.",
+    "options": [
+      "quel",
+      "la quelle",
+      "quelle",
+      "quelles"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 8,
+    "questionText": "La table est cassée. Il faut ……………réparer.",
+    "options": [
+      "la",
+      "le",
+      "l’",
+      "lui"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 9,
+    "questionText": "L’enfant ……………à l’école de bonne heure.",
+    "options": [
+      "arriver",
+      "arrivent",
+      "arrives",
+      "arrive"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 10,
+    "questionText": "…………..eau est nécessaire à la vie",
+    "options": [
+      "la",
+      "D’",
+      "L’",
+      "De l’"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 11,
+    "questionText": "Ces deux filles se …………..beaucoup.",
+    "options": [
+      "ressemble",
+      "ressemblons",
+      "ressemblez",
+      "ressemblent"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 12,
+    "questionText": "Marie doit …………… son travail aujourd’hui.",
+    "options": [
+      "faites",
+      "fais",
+      "fait",
+      "faire"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 13,
+    "questionText": "Maman dit ; ‘Alice prends ………..panier pour faire des courses.’",
+    "options": [
+      "ce",
+      "cet",
+      "cette",
+      "ces"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 14,
+    "questionText": "En cette saison, les arbres ont …………..belles couleurs.",
+    "options": [
+      "du",
+      "des",
+      "de",
+      "d’"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 15,
+    "questionText": "Voici la maison ………..je suis né.",
+    "options": [
+      "quel",
+      "que",
+      "quelle",
+      "où"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 16,
+    "questionText": "Dans ……………..livre il y a beaucoup de photos",
+    "options": [
+      "cet",
+      "cette",
+      "ce",
+      "ces"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 17,
+    "questionText": "Papa construit une …………maison",
+    "options": [
+      "bel",
+      "belle",
+      "bels",
+      "belles"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 18,
+    "questionText": "Elle voit le médecin une fois ……….mois.",
+    "options": [
+      "par",
+      "le",
+      "en",
+      "dans"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 19,
+    "questionText": "Chacun à ……………….problèmes.",
+    "options": [
+      "le",
+      "son",
+      "ses",
+      "ce"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 20,
+    "questionText": "……………… lit un livre intéressant.",
+    "options": [
+      "Je",
+      "Vous",
+      "Tu",
+      "Il"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 21,
+    "questionText": "Le panier est …………..la table",
+    "options": [
+      "de",
+      "sur",
+      "à",
+      "en"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 22,
+    "questionText": "Le …………… garçons ne va pas à l’école.",
+    "options": [
+      "petits",
+      "petit",
+      "petite",
+      "petites"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 23,
+    "questionText": "Le professeur parle ……………élèves.",
+    "options": [
+      "à",
+      "avec",
+      "à l’",
+      "aux"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 24,
+    "questionText": "Où est la veste …………..l’homme",
+    "options": [
+      "de",
+      "du",
+      "à",
+      "pour"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 25,
+    "questionText": "Il fait …………….soleil aujourd’hui",
+    "options": [
+      "de",
+      "du",
+      "des",
+      "le"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 26,
+    "questionText": "Abedi Pele a marqué deux ……..pendant le match.",
+    "options": [
+      "notes",
+      "points",
+      "buts",
+      "fautes"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 27,
+    "questionText": "Le 25 décembre on fête  ………….",
+    "options": [
+      "les Pâques",
+      "le Noël",
+      "le Ramadan",
+      "le Carnaval"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 28,
+    "questionText": "Combien ……………….pommes avez-vous ?",
+    "options": [
+      "des",
+      "du",
+      "de",
+      "d’"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 29,
+    "questionText": "L’élève achète un livre dans une …………",
+    "options": [
+      "bibliothèque",
+      "librairie",
+      "boutique",
+      "pharmacie"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 30,
+    "questionText": "Donne-moi une douzaine …………œufs. Read the passage below carefully and answer the questions that follow by shading on your answer sheet the letter which corresponds with the correct answer Aujourd’hui c’est le 6 mai 1998 et nous sommes en vacances. Maman fête  son quarantième anniversaire. Alors je vais en ville avec l’un de mes camarades pour lui acheter un cadeau. En ville, Kojo m’accompagne dans le plus grand magasin du quartier. Là on trouve beaucoup de belles choses : des tissus de différentes couleurs, des robes, des frigidaires, des produits alimentaires, des boissons, des chaussures et des bouquets de fleurs. Nous nous promenons pendant longtemps dans le magasin. Cela nous permet de tout voir. Finalement, je décide d’acheter un bouquet de fleurs pour ma mère. Ce sont de jolies roses et d’autres fleurs. ‘Celles-ci sont bien présentables’, dit Kojo. Je prends l’argent de ma poche et je paie la commerçante. Quand nous arrivons à la maison, Maman nous rencontre à la porte. Je lui donne le bouquet de fleurs et lui souhaite ‘Bon Anniversaire’ Elle est étonnée et elle nous remercie pour notre gentillesse.",
+    "options": [
+      "des",
+      "d’",
+      "de",
+      "du"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 31,
+    "questionText": "Maman a ………………ans aujourd’hui.",
+    "options": [
+      "40",
+      "50",
+      "60",
+      "70"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 32,
+    "questionText": "Le narrateur va en ville pour…………..",
+    "options": [
+      "se promener",
+      "voir son samarade",
+      "chercher un cadeau",
+      "regarder de belles choses."
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 33,
+    "questionText": "Avec qui va-t-il en ville ? Avec ……….",
+    "options": [
+      "son ami",
+      "son frère",
+      "une fille",
+      "une commercante"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 34,
+    "questionText": "Les garçons achètent le bouquet………….",
+    "options": [
+      "dans la rue",
+      "au marché",
+      "dans une boutique",
+      "pres de la maison"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 35,
+    "questionText": "Dans le magasin, il y a ………..",
+    "options": [
+      "des fleurs et des tableaux",
+      "des tissus et des chaussures",
+      "des robes et des bijoux",
+      "des frigidaires et des televisions"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 36,
+    "questionText": "‘Pourquoi les garçons se promenent-ils dans le magasin ? Ils se promenent pour.",
+    "options": [
+      "chercher la mère",
+      "mieux voir les marchandises",
+      "faire passer le temps",
+      "chercher un ami"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 37,
+    "questionText": "L’auteur décide d’acherter …………..",
+    "options": [
+      "des chaussures",
+      "des robes",
+      "des frigidaires",
+      "des fleurs"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 38,
+    "questionText": "Qui recoit les fleurs ?",
+    "options": [
+      "Kojo",
+      "Une fille",
+      "Maman",
+      "La commercante"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 39,
+    "questionText": "Quelle est la réaction de Maman ? Elle est …………",
+    "options": [
+      "triste",
+      "gentille",
+      "surprise",
+      "fâchée"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2000",
+    "examType": "bece",
+    "questionNumber": 40,
+    "questionText": "Quel titre peut-on donner à ce passage ?",
+    "options": [
+      "Un bouquet de fleurs",
+      "Une surprise pour Maman",
+      "Une promenade",
+      "Les deux amis"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  }
+]

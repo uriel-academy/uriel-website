@@ -1,0 +1,788 @@
+[
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 1,
+    "questionText": "Les élèves vont en vacances …………….. 30 janvier.",
+    "options": [
+      "la",
+      "au",
+      "en",
+      "le"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 2,
+    "questionText": "Nous jouons ……………..football chaque samedi matin.",
+    "options": [
+      "du",
+      "aux",
+      "au",
+      "le"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 3,
+    "questionText": "Le soir, je ……………… à 9 heures.",
+    "options": [
+      "dort",
+      "dormons",
+      "dorment",
+      "dors"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 4,
+    "questionText": "Ali est un ……………….. élève",
+    "options": [
+      "bon",
+      "bons",
+      "bonne",
+      "bonnes"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 5,
+    "questionText": "L’homme est …………..il à beaucoup d’argent.",
+    "options": [
+      "pauvre",
+      "joli",
+      "riche",
+      "grand"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 6,
+    "questionText": "Le voleur ………….. de la prison.",
+    "options": [
+      "sortez",
+      "sors",
+      "sortent",
+      "sort"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 7,
+    "questionText": "Le garçon ……………les portes et les fenêtres de l’école.",
+    "options": [
+      "ouvres",
+      "ouvre",
+      "ouvrir",
+      "ouvert"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 8,
+    "questionText": "Ama achète un kilo ……………..tomates au marché.",
+    "options": [
+      "des",
+      "de la",
+      "de",
+      "du"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 9,
+    "questionText": "Pour aller à l’école, nous ……………..l’autobus.",
+    "options": [
+      "prenons",
+      "prenez",
+      "prendre",
+      "prennent"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 10,
+    "questionText": "Ils ……………… lavent tous les matins",
+    "options": [
+      "lui",
+      "sont",
+      "leur",
+      "se"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 11,
+    "questionText": "L’enfant ……………. intelligent.",
+    "options": [
+      "est",
+      "suis",
+      "être",
+      "es"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 12,
+    "questionText": "Quelle ………… robe !",
+    "options": [
+      "joli",
+      "jolie",
+      "jolis",
+      "jolies"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 13,
+    "questionText": "Ama achète un ……………. mouchoir",
+    "options": [
+      "nouvel",
+      "nouveau",
+      "nouvelle",
+      "nouvelles"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 14,
+    "questionText": "Elle dort parce qu’elle est …………..",
+    "options": [
+      "fatigué",
+      "fatiguée",
+      "fatiguant",
+      "fatigue"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 15,
+    "questionText": "Il va ………………. la plage",
+    "options": [
+      "a",
+      "à",
+      "au",
+      "en"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 16,
+    "questionText": "Il travaille ……………… le jardin.",
+    "options": [
+      "par",
+      "dans",
+      "en",
+      "au"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 17,
+    "questionText": "Il y a beaucoup ………………. personnes dans la chambre.",
+    "options": [
+      "du",
+      "des",
+      "d’",
+      "de"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 18,
+    "questionText": "Les élèves ………………. leur devoir.",
+    "options": [
+      "fait",
+      "fais",
+      "font",
+      "faisons"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 19,
+    "questionText": "Mon Père à une ……………….. maison.",
+    "options": [
+      "grande",
+      "petit",
+      "grand",
+      "grosse"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 20,
+    "questionText": "………………… professeur est content.",
+    "options": [
+      "Ma",
+      "Mon",
+      "Mes.",
+      "Sa"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 21,
+    "questionText": "Nous allons …………….. ville.",
+    "options": [
+      "en",
+      "au",
+      "dans",
+      "a"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 22,
+    "questionText": "J’ai …………stylo dans mon sa",
+    "options": [
+      "la",
+      "une",
+      "un",
+      "de"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 23,
+    "questionText": "Cet élève ne travaille pas bien en classe. Il est……………",
+    "options": [
+      "gentil",
+      "intelligent",
+      "serieux",
+      "paresseux"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 24,
+    "questionText": "Kofi n’est pas gran",
+    "options": [
+      "Il est……….",
+      "jolie",
+      "petit",
+      "mauvais",
+      "belle"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 25,
+    "questionText": "Le bébé boit ……………. lait.",
+    "options": [
+      "de",
+      "des",
+      "de la",
+      "du"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 26,
+    "questionText": "Tu ……………….. vingt ans.",
+    "options": [
+      "es",
+      "ai",
+      "as",
+      "a"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 27,
+    "questionText": "Le chat est un animal ………………",
+    "options": [
+      "domestique",
+      "sauvage",
+      "sale",
+      "féroce"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 28,
+    "questionText": "Les ……………… sont dans la mer.",
+    "options": [
+      "souris",
+      "moutons",
+      "poissons",
+      "poules"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 29,
+    "questionText": "L’histoire est très ……………………….",
+    "options": [
+      "amusant",
+      "amusee",
+      "amusent",
+      "amusante"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 30,
+    "questionText": "Le frère de mon père est mon ……………",
+    "options": [
+      "cousin",
+      "frère",
+      "oncle",
+      "neveu\n\nPART IIIRead the passage below carefully and answer the questions that follow by shading on your answer sheet the letter which corresponds with the correct answer\n\nUN SOIR AU CINEMA\n\nLe samedi soir, je vais au cinéma avec ma sœur et mes parents. Mais aujourd’hui maman ne va pas avec nous. Elle ne va pas parce qu’elle est fatiguée. Je porte un joli pantalon et une belle chemise. Ma sœur aussi porte sa jolie robe.Nous arrivons au cinéma avec Pap",
+      "Il y a beaucoup de personnes dans la salle. Le film commence à sept heures.Je suis derrière une femme. Je ne vois pas parce qu’elle a beaucoup de cheveux. Je ne sui pas content. Papa demande pourquoi je ne suis pas content. Je lui dis que je ne peux pas voir à cause des cheveux de la femme. Ses cheveux ressemblent à un chapeau. Papa dit à la femme d’enlever son chapeau. ‘Je ne porte pas de chapeau. Ce sont mes cheveux, Monsieur’Tout le monde commence à rire.31. La famille va au cinéma…………….",
+      "le dimanche",
+      "le samedi soir",
+      "tous les soirs",
+      "tous les jours"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 32,
+    "questionText": "Aujourd’hui les enfants vont au cinéma avec……………",
+    "options": [
+      "leur mère",
+      "leur ami",
+      "leur père",
+      "leur sœur"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 33,
+    "questionText": "Maman reste à la maison parce qu’elle est ………………",
+    "options": [
+      "gentille",
+      "paresseuse",
+      "contente",
+      "fatiguée"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 34,
+    "questionText": "Que porte la sœur ? Elle porte …………………",
+    "options": [
+      "un joli pantalon",
+      "une jolie robe",
+      "une belle chemise",
+      "une belle jupe"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 35,
+    "questionText": "Ils vont au ………….avec Pap",
+    "options": [
+      "marché",
+      "champ",
+      "cinéma",
+      "bureau"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 36,
+    "questionText": "Le film commence à …………….",
+    "options": [
+      "6 heures",
+      "7 heures",
+      "9 heures",
+      "8 heures"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 37,
+    "questionText": "La femme à beaucoup de ……………….",
+    "options": [
+      "foulards",
+      "chapeaux",
+      "robes",
+      "cheveux"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 38,
+    "questionText": "Les cheveux de la famille ressemblent à ……………..",
+    "options": [
+      "des fleurs",
+      "un panier",
+      "des feuilles",
+      "un chapeau"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 39,
+    "questionText": "Qu’est-ce que Papa dit à la femme ? Il lui dit …………..",
+    "options": [
+      "d’enlever son chapeau",
+      "de porter son chapeau",
+      "de chercher son chapeau",
+      "d’apporter son chapeau"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1991",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 40,
+    "questionText": "Que fait tout le monde ? Tout le monde ………………",
+    "options": [
+      "parle",
+      "chante",
+      "crie",
+      "rit"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1991 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.765Z"
+    }
+  }
+]

@@ -1,0 +1,802 @@
+[
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 1,
+    "questionText": "Mon ami a ……………..joli pantalon.",
+    "options": [
+      "un",
+      "une",
+      "de",
+      "des"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 2,
+    "questionText": "Les garçons jouent ………………..football.",
+    "options": [
+      "du",
+      "des",
+      "au",
+      "aux"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 3,
+    "questionText": "Fatou mange …………..riz chaque jour.",
+    "options": [
+      "de",
+      "de la",
+      "des",
+      "du"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 4,
+    "questionText": "Kofi donne …………. stylo à sa sœur.",
+    "options": [
+      "le",
+      "la",
+      "une",
+      "l’"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 5,
+    "questionText": "Les oiseaux chantent dans …………… arbres.",
+    "options": [
+      "la",
+      "le",
+      "l’",
+      "les"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 6,
+    "questionText": "Les enfants regardent …………. télévision",
+    "options": [
+      "des",
+      "du",
+      "les",
+      "la"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 7,
+    "questionText": "Je n’aime pas ……………..mathématiques.",
+    "options": [
+      "de la",
+      "la",
+      "les",
+      "du"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 8,
+    "questionText": "Musa va ……………ciném",
+    "options": [
+      "le",
+      "la",
+      "les",
+      "au"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 9,
+    "questionText": "Maman a …………..beau bébé.",
+    "options": [
+      "un",
+      "une",
+      "les",
+      "de"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 10,
+    "questionText": "Il faut faire ……………………correction.",
+    "options": [
+      "les",
+      "le",
+      "des",
+      "la"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 11,
+    "questionText": "Papa prend …………..café chau",
+    "options": [
+      "du",
+      "d’",
+      "de",
+      "de la"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 12,
+    "questionText": "Ces filles sont toujours …………….",
+    "options": [
+      "contente",
+      "contentes",
+      "content",
+      "contents"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 13,
+    "questionText": "Janet aime la musique. Elle …………. toujours.",
+    "options": [
+      "travaille",
+      "parle",
+      "bavarde",
+      "chante"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 14,
+    "questionText": "Ce mot est difficile. Donne-moi un ……………..",
+    "options": [
+      "livre",
+      "cahier",
+      "dictionnaire",
+      "journal"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 15,
+    "questionText": "Ferme …………… Tu parle trop.",
+    "options": [
+      "ta bouche",
+      "ton oreille",
+      "ton nez",
+      "ta main"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 16,
+    "questionText": "Kofi et Ama sont ………………..",
+    "options": [
+      "intelligent",
+      "intelligente",
+      "intelligentes",
+      "intelligents"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 17,
+    "questionText": "Esi est malade. Elle va chez le ……….",
+    "options": [
+      "cuisinier",
+      "docteur",
+      "danseur",
+      "professeur"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 18,
+    "questionText": "C’est un beau bébé, il pèse 10………………",
+    "options": [
+      "centimètres",
+      "kilomètres",
+      "kilogramme",
+      "mètres"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 19,
+    "questionText": "Je vois un film intéressant au ………………",
+    "options": [
+      "champ",
+      "cinéma",
+      "marché",
+      "bureau"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 20,
+    "questionText": "Elle a beaucoup…………………",
+    "options": [
+      "d’oranges",
+      "des oranges",
+      "les oranges",
+      "de l’orange"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 21,
+    "questionText": "Un oiseau a ……………..",
+    "options": [
+      "une bouche",
+      "un bec",
+      "des mains",
+      "des cheveux"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 22,
+    "questionText": "C’est un pharmacien. Il vend des ……………",
+    "options": [
+      "fruits",
+      "médicaments",
+      "boissons",
+      "maladies"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 23,
+    "questionText": "Où allez-vous ? ……………………. allons à l’école.",
+    "options": [
+      "Vous",
+      "Nous",
+      "Il",
+      "Tu"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 24,
+    "questionText": "Tu as de l’argent ? Oui, j’en …………..",
+    "options": [
+      "as",
+      "ai",
+      "avez",
+      "a"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 25,
+    "questionText": "L’élève met le livre ………………….. la table.",
+    "options": [
+      "entré",
+      "sur",
+      "vers",
+      "pour"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 26,
+    "questionText": "Ces tomates coutent…………..cedis.",
+    "options": [
+      "premier",
+      "cent",
+      "rien",
+      "dernier"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 27,
+    "questionText": "Regardez ……………..chemise.",
+    "options": [
+      "ce",
+      "ces",
+      "cette",
+      "cet"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 28,
+    "questionText": "Elle travaille ………….. Poste.",
+    "options": [
+      "dans",
+      "à la",
+      "à",
+      "en"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 29,
+    "questionText": "Le Togo est ……………. Afrique.",
+    "options": [
+      "pour",
+      "à",
+      "en",
+      "par"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 30,
+    "questionText": "Les jeunes filles sont…………",
+    "options": [
+      "beaux",
+      "belles",
+      "belle",
+      "bel\n\nRead the passage below carefully and answer the questions that follow by shading on your answer sheet the letter which corresponds with the correct answer\n\nTHE REWARD OF A GREEDY MANUn jour, Abalo decide de visiter un village voisin a cheval. C’est la troisieme fois qu’il va dans ce village. Avant de partir, Abalo ne mange rien. Il n’aime pas acheter à manger mais il aime manger beaucoup. Abalo arrive dans le village. Les villageois savent qu’il aimera manger sans payer.Les villageois donnent alors à Abalo une belle chambre. Abalo attend son repas. Les villageois decident de tuer son cheval pour lui préparé un bon repas. Le repas est prêt après quelques minutes ‘bon repas’ dit Abalo. Il mange très bien el il dort.Le soir, il leue demandé son cheval pour partir. Les gen du village demandent. ‘Tu as bien mange, n’est-ce pas ? Oui, j’ai bien mange. Et bien maintenant, c’est toi qui portes ton cheval. Comment ?’ dit Abalo. Mais oui, ton cheval est dans ton ventre."
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 31,
+    "questionText": "Abalo décide un jour de ……………",
+    "options": [
+      "travailler",
+      "manger",
+      "voyager",
+      "dormir"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 32,
+    "questionText": "Abalo visite le village …………..fois",
+    "options": [
+      "une",
+      "trois",
+      "quatre",
+      "cinq"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 33,
+    "questionText": "Qu’est-ce qu’il mange avant de partir ?",
+    "options": [
+      "rien",
+      "un repas",
+      "tout",
+      "un chaval"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 34,
+    "questionText": "Les villageois savent qu’Abalo ………….",
+    "options": [
+      "n’a pas de cheval",
+      "ne paie pas quand il mange",
+      "n’aime pas manger",
+      "a un gros ventre"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 35,
+    "questionText": "Où attend-il son repas ?",
+    "options": [
+      "dans la cuisine",
+      "dans la chambre",
+      "à la salle à manger",
+      "au restaurant"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 36,
+    "questionText": "Après le repas Abalo……………….",
+    "options": [
+      "dort",
+      "rit",
+      "chante",
+      "s’amuse"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 37,
+    "questionText": "Abalo décide de quitter le village……………",
+    "options": [
+      "à midi",
+      "le soir",
+      "le matin",
+      "à demain"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 38,
+    "questionText": "Qui a bien mangé ?……………………",
+    "options": [
+      "personne",
+      "le cheval",
+      "Abalo",
+      "les villageois"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 39,
+    "questionText": "Où est le cheval d’Abalo ?",
+    "options": [
+      "Abalo l’a tué",
+      "Le cheval est parti en ville",
+      "Les villageois l’ont mangé",
+      "Abalo l’amangé"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1993",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 40,
+    "questionText": "Qui a tué le cheval ?",
+    "options": [
+      "Les villageois",
+      "Abalo",
+      "Un ami d’Abalo",
+      "personne"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1993 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.669Z"
+    }
+  }
+]

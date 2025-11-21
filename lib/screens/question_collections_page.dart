@@ -148,6 +148,7 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
       case Subject.ict: return 'ICT';
       case Subject.religiousMoralEducation: return 'Religious and Moral Education';
       case Subject.creativeArts: return 'Creative Arts';
+      case Subject.careerTechnology: return 'Career Technology';
       case Subject.trivia: return 'Trivia';
     }
   }

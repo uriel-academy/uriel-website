@@ -1,0 +1,13 @@
+{
+  "name": "uriel-docx-import",
+  "version": "0.1.0",
+  "description": "Convert BECE DOCX question files to JSON and optionally import to Firestore",
+  "main": "import_word_questions.js",
+  "scripts": {
+    "start": "node import_word_questions.js"
+  },
+  "dependencies": {
+    "firebase-admin": "^11.10.0",
+    "mammoth": "^1.6.0"
+  }
+}

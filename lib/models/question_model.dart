@@ -19,6 +19,7 @@ enum Subject {
   ict,
   religiousMoralEducation,
   creativeArts,
+  careerTechnology,
   trivia
 }
 

@@ -1,0 +1,802 @@
+[
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 1,
+    "questionText": "La banane est ……….. fruit.",
+    "options": [
+      "un",
+      "des",
+      "de la",
+      "une"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 2,
+    "questionText": "Kofi a faim, il ……………….. du riz.",
+    "options": [
+      "joue",
+      "mange",
+      "chante",
+      "parle"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 3,
+    "questionText": "La chambre est sale. Il faut la …………….",
+    "options": [
+      "vendre",
+      "fermer",
+      "jouer",
+      "balayer"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 4,
+    "questionText": "En France on parle …………………",
+    "options": [
+      "Portugais",
+      "Anglais",
+      "français",
+      "Chinois"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 5,
+    "questionText": "Elle est méchante. Elle …………… les enfants.",
+    "options": [
+      "frappe",
+      "frappes",
+      "frappent",
+      "frapper"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 6,
+    "questionText": "Ama chante bien. Elle a une belle ……………",
+    "options": [
+      "joue",
+      "voie",
+      "voix",
+      "bouche"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 7,
+    "questionText": "La robe est jolie. Je vais …………..acheter.",
+    "options": [
+      "les",
+      "l’",
+      "le",
+      "la"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 8,
+    "questionText": "Afua est une ……………..fille",
+    "options": [
+      "bel",
+      "belle",
+      "beau",
+      "beaux"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 9,
+    "questionText": "Ma mère prépare le déjeuner dans la ………………",
+    "options": [
+      "salle de bain",
+      "chambre",
+      "cuisine",
+      "salle à manger"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 10,
+    "questionText": "Le professeur corrige les …………….",
+    "options": [
+      "fautes",
+      "malades",
+      "livres",
+      "tableaux"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 11,
+    "questionText": "Le train ne marche pas vite. Il va ……………….",
+    "options": [
+      "lentement",
+      "tranquillement",
+      "gentiment",
+      "bruyamment"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 12,
+    "questionText": "Je ……………… lève à 6 heures",
+    "options": [
+      "lui",
+      "me",
+      "nous",
+      "se"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 13,
+    "questionText": "Kojo habite ……………….. Kumasi",
+    "options": [
+      "à",
+      "a",
+      "au",
+      "en"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 14,
+    "questionText": "Donne-moi………….. cahier",
+    "options": [
+      "nos",
+      "tes",
+      "ma",
+      "ton"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 15,
+    "questionText": "Regarde Ama, ……………. mange en classe.",
+    "options": [
+      "il",
+      "elle",
+      "tu",
+      "nous"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 16,
+    "questionText": "Son professeur ……………. donne une règle.",
+    "options": [
+      "les",
+      "le",
+      "lui",
+      "la"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 17,
+    "questionText": "J’ai …………….. donne-moi de l’eau.",
+    "options": [
+      "soif",
+      "peur",
+      "faim",
+      "froid"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 18,
+    "questionText": "Les enfants …………. à l’école.",
+    "options": [
+      "va",
+      "vont",
+      "vais",
+      "allons"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 19,
+    "questionText": "J’aime un chapeau ……………",
+    "options": [
+      "noire",
+      "verte",
+      "blanche",
+      "rouge"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 20,
+    "questionText": "La craie est ………… la boîte.",
+    "options": [
+      "près",
+      "par",
+      "dans",
+      "à"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 21,
+    "questionText": "Le garçon …………. content.",
+    "options": [
+      "suis",
+      "êtes",
+      "est",
+      "es"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 22,
+    "questionText": "Je m’………………..Isaa",
+    "options": [
+      "appelles",
+      "appelle",
+      "appeler",
+      "appellent"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 23,
+    "questionText": "La saison des pluies commence …………juin.",
+    "options": [
+      "en",
+      "au",
+      "dans",
+      "à"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 24,
+    "questionText": "Le livre est …………… la table.",
+    "options": [
+      "sur",
+      "près",
+      "loin",
+      "a"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 25,
+    "questionText": "……………….. devoir est trop difficile.",
+    "options": [
+      "Cet",
+      "Cette",
+      "Ce",
+      "Ces"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 26,
+    "questionText": "Tamale est une grande ville ……………….. Ghan",
+    "options": [
+      "de l’",
+      "du",
+      "de la",
+      "de"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 27,
+    "questionText": "Voici mes sœurs …………….. sont gentilles.",
+    "options": [
+      "elle",
+      "nous",
+      "elles",
+      "ils"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 28,
+    "questionText": "Adzoa est …………sœur.",
+    "options": [
+      "mon",
+      "son",
+      "ma",
+      "mes"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 29,
+    "questionText": "Ama, où vas-…………….. ?",
+    "options": [
+      "il",
+      "tu",
+      "nous",
+      "vous"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 30,
+    "questionText": "Paul est …………… ami",
+    "options": [
+      "ses",
+      "ta",
+      "ma",
+      "mon"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 31,
+    "questionText": "Kweku est malade ………….va à l’hôpital.",
+    "options": [
+      "je",
+      "tu",
+      "il",
+      "elle"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 32,
+    "questionText": "Ils ………………. mes amis.",
+    "options": [
+      "est",
+      "êtes",
+      "sont",
+      "sommes"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 33,
+    "questionText": "Nana a beaucoup d’argent. Il est …………..",
+    "options": [
+      "gentil",
+      "riche",
+      "jolie",
+      "bon"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 34,
+    "questionText": "La mangue est …………..",
+    "options": [
+      "une mangue",
+      "une fleur",
+      "un fruit",
+      "une feuille"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 35,
+    "questionText": "……………….. est le crayon ? Il est dans le sa",
+    "options": [
+      "Combien",
+      "Quand",
+      "Où",
+      "Pourquoi\n\nRead the passage below carefully and answer the questions that follow by shading on your answer sheet the letter which corresponds with the correct answer\n\nC’est samedi, le jour de marché. Tout le monde se lève de bonne heure dans le village de Rikiti.Personne ne va au champ ce jour-là. Les hommes, les enfants vont tous au marché. Au marché, ils vendent et achètent beaucoup de choses. Ils rencontrent aussi des amis. Ce jour-là, les jeunes hommes et les jeunes filles sont très contents.Au marché, les marchands crient pour appeler les acheteurs. On trouve toute sorte de choses ; poissons, viande, vêtements, chaussures, bijoux et beaucoup d’autres objets. C’est une journée agréable."
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 36,
+    "questionText": "Dans le village de Rikiti, on va au marché,………………",
+    "options": [
+      "toute la semaine",
+      "une fois par semaine",
+      "chaque jour de la semaine",
+      "chaque dimanche"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 37,
+    "questionText": "On va au marché pour ………………….",
+    "options": [
+      "cultiver les champs",
+      "vendre et acheter des marchandises",
+      "jouer",
+      "danser"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 38,
+    "questionText": "Que font les marchands pour vendre leurs produits ?",
+    "options": [
+      "ils crient pour appeler les acheteurs",
+      "ils restent silencieux",
+      "ils sourient",
+      "ils parlent avec les acheteurs"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 39,
+    "questionText": "Au marché on vend ………….",
+    "options": [
+      "des hommes et des poissons",
+      "des chaussures et arbres",
+      "des poissons et des chaussures",
+      "des femmes et des bijoux"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1992",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 40,
+    "questionText": "Donnez un titre au passage.",
+    "options": [
+      "Les femmes au marché",
+      "promenade au village",
+      "la fêté du village",
+      "le jour de marché"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1992 questions.docx",
+      "importedAt": "2025-11-20T17:18:40.582Z"
+    }
+  }
+]

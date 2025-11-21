@@ -8,7 +8,9 @@ import 'package:flutter_math_fork/flutter_math.dart';
 import 'package:flutter/services.dart';
 import '../services/uri_normalizer.dart';
 import 'dart:convert';
-import 'dart:html' as html;
+import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:image_picker/image_picker.dart';
+import 'package:universal_html/html.dart' as html;
 
 class UriPage extends StatefulWidget {
   final bool embedded;
@@ -87,46 +89,60 @@ class _UriPageState extends State<UriPage> {
   
   Future<void> _pickFile() async {
     try {
-      // Use HTML file input for web - only images supported for now
-      final html.FileUploadInputElement uploadInput = html.FileUploadInputElement();
-      uploadInput.accept = 'image/*';
-      uploadInput.click();
-      
-      uploadInput.onChange.listen((e) async {
-        final files = uploadInput.files;
-        if (files != null && files.isNotEmpty) {
-          final file = files[0];
-          final fileName = file.name.toLowerCase();
-          
-          // Check if it's a supported image format
-          if (!fileName.endsWith('.jpg') && !fileName.endsWith('.jpeg') && 
-              !fileName.endsWith('.png') && !fileName.endsWith('.gif') && 
-              !fileName.endsWith('.webp')) {
-            if (mounted) {
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
-                  content: Text('Please upload an image file (JPG, PNG, GIF, or WebP)', 
-                    style: GoogleFonts.montserrat()),
-                  backgroundColor: Colors.red,
-                  duration: const Duration(seconds: 3),
-                ),
-              );
-            }
-            return;
-          }
-          
-          final reader = html.FileReader();
-          
-          reader.readAsArrayBuffer(file);
-          reader.onLoadEnd.listen((e) {
-            final bytes = reader.result as Uint8List;
+      if (kIsWeb) {
+        // Web implementation using HTML
+        final html.FileUploadInputElement uploadInput = html.FileUploadInputElement();
+        uploadInput.accept = 'image/*';
+        uploadInput.click();
+        
+        uploadInput.onChange.listen((e) async {
+          final files = uploadInput.files;
+          if (files != null && files.isNotEmpty) {
+            final file = files[0];
+            final fileName = file.name.toLowerCase();
             
-            setState(() {
-              _selectedImageBytes = bytes;
+            // Check if it's a supported image format
+            if (!fileName.endsWith('.jpg') && !fileName.endsWith('.jpeg') && 
+                !fileName.endsWith('.png') && !fileName.endsWith('.gif') && 
+                !fileName.endsWith('.webp')) {
+              if (mounted) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text('Please upload an image file (JPG, PNG, GIF, or WebP)', 
+                      style: GoogleFonts.montserrat()),
+                    backgroundColor: Colors.red,
+                    duration: const Duration(seconds: 3),
+                  ),
+                );
+              }
+              return;
+            }
+            
+            final reader = html.FileReader();
+            
+            reader.readAsArrayBuffer(file);
+            reader.onLoadEnd.listen((e) {
+              final bytes = reader.result as Uint8List;
+              
+              setState(() {
+                _selectedImageBytes = bytes;
+              });
             });
+          }
+        });
+      } else {
+        // Mobile implementation using image_picker
+        final ImagePicker picker = ImagePicker();
+        final XFile? image = await picker.pickImage(source: ImageSource.gallery);
+        
+        if (image != null) {
+          final bytes = await image.readAsBytes();
+          
+          setState(() {
+            _selectedImageBytes = bytes;
           });
         }
-      });
+      }
     } catch (e) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(

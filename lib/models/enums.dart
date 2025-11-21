@@ -10,6 +10,7 @@ enum Subject {
   ict,
   religiousMoralEducation,
   creativeArts,
+  careerTechnology,
   trivia,
 }
 
@@ -38,6 +39,8 @@ extension SubjectX on Subject {
         return 'Religious & Moral Education';
       case Subject.creativeArts:
         return 'Creative Arts';
+      case Subject.careerTechnology:
+        return 'Career Technology';
       case Subject.trivia:
         return 'Trivia';
     }

@@ -1,0 +1,609 @@
+[
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 1,
+    "questionText": "Les élèves cherchent ……….informations sur le Togo",
+    "options": [
+      "d’",
+      "du",
+      "des",
+      "de la"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 2,
+    "questionText": "Ecris-moi ……………lettre",
+    "options": [
+      "une",
+      "un",
+      "du",
+      "de la"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 3,
+    "questionText": "…………étudiant est paresseux.",
+    "options": [
+      "Ce",
+      "Cet",
+      "Ces",
+      "Cette"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 4,
+    "questionText": "Voici trois stylos. Prenez-…………… !",
+    "options": [
+      "les",
+      "la",
+      "le",
+      "leurs"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 5,
+    "questionText": "………….belles couleurs !",
+    "options": [
+      "Quel",
+      "Quelle",
+      "Quels",
+      "Quelles"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 6,
+    "questionText": "Christine va ……..hôpital pour voir le médecin.",
+    "options": [
+      "à",
+      "au",
+      "a l’",
+      "à la"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 7,
+    "questionText": "Les enfants aiment jouer …………..volleyball",
+    "options": [
+      "au",
+      "de",
+      "du",
+      "aux"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 8,
+    "questionText": "Antoine, mets ………….gomme dans ton sac !",
+    "options": [
+      "ta",
+      "ton",
+      "tes",
+      "toi"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 9,
+    "questionText": "Cet homme est très ……………..",
+    "options": [
+      "gentil",
+      "gentils",
+      "gentille",
+      "gentilles"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 10,
+    "questionText": "Les étudiants invitent leurs amis à …………..avec eux. PART II Below are ten sentences with blank spaces followed by four options lettered A to D. Choose from the options the most correct answer that will fit into each blank space and shade on your answer sheet the letter of the answer you have chosen",
+    "options": [
+      "sort",
+      "sortir",
+      "sortez",
+      "sortent"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 11,
+    "questionText": "Les villageois ont …………………..de nouvelles cases",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 12,
+    "questionText": "On voit des …………….dans la forêt.",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 13,
+    "questionText": "Je veux …………..de l’eau.",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 14,
+    "questionText": "Cette chemise est trop sale ; je dois la …………",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 15,
+    "questionText": "L’agriculteur à besoin de ……………pour cultiver la terre.",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 16,
+    "questionText": "Ouvre la bouche ! Ah ! Tes ……………..sont très blanches !",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 17,
+    "questionText": "Marc mange trop. Il est ………………",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 18,
+    "questionText": "Ma sœur ……….le repas du soir",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 19,
+    "questionText": "Le fils de ma sœur est mon",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 20,
+    "questionText": "Un ………….fait des tables et des chaises.",
+    "options": [
+      "B C D"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 11,
+    "questionText": "mis corrigé construit fabriqué",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 12,
+    "questionText": "mers arbres avions poissons",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 13,
+    "questionText": "boire piler manger brûler",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 14,
+    "questionText": "laver porter repasser vendre",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 15,
+    "questionText": "clé houe craie cuillère",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 16,
+    "questionText": "dents doigts cheveux oreilles",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 17,
+    "questionText": "bavard méchant ivrogne gourmand",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 18,
+    "questionText": "met conduit boit prépare",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 19,
+    "questionText": "père oncle neveu cousin",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 20,
+    "questionText": "fermier chauffeur menuisier professeur PART III Read the passage below carefully and answer the questions that follow by shading on your answer sheet the letter which corresponds with the correct answer En Classe La leçon de français commence à dix heures et dure une heure vingt minutes. Madame Ampaafo, notre professeur, entre dans la classe à dix heure. Elle nous dit ‘Bonjour’ et tous les élèves se lèvent et répondent ‘Bonjour Madame’ ! Elle continue : ‘Fermez vos livres et ouvrez vos cahiers.’ Elle distribue des papiers sur lesquels il y Elle commence à lire une histoire très intéressante. Nous écoutons tous attentivement sauf Sarfo et Achana qui bavardent. Ils ne font pas attention. Elle lit l’histoire une deuxième fois et nous demande de répondre aux questions dans nos cahiers. Beaucoup d’élèves répondent bien aux questions. A la fin, ils ont de très bonnes notes. Quand le professeur sort de la classe à onze heures vingt, nous sommes tous très contents. Sarfo et Achana, au contraire, sont tristes parce qu’ils ont de très mauvaises notes. Ils commencent à pleurer.",
+    "options": [
+      "des questions. ‘Maintenant, écoutez !’ dit-elle."
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 21,
+    "questionText": "- Le cours de français commence à …………heures.",
+    "options": [
+      "quelle heure est-ce que le cours de français commence ?",
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 22,
+    "questionText": "Le nom du professeur est …………..",
+    "options": [
+      "Achana",
+      "Sarfo",
+      "Madame Ampaafo",
+      "Monsieur Ampaafo"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 23,
+    "questionText": "Le professeur entre dans la classe …………",
+    "options": [
+      "avant l’heure",
+      "en avance",
+      "en retard",
+      "à l’heure"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 24,
+    "questionText": "‘…………vos livres’ dit le professeur quand elle entre en classe.",
+    "options": [
+      "Cachez",
+      "Ouvrez",
+      "Fermez",
+      "Cherchez"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 25,
+    "questionText": "Quelles sont sur les papiers que le professeur distribue aux élèves ?",
+    "options": [
+      "De bonnes notes",
+      "Des réponses",
+      "Des questions",
+      "Des histoires"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 26,
+    "questionText": "Tous les élèves écoutent attentivement ………..Sarfo et Achana.",
+    "options": [
+      "exceptés",
+      "y compris",
+      "comme",
+      "même"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 27,
+    "questionText": "L’histoire est ………….",
+    "options": [
+      "drôle",
+      "triste",
+      "ennuyeuse",
+      "intéressante"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 28,
+    "questionText": "Sarfo et Achana ne font pas attention. Ils ………..",
+    "options": [
+      "jouent",
+      "parlent",
+      "dorment",
+      "mangent"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 29,
+    "questionText": "Pourquoi Sarfo et Achana sont tristes ? - Parce qu’ils ont ……",
+    "options": [
+      "échoué",
+      "réussit",
+      "écouté",
+      "lu"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 30,
+    "questionText": "PART IV The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the options the correct word(s) that will fit each numbered space and shade on your answer sheet the letter of the answer you have chosen. Maman Serwah – 31 – de l’hôpital il y a huit jours. – 32 – ce temps-la, c’est la joie partout dans la maison ! Pourquoi ? C’est parce qu’elle a deux – 33 – bébés ; des jumeaux. La famille – 34 – de fêter l’arrivée de ce beau garçon et de cette belle fille. Très tôt le matin, les parents et les amis – 35 – pour la fête . Bientôt il y a beaucoup de gens dans – 36 – maison de Maman Serwah et son mari, Monsieur Koffi. Ils apportent des cadeaux et même de l’argent aux bébés et à la mère. Le chef de famille – 37 – les noms des enfants. Une semaine après  la naissance d’un enfant, on lui donne un nom ; c’est la tradition. Ensuite, il y a beaucoup à boire et à – 38 - . On joue de la musique et les gens – 39 - . Tout le monde est – 40 –.",
+    "options": [
+      "la fin, Sarfo et Achana ………",
+      "jouent",
+      "pleurent",
+      "sortent",
+      "bavardent",
+      "B C D"
+    ],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 31,
+    "questionText": "sort est sorti est sortie sortira",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 32,
+    "questionText": "Après  Avant Depuis Pendant",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 33,
+    "questionText": "nouveau nouveaux nouvelle nouvelles",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 34,
+    "questionText": "décidé décide décidez décidons",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 35,
+    "questionText": "arrive arrivons arrivez arrivent",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 36,
+    "questionText": "le la les leur",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 37,
+    "questionText": "annonce annonces annoncez annoncent",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 38,
+    "questionText": "mange mange mangez manger",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 39,
+    "questionText": "danse dansez dansons dansent",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  },
+  {
+    "subject": "french",
+    "year": "2011",
+    "examType": "bece",
+    "questionNumber": 40,
+    "questionText": "content contents contente contentes",
+    "options": [],
+    "correctAnswer": null,
+    "passage": null
+  }
+]

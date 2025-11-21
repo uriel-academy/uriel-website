@@ -4165,3 +4165,100 @@ export const importIntegratedScienceQuestions = functions.https.onCall(async (da
     throw new functions.https.HttpsError('internal', `Failed to import Integrated Science questions: ${errorMessage}`);
   }
 });
+
+// Import Career Technology Questions
+export const importCareerTechnologyQuestions = functions.https.onCall(async (data, context) => {
+  try {
+    // Verify that the user is authenticated and is an admin
+    if (!context.auth) {
+      throw new functions.https.HttpsError('unauthenticated', 'User must be authenticated');
+    }
+
+    // Check if user has admin role in custom claims
+    const role = context.auth.token.role as string | undefined;
+    const adminEmail = 'studywithuriel@gmail.com';
+
+    if (!role || !['admin', 'super_admin'].includes(role)) {
+      if (context.auth.token.email !== adminEmail) {
+        throw new functions.https.HttpsError('permission-denied', 'Only admins can import questions');
+      }
+    }
+
+    console.log('Starting Career Technology questions import...');
+
+    const fs = require('fs');
+    const path = require('path');
+
+    const questionsPath = path.join(__dirname, '..', '..', 'assets', 'bece_json', 'bece_career_technology_questions.json');
+
+    if (!fs.existsSync(questionsPath)) {
+      throw new functions.https.HttpsError('not-found', 'Career Technology questions file not found');
+    }
+
+    const questionsData = JSON.parse(fs.readFileSync(questionsPath, 'utf8'));
+    const currentDate = new Date().toISOString();
+
+    console.log(`Processing ${questionsData.length} Career Technology questions`);
+
+    let importedCount = 0;
+    const batch = db.batch();
+
+    for (const question of questionsData) {
+      const docId = `career_technology_${question.year}_q${question.questionNumber}`;
+      const docRef = db.collection('questions').doc(docId);
+
+      const questionDoc = {
+        id: docId,
+        questionText: question.questionText,
+        type: 'multipleChoice',
+        subject: 'careerTechnology',
+        examType: 'bece',
+        year: question.year,
+        section: 'A',
+        questionNumber: question.questionNumber,
+        options: question.options,
+        correctAnswer: question.correctAnswer || null,
+        explanation: `This is question ${question.questionNumber} from the ${question.year} BECE Career Technology exam.`,
+        marks: 1,
+        difficulty: 'medium',
+        topics: ['Career Technology', 'BECE', question.year],
+        createdAt: currentDate,
+        updatedAt: currentDate,
+        createdBy: 'system_import',
+        isActive: true,
+        metadata: {
+          source: `BECE ${question.year}`,
+          importDate: currentDate,
+          verified: true
+        }
+      };
+
+      batch.set(docRef, questionDoc);
+      importedCount++;
+
+      // Commit batch every 500 documents (Firestore limit is 500)
+      if (importedCount % 500 === 0) {
+        await batch.commit();
+        console.log(`Committed batch at ${importedCount} questions`);
+      }
+    }
+
+    // Commit remaining questions
+    if (importedCount % 500 !== 0) {
+      await batch.commit();
+    }
+
+    console.log(`Successfully imported ${importedCount} Career Technology questions!`);
+
+    return {
+      success: true,
+      message: `Successfully imported ${importedCount} Career Technology questions!`,
+      questionsImported: importedCount
+    };
+
+  } catch (error) {
+    console.error('Error importing Career Technology questions:', error);
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    throw new functions.https.HttpsError('internal', `Failed to import Career Technology questions: ${errorMessage}`);
+  }
+});

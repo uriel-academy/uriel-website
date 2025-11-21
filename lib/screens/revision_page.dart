@@ -464,6 +464,8 @@ class _RevisionPageState extends State<RevisionPage> {
         return 'Religious and Moral Education';
       case Subject.creativeArts:
         return 'Creative Arts';
+      case Subject.careerTechnology:
+        return 'Career Technology';
       case Subject.trivia:
         return 'Trivia';
     }

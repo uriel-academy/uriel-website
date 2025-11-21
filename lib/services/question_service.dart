@@ -174,9 +174,7 @@ class QuestionService {
       }
       
       if (year != null) {
-        // Try to parse year as int if it's a string, since Firebase stores it as int
-        final yearValue = int.tryParse(year) ?? year;
-        query = query.where('year', isEqualTo: yearValue);
+        query = query.where('year', isEqualTo: year);
       }
       
       if (section != null) {
@@ -305,6 +303,8 @@ class QuestionService {
         return 'ict';
       case Subject.creativeArts:
         return 'creativeArts';
+      case Subject.careerTechnology:
+        return 'careerTechnology';
       case Subject.trivia:
         return 'trivia';
     }

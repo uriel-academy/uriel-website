@@ -492,6 +492,7 @@ Marks: 10''',
       case Subject.ict: return 'ICT';
       case Subject.religiousMoralEducation: return 'Religious & Moral Education';
       case Subject.creativeArts: return 'Creative Arts';
+      case Subject.careerTechnology: return 'Career Technology';
       case Subject.trivia: return 'Trivia';
     }
   }
@@ -1100,6 +1101,7 @@ class _ExamManagementTabState extends State<ExamManagementTab> {
       case Subject.ict: return 'ICT';
       case Subject.religiousMoralEducation: return 'Religious & Moral Education';
       case Subject.creativeArts: return 'Creative Arts';
+      case Subject.careerTechnology: return 'Career Technology';
       case Subject.trivia: return 'Trivia';
     }
   }

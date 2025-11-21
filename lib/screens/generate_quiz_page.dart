@@ -45,6 +45,7 @@ class _GenerateQuizPageState extends State<GenerateQuizPage> {
     Subject.ict,
     Subject.religiousMoralEducation,
     Subject.creativeArts,
+    Subject.careerTechnology,
   ];
   final List<String> _difficultyLevels = ['easy', 'medium', 'difficult'];
   final List<String> _classLevels = ['JHS 1', 'JHS 2', 'JHS 3', 'SHS 1', 'SHS 2', 'SHS 3'];
@@ -314,6 +315,7 @@ class _GenerateQuizPageState extends State<GenerateQuizPage> {
       case Subject.ict: return 'ICT';
       case Subject.religiousMoralEducation: return 'RME';
       case Subject.creativeArts: return 'Creative Arts';
+      case Subject.careerTechnology: return 'Career Technology';
       case Subject.trivia: return 'Trivia';
     }
   }

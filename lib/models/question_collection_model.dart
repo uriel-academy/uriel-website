@@ -62,6 +62,8 @@ class QuestionCollection {
         return 'RME';
       case Subject.creativeArts:
         return 'Creative Arts';
+      case Subject.careerTechnology:
+        return 'Career Technology';
       case Subject.trivia:
         return 'Trivia';
     }

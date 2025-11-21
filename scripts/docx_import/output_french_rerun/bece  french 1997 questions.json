@@ -1,0 +1,804 @@
+[
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 1,
+    "questionText": "Je veux savoir l’heure, montre-moi ta …………..",
+    "options": [
+      "cloche",
+      "montre",
+      "règle",
+      "chaine"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.974Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 2,
+    "questionText": "Les cheveux sont sur ………….",
+    "options": [
+      "la langue",
+      "la main",
+      "les dents",
+      "la tête"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.974Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 3,
+    "questionText": "Les enfants ……….. lentement.",
+    "options": [
+      "marche",
+      "marches",
+      "marchent",
+      "marcher"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.974Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 4,
+    "questionText": "Regardez les filles, elles ………….. contentes.",
+    "options": [
+      "ont",
+      "sont",
+      "êtes",
+      "sommes"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.974Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 5,
+    "questionText": "Tu ………….. un beau stylo ! Donne- le moi",
+    "options": [
+      "as",
+      "à",
+      "est",
+      "es"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.974Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 6,
+    "questionText": "Est-ce que vous ………… vos devoir.",
+    "options": [
+      "fais",
+      "fait",
+      "faites",
+      "font"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.974Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 7,
+    "questionText": "Les élèves ………. à haute voix.",
+    "options": [
+      "parles",
+      "parlent",
+      "parlons",
+      "parle"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.974Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 8,
+    "questionText": "L’enfant ………….. bonjour à ses parents.",
+    "options": [
+      "dis",
+      "dites",
+      "dit",
+      "disent"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.974Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 9,
+    "questionText": "Nous ………….. un bon repas.",
+    "options": [
+      "mangeons",
+      "mangent",
+      "mange",
+      "manges"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.974Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 10,
+    "questionText": "Les ………….. filles ont de belles robes",
+    "options": [
+      "petits",
+      "petite",
+      "petites",
+      "petit"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.974Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 11,
+    "questionText": "La voiture de mon père est……………..",
+    "options": [
+      "vert",
+      "vertes",
+      "verts",
+      "verte"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.975Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 12,
+    "questionText": "Kofi frappe son petit frère parce qu’il ne ………. aime pas.",
+    "options": [
+      "les",
+      "le",
+      "l’",
+      "la"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.975Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 13,
+    "questionText": "Où est mon livre de français ? Je ne ……….. trouve pas",
+    "options": [
+      "la",
+      "le",
+      "lui",
+      "les"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.975Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 14,
+    "questionText": "Maman parle à ses enfants. Elle ………. parle.",
+    "options": [
+      "les",
+      "leur",
+      "la",
+      "lui"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.975Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 15,
+    "questionText": "Les enfants jouent ………….. football.",
+    "options": [
+      "aux",
+      "en",
+      "du",
+      "au"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.975Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 16,
+    "questionText": "Combien de stylos avez-vous, mes élèves ? Nous ……….. avons deux.",
+    "options": [
+      "y",
+      "les",
+      "en",
+      "des"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.975Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 17,
+    "questionText": "S’il te plait, donne-moi ………… règle.",
+    "options": [
+      "son",
+      "ta",
+      "en",
+      "ton"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.975Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 18,
+    "questionText": "………………… pantalon est sale.",
+    "options": [
+      "Ton",
+      "Sa",
+      "Ma",
+      "Ta"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.975Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 19,
+    "questionText": "Quel temps fait-il ? Il fait ………….temps",
+    "options": [
+      "joli",
+      "beau",
+      "sale",
+      "l’heure"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.975Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 20,
+    "questionText": "Kwame à mal à la tête. Il doit prendre …………",
+    "options": [
+      "de la bière",
+      "des comprimés",
+      "de l’eau",
+      "du sirop"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.975Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 21,
+    "questionText": "Le cultivateur prend son coupe-coupe et va……………",
+    "options": [
+      "à l’école",
+      "à la plage",
+      "à l’hôpital",
+      "au champ"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.975Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 22,
+    "questionText": "Serwaa mange beaucoup. Elle est ………..",
+    "options": [
+      "gourmande",
+      "intelligente",
+      "bavarde",
+      "sérieuse"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.975Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 23,
+    "questionText": "Ama parle très ……… parce qu’elle est malade.",
+    "options": [
+      "gentiment",
+      "doucement",
+      "bien",
+      "poliment"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.975Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 24,
+    "questionText": "Le frère de mon père est mon …………",
+    "options": [
+      "cousin",
+      "neveu",
+      "père",
+      "oncle"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.975Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 25,
+    "questionText": "Paul prend le petit déjeuner ……………",
+    "options": [
+      "le soir",
+      "à midi",
+      "le matin",
+      "la soirée\n\nChoose from column 2 one option which has no corresponding partner in column 1"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.975Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 26,
+    "questionText": "Column 1 Column 21. L’orange",
+    "options": [
+      "le jour2. le bébé",
+      "l’heure3. la montre",
+      "le fruit4. la craie",
+      "le fait"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.975Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 27,
+    "questionText": "Column 1 Column 21. les poissons",
+    "options": [
+      "la forêt2. les animaux sauvages",
+      "la rivière3. les hommes",
+      "la classe4. les cultivateurs",
+      "le garage"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.975Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 28,
+    "questionText": "Column 1 Column 21. danser",
+    "options": [
+      "dormir2. acheter",
+      "finir3. commencer",
+      "prendre4. réveiller",
+      "vendre"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.975Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 29,
+    "questionText": "Column 1 Column 21. lentement",
+    "options": [
+      "bien2. gentiment",
+      "méchamment3. mal",
+      "vite4. brillamment",
+      "amicalement"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.975Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 30,
+    "questionText": "Column 1 Column 21. le professeur",
+    "options": [
+      "la chaise2. la table",
+      "l’élève3. le livre",
+      "la règle4. le tableau",
+      "la craie\n\nRead the passage below carefully and answer the questions that follow by shading on your answer sheet the letter which corresponds with the correct answer\n\nMaman va au marché chaque jour. Elle vend des tomates, des oranges, des arachides et des bananes. Pendant ces grandes vacances j’accompagne Maman au marché. Toutes les amies de Maman sont contentes de me voir. Elles m’invitent pour les saluer. Alors, je vais leur dire bonjour l’une après l’autre. Après, je m’assieds auprès de Maman. Elle me donne des bonbons et des gâteaux.Dans l’après –midi, la voisine de Maman qui s’appelle Mouna me donne du coc",
+      "J’aime bien cel",
+      "Je lui dis merci et le bois vite. Je suis toujours contente. Le soir, nous rentrons chez nous. Je n’oublie jamais les belles journéespassées au marché."
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.975Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 31,
+    "questionText": "Quand est-ce que Maman va au marché ?",
+    "options": [
+      "Un jour",
+      "Souvent",
+      "Chaque semaine",
+      "Tous les jours"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.975Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 32,
+    "questionText": "Maman va au marché pour …………….. des fruits",
+    "options": [
+      "acheter",
+      "vendre",
+      "prendre",
+      "ramasser"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.975Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 33,
+    "questionText": "Pendant les vacances, je vais au marché avec ……….",
+    "options": [
+      "ma mère",
+      "mes amies",
+      "mes voisines",
+      "ma grand-mère"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.975Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 34,
+    "questionText": "Qui sont contentes de voir l’enfant ?………………",
+    "options": [
+      "Mouna",
+      "La voisine de Maman",
+      "Maman et moi",
+      "Les camarades de Maman"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.975Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 35,
+    "questionText": "L’enfant ………….. à côte de sa mère.",
+    "options": [
+      "se lave",
+      "s’amuse",
+      "se rend",
+      "s’assied"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.975Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 36,
+    "questionText": "Qui donne des gâteaux à l’enfant ?",
+    "options": [
+      "Maman",
+      "Mouna",
+      "la voisine de Maman",
+      "Les amies de maman"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.975Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 37,
+    "questionText": "Qui est Mouna ? Elle est ………….. de Maman",
+    "options": [
+      "la sœur",
+      "l’amie",
+      "la cliente",
+      "la fille"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.975Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 38,
+    "questionText": "Qu’est-ce que la voisine de Maman donne à l’enfant ?",
+    "options": [
+      "des arachides",
+      "une banane",
+      "des tomates",
+      "une boisson"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.975Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 39,
+    "questionText": "Maman et l’enfant vont à la maison ………………..",
+    "options": [
+      "le soir",
+      "lentement",
+      "l’après –midi",
+      "à midi"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.975Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1997",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 40,
+    "questionText": "Donnez un titre à ce passage.",
+    "options": [
+      "En vacances",
+      "Au marché",
+      "Un cadeau",
+      "Les amies de Maman"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece  french 1997 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.975Z"
+    }
+  }
+]

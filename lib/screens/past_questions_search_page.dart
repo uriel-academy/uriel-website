@@ -1647,6 +1647,8 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
         return Subject.ict;
       case 'creative arts':
         return Subject.creativeArts;
+      case 'career technology':
+        return Subject.careerTechnology;
       case 'trivia':
         return Subject.trivia;
       default:

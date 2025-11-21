@@ -1,0 +1,802 @@
+[
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 1,
+    "questionText": "Abena cherche ……….. montre",
+    "options": [
+      "le",
+      "du",
+      "la",
+      "de"
+    ],
+    "correctAnswer": "A",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 2,
+    "questionText": "Papa lit ……….. journal.",
+    "options": [
+      "le",
+      "du",
+      "la",
+      "de"
+    ],
+    "correctAnswer": "C",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 3,
+    "questionText": "Nous prenons …………thé.",
+    "options": [
+      "de",
+      "des",
+      "de l’",
+      "du"
+    ],
+    "correctAnswer": "D",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 4,
+    "questionText": "Va me chercher ……….eau.",
+    "options": [
+      "d’",
+      "des",
+      "de l’",
+      "de la"
+    ],
+    "correctAnswer": "A",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 5,
+    "questionText": "Mon petit frère écrit avec ………… stylo.",
+    "options": [
+      "du",
+      "une",
+      "des",
+      "un"
+    ],
+    "correctAnswer": "A",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 6,
+    "questionText": "Vous aimez ………… fruits ?",
+    "options": [
+      "des",
+      "à la",
+      "du",
+      "de la"
+    ],
+    "correctAnswer": "D",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 7,
+    "questionText": "Nous allons ………….ville.",
+    "options": [
+      "à",
+      "au",
+      "en",
+      "dans"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 8,
+    "questionText": "Ma cousine travaille ……….. banque.",
+    "options": [
+      "au",
+      "à la",
+      "dans",
+      "en"
+    ],
+    "correctAnswer": "A",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 9,
+    "questionText": "Elle donne …………….cahier à Kofi.",
+    "options": [
+      "sa",
+      "ses",
+      "son",
+      "mes"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 10,
+    "questionText": "Donnez-moi……….. pain, s’il vous plait.",
+    "options": [
+      "du",
+      "de",
+      "de la",
+      "des"
+    ],
+    "correctAnswer": "C",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 11,
+    "questionText": "Taisez-…………. mes élèves.",
+    "options": [
+      "nous",
+      "de",
+      "de la",
+      "vous"
+    ],
+    "correctAnswer": "C",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 12,
+    "questionText": "Vous jouez …….. football n’est-ce pas ?",
+    "options": [
+      "à",
+      "le",
+      "au",
+      "la"
+    ],
+    "correctAnswer": "D",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 13,
+    "questionText": "Où est ta sœur ? …………voil",
+    "options": [
+      "La",
+      "Le",
+      "Elle",
+      "Lui"
+    ],
+    "correctAnswer": "C",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 14,
+    "questionText": "Elle habite ………. Togo.",
+    "options": [
+      "en",
+      "dans",
+      "avec",
+      "au"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 15,
+    "questionText": "Jojo met le livre ………….. son sa",
+    "options": [
+      "en",
+      "dans",
+      "avec",
+      "à"
+    ],
+    "correctAnswer": "D",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 16,
+    "questionText": "Nous écoutons la …………….. chaque matin.",
+    "options": [
+      "radio",
+      "table",
+      "voiture",
+      "boîte"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 17,
+    "questionText": "Il est muet ; il ne …………. pas",
+    "options": [
+      "danse",
+      "voit",
+      "parle",
+      "mange"
+    ],
+    "correctAnswer": "A",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 18,
+    "questionText": "Nous cultivons du riz au …………",
+    "options": [
+      "refectoire",
+      "terrain",
+      "salon",
+      "champ"
+    ],
+    "correctAnswer": "C",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 19,
+    "questionText": "Si vous voyez Ama, dites …………. que je la cherche.",
+    "options": [
+      "la",
+      "lui",
+      "elle",
+      "le"
+    ],
+    "correctAnswer": "A",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 20,
+    "questionText": "Le soleil se couche …………",
+    "options": [
+      "à l’est",
+      "au nord",
+      "à l’ouest",
+      "au sud"
+    ],
+    "correctAnswer": "C",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 21,
+    "questionText": "Il ne travaille pas beaucoup alors il est …………",
+    "options": [
+      "pauvre",
+      "fatigué",
+      "fort",
+      "vieux"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 22,
+    "questionText": "Les élèves …………. pendant la récréation.",
+    "options": [
+      "jouent",
+      "pleurent",
+      "travaillent",
+      "voyagent"
+    ],
+    "correctAnswer": "C",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 23,
+    "questionText": "Quelle ………fleur !",
+    "options": [
+      "bel",
+      "beau",
+      "belle",
+      "beaux"
+    ],
+    "correctAnswer": "A",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 24,
+    "questionText": "Vous………… une erreur, Monsieur.",
+    "options": [
+      "faites",
+      "fait",
+      "font",
+      "fais"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 25,
+    "questionText": "Adjoa ………… contente",
+    "options": [
+      "sont",
+      "es",
+      "sommes",
+      "est"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 26,
+    "questionText": "Madame Mensah est très ………………",
+    "options": [
+      "gentil",
+      "gentille",
+      "gentilles",
+      "gentils"
+    ],
+    "correctAnswer": "D",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 27,
+    "questionText": "Tu ………….. déjà ?",
+    "options": [
+      "dort",
+      "dors",
+      "dormez",
+      "dorment"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 28,
+    "questionText": "Les hommes ……………. des pantalons.",
+    "options": [
+      "portent",
+      "portez",
+      "porte",
+      "portes"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 29,
+    "questionText": "……………….. heure est-il, Kobina ?",
+    "options": [
+      "Quel",
+      "Quels",
+      "Quelle",
+      "Quelles"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 30,
+    "questionText": "Nous …………. le petit déjeuner à 7 heures.",
+    "options": [
+      "prend",
+      "prenons",
+      "prennent",
+      "prends\n\nRead the passage below carefully and answer the questions that follow by shading on your answer sheet the letter which corresponds with the correct answer\n\nMadame Mensah est infirmière. Elle travaille dans une clinique. Cette clinique se trouve au centre de la grande ville.Mais Madame Mensah et sa famille habitent loin de la ville. Elle a trois enfants : des jumeaux et une fille. Chaque jour elle se lève de bonne heure. Elle fait des travaux domestiques. Elle quitte la maison à sept heures moins le quart pour aller au travail.Quand elle arrive, elle salue tous les malades dans la salle et puis elle commence le travail. Madame Mensah aime surtout les enfants. Elle leur donne souvent du chocolat et du bonbon. Les adultes et les enfants malades l’appellent ‘Maman’ parce qu’elle est gentille."
+    ],
+    "correctAnswer": "C",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 31,
+    "questionText": "Madame Mensah travaille dans …………",
+    "options": [
+      "un bureau",
+      "un hôpital",
+      "une usine",
+      "une banque"
+    ],
+    "correctAnswer": "C",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 32,
+    "questionText": "La clinique où elle travaille est …………….. de la ville.",
+    "options": [
+      "près",
+      "à l’est",
+      "au centre",
+      "à l’ouest"
+    ],
+    "correctAnswer": "C",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 33,
+    "questionText": "La famille Mensah habitent ………. de la ville.",
+    "options": [
+      "loin",
+      "au centre",
+      "au nord",
+      "à l’ouest"
+    ],
+    "correctAnswer": "A",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 34,
+    "questionText": "Il y a ……………… garçons dans la famille.",
+    "options": [
+      "5",
+      "4",
+      "3",
+      "2"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 35,
+    "questionText": "Madame Mensah …………….. tous les jours.",
+    "options": [
+      "travaille tard",
+      "se lève très tôt",
+      "se repose",
+      "se couche très tard"
+    ],
+    "correctAnswer": "D",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 36,
+    "questionText": "Elle va au travail à ……………….",
+    "options": [
+      "6 heures 45",
+      "6 heures 30",
+      "6 heures 15",
+      "6 heures"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 37,
+    "questionText": "Avant de travailler elle ………..",
+    "options": [
+      "donne du chocolat aux enfants",
+      "vend des bonbons aux adultes",
+      "dit bonjour aux malades",
+      "appelle les malades"
+    ],
+    "correctAnswer": "A",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 38,
+    "questionText": "Ce sont les ……….. qui reçoivent les cadeaux de Madame Mensah.",
+    "options": [
+      "jumeaux",
+      "adultes",
+      "maris",
+      "jeunes"
+    ],
+    "correctAnswer": "D",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 39,
+    "questionText": "Madame Mensah aime beaucoup",
+    "options": [
+      "les hommes",
+      "les petits",
+      "les infirmières",
+      "les jumeaux"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1998",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 40,
+    "questionText": "Madame Mensah est appelée ‘Maman parce qu’elle est………….",
+    "options": [
+      "travailleuse",
+      "gentille",
+      "infirmière",
+      "mère"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1998 questions.docx",
+      "importedAt": "2025-11-20T16:29:01.947Z"
+    }
+  }
+]

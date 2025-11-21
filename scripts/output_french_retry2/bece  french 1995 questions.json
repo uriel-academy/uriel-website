@@ -1,0 +1,802 @@
+[
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 1,
+    "questionText": "Ama allume …………………feu",
+    "options": [
+      "l’",
+      "le",
+      "la",
+      "de"
+    ],
+    "correctAnswer": "A",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.895Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 2,
+    "questionText": "Va m’apporter ………….oranges",
+    "options": [
+      "du",
+      "des",
+      "d’",
+      "de l’"
+    ],
+    "correctAnswer": "C",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.895Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 3,
+    "questionText": "Le chasseur tue ……………. éléphant.",
+    "options": [
+      "les",
+      "l’",
+      "la",
+      "de l’"
+    ],
+    "correctAnswer": "D",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.895Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 4,
+    "questionText": "Esi achète ……………mangue",
+    "options": [
+      "une",
+      "un",
+      "du",
+      "de"
+    ],
+    "correctAnswer": "A",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.895Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 5,
+    "questionText": "Les Français boivent ……………vin.",
+    "options": [
+      "du",
+      "de la",
+      "de",
+      "d’"
+    ],
+    "correctAnswer": "A",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.895Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 6,
+    "questionText": "Nous mangeons avec …………….cuillère.",
+    "options": [
+      "un",
+      "le",
+      "une",
+      "de la"
+    ],
+    "correctAnswer": "D",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.895Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 7,
+    "questionText": "Cet élève monte sur ………….ban",
+    "options": [
+      "le",
+      "la",
+      "une",
+      "du"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.895Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 8,
+    "questionText": "La poule est ………..oiseau",
+    "options": [
+      "d’",
+      "un",
+      "de l’",
+      "une"
+    ],
+    "correctAnswer": "A",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.895Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 9,
+    "questionText": "Le professeur corrige ……………fautes.",
+    "options": [
+      "le",
+      "du",
+      "les",
+      "de la"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.895Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 10,
+    "questionText": "…………….bière, s’il te plaît.",
+    "options": [
+      "Du",
+      "De la",
+      "De",
+      "De l’"
+    ],
+    "correctAnswer": "C",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.895Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 11,
+    "questionText": "Allez vite …………tableau",
+    "options": [
+      "à",
+      "au",
+      "à la",
+      "le"
+    ],
+    "correctAnswer": "C",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.895Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 12,
+    "questionText": "Où est la gomme ? …………….voila",
+    "options": [
+      "Le",
+      "La",
+      "Lui",
+      "Elle"
+    ],
+    "correctAnswer": "D",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.895Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 13,
+    "questionText": "Les enfants chantent ; ……………. sont contents.",
+    "options": [
+      "ils",
+      "nous",
+      "il",
+      "vous"
+    ],
+    "correctAnswer": "C",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.895Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 14,
+    "questionText": "Les athlètes font ……………sport.",
+    "options": [
+      "du",
+      "d’",
+      "de",
+      "de la"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.895Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 15,
+    "questionText": "Elle est aveugle ; elle ne ………………pas",
+    "options": [
+      "chante",
+      "dort",
+      "marché",
+      "voit"
+    ],
+    "correctAnswer": "D",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.896Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 16,
+    "questionText": "Le soleil se ……………. à six heures du matin.",
+    "options": [
+      "couche",
+      "lève",
+      "lave",
+      "promène"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.896Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 17,
+    "questionText": "Viens manger ! Tu as ……………",
+    "options": [
+      "soif",
+      "froid",
+      "faim",
+      "chaud"
+    ],
+    "correctAnswer": "A",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.896Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 18,
+    "questionText": "Le stylo n’est pas noir, au contraire, il est……………",
+    "options": [
+      "grand",
+      "blanc",
+      "long",
+      "joli"
+    ],
+    "correctAnswer": "C",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.896Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 19,
+    "questionText": "Kwame cultive son champ avec ………………",
+    "options": [
+      "sa houe",
+      "son fusil",
+      "son château",
+      "sa fourchette"
+    ],
+    "correctAnswer": "A",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.896Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 20,
+    "questionText": "C’est un gourmand, il mange ……………",
+    "options": [
+      "petit",
+      "nombreux",
+      "peu",
+      "trop"
+    ],
+    "correctAnswer": "C",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.896Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 21,
+    "questionText": "Quel temps fait-il ? ……………….",
+    "options": [
+      "Il me fait mal",
+      "Il fait beau",
+      "Il est huit heures",
+      "Il fait du mal"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.896Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 22,
+    "questionText": "Qui est la ? ………………….",
+    "options": [
+      "Personne",
+      "Je",
+      "Il",
+      "Me"
+    ],
+    "correctAnswer": "C",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.896Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 23,
+    "questionText": "Kofi lave sa chemise parce qu’elle est très ……….",
+    "options": [
+      "laide",
+      "sèche",
+      "sale",
+      "belle"
+    ],
+    "correctAnswer": "A",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.896Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 24,
+    "questionText": "L’élève écrit sur une feuille de ……………",
+    "options": [
+      "toile",
+      "papier",
+      "paille",
+      "tôle"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.896Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 25,
+    "questionText": "Regarde cette ……………. quelle heure est-il ?",
+    "options": [
+      "boîte",
+      "montre",
+      "maison",
+      "eau"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.896Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 26,
+    "questionText": "Vous avez sommeil ? Allez donc ………………",
+    "options": [
+      "au champ",
+      "à la cuisine",
+      "à la plage",
+      "au lit"
+    ],
+    "correctAnswer": "D",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.896Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 27,
+    "questionText": "Quel ……………. garçon !",
+    "options": [
+      "bel",
+      "belle",
+      "beau",
+      "beaux"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.896Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 28,
+    "questionText": "Les oranges sont ………………",
+    "options": [
+      "verte",
+      "vert",
+      "verts",
+      "vertes"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.896Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 29,
+    "questionText": "Kwame va ……………..ville.",
+    "options": [
+      "aux",
+      "au",
+      "à",
+      "en"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.896Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 30,
+    "questionText": "Il y à une boîte ……………… le banc",
+    "options": [
+      "pres",
+      "a",
+      "sous",
+      "de\n\nRead the passage below carefully and answer the questions that follow by shading on your answer sheet the letter which corresponds with the correct answer\n\nLA FETE AU VILLAGEAprès les récoltes, c’est la fêté. Ce jour-là, tout le monde est content dans le village. Les villageois tuent des coqs, des poules, des moutons et des bœufs. On prépare du riz, du foufou et de la pâte. On boit du vin de palme, de la bière et de jus de fruits.Après le repas, chacun porte ses jolis vêtements. Les hommes, les femmes, les filles et les garçons se rassemblent sous un grand arbre. La, ils jouent du tam-tam. Ils chantent, dansent et rient. La nuit, ils rentrent à la maison. Ils sont tous fatigués. Ils se couchent dans la cour et dorment bien. C’est ça la vie au village."
+    ],
+    "correctAnswer": "C",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.896Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 31,
+    "questionText": "Qu’est-ce qu’il y à après les récoltes ?",
+    "options": [
+      "La fête",
+      "La classe",
+      "Le repas",
+      "La boisson"
+    ],
+    "correctAnswer": "C",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.896Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 32,
+    "questionText": "Comment sont les villageois ? Ils sont …………….",
+    "options": [
+      "gentils",
+      "paresseux",
+      "contents",
+      "méchants"
+    ],
+    "correctAnswer": "C",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.896Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 33,
+    "questionText": "Ils tuent des ……………………..",
+    "options": [
+      "coqs, chevaux et oiseaux",
+      "poules, bœufs et moutons",
+      "bœufs et chèvre",
+      "moutons et chats"
+    ],
+    "correctAnswer": "A",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.896Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 34,
+    "questionText": "Qu’est-ce que les villageois mangent ? Ils mangent …………",
+    "options": [
+      "du riz et du foufou",
+      "des fruits",
+      "des récoltes",
+      "des récoltes et des fruits"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.896Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 35,
+    "questionText": "Après le repas chacun met …………………",
+    "options": [
+      "son grand vêtement",
+      "ses beaux vêtements",
+      "sa belle robe",
+      "son beau pantalon"
+    ],
+    "correctAnswer": "D",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.896Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 36,
+    "questionText": "Où se rassemblent-il ? ………………..",
+    "options": [
+      "Dans le champ",
+      "Dans la maison",
+      "Sous un arbre",
+      "Chez le chef du village"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.896Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 37,
+    "questionText": "Que font-ils quand ils se rassemblent ? Ils ……………",
+    "options": [
+      "mangent",
+      "s’amusent",
+      "dorment",
+      "s’habillent"
+    ],
+    "correctAnswer": "A",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.896Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 38,
+    "questionText": "La nuit, tout le monde rentre……………………",
+    "options": [
+      "au village",
+      "chez le chef",
+      "chez lui",
+      "dans la cour"
+    ],
+    "correctAnswer": "D",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.896Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 39,
+    "questionText": "Ils se couchent …………………..",
+    "options": [
+      "en plein air",
+      "dans la chambre",
+      "dans la maison",
+      "sous un grand arbre"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.896Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1995",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 40,
+    "questionText": "C’est ça la vie au village ‘ C’est-à-dire………………",
+    "options": [
+      "la vie est intéressante au village",
+      "la vie est difficile au village",
+      "la vie est dangereuse au village",
+      "la vie est terrible au village."
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1995 questions.docx",
+      "importedAt": "2025-11-20T17:20:31.896Z"
+    }
+  }
+]

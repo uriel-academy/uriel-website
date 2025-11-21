@@ -143,6 +143,8 @@ class SubjectQuickLinksWidget extends StatelessWidget {
         return const Color(0xFF009688);
       case Subject.creativeArts:
         return const Color(0xFFFF5722);
+      case Subject.careerTechnology:
+        return const Color(0xFF607D8B);
       case Subject.trivia:
         return const Color(0xFF9C27B0);
       default:
@@ -172,6 +174,8 @@ class SubjectQuickLinksWidget extends StatelessWidget {
         return Icons.computer;
       case Subject.creativeArts:
         return Icons.palette;
+      case Subject.careerTechnology:
+        return Icons.build;
       case Subject.trivia:
         return Icons.psychology;
       default:
@@ -201,6 +205,8 @@ class SubjectQuickLinksWidget extends StatelessWidget {
         return 'ICT';
       case Subject.creativeArts:
         return 'Creative Arts';
+      case Subject.careerTechnology:
+        return 'Career Tech';
       case Subject.trivia:
         return 'Trivia';
       default:

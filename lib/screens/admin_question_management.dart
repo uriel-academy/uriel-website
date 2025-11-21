@@ -591,6 +591,8 @@ class _SingleQuestionInputTabState extends State<SingleQuestionInputTab> {
         return 'Religious & Moral Education';
       case Subject.creativeArts:
         return 'Creative Arts';
+      case Subject.careerTechnology:
+        return 'Career Technology';
       case Subject.trivia:
         return 'Trivia';
     }

@@ -640,6 +640,8 @@ class _QuizSetupPageState extends State<QuizSetupPage> {
         return Subject.ict;
       case 'Creative Arts':
         return Subject.creativeArts;
+      case 'Career Technology':
+        return Subject.careerTechnology;
       case 'French':
         return Subject.french;
       case 'Twi':

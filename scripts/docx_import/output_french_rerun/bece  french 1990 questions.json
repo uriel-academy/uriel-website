@@ -1,0 +1,803 @@
+[
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 1,
+    "questionText": "Elles mangent ……….. pain",
+    "options": [
+      "de la",
+      "la",
+      "du",
+      "une"
+    ],
+    "correctAnswer": "A",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.077Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 2,
+    "questionText": "Nous écrivons ………… tableau.",
+    "options": [
+      "à la",
+      "aux",
+      "à l’",
+      "au"
+    ],
+    "correctAnswer": "C",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.079Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 3,
+    "questionText": "Kofi va chercher …………….chaise.",
+    "options": [
+      "du",
+      "une",
+      "de la",
+      "des"
+    ],
+    "correctAnswer": "D",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.079Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 4,
+    "questionText": "Maman achète …………. tomates.",
+    "options": [
+      "une",
+      "de",
+      "de la",
+      "des"
+    ],
+    "correctAnswer": "A",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.079Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 5,
+    "questionText": "…………………….. enfant dort sur la table",
+    "options": [
+      "Les",
+      "La",
+      "L’",
+      "De la"
+    ],
+    "correctAnswer": "A",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.079Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 6,
+    "questionText": "Le chat mange …………… Lézards.",
+    "options": [
+      "une",
+      "les",
+      "la",
+      "un"
+    ],
+    "correctAnswer": "D",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.079Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 7,
+    "questionText": "Ama écoute ………….. leçon.",
+    "options": [
+      "le",
+      "à la",
+      "la",
+      "les"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.079Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 8,
+    "questionText": "Donne-moi ………….eau.",
+    "options": [
+      "une",
+      "un",
+      "la",
+      "l’"
+    ],
+    "correctAnswer": "A",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.079Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 9,
+    "questionText": "…………….. homme arrives.",
+    "options": [
+      "La",
+      "Les",
+      "Un",
+      "Une"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.079Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 10,
+    "questionText": "Nous avons …………… belle maison.",
+    "options": [
+      "une",
+      "un",
+      "le",
+      "les"
+    ],
+    "correctAnswer": "C",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.079Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 11,
+    "questionText": "Viens me ………..bonjour.",
+    "options": [
+      "saluer",
+      "parler",
+      "dire",
+      "voir"
+    ],
+    "correctAnswer": "C",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.079Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 12,
+    "questionText": "Aujourd’hui c’est samedi, et demain sera",
+    "options": [
+      "dimanche",
+      "lundi",
+      "jeudi",
+      "vendredi"
+    ],
+    "correctAnswer": "D",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.079Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 13,
+    "questionText": "L’homme vend des chemises et des robes. C’est un…………..",
+    "options": [
+      "vendeur",
+      "voleur",
+      "professeur",
+      "pêcheur"
+    ],
+    "correctAnswer": "C",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.079Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 14,
+    "questionText": "Quel âge as-tu ? ……………….",
+    "options": [
+      "J’ai froid",
+      "Je vais bien",
+      "Je mange bien",
+      "J’ai dix ans."
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.079Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 15,
+    "questionText": "Elle est malade. Elle prend……………",
+    "options": [
+      "de la bière",
+      "de l’aspirine",
+      "de vin",
+      "de l’eau"
+    ],
+    "correctAnswer": "D",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.079Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 16,
+    "questionText": "J’ai faim. Je veux……………..",
+    "options": [
+      "dormir",
+      "parler",
+      "manger",
+      "courir"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.079Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 17,
+    "questionText": "Le cocotier est ………….",
+    "options": [
+      "un arbre",
+      "un animal",
+      "un insecte",
+      "un fruit"
+    ],
+    "correctAnswer": "A",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.079Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 18,
+    "questionText": "Le professeur corrige les",
+    "options": [
+      "classes",
+      "tableaux",
+      "devoirs",
+      "bancs"
+    ],
+    "correctAnswer": "C",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.079Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 19,
+    "questionText": "Le ………….. se trouve dans l’eau.",
+    "options": [
+      "mouton",
+      "poisson",
+      "chat",
+      "chien"
+    ],
+    "correctAnswer": "A",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.079Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 20,
+    "questionText": "L’oranges est …………",
+    "options": [
+      "un bâton",
+      "une poupée",
+      "un journal",
+      "un fruit"
+    ],
+    "correctAnswer": "C",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.079Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 21,
+    "questionText": "Les élèves entrent ……….classe.",
+    "options": [
+      "au",
+      "à",
+      "en",
+      "pour"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.079Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 22,
+    "questionText": "Le livre est …………… la table.",
+    "options": [
+      "dans",
+      "sur",
+      "à",
+      "sans"
+    ],
+    "correctAnswer": "C",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.079Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 23,
+    "questionText": "Le voleur passe ……… la fenêtre.",
+    "options": [
+      "sous",
+      "sans",
+      "dans",
+      "par"
+    ],
+    "correctAnswer": "A",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.079Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 24,
+    "questionText": "Cette dame porte des lunettes ……….bien voir.",
+    "options": [
+      "de",
+      "pour",
+      "en",
+      "par"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.079Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 25,
+    "questionText": "L’enfant marché ………….. sa mère.",
+    "options": [
+      "devant",
+      "pour",
+      "sous",
+      "sur"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.079Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 26,
+    "questionText": "Ils vont…………… Lomé en autocar",
+    "options": [
+      "sur",
+      "au",
+      "à",
+      "du"
+    ],
+    "correctAnswer": "D",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.079Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 27,
+    "questionText": "Qui est …………… la porte ?",
+    "options": [
+      "sur",
+      "derrière",
+      "sous",
+      "vers"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.079Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 28,
+    "questionText": "Kofi va ………… France",
+    "options": [
+      "de",
+      "vers",
+      "en",
+      "à"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.079Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 29,
+    "questionText": "Le chat …………..sur le tit",
+    "options": [
+      "dort",
+      "va",
+      "regarde",
+      "écrit"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.079Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 30,
+    "questionText": "Maman donne des bonbons ………. enfants.",
+    "options": [
+      "des",
+      "pour",
+      "au",
+      "aux\n\nRead the passage below carefully and answer the questions that follow by shading on your answer sheet the letter which corresponds with the correct answer\n\nLA MECHANTE FILLE\n\nC’est midi. Tout le monde dort. Mais Ali est dans le jardin. Il lit son livre et écoute la chanson des oiseaux.Après quelques minutes sa sœur Rama arrive du marché. Elle voit Ali dans le jardin, mais Ali ne la voit pas. Il continue à lire.Elle entré dans le jardin en silence. Elle se cache derrière un arbre. Elle à un sa",
+      "Elle prend du sac un serpent-poupee qu’ell à achète au marché. Elle met le serpent-poupee sur la tête d’Ali mais le poupee tombe devant Ali Il à peur. Il crie, il saute, et commence à courir vers la maison.Rama rit et appelle son frère. Mais Ali continue à courir. Il à toujour peur. Rama n’est pas du tout gentille."
+    ],
+    "correctAnswer": "C",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.079Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 31,
+    "questionText": "Quand est-ce que tout le monde dort ?",
+    "options": [
+      "Le matin",
+      "A midi",
+      "L’après –midi",
+      "A minuit"
+    ],
+    "correctAnswer": "C",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.079Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 32,
+    "questionText": "Où est Ali ? Il est …………….",
+    "options": [
+      "dans la maison",
+      "avec Rama",
+      "dans le jardin",
+      "au marché"
+    ],
+    "correctAnswer": "C",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.080Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 33,
+    "questionText": "Qui chantent dans le jardin ?",
+    "options": [
+      "Les oiseaux",
+      "Rama et Ali",
+      "Ali et sa sœur",
+      "Les serpent-poupees"
+    ],
+    "correctAnswer": "A",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.080Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 34,
+    "questionText": "Dans le jardin, Rama voit……………….",
+    "options": [
+      "son frère",
+      "le livre",
+      "tout le monde",
+      "sa sœur"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.080Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 35,
+    "questionText": "Rama vient ……………….",
+    "options": [
+      "de la maison",
+      "du jardin",
+      "de la salle",
+      "du marché"
+    ],
+    "correctAnswer": "D",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.080Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 36,
+    "questionText": "Où se cache Rama ? Elle se cache……………..",
+    "options": [
+      "devant l’arbre",
+      "derrière l’arbre",
+      "derrière Ali",
+      "devant le jardin"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.080Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 37,
+    "questionText": "Qui met le serpent poupee ?",
+    "options": [
+      "Ali",
+      "Personne",
+      "Rama",
+      "La famille"
+    ],
+    "correctAnswer": "A",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.080Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 38,
+    "questionText": "Rama met le serpent-poupee…………….",
+    "options": [
+      "dans la poche",
+      "aux pieds d’Ali",
+      "sur la tête d’Ali",
+      "dans la chemise"
+    ],
+    "correctAnswer": "D",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.080Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 39,
+    "questionText": "Ali court vers………….",
+    "options": [
+      "le jardin",
+      "le marché",
+      "la maison",
+      "l’arbre"
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.080Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "1990",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 40,
+    "questionText": "Que fait Rama finalement ?",
+    "options": [
+      "Elle rit et appelle son frère",
+      "Elle crie et court vers son frère",
+      "Elle rit et regarde son frère.",
+      "Elle crie et appelle son frère."
+    ],
+    "correctAnswer": "B",
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "metadata": {
+      "sourceFile": "bece  french 1990 questions.docx",
+      "importedAt": "2025-11-20T16:28:18.080Z"
+    }
+  }
+]

@@ -1,0 +1,704 @@
+[
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 2,
+    "questionText": "Selon les textes, qui n'aime pas préparer les repas?",
+    "options": [
+      "Cobbina",
+      "D-Jay",
+      "Roberta",
+      "Rukiya"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 3,
+    "questionText": "Rukiya aime ......",
+    "options": [
+      "l'anglais",
+      "le français",
+      "l'histoire",
+      "les mathènatuques"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 4,
+    "questionText": "Rukiya est ...... du groupe de trois èlèves.",
+    "options": [
+      "la plus àgèe",
+      "la plus belle",
+      "la plus jeune",
+      "la plus petite"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 5,
+    "questionText": "Selon le passage, Cobbina adore ......",
+    "options": [
+      "les chats",
+      "l'anglais",
+      "aller à Tarkwa",
+      "manger de la viande\n\nTEXTE 2.\n\nUn journaliste nous raconte la vie à Domekofe le vendredi soir. Lisez le texte et rèpondez aux questions.Le vendredi soir à Domekofe est toujours animé. Quand les élèves reviennent de l'école, ils font d'abord leurs devoirs. Leurs parents aussi reviennent au foyer après la journée au champ. Après le diner, les habitants se rassemblent au centre public pour se divertir.Là-bas,on joue du tam-tam, on chante et on danse. Pendant ces jouissances, les jeunes imitent leurs parents en dansant aussi. En plus, certains profitent de l'occasion pour chercher leurs amants.À 22 heures, les activités s'arrêtent puis tout le monde va au lit.6.\n\nQu'est-ce qui anime le vendredi soir à Domekofe?",
+      "La journée au champ",
+      "Le retour des éléves",
+      "Le devoirs",
+      "Les jouissances"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 7,
+    "questionText": "Selon le journaliste, les parents à Domekofe sont ......",
+    "options": [
+      "animateurs",
+      "cultivateurs",
+      "élèves",
+      "musiciens"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 8,
+    "questionText": "D'après le texte, on joue du tam-tam ......",
+    "options": [
+      "à la place publique",
+      "à l'école publique",
+      "au champ",
+      "au foyer"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 9,
+    "questionText": "Pendant la soirée, les jeunes dansent ...... leurs parents.",
+    "options": [
+      "avec",
+      "comme",
+      "pour",
+      "sans"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 10,
+    "questionText": "À 22 heures, lout le monde va ......",
+    "options": [
+      "chanter",
+      "danser",
+      "se coucher",
+      "s'amuser\n\nTEXTE 3.\n\nKwaku passe ses vacances chez son oncle. Il présente la famille de son oncle à son ami sur Facebook. Lisez le texte et rèpondez aux questions.Mon oncle, M. Boateng, est architecte. Sa femme est présentatrice à la radio. Ils ont trois enfants Patrick et Patricia, nés le méme jour il y a dix ans, et Philip qui a deux ans de moins.Chaque matin, Patrick va chercher de l'eau alors que Philip balaie la cour et les chambres. Patricia aide sa mère à la cuisine et moi, je lave la voiture de mon oncle. Après, les enfants se lavent, prennent leur petit déjeuner et quittent la maison pour l'école à sept heures.11.\n\nLa famille Boateng a ...... membres.",
+      "deux",
+      "trois",
+      "cinq",
+      "six"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 12,
+    "questionText": "Kwaku est ...... de M. Boateng.",
+    "options": [
+      "l'enfant",
+      "l'oncle",
+      "le cousin",
+      "le neveu"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 13,
+    "questionText": "Patrick et Patricia sont nés le même jour, c'est-à-dire qu'ils sont ......",
+    "options": [
+      "des confrères",
+      "des frères",
+      "des jumeaux",
+      "des soeurs"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 14,
+    "questionText": "Philip a quel àge?",
+    "options": [
+      "2 ans",
+      "8 ans",
+      "10 ans",
+      "12 ans"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 15,
+    "questionText": "Le petit déjeuner est préparé par ......",
+    "options": [
+      "Patrick et Patricia",
+      "Philip et Kwaku",
+      "Philip et Mme Boateng",
+      "Patricia et Mme Boateng\n\nTEXTE 4.\n\nVoici un article publié dans un journal des jeunes togolais. Lisez-le et rèpondez aux questions.Un match de foot pas comme les autresPour célébrer le soixante-septième anniversare de l'indépendance du Ghana, le Ministère des Sports organise un match de foot entre mon école, Barracks Basic et Airport Basi",
+      "Le match a lieu sur notre terrain.À la première mi-temps, notre équipe marque trois buts grâce à Appiah, notre capitaine, Lorlornyo et Abeiku. Pendant la deuxième mi-temps, l'arbitre siffle deux pénaltys pour Airport Basi",
+      "Mais leur capitaine, Shittu, rate le premier et notre gardien arrête le deuxième.À la quatre-vngt-neuvième minute, e'est le gargien de Airport Basic qui n'arrive pas à marquer un autre pénalty. Quelle malchance!16.\n\nBarracks Basic et Airport Basic son ......",
+      "des camps militaires",
+      "des écoles primaires",
+      "des équipes de football",
+      "des joueurs de football"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 17,
+    "questionText": "Le match a lieu ......",
+    "options": [
+      "à Barracks Basic",
+      "à Airport Basic",
+      "au ministère des Sports",
+      "sur le terrain du Ghana"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 18,
+    "questionText": "Combien de buts sont marqués pendant le match?",
+    "options": [
+      "Zéro",
+      "Deux",
+      "Trois",
+      "Cinq"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 19,
+    "questionText": "Selon le passage, ......",
+    "options": [
+      "Airport Basic perd le match",
+      "Appiah marque trois buts",
+      "l'arbitre siffle deux pénaltys",
+      "Shittu rate trois pénaltys"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 20,
+    "questionText": "Le gardien de Airport Basic rate un pénalty à la ...... minute.",
+    "options": [
+      "29 ème",
+      "49 ème",
+      "89 ème",
+      "99 ème\n\nPART IIComplétez les phrases suivantes avec les mots qui conviennent le plus en noircissant la lettre de la réponse juste.Complete the following sentences with the most appropriate word(s) and shade on your answer sheet the letter of the answer you have chosen.21.\n\nQuand on parle d'Afadzato, il s'agit ......",
+      "d'un animal",
+      "d'une montagne",
+      "d'un pays",
+      "d'une ville"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 22,
+    "questionText": "À la fin de la journée, quand Aminata veut aller au lit, elle dit ...... à a mère.",
+    "options": [
+      "Au lit!",
+      "Au revoir!",
+      "Bonne nuit!",
+      "Bonsoir!"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 23,
+    "questionText": "- Joe! Tu es le dernier né de tes parents?- Ah non! Je suis plutôt ......",
+    "options": [
+      "l'ainé",
+      "le cadet",
+      "l'enfant",
+      "le petit"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 24,
+    "questionText": "- Bonjour, Maman! Où allez-vous?- Bonjour! Je veux aller voir le directeur de l'école dans ...... pour payer les frais de scolarité.",
+    "options": [
+      "son atelier",
+      "son bureau",
+      "sa classe",
+      "sa salle"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 25,
+    "questionText": "- Salut Sammy! Je t'invite à jouer aux jeux vidéo. Tu viens?- ...... Je suis occupé.",
+    "options": [
+      "D'accord!",
+      "Désolé!",
+      "Ok,ça marche!",
+      "Oui, merci!"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 26,
+    "questionText": "M. Dupont est européen ...... son tient noir.",
+    "options": [
+      "à part",
+      "dans",
+      "en plus",
+      "malgré"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 27,
+    "questionText": "Avec l'ordonnance, Mme Awula va ...... pour acheter des médicaments.",
+    "options": [
+      "à la clinique",
+      "à la pharmacie",
+      "au magasin",
+      "au marché"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 28,
+    "questionText": "- Paul, voici mon cousin, Jean.- Ah bon! Donc, il est ......!",
+    "options": [
+      "le fils de ta soeur",
+      "le fils de ta tante",
+      "le frère de ton père",
+      "le frère de ton neveu"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 29,
+    "questionText": "Mes chers enfants, c'est bientôt décembre et nous devons nous préparer pour la fête ......",
+    "options": [
+      "des Mères",
+      "de Noël",
+      "des Pâques",
+      "de Pentecôte"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 30,
+    "questionText": "- Esi, que penses-tu des citoyens de ......?- Ils sont vraiment gentils.",
+    "options": [
+      "cette école",
+      "cette région",
+      "ce pays",
+      "ce quartier\n\nPART IIIComplétez le passage suivant avec les mots qui conviennent le plus en noircissant la lettre de la rèponse juste.Complete the following passage with the most appropriate word(s) and shade on your answer sheet the letter of the answer you have chosen.Fiifi décrit à son correspondant ivôirien, la féte d'igname chez les Lugus.Le dernier samedi ---31--- mois d'août marque le jour de la féte d'igname chez les Lugus. Au village de Koboti, tout le monde ---32--- de bonne heure três ---33---. Personne ne va au champ ---34--- au travail ce jour-là. Le matin, les hommes ---35--- des moutons, des boeufs det coqs. Leurs femmes préparent du fufu d'igname; et c'est le repas préféré dans ---36--- maison.Après avoir mangé, chacum porte ---37--- jolis vêtements et bijoux. ---38--- se rassemblent à la place publique ---39--- le grand arbre au centre du village. Là, les jeunes hommes jouent du tam-tam et les autres dansent. Le soir, ils rentrent chez ---40--- tout fatigués.31.\n\nChoose the most appropriate word(s) to complete the passage.",
+      "de",
+      "au",
+      "du",
+      "le"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 32,
+    "questionText": "Choose the most appropriate word(s) to complete the passage.",
+    "options": [
+      "se lève",
+      "se lèves",
+      "se lèvent",
+      "se lever"
+    ],
+    "correctAnswer": "C",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 33,
+    "questionText": "Choose the most appropriate word(s) to complete the passage.",
+    "options": [
+      "content",
+      "contente",
+      "contents",
+      "contentes"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 34,
+    "questionText": "Choose the most appropriate word(s) to complete the passage.",
+    "options": [
+      "ou",
+      "ni",
+      "pas",
+      "qu"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 35,
+    "questionText": "Choose the most appropriate word(s) to complete the passage.",
+    "options": [
+      "tue",
+      "tuer",
+      "tues",
+      "tuent"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 36,
+    "questionText": "Choose the most appropriate word(s) to complete the passage.",
+    "options": [
+      "cette",
+      "chaque",
+      "d'autres",
+      "quelques"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 37,
+    "questionText": "Choose the most appropriate word(s) to complete the passage.",
+    "options": [
+      "leurs",
+      "nos",
+      "ses",
+      "vos"
+    ],
+    "correctAnswer": "A",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 38,
+    "questionText": "Choose the most appropriate word(s) to complete the passage.",
+    "options": [
+      "Elle",
+      "Elles",
+      "Il",
+      "Ils"
+    ],
+    "correctAnswer": "D",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 39,
+    "questionText": "Choose the most appropriate word(s) to complete the passage.",
+    "options": [
+      "dans",
+      "près",
+      "sous",
+      "sur"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  },
+  {
+    "subject": "french",
+    "year": "2025",
+    "examType": "bece",
+    "section": "A",
+    "questionNumber": 40,
+    "questionText": "Choose the most appropriate word(s) to complete the passage.",
+    "options": [
+      "elles",
+      "eux",
+      "nous",
+      "vous"
+    ],
+    "correctAnswer": "B",
+    "passage": null,
+    "metadata": {
+      "sourceFile": "bece french 2025 questions.docx",
+      "importedAt": "2025-11-20T16:29:03.950Z"
+    }
+  }
+]
