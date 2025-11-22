@@ -6,6 +6,7 @@ import 'package:share_plus/share_plus.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
+import '../services/storage_service.dart';
 
 class EnhancedEpubReaderPage extends StatefulWidget {
   final String bookTitle;
@@ -194,6 +195,16 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
     }
   }
 
+  Future<Uint8List?> _loadFromAssets() async {
+    try {
+      final assetBytes = await rootBundle.load(widget.assetPath);
+      return assetBytes.buffer.asUint8List();
+    } catch (e) {
+      debugPrint('Failed to load from assets: $e');
+      return null;
+    }
+  }
+
   Future<void> _loadEpub() async {
     try {
       setState(() {
@@ -201,15 +212,34 @@ class _EnhancedEpubReaderPageState extends State<EnhancedEpubReaderPage> with Si
         _error = null;
       });
 
-      final bytes = await rootBundle.load(widget.assetPath);
+      Uint8List? bytes;
+
+      // Try to load from Firebase Storage first (for lazy loading)
+      if (widget.assetPath.startsWith('storage://')) {
+        // Extract filename from storage path
+        final fileName = widget.assetPath.replaceFirst('storage://', '');
+        bytes = await StorageService.downloadStorybook(fileName);
+      }
+
+      // Fallback to assets if storage fails or if it's an asset path
+      bytes ??= await _loadFromAssets();
+
+      // Final check if we have bytes
+      if (bytes!.isEmpty) {
+        setState(() {
+          _isLoading = false;
+          _error = 'Failed to load book content';
+        });
+        return;
+      }
       
       // Load EPUB for text extraction
-      _epubBook = await EpubReader.readBook(bytes.buffer.asUint8List());
+      _epubBook = await EpubReader.readBook(bytes);
       await _extractChapterTexts();
       
       // Load EPUB for viewing
       _epubController = EpubController(
-        document: EpubDocument.openData(bytes.buffer.asUint8List()),
+        document: EpubDocument.openData(bytes),
       );
 
       // Load saved progress

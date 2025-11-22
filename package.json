@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@google-cloud/storage": "^7.17.3",
     "adm-zip": "^0.5.16",
     "axios": "^1.12.2",
     "epubjs": "^0.3.93",

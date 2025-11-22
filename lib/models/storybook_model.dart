@@ -5,7 +5,8 @@ class Storybook {
   final String title;
   final String author;
   final String fileName;
-  final String assetPath;
+  final String assetPath; // Keep for backward compatibility, but prefer storageUrl
+  final String? storageUrl; // New field for Firebase Storage URL
   final int fileSize;
   final String format;
   final String category;
@@ -24,6 +25,7 @@ class Storybook {
     required this.author,
     required this.fileName,
     required this.assetPath,
+    this.storageUrl,
     required this.fileSize,
     required this.format,
     required this.category,
@@ -46,6 +48,7 @@ class Storybook {
       author: data['author'] ?? 'Unknown',
       fileName: data['fileName'] ?? '',
       assetPath: data['assetPath'] ?? '',
+      storageUrl: data['storageUrl'],
       fileSize: data['fileSize'] ?? 0,
       format: data['format'] ?? 'epub',
       category: data['category'] ?? 'classic-literature',
@@ -67,6 +70,7 @@ class Storybook {
       'author': author,
       'fileName': fileName,
       'assetPath': assetPath,
+      'storageUrl': storageUrl,
       'fileSize': fileSize,
       'format': format,
       'category': category,

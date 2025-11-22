@@ -1,0 +1,89 @@
+{
+  "timestamp": "2025-11-22T12:12:03.984Z",
+  "metrics": {
+    "totalDownloads": 0,
+    "averageDownloadTime": 0,
+    "failedDownloads": 0,
+    "storageUsage": 403850640,
+    "activeUsers": 0,
+    "popularBooks": [
+      {
+        "id": "a-christmas-carol-charles-dickens",
+        "title": "A Christmas Carol",
+        "author": "Charles Dickens",
+        "downloadCount": 0,
+        "fileSize": 2315245
+      },
+      {
+        "id": "a-dolls-house-henrik-ibsen",
+        "title": "A Dolls House",
+        "author": "Henrik Ibsen",
+        "downloadCount": 0,
+        "fileSize": 4371632
+      },
+      {
+        "id": "a-room-with-a-view-e-m-forster",
+        "title": "A Room With A View E",
+        "author": "M Forster",
+        "downloadCount": 0,
+        "fileSize": 6010428
+      },
+      {
+        "id": "a-tale-of-two-cities-charles-dickens",
+        "title": "A Tale Of Two Cities",
+        "author": "Charles Dickens",
+        "downloadCount": 0,
+        "fileSize": 4625287
+      },
+      {
+        "id": "alices-adventures-in-wonderland-lewis-carroll",
+        "title": "Alices Adventures In Wonderland",
+        "author": "Lewis Carroll",
+        "downloadCount": 0,
+        "fileSize": 27400828
+      },
+      {
+        "id": "anna-karenina-leo-tolstoy",
+        "title": "Anna Karenina",
+        "author": "Leo Tolstoy",
+        "downloadCount": 0,
+        "fileSize": 3353971
+      },
+      {
+        "id": "anne-of-green-gables-l-m-montgomery",
+        "title": "Anne Of Green Gables L",
+        "author": "M Montgomery",
+        "downloadCount": 0,
+        "fileSize": 2108470
+      },
+      {
+        "id": "bambi-felix-salten",
+        "title": "Bambi",
+        "author": "Felix Salten",
+        "downloadCount": 0,
+        "fileSize": 3703916
+      },
+      {
+        "id": "beowulf-an-anglo-saxon-epic-poem",
+        "title": "Beowulf An Anglo Saxon",
+        "author": "Epic Poem",
+        "downloadCount": 0,
+        "fileSize": 1898128
+      },
+      {
+        "id": "candide-voltaire",
+        "title": "Candide",
+        "author": "Voltaire",
+        "downloadCount": 0,
+        "fileSize": 4403398
+      }
+    ],
+    "performanceMetrics": []
+  },
+  "recommendations": [
+    "Lazy loading successfully reduces initial bundle size",
+    "Firebase Storage provides reliable content delivery",
+    "Monitor download patterns to optimize content strategy",
+    "Consider implementing download caching for better performance"
+  ]
+}

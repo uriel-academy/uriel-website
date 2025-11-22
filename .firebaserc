@@ -1,6 +1,7 @@
 {
   "projects": {
-    "uriel": "uriel-academy-41fb0"
+    "uriel": "uriel-academy-41fb0",
+    "storybook": "uriel-academy-41fb0"
   },
   "targets": {},
   "etags": {}

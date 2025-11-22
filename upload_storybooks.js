@@ -7,7 +7,7 @@ const serviceAccount = require('./uriel-academy-41fb0-firebase-adminsdk-fbsvc-4f
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  storageBucket: 'gs://uriel-academy-41fb0.appspot.com'
+  storageBucket: 'uriel-academy-41fb0.firebasestorage.app'
 });
 
 const bucket = admin.storage().bucket();

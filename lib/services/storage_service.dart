@@ -1,5 +1,6 @@
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/foundation.dart';
+import 'dart:typed_data';
 
 class StorageService {
   static final FirebaseStorage _storage = FirebaseStorage.instance;
@@ -273,29 +274,25 @@ class StorageService {
     }).toList();
   }
 
-  // Upload file to storage (for admin use)
-  static Future<String> uploadFile(String filePath, String fileName, String subject) async {
+  // Get storybook download URL from storage
+  static Future<String?> getStorybookDownloadUrl(String fileName) async {
     try {
-      String folderPath;
-      switch (subject.toLowerCase()) {
-        case 'rme':
-        case 'religious and moral education':
-          folderPath = 'bece-rme questions';
-          break;
-        case 'trivia':
-          folderPath = 'trivia';
-          break;
-        default:
-          folderPath = 'bece-${subject.toLowerCase()} questions';
-      }
-      
-      final ref = _storage.ref('$folderPath/$fileName');
-      // Note: For web, you'd use different upload method
-      // This is just the structure for future implementation
-      
+      final ref = _storage.ref('storybooks/$fileName');
       return await ref.getDownloadURL();
     } catch (e) {
-      throw Exception('Failed to upload file: $e');
+      debugPrint('Error getting storybook download URL for $fileName: $e');
+      return null;
+    }
+  }
+
+  // Download storybook bytes from storage
+  static Future<Uint8List?> downloadStorybook(String fileName) async {
+    try {
+      final ref = _storage.ref('storybooks/$fileName');
+      return await ref.getData();
+    } catch (e) {
+      debugPrint('Error downloading storybook $fileName: $e');
+      return null;
     }
   }
 }

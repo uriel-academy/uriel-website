@@ -962,6 +962,11 @@ class _TextbooksPageState extends State<TextbooksPage>
     // Increment read count
     _storybookService.incrementReadCount(storybook.id);
     
+    // Determine the asset path - prefer storage URL for lazy loading
+    String assetPath = storybook.storageUrl != null 
+        ? 'storage://${storybook.fileName}'
+        : storybook.assetPath;
+    
     // Open the Enhanced EPUB reader
     Navigator.push(
       context,
@@ -969,7 +974,7 @@ class _TextbooksPageState extends State<TextbooksPage>
         builder: (context) => EnhancedEpubReaderPage(
           bookTitle: storybook.title,
           author: storybook.author,
-          assetPath: storybook.assetPath,
+          assetPath: assetPath,
           bookId: storybook.id,
         ),
       ),
