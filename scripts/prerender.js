@@ -44,7 +44,9 @@ routes.forEach(route => {
   out = out.replace(/<meta property="twitter:title" content=".*?">/s, `<meta property="twitter:title" content="${title}">`);
   out = out.replace(/<meta property="twitter:description" content=".*?">/s, `<meta property="twitter:description" content="${desc}">`);
   out = out.replace(/<meta property="twitter:image" content=".*?">/s, `<meta property="twitter:image" content="${image}">`);
-  out = out.replace(/<link rel="canonical" href=".*?">/s, `<link rel="canonical" href="https://uriel-academy-41fb0.web.app${route.path}">`);
+  out = out.replace(/<link rel="canonical" href=".*?">/s, `<link rel="canonical" href="https://uriel.academy${route.path}">`);
+  out = out.replace(/<meta property="og:url" content=".*?">/s, `<meta property="og:url" content="https://uriel.academy${route.path}">`);
+  out = out.replace(/<meta property="twitter:url" content=".*?">/s, `<meta property="twitter:url" content="https://uriel.academy${route.path}">`);
 
   const outPath = path.join(buildPath, route.file);
   fs.writeFileSync(outPath, out, 'utf8');
