@@ -4,8 +4,10 @@ import 'package:flutter_web_plugins/url_strategy.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'firebase_options.dart';
 import 'services/connection_service.dart'; // Import connection monitoring service
+// import 'services/push_notification_service.dart'; // Import push notification service - commented out as file doesn't exist
 import 'screens/landing_page.dart'; // Import LandingPage for first load
 import 'screens/sign_in.dart' as sign_in; // Import your sign-in page with alias
 import 'screens/auth_gate.dart'; // Import AuthGate from dedicated file
@@ -39,6 +41,10 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
+  // Initialize Firebase Analytics
+  FirebaseAnalytics analytics = FirebaseAnalytics.instance;
+  FirebaseAnalyticsObserver observer = FirebaseAnalyticsObserver(analytics: analytics);
+
   // Enable local persistence so note text is immediately available offline
   // Use limited cache on web to prevent internal state errors (Firebase SDK 11.x)
   if (kIsWeb) {
@@ -59,11 +65,17 @@ void main() async {
   // Start connection monitoring to detect and recover from disconnections
   ConnectionService().startMonitoring();
 
-  runApp(const MyApp());
+  // Initialize push notifications - commented out as service doesn't exist
+  // await PushNotificationService().initialize();
+
+  runApp(MyApp(analytics: analytics, observer: observer));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final FirebaseAnalytics analytics;
+  final FirebaseAnalyticsObserver observer;
+
+  const MyApp({super.key, required this.analytics, required this.observer});
 
   @override
   Widget build(BuildContext context) {
@@ -72,6 +84,7 @@ class MyApp extends StatelessWidget {
         title: 'Uriel Academy',
         debugShowCheckedModeBanner: false,
         home: const AuthGate(), // Start with AuthGate (checks auth state automatically)
+        navigatorObservers: [observer], // Add analytics observer
         onGenerateRoute: (settings) {
         // Check if user is authenticated
         final isAuthenticated = FirebaseAuth.instance.currentUser != null;

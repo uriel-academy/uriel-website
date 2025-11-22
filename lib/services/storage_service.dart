@@ -1,6 +1,8 @@
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/foundation.dart';
 import 'dart:typed_data';
+import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class StorageService {
   static final FirebaseStorage _storage = FirebaseStorage.instance;
@@ -289,10 +291,73 @@ class StorageService {
   static Future<Uint8List?> downloadStorybook(String fileName) async {
     try {
       final ref = _storage.ref('storybooks/$fileName');
-      return await ref.getData();
+      final bytes = await ref.getData();
+
+      if (bytes != null) {
+        // Track download analytics
+        await _trackStorybookDownload(fileName);
+
+        // Increment download count in Firestore
+        await _incrementDownloadCount(fileName);
+      }
+
+      return bytes;
     } catch (e) {
       debugPrint('Error downloading storybook $fileName: $e');
       return null;
+    }
+  }
+
+  // Track storybook download analytics
+  static Future<void> _trackStorybookDownload(String fileName) async {
+    try {
+      final analytics = FirebaseAnalytics.instance;
+
+      // Extract book info from filename for better analytics
+      final bookTitle = fileName.replaceAll('.epub', '').replaceAll('.azw3', '')
+          .replaceAll('-', ' ').split(' ').map((word) =>
+              word.isNotEmpty ? word[0].toUpperCase() + word.substring(1) : word)
+          .join(' ');
+
+      await analytics.logEvent(
+        name: 'storybook_download',
+        parameters: {
+          'book_title': bookTitle,
+          'file_name': fileName,
+          'format': fileName.endsWith('.epub') ? 'epub' : 'azw3',
+          'timestamp': DateTime.now().toIso8601String(),
+        },
+      );
+
+      debugPrint('Analytics: Tracked download for $bookTitle');
+    } catch (e) {
+      debugPrint('Error tracking analytics: $e');
+    }
+  }
+
+  // Increment download count in Firestore
+  static Future<void> _incrementDownloadCount(String fileName) async {
+    try {
+      // Find the storybook document by fileName
+      final querySnapshot = await FirebaseFirestore.instance
+          .collection('storybooks')
+          .where('fileName', isEqualTo: fileName)
+          .limit(1)
+          .get();
+
+      if (querySnapshot.docs.isNotEmpty) {
+        final docRef = querySnapshot.docs.first.reference;
+
+        // Increment download count
+        await docRef.update({
+          'downloadCount': FieldValue.increment(1),
+          'lastAccessed': FieldValue.serverTimestamp(),
+        });
+
+        debugPrint('Firestore: Incremented download count for $fileName');
+      }
+    } catch (e) {
+      debugPrint('Error updating download count: $e');
     }
   }
 }

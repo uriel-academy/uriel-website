@@ -1,0 +1,520 @@
+{
+  "generatedAt": "2025-11-22T12:19:18.745Z",
+  "metrics": {
+    "downloadPatterns": {
+      "totalDownloads": 0,
+      "averageDownloads": 0,
+      "booksWithNoDownloads": 97,
+      "topPerformers": [
+        {
+          "title": "A Christmas Carol",
+          "author": "Charles Dickens",
+          "downloads": 0
+        },
+        {
+          "title": "A Dolls House",
+          "author": "Henrik Ibsen",
+          "downloads": 0
+        },
+        {
+          "title": "A Room With A View E",
+          "author": "M Forster",
+          "downloads": 0
+        },
+        {
+          "title": "A Tale Of Two Cities",
+          "author": "Charles Dickens",
+          "downloads": 0
+        },
+        {
+          "title": "Alices Adventures In Wonderland",
+          "author": "Lewis Carroll",
+          "downloads": 0
+        },
+        {
+          "title": "Anna Karenina",
+          "author": "Leo Tolstoy",
+          "downloads": 0
+        },
+        {
+          "title": "Anne Of Green Gables L",
+          "author": "M Montgomery",
+          "downloads": 0
+        },
+        {
+          "title": "Bambi",
+          "author": "Felix Salten",
+          "downloads": 0
+        },
+        {
+          "title": "Beowulf An Anglo Saxon",
+          "author": "Epic Poem",
+          "downloads": 0
+        },
+        {
+          "title": "Candide",
+          "author": "Voltaire",
+          "downloads": 0
+        }
+      ]
+    },
+    "categories": {
+      "classic-literature": {
+        "count": 97,
+        "downloads": 0,
+        "books": [
+          {
+            "title": "A Christmas Carol",
+            "downloads": 0
+          },
+          {
+            "title": "A Dolls House",
+            "downloads": 0
+          },
+          {
+            "title": "A Room With A View E",
+            "downloads": 0
+          },
+          {
+            "title": "A Tale Of Two Cities",
+            "downloads": 0
+          },
+          {
+            "title": "Alices Adventures In Wonderland",
+            "downloads": 0
+          },
+          {
+            "title": "Anna Karenina",
+            "downloads": 0
+          },
+          {
+            "title": "Anne Of Green Gables L",
+            "downloads": 0
+          },
+          {
+            "title": "Bambi",
+            "downloads": 0
+          },
+          {
+            "title": "Beowulf An Anglo Saxon",
+            "downloads": 0
+          },
+          {
+            "title": "Candide",
+            "downloads": 0
+          },
+          {
+            "title": "Cranford",
+            "downloads": 0
+          },
+          {
+            "title": "Crime And Punishment",
+            "downloads": 0
+          },
+          {
+            "title": "Cup Of Gold",
+            "downloads": 0
+          },
+          {
+            "title": "Dialogues",
+            "downloads": 0
+          },
+          {
+            "title": "Don Quixote Miguel",
+            "downloads": 0
+          },
+          {
+            "title": "Dracula",
+            "downloads": 0
+          },
+          {
+            "title": "Dubliners",
+            "downloads": 0
+          },
+          {
+            "title": "Emma",
+            "downloads": 0
+          },
+          {
+            "title": "Ethan Frome",
+            "downloads": 0
+          },
+          {
+            "title": "Fables",
+            "downloads": 0
+          },
+          {
+            "title": "Flatland Edwin",
+            "downloads": 0
+          },
+          {
+            "title": "Frankenstein",
+            "downloads": 0
+          },
+          {
+            "title": "Great Expectations",
+            "downloads": 0
+          },
+          {
+            "title": "History Of Tom Jones A Foundling",
+            "downloads": 0
+          },
+          {
+            "title": "Household Tales Jacob And",
+            "downloads": 0
+          },
+          {
+            "title": "In A Glass Darkly Joseph Sheridan",
+            "downloads": 0
+          },
+          {
+            "title": "In Search Of Lost Time",
+            "downloads": 0
+          },
+          {
+            "title": "Incidents In The Life Of A Slave Girl",
+            "downloads": 0
+          },
+          {
+            "title": "Jane Eyre",
+            "downloads": 0
+          },
+          {
+            "title": "Le Morte D Arthur Sir",
+            "downloads": 0
+          },
+          {
+            "title": "Les Miserables",
+            "downloads": 0
+          },
+          {
+            "title": "Leviathan",
+            "downloads": 0
+          },
+          {
+            "title": "Little Women Louisa",
+            "downloads": 0
+          },
+          {
+            "title": "Madame Bovary",
+            "downloads": 0
+          },
+          {
+            "title": "Meditations",
+            "downloads": 0
+          },
+          {
+            "title": "Middlemarch",
+            "downloads": 0
+          },
+          {
+            "title": "Moby Dick",
+            "downloads": 0
+          },
+          {
+            "title": "Narrative Of The Life Of Frederick Douglass",
+            "downloads": 0
+          },
+          {
+            "title": "Nicomachean",
+            "downloads": 0
+          },
+          {
+            "title": "Noli Me Tangere",
+            "downloads": 0
+          },
+          {
+            "title": "On Liberty John",
+            "downloads": 0
+          },
+          {
+            "title": "Paradise Lost",
+            "downloads": 0
+          },
+          {
+            "title": "Peter Pan J",
+            "downloads": 0
+          },
+          {
+            "title": "Philosophical Works",
+            "downloads": 0
+          },
+          {
+            "title": "Poetry Edgar",
+            "downloads": 0
+          },
+          {
+            "title": "Pride Prejudice",
+            "downloads": 0
+          },
+          {
+            "title": "Romeo And Juliet",
+            "downloads": 0
+          },
+          {
+            "title": "Second Treatise Of Government",
+            "downloads": 0
+          },
+          {
+            "title": "Sense And Sensibility",
+            "downloads": 0
+          },
+          {
+            "title": "Siddhartha",
+            "downloads": 0
+          },
+          {
+            "title": "The Adventures Of Huckleberry Finn",
+            "downloads": 0
+          },
+          {
+            "title": "The Adventures Of Sherlock Holmes Arthur",
+            "downloads": 0
+          },
+          {
+            "title": "The Adventures Of Tom Sawyer Complete",
+            "downloads": 0
+          },
+          {
+            "title": "The Art Of War",
+            "downloads": 0
+          },
+          {
+            "title": "The Autobiography Of Benjamin Franklin",
+            "downloads": 0
+          },
+          {
+            "title": "The Awakening",
+            "downloads": 0
+          },
+          {
+            "title": "The Blue Castle L",
+            "downloads": 0
+          },
+          {
+            "title": "The Brothers Karamazov",
+            "downloads": 0
+          },
+          {
+            "title": "The Call Of The Wild",
+            "downloads": 0
+          },
+          {
+            "title": "The Call Of The Wild",
+            "downloads": 0
+          },
+          {
+            "title": "The Communist Manifesto Karl Marx",
+            "downloads": 0
+          },
+          {
+            "title": "The Count Of Monte Cristo",
+            "downloads": 0
+          },
+          {
+            "title": "The Divine Comedy",
+            "downloads": 0
+          },
+          {
+            "title": "The Enchanted April Elizabeth",
+            "downloads": 0
+          },
+          {
+            "title": "The Great Gatsby F",
+            "downloads": 0
+          },
+          {
+            "title": "The History Of The Peloponnesian",
+            "downloads": 0
+          },
+          {
+            "title": "The Hound Of The Baskervilles Arthur",
+            "downloads": 0
+          },
+          {
+            "title": "The House Of Mirth",
+            "downloads": 0
+          },
+          {
+            "title": "The",
+            "downloads": 0
+          },
+          {
+            "title": "The Importance Of Being Earnest",
+            "downloads": 0
+          },
+          {
+            "title": "The Interesting Narrative Of The Life Of Olaudah Equiano",
+            "downloads": 0
+          },
+          {
+            "title": "The King In Yellow Robert",
+            "downloads": 0
+          },
+          {
+            "title": "The Life And Adventures Of Robinson Crusoe",
+            "downloads": 0
+          },
+          {
+            "title": "The",
+            "downloads": 0
+          },
+          {
+            "title": "The Picture Of Dorian Gray",
+            "downloads": 0
+          },
+          {
+            "title": "The Prince",
+            "downloads": 0
+          },
+          {
+            "title": "The Problems Of Philosophy",
+            "downloads": 0
+          },
+          {
+            "title": "The Scarlet Letter",
+            "downloads": 0
+          },
+          {
+            "title": "The Secret Garden Frances",
+            "downloads": 0
+          },
+          {
+            "title": "The Sketch Book Of Geoffrey Crayon Gent",
+            "downloads": 0
+          },
+          {
+            "title": "The Souls Of Black Folk W E B",
+            "downloads": 0
+          },
+          {
+            "title": "The Story Of My Experiments With Truth",
+            "downloads": 0
+          },
+          {
+            "title": "The Strange Case Of Dr Jekyll And Mr Hyde Robert",
+            "downloads": 0
+          },
+          {
+            "title": "The Sun Also Rises",
+            "downloads": 0
+          },
+          {
+            "title": "The Time Machine H",
+            "downloads": 0
+          },
+          {
+            "title": "The Turn Of The Screw",
+            "downloads": 0
+          },
+          {
+            "title": "The War Of The Worlds H",
+            "downloads": 0
+          },
+          {
+            "title": "The Wealth Of Nations",
+            "downloads": 0
+          },
+          {
+            "title": "The Wonderful Wizard Of Oz L",
+            "downloads": 0
+          },
+          {
+            "title": "Thus Spake Zarathustra",
+            "downloads": 0
+          },
+          {
+            "title": "Tractatus Logico Philosophicus",
+            "downloads": 0
+          },
+          {
+            "title": "Twenty Years After",
+            "downloads": 0
+          },
+          {
+            "title": "Walden Henry",
+            "downloads": 0
+          },
+          {
+            "title": "War And Peace",
+            "downloads": 0
+          },
+          {
+            "title": "Winnie The Pooh A",
+            "downloads": 0
+          },
+          {
+            "title": "Women And Economics Charlotte",
+            "downloads": 0
+          },
+          {
+            "title": "Wuthering Heights",
+            "downloads": 0
+          }
+        ]
+      }
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "high",
+      "type": "homepage_feature",
+      "title": "Feature Top 5 Books on Homepage",
+      "description": "Prominently display the most downloaded books to increase engagement",
+      "books": [
+        "A Christmas Carol",
+        "A Dolls House",
+        "A Room With A View E",
+        "A Tale Of Two Cities",
+        "Alices Adventures In Wonderland"
+      ],
+      "impact": "High - Immediate visibility boost"
+    },
+    {
+      "priority": "medium",
+      "type": "promotion_campaign",
+      "title": "Promote Undiscovered Books",
+      "description": "Create campaigns for 10 books with zero downloads",
+      "books": [
+        "A Christmas Carol",
+        "A Dolls House",
+        "A Room With A View E",
+        "A Tale Of Two Cities",
+        "Alices Adventures In Wonderland",
+        "Anna Karenina",
+        "Anne Of Green Gables L",
+        "Bambi",
+        "Beowulf An Anglo Saxon",
+        "Candide"
+      ],
+      "impact": "Medium - Long-term engagement growth"
+    },
+    {
+      "priority": "high",
+      "type": "category_focus",
+      "title": "Focus on classic-literature Category",
+      "description": "Invest more in the highest-performing category (0 downloads)",
+      "impact": "High - ROI optimization"
+    },
+    {
+      "priority": "high",
+      "type": "ux_improvement",
+      "title": "Implement Book Recommendations",
+      "description": "Add personalized book recommendations based on reading history",
+      "impact": "High - User engagement boost"
+    },
+    {
+      "priority": "medium",
+      "type": "analytics_enhancement",
+      "title": "Enhanced Analytics Tracking",
+      "description": "Track reading time, completion rates, and user preferences",
+      "impact": "Medium - Better data-driven decisions"
+    }
+  ],
+  "summary": {
+    "totalBooks": 10,
+    "totalDownloads": 0,
+    "topCategory": "classic-literature",
+    "recommendationsCount": 5
+  }
+}
