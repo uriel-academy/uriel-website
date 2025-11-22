@@ -1,1 +1,200 @@
-[]
+[
+  {
+    "passage": null,
+    "questions": [],
+    "context": "PART II",
+    "year": "2011"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 22,
+        "questionText": "Le nom du professeur est …………..",
+        "options": [
+          "Achana",
+          "Sarfo",
+          "Madame Ampaafo",
+          "Monsieur Ampaafo"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 23,
+        "questionText": "Le professeur entre dans la classe …………",
+        "options": [
+          "avant l’heure",
+          "en avance",
+          "en retard",
+          "à l’heure"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 24,
+        "questionText": "‘…………vos livres’ dit le professeur quand elle entre en classe.",
+        "options": [
+          "Cachez",
+          "Ouvrez",
+          "Fermez",
+          "Cherchez"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 25,
+        "questionText": "Quelles sont sur les papiers que le professeur distribue aux élèves ?",
+        "options": [
+          "De bonnes notes",
+          "Des réponses",
+          "Des questions",
+          "Des histoires"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 26,
+        "questionText": "Tous les élèves écoutent attentivement ………..Sarfo et Achan",
+        "options": [
+          "exceptés",
+          "y compris",
+          "comme",
+          "même"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 27,
+        "questionText": "L’histoire est ………….",
+        "options": [
+          "drôle",
+          "triste",
+          "ennuyeuse",
+          "intéressante"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 28,
+        "questionText": "Sarfo et Achana ne font pas attention. Ils ………..",
+        "options": [
+          "jouent",
+          "parlent",
+          "dorment",
+          "mangent"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 29,
+        "questionText": "Pourquoi Sarfo et Achana sont tristes ? - Parce qu’ils ont ……",
+        "options": [
+          "échoué",
+          "réussit",
+          "écouté",
+          "lu"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 30,
+        "questionText": "A la fin, Sarfo et Achana ………",
+        "options": [
+          "jouent",
+          "pleurent",
+          "sortent",
+          "bavardent"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      }
+    ],
+    "context": "PART III",
+    "year": "2011"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 31,
+        "questionText": "– de l’hôpital il y a huit jours. –",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 32,
+        "questionText": "– ce temps-la, c’est la joie partout dans la maison ! Pourquoi ? C’est parce qu’elle a deux –",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 33,
+        "questionText": "– bébés ; des jumeaux. La famille –",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 34,
+        "questionText": "– de fêter l’arrivée de ce beau garçon et de cette belle fille. Très tôt le matin, les parents et les amis –",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 35,
+        "questionText": "– pour la fête . Bientôt il y a beaucoup de gens dans –",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 36,
+        "questionText": "– maison de Maman Serwah et son mari, Monsieur Koffi. Ils apportent des cadeaux et même de l’argent aux bébés et à la mère. Le chef de famille –",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 37,
+        "questionText": "– les noms des enfants. Une semaine après la naissance d’un enfant, on lui donne un nom ; c’est la tradition. Ensuite, il y a beaucoup à boire et à –",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 38,
+        "questionText": "- . On joue de la musique et les gens –",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 39,
+        "questionText": "- . Tout le monde est –",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 40,
+        "questionText": "–.",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      }
+    ],
+    "context": "PART I",
+    "year": "2011"
+  }
+]

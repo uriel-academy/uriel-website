@@ -1,0 +1,249 @@
+[
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 11,
+        "questionText": "Le stylo est sur ……….cahier.",
+        "options": [
+          "la",
+          "les",
+          "le",
+          "l’"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 12,
+        "questionText": "…………..homme est l’oncle de Kofi",
+        "options": [
+          "Ce",
+          "Cet",
+          "Cette",
+          "Ces"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 13,
+        "questionText": "Il y a beaucoup ………. élèves dans la classe",
+        "options": [
+          "de",
+          "d’",
+          "des",
+          "du"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 14,
+        "questionText": "Le bus …… à cinq heures du soir.",
+        "options": [
+          "arrive",
+          "arrivées",
+          "arrivez",
+          "arrivent"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 15,
+        "questionText": "S’il vous plait, ……..heure est-il ?",
+        "options": [
+          "quel",
+          "quelle",
+          "quels",
+          "quelles"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 16,
+        "questionText": "Il va …………. bientôt.",
+        "options": [
+          "part",
+          "partez",
+          "partent",
+          "partir"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 17,
+        "questionText": "C’est une très …..voiture.",
+        "options": [
+          "belle",
+          "beaux",
+          "belles",
+          "beau"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 18,
+        "questionText": "Quel âge as-tu ?",
+        "options": [
+          "Je suis",
+          "J’ai dix ans",
+          "Je fais",
+          "J’aime"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 19,
+        "questionText": "Notre père est maintenant ………Senegal",
+        "options": [
+          "à",
+          "en",
+          "dans",
+          "au"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 20,
+        "questionText": "Je prends le train ………la gare.",
+        "options": [
+          "du",
+          "sous",
+          "en",
+          "à"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 31,
+        "questionText": "Le narrateur a …………………..",
+        "options": [
+          "un ami",
+          "deux amis",
+          "trois amis",
+          "quatre amis"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 32,
+        "questionText": "Makavo a environ ………………ans",
+        "options": [
+          "5",
+          "7",
+          "10",
+          "15"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 33,
+        "questionText": "Makavo est le ………………enfant de ses parents.",
+        "options": [
+          "premier",
+          "seul",
+          "dernier",
+          "quatrième"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 34,
+        "questionText": "Le narrateur aime Makavo parce qu’il est ……………",
+        "options": [
+          "beau",
+          "humble",
+          "courageux",
+          "travailleur"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 35,
+        "questionText": "Les parents de Makavo lui défendent",
+        "options": [
+          "d’aller en classe",
+          "de sortir de la maison",
+          "de trop jouer",
+          "d’avoir des amis"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 36,
+        "questionText": "Selon le passage, Makavo ……………..",
+        "options": [
+          "déteste les parents strictes",
+          "à très peu d’amis",
+          "visite ses amis du quartier",
+          "encourage les garçons indisciplinés"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 37,
+        "questionText": "Le samedi Makavo se lève ………….",
+        "options": [
+          "l’après-midi",
+          "le soir",
+          "vers midi",
+          "tôt le matin"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 38,
+        "questionText": "Aussitôt qu’il se lève, Makavo ……………",
+        "options": [
+          "prend le petit déjeuner",
+          "se lave la bouche",
+          "balaie la cour",
+          "fait les prières"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 39,
+        "questionText": "Le soir Makavo ……………",
+        "options": [
+          "fait les devoirs",
+          "prend son petit déjeuner",
+          "regarde la télévision",
+          "visite son ami"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 40,
+        "questionText": "Makavo dort à ………….heures du soir.",
+        "options": [
+          "7",
+          "8",
+          "9",
+          "10"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      }
+    ],
+    "context": "PART I",
+    "year": "2005"
+  }
+]

@@ -1,0 +1,463 @@
+[
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 1,
+        "questionText": "moi eux toi lui",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 2,
+        "questionText": "en nous s’ y",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 3,
+        "questionText": "rien pas jamais personne",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 4,
+        "questionText": "situé située situer situe",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 5,
+        "questionText": "ma nos ta mon",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 6,
+        "questionText": "entre pour de parmi",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 7,
+        "questionText": "aime aimes aiment aimez",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 8,
+        "questionText": "Le L’ La Leurs",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 9,
+        "questionText": "as ont avons avez",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 10,
+        "questionText": "au à la à à l’ For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 11,
+        "questionText": "Tu ne ………………pas faire le devoir ?",
+        "options": [
+          "peut",
+          "peux",
+          "pouvez",
+          "peuvent"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 12,
+        "questionText": "Il y a ………. oranges dans le panier.",
+        "options": [
+          "des",
+          "de l’",
+          "de",
+          "du"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 13,
+        "questionText": "Il nous pose …………..questions",
+        "options": [
+          "plusieurs",
+          "beaucoup",
+          "assez",
+          "peu"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 14,
+        "questionText": "Elles ……………le crayon.",
+        "options": [
+          "voit",
+          "voyez",
+          "voient",
+          "vois"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 15,
+        "questionText": "Je parle ………..Kofi",
+        "options": [
+          "au",
+          "à",
+          "de la",
+          "à la"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 16,
+        "questionText": "Mon père est ……….il enseigne dans l’école secondaire de notre village.",
+        "options": [
+          "cultivateur",
+          "ouvrier",
+          "professeur",
+          "docteur"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 17,
+        "questionText": "Le huitième mois de l’année est……….",
+        "options": [
+          "avril",
+          "août",
+          "Septembre",
+          "Octobre"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 18,
+        "questionText": "Le ………………à mangé la viande que Maman a mise dans le panier.",
+        "options": [
+          "cahier",
+          "chat",
+          "bus",
+          "papier"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 19,
+        "questionText": "Cette chemise n’est pas propre. Elle est ………………",
+        "options": [
+          "belle",
+          "petite",
+          "mouillée",
+          "sale"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 20,
+        "questionText": "La fille est aveugle, elle ……………….pas. Below are ten sentences with blank spaces followed by four options lettered A to D. Choose from the options the most correct answer that will fit into each blank space and shade on your answer sheet the letter of the answer you have chosen",
+        "options": [
+          "ne marché",
+          "n’entend",
+          "ne parle",
+          "ne voit"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 21,
+        "questionText": "",
+        "options": [
+          "l’école, les ………….jouent pendant la récréation"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 22,
+        "questionText": "Ce vieil homme porte des lunettes parce qu’il a mal aux……………",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 23,
+        "questionText": "Mon jeu préféré est …………………",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 24,
+        "questionText": "Il est …………….. ; il fait du pain.",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 25,
+        "questionText": "La noix de coco est …………………",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 26,
+        "questionText": "Ce mot est difficile à comprendre. Donne-moi ……………….",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 27,
+        "questionText": "Ama est malade ; elle prend son ………………",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 28,
+        "questionText": "Kwesi entend avec une seule……………………",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 29,
+        "questionText": "Le ……………………….est un animal domestique",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 30,
+        "questionText": "Il pleut ; je porte …………………..",
+        "options": [
+          "B C D"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 21,
+        "questionText": "vendeurs cultivateur élèves travailleurs",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 22,
+        "questionText": "pieds bras yeux oreilles",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 23,
+        "questionText": "la cuisine la pêche voyage le football",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 24,
+        "questionText": "fermier boulanger chauffeur maçon",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 25,
+        "questionText": "un arbre une fleur un fruit une feuille",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 26,
+        "questionText": "le cahier le dictionnaire le stylo le livre",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 27,
+        "questionText": "sac médicament chapeau vêtement",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 28,
+        "questionText": "dent jambre main oreille",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 29,
+        "questionText": "lion chien tigre loup",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 30,
+        "questionText": "une montre une serviette un crayon un parapluie Read the passage below carefully and answer the questions that follow by shading on your answer sheet the letter which corresponds with the correct answer Le gros serpent Monsieur Amadou était cultivateur et mécanicien. Il se levait toujours très tôt pour arriver à l’heure au garage. Quelquefois, il se levait plus tôt que d’habitude. C’était parce qu’il voulait aller au champ avant d’aller au garage. Un jour quand il revenait du champ, il à vu un gros serpent qui traversait le chemin. Monsieur Amadou avait peur mais il à pris une branche pour le tuer. Malheureusement, le serpent s’est sauvé. Monsieur Amadou ne savait pas où il était passé. Quant il prenait la branche, ses lunettes sont tombées mais il ne savait pas. Vite il à couru à la maison où il a remarqué qu’il avait perdu les lunettes. Il a décidé de les laisser dans la forêt parce qu’il avait toujours peur. Pauvre de lui !",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 31,
+        "questionText": "Monsieur Amadou répare quelquefois les ……………..",
+        "options": [
+          "montres",
+          "tables",
+          "voitures",
+          "chaussures"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 32,
+        "questionText": "Pour aller au garage Monsieur Amadou se levait ……………..",
+        "options": [
+          "de bonne heure",
+          "pendant la nuit",
+          "le dernier",
+          "après  tout le monde"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 33,
+        "questionText": "Il se levait plus tôt parfois pour aller",
+        "options": [
+          "en ville",
+          "au champ",
+          "au bureau",
+          "dans la forêt"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 34,
+        "questionText": "Que faisait le serpent quand M.Amadou l’à vu ?",
+        "options": [
+          "Il se reposait",
+          "Il dormait",
+          "Il bougeait",
+          "Il regardait M.Amadou"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 35,
+        "questionText": "Monsieur Amadou voulait le tuer avec …………………",
+        "options": [
+          "un bâton",
+          "un fusil",
+          "un pierre",
+          "un coupe-coupe"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 36,
+        "questionText": "Le serpent n’à pas été tué parce ……………….",
+        "options": [
+          "qu’il était parti très vite",
+          "qu’il était gros",
+          "que Monsieur Amadou avait peur",
+          "que la branche était cassée"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 37,
+        "questionText": "Monsieur Amadou a perdu ……………….",
+        "options": [
+          "son bâton",
+          "son sac",
+          "ses outils",
+          "ses lunettes"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 38,
+        "questionText": "Comment Monsieur Amadou est-il rentré ? Il est rentré en ……….",
+        "options": [
+          "criant fort",
+          "regardent partout",
+          "courant vite",
+          "cachant son sac"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 39,
+        "questionText": "Monsieur Amadou avait perdu quelque chose …………..",
+        "options": [
+          "en route",
+          "dans la forêt",
+          "à la maison",
+          "au garage"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 40,
+        "questionText": "Monsieur Amadou n’est pas allé chercher ses lunettes parce qu’il……………….",
+        "options": [
+          "avait peur",
+          "était pressé",
+          "était trop tard",
+          "en avait plusieurs"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      }
+    ],
+    "context": "PART I",
+    "year": "2008"
+  }
+]

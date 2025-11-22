@@ -1,0 +1,249 @@
+[
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 11,
+        "questionText": "Ces boxeurs sont ……..plus forts",
+        "options": [
+          "le",
+          "la",
+          "les",
+          "l’"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 12,
+        "questionText": "L’étudiant se présente ……Fuseini",
+        "options": [
+          "à",
+          "au",
+          "aux",
+          "à l’"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 13,
+        "questionText": "Cet élève n’à pas ……….livres",
+        "options": [
+          "d’",
+          "de",
+          "des",
+          "du"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 14,
+        "questionText": "Elle veut du poisson ? - Oui, elle ……….veut.",
+        "options": [
+          "le",
+          "l’",
+          "en",
+          "du"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 15,
+        "questionText": "Le riz coûte ………ici",
+        "options": [
+          "cher",
+          "chère",
+          "chers",
+          "chères"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 16,
+        "questionText": "Tu vois le bâtiment ? Oui, je ……..vois",
+        "options": [
+          "la",
+          "l’",
+          "le",
+          "les"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 17,
+        "questionText": "Le frère et la sœur d’Amalia …………français.",
+        "options": [
+          "parle",
+          "parlent",
+          "parler",
+          "parlons"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 18,
+        "questionText": "Les …….sont vieilles",
+        "options": [
+          "vendeur",
+          "vendeurs",
+          "vendeuse",
+          "vendeuses"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 19,
+        "questionText": "Meimouna va à l’hôpital parce qu’elle est …..",
+        "options": [
+          "gentille",
+          "malade",
+          "pauvre",
+          "petite"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 20,
+        "questionText": "Le chant ………oiseau me plaît.",
+        "options": [
+          "l’",
+          "de",
+          "de l’",
+          "de la"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 31,
+        "questionText": "Quel travail fait Monsieur Jules ? Il est",
+        "options": [
+          "pilote",
+          "voyageur",
+          "capitaine",
+          "marin"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 32,
+        "questionText": "Monsieur Jules voyage en",
+        "options": [
+          "navire",
+          "pirogue",
+          "camion",
+          "avion"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 33,
+        "questionText": "Comment est Madame Jules quand son mari voyage ? Elle est",
+        "options": [
+          "heureuse",
+          "fatiguée",
+          "mecontente",
+          "intéressante"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 34,
+        "questionText": "Le dernier voyage de Monsieur Jules dure",
+        "options": [
+          "vingt semaines",
+          "quinze semaines",
+          "dix semaines",
+          "huit semaines"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 35,
+        "questionText": "La lettre de Papa annonce",
+        "options": [
+          "sa maladie",
+          "son inquiétude",
+          "son arrivée",
+          "sa joie"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 36,
+        "questionText": "Quand Madame Jules reçoit-elle une lettre de son mari ? Elle reçoit une lettre",
+        "options": [
+          "le soir",
+          "le matin",
+          "l’après –midi",
+          "la nuit"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 37,
+        "questionText": "Que font les enfants quand leur Papa arrive ? Ils",
+        "options": [
+          "l’embrassent",
+          "l’admirent",
+          "le regardent",
+          "le saluent"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 38,
+        "questionText": "Deux jours après  la lettre, Monsieur Jules arrive",
+        "options": [
+          "chez ses amis",
+          "à l’étranger",
+          "à la maison",
+          "chez ses patrons"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 39,
+        "questionText": "Selon le passage, Madame Jules",
+        "options": [
+          "n’aime pas ses enfants",
+          "aime bien son mari",
+          "n’écoute pas ses enfants",
+          "admire peu son mari"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 40,
+        "questionText": "Selon le passage, le travail d’un marin est intéressant mais…….",
+        "options": [
+          "payant",
+          "difficile",
+          "ennuyeux",
+          "dangereux"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      }
+    ],
+    "context": "PART I",
+    "year": "2003"
+  }
+]

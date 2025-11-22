@@ -18,7 +18,7 @@ class _StudyPlannerPageState extends State<StudyPlannerPage> {
   String? _selectedGrade;
   DateTime? _examDate;
   int _studyHoursPerDay = 2;
-  List<String> _weakSubjects = [];
+  final List<String> _weakSubjects = [];
   
   final List<String> _exams = ['BECE', 'WASSCE', 'NOVDEC'];
   final List<String> _grades = ['JHS 1', 'JHS 2', 'JHS 3', 'SHS 1', 'SHS 2', 'SHS 3'];

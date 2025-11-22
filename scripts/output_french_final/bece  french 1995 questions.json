@@ -1,0 +1,538 @@
+[
+  {
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "questions": [
+      {
+        "questionNumber": 1,
+        "questionText": "Ama allume …………………feu",
+        "options": [
+          "l’",
+          "le",
+          "la",
+          "de"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 2,
+        "questionText": "Va m’apporter ………….oranges",
+        "options": [
+          "du",
+          "des",
+          "d’",
+          "de l’"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 3,
+        "questionText": "Le chasseur tue ……………. éléphant.",
+        "options": [
+          "les",
+          "l’",
+          "la",
+          "de l’"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 4,
+        "questionText": "Esi achète ……………mangue",
+        "options": [
+          "une",
+          "un",
+          "du",
+          "de"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 5,
+        "questionText": "Les Français boivent ……………vin.",
+        "options": [
+          "du",
+          "de la",
+          "de",
+          "d’"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 1",
+    "year": "1995"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 6,
+        "questionText": "Nous mangeons avec …………….cuillère.",
+        "options": [
+          "un",
+          "le",
+          "une",
+          "de la"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 7,
+        "questionText": "Cet élève monte sur ………….ban",
+        "options": [
+          "le",
+          "la",
+          "une",
+          "du"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 8,
+        "questionText": "La poule est ………..oiseau",
+        "options": [
+          "d’",
+          "un",
+          "de l’",
+          "une"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 9,
+        "questionText": "Le professeur corrige ……………fautes.",
+        "options": [
+          "le",
+          "du",
+          "les",
+          "de la"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 10,
+        "questionText": "…………….bière, s’il te plaît.",
+        "options": [
+          "Du",
+          "De la",
+          "De",
+          "De l’"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 2",
+    "year": "1995"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 11,
+        "questionText": "Allez vite …………tableau",
+        "options": [
+          "à",
+          "au",
+          "à la",
+          "le"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 12,
+        "questionText": "Où est la gomme ? …………….voila",
+        "options": [
+          "Le",
+          "La",
+          "Lui",
+          "Elle"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 13,
+        "questionText": "Les enfants chantent ; ……………. sont contents.",
+        "options": [
+          "ils",
+          "nous",
+          "il",
+          "vous"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 14,
+        "questionText": "Les athlètes font ……………sport.",
+        "options": [
+          "du",
+          "d’",
+          "de",
+          "de la"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 15,
+        "questionText": "Elle est aveugle ; elle ne ………………pas",
+        "options": [
+          "chante",
+          "dort",
+          "marché",
+          "voit"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 3",
+    "year": "1995"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 16,
+        "questionText": "Le soleil se ……………. à six heures du matin.",
+        "options": [
+          "couche",
+          "lève",
+          "lave",
+          "promène"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 17,
+        "questionText": "Viens manger ! Tu as ……………",
+        "options": [
+          "soif",
+          "froid",
+          "faim",
+          "chaud"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 18,
+        "questionText": "Le stylo n’est pas noir, au contraire, il est……………",
+        "options": [
+          "grand",
+          "blanc",
+          "long",
+          "joli"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 19,
+        "questionText": "Kwame cultive son champ avec ………………",
+        "options": [
+          "sa houe",
+          "son fusil",
+          "son château",
+          "sa fourchette"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 20,
+        "questionText": "C’est un gourmand, il mange ……………",
+        "options": [
+          "petit",
+          "nombreux",
+          "peu",
+          "trop"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 4",
+    "year": "1995"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 21,
+        "questionText": "Quel temps fait-il ? ……………….",
+        "options": [
+          "Il me fait mal",
+          "Il fait beau",
+          "Il est huit heures",
+          "Il fait du mal"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 22,
+        "questionText": "Qui est la ? ………………….",
+        "options": [
+          "Personne",
+          "Je",
+          "Il",
+          "Me"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 23,
+        "questionText": "Kofi lave sa chemise parce qu’elle est très ……….",
+        "options": [
+          "laide",
+          "sèche",
+          "sale",
+          "belle"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 24,
+        "questionText": "L’élève écrit sur une feuille de ……………",
+        "options": [
+          "toile",
+          "papier",
+          "paille",
+          "tôle"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 25,
+        "questionText": "Regarde cette ……………. quelle heure est-il ?",
+        "options": [
+          "boîte",
+          "montre",
+          "maison",
+          "eau"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 5",
+    "year": "1995"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 26,
+        "questionText": "Vous avez sommeil ? Allez donc ………………",
+        "options": [
+          "au champ",
+          "à la cuisine",
+          "à la plage",
+          "au lit"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 27,
+        "questionText": "Quel ……………. garçon !",
+        "options": [
+          "bel",
+          "belle",
+          "beau",
+          "beaux"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 28,
+        "questionText": "Les oranges sont ………………",
+        "options": [
+          "verte",
+          "vert",
+          "verts",
+          "vertes"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 29,
+        "questionText": "Kwame va ……………..ville.",
+        "options": [
+          "aux",
+          "au",
+          "à",
+          "en"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 30,
+        "questionText": "Il y à une boîte ……………… le banc",
+        "options": [
+          "pres",
+          "a",
+          "sous",
+          "de"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 6",
+    "year": "1995"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 31,
+        "questionText": "Qu’est-ce qu’il y à après les récoltes ?",
+        "options": [
+          "La fête",
+          "La classe",
+          "Le repas",
+          "La boisson"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 32,
+        "questionText": "Comment sont les villageois ? Ils sont …………….",
+        "options": [
+          "gentils",
+          "paresseux",
+          "contents",
+          "méchants"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 33,
+        "questionText": "Ils tuent des ……………………..",
+        "options": [
+          "coqs, chevaux et oiseaux",
+          "poules, bœufs et moutons",
+          "bœufs et chèvre",
+          "moutons et chats"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 34,
+        "questionText": "Qu’est-ce que les villageois mangent ? Ils mangent …………",
+        "options": [
+          "du riz et du foufou",
+          "des fruits",
+          "des récoltes",
+          "des récoltes et des fruits"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 35,
+        "questionText": "Après le repas chacun met …………………",
+        "options": [
+          "son grand vêtement",
+          "ses beaux vêtements",
+          "sa belle robe",
+          "son beau pantalon"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 7",
+    "year": "1995"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 36,
+        "questionText": "Où se rassemblent-il ? ………………..",
+        "options": [
+          "Dans le champ",
+          "Dans la maison",
+          "Sous un arbre",
+          "Chez le chef du village"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 37,
+        "questionText": "Que font-ils quand ils se rassemblent ? Ils ……………",
+        "options": [
+          "mangent",
+          "s’amusent",
+          "dorment",
+          "s’habillent"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 38,
+        "questionText": "La nuit, tout le monde rentre……………………",
+        "options": [
+          "au village",
+          "chez le chef",
+          "chez lui",
+          "dans la cour"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 39,
+        "questionText": "Ils se couchent …………………..",
+        "options": [
+          "en plein air",
+          "dans la chambre",
+          "dans la maison",
+          "sous un grand arbre"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 40,
+        "questionText": "C’est ça la vie au village ‘ C’est-à-dire………………",
+        "options": [
+          "la vie est intéressante au village",
+          "la vie est difficile au village",
+          "la vie est dangereuse au village",
+          "la vie est terrible au village."
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 8",
+    "year": "1995"
+  }
+]

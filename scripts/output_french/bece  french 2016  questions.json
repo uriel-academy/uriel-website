@@ -1,470 +1,262 @@
 [
   {
-    "subject": "french",
-    "year": "2016",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 1,
-    "questionText": "L’intérieur de ……………….église est belle.",
-    "options": [
-      "ce",
-      "cet",
-      "ces",
-      "cette"
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 20,
+        "questionText": "Je suis heureux de vous …………………mon ami. Il s’appelle Sébastian.",
+        "options": [
+          "11. d’éponge           \tde savon              de serviette               \td’huile12. honnête             \tpatient                 poli                             \tjovial13. sujets                 \tobjets                   jeux                            \tmatières14. faible                 \tfière                      gentille                       \tparesseuse15. l’air                        l’eau                      la route                          la terre16. écrire                    lire                         marcher                    \ttravailler17. courageux            joyeux                   heureux                    \trespectueux18. boire                     croire                     fumer                        \tmanger19. coiffeuse               commerçante   \tcouturière               \tcuisinière20. annoncer         \tdéclarer                 nommer                   \tprésenter"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      }
     ],
-    "displayOptions": [
-      "A. ce",
-      "B. cet",
-      "C. ces",
-      "D. cette"
-    ],
-    "correctAnswer": "A",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2016  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.486Z"
-    }
+    "context": "PART II",
+    "year": "2016"
   },
   {
-    "subject": "french",
-    "year": "2016",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 2,
-    "questionText": "……………………..pays est en Afrique de l’Ouest.",
-    "options": [
-      "Nos",
-      "Notre",
-      "Leurs",
-      "Sa"
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 21,
+        "questionText": "Qu’est-ce qui se passe en août ?",
+        "options": [
+          "Le train arrive à la gare.",
+          "Les écoliers vont en vacances.",
+          "Ahmed et son ami ferment les écoles.",
+          "Le train de Huni-Valley va à Kumasi."
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 22,
+        "questionText": "La destination des deux amis est …………",
+        "options": [
+          "Huni-Valley",
+          "Kumasi",
+          "Akwaaba",
+          "Asafo"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 23,
+        "questionText": "Les deux amis ont l’intention de voyager par …………….",
+        "options": [
+          "la route",
+          "l’air",
+          "le chemin de fer",
+          "l’eau"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 24,
+        "questionText": "Selon le texte, le train partira dans …………..minutes.",
+        "options": [
+          "vingt",
+          "trente",
+          "quinze",
+          "quarante"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 25,
+        "questionText": "Pour assurer leurs places dans le train, ils ont acheté des …………",
+        "options": [
+          "billets",
+          "boissons",
+          "beignets",
+          "poulets"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 26,
+        "questionText": "– Pourquoi entrent-ils dans le restaurant ?– Pour………………………………",
+        "options": [
+          "regarder le train",
+          "manger quelque chose",
+          "prendre le train",
+          "acheter des billets"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 27,
+        "questionText": "Ils n’entendent pas l’annonce du départ parce qu’ils……………..",
+        "options": [
+          "bavardent",
+          "boivent",
+          "dorment",
+          "se lèvent"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 28,
+        "questionText": "Qu’est-ce qu’ils prennent au restaurant ?",
+        "options": [
+          "Des gâteaux",
+          "Du boisson",
+          "Des beignets",
+          "Du riz"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 29,
+        "questionText": "– Pourquoi ont-ils finalement décidé de prendre une voiture ?– Parce que le train ………………",
+        "options": [
+          "est en panne",
+          "est déjà parti",
+          "n’est pas encore plein",
+          "n’est pas encore arrive"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 30,
+        "questionText": "A la fin du passage, les deux amis sont ……………",
+        "options": [
+          "contents",
+          "déçus",
+          "satisfaits",
+          "malades"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      }
     ],
-    "displayOptions": [
-      "A. Nos",
-      "B. Notre",
-      "C. Leurs",
-      "D. Sa"
-    ],
-    "correctAnswer": "C",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2016  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.486Z"
-    }
+    "context": "PART III",
+    "year": "2016"
   },
   {
-    "subject": "french",
-    "year": "2016",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 3,
-    "questionText": "Est-ce que tu …………….la vérité?",
-    "options": [
-      "dites",
-      "dis",
-      "dire",
-      "dit"
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 31,
+        "questionText": "",
+        "options": [
+          "vieil",
+          "vieux",
+          "vieille",
+          "vieilles"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 32,
+        "questionText": "de du des de la",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 33,
+        "questionText": "",
+        "options": [
+          "sa",
+          "son",
+          "il",
+          "lui"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 34,
+        "questionText": "au aux en à la",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 35,
+        "questionText": "",
+        "options": [
+          "voisin",
+          "voisine",
+          "voisines",
+          "voisins"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 36,
+        "questionText": "",
+        "options": [
+          "va",
+          "vas",
+          "allez",
+          "aller"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 37,
+        "questionText": "",
+        "options": [
+          "à",
+          "avec",
+          "contre",
+          "pour"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 38,
+        "questionText": "",
+        "options": [
+          "lentement",
+          "lentes",
+          "lente",
+          "lent"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 39,
+        "questionText": "",
+        "options": [
+          "vous",
+          "toi",
+          "eux",
+          "moi"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 40,
+        "questionText": "",
+        "options": [
+          "conduis",
+          "conduit",
+          "conduire",
+          "conduisez"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      }
     ],
-    "displayOptions": [
-      "A. dites",
-      "B. dis",
-      "C. dire",
-      "D. dit"
-    ],
-    "correctAnswer": "D",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2016  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.486Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2016",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 4,
-    "questionText": "Le professeur dit bonjour ……………..élèves quand il arrive en classe.",
-    "options": [
-      "a",
-      "aux",
-      "des",
-      "les"
-    ],
-    "displayOptions": [
-      "A. a",
-      "B. aux",
-      "C. des",
-      "D. les"
-    ],
-    "correctAnswer": "A",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2016  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.486Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2016",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 5,
-    "questionText": "………………coûte ta jolie robe?",
-    "options": [
-      "Combien",
-      "Comment",
-      "Pourquoi",
-      "Que"
-    ],
-    "displayOptions": [
-      "A. Combien",
-      "B. Comment",
-      "C. Pourquoi",
-      "D. Que"
-    ],
-    "correctAnswer": "A",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2016  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.486Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2016",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 6,
-    "questionText": "Joshua vient du Ghana; il est de la nationalité……………..",
-    "options": [
-      "ghana",
-      "ghanéen",
-      "ghanéenne",
-      "ghanéens"
-    ],
-    "displayOptions": [
-      "A. ghana",
-      "B. ghanéen",
-      "C. ghanéenne",
-      "D. ghanéens"
-    ],
-    "correctAnswer": "D",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2016  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.486Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2016",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 7,
-    "questionText": "A l’âge de deux ans, …………..append à parler.",
-    "options": [
-      "nous",
-      "on",
-      "tu",
-      "j’"
-    ],
-    "displayOptions": [
-      "A. nous",
-      "B. on",
-      "C. tu",
-      "D. j’"
-    ],
-    "correctAnswer": "B",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2016  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.486Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2016",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 8,
-    "questionText": "La plupart ……………enfants aiment s’amuser.",
-    "options": [
-      "de",
-      "d’",
-      "du",
-      "des"
-    ],
-    "displayOptions": [
-      "A. de",
-      "B. d’",
-      "C. du",
-      "D. des"
-    ],
-    "correctAnswer": "A",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2016  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.486Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2016",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 9,
-    "questionText": "Abena se cache ……………….la porte.",
-    "options": [
-      "sur",
-      "près",
-      "derrière",
-      "vers"
-    ],
-    "displayOptions": [
-      "A. sur",
-      "B. près",
-      "C. derrière",
-      "D. vers"
-    ],
-    "correctAnswer": "B",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2016  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.486Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2016",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 21,
-    "questionText": "Qu’est-ce qui se passe en août ?",
-    "options": [
-      "Le train arrive à la gare.",
-      "Les écoliers vont en vacances.",
-      "Ahmed et son ami ferment les écoles.",
-      "Le train de Huni-Valley va à Kumasi."
-    ],
-    "displayOptions": [
-      "A. Le train arrive à la gare.",
-      "B. Les écoliers vont en vacances.",
-      "C. Ahmed et son ami ferment les écoles.",
-      "D. Le train de Huni-Valley va à Kumasi."
-    ],
-    "correctAnswer": "B",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2016  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.486Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2016",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 22,
-    "questionText": "La destination des deux amis est …………",
-    "options": [
-      "Huni-Valley",
-      "Kumasi",
-      "Akwaaba",
-      "Asafo"
-    ],
-    "displayOptions": [
-      "A. Huni-Valley",
-      "B. Kumasi",
-      "C. Akwaaba",
-      "D. Asafo"
-    ],
-    "correctAnswer": "C",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2016  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.486Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2016",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 23,
-    "questionText": "Les deux amis ont l’intention de voyager par …………….",
-    "options": [
-      "la route",
-      "l’air",
-      "le chemin de fer",
-      "l’eau"
-    ],
-    "displayOptions": [
-      "A. la route",
-      "B. l’air",
-      "C. le chemin de fer",
-      "D. l’eau"
-    ],
-    "correctAnswer": "A",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2016  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.486Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2016",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 24,
-    "questionText": "Selon le texte, le train partira dans …………..minutes.",
-    "options": [
-      "vingt",
-      "trente",
-      "quinze",
-      "quarante"
-    ],
-    "displayOptions": [
-      "A. vingt",
-      "B. trente",
-      "C. quinze",
-      "D. quarante"
-    ],
-    "correctAnswer": "B",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2016  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.486Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2016",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 25,
-    "questionText": "Pour assurer leurs places dans le train, ils ont acheté des …………",
-    "options": [
-      "billets",
-      "boissons",
-      "beignets",
-      "poulets"
-    ],
-    "displayOptions": [
-      "A. billets",
-      "B. boissons",
-      "C. beignets",
-      "D. poulets"
-    ],
-    "correctAnswer": "B",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2016  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.486Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2016",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 26,
-    "questionText": "– Pourquoi entrent-ils dans le restaurant ?– Pour………………………………",
-    "options": [
-      "regarder le train",
-      "manger quelque chose",
-      "prendre le train",
-      "acheter des billets"
-    ],
-    "displayOptions": [
-      "A. regarder le train",
-      "B. manger quelque chose",
-      "C. prendre le train",
-      "D. acheter des billets"
-    ],
-    "correctAnswer": "D",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2016  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.486Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2016",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 27,
-    "questionText": "Ils n’entendent pas l’annonce du départ parce qu’ils……………..",
-    "options": [
-      "bavardent",
-      "boivent",
-      "dorment",
-      "se lèvent"
-    ],
-    "displayOptions": [
-      "A. bavardent",
-      "B. boivent",
-      "C. dorment",
-      "D. se lèvent"
-    ],
-    "correctAnswer": "B",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2016  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.486Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2016",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 28,
-    "questionText": "Qu’est-ce qu’ils prennent au restaurant ?",
-    "options": [
-      "Des gâteaux",
-      "Du boisson",
-      "Des beignets",
-      "Du riz"
-    ],
-    "displayOptions": [
-      "A. Des gâteaux",
-      "B. Du boisson",
-      "C. Des beignets",
-      "D. Du riz"
-    ],
-    "correctAnswer": "B",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2016  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.486Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2016",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 29,
-    "questionText": "– Pourquoi ont-ils finalement décidé de prendre une voiture ?– Parce que le train ………………",
-    "options": [
-      "est en panne",
-      "est déjà parti",
-      "n’est pas encore plein",
-      "n’est pas encore arrive"
-    ],
-    "displayOptions": [
-      "A. est en panne",
-      "B. est déjà parti",
-      "C. n’est pas encore plein",
-      "D. n’est pas encore arrive"
-    ],
-    "correctAnswer": "B",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2016  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.486Z"
-    }
+    "context": "PART I",
+    "year": "2016"
   }
 ]

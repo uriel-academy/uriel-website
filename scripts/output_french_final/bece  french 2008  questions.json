@@ -1,0 +1,249 @@
+[
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 11,
+        "questionText": "Tu ne ………………pas faire le devoir ?",
+        "options": [
+          "peut",
+          "peux",
+          "pouvez",
+          "peuvent"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 12,
+        "questionText": "Il y a ………. oranges dans le panier.",
+        "options": [
+          "des",
+          "de l’",
+          "de",
+          "du"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 13,
+        "questionText": "Il nous pose …………..questions",
+        "options": [
+          "plusieurs",
+          "beaucoup",
+          "assez",
+          "peu"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 14,
+        "questionText": "Elles ……………le crayon.",
+        "options": [
+          "voit",
+          "voyez",
+          "voient",
+          "vois"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 15,
+        "questionText": "Je parle ………..Kofi",
+        "options": [
+          "au",
+          "à",
+          "de la",
+          "à la"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 16,
+        "questionText": "Mon père est ……….il enseigne dans l’école secondaire de notre village.",
+        "options": [
+          "cultivateur",
+          "ouvrier",
+          "professeur",
+          "docteur"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 17,
+        "questionText": "Le huitième mois de l’année est……….",
+        "options": [
+          "avril",
+          "août",
+          "Septembre",
+          "Octobre"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 18,
+        "questionText": "Le ………………à mangé la viande que Maman a mise dans le panier.",
+        "options": [
+          "cahier",
+          "chat",
+          "bus",
+          "papier"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 19,
+        "questionText": "Cette chemise n’est pas propre. Elle est ………………",
+        "options": [
+          "belle",
+          "petite",
+          "mouillée",
+          "sale"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 20,
+        "questionText": "La fille est aveugle, elle ……………….pas.",
+        "options": [
+          "ne marché",
+          "n’entend",
+          "ne parle",
+          "ne voit"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 31,
+        "questionText": "Monsieur Amadou répare quelquefois les ……………..",
+        "options": [
+          "montres",
+          "tables",
+          "voitures",
+          "chaussures"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 32,
+        "questionText": "Pour aller au garage Monsieur Amadou se levait ……………..",
+        "options": [
+          "de bonne heure",
+          "pendant la nuit",
+          "le dernier",
+          "après  tout le monde"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 33,
+        "questionText": "Il se levait plus tôt parfois pour aller",
+        "options": [
+          "en ville",
+          "au champ",
+          "au bureau",
+          "dans la forêt"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 34,
+        "questionText": "Que faisait le serpent quand M.Amadou l’à vu ?",
+        "options": [
+          "Il se reposait",
+          "Il dormait",
+          "Il bougeait",
+          "Il regardait M.Amadou"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 35,
+        "questionText": "Monsieur Amadou voulait le tuer avec …………………",
+        "options": [
+          "un bâton",
+          "un fusil",
+          "un pierre",
+          "un coupe-coupe"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 36,
+        "questionText": "Le serpent n’à pas été tué parce ……………….",
+        "options": [
+          "qu’il était parti très vite",
+          "qu’il était gros",
+          "que Monsieur Amadou avait peur",
+          "que la branche était cassée"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 37,
+        "questionText": "Monsieur Amadou a perdu ……………….",
+        "options": [
+          "son bâton",
+          "son sac",
+          "ses outils",
+          "ses lunettes"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 38,
+        "questionText": "Comment Monsieur Amadou est-il rentré ? Il est rentré en ……….",
+        "options": [
+          "criant fort",
+          "regardent partout",
+          "courant vite",
+          "cachant son sac"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 39,
+        "questionText": "Monsieur Amadou avait perdu quelque chose …………..",
+        "options": [
+          "en route",
+          "dans la forêt",
+          "à la maison",
+          "au garage"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 40,
+        "questionText": "Monsieur Amadou n’est pas allé chercher ses lunettes parce qu’il……………….",
+        "options": [
+          "avait peur",
+          "était pressé",
+          "était trop tard",
+          "en avait plusieurs"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      }
+    ],
+    "context": "PART I",
+    "year": "2008"
+  }
+]

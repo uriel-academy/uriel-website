@@ -1,0 +1,490 @@
+[
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 11,
+        "questionText": "- Est-ce que tu donnes des bonbons aux enfants ? - Oui, je …………..donne des bonbons",
+        "options": [
+          "les",
+          "eux",
+          "leur",
+          "leurs"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 12,
+        "questionText": "Est-ce que Mariam voyage souvent à Aflao ? - Oui, elle ………….voyage souvent",
+        "options": [
+          "en",
+          "y",
+          "la",
+          "le"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 13,
+        "questionText": "- Combien de cahiers as-tu, Kofi ? - ………….ai dix",
+        "options": [
+          "J’en",
+          "Je les",
+          "Je l’",
+          "Je leur"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 14,
+        "questionText": "Les taxis d’ici sont …………..",
+        "options": [
+          "belles",
+          "bel",
+          "beaux",
+          "beau"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 15,
+        "questionText": "Chez moi on va à la ferme tous les jours ……….le jeudi.",
+        "options": [
+          "sauf",
+          "sans",
+          "et",
+          "avec"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 16,
+        "questionText": "Les automobilistes conduisent à droite …….. Ghana.",
+        "options": [
+          "le",
+          "en",
+          "au",
+          "à"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 17,
+        "questionText": "Le marché principal se trouve ………ville.",
+        "options": [
+          "à",
+          "en",
+          "sur",
+          "dans"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 18,
+        "questionText": "Qu’est-ce que vous ……….là-bas ?",
+        "options": [
+          "fais",
+          "fait",
+          "font",
+          "faites"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 19,
+        "questionText": "Nous ………à la maison tard demain soir.",
+        "options": [
+          "irons",
+          "allons",
+          "irions",
+          "allions"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 20,
+        "questionText": "Moussa n’à pas ………chocolat.",
+        "options": [
+          "du",
+          "de la",
+          "de",
+          "d’un"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 31,
+        "questionText": "Combien d’élèves ont réussi à l’examen final ?",
+        "options": [
+          "50",
+          "100",
+          "150",
+          "200"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 32,
+        "questionText": "Ceux qui ont réussi sont ………de la classe.",
+        "options": [
+          "le tiers",
+          "la moitié",
+          "le quart",
+          "les deux tiers"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 33,
+        "questionText": "Ceux qui n’ont pas réussi à l’examen sont ………….",
+        "options": [
+          "pauvres",
+          "bavards",
+          "intelligents",
+          "paresseux"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 34,
+        "questionText": "Selon le passage, le narrateur ……….",
+        "options": [
+          "connaît bien la grande ville",
+          "fréquente l’école JSS en ville",
+          "à bien travaillé à l’examen",
+          "va à l’école SSS une fois par an"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 35,
+        "questionText": "L’école SSS se trouve ………….",
+        "options": [
+          "dans le village du narrateur",
+          "dans la capitale",
+          "dans une ville voisine",
+          "dans un village lointain"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 36,
+        "questionText": "Où se couchent les élèves de l’école SSS ?",
+        "options": [
+          "Au dortoir",
+          "Dans les salles de bains",
+          "Au refectoire",
+          "Dans les salles de classe"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 37,
+        "questionText": "Dans les salles de bain on trouve………",
+        "options": [
+          "de grands lits",
+          "de l’eau courante",
+          "des tables",
+          "des cloches"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 38,
+        "questionText": "Les activités d’un élève à l’école sont réglées par ………",
+        "options": [
+          "Les professeurs",
+          "les grands élèves",
+          "la cloche",
+          "la punition"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 39,
+        "questionText": "Selon le narrateur, la vie d’un pensionnaire est comparable à celle d’un……….",
+        "options": [
+          "douanier",
+          "soldat",
+          "policier",
+          "gardien"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 40,
+        "questionText": "Quel est le meilleur titre de ce passage ?",
+        "options": [
+          "Un camp militaire",
+          "Les élèves travailleurs",
+          "Une visite en ville",
+          "La vie à l’école",
+          "B C D"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 11,
+        "questionText": "- Est-ce que tu donnes des bonbons aux enfants ? - Oui, je …………..donne des bonbons",
+        "options": [
+          "les",
+          "eux",
+          "leur",
+          "leurs"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 12,
+        "questionText": "Est-ce que Mariam voyage souvent à Aflao ? - Oui, elle ………….voyage souvent",
+        "options": [
+          "en",
+          "y",
+          "la",
+          "le"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 13,
+        "questionText": "- Combien de cahiers as-tu, Kofi ? - ………….ai dix",
+        "options": [
+          "J’en",
+          "Je les",
+          "Je l’",
+          "Je leur"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 14,
+        "questionText": "Les taxis d’ici sont …………..",
+        "options": [
+          "belles",
+          "bel",
+          "beaux",
+          "beau"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 15,
+        "questionText": "Chez moi on va à la ferme tous les jours ……….le jeudi.",
+        "options": [
+          "sauf",
+          "sans",
+          "et",
+          "avec"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 16,
+        "questionText": "Les automobilistes conduisent à droite …….. Ghana.",
+        "options": [
+          "le",
+          "en",
+          "au",
+          "à"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 17,
+        "questionText": "Le marché principal se trouve ………ville.",
+        "options": [
+          "à",
+          "en",
+          "sur",
+          "dans"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 18,
+        "questionText": "Qu’est-ce que vous ……….là-bas ?",
+        "options": [
+          "fais",
+          "fait",
+          "font",
+          "faites"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 19,
+        "questionText": "Nous ………à la maison tard demain soir.",
+        "options": [
+          "irons",
+          "allons",
+          "irions",
+          "allions"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 20,
+        "questionText": "Moussa n’à pas ………chocolat.",
+        "options": [
+          "du",
+          "de la",
+          "de",
+          "d’un"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 31,
+        "questionText": "Combien d’élèves ont réussi à l’examen final ?",
+        "options": [
+          "50",
+          "100",
+          "150",
+          "200"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 32,
+        "questionText": "Ceux qui ont réussi sont ………de la classe.",
+        "options": [
+          "le tiers",
+          "la moitié",
+          "le quart",
+          "les deux tiers"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 33,
+        "questionText": "Ceux qui n’ont pas réussi à l’examen sont ………….",
+        "options": [
+          "pauvres",
+          "bavards",
+          "intelligents",
+          "paresseux"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 34,
+        "questionText": "Selon le passage, le narrateur ……….",
+        "options": [
+          "connaît bien la grande ville",
+          "fréquente l’école JSS en ville",
+          "à bien travaillé à l’examen",
+          "va à l’école SSS une fois par an"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 35,
+        "questionText": "L’école SSS se trouve ………….",
+        "options": [
+          "dans le village du narrateur",
+          "dans la capitale",
+          "dans une ville voisine",
+          "dans un village lointain"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 36,
+        "questionText": "Où se couchent les élèves de l’école SSS ?",
+        "options": [
+          "Au dortoir",
+          "Dans les salles de bains",
+          "Au refectoire",
+          "Dans les salles de classe"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 37,
+        "questionText": "Dans les salles de bain on trouve………",
+        "options": [
+          "de grands lits",
+          "de l’eau courante",
+          "des tables",
+          "des cloches"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 38,
+        "questionText": "Les activités d’un élève à l’école sont réglées par ………",
+        "options": [
+          "Les professeurs",
+          "les grands élèves",
+          "la cloche",
+          "la punition"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 39,
+        "questionText": "Selon le narrateur, la vie d’un pensionnaire est comparable à celle d’un……….",
+        "options": [
+          "douanier",
+          "soldat",
+          "policier",
+          "gardien"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 40,
+        "questionText": "Quel est le meilleur titre de ce passage ?",
+        "options": [
+          "Un camp militaire",
+          "Les élèves travailleurs",
+          "Une visite en ville",
+          "La vie à l’école"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      }
+    ],
+    "context": "PART I",
+    "year": "2004"
+  }
+]

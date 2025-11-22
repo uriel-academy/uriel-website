@@ -51,25 +51,40 @@ class _QuestionCollectionsPageState extends State<QuestionCollectionsPage> {
     try {
       debugPrint('🚀 Loading question collections...');
       
-      // Load all active questions without limit
-      final questions = await _questionService.getQuestions(
+      // Load questions from main collection
+      final mainQuestions = await _questionService.getQuestions(
         activeOnly: true,
       ).timeout(
-        const Duration(seconds: 30), // Increased timeout for loading all questions
+        const Duration(seconds: 30),
         onTimeout: () {
-          debugPrint('⏰ Timeout loading questions after 30 seconds');
+          debugPrint('⏰ Timeout loading main questions after 30 seconds');
           return <Question>[];
         },
       );
       
-      debugPrint('📊 Loaded ${questions.length} total questions');
+      // Load French questions from separate collection
+      final frenchQuestions = await _questionService.getQuestions(
+        subject: Subject.french,
+        activeOnly: true,
+      ).timeout(
+        const Duration(seconds: 30),
+        onTimeout: () {
+          debugPrint('⏰ Timeout loading French questions after 30 seconds');
+          return <Question>[];
+        },
+      );
       
-      if (questions.isEmpty) {
+      // Combine all questions
+      final allQuestions = [...mainQuestions, ...frenchQuestions];
+      
+      debugPrint('📊 Loaded ${mainQuestions.length} main questions and ${frenchQuestions.length} French questions (${allQuestions.length} total)');
+      
+      if (allQuestions.isEmpty) {
         debugPrint('⚠️ No questions loaded! Check Firebase connection and data.');
       }
       
       // Group into collections
-      final collections = QuestionCollection.groupQuestions(questions);
+      final collections = QuestionCollection.groupQuestions(allQuestions);
       
       // Sort by year (most recent first)
       collections.sort((a, b) => b.year.compareTo(a.year));

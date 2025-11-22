@@ -16,18 +16,28 @@ const { Buffer } = require('buffer');
 
 function parseArgs() {
   const args = {};
-  process.argv.slice(2).forEach((a) => {
+  const argv = process.argv.slice(2);
+
+  for (let i = 0; i < argv.length; i++) {
+    const a = argv[i];
     if (a.startsWith('--')) {
-      const eqIndex = a.indexOf('=');
+      const key = a.substring(2);
+      const eqIndex = key.indexOf('=');
       if (eqIndex > 0) {
-        const k = a.substring(2, eqIndex);
-        const v = a.substring(eqIndex + 1);
+        // --key=value format
+        const k = key.substring(0, eqIndex);
+        const v = key.substring(eqIndex + 1);
         args[k] = v;
       } else {
-        args[a.substring(2)] = true;
+        // --key value format
+        const k = key;
+        const v = argv[i + 1] && !argv[i + 1].startsWith('--') ? argv[i + 1] : true;
+        args[k] = v;
+        if (v !== true) i++; // Skip the next argument if it was consumed as a value
       }
     }
-  });
+  }
+
   return args;
 }
 
@@ -46,65 +56,294 @@ function splitQuestionsFromText(text, year) {
   text = text.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
   text = text.replace(/\n{3,}/g, '\n\n');
 
-  let passage = null;
-  let questions = [];
+  const passagesAndQuestions = [];
 
-  // For French, passages are typically at the beginning
-  // Look for passage markers or long text blocks before questions
-  const firstQuestionMatch = text.search(/(^|\n)\s*\d{1,2}[\).\s]/m);
+  // Split by PART markers (PART I, PART II, etc.)
+  const partRegex = /PART\s+(?:I{1,3}|IV|II{1,2}|III)/gi;
+  const parts = text.split(partRegex);
+
+  if (parts.length > 1) {
+    // Multiple parts found - process each part separately
+    const partHeaders = text.match(partRegex) || [];
+
+    for (let i = 1; i < parts.length; i++) {
+      const partContent = parts[i].trim();
+      const partHeader = partHeaders[i-1] || `PART ${i}`;
+
+      console.log(`Processing ${partHeader}...`);
+
+      const partResults = parsePartContent(partContent, year, partHeader);
+      passagesAndQuestions.push(...partResults);
+    }
+  } else {
+    // Single part or no clear parts - process as one
+    const partResults = parsePartContent(text, year, 'PART I');
+    passagesAndQuestions.push(...partResults);
+  }
+
+  return { passagesAndQuestions };
+}
+
+function parsePartContent(text, year, partHeader) {
+  const results = [];
+
+  // Special handling for 2025 Part 3 - questions 31-40 have a fill-in passage
+  if (year === '2025' && partHeader.includes('PART III')) {
+    return parsePart3_2025(text, year, partHeader);
+  }
+
+  // Split by TEXTE markers (TEXTE 1, TEXTE 2, etc.)
+  const texteRegex = /TEXTE\s+\d+:/gi;
+  const textes = text.split(texteRegex);
+
+  if (textes.length > 1) {
+    // Multiple textes found
+    const texteHeaders = text.match(texteRegex) || [];
+
+    for (let i = 1; i < textes.length; i++) {
+      const texteContent = textes[i].trim();
+      const texteHeader = texteHeaders[i-1] || `TEXTE ${i}`;
+
+      console.log(`  Processing ${texteHeader}...`);
+
+      const texteResults = parseTexteContent(texteContent, year, `${partHeader} - ${texteHeader}`);
+      results.push(...texteResults);
+    }
+  } else {
+    // No clear textes - treat as single passage for the part
+    const texteResults = parseTexteContent(text, year, partHeader);
+    results.push(...texteResults);
+  }
+
+  return results;
+}
+
+function parseTexteContent(text, year, context) {
+  const results = [];
+
+  // For 2024+ format, questions may be embedded in the text
+  // Look for the first question anywhere in the text
+  const firstQuestionMatch = text.search(/\d{1,2}[\).\s]/);
+  let passage = null;
+  let questionsText = text;
+
   if (firstQuestionMatch > 0) {
-    const lead = text.slice(0, firstQuestionMatch).trim();
-    // Consider it a passage if it contains "TEXTE" or is substantial (>100 chars)
-    if (lead.includes('TEXTE') || lead.length > 100) {
-      passage = lead;
-      text = text.slice(firstQuestionMatch);
+    // Extract everything from start up to first question as the passage
+    const potentialPassage = text.slice(0, firstQuestionMatch).trim();
+
+    // Consider it a passage if it's substantial (>20 chars) and contains meaningful content
+    if (potentialPassage.length > 20 && !potentialPassage.toLowerCase().includes('answer')) {
+      passage = potentialPassage;
+      questionsText = text.slice(firstQuestionMatch);
     }
   }
 
-  // Special handling for post-2010 files with top-down options
-  const isPost2010 = year && parseInt(year) > 2010;
-  const isTopDownFormat = isPost2010 && text.includes('A.') && text.includes('B.');
+  // Parse questions from the remaining text
+  const questions = parseQuestionsFromText(questionsText, year);
 
-  if (isTopDownFormat) {
-    // Handle top-down format where options appear vertically after each question
-    questions = parseTopDownFormat(text);
+  // Associate passage with questions (typically 4-5 questions per passage)
+  if (passage && questions.length > 0) {
+    // For 2024 format, each TEXTE should have exactly 5 questions
+    const questionsPerPassage = 5;
+
+    if (questions.length <= questionsPerPassage) {
+      // All questions belong to this passage
+      results.push({
+        passage: passage,
+        questions: questions,
+        context: context,
+        year: year
+      });
+    } else {
+      // More questions than expected - split them
+      const numPassages = Math.ceil(questions.length / questionsPerPassage);
+
+      for (let i = 0; i < numPassages; i++) {
+        const startIdx = i * questionsPerPassage;
+        const endIdx = Math.min(startIdx + questionsPerPassage, questions.length);
+        const passageQuestions = questions.slice(startIdx, endIdx);
+
+        results.push({
+          passage: i === 0 ? passage : null, // Only first group gets the passage
+          questions: passageQuestions,
+          context: `${context} - Part ${i + 1}`,
+          year: year
+        });
+      }
+    }
   } else {
-    // Standard parsing
-    questions = parseStandardFormat(text);
+    // No passage found, just questions
+    results.push({
+      passage: null,
+      questions: questions,
+      context: context,
+      year: year
+    });
   }
 
-  return { passage, questions };
+  return results;
 }
 
-function parseTopDownFormat(text) {
+function parsePart3_2025(text, year, partHeader) {
+  const results = [];
+
+  // For 2025 Part 3, questions 31-40 have a fill-in passage
+  // Look for questions 31-40 and extract the passage that comes before them
+  const q31Match = text.search(/(^|\n)\s*31[\).\s]/m);
+  let fillInPassage = null;
+  let questionsText = text;
+
+  if (q31Match > 0) {
+    const lead = text.slice(0, q31Match).trim();
+    // Look for fill-in indicators or substantial text
+    if (lead.length > 50 && (lead.toLowerCase().includes('complète') || lead.toLowerCase().includes('fill') || lead.includes('___'))) {
+      fillInPassage = lead;
+      questionsText = text.slice(q31Match);
+    }
+  }
+
+  // Parse questions 31-40
+  const questions = parseQuestionsFromText(questionsText, year);
+  const part3Questions = questions.filter(q => q.questionNumber >= 31 && q.questionNumber <= 40);
+
+  if (fillInPassage && part3Questions.length > 0) {
+    results.push({
+      passage: fillInPassage,
+      questions: part3Questions,
+      context: `${partHeader} - Fill-in Passage`,
+      year: year
+    });
+  } else {
+    // No fill-in passage found, treat as regular questions
+    results.push({
+      passage: null,
+      questions: part3Questions,
+      context: partHeader,
+      year: year
+    });
+  }
+
+  // Handle any remaining questions (if any)
+  const remainingQuestions = questions.filter(q => q.questionNumber < 31 || q.questionNumber > 40);
+  if (remainingQuestions.length > 0) {
+    results.push({
+      passage: null,
+      questions: remainingQuestions,
+      context: `${partHeader} - Other Questions`,
+      year: year
+    });
+  }
+
+  return results;
+}
+
+function parseQuestionsFromText(text, year) {
   const questions = [];
-  // Find all question blocks using regex
-  const questionRegex = /(?:^|\n)\s*(\d{1,2})[\).\s]*([^\n]*?)(?=(?:\n\s*\d{1,2}[\).\s]|$))/g;
+
+  // Find all question start positions - more flexible pattern
+  const questionStarts = [];
+  // Look for patterns like: "1.", "2)", "3 ", "TEXTE 1:", etc.
+  const regex = /(\d{1,2})([\.\)\s:]|\s*$)/g;
   let match;
 
-  while ((match = questionRegex.exec(text)) !== null) {
-    const num = parseInt(match[1], 10);
-    let body = match[2].trim();
+  console.log(`parseQuestionsFromText: text length ${text.length}, starts with: ${text.substring(0, 100)}...`);
 
-    // Extract question text and options from the body
+  while ((match = regex.exec(text)) !== null) {
+    const num = parseInt(match[1], 10);
+
+    // Only consider questions 1-40
+    if (num >= 1 && num <= 40) {
+      questionStarts.push({
+        position: match.index,
+        number: num,
+        fullMatch: match[0]
+      });
+      console.log(`Found question start: ${num} at position ${match.index}`);
+    }
+  }
+
+  // Also look for "TEXTE X:" patterns
+  const texteRegex = /TEXTE\s+(\d{1,2}):/gi;
+  while ((match = texteRegex.exec(text)) !== null) {
+    const num = parseInt(match[1], 10);
+    if (num >= 1 && num <= 40) {
+      questionStarts.push({
+        position: match.index,
+        number: num,
+        fullMatch: match[0],
+        isTexte: true
+      });
+    }
+  }
+
+  // Remove duplicates (keep the first occurrence of each question number)
+  const seen = new Set();
+  const uniqueStarts = questionStarts.filter(start => {
+    if (seen.has(start.number)) {
+      return false;
+    }
+    seen.add(start.number);
+    return true;
+  });
+
+  // Sort by position
+  uniqueStarts.sort((a, b) => a.position - b.position);
+
+  // Process each question
+  for (let i = 0; i < uniqueStarts.length; i++) {
+    const start = uniqueStarts[i];
+    const end = i < uniqueStarts.length - 1 ? uniqueStarts[i + 1].position : text.length;
+
+    // Extract the question block
+    const questionBlock = text.substring(start.position, end).trim();
+
+    // Remove the question number prefix - handle different formats
+    let body = questionBlock;
+    if (start.isTexte) {
+      // For "TEXTE X:" format, remove the "TEXTE X:" part
+      body = body.replace(/^TEXTE\s+\d{1,2}:\s*/i, '').trim();
+    } else {
+      // For "X.", "X)", "X " formats
+      body = body.replace(/^\s*\d{1,2}[\.\)\s:]+\s*/, '').trim();
+    }
+
+    // Skip if this looks like an answer line
+    if (body.match(/^[A-D][\.\)]?/i) && body.length < 20) {
+      continue;
+    }
+
+    // Extract question text and options
     let questionText = '';
     let options = [];
 
-    // Simple approach: split by option markers
-    const parts = body.split(/([A-D])\.\s*/).filter(p => p.trim().length > 0);
-
-    if (parts.length >= 3) { // At least question + 2 options
-      questionText = parts[0].trim();
-
-      // Group letter + text pairs
-      options = [];
-      for (let i = 1; i < parts.length; i += 2) {
-        if (i + 1 < parts.length) {
-          const letter = parts[i];
-          const text = parts[i + 1].trim();
-          if (/^[A-D]$/.test(letter)) {
-            options.push(text);
+    // First try inline extraction on the entire body
+    const inlineExtracted = extractInlineOptions(body);
+    if (inlineExtracted) {
+      questionText = inlineExtracted.question;
+      options = inlineExtracted.options;
+    } else {
+      // Fallback: Split body into lines (but since it's one line, split by option markers)
+      const parts = body.split(/(?=[A-D][\.\)\s])/);
+      if (parts.length > 1) {
+        // First part is question text
+        questionText = parts[0].trim();
+        // Remaining parts are options
+        for (let j = 1; j < parts.length; j++) {
+          const optMatch = parts[j].match(/^([A-D])(?:\.|\)|\s|[-–—:])\s*(.+)$/i);
+          if (optMatch) {
+            options.push(optMatch[2].trim());
           }
+        }
+      } else {
+        // No clear options found - check if this is the newer format (2010+) with space-separated options
+        const words = body.split(/\s+/).filter(w => w.length > 0);
+        if (words.length === 4 && !body.includes('.') && !body.includes('A.') && !body.includes('B.')) {
+          // This looks like the newer format: "son sa ton ta" - four space-separated options
+          questionText = ''; // No question text for fill-in questions
+          options = words;
+        } else {
+          // No clear options found, treat whole body as question text
+          questionText = body;
         }
       }
     }
@@ -112,60 +351,16 @@ function parseTopDownFormat(text) {
     // Clean up question text
     questionText = questionText.replace(/\s+/g, ' ').trim();
 
-    if (questionText && options.length >= 2) {
+    // Only add if we have a valid question
+    // For fill-in questions (1-10 in newer format), options are sufficient even without question text
+    if ((questionText && options.length >= 1) || (options.length >= 1 && start.number >= 1 && start.number <= 10) || (start.number >= 31 && start.number <= 40)) {
       questions.push({
-        questionNumber: num,
+        questionNumber: start.number,
         questionText,
         options,
         _removedLeadingChoice: false
       });
     }
-  }
-
-  return questions;
-}
-
-function parseStandardFormat(text) {
-  // Similar to the original parsing logic but simplified for French
-  const questions = [];
-  const qRegex = /(?:^|\n)\s*(\d{1,2})[\).\s]*([\s\S]*?)(?=(?:\n\s*\d{1,2}[\).\s]|$))/g;
-
-  let m;
-  while ((m = qRegex.exec(text)) !== null) {
-    const num = parseInt(m[1], 10);
-    let body = m[2].trim();
-
-    // Extract options - look for A., B., C., D. patterns
-    const lines = body.split('\n').map(l => l.trim()).filter(l => l.length > 0);
-    let options = [];
-    let questionLines = [];
-
-    lines.forEach(line => {
-      const optMatch = line.match(/^([A-D])(?:\.|\)|\s|[-–—:])\s*(.+)$/i);
-      if (optMatch) {
-        options.push(optMatch[2].trim());
-      } else {
-        questionLines.push(line);
-      }
-    });
-
-    // If no options found, try inline extraction
-    if (options.length === 0) {
-      const extracted = extractInlineOptions(body);
-      if (extracted) {
-        options = extracted.options;
-        questionLines = [extracted.question];
-      }
-    }
-
-    let questionText = questionLines.join(' ');
-
-    questions.push({
-      questionNumber: num,
-      questionText,
-      options,
-      _removedLeadingChoice: false
-    });
   }
 
   return questions;
@@ -219,30 +414,35 @@ async function importToFirestore(results, serviceAccountPath) {
   let passageCount = 0;
 
   for (const result of results) {
-    if (result.passage && result.year) {
-      const passageId = `french_${result.year}_passage`.replace(/\s+/g, '_').toLowerCase();
-      const passageRef = db.collection('french_passages').doc(passageId);
+    // result.passagesAndQuestions is now an array of {passage, questions, context, year}
+    for (const item of result.passagesAndQuestions) {
+      if (item.passage && item.questions.length > 0) {
+        const year = item.year || result.docs?.[0]?.year;
+        const passageId = `french_${year}_${item.context.replace(/\s+/g, '_').toLowerCase()}`.replace(/[^a-z0-9_]/g, '_');
 
-      const passageData = {
-        id: passageId,
-        title: `French Comprehension Passage ${result.year}`,
-        content: result.passage,
-        subject: 'french',
-        examType: 'bece',
-        year: result.year,
-        section: 'COMPREHENSION',
-        createdAt: admin.firestore.FieldValue.serverTimestamp(),
-        createdBy: 'french_import',
-        isActive: true
-      };
+        const passageRef = db.collection('french_passages').doc(passageId);
 
-      passageBatch.set(passageRef, passageData);
-      passageCount++;
+        const passageData = {
+          id: passageId,
+          title: `French ${item.context}`,
+          content: item.passage,
+          subject: 'french',
+          examType: 'bece',
+          year: year,
+          section: 'COMPREHENSION',
+          createdAt: admin.firestore.FieldValue.serverTimestamp(),
+          createdBy: 'french_import',
+          isActive: true
+        };
 
-      // Add passageId to all questions in this result
-      result.docs.forEach(doc => {
-        doc.passageId = passageId;
-      });
+        passageBatch.set(passageRef, passageData);
+        passageCount++;
+
+        // Add passageId to all questions in this group
+        item.questions.forEach(q => {
+          q.passageId = passageId;
+        });
+      }
     }
   }
 
@@ -256,20 +456,36 @@ async function importToFirestore(results, serviceAccountPath) {
   let questionCount = 0;
 
   for (const result of results) {
-    for (const doc of result.docs) {
+    // Flatten all questions from all passage groups
+    const allQuestions = result.passagesAndQuestions.flatMap(item => item.questions);
+
+    for (const question of allQuestions) {
       // Skip documents with missing required fields
-      if (!doc.year || !doc.questionNumber || !doc.questionText) {
-        console.warn(`Skipping question with missing data: year=${doc.year}, qNum=${doc.questionNumber}`);
+      if (!question.questionNumber || !question.questionText) {
+        console.warn(`Skipping question with missing data: qNum=${question.questionNumber}`);
         continue;
       }
 
-      const id = `french_${doc.year}_${doc.questionNumber}`.replace(/\s+/g, '_').toLowerCase();
+      const year = result.year || question.year;
+      if (!year) {
+        console.warn(`Skipping question with no year: qNum=${question.questionNumber}`);
+        continue;
+      }
+
+      const id = `french_${year}_${question.questionNumber}`.replace(/\s+/g, '_').toLowerCase();
       const docRef = db.collection('french_questions').doc(id);
 
       const payload = {
-        ...doc,
-        id,
         subject: 'french',
+        year: year,
+        examType: 'bece',
+        section: 'COMPREHENSION',
+        questionNumber: question.questionNumber,
+        questionText: question.questionText,
+        options: question.options,
+        displayOptions: question.options.map((o, i) => `${String.fromCharCode(65 + i)}. ${o}`),
+        correctAnswer: question.correctAnswer,
+        passageId: question.passageId || null,
         type: 'multipleChoice',
         marks: 1,
         difficulty: 'medium',
@@ -295,11 +511,10 @@ async function processFile(filePath) {
   const base = path.basename(filePath, '.docx');
   const year = (base.match(/(19|20)\d{2}/) || [''])[0];
 
-  const { passage, questions } = splitQuestionsFromText(raw, year);
+  const { passagesAndQuestions } = splitQuestionsFromText(raw, year);
 
   return {
-    passage,
-    questions,
+    passagesAndQuestions,
     year,
     fileName: base
   };
@@ -325,7 +540,7 @@ async function main() {
   for (const f of docxFiles) {
     console.log('Processing', path.basename(f));
     try {
-      const { passage, questions, year, fileName } = await processFile(f);
+      const { passagesAndQuestions, year, fileName } = await processFile(f);
 
       // Load answers if available (skip for 1990-1999)
       let answersMap = {};
@@ -345,36 +560,19 @@ async function main() {
         }
       }
 
-      // Merge answers
-      const mergedQuestions = questions.map(q => ({
-        ...q,
-        correctAnswer: answersMap[q.questionNumber] || null
-      }));
+      // Merge answers into all questions
+      passagesAndQuestions.forEach(item => {
+        item.questions.forEach(q => {
+          q.correctAnswer = answersMap[q.questionNumber] || null;
+        });
+      });
 
-      // Build docs for import
-      const outDocs = mergedQuestions.map(q => ({
-        subject: 'french',
-        year,
-        examType: 'bece',
-        section: passage ? 'COMPREHENSION' : 'A',
-        questionNumber: q.questionNumber,
-        questionText: q.questionText,
-        options: q.options,
-        displayOptions: q.options.map((o, i) => `${String.fromCharCode(65 + i)}. ${o}`),
-        correctAnswer: q.correctAnswer,
-        passage: passage || null,
-        metadata: {
-          sourceFile: path.basename(f),
-          importedAt: new Date().toISOString()
-        }
-      }));
-
-      // Save to JSON
+      // Save to JSON for debugging/review
       const outPath = path.join(outDir, `${fileName}.json`);
-      fs.writeFileSync(outPath, JSON.stringify(outDocs, null, 2), 'utf8');
-      console.log(`Wrote ${outDocs.length} questions to ${outPath}`);
+      fs.writeFileSync(outPath, JSON.stringify(passagesAndQuestions, null, 2), 'utf8');
+      console.log(`Wrote ${passagesAndQuestions.reduce((sum, item) => sum + item.questions.length, 0)} questions to ${outPath}`);
 
-      results.push({ file: f, docs: outDocs, passage });
+      results.push({ file: f, passagesAndQuestions, year });
 
     } catch (err) {
       console.error('Error processing', f, err);

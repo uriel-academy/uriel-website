@@ -1,0 +1,370 @@
+[
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 11,
+        "questionText": "Amidou est l,8 ……….. de taille",
+        "options": [
+          "kilos",
+          "poids",
+          "longueur",
+          "mètres"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 12,
+        "questionText": "Le mécanicien travaille au ……..",
+        "options": [
+          "garage",
+          "bureau",
+          "marché",
+          "champ"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 13,
+        "questionText": "C’est pour ………faute qu’il est puni.",
+        "options": [
+          "ce",
+          "cette",
+          "cet",
+          "ces"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 14,
+        "questionText": "Tu es malade ; il faut voir le ……….",
+        "options": [
+          "cultivateur",
+          "professeur",
+          "chanter",
+          "docteur"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 15,
+        "questionText": "Pour réussir à l’examen, je dois bien…………",
+        "options": [
+          "jouer",
+          "dormir",
+          "étudier",
+          "manger"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 16,
+        "questionText": "Quelle robe sale ! Il faut la ……….",
+        "options": [
+          "laver",
+          "sécher",
+          "coudre",
+          "repasser"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 17,
+        "questionText": "J’ai terriblement soif. Donne-moi à ……….",
+        "options": [
+          "piler",
+          "voir",
+          "boire",
+          "manger"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 18,
+        "questionText": "Papa veut voyager, je dois lui faire sa …………",
+        "options": [
+          "valise",
+          "serviette",
+          "maison",
+          "voiture"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 19,
+        "questionText": "Petit à petit, l’oiseau fait son ………",
+        "options": [
+          "chant",
+          "nid",
+          "lit",
+          "Toit"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 20,
+        "questionText": "Il y a sept …….dans une semaine.",
+        "options": [
+          "saisons",
+          "mois",
+          "jours",
+          "années"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 21,
+        "questionText": "Donne-moi la serviette, je veux me …………",
+        "options": [
+          "coucher",
+          "laver",
+          "peigner",
+          "promener"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 22,
+        "questionText": "Je ne comprends pas ce mot. Donne-moi un …….",
+        "options": [
+          "dictionnaire",
+          "cahier",
+          "journal",
+          "livre"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 23,
+        "questionText": "Fermez ………vous parlez trop.",
+        "options": [
+          "l’oreille",
+          "le nez",
+          "la main",
+          "la bouche"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 24,
+        "questionText": "Mon frère est fermier. Il cultive son champ avec……….",
+        "options": [
+          "son couteau",
+          "son fusil",
+          "sa houe",
+          "sa cuillère"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 25,
+        "questionText": "Ma voiture est tombée en panne, je dois voir …………..",
+        "options": [
+          "le mécanicien",
+          "le fermier",
+          "le chauffeur",
+          "le docteur"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 26,
+        "questionText": "Cette fille est muette, Elle ……….pas",
+        "options": [
+          "marche",
+          "ne voit",
+          "ne parle",
+          "n’entend"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 27,
+        "questionText": "Kofi ne travaille pas bien en classe. Il est ……..",
+        "options": [
+          "sérieux",
+          "paresseux",
+          "content",
+          "obéissant"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 28,
+        "questionText": "L’orange est un ………",
+        "options": [
+          "fruit",
+          "animal",
+          "parasite",
+          "insecte"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 29,
+        "questionText": "Abdou mange trop. Il est ………",
+        "options": [
+          "bavard",
+          "gourmand",
+          "travailleur",
+          "aveugle"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 30,
+        "questionText": "Amina prépare le petit déjeuner dans la …………",
+        "options": [
+          "cuisine",
+          "librairie",
+          "boutique",
+          "pharmacie"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 31,
+        "questionText": "Pourquoi Kojo n’est pas allé à l’école. Parce qu’il ………..",
+        "options": [
+          "était malade",
+          "voulait arrêter un voleur",
+          "voulait fêter le jour de sa naissance",
+          "à visité un magasin"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 32,
+        "questionText": "Kojo décide d’entrer dans le magasin parce ……",
+        "options": [
+          "qu’il à peur de l’homme",
+          "que la rue est vide",
+          "qu’il veut acheter des marchandises",
+          "qu’il se promène"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 33,
+        "questionText": "Qu’est-ce que l’homme aacheté? Il ……….",
+        "options": [
+          "a acheté une boîte de chocolat",
+          "n’a rien acheté",
+          "a acheté un sac",
+          "à acheté un cadeau"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 34,
+        "questionText": "Combien coûte une boîte de chocolat ?",
+        "options": [
+          "¢50.00",
+          "¢60.00",
+          "¢80.00",
+          "¢100.00"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 35,
+        "questionText": "Pourquoi l’homme",
+        "options": [
+          "t-il regardé à droite et à gauche ?",
+          "il voulait voler",
+          "il voulait acheter des marchandises",
+          "il voulait mieux regarder les marchandises",
+          "il cherchait son argent"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 36,
+        "questionText": "L’homme a pris ………boîtes de chocolat ?",
+        "options": [
+          "2",
+          "4",
+          "6",
+          "8"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 37,
+        "questionText": "Où est-ce qu’il a mis les boîtes de chocolat ?",
+        "options": [
+          "Dans son pantalon",
+          "Dans ses chaussures",
+          "Sous son chapeau",
+          "Dans son mouchoir"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 38,
+        "questionText": "Le voleur s’est sauvé ……………",
+        "options": [
+          "soigneusement",
+          "bruyamment",
+          "heureusement",
+          "rapidement"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 39,
+        "questionText": "Qui a arrêté le voleur ?",
+        "options": [
+          "Kojo",
+          "La vendeuse",
+          "Un policier",
+          "Tout le monde."
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 40,
+        "questionText": "Quel titre peut-on donner à ce passage ?",
+        "options": [
+          "Kojo, le garçon courageux",
+          "Le grand magasin",
+          "Le voleur",
+          "Un agent le police"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      }
+    ],
+    "context": "PART I",
+    "year": "2002"
+  }
+]

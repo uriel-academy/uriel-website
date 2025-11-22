@@ -1,0 +1,539 @@
+[
+  {
+    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "questions": [
+      {
+        "questionNumber": 1,
+        "questionText": "Mon ami a ……………..joli pantalon.",
+        "options": [
+          "un",
+          "une",
+          "de",
+          "des"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 2,
+        "questionText": "Les garçons jouent ………………..football.",
+        "options": [
+          "du",
+          "des",
+          "au",
+          "aux"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 3,
+        "questionText": "Fatou mange …………..riz chaque jour.",
+        "options": [
+          "de",
+          "de la",
+          "des",
+          "du"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 4,
+        "questionText": "Kofi donne …………. stylo à sa sœur.",
+        "options": [
+          "le",
+          "la",
+          "une",
+          "l’"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 5,
+        "questionText": "Les oiseaux chantent dans …………… arbres.",
+        "options": [
+          "la",
+          "le",
+          "l’",
+          "les"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 1",
+    "year": "1993"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 6,
+        "questionText": "Les enfants regardent …………. télévision",
+        "options": [
+          "des",
+          "du",
+          "les",
+          "la"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 7,
+        "questionText": "Je n’aime pas ……………..mathématiques.",
+        "options": [
+          "de la",
+          "la",
+          "les",
+          "du"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 8,
+        "questionText": "Musa va ……………ciném",
+        "options": [
+          "le",
+          "la",
+          "les",
+          "au"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 9,
+        "questionText": "Maman a …………..beau bébé.",
+        "options": [
+          "un",
+          "une",
+          "les",
+          "de"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 10,
+        "questionText": "Il faut faire ……………………correction.",
+        "options": [
+          "les",
+          "le",
+          "des",
+          "la"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 2",
+    "year": "1993"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 11,
+        "questionText": "Papa prend …………..café chau",
+        "options": [
+          "du",
+          "d’",
+          "de",
+          "de la"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 12,
+        "questionText": "Ces filles sont toujours …………….",
+        "options": [
+          "contente",
+          "contentes",
+          "content",
+          "contents"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 13,
+        "questionText": "Janet aime la musique. Elle …………. toujours.",
+        "options": [
+          "travaille",
+          "parle",
+          "bavarde",
+          "chante"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 14,
+        "questionText": "Ce mot est difficile. Donne-moi un ……………..",
+        "options": [
+          "livre",
+          "cahier",
+          "dictionnaire",
+          "journal"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 15,
+        "questionText": "Ferme …………… Tu parle trop.",
+        "options": [
+          "ta bouche",
+          "ton oreille",
+          "ton nez",
+          "ta main"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 3",
+    "year": "1993"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 16,
+        "questionText": "Kofi et Ama sont ………………..",
+        "options": [
+          "intelligent",
+          "intelligente",
+          "intelligentes",
+          "intelligents"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 17,
+        "questionText": "Esi est malade. Elle va chez le ……….",
+        "options": [
+          "cuisinier",
+          "docteur",
+          "danseur",
+          "professeur"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 18,
+        "questionText": "C’est un beau bébé, il pèse 10………………",
+        "options": [
+          "centimètres",
+          "kilomètres",
+          "kilogramme",
+          "mètres"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 19,
+        "questionText": "Je vois un film intéressant au ………………",
+        "options": [
+          "champ",
+          "cinéma",
+          "marché",
+          "bureau"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 20,
+        "questionText": "Elle a beaucoup…………………",
+        "options": [
+          "d’oranges",
+          "des oranges",
+          "les oranges",
+          "de l’orange"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 4",
+    "year": "1993"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 21,
+        "questionText": "Un oiseau a ……………..",
+        "options": [
+          "une bouche",
+          "un bec",
+          "des mains",
+          "des cheveux"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 22,
+        "questionText": "C’est un pharmacien. Il vend des ……………",
+        "options": [
+          "fruits",
+          "médicaments",
+          "boissons",
+          "maladies"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 23,
+        "questionText": "Où allez-vous ? ……………………. allons à l’école.",
+        "options": [
+          "Vous",
+          "Nous",
+          "Il",
+          "Tu"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 24,
+        "questionText": "Tu as de l’argent ? Oui, j’en …………..",
+        "options": [
+          "as",
+          "ai",
+          "avez",
+          "a"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 25,
+        "questionText": "L’élève met le livre ………………….. la table.",
+        "options": [
+          "entré",
+          "sur",
+          "vers",
+          "pour"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 5",
+    "year": "1993"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 26,
+        "questionText": "Ces tomates coutent…………..cedis.",
+        "options": [
+          "premier",
+          "cent",
+          "rien",
+          "dernier"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 27,
+        "questionText": "Regardez ……………..chemise.",
+        "options": [
+          "ce",
+          "ces",
+          "cette",
+          "cet"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 28,
+        "questionText": "Elle travaille ………….. Poste.",
+        "options": [
+          "dans",
+          "à la",
+          "à",
+          "en"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 29,
+        "questionText": "Le Togo est ……………. Afrique.",
+        "options": [
+          "pour",
+          "à",
+          "en",
+          "par"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 30,
+        "questionText": "Les jeunes filles sont…………",
+        "options": [
+          "beaux",
+          "belles",
+          "belle",
+          "bel"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 6",
+    "year": "1993"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 31,
+        "questionText": "Abalo décide un jour de ……………",
+        "options": [
+          "travailler",
+          "manger",
+          "voyager",
+          "dormir"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 32,
+        "questionText": "Abalo visite le village …………..fois",
+        "options": [
+          "une",
+          "trois",
+          "quatre",
+          "cinq"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 33,
+        "questionText": "Qu’est-ce qu’il mange avant de partir ?",
+        "options": [
+          "rien",
+          "un repas",
+          "tout",
+          "un chaval"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 34,
+        "questionText": "Les villageois savent qu’Abalo ………….",
+        "options": [
+          "n’a pas de cheval",
+          "ne paie pas quand il mange",
+          "n’aime pas manger",
+          "a un gros ventre"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 35,
+        "questionText": "Où atten",
+        "options": [
+          "il son repas ?",
+          "dans la cuisine",
+          "dans la chambre",
+          "à la salle à manger",
+          "au restaurant"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 7",
+    "year": "1993"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 36,
+        "questionText": "Après le repas Abalo……………….",
+        "options": [
+          "dort",
+          "rit",
+          "chante",
+          "s’amuse"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 37,
+        "questionText": "Abalo décide de quitter le village……………",
+        "options": [
+          "à midi",
+          "le soir",
+          "le matin",
+          "à demain"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 38,
+        "questionText": "Qui a bien mangé ?……………………",
+        "options": [
+          "personne",
+          "le cheval",
+          "Abalo",
+          "les villageois"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 39,
+        "questionText": "Où est le cheval d’Abalo ?",
+        "options": [
+          "Abalo l’a tué",
+          "Le cheval est parti en ville",
+          "Les villageois l’ont mangé",
+          "Abalo l’amangé"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 40,
+        "questionText": "Qui a tué le cheval ?",
+        "options": [
+          "Les villageois",
+          "Abalo",
+          "Un ami d’Abalo",
+          "personne"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 8",
+    "year": "1993"
+  }
+]

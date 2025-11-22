@@ -1,0 +1,538 @@
+[
+  {
+    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "questions": [
+      {
+        "questionNumber": 1,
+        "questionText": "La banane est ……….. fruit.",
+        "options": [
+          "un",
+          "des",
+          "de la",
+          "une"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 2,
+        "questionText": "Kofi a faim, il ……………….. du riz.",
+        "options": [
+          "joue",
+          "mange",
+          "chante",
+          "parle"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 3,
+        "questionText": "La chambre est sale. Il faut la …………….",
+        "options": [
+          "vendre",
+          "fermer",
+          "jouer",
+          "balayer"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 4,
+        "questionText": "En France on parle …………………",
+        "options": [
+          "Portugais",
+          "Anglais",
+          "français",
+          "Chinois"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 5,
+        "questionText": "Elle est méchante. Elle …………… les enfants.",
+        "options": [
+          "frappe",
+          "frappes",
+          "frappent",
+          "frapper"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 1",
+    "year": "1992"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 6,
+        "questionText": "Ama chante bien. Elle a une belle ……………",
+        "options": [
+          "joue",
+          "voie",
+          "voix",
+          "bouche"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 7,
+        "questionText": "La robe est jolie. Je vais …………..acheter.",
+        "options": [
+          "les",
+          "l’",
+          "le",
+          "la"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 8,
+        "questionText": "Afua est une ……………..fille",
+        "options": [
+          "bel",
+          "belle",
+          "beau",
+          "beaux"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 9,
+        "questionText": "Ma mère prépare le déjeuner dans la ………………",
+        "options": [
+          "salle de bain",
+          "chambre",
+          "cuisine",
+          "salle à manger"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 10,
+        "questionText": "Le professeur corrige les …………….",
+        "options": [
+          "fautes",
+          "malades",
+          "livres",
+          "tableaux"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 2",
+    "year": "1992"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 11,
+        "questionText": "Le train ne marche pas vite. Il va ……………….",
+        "options": [
+          "lentement",
+          "tranquillement",
+          "gentiment",
+          "bruyamment"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 12,
+        "questionText": "Je ……………… lève à 6 heures",
+        "options": [
+          "lui",
+          "me",
+          "nous",
+          "se"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 13,
+        "questionText": "Kojo habite ……………….. Kumasi",
+        "options": [
+          "à",
+          "a",
+          "au",
+          "en"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 14,
+        "questionText": "Donne-moi………….. cahier",
+        "options": [
+          "nos",
+          "tes",
+          "ma",
+          "ton"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 15,
+        "questionText": "Regarde Ama, ……………. mange en classe.",
+        "options": [
+          "il",
+          "elle",
+          "tu",
+          "nous"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 3",
+    "year": "1992"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 16,
+        "questionText": "Son professeur ……………. donne une règle.",
+        "options": [
+          "les",
+          "le",
+          "lui",
+          "la"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 17,
+        "questionText": "J’ai …………….. donne-moi de l’eau.",
+        "options": [
+          "soif",
+          "peur",
+          "faim",
+          "froid"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 18,
+        "questionText": "Les enfants …………. à l’école.",
+        "options": [
+          "va",
+          "vont",
+          "vais",
+          "allons"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 19,
+        "questionText": "J’aime un chapeau ……………",
+        "options": [
+          "noire",
+          "verte",
+          "blanche",
+          "rouge"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 20,
+        "questionText": "La craie est ………… la boîte.",
+        "options": [
+          "près",
+          "par",
+          "dans",
+          "à"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 4",
+    "year": "1992"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 21,
+        "questionText": "Le garçon …………. content.",
+        "options": [
+          "suis",
+          "êtes",
+          "est",
+          "es"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 22,
+        "questionText": "Je m’………………..Isaa",
+        "options": [
+          "appelles",
+          "appelle",
+          "appeler",
+          "appellent"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 23,
+        "questionText": "La saison des pluies commence …………juin.",
+        "options": [
+          "en",
+          "au",
+          "dans",
+          "à"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 24,
+        "questionText": "Le livre est …………… la table.",
+        "options": [
+          "sur",
+          "près",
+          "loin",
+          "a"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 25,
+        "questionText": "……………….. devoir est trop difficile.",
+        "options": [
+          "Cet",
+          "Cette",
+          "Ce",
+          "Ces"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 5",
+    "year": "1992"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 26,
+        "questionText": "Tamale est une grande ville ……………….. Ghan",
+        "options": [
+          "de l’",
+          "du",
+          "de la",
+          "de"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 27,
+        "questionText": "Voici mes sœurs …………….. sont gentilles.",
+        "options": [
+          "elle",
+          "nous",
+          "elles",
+          "ils"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 28,
+        "questionText": "Adzoa est …………sœur.",
+        "options": [
+          "mon",
+          "son",
+          "ma",
+          "mes"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 29,
+        "questionText": "Ama, où vas-…………….. ?",
+        "options": [
+          "il",
+          "tu",
+          "nous",
+          "vous"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 30,
+        "questionText": "Paul est …………… ami",
+        "options": [
+          "ses",
+          "ta",
+          "ma",
+          "mon"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 6",
+    "year": "1992"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 31,
+        "questionText": "Kweku est malade ………….va à l’hôpital.",
+        "options": [
+          "je",
+          "tu",
+          "il",
+          "elle"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 32,
+        "questionText": "Ils ………………. mes amis.",
+        "options": [
+          "est",
+          "êtes",
+          "sont",
+          "sommes"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 33,
+        "questionText": "Nana a beaucoup d’argent. Il est …………..",
+        "options": [
+          "gentil",
+          "riche",
+          "jolie",
+          "bon"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 34,
+        "questionText": "La mangue est …………..",
+        "options": [
+          "une mangue",
+          "une fleur",
+          "un fruit",
+          "une feuille"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 35,
+        "questionText": "……………….. est le crayon ? Il est dans le sa",
+        "options": [
+          "Combien",
+          "Quand",
+          "Où",
+          "Pourquoi"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 7",
+    "year": "1992"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 36,
+        "questionText": "Dans le village de Rikiti, on va au marché,………………",
+        "options": [
+          "toute la semaine",
+          "une fois par semaine",
+          "chaque jour de la semaine",
+          "chaque dimanche"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 37,
+        "questionText": "On va au marché pour ………………….",
+        "options": [
+          "cultiver les champs",
+          "vendre et acheter des marchandises",
+          "jouer",
+          "danser"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 38,
+        "questionText": "Que font les marchands pour vendre leurs produits ?",
+        "options": [
+          "ils crient pour appeler les acheteurs",
+          "ils restent silencieux",
+          "ils sourient",
+          "ils parlent avec les acheteurs"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 39,
+        "questionText": "Au marché on vend ………….",
+        "options": [
+          "des hommes et des poissons",
+          "des chaussures et arbres",
+          "des poissons et des chaussures",
+          "des femmes et des bijoux"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 40,
+        "questionText": "Donnez un titre au passage.",
+        "options": [
+          "Les femmes au marché",
+          "promenade au village",
+          "la fêté du village",
+          "le jour de marché"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 8",
+    "year": "1992"
+  }
+]

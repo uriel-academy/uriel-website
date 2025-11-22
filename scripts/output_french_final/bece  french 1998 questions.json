@@ -1,0 +1,538 @@
+[
+  {
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "questions": [
+      {
+        "questionNumber": 1,
+        "questionText": "Abena cherche ……….. montre",
+        "options": [
+          "le",
+          "du",
+          "la",
+          "de"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 2,
+        "questionText": "Papa lit ……….. journal.",
+        "options": [
+          "le",
+          "du",
+          "la",
+          "de"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 3,
+        "questionText": "Nous prenons …………thé.",
+        "options": [
+          "de",
+          "des",
+          "de l’",
+          "du"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 4,
+        "questionText": "Va me chercher ……….eau.",
+        "options": [
+          "d’",
+          "des",
+          "de l’",
+          "de la"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 5,
+        "questionText": "Mon petit frère écrit avec ………… stylo.",
+        "options": [
+          "du",
+          "une",
+          "des",
+          "un"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 1",
+    "year": "1998"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 6,
+        "questionText": "Vous aimez ………… fruits ?",
+        "options": [
+          "des",
+          "à la",
+          "du",
+          "de la"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 7,
+        "questionText": "Nous allons ………….ville.",
+        "options": [
+          "à",
+          "au",
+          "en",
+          "dans"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 8,
+        "questionText": "Ma cousine travaille ……….. banque.",
+        "options": [
+          "au",
+          "à la",
+          "dans",
+          "en"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 9,
+        "questionText": "Elle donne …………….cahier à Kofi.",
+        "options": [
+          "sa",
+          "ses",
+          "son",
+          "mes"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 10,
+        "questionText": "Donnez-moi……….. pain, s’il vous plait.",
+        "options": [
+          "du",
+          "de",
+          "de la",
+          "des"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 2",
+    "year": "1998"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 11,
+        "questionText": "Taisez-…………. mes élèves.",
+        "options": [
+          "nous",
+          "de",
+          "de la",
+          "vous"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 12,
+        "questionText": "Vous jouez …….. football n’est-ce pas ?",
+        "options": [
+          "à",
+          "le",
+          "au",
+          "la"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 13,
+        "questionText": "Où est ta sœur ? …………voil",
+        "options": [
+          "La",
+          "Le",
+          "Elle",
+          "Lui"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 14,
+        "questionText": "Elle habite ………. Togo.",
+        "options": [
+          "en",
+          "dans",
+          "avec",
+          "au"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 15,
+        "questionText": "Jojo met le livre ………….. son sa",
+        "options": [
+          "en",
+          "dans",
+          "avec",
+          "à"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 3",
+    "year": "1998"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 16,
+        "questionText": "Nous écoutons la …………….. chaque matin.",
+        "options": [
+          "radio",
+          "table",
+          "voiture",
+          "boîte"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 17,
+        "questionText": "Il est muet ; il ne …………. pas",
+        "options": [
+          "danse",
+          "voit",
+          "parle",
+          "mange"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 18,
+        "questionText": "Nous cultivons du riz au …………",
+        "options": [
+          "refectoire",
+          "terrain",
+          "salon",
+          "champ"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 19,
+        "questionText": "Si vous voyez Ama, dites …………. que je la cherche.",
+        "options": [
+          "la",
+          "lui",
+          "elle",
+          "le"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 20,
+        "questionText": "Le soleil se couche …………",
+        "options": [
+          "à l’est",
+          "au nord",
+          "à l’ouest",
+          "au sud"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 4",
+    "year": "1998"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 21,
+        "questionText": "Il ne travaille pas beaucoup alors il est …………",
+        "options": [
+          "pauvre",
+          "fatigué",
+          "fort",
+          "vieux"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 22,
+        "questionText": "Les élèves …………. pendant la récréation.",
+        "options": [
+          "jouent",
+          "pleurent",
+          "travaillent",
+          "voyagent"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 23,
+        "questionText": "Quelle ………fleur !",
+        "options": [
+          "bel",
+          "beau",
+          "belle",
+          "beaux"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 24,
+        "questionText": "Vous………… une erreur, Monsieur.",
+        "options": [
+          "faites",
+          "fait",
+          "font",
+          "fais"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 25,
+        "questionText": "Adjoa ………… contente",
+        "options": [
+          "sont",
+          "es",
+          "sommes",
+          "est"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 5",
+    "year": "1998"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 26,
+        "questionText": "Madame Mensah est très ………………",
+        "options": [
+          "gentil",
+          "gentille",
+          "gentilles",
+          "gentils"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 27,
+        "questionText": "Tu ………….. déjà ?",
+        "options": [
+          "dort",
+          "dors",
+          "dormez",
+          "dorment"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 28,
+        "questionText": "Les hommes ……………. des pantalons.",
+        "options": [
+          "portent",
+          "portez",
+          "porte",
+          "portes"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 29,
+        "questionText": "……………….. heure est-il, Kobina ?",
+        "options": [
+          "Quel",
+          "Quels",
+          "Quelle",
+          "Quelles"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 30,
+        "questionText": "Nous …………. le petit déjeuner à 7 heures.",
+        "options": [
+          "prend",
+          "prenons",
+          "prennent",
+          "prends"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 6",
+    "year": "1998"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 31,
+        "questionText": "Madame Mensah travaille dans …………",
+        "options": [
+          "un bureau",
+          "un hôpital",
+          "une usine",
+          "une banque"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 32,
+        "questionText": "La clinique où elle travaille est …………….. de la ville.",
+        "options": [
+          "près",
+          "à l’est",
+          "au centre",
+          "à l’ouest"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 33,
+        "questionText": "La famille Mensah habitent ………. de la ville.",
+        "options": [
+          "loin",
+          "au centre",
+          "au nord",
+          "à l’ouest"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 34,
+        "questionText": "Il y a ……………… garçons dans la famille.",
+        "options": [
+          "5",
+          "4",
+          "3",
+          "2"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 35,
+        "questionText": "Madame Mensah …………….. tous les jours.",
+        "options": [
+          "travaille tard",
+          "se lève très tôt",
+          "se repose",
+          "se couche très tard"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 7",
+    "year": "1998"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 36,
+        "questionText": "Elle va au travail à ……………….",
+        "options": [
+          "6 heures 45",
+          "6 heures 30",
+          "6 heures 15",
+          "6 heures"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 37,
+        "questionText": "Avant de travailler elle ………..",
+        "options": [
+          "donne du chocolat aux enfants",
+          "vend des bonbons aux adultes",
+          "dit bonjour aux malades",
+          "appelle les malades"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 38,
+        "questionText": "Ce sont les ……….. qui reçoivent les cadeaux de Madame Mensah.",
+        "options": [
+          "jumeaux",
+          "adultes",
+          "maris",
+          "jeunes"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 39,
+        "questionText": "Madame Mensah aime beaucoup",
+        "options": [
+          "les hommes",
+          "les petits",
+          "les infirmières",
+          "les jumeaux"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 40,
+        "questionText": "Madame Mensah est appelée ‘Maman parce qu’elle est………….",
+        "options": [
+          "travailleuse",
+          "gentille",
+          "infirmière",
+          "mère"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 8",
+    "year": "1998"
+  }
+]

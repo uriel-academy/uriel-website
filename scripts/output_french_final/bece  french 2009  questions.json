@@ -1,0 +1,249 @@
+[
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 11,
+        "questionText": "Akosua lave …………………..foulard de sa mère.",
+        "options": [
+          "les",
+          "la",
+          "l’",
+          "le"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 12,
+        "questionText": "Tous les élèves ………………s’amuser au jardin le week-end prochain.",
+        "options": [
+          "iront",
+          "allaient",
+          "vas",
+          "allez"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 13,
+        "questionText": "…………………élève parle trop",
+        "options": [
+          "Ce",
+          "Cet",
+          "Ces",
+          "Cette"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 14,
+        "questionText": "Les professeurs ……………….de partir",
+        "options": [
+          "vient",
+          "viendront",
+          "vient",
+          "viennent"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 15,
+        "questionText": "Cynthia, Rashidatu et Kofi sont très…………….",
+        "options": [
+          "intelligentes",
+          "intelligents",
+          "intelligent",
+          "intelligente"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 16,
+        "questionText": "Tu………………très vite.",
+        "options": [
+          "grandit",
+          "grandi",
+          "grandis",
+          "grandir"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 17,
+        "questionText": "Il y a trop de ………………sur ce terrain de football.",
+        "options": [
+          "cailloux",
+          "caillou",
+          "cartables",
+          "cartable"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 18,
+        "questionText": "Kofi ……………..mal au ventre parce qu’il a mangé une mangue verte.",
+        "options": [
+          "as",
+          "a",
+          "est",
+          "avoir"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 19,
+        "questionText": "Quand ……………….jeune, j’aimais jouer au football.",
+        "options": [
+          "je suis",
+          "j’avais",
+          "j’étais",
+          "j’étais"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 20,
+        "questionText": "Mon père ………………….les accusés, il est avocat.",
+        "options": [
+          "frappe",
+          "défend",
+          "soigne",
+          "enseigne"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 31,
+        "questionText": "Titi est …………..frère de Baba.",
+        "options": [
+          "le grand",
+          "le petit",
+          "la grande",
+          "la petite"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 32,
+        "questionText": "Les samedis, Titi et Baba vont …………………",
+        "options": [
+          "au college",
+          "au village",
+          "au champ",
+          "au cinéma"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 33,
+        "questionText": "Le village natal, c’est le village où ……………",
+        "options": [
+          "on est né",
+          "on est élève",
+          "on va au champ",
+          "on nage"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 34,
+        "questionText": "Monsieur Samba n’aime pas travailler avec sa femme parce qu’elle ………",
+        "options": [
+          "est paressuese",
+          "travaille vite",
+          "parle beaucoup",
+          "est toujours fatiguee"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 35,
+        "questionText": "Selon Monsieur Samba, les femmes travaillent……………………",
+        "options": [
+          "joyeusement",
+          "lentement",
+          "rapidement",
+          "silencieusement"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 36,
+        "questionText": "Monsieur Samba aime travailler avec qui ? - Il aime travailler avec ………………",
+        "options": [
+          "sa femme",
+          "ses enfants",
+          "ses frères",
+          "ses parents"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 37,
+        "questionText": "Au champ, ils travaillent ………………",
+        "options": [
+          "de l’après –midi au soir",
+          "de l’aube à midi",
+          "du matin au soir",
+          "du matin à l’après –midi"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 38,
+        "questionText": "Monsieur Samba pense que les hommes doivent être…………",
+        "options": [
+          "faible",
+          "forts",
+          "fatigués",
+          "fiers"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 39,
+        "questionText": "Que font-ils pendant les repos ? - Ils ……………",
+        "options": [
+          "dorment paisiblement",
+          "causent beaucoup",
+          "prennent les repas",
+          "rentrent chez eux"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 40,
+        "questionText": "Comment sont-ils le soir quand ils rentrent à la maison ? - Ils sont très ……………",
+        "options": [
+          "faible",
+          "tristes",
+          "heureux",
+          "malheureux"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      }
+    ],
+    "context": "PART I",
+    "year": "2009"
+  }
+]

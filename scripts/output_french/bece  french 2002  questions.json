@@ -1,962 +1,452 @@
 [
   {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 8,
-    "questionText": "heures du soir nous sommes ____10____ table et nous mangeons bien.",
-    "options": [
-      "B C D"
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 8,
+        "questionText": "heures du soir nous sommes ____10____ table et nous mangeons bien.",
+        "options": [
+          "D"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 1,
+        "questionText": "",
+        "options": [
+          "petit",
+          "petite",
+          "petits",
+          "petites"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 2,
+        "questionText": "",
+        "options": [
+          "moyen",
+          "moyennes",
+          "moyenne",
+          "moyens"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 3,
+        "questionText": "",
+        "options": [
+          "brillant",
+          "brillantes",
+          "brillants",
+          "brillante"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 4,
+        "questionText": "",
+        "options": [
+          "le",
+          "la",
+          "les",
+          "l’"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 6,
+        "questionText": "",
+        "options": [
+          "travaille",
+          "travaillait",
+          "travailles",
+          "travailler"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 9,
+        "questionText": "",
+        "options": [
+          "moi",
+          "toi",
+          "nous",
+          "elle"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 10,
+        "questionText": "en à la à sur For each question, choose from the options lettered",
+        "options": [
+          "to"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 11,
+        "questionText": "Amidou est l,8 ……….. de taille",
+        "options": [
+          "kilos",
+          "poids",
+          "longueur",
+          "mètres"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 12,
+        "questionText": "Le mécanicien travaille au ……..",
+        "options": [
+          "garage",
+          "bureau",
+          "marché",
+          "champ"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 13,
+        "questionText": "C’est pour ………faute qu’il est puni.",
+        "options": [
+          "ce",
+          "cette",
+          "cet",
+          "ces"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 14,
+        "questionText": "Tu es malade ; il faut voir le ……….",
+        "options": [
+          "cultivateur",
+          "professeur",
+          "chanter",
+          "docteur\n\n15. Pour réussir à l’examen, je dois bien…………",
+          "jouer",
+          "dormir",
+          "étudier",
+          "manger"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 16,
+        "questionText": "Quelle robe sale ! Il faut la ……….",
+        "options": [
+          "laver",
+          "sécher",
+          "coudre",
+          "repasser"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 17,
+        "questionText": "J’ai terriblement soif. Donne-moi à ……….",
+        "options": [
+          "piler",
+          "voir",
+          "boire",
+          "manger"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 18,
+        "questionText": "Papa veut voyager, je dois lui faire sa …………",
+        "options": [
+          "valise",
+          "serviette",
+          "maison",
+          "voiture"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 19,
+        "questionText": "Petit à petit, l’oiseau fait son ………",
+        "options": [
+          "chant",
+          "nid",
+          "lit",
+          "Toit"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 20,
+        "questionText": "Il y a sept …….dans une semaine.",
+        "options": [
+          "saisons",
+          "mois",
+          "jours",
+          "années"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 21,
+        "questionText": "Donne-moi la serviette, je veux me …………",
+        "options": [
+          "coucher",
+          "laver",
+          "peigner",
+          "promener"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 22,
+        "questionText": "Je ne comprends pas ce mot. Donne-moi un …….",
+        "options": [
+          "dictionnaire",
+          "cahier",
+          "journal",
+          "livre"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 23,
+        "questionText": "Fermez ………vous parlez trop.",
+        "options": [
+          "l’oreille",
+          "le nez",
+          "la main",
+          "la bouche"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 24,
+        "questionText": "Mon frère est fermier. Il cultive son champ avec……….",
+        "options": [
+          "son couteau",
+          "son fusil",
+          "sa houe",
+          "sa cuillère"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 25,
+        "questionText": "Ma voiture est tombée en panne, je dois voir …………..",
+        "options": [
+          "le mécanicien",
+          "le fermier",
+          "le chauffeur",
+          "le docteur"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 26,
+        "questionText": "Cette fille est muette, Elle ……….pas",
+        "options": [
+          "marche",
+          "ne voit",
+          "ne parle",
+          "n’entend"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 27,
+        "questionText": "Kofi ne travaille pas bien en classe. Il est ……..",
+        "options": [
+          "sérieux",
+          "paresseux",
+          "content",
+          "obéissant"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 28,
+        "questionText": "L’orange est un ………",
+        "options": [
+          "fruit",
+          "animal",
+          "parasite",
+          "insecte"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 29,
+        "questionText": "Abdou mange trop. Il est ………",
+        "options": [
+          "bavard",
+          "gourmand",
+          "travailleur",
+          "aveugle"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 30,
+        "questionText": "Amina prépare le petit déjeuner dans la …………",
+        "options": [
+          "cuisine",
+          "librairie",
+          "boutique",
+          "pharmacie\n\nRead the passage below carefully and answer the questions that follow by shading on your answer sheet the\n\nletter which corresponds with the correct answer\n\nJe m’appelle Kofi Akom. J’ai fêté  mon anniversaire hier, donc je ne suis pas allé à l’école.\n\nAprès  la cérémonie, j’ai décidé d’aller me promener en ville. Après  quelque temps de marche\n\nj’ai remarqué qu’un homme me suivait de près. J’avais peur. Pour éviter cet homme, j’ai décidé d’entrer\n\ndans un magasin. Aussitôt que j’y suis entré, l’homme est entré lui aussi.\n\nIl à demandé le prix d’une boîte de chocolat. La vendeuse a dit : cent cedis mais il ne l’à pas\n\nacheté. Il a continué à se promener dans le magasin. L’homme est revenu près du chocolat. Il à regardé à\n\ndroite et à gauche.\n\nEnsuite, il a pris deux boîtes de chocolat. Il a mis les boîtes de chocolat dans sa poche. L’homme\n\ns’est dirigé vers la porte et s’est sauvé à toute vitesse.\n\nHeureusement, un agent de police l’a vu et l’a arrêté. Le voleur a eu honte car tout le monde s’est\n\nmoqué de lui."
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 31,
+        "questionText": "Pourquoi Kojo n’est pas allé à l’école. Parce qu’il ………..",
+        "options": [
+          "était malade",
+          "voulait arrêter un voleur",
+          "voulait fêter le jour de sa naissance",
+          "à visité un magasin"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 32,
+        "questionText": "Kojo décide d’entrer dans le magasin parce ……",
+        "options": [
+          "qu’il à peur de l’homme",
+          "que la rue est vide",
+          "qu’il veut acheter des marchandises",
+          "qu’il se promène"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 33,
+        "questionText": "Qu’est-ce que l’homme aacheté? Il ……….",
+        "options": [
+          "a acheté une boîte de chocolat",
+          "n’a rien acheté",
+          "a acheté un sac",
+          "à acheté un cadeau"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 34,
+        "questionText": "Combien coûte une boîte de chocolat ?",
+        "options": [
+          "¢50.00",
+          "¢60.00",
+          "¢80.00",
+          "¢100.00"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 35,
+        "questionText": "Pourquoi l’homme",
+        "options": [
+          "t-il regardé à droite et à gauche ?",
+          "il voulait voler",
+          "il voulait acheter des marchandises",
+          "il voulait mieux regarder les marchandises",
+          "il cherchait son argent"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 36,
+        "questionText": "L’homme a pris ………boîtes de chocolat ?",
+        "options": [
+          "2",
+          "4",
+          "6",
+          "8"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 37,
+        "questionText": "Où est-ce qu’il a mis les boîtes de chocolat ?",
+        "options": [
+          "Dans son pantalon",
+          "Dans ses chaussures",
+          "Sous son chapeau",
+          "Dans son mouchoir"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 38,
+        "questionText": "Le voleur s’est sauvé ……………",
+        "options": [
+          "soigneusement",
+          "bruyamment",
+          "heureusement",
+          "rapidement"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 39,
+        "questionText": "Qui a arrêté le voleur ?",
+        "options": [
+          "Kojo",
+          "La vendeuse",
+          "Un policier",
+          "Tout le monde."
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 40,
+        "questionText": "Quel titre peut-on donner à ce passage ?",
+        "options": [
+          "Kojo, le garçon courageux",
+          "Le grand magasin",
+          "Le voleur",
+          "Un agent le police"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      }
     ],
-    "displayOptions": [
-      "A. B C D"
-    ],
-    "correctAnswer": "A",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.154Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 1,
-    "questionText": "petit petite petits petites",
-    "options": [],
-    "displayOptions": [],
-    "correctAnswer": "A",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.154Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 2,
-    "questionText": "moyen moyennes moyenne moyens",
-    "options": [],
-    "displayOptions": [],
-    "correctAnswer": "C",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.154Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 3,
-    "questionText": "brillant brillantes brillants brillante",
-    "options": [],
-    "displayOptions": [],
-    "correctAnswer": "D",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.154Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 4,
-    "questionText": "le la les l’",
-    "options": [],
-    "displayOptions": [],
-    "correctAnswer": "A",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.154Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 5,
-    "questionText": "avec et plus où",
-    "options": [],
-    "displayOptions": [],
-    "correctAnswer": "A",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.154Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 6,
-    "questionText": "travaille travaillait travailles travailler",
-    "options": [],
-    "displayOptions": [],
-    "correctAnswer": "D",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.154Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 7,
-    "questionText": "vendu vends vend vendre",
-    "options": [],
-    "displayOptions": [],
-    "correctAnswer": "B",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.154Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 8,
-    "questionText": "en vu à au",
-    "options": [],
-    "displayOptions": [],
-    "correctAnswer": "A",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.154Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 9,
-    "questionText": "moi toi nous elle",
-    "options": [],
-    "displayOptions": [],
-    "correctAnswer": "B",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.154Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 10,
-    "questionText": "en à la à sur For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
-    "options": [],
-    "displayOptions": [],
-    "correctAnswer": "C",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.154Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 11,
-    "questionText": "Amidou est l,8 ……….. de taille",
-    "options": [
-      "kilos",
-      "poids",
-      "longueur",
-      "mètres"
-    ],
-    "displayOptions": [
-      "A. kilos",
-      "B. poids",
-      "C. longueur",
-      "D. mètres"
-    ],
-    "correctAnswer": "C",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.154Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 12,
-    "questionText": "Le mécanicien travaille au ……..",
-    "options": [
-      "garage",
-      "bureau",
-      "marché",
-      "champ"
-    ],
-    "displayOptions": [
-      "A. garage",
-      "B. bureau",
-      "C. marché",
-      "D. champ"
-    ],
-    "correctAnswer": "D",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.154Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 13,
-    "questionText": "C’est pour ………faute qu’il est puni.",
-    "options": [
-      "ce",
-      "cette",
-      "cet",
-      "ces"
-    ],
-    "displayOptions": [
-      "A. ce",
-      "B. cette",
-      "C. cet",
-      "D. ces"
-    ],
-    "correctAnswer": "C",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.154Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 14,
-    "questionText": "Tu es malade ; il faut voir le ……….",
-    "options": [
-      "cultivateur",
-      "professeur",
-      "chanter",
-      "docteur"
-    ],
-    "displayOptions": [
-      "A. cultivateur",
-      "B. professeur",
-      "C. chanter",
-      "D. docteur"
-    ],
-    "correctAnswer": "B",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.154Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 15,
-    "questionText": "Pour réussir à l’examen, je dois bien…………",
-    "options": [
-      "jouer",
-      "dormir",
-      "étudier",
-      "manger"
-    ],
-    "displayOptions": [
-      "A. jouer",
-      "B. dormir",
-      "C. étudier",
-      "D. manger"
-    ],
-    "correctAnswer": "D",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.154Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 16,
-    "questionText": "Quelle robe sale ! Il faut la ……….",
-    "options": [
-      "laver",
-      "sécher",
-      "coudre",
-      "repasser"
-    ],
-    "displayOptions": [
-      "A. laver",
-      "B. sécher",
-      "C. coudre",
-      "D. repasser"
-    ],
-    "correctAnswer": "B",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.154Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 17,
-    "questionText": "J’ai terriblement soif. Donne-moi à ……….",
-    "options": [
-      "piler",
-      "voir",
-      "boire",
-      "manger"
-    ],
-    "displayOptions": [
-      "A. piler",
-      "B. voir",
-      "C. boire",
-      "D. manger"
-    ],
-    "correctAnswer": "A",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.154Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 18,
-    "questionText": "Papa veut voyager, je dois lui faire sa …………",
-    "options": [
-      "valise",
-      "serviette",
-      "maison",
-      "voiture"
-    ],
-    "displayOptions": [
-      "A. valise",
-      "B. serviette",
-      "C. maison",
-      "D. voiture"
-    ],
-    "correctAnswer": "C",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.154Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 19,
-    "questionText": "Petit à petit, l’oiseau fait son ………",
-    "options": [
-      "chant",
-      "nid",
-      "lit",
-      "Toit"
-    ],
-    "displayOptions": [
-      "A. chant",
-      "B. nid",
-      "C. lit",
-      "D. Toit"
-    ],
-    "correctAnswer": "A",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.154Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 20,
-    "questionText": "Il y a sept …….dans une semaine.",
-    "options": [
-      "saisons",
-      "mois",
-      "jours",
-      "années"
-    ],
-    "displayOptions": [
-      "A. saisons",
-      "B. mois",
-      "C. jours",
-      "D. années"
-    ],
-    "correctAnswer": "C",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.154Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 21,
-    "questionText": "Donne-moi la serviette, je veux me …………",
-    "options": [
-      "coucher",
-      "laver",
-      "peigner",
-      "promener"
-    ],
-    "displayOptions": [
-      "A. coucher",
-      "B. laver",
-      "C. peigner",
-      "D. promener"
-    ],
-    "correctAnswer": "B",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.154Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 22,
-    "questionText": "Je ne comprends pas ce mot. Donne-moi un …….",
-    "options": [
-      "dictionnaire",
-      "cahier",
-      "journal",
-      "livre"
-    ],
-    "displayOptions": [
-      "A. dictionnaire",
-      "B. cahier",
-      "C. journal",
-      "D. livre"
-    ],
-    "correctAnswer": "C",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.154Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 23,
-    "questionText": "Fermez ………vous parlez trop.",
-    "options": [
-      "l’oreille",
-      "le nez",
-      "la main",
-      "la bouche"
-    ],
-    "displayOptions": [
-      "A. l’oreille",
-      "B. le nez",
-      "C. la main",
-      "D. la bouche"
-    ],
-    "correctAnswer": "A",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.154Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 24,
-    "questionText": "Mon frère est fermier. Il cultive son champ avec……….",
-    "options": [
-      "son couteau",
-      "son fusil",
-      "sa houe",
-      "sa cuillère"
-    ],
-    "displayOptions": [
-      "A. son couteau",
-      "B. son fusil",
-      "C. sa houe",
-      "D. sa cuillère"
-    ],
-    "correctAnswer": "B",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.154Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 25,
-    "questionText": "Ma voiture est tombée en panne, je dois voir …………..",
-    "options": [
-      "le mécanicien",
-      "le fermier",
-      "le chauffeur",
-      "le docteur"
-    ],
-    "displayOptions": [
-      "A. le mécanicien",
-      "B. le fermier",
-      "C. le chauffeur",
-      "D. le docteur"
-    ],
-    "correctAnswer": "B",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.154Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 26,
-    "questionText": "Cette fille est muette, Elle ……….pas",
-    "options": [
-      "marche",
-      "ne voit",
-      "ne parle",
-      "n’entend"
-    ],
-    "displayOptions": [
-      "A. marche",
-      "B. ne voit",
-      "C. ne parle",
-      "D. n’entend"
-    ],
-    "correctAnswer": "D",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.155Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 27,
-    "questionText": "Kofi ne travaille pas bien en classe. Il est ……..",
-    "options": [
-      "sérieux",
-      "paresseux",
-      "content",
-      "obéissant"
-    ],
-    "displayOptions": [
-      "A. sérieux",
-      "B. paresseux",
-      "C. content",
-      "D. obéissant"
-    ],
-    "correctAnswer": "B",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.155Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 28,
-    "questionText": "L’orange est un ………",
-    "options": [
-      "fruit",
-      "animal",
-      "parasite",
-      "insecte"
-    ],
-    "displayOptions": [
-      "A. fruit",
-      "B. animal",
-      "C. parasite",
-      "D. insecte"
-    ],
-    "correctAnswer": "B",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.155Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 29,
-    "questionText": "Abdou mange trop. Il est ………",
-    "options": [
-      "bavard",
-      "gourmand",
-      "travailleur",
-      "aveugle"
-    ],
-    "displayOptions": [
-      "A. bavard",
-      "B. gourmand",
-      "C. travailleur",
-      "D. aveugle"
-    ],
-    "correctAnswer": "B",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.155Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 30,
-    "questionText": "Amina prépare le petit déjeuner dans la ………… Read the passage below carefully and answer the questions that follow by shading on your answer sheet the letter which corresponds with the correct answer Je m’appelle Kofi Akom. J’ai fêté  mon anniversaire hier, donc je ne suis pas allé à l’école. Après  la cérémonie, j’ai décidé d’aller me promener en ville. Après  quelque temps de marche j’ai remarqué qu’un homme me suivait de près. J’avais peur. Pour éviter cet homme, j’ai décidé d’entrer dans un magasin. Aussitôt que j’y suis entré, l’homme est entré lui aussi. Il à demandé le prix d’une boîte de chocolat. La vendeuse a dit : cent cedis mais il ne l’à pas acheté. Il a continué à se promener dans le magasin. L’homme est revenu près du chocolat. Il à regardé à droite et à gauche. Ensuite, il a pris deux boîtes de chocolat. Il a mis les boîtes de chocolat dans sa poche. L’homme s’est dirigé vers la porte et s’est sauvé à toute vitesse. Heureusement, un agent de police l’a vu et l’a arrêté. Le voleur a eu honte car tout le monde s’est moqué de lui.",
-    "options": [
-      "cuisine",
-      "librairie",
-      "boutique",
-      "pharmacie"
-    ],
-    "displayOptions": [
-      "A. cuisine",
-      "B. librairie",
-      "C. boutique",
-      "D. pharmacie"
-    ],
-    "correctAnswer": "C",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.155Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 31,
-    "questionText": "Pourquoi Kojo n’est pas allé à l’école. Parce qu’il ………..",
-    "options": [
-      "était malade",
-      "voulait arrêter un voleur",
-      "voulait fêter le jour de sa naissance",
-      "à visité un magasin"
-    ],
-    "displayOptions": [
-      "A. était malade",
-      "B. voulait arrêter un voleur",
-      "C. voulait fêter le jour de sa naissance",
-      "D. à visité un magasin"
-    ],
-    "correctAnswer": "C",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.155Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 32,
-    "questionText": "Kojo décide d’entrer dans le magasin parce ……",
-    "options": [
-      "qu’il à peur de l’homme",
-      "que la rue est vide",
-      "qu’il veut acheter des marchandises",
-      "qu’il se promène"
-    ],
-    "displayOptions": [
-      "A. qu’il à peur de l’homme",
-      "B. que la rue est vide",
-      "C. qu’il veut acheter des marchandises",
-      "D. qu’il se promène"
-    ],
-    "correctAnswer": "C",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.155Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 33,
-    "questionText": "Qu’est-ce que l’homme aacheté? Il ……….",
-    "options": [
-      "a acheté une boîte de chocolat",
-      "n’a rien acheté",
-      "a acheté un sac",
-      "à acheté un cadeau"
-    ],
-    "displayOptions": [
-      "A. a acheté une boîte de chocolat",
-      "B. n’a rien acheté",
-      "C. a acheté un sac",
-      "D. à acheté un cadeau"
-    ],
-    "correctAnswer": "A",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.155Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 34,
-    "questionText": "Combien coûte une boîte de chocolat ?",
-    "options": [
-      "¢50.00",
-      "¢60.00",
-      "¢80.00",
-      "¢100.00"
-    ],
-    "displayOptions": [
-      "A. ¢50.00",
-      "B. ¢60.00",
-      "C. ¢80.00",
-      "D. ¢100.00"
-    ],
-    "correctAnswer": "B",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.155Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 35,
-    "questionText": "Pourquoi l’homme a-t-il regardé à droite et à gauche ?",
-    "options": [
-      "il voulait voler",
-      "il voulait acheter des marchandises",
-      "il voulait mieux regarder les marchandises",
-      "il cherchait son argent"
-    ],
-    "displayOptions": [
-      "A. il voulait voler",
-      "B. il voulait acheter des marchandises",
-      "C. il voulait mieux regarder les marchandises",
-      "D. il cherchait son argent"
-    ],
-    "correctAnswer": "D",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.155Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 36,
-    "questionText": "L’homme a pris ………boîtes de chocolat ?",
-    "options": [
-      "2",
-      "4",
-      "6",
-      "8"
-    ],
-    "displayOptions": [
-      "A. 2",
-      "B. 4",
-      "C. 6",
-      "D. 8"
-    ],
-    "correctAnswer": "B",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.155Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 37,
-    "questionText": "Où est-ce qu’il a mis les boîtes de chocolat ?",
-    "options": [
-      "Dans son pantalon",
-      "Dans ses chaussures",
-      "Sous son chapeau",
-      "Dans son mouchoir"
-    ],
-    "displayOptions": [
-      "A. Dans son pantalon",
-      "B. Dans ses chaussures",
-      "C. Sous son chapeau",
-      "D. Dans son mouchoir"
-    ],
-    "correctAnswer": "A",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.155Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 38,
-    "questionText": "Le voleur s’est sauvé ……………",
-    "options": [
-      "soigneusement",
-      "bruyamment",
-      "heureusement",
-      "rapidement"
-    ],
-    "displayOptions": [
-      "A. soigneusement",
-      "B. bruyamment",
-      "C. heureusement",
-      "D. rapidement"
-    ],
-    "correctAnswer": "D",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.155Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 39,
-    "questionText": "Qui a arrêté le voleur ?",
-    "options": [
-      "Kojo",
-      "La vendeuse",
-      "Un policier",
-      "Tout le monde."
-    ],
-    "displayOptions": [
-      "A. Kojo",
-      "B. La vendeuse",
-      "C. Un policier",
-      "D. Tout le monde."
-    ],
-    "correctAnswer": "B",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.155Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2002",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 40,
-    "questionText": "Quel titre peut-on donner à ce passage ?",
-    "options": [
-      "Kojo, le garçon courageux",
-      "Le grand magasin",
-      "Le voleur",
-      "Un agent le police"
-    ],
-    "displayOptions": [
-      "A. Kojo, le garçon courageux",
-      "B. Le grand magasin",
-      "C. Le voleur",
-      "D. Un agent le police"
-    ],
-    "correctAnswer": "B",
-    "passage": "The passage below has ten numbered spaces followed by four options lettered A to D. Choose from the\n\noptions the correct word(s) that will fit each numbered space and shade on your answer sheet the\n\nletter of the answer you have chosen.\n\nJe m’appelle Nkrumah Serwaa. Je suis une _____1_____ fille de 15 ans. J’ai une taille\n\n_____2_____ et un teint clair. Mon visage est rond et mes yeux sont petits et ____3____ Je frequente\n\n____4____ école secondaire de Tono. Je suis en première année. J’ai une petite famille qui se compose\n\nde nom père, ma mère, ma sœur Ama, mon frère Kojo ____5____ moi. Mon père ____6____ à la\n\nbanque et ma mère ____7____ de differentes sortes de produits ____8_____ marché.\n\nLe soir, mes parents rentrent à la maison. Ma sœur et _____9____ nous preparons le diner. Vers",
-    "metadata": {
-      "sourceFile": "bece  french 2002  questions.docx",
-      "importedAt": "2025-11-21T09:25:04.155Z"
-    }
+    "context": "PART I",
+    "year": "2002"
   }
 ]

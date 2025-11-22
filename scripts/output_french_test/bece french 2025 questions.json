@@ -1,0 +1,232 @@
+[
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 22,
+        "questionText": "À la fin de la journée, quand Aminata veut aller au lit, elle dit ...... à a mère.",
+        "options": [
+          "Au lit!",
+          "Au revoir!",
+          "Bonne nuit!",
+          "Bonsoir!"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 23,
+        "questionText": "- Joe! Tu es le dernier né de tes parents?- Ah non! Je suis plutôt ......",
+        "options": [
+          "l'ainé",
+          "le cadet",
+          "l'enfant",
+          "le petit"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 24,
+        "questionText": "- Bonjour, Maman! Où allez-vous?- Bonjour! Je veux aller voir le directeur de l'école dans ...... pour payer les frais de scolarité.",
+        "options": [
+          "son atelier",
+          "son bureau",
+          "sa classe",
+          "sa salle"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 25,
+        "questionText": "- Salut Sammy! Je t'invite à jouer aux jeux vidéo. Tu viens?- ...... Je suis occupé.",
+        "options": [
+          "D'accord!",
+          "Désolé!",
+          "Ok,ça marche!",
+          "Oui, merci!"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 26,
+        "questionText": "M. Dupont est européen ...... son tient noir.",
+        "options": [
+          "à part",
+          "dans",
+          "en plus",
+          "malgré"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 27,
+        "questionText": "Avec l'ordonnance, Mme Awula va ...... pour acheter des médicaments.",
+        "options": [
+          "à la clinique",
+          "à la pharmacie",
+          "au magasin",
+          "au marché"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 28,
+        "questionText": "- Paul, voici mon cousin, Jean.- Ah bon! Donc, il est ......!",
+        "options": [
+          "le fils de ta soeur",
+          "le fils de ta tante",
+          "le frère de ton père",
+          "le frère de ton neveu"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 29,
+        "questionText": "Mes chers enfants, c'est bientôt décembre et nous devons nous préparer pour la fête ......",
+        "options": [
+          "des Mères",
+          "de Noël",
+          "des Pâques",
+          "de Pentecôte"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 30,
+        "questionText": "- Esi, que penses-tu des citoyens de ......?- Ils sont vraiment gentils.",
+        "options": [
+          "cette école",
+          "cette région",
+          "ce pays",
+          "ce quartier"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      }
+    ],
+    "context": "PART II",
+    "year": "2025"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 32,
+        "questionText": "Choose the most appropriate word(s) to complete the passage.",
+        "options": [
+          "se lève",
+          "se lèves",
+          "se lèvent",
+          "se lever"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 33,
+        "questionText": "Choose the most appropriate word(s) to complete the passage.",
+        "options": [
+          "content",
+          "contente",
+          "contents",
+          "contentes"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 34,
+        "questionText": "Choose the most appropriate word(s) to complete the passage.",
+        "options": [
+          "ou",
+          "ni",
+          "pas",
+          "qu"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 35,
+        "questionText": "Choose the most appropriate word(s) to complete the passage.",
+        "options": [
+          "tue",
+          "tuer",
+          "tues",
+          "tuent"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 36,
+        "questionText": "Choose the most appropriate word(s) to complete the passage.",
+        "options": [
+          "cette",
+          "chaque",
+          "d'autres",
+          "quelques"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 37,
+        "questionText": "Choose the most appropriate word(s) to complete the passage.",
+        "options": [
+          "leurs",
+          "nos",
+          "ses",
+          "vos"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 38,
+        "questionText": "Choose the most appropriate word(s) to complete the passage.",
+        "options": [
+          "Elle",
+          "Elles",
+          "Il",
+          "Ils"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 39,
+        "questionText": "Choose the most appropriate word(s) to complete the passage.",
+        "options": [
+          "dans",
+          "près",
+          "sous",
+          "sur"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 40,
+        "questionText": "Choose the most appropriate word(s) to complete the passage.",
+        "options": [
+          "elles",
+          "eux",
+          "nous",
+          "vous"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      }
+    ],
+    "context": "PART III",
+    "year": "2025"
+  }
+]

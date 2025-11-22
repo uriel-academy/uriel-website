@@ -1,0 +1,538 @@
+[
+  {
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "questions": [
+      {
+        "questionNumber": 1,
+        "questionText": "Amina mange ………….. arachides",
+        "options": [
+          "des",
+          "de",
+          "l’",
+          "du"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 2,
+        "questionText": "………… filles sont dans la salle de classe ?",
+        "options": [
+          "à la",
+          "aux",
+          "le",
+          "les"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 3,
+        "questionText": "Ma sœur va …………. marché tous les jours.",
+        "options": [
+          "à la",
+          "aux",
+          "le",
+          "au"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 4,
+        "questionText": "Donne-moi ………..règle, Kofi.",
+        "options": [
+          "une",
+          "un",
+          "du",
+          "le"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 5,
+        "questionText": "Il y a beaucoup……………..poissons dans le filet.",
+        "options": [
+          "de",
+          "un",
+          "du",
+          "le"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 1",
+    "year": "1994"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 6,
+        "questionText": "Papa Kwame …………… une belle maison",
+        "options": [
+          "ai",
+          "a",
+          "as",
+          "ont"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 7,
+        "questionText": "……………… professeur est gentil",
+        "options": [
+          "Ma",
+          "Nos",
+          "Mes",
+          "Ton"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 8,
+        "questionText": "Monsieur Mensah………………. le chef du village",
+        "options": [
+          "est",
+          "suis",
+          "es",
+          "sommes"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 9,
+        "questionText": "J’irai à la plage …………",
+        "options": [
+          "hier",
+          "la semainedernière",
+          "demain",
+          "l’année passée"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 10,
+        "questionText": "Quelle………….. dame !",
+        "options": [
+          "vieil",
+          "vieux",
+          "vieilles",
+          "vieille"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 2",
+    "year": "1994"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 11,
+        "questionText": "Il a faim, il veut……………….",
+        "options": [
+          "manger",
+          "sortir",
+          "marcher",
+          "boire"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 12,
+        "questionText": "Ils habitent…………… Abidjan.",
+        "options": [
+          "sur",
+          "au",
+          "à",
+          "du"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 13,
+        "questionText": "Comment vas-tu ? …………..",
+        "options": [
+          "Je regarde la télévision",
+          "Je mange des fruits",
+          "Je vais bien, merci",
+          "Je vais à la gare"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 14,
+        "questionText": "…………… achète du riz.",
+        "options": [
+          "Ils",
+          "Il",
+          "Elles",
+          "Nous"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 15,
+        "questionText": "Voici le livre. Je ………….donne à l’élève.",
+        "options": [
+          "le",
+          "lui",
+          "la",
+          "les"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 3",
+    "year": "1994"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 16,
+        "questionText": "Où êtes-…………….. ?",
+        "options": [
+          "nous",
+          "toi",
+          "vous",
+          "tu"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 17,
+        "questionText": "……………… avons une belle voiture.",
+        "options": [
+          "Vous",
+          "Tu",
+          "Il",
+          "Nous"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 18,
+        "questionText": "La ……………. fille dort.",
+        "options": [
+          "grand",
+          "petite",
+          "petit",
+          "gros"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 19,
+        "questionText": "…………. mère est très gentille.",
+        "options": [
+          "Son",
+          "Ton",
+          "Mon",
+          "Ma"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 20,
+        "questionText": "Je travaille ………………champs",
+        "options": [
+          "dans",
+          "en",
+          "aux",
+          "à"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 4",
+    "year": "1994"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 21,
+        "questionText": "Ibrahim …………… dans la cours",
+        "options": [
+          "jouent",
+          "joues",
+          "jouons",
+          "joue"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 22,
+        "questionText": "…………. fille est malade.",
+        "options": [
+          "Celle",
+          "Cet",
+          "Ce",
+          "Cette"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 23,
+        "questionText": "Pourquoi tu …………. dors pas ?",
+        "options": [
+          "le",
+          "te",
+          "lui",
+          "ne"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 24,
+        "questionText": "Vous écrivez avec un …………",
+        "options": [
+          "sac",
+          "crayon",
+          "livre",
+          "cahier"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 25,
+        "questionText": "Ama est très …………..",
+        "options": [
+          "fatigué",
+          "fatiguée",
+          "fatigué",
+          "fatigues"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 5",
+    "year": "1994"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 26,
+        "questionText": "Il ……………. lève de bonne heure.",
+        "options": [
+          "se",
+          "ce",
+          "te",
+          "me"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 27,
+        "questionText": "………………… orange est très douce.",
+        "options": [
+          "De",
+          "La",
+          "Le",
+          "L’"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 28,
+        "questionText": "Je prends …………… chocolat.",
+        "options": [
+          "du",
+          "des",
+          "de",
+          "de la"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 29,
+        "questionText": "…………… revoir, à demain",
+        "options": [
+          "Du",
+          "Pour",
+          "Au",
+          "Où"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 30,
+        "questionText": "Les élèves ne travaillent pas bien ; ils sont ………….",
+        "options": [
+          "gentils",
+          "intelligents",
+          "sérieux",
+          "paresseux"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 6",
+    "year": "1994"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 31,
+        "questionText": "Qui est Sabou ? C’est ……………..",
+        "options": [
+          "le chauffeur",
+          "le professeur",
+          "l’enfant paresseux",
+          "l’enfant méchant"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 32,
+        "questionText": "Le père de Sabou a …………..enfants",
+        "options": [
+          "deux",
+          "quatre",
+          "cinq",
+          "sept"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 33,
+        "questionText": "………………. est infirmière.",
+        "options": [
+          "La mère",
+          "Le père",
+          "Sabou",
+          "La sœur"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 34,
+        "questionText": "Qui se lève tard ? ………………..",
+        "options": [
+          "Le père",
+          "La mère",
+          "Les amis",
+          "Sabou"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 35,
+        "questionText": "Pourquoi est-ce que Sabou pleure souvent ?",
+        "options": [
+          "Il ne veut pas aller à l’école",
+          "Il ne veut pas travailler",
+          "Il se lève tôt",
+          "Il doit laver le visage"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 7",
+    "year": "1994"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 36,
+        "questionText": "Sabou va à l’école",
+        "options": [
+          "tard",
+          "souvent",
+          "bientôt",
+          "quelquefois"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 37,
+        "questionText": "Le père de Sabon n’est pas content parce que…………..",
+        "options": [
+          "Sabou ne vient pas à la maison à l’heure",
+          "Sabou se lève de bonne heure",
+          "Sabou n’a pas d’amis",
+          "Sabou est puni"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 38,
+        "questionText": "…………….n’a pas de bon caractère.",
+        "options": [
+          "La mère",
+          "Le père",
+          "Le professeur",
+          "Sabou"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 39,
+        "questionText": "Qui n’est pas content de Sabou ?",
+        "options": [
+          "Ses frères",
+          "Ses sœurs",
+          "tous ses parents",
+          "tout le monde"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 40,
+        "questionText": "Sabou n’a pas d’amis parce qu’il est",
+        "options": [
+          "malheureux",
+          "paresseux",
+          "stupide",
+          "dangereux"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 8",
+    "year": "1994"
+  }
+]

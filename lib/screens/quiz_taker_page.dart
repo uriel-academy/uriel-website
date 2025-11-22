@@ -194,12 +194,18 @@ class _QuizTakerPageState extends State<QuizTakerPage>
 
     debugPrint('📖 Preloading ${passageIds.length} passages...');
     
+    // Map subject string to enum for collection determination
+    final subjectEnum = _mapStringToSubject(widget.subject);
+    
     // Fetch all passages in parallel
     await Future.wait(
       passageIds.map((passageId) async {
         try {
+          // Determine which collection to use based on subject
+          String collectionName = subjectEnum == Subject.french ? 'french_passages' : 'passages';
+          
           final doc = await FirebaseFirestore.instance
-              .collection('passages')
+              .collection(collectionName)
               .doc(passageId)
               .get();
 

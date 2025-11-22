@@ -263,12 +263,12 @@ class LandingPage extends StatelessWidget {
       width: width,
       padding: const EdgeInsets.all(28),
       decoration: BoxDecoration(
-        gradient: LinearGradient(
+        gradient: const LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
             Colors.white,
-            const Color(0xFFF8F9FA),
+            Color(0xFFF8F9FA),
           ],
         ),
         borderRadius: BorderRadius.circular(20),

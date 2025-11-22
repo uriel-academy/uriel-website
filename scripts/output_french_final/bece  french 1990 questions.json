@@ -1,0 +1,538 @@
+[
+  {
+    "passage": "PART 1For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "questions": [
+      {
+        "questionNumber": 1,
+        "questionText": "Elles mangent ……….. pain",
+        "options": [
+          "de la",
+          "la",
+          "du",
+          "une"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 2,
+        "questionText": "Nous écrivons ………… tableau.",
+        "options": [
+          "à la",
+          "aux",
+          "à l’",
+          "au"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 3,
+        "questionText": "Kofi va chercher …………….chaise.",
+        "options": [
+          "du",
+          "une",
+          "de la",
+          "des"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 4,
+        "questionText": "Maman achète …………. tomates.",
+        "options": [
+          "une",
+          "de",
+          "de la",
+          "des"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 5,
+        "questionText": "…………………….. enfant dort sur la table",
+        "options": [
+          "Les",
+          "La",
+          "L’",
+          "De la"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 1",
+    "year": "1990"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 6,
+        "questionText": "Le chat mange …………… Lézards.",
+        "options": [
+          "une",
+          "les",
+          "la",
+          "un"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 7,
+        "questionText": "Ama écoute ………….. leçon.",
+        "options": [
+          "le",
+          "à la",
+          "la",
+          "les"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 8,
+        "questionText": "Donne-moi ………….eau.",
+        "options": [
+          "une",
+          "un",
+          "la",
+          "l’"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 9,
+        "questionText": "…………….. homme arrives.",
+        "options": [
+          "La",
+          "Les",
+          "Un",
+          "Une"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 10,
+        "questionText": "Nous avons …………… belle maison.",
+        "options": [
+          "une",
+          "un",
+          "le",
+          "les"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 2",
+    "year": "1990"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 11,
+        "questionText": "Viens me ………..bonjour.",
+        "options": [
+          "saluer",
+          "parler",
+          "dire",
+          "voir"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 12,
+        "questionText": "Aujourd’hui c’est samedi, et demain sera",
+        "options": [
+          "dimanche",
+          "lundi",
+          "jeudi",
+          "vendredi"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 13,
+        "questionText": "L’homme vend des chemises et des robes. C’est un…………..",
+        "options": [
+          "vendeur",
+          "voleur",
+          "professeur",
+          "pêcheur"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 14,
+        "questionText": "Quel âge as-tu ? ……………….",
+        "options": [
+          "J’ai froid",
+          "Je vais bien",
+          "Je mange bien",
+          "J’ai dix ans."
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 15,
+        "questionText": "Elle est malade. Elle prend……………",
+        "options": [
+          "de la bière",
+          "de l’aspirine",
+          "de vin",
+          "de l’eau"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 3",
+    "year": "1990"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 16,
+        "questionText": "J’ai faim. Je veux……………..",
+        "options": [
+          "dormir",
+          "parler",
+          "manger",
+          "courir"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 17,
+        "questionText": "Le cocotier est ………….",
+        "options": [
+          "un arbre",
+          "un animal",
+          "un insecte",
+          "un fruit"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 18,
+        "questionText": "Le professeur corrige les",
+        "options": [
+          "classes",
+          "tableaux",
+          "devoirs",
+          "bancs"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 19,
+        "questionText": "Le ………….. se trouve dans l’eau.",
+        "options": [
+          "mouton",
+          "poisson",
+          "chat",
+          "chien"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 20,
+        "questionText": "L’oranges est …………",
+        "options": [
+          "un bâton",
+          "une poupée",
+          "un journal",
+          "un fruit"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 4",
+    "year": "1990"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 21,
+        "questionText": "Les élèves entrent ……….classe.",
+        "options": [
+          "au",
+          "à",
+          "en",
+          "pour"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 22,
+        "questionText": "Le livre est …………… la table.",
+        "options": [
+          "dans",
+          "sur",
+          "à",
+          "sans"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 23,
+        "questionText": "Le voleur passe ……… la fenêtre.",
+        "options": [
+          "sous",
+          "sans",
+          "dans",
+          "par"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 24,
+        "questionText": "Cette dame porte des lunettes ……….bien voir.",
+        "options": [
+          "de",
+          "pour",
+          "en",
+          "par"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 25,
+        "questionText": "L’enfant marché ………….. sa mère.",
+        "options": [
+          "devant",
+          "pour",
+          "sous",
+          "sur"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 5",
+    "year": "1990"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 26,
+        "questionText": "Ils vont…………… Lomé en autocar",
+        "options": [
+          "sur",
+          "au",
+          "à",
+          "du"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 27,
+        "questionText": "Qui est …………… la porte ?",
+        "options": [
+          "sur",
+          "derrière",
+          "sous",
+          "vers"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 28,
+        "questionText": "Kofi va ………… France",
+        "options": [
+          "de",
+          "vers",
+          "en",
+          "à"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 29,
+        "questionText": "Le chat …………..sur le tit",
+        "options": [
+          "dort",
+          "va",
+          "regarde",
+          "écrit"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 30,
+        "questionText": "Maman donne des bonbons ………. enfants.",
+        "options": [
+          "des",
+          "pour",
+          "au",
+          "aux"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 6",
+    "year": "1990"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 31,
+        "questionText": "Quand est-ce que tout le monde dort ?",
+        "options": [
+          "Le matin",
+          "A midi",
+          "L’après –midi",
+          "A minuit"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 32,
+        "questionText": "Où est Ali ? Il est …………….",
+        "options": [
+          "dans la maison",
+          "avec Rama",
+          "dans le jardin",
+          "au marché"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 33,
+        "questionText": "Qui chantent dans le jardin ?",
+        "options": [
+          "Les oiseaux",
+          "Rama et Ali",
+          "Ali et sa sœur",
+          "Les serpent-poupees"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 34,
+        "questionText": "Dans le jardin, Rama voit……………….",
+        "options": [
+          "son frère",
+          "le livre",
+          "tout le monde",
+          "sa sœur"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 35,
+        "questionText": "Rama vient ……………….",
+        "options": [
+          "de la maison",
+          "du jardin",
+          "de la salle",
+          "du marché"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 7",
+    "year": "1990"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 36,
+        "questionText": "Où se cache Rama ? Elle se cache……………..",
+        "options": [
+          "devant l’arbre",
+          "derrière l’arbre",
+          "derrière Ali",
+          "devant le jardin"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 37,
+        "questionText": "Qui met le serpent poupee ?",
+        "options": [
+          "Ali",
+          "Personne",
+          "Rama",
+          "La famille"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 38,
+        "questionText": "Rama met le serpent-poupee…………….",
+        "options": [
+          "dans la poche",
+          "aux pieds d’Ali",
+          "sur la tête d’Ali",
+          "dans la chemise"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 39,
+        "questionText": "Ali court vers………….",
+        "options": [
+          "le jardin",
+          "le marché",
+          "la maison",
+          "l’arbre"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 40,
+        "questionText": "Que fait Rama finalement ?",
+        "options": [
+          "Elle rit et appelle son frère",
+          "Elle crie et court vers son frère",
+          "Elle rit et regarde son frère.",
+          "Elle crie et appelle son frère."
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 8",
+    "year": "1990"
+  }
+]

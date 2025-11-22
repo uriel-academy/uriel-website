@@ -1,0 +1,249 @@
+[
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 11,
+        "questionText": "Les élèves……………trop de bruit en classe",
+        "options": [
+          "fait",
+          "font",
+          "faites",
+          "faisons"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 12,
+        "questionText": "Madame Aku est très ………………….",
+        "options": [
+          "Méchant",
+          "Méchante",
+          "Méchantes",
+          "Méchants"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 13,
+        "questionText": "Nous allons ………………….dispensaire ce matin",
+        "options": [
+          "à la",
+          "du",
+          "en",
+          "au"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 14,
+        "questionText": "Je reviens ………………….voiture.",
+        "options": [
+          "au",
+          "en",
+          "de",
+          "à"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 15,
+        "questionText": "Quelle heure est-……………. ?",
+        "options": [
+          "elle",
+          "tu",
+          "il",
+          "eux"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 16,
+        "questionText": "Où est ta sœur ? …………………..voilà",
+        "options": [
+          "La",
+          "Le",
+          "Elle",
+          "Lui"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 17,
+        "questionText": "C’est un ……………..oiseau",
+        "options": [
+          "beau",
+          "bel",
+          "beaux",
+          "belles"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 18,
+        "questionText": "Le père d’Amadou ……………..trop.",
+        "options": [
+          "mangent",
+          "mangeons",
+          "mange",
+          "manges"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 19,
+        "questionText": "Il y a deux livres ici. Celui-ci est ………., celui-là est à mon cousin.",
+        "options": [
+          "la mienne",
+          "le mien",
+          "la tienne",
+          "les miens"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 20,
+        "questionText": "………………….sommes en train de travailler.",
+        "options": [
+          "Vous",
+          "Nous",
+          "Ils",
+          "Elle"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 31,
+        "questionText": "Selon le passage, les cultivateurs dépendent………………..",
+        "options": [
+          "de la pluie",
+          "de l’irrigation",
+          "du lac",
+          "des rivières"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 32,
+        "questionText": "Les cultivateurs utilisent des ………….pour préparer la terre.",
+        "options": [
+          "marteaux",
+          "fusils",
+          "houes",
+          "balais"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 33,
+        "questionText": "Les fermiers commencent à cultiver la terre en …………..",
+        "options": [
+          "mars",
+          "avril",
+          "octobre",
+          "décembre"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 34,
+        "questionText": "Avant de semer les grains, les cultivateurs ……………….",
+        "options": [
+          "préparent la pluie",
+          "mangent de l’igname",
+          "pilent des grains",
+          "préparent la terre"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 35,
+        "questionText": "Selon le passage, le gari est un plat préparé………………",
+        "options": [
+          "du maïs",
+          "du manioc",
+          "de l’igname",
+          "du plantain"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 36,
+        "questionText": "Quand est-ce que les plantes poussent bien ? Pendant la saison………….",
+        "options": [
+          "des pluies",
+          "chaude",
+          "froide",
+          "sèche"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 37,
+        "questionText": "Pourquoi est-il nécessaire de couper les mauvaises herbes ? Pour permettre aux plantes de ……………………",
+        "options": [
+          "grandir",
+          "sécher",
+          "tomber",
+          "mourir"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 38,
+        "questionText": "Tous les samedis, ce sont les ………………qui restent aux villages.",
+        "options": [
+          "hommes",
+          "jeunes gens",
+          "femmes",
+          "âgés et les enfants"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 39,
+        "questionText": "Les cultivateurs qui sont très sérieux ont …………….récoltes",
+        "options": [
+          "de mauvaises",
+          "de médiocres",
+          "de pauvres",
+          "d’abondantes"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 40,
+        "questionText": "Après  une bonne récolte quelques cultivateurs …………….",
+        "options": [
+          "disent ‘Dieu merci’",
+          "abandonnent Dieu",
+          "oublient Dieu",
+          "se fâchent contre Dieu"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      }
+    ],
+    "context": "PART I",
+    "year": "2007"
+  }
+]

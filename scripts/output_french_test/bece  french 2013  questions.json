@@ -1,0 +1,151 @@
+[
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 11,
+        "questionText": "Le cultivateur coupe les branches avec son…………………….12. Rosie est très …………………… ; elle n’aime pas travailler13. L’après –midi, Maman Téné se couche sur une ……………dans la cour.14. Je vais chez ma ………………..pour me faire une jupe15. …………………tu es fatigué, viens t’asseoir16. Papa regarde la ………………….et il dit qu’il est déjà 7 heures.17. Il fait chaud ici ; ouvrez les ………………….18. C’est le week-end ; nous allons à la plage pour ………………..19. Katou ………………….lentement parce qu’il a mal au genou20. Chez nous au village, toutes les feuilles sont …………pendant la saison des pluies",
+        "options": [
+          "B                                 C                                    D11. gâteau                  marteau                  coupe-coupe                  couteau12. curieuse               lente                        paresseuse                     timide13. boite                     natte                        pierre                              valise14. boutiquière         couturière              cuisinière                       fermière15. Comme                Donc                        Puis                                 Tel16. chaise                   chambre                 montre                            table17. toilettes                fenêtres                  sacs                                   serviettes18. cultiver                 nager                      travailler                          voyager19. chante                   mange                    marche                             parle20. brunes                  jeunes                    oranges                             vertes"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      }
+    ],
+    "context": "PART II",
+    "year": "2013"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 21,
+        "questionText": "Le père d’Akua habite à ……………………..",
+        "options": [
+          "la capitale",
+          "Prampram",
+          "Oguaa",
+          "la gare"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 22,
+        "questionText": "– Qu’est-ce qu’Akua fait avant de rendre visite à son père ?– Elle envoie",
+        "options": [
+          "un message télégraphique",
+          "un message téléphonique",
+          "un messager",
+          "une lettre"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 23,
+        "questionText": "Quand est-ce qu’Akua se lève le jour de son voyage ?",
+        "options": [
+          "De bonne heure",
+          "A l’après midi",
+          "Tard dans la nuit",
+          "Vers le soir"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 24,
+        "questionText": "Akua voyage ……………………",
+        "options": [
+          "en train",
+          "en voiture",
+          "par avion",
+          "par bateau"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 25,
+        "questionText": "A la gare, on voit……………..Voitures",
+        "options": [
+          "quelques",
+          "deux",
+          "trois",
+          "plusieurs"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 26,
+        "questionText": "Qui conduit la voiture ?",
+        "options": [
+          "Akua",
+          "Papa",
+          "Le chauffeur",
+          "Les voyageurs"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 27,
+        "questionText": "Le voyage commence …………………",
+        "options": [
+          "après trois heures",
+          "après quatre heures",
+          "immédiatement",
+          "plus tard"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 28,
+        "questionText": "‘Il est plein de joie.’ Cela veut dire que Papa est ………….",
+        "options": [
+          "confus",
+          "content",
+          "triste",
+          "surpris"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 29,
+        "questionText": "Papa remercie Akua parce qu’il ……………….",
+        "options": [
+          "achète des choses",
+          "rend visite aux amis",
+          "mange avec Akua",
+          "reçoit un cadeau"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 30,
+        "questionText": "Le dernier lieu de leur visite est …………………",
+        "options": [
+          "la gare",
+          "la maison",
+          "chez les amis",
+          "les magasins"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      }
+    ],
+    "context": "PART III",
+    "year": "2013"
+  },
+  {
+    "passage": null,
+    "questions": [],
+    "context": "PART I",
+    "year": "2013"
+  }
+]

@@ -1,0 +1,117 @@
+[
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 32,
+        "questionText": "Aujourd’hui les enfants vont au cinéma avec……………",
+        "options": [
+          "leur mère",
+          "leur ami",
+          "leur père",
+          "leur sœur"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 33,
+        "questionText": "Maman reste à la maison parce qu’elle est ………………",
+        "options": [
+          "gentille",
+          "paresseuse",
+          "contente",
+          "fatiguée"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 34,
+        "questionText": "Que porte la sœur ? Elle porte …………………",
+        "options": [
+          "un joli pantalon",
+          "une jolie robe",
+          "une belle chemise",
+          "une belle jupe"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 35,
+        "questionText": "Ils vont au ………….avec Pap",
+        "options": [
+          "marché",
+          "champ",
+          "cinéma",
+          "bureau"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 36,
+        "questionText": "Le film commence à …………….",
+        "options": [
+          "6 heures",
+          "7 heures",
+          "9 heures",
+          "8 heures"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 37,
+        "questionText": "La femme à beaucoup de ……………….",
+        "options": [
+          "foulards",
+          "chapeaux",
+          "robes",
+          "cheveux"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 38,
+        "questionText": "Les cheveux de la famille ressemblent à ……………..",
+        "options": [
+          "des fleurs",
+          "un panier",
+          "des feuilles",
+          "un chapeau"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 39,
+        "questionText": "Qu’est-ce que Papa dit à la femme ? Il lui dit …………..",
+        "options": [
+          "d’enlever son chapeau",
+          "de porter son chapeau",
+          "de chercher son chapeau",
+          "d’apporter son chapeau"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 40,
+        "questionText": "Que fait tout le monde ? Tout le monde ………………",
+        "options": [
+          "parle",
+          "chante",
+          "crie",
+          "rit"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART III",
+    "year": "1991"
+  }
+]

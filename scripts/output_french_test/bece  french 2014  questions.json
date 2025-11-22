@@ -1,0 +1,151 @@
+[
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 11,
+        "questionText": "Le manguier et le cocotier sont des …………….12. Kofi est malade ; il va acheter des ……………..13. Mon père est …………. ; il a un grand champ de maïs.14. Le ………………vit dans l’eau.15. Aujourd’hui c’est samedi ; demain sera ……………16. Viens me …………..bonjour demain matin.17. Le bébé pleure …………..qu’il est malade.18. Je prends le petit déjeuner chaque19. Le français est plus facile ………………..les mathématiques20. Ama a ………………………. ; elle veut de l’eau",
+        "options": [
+          "B                                  C                                        D11. repas                      fruits                          arbres                               boissons12. medicaments      gateaux                       biscuits                            bonbons13. pecheur                coiffeur                       vendeur                           cultivateur14. chat                       chien                           mouton                            poisson15. lundi                     mardi                           vendredi                         dimanche16. voir                       dire                               parler                               saluer17. si                            donc                             parce                                quoi18. matin                    midi                              soir                                   nuit19. qui                         que                               quand                               comment20. faim                      froid                             soif                                    sommeil"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      }
+    ],
+    "context": "PART II",
+    "year": "2014"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 21,
+        "questionText": "La famille va au cinéma ……………..",
+        "options": [
+          "tous les jours",
+          "tous les soirs",
+          "une fois par mois",
+          "une fois par semaine"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 22,
+        "questionText": "Le jour en question, la famille va au cinéma sans …………….",
+        "options": [
+          "Adzo",
+          "Kwami",
+          "le père",
+          "la femme"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 23,
+        "questionText": "La personne qui reste à la maison ………………",
+        "options": [
+          "se repose",
+          "est fatiguée",
+          "a du travail",
+          "a sommeil"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 24,
+        "questionText": "Qu’est-ce que Kwami porte pour aller au cinéma ?",
+        "options": [
+          "De beaux vêtements",
+          "De nouveaux vêtements",
+          "Des vêtements propres",
+          "Des vêtements mouillés"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 25,
+        "questionText": "– Quand est-ce que les membres de la famille arrivent au cinéma ?– Ils arrivent ………….",
+        "options": [
+          "tard",
+          "le matin",
+          "à l’heure",
+          "l’après –midi"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 26,
+        "questionText": "La famille achète des billets pour ……………",
+        "options": [
+          "porter de jolis habits",
+          "rester à la maison",
+          "préparer l’examen",
+          "entrer dans la salle"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 27,
+        "questionText": "Dans la salle du cinéma",
+        "options": [
+          "il n’y a personne",
+          "il y a quelques gens",
+          "il y a une personne",
+          "il y a plusieurs gens"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 28,
+        "questionText": "La femme devant le narrateur à beaucoup de …………",
+        "options": [
+          "robes",
+          "cheveux",
+          "chapeaux",
+          "foulards"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 29,
+        "questionText": "Pourquoi le narrateur est triste ?",
+        "options": [
+          "Le film ne commence pas",
+          "Il ne peut pas voir le film",
+          "La femme est très belle pour lui",
+          "Beaucoup de gens sont devant lui."
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 30,
+        "questionText": "– Qu’est-ce que Papa dit à la femme ?– Il lui dit ……………..son chapeau",
+        "options": [
+          "de porter",
+          "d’acheter",
+          "de chercher",
+          "d’enlever"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      }
+    ],
+    "context": "PART III",
+    "year": "2014"
+  },
+  {
+    "passage": null,
+    "questions": [],
+    "context": "PART I",
+    "year": "2014"
+  }
+]

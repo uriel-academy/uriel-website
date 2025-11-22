@@ -1,0 +1,469 @@
+[
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 1,
+        "questionText": "son sa ton ta",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 2,
+        "questionText": "de du au de la",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 3,
+        "questionText": "sur pour par en",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 4,
+        "questionText": "jeune grandes jeunes grand",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 5,
+        "questionText": "leur ses tes leurs",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 6,
+        "questionText": "nagent nagé nagés nageaient",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 7,
+        "questionText": "puis et alors donc",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 8,
+        "questionText": "parce-que puisque comme mais",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 9,
+        "questionText": "Soudain Alors Heureusement Puisqu’",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 10,
+        "questionText": "rentrer rentraient rentrés rentré For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 11,
+        "questionText": "Ama, voici Fati, mon amie. Elle vient du Liberia, elle est donc ……..",
+        "options": [
+          "libérien",
+          "libérai",
+          "libérienne",
+          "libériens"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 12,
+        "questionText": "Mon petit frère va à l’école à Lomé alors il parle ……….le français.",
+        "options": [
+          "beaucoup",
+          "bien",
+          "bon",
+          "trop"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 13,
+        "questionText": "Fatou, voici tes livres de mathématiques ; où sont les …… ?",
+        "options": [
+          "tiennes",
+          "miens",
+          "miennes",
+          "tiens"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 14,
+        "questionText": "Yaw, j’ai faim mais je n’ai pas ……. pour acheter de la nourriture.",
+        "options": [
+          "l’argent",
+          "de l’argent",
+          "argent",
+          "d’argent"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 15,
+        "questionText": "Maman, tu ne vas pas à l’église aujourd’hui ? ………….. j’y vais.",
+        "options": [
+          "Oui",
+          "Si",
+          "Non",
+          "Mais"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 16,
+        "questionText": "Monsieur ……..…me dire où se trouve la poste ? Je veux acheter des timbres.",
+        "options": [
+          "pourriez-vous",
+          "peux-tu",
+          "pouvez-vous",
+          "peut-il"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 17,
+        "questionText": "Dépêchez-vous mes enfants, nous devons aller à la gare pour rencontrer Papa. Mais Maman à ……….heure arrive le train ?",
+        "options": [
+          "quelle",
+          "quels",
+          "quelles",
+          "quel"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 18,
+        "questionText": "Tante Sylvie, qu’est-ce que tu …………manger ce soir ; du foufou ou du riz ?",
+        "options": [
+          "préférer",
+          "préfère",
+          "préférez",
+          "préfères"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 19,
+        "questionText": "Mes élèves, ce sac est à qui ? C’est …………s’il vous plait.",
+        "options": [
+          "la mienne",
+          "mien",
+          "à moi",
+          "toi"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 20,
+        "questionText": "J’arrive très souvent en retard à l’école, mail l’année prochaine, je me …………plus tôt pour arriver à l’heure. Below are ten sentences with blank spaces followed by four options lettered A to D. Choose from the options the most correct answer that will fit into each blank space and shade on your answer sheet the letter of the answer you have chosen",
+        "options": [
+          "lèverai",
+          "lever",
+          "lèverais",
+          "lève"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 21,
+        "questionText": "Quand on est malade, on doit aller à l’…………….",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 22,
+        "questionText": "Alice, va à la …………pour préparer le repas.",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 23,
+        "questionText": "Mon ami qui est en France vient de …………son congé.",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 24,
+        "questionText": "D’habitude, nous n’allons pas à l’école le samedi et le ………..",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 25,
+        "questionText": "J’apprends bien mes leçons pour réussir à l’…………….final.",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 26,
+        "questionText": "…………est plus rapide que la voiture.",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 27,
+        "questionText": "Richard vient d’………… une nouvelle maison.",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 28,
+        "questionText": "Le directeur a oublié de fermer ………de son bureau.",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 29,
+        "questionText": "L’élève n’a pas …………le devoir.",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 30,
+        "questionText": "Mon meilleur ami s’……….Ferdinand",
+        "options": [
+          "B C D"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 21,
+        "questionText": "hôtel hôpital école église",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 22,
+        "questionText": "cuisine pièce chambre douche",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 23,
+        "questionText": "tuer manger sortir prendre",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 24,
+        "questionText": "dimanche lundi mardi mercredi",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 25,
+        "questionText": "entrainement étude examen apprentissage",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 26,
+        "questionText": "La pirogue L’avion La bicyclette Le camion",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 27,
+        "questionText": "acheter en laver éviter accueillir",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 28,
+        "questionText": "le portail la porte l’entrée la sortie",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 29,
+        "questionText": "bu chanté fermé fait",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 30,
+        "questionText": "écrit appelle adresse identifie\n\nRead the passage below carefully and answer the questions that follow by shading on your answer sheet the\n\nletter which corresponds with the correct answer\n\nJe m’appelle Kofi Mensah et j’habite avec mon gran",
+        "options": [
+          "père à Asank",
+          "Nous les enfants nous\n\nl’appelons Nan",
+          "Chaque samedi j’accompagne Nana au champ où nous travaillons du matin jusqu’au\n\nsoir. Gran",
+          "père cultive du maïs, du manioc, et des bananes.\n\nD’habitude, je me lève tôt le matin et je balaie la cour. Ensuite, je vais cherche de l’eau à la\n\nrivière. Après, je mets du poisson, du sel, des tomates et de l’eau à boire dans un sa",
+          "Nana, lui prend\n\ndeux coupe-coupe, une houe et un fusil. Souvent nous quittons la maison vers sept heures du matin.\n\nQuand nous arrivons au champ, Gran",
+          "père me dit d’être toujours près de lui. Il sait qu’il y a des\n\nserpents et d’autres animaux sauvages dans la brousse. A midi, quand nous avons faim, nous arrêtons le\n\ntravail. Je prends du manioc et je le mets sur le feu. Nous le mangeons avec du poisson fume.\n\nAprès  le déjeuner, le vieux se repose et moi, je chasse les petits oiseaux qui mangent le maïs.\n\nNous reprenons le travail à trois heures. A cinq heures nous rentrons à la maison.\n\nJ’aime aller au champ tous les samedis parce que Nana me donne beaucoup de bonnes choses\n\nquand je travaille dur. J’aime aussi me promener dans la brousse pour ramasser des fruits."
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 31,
+        "questionText": "Qui parle dans le texte ?",
+        "options": [
+          "Grand-père",
+          "Nana",
+          "Asanka",
+          "Kofi Mensah"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 32,
+        "questionText": "Le samedi, l’auteur va………",
+        "options": [
+          "manger des bananes",
+          "cultiver la terre",
+          "visiter son grand-père",
+          "se promener dans le champ"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 33,
+        "questionText": "L’auteur se lève ………..",
+        "options": [
+          "de bonne heure",
+          "à sept heures",
+          "à midi",
+          "à six heures du soir"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 34,
+        "questionText": "Qu’est-ce que Kofi fait le matin ?",
+        "options": [
+          "il prend son petit déjeuner",
+          "il travaille à la maison",
+          "il parle avec son grand-père",
+          "il dit bonjour à ses parents"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 35,
+        "questionText": "",
+        "options": [
+          "sept heures du matin Kofi",
+          "va chercher de l’eau",
+          "prend le coupe-coupe et la houe",
+          "va chasser des oiseaux",
+          "va au champ"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 36,
+        "questionText": "Pourquoi le narrateur doit-il rester auprès du grand-père ?",
+        "options": [
+          "pour travailler dur",
+          "parce qu’il y a des dangers dans la forêt",
+          "parce qu’il aime son grand-père",
+          "pour préparez le repas de midi"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 37,
+        "questionText": "Qu’est-ce que grand-père fait a midi ?",
+        "options": [
+          "il chasse les oiseaux",
+          "il prépare le déjeuner",
+          "il rentre à la maison",
+          "il se repose"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 38,
+        "questionText": "Kofi chasse les oiseaux parce qu’ils.",
+        "options": [
+          "mangent le maïs",
+          "font du bruit",
+          "mangent les insectes",
+          "volent"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 39,
+        "questionText": "Nana et Kofi se reposent pendant ……",
+        "options": [
+          "2 heures",
+          "3 heures",
+          "4 heures",
+          "5 heures"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 40,
+        "questionText": "Donnez un titre à ce passage",
+        "options": [
+          "Kofi et les oiseaux",
+          "une visite au champ",
+          "le travail au champ",
+          "un bon samedi"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      }
+    ],
+    "context": "PART I",
+    "year": "2001"
+  }
+]

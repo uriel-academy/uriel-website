@@ -1,0 +1,252 @@
+[
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 11,
+        "questionText": "Ama, voici Fati, mon amie. Elle vient du Liberia, elle est donc ……..",
+        "options": [
+          "libérien",
+          "libérai",
+          "libérienne",
+          "libériens"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 12,
+        "questionText": "Mon petit frère va à l’école à Lomé alors il parle ……….le français.",
+        "options": [
+          "beaucoup",
+          "bien",
+          "bon",
+          "trop"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 13,
+        "questionText": "Fatou, voici tes livres de mathématiques ; où sont les …… ?",
+        "options": [
+          "tiennes",
+          "miens",
+          "miennes",
+          "tiens"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 14,
+        "questionText": "Yaw, j’ai faim mais je n’ai pas ……. pour acheter de la nourriture.",
+        "options": [
+          "l’argent",
+          "de l’argent",
+          "argent",
+          "d’argent"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 15,
+        "questionText": "Maman, tu ne vas pas à l’église aujourd’hui ? ………….. j’y vais.",
+        "options": [
+          "Oui",
+          "Si",
+          "Non",
+          "Mais"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 16,
+        "questionText": "Monsieur ……..…me dire où se trouve la poste ? Je veux acheter des timbres.",
+        "options": [
+          "pourriez-vous",
+          "peux-tu",
+          "pouvez-vous",
+          "peut-il"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 17,
+        "questionText": "Dépêchez-vous mes enfants, nous devons aller à la gare pour rencontrer Pap",
+        "options": [
+          "Mais Maman à",
+          "quelle",
+          "quels",
+          "quelles",
+          "quel"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 18,
+        "questionText": "Tante Sylvie, qu’est-ce que tu …………manger ce soir ; du foufou ou du riz ?",
+        "options": [
+          "préférer",
+          "préfère",
+          "préférez",
+          "préfères"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 19,
+        "questionText": "Mes élèves, ce sac est à qui ? C’est …………s’il vous plait.",
+        "options": [
+          "la mienne",
+          "mien",
+          "à moi",
+          "toi"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 20,
+        "questionText": "J’arrive très souvent en retard à l’école, mail l’année prochaine, je me …………plus tôt pour arriver à l’heure.",
+        "options": [
+          "lèverai",
+          "lever",
+          "lèverais",
+          "lève"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 31,
+        "questionText": "Qui parle dans le texte ?",
+        "options": [
+          "Grand-père",
+          "Nana",
+          "Asanka",
+          "Kofi Mensah"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 32,
+        "questionText": "Le samedi, l’auteur va………",
+        "options": [
+          "manger des bananes",
+          "cultiver la terre",
+          "visiter son grand-père",
+          "se promener dans le champ"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 33,
+        "questionText": "L’auteur se lève ………..",
+        "options": [
+          "de bonne heure",
+          "à sept heures",
+          "à midi",
+          "à six heures du soir"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 34,
+        "questionText": "Qu’est-ce que Kofi fait le matin ?",
+        "options": [
+          "il prend son petit déjeuner",
+          "il travaille à la maison",
+          "il parle avec son grand-père",
+          "il dit bonjour à ses parents"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 35,
+        "questionText": "A sept heures du matin Kofi",
+        "options": [
+          "va chercher de l’eau",
+          "prend le coupe-coupe et la houe",
+          "va chasser des oiseaux",
+          "va au champ"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 36,
+        "questionText": "Pourquoi le narrateur doit-il rester auprès du gran",
+        "options": [
+          "père ?",
+          "pour travailler dur",
+          "parce qu’il y a des dangers dans la forêt",
+          "parce qu’il aime son grand-père",
+          "pour préparez le repas de midi"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 37,
+        "questionText": "Qu’est-ce que gran",
+        "options": [
+          "père fait a midi ?",
+          "il chasse les oiseaux",
+          "il prépare le déjeuner",
+          "il rentre à la maison",
+          "il se repose"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 38,
+        "questionText": "Kofi chasse les oiseaux parce qu’ils.",
+        "options": [
+          "mangent le maïs",
+          "font du bruit",
+          "mangent les insectes",
+          "volent"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 39,
+        "questionText": "Nana et Kofi se reposent pendant ……",
+        "options": [
+          "2 heures",
+          "3 heures",
+          "4 heures",
+          "5 heures"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 40,
+        "questionText": "Donnez un titre à ce passage",
+        "options": [
+          "Kofi et les oiseaux",
+          "une visite au champ",
+          "le travail au champ",
+          "un bon samedi"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      }
+    ],
+    "context": "PART I",
+    "year": "2001"
+  }
+]

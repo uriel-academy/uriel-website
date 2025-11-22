@@ -1,0 +1,461 @@
+[
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 1,
+        "questionText": "que quel quelle qui",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 2,
+        "questionText": "causez causes causer cause",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 3,
+        "questionText": "elles lui il ils",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 4,
+        "questionText": "situés située situé situées",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 5,
+        "questionText": "de dans sur sous",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 6,
+        "questionText": "travaille travailles travailler travaillez",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 7,
+        "questionText": "de des les du",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 8,
+        "questionText": "notre leur tes nos",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 9,
+        "questionText": "celle celui ceux celles",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 10,
+        "questionText": "lui toi eux nous For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 11,
+        "questionText": "Akosua lave …………………..foulard de sa mère.",
+        "options": [
+          "les",
+          "la",
+          "l’",
+          "le"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 12,
+        "questionText": "Tous les élèves ………………s’amuser au jardin le week-end prochain.",
+        "options": [
+          "iront",
+          "allaient",
+          "vas",
+          "allez"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 13,
+        "questionText": "…………………élève parle trop",
+        "options": [
+          "Ce",
+          "Cet",
+          "Ces",
+          "Cette"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 14,
+        "questionText": "Les professeurs ……………….de partir",
+        "options": [
+          "vient",
+          "viendront",
+          "vient",
+          "viennent"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 15,
+        "questionText": "Cynthia, Rashidatu et Kofi sont très…………….",
+        "options": [
+          "intelligentes",
+          "intelligents",
+          "intelligent",
+          "intelligente"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 16,
+        "questionText": "Tu………………très vite.",
+        "options": [
+          "grandit",
+          "grandi",
+          "grandis",
+          "grandir"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 17,
+        "questionText": "Il y a trop de ………………sur ce terrain de football.",
+        "options": [
+          "cailloux",
+          "caillou",
+          "cartables",
+          "cartable"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 18,
+        "questionText": "Kofi ……………..mal au ventre parce qu’il a mangé une mangue verte.",
+        "options": [
+          "as",
+          "a",
+          "est",
+          "avoir"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 19,
+        "questionText": "Quand ……………….jeune, j’aimais jouer au football.",
+        "options": [
+          "je suis",
+          "j’avais",
+          "j’étais",
+          "j’étais"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 20,
+        "questionText": "Mon père ………………….les accusés, il est avocat. Below are ten sentences with blank spaces followed by four options lettered A to D. Choose from the options the most correct answer that will fit into each blank space and shade on your answer sheet the letter of the answer you have chosen",
+        "options": [
+          "frappe",
+          "défend",
+          "soigne",
+          "enseigne"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 21,
+        "questionText": "L’ensemble des os du ……………..s’appelle le squelette.",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 22,
+        "questionText": "Pendant la saison sèche, il n’y a pas de …………………………",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 23,
+        "questionText": "Le sang a une couleur ………………….",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 24,
+        "questionText": "Madame Owusu est ……………….. ; elle soigne les malades.",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 25,
+        "questionText": "Celui qui attrape les poissons avec un filet est un ……………",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 26,
+        "questionText": "Moussah est un bon ……………… ; il tue toujours des gibiers",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 27,
+        "questionText": "Le couteau sert à …………………..les aliments.",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 28,
+        "questionText": "Son père conduit un taxi ; il est …………………..",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 29,
+        "questionText": "Les documents et les objets ………………sont gardés dans un musée.",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 30,
+        "questionText": "Il y a beaucoup …………………cahiers, livres et stylos dans son cartable.",
+        "options": [
+          "B C D"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 21,
+        "questionText": "cœur corps sang muscle",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 22,
+        "questionText": "chaleur soleil pluies matin",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 23,
+        "questionText": "verte rouge jaune blanche",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 24,
+        "questionText": "cultivatrice professeur infirmière vendeuse",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 25,
+        "questionText": "pêcheur fleuriste fermier plombier",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 26,
+        "questionText": "chanteur chasseur chauffeur cultivateur",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 27,
+        "questionText": "couper acheter cuire vendre",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 28,
+        "questionText": "chauffeur coiffeur mecanicien médecin",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 29,
+        "questionText": "ancien ancienne anciens ancienne",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 30,
+        "questionText": "des de de l’ de la Read the passage below carefully and answer the questions that follow by shading on your answer sheet the letter which corresponds with the correct answer Un Samedi Au Champ Titi et son frère cadet, Baba, sont élèves au collège de Kames, leur village natal. Les samedis, ils accompagnent leurs parents, Monsieur et Madame Samba au champ. Monsieur Samba n’aime pas beaucoup travailler avec sa femme. Il dit souvent : ‘les femmes sont bavardes. Elles ne travaillent pas vite’. Alors, il préfère travailler avec leurs deux fils. Le travaille au champ dure toute la journée. Ils commencent quelquefois de très bonne heure ; à six heures et terminent vers dix-huit heures. Il y a seulement deux repos. Parfois, les deux garçons sont très fatigués et ils arrêtent de travailler. Mais, le père leur crie en disant : ‘paresseux ! debout ! Vous êtes hommes. Il faut être fort ! Allez ! Au travail ! Et les deux frères obéissent à leur père et reprennent le travail. Ils continuent à travailler mais ils ne sont pas contents. Pendant les repos, ils mangent silencieusement tous ensemble dans la même assiette. Ce repas est souvent ‘L’AMPESI’ de manioc à la sauce du gombo. Cette nourriture est très délicieuse. Le soir, ils rentrent chez eux très contents d’avoir fait un bon travail au champ",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 31,
+        "questionText": "Titi est …………..frère de Baba.",
+        "options": [
+          "le grand",
+          "le petit",
+          "la grande",
+          "la petite"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 32,
+        "questionText": "Les samedis, Titi et Baba vont …………………",
+        "options": [
+          "au college",
+          "au village",
+          "au champ",
+          "au cinéma"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 33,
+        "questionText": "Le village natal, c’est le village où ……………",
+        "options": [
+          "on est né",
+          "on est élève",
+          "on va au champ",
+          "on nage"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 34,
+        "questionText": "Monsieur Samba n’aime pas travailler avec sa femme parce qu’elle ………",
+        "options": [
+          "est paressuese",
+          "travaille vite",
+          "parle beaucoup",
+          "est toujours fatiguee"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 35,
+        "questionText": "Selon Monsieur Samba, les femmes travaillent……………………",
+        "options": [
+          "joyeusement",
+          "lentement",
+          "rapidement",
+          "silencieusement"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 36,
+        "questionText": "Monsieur Samba aime travailler avec qui ? - Il aime travailler avec ………………",
+        "options": [
+          "sa femme",
+          "ses enfants",
+          "ses frères",
+          "ses parents"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 37,
+        "questionText": "Au champ, ils travaillent ………………",
+        "options": [
+          "de l’après –midi au soir",
+          "de l’aube à midi",
+          "du matin au soir",
+          "du matin à l’après –midi"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 38,
+        "questionText": "Monsieur Samba pense que les hommes doivent être…………",
+        "options": [
+          "faible",
+          "forts",
+          "fatigués",
+          "fiers"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 39,
+        "questionText": "Que font-ils pendant les repos ? - Ils ……………",
+        "options": [
+          "dorment paisiblement",
+          "causent beaucoup",
+          "prennent les repas",
+          "rentrent chez eux"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 40,
+        "questionText": "Comment sont-ils le soir quand ils rentrent à la maison ? - Ils sont très ……………",
+        "options": [
+          "faible",
+          "tristes",
+          "heureux",
+          "malheureux"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      }
+    ],
+    "context": "PART I",
+    "year": "2009"
+  }
+]

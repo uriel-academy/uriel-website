@@ -1,1458 +1,504 @@
 [
   {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 2,
-    "questionText": "Qui vend du poisson fumé?",
-    "options": [
-      "Ali",
-      "Maman",
-      "Maman Titi",
-      "Tantie Adzo"
+    "passage": "La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.",
+    "questions": [
+      {
+        "questionNumber": 2,
+        "questionText": "Qui vend du poisson fumé?",
+        "options": [
+          "Ali",
+          "Maman",
+          "Maman Titi",
+          "Tantie Adzo"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 3,
+        "questionText": "Ali va dépenser ... chez Tantie Adzo.",
+        "options": [
+          "25 cedis",
+          "30 cedis",
+          "50 cedis",
+          "55 cedis"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 4,
+        "questionText": "Combien coûte une tablette de savon?",
+        "options": [
+          "3."
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 14,
+        "questionText": "00 cedis",
+        "options": [
+          "25.50 cedis\n\n5.\n\nIl reste 13 cedis pour ......",
+          "Ali",
+          "la poche",
+          "le bus",
+          "Maman"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      }
     ],
-    "displayOptions": [
-      "A. Ali",
-      "B. Maman",
-      "C. Maman Titi",
-      "D. Tantie Adzo"
-    ],
-    "correctAnswer": "C",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.718Z"
-    }
+    "context": "PART I - TEXTE 1:",
+    "year": "2024"
   },
   {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 3,
-    "questionText": "Ali va dépenser ... chez Tantie Adzo.",
-    "options": [
-      "25 cedis",
-      "30 cedis",
-      "50 cedis",
-      "55 cedis"
+    "passage": "Deux amis discutent de leurs passe-temps. Lisez le dialogue et répondez aux questions.Atangi:Bonjour,Adwoa.Adwoa:Bonjour,Atangi.Atangi:Ah! Toujours en forme. Qu'est-ce que tu fais pour étre en bonne santé?Adwoa:Du sport. Et toi, tu fais du sport?Atangi:Oui,je fais du jogging chaque matin.Adwoa:Moi,je vais au club le mercredi, le vendredi et le samedi pour jouer au tennis.Atangi:Tu joues avec qui?Adwoa:Avec mon cousin,Kojo,et ma nièce,Aba.Atangi:Vous jouez toute la journée?Adwoa:Mais non!D'habitude,nous sommes au club de 17h à 19h",
+    "questions": [
+      {
+        "questionNumber": 6,
+        "questionText": "Les deux personnes sont en train de ...",
+        "options": [
+          "faire du sport",
+          "faire du tennis",
+          "parler du sport",
+          "parler du jogging"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 7,
+        "questionText": "Adwoa reste en bonne santé grâce ...",
+        "options": [
+          "au club",
+          "au cousin",
+          "au jogging",
+          "au sport"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 8,
+        "questionText": "Atangi fait du sport ... fois par semaine.",
+        "options": [
+          "une",
+          "trois",
+          "six",
+          "sept"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 9,
+        "questionText": "Adwoa passe ... au clu",
+        "options": [
+          "une heure",
+          "deux heures et demie",
+          "dix-sept heures",
+          "dix neuf heures et demie"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 10,
+        "questionText": "Selon le texte, combien de personnes front du sport?",
+        "options": [
+          "1",
+          "2",
+          "3"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      }
     ],
-    "displayOptions": [
-      "A. 25 cedis",
-      "B. 30 cedis",
-      "C. 50 cedis",
-      "D. 55 cedis"
-    ],
-    "correctAnswer": "D",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.718Z"
-    }
+    "context": "PART I - TEXTE 2:",
+    "year": "2024"
   },
   {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 4,
-    "questionText": "Combien coûte une tablette de savon?",
-    "options": [
-      "3.5 cedis",
-      "7.00 cedis",
-      "14.00 cedis",
-      "25.50 cedis"
+    "passage": "Monique, une Ivoirienne,accompagne na mère au marché de Makola. Elle raconte ce qui se passe à son ami par WhatsApp. Lisez son texte et répondez aux questions.Le marché de Makola a lieu chaque jour sauf le dimanche. Les samedes, ma mère et moi allons faire des courses pour la semaine. Nous arrivons au marché à pied à",
+    "questions": [
+      {
+        "questionNumber": 11,
+        "questionText": "Le marché de Makola a lieu ....",
+        "options": [
+          "les samedis",
+          "les dimanches",
+          "six jours de la semaine",
+          "sept jours de la semaine"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 12,
+        "questionText": "Comment Monique et maman vont-elles au marché?",
+        "options": [
+          "Elles courent.",
+          "Elles marchent.",
+          "Elles prennent le bus.",
+          "Elles vont en voiture."
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 13,
+        "questionText": "Arrivées au marché,Monique et Maman achétent .....",
+        "options": [
+          "de la sauce",
+          "des fruits",
+          "seulement des légumes",
+          "seulement du poisson"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 4,
+        "questionText": "heures",
+        "options": [
+          "8 heures",
+          "11 heures"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 15,
+        "questionText": "Monique aime faire les courses avec Maman ....",
+        "options": [
+          "parce qu'elles vont au marché les samedis",
+          "parce qu'elles vont au marché à pied",
+          "parce que Papa vient les chercher en voiture",
+          "parce que Maman lui donne des cadeux"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      }
     ],
-    "displayOptions": [
-      "A. 3.5 cedis",
-      "B. 7.00 cedis",
-      "C. 14.00 cedis",
-      "D. 25.50 cedis"
-    ],
-    "correctAnswer": "A",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.718Z"
-    }
+    "context": "PART I - TEXTE 3:",
+    "year": "2024"
   },
   {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 7,
-    "questionText": "Adwoa reste en bonne santé grâce ...",
-    "options": [
-      "au club",
-      "au cousin",
-      "au jogging",
-      "au sport"
+    "passage": "Un groupe d' apprenants se prépare pour un voyage. Leur enseignant leur envoie un message sur WhatsApp. Lisez le message et répondez aux questions.Mes chers apprenants!Demain, nous allons visiter la montagne Afadza. Voici des informations pour vous.D'abord,vous devez vous lever tôt. Le bus va partir à 6h",
+    "questions": [
+      {
+        "questionNumber": 16,
+        "questionText": "Où vont les apprenants?",
+        "options": [
+          "À la maison.",
+          "À l'école.",
+          "En excursion.",
+          "En vacances."
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 17,
+        "questionText": "À quelle heure les apprenants doivent-ils être prêts?",
+        "options": [
+          "Avant six heures.",
+          "Après six heures.",
+          "Avant six heures et demie.",
+          "Après six heures et demie."
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 18,
+        "questionText": "Ce n'est pas permis de mettre les repas dans ....",
+        "options": [
+          "les cartables",
+          "les manteaux",
+          "le sac",
+          "le bus"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 19,
+        "questionText": "Les apprenants peuvent apporter leurs téléphones portables pour ....",
+        "options": [
+          "faire des appels",
+          "faire des photos",
+          "recevoir des appels",
+          "recevoir des photos"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 20,
+        "questionText": "Les apprenants doivent apporter des manteaux pour se protéger contre ....",
+        "options": [
+          "la hauteur",
+          "le temps",
+          "les accidents",
+          "les images"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      }
     ],
-    "displayOptions": [
-      "A. au club",
-      "B. au cousin",
-      "C. au jogging",
-      "D. au sport"
-    ],
-    "correctAnswer": "B",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.718Z"
-    }
+    "context": "PART I - TEXTE 4:",
+    "year": "2024"
   },
   {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 8,
-    "questionText": "Atangi fait du sport ... fois par semaine.",
-    "options": [
-      "une",
-      "trois",
-      "six",
-      "sept"
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 21,
+        "questionText": "Vouss avez le paludisme. Pour votre guérison rapide, prenez ce médicament trois ... par jour.",
+        "options": [
+          "fois",
+          "heures",
+          "parts",
+          "temps"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 22,
+        "questionText": "J'ai un enfant à nourrir et d'autres choses à faire. Je n'ai pas ... de temps pour avoir cette conversation.",
+        "options": [
+          "assez",
+          "moins",
+          "peu",
+          "si"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 23,
+        "questionText": "- Je cherche de l'eau pour me laver.- Attends un peu, Pap",
+        "options": [
+          "Julie revient de la rivière avee un ... d'eau.",
+          "saut",
+          "seeau",
+          "seau",
+          "sot"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 24,
+        "questionText": "Pour éviter les maladies, il est conseillé de se laver les mains avec ... et de l'eau.",
+        "options": [
+          "du papier",
+          "du savon",
+          "un mouchoir",
+          "une serviette"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 25,
+        "questionText": "Mes chers amis,je vous présente Histro. Il a quarante-six ans. C'est ... célébre",
+        "options": [
+          "une femme",
+          "une fille",
+          "un garçon",
+          "un homme"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 26,
+        "questionText": "Quand il est temps de rentrer chez eux, Jean dit au revoir à Marie et elle répond << .... >>",
+        "options": [
+          "À Bientôt!",
+          "Bonjour!",
+          "Merci!",
+          "Pas de quoi!"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 27,
+        "questionText": "Stefan ... d'Allemagne. Alors, il est alleman",
+        "options": [
+          "arrive",
+          "descend",
+          "sort",
+          "vient"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 28,
+        "questionText": "Pour gagner de l'argent,ma nièce ... des vêtements au marché.",
+        "options": [
+          "partage",
+          "porte",
+          "prend",
+          "port"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 29,
+        "questionText": "Il est conseillé d'emmener les voleurs ...... au lieu de les tuer pour respecter les droits de l'homme.",
+        "options": [
+          "au bureau",
+          "au commissariat",
+          "à la gare",
+          "à la maison"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 30,
+        "questionText": "Quand Edouard est libre, il aime aller ...... pour voir des spectacles.",
+        "options": [
+          "à la banque",
+          "au cinéma",
+          "à l'hôpital",
+          "au théâtre"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      }
     ],
-    "displayOptions": [
-      "A. une",
-      "B. trois",
-      "C. six",
-      "D. sept"
-    ],
-    "correctAnswer": "A",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.718Z"
-    }
+    "context": "PART II",
+    "year": "2024"
   },
   {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 9,
-    "questionText": "Adwoa passe ... au club.",
-    "options": [
-      "une heure",
-      "deux heures et demie",
-      "dix-sept heures",
-      "dix neuf heures et demie"
-    ],
-    "displayOptions": [
-      "A. une heure",
-      "B. deux heures et demie",
-      "C. dix-sept heures",
-      "D. dix neuf heures et demie"
-    ],
-    "correctAnswer": "B",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.718Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 12,
-    "questionText": "Comment Monique et maman vont-elles au marché?",
-    "options": [
-      "Elles courent.",
-      "Elles marchent.",
-      "Elles prennent le bus.",
-      "Elles vont en voiture."
-    ],
-    "displayOptions": [
-      "A. Elles courent.",
-      "B. Elles marchent.",
-      "C. Elles prennent le bus.",
-      "D. Elles vont en voiture."
-    ],
-    "correctAnswer": "D",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.718Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 13,
-    "questionText": "Arrivées au marché,Monique et Maman achétent .....",
-    "options": [
-      "de la sauce",
-      "des fruits",
-      "seulement des légumes",
-      "seulement du poisson"
-    ],
-    "displayOptions": [
-      "A. de la sauce",
-      "B. des fruits",
-      "C. seulement des légumes",
-      "D. seulement du poisson"
-    ],
-    "correctAnswer": "C",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 14,
-    "questionText": "Au marché,les deux femmes passent combien de temps?",
-    "options": [
-      "3 heures",
-      "4 heures",
-      "8 heures",
-      "11 heures"
-    ],
-    "displayOptions": [
-      "A. 3 heures",
-      "B. 4 heures",
-      "C. 8 heures",
-      "D. 11 heures"
-    ],
-    "correctAnswer": "B",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 17,
-    "questionText": "À quelle heure les apprenants doivent-ils être prêts?",
-    "options": [
-      "Avant six heures.",
-      "Après six heures.",
-      "Avant six heures et demie.",
-      "Après six heures et demie."
-    ],
-    "displayOptions": [
-      "A. Avant six heures.",
-      "B. Après six heures.",
-      "C. Avant six heures et demie.",
-      "D. Après six heures et demie."
-    ],
-    "correctAnswer": "A",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 18,
-    "questionText": "Ce n'est pas permis de mettre les repas dans ....",
-    "options": [
-      "les cartables",
-      "les manteaux",
-      "le sac",
-      "le bus"
-    ],
-    "displayOptions": [
-      "A. les cartables",
-      "B. les manteaux",
-      "C. le sac",
-      "D. le bus"
-    ],
-    "correctAnswer": "C",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 19,
-    "questionText": "Les apprenants peuvent apporter leurs téléphones portables pour ....",
-    "options": [
-      "faire des appels",
-      "faire des photos",
-      "recevoir des appels",
-      "recevoir des photos"
-    ],
-    "displayOptions": [
-      "A. faire des appels",
-      "B. faire des photos",
-      "C. recevoir des appels",
-      "D. recevoir des photos"
-    ],
-    "correctAnswer": "A",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 22,
-    "questionText": "J'ai un enfant à nourrir et d'autres choses à faire. Je n'ai pas ... de temps pour avoir cette conversation.",
-    "options": [
-      "assez",
-      "moins",
-      "peu",
-      "si"
-    ],
-    "displayOptions": [
-      "A. assez",
-      "B. moins",
-      "C. peu",
-      "D. si"
-    ],
-    "correctAnswer": "C",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 23,
-    "questionText": "- Je cherche de l'eau pour me laver.- Attends un peu, Papa. Julie revient de la rivière avee un ... d'eau.",
-    "options": [
-      "saut",
-      "seeau",
-      "seau",
-      "sot"
-    ],
-    "displayOptions": [
-      "A. saut",
-      "B. seeau",
-      "C. seau",
-      "D. sot"
-    ],
-    "correctAnswer": "A",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 24,
-    "questionText": "Pour éviter les maladies, il est conseillé de se laver les mains avec ... et de l'eau.",
-    "options": [
-      "du papier",
-      "du savon",
-      "un mouchoir",
-      "une serviette"
-    ],
-    "displayOptions": [
-      "A. du papier",
-      "B. du savon",
-      "C. un mouchoir",
-      "D. une serviette"
-    ],
-    "correctAnswer": "B",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 25,
-    "questionText": "Mes chers amis,je vous présente Histro. Il a quarante-six ans. C'est ... célébre",
-    "options": [
-      "une femme",
-      "une fille",
-      "un garçon",
-      "un homme"
-    ],
-    "displayOptions": [
-      "A. une femme",
-      "B. une fille",
-      "C. un garçon",
-      "D. un homme"
-    ],
-    "correctAnswer": "B",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 26,
-    "questionText": "Quand il est temps de rentrer chez eux, Jean dit au revoir à Marie et elle répond << .... >>",
-    "options": [
-      "À Bientôt!",
-      "Bonjour!",
-      "Merci!",
-      "Pas de quoi!"
-    ],
-    "displayOptions": [
-      "A. À Bientôt!",
-      "B. Bonjour!",
-      "C. Merci!",
-      "D. Pas de quoi!"
-    ],
-    "correctAnswer": "D",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 27,
-    "questionText": "Stefan ... d'Allemagne. Alors, il est allemand.",
-    "options": [
-      "arrive",
-      "descend",
-      "sort",
-      "vient"
-    ],
-    "displayOptions": [
-      "A. arrive",
-      "B. descend",
-      "C. sort",
-      "D. vient"
-    ],
-    "correctAnswer": "B",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 28,
-    "questionText": "Pour gagner de l'argent,ma nièce ... des vêtements au marché.",
-    "options": [
-      "partage",
-      "porte",
-      "prend",
-      "port"
-    ],
-    "displayOptions": [
-      "A. partage",
-      "B. porte",
-      "C. prend",
-      "D. port"
-    ],
-    "correctAnswer": "B",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 29,
-    "questionText": "Il est conseillé d'emmener les voleurs ...... au lieu de les tuer pour respecter les droits de l'homme.",
-    "options": [
-      "au bureau",
-      "au commissariat",
-      "à la gare",
-      "à la maison"
-    ],
-    "displayOptions": [
-      "A. au bureau",
-      "B. au commissariat",
-      "C. à la gare",
-      "D. à la maison"
-    ],
-    "correctAnswer": "B",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 32,
-    "questionText": "Choose the most appropriate word to complete the passage.",
-    "options": [
-      "dont",
-      "que",
-      "qui",
-      "où"
-    ],
-    "displayOptions": [
-      "A. dont",
-      "B. que",
-      "C. qui",
-      "D. où"
-    ],
-    "correctAnswer": "C",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 33,
-    "questionText": "Choose the most appropriate word to complete the passage.",
-    "options": [
-      "avec",
-      "ainsi",
-      "comme",
-      "pareil"
-    ],
-    "displayOptions": [
-      "A. avec",
-      "B. ainsi",
-      "C. comme",
-      "D. pareil"
-    ],
-    "correctAnswer": "A",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 34,
-    "questionText": "Choose the most appropriate word to complete the passage.",
-    "options": [
-      "exemple",
-      "sans",
-      "selon",
-      "surtout"
-    ],
-    "displayOptions": [
-      "A. exemple",
-      "B. sans",
-      "C. selon",
-      "D. surtout"
-    ],
-    "correctAnswer": "B",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 35,
-    "questionText": "Choose the most appropriate word to complete the passage.",
-    "options": [
-      "dès",
-      "mais",
-      "pendant",
-      "quand"
-    ],
-    "displayOptions": [
-      "A. dès",
-      "B. mais",
-      "C. pendant",
-      "D. quand"
-    ],
-    "correctAnswer": "D",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 36,
-    "questionText": "Choose the most appropriate word to complete the passage.",
-    "options": [
-      "leur",
-      "leurs",
-      "notre",
-      "nos"
-    ],
-    "displayOptions": [
-      "A. leur",
-      "B. leurs",
-      "C. notre",
-      "D. nos"
-    ],
-    "correctAnswer": "B",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 37,
-    "questionText": "Choose the most appropriate word to complete the passage.",
-    "options": [
-      "Avant",
-      "Quand",
-      "Même",
-      "Pourtant"
-    ],
-    "displayOptions": [
-      "A. Avant",
-      "B. Quand",
-      "C. Même",
-      "D. Pourtant"
-    ],
-    "correctAnswer": "A",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 38,
-    "questionText": "Choose the most appropriate word to complete the passage.",
-    "options": [
-      "elle",
-      "la",
-      "le",
-      "lui"
-    ],
-    "displayOptions": [
-      "A. elle",
-      "B. la",
-      "C. le",
-      "D. lui"
-    ],
-    "correctAnswer": "D",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 39,
-    "questionText": "Choose the most appropriate word to complete the passage.",
-    "options": [
-      "prépare",
-      "préparé",
-      "préparer",
-      "prépares"
-    ],
-    "displayOptions": [
-      "A. prépare",
-      "B. préparé",
-      "C. préparer",
-      "D. prépares"
-    ],
-    "correctAnswer": "B",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 2,
-    "questionText": "Selon les textes, qui n'aime pas préparer les repas?",
-    "options": [
-      "Cobbina",
-      "D-Jay",
-      "Roberta",
-      "Rukiya"
-    ],
-    "displayOptions": [
-      "A. Cobbina",
-      "B. D-Jay",
-      "C. Roberta",
-      "D. Rukiya"
-    ],
-    "correctAnswer": "C",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 3,
-    "questionText": "Rukiya aime ......",
-    "options": [
-      "l'anglais",
-      "le français",
-      "l'histoire",
-      "les mathènatuques"
-    ],
-    "displayOptions": [
-      "A. l'anglais",
-      "B. le français",
-      "C. l'histoire",
-      "D. les mathènatuques"
-    ],
-    "correctAnswer": "D",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 4,
-    "questionText": "Rukiya est ...... du groupe de trois èlèves.",
-    "options": [
-      "la plus àgèe",
-      "la plus belle",
-      "la plus jeune",
-      "la plus petite"
-    ],
-    "displayOptions": [
-      "A. la plus àgèe",
-      "B. la plus belle",
-      "C. la plus jeune",
-      "D. la plus petite"
-    ],
-    "correctAnswer": "A",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 7,
-    "questionText": "Selon le journaliste, les parents à Domekofe sont ......",
-    "options": [
-      "animateurs",
-      "cultivateurs",
-      "élèves",
-      "musiciens"
-    ],
-    "displayOptions": [
-      "A. animateurs",
-      "B. cultivateurs",
-      "C. élèves",
-      "D. musiciens"
-    ],
-    "correctAnswer": "B",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 8,
-    "questionText": "D'après le texte, on joue du tam-tam ......",
-    "options": [
-      "à la place publique",
-      "à l'école publique",
-      "au champ",
-      "au foyer"
-    ],
-    "displayOptions": [
-      "A. à la place publique",
-      "B. à l'école publique",
-      "C. au champ",
-      "D. au foyer"
-    ],
-    "correctAnswer": "A",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 9,
-    "questionText": "Pendant la soirée, les jeunes dansent ...... leurs parents.",
-    "options": [
-      "avec",
-      "comme",
-      "pour",
-      "sans"
-    ],
-    "displayOptions": [
-      "A. avec",
-      "B. comme",
-      "C. pour",
-      "D. sans"
-    ],
-    "correctAnswer": "B",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 12,
-    "questionText": "Kwaku est ...... de M. Boateng.",
-    "options": [
-      "l'enfant",
-      "l'oncle",
-      "le cousin",
-      "le neveu"
-    ],
-    "displayOptions": [
-      "A. l'enfant",
-      "B. l'oncle",
-      "C. le cousin",
-      "D. le neveu"
-    ],
-    "correctAnswer": "D",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 13,
-    "questionText": "Patrick et Patricia sont nés le même jour, c'est-à-dire qu'ils sont ......",
-    "options": [
-      "des confrères",
-      "des frères",
-      "des jumeaux",
-      "des soeurs"
-    ],
-    "displayOptions": [
-      "A. des confrères",
-      "B. des frères",
-      "C. des jumeaux",
-      "D. des soeurs"
-    ],
-    "correctAnswer": "C",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 14,
-    "questionText": "Philip a quel àge?",
-    "options": [
-      "2 ans",
-      "8 ans",
-      "10 ans",
-      "12 ans"
-    ],
-    "displayOptions": [
-      "A. 2 ans",
-      "B. 8 ans",
-      "C. 10 ans",
-      "D. 12 ans"
-    ],
-    "correctAnswer": "B",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 17,
-    "questionText": "Le match a lieu ......",
-    "options": [
-      "à Barracks Basic",
-      "à Airport Basic",
-      "au ministère des Sports",
-      "sur le terrain du Ghana"
-    ],
-    "displayOptions": [
-      "A. à Barracks Basic",
-      "B. à Airport Basic",
-      "C. au ministère des Sports",
-      "D. sur le terrain du Ghana"
-    ],
-    "correctAnswer": "A",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 18,
-    "questionText": "Combien de buts sont marqués pendant le match?",
-    "options": [
-      "Zéro",
-      "Deux",
-      "Trois",
-      "Cinq"
-    ],
-    "displayOptions": [
-      "A. Zéro",
-      "B. Deux",
-      "C. Trois",
-      "D. Cinq"
-    ],
-    "correctAnswer": "C",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 19,
-    "questionText": "Selon le passage, ......",
-    "options": [
-      "Airport Basic perd le match",
-      "Appiah marque trois buts",
-      "l'arbitre siffle deux pénaltys",
-      "Shittu rate trois pénaltys"
-    ],
-    "displayOptions": [
-      "A. Airport Basic perd le match",
-      "B. Appiah marque trois buts",
-      "C. l'arbitre siffle deux pénaltys",
-      "D. Shittu rate trois pénaltys"
-    ],
-    "correctAnswer": "A",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 22,
-    "questionText": "À la fin de la journée, quand Aminata veut aller au lit, elle dit ...... à a mère.",
-    "options": [
-      "Au lit!",
-      "Au revoir!",
-      "Bonne nuit!",
-      "Bonsoir!"
-    ],
-    "displayOptions": [
-      "A. Au lit!",
-      "B. Au revoir!",
-      "C. Bonne nuit!",
-      "D. Bonsoir!"
-    ],
-    "correctAnswer": "C",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 23,
-    "questionText": "- Joe! Tu es le dernier né de tes parents?- Ah non! Je suis plutôt ......",
-    "options": [
-      "l'ainé",
-      "le cadet",
-      "l'enfant",
-      "le petit"
-    ],
-    "displayOptions": [
-      "A. l'ainé",
-      "B. le cadet",
-      "C. l'enfant",
-      "D. le petit"
-    ],
-    "correctAnswer": "A",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 24,
-    "questionText": "- Bonjour, Maman! Où allez-vous?- Bonjour! Je veux aller voir le directeur de l'école dans ...... pour payer les frais de scolarité.",
-    "options": [
-      "son atelier",
-      "son bureau",
-      "sa classe",
-      "sa salle"
-    ],
-    "displayOptions": [
-      "A. son atelier",
-      "B. son bureau",
-      "C. sa classe",
-      "D. sa salle"
-    ],
-    "correctAnswer": "B",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 25,
-    "questionText": "- Salut Sammy! Je t'invite à jouer aux jeux vidéo. Tu viens?- ...... Je suis occupé.",
-    "options": [
-      "D'accord!",
-      "Désolé!",
-      "Ok,ça marche!",
-      "Oui, merci!"
-    ],
-    "displayOptions": [
-      "A. D'accord!",
-      "B. Désolé!",
-      "C. Ok,ça marche!",
-      "D. Oui, merci!"
-    ],
-    "correctAnswer": "B",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 26,
-    "questionText": "M. Dupont est européen ...... son tient noir.",
-    "options": [
-      "à part",
-      "dans",
-      "en plus",
-      "malgré"
-    ],
-    "displayOptions": [
-      "A. à part",
-      "B. dans",
-      "C. en plus",
-      "D. malgré"
-    ],
-    "correctAnswer": "D",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 27,
-    "questionText": "Avec l'ordonnance, Mme Awula va ...... pour acheter des médicaments.",
-    "options": [
-      "à la clinique",
-      "à la pharmacie",
-      "au magasin",
-      "au marché"
-    ],
-    "displayOptions": [
-      "A. à la clinique",
-      "B. à la pharmacie",
-      "C. au magasin",
-      "D. au marché"
-    ],
-    "correctAnswer": "B",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 28,
-    "questionText": "- Paul, voici mon cousin, Jean.- Ah bon! Donc, il est ......!",
-    "options": [
-      "le fils de ta soeur",
-      "le fils de ta tante",
-      "le frère de ton père",
-      "le frère de ton neveu"
-    ],
-    "displayOptions": [
-      "A. le fils de ta soeur",
-      "B. le fils de ta tante",
-      "C. le frère de ton père",
-      "D. le frère de ton neveu"
-    ],
-    "correctAnswer": "B",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 29,
-    "questionText": "Mes chers enfants, c'est bientôt décembre et nous devons nous préparer pour la fête ......",
-    "options": [
-      "des Mères",
-      "de Noël",
-      "des Pâques",
-      "de Pentecôte"
-    ],
-    "displayOptions": [
-      "A. des Mères",
-      "B. de Noël",
-      "C. des Pâques",
-      "D. de Pentecôte"
-    ],
-    "correctAnswer": "B",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 32,
-    "questionText": "Choose the most appropriate word(s) to complete the passage.",
-    "options": [
-      "se lève",
-      "se lèves",
-      "se lèvent",
-      "se lever"
-    ],
-    "displayOptions": [
-      "A. se lève",
-      "B. se lèves",
-      "C. se lèvent",
-      "D. se lever"
-    ],
-    "correctAnswer": "C",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 33,
-    "questionText": "Choose the most appropriate word(s) to complete the passage.",
-    "options": [
-      "content",
-      "contente",
-      "contents",
-      "contentes"
-    ],
-    "displayOptions": [
-      "A. content",
-      "B. contente",
-      "C. contents",
-      "D. contentes"
-    ],
-    "correctAnswer": "A",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 34,
-    "questionText": "Choose the most appropriate word(s) to complete the passage.",
-    "options": [
-      "ou",
-      "ni",
-      "pas",
-      "qu"
-    ],
-    "displayOptions": [
-      "A. ou",
-      "B. ni",
-      "C. pas",
-      "D. qu"
-    ],
-    "correctAnswer": "B",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 35,
-    "questionText": "Choose the most appropriate word(s) to complete the passage.",
-    "options": [
-      "tue",
-      "tuer",
-      "tues",
-      "tuent"
-    ],
-    "displayOptions": [
-      "A. tue",
-      "B. tuer",
-      "C. tues",
-      "D. tuent"
-    ],
-    "correctAnswer": "D",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 36,
-    "questionText": "Choose the most appropriate word(s) to complete the passage.",
-    "options": [
-      "cette",
-      "chaque",
-      "d'autres",
-      "quelques"
-    ],
-    "displayOptions": [
-      "A. cette",
-      "B. chaque",
-      "C. d'autres",
-      "D. quelques"
-    ],
-    "correctAnswer": "B",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 37,
-    "questionText": "Choose the most appropriate word(s) to complete the passage.",
-    "options": [
-      "leurs",
-      "nos",
-      "ses",
-      "vos"
-    ],
-    "displayOptions": [
-      "A. leurs",
-      "B. nos",
-      "C. ses",
-      "D. vos"
-    ],
-    "correctAnswer": "A",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 38,
-    "questionText": "Choose the most appropriate word(s) to complete the passage.",
-    "options": [
-      "Elle",
-      "Elles",
-      "Il",
-      "Ils"
-    ],
-    "displayOptions": [
-      "A. Elle",
-      "B. Elles",
-      "C. Il",
-      "D. Ils"
-    ],
-    "correctAnswer": "D",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2024",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 39,
-    "questionText": "Choose the most appropriate word(s) to complete the passage.",
-    "options": [
-      "dans",
-      "près",
-      "sous",
-      "sur"
-    ],
-    "displayOptions": [
-      "A. dans",
-      "B. près",
-      "C. sous",
-      "D. sur"
-    ],
-    "correctAnswer": "B",
-    "passage": "PART ILisez les quatre textes ci-dessous et répondez aux questions en noircissant la lettre qui correspond à la réponse juste.Read the four texts below and answer the questions that follow by shadding the letter which corresponds with the correct answer.TEXTE 1: La mère d'Ali l'envoie aller faire des courses en ville. Lisez le dialogue et répondez aux questions.Mamam:Ali!Ali:Oui,mamam.Mamam:Viens! Je t'envoie au marchè faire des courses.Ali:D'accord,mamam!Mamam:Prends cet argent ... C'est combien?Ali:C'est cent cedis.Mamam:Bien!Tu vas m'acheter une bouteille d'huile et deux tablettes de savon chez Mama Titi;puis du poisson fumé et un kilo de viande chez Tantie Adzo. Vingt-cinq cedis de viande,trente cedis de poisson, sept cedis pour le savon et vingt-cinq cedis pour la bouteille d'huile.ça fait combien?Ali:Quatre-vingt-sept cedis. II reste treize cedis.Mamam:Oui!C'est pour le transport.1.\n\nMamam donne combien à Ali?A.  13 cedisB.  25 cedisC.  30 cedisD.  100 cedis",
-    "metadata": {
-      "sourceFile": "bece french 2024 questions.docx",
-      "importedAt": "2025-11-21T09:25:07.719Z"
-    }
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 31,
+        "questionText": "",
+        "options": [
+          "---",
+          "tout",
+          "ce",
+          "---"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 32,
+        "questionText": "--- nous faisons. Nous aussi,nous sommes fiers de nos parents. Ils sont très généreux. Papa n'est pas avare ---",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 33,
+        "questionText": "--- d'autres pères. Il nous donne tout ce que nous désirons, ---",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 34,
+        "questionText": "--- des livres.Le soir,---",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 35,
+        "questionText": "--- il rentre, il vient dans ---",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 36,
+        "questionText": "--- chambres. Là,il nous parle de sa journée. ---",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 37,
+        "questionText": "--- s'il est fatigué,il écoute ce que nous voulons---",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 38,
+        "questionText": "--- dire. Il regarde nos cahiers et il nous conseille. Quelquefois, il aide maman à ---",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 39,
+        "questionText": "--- le repas. Quant ---",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 40,
+        "questionText": "--- maman, elle nous enseigne la propreté et la politesse.31. Choose the most appropriate word to complete the passage.",
+        "options": [
+          "à",
+          "de",
+          "en",
+          "pour\n\n32.\n\nChoose the most appropriate word to complete the passage.",
+          "dont",
+          "que",
+          "qui",
+          "où\n\n33.\n\nChoose the most appropriate word to complete the passage.",
+          "avec",
+          "ainsi",
+          "comme",
+          "pareil\n\n34.\n\nChoose the most appropriate word to complete the passage.",
+          "exemple",
+          "sans",
+          "selon",
+          "surtout\n\n35.\n\nChoose the most appropriate word to complete the passage.",
+          "dès",
+          "mais",
+          "pendant",
+          "quand\n\n36.\n\nChoose the most appropriate word to complete the passage.",
+          "leur",
+          "leurs",
+          "notre",
+          "nos\n\n37.\n\nChoose the most appropriate word to complete the passage.",
+          "Avant",
+          "Quand",
+          "Même",
+          "Pourtant\n\n38.\n\nChoose the most appropriate word to complete the passage.",
+          "elle",
+          "la",
+          "le",
+          "lui\n\n39.\n\nChoose the most appropriate word to complete the passage.",
+          "prépare",
+          "préparé",
+          "préparer",
+          "prépares\n\n40.\n\nChoose the most appropriate word to complete the passage.",
+          "à",
+          "de",
+          "pour",
+          "selon"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      }
+    ],
+    "context": "PART III",
+    "year": "2024"
   }
 ]

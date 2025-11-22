@@ -1,0 +1,158 @@
+[
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 11,
+        "questionText": "Les enfants vont se coucher parce qu’ils ont ……………12. Anita à envoyé une carte ………….. Noël à son ami.13. Le quatrième mois de l’année est ……………….14. Ama lave son pagne parce qu’il est ………………15. Les étudiants empruntent des livres à ………………….16. Le petit ne marche pas bien sans ses ………………17. C’est cette couturière qui nous fait nos ………………….18. Paul vient souvent ………………..nous19. Jojo porte des lunettes pour bien …………………20. Dédé n’à rien à manger parce qu’elle est …………",
+        "options": [
+          "B C D"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 11,
+        "questionText": "sommeil soif peur faim12. à au de sur13. avril juillet juin mai14. brûlé déchiré longue sale15.la bibliothèque la librairie l’église l’hôtel16. ceintures chapeaux chaussures chemises17.bracelets bagues colliers jupes18. au chez de dans19. entendre marcher parler voir20. fâchée fatigué petite pauvre",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      }
+    ],
+    "context": "PART II",
+    "year": "2012"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 21,
+        "questionText": "Où habite la famille Adah ?",
+        "options": [
+          "A la capitale",
+          "Dans une plantation",
+          "Au village",
+          "Dans une grande ville"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 22,
+        "questionText": "Monsieur est riche parce qu’il a",
+        "options": [
+          "quatre enfants",
+          "un supermarché",
+          "des plantations",
+          "une grande maison"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 23,
+        "questionText": "Combien de filles ont Monsieur et Madame Adah ?",
+        "options": [
+          "Une fille",
+          "Deux filles",
+          "Trois filles",
+          "Quatre filles"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 24,
+        "questionText": "Monsieur et Madame Adah aiment la vie …………….du village.",
+        "options": [
+          "agréable",
+          "calme",
+          "chargée",
+          "intéressante"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 25,
+        "questionText": "Dans la capitale on s’amuse ……………..",
+        "options": [
+          "souvent",
+          "rarement",
+          "quelquefois",
+          "toujours"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 26,
+        "questionText": "Qui invite Amalie à la capitale ?",
+        "options": [
+          "Sa camarade",
+          "Sa cousine",
+          "Sa nièce",
+          "Sa tante"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 27,
+        "questionText": "Pourquoi les parents d’Amalia lui refusent d’aller chez Sophie ?",
+        "options": [
+          "Parce qu’ils aiment le village",
+          "Parce qu’Amalia doit étudier",
+          "Parce qu’Amalia n’est pas contente",
+          "Parce qu’ils n’aiment pas la capitale."
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 28,
+        "questionText": "Amalia ne mange plus parce qu’elle ……………..",
+        "options": [
+          "n’a plus faim",
+          "n’est pas contente",
+          "se repose",
+          "s’amuse"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 29,
+        "questionText": "Amalia se blesse le pied en ……………..",
+        "options": [
+          "dansant",
+          "courant",
+          "sautant",
+          "marchant"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 30,
+        "questionText": "– Que fait Amalia le cinquième jour ?– Elle ……………",
+        "options": [
+          "se repose chez elle",
+          "reste à la maison",
+          "fait la cuisine",
+          "va dans la ville"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      }
+    ],
+    "context": "PART III",
+    "year": "2012"
+  },
+  {
+    "passage": null,
+    "questions": [],
+    "context": "PART I",
+    "year": "2012"
+  }
+]

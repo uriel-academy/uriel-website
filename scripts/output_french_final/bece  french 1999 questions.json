@@ -1,0 +1,538 @@
+[
+  {
+    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+    "questions": [
+      {
+        "questionNumber": 1,
+        "questionText": "Michael Jackson est …………… grand chanteur.",
+        "options": [
+          "une",
+          "de",
+          "du",
+          "un"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 2,
+        "questionText": "Il faut marcher ………. nous sommes en retar",
+        "options": [
+          "soigneusement",
+          "vite",
+          "doucement",
+          "bien"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 3,
+        "questionText": "Le garçon ………….. à réussi à l’examen.",
+        "options": [
+          "heureux",
+          "souriant",
+          "travailleur",
+          "gentil"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 4,
+        "questionText": "Comment vas-tu ? Je ………… bien, merci.",
+        "options": [
+          "vais",
+          "parle",
+          "suis",
+          "sens"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 5,
+        "questionText": "Deux et cinq font ……….",
+        "options": [
+          "trois",
+          "cinq",
+          "six",
+          "sept"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 1",
+    "year": "1999"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 6,
+        "questionText": "Vos cheveux sont trop longs ; il faut les …………..",
+        "options": [
+          "laver",
+          "couper",
+          "essuyer",
+          "peigner"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 7,
+        "questionText": "Le maçon utilise le ciment pour …………. la maison.",
+        "options": [
+          "peindre",
+          "faire",
+          "laver",
+          "construire"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 8,
+        "questionText": "La chaise est cassée. Appelle-moi-le ………",
+        "options": [
+          "menuisier",
+          "tailleur",
+          "maçon",
+          "mécanicien"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 9,
+        "questionText": "……………jolies fleurs.",
+        "options": [
+          "Quel",
+          "Quels",
+          "Quelle",
+          "Quelles"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 10,
+        "questionText": "Elle fait des études……….. France",
+        "options": [
+          "à",
+          "au",
+          "en",
+          "du"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 2",
+    "year": "1999"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 11,
+        "questionText": "Les pluies commencent ……….mois de juin.",
+        "options": [
+          "au",
+          "en",
+          "a",
+          "le"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 12,
+        "questionText": "Nous ………..de la chance.",
+        "options": [
+          "ayons",
+          "avons",
+          "avez",
+          "sommes"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 13,
+        "questionText": "On ……… au restaurant demain.",
+        "options": [
+          "vas",
+          "va",
+          "allons",
+          "allez"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 14,
+        "questionText": "Elles ………des parents sympathiques.",
+        "options": [
+          "a",
+          "avez",
+          "avons",
+          "ont"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 15,
+        "questionText": "Abena …………quinze ans.",
+        "options": [
+          "a",
+          "est",
+          "es",
+          "as"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 3",
+    "year": "1999"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 16,
+        "questionText": "Kofi efface le tableau avec …………chiffon.",
+        "options": [
+          "la",
+          "le",
+          "une",
+          "de"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 17,
+        "questionText": "La règle est …………..le pupitre.",
+        "options": [
+          "loin",
+          "près",
+          "en",
+          "sur"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 18,
+        "questionText": "Il faut …………..donner le cahier",
+        "options": [
+          "la",
+          "le",
+          "les",
+          "lui"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 19,
+        "questionText": "Ama et Abena sont",
+        "options": [
+          "bel",
+          "beaux",
+          "belles",
+          "belle"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 20,
+        "questionText": "Il a …………, alors il doit aller au lit.",
+        "options": [
+          "soif",
+          "faim",
+          "chaud",
+          "sommeil"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 4",
+    "year": "1999"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 21,
+        "questionText": "Il est médecin, donc il ………….. les malades.",
+        "options": [
+          "soigne",
+          "corrige",
+          "aime",
+          "voit"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 22,
+        "questionText": "Ton sac est plein ………fruits.",
+        "options": [
+          "de",
+          "des",
+          "du",
+          "d’"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 23,
+        "questionText": "Kofi mange trop. Il est ………….",
+        "options": [
+          "bavard",
+          "gourmand",
+          "paresseux",
+          "travailleur"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 24,
+        "questionText": "Vous voulez de la marmelade ? Oui, j’en……………",
+        "options": [
+          "veux",
+          "veut",
+          "veulent",
+          "voulons"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 25,
+        "questionText": "C’est un ………….homme.",
+        "options": [
+          "beau",
+          "belle",
+          "bel",
+          "beaux"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 5",
+    "year": "1999"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 26,
+        "questionText": "…………… âge as-tu ?",
+        "options": [
+          "Quel",
+          "Quels",
+          "Quelle",
+          "Quelles"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 27,
+        "questionText": "A l’hôpital ………aide le médecin à soigner les malades.",
+        "options": [
+          "l’ingénieur",
+          "le malade",
+          "la cuisinière",
+          "l’infermière"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 28,
+        "questionText": "Nous …………de manger",
+        "options": [
+          "allons",
+          "entrons",
+          "venons",
+          "sortons"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 29,
+        "questionText": "Nous ……….de manger",
+        "options": [
+          "au",
+          "en",
+          "du",
+          "aux"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 30,
+        "questionText": "Le fermier me donne un …………. de vin.",
+        "options": [
+          "morceau",
+          "seau",
+          "bol",
+          "verre"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 6",
+    "year": "1999"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 31,
+        "questionText": "Pourquoi Kwame est-il malheureux aujourd’hui ? Parce que sa petite sœur Yaa……….",
+        "options": [
+          "est malheureuse",
+          "ne va pas bien",
+          "n’à pas d’argent",
+          "est en congé"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 32,
+        "questionText": "Yaa est malade depuis …………",
+        "options": [
+          "dix jours",
+          "treize jours",
+          "douze jours",
+          "quatorze jours"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 33,
+        "questionText": "Que fait le père de Kwame en France ? …………….",
+        "options": [
+          "il va voir le médecin",
+          "il est en vacances",
+          "il achète des médicaments",
+          "il fait des courses"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 34,
+        "questionText": "Combien coûtent les vingt comprimés ?",
+        "options": [
+          "Quarante mille cedis",
+          "Trente mille cedis",
+          "vingt mille cedis",
+          "Quatorze mille cedis"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 35,
+        "questionText": "Après les cours Kwame va …………..",
+        "options": [
+          "à la pharmacie",
+          "chez Tonton",
+          "à la maison",
+          "à l’hôpital"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 7",
+    "year": "1999"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 36,
+        "questionText": "‘On frappe à la porte’ Cela veut dire que ………est à la porte.",
+        "options": [
+          "personne",
+          "maman",
+          "quelqu’un",
+          "Papa"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 37,
+        "questionText": "C’est ………….des enfants qui arrive.",
+        "options": [
+          "le frère",
+          "l’oncle",
+          "père",
+          "l’aime"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 38,
+        "questionText": "Kwame est ………. quand Tonton arrive.",
+        "options": [
+          "fâché",
+          "malade",
+          "content",
+          "bavard"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 39,
+        "questionText": "A la fin de l’histoire, il semble que Yaa……..",
+        "options": [
+          "n’es plus malade",
+          "n’est pas contente",
+          "n’est pas en vacances",
+          "est au lit"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      },
+      {
+        "questionNumber": 40,
+        "questionText": "Le meilleur titre pour cette histoire c’est …………",
+        "options": [
+          "un jour de congé",
+          "un père heureux",
+          "une bonne surprise",
+          "une fille courageuse"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": null
+      }
+    ],
+    "context": "PART I - Part 8",
+    "year": "1999"
+  }
+]

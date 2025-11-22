@@ -1,0 +1,141 @@
+[
+  {
+    "passage": null,
+    "questions": [],
+    "context": "PART II",
+    "year": "2016"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 21,
+        "questionText": "Qu’est-ce qui se passe en août ?",
+        "options": [
+          "Le train arrive à la gare.",
+          "Les écoliers vont en vacances.",
+          "Ahmed et son ami ferment les écoles.",
+          "Le train de Huni-Valley va à Kumasi."
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 22,
+        "questionText": "La destination des deux amis est …………",
+        "options": [
+          "Huni-Valley",
+          "Kumasi",
+          "Akwaaba",
+          "Asafo"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 23,
+        "questionText": "Les deux amis ont l’intention de voyager par …………….",
+        "options": [
+          "la route",
+          "l’air",
+          "le chemin de fer",
+          "l’eau"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 24,
+        "questionText": "Selon le texte, le train partira dans …………..minutes.",
+        "options": [
+          "vingt",
+          "trente",
+          "quinze",
+          "quarante"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 25,
+        "questionText": "Pour assurer leurs places dans le train, ils ont acheté des …………",
+        "options": [
+          "billets",
+          "boissons",
+          "beignets",
+          "poulets"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 26,
+        "questionText": "– Pourquoi entrent-ils dans le restaurant ?– Pour………………………………",
+        "options": [
+          "regarder le train",
+          "manger quelque chose",
+          "prendre le train",
+          "acheter des billets"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 27,
+        "questionText": "Ils n’entendent pas l’annonce du départ parce qu’ils……………..",
+        "options": [
+          "bavardent",
+          "boivent",
+          "dorment",
+          "se lèvent"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 28,
+        "questionText": "Qu’est-ce qu’ils prennent au restaurant ?",
+        "options": [
+          "Des gâteaux",
+          "Du boisson",
+          "Des beignets",
+          "Du riz"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 29,
+        "questionText": "– Pourquoi ont-ils finalement décidé de prendre une voiture ?– Parce que le train ………………",
+        "options": [
+          "est en panne",
+          "est déjà parti",
+          "n’est pas encore plein",
+          "n’est pas encore arrive"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 30,
+        "questionText": "A la fin du passage, les deux amis sont ……………",
+        "options": [
+          "contents",
+          "déçus",
+          "satisfaits",
+          "malades"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      }
+    ],
+    "context": "PART III",
+    "year": "2016"
+  },
+  {
+    "passage": null,
+    "questions": [],
+    "context": "PART I",
+    "year": "2016"
+  }
+]

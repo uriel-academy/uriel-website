@@ -1,0 +1,141 @@
+[
+  {
+    "passage": null,
+    "questions": [],
+    "context": "PART II",
+    "year": "2011"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 21,
+        "questionText": "A quelle heure est-ce que le cours de français commence ? - Le cours de français commence à …………heures.",
+        "options": [
+          "8",
+          "9",
+          "10",
+          "11"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 22,
+        "questionText": "Le nom du professeur est …………..",
+        "options": [
+          "Achana",
+          "Sarfo",
+          "Madame Ampaafo",
+          "Monsieur Ampaafo"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 23,
+        "questionText": "Le professeur entre dans la classe …………",
+        "options": [
+          "avant l’heure",
+          "en avance",
+          "en retard",
+          "à l’heure"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 24,
+        "questionText": "‘…………vos livres’ dit le professeur quand elle entre en classe.",
+        "options": [
+          "Cachez",
+          "Ouvrez",
+          "Fermez",
+          "Cherchez"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 25,
+        "questionText": "Quelles sont sur les papiers que le professeur distribue aux élèves ?",
+        "options": [
+          "De bonnes notes",
+          "Des réponses",
+          "Des questions",
+          "Des histoires"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 26,
+        "questionText": "Tous les élèves écoutent attentivement ………..Sarfo et Achana.",
+        "options": [
+          "exceptés",
+          "y compris",
+          "comme",
+          "même"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 27,
+        "questionText": "L’histoire est ………….",
+        "options": [
+          "drôle",
+          "triste",
+          "ennuyeuse",
+          "intéressante"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 28,
+        "questionText": "Sarfo et Achana ne font pas attention. Ils ………..",
+        "options": [
+          "jouent",
+          "parlent",
+          "dorment",
+          "mangent"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 29,
+        "questionText": "Pourquoi Sarfo et Achana sont tristes ? - Parce qu’ils ont ……",
+        "options": [
+          "échoué",
+          "réussit",
+          "écouté",
+          "lu"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 30,
+        "questionText": "A la fin, Sarfo et Achana ………",
+        "options": [
+          "jouent",
+          "pleurent",
+          "sortent",
+          "bavardent"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      }
+    ],
+    "context": "PART III",
+    "year": "2011"
+  },
+  {
+    "passage": null,
+    "questions": [],
+    "context": "PART I",
+    "year": "2011"
+  }
+]

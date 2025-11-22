@@ -1,0 +1,129 @@
+[
+  {
+    "passage": null,
+    "questions": [],
+    "context": "PART II",
+    "year": "2015"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 21,
+        "questionText": "Karim se réveille………………",
+        "options": [
+          "très tard",
+          "de bonne heure",
+          "à la tombée du soleil",
+          "quand le petit déjeuner est prêt"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 22,
+        "questionText": "Pourquoi prend-il de l’eau chaude ?",
+        "options": [
+          "Parce qu’il a soif",
+          "Parce qu’il est sérieux",
+          "Parce qu’il est malade",
+          "Parce qu’il a faim"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 23,
+        "questionText": "Karim prend son petit déjeuner………………",
+        "options": [
+          "avant d’aller au champ",
+          "à son arrivée au champ",
+          "quand il a mal à la gorge",
+          "s’il veut aller se coucher"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 24,
+        "questionText": "Au champ, le cultivateur………………….les herbes",
+        "options": [
+          "enlève",
+          "plante",
+          "brule",
+          "mange"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 25,
+        "questionText": "Selon le texte, Karim cultive la terre avec ………………",
+        "options": [
+          "un coupe-coupe",
+          "une houe",
+          "un hameçon",
+          "une pioche"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 27,
+        "questionText": "Karim fait la sieste …………..",
+        "options": [
+          "pendant trente minutes",
+          "pendant deux heures",
+          "le matin",
+          "le soir"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 28,
+        "questionText": "Qu’est-ce qu’il fait âpres le repos ?",
+        "options": [
+          "Il prend son déjeuner",
+          "Il rentre chez lui",
+          "Il boit de l’eau",
+          "Il arrache du manioc"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 29,
+        "questionText": "Quand est-ce qu’il rentre chez lui ?",
+        "options": [
+          "Le matin",
+          "Le soir",
+          "Vers midi",
+          "Vers 2 heures"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 30,
+        "questionText": "A la fin du jour, Karim quitte son champ fatigué et …………….",
+        "options": [
+          "satisfait",
+          "malade",
+          "en colère",
+          "mecontent"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      }
+    ],
+    "context": "PART III",
+    "year": "2015"
+  },
+  {
+    "passage": null,
+    "questions": [],
+    "context": "PART I",
+    "year": "2015"
+  }
+]

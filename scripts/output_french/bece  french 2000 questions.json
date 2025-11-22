@@ -1,1042 +1,526 @@
 [
   {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 1,
-    "questionText": "Pendant la récréation, les élèves sortent ………….classe",
-    "options": [
-      "de",
-      "du",
-      "de la",
-      "d’"
-    ],
-    "displayOptions": [
-      "A. de",
-      "B. du",
-      "C. de la",
-      "D. d’"
-    ],
-    "correctAnswer": "A",
     "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.629Z"
-    }
+    "questions": [
+      {
+        "questionNumber": 1,
+        "questionText": "Pendant la récréation, les élèves sortent ………….classe",
+        "options": [
+          "de",
+          "du",
+          "de la",
+          "d’"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 2,
+        "questionText": "Papa et Maman …………beaucoup.",
+        "options": [
+          "s’aimait",
+          "s’aime",
+          "s’aiment",
+          "s’aimer"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 3,
+        "questionText": "Où est la robe de …………sœur ?",
+        "options": [
+          "mon",
+          "ma",
+          "son",
+          "ses"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 4,
+        "questionText": "Dans ………….magasin de Papa il y a beaucoup de choses.",
+        "options": [
+          "la",
+          "le",
+          "de",
+          "du"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 5,
+        "questionText": "Le samedi les paysans vont …………..champ.",
+        "options": [
+          "a",
+          "aux",
+          "au",
+          "en"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      }
+    ],
+    "context": "PART I - Part 1",
+    "year": "2000"
   },
   {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 2,
-    "questionText": "Papa et Maman …………beaucoup.",
-    "options": [
-      "s’aimait",
-      "s’aime",
-      "s’aiment",
-      "s’aimer"
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 6,
+        "questionText": "Kofi et Ama ………….de bons amis",
+        "options": [
+          "sommes",
+          "es",
+          "êtes",
+          "sont"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 7,
+        "questionText": "Dis-moi à …………… heure arrive le bus.",
+        "options": [
+          "quel",
+          "la quelle",
+          "quelle",
+          "quelles"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 8,
+        "questionText": "La table est cassée. Il faut ……………réparer.",
+        "options": [
+          "la",
+          "le",
+          "l’",
+          "lui"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 9,
+        "questionText": "L’enfant ……………à l’école de bonne heure.",
+        "options": [
+          "arriver",
+          "arrivent",
+          "arrives",
+          "arrive"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 10,
+        "questionText": "…………..eau est nécessaire à la vie",
+        "options": [
+          "la",
+          "D’",
+          "L’",
+          "De l’"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      }
     ],
-    "displayOptions": [
-      "A. s’aimait",
-      "B. s’aime",
-      "C. s’aiment",
-      "D. s’aimer"
-    ],
-    "correctAnswer": "C",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.629Z"
-    }
+    "context": "PART I - Part 2",
+    "year": "2000"
   },
   {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 3,
-    "questionText": "Où est la robe de …………sœur ?",
-    "options": [
-      "mon",
-      "ma",
-      "son",
-      "ses"
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 11,
+        "questionText": "Ces deux filles se …………..beaucoup.",
+        "options": [
+          "ressemble",
+          "ressemblons",
+          "ressemblez",
+          "ressemblent"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 12,
+        "questionText": "Marie doit …………… son travail aujourd’hui.",
+        "options": [
+          "faites",
+          "fais",
+          "fait",
+          "faire"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 13,
+        "questionText": "Maman dit ; ‘Alice prends ………..panier pour faire des courses.’",
+        "options": [
+          "ce",
+          "cet",
+          "cette",
+          "ces"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 14,
+        "questionText": "En cette saison, les arbres ont …………..belles couleurs.",
+        "options": [
+          "du",
+          "des",
+          "de",
+          "d’"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 15,
+        "questionText": "Voici la maison ………..je suis né.",
+        "options": [
+          "quel",
+          "que",
+          "quelle",
+          "où"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      }
     ],
-    "displayOptions": [
-      "A. mon",
-      "B. ma",
-      "C. son",
-      "D. ses"
-    ],
-    "correctAnswer": "D",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
+    "context": "PART I - Part 3",
+    "year": "2000"
   },
   {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 4,
-    "questionText": "Dans ………….magasin de Papa il y a beaucoup de choses.",
-    "options": [
-      "la",
-      "le",
-      "de",
-      "du"
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 16,
+        "questionText": "Dans ……………..livre il y a beaucoup de photos",
+        "options": [
+          "cet",
+          "cette",
+          "ce",
+          "ces"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 17,
+        "questionText": "Papa construit une …………maison",
+        "options": [
+          "bel",
+          "belle",
+          "bels",
+          "belles"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 18,
+        "questionText": "Elle voit le médecin une fois ……….mois.",
+        "options": [
+          "par",
+          "le",
+          "en",
+          "dans"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 19,
+        "questionText": "Chacun à ……………….problèmes.",
+        "options": [
+          "le",
+          "son",
+          "ses",
+          "ce"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 20,
+        "questionText": "……………… lit un livre intéressant.",
+        "options": [
+          "Je",
+          "Vous",
+          "Tu",
+          "Il"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      }
     ],
-    "displayOptions": [
-      "A. la",
-      "B. le",
-      "C. de",
-      "D. du"
-    ],
-    "correctAnswer": "A",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
+    "context": "PART I - Part 4",
+    "year": "2000"
   },
   {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 5,
-    "questionText": "Le samedi les paysans vont …………..champ.",
-    "options": [
-      "a",
-      "aux",
-      "au",
-      "en"
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 21,
+        "questionText": "Le panier est …………..la table",
+        "options": [
+          "de",
+          "sur",
+          "à",
+          "en"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 22,
+        "questionText": "Le …………… garçons ne va pas à l’école.",
+        "options": [
+          "petits",
+          "petit",
+          "petite",
+          "petites"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 23,
+        "questionText": "Le professeur parle ……………élèves.",
+        "options": [
+          "à",
+          "avec",
+          "à l’",
+          "aux"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 24,
+        "questionText": "Où est la veste …………..l’homme",
+        "options": [
+          "de",
+          "du",
+          "à",
+          "pour"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 25,
+        "questionText": "Il fait …………….soleil aujourd’hui",
+        "options": [
+          "de",
+          "du",
+          "des",
+          "le"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      }
     ],
-    "displayOptions": [
-      "A. a",
-      "B. aux",
-      "C. au",
-      "D. en"
-    ],
-    "correctAnswer": "A",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
+    "context": "PART I - Part 5",
+    "year": "2000"
   },
   {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 6,
-    "questionText": "Kofi et Ama ………….de bons amis",
-    "options": [
-      "sommes",
-      "es",
-      "êtes",
-      "sont"
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 26,
+        "questionText": "Abedi Pele a marqué deux ……..pendant le match.",
+        "options": [
+          "notes",
+          "points",
+          "buts",
+          "fautes"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 27,
+        "questionText": "Le 25 décembre on fête ………….",
+        "options": [
+          "les Pâques",
+          "le Noël",
+          "le Ramadan",
+          "le Carnaval"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 28,
+        "questionText": "Combien ……………….pommes avez-vous ?",
+        "options": [
+          "des",
+          "du",
+          "de",
+          "d’"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 29,
+        "questionText": "L’élève achète un livre dans une …………",
+        "options": [
+          "bibliothèque",
+          "librairie",
+          "boutique",
+          "pharmacie"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 30,
+        "questionText": "Donne-moi une douzaine …………œufs.",
+        "options": [
+          "des",
+          "d’",
+          "de",
+          "du\n\nRead the passage below carefully and answer the questions that follow by shading on your answer sheet the\n\nletter which corresponds with the correct answer\n\nAujourd’hui c’est le 6 mai 1998 et nous sommes en vacances. Maman fête  son quarantième\n\nanniversaire. Alors je vais en ville avec l’un de mes camarades pour lui acheter un cadeau.\n\nEn ville, Kojo m’accompagne dans le plus grand magasin du quartier. Là on trouve beaucoup de\n\nbelles choses : des tissus de différentes couleurs, des robes, des frigidaires, des produits alimentaires, des\n\nboissons, des chaussures et des bouquets de fleurs.\n\nNous nous promenons pendant longtemps dans le magasin. Cela nous permet de tout voir.\n\nFinalement, je décide d’acheter un bouquet de fleurs pour ma mère. Ce sont de jolies roses et d’autres\n\nfleurs. ‘Celles-ci sont bien présentables’, dit Kojo.\n\nJe prends l’argent de ma poche et je paie la commerçante. Quand nous arrivons à la maison,\n\nMaman nous rencontre à la porte. Je lui donne le bouquet de fleurs et lui souhaite ‘Bon Anniversaire’\n\nElle est étonnée et elle nous remercie pour notre gentillesse."
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      }
     ],
-    "displayOptions": [
-      "A. sommes",
-      "B. es",
-      "C. êtes",
-      "D. sont"
-    ],
-    "correctAnswer": "D",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
+    "context": "PART I - Part 6",
+    "year": "2000"
   },
   {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 7,
-    "questionText": "Dis-moi à …………… heure arrive le bus.",
-    "options": [
-      "quel",
-      "la quelle",
-      "quelle",
-      "quelles"
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 31,
+        "questionText": "Maman a ………………ans aujourd’hui.",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 32,
+        "questionText": "Le narrateur va en ville pour…………..",
+        "options": [
+          "se promener",
+          "voir son samarade",
+          "chercher un cadeau",
+          "regarder de belles choses."
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 33,
+        "questionText": "Avec qui v",
+        "options": [
+          "t-il en ville ? Avec ……….",
+          "son ami",
+          "son frère",
+          "une fille",
+          "une commercante"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 34,
+        "questionText": "Les garçons achètent le bouquet………….",
+        "options": [
+          "dans la rue",
+          "au marché",
+          "dans une boutique",
+          "pres de la maison"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 35,
+        "questionText": "Dans le magasin, il y a ………..",
+        "options": [
+          "des fleurs et des tableaux",
+          "des tissus et des chaussures",
+          "des robes et des bijoux",
+          "des frigidaires et des televisions"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      }
     ],
-    "displayOptions": [
-      "A. quel",
-      "B. la quelle",
-      "C. quelle",
-      "D. quelles"
-    ],
-    "correctAnswer": "B",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
+    "context": "PART I - Part 7",
+    "year": "2000"
   },
   {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 8,
-    "questionText": "La table est cassée. Il faut ……………réparer.",
-    "options": [
-      "la",
-      "le",
-      "l’",
-      "lui"
-    ],
-    "displayOptions": [
-      "A. la",
-      "B. le",
-      "C. l’",
-      "D. lui"
-    ],
-    "correctAnswer": "A",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 9,
-    "questionText": "L’enfant ……………à l’école de bonne heure.",
-    "options": [
-      "arriver",
-      "arrivent",
-      "arrives",
-      "arrive"
-    ],
-    "displayOptions": [
-      "A. arriver",
-      "B. arrivent",
-      "C. arrives",
-      "D. arrive"
-    ],
-    "correctAnswer": "B",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 10,
-    "questionText": "…………..eau est nécessaire à la vie",
-    "options": [
-      "la",
-      "D’",
-      "L’",
-      "De l’"
-    ],
-    "displayOptions": [
-      "A. la",
-      "B. D’",
-      "C. L’",
-      "D. De l’"
-    ],
-    "correctAnswer": "C",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 11,
-    "questionText": "Ces deux filles se …………..beaucoup.",
-    "options": [
-      "ressemble",
-      "ressemblons",
-      "ressemblez",
-      "ressemblent"
-    ],
-    "displayOptions": [
-      "A. ressemble",
-      "B. ressemblons",
-      "C. ressemblez",
-      "D. ressemblent"
-    ],
-    "correctAnswer": "C",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 12,
-    "questionText": "Marie doit …………… son travail aujourd’hui.",
-    "options": [
-      "faites",
-      "fais",
-      "fait",
-      "faire"
-    ],
-    "displayOptions": [
-      "A. faites",
-      "B. fais",
-      "C. fait",
-      "D. faire"
-    ],
-    "correctAnswer": "D",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 13,
-    "questionText": "Maman dit ; ‘Alice prends ………..panier pour faire des courses.’",
-    "options": [
-      "ce",
-      "cet",
-      "cette",
-      "ces"
-    ],
-    "displayOptions": [
-      "A. ce",
-      "B. cet",
-      "C. cette",
-      "D. ces"
-    ],
-    "correctAnswer": "C",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 14,
-    "questionText": "En cette saison, les arbres ont …………..belles couleurs.",
-    "options": [
-      "du",
-      "des",
-      "de",
-      "d’"
-    ],
-    "displayOptions": [
-      "A. du",
-      "B. des",
-      "C. de",
-      "D. d’"
-    ],
-    "correctAnswer": "B",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 15,
-    "questionText": "Voici la maison ………..je suis né.",
-    "options": [
-      "quel",
-      "que",
-      "quelle",
-      "où"
-    ],
-    "displayOptions": [
-      "A. quel",
-      "B. que",
-      "C. quelle",
-      "D. où"
-    ],
-    "correctAnswer": "D",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 16,
-    "questionText": "Dans ……………..livre il y a beaucoup de photos",
-    "options": [
-      "cet",
-      "cette",
-      "ce",
-      "ces"
-    ],
-    "displayOptions": [
-      "A. cet",
-      "B. cette",
-      "C. ce",
-      "D. ces"
-    ],
-    "correctAnswer": "B",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 17,
-    "questionText": "Papa construit une …………maison",
-    "options": [
-      "bel",
-      "belle",
-      "bels",
-      "belles"
-    ],
-    "displayOptions": [
-      "A. bel",
-      "B. belle",
-      "C. bels",
-      "D. belles"
-    ],
-    "correctAnswer": "A",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 18,
-    "questionText": "Elle voit le médecin une fois ……….mois.",
-    "options": [
-      "par",
-      "le",
-      "en",
-      "dans"
-    ],
-    "displayOptions": [
-      "A. par",
-      "B. le",
-      "C. en",
-      "D. dans"
-    ],
-    "correctAnswer": "C",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 19,
-    "questionText": "Chacun à ……………….problèmes.",
-    "options": [
-      "le",
-      "son",
-      "ses",
-      "ce"
-    ],
-    "displayOptions": [
-      "A. le",
-      "B. son",
-      "C. ses",
-      "D. ce"
-    ],
-    "correctAnswer": "A",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 20,
-    "questionText": "……………… lit un livre intéressant.",
-    "options": [
-      "Je",
-      "Vous",
-      "Tu",
-      "Il"
-    ],
-    "displayOptions": [
-      "A. Je",
-      "B. Vous",
-      "C. Tu",
-      "D. Il"
-    ],
-    "correctAnswer": "C",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 21,
-    "questionText": "Le panier est …………..la table",
-    "options": [
-      "de",
-      "sur",
-      "à",
-      "en"
-    ],
-    "displayOptions": [
-      "A. de",
-      "B. sur",
-      "C. à",
-      "D. en"
-    ],
-    "correctAnswer": "B",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 22,
-    "questionText": "Le …………… garçons ne va pas à l’école.",
-    "options": [
-      "petits",
-      "petit",
-      "petite",
-      "petites"
-    ],
-    "displayOptions": [
-      "A. petits",
-      "B. petit",
-      "C. petite",
-      "D. petites"
-    ],
-    "correctAnswer": "C",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 23,
-    "questionText": "Le professeur parle ……………élèves.",
-    "options": [
-      "à",
-      "avec",
-      "à l’",
-      "aux"
-    ],
-    "displayOptions": [
-      "A. à",
-      "B. avec",
-      "C. à l’",
-      "D. aux"
-    ],
-    "correctAnswer": "A",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 24,
-    "questionText": "Où est la veste …………..l’homme",
-    "options": [
-      "de",
-      "du",
-      "à",
-      "pour"
-    ],
-    "displayOptions": [
-      "A. de",
-      "B. du",
-      "C. à",
-      "D. pour"
-    ],
-    "correctAnswer": "B",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 25,
-    "questionText": "Il fait …………….soleil aujourd’hui",
-    "options": [
-      "de",
-      "du",
-      "des",
-      "le"
-    ],
-    "displayOptions": [
-      "A. de",
-      "B. du",
-      "C. des",
-      "D. le"
-    ],
-    "correctAnswer": "B",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 26,
-    "questionText": "Abedi Pele a marqué deux ……..pendant le match.",
-    "options": [
-      "notes",
-      "points",
-      "buts",
-      "fautes"
-    ],
-    "displayOptions": [
-      "A. notes",
-      "B. points",
-      "C. buts",
-      "D. fautes"
-    ],
-    "correctAnswer": "D",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 27,
-    "questionText": "Le 25 décembre on fête  ………….",
-    "options": [
-      "les Pâques",
-      "le Noël",
-      "le Ramadan",
-      "le Carnaval"
-    ],
-    "displayOptions": [
-      "A. les Pâques",
-      "B. le Noël",
-      "C. le Ramadan",
-      "D. le Carnaval"
-    ],
-    "correctAnswer": "B",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 28,
-    "questionText": "Combien ……………….pommes avez-vous ?",
-    "options": [
-      "des",
-      "du",
-      "de",
-      "d’"
-    ],
-    "displayOptions": [
-      "A. des",
-      "B. du",
-      "C. de",
-      "D. d’"
-    ],
-    "correctAnswer": "B",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 29,
-    "questionText": "L’élève achète un livre dans une …………",
-    "options": [
-      "bibliothèque",
-      "librairie",
-      "boutique",
-      "pharmacie"
-    ],
-    "displayOptions": [
-      "A. bibliothèque",
-      "B. librairie",
-      "C. boutique",
-      "D. pharmacie"
-    ],
-    "correctAnswer": "B",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 30,
-    "questionText": "Donne-moi une douzaine …………œufs. Read the passage below carefully and answer the questions that follow by shading on your answer sheet the letter which corresponds with the correct answer Aujourd’hui c’est le 6 mai 1998 et nous sommes en vacances. Maman fête  son quarantième anniversaire. Alors je vais en ville avec l’un de mes camarades pour lui acheter un cadeau. En ville, Kojo m’accompagne dans le plus grand magasin du quartier. Là on trouve beaucoup de belles choses : des tissus de différentes couleurs, des robes, des frigidaires, des produits alimentaires, des boissons, des chaussures et des bouquets de fleurs. Nous nous promenons pendant longtemps dans le magasin. Cela nous permet de tout voir. Finalement, je décide d’acheter un bouquet de fleurs pour ma mère. Ce sont de jolies roses et d’autres fleurs. ‘Celles-ci sont bien présentables’, dit Kojo. Je prends l’argent de ma poche et je paie la commerçante. Quand nous arrivons à la maison, Maman nous rencontre à la porte. Je lui donne le bouquet de fleurs et lui souhaite ‘Bon Anniversaire’ Elle est étonnée et elle nous remercie pour notre gentillesse.",
-    "options": [
-      "des",
-      "d’",
-      "de",
-      "du"
-    ],
-    "displayOptions": [
-      "A. des",
-      "B. d’",
-      "C. de",
-      "D. du"
-    ],
-    "correctAnswer": "C",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 31,
-    "questionText": "Maman a ………………ans aujourd’hui.",
-    "options": [
-      "40",
-      "50",
-      "60",
-      "70"
-    ],
-    "displayOptions": [
-      "A. 40",
-      "B. 50",
-      "C. 60",
-      "D. 70"
-    ],
-    "correctAnswer": "C",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 32,
-    "questionText": "Le narrateur va en ville pour…………..",
-    "options": [
-      "se promener",
-      "voir son samarade",
-      "chercher un cadeau",
-      "regarder de belles choses."
-    ],
-    "displayOptions": [
-      "A. se promener",
-      "B. voir son samarade",
-      "C. chercher un cadeau",
-      "D. regarder de belles choses."
-    ],
-    "correctAnswer": "C",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 33,
-    "questionText": "Avec qui va-t-il en ville ? Avec ……….",
-    "options": [
-      "son ami",
-      "son frère",
-      "une fille",
-      "une commercante"
-    ],
-    "displayOptions": [
-      "A. son ami",
-      "B. son frère",
-      "C. une fille",
-      "D. une commercante"
-    ],
-    "correctAnswer": "A",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 34,
-    "questionText": "Les garçons achètent le bouquet………….",
-    "options": [
-      "dans la rue",
-      "au marché",
-      "dans une boutique",
-      "pres de la maison"
-    ],
-    "displayOptions": [
-      "A. dans la rue",
-      "B. au marché",
-      "C. dans une boutique",
-      "D. pres de la maison"
-    ],
-    "correctAnswer": "B",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 35,
-    "questionText": "Dans le magasin, il y a ………..",
-    "options": [
-      "des fleurs et des tableaux",
-      "des tissus et des chaussures",
-      "des robes et des bijoux",
-      "des frigidaires et des televisions"
-    ],
-    "displayOptions": [
-      "A. des fleurs et des tableaux",
-      "B. des tissus et des chaussures",
-      "C. des robes et des bijoux",
-      "D. des frigidaires et des televisions"
-    ],
-    "correctAnswer": "D",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 36,
-    "questionText": "‘Pourquoi les garçons se promenent-ils dans le magasin ? Ils se promenent pour.",
-    "options": [
-      "chercher la mère",
-      "mieux voir les marchandises",
-      "faire passer le temps",
-      "chercher un ami"
-    ],
-    "displayOptions": [
-      "A. chercher la mère",
-      "B. mieux voir les marchandises",
-      "C. faire passer le temps",
-      "D. chercher un ami"
-    ],
-    "correctAnswer": "B",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 37,
-    "questionText": "L’auteur décide d’acherter …………..",
-    "options": [
-      "des chaussures",
-      "des robes",
-      "des frigidaires",
-      "des fleurs"
-    ],
-    "displayOptions": [
-      "A. des chaussures",
-      "B. des robes",
-      "C. des frigidaires",
-      "D. des fleurs"
-    ],
-    "correctAnswer": "A",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 38,
-    "questionText": "Qui recoit les fleurs ?",
-    "options": [
-      "Kojo",
-      "Une fille",
-      "Maman",
-      "La commercante"
-    ],
-    "displayOptions": [
-      "A. Kojo",
-      "B. Une fille",
-      "C. Maman",
-      "D. La commercante"
-    ],
-    "correctAnswer": "D",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 39,
-    "questionText": "Quelle est la réaction de Maman ? Elle est …………",
-    "options": [
-      "triste",
-      "gentille",
-      "surprise",
-      "fâchée"
-    ],
-    "displayOptions": [
-      "A. triste",
-      "B. gentille",
-      "C. surprise",
-      "D. fâchée"
-    ],
-    "correctAnswer": "B",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2000",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 40,
-    "questionText": "Quel titre peut-on donner à ce passage ?",
-    "options": [
-      "Un bouquet de fleurs",
-      "Une surprise pour Maman",
-      "Une promenade",
-      "Les deux amis"
-    ],
-    "displayOptions": [
-      "A. Un bouquet de fleurs",
-      "B. Une surprise pour Maman",
-      "C. Une promenade",
-      "D. Les deux amis"
-    ],
-    "correctAnswer": "B",
-    "passage": "For each question, choose from the options lettered A to D the one that is mostsuitable to complete the\n\nsentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2000 questions.docx",
-      "importedAt": "2025-11-21T09:25:03.630Z"
-    }
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 36,
+        "questionText": "‘Pourquoi les garçons se promenent-ils dans le magasin ? Ils se promenent pour.",
+        "options": [
+          "chercher la mère",
+          "mieux voir les marchandises",
+          "faire passer le temps",
+          "chercher un ami"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 37,
+        "questionText": "L’auteur décide d’acherter …………..",
+        "options": [
+          "des chaussures",
+          "des robes",
+          "des frigidaires",
+          "des fleurs"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 38,
+        "questionText": "Qui recoit les fleurs ?",
+        "options": [
+          "Kojo",
+          "Une fille",
+          "Maman",
+          "La commercante"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 39,
+        "questionText": "Quelle est la réaction de Maman ? Elle est …………",
+        "options": [
+          "triste",
+          "gentille",
+          "surprise",
+          "fâchée\n\n40. Quel titre peut-on donner à ce passage ?",
+          "Un bouquet de fleurs",
+          "Une surprise pour Maman",
+          "Une promenade",
+          "Les deux amis"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      }
+    ],
+    "context": "PART I - Part 8",
+    "year": "2000"
   }
 ]

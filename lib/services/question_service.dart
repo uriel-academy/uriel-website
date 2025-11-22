@@ -10,6 +10,17 @@ class QuestionService {
   // Collections
   CollectionReference get _questionsCollection => _firestore.collection('questions');
 
+  /// Get the appropriate collection for a subject
+  CollectionReference _getCollectionForSubject(dynamic subject) {
+    if (subject != null) {
+      String subjectStr = subject is Subject ? _getSubjectString(subject) : subject.toString();
+      if (subjectStr == 'french') {
+        return _firestore.collection('french_questions');
+      }
+    }
+    return _questionsCollection;
+  }
+
   /// Add a single question
   Future<void> addQuestion(Question question) async {
     try {
@@ -44,8 +55,11 @@ class QuestionService {
     bool activeOnly = true,
   }) async {
     try {
+      // Determine which collection to use based on subject
+      CollectionReference collection = _getCollectionForSubject(subject);
+      
       // Try to fetch from Firestore first
-      Query query = _questionsCollection;
+      Query query = collection;
       
       if (examType != null) {
         String examTypeStr = examType is ExamType ? _getExamTypeString(examType) : examType.toString();
@@ -158,7 +172,10 @@ class QuestionService {
     String? triviaCategory, // New: filter by trivia category
   }) async {
     try {
-      Query query = _questionsCollection;
+      // Determine which collection to use based on subject
+      CollectionReference collection = _getCollectionForSubject(subject);
+      
+      Query query = collection;
       
       String? examTypeStr;
       String? subjectStr;
@@ -372,7 +389,10 @@ class QuestionService {
     bool activeOnly = true,
   }) async {
     try {
-      Query query = _questionsCollection;
+      // Determine which collection to use based on subject
+      CollectionReference collection = _getCollectionForSubject(subject);
+      
+      Query query = collection;
       
       if (examType != null) {
         String examTypeStr = examType is ExamType ? _getExamTypeString(examType) : examType.toString();

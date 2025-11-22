@@ -1,444 +1,230 @@
 [
   {
-    "subject": "french",
-    "year": "2015",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 1,
-    "questionText": "Regarde! Il commence …………..pleuvoir.",
-    "options": [
-      "à",
-      "dans",
-      "en",
-      "pour"
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 20,
+        "questionText": "Le professeur de géographie ………….avec la carte du Ghan",
+        "options": [
+          "11. beurre           lait                         pain                           sucre12. directeur\t  mécanicien            docteur                 \tconducteur13. son bras  \t  sa cravate          \tson stylo              \tsa poche14. l’atelier     \tle bureau           \tla cuisine              \tle garage15. genoux      \toreilles               \tpieds                        yeux16. la cour       \tles fleurs            \tla piste                     les oiseaux17. dormir           manger              \tsortir                    \ttravailler18. en               \tau                           de                          \tdu19. en foulard     une chemise          un pantalon              une jupe20. enseigne        conduit              \tparle                      \tecrit"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      }
     ],
-    "displayOptions": [
-      "A. à",
-      "B. dans",
-      "C. en",
-      "D. pour"
-    ],
-    "correctAnswer": "A",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2015  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.306Z"
-    }
+    "context": "PART II",
+    "year": "2015"
   },
   {
-    "subject": "french",
-    "year": "2015",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 2,
-    "questionText": "Nos amis vont chercher …………………..chambre",
-    "options": [
-      "un",
-      "le",
-      "de",
-      "une"
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 21,
+        "questionText": "Karim se réveille………………",
+        "options": [
+          "très tard",
+          "de bonne heure",
+          "à la tombée du soleil",
+          "quand le petit déjeuner est prêt"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 22,
+        "questionText": "Pourquoi pren",
+        "options": [
+          "il de l’eau chaude ?",
+          "Parce qu’il a soif",
+          "Parce qu’il est sérieux",
+          "Parce qu’il est malade",
+          "Parce qu’il a faim"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 23,
+        "questionText": "Karim prend son petit déjeuner………………",
+        "options": [
+          "avant d’aller au champ",
+          "à son arrivée au champ",
+          "quand il a mal à la gorge",
+          "s’il veut aller se coucher"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 24,
+        "questionText": "Au champ, le cultivateur………………….les herbes",
+        "options": [
+          "enlève",
+          "plante",
+          "brule",
+          "mange"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 25,
+        "questionText": "Selon le texte, Karim cultive la terre avec ………………",
+        "options": [
+          "un coupe-coupe",
+          "une houe",
+          "un hameçon",
+          "une pioche"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 26,
+        "questionText": "– Pourquoi son corps est couvert de sueur ? ………..– Parce qu’il est ………………..",
+        "options": [
+          "paresseux",
+          "méchant",
+          "fâché",
+          "travailleur"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 27,
+        "questionText": "Karim fait la sieste …………..",
+        "options": [
+          "pendant trente minutes",
+          "pendant deux heures",
+          "le matin",
+          "le soir"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 28,
+        "questionText": "Qu’est-ce qu’il fait âpres le repos ?",
+        "options": [
+          "Il prend son déjeuner",
+          "Il rentre chez lui",
+          "Il boit de l’eau",
+          "Il arrache du manioc"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 29,
+        "questionText": "Quand est-ce qu’il rentre chez lui ?",
+        "options": [
+          "Le matin",
+          "Le soir",
+          "Vers midi",
+          "Vers 2 heures"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 30,
+        "questionText": "A la fin du jour, Karim quitte son champ fatigué et …………….",
+        "options": [
+          "satisfait",
+          "malade",
+          "en colère",
+          "mecontent"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      }
     ],
-    "displayOptions": [
-      "A. un",
-      "B. le",
-      "C. de",
-      "D. une"
-    ],
-    "correctAnswer": "C",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2015  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.306Z"
-    }
+    "context": "PART III",
+    "year": "2015"
   },
   {
-    "subject": "french",
-    "year": "2015",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 3,
-    "questionText": "Au collège “All Girls”, les placards sont ……………………",
-    "options": [
-      "arranges",
-      "arrangés",
-      "arranger",
-      "arrangez"
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 31,
+        "questionText": "– Betifi. C’est un beau village qui est au bord d’une –",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 32,
+        "questionText": "– . Il y a beaucoup –",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 33,
+        "questionText": "– arbres. Les habitants de ce village sont cultivateurs. Ils –",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 34,
+        "questionText": "",
+        "options": [
+          "–",
+          "dans",
+          "de",
+          "–"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 35,
+        "questionText": "– maisons en banco.Le matin, les habitants vont –",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 36,
+        "questionText": "– et cultivent le manioc et le mais. Tout le monde est content dans le village. Alors le village est –",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 37,
+        "questionText": "– . Les oiseaux –",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 38,
+        "questionText": "– sur des arbres et mangent des fruits. L’après-midi, les villageois retournent –",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 39,
+        "questionText": "– eux. Les hommes se lavent et les enfants jouent au football. Les femmes –",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 40,
+        "questionText": "– le repas du soir. Tout le monde mange bien.J’aime bien mon village.",
+        "options": [
+          "31. t’appelles   \t   m’appelle             s’appelle                  \tl’appelle32. pont                   rivière                  champ                     \tbateau33. d’                    \tdes                    \tde                            \tdu34. habitent         \ts’habillent        \tse lèvent                \ttravaillent35. petit                \tpetits                    petite                     \tpetites36. à l’école               à la maison      \tau champ               \tau marché37. isolé                 \tpauvre             \tpaisible                   \tmisérable38. chante             \tchantes                chantez                   \tchantent39. en                         vers                     chez                         \tavec40. prépare           \tprépares         \tpréparez                 \tpréparent"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      }
     ],
-    "displayOptions": [
-      "A. arranges",
-      "B. arrangés",
-      "C. arranger",
-      "D. arrangez"
-    ],
-    "correctAnswer": "D",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2015  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.306Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2015",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 4,
-    "questionText": "Madame Sassou a acheté des jouets pour ………………..enfant",
-    "options": [
-      "s’",
-      "sa",
-      "ses",
-      "son"
-    ],
-    "displayOptions": [
-      "A. s’",
-      "B. sa",
-      "C. ses",
-      "D. son"
-    ],
-    "correctAnswer": "A",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2015  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.306Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2015",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 5,
-    "questionText": "………………………est la date d’aujourd’hui ?",
-    "options": [
-      "Quel",
-      "Quelle",
-      "Quelles",
-      "Quels"
-    ],
-    "displayOptions": [
-      "A. Quel",
-      "B. Quelle",
-      "C. Quelles",
-      "D. Quels"
-    ],
-    "correctAnswer": "A",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2015  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.306Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2015",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 6,
-    "questionText": "Dans notre jardin, il y a de………………..fleurs",
-    "options": [
-      "beau",
-      "beaux",
-      "belle",
-      "belles"
-    ],
-    "displayOptions": [
-      "A. beau",
-      "B. beaux",
-      "C. belle",
-      "D. belles"
-    ],
-    "correctAnswer": "D",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2015  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.306Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2015",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 7,
-    "questionText": "– Qu’est-ce que ………………cherches ?– Mon stylo",
-    "options": [
-      "elle",
-      "je",
-      "tu",
-      "vous"
-    ],
-    "displayOptions": [
-      "A. elle",
-      "B. je",
-      "C. tu",
-      "D. vous"
-    ],
-    "correctAnswer": "B",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2015  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.306Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2015",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 8,
-    "questionText": "L’instituteur va ………………..les élèves paresseux.",
-    "options": [
-      "puni",
-      "punir",
-      "punis",
-      "punit"
-    ],
-    "displayOptions": [
-      "A. puni",
-      "B. punir",
-      "C. punis",
-      "D. punit"
-    ],
-    "correctAnswer": "A",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2015  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.306Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2015",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 9,
-    "questionText": "……………………de filles travaillent au nouveau restaurant ?",
-    "options": [
-      "Combien",
-      "Comment",
-      "Pourquoi",
-      "Qu’est-ce que"
-    ],
-    "displayOptions": [
-      "A. Combien",
-      "B. Comment",
-      "C. Pourquoi",
-      "D. Qu’est-ce que"
-    ],
-    "correctAnswer": "B",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2015  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.306Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2015",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 21,
-    "questionText": "Karim se réveille………………",
-    "options": [
-      "très tard",
-      "de bonne heure",
-      "à la tombée du soleil",
-      "quand le petit déjeuner est prêt"
-    ],
-    "displayOptions": [
-      "A. très tard",
-      "B. de bonne heure",
-      "C. à la tombée du soleil",
-      "D. quand le petit déjeuner est prêt"
-    ],
-    "correctAnswer": "B",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2015  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.306Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2015",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 22,
-    "questionText": "Pourquoi prend-il de l’eau chaude ?",
-    "options": [
-      "Parce qu’il a soif",
-      "Parce qu’il est sérieux",
-      "Parce qu’il est malade",
-      "Parce qu’il a faim"
-    ],
-    "displayOptions": [
-      "A. Parce qu’il a soif",
-      "B. Parce qu’il est sérieux",
-      "C. Parce qu’il est malade",
-      "D. Parce qu’il a faim"
-    ],
-    "correctAnswer": "C",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2015  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.306Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2015",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 23,
-    "questionText": "Karim prend son petit déjeuner………………",
-    "options": [
-      "avant d’aller au champ",
-      "à son arrivée au champ",
-      "quand il a mal à la gorge",
-      "s’il veut aller se coucher"
-    ],
-    "displayOptions": [
-      "A. avant d’aller au champ",
-      "B. à son arrivée au champ",
-      "C. quand il a mal à la gorge",
-      "D. s’il veut aller se coucher"
-    ],
-    "correctAnswer": "A",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2015  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.307Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2015",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 24,
-    "questionText": "Au champ, le cultivateur………………….les herbes",
-    "options": [
-      "enlève",
-      "plante",
-      "brule",
-      "mange"
-    ],
-    "displayOptions": [
-      "A. enlève",
-      "B. plante",
-      "C. brule",
-      "D. mange"
-    ],
-    "correctAnswer": "B",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2015  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.307Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2015",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 25,
-    "questionText": "Selon le texte, Karim cultive la terre avec ………………",
-    "options": [
-      "un coupe-coupe",
-      "une houe",
-      "un hameçon",
-      "une pioche"
-    ],
-    "displayOptions": [
-      "A. un coupe-coupe",
-      "B. une houe",
-      "C. un hameçon",
-      "D. une pioche"
-    ],
-    "correctAnswer": "B",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2015  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.307Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2015",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 27,
-    "questionText": "Karim fait la sieste …………..",
-    "options": [
-      "pendant trente minutes",
-      "pendant deux heures",
-      "le matin",
-      "le soir"
-    ],
-    "displayOptions": [
-      "A. pendant trente minutes",
-      "B. pendant deux heures",
-      "C. le matin",
-      "D. le soir"
-    ],
-    "correctAnswer": "B",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2015  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.307Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2015",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 28,
-    "questionText": "Qu’est-ce qu’il fait âpres le repos ?",
-    "options": [
-      "Il prend son déjeuner",
-      "Il rentre chez lui",
-      "Il boit de l’eau",
-      "Il arrache du manioc"
-    ],
-    "displayOptions": [
-      "A. Il prend son déjeuner",
-      "B. Il rentre chez lui",
-      "C. Il boit de l’eau",
-      "D. Il arrache du manioc"
-    ],
-    "correctAnswer": "B",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2015  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.307Z"
-    }
-  },
-  {
-    "subject": "french",
-    "year": "2015",
-    "examType": "bece",
-    "section": "COMPREHENSION",
-    "questionNumber": 29,
-    "questionText": "Quand est-ce qu’il rentre chez lui ?",
-    "options": [
-      "Le matin",
-      "Le soir",
-      "Vers midi",
-      "Vers 2 heures"
-    ],
-    "displayOptions": [
-      "A. Le matin",
-      "B. Le soir",
-      "C. Vers midi",
-      "D. Vers 2 heures"
-    ],
-    "correctAnswer": "B",
-    "passage": "For each question, choose from the options lettered A to D the one that is most suitable to complete the sentence given.",
-    "metadata": {
-      "sourceFile": "bece  french 2015  questions.docx",
-      "importedAt": "2025-11-21T09:25:07.307Z"
-    }
+    "context": "PART I",
+    "year": "2015"
   }
 ]

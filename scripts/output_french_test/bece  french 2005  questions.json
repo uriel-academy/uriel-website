@@ -1,0 +1,461 @@
+[
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 1,
+        "questionText": "en au à l’ à",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 2,
+        "questionText": "de à pour et",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 3,
+        "questionText": "important importants importante importantes",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 4,
+        "questionText": "leur vous te nous",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 5,
+        "questionText": "à au en à la",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 6,
+        "questionText": "sommes est sont êtes",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 7,
+        "questionText": "en la l’ y",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 8,
+        "questionText": "de des du d’",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 9,
+        "questionText": "faire fait faisons font",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 10,
+        "questionText": "Donc Toujours Ensuite Aussi For each question, choose from the options lettered A to D the one that is mostsuitable to complete the sentence given.",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 11,
+        "questionText": "Le stylo est sur ……….cahier.",
+        "options": [
+          "la",
+          "les",
+          "le",
+          "l’"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 12,
+        "questionText": "…………..homme est l’oncle de Kofi",
+        "options": [
+          "Ce",
+          "Cet",
+          "Cette",
+          "Ces"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 13,
+        "questionText": "Il y a beaucoup ………. élèves dans la classe",
+        "options": [
+          "de",
+          "d’",
+          "des",
+          "du"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 14,
+        "questionText": "Le bus …… à cinq heures du soir.",
+        "options": [
+          "arrive",
+          "arrivées",
+          "arrivez",
+          "arrivent"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 15,
+        "questionText": "S’il vous plait, ……..heure est-il ?",
+        "options": [
+          "quel",
+          "quelle",
+          "quels",
+          "quelles"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 16,
+        "questionText": "Il va …………. bientôt.",
+        "options": [
+          "part",
+          "partez",
+          "partent",
+          "partir"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 17,
+        "questionText": "C’est une très …..voiture.",
+        "options": [
+          "belle",
+          "beaux",
+          "belles",
+          "beau"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 18,
+        "questionText": "Quel âge as-tu ?",
+        "options": [
+          "Je suis",
+          "J’ai dix ans",
+          "Je fais",
+          "J’aime"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 19,
+        "questionText": "Notre père est maintenant ………Senegal",
+        "options": [
+          "à",
+          "en",
+          "dans",
+          "au"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 20,
+        "questionText": "Je prends le train ………la gare. Below are ten sentences with blank spaces followed by four options lettered A to D. Choose from the options the most correct answer that will fit into each blank space and shade on your answer sheet the letter of the answer you have chosen",
+        "options": [
+          "du",
+          "sous",
+          "en",
+          "à"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 21,
+        "questionText": "Le tailleur Baba fait des ……………pour ses clients.",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 22,
+        "questionText": "Le bébé ……………..quand il à faim.",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 23,
+        "questionText": "Nikoi à la fièvre et le médecin lui donne………………",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 24,
+        "questionText": "Haruna cherche ……………pour écrire au tableau.",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 25,
+        "questionText": "J’apprends bien pour………. à l’examen.",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 26,
+        "questionText": "Va à la boulangerie d’en face pour m’acheter du …………",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 27,
+        "questionText": "C’est avec cette clé qu’on …………la porte d’entrée.",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 28,
+        "questionText": "Le samedi est le jour qui vient juste avant le …………..",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 29,
+        "questionText": "L’enfant a sommeil. C’est pourquoi il ……………..",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 30,
+        "questionText": "Les cinémas d’ici passent seulement des …………locaux",
+        "options": [
+          "B C D"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 21,
+        "questionText": "habits filets souliers chaises",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 22,
+        "questionText": "se lave pleure s’assied chante",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 23,
+        "questionText": "des fruits du chocolat de l’eau des comprimés",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 24,
+        "questionText": "un stylo une craie un torchon un crayon",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 25,
+        "questionText": "gagner admettre réussir faire",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 26,
+        "questionText": "pain sucre lait sel",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 27,
+        "questionText": "casse frappe ouvre fait",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 28,
+        "questionText": "vendredi dimanche jeudi mercredi",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 29,
+        "questionText": "dort mange joue marche",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 30,
+        "questionText": "photos images appareils films Read the passage below carefully and answer the questions that follow by shading on your answer sheet the letter which corresponds with the correct answer J’ai un seul ami dans mon quartier. Il s’appelle Makavo. Il a une dizaine d’années. Il est le fils unique de ses parents, mais il n’est pas un enfant choyé. Il est aussi intelligent et travailleur que moi. C’est pourquoi je l’aime beaucoup. Les parents de Makavo sont strictes. Ils ne lui permettent pas de s’absenter de la classe ou de passer beaucoup de temps à jouer ou à dormir. Ils sont des gens disciplinés, alors, ils ne veulent pas que leur fils marche avec les enfants désobéissants. À cause de cela, plusieurs garçons de mon quartier ne rendent pas visite à Makavo. Le samedi matin, Makavo se lève de bonne heure et se brosse les dents. Puis, il fait ses prières du matin. Il salue ses parents et ensuite il aide sa mère à balayer la cour de la maison. Il fait ses devoirs dans l’après –midi et regarde la télévision le soir. Il va au lit vers neuf heures.",
+        "options": [],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 31,
+        "questionText": "Le narrateur a …………………..",
+        "options": [
+          "un ami",
+          "deux amis",
+          "trois amis",
+          "quatre amis"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 32,
+        "questionText": "Makavo a environ ………………ans",
+        "options": [
+          "5",
+          "7",
+          "10",
+          "15"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 33,
+        "questionText": "Makavo est le ………………enfant de ses parents.",
+        "options": [
+          "premier",
+          "seul",
+          "dernier",
+          "quatrième"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 34,
+        "questionText": "Le narrateur aime Makavo parce qu’il est ……………",
+        "options": [
+          "beau",
+          "humble",
+          "courageux",
+          "travailleur"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 35,
+        "questionText": "Les parents de Makavo lui défendent",
+        "options": [
+          "d’aller en classe",
+          "de sortir de la maison",
+          "de trop jouer",
+          "d’avoir des amis"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 36,
+        "questionText": "Selon le passage, Makavo ……………..",
+        "options": [
+          "déteste les parents strictes",
+          "à très peu d’amis",
+          "visite ses amis du quartier",
+          "encourage les garçons indisciplinés"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 37,
+        "questionText": "Le samedi Makavo se lève ………….",
+        "options": [
+          "l’après-midi",
+          "le soir",
+          "vers midi",
+          "tôt le matin"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 38,
+        "questionText": "Aussitôt qu’il se lève, Makavo ……………",
+        "options": [
+          "prend le petit déjeuner",
+          "se lave la bouche",
+          "balaie la cour",
+          "fait les prières"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 39,
+        "questionText": "Le soir Makavo ……………",
+        "options": [
+          "fait les devoirs",
+          "prend son petit déjeuner",
+          "regarde la télévision",
+          "visite son ami"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 40,
+        "questionText": "Makavo dort à ………….heures du soir.",
+        "options": [
+          "7",
+          "8",
+          "9",
+          "10"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      }
+    ],
+    "context": "PART I",
+    "year": "2005"
+  }
+]

@@ -1,0 +1,141 @@
+[
+  {
+    "passage": null,
+    "questions": [],
+    "context": "PART II",
+    "year": "2013"
+  },
+  {
+    "passage": null,
+    "questions": [
+      {
+        "questionNumber": 21,
+        "questionText": "Le père d’Akua habite à ……………………..",
+        "options": [
+          "la capitale",
+          "Prampram",
+          "Oguaa",
+          "la gare"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 22,
+        "questionText": "– Qu’est-ce qu’Akua fait avant de rendre visite à son père ?– Elle envoie",
+        "options": [
+          "un message télégraphique",
+          "un message téléphonique",
+          "un messager",
+          "une lettre"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      },
+      {
+        "questionNumber": 23,
+        "questionText": "Quand est-ce qu’Akua se lève le jour de son voyage ?",
+        "options": [
+          "De bonne heure",
+          "A l’après midi",
+          "Tard dans la nuit",
+          "Vers le soir"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "A"
+      },
+      {
+        "questionNumber": 24,
+        "questionText": "Akua voyage ……………………",
+        "options": [
+          "en train",
+          "en voiture",
+          "par avion",
+          "par bateau"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 25,
+        "questionText": "A la gare, on voit……………..Voitures",
+        "options": [
+          "quelques",
+          "deux",
+          "trois",
+          "plusieurs"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 26,
+        "questionText": "Qui conduit la voiture ?",
+        "options": [
+          "Akua",
+          "Papa",
+          "Le chauffeur",
+          "Les voyageurs"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "D"
+      },
+      {
+        "questionNumber": 27,
+        "questionText": "Le voyage commence …………………",
+        "options": [
+          "après trois heures",
+          "après quatre heures",
+          "immédiatement",
+          "plus tard"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 28,
+        "questionText": "‘Il est plein de joie.’ Cela veut dire que Papa est ………….",
+        "options": [
+          "confus",
+          "content",
+          "triste",
+          "surpris"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 29,
+        "questionText": "Papa remercie Akua parce qu’il ……………….",
+        "options": [
+          "achète des choses",
+          "rend visite aux amis",
+          "mange avec Akua",
+          "reçoit un cadeau"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "B"
+      },
+      {
+        "questionNumber": 30,
+        "questionText": "Le dernier lieu de leur visite est …………………",
+        "options": [
+          "la gare",
+          "la maison",
+          "chez les amis",
+          "les magasins"
+        ],
+        "_removedLeadingChoice": false,
+        "correctAnswer": "C"
+      }
+    ],
+    "context": "PART III",
+    "year": "2013"
+  },
+  {
+    "passage": null,
+    "questions": [],
+    "context": "PART I",
+    "year": "2013"
+  }
+]
