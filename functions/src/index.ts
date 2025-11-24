@@ -8,6 +8,10 @@ import { aiChatHttpStreaming } from './aiChatHttp';
 import OpenAI from 'openai';
 import cors from 'cors';
 
+// Export textbook generation functions
+export * from './textbook_generator';
+export * from './english_textbook_generator';
+
 // Note: legacy ai handlers removed. Single consolidated HTTP handler `aiChatHttp` is used.
 
 // Lightweight CORS-safe aiChat HTTP endpoint for Flutter Web clients

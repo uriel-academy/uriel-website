@@ -128,7 +128,7 @@ class ContentStrategyService {
           activeBooks++;
         }
 
-        final downloadCount = data['downloadCount'] ?? 0;
+        final downloadCount = (data['downloadCount'] as num?)?.toInt() ?? 0;
         totalDownloads += downloadCount;
 
         final category = data['category'] ?? 'uncategorized';

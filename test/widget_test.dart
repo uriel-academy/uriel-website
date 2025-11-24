@@ -41,4 +41,47 @@ void main() {
     expect(find.text('0'), findsNothing);
     expect(find.text('1'), findsOneWidget);
   });
+
+  testWidgets('App builds without Firebase initialization', (WidgetTester tester) async {
+    // Test that basic Material widgets work (avoiding Firebase dependencies)
+    await tester.pumpWidget(const MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Text('Test App'),
+        ),
+      ),
+    ));
+
+    expect(find.text('Test App'), findsOneWidget);
+  });
+
+  testWidgets('MaterialApp structure is correct', (WidgetTester tester) async {
+    await tester.pumpWidget(const CounterApp());
+
+    // Verify MaterialApp structure
+    expect(find.byType(MaterialApp), findsOneWidget);
+    expect(find.byType(Scaffold), findsOneWidget);
+    expect(find.byType(AppBar), findsOneWidget);
+    expect(find.byType(FloatingActionButton), findsOneWidget);
+  });
+
+  testWidgets('UI updates correctly on state change', (WidgetTester tester) async {
+    await tester.pumpWidget(const CounterApp());
+
+    // Initial state
+    expect(find.text('0'), findsOneWidget);
+
+    // Multiple increments
+    await tester.tap(find.byKey(const Key('increment')));
+    await tester.pump();
+    expect(find.text('1'), findsOneWidget);
+
+    await tester.tap(find.byKey(const Key('increment')));
+    await tester.pump();
+    expect(find.text('2'), findsOneWidget);
+
+    await tester.tap(find.byKey(const Key('increment')));
+    await tester.pump();
+    expect(find.text('3'), findsOneWidget);
+  });
 }

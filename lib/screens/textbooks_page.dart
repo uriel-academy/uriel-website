@@ -5,8 +5,10 @@ import '../models/storybook_model.dart';
 import '../services/textbook_service.dart';
 import '../services/storybook_service.dart';
 import '../services/course_reader_service.dart';
+import '../services/english_textbook_service.dart';
 import 'enhanced_epub_reader_page.dart';
 import 'course_unit_list_page.dart';
+import 'english_textbook_reader_page.dart';
 
 class TextbooksPage extends StatefulWidget {
   const TextbooksPage({super.key});
@@ -37,7 +39,10 @@ class _TextbooksPageState extends State<TextbooksPage>
   List<Storybook> allStorybooks = [];
   List<Storybook> filteredStorybooks = [];
   List<String> authors = [];
+  List<Map<String, dynamic>> englishTextbooks = [];
+  Map<String, Map<String, dynamic>> englishProgressMap = {};
   bool isLoading = true;
+  bool isLoadingEnglish = true;
 
   final List<String> levels = ['All', 'JHS 1', 'JHS 2', 'JHS 3', 'SHS 1', 'SHS 2', 'SHS 3'];
   final List<String> subjects = [
@@ -65,6 +70,7 @@ class _TextbooksPageState extends State<TextbooksPage>
     
     _loadTextbooks();
     _loadStorybooks();
+    _loadEnglishTextbooks();
     _animationController.forward();
   }
 
@@ -95,6 +101,24 @@ class _TextbooksPageState extends State<TextbooksPage>
       _applyStoryFilter();
     } catch (e) {
       debugPrint('Error loading storybooks: $e');
+    }
+  }
+
+  Future<void> _loadEnglishTextbooks() async {
+    setState(() => isLoadingEnglish = true);
+    try {
+      final service = EnglishTextbookService();
+      englishTextbooks = await service.getAllTextbooks();
+      
+      // Load progress for each textbook
+      for (final textbook in englishTextbooks) {
+        final progress = await service.getUserProgress(textbook['id']);
+        englishProgressMap[textbook['id']] = progress;
+      }
+    } catch (e) {
+      debugPrint('Error loading English textbooks: $e');
+    } finally {
+      setState(() => isLoadingEnglish = false);
     }
   }
 
@@ -289,7 +313,7 @@ class _TextbooksPageState extends State<TextbooksPage>
             ),
 
             // Content
-            if (isLoading && _tabController.index != 2) ...[
+            if (isLoading && _tabController.index != 2 && _tabController.index != 3) ...[
               SliverFillRemaining(
                 child: Center(
                   child: Column(
@@ -324,17 +348,135 @@ class _TextbooksPageState extends State<TextbooksPage>
                       : _buildStorybooksList(isMobile),
                 ),
               ],
-            ] else if (filteredTextbooks.isEmpty) ...[
-              SliverFillRemaining(
-                child: _buildEmptyState(),
-              ),
+            ] else if (_tabController.index == 1) ...[
+              // Textbooks tab - show English textbooks first, then regular textbooks
+              if (!isLoadingEnglish && englishTextbooks.isNotEmpty) ...[
+                SliverToBoxAdapter(
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(
+                      isMobile ? 16 : 24,
+                      isMobile ? 16 : 24,
+                      isMobile ? 16 : 24,
+                      8,
+                    ),
+                    child: Text(
+                      'Interactive English Textbooks',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: const Color(0xFF1A1E3F),
+                      ),
+                    ),
+                  ),
+                ),
+                SliverPadding(
+                  padding: EdgeInsets.fromLTRB(
+                    isMobile ? 16 : 24,
+                    0,
+                    isMobile ? 16 : 24,
+                    isMobile ? 16 : 24,
+                  ),
+                  sliver: _buildEnglishTextbooksGrid(isMobile),
+                ),
+              ],
+              if (filteredTextbooks.isNotEmpty) ...[
+                SliverToBoxAdapter(
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(
+                      isMobile ? 16 : 24,
+                      englishTextbooks.isNotEmpty ? 8 : (isMobile ? 16 : 24),
+                      isMobile ? 16 : 24,
+                      8,
+                    ),
+                    child: Text(
+                      englishTextbooks.isNotEmpty ? 'Other Textbooks' : 'Textbooks',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: const Color(0xFF1A1E3F),
+                      ),
+                    ),
+                  ),
+                ),
+                SliverPadding(
+                  padding: EdgeInsets.fromLTRB(
+                    isMobile ? 16 : 24,
+                    0,
+                    isMobile ? 16 : 24,
+                    isMobile ? 16 : 24,
+                  ),
+                  sliver: isGridView
+                      ? _buildTextbookGrid(isMobile)
+                      : _buildTextbookList(isMobile),
+                ),
+              ],
+              if (!isLoadingEnglish && englishTextbooks.isEmpty && filteredTextbooks.isEmpty) ...[
+                SliverFillRemaining(
+                  child: _buildEmptyState(),
+                ),
+              ],
             ] else ...[
-              SliverPadding(
-                padding: EdgeInsets.all(isMobile ? 16 : 24),
-                sliver: isGridView
-                    ? _buildTextbookGrid(isMobile)
-                    : _buildTextbookList(isMobile),
-              ),
+              // All Books tab (index 0) - show both English and regular textbooks
+              if (!isLoadingEnglish && englishTextbooks.isNotEmpty) ...[
+                SliverToBoxAdapter(
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(
+                      isMobile ? 16 : 24,
+                      isMobile ? 16 : 24,
+                      isMobile ? 16 : 24,
+                      8,
+                    ),
+                    child: Text(
+                      'Interactive English Textbooks',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: const Color(0xFF1A1E3F),
+                      ),
+                    ),
+                  ),
+                ),
+                SliverPadding(
+                  padding: EdgeInsets.fromLTRB(
+                    isMobile ? 16 : 24,
+                    0,
+                    isMobile ? 16 : 24,
+                    isMobile ? 16 : 24,
+                  ),
+                  sliver: _buildEnglishTextbooksGrid(isMobile),
+                ),
+              ],
+              if (filteredTextbooks.isNotEmpty) ...[
+                SliverToBoxAdapter(
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(
+                      isMobile ? 16 : 24,
+                      englishTextbooks.isNotEmpty ? 8 : (isMobile ? 16 : 24),
+                      isMobile ? 16 : 24,
+                      8,
+                    ),
+                    child: Text(
+                      englishTextbooks.isNotEmpty ? 'Other Textbooks' : 'All Textbooks',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: const Color(0xFF1A1E3F),
+                      ),
+                    ),
+                  ),
+                ),
+                SliverPadding(
+                  padding: EdgeInsets.all(isMobile ? 16 : 24),
+                  sliver: isGridView
+                      ? _buildTextbookGrid(isMobile)
+                      : _buildTextbookList(isMobile),
+                ),
+              ],
+              if (!isLoadingEnglish && englishTextbooks.isEmpty && filteredTextbooks.isEmpty) ...[
+                SliverFillRemaining(
+                  child: _buildEmptyState(),
+                ),
+              ],
             ],
 
             // Bottom padding for mobile
@@ -1952,6 +2094,198 @@ class _TextbooksPageState extends State<TextbooksPage>
             child: Text('Download', style: GoogleFonts.montserrat()),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildEnglishTextbooksGrid(bool isMobile) {
+    return SliverPadding(
+      padding: EdgeInsets.all(isMobile ? 16 : 24),
+      sliver: SliverGrid(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: isMobile ? 1 : 3,
+          childAspectRatio: isMobile ? 2.5 : 0.75,
+          crossAxisSpacing: 16,
+          mainAxisSpacing: 16,
+        ),
+        delegate: SliverChildBuilderDelegate(
+          (context, index) {
+            final textbook = englishTextbooks[index];
+            final textbookId = textbook['id'] as String;
+            final title = textbook['title'] as String;
+            final yearString = textbook['year'] as String;
+            
+            // Extract year number for cover image (handle "JHS 1", "JHS 2", etc.)
+            final match = RegExp(r'\d+').firstMatch(yearString);
+            final yearNum = match != null ? int.parse(match.group(0)!) : 1;
+            
+            final description = textbook['description'] as String? ?? 'Interactive English textbook with questions and XP rewards';
+            
+            // Get progress data
+            final progressData = englishProgressMap[textbookId];
+            final completedSections = progressData?['completedSections'] as int? ?? 0;
+            final totalSections = progressData?['totalSections'] as int? ?? 0;
+            final totalXP = progressData?['totalXP'] as int? ?? 0;
+            final isCompleted = progressData?['isCompleted'] as bool? ?? false;
+            final progressPercent = totalSections > 0 ? (completedSections / totalSections * 100).toInt() : 0;
+
+            // Determine book cover path
+            final coverPath = 'assets/english_jhs$yearNum.png';
+
+            return Card(
+              elevation: 4,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => EnglishTextbookReaderPage(
+                        year: yearString,
+                        textbookId: textbookId,
+                      ),
+                    ),
+                  );
+                },
+                borderRadius: BorderRadius.circular(12),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Book cover image
+                    Expanded(
+                      flex: 3,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: const BorderRadius.vertical(
+                            top: Radius.circular(12),
+                          ),
+                          image: DecorationImage(
+                            image: AssetImage(coverPath),
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        child: isCompleted
+                            ? Container(
+                                alignment: Alignment.topRight,
+                                padding: const EdgeInsets.all(8),
+                                child: Container(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 8,
+                                    vertical: 4,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: Colors.green,
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      const Icon(
+                                        Icons.check_circle,
+                                        color: Colors.white,
+                                        size: 16,
+                                      ),
+                                      const SizedBox(width: 4),
+                                      Text(
+                                        'Completed',
+                                        style: GoogleFonts.montserrat(
+                                          color: Colors.white,
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              )
+                            : null,
+                      ),
+                    ),
+                    // Book details
+                    Expanded(
+                      flex: 2,
+                      child: Padding(
+                        padding: const EdgeInsets.all(12),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              title,
+                              style: GoogleFonts.montserrat(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                            const SizedBox(height: 4),
+                            Text(
+                              description,
+                              style: GoogleFonts.montserrat(
+                                fontSize: 12,
+                                color: Colors.grey[600],
+                              ),
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                            const Spacer(),
+                            // Progress bar
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      '$progressPercent% Complete',
+                                      style: GoogleFonts.montserrat(
+                                        fontSize: 11,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                    Row(
+                                      children: [
+                                        const Icon(
+                                          Icons.stars,
+                                          size: 14,
+                                          color: Colors.amber,
+                                        ),
+                                        const SizedBox(width: 4),
+                                        Text(
+                                          '$totalXP XP',
+                                          style: GoogleFonts.montserrat(
+                                            fontSize: 11,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.amber[700],
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(height: 4),
+                                LinearProgressIndicator(
+                                  value: totalSections > 0 ? completedSections / totalSections : 0,
+                                  backgroundColor: Colors.grey[300],
+                                  valueColor: AlwaysStoppedAnimation<Color>(
+                                    isCompleted ? Colors.green : const Color(0xFFD62828),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            );
+          },
+          childCount: englishTextbooks.length,
+        ),
       ),
     );
   }

@@ -28,8 +28,9 @@ import 'screens/pricing_page.dart'; // Import Pricing page
 import 'screens/payment_page.dart'; // Import Payment page
 import 'screens/uri_page.dart'; // New ChatGPT-like full page Uri
 import 'screens/upload_note_page.dart'; // Upload notes page
-import 'screens/note_viewer_page.dart'; // Note viewer page
 import 'screens/study_planner_page.dart'; // Study planner page
+import 'screens/note_viewer_page.dart'; // Note viewer page
+// import 'widgets/error_boundary.dart'; // Import error boundary - COMMENTED OUT: Causing app initialization issues
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

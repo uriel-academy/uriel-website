@@ -307,7 +307,7 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 4,
             offset: const Offset(0, 2),
           ),
@@ -438,7 +438,7 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
                 onSelected: (selected) {
                   setState(() => _studyGoal = goal);
                 },
-                selectedColor: AppStyles.primaryRed.withOpacity(0.2),
+                selectedColor: AppStyles.primaryRed.withValues(alpha: 0.2),
                 labelStyle: AppStyles.montserratMedium(
                   color: _studyGoal == goal
                       ? AppStyles.primaryRed
@@ -488,7 +488,7 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
                 Container(
                   padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(
-                    color: const Color(0xFF2ECC71).withOpacity(0.1),
+                    color: const Color(0xFF2ECC71).withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Row(
@@ -565,7 +565,7 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
                   onSelected: (selected) {
                     setState(() => _preferredTime = time);
                   },
-                  selectedColor: AppStyles.primaryRed.withOpacity(0.2),
+                  selectedColor: AppStyles.primaryRed.withValues(alpha: 0.2),
                   labelStyle: AppStyles.montserratMedium(
                     color: _preferredTime == time
                         ? AppStyles.primaryRed
@@ -587,7 +587,8 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
               scrollDirection: Axis.horizontal,
               child: DataTable(
                 headingRowHeight: 40,
-                dataRowHeight: 40,
+                dataRowMinHeight: 40,
+                dataRowMaxHeight: 40,
                 columns: [
                   const DataColumn(label: Text('Day')),
                   ...['Morning', 'Afternoon', 'Evening']
@@ -663,7 +664,7 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
                             });
                           });
                         },
-                  selectedColor: const Color(0xFF2ECC71).withOpacity(0.2),
+                  selectedColor: const Color(0xFF2ECC71).withValues(alpha: 0.2),
                   checkmarkColor: const Color(0xFF2ECC71),
                   labelStyle: AppStyles.montserratMedium(fontSize: 12),
                 );
@@ -878,7 +879,7 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: AppStyles.primaryRed.withOpacity(0.1),
+                color: AppStyles.primaryRed.withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Row(
@@ -928,7 +929,7 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 4,
             offset: const Offset(0, -2),
           ),
@@ -1038,7 +1039,7 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
                   color: Colors.white,
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.05),
+                      color: Colors.black.withValues(alpha: 0.05),
                       blurRadius: 4,
                       offset: const Offset(0, 2),
                     ),
@@ -1144,7 +1145,7 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
                                   Container(
                                     padding: const EdgeInsets.all(12),
                                     decoration: BoxDecoration(
-                                      color: const Color(0xFF2ECC71).withOpacity(0.1),
+                                      color: const Color(0xFF2ECC71).withValues(alpha: 0.1),
                                       borderRadius: BorderRadius.circular(12),
                                     ),
                                     child: const Icon(
@@ -1236,7 +1237,7 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
                                       Container(
                                         padding: const EdgeInsets.all(8),
                                         decoration: BoxDecoration(
-                                          color: const Color(0xFF6A00F4).withOpacity(0.1),
+                                          color: const Color(0xFF6A00F4).withValues(alpha: 0.1),
                                           borderRadius: BorderRadius.circular(8),
                                         ),
                                         child: const Icon(
@@ -1269,7 +1270,7 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
                                         padding: EdgeInsets.all(isSmallScreen ? 12 : 16),
                                         decoration: BoxDecoration(
                                           color: isCompleted
-                                              ? const Color(0xFF2ECC71).withOpacity(0.1)
+                                              ? const Color(0xFF2ECC71).withValues(alpha: 0.1)
                                               : Colors.grey[50],
                                           borderRadius: BorderRadius.circular(12),
                                           border: Border.all(
@@ -1437,7 +1438,7 @@ class _StudyPlanPageState extends State<StudyPlanPage> with SingleTickerProvider
                         const SizedBox(height: 16),
                         Card(
                           elevation: 2,
-                          color: const Color(0xFF2ECC71).withOpacity(0.1),
+                          color: const Color(0xFF2ECC71).withValues(alpha: 0.1),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(16),
                           ),

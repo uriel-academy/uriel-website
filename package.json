@@ -1,13 +1,15 @@
 {
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.70.1",
     "@google-cloud/storage": "^7.17.3",
     "adm-zip": "^0.5.16",
     "axios": "^1.12.2",
+    "dotenv": "^17.2.3",
     "epubjs": "^0.3.93",
-    "firebase-admin": "^13.5.0",
+    "firebase-admin": "^13.6.0",
     "mammoth": "^1.11.0",
     "minimist": "^1.2.8",
-    "openai": "^6.5.0",
+    "openai": "^6.9.1",
     "pdf-parse": "^2.4.5",
     "puppeteer": "^24.26.1"
   },

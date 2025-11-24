@@ -1,0 +1,525 @@
+import 'package:cloud_functions/cloud_functions.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
+/// Service for managing interactive English textbooks with XP system
+class EnglishTextbookService {
+  static final EnglishTextbookService _instance = EnglishTextbookService._internal();
+  factory EnglishTextbookService() => _instance;
+  EnglishTextbookService._internal();
+
+  final FirebaseFunctions _functions = FirebaseFunctions.instance;
+  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+
+  /// Generate complete English textbook for a specific year
+  Future<Map<String, dynamic>> generateTextbook({
+    required String year, // 'JHS 1', 'JHS 2', or 'JHS 3'
+    int batchSize = 2,
+  }) async {
+    try {
+      final result = await _functions.httpsCallable('generateEnglishTextbooks').call({
+        'year': year,
+        'batchSize': batchSize,
+      });
+
+      return {
+        'success': true,
+        'textbookId': result.data['textbookId'],
+        'year': result.data['year'],
+        'chapters': result.data['chapters'],
+        'sections': result.data['sections'],
+        'totalQuestions': result.data['totalQuestions'],
+      };
+    } catch (e) {
+      print('Error generating textbook: $e');
+      return {
+        'success': false,
+        'error': e.toString(),
+      };
+    }
+  }
+
+  /// Get all English textbooks
+  Future<List<Map<String, dynamic>>> getAllTextbooks() async {
+    try {
+      final snapshot = await _firestore
+          .collection('textbooks')
+          .where('subject', isEqualTo: 'English')
+          .orderBy('year')
+          .get();
+      
+      return snapshot.docs.map((doc) {
+        return {
+          'id': doc.id,
+          ...doc.data(),
+        };
+      }).toList();
+    } catch (e) {
+      print('Error getting textbooks: $e');
+      return [];
+    }
+  }
+
+  /// Get textbook for a specific year
+  Future<Map<String, dynamic>?> getTextbook(String year) async {
+    try {
+      final snapshot = await _firestore
+          .collection('textbooks')
+          .where('subject', isEqualTo: 'English')
+          .where('year', isEqualTo: year)
+          .limit(1)
+          .get();
+
+      if (snapshot.docs.isEmpty) return null;
+
+      final doc = snapshot.docs.first;
+      return {
+        'id': doc.id,
+        ...doc.data(),
+      };
+    } catch (e) {
+      print('Error fetching textbook: $e');
+      return null;
+    }
+  }
+
+  /// Get all chapters for a textbook
+  Future<List<Map<String, dynamic>>> getChapters(String textbookId) async {
+    try {
+      final snapshot = await _firestore
+          .collection('textbooks')
+          .doc(textbookId)
+          .collection('chapters')
+          .orderBy('chapterNumber')
+          .get();
+
+      return snapshot.docs
+          .map((doc) => {'id': doc.id, ...doc.data()})
+          .toList();
+    } catch (e) {
+      print('Error fetching chapters: $e');
+      return [];
+    }
+  }
+
+  /// Get all sections for a chapter
+  Future<List<Map<String, dynamic>>> getSections(String textbookId) async {
+    try {
+      final snapshot = await _firestore
+          .collection('textbooks')
+          .doc(textbookId)
+          .collection('sections')
+          .orderBy('chapterIndex')
+          .orderBy('topicIndex')
+          .get();
+
+      return snapshot.docs
+          .map((doc) => {'id': doc.id, ...doc.data()})
+          .toList();
+    } catch (e) {
+      print('Error fetching sections: $e');
+      return [];
+    }
+  }
+
+  /// Get section content
+  Future<Map<String, dynamic>?> getSection(String textbookId, String sectionId) async {
+    try {
+      final doc = await _firestore
+          .collection('textbooks')
+          .doc(textbookId)
+          .collection('sections')
+          .doc(sectionId)
+          .get();
+
+      if (!doc.exists) return null;
+
+      return {'id': doc.id, ...doc.data()!};
+    } catch (e) {
+      print('Error fetching section: $e');
+      return null;
+    }
+  }
+
+  /// Get questions for a section
+  Future<List<Map<String, dynamic>>> getSectionQuestions(
+    String textbookId,
+    String sectionId,
+  ) async {
+    try {
+      final snapshot = await _firestore
+          .collection('textbooks')
+          .doc(textbookId)
+          .collection('questions')
+          .where('sectionId', isEqualTo: sectionId)
+          .where('questionType', isEqualTo: 'section')
+          .get();
+
+      return snapshot.docs
+          .map((doc) => {'id': doc.id, ...doc.data()})
+          .toList();
+    } catch (e) {
+      print('Error fetching section questions: $e');
+      return [];
+    }
+  }
+
+  /// Get chapter review questions
+  Future<List<Map<String, dynamic>>> getChapterQuestions(
+    String textbookId,
+    int chapterIndex,
+  ) async {
+    try {
+      final snapshot = await _firestore
+          .collection('textbooks')
+          .doc(textbookId)
+          .collection('questions')
+          .where('chapterIndex', isEqualTo: chapterIndex)
+          .where('questionType', isEqualTo: 'chapter')
+          .get();
+
+      return snapshot.docs
+          .map((doc) => {'id': doc.id, ...doc.data()})
+          .toList();
+    } catch (e) {
+      print('Error fetching chapter questions: $e');
+      return [];
+    }
+  }
+
+  /// Get year-end assessment questions
+  Future<List<Map<String, dynamic>>> getYearEndQuestions(String textbookId) async {
+    try {
+      final snapshot = await _firestore
+          .collection('textbooks')
+          .doc(textbookId)
+          .collection('questions')
+          .where('questionType', isEqualTo: 'yearEnd')
+          .get();
+
+      return snapshot.docs
+          .map((doc) => {'id': doc.id, ...doc.data()})
+          .toList();
+    } catch (e) {
+      print('Error fetching year-end questions: $e');
+      return [];
+    }
+  }
+
+  /// Submit answer and award XP
+  Future<Map<String, dynamic>> submitAnswer({
+    required String textbookId,
+    required String questionId,
+    required String selectedAnswer,
+    required String correctAnswer,
+    required int xpValue,
+    required String questionType, // 'section', 'chapter', 'yearEnd'
+  }) async {
+    final user = _auth.currentUser;
+    if (user == null) {
+      return {'success': false, 'error': 'User not authenticated'};
+    }
+
+    final isCorrect = selectedAnswer == correctAnswer;
+    final xpEarned = isCorrect ? xpValue : 0;
+
+    try {
+      final userProgressRef = _firestore
+          .collection('textbooks')
+          .doc(textbookId)
+          .collection('userProgress')
+          .doc(user.uid);
+
+      await _firestore.runTransaction((transaction) async {
+        final progressDoc = await transaction.get(userProgressRef);
+        final currentData = progressDoc.exists ? progressDoc.data()! : {};
+
+        final answeredQuestions = List<String>.from(
+          currentData['answeredQuestions'] ?? [],
+        );
+        
+        if (!answeredQuestions.contains(questionId)) {
+          answeredQuestions.add(questionId);
+        }
+
+        final correctAnswers = (currentData['correctAnswers'] ?? 0) + (isCorrect ? 1 : 0);
+        final totalAnswers = (currentData['totalAnswers'] ?? 0) + 1;
+        final totalXP = (currentData['totalXP'] ?? 0) + xpEarned;
+
+        transaction.set(
+          userProgressRef,
+          {
+            'answeredQuestions': answeredQuestions,
+            'correctAnswers': correctAnswers,
+            'totalAnswers': totalAnswers,
+            'totalXP': totalXP,
+            'lastActivity': FieldValue.serverTimestamp(),
+          },
+          SetOptions(merge: true),
+        );
+
+        // Award XP to user's main profile
+        if (xpEarned > 0) {
+          final userRef = _firestore.collection('users').doc(user.uid);
+          transaction.update(userRef, {
+            'badges.points': FieldValue.increment(xpEarned),
+            'lastActivity': FieldValue.serverTimestamp(),
+          });
+        }
+      });
+
+      return {
+        'success': true,
+        'isCorrect': isCorrect,
+        'xpEarned': xpEarned,
+      };
+    } catch (e) {
+      print('Error submitting answer: $e');
+      return {'success': false, 'error': e.toString()};
+    }
+  }
+
+  /// Mark section as complete and award XP
+  Future<Map<String, dynamic>> completionSection({
+    required String textbookId,
+    required String sectionId,
+    required int xpReward,
+  }) async {
+    final user = _auth.currentUser;
+    if (user == null) {
+      return {'success': false, 'error': 'User not authenticated'};
+    }
+
+    try {
+      final userProgressRef = _firestore
+          .collection('textbooks')
+          .doc(textbookId)
+          .collection('userProgress')
+          .doc(user.uid);
+
+      await _firestore.runTransaction((transaction) async {
+        final progressDoc = await transaction.get(userProgressRef);
+        final currentData = progressDoc.exists ? progressDoc.data()! : {};
+
+        final completedSections = List<String>.from(
+          currentData['completedSections'] ?? [],
+        );
+
+        // Only award XP if not already completed
+        final isNewCompletion = !completedSections.contains(sectionId);
+        final xpToAward = isNewCompletion ? xpReward : 0;
+
+        if (isNewCompletion) {
+          completedSections.add(sectionId);
+        }
+
+        transaction.set(
+          userProgressRef,
+          {
+            'completedSections': completedSections,
+            'totalXP': FieldValue.increment(xpToAward),
+            'lastActivity': FieldValue.serverTimestamp(),
+          },
+          SetOptions(merge: true),
+        );
+
+        // Award XP to user's main profile
+        if (xpToAward > 0) {
+          final userRef = _firestore.collection('users').doc(user.uid);
+          transaction.update(userRef, {
+            'badges.points': FieldValue.increment(xpToAward),
+            'lastActivity': FieldValue.serverTimestamp(),
+          });
+        }
+      });
+
+      return {'success': true, 'xpEarned': xpReward};
+    } catch (e) {
+      print('Error completing section: $e');
+      return {'success': false, 'error': e.toString()};
+    }
+  }
+
+  /// Mark chapter as complete and award XP
+  Future<Map<String, dynamic>> completeChapter({
+    required String textbookId,
+    required int chapterIndex,
+    required int xpReward,
+  }) async {
+    final user = _auth.currentUser;
+    if (user == null) {
+      return {'success': false, 'error': 'User not authenticated'};
+    }
+
+    try {
+      final userProgressRef = _firestore
+          .collection('textbooks')
+          .doc(textbookId)
+          .collection('userProgress')
+          .doc(user.uid);
+
+      await _firestore.runTransaction((transaction) async {
+        final progressDoc = await transaction.get(userProgressRef);
+        final currentData = progressDoc.exists ? progressDoc.data()! : {};
+
+        final completedChapters = List<int>.from(
+          currentData['completedChapters'] ?? [],
+        );
+
+        final isNewCompletion = !completedChapters.contains(chapterIndex);
+        final xpToAward = isNewCompletion ? xpReward : 0;
+
+        if (isNewCompletion) {
+          completedChapters.add(chapterIndex);
+        }
+
+        transaction.set(
+          userProgressRef,
+          {
+            'completedChapters': completedChapters,
+            'totalXP': FieldValue.increment(xpToAward),
+            'lastActivity': FieldValue.serverTimestamp(),
+          },
+          SetOptions(merge: true),
+        );
+
+        // Award XP to user's main profile
+        if (xpToAward > 0) {
+          final userRef = _firestore.collection('users').doc(user.uid);
+          transaction.update(userRef, {
+            'badges.points': FieldValue.increment(xpToAward),
+            'lastActivity': FieldValue.serverTimestamp(),
+          });
+        }
+      });
+
+      return {'success': true, 'xpEarned': xpReward};
+    } catch (e) {
+      print('Error completing chapter: $e');
+      return {'success': false, 'error': e.toString()};
+    }
+  }
+
+  /// Mark year as complete and award XP
+  Future<Map<String, dynamic>> completeYear({
+    required String textbookId,
+    required int xpReward,
+    required bool isAllYearsComplete,
+  }) async {
+    final user = _auth.currentUser;
+    if (user == null) {
+      return {'success': false, 'error': 'User not authenticated'};
+    }
+
+    try {
+      final userProgressRef = _firestore
+          .collection('textbooks')
+          .doc(textbookId)
+          .collection('userProgress')
+          .doc(user.uid);
+
+      // Bonus XP if all 3 years are complete
+      final bonusXP = isAllYearsComplete ? 5000 : 0;
+      final totalXP = xpReward + bonusXP;
+
+      await _firestore.runTransaction((transaction) async {
+        transaction.set(
+          userProgressRef,
+          {
+            'yearComplete': true,
+            'completedAt': FieldValue.serverTimestamp(),
+            'totalXP': FieldValue.increment(totalXP),
+          },
+          SetOptions(merge: true),
+        );
+
+        // Award XP to user's main profile
+        final userRef = _firestore.collection('users').doc(user.uid);
+        transaction.update(userRef, {
+          'badges.points': FieldValue.increment(totalXP),
+          'lastActivity': FieldValue.serverTimestamp(),
+        });
+
+        // Award special badge if all years complete
+        if (isAllYearsComplete) {
+          transaction.update(userRef, {
+            'badges.earned': FieldValue.arrayUnion(['english_master_jhs']),
+          });
+        }
+      });
+
+      return {
+        'success': true,
+        'xpEarned': totalXP,
+        'bonusXP': bonusXP,
+      };
+    } catch (e) {
+      print('Error completing year: $e');
+      return {'success': false, 'error': e.toString()};
+    }
+  }
+
+  /// Get user's progress for a textbook
+  Future<Map<String, dynamic>> getUserProgress(String textbookId) async {
+    final user = _auth.currentUser;
+    if (user == null) return {};
+
+    try {
+      final doc = await _firestore
+          .collection('textbooks')
+          .doc(textbookId)
+          .collection('userProgress')
+          .doc(user.uid)
+          .get();
+
+      if (!doc.exists) return {};
+
+      return doc.data()!;
+    } catch (e) {
+      print('Error fetching user progress: $e');
+      return {};
+    }
+  }
+
+  /// Check if user has completed all 3 years
+  Future<bool> hasCompletedAllYears(String userId) async {
+    try {
+      final jhs1 = await _firestore
+          .collection('textbooks')
+          .where('subject', isEqualTo: 'English')
+          .where('year', isEqualTo: 'JHS 1')
+          .limit(1)
+          .get();
+
+      final jhs2 = await _firestore
+          .collection('textbooks')
+          .where('subject', isEqualTo: 'English')
+          .where('year', isEqualTo: 'JHS 2')
+          .limit(1)
+          .get();
+
+      final jhs3 = await _firestore
+          .collection('textbooks')
+          .where('subject', isEqualTo: 'English')
+          .where('year', isEqualTo: 'JHS 3')
+          .limit(1)
+          .get();
+
+      if (jhs1.docs.isEmpty || jhs2.docs.isEmpty || jhs3.docs.isEmpty) {
+        return false;
+      }
+
+      final progress1 = await getUserProgress(jhs1.docs.first.id);
+      final progress2 = await getUserProgress(jhs2.docs.first.id);
+      final progress3 = await getUserProgress(jhs3.docs.first.id);
+
+      return (progress1['yearComplete'] == true) &&
+          (progress2['yearComplete'] == true) &&
+          (progress3['yearComplete'] == true);
+    } catch (e) {
+      print('Error checking year completion: $e');
+      return false;
+    }
+  }
+}

@@ -148,7 +148,7 @@ class DataService {
       }
 
       final snapshot = await query.get();
-      final data = snapshot.docs.map((doc) => doc.data()).toList();
+      final data = snapshot.docs.map((doc) => doc.data() as Map<String, dynamic>).toList();
 
       _cache[cacheKey] = data;
       _cacheTimestamps[cacheKey] = DateTime.now();

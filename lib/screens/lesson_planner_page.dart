@@ -343,7 +343,7 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 4,
             offset: const Offset(0, 2),
           ),
@@ -588,7 +588,7 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
                   onSelected: (selected) {
                     setState(() => _level = level);
                   },
-                  selectedColor: AppStyles.primaryRed.withOpacity(0.2),
+                  selectedColor: AppStyles.primaryRed.withValues(alpha: 0.2),
                   labelStyle: AppStyles.montserratMedium(
                     color: _level == level ? AppStyles.primaryRed : Colors.grey[700]!,
                   ),
@@ -645,7 +645,7 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
                       }
                     });
                   },
-                  selectedColor: AppStyles.primaryRed.withOpacity(0.2),
+                  selectedColor: AppStyles.primaryRed.withValues(alpha: 0.2),
                   checkmarkColor: AppStyles.primaryRed,
                   labelStyle: AppStyles.montserratMedium(fontSize: 12),
                 );
@@ -728,7 +728,7 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
                   onSelected: (selected) {
                     setState(() => _selectedTerm = term);
                   },
-                  selectedColor: AppStyles.primaryRed.withOpacity(0.2),
+                  selectedColor: AppStyles.primaryRed.withValues(alpha: 0.2),
                   labelStyle: AppStyles.montserratMedium(
                     color: _selectedTerm == term ? AppStyles.primaryRed : Colors.grey[700]!,
                   ),
@@ -935,7 +935,7 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
                   onSelected: (selected) {
                     setState(() => _planningGoal = goal);
                   },
-                  selectedColor: AppStyles.primaryRed.withOpacity(0.2),
+                  selectedColor: AppStyles.primaryRed.withValues(alpha: 0.2),
                   labelStyle: AppStyles.montserratMedium(
                     fontSize: 12,
                     color: _planningGoal == goal ? AppStyles.primaryRed : Colors.grey[700]!,
@@ -959,7 +959,7 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
                   onSelected: (selected) {
                     setState(() => _planningStyle = style);
                   },
-                  selectedColor: AppStyles.primaryRed.withOpacity(0.2),
+                  selectedColor: AppStyles.primaryRed.withValues(alpha: 0.2),
                   labelStyle: AppStyles.montserratMedium(
                     color: _planningStyle == style ? AppStyles.primaryRed : Colors.grey[700]!,
                   ),
@@ -1017,7 +1017,7 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: AppStyles.primaryRed.withOpacity(0.1),
+                color: AppStyles.primaryRed.withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Row(
@@ -1068,7 +1068,7 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 4,
             offset: const Offset(0, -2),
           ),
@@ -1325,7 +1325,7 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
                                   Container(
                                     padding: const EdgeInsets.all(12),
                                     decoration: BoxDecoration(
-                                      color: AppStyles.primaryRed.withOpacity(0.1),
+                                      color: AppStyles.primaryRed.withValues(alpha: 0.1),
                                       borderRadius: BorderRadius.circular(12),
                                     ),
                                     child: const Icon(
@@ -2056,7 +2056,7 @@ class _LessonPlannerPageState extends State<LessonPlannerPage> with SingleTicker
                             lesson['subject'] ?? '',
                             style: AppStyles.montserratMedium(
                               fontSize: 14,
-                              color: Colors.white.withOpacity(0.9),
+                              color: Colors.white.withValues(alpha: 0.9),
                             ),
                           ),
                         ],
