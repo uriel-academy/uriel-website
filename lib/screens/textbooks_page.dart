@@ -2164,6 +2164,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                           image: DecorationImage(
                             image: AssetImage(coverPath),
                             fit: BoxFit.cover,
+                            alignment: Alignment.topCenter,
                           ),
                         ),
                         child: isCompleted

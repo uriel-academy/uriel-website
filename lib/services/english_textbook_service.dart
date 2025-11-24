@@ -103,20 +103,40 @@ class EnglishTextbookService {
     }
   }
 
-  /// Get all sections for a chapter
+  /// Get all sections for a textbook (flattened from all chapters)
   Future<List<Map<String, dynamic>>> getSections(String textbookId) async {
     try {
-      final snapshot = await _firestore
+      final allSections = <Map<String, dynamic>>[];
+      
+      // Get all chapters first
+      final chaptersSnapshot = await _firestore
           .collection('textbooks')
           .doc(textbookId)
-          .collection('sections')
-          .orderBy('chapterIndex')
-          .orderBy('topicIndex')
+          .collection('chapters')
+          .orderBy('chapterNumber')
           .get();
 
-      return snapshot.docs
-          .map((doc) => {'id': doc.id, ...doc.data()})
-          .toList();
+      // For each chapter, get its sections
+      for (var i = 0; i < chaptersSnapshot.docs.length; i++) {
+        final chapterDoc = chaptersSnapshot.docs[i];
+        final sectionsSnapshot = await chapterDoc.reference
+            .collection('sections')
+            .orderBy('sectionNumber')
+            .get();
+
+        for (var sectionDoc in sectionsSnapshot.docs) {
+          final sectionData = sectionDoc.data();
+          allSections.add({
+            'id': sectionDoc.id,
+            'chapterIndex': i,
+            'chapterNumber': chapterDoc.data()['chapterNumber'],
+            'chapterId': chapterDoc.id,
+            ...sectionData,
+          });
+        }
+      }
+
+      return allSections;
     } catch (e) {
       print('Error fetching sections: $e');
       return [];
@@ -124,11 +144,13 @@ class EnglishTextbookService {
   }
 
   /// Get section content
-  Future<Map<String, dynamic>?> getSection(String textbookId, String sectionId) async {
+  Future<Map<String, dynamic>?> getSection(String textbookId, String chapterId, String sectionId) async {
     try {
       final doc = await _firestore
           .collection('textbooks')
           .doc(textbookId)
+          .collection('chapters')
+          .doc(chapterId)
           .collection('sections')
           .doc(sectionId)
           .get();
