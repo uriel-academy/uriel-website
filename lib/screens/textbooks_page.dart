@@ -364,28 +364,10 @@ class _TextbooksPageState extends State<TextbooksPage>
             ] else if (_tabController.index == 1) ...[
               // Textbooks tab - show English textbooks first, then regular textbooks
               if (!isLoadingEnglish && englishTextbooks.isNotEmpty) ...[
-                SliverToBoxAdapter(
-                  child: Padding(
-                    padding: EdgeInsets.fromLTRB(
-                      isMobile ? 16 : 24,
-                      isMobile ? 16 : 24,
-                      isMobile ? 16 : 24,
-                      8,
-                    ),
-                    child: Text(
-                      'Interactive English Textbooks',
-                      style: GoogleFonts.montserrat(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: const Color(0xFF1A1E3F),
-                      ),
-                    ),
-                  ),
-                ),
                 SliverPadding(
                   padding: EdgeInsets.fromLTRB(
                     isMobile ? 16 : 24,
-                    0,
+                    isMobile ? 16 : 24,
                     isMobile ? 16 : 24,
                     isMobile ? 16 : 24,
                   ),
@@ -435,28 +417,10 @@ class _TextbooksPageState extends State<TextbooksPage>
             ] else ...[
               // All Books tab (index 0) - show both English and regular textbooks
               if (!isLoadingEnglish && englishTextbooks.isNotEmpty) ...[
-                SliverToBoxAdapter(
-                  child: Padding(
-                    padding: EdgeInsets.fromLTRB(
-                      isMobile ? 16 : 24,
-                      isMobile ? 16 : 24,
-                      isMobile ? 16 : 24,
-                      8,
-                    ),
-                    child: Text(
-                      'Interactive English Textbooks',
-                      style: GoogleFonts.montserrat(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: const Color(0xFF1A1E3F),
-                      ),
-                    ),
-                  ),
-                ),
                 SliverPadding(
                   padding: EdgeInsets.fromLTRB(
                     isMobile ? 16 : 24,
-                    0,
+                    isMobile ? 16 : 24,
                     isMobile ? 16 : 24,
                     isMobile ? 16 : 24,
                   ),
@@ -2125,9 +2089,10 @@ class _TextbooksPageState extends State<TextbooksPage>
   }
 
   Widget _buildEnglishTextbooksGrid(bool isMobile) {
-    // Pagination: 9 textbooks per page
-    final startIndex = _currentEnglishPage * 9;
-    final endIndex = (startIndex + 9).clamp(0, englishTextbooks.length);
+    // Mobile: Show all 3 textbooks, Desktop: Pagination with 9 per page
+    final itemsPerPage = isMobile ? englishTextbooks.length : 9;
+    final startIndex = isMobile ? 0 : (_currentEnglishPage * itemsPerPage);
+    final endIndex = (startIndex + itemsPerPage).clamp(0, englishTextbooks.length);
     
     // Safely get paginated textbooks with validation
     List<Map<String, dynamic>> paginatedTextbooks = [];
@@ -2136,6 +2101,11 @@ class _TextbooksPageState extends State<TextbooksPage>
           .where((book) => book['id'] != null && book['year'] != null && book['title'] != null)
           .toList()
           .sublist(startIndex, endIndex);
+      
+      debugPrint('📱 Mobile: $isMobile, Showing ${paginatedTextbooks.length} textbooks');
+      for (var book in paginatedTextbooks) {
+        debugPrint('   - ${book['id']}: ${book['title']}');
+      }
     } catch (e) {
       debugPrint('❌ Error creating paginated textbooks: $e');
       paginatedTextbooks = [];
@@ -2289,9 +2259,9 @@ class _TextbooksPageState extends State<TextbooksPage>
                         ],
                       ),
                     ),
-                    // Book details (reduced)
+                    // Book details (reduced by 20% for desktop)
                     Expanded(
-                      flex: 3, // 5:3 ratio - text area smaller
+                      flex: isMobile ? 3 : 2, // Desktop: 5:2 (was 5:3), Mobile: 5:3
                       child: Padding(
                         padding: const EdgeInsets.fromLTRB(12, 16, 12, 12),
                         child: Column(
@@ -2408,6 +2378,11 @@ class _TextbooksPageState extends State<TextbooksPage>
   }
 
   Widget _buildEnglishPaginationControls() {
+    final isMobile = MediaQuery.of(context).size.width < 768;
+    
+    // Don't show pagination on mobile (all textbooks shown)
+    if (isMobile) return const SizedBox();
+    
     final totalPages = (englishTextbooks.length / 9).ceil();
     if (totalPages <= 1) return const SizedBox();
     
