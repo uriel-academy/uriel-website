@@ -32,6 +32,7 @@ class _SocialRmeTextbookReaderPageState extends State<SocialRmeTextbookReaderPag
   
   bool isLoading = true;
   bool isLoadingSection = false;
+  bool showingQuestions = false;
   int selectedChapterIndex = 0;
   int selectedSectionIndex = 0;
   
@@ -39,6 +40,10 @@ class _SocialRmeTextbookReaderPageState extends State<SocialRmeTextbookReaderPag
   Map<String, dynamic> userProgress = {};
   Set<String> completedSections = {};
   int totalXP = 0;
+  
+  // Answer tracking
+  final Map<String, String> _selectedAnswers = {};
+  final Map<String, bool> _submittedAnswers = {};
 
   @override
   void initState() {
@@ -83,7 +88,10 @@ class _SocialRmeTextbookReaderPageState extends State<SocialRmeTextbookReaderPag
   }
 
   Future<void> _loadSection(String chapterId, String sectionId) async {
-    setState(() => isLoadingSection = true);
+    setState(() {
+      isLoadingSection = true;
+      showingQuestions = false; // Reset quiz view when loading new section
+    });
     try {
       currentSection = await _service.getSection(widget.textbookId, chapterId, sectionId);
       currentChapterId = chapterId;
@@ -301,7 +309,7 @@ class _SocialRmeTextbookReaderPageState extends State<SocialRmeTextbookReaderPag
               Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color: subjectColor.withOpacity(0.1),
+                  color: const Color(0xFFD62828).withOpacity(0.1),
                   border: Border(
                     bottom: BorderSide(color: Colors.grey[200]!),
                   ),
@@ -321,7 +329,7 @@ class _SocialRmeTextbookReaderPageState extends State<SocialRmeTextbookReaderPag
                     LinearProgressIndicator(
                       value: _calculateOverallProgress(),
                       backgroundColor: Colors.grey[300],
-                      valueColor: AlwaysStoppedAnimation<Color>(subjectColor),
+                      valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFFD62828)),
                     ),
                     const SizedBox(height: 4),
                     Text(
@@ -350,7 +358,7 @@ class _SocialRmeTextbookReaderPageState extends State<SocialRmeTextbookReaderPag
                         width: 32,
                         height: 32,
                         decoration: BoxDecoration(
-                          color: isExpanded ? subjectColor : Colors.grey[200],
+                          color: isExpanded ? const Color(0xFFD62828) : Colors.grey[200],
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: Center(
@@ -388,11 +396,11 @@ class _SocialRmeTextbookReaderPageState extends State<SocialRmeTextbookReaderPag
                             style: GoogleFonts.montserrat(
                               fontSize: 13,
                               fontWeight: isCurrentSection ? FontWeight.bold : FontWeight.normal,
-                              color: isCurrentSection ? subjectColor : const Color(0xFF1A1E3F),
+                              color: isCurrentSection ? const Color(0xFFD62828) : const Color(0xFF1A1E3F),
                             ),
                           ),
                           selected: isCurrentSection,
-                          selectedTileColor: subjectColor.withOpacity(0.1),
+                          selectedTileColor: const Color(0xFFD62828).withOpacity(0.1),
                           onTap: () => _loadSection(chapterId, sectionId),
                         );
                       }).toList(),
@@ -543,7 +551,7 @@ class _SocialRmeTextbookReaderPageState extends State<SocialRmeTextbookReaderPag
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                       decoration: BoxDecoration(
-                        color: subjectColor.withOpacity(0.1),
+                        color: const Color(0xFFD62828).withOpacity(0.1),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Text(
@@ -551,7 +559,7 @@ class _SocialRmeTextbookReaderPageState extends State<SocialRmeTextbookReaderPag
                         style: GoogleFonts.montserrat(
                           fontSize: 12,
                           fontWeight: FontWeight.w600,
-                          color: subjectColor,
+                          color: const Color(0xFFD62828),
                         ),
                       ),
                     ),
@@ -664,8 +672,14 @@ class _SocialRmeTextbookReaderPageState extends State<SocialRmeTextbookReaderPag
             ),
           ),
           
-          // Questions section
-          if (questions.isNotEmpty) ...[
+          // Take Section Quiz button
+          if (questions.isNotEmpty && !showingQuestions) ...[
+            const SizedBox(height: 32),
+            _buildTakeQuizButton(questions, subjectColor),
+          ],
+          
+          // Questions section (shown after clicking Take Quiz)
+          if (questions.isNotEmpty && showingQuestions) ...[
             const SizedBox(height: 24),
             _buildQuestionsSection(questions, subjectColor),
           ],
@@ -705,13 +719,104 @@ class _SocialRmeTextbookReaderPageState extends State<SocialRmeTextbookReaderPag
     );
   }
 
+  Widget _buildTakeQuizButton(List questions, Color subjectColor) {
+    final isMobile = MediaQuery.of(context).size.width < 768;
+    final totalXP = questions.fold<int>(0, (sum, q) => sum + ((q as Map)['xpValue'] as int? ?? 10));
+    
+    return Container(
+      padding: EdgeInsets.all(isMobile ? 20 : 24),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            const Color(0xFFD62828).withOpacity(0.1),
+            const Color(0xFFD62828).withOpacity(0.05),
+          ],
+        ),
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: const Color(0xFFD62828).withOpacity(0.3)),
+      ),
+      child: Column(
+        children: [
+          Row(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFD62828),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: const Icon(
+                  Icons.quiz,
+                  color: Colors.white,
+                  size: 24,
+                ),
+              ),
+              const SizedBox(width: 16),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Ready to Test Your Knowledge?',
+                      style: GoogleFonts.montserrat(
+                        fontSize: isMobile ? 16 : 18,
+                        fontWeight: FontWeight.bold,
+                        color: const Color(0xFF1A1E3F),
+                      ),
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      '${questions.length} questions • Earn up to $totalXP XP',
+                      style: GoogleFonts.montserrat(
+                        fontSize: isMobile ? 13 : 14,
+                        color: Colors.grey[700],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 16),
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(
+              onPressed: () {
+                setState(() => showingQuestions = true);
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFFD62828),
+                foregroundColor: Colors.white,
+                padding: EdgeInsets.symmetric(
+                  vertical: isMobile ? 14 : 16,
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                elevation: 0,
+              ),
+              child: Text(
+                'Take Section Quiz',
+                style: GoogleFonts.montserrat(
+                  fontSize: isMobile ? 15 : 16,
+                  fontWeight: FontWeight.w600,
+                  letterSpacing: 0.5,
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
   Widget _buildQuestionsSection(List questions, Color subjectColor) {
     return Container(
       padding: const EdgeInsets.all(24),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: subjectColor.withOpacity(0.3)),
+        border: Border.all(color: const Color(0xFFD62828).withOpacity(0.3)),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.05),
@@ -725,10 +830,10 @@ class _SocialRmeTextbookReaderPageState extends State<SocialRmeTextbookReaderPag
         children: [
           Row(
             children: [
-              Icon(Icons.quiz, color: subjectColor),
+              const Icon(Icons.quiz, color: Color(0xFFD62828)),
               const SizedBox(width: 8),
               Text(
-                'Practice Questions',
+                'Section Quiz',
                 style: GoogleFonts.montserrat(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
@@ -736,22 +841,36 @@ class _SocialRmeTextbookReaderPageState extends State<SocialRmeTextbookReaderPag
                 ),
               ),
               const Spacer(),
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                decoration: BoxDecoration(
-                  color: Colors.amber.withOpacity(0.1),
-                  borderRadius: BorderRadius.circular(20),
+              TextButton.icon(
+                onPressed: () {
+                  setState(() => showingQuestions = false);
+                },
+                icon: const Icon(Icons.arrow_back, size: 18),
+                label: Text(
+                  'Back to Content',
+                  style: GoogleFonts.montserrat(fontSize: 13),
                 ),
-                child: Text(
-                  '${questions.length} questions',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.amber[700],
-                  ),
+                style: TextButton.styleFrom(
+                  foregroundColor: const Color(0xFFD62828),
                 ),
               ),
             ],
+          ),
+          const SizedBox(height: 4),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+            decoration: BoxDecoration(
+              color: Colors.amber.withOpacity(0.1),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Text(
+              '${questions.length} questions',
+              style: GoogleFonts.montserrat(
+                fontSize: 12,
+                fontWeight: FontWeight.w600,
+                color: Colors.amber[700],
+              ),
+            ),
           ),
           const SizedBox(height: 16),
           ...questions.asMap().entries.map((entry) {
@@ -764,169 +883,278 @@ class _SocialRmeTextbookReaderPageState extends State<SocialRmeTextbookReaderPag
   }
 
   Widget _buildQuestionCard(int number, Map<String, dynamic> question, Color subjectColor) {
-    final questionText = question['questionText'] as String? ?? '';
+    final questionText = (question['questionText'] ?? question['question']) as String? ?? '';
     final options = question['options'] as Map<String, dynamic>? ?? {};
     final correctAnswer = question['correctAnswer'] as String? ?? 'A';
     final explanation = question['explanation'] as String? ?? '';
-    final xpValue = question['xpValue'] as int? ?? 10;
+    final xpValue = (question['xpValue'] ?? question['xpReward']) as int? ?? 10;
+    final questionId = question['id'] as String? ?? 'q$number';
     
-    return StatefulBuilder(
-      builder: (context, setQuestionState) {
-        String? selectedAnswer;
-        bool? isCorrect;
-        bool showExplanation = false;
-        
-        return Container(
-          margin: const EdgeInsets.only(bottom: 16),
-          padding: const EdgeInsets.all(16),
-          decoration: BoxDecoration(
-            color: Colors.grey[50],
-            borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: Colors.grey[200]!),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    width: 28,
-                    height: 28,
-                    decoration: BoxDecoration(
-                      color: subjectColor,
-                      borderRadius: BorderRadius.circular(6),
-                    ),
-                    child: Center(
-                      child: Text(
-                        '$number',
-                        style: GoogleFonts.montserrat(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14,
-                        ),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 12),
-                  Expanded(
-                    child: Text(
-                      questionText,
-                      style: GoogleFonts.montserrat(
-                        fontSize: 15,
-                        fontWeight: FontWeight.w500,
-                        color: const Color(0xFF1A1E3F),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 16),
-              ...options.entries.map((option) {
-                return Padding(
-                  padding: const EdgeInsets.only(bottom: 8),
-                  child: InkWell(
-                    onTap: () {
-                      setQuestionState(() {
-                        selectedAnswer = option.key;
-                        isCorrect = option.key == correctAnswer;
-                        showExplanation = true;
-                      });
-                      
-                      // Submit answer
-                      _service.submitAnswer(
-                        widget.textbookId,
-                        currentChapterId!,
-                        currentSectionId!,
-                        question['id'] as String? ?? 'q$number',
-                        option.key,
-                        correctAnswer,
-                        xpValue,
-                      );
-                    },
-                    child: Container(
-                      padding: const EdgeInsets.all(12),
-                      decoration: BoxDecoration(
-                        color: selectedAnswer == option.key
-                            ? (isCorrect == true ? Colors.green.withOpacity(0.1) : Colors.red.withOpacity(0.1))
-                            : Colors.white,
-                        borderRadius: BorderRadius.circular(8),
-                        border: Border.all(
-                          color: selectedAnswer == option.key
-                              ? (isCorrect == true ? Colors.green : Colors.red)
-                              : Colors.grey[300]!,
-                          width: selectedAnswer == option.key ? 2 : 1,
-                        ),
-                      ),
-                      child: Row(
-                        children: [
-                          Container(
-                            width: 24,
-                            height: 24,
-                            decoration: BoxDecoration(
-                              color: subjectColor.withOpacity(0.1),
-                              borderRadius: BorderRadius.circular(4),
-                            ),
-                            child: Center(
-                              child: Text(
-                                option.key,
-                                style: GoogleFonts.montserrat(
-                                  fontWeight: FontWeight.bold,
-                                  color: subjectColor,
-                                ),
-                              ),
-                            ),
-                          ),
-                          const SizedBox(width: 12),
-                          Expanded(
-                            child: Text(
-                              option.value as String,
-                              style: GoogleFonts.montserrat(fontSize: 14),
-                            ),
-                          ),
-                          if (selectedAnswer == option.key)
-                            Icon(
-                              isCorrect == true ? Icons.check_circle : Icons.cancel,
-                              color: isCorrect == true ? Colors.green : Colors.red,
-                            ),
-                        ],
-                      ),
-                    ),
-                  ),
-                );
-              }),
-              if (showExplanation && explanation.isNotEmpty) ...[
-                const SizedBox(height: 12),
+    final isSubmitted = _submittedAnswers.containsKey(questionId);
+    final isCorrect = _submittedAnswers[questionId] ?? false;
+    final isMobile = MediaQuery.of(context).size.width < 768;
+    
+    return Card(
+      margin: EdgeInsets.only(bottom: isMobile ? 16 : 20),
+      elevation: 0,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(16),
+        side: BorderSide(
+          color: Colors.grey[200]!,
+          width: 1,
+        ),
+      ),
+      child: Padding(
+        padding: EdgeInsets.all(isMobile ? 16 : 24),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
                 Container(
-                  padding: const EdgeInsets.all(12),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 14,
+                    vertical: 8,
+                  ),
                   decoration: BoxDecoration(
-                    color: Colors.blue.withOpacity(0.1),
-                    borderRadius: BorderRadius.circular(8),
-                    border: Border.all(color: Colors.blue.withOpacity(0.3)),
+                    gradient: const LinearGradient(
+                      colors: [Color(0xFFD62828), Color(0xFFB71C1C)],
+                    ),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Text(
+                    'Q$number',
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 14,
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 12),
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 12,
+                    vertical: 6,
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.orange[50],
+                    borderRadius: BorderRadius.circular(16),
+                    border: Border.all(
+                      color: Colors.orange[200]!,
+                    ),
                   ),
                   child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
                     children: [
-                      const Icon(Icons.lightbulb, color: Colors.blue, size: 20),
-                      const SizedBox(width: 8),
-                      Expanded(
-                        child: Text(
-                          explanation,
-                          style: GoogleFonts.montserrat(
-                            fontSize: 13,
-                            color: Colors.blue[900],
-                          ),
+                      Icon(
+                        Icons.stars,
+                        size: 16,
+                        color: Colors.orange[700],
+                      ),
+                      const SizedBox(width: 4),
+                      Text(
+                        '+$xpValue XP',
+                        style: TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.orange[700],
                         ),
                       ),
                     ],
                   ),
                 ),
+                if (isSubmitted) ...[
+                  const SizedBox(width: 8),
+                  Icon(
+                    isCorrect ? Icons.check_circle : Icons.cancel,
+                    color: isCorrect ? Colors.green : Colors.red,
+                    size: 24,
+                  ),
+                ],
               ],
+            ),
+            const SizedBox(height: 20),
+            Text(
+              questionText,
+              style: TextStyle(
+                fontSize: isMobile ? 15 : 17,
+                fontWeight: FontWeight.w500,
+                height: 1.5,
+                color: const Color(0xFF1A1E3F),
+              ),
+            ),
+            const SizedBox(height: 20),
+            ...['A', 'B', 'C', 'D'].map((option) {
+              final optionText = options[option] ?? '';
+              final isSelected = _selectedAnswers[questionId] == option;
+              final showCorrect = isSubmitted && correctAnswer == option;
+              final showWrong = isSubmitted && isSelected && !isCorrect;
+
+              return Container(
+                margin: const EdgeInsets.only(bottom: 12),
+                decoration: BoxDecoration(
+                  color: showCorrect
+                      ? Colors.green[50]
+                      : showWrong
+                          ? Colors.red[50]
+                          : isSelected
+                              ? const Color(0xFFD62828).withOpacity(0.1)
+                              : Colors.transparent,
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(
+                    color: showCorrect
+                        ? Colors.green
+                        : showWrong
+                            ? Colors.red
+                            : isSelected
+                                ? const Color(0xFFD62828)
+                                : Colors.grey[300]!,
+                    width: showCorrect || showWrong ? 2 : 1,
+                  ),
+                ),
+                child: RadioListTile<String>(
+                  title: Text(
+                    '$option. $optionText',
+                    style: TextStyle(
+                      fontSize: isMobile ? 14 : 16,
+                      fontWeight: showCorrect || showWrong
+                          ? FontWeight.w600
+                          : FontWeight.normal,
+                      color: showCorrect
+                          ? Colors.green[900]
+                          : showWrong
+                              ? Colors.red[900]
+                              : Colors.black87,
+                    ),
+                  ),
+                  value: option,
+                  groupValue: _selectedAnswers[questionId],
+                  onChanged: isSubmitted
+                      ? null
+                      : (value) {
+                          setState(() {
+                            _selectedAnswers[questionId] = value!;
+                          });
+                        },
+                  activeColor: const Color(0xFFD62828),
+                  contentPadding: const EdgeInsets.symmetric(
+                    horizontal: 8,
+                    vertical: 4,
+                  ),
+                ),
+              );
+            }),
+            if (!isSubmitted && _selectedAnswers.containsKey(questionId)) ...[
+              const SizedBox(height: 16),
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: () => _submitAnswer(
+                    questionId,
+                    correctAnswer,
+                    xpValue,
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFFD62828),
+                    foregroundColor: Colors.white,
+                    padding: EdgeInsets.symmetric(
+                      vertical: isMobile ? 12 : 14,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    elevation: 0,
+                  ),
+                  child: const Text(
+                    'Submit Answer',
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+              ),
             ],
-          ),
-        );
-      },
+            if (isSubmitted) ...[
+              const SizedBox(height: 20),
+              Container(
+                padding: EdgeInsets.all(isMobile ? 14 : 16),
+                decoration: BoxDecoration(
+                  color: isCorrect ? Colors.green[50] : Colors.red[50],
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(
+                    color: isCorrect ? Colors.green[300]! : Colors.red[300]!,
+                  ),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Icon(
+                          isCorrect ? Icons.check_circle : Icons.error,
+                          color: isCorrect ? Colors.green[700] : Colors.red[700],
+                          size: 20,
+                        ),
+                        const SizedBox(width: 8),
+                        Text(
+                          isCorrect ? 'Correct!' : 'Incorrect',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: isMobile ? 15 : 16,
+                            color: isCorrect ? Colors.green[900] : Colors.red[900],
+                          ),
+                        ),
+                      ],
+                    ),
+                    if (explanation.isNotEmpty) ...[
+                      const SizedBox(height: 12),
+                      Text(
+                        explanation,
+                        style: TextStyle(
+                          fontSize: isMobile ? 14 : 15,
+                          height: 1.5,
+                          color: isCorrect ? Colors.green[900] : Colors.red[900],
+                        ),
+                      ),
+                    ],
+                  ],
+                ),
+              ),
+            ],
+          ],
+        ),
+      ),
     );
+  }
+  
+  void _submitAnswer(String questionId, String correctAnswer, int xpValue) {
+    final selectedAnswer = _selectedAnswers[questionId];
+    if (selectedAnswer == null) return;
+    
+    final isCorrect = selectedAnswer == correctAnswer;
+    
+    setState(() {
+      _submittedAnswers[questionId] = isCorrect;
+    });
+    
+    // Submit to service
+    _service.submitAnswer(
+      widget.textbookId,
+      currentChapterId!,
+      currentSectionId!,
+      questionId,
+      selectedAnswer,
+      correctAnswer,
+      xpValue,
+    );
+    
+    if (isCorrect) {
+      setState(() {
+        totalXP += xpValue;
+      });
+    }
   }
 
   Widget _buildNavigationButtons(Color subjectColor) {
@@ -944,8 +1172,8 @@ class _SocialRmeTextbookReaderPageState extends State<SocialRmeTextbookReaderPag
             icon: const Icon(Icons.arrow_back),
             label: const Text('Previous'),
             style: OutlinedButton.styleFrom(
-              foregroundColor: subjectColor,
-              side: BorderSide(color: subjectColor),
+              foregroundColor: const Color(0xFFD62828),
+              side: const BorderSide(color: Color(0xFFD62828)),
               padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
             ),
           )
@@ -957,7 +1185,7 @@ class _SocialRmeTextbookReaderPageState extends State<SocialRmeTextbookReaderPag
             icon: const Icon(Icons.arrow_forward),
             label: const Text('Next'),
             style: ElevatedButton.styleFrom(
-              backgroundColor: subjectColor,
+              backgroundColor: const Color(0xFFD62828),
               foregroundColor: Colors.white,
               padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
             ),
@@ -995,8 +1223,8 @@ class _SocialRmeTextbookReaderPageState extends State<SocialRmeTextbookReaderPag
                 icon: const Icon(Icons.arrow_back, size: 18),
                 label: const Text('Prev'),
                 style: OutlinedButton.styleFrom(
-                  foregroundColor: subjectColor,
-                  side: BorderSide(color: subjectColor),
+                  foregroundColor: const Color(0xFFD62828),
+                  side: const BorderSide(color: Color(0xFFD62828)),
                   padding: const EdgeInsets.symmetric(vertical: 12),
                 ),
               ),
@@ -1011,7 +1239,7 @@ class _SocialRmeTextbookReaderPageState extends State<SocialRmeTextbookReaderPag
                 icon: const Icon(Icons.arrow_forward, size: 18),
                 label: const Text('Next'),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: subjectColor,
+                  backgroundColor: const Color(0xFFD62828),
                   foregroundColor: Colors.white,
                   padding: const EdgeInsets.symmetric(vertical: 12),
                 ),

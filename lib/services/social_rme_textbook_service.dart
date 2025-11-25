@@ -346,10 +346,26 @@ class SocialRmeTextbookService {
             'lastAccessed': FieldValue.serverTimestamp(),
           }, SetOptions(merge: true));
 
-          // Also update user's global XP
+          // Also update user's global XP (using totalXP field)
           final userRef = _firestore.collection('users').doc(user.uid);
           transaction.update(userRef, {
-            'xp': FieldValue.increment(xpReward),
+            'totalXP': FieldValue.increment(xpReward),
+            'lastXPUpdate': FieldValue.serverTimestamp(),
+          });
+          
+          // Log XP transaction for tracking
+          final xpTransactionRef = _firestore.collection('xp_transactions').doc();
+          transaction.set(xpTransactionRef, {
+            'userId': user.uid,
+            'xpAmount': xpReward,
+            'source': 'textbook',
+            'details': {
+              'textbookId': textbookId,
+              'chapterId': chapterId,
+              'sectionId': sectionId,
+              'action': 'section_completion',
+            },
+            'timestamp': FieldValue.serverTimestamp(),
           });
         }
       });
@@ -374,9 +390,11 @@ class SocialRmeTextbookService {
 
     if (isCorrect) {
       try {
-        // Award XP
-        await _firestore.collection('users').doc(user.uid).update({
-          'xp': FieldValue.increment(xpReward),
+        // Award XP to user's main profile (using totalXP field)
+        final userRef = _firestore.collection('users').doc(user.uid);
+        await userRef.update({
+          'totalXP': FieldValue.increment(xpReward),
+          'lastXPUpdate': FieldValue.serverTimestamp(),
         });
 
         // Track answer in progress
@@ -390,6 +408,23 @@ class SocialRmeTextbookService {
           'totalXP': FieldValue.increment(xpReward),
           'lastAccessed': FieldValue.serverTimestamp(),
         }, SetOptions(merge: true));
+        
+        // Log XP transaction for tracking
+        await _firestore.collection('xp_transactions').add({
+          'userId': user.uid,
+          'xpAmount': xpReward,
+          'source': 'textbook',
+          'details': {
+            'textbookId': textbookId,
+            'chapterId': chapterId,
+            'sectionId': sectionId,
+            'questionId': questionId,
+            'action': 'correct_answer',
+          },
+          'timestamp': FieldValue.serverTimestamp(),
+        });
+        
+        debugPrint('✅ Awarded $xpReward XP for correct answer');
       } catch (e) {
         debugPrint('❌ Error submitting answer: $e');
       }
