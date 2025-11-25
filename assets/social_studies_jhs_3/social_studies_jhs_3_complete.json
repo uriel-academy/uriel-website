@@ -1,0 +1,38 @@
+{
+  "textbookId": "social_studies_jhs_3",
+  "subject": "Social Studies",
+  "year": "JHS 3",
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "title": "BECE Prep: Ghana's Political History",
+      "sections": [],
+      "chapterReviewQuestions": []
+    },
+    {
+      "chapterNumber": 2,
+      "title": "BECE Prep: Ghana's Constitution and Government",
+      "sections": [],
+      "chapterReviewQuestions": []
+    },
+    {
+      "chapterNumber": 3,
+      "title": "BECE Prep: International Relations",
+      "sections": [],
+      "chapterReviewQuestions": []
+    },
+    {
+      "chapterNumber": 4,
+      "title": "BECE Prep: Contemporary Issues",
+      "sections": [],
+      "chapterReviewQuestions": []
+    },
+    {
+      "chapterNumber": 5,
+      "title": "BECE Revision and Practice",
+      "sections": [],
+      "chapterReviewQuestions": []
+    }
+  ],
+  "yearEndAssessment": []
+}

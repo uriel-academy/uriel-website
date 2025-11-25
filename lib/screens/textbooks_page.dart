@@ -6,9 +6,11 @@ import '../services/textbook_service.dart';
 import '../services/storybook_service.dart';
 import '../services/course_reader_service.dart';
 import '../services/english_textbook_service.dart';
+import '../services/social_rme_textbook_service.dart';
 import 'enhanced_epub_reader_page.dart';
 import 'course_unit_list_page.dart';
 import 'english_textbook_reader_page.dart';
+import 'social_rme_textbook_reader_page.dart';
 
 class TextbooksPage extends StatefulWidget {
   const TextbooksPage({super.key});
@@ -25,6 +27,7 @@ class _TextbooksPageState extends State<TextbooksPage>
 
   final TextbookService _textbookService = TextbookService();
   final StorybookService _storybookService = StorybookService();
+  final SocialRmeTextbookService _socialRmeService = SocialRmeTextbookService();
   final TextEditingController _searchController = TextEditingController();
 
   String selectedLevel = 'All';
@@ -42,6 +45,14 @@ class _TextbooksPageState extends State<TextbooksPage>
   List<Map<String, dynamic>> englishTextbooks = [];
   List<Map<String, dynamic>> filteredEnglishTextbooks = [];
   Map<String, Map<String, dynamic>> englishProgressMap = {};
+  
+  // Social Studies and RME textbooks
+  List<Map<String, dynamic>> socialStudiesTextbooks = [];
+  List<Map<String, dynamic>> rmeTextbooks = [];
+  List<Map<String, dynamic>> filteredSocialRmeTextbooks = [];
+  Map<String, Map<String, dynamic>> socialRmeProgressMap = {};
+  bool isLoadingSocialRme = true;
+  
   bool isLoading = true;
   bool isLoadingEnglish = true;
   
@@ -51,12 +62,12 @@ class _TextbooksPageState extends State<TextbooksPage>
 
   final List<String> levels = ['All', 'JHS 1', 'JHS 2', 'JHS 3', 'SHS 1', 'SHS 2', 'SHS 3'];
   final List<String> subjects = [
-    'All', 'Mathematics', 'English Language', 'Science', 'Social Studies',
+    'All', 'English', 'Mathematics', 'English Language', 'Science', 'Social Studies',
     'ICT', 'Religious & Moral Education', 'Creative Arts', 'French',
     'Twi', 'Ga', 'Ewe', 'Technical Skills'
   ];
   final List<String> publishers = [
-    'All', 'Unimax Macmillan', 'Sedco Publishing', 'Sam-Woode Publishers',
+    'All', 'Uriel Academy', 'Unimax Macmillan', 'Sedco Publishing', 'Sam-Woode Publishers',
     'Goldfield Publishers', 'Ministry of Education'
   ];
 
@@ -76,6 +87,7 @@ class _TextbooksPageState extends State<TextbooksPage>
     _loadTextbooks();
     _loadStorybooks();
     _loadEnglishTextbooks();
+    _loadSocialRmeTextbooks();
     _animationController.forward();
   }
 
@@ -135,6 +147,69 @@ class _TextbooksPageState extends State<TextbooksPage>
     }
   }
 
+  Future<void> _loadSocialRmeTextbooks() async {
+    setState(() => isLoadingSocialRme = true);
+    try {
+      // Load Social Studies textbooks
+      socialStudiesTextbooks = await _socialRmeService.getSocialStudiesTextbooks();
+      debugPrint('📚 Loaded ${socialStudiesTextbooks.length} Social Studies textbooks');
+      
+      // Load RME textbooks
+      rmeTextbooks = await _socialRmeService.getRmeTextbooks();
+      debugPrint('📚 Loaded ${rmeTextbooks.length} RME textbooks');
+      
+      // Load progress for each textbook
+      for (final textbook in [...socialStudiesTextbooks, ...rmeTextbooks]) {
+        final progress = await _socialRmeService.getUserProgress(textbook['id']);
+        socialRmeProgressMap[textbook['id']] = progress;
+      }
+      
+      // Initialize filtered list - combine all
+      filteredSocialRmeTextbooks = [...socialStudiesTextbooks, ...rmeTextbooks];
+      
+      // Apply any existing filters
+      _applySocialRmeFilter();
+    } catch (e) {
+      debugPrint('❌ Error loading Social Studies/RME textbooks: $e');
+    } finally {
+      setState(() => isLoadingSocialRme = false);
+    }
+  }
+
+  void _applySocialRmeFilter() {
+    setState(() {
+      final allSocialRme = [...socialStudiesTextbooks, ...rmeTextbooks];
+      
+      if (searchQuery.isEmpty && selectedLevel == 'All' && selectedSubject == 'All') {
+        filteredSocialRmeTextbooks = List.from(allSocialRme);
+      } else {
+        filteredSocialRmeTextbooks = allSocialRme.where((book) {
+          final title = (book['title'] as String? ?? '').toLowerCase();
+          final year = (book['year'] as String? ?? '').toLowerCase();
+          final subject = (book['subject'] as String? ?? '').toLowerCase();
+          final query = searchQuery.toLowerCase().trim();
+          
+          // Level filter
+          bool matchesLevel = selectedLevel == 'All' || year == selectedLevel.toLowerCase();
+          
+          // Subject filter
+          bool matchesSubject = selectedSubject == 'All' || 
+              subject.contains(selectedSubject.toLowerCase()) ||
+              (selectedSubject.toLowerCase() == 'social studies' && subject.contains('social')) ||
+              (selectedSubject.toLowerCase().contains('religious') && (subject.contains('rme') || subject.contains('religious')));
+          
+          // Search query filter
+          bool matchesSearch = query.isEmpty || 
+              title.contains(query) || 
+              year.contains(query) ||
+              subject.contains(query);
+          
+          return matchesLevel && matchesSubject && matchesSearch;
+        }).toList();
+      }
+    });
+  }
+
   void _onTabChanged() {
     setState(() {
       // Reset search when switching tabs
@@ -142,6 +217,7 @@ class _TextbooksPageState extends State<TextbooksPage>
       searchQuery = '';
       _applyFilters();
       _applyStoryFilter();
+      _applySocialRmeFilter();
     });
   }
 
@@ -150,15 +226,39 @@ class _TextbooksPageState extends State<TextbooksPage>
       // Only show Uriel English course, hide all other textbooks
       filteredTextbooks = [];
       
-      // Filter English textbooks by search query
-      if (searchQuery.isEmpty) {
+      // Filter English textbooks by search query, level, and subject
+      if (searchQuery.isEmpty && selectedLevel == 'All' && selectedSubject == 'All') {
         filteredEnglishTextbooks = List.from(englishTextbooks);
       } else {
         filteredEnglishTextbooks = englishTextbooks.where((book) {
           final title = (book['title'] as String? ?? '').toLowerCase();
           final year = (book['year'] as String? ?? '').toLowerCase();
-          final query = searchQuery.toLowerCase();
-          return title.contains(query) || year.contains(query);
+          final subject = (book['subject'] as String? ?? '').toLowerCase();
+          final query = searchQuery.toLowerCase().trim();
+          
+          // Level filter (class filter)
+          bool matchesLevel = selectedLevel == 'All' || year == selectedLevel.toLowerCase();
+          
+          // Subject filter
+          bool matchesSubject = selectedSubject == 'All' || subject == selectedSubject.toLowerCase();
+          
+          // Search query filter
+          bool matchesSearch = true;
+          if (query.isNotEmpty) {
+            // More precise matching: check if query matches year exactly or is contained in title
+            final normalizedYear = year.replaceAll(' ', ''); // "jhs 1" -> "jhs1"
+            final normalizedQuery = query.replaceAll(' ', ''); // "jhs 1" -> "jhs1"
+            
+            // Exact year match (e.g., "jhs1" matches "JHS 1" but not "JHS 2")
+            if (normalizedYear == normalizedQuery || year == query) {
+              matchesSearch = true;
+            } else {
+              // Partial title match (e.g., "comprehensive" matches all)
+              matchesSearch = title.contains(query);
+            }
+          }
+          
+          return matchesLevel && matchesSubject && matchesSearch;
         }).toList();
       }
     });
@@ -378,7 +478,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                 ),
               ],
             ] else if (_tabController.index == 1) ...[
-              // Textbooks tab - show English textbooks first, then regular textbooks
+              // Textbooks tab - show English textbooks first, then Social Studies/RME
               if (!isLoadingEnglish && filteredEnglishTextbooks.isNotEmpty) ...[
                 SliverPadding(
                   padding: EdgeInsets.fromLTRB(
@@ -394,17 +494,39 @@ class _TextbooksPageState extends State<TextbooksPage>
                   child: _buildEnglishPaginationControls(),
                 ),
               ],
+              // Social Studies and RME Textbooks
+              if (!isLoadingSocialRme && filteredSocialRmeTextbooks.isNotEmpty) ...[
+                SliverToBoxAdapter(
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(
+                      isMobile ? 16 : 24,
+                      filteredEnglishTextbooks.isNotEmpty ? 16 : (isMobile ? 16 : 24),
+                      isMobile ? 16 : 24,
+                      8,
+                    ),
+                    child: Text(
+                      'Social Studies & RME',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: const Color(0xFF1A1E3F),
+                      ),
+                    ),
+                  ),
+                ),
+                _buildSocialRmeTextbooksGrid(isMobile),
+              ],
               if (filteredTextbooks.isNotEmpty) ...[
                 SliverToBoxAdapter(
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(
                       isMobile ? 16 : 24,
-                      filteredEnglishTextbooks.isNotEmpty ? 8 : (isMobile ? 16 : 24),
+                      filteredEnglishTextbooks.isNotEmpty || filteredSocialRmeTextbooks.isNotEmpty ? 8 : (isMobile ? 16 : 24),
                       isMobile ? 16 : 24,
                       8,
                     ),
                     child: Text(
-                      englishTextbooks.isNotEmpty ? 'Other Textbooks' : 'Textbooks',
+                      'Other Textbooks',
                       style: GoogleFonts.montserrat(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -425,13 +547,13 @@ class _TextbooksPageState extends State<TextbooksPage>
                       : _buildTextbookList(isMobile),
                 ),
               ],
-              if (!isLoadingEnglish && filteredEnglishTextbooks.isEmpty && filteredTextbooks.isEmpty) ...[
+              if (!isLoadingEnglish && !isLoadingSocialRme && filteredEnglishTextbooks.isEmpty && filteredSocialRmeTextbooks.isEmpty && filteredTextbooks.isEmpty) ...[
                 SliverFillRemaining(
                   child: _buildEmptyState(),
                 ),
               ],
             ] else ...[
-              // All Books tab (index 0) - show both English and regular textbooks
+              // All Books tab (index 0) - show English, Social Studies/RME, and other textbooks
               if (!isLoadingEnglish && filteredEnglishTextbooks.isNotEmpty) ...[
                 SliverPadding(
                   padding: EdgeInsets.fromLTRB(
@@ -447,17 +569,39 @@ class _TextbooksPageState extends State<TextbooksPage>
                   child: _buildEnglishPaginationControls(),
                 ),
               ],
+              // Social Studies and RME Textbooks
+              if (!isLoadingSocialRme && filteredSocialRmeTextbooks.isNotEmpty) ...[
+                SliverToBoxAdapter(
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(
+                      isMobile ? 16 : 24,
+                      filteredEnglishTextbooks.isNotEmpty ? 16 : (isMobile ? 16 : 24),
+                      isMobile ? 16 : 24,
+                      8,
+                    ),
+                    child: Text(
+                      'Social Studies & RME',
+                      style: GoogleFonts.montserrat(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: const Color(0xFF1A1E3F),
+                      ),
+                    ),
+                  ),
+                ),
+                _buildSocialRmeTextbooksGrid(isMobile),
+              ],
               if (filteredTextbooks.isNotEmpty) ...[
                 SliverToBoxAdapter(
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(
                       isMobile ? 16 : 24,
-                      filteredEnglishTextbooks.isNotEmpty ? 8 : (isMobile ? 16 : 24),
+                      (filteredEnglishTextbooks.isNotEmpty || filteredSocialRmeTextbooks.isNotEmpty) ? 8 : (isMobile ? 16 : 24),
                       isMobile ? 16 : 24,
                       8,
                     ),
                     child: Text(
-                      filteredEnglishTextbooks.isNotEmpty ? 'Other Textbooks' : 'All Textbooks',
+                      'Other Textbooks',
                       style: GoogleFonts.montserrat(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -473,7 +617,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                       : _buildTextbookList(isMobile),
                 ),
               ],
-              if (!isLoadingEnglish && filteredEnglishTextbooks.isEmpty && filteredTextbooks.isEmpty) ...[
+              if (!isLoadingEnglish && !isLoadingSocialRme && filteredEnglishTextbooks.isEmpty && filteredSocialRmeTextbooks.isEmpty && filteredTextbooks.isEmpty) ...[
                 SliverFillRemaining(
                   child: _buildEmptyState(),
                 ),
@@ -2570,6 +2714,299 @@ class _TextbooksPageState extends State<TextbooksPage>
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  /// Build grid of Social Studies and RME textbooks
+  Widget _buildSocialRmeTextbooksGrid(bool isMobile) {
+    if (filteredSocialRmeTextbooks.isEmpty) {
+      return const SliverToBoxAdapter(child: SizedBox());
+    }
+
+    return SliverPadding(
+      padding: EdgeInsets.all(isMobile ? 16 : 24),
+      sliver: SliverGrid(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: isMobile ? 2 : 3,
+          childAspectRatio: isMobile ? 0.58 : 0.7,
+          crossAxisSpacing: isMobile ? 12 : 16,
+          mainAxisSpacing: isMobile ? 12 : 16,
+        ),
+        delegate: SliverChildBuilderDelegate(
+          (context, index) {
+            try {
+              final textbook = filteredSocialRmeTextbooks[index];
+              final textbookId = textbook['id'] as String? ?? 'unknown';
+              final title = textbook['title'] as String? ?? 'Unknown Title';
+              final subject = textbook['subject'] as String? ?? 'Social Studies';
+              final yearString = textbook['year'] as String? ?? 'JHS 1';
+              final coverImage = textbook['coverImage'] as String? ?? '';
+              final totalChapters = textbook['totalChapters'] as int? ?? 0;
+              final totalSections = textbook['totalSections'] as int? ?? 0;
+              
+              // Get progress data
+              final progressData = socialRmeProgressMap[textbookId] ?? {};
+              final completedSections = (progressData['completedSections'] as List?)?.length ?? 0;
+              final totalXP = progressData['totalXP'] as int? ?? 0;
+              final progressPercent = totalSections > 0 ? (completedSections / totalSections * 100).toInt() : 0;
+              final isCompleted = completedSections >= totalSections && totalSections > 0;
+              
+              // Get subject color
+              final subjectColor = subject.toLowerCase().contains('social') 
+                  ? const Color(0xFF9C27B0)  // Purple for Social Studies
+                  : const Color(0xFF795548); // Brown for RME
+
+              return Card(
+                elevation: 4,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SocialRmeTextbookReaderPage(
+                          textbookId: textbookId,
+                          subject: subject,
+                          year: yearString,
+                        ),
+                      ),
+                    );
+                  },
+                  borderRadius: BorderRadius.circular(12),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // Book cover image
+                      Expanded(
+                        flex: 5,
+                        child: Stack(
+                          fit: StackFit.expand,
+                          children: [
+                            ClipRRect(
+                              borderRadius: const BorderRadius.vertical(
+                                top: Radius.circular(12),
+                              ),
+                              child: coverImage.isNotEmpty
+                                  ? Image.asset(
+                                      coverImage,
+                                      fit: BoxFit.cover,
+                                      alignment: Alignment.topCenter,
+                                      errorBuilder: (context, error, stackTrace) {
+                                        return Container(
+                                          color: subjectColor.withOpacity(0.1),
+                                          child: Column(
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            children: [
+                                              Icon(
+                                                subject.toLowerCase().contains('social')
+                                                    ? Icons.public
+                                                    : Icons.church,
+                                                size: 48,
+                                                color: subjectColor.withOpacity(0.5),
+                                              ),
+                                              const SizedBox(height: 8),
+                                              Text(
+                                                yearString,
+                                                style: GoogleFonts.montserrat(
+                                                  fontSize: 16,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: subjectColor,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        );
+                                      },
+                                    )
+                                  : Container(
+                                      color: subjectColor.withOpacity(0.1),
+                                      child: Column(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children: [
+                                          Icon(
+                                            subject.toLowerCase().contains('social')
+                                                ? Icons.public
+                                                : Icons.church,
+                                            size: 48,
+                                            color: subjectColor.withOpacity(0.5),
+                                          ),
+                                          const SizedBox(height: 8),
+                                          Text(
+                                            yearString,
+                                            style: GoogleFonts.montserrat(
+                                              fontSize: 16,
+                                              fontWeight: FontWeight.bold,
+                                              color: subjectColor,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                            ),
+                            // NEW badge
+                            Positioned(
+                              top: 8,
+                              left: 8,
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 8,
+                                  vertical: 4,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFF34C759),
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: Text(
+                                  'NEW',
+                                  style: GoogleFonts.montserrat(
+                                    color: Colors.white,
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            if (isCompleted)
+                              Positioned(
+                                top: 8,
+                                right: 8,
+                                child: Container(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 8,
+                                    vertical: 4,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: Colors.green,
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      const Icon(
+                                        Icons.check_circle,
+                                        color: Colors.white,
+                                        size: 14,
+                                      ),
+                                      const SizedBox(width: 4),
+                                      Text(
+                                        'Done',
+                                        style: GoogleFonts.montserrat(
+                                          color: Colors.white,
+                                          fontSize: 10,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                          ],
+                        ),
+                      ),
+                      // Book details
+                      Expanded(
+                        flex: isMobile ? 3 : 2,
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(12, 12, 12, 12),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              // Subject badge
+                              Container(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 6,
+                                  vertical: 2,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: subjectColor.withOpacity(0.1),
+                                  borderRadius: BorderRadius.circular(4),
+                                ),
+                                child: Text(
+                                  subject,
+                                  style: GoogleFonts.montserrat(
+                                    fontSize: 8,
+                                    fontWeight: FontWeight.w600,
+                                    color: subjectColor,
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(height: 4),
+                              Text(
+                                title,
+                                style: GoogleFonts.montserrat(
+                                  fontSize: isMobile ? 11 : 14,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                              const Spacer(),
+                              // Progress and XP
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        '$totalChapters chapters',
+                                        style: GoogleFonts.montserrat(
+                                          fontSize: isMobile ? 8 : 10,
+                                          color: Colors.grey[600],
+                                        ),
+                                      ),
+                                      Row(
+                                        children: [
+                                          Icon(
+                                            Icons.stars,
+                                            size: isMobile ? 12 : 14,
+                                            color: Colors.amber,
+                                          ),
+                                          const SizedBox(width: 2),
+                                          Text(
+                                            '$totalXP XP',
+                                            style: GoogleFonts.montserrat(
+                                              fontSize: isMobile ? 8 : 10,
+                                              fontWeight: FontWeight.bold,
+                                              color: Colors.amber[700],
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(height: 4),
+                                  LinearProgressIndicator(
+                                    value: progressPercent / 100,
+                                    backgroundColor: Colors.grey[300],
+                                    valueColor: AlwaysStoppedAnimation<Color>(
+                                      isCompleted ? Colors.green : subjectColor,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              );
+            } catch (e) {
+              debugPrint('❌ Error rendering Social/RME textbook: $e');
+              return const Card(
+                child: Center(
+                  child: Icon(Icons.error, color: Colors.red),
+                ),
+              );
+            }
+          },
+          childCount: filteredSocialRmeTextbooks.length,
+        ),
       ),
     );
   }

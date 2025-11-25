@@ -55,6 +55,12 @@ flutter:
     - assets/english_jhs1.png
     - assets/english_jhs2.png
     - assets/english_jhs3.png
+    - assets/social-studies_jhs1.png
+    - assets/social-studies_jhs2.png
+    - assets/social-studies_jhs3.png
+    - assets/rme_jhs1.png
+    - assets/rme_jhs2.png
+    - assets/rme_jhs3.png
     - assets/textbooks/
     - assets/notes_cover/creative_arts_note_cover.png
     - assets/notes_cover/english_note_cover.png

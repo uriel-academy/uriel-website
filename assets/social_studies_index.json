@@ -1,0 +1,26 @@
+{
+  "subject": "Social Studies",
+  "description": "Comprehensive Social Studies textbooks for JHS 1-3, BECE-aligned",
+  "years": [
+    {
+      "year": "JHS 1",
+      "textbookId": "social_studies_jhs_1",
+      "chapters": 5,
+      "totalSections": 25
+    },
+    {
+      "year": "JHS 2",
+      "textbookId": "social_studies_jhs_2",
+      "chapters": 5,
+      "totalSections": 25
+    },
+    {
+      "year": "JHS 3",
+      "textbookId": "social_studies_jhs_3",
+      "chapters": 5,
+      "totalSections": 25
+    }
+  ],
+  "generatedAt": "2025-11-25T18:55:40.519Z",
+  "generatedBy": "OpenAI GPT-4o"
+}
