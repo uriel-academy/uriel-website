@@ -1,8 +1,11 @@
+import 'dart:convert';
 import 'package:cloud_functions/cloud_functions.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/services.dart';
 
 /// Service for managing interactive English textbooks with XP system
+/// Now loads from local JSON assets for instant performance
 class EnglishTextbookService {
   static final EnglishTextbookService _instance = EnglishTextbookService._internal();
   factory EnglishTextbookService() => _instance;
@@ -11,6 +14,37 @@ class EnglishTextbookService {
   final FirebaseFunctions _functions = FirebaseFunctions.instance;
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final FirebaseAuth _auth = FirebaseAuth.instance;
+  
+  // Cache for loaded textbooks from JSON
+  final Map<String, Map<String, dynamic>> _textbookCache = {};
+  bool _cacheLoaded = false;
+
+  /// Load all textbooks from JSON assets into cache
+  Future<void> _loadTextbooksFromAssets() async {
+    if (_cacheLoaded) return;
+    
+    try {
+      final textbookIds = ['english_jhs_1', 'english_jhs_2', 'english_jhs_3'];
+      
+      for (final id in textbookIds) {
+        try {
+          print('📚 Attempting to load: assets/textbooks/$id.json');
+          final jsonString = await rootBundle.loadString('assets/textbooks/$id.json');
+          final textbookData = json.decode(jsonString) as Map<String, dynamic>;
+          _textbookCache[id] = textbookData;
+          print('✅ Successfully loaded: $id (${textbookData['title']})');
+        } catch (e) {
+          print('❌ Could not load $id.json from assets: $e');
+        }
+      }
+      
+      _cacheLoaded = true;
+      print('📖 Loaded ${_textbookCache.length} textbooks from assets');
+      print('   Cached textbook IDs: ${_textbookCache.keys.join(', ')}');
+    } catch (e) {
+      print('❌ Error loading textbooks from assets: $e');
+    }
+  }
 
   /// Generate complete English textbook for a specific year
   Future<Map<String, dynamic>> generateTextbook({
@@ -40,13 +74,44 @@ class EnglishTextbookService {
     }
   }
 
-  /// Get all English textbooks
+  /// Get all English textbooks (from JSON assets with Firestore fallback)
   Future<List<Map<String, dynamic>>> getAllTextbooks() async {
     try {
+      // Load from assets first
+      await _loadTextbooksFromAssets();
+      
+      if (_textbookCache.isNotEmpty) {
+        final textbooks = _textbookCache.values.map((textbook) {
+          // Ensure all required fields exist with proper null safety
+          return {
+            'id': textbook['id'] ?? '',
+            'subject': textbook['subject'] ?? 'English',
+            'year': textbook['year'] ?? '',
+            'title': textbook['title'] ?? '',
+            'description': textbook['description'] ?? '',
+            'coverImage': textbook['coverImage'] ?? '',
+            'totalChapters': textbook['totalChapters'] ?? 0,
+            'totalSections': textbook['totalSections'] ?? 0,
+          };
+        }).toList();
+        
+        // Safe sort with null checks and filtering
+        textbooks.removeWhere((book) => book['year'] == null || book['year'] == '');
+        textbooks.sort((a, b) {
+          final yearA = a['year'] as String?;
+          final yearB = b['year'] as String?;
+          if (yearA == null || yearB == null) return 0;
+          return yearA.compareTo(yearB);
+        });
+        
+        return textbooks;
+      }
+      
+      // Fallback to Firestore
+      print('⚠️ Falling back to Firestore for textbooks');
       final snapshot = await _firestore
           .collection('textbooks')
           .where('subject', isEqualTo: 'English')
-          .orderBy('year')
           .get();
       
       return snapshot.docs.map((doc) {
@@ -61,9 +126,21 @@ class EnglishTextbookService {
     }
   }
 
-  /// Get textbook for a specific year
+  /// Get textbook for a specific year (from JSON assets with Firestore fallback)
   Future<Map<String, dynamic>?> getTextbook(String year) async {
     try {
+      // Load from assets first
+      await _loadTextbooksFromAssets();
+      
+      // Find in cache
+      for (final textbook in _textbookCache.values) {
+        if (textbook['year'] == year) {
+          return textbook;
+        }
+      }
+      
+      // Fallback to Firestore
+      print('⚠️ Falling back to Firestore for textbook: $year');
       final snapshot = await _firestore
           .collection('textbooks')
           .where('subject', isEqualTo: 'English')
@@ -84,9 +161,20 @@ class EnglishTextbookService {
     }
   }
 
-  /// Get all chapters for a textbook
+  /// Get all chapters for a textbook (from JSON assets with Firestore fallback)
   Future<List<Map<String, dynamic>>> getChapters(String textbookId) async {
     try {
+      // Load from assets first
+      await _loadTextbooksFromAssets();
+      
+      // Check cache
+      if (_textbookCache.containsKey(textbookId)) {
+        final chapters = _textbookCache[textbookId]!['chapters'] as List;
+        return chapters.map((ch) => ch as Map<String, dynamic>).toList();
+      }
+      
+      // Fallback to Firestore
+      print('⚠️ Falling back to Firestore for chapters: $textbookId');
       final snapshot = await _firestore
           .collection('textbooks')
           .doc(textbookId)
@@ -103,9 +191,38 @@ class EnglishTextbookService {
     }
   }
 
-  /// Get all sections for a textbook (flattened from all chapters)
+  /// Get all sections for a textbook (flattened from all chapters, from JSON with Firestore fallback)
   Future<List<Map<String, dynamic>>> getSections(String textbookId) async {
     try {
+      // Load from assets first
+      await _loadTextbooksFromAssets();
+      
+      // Check cache
+      if (_textbookCache.containsKey(textbookId)) {
+        final allSections = <Map<String, dynamic>>[];
+        final chapters = _textbookCache[textbookId]!['chapters'] as List;
+        
+        for (var i = 0; i < chapters.length; i++) {
+          final chapter = chapters[i] as Map<String, dynamic>;
+          final sections = chapter['sections'] as List;
+          
+          for (var section in sections) {
+            final sectionMap = section as Map<String, dynamic>;
+            allSections.add({
+              'id': sectionMap['id'],
+              'chapterIndex': i,
+              'chapterNumber': chapter['chapterNumber'],
+              'chapterId': chapter['id'],
+              ...sectionMap,
+            });
+          }
+        }
+        
+        return allSections;
+      }
+      
+      // Fallback to Firestore
+      print('⚠️ Falling back to Firestore for sections: $textbookId');
       final allSections = <Map<String, dynamic>>[];
       
       // Get all chapters first
@@ -143,9 +260,33 @@ class EnglishTextbookService {
     }
   }
 
-  /// Get section content
+  /// Get section content (from JSON assets with Firestore fallback)
   Future<Map<String, dynamic>?> getSection(String textbookId, String chapterId, String sectionId) async {
     try {
+      // Load from assets first
+      await _loadTextbooksFromAssets();
+      
+      // Check cache
+      if (_textbookCache.containsKey(textbookId)) {
+        final chapters = _textbookCache[textbookId]!['chapters'] as List;
+        
+        for (final chapter in chapters) {
+          final chapterMap = chapter as Map<String, dynamic>;
+          if (chapterMap['id'] == chapterId) {
+            final sections = chapterMap['sections'] as List;
+            
+            for (final section in sections) {
+              final sectionMap = section as Map<String, dynamic>;
+              if (sectionMap['id'] == sectionId) {
+                return sectionMap;
+              }
+            }
+          }
+        }
+      }
+      
+      // Fallback to Firestore
+      print('⚠️ Falling back to Firestore for section: $textbookId/$chapterId/$sectionId');
       final doc = await _firestore
           .collection('textbooks')
           .doc(textbookId)

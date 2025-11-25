@@ -43,6 +43,10 @@ class _TextbooksPageState extends State<TextbooksPage>
   Map<String, Map<String, dynamic>> englishProgressMap = {};
   bool isLoading = true;
   bool isLoadingEnglish = true;
+  
+  // Pagination state
+  int _currentEnglishPage = 0;
+  int _currentStorybookPage = 0;
 
   final List<String> levels = ['All', 'JHS 1', 'JHS 2', 'JHS 3', 'SHS 1', 'SHS 2', 'SHS 3'];
   final List<String> subjects = [
@@ -110,13 +114,18 @@ class _TextbooksPageState extends State<TextbooksPage>
       final service = EnglishTextbookService();
       englishTextbooks = await service.getAllTextbooks();
       
+      debugPrint('📚 Loaded ${englishTextbooks.length} English textbooks:');
+      for (final textbook in englishTextbooks) {
+        debugPrint('  - ${textbook['id']}: ${textbook['title']} (${textbook['year']})');
+      }
+      
       // Load progress for each textbook
       for (final textbook in englishTextbooks) {
         final progress = await service.getUserProgress(textbook['id']);
         englishProgressMap[textbook['id']] = progress;
       }
     } catch (e) {
-      debugPrint('Error loading English textbooks: $e');
+      debugPrint('❌ Error loading English textbooks: $e');
     } finally {
       setState(() => isLoadingEnglish = false);
     }
@@ -347,6 +356,10 @@ class _TextbooksPageState extends State<TextbooksPage>
                       ? _buildStorybooksGrid(isMobile)
                       : _buildStorybooksList(isMobile),
                 ),
+                // Storybook pagination
+                SliverToBoxAdapter(
+                  child: _buildStorybookPaginationControls(),
+                ),
               ],
             ] else if (_tabController.index == 1) ...[
               // Textbooks tab - show English textbooks first, then regular textbooks
@@ -377,6 +390,10 @@ class _TextbooksPageState extends State<TextbooksPage>
                     isMobile ? 16 : 24,
                   ),
                   sliver: _buildEnglishTextbooksGrid(isMobile),
+                ),
+                // English pagination for Textbooks tab
+                SliverToBoxAdapter(
+                  child: _buildEnglishPaginationControls(),
                 ),
               ],
               if (filteredTextbooks.isNotEmpty) ...[
@@ -444,6 +461,10 @@ class _TextbooksPageState extends State<TextbooksPage>
                     isMobile ? 16 : 24,
                   ),
                   sliver: _buildEnglishTextbooksGrid(isMobile),
+                ),
+                // English pagination for All Books tab
+                SliverToBoxAdapter(
+                  child: _buildEnglishPaginationControls(),
                 ),
               ],
               if (filteredTextbooks.isNotEmpty) ...[
@@ -655,21 +676,26 @@ class _TextbooksPageState extends State<TextbooksPage>
   }
 
   Widget _buildStorybooksGrid(bool isMobile) {
-    final crossAxisCount = isMobile ? 2 : 4;
+    // Pagination: 9 storybooks per page
+    final startIndex = _currentStorybookPage * 9;
+    final endIndex = (startIndex + 9).clamp(0, filteredStorybooks.length);
+    final paginatedStorybooks = filteredStorybooks.sublist(startIndex, endIndex);
+    
+    final crossAxisCount = isMobile ? 2 : 3;
     
     return SliverGrid(
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: crossAxisCount,
-        childAspectRatio: isMobile ? 0.7 : 0.75,
+        childAspectRatio: isMobile ? 0.58 : 0.7,
         crossAxisSpacing: isMobile ? 12 : 16,
         mainAxisSpacing: isMobile ? 12 : 16,
       ),
       delegate: SliverChildBuilderDelegate(
         (context, index) {
-          final storybook = filteredStorybooks[index];
+          final storybook = paginatedStorybooks[index];
           return _buildStorybookCard(storybook, isMobile);
         },
-        childCount: filteredStorybooks.length,
+        childCount: paginatedStorybooks.length,
       ),
     );
   }
@@ -1227,7 +1253,7 @@ class _TextbooksPageState extends State<TextbooksPage>
   }
 
   Widget _buildTextbookGrid(bool isMobile) {
-    final crossAxisCount = isMobile ? 2 : 4;
+    final crossAxisCount = isMobile ? 2 : 3;
     
     // Check if we're on the Textbooks tab (index 1) and should show the course
     final bool showCourseCard = _tabController.index == 1 || _tabController.index == 0; // Show in Textbooks and All Books tabs
@@ -1236,7 +1262,7 @@ class _TextbooksPageState extends State<TextbooksPage>
     return SliverGrid(
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: crossAxisCount,
-        childAspectRatio: isMobile ? 0.7 : 0.75,
+        childAspectRatio: isMobile ? 0.58 : 0.7,
         crossAxisSpacing: isMobile ? 12 : 16,
         mainAxisSpacing: isMobile ? 12 : 16,
       ),
@@ -2099,40 +2125,72 @@ class _TextbooksPageState extends State<TextbooksPage>
   }
 
   Widget _buildEnglishTextbooksGrid(bool isMobile) {
+    // Pagination: 9 textbooks per page
+    final startIndex = _currentEnglishPage * 9;
+    final endIndex = (startIndex + 9).clamp(0, englishTextbooks.length);
+    
+    // Safely get paginated textbooks with validation
+    List<Map<String, dynamic>> paginatedTextbooks = [];
+    try {
+      paginatedTextbooks = englishTextbooks
+          .where((book) => book['id'] != null && book['year'] != null && book['title'] != null)
+          .toList()
+          .sublist(startIndex, endIndex);
+    } catch (e) {
+      debugPrint('❌ Error creating paginated textbooks: $e');
+      paginatedTextbooks = [];
+    }
+    
     return SliverPadding(
       padding: EdgeInsets.all(isMobile ? 16 : 24),
       sliver: SliverGrid(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: isMobile ? 1 : 3,
-          childAspectRatio: isMobile ? 2.5 : 0.75,
-          crossAxisSpacing: 16,
-          mainAxisSpacing: 16,
+          crossAxisCount: isMobile ? 2 : 3,
+          childAspectRatio: isMobile ? 0.58 : 0.7,
+          crossAxisSpacing: isMobile ? 12 : 16,
+          mainAxisSpacing: isMobile ? 12 : 16,
         ),
         delegate: SliverChildBuilderDelegate(
           (context, index) {
-            final textbook = englishTextbooks[index];
-            final textbookId = textbook['id'] as String;
-            final title = textbook['title'] as String;
-            final yearString = textbook['year'] as String;
-            
-            // Extract year number for cover image (handle "JHS 1", "JHS 2", etc.)
-            final match = RegExp(r'\d+').firstMatch(yearString);
-            final yearNum = match != null ? int.parse(match.group(0)!) : 1;
-            
-            final description = textbook['description'] as String? ?? 'Interactive English textbook with questions and XP rewards';
-            
-            // Get progress data
-            final progressData = englishProgressMap[textbookId];
-            final completedSections = progressData?['completedSections'] as int? ?? 0;
-            final totalSections = progressData?['totalSections'] as int? ?? 0;
-            final totalXP = progressData?['totalXP'] as int? ?? 0;
-            final isCompleted = progressData?['isCompleted'] as bool? ?? false;
-            final progressPercent = totalSections > 0 ? (completedSections / totalSections * 100).toInt() : 0;
+            try {
+              final textbook = paginatedTextbooks[index];
+              final textbookId = textbook['id'] as String? ?? 'unknown';
+              final title = textbook['title'] as String? ?? 'Unknown Title';
+              final yearString = textbook['year'] as String? ?? 'JHS 1';
+              
+              // Extract year number for cover image (handle "JHS 1", "JHS 2", etc.)
+              final match = RegExp(r'\d+').firstMatch(yearString);
+              final yearNum = match != null ? int.parse(match.group(0)!) : 1;
+              
+              // Get progress data safely
+              final progressData = englishProgressMap[textbookId] ?? {};
+              
+              // Safe integer extraction with defaults
+              int completedSections = 0;
+              int totalSections = 0;
+              int totalXP = 0;
+              bool isCompleted = false;
+              
+              try {
+                completedSections = progressData['completedSections'] as int? ?? 0;
+                totalSections = progressData['totalSections'] as int? ?? 0;
+                totalXP = progressData['totalXP'] as int? ?? 0;
+                isCompleted = progressData['isCompleted'] as bool? ?? false;
+              } catch (e) {
+                debugPrint('⚠️ Error parsing progress data for $textbookId: $e');
+              }
+              
+              final progressPercent = totalSections > 0 ? (completedSections / totalSections * 100).toInt() : 0;
 
-            // Determine book cover path
-            final coverPath = 'assets/english_jhs$yearNum.png';
+              // Determine book cover path
+              final coverPath = 'assets/english_jhs$yearNum.png';
+              
+              debugPrint('📖 Rendering textbook card: $textbookId');
+              debugPrint('   Year: $yearString -> yearNum: $yearNum');
+              debugPrint('   Cover path: $coverPath');
+              debugPrint('   Title: $title');
 
-            return Card(
+              return Card(
               elevation: 4,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
@@ -2155,78 +2213,95 @@ class _TextbooksPageState extends State<TextbooksPage>
                   children: [
                     // Book cover image
                     Expanded(
-                      flex: 3,
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: const BorderRadius.vertical(
-                            top: Radius.circular(12),
-                          ),
-                          image: DecorationImage(
-                            image: AssetImage(coverPath),
-                            fit: BoxFit.cover,
-                            alignment: Alignment.topCenter,
-                          ),
-                        ),
-                        child: isCompleted
-                            ? Container(
-                                alignment: Alignment.topRight,
-                                padding: const EdgeInsets.all(8),
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                    horizontal: 8,
-                                    vertical: 4,
-                                  ),
-                                  decoration: BoxDecoration(
-                                    color: Colors.green,
-                                    borderRadius: BorderRadius.circular(12),
-                                  ),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.min,
+                      flex: 5, // 5:3 ratio gives more cover, text reduced
+                      child: Stack(
+                        fit: StackFit.expand,
+                        children: [
+                          ClipRRect(
+                            borderRadius: const BorderRadius.vertical(
+                              top: Radius.circular(12),
+                            ),
+                            child: Image.asset(
+                              coverPath,
+                              fit: BoxFit.cover,
+                              alignment: Alignment.topCenter,
+                              errorBuilder: (context, error, stackTrace) {
+                                debugPrint('\u274c Error loading $coverPath: $error');
+                                return Container(
+                                  color: const Color(0xFFD62828).withOpacity(0.1),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      const Icon(
-                                        Icons.check_circle,
-                                        color: Colors.white,
-                                        size: 16,
+                                      Icon(
+                                        Icons.book,
+                                        size: 48,
+                                        color: const Color(0xFFD62828).withOpacity(0.5),
                                       ),
-                                      const SizedBox(width: 4),
+                                      const SizedBox(height: 8),
                                       Text(
-                                        'Completed',
+                                        yearString,
                                         style: GoogleFonts.montserrat(
-                                          color: Colors.white,
-                                          fontSize: 12,
+                                          fontSize: 16,
                                           fontWeight: FontWeight.bold,
+                                          color: const Color(0xFFD62828),
                                         ),
                                       ),
                                     ],
                                   ),
+                                );
+                              },
+                            ),
+                          ),
+                          if (isCompleted)
+                            Positioned(
+                              top: 8,
+                              right: 8,
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 8,
+                                  vertical: 4,
                                 ),
-                              )
-                            : null,
+                                decoration: BoxDecoration(
+                                  color: Colors.green,
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    const Icon(
+                                      Icons.check_circle,
+                                      color: Colors.white,
+                                      size: 16,
+                                    ),
+                                    const SizedBox(width: 4),
+                                    Text(
+                                      'Completed',
+                                      style: GoogleFonts.montserrat(
+                                        color: Colors.white,
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                        ],
                       ),
                     ),
-                    // Book details
+                    // Book details (reduced)
                     Expanded(
-                      flex: 2,
+                      flex: 3, // 5:3 ratio - text area smaller
                       child: Padding(
-                        padding: const EdgeInsets.all(12),
+                        padding: const EdgeInsets.fromLTRB(12, 16, 12, 12),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
                               title,
                               style: GoogleFonts.montserrat(
-                                fontSize: 16,
+                                fontSize: isMobile ? 13 : 16,
                                 fontWeight: FontWeight.bold,
-                              ),
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                            const SizedBox(height: 4),
-                            Text(
-                              description,
-                              style: GoogleFonts.montserrat(
-                                fontSize: 12,
-                                color: Colors.grey[600],
                               ),
                               maxLines: 2,
                               overflow: TextOverflow.ellipsis,
@@ -2242,22 +2317,22 @@ class _TextbooksPageState extends State<TextbooksPage>
                                     Text(
                                       '$progressPercent% Complete',
                                       style: GoogleFonts.montserrat(
-                                        fontSize: 11,
+                                        fontSize: isMobile ? 9 : 11,
                                         fontWeight: FontWeight.w500,
                                       ),
                                     ),
                                     Row(
                                       children: [
-                                        const Icon(
+                                        Icon(
                                           Icons.stars,
-                                          size: 14,
+                                          size: isMobile ? 12 : 14,
                                           color: Colors.amber,
                                         ),
                                         const SizedBox(width: 4),
                                         Text(
                                           '$totalXP XP',
                                           style: GoogleFonts.montserrat(
-                                            fontSize: 11,
+                                            fontSize: isMobile ? 9 : 11,
                                             fontWeight: FontWeight.bold,
                                             color: Colors.amber[700],
                                           ),
@@ -2284,9 +2359,226 @@ class _TextbooksPageState extends State<TextbooksPage>
                 ),
               ),
             );
+            } catch (e, stackTrace) {
+              debugPrint('❌ Error rendering textbook card at index $index: $e');
+              debugPrint('   Textbook data: ${paginatedTextbooks.length > index ? paginatedTextbooks[index] : "N/A"}');
+              debugPrint('   Stack trace: $stackTrace');
+              // Return error placeholder card with details
+              return Card(
+                elevation: 2,
+                color: Colors.red.shade50,
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      const Icon(Icons.error_outline, size: 48, color: Colors.red),
+                      const SizedBox(height: 8),
+                      Text(
+                        'Error at index $index',
+                        style: GoogleFonts.montserrat(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.red.shade900,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      const SizedBox(height: 4),
+                      Text(
+                        e.toString(),
+                        style: GoogleFonts.montserrat(
+                          fontSize: 10,
+                          color: Colors.red.shade700,
+                        ),
+                        textAlign: TextAlign.center,
+                        maxLines: 3,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ],
+                  ),
+                ),
+              );
+            }
           },
-          childCount: englishTextbooks.length,
+          childCount: paginatedTextbooks.length,
         ),
+      ),
+    );
+  }
+
+  Widget _buildEnglishPaginationControls() {
+    final totalPages = (englishTextbooks.length / 9).ceil();
+    if (totalPages <= 1) return const SizedBox();
+    
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 16),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          // Previous button
+          IconButton(
+            onPressed: _currentEnglishPage > 0
+                ? () => setState(() => _currentEnglishPage--)
+                : null,
+            icon: const Icon(Icons.chevron_left, size: 20),
+            style: IconButton.styleFrom(
+              backgroundColor: _currentEnglishPage > 0
+                  ? const Color(0xFFD62828).withOpacity(0.1)
+                  : Colors.grey[200],
+              foregroundColor: _currentEnglishPage > 0
+                  ? const Color(0xFFD62828)
+                  : Colors.grey,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+            ),
+          ),
+          const SizedBox(width: 16),
+          // Page numbers
+          ...List.generate(totalPages.clamp(0, 5), (index) {
+            final isCurrentPage = index == _currentEnglishPage;
+            return Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 4),
+              child: GestureDetector(
+                onTap: () => setState(() => _currentEnglishPage = index),
+                child: Container(
+                  width: 36,
+                  height: 36,
+                  decoration: BoxDecoration(
+                    color: isCurrentPage
+                        ? const Color(0xFFD62828)
+                        : Colors.transparent,
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(
+                      color: isCurrentPage
+                          ? const Color(0xFFD62828)
+                          : Colors.grey[300]!,
+                    ),
+                  ),
+                  child: Center(
+                    child: Text(
+                      '${index + 1}',
+                      style: GoogleFonts.montserrat(
+                        color: isCurrentPage ? Colors.white : Colors.black87,
+                        fontWeight: isCurrentPage
+                            ? FontWeight.bold
+                            : FontWeight.normal,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            );
+          }),
+          const SizedBox(width: 16),
+          // Next button
+          IconButton(
+            onPressed: _currentEnglishPage < totalPages - 1
+                ? () => setState(() => _currentEnglishPage++)
+                : null,
+            icon: const Icon(Icons.chevron_right, size: 20),
+            style: IconButton.styleFrom(
+              backgroundColor: _currentEnglishPage < totalPages - 1
+                  ? const Color(0xFFD62828).withOpacity(0.1)
+                  : Colors.grey[200],
+              foregroundColor: _currentEnglishPage < totalPages - 1
+                  ? const Color(0xFFD62828)
+                  : Colors.grey,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildStorybookPaginationControls() {
+    final totalPages = (filteredStorybooks.length / 9).ceil();
+    if (totalPages <= 1) return const SizedBox();
+    
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 16),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          // Previous button
+          IconButton(
+            onPressed: _currentStorybookPage > 0
+                ? () => setState(() => _currentStorybookPage--)
+                : null,
+            icon: const Icon(Icons.chevron_left, size: 20),
+            style: IconButton.styleFrom(
+              backgroundColor: _currentStorybookPage > 0
+                  ? const Color(0xFFD62828).withOpacity(0.1)
+                  : Colors.grey[200],
+              foregroundColor: _currentStorybookPage > 0
+                  ? const Color(0xFFD62828)
+                  : Colors.grey,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+            ),
+          ),
+          const SizedBox(width: 16),
+          // Page numbers
+          ...List.generate(totalPages.clamp(0, 5), (index) {
+            final isCurrentPage = index == _currentStorybookPage;
+            return Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 4),
+              child: GestureDetector(
+                onTap: () => setState(() => _currentStorybookPage = index),
+                child: Container(
+                  width: 36,
+                  height: 36,
+                  decoration: BoxDecoration(
+                    color: isCurrentPage
+                        ? const Color(0xFFD62828)
+                        : Colors.transparent,
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(
+                      color: isCurrentPage
+                          ? const Color(0xFFD62828)
+                          : Colors.grey[300]!,
+                    ),
+                  ),
+                  child: Center(
+                    child: Text(
+                      '${index + 1}',
+                      style: GoogleFonts.montserrat(
+                        color: isCurrentPage ? Colors.white : Colors.black87,
+                        fontWeight: isCurrentPage
+                            ? FontWeight.bold
+                            : FontWeight.normal,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            );
+          }),
+          const SizedBox(width: 16),
+          // Next button
+          IconButton(
+            onPressed: _currentStorybookPage < totalPages - 1
+                ? () => setState(() => _currentStorybookPage++)
+                : null,
+            icon: const Icon(Icons.chevron_right, size: 20),
+            style: IconButton.styleFrom(
+              backgroundColor: _currentStorybookPage < totalPages - 1
+                  ? const Color(0xFFD62828).withOpacity(0.1)
+                  : Colors.grey[200],
+              foregroundColor: _currentStorybookPage < totalPages - 1
+                  ? const Color(0xFFD62828)
+                  : Colors.grey,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
