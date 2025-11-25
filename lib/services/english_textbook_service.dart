@@ -26,13 +26,22 @@ class EnglishTextbookService {
     try {
       final textbookIds = ['english_jhs_1', 'english_jhs_2', 'english_jhs_3'];
       
+      // Clear any existing cache to force fresh load
+      _textbookCache.clear();
+      
       for (final id in textbookIds) {
         try {
-          print('📚 Attempting to load: assets/textbooks/$id.json');
+          print('📚 [v2] Attempting to load: assets/textbooks/$id.json');
           final jsonString = await rootBundle.loadString('assets/textbooks/$id.json');
           final textbookData = json.decode(jsonString) as Map<String, dynamic>;
           _textbookCache[id] = textbookData;
-          print('✅ Successfully loaded: $id (${textbookData['title']})');
+          
+          // Log first section title for verification
+          if (textbookData['chapters'] != null && (textbookData['chapters'] as List).isNotEmpty) {
+            final firstChapter = (textbookData['chapters'] as List)[0];
+            final firstSection = (firstChapter['sections'] as List)[0];
+            print('✅ Loaded: $id - ${textbookData['title']} - First section: ${firstSection['title']}');
+          }
         } catch (e) {
           print('❌ Could not load $id.json from assets: $e');
         }

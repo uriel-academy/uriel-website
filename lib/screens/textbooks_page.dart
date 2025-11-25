@@ -40,6 +40,7 @@ class _TextbooksPageState extends State<TextbooksPage>
   List<Storybook> filteredStorybooks = [];
   List<String> authors = [];
   List<Map<String, dynamic>> englishTextbooks = [];
+  List<Map<String, dynamic>> filteredEnglishTextbooks = [];
   Map<String, Map<String, dynamic>> englishProgressMap = {};
   bool isLoading = true;
   bool isLoadingEnglish = true;
@@ -124,6 +125,9 @@ class _TextbooksPageState extends State<TextbooksPage>
         final progress = await service.getUserProgress(textbook['id']);
         englishProgressMap[textbook['id']] = progress;
       }
+      
+      // Initialize filtered list
+      filteredEnglishTextbooks = List.from(englishTextbooks);
     } catch (e) {
       debugPrint('❌ Error loading English textbooks: $e');
     } finally {
@@ -145,6 +149,18 @@ class _TextbooksPageState extends State<TextbooksPage>
     setState(() {
       // Only show Uriel English course, hide all other textbooks
       filteredTextbooks = [];
+      
+      // Filter English textbooks by search query
+      if (searchQuery.isEmpty) {
+        filteredEnglishTextbooks = List.from(englishTextbooks);
+      } else {
+        filteredEnglishTextbooks = englishTextbooks.where((book) {
+          final title = (book['title'] as String? ?? '').toLowerCase();
+          final year = (book['year'] as String? ?? '').toLowerCase();
+          final query = searchQuery.toLowerCase();
+          return title.contains(query) || year.contains(query);
+        }).toList();
+      }
     });
   }
 
@@ -363,7 +379,7 @@ class _TextbooksPageState extends State<TextbooksPage>
               ],
             ] else if (_tabController.index == 1) ...[
               // Textbooks tab - show English textbooks first, then regular textbooks
-              if (!isLoadingEnglish && englishTextbooks.isNotEmpty) ...[
+              if (!isLoadingEnglish && filteredEnglishTextbooks.isNotEmpty) ...[
                 SliverPadding(
                   padding: EdgeInsets.fromLTRB(
                     isMobile ? 16 : 24,
@@ -383,7 +399,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(
                       isMobile ? 16 : 24,
-                      englishTextbooks.isNotEmpty ? 8 : (isMobile ? 16 : 24),
+                      filteredEnglishTextbooks.isNotEmpty ? 8 : (isMobile ? 16 : 24),
                       isMobile ? 16 : 24,
                       8,
                     ),
@@ -409,14 +425,14 @@ class _TextbooksPageState extends State<TextbooksPage>
                       : _buildTextbookList(isMobile),
                 ),
               ],
-              if (!isLoadingEnglish && englishTextbooks.isEmpty && filteredTextbooks.isEmpty) ...[
+              if (!isLoadingEnglish && filteredEnglishTextbooks.isEmpty && filteredTextbooks.isEmpty) ...[
                 SliverFillRemaining(
                   child: _buildEmptyState(),
                 ),
               ],
             ] else ...[
               // All Books tab (index 0) - show both English and regular textbooks
-              if (!isLoadingEnglish && englishTextbooks.isNotEmpty) ...[
+              if (!isLoadingEnglish && filteredEnglishTextbooks.isNotEmpty) ...[
                 SliverPadding(
                   padding: EdgeInsets.fromLTRB(
                     isMobile ? 16 : 24,
@@ -436,12 +452,12 @@ class _TextbooksPageState extends State<TextbooksPage>
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(
                       isMobile ? 16 : 24,
-                      englishTextbooks.isNotEmpty ? 8 : (isMobile ? 16 : 24),
+                      filteredEnglishTextbooks.isNotEmpty ? 8 : (isMobile ? 16 : 24),
                       isMobile ? 16 : 24,
                       8,
                     ),
                     child: Text(
-                      englishTextbooks.isNotEmpty ? 'Other Textbooks' : 'All Textbooks',
+                      filteredEnglishTextbooks.isNotEmpty ? 'Other Textbooks' : 'All Textbooks',
                       style: GoogleFonts.montserrat(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -457,7 +473,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                       : _buildTextbookList(isMobile),
                 ),
               ],
-              if (!isLoadingEnglish && englishTextbooks.isEmpty && filteredTextbooks.isEmpty) ...[
+              if (!isLoadingEnglish && filteredEnglishTextbooks.isEmpty && filteredTextbooks.isEmpty) ...[
                 SliverFillRemaining(
                   child: _buildEmptyState(),
                 ),
@@ -2090,14 +2106,14 @@ class _TextbooksPageState extends State<TextbooksPage>
 
   Widget _buildEnglishTextbooksGrid(bool isMobile) {
     // Mobile: Show all 3 textbooks, Desktop: Pagination with 9 per page
-    final itemsPerPage = isMobile ? englishTextbooks.length : 9;
+    final itemsPerPage = isMobile ? filteredEnglishTextbooks.length : 9;
     final startIndex = isMobile ? 0 : (_currentEnglishPage * itemsPerPage);
-    final endIndex = (startIndex + itemsPerPage).clamp(0, englishTextbooks.length);
+    final endIndex = (startIndex + itemsPerPage).clamp(0, filteredEnglishTextbooks.length);
     
     // Safely get paginated textbooks with validation
     List<Map<String, dynamic>> paginatedTextbooks = [];
     try {
-      paginatedTextbooks = englishTextbooks
+      paginatedTextbooks = filteredEnglishTextbooks
           .where((book) => book['id'] != null && book['year'] != null && book['title'] != null)
           .toList()
           .sublist(startIndex, endIndex);
@@ -2383,7 +2399,7 @@ class _TextbooksPageState extends State<TextbooksPage>
     // Don't show pagination on mobile (all textbooks shown)
     if (isMobile) return const SizedBox();
     
-    final totalPages = (englishTextbooks.length / 9).ceil();
+    final totalPages = (filteredEnglishTextbooks.length / 9).ceil();
     if (totalPages <= 1) return const SizedBox();
     
     return Container(
