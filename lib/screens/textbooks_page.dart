@@ -350,6 +350,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                           setState(() => searchQuery = value);
                           _applyFilters();
                           _applyStoryFilter();
+                          _applySocialRmeFilter();
                         },
                       ),
                     ),
@@ -650,6 +651,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                 (value) => setState(() {
                   selectedLevel = value!;
                   _applyFilters();
+                  _applySocialRmeFilter();
                 }),
               ),
             ),
@@ -662,6 +664,7 @@ class _TextbooksPageState extends State<TextbooksPage>
                 (value) => setState(() {
                   selectedSubject = value!;
                   _applyFilters();
+                  _applySocialRmeFilter();
                 }),
               ),
             ),
@@ -676,6 +679,7 @@ class _TextbooksPageState extends State<TextbooksPage>
           (value) => setState(() {
             selectedPublisher = value!;
             _applyFilters();
+            _applySocialRmeFilter();
           }),
         ),
       ],
@@ -693,6 +697,7 @@ class _TextbooksPageState extends State<TextbooksPage>
             (value) => setState(() {
               selectedLevel = value!;
               _applyFilters();
+              _applySocialRmeFilter();
             }),
           ),
         ),
@@ -705,6 +710,7 @@ class _TextbooksPageState extends State<TextbooksPage>
             (value) => setState(() {
               selectedSubject = value!;
               _applyFilters();
+              _applySocialRmeFilter();
             }),
           ),
         ),
@@ -717,6 +723,7 @@ class _TextbooksPageState extends State<TextbooksPage>
             (value) => setState(() {
               selectedPublisher = value!;
               _applyFilters();
+              _applySocialRmeFilter();
             }),
           ),
         ),
