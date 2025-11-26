@@ -24,7 +24,7 @@
   <meta name="google-signin-client_id" content="391331682365-s5rp3nm50laoip5hevc19dtg71tqup3v.apps.googleusercontent.com">
   
   <title>Uriel Academy – Smart Study Platform for Ghanaian Students | Past Questions, AI Tools & Textbooks</title>
-  <link rel="canonical" href="https://uriel-academy-41fb0.web.app/">
+  <link rel="canonical" href="https://uriel.academy/">
   <!-- Primary Meta Tags -->
   <meta name="title" content="Uriel Academy – Smart Study Platform for Ghanaian Students">
   <meta name="description" content="Ghana's most comprehensive learning platform featuring 10,000+ past questions (BECE, WASSCE, NOVDEC), approved textbooks, AI study tools, interactive trivia, flashcards, and personalized study plans. Study smarter, not harder.">
@@ -36,7 +36,7 @@
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://uriel-academy-41fb0.web.app/">
+  <meta property="og:url" content="https://uriel.academy/">
   <meta property="og:title" content="Uriel Academy – Smart Study Platform for Ghanaian Students">
   <meta property="og:description" content="Ghana's most comprehensive learning platform with 10,000+ past questions, AI tools, textbooks, flashcards, trivia, and personalized study plans. Master your exams with smart learning.">
   <meta property="og:image" content="https://uriel-academy-41fb0.web.app/assets/og-image.png">
@@ -44,7 +44,7 @@
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://uriel-academy-41fb0.web.app/">
+  <meta property="twitter:url" content="https://uriel.academy/">
   <meta property="twitter:title" content="Uriel Academy – Smart Study Platform for Ghanaian Students">
   <meta property="twitter:description" content="Ghana's most comprehensive learning platform with 10,000+ past questions, AI tools, textbooks, flashcards, trivia, and personalized study plans.">
   <meta property="twitter:image" content="https://uriel-academy-41fb0.web.app/assets/twitter-image.png">
@@ -279,6 +279,41 @@
     window.addEventListener('flutter-first-frame', function() {
       document.body.classList.add('flutter-loaded');
     });
+
+    // Update canonical URL dynamically for SPA routes
+    function updateCanonicalURL() {
+      const canonical = document.querySelector('link[rel="canonical"]');
+      if (canonical) {
+        const currentPath = window.location.pathname;
+        const canonicalURL = 'https://uriel.academy' + currentPath;
+        canonical.href = canonicalURL;
+        
+        // Also update Open Graph URL
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        if (ogUrl) {
+          ogUrl.content = canonicalURL;
+        }
+        
+        // Update Twitter URL
+        const twitterUrl = document.querySelector('meta[property="twitter:url"]');
+        if (twitterUrl) {
+          twitterUrl.content = canonicalURL;
+        }
+      }
+    }
+
+    // Update on page load and when URL changes
+    window.addEventListener('load', updateCanonicalURL);
+    window.addEventListener('popstate', updateCanonicalURL);
+    
+    // Also update when Flutter navigation occurs (if possible)
+    let lastPath = window.location.pathname;
+    setInterval(() => {
+      if (window.location.pathname !== lastPath) {
+        lastPath = window.location.pathname;
+        updateCanonicalURL();
+      }
+    }, 100);
   </script>
 </body>
 </html>
