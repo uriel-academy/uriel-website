@@ -1,0 +1,17 @@
+{
+  "totalSubjects": 11,
+  "totalQuestions": 1388,
+  "bySubject": {
+    "Asante Twi": 7,
+    "Career Technology": 12,
+    "Creative Arts": 11,
+    "English": 155,
+    "French": 125,
+    "Ga": 6,
+    "ICT": 80,
+    "Mathematics": 378,
+    "RME": 203,
+    "Integrated Science": 182,
+    "Social Studies": 229
+  }
+}

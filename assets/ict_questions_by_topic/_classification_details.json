@@ -1,0 +1,6061 @@
+{
+  "totalClassified": 655,
+  "classifications": [
+    {
+      "id": "ict_2011_q1",
+      "year": "2011",
+      "questionNumber": 1,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The most common means by which date are input into the computer is through the ..............."
+    },
+    {
+      "id": "ict_2011_q10",
+      "year": "2011",
+      "questionNumber": 10,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The software that manages the communication between the hardware and the application software of a c..."
+    },
+    {
+      "id": "ict_2011_q11",
+      "year": "2011",
+      "questionNumber": 11,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "Windows organize information on computers using a..."
+    },
+    {
+      "id": "ict_2011_q12",
+      "year": "2011",
+      "questionNumber": 12,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "Which of the following are valid folder name?\n\nI. Black/Stars\nII. Black:Stars\nIII. Black_Stars\nIV. B..."
+    },
+    {
+      "id": "ict_2011_q13",
+      "year": "2011",
+      "questionNumber": 13,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Use the following information to answer the question below.\n\nI. Processing\nII. Data\nIII. Information..."
+    },
+    {
+      "id": "ict_2011_q14",
+      "year": "2011",
+      "questionNumber": 14,
+      "classifiedTopics": [
+        "Health And Safety In Using ICT Tools"
+      ],
+      "preview": "Which of the following is not a safety measure to consider in the ICT environment?..."
+    },
+    {
+      "id": "ict_2011_q15",
+      "year": "2011",
+      "questionNumber": 15,
+      "classifiedTopics": [
+        "Ethics Of Using ICTs"
+      ],
+      "preview": "The legal right to control the production and selling of a book, play, film and software is known as..."
+    },
+    {
+      "id": "ict_2011_q16",
+      "year": "2011",
+      "questionNumber": 16,
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "preview": "Which of the following can bring enhanced learning experience to the classroom through the use of pi..."
+    },
+    {
+      "id": "ict_2011_q18",
+      "year": "2011",
+      "questionNumber": 18,
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "preview": "To which of the following activities is ICT useful?\n\nI. Education\nII. Farming\nIII. Medicine..."
+    },
+    {
+      "id": "ict_2011_q19",
+      "year": "2011",
+      "questionNumber": 19,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "Which of the following keys are frequently used in our daily typing work on a computer system?\n\nI. E..."
+    },
+    {
+      "id": "ict_2011_q2",
+      "year": "2011",
+      "questionNumber": 2,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Computer devices such as mouse, trackpad and joystick are referred to as ..................."
+    },
+    {
+      "id": "ict_2011_q20",
+      "year": "2011",
+      "questionNumber": 20,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "During typing lessons, computer users are supposed to use ...................."
+    },
+    {
+      "id": "ict_2011_q21",
+      "year": "2011",
+      "questionNumber": 21,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "The most appropriate finger required to type the F on a standard QWERTY computer keyboard is the..."
+    },
+    {
+      "id": "ict_2011_q22",
+      "year": "2011",
+      "questionNumber": 22,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "In the absence of a mouse, which of the following devices could be used to perform its function?..."
+    },
+    {
+      "id": "ict_2011_q23",
+      "year": "2011",
+      "questionNumber": 23,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Word Processing Applications"
+      ],
+      "preview": "In typing a class assignments given by a Ghanaian language teacher using the computer, which of the ..."
+    },
+    {
+      "id": "ict_2011_q24",
+      "year": "2011",
+      "questionNumber": 24,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "A key on a keyboard of a computer has two symbols on it, top and down. Which of the following proced..."
+    },
+    {
+      "id": "ict_2011_q25",
+      "year": "2011",
+      "questionNumber": 25,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "To save a previously saved document under a new name, use the ....................."
+    },
+    {
+      "id": "ict_2011_q26",
+      "year": "2011",
+      "questionNumber": 26,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Word Processing Applications"
+      ],
+      "preview": "To bold a text in a word processing document, first select the text, then use the shortcut keys ......."
+    },
+    {
+      "id": "ict_2011_q27",
+      "year": "2011",
+      "questionNumber": 27,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "The symbol B, I, U are commonly used buttons found on the ......................."
+    },
+    {
+      "id": "ict_2011_q28",
+      "year": "2011",
+      "questionNumber": 28,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "Which of the following is not a tool on the drawing toolbar?..."
+    },
+    {
+      "id": "ict_2011_q29",
+      "year": "2011",
+      "questionNumber": 29,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "preview": "Which of the following is not a toolbar?..."
+    },
+    {
+      "id": "ict_2011_q30",
+      "year": "2011",
+      "questionNumber": 30,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Spreadsheet Applications"
+      ],
+      "preview": "Lines, block arrows and flowcharts are located on the ....................."
+    },
+    {
+      "id": "ict_2011_q31",
+      "year": "2011",
+      "questionNumber": 31,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "The default orientation for a word processing document is ......................."
+    },
+    {
+      "id": "ict_2011_q32",
+      "year": "2011",
+      "questionNumber": 32,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "To preview a document before printing is necessary because ......................"
+    },
+    {
+      "id": "ict_2011_q33",
+      "year": "2011",
+      "questionNumber": 33,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "A computer program that enables users to surf the internet is known as ..........................."
+    },
+    {
+      "id": "ict_2011_q34",
+      "year": "2011",
+      "questionNumber": 34,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "A teacher using the internet decided to send an electronic mail to Junior High School students in Gh..."
+    },
+    {
+      "id": "ict_2011_q35",
+      "year": "2011",
+      "questionNumber": 35,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "In e-mail context, what does bcc stands for?..."
+    },
+    {
+      "id": "ict_2011_q36",
+      "year": "2011",
+      "questionNumber": 36,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "The worldwide network that makes electronic information available to users is also known as ..........."
+    },
+    {
+      "id": "ict_2011_q37",
+      "year": "2011",
+      "questionNumber": 37,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "The Internet And World Wide Web"
+      ],
+      "preview": "Transferring data from a remote computer to a local computer is referred to as ........................"
+    },
+    {
+      "id": "ict_2011_q38",
+      "year": "2011",
+      "questionNumber": 38,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "A tool for locating information on the internet is the .................."
+    },
+    {
+      "id": "ict_2011_q39",
+      "year": "2011",
+      "questionNumber": 39,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "A mathematical calculation in a spreadsheet is called .................."
+    },
+    {
+      "id": "ict_2011_q4",
+      "year": "2011",
+      "questionNumber": 4,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Which of the following is a storage medium?..."
+    },
+    {
+      "id": "ict_2011_q40",
+      "year": "2011",
+      "questionNumber": 40,
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "preview": "Which of the following features in a browser enables users to fetch the latest copy of a web page?..."
+    },
+    {
+      "id": "ict_2011_q5",
+      "year": "2011",
+      "questionNumber": 5,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The two components of the personal computer main memory are ................."
+    },
+    {
+      "id": "ict_2011_q6",
+      "year": "2011",
+      "questionNumber": 6,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Which of the following devices has the largest storage capacity?..."
+    },
+    {
+      "id": "ict_2011_q7",
+      "year": "2011",
+      "questionNumber": 7,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The process that starts an operating system when a computer system is turned on is referred to as ....."
+    },
+    {
+      "id": "ict_2011_q8",
+      "year": "2011",
+      "questionNumber": 8,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Which of the following statements is not true?..."
+    },
+    {
+      "id": "ict_2011_q9",
+      "year": "2011",
+      "questionNumber": 9,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "GUI stand for..."
+    },
+    {
+      "id": "ict_2012_q1",
+      "year": "2012",
+      "questionNumber": 1,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The device that converts computer output into displayed images is the ........................."
+    },
+    {
+      "id": "ict_2012_q10",
+      "year": "2012",
+      "questionNumber": 10,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "Given sizes and designs of letters, numbers and symbols that are displayed in a word processing docu..."
+    },
+    {
+      "id": "ict_2012_q11",
+      "year": "2012",
+      "questionNumber": 11,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "Which of the following is a tool on the drawing toolbar of a word processing program?..."
+    },
+    {
+      "id": "ict_2012_q12",
+      "year": "2012",
+      "questionNumber": 12,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "When an image is copied, it first goes to the..."
+    },
+    {
+      "id": "ict_2012_q13",
+      "year": "2012",
+      "questionNumber": 13,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "To press letter J, which finger is appropriate to use on a QWERTY keyboard?..."
+    },
+    {
+      "id": "ict_2012_q14",
+      "year": "2012",
+      "questionNumber": 14,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "The Internet And World Wide Web"
+      ],
+      "preview": "The internet is a..."
+    },
+    {
+      "id": "ict_2012_q15",
+      "year": "2012",
+      "questionNumber": 15,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Spreadsheet Applications"
+      ],
+      "preview": "The computer equivalence of a sheet of paper divided into rows and columns in the office suits is ca..."
+    },
+    {
+      "id": "ict_2012_q16",
+      "year": "2012",
+      "questionNumber": 16,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The temporary working memory of a computer system is the ............"
+    },
+    {
+      "id": "ict_2012_q17",
+      "year": "2012",
+      "questionNumber": 17,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The software responsible for the management of the basic operations of the computer is the..."
+    },
+    {
+      "id": "ict_2012_q18",
+      "year": "2012",
+      "questionNumber": 18,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "On the desktop, the part which displays opened applications and other icons is referred to as........."
+    },
+    {
+      "id": "ict_2012_q19",
+      "year": "2012",
+      "questionNumber": 19,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "The act of pressing a computer mouse button twice quickly without moving the mouse is termed ......"
+    },
+    {
+      "id": "ict_2012_q2",
+      "year": "2012",
+      "questionNumber": 2,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The least number of input devices that a computer system can have is ........"
+    },
+    {
+      "id": "ict_2012_q20",
+      "year": "2012",
+      "questionNumber": 20,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Ethics Of Using ICTs"
+      ],
+      "preview": "The following are good practices in the computer environment except............"
+    },
+    {
+      "id": "ict_2012_q21",
+      "year": "2012",
+      "questionNumber": 21,
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "preview": "Which of the following software can be used to enhance teaching and learning through the use of pict..."
+    },
+    {
+      "id": "ict_2012_q22",
+      "year": "2012",
+      "questionNumber": 22,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "The total number of keys on a standard QWERTY keyboard is..."
+    },
+    {
+      "id": "ict_2012_q23",
+      "year": "2012",
+      "questionNumber": 23,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "Which of the following is a valid folder name?..."
+    },
+    {
+      "id": "ict_2012_q24",
+      "year": "2012",
+      "questionNumber": 24,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "A program on the computer which enables users to type letters to friends is the .........."
+    },
+    {
+      "id": "ict_2012_q25",
+      "year": "2012",
+      "questionNumber": 25,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "The command that enables user to save a previously saved document under a new name is ..........."
+    },
+    {
+      "id": "ict_2012_q26",
+      "year": "2012",
+      "questionNumber": 26,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "preview": "The standard toolbar contains buttons that..."
+    },
+    {
+      "id": "ict_2012_q27",
+      "year": "2012",
+      "questionNumber": 27,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "To see exactly how pages of a current document will appear when printed, the command given is the ....."
+    },
+    {
+      "id": "ict_2012_q28",
+      "year": "2012",
+      "questionNumber": 28,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "A tool for locating information on the internet is the........"
+    },
+    {
+      "id": "ict_2012_q29",
+      "year": "2012",
+      "questionNumber": 29,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "An entity in a file system which contains a group of files is called ............."
+    },
+    {
+      "id": "ict_2012_q3",
+      "year": "2012",
+      "questionNumber": 3,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Which of the following devices has the largest storage capacity?..."
+    },
+    {
+      "id": "ict_2012_q30",
+      "year": "2012",
+      "questionNumber": 30,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The creation of a copy of data on a computer system for safe keeping externally is referred to as......"
+    },
+    {
+      "id": "ict_2012_q32",
+      "year": "2012",
+      "questionNumber": 32,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "Recycle bin or trash bin contains deleted files and folders from the............"
+    },
+    {
+      "id": "ict_2012_q33",
+      "year": "2012",
+      "questionNumber": 33,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "Keys on a computer keyboard which are used to move the cursor in a specified direction are called ....."
+    },
+    {
+      "id": "ict_2012_q34",
+      "year": "2012",
+      "questionNumber": 34,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Word Processing Applications"
+      ],
+      "preview": "To underline a selected text in a word processing program, the keys used are..."
+    },
+    {
+      "id": "ict_2012_q35",
+      "year": "2012",
+      "questionNumber": 35,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "Double clicking on a word in a word processing program selects the .............."
+    },
+    {
+      "id": "ict_2012_q36",
+      "year": "2012",
+      "questionNumber": 36,
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "preview": "All the following are reasons for using ICT in education except.................."
+    },
+    {
+      "id": "ict_2012_q37",
+      "year": "2012",
+      "questionNumber": 37,
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "Spreadsheet Applications"
+      ],
+      "preview": "In word processing program, lines block arrows and flow charts are found on which of the following t..."
+    },
+    {
+      "id": "ict_2012_q38",
+      "year": "2012",
+      "questionNumber": 38,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "The Internet And World Wide Web"
+      ],
+      "preview": "Which program icon on the desktop leads to the disk drives?..."
+    },
+    {
+      "id": "ict_2012_q4",
+      "year": "2012",
+      "questionNumber": 4,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The device used to ensure a constant flow of power supply to a computer system is the......"
+    },
+    {
+      "id": "ict_2012_q40",
+      "year": "2012",
+      "questionNumber": 40,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "File And Folder Management"
+      ],
+      "preview": "Computer virus is capable of ..........................."
+    },
+    {
+      "id": "ict_2012_q5",
+      "year": "2012",
+      "questionNumber": 5,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "The total number of command buttons on the title bar of an opened word processing window is ......."
+    },
+    {
+      "id": "ict_2012_q6",
+      "year": "2012",
+      "questionNumber": 6,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Processed or transformed facts which are meaningful to the user is called ......."
+    },
+    {
+      "id": "ict_2012_q7",
+      "year": "2012",
+      "questionNumber": 7,
+      "classifiedTopics": [
+        "Health And Safety In Using ICT Tools"
+      ],
+      "preview": "The following are possible health hazards of prolonged use of the computer system except..."
+    },
+    {
+      "id": "ict_2012_q8",
+      "year": "2012",
+      "questionNumber": 8,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "Which key on the keyboard is used to erase characters from the right to the left in word processing ..."
+    },
+    {
+      "id": "ict_2012_q9",
+      "year": "2012",
+      "questionNumber": 9,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "The key on the QWERTY keyboard used to produce alphabetic upper case letters is ......"
+    },
+    {
+      "id": "ict_2013_q10",
+      "year": "2013",
+      "questionNumber": 10,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "An example of an operating system is .................."
+    },
+    {
+      "id": "ict_2013_q11",
+      "year": "2013",
+      "questionNumber": 11,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "To copy a file means to ....................."
+    },
+    {
+      "id": "ict_2013_q12",
+      "year": "2013",
+      "questionNumber": 12,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Programs that performs specific task for users are referred to as ..............."
+    },
+    {
+      "id": "ict_2013_q13",
+      "year": "2013",
+      "questionNumber": 13,
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "File And Folder Management"
+      ],
+      "preview": "A group of files are stored in a ................."
+    },
+    {
+      "id": "ict_2013_q14",
+      "year": "2013",
+      "questionNumber": 14,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The operation whereby the computer manipulates data to produce information is known as ................"
+    },
+    {
+      "id": "ict_2013_q15",
+      "year": "2013",
+      "questionNumber": 15,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "Which of the following emits radiation?..."
+    },
+    {
+      "id": "ict_2013_q16",
+      "year": "2013",
+      "questionNumber": 16,
+      "classifiedTopics": [
+        "Ethics Of Using ICTs"
+      ],
+      "preview": "The legal right that does not allow people to copy intellectual property without the permission of t..."
+    },
+    {
+      "id": "ict_2013_q17",
+      "year": "2013",
+      "questionNumber": 17,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Software that presents lessons in a movie - like manner is referred to as .............."
+    },
+    {
+      "id": "ict_2013_q18",
+      "year": "2013",
+      "questionNumber": 18,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "The symbols B, I, U are commonly used buttons found on the ................"
+    },
+    {
+      "id": "ict_2013_q19",
+      "year": "2013",
+      "questionNumber": 19,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "File And Folder Management"
+      ],
+      "preview": "Right - clicking a mouse on an open window............."
+    },
+    {
+      "id": "ict_2013_q2",
+      "year": "2013",
+      "questionNumber": 2,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The device that the computer uses to keep data is ..............................."
+    },
+    {
+      "id": "ict_2013_q20",
+      "year": "2013",
+      "questionNumber": 20,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "Which of the following computer keyboard keys is used to delete characters from left to right on - s..."
+    },
+    {
+      "id": "ict_2013_q21",
+      "year": "2013",
+      "questionNumber": 21,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "Which of the following computer keys allows the user to type upper case letters?..."
+    },
+    {
+      "id": "ict_2013_q22",
+      "year": "2013",
+      "questionNumber": 22,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "Which of the following keys is used for multiple selection of the text that are not continuous?..."
+    },
+    {
+      "id": "ict_2013_q23",
+      "year": "2013",
+      "questionNumber": 23,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "preview": "When a user clicks within a selected text by holding down the left mouse button, and then transfers ..."
+    },
+    {
+      "id": "ict_2013_q24",
+      "year": "2013",
+      "questionNumber": 24,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "Which of the following menu titles contains the bullets and numbering command..."
+    },
+    {
+      "id": "ict_2013_q25",
+      "year": "2013",
+      "questionNumber": 25,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "In order to apply bold formatting to a section of existing text, the user must first.............."
+    },
+    {
+      "id": "ict_2013_q26",
+      "year": "2013",
+      "questionNumber": 26,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "File And Folder Management"
+      ],
+      "preview": "The save command is found under which of the following menu buttons..."
+    },
+    {
+      "id": "ict_2013_q27",
+      "year": "2013",
+      "questionNumber": 27,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "Which of the following command buttons is found on the standard toolbar?..."
+    },
+    {
+      "id": "ict_2013_q28",
+      "year": "2013",
+      "questionNumber": 28,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "When a text automatically moves to the next line at the end of a margin in a word processing program..."
+    },
+    {
+      "id": "ict_2013_q29",
+      "year": "2013",
+      "questionNumber": 29,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "Which of the following is a tool on the drawing toolbar?..."
+    },
+    {
+      "id": "ict_2013_q3",
+      "year": "2013",
+      "questionNumber": 3,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "The first key on the keyboard is ............................."
+    },
+    {
+      "id": "ict_2013_q30",
+      "year": "2013",
+      "questionNumber": 30,
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "Spreadsheet Applications"
+      ],
+      "preview": "A rectangle can be drawn in word processing application using the..."
+    },
+    {
+      "id": "ict_2013_q31",
+      "year": "2013",
+      "questionNumber": 31,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The device which is used to produce hard copies from personal computers in schools is..."
+    },
+    {
+      "id": "ict_2013_q32",
+      "year": "2013",
+      "questionNumber": 32,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "A computer program that enables users to surf the internet is known as ................"
+    },
+    {
+      "id": "ict_2013_q33",
+      "year": "2013",
+      "questionNumber": 33,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "Word processing is used mainly by..."
+    },
+    {
+      "id": "ict_2013_q34",
+      "year": "2013",
+      "questionNumber": 34,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "The Internet And World Wide Web"
+      ],
+      "preview": "Which of the following devices will enable users to get access to the internet connection?..."
+    },
+    {
+      "id": "ict_2013_q35",
+      "year": "2013",
+      "questionNumber": 35,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "The Internet And World Wide Web"
+      ],
+      "preview": "Transferring data from a remote computer to a local computer is referred to as ............."
+    },
+    {
+      "id": "ict_2013_q36",
+      "year": "2013",
+      "questionNumber": 36,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "Specialized programs that assists users to locate information on the internet are called..."
+    },
+    {
+      "id": "ict_2013_q37",
+      "year": "2013",
+      "questionNumber": 37,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "Which of the following refers to unsolicited e-mails in the form of advertising and chain letters?..."
+    },
+    {
+      "id": "ict_2013_q38",
+      "year": "2013",
+      "questionNumber": 38,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The software responsible for management of the basic operations of the computer is the..."
+    },
+    {
+      "id": "ict_2013_q39",
+      "year": "2013",
+      "questionNumber": 39,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "On which of the following toolbars is the print preview button located?..."
+    },
+    {
+      "id": "ict_2013_q4",
+      "year": "2013",
+      "questionNumber": 4,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "In which of the following are the storage devices arranged in the basis of lowest to highest capacit..."
+    },
+    {
+      "id": "ict_2013_q40",
+      "year": "2013",
+      "questionNumber": 40,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "The intersection of the 8th row and the 7th column in a spreadsheet application will have the cell r..."
+    },
+    {
+      "id": "ict_2013_q5",
+      "year": "2013",
+      "questionNumber": 5,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "A pen drive..."
+    },
+    {
+      "id": "ict_2013_q6",
+      "year": "2013",
+      "questionNumber": 6,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The main storage medium within the system unit of the computer is the..."
+    },
+    {
+      "id": "ict_2013_q7",
+      "year": "2013",
+      "questionNumber": 7,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "To boot a computer is the same as to ..................."
+    },
+    {
+      "id": "ict_2013_q8",
+      "year": "2013",
+      "questionNumber": 8,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "On which bar is the system clock located..."
+    },
+    {
+      "id": "ict_2013_q9",
+      "year": "2013",
+      "questionNumber": 9,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "The command button used to exit windows application is the ......................"
+    },
+    {
+      "id": "ict_2014_q1",
+      "year": "2014",
+      "questionNumber": 1,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The part of the computer which displays information to the user in soft copy format is the..."
+    },
+    {
+      "id": "ict_2014_q10",
+      "year": "2014",
+      "questionNumber": 10,
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "File And Folder Management"
+      ],
+      "preview": "A group of files are stored in a..."
+    },
+    {
+      "id": "ict_2014_q11",
+      "year": "2014",
+      "questionNumber": 11,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "The area of the taskbar that display small icons of some programs such as the system clock is..."
+    },
+    {
+      "id": "ict_2014_q12",
+      "year": "2014",
+      "questionNumber": 12,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Which of the following is a problem to computer users as a result of radiation from the monitor?..."
+    },
+    {
+      "id": "ict_2014_q13",
+      "year": "2014",
+      "questionNumber": 13,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "Dragging a folder from one drive to a window on another drive is equivalent to a..."
+    },
+    {
+      "id": "ict_2014_q14",
+      "year": "2014",
+      "questionNumber": 14,
+      "classifiedTopics": [
+        "Health And Safety In Using ICT Tools"
+      ],
+      "preview": "Which of the following safety precaution(s) is/are advisable to practice? I. do not answer or receiv..."
+    },
+    {
+      "id": "ict_2014_q15",
+      "year": "2014",
+      "questionNumber": 15,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Word Processing Applications"
+      ],
+      "preview": "A computer program that can copy itself and infect the computer without the permission or knowledge ..."
+    },
+    {
+      "id": "ict_2014_q16",
+      "year": "2014",
+      "questionNumber": 16,
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "preview": "The software that assists students in learning and can also be used to take online examinations is..."
+    },
+    {
+      "id": "ict_2014_q17",
+      "year": "2014",
+      "questionNumber": 17,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Word Processing Applications"
+      ],
+      "preview": "ICT tools can be used in all the following areas except..."
+    },
+    {
+      "id": "ict_2014_q18",
+      "year": "2014",
+      "questionNumber": 18,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "The act of clicking on an object and dragging it to a different location is referred to as..."
+    },
+    {
+      "id": "ict_2014_q19",
+      "year": "2014",
+      "questionNumber": 19,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "When pursuing typing lessons, computer users are expected to use..."
+    },
+    {
+      "id": "ict_2014_q2",
+      "year": "2014",
+      "questionNumber": 2,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The sharpness of an image on a monitor screen is determined by the number of..."
+    },
+    {
+      "id": "ict_2014_q20",
+      "year": "2014",
+      "questionNumber": 20,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "Which of the following keys is not a function key on the key on the computer keyboard?..."
+    },
+    {
+      "id": "ict_2014_q21",
+      "year": "2014",
+      "questionNumber": 21,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "The computer keyboard combinations that would move the cursor insertion point to the beginning of th..."
+    },
+    {
+      "id": "ict_2014_q22",
+      "year": "2014",
+      "questionNumber": 22,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "Which of the following commands id used to resave an edited file with the same file named?..."
+    },
+    {
+      "id": "ict_2014_q23",
+      "year": "2014",
+      "questionNumber": 23,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "Computerized text editing is also referred to as..."
+    },
+    {
+      "id": "ict_2014_q24",
+      "year": "2014",
+      "questionNumber": 24,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "In order to apply bold formatting to a section of existing text, the user must first..."
+    },
+    {
+      "id": "ict_2014_q25",
+      "year": "2014",
+      "questionNumber": 25,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "Text that is justify is..."
+    },
+    {
+      "id": "ict_2014_q26",
+      "year": "2014",
+      "questionNumber": 26,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "Which of the following keys are used to underline a text in word processing?..."
+    },
+    {
+      "id": "ict_2014_q27",
+      "year": "2014",
+      "questionNumber": 27,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "When a text automatically moves to the next line at the end of a margin in a word processing program..."
+    },
+    {
+      "id": "ict_2014_q28",
+      "year": "2014",
+      "questionNumber": 28,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "The default orientation for a word processing document is..."
+    },
+    {
+      "id": "ict_2014_q29",
+      "year": "2014",
+      "questionNumber": 29,
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "File And Folder Management"
+      ],
+      "preview": "To print a document after previewing, use the..."
+    },
+    {
+      "id": "ict_2014_q3",
+      "year": "2014",
+      "questionNumber": 3,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Which of the following can be used as an input device and at the same time as an output device?..."
+    },
+    {
+      "id": "ict_2014_q30",
+      "year": "2014",
+      "questionNumber": 30,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "The Internet And World Wide Web"
+      ],
+      "preview": "On an email interface, which of the following areas is mandatory to complete and send a message?..."
+    },
+    {
+      "id": "ict_2014_q31",
+      "year": "2014",
+      "questionNumber": 31,
+      "classifiedTopics": [
+        "File And Folder Management",
+        "Integrating ICT Into Learning"
+      ],
+      "preview": "Which of the following domain name extensions is used by education institution?..."
+    },
+    {
+      "id": "ict_2014_q32",
+      "year": "2014",
+      "questionNumber": 32,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "Which of the following is a web browser?..."
+    },
+    {
+      "id": "ict_2014_q33",
+      "year": "2014",
+      "questionNumber": 33,
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "preview": "Which feature in a browser enables users to fetch the latest copy of a web page?..."
+    },
+    {
+      "id": "ict_2014_q34",
+      "year": "2014",
+      "questionNumber": 34,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "The Internet And World Wide Web"
+      ],
+      "preview": "Transmitting data from a local computer to a remote computer is referred to as..."
+    },
+    {
+      "id": "ict_2014_q35",
+      "year": "2014",
+      "questionNumber": 35,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "The http:// in a website address refers to..."
+    },
+    {
+      "id": "ict_2014_q36",
+      "year": "2014",
+      "questionNumber": 36,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "File And Folder Management"
+      ],
+      "preview": "The command button that opens a dialog box for users to create an email messages is..."
+    },
+    {
+      "id": "ict_2014_q37",
+      "year": "2014",
+      "questionNumber": 37,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "A spreadsheet cell name is referenced by a..."
+    },
+    {
+      "id": "ict_2014_q38",
+      "year": "2014",
+      "questionNumber": 38,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "Mathematical calculations in a spreadsheet are called..."
+    },
+    {
+      "id": "ict_2014_q39",
+      "year": "2014",
+      "questionNumber": 39,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Word Processing Applications"
+      ],
+      "preview": "Which of the following does a user need to bypass before accessing an email?..."
+    },
+    {
+      "id": "ict_2014_q4",
+      "year": "2014",
+      "questionNumber": 4,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The device that uses the magnetic method to store data is..."
+    },
+    {
+      "id": "ict_2014_q40",
+      "year": "2014",
+      "questionNumber": 40,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "To apply a formula or function in a spreadsheet program, the symbol used is..."
+    },
+    {
+      "id": "ict_2014_q5",
+      "year": "2014",
+      "questionNumber": 5,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Which of the following devices had the largest storage capacity?..."
+    },
+    {
+      "id": "ict_2014_q6",
+      "year": "2014",
+      "questionNumber": 6,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "By default, the drive letter assigned to the hard disk drive is ........"
+    },
+    {
+      "id": "ict_2014_q7",
+      "year": "2014",
+      "questionNumber": 7,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Which of the following devices must be turned on first when booting a computer?..."
+    },
+    {
+      "id": "ict_2014_q8",
+      "year": "2014",
+      "questionNumber": 8,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The program that is loaded into the main memory when a computer is booted is..."
+    },
+    {
+      "id": "ict_2014_q9",
+      "year": "2014",
+      "questionNumber": 9,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "To copy a file means to..."
+    },
+    {
+      "id": "ict_2015_q1",
+      "year": "2015",
+      "questionNumber": 1,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "Which of the following computer keyboard keys is used to type upper case letters when the caps lock ..."
+    },
+    {
+      "id": "ict_2015_q10",
+      "year": "2015",
+      "questionNumber": 10,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "When files and folders are deleted from the computer, they go into them..."
+    },
+    {
+      "id": "ict_2015_q11",
+      "year": "2015",
+      "questionNumber": 11,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "Which of the following gives the user a log of all opened programs?..."
+    },
+    {
+      "id": "ict_2015_q12",
+      "year": "2015",
+      "questionNumber": 12,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "Which if the following would happen when a user double clicks on a folder?..."
+    },
+    {
+      "id": "ict_2015_q13",
+      "year": "2015",
+      "questionNumber": 13,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "Dragging a folder from one drive to a window on the same drive is equivalent to a..."
+    },
+    {
+      "id": "ict_2015_q14",
+      "year": "2015",
+      "questionNumber": 14,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The process whereby the computer manipulates data to produce information is known as..."
+    },
+    {
+      "id": "ict_2015_q15",
+      "year": "2015",
+      "questionNumber": 15,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The stages of information processing cycle under ICT are..."
+    },
+    {
+      "id": "ict_2015_q16",
+      "year": "2015",
+      "questionNumber": 16,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Which of the following is a problem to computer users as a result of radiation from the momitor..."
+    },
+    {
+      "id": "ict_2015_q17",
+      "year": "2015",
+      "questionNumber": 17,
+      "classifiedTopics": [
+        "Ethics Of Using ICTs"
+      ],
+      "preview": "Which of the following is a reason for copyrighting ICT tools or technologies?..."
+    },
+    {
+      "id": "ict_2015_q18",
+      "year": "2015",
+      "questionNumber": 18,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Which of the following is a bad practice in the usage of ICT tools?..."
+    },
+    {
+      "id": "ict_2015_q19",
+      "year": "2015",
+      "questionNumber": 19,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "To search for information on various topics, which of the following packages is used?..."
+    },
+    {
+      "id": "ict_2015_q2",
+      "year": "2015",
+      "questionNumber": 2,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Which of the following devices are used to feed a computer system with data?..."
+    },
+    {
+      "id": "ict_2015_q20",
+      "year": "2015",
+      "questionNumber": 20,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "preview": "If a user places the mouse cursor at one end of a text, holds down the left button and drags to the ..."
+    },
+    {
+      "id": "ict_2015_q21",
+      "year": "2015",
+      "questionNumber": 21,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Word Processing Applications"
+      ],
+      "preview": "To underline selected text(s) under a word processing environment, use the shortcut keys..."
+    },
+    {
+      "id": "ict_2015_q22",
+      "year": "2015",
+      "questionNumber": 22,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "A collection of separate windows applications sold as a group is called..."
+    },
+    {
+      "id": "ict_2015_q23",
+      "year": "2015",
+      "questionNumber": 23,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "Adding 3-D effect to an object is done through the..."
+    },
+    {
+      "id": "ict_2015_q24",
+      "year": "2015",
+      "questionNumber": 24,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "Which of the following options is required to save a document with a different name?..."
+    },
+    {
+      "id": "ict_2015_q25",
+      "year": "2015",
+      "questionNumber": 25,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "The process of automatically moving an entire word to start the next line in a word processing progr..."
+    },
+    {
+      "id": "ict_2015_q27",
+      "year": "2015",
+      "questionNumber": 27,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "The shift key on a computer keyboard is used to..."
+    },
+    {
+      "id": "ict_2015_q28",
+      "year": "2015",
+      "questionNumber": 28,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "Which of the following document views will enable a user to view a document as it will appear on a p..."
+    },
+    {
+      "id": "ict_2015_q29",
+      "year": "2015",
+      "questionNumber": 29,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "The print preview button is located on which of the following toolbars?..."
+    },
+    {
+      "id": "ict_2015_q3",
+      "year": "2015",
+      "questionNumber": 3,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "A computer accepts data input, processes the data and produces..."
+    },
+    {
+      "id": "ict_2015_q30",
+      "year": "2015",
+      "questionNumber": 30,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "Which of the following is an icon on the drawing toolbar?..."
+    },
+    {
+      "id": "ict_2015_q31",
+      "year": "2015",
+      "questionNumber": 31,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Transferring data from a local computer to a remote computer is referred to as..."
+    },
+    {
+      "id": "ict_2015_q32",
+      "year": "2015",
+      "questionNumber": 32,
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "preview": "In computing, an element which links from one document to another or within the same document is cal..."
+    },
+    {
+      "id": "ict_2015_q33",
+      "year": "2015",
+      "questionNumber": 33,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "Information printed on paper is referred to as..."
+    },
+    {
+      "id": "ict_2015_q34",
+      "year": "2015",
+      "questionNumber": 34,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "The button that opens a dialogue box for users to create an email message is..."
+    },
+    {
+      "id": "ict_2015_q35",
+      "year": "2015",
+      "questionNumber": 35,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "File And Folder Management"
+      ],
+      "preview": "Computer virus is capable of..."
+    },
+    {
+      "id": "ict_2015_q36",
+      "year": "2015",
+      "questionNumber": 36,
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "preview": "In an email environment, the acronym BCC refers to..."
+    },
+    {
+      "id": "ict_2015_q37",
+      "year": "2015",
+      "questionNumber": 37,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "A computer program that enables users to surf the internet is called..."
+    },
+    {
+      "id": "ict_2015_q38",
+      "year": "2015",
+      "questionNumber": 38,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "Specialized programs that assist a user to locate information on the internet is called..."
+    },
+    {
+      "id": "ict_2015_q39",
+      "year": "2015",
+      "questionNumber": 39,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "The sign which represents an insertion of a formula in a spreadsheet program is..."
+    },
+    {
+      "id": "ict_2015_q4",
+      "year": "2015",
+      "questionNumber": 4,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The component of the computer that houses the motherboard and the power supply unit is called..."
+    },
+    {
+      "id": "ict_2015_q40",
+      "year": "2015",
+      "questionNumber": 40,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "Which of the following terms in a spreadsheet is identified by a letter and a number?..."
+    },
+    {
+      "id": "ict_2015_q5",
+      "year": "2015",
+      "questionNumber": 5,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Which component of the computer resembles the typewriter?..."
+    },
+    {
+      "id": "ict_2015_q6",
+      "year": "2015",
+      "questionNumber": 6,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The optical storage media among the following is..."
+    },
+    {
+      "id": "ict_2015_q7",
+      "year": "2015",
+      "questionNumber": 7,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Which of the following media stores data temporarily?..."
+    },
+    {
+      "id": "ict_2015_q8",
+      "year": "2015",
+      "questionNumber": 8,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Which of the following devices must be turned on first when booting the computer?..."
+    },
+    {
+      "id": "ict_2016_q1",
+      "year": "2016",
+      "questionNumber": 1,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The brain of the computer is the..."
+    },
+    {
+      "id": "ict_2016_q10",
+      "year": "2016",
+      "questionNumber": 10,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Entry of data into a computer is termed..."
+    },
+    {
+      "id": "ict_2016_q11",
+      "year": "2016",
+      "questionNumber": 11,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The following are hardware components except..."
+    },
+    {
+      "id": "ict_2016_q12",
+      "year": "2016",
+      "questionNumber": 12,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "The following devices can be found in the system unit except..."
+    },
+    {
+      "id": "ict_2016_q13",
+      "year": "2016",
+      "questionNumber": 13,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "The method of reproducing copies of a document is termed..."
+    },
+    {
+      "id": "ict_2016_q14",
+      "year": "2016",
+      "questionNumber": 14,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Storage media that are similar to compact discs but store more data are known as..."
+    },
+    {
+      "id": "ict_2016_q15",
+      "year": "2016",
+      "questionNumber": 15,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "To boot a computer system, the user needs..."
+    },
+    {
+      "id": "ict_2016_q16",
+      "year": "2016",
+      "questionNumber": 16,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "The number of command buttons on the control menu are..."
+    },
+    {
+      "id": "ict_2016_q17",
+      "year": "2016",
+      "questionNumber": 17,
+      "classifiedTopics": [
+        "The Internet And World Wide Web",
+        "File And Folder Management"
+      ],
+      "preview": "The location where a file is stored is called..."
+    },
+    {
+      "id": "ict_2016_q2",
+      "year": "2016",
+      "questionNumber": 2,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "An example of output device is the..."
+    },
+    {
+      "id": "ict_2016_q20",
+      "year": "2016",
+      "questionNumber": 20,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Which of the following cannot cause computer virus infection?..."
+    },
+    {
+      "id": "ict_2016_q21",
+      "year": "2016",
+      "questionNumber": 21,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "preview": "The following are features of a word processing application window except..."
+    },
+    {
+      "id": "ict_2016_q22",
+      "year": "2016",
+      "questionNumber": 22,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "Which of the following is not a component of a uniform resource locator (URL)?..."
+    },
+    {
+      "id": "ict_2016_q23",
+      "year": "2016",
+      "questionNumber": 23,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "The speed of modern is measured in..."
+    },
+    {
+      "id": "ict_2016_q24",
+      "year": "2016",
+      "questionNumber": 24,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "A special software that is used to access the internet is called..."
+    },
+    {
+      "id": "ict_2016_q26",
+      "year": "2016",
+      "questionNumber": 26,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "Changing the desktop wall paper of a computer is termed..."
+    },
+    {
+      "id": "ict_2016_q27",
+      "year": "2016",
+      "questionNumber": 27,
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "preview": "The use of ICT in learning and teaching id to make it..."
+    },
+    {
+      "id": "ict_2016_q28",
+      "year": "2016",
+      "questionNumber": 28,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Word Processing Applications"
+      ],
+      "preview": "To create a space between characters, words and sentences, use the..."
+    },
+    {
+      "id": "ict_2016_q29",
+      "year": "2016",
+      "questionNumber": 29,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Which computer keyboard key allows users to erase characters to the left of the cursor?..."
+    },
+    {
+      "id": "ict_2016_q30",
+      "year": "2016",
+      "questionNumber": 30,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "The process that is used to recall a document previously saved is termed..."
+    },
+    {
+      "id": "ict_2016_q31",
+      "year": "2016",
+      "questionNumber": 31,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "Double-clicking on a program icon on a computer desktop..."
+    },
+    {
+      "id": "ict_2016_q32",
+      "year": "2016",
+      "questionNumber": 32,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "Which of the following steps will opens, check and correct errors, and submit the file for safe keep..."
+    },
+    {
+      "id": "ict_2016_q33",
+      "year": "2016",
+      "questionNumber": 33,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "preview": "The process of a user placing the cursor at one end of a text, holds down the left mouse button and ..."
+    },
+    {
+      "id": "ict_2016_q34",
+      "year": "2016",
+      "questionNumber": 34,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "Previewing a document before printing is necessary because it..."
+    },
+    {
+      "id": "ict_2016_q35",
+      "year": "2016",
+      "questionNumber": 35,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "Which of the following options is used to access a message from an inbox in an electronic mailing?..."
+    },
+    {
+      "id": "ict_2016_q36",
+      "year": "2016",
+      "questionNumber": 36,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Word Processing Applications"
+      ],
+      "preview": "Which of the following options is used to access a message from an inbox in an electronic mailing?..."
+    },
+    {
+      "id": "ict_2016_q37",
+      "year": "2016",
+      "questionNumber": 37,
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "preview": "Which of the following command buttons in the browser enables a user to fetch the latest copy of the..."
+    },
+    {
+      "id": "ict_2016_q38",
+      "year": "2016",
+      "questionNumber": 38,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "A spreadsheet cell name is referenced by a..."
+    },
+    {
+      "id": "ict_2016_q39",
+      "year": "2016",
+      "questionNumber": 39,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "Mathematical calculations in a spreadsheet application are called..."
+    },
+    {
+      "id": "ict_2016_q4",
+      "year": "2016",
+      "questionNumber": 4,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "To boot a computer means to..."
+    },
+    {
+      "id": "ict_2016_q40",
+      "year": "2016",
+      "questionNumber": 40,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "In a spreadsheet application, which of the following can be identified by a letter?..."
+    },
+    {
+      "id": "ict_2016_q5",
+      "year": "2016",
+      "questionNumber": 5,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "The horizontal bar that normally lies at the bottom of a computer desktop screen is called..."
+    },
+    {
+      "id": "ict_2016_q6",
+      "year": "2016",
+      "questionNumber": 6,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "A folder within another folder is called..."
+    },
+    {
+      "id": "ict_2016_q7",
+      "year": "2016",
+      "questionNumber": 7,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Processed material which is meaningful to the user in computing is called..."
+    },
+    {
+      "id": "ict_2016_q8",
+      "year": "2016",
+      "questionNumber": 8,
+      "classifiedTopics": [
+        "Ethics Of Using ICTs"
+      ],
+      "preview": "The copyright laws protect works of an author for a period of his life time and..."
+    },
+    {
+      "id": "ict_2016_q9",
+      "year": "2016",
+      "questionNumber": 9,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "An example of a function key on a computer keyboard is..."
+    },
+    {
+      "id": "ict_2017_q1",
+      "year": "2017",
+      "questionNumber": 1,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "A group of instructions that directs a computer is called..."
+    },
+    {
+      "id": "ict_2017_q10",
+      "year": "2017",
+      "questionNumber": 10,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "System software is a platform which runs..."
+    },
+    {
+      "id": "ict_2017_q11",
+      "year": "2017",
+      "questionNumber": 11,
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "preview": "The memory that stores permanent instructions is referred to as..."
+    },
+    {
+      "id": "ict_2017_q12",
+      "year": "2017",
+      "questionNumber": 12,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The interaction between the input and output devices is controlled by the..."
+    },
+    {
+      "id": "ict_2017_q13",
+      "year": "2017",
+      "questionNumber": 13,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "File And Folder Management"
+      ],
+      "preview": "Which of the following is not a storage device?..."
+    },
+    {
+      "id": "ict_2017_q14",
+      "year": "2017",
+      "questionNumber": 14,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "To boot a computer system, the user needs..."
+    },
+    {
+      "id": "ict_2017_q15",
+      "year": "2017",
+      "questionNumber": 15,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "The following are features on the GUI except..."
+    },
+    {
+      "id": "ict_2017_q16",
+      "year": "2017",
+      "questionNumber": 16,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Word Processing Applications"
+      ],
+      "preview": "When files are cleared from the computer, it is known as..."
+    },
+    {
+      "id": "ict_2017_q18",
+      "year": "2017",
+      "questionNumber": 18,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The following are good posture positions when using a computer except..."
+    },
+    {
+      "id": "ict_2017_q19",
+      "year": "2017",
+      "questionNumber": 19,
+      "classifiedTopics": [
+        "Ethics Of Using ICTs"
+      ],
+      "preview": "The ethical issue that relates to the responsibility of those who collect data to ensure that the da..."
+    },
+    {
+      "id": "ict_2017_q2",
+      "year": "2017",
+      "questionNumber": 2,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Devices that extend their services to enhance the function of the computer are called..."
+    },
+    {
+      "id": "ict_2017_q20",
+      "year": "2017",
+      "questionNumber": 20,
+      "classifiedTopics": [
+        "Ethics Of Using ICTs"
+      ],
+      "preview": "The legal right to control the production and selling of a book, play, film or software is called..."
+    },
+    {
+      "id": "ict_2017_q21",
+      "year": "2017",
+      "questionNumber": 21,
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "File And Folder Management"
+      ],
+      "preview": "A word document created with a word processing program will have the extension..."
+    },
+    {
+      "id": "ict_2017_q22",
+      "year": "2017",
+      "questionNumber": 22,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "A collection of linked documents or pages stored on millions of computers and distributed across the..."
+    },
+    {
+      "id": "ict_2017_q23",
+      "year": "2017",
+      "questionNumber": 23,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "The set of rules that enables different types of computers and networks on the internet to communica..."
+    },
+    {
+      "id": "ict_2017_q24",
+      "year": "2017",
+      "questionNumber": 24,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Word Processing Applications"
+      ],
+      "preview": "The fastest form of sending information is through the..."
+    },
+    {
+      "id": "ict_2017_q25",
+      "year": "2017",
+      "questionNumber": 25,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "File And Folder Management"
+      ],
+      "preview": "After work, your mother decided to bring a copy of the data home to work on. Which of the following ..."
+    },
+    {
+      "id": "ict_2017_q26",
+      "year": "2017",
+      "questionNumber": 26,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "preview": "The process of moving different portions of a document on the screen into view is called..."
+    },
+    {
+      "id": "ict_2017_q27",
+      "year": "2017",
+      "questionNumber": 27,
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "preview": "Which of the following is not reason for using ICT in education?..."
+    },
+    {
+      "id": "ict_2017_q28",
+      "year": "2017",
+      "questionNumber": 28,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "Which of the following computer keyboard keys are used for issuing commands?..."
+    },
+    {
+      "id": "ict_2017_q29",
+      "year": "2017",
+      "questionNumber": 29,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "Which of the following mouse buttons when clicked, provides a menu which a user can choose from?..."
+    },
+    {
+      "id": "ict_2017_q3",
+      "year": "2017",
+      "questionNumber": 3,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The physical material on which computer keeps data, instructions, and information is called..."
+    },
+    {
+      "id": "ict_2017_q30",
+      "year": "2017",
+      "questionNumber": 30,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "Making changes to an existing document is referred to as..."
+    },
+    {
+      "id": "ict_2017_q31",
+      "year": "2017",
+      "questionNumber": 31,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "A symbol on the screen that indicates where the next character typed will appear is..."
+    },
+    {
+      "id": "ict_2017_q32",
+      "year": "2017",
+      "questionNumber": 32,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "Which of the following steps can be used to change font type of a document?..."
+    },
+    {
+      "id": "ict_2017_q33",
+      "year": "2017",
+      "questionNumber": 33,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "preview": "The Standard Toolbar contains buttons that..."
+    },
+    {
+      "id": "ict_2017_q34",
+      "year": "2017",
+      "questionNumber": 34,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "In using MS Word, one can decide to see exactly how the pages of the current document will appear wh..."
+    },
+    {
+      "id": "ict_2017_q35",
+      "year": "2017",
+      "questionNumber": 35,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "The basic information on the internet can be in the form of the following except..."
+    },
+    {
+      "id": "ict_2017_q36",
+      "year": "2017",
+      "questionNumber": 36,
+      "classifiedTopics": [
+        "The Internet And World Wide Web",
+        "Word Processing Applications"
+      ],
+      "preview": "If you want any information on the internet that contains the keywords \"Kofi\", \"Annan\" and \"Ghana\", ..."
+    },
+    {
+      "id": "ict_2017_q37",
+      "year": "2017",
+      "questionNumber": 37,
+      "classifiedTopics": [
+        "The Internet And World Wide Web",
+        "Integrating ICT Into Learning"
+      ],
+      "preview": "A student wants to search for information on the internet to have solution to the ICT assignment fro..."
+    },
+    {
+      "id": "ict_2017_q38",
+      "year": "2017",
+      "questionNumber": 38,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "A set of cells in the horizontal direction in a spreadsheet application is called..."
+    },
+    {
+      "id": "ict_2017_q39",
+      "year": "2017",
+      "questionNumber": 39,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "In spreadsheets, you can create a relationship between two cells using..."
+    },
+    {
+      "id": "ict_2017_q4",
+      "year": "2017",
+      "questionNumber": 4,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "When a computer is on, it is normally termed..."
+    },
+    {
+      "id": "ict_2017_q40",
+      "year": "2017",
+      "questionNumber": 40,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "The sign used to prompt a spreadsheet that a user is about to apply a formula/function to a cell is..."
+    },
+    {
+      "id": "ict_2017_q6",
+      "year": "2017",
+      "questionNumber": 6,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "The duplication of an original document is referred to as..."
+    },
+    {
+      "id": "ict_2017_q7",
+      "year": "2017",
+      "questionNumber": 7,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The steps data go through to become information are..."
+    },
+    {
+      "id": "ict_2017_q8",
+      "year": "2017",
+      "questionNumber": 8,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "Which of the following is a keyboard layout format?..."
+    },
+    {
+      "id": "ict_2017_q9",
+      "year": "2017",
+      "questionNumber": 9,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "Which of the following programs has features like grid book?..."
+    },
+    {
+      "id": "ict_2018_q10",
+      "year": "2018",
+      "questionNumber": 10,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "How many arrow keys are found on the computer keyboard?..."
+    },
+    {
+      "id": "ict_2018_q11",
+      "year": "2018",
+      "questionNumber": 11,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "In a spreadsheet application, which of the following displays the contents of the active cell..."
+    },
+    {
+      "id": "ict_2018_q12",
+      "year": "2018",
+      "questionNumber": 12,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The following are components in the system unit except..."
+    },
+    {
+      "id": "ict_2018_q13",
+      "year": "2018",
+      "questionNumber": 13,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "Microsoft Word, Encarta Kids, Mavis Beacon Teaches Typing are examples of..."
+    },
+    {
+      "id": "ict_2018_q14",
+      "year": "2018",
+      "questionNumber": 14,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The following are input devices except..."
+    },
+    {
+      "id": "ict_2018_q15",
+      "year": "2018",
+      "questionNumber": 15,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "File And Folder Management"
+      ],
+      "preview": "From which of the following storage media will deleted items be sent to the recycle bin?..."
+    },
+    {
+      "id": "ict_2018_q16",
+      "year": "2018",
+      "questionNumber": 16,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "The name given to the background area of a computer when turned on is..."
+    },
+    {
+      "id": "ict_2018_q17",
+      "year": "2018",
+      "questionNumber": 17,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "File And Folder Management"
+      ],
+      "preview": "Which of the following is used as a shortcut means to open files, folders and programs?..."
+    },
+    {
+      "id": "ict_2018_q18",
+      "year": "2018",
+      "questionNumber": 18,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "A folder inside another folder is called..."
+    },
+    {
+      "id": "ict_2018_q2",
+      "year": "2018",
+      "questionNumber": 2,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Which of the following devices sends commands into the computer?..."
+    },
+    {
+      "id": "ict_2018_q20",
+      "year": "2018",
+      "questionNumber": 20,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "File And Folder Management"
+      ],
+      "preview": "The computer program designed to prevent viruses from damaging the computer and its files is called..."
+    },
+    {
+      "id": "ict_2018_q21",
+      "year": "2018",
+      "questionNumber": 21,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "The default orientation for a Word document is..."
+    },
+    {
+      "id": "ict_2018_q22",
+      "year": "2018",
+      "questionNumber": 22,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "In a web browser, where is the website address typed?..."
+    },
+    {
+      "id": "ict_2018_q24",
+      "year": "2018",
+      "questionNumber": 24,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "The Internet And World Wide Web"
+      ],
+      "preview": "A system of interconnected computers, telephones, or other communication devices that can communicat..."
+    },
+    {
+      "id": "ict_2018_q26",
+      "year": "2018",
+      "questionNumber": 26,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "The background image that appears on a computer desktop is known as..."
+    },
+    {
+      "id": "ict_2018_q27",
+      "year": "2018",
+      "questionNumber": 27,
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "Spreadsheet Applications"
+      ],
+      "preview": "Which of the following programs would support the study of Mathematics?..."
+    },
+    {
+      "id": "ict_2018_q28",
+      "year": "2018",
+      "questionNumber": 28,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Word Processing Applications"
+      ],
+      "preview": "To create a space between characters, word and sentences, use the..."
+    },
+    {
+      "id": "ict_2018_q29",
+      "year": "2018",
+      "questionNumber": 29,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "Which part of the computer mouse button is used to select an object on screen?..."
+    },
+    {
+      "id": "ict_2018_q3",
+      "year": "2018",
+      "questionNumber": 3,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Which of the following storage media normally stores the operating system?..."
+    },
+    {
+      "id": "ict_2018_q30",
+      "year": "2018",
+      "questionNumber": 30,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "Making changes and corrections of grammatical errors to an existing document is referred to as..."
+    },
+    {
+      "id": "ict_2018_q31",
+      "year": "2018",
+      "questionNumber": 31,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "Which of the following keyboard keys can be used to delete characters in a Word Processing program?..."
+    },
+    {
+      "id": "ict_2018_q32",
+      "year": "2018",
+      "questionNumber": 32,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "Which computer keyboards key should be pressed to start a new paragraph in a Word Processing documen..."
+    },
+    {
+      "id": "ict_2018_q33",
+      "year": "2018",
+      "questionNumber": 33,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "Which of the following bars displays the heading of an open window?..."
+    },
+    {
+      "id": "ict_2018_q34",
+      "year": "2018",
+      "questionNumber": 34,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "The print preview button is located on which of the following toolbars?..."
+    },
+    {
+      "id": "ict_2018_q35",
+      "year": "2018",
+      "questionNumber": 35,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "Which of the following is compulsory when composing and sending an email?..."
+    },
+    {
+      "id": "ict_2018_q36",
+      "year": "2018",
+      "questionNumber": 36,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "Specialized program that assists a user to locate information on the web and on the internet is call..."
+    },
+    {
+      "id": "ict_2018_q37",
+      "year": "2018",
+      "questionNumber": 37,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "Which of the following is a complete website address?..."
+    },
+    {
+      "id": "ict_2018_q38",
+      "year": "2018",
+      "questionNumber": 38,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "In Spreadsheet application, which of the following symbols represents multiplication..."
+    },
+    {
+      "id": "ict_2018_q39",
+      "year": "2018",
+      "questionNumber": 39,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "Which of the following is used for multiplication operation in Spreadsheet functions?..."
+    },
+    {
+      "id": "ict_2018_q4",
+      "year": "2018",
+      "questionNumber": 4,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Using a computer application is known as..."
+    },
+    {
+      "id": "ict_2018_q40",
+      "year": "2018",
+      "questionNumber": 40,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "Which of the following is used to find the minimum number among a set of numbers in Spreadsheet func..."
+    },
+    {
+      "id": "ict_2018_q5",
+      "year": "2018",
+      "questionNumber": 5,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "The system tray is also called..."
+    },
+    {
+      "id": "ict_2018_q6",
+      "year": "2018",
+      "questionNumber": 6,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "File And Folder Management"
+      ],
+      "preview": "The default storage location for files and folders is..."
+    },
+    {
+      "id": "ict_2018_q7",
+      "year": "2018",
+      "questionNumber": 7,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "Which of the following statements are true about files? I. A file can be renamed whilst it is open I..."
+    },
+    {
+      "id": "ict_2018_q8",
+      "year": "2018",
+      "questionNumber": 8,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Which of the following devices is used to process information?..."
+    },
+    {
+      "id": "ict_2018_q9",
+      "year": "2018",
+      "questionNumber": 9,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "The Internet And World Wide Web"
+      ],
+      "preview": "Which of the following items is not a source of computer virus?..."
+    },
+    {
+      "id": "ict_2019_q1",
+      "year": "2019",
+      "questionNumber": 1,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "An electronic and programmable device that processes data into use information is called..."
+    },
+    {
+      "id": "ict_2019_q10",
+      "year": "2019",
+      "questionNumber": 10,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "Which of the following applications is an example of a Word processor?..."
+    },
+    {
+      "id": "ict_2019_q11",
+      "year": "2019",
+      "questionNumber": 11,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The only software that runs without a user's instruction on a computer is the..."
+    },
+    {
+      "id": "ict_2019_q12",
+      "year": "2019",
+      "questionNumber": 12,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The Liquid Crystal Display monitor of a computer is also known as the..."
+    },
+    {
+      "id": "ict_2019_q13",
+      "year": "2019",
+      "questionNumber": 13,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "A pen-like device that is used to enter data by applying pressure on a screen is the..."
+    },
+    {
+      "id": "ict_2019_q14",
+      "year": "2019",
+      "questionNumber": 14,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "One gigabyte of data approximates to..."
+    },
+    {
+      "id": "ict_2019_q15",
+      "year": "2019",
+      "questionNumber": 15,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Which of the following devices will turn off first when shutting down the computer?..."
+    },
+    {
+      "id": "ict_2019_q16",
+      "year": "2019",
+      "questionNumber": 16,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The title bar of an opened application always displays the name of the application and the name of t..."
+    },
+    {
+      "id": "ict_2019_q17",
+      "year": "2019",
+      "questionNumber": 17,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "To remove unwanted shortcuts from the desktop which of the following options will be appropriate? I...."
+    },
+    {
+      "id": "ict_2019_q18",
+      "year": "2019",
+      "questionNumber": 18,
+      "classifiedTopics": [
+        "Health And Safety In Using ICT Tools"
+      ],
+      "preview": "The safety measure to prevent back ache when using the computer for a very long time is to..."
+    },
+    {
+      "id": "ict_2019_q19",
+      "year": "2019",
+      "questionNumber": 19,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "The best measure that computer users should practice to reduce the changes of wrist and finger pains..."
+    },
+    {
+      "id": "ict_2019_q2",
+      "year": "2019",
+      "questionNumber": 2,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "File And Folder Management"
+      ],
+      "preview": "Which of the following media uses laser technology to write and read data?..."
+    },
+    {
+      "id": "ict_2019_q20",
+      "year": "2019",
+      "questionNumber": 20,
+      "classifiedTopics": [
+        "Ethics Of Using ICTs"
+      ],
+      "preview": "Illegal copying of operating system, application software, music and videos is referred to as copyri..."
+    },
+    {
+      "id": "ict_2019_q21",
+      "year": "2019",
+      "questionNumber": 21,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "To resave an edited document, use..."
+    },
+    {
+      "id": "ict_2019_q22",
+      "year": "2019",
+      "questionNumber": 22,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "A collection of linked documents or pages stored on millions of computers and distributed across the..."
+    },
+    {
+      "id": "ict_2019_q23",
+      "year": "2019",
+      "questionNumber": 23,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The device used to transform digital signals to analogue signals and vice versa on a network is a..."
+    },
+    {
+      "id": "ict_2019_q24",
+      "year": "2019",
+      "questionNumber": 24,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "Google is an example of a..."
+    },
+    {
+      "id": "ict_2019_q25",
+      "year": "2019",
+      "questionNumber": 25,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "Mrs. Famiyeh wants to copy information onto a compact disc, clean the content and later copy the inf..."
+    },
+    {
+      "id": "ict_2019_q26",
+      "year": "2019",
+      "questionNumber": 26,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Word Processing Applications"
+      ],
+      "preview": "To execute more than one program at the same time, the system software being used should be capable ..."
+    },
+    {
+      "id": "ict_2019_q27",
+      "year": "2019",
+      "questionNumber": 27,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Which of the following statements best describes a computer operator? A person who..."
+    },
+    {
+      "id": "ict_2019_q28",
+      "year": "2019",
+      "questionNumber": 28,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Word Processing Applications"
+      ],
+      "preview": "A document which shows its entire text in upper case means that the user has achieved the..."
+    },
+    {
+      "id": "ict_2019_q29",
+      "year": "2019",
+      "questionNumber": 29,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "Pressing and releasing the left mouse button twice in quick succession is termed..."
+    },
+    {
+      "id": "ict_2019_q3",
+      "year": "2019",
+      "questionNumber": 3,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Turning off the computer is also known as..."
+    },
+    {
+      "id": "ict_2019_q30",
+      "year": "2019",
+      "questionNumber": 30,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "Which of the following keys is used to create a new line in Word processing?..."
+    },
+    {
+      "id": "ict_2019_q31",
+      "year": "2019",
+      "questionNumber": 31,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "The feature in Word processors that automatically moves the cursor to the beginning of the next line..."
+    },
+    {
+      "id": "ict_2019_q32",
+      "year": "2019",
+      "questionNumber": 32,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "The red wavy line under a word in a Word processing document refers to word..."
+    },
+    {
+      "id": "ict_2019_q33",
+      "year": "2019",
+      "questionNumber": 33,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "The shortcut to some commands on the menu bar of a Word processing application program can be found ..."
+    },
+    {
+      "id": "ict_2019_q34",
+      "year": "2019",
+      "questionNumber": 34,
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "preview": "Which of the following document views would show the document as it would look when it is printed?..."
+    },
+    {
+      "id": "ict_2019_q35",
+      "year": "2019",
+      "questionNumber": 35,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "The buttons for reload/refresh, back, top and forward can be found on the following applications exc..."
+    },
+    {
+      "id": "ict_2019_q36",
+      "year": "2019",
+      "questionNumber": 36,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "The software that enable users access web pages on the internet is called..."
+    },
+    {
+      "id": "ict_2019_q37",
+      "year": "2019",
+      "questionNumber": 37,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Word Processing Applications"
+      ],
+      "preview": "In computing, the exchange of information is referred to as..."
+    },
+    {
+      "id": "ict_2019_q38",
+      "year": "2019",
+      "questionNumber": 38,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "Which of the following functions is used to find the mean number..."
+    },
+    {
+      "id": "ict_2019_q39",
+      "year": "2019",
+      "questionNumber": 39,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "The content of a selected cell is shown in the..."
+    },
+    {
+      "id": "ict_2019_q4",
+      "year": "2019",
+      "questionNumber": 4,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "The following are items located on the default task bar except..."
+    },
+    {
+      "id": "ict_2019_q40",
+      "year": "2019",
+      "questionNumber": 40,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Spreadsheet Applications"
+      ],
+      "preview": "An application that helps the user to change any number in a cell and immediately see the result of ..."
+    },
+    {
+      "id": "ict_2019_q5",
+      "year": "2019",
+      "questionNumber": 5,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "Files are best kept in..."
+    },
+    {
+      "id": "ict_2019_q6",
+      "year": "2019",
+      "questionNumber": 6,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The end results of the information processing cycle that cannot be touched is referred to as..."
+    },
+    {
+      "id": "ict_2019_q7",
+      "year": "2019",
+      "questionNumber": 7,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "A malicious software specially designed to cause computer system to be slow and malfunction is..."
+    },
+    {
+      "id": "ict_2019_q8",
+      "year": "2019",
+      "questionNumber": 8,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "The arrow keys on the computer keyboard are also referred to as..."
+    },
+    {
+      "id": "ict_2019_q9",
+      "year": "2019",
+      "questionNumber": 9,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "The name given to each cell according to its column label and row number is called..."
+    },
+    {
+      "id": "ict_2020_q1",
+      "year": "2020",
+      "questionNumber": 1,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "A computer model that looks like a brief case is called..."
+    },
+    {
+      "id": "ict_2020_q10",
+      "year": "2020",
+      "questionNumber": 10,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "A set of cells in the vertical directions in a spreadsheet application is called..."
+    },
+    {
+      "id": "ict_2020_q11",
+      "year": "2020",
+      "questionNumber": 11,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The software that manages the communication between the hardware and the application software is..."
+    },
+    {
+      "id": "ict_2020_q12",
+      "year": "2020",
+      "questionNumber": 12,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Which of the following data measuring units is not in the computer field?..."
+    },
+    {
+      "id": "ict_2020_q13",
+      "year": "2020",
+      "questionNumber": 13,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The following options are computer output devices except..."
+    },
+    {
+      "id": "ict_2020_q14",
+      "year": "2020",
+      "questionNumber": 14,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "One megabyte of data is approximately equal to..."
+    },
+    {
+      "id": "ict_2020_q16",
+      "year": "2020",
+      "questionNumber": 16,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "An operating system has all the following features except..."
+    },
+    {
+      "id": "ict_2020_q17",
+      "year": "2020",
+      "questionNumber": 17,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "File And Folder Management"
+      ],
+      "preview": "Which of the following tools gives the user a log of all opened applications?..."
+    },
+    {
+      "id": "ict_2020_q18",
+      "year": "2020",
+      "questionNumber": 18,
+      "classifiedTopics": [
+        "Health And Safety In Using ICT Tools"
+      ],
+      "preview": "Which of the following options is not a safety measure?..."
+    },
+    {
+      "id": "ict_2020_q19",
+      "year": "2020",
+      "questionNumber": 19,
+      "classifiedTopics": [
+        "Health And Safety In Using ICT Tools"
+      ],
+      "preview": "The following options are possible health hazards of prolonged use of the computer systems except..."
+    },
+    {
+      "id": "ict_2020_q2",
+      "year": "2020",
+      "questionNumber": 2,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The following components are forms of pointing devices except..."
+    },
+    {
+      "id": "ict_2020_q20",
+      "year": "2020",
+      "questionNumber": 20,
+      "classifiedTopics": [
+        "Ethics Of Using ICTs"
+      ],
+      "preview": "The practice of copying and distributing information without the permission of the owner is known as..."
+    },
+    {
+      "id": "ict_2020_q21",
+      "year": "2020",
+      "questionNumber": 21,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "To edit a word document, the user must first..."
+    },
+    {
+      "id": "ict_2020_q22",
+      "year": "2020",
+      "questionNumber": 22,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Word Processing Applications"
+      ],
+      "preview": "The acronym ISP stands for..."
+    },
+    {
+      "id": "ict_2020_q23",
+      "year": "2020",
+      "questionNumber": 23,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "A tool for locating information on the internet is called..."
+    },
+    {
+      "id": "ict_2020_q24",
+      "year": "2020",
+      "questionNumber": 24,
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "preview": "In computing, an element which links one document to another or within the same document is referred..."
+    },
+    {
+      "id": "ict_2020_q25",
+      "year": "2020",
+      "questionNumber": 25,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "It is appropriate to use a backup when the original file is..."
+    },
+    {
+      "id": "ict_2020_q26",
+      "year": "2020",
+      "questionNumber": 26,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "A user can arrange icons by I. Date II. Type III. Name IV. Colour The correct option by which the us..."
+    },
+    {
+      "id": "ict_2020_q27",
+      "year": "2020",
+      "questionNumber": 27,
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "preview": "A teacher who uses a video to teach students is making use of ICT in..."
+    },
+    {
+      "id": "ict_2020_q28",
+      "year": "2020",
+      "questionNumber": 28,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "To center text in a word processing application, use the keyboard keys combination..."
+    },
+    {
+      "id": "ict_2020_q29",
+      "year": "2020",
+      "questionNumber": 29,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Word Processing Applications"
+      ],
+      "preview": "The keyboard keys combination that will allow a user to move from the current cursor position in a w..."
+    },
+    {
+      "id": "ict_2020_q3",
+      "year": "2020",
+      "questionNumber": 3,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Which of the following devices provides permanent storage of information for the future retrieval an..."
+    },
+    {
+      "id": "ict_2020_q30",
+      "year": "2020",
+      "questionNumber": 30,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "The justify command will align the selected text to..."
+    },
+    {
+      "id": "ict_2020_q31",
+      "year": "2020",
+      "questionNumber": 31,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "The align centre command will place the selected text at the center of the..."
+    },
+    {
+      "id": "ict_2020_q32",
+      "year": "2020",
+      "questionNumber": 32,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "Highlighting a text is similar to..."
+    },
+    {
+      "id": "ict_2020_q33",
+      "year": "2020",
+      "questionNumber": 33,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "Which of the following menu options contains the print command in word processing application window..."
+    },
+    {
+      "id": "ict_2020_q34",
+      "year": "2020",
+      "questionNumber": 34,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "The keyboard shortcut keys for printing a document is..."
+    },
+    {
+      "id": "ict_2020_q35",
+      "year": "2020",
+      "questionNumber": 35,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "The set of rules that enables different types of computers and networks on the internet to communica..."
+    },
+    {
+      "id": "ict_2020_q36",
+      "year": "2020",
+      "questionNumber": 36,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Which of the following computer components is used to display the desktop icons?..."
+    },
+    {
+      "id": "ict_2020_q37",
+      "year": "2020",
+      "questionNumber": 37,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Computer devices such as mouse and joystick are referred to as..."
+    },
+    {
+      "id": "ict_2020_q38",
+      "year": "2020",
+      "questionNumber": 38,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "The intersection of a row and a column is called..."
+    },
+    {
+      "id": "ict_2020_q39",
+      "year": "2020",
+      "questionNumber": 39,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "The spreadsheet cell that a user works in at any given time is called..."
+    },
+    {
+      "id": "ict_2020_q4",
+      "year": "2020",
+      "questionNumber": 4,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The process of putting the computer into a state of readiness for operation is referred to as..."
+    },
+    {
+      "id": "ict_2020_q40",
+      "year": "2020",
+      "questionNumber": 40,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "Cell address is normally displayed in the..."
+    },
+    {
+      "id": "ict_2020_q5",
+      "year": "2020",
+      "questionNumber": 5,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The operating system is a type of..."
+    },
+    {
+      "id": "ict_2020_q6",
+      "year": "2020",
+      "questionNumber": 6,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "The duplication of an original document is referred to as..."
+    },
+    {
+      "id": "ict_2020_q7",
+      "year": "2020",
+      "questionNumber": 7,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The following techniques are primary sources of data collection except..."
+    },
+    {
+      "id": "ict_2020_q8",
+      "year": "2020",
+      "questionNumber": 8,
+      "classifiedTopics": [
+        "Ethics Of Using ICTs"
+      ],
+      "preview": "Which of the following reasons best describes copyright protection?..."
+    },
+    {
+      "id": "ict_2021_q1",
+      "year": "2021",
+      "questionNumber": 1,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Computers are classified according to the following features except..."
+    },
+    {
+      "id": "ict_2021_q10",
+      "year": "2021",
+      "questionNumber": 10,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "Which of the following buttons on the Turn Off computer dialogue box will lead a user to a warm boot..."
+    },
+    {
+      "id": "ict_2021_q11",
+      "year": "2021",
+      "questionNumber": 11,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "The start button is found on the..."
+    },
+    {
+      "id": "ict_2021_q12",
+      "year": "2021",
+      "questionNumber": 12,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "Which of the following items is not a feature on the computer desktop?..."
+    },
+    {
+      "id": "ict_2021_q13",
+      "year": "2021",
+      "questionNumber": 13,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "The desktop feature which contains the quick launch button is the..."
+    },
+    {
+      "id": "ict_2021_q14",
+      "year": "2021",
+      "questionNumber": 14,
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "File And Folder Management"
+      ],
+      "preview": "Files that are no more needed by the user are sent to..."
+    },
+    {
+      "id": "ict_2021_q15",
+      "year": "2021",
+      "questionNumber": 15,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "When a user unintentionally deletes files and folders from the computer hard disk, the user can rest..."
+    },
+    {
+      "id": "ict_2021_q16",
+      "year": "2021",
+      "questionNumber": 16,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The two main terms involved in the Information Processing Cycle are..."
+    },
+    {
+      "id": "ict_2021_q17",
+      "year": "2021",
+      "questionNumber": 17,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Which of the following effects is associated with a computer user as a result of radiation from the ..."
+    },
+    {
+      "id": "ict_2021_q18",
+      "year": "2021",
+      "questionNumber": 18,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Health And Safety In Using ICT Tools"
+      ],
+      "preview": "The following options are possible health problems associated with long term exposure to ICT tools e..."
+    },
+    {
+      "id": "ict_2021_q19",
+      "year": "2021",
+      "questionNumber": 19,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Which of the following activities is a bad practice in the usage of ICT tools?..."
+    },
+    {
+      "id": "ict_2021_q2",
+      "year": "2021",
+      "questionNumber": 2,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Word Processing Applications"
+      ],
+      "preview": "The utility software is one of the basic types of..."
+    },
+    {
+      "id": "ict_2021_q20",
+      "year": "2021",
+      "questionNumber": 20,
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "preview": "ICT tools can be used to promote positive attitude in all the following ways except..."
+    },
+    {
+      "id": "ict_2021_q21",
+      "year": "2021",
+      "questionNumber": 21,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Word Processing Applications"
+      ],
+      "preview": "The application of science and scientific knowledge in our daily life is termed..."
+    },
+    {
+      "id": "ict_2021_q22",
+      "year": "2021",
+      "questionNumber": 22,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "The navigation keys on the computer keyboard are also called..."
+    },
+    {
+      "id": "ict_2021_q23",
+      "year": "2021",
+      "questionNumber": 23,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "Which of the following computer keyboard keys can be used to delete a character?..."
+    },
+    {
+      "id": "ict_2021_q24",
+      "year": "2021",
+      "questionNumber": 24,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "During typing lessons, which finger is used to type the letter D?..."
+    },
+    {
+      "id": "ict_2021_q25",
+      "year": "2021",
+      "questionNumber": 25,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "The commands used to move selected text from one location to another in the same document is the..."
+    },
+    {
+      "id": "ict_2021_q26",
+      "year": "2021",
+      "questionNumber": 26,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "Which of the following keys is used for multiple selection of texts that are not continuous?..."
+    },
+    {
+      "id": "ict_2021_q27",
+      "year": "2021",
+      "questionNumber": 27,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "To create a space while typing in a Word processing environment, the computer keyboard key used is t..."
+    },
+    {
+      "id": "ict_2021_q28",
+      "year": "2021",
+      "questionNumber": 28,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Word Processing Applications"
+      ],
+      "preview": "To underline a selected text in a Word document, the computer keyboard shortcut keys used are..."
+    },
+    {
+      "id": "ict_2021_q29",
+      "year": "2021",
+      "questionNumber": 29,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "Which of the following options shows the contents of both the standard toolbar and the formatting to..."
+    },
+    {
+      "id": "ict_2021_q3",
+      "year": "2021",
+      "questionNumber": 3,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The information permanently stored in the Read only Memory chip is called..."
+    },
+    {
+      "id": "ict_2021_q30",
+      "year": "2021",
+      "questionNumber": 30,
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "File And Folder Management"
+      ],
+      "preview": "To print a document after previewing, use the..."
+    },
+    {
+      "id": "ict_2021_q31",
+      "year": "2021",
+      "questionNumber": 31,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "Which of the following options is a valid website address?..."
+    },
+    {
+      "id": "ict_2021_q32",
+      "year": "2021",
+      "questionNumber": 32,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "A special software that is used to access the internet is called..."
+    },
+    {
+      "id": "ict_2021_q33",
+      "year": "2021",
+      "questionNumber": 33,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "preview": "In computing, an element or icon that links one document to another in a different document or withi..."
+    },
+    {
+      "id": "ict_2021_q34",
+      "year": "2021",
+      "questionNumber": 34,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "Which of the following options is a web browser?..."
+    },
+    {
+      "id": "ict_2021_q35",
+      "year": "2021",
+      "questionNumber": 35,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "The command button that opens up a dialogue box for users to compose an e-mail message is the..."
+    },
+    {
+      "id": "ict_2021_q36",
+      "year": "2021",
+      "questionNumber": 36,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "Which feature of a web browser enables a user to access the latest information from the browser?..."
+    },
+    {
+      "id": "ict_2021_q37",
+      "year": "2021",
+      "questionNumber": 37,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "Mathematical calculations in a Spreadsheet application are called..."
+    },
+    {
+      "id": "ict_2021_q38",
+      "year": "2021",
+      "questionNumber": 38,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "Which of the following terms in a Spreadsheet application is identified by a letter and number..."
+    },
+    {
+      "id": "ict_2021_q39",
+      "year": "2021",
+      "questionNumber": 39,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "A selected cell in a Spreadsheet application is the..."
+    },
+    {
+      "id": "ict_2021_q4",
+      "year": "2021",
+      "questionNumber": 4,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The computer device that is used to display information in the softcopy form is the..."
+    },
+    {
+      "id": "ict_2021_q40",
+      "year": "2021",
+      "questionNumber": 40,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "The sign used to prompt a Spreadsheet application that a user is about to apply a formula to a cell ..."
+    },
+    {
+      "id": "ict_2021_q5",
+      "year": "2021",
+      "questionNumber": 5,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "Which part of the computer mouse is used for double-clicking?..."
+    },
+    {
+      "id": "ict_2021_q6",
+      "year": "2021",
+      "questionNumber": 6,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Which of the following items is not a storage medium?..."
+    },
+    {
+      "id": "ict_2021_q7",
+      "year": "2021",
+      "questionNumber": 7,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "One byte of data is equal to..."
+    },
+    {
+      "id": "ict_2021_q8",
+      "year": "2021",
+      "questionNumber": 8,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The 3.5 inches floppy disk has a storage capacity of..."
+    },
+    {
+      "id": "ict_2021_q9",
+      "year": "2021",
+      "questionNumber": 9,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "To boot a computer system, the user needs..."
+    },
+    {
+      "id": "ict_2022_q1",
+      "year": "2022",
+      "questionNumber": 1,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Any hardware device connected to the system unit of a computer is referred to as..."
+    },
+    {
+      "id": "ict_2022_q10",
+      "year": "2022",
+      "questionNumber": 10,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The following options are forms of exchange of information except..."
+    },
+    {
+      "id": "ict_2022_q11",
+      "year": "2022",
+      "questionNumber": 11,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "Which of the following applications will help a user access information from the internet?..."
+    },
+    {
+      "id": "ict_2022_q12",
+      "year": "2022",
+      "questionNumber": 12,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "The horizontal bar on top of a window that contains the window's name is called..."
+    },
+    {
+      "id": "ict_2022_q13",
+      "year": "2022",
+      "questionNumber": 13,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "File And Folder Management"
+      ],
+      "preview": "Information should be stored for users to..."
+    },
+    {
+      "id": "ict_2022_q14",
+      "year": "2022",
+      "questionNumber": 14,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "The basic function of the computer mouse is for..."
+    },
+    {
+      "id": "ict_2022_q15",
+      "year": "2022",
+      "questionNumber": 15,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "Which of the following options can be used for titles or headings of a worksheet?..."
+    },
+    {
+      "id": "ict_2022_q16",
+      "year": "2022",
+      "questionNumber": 16,
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "File And Folder Management"
+      ],
+      "preview": "The default location for saving a text file is..."
+    },
+    {
+      "id": "ict_2022_q17",
+      "year": "2022",
+      "questionNumber": 17,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "An application window that displays a message for a response between a user and a software is called..."
+    },
+    {
+      "id": "ict_2022_q18",
+      "year": "2022",
+      "questionNumber": 18,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "Which of the following bars can have its position changed on the desktop?..."
+    },
+    {
+      "id": "ict_2022_q19",
+      "year": "2022",
+      "questionNumber": 19,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "Which of the following fingers is used to type the letter A during typing?..."
+    },
+    {
+      "id": "ict_2022_q2",
+      "year": "2022",
+      "questionNumber": 2,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Which of the following components has the characteristics of being volatile?..."
+    },
+    {
+      "id": "ict_2022_q20",
+      "year": "2022",
+      "questionNumber": 20,
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "preview": "To access information from a website, the user must enter the keywords in the..."
+    },
+    {
+      "id": "ict_2022_q21",
+      "year": "2022",
+      "questionNumber": 21,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "Which of the following formatting styles is usually applied to a heading of a document?..."
+    },
+    {
+      "id": "ict_2022_q22",
+      "year": "2022",
+      "questionNumber": 22,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Word Processing Applications"
+      ],
+      "preview": "In computing, raw or unprocessed text or fact is called..."
+    },
+    {
+      "id": "ict_2022_q23",
+      "year": "2022",
+      "questionNumber": 23,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "A search engine is a type of a computer..."
+    },
+    {
+      "id": "ict_2022_q24",
+      "year": "2022",
+      "questionNumber": 24,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "Dragging a file into the recycle bin is the same as..."
+    },
+    {
+      "id": "ict_2022_q25",
+      "year": "2022",
+      "questionNumber": 25,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Which of the following items tend to attract heavy investment from most organizations?..."
+    },
+    {
+      "id": "ict_2022_q26",
+      "year": "2022",
+      "questionNumber": 26,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "A computer that combines the features of analogue and digital functionalities is known as..."
+    },
+    {
+      "id": "ict_2022_q27",
+      "year": "2022",
+      "questionNumber": 27,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "The process of clicking the left mouse button twice in quick succession on a particular word will..."
+    },
+    {
+      "id": "ict_2022_q28",
+      "year": "2022",
+      "questionNumber": 28,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Spreadsheet Applications"
+      ],
+      "preview": "Double-clicking in a Spreadsheet cell makes the cell..."
+    },
+    {
+      "id": "ict_2022_q29",
+      "year": "2022",
+      "questionNumber": 29,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "To obtain a constant flow of power into a computer system, the user should use..."
+    },
+    {
+      "id": "ict_2022_q3",
+      "year": "2022",
+      "questionNumber": 3,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The webcam best feeds the computer with data in the form of..."
+    },
+    {
+      "id": "ict_2022_q30",
+      "year": "2022",
+      "questionNumber": 30,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The following options are pointing devices in computing except..."
+    },
+    {
+      "id": "ict_2022_q31",
+      "year": "2022",
+      "questionNumber": 31,
+      "classifiedTopics": [
+        "Ethics Of Using ICTs"
+      ],
+      "preview": "The exclusive legal right that prohibits unauthorize use of intellectual property is referred to as..."
+    },
+    {
+      "id": "ict_2022_q32",
+      "year": "2022",
+      "questionNumber": 32,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Developers of computer virus can technically be referred to as computer..."
+    },
+    {
+      "id": "ict_2022_q33",
+      "year": "2022",
+      "questionNumber": 33,
+      "classifiedTopics": [
+        "Spreadsheet Applications",
+        "Integrating ICT Into Learning"
+      ],
+      "preview": "The electronic application used for financial records is known as..."
+    },
+    {
+      "id": "ict_2022_q34",
+      "year": "2022",
+      "questionNumber": 34,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "Which of the following applications is suitable for delivering lessons to students?..."
+    },
+    {
+      "id": "ict_2022_q35",
+      "year": "2022",
+      "questionNumber": 35,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "The feature of a webpage that allows a user to access frequently visited webpages or websites is ref..."
+    },
+    {
+      "id": "ict_2022_q36",
+      "year": "2022",
+      "questionNumber": 36,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Spreadsheet Applications"
+      ],
+      "preview": "The operating system function that enables computer users to do many activities at the same time is ..."
+    },
+    {
+      "id": "ict_2022_q37",
+      "year": "2022",
+      "questionNumber": 37,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "The arrow cursor is basically used to open..."
+    },
+    {
+      "id": "ict_2022_q38",
+      "year": "2022",
+      "questionNumber": 38,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The term virus as used in computing is a..."
+    },
+    {
+      "id": "ict_2022_q39",
+      "year": "2022",
+      "questionNumber": 39,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "In computing, 8 bits can technically be called a..."
+    },
+    {
+      "id": "ict_2022_q4",
+      "year": "2022",
+      "questionNumber": 4,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "File And Folder Management"
+      ],
+      "preview": "The full meaning of the acronym DVD is..."
+    },
+    {
+      "id": "ict_2022_q40",
+      "year": "2022",
+      "questionNumber": 40,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "In a Word processing application, header and footer facility can be accessed from the..."
+    },
+    {
+      "id": "ict_2022_q5",
+      "year": "2022",
+      "questionNumber": 5,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "The print command can be issued from the..."
+    },
+    {
+      "id": "ict_2022_q6",
+      "year": "2022",
+      "questionNumber": 6,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "In a spreadsheet application, the ready mode on the status bar means it is ready to..."
+    },
+    {
+      "id": "ict_2022_q7",
+      "year": "2022",
+      "questionNumber": 7,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "The rectangular-shaped viewing area of an application on the screen of a computer that the user work..."
+    },
+    {
+      "id": "ict_2022_q8",
+      "year": "2022",
+      "questionNumber": 8,
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "Ethics Of Using ICTs"
+      ],
+      "preview": "Generally main captions of documents are aligned using the..."
+    },
+    {
+      "id": "ict_2022_q9",
+      "year": "2022",
+      "questionNumber": 9,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "preview": "Which of the following menu options will take a user to the symbol dialog box in a Word processing a..."
+    },
+    {
+      "id": "ict_2023_q1",
+      "year": "2023",
+      "questionNumber": 1,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "The start button is located on the..."
+    },
+    {
+      "id": "ict_2023_q10",
+      "year": "2023",
+      "questionNumber": 10,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "A file that is cut is temporarily sent to the..."
+    },
+    {
+      "id": "ict_2023_q11",
+      "year": "2023",
+      "questionNumber": 11,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "Which of the following devices provides the function as a pointing object on the screen?..."
+    },
+    {
+      "id": "ict_2023_q12",
+      "year": "2023",
+      "questionNumber": 12,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "Numbering and bulleting tool in word processing application is located on the..."
+    },
+    {
+      "id": "ict_2023_q13",
+      "year": "2023",
+      "questionNumber": 13,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Spreadsheet Applications"
+      ],
+      "preview": "The information that a spreadsheet displays when a user inputs incorrect formula is called..."
+    },
+    {
+      "id": "ict_2023_q14",
+      "year": "2023",
+      "questionNumber": 14,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Which of the following is not a data storage unit in the field of computing?..."
+    },
+    {
+      "id": "ict_2023_q15",
+      "year": "2023",
+      "questionNumber": 15,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "In word processing environment, text selection can also be referred to as text..."
+    },
+    {
+      "id": "ict_2023_q16",
+      "year": "2023",
+      "questionNumber": 16,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "The platform provided by the operating system for user's interaction is called..."
+    },
+    {
+      "id": "ict_2023_q17",
+      "year": "2023",
+      "questionNumber": 17,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Digital data can be transferred over the telephone lines with the help of..."
+    },
+    {
+      "id": "ict_2023_q18",
+      "year": "2023",
+      "questionNumber": 18,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "preview": "The various forms of document view mode in word processing applications is located on the..."
+    },
+    {
+      "id": "ict_2023_q19",
+      "year": "2023",
+      "questionNumber": 19,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Both the hard disc drive and the floppy disk drive are examples of..."
+    },
+    {
+      "id": "ict_2023_q2",
+      "year": "2023",
+      "questionNumber": 2,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "An application window can be exited using an option on the..."
+    },
+    {
+      "id": "ict_2023_q20",
+      "year": "2023",
+      "questionNumber": 20,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "The importance of password in an e-mail is to..."
+    },
+    {
+      "id": "ict_2023_q21",
+      "year": "2023",
+      "questionNumber": 21,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "To print different pages of a document, enter the page numbers and separate them with a..."
+    },
+    {
+      "id": "ict_2023_q22",
+      "year": "2023",
+      "questionNumber": 22,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "One example of an input device is..."
+    },
+    {
+      "id": "ict_2023_q23",
+      "year": "2023",
+      "questionNumber": 23,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "Which finger is usually placed on the spacebar during typing?..."
+    },
+    {
+      "id": "ict_2023_q24",
+      "year": "2023",
+      "questionNumber": 24,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "File And Folder Management"
+      ],
+      "preview": "When a user clicks on the start button, it displays..."
+    },
+    {
+      "id": "ict_2023_q25",
+      "year": "2023",
+      "questionNumber": 25,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Working with the computer at the office makes a user more..."
+    },
+    {
+      "id": "ict_2023_q26",
+      "year": "2023",
+      "questionNumber": 26,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "The process where a user can save the address of a webpage so that it can be easily visited is calle..."
+    },
+    {
+      "id": "ict_2023_q27",
+      "year": "2023",
+      "questionNumber": 27,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The step by step instructions that tell the computer what to do is..."
+    },
+    {
+      "id": "ict_2023_q28",
+      "year": "2023",
+      "questionNumber": 28,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Personal images from a mobile phone or digital camera are best stored in..."
+    },
+    {
+      "id": "ict_2023_q29",
+      "year": "2023",
+      "questionNumber": 29,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "For a computer to be useful, the hardware must work together with the..."
+    },
+    {
+      "id": "ict_2023_q3",
+      "year": "2023",
+      "questionNumber": 3,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "In a spreadsheet application, when a user presses the tab key on the keyboard, the cursor moves..."
+    },
+    {
+      "id": "ict_2023_q30",
+      "year": "2023",
+      "questionNumber": 30,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Ethics Of Using ICTs"
+      ],
+      "preview": "The process of gaining unauthorized access into a computer system is referred to as..."
+    },
+    {
+      "id": "ict_2023_q31",
+      "year": "2023",
+      "questionNumber": 31,
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "File And Folder Management"
+      ],
+      "preview": "To browse through webpages means to..."
+    },
+    {
+      "id": "ict_2023_q32",
+      "year": "2023",
+      "questionNumber": 32,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "Which of the following features will display the content of the active cell in a spreadsheet?..."
+    },
+    {
+      "id": "ict_2023_q33",
+      "year": "2023",
+      "questionNumber": 33,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "In computing environment, joystick is generally used to control..."
+    },
+    {
+      "id": "ict_2023_q34",
+      "year": "2023",
+      "questionNumber": 34,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "Which of the following options is not part of a spreadsheet data type?..."
+    },
+    {
+      "id": "ict_2023_q35",
+      "year": "2023",
+      "questionNumber": 35,
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "preview": "Which of the following applications makes teaching and learning easy and interesting?..."
+    },
+    {
+      "id": "ict_2023_q36",
+      "year": "2023",
+      "questionNumber": 36,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Information in the computer is represented in..."
+    },
+    {
+      "id": "ict_2023_q37",
+      "year": "2023",
+      "questionNumber": 37,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "E-mail messages are sent through..."
+    },
+    {
+      "id": "ict_2023_q38",
+      "year": "2023",
+      "questionNumber": 38,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "File And Folder Management"
+      ],
+      "preview": "DVD mostly used in computer is a type of..."
+    },
+    {
+      "id": "ict_2023_q39",
+      "year": "2023",
+      "questionNumber": 39,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "Which of the following symbols is not part of a website address?..."
+    },
+    {
+      "id": "ict_2023_q4",
+      "year": "2023",
+      "questionNumber": 4,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "The type of alignment that positions the selected text for both left and right margins to be straigh..."
+    },
+    {
+      "id": "ict_2023_q40",
+      "year": "2023",
+      "questionNumber": 40,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "The process of pressing and releasing the default mouse button once is best called..."
+    },
+    {
+      "id": "ict_2023_q5",
+      "year": "2023",
+      "questionNumber": 5,
+      "classifiedTopics": [
+        "Ethics Of Using ICTs"
+      ],
+      "preview": "The use of someone's intellectual property and presenting it as yours is called..."
+    },
+    {
+      "id": "ict_2023_q6",
+      "year": "2023",
+      "questionNumber": 6,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Computer virus can also be classified as computer..."
+    },
+    {
+      "id": "ict_2023_q7",
+      "year": "2023",
+      "questionNumber": 7,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "Using two or more keys on the computer keyboard to perform an action is termed..."
+    },
+    {
+      "id": "ict_2023_q8",
+      "year": "2023",
+      "questionNumber": 8,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "A wrongly typed text in a word processing document will be prompted by the..."
+    },
+    {
+      "id": "ict_2023_q9",
+      "year": "2023",
+      "questionNumber": 9,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Which of the following options is not a hardware component of a computer system?..."
+    },
+    {
+      "id": "ict_2024_q1",
+      "year": "2024",
+      "questionNumber": 1,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "A student in the computer laboratory wants to change the style, size and colour of a typeface in Mic..."
+    },
+    {
+      "id": "ict_2024_q10",
+      "year": "2024",
+      "questionNumber": 10,
+      "classifiedTopics": [
+        "Spreadsheet Applications",
+        "Integrating ICT Into Learning"
+      ],
+      "preview": "A teacher tasked students to demonstrate an activity using a flowchart diagram. The appropriate symb..."
+    },
+    {
+      "id": "ict_2024_q11",
+      "year": "2024",
+      "questionNumber": 11,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "Settings and permissions that are specific to a user and determines the activities the user can perf..."
+    },
+    {
+      "id": "ict_2024_q12",
+      "year": "2024",
+      "questionNumber": 12,
+      "classifiedTopics": [
+        "Health And Safety In Using ICT Tools"
+      ],
+      "preview": "Good health practice suggests that we take intermittent breaks while working. The importance of taki..."
+    },
+    {
+      "id": "ict_2024_q13",
+      "year": "2024",
+      "questionNumber": 13,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "Four students in a class wrote the following function in Microsoft Excel. Which of the functions wri..."
+    },
+    {
+      "id": "ict_2024_q14",
+      "year": "2024",
+      "questionNumber": 14,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "To demonstrate to a class, the steps to be taken to create a PivotTable from a set of data in Micros..."
+    },
+    {
+      "id": "ict_2024_q15",
+      "year": "2024",
+      "questionNumber": 15,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "In a computer shop, the attendant advised a customer to buy the fifth generation computer due to its..."
+    },
+    {
+      "id": "ict_2024_q16",
+      "year": "2024",
+      "questionNumber": 16,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "The social media platform that allows members to post questions, start a discussion or contribute to..."
+    },
+    {
+      "id": "ict_2024_q17",
+      "year": "2024",
+      "questionNumber": 17,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Health And Safety In Using ICT Tools"
+      ],
+      "preview": "The introduction of Artificial Intelligence as come with its related ethical concerns such as..."
+    },
+    {
+      "id": "ict_2024_q18",
+      "year": "2024",
+      "questionNumber": 18,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "A user who selected 4 x 3 in the insert table grid in a Word document will insert..."
+    },
+    {
+      "id": "ict_2024_q19",
+      "year": "2024",
+      "questionNumber": 19,
+      "classifiedTopics": [
+        "The Internet And World Wide Web",
+        "File And Folder Management"
+      ],
+      "preview": "The Screenshot feature under the Insert Tab of a Microsoft PowerPoint application allows a user to i..."
+    },
+    {
+      "id": "ict_2024_q2",
+      "year": "2024",
+      "questionNumber": 2,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "A quiz master asked participants to complete the statement: whiles the Internet Explorer is used to ..."
+    },
+    {
+      "id": "ict_2024_q20",
+      "year": "2024",
+      "questionNumber": 20,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "The examination scores in Computing of a class was entered into a Microsoft Excel worksheet. The app..."
+    },
+    {
+      "id": "ict_2024_q21",
+      "year": "2024",
+      "questionNumber": 21,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "In pseudocode, the keyword FOR indicates..."
+    },
+    {
+      "id": "ict_2024_q22",
+      "year": "2024",
+      "questionNumber": 22,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "The central device that communicates with other network devices and manages resources is a..."
+    },
+    {
+      "id": "ict_2024_q23",
+      "year": "2024",
+      "questionNumber": 23,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "A user is to apply predefined formatting styles to texts in Microsoft PowerPoint application. The be..."
+    },
+    {
+      "id": "ict_2024_q25",
+      "year": "2024",
+      "questionNumber": 25,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "A teacher tasked her students to create a date with year, month and day format. The most appropriate..."
+    },
+    {
+      "id": "ict_2024_q26",
+      "year": "2024",
+      "questionNumber": 26,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "The Internet And World Wide Web"
+      ],
+      "preview": "cybercriminals can obstruct data in transmission to and from a device or a network using a data thre..."
+    },
+    {
+      "id": "ict_2024_q27",
+      "year": "2024",
+      "questionNumber": 27,
+      "classifiedTopics": [
+        "The Internet And World Wide Web",
+        "Integrating ICT Into Learning"
+      ],
+      "preview": "A teacher sends class assignment to his students using an e-mail. The protocol used by the e-mail to..."
+    },
+    {
+      "id": "ict_2024_q28",
+      "year": "2024",
+      "questionNumber": 28,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "The Merge & Centre button in a Spreadsheet application is used to..."
+    },
+    {
+      "id": "ict_2024_q29",
+      "year": "2024",
+      "questionNumber": 29,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Arku entered 20 into a computer as quantity of pencils bought. How will the figure be represented in..."
+    },
+    {
+      "id": "ict_2024_q3",
+      "year": "2024",
+      "questionNumber": 3,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "The concept of Artificial Intelligence's ability to suggest related information to a user who regula..."
+    },
+    {
+      "id": "ict_2024_q30",
+      "year": "2024",
+      "questionNumber": 30,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "Cindy was trying to access information from the WAEC website but whenever she enters the URL, it tak..."
+    },
+    {
+      "id": "ict_2024_q31",
+      "year": "2024",
+      "questionNumber": 31,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "preview": "In Desktop Publishing, a user can create a new document through the following ways except for..."
+    },
+    {
+      "id": "ict_2024_q32",
+      "year": "2024",
+      "questionNumber": 32,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "preview": "The Desktop Publishing feature that best helps a user to align objects, texts and elements in a publ..."
+    },
+    {
+      "id": "ict_2024_q33",
+      "year": "2024",
+      "questionNumber": 33,
+      "classifiedTopics": [
+        "Ethics Of Using ICTs",
+        "The Internet And World Wide Web"
+      ],
+      "preview": "One of your classmates continuously sends threat messages through social media platforms to you. Thi..."
+    },
+    {
+      "id": "ict_2024_q34",
+      "year": "2024",
+      "questionNumber": 34,
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "preview": "A computing project work requires students to design a blog for a school. The best item to be used f..."
+    },
+    {
+      "id": "ict_2024_q35",
+      "year": "2024",
+      "questionNumber": 35,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Computer manufacturing went through series of developmental stages with each stage characterized by ..."
+    },
+    {
+      "id": "ict_2024_q36",
+      "year": "2024",
+      "questionNumber": 36,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "File And Folder Management"
+      ],
+      "preview": "In computer programming, debugging is a technique used to..."
+    },
+    {
+      "id": "ict_2024_q37",
+      "year": "2024",
+      "questionNumber": 37,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "Which of the following services best describes an entrepreneurial opportunity in computer networking..."
+    },
+    {
+      "id": "ict_2024_q38",
+      "year": "2024",
+      "questionNumber": 38,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The peripheral device shown in Figure 1 is used to capture..."
+    },
+    {
+      "id": "ict_2024_q39",
+      "year": "2024",
+      "questionNumber": 39,
+      "classifiedTopics": [
+        "Health And Safety In Using ICT Tools"
+      ],
+      "preview": "The practice of the use of computers and related electronic resources in an environmentally responsi..."
+    },
+    {
+      "id": "ict_2024_q4",
+      "year": "2024",
+      "questionNumber": 4,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Word Processing Applications"
+      ],
+      "preview": "A blog has many sections. The purpose of the comment section is to..."
+    },
+    {
+      "id": "ict_2024_q40",
+      "year": "2024",
+      "questionNumber": 40,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "Social media users can regulate the type of information they share on their pages. Privacy setting w..."
+    },
+    {
+      "id": "ict_2024_q5",
+      "year": "2024",
+      "questionNumber": 5,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "In a printing industry, the device that uses the mechanism of laying down a transparent dye and melt..."
+    },
+    {
+      "id": "ict_2024_q6",
+      "year": "2024",
+      "questionNumber": 6,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "Collaborative robot is a category of robots that..."
+    },
+    {
+      "id": "ict_2024_q7",
+      "year": "2024",
+      "questionNumber": 7,
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "preview": "A student inserted a picture into a Microsoft PowerPoint presentation and needed to work on the pict..."
+    },
+    {
+      "id": "ict_2024_q8",
+      "year": "2024",
+      "questionNumber": 8,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "File And Folder Management"
+      ],
+      "preview": "A student is watching video from a pen drive using a computer. The process the computer uses to acce..."
+    },
+    {
+      "id": "ict_2024_q9",
+      "year": "2024",
+      "questionNumber": 9,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "What does the formula = IF(A1>10,\"Pass\",\"Fail\") do in a Spreadsheet application?..."
+    },
+    {
+      "id": "ict_2025_q1",
+      "year": "2025",
+      "questionNumber": 1,
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "File And Folder Management"
+      ],
+      "preview": "A programmer has indented the codes in the program being written. The purpose of the indentation is ..."
+    },
+    {
+      "id": "ict_2025_q10",
+      "year": "2025",
+      "questionNumber": 10,
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "preview": "To make teaching and learning of computing more interactive, the teacher intends to demonstrate an a..."
+    },
+    {
+      "id": "ict_2025_q11",
+      "year": "2025",
+      "questionNumber": 11,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Spreadsheet Applications"
+      ],
+      "preview": "The graphic tablet is a kind of device used to capture..."
+    },
+    {
+      "id": "ict_2025_q12",
+      "year": "2025",
+      "questionNumber": 12,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "After replacing his old smartphone with a new one, Muba cannot access most of his saved contacts. Hi..."
+    },
+    {
+      "id": "ict_2025_q13",
+      "year": "2025",
+      "questionNumber": 13,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "Text formatting options in Word processing applications include..."
+    },
+    {
+      "id": "ict_2025_q14",
+      "year": "2025",
+      "questionNumber": 14,
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "preview": "A school prefect approached the computing club to guide him design a presentation using Microsoft Po..."
+    },
+    {
+      "id": "ict_2025_q15",
+      "year": "2025",
+      "questionNumber": 15,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Health And Safety In Using ICT Tools"
+      ],
+      "preview": "Which of the following terminologies is associated with computer network?..."
+    },
+    {
+      "id": "ict_2025_q16",
+      "year": "2025",
+      "questionNumber": 16,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "What value will the Microsoft Excel function = COUNT(A1:A10) return?..."
+    },
+    {
+      "id": "ict_2025_q17",
+      "year": "2025",
+      "questionNumber": 17,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "The term multimedia is widely used in several areas in the computing environment. What will you tell..."
+    },
+    {
+      "id": "ict_2025_q18",
+      "year": "2025",
+      "questionNumber": 18,
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "Integrating ICT Into Learning"
+      ],
+      "preview": "In a Desktop Publishing project work, a student's work contained more text than it can display. This..."
+    },
+    {
+      "id": "ict_2025_q19",
+      "year": "2025",
+      "questionNumber": 19,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "preview": "A designer consistently reminds his staff to use template in Desktop publishing because it helps to..."
+    },
+    {
+      "id": "ict_2025_q2",
+      "year": "2025",
+      "questionNumber": 2,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "At the Internet cafe, Kofi connected his laptop to the Internet without using cable and Akua also co..."
+    },
+    {
+      "id": "ict_2025_q20",
+      "year": "2025",
+      "questionNumber": 20,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "A quiz master asked participants to complete the statement: while download folder is the default loc..."
+    },
+    {
+      "id": "ict_2025_q21",
+      "year": "2025",
+      "questionNumber": 21,
+      "classifiedTopics": [
+        "Health And Safety In Using ICT Tools",
+        "The Internet And World Wide Web"
+      ],
+      "preview": "The role of neural networks in Artificial Intelligence in modern technology is to..."
+    },
+    {
+      "id": "ict_2025_q22",
+      "year": "2025",
+      "questionNumber": 22,
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "preview": "Robots are used in many areas of the society. An example of the application of robots in the society..."
+    },
+    {
+      "id": "ict_2025_q23",
+      "year": "2025",
+      "questionNumber": 23,
+      "classifiedTopics": [
+        "Health And Safety In Using ICT Tools"
+      ],
+      "preview": "The Secretary to the Parliament of Ghana sits on an ergonomic chair to work in the office because it..."
+    },
+    {
+      "id": "ict_2025_q24",
+      "year": "2025",
+      "questionNumber": 24,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "An entry on a blog that contains texts, images or multimedia content is called..."
+    },
+    {
+      "id": "ict_2025_q25",
+      "year": "2025",
+      "questionNumber": 25,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Integrating ICT Into Learning"
+      ],
+      "preview": "A student is very good at converting any integer to binary but finds it difficult to convert from he..."
+    },
+    {
+      "id": "ict_2025_q26",
+      "year": "2025",
+      "questionNumber": 26,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "A customer gave a new laptop to a technician to set accounts on windows that is required to make cha..."
+    },
+    {
+      "id": "ict_2025_q27",
+      "year": "2025",
+      "questionNumber": 27,
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "preview": "A user intends to create and customize diagrams in Microsoft PowerPoint application for a presentati..."
+    },
+    {
+      "id": "ict_2025_q28",
+      "year": "2025",
+      "questionNumber": 28,
+      "classifiedTopics": [
+        "The Internet And World Wide Web",
+        "File And Folder Management"
+      ],
+      "preview": "Surfing the Internet requires the use of search engines which was designed to help users find..."
+    },
+    {
+      "id": "ict_2025_q29",
+      "year": "2025",
+      "questionNumber": 29,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "The purpose of the IF function in Microsoft Excel application is to..."
+    },
+    {
+      "id": "ict_2025_q3",
+      "year": "2025",
+      "questionNumber": 3,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "In a group presentation, a group was to demonstrate how to insert an online video into a slide they ..."
+    },
+    {
+      "id": "ict_2025_q30",
+      "year": "2025",
+      "questionNumber": 30,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "Zalia is very good at posting her pictures and location of where ever she goes on her social media p..."
+    },
+    {
+      "id": "ict_2025_q31",
+      "year": "2025",
+      "questionNumber": 31,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Computers have become smaller, faster and more reliable due to the use of microprocessor in the..."
+    },
+    {
+      "id": "ict_2025_q32",
+      "year": "2025",
+      "questionNumber": 32,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "Bello formatted Microsoft Excel worksheet cells with different colours based on specific conditions ..."
+    },
+    {
+      "id": "ict_2025_q33",
+      "year": "2025",
+      "questionNumber": 33,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "After the computing class, a colleague approached you to further explain to him how to reference a w..."
+    },
+    {
+      "id": "ict_2025_q34",
+      "year": "2025",
+      "questionNumber": 34,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "File And Folder Management"
+      ],
+      "preview": "In the concept of programming, a comment in a program code is used to..."
+    },
+    {
+      "id": "ict_2025_q35",
+      "year": "2025",
+      "questionNumber": 35,
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "preview": "A weekend assignment requires students to create a blog for the school. The best activity needed for..."
+    },
+    {
+      "id": "ict_2025_q36",
+      "year": "2025",
+      "questionNumber": 36,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The most powerful technological innovation made during the development of the fifth-generation compu..."
+    },
+    {
+      "id": "ict_2025_q37",
+      "year": "2025",
+      "questionNumber": 37,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "The purpose of a storage device in a computer system is for..."
+    },
+    {
+      "id": "ict_2025_q38",
+      "year": "2025",
+      "questionNumber": 38,
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "preview": "JHS students were given a project by their computing teacher to create a virtual museum for the stor..."
+    },
+    {
+      "id": "ict_2025_q39",
+      "year": "2025",
+      "questionNumber": 39,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "The correct syntax of the IF function in Microsoft Excel is:..."
+    },
+    {
+      "id": "ict_2025_q4",
+      "year": "2025",
+      "questionNumber": 4,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "A man shared his property to his children and wife in a particular ratio. The most appropriate chart..."
+    },
+    {
+      "id": "ict_2025_q40",
+      "year": "2025",
+      "questionNumber": 40,
+      "classifiedTopics": [
+        "The Internet And World Wide Web",
+        "File And Folder Management"
+      ],
+      "preview": "To send pictures via email (which students struggle with), the most appropriate email feature is:..."
+    },
+    {
+      "id": "ict_2025_q5",
+      "year": "2025",
+      "questionNumber": 5,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Spreadsheet Applications"
+      ],
+      "preview": "Robotic systems have components that relates to the functioning of the human organs. The component o..."
+    },
+    {
+      "id": "ict_2025_q6",
+      "year": "2025",
+      "questionNumber": 6,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "A programmer uses a good algorithm to write a software. The algorithm being used is characterized by..."
+    },
+    {
+      "id": "ict_2025_q7",
+      "year": "2025",
+      "questionNumber": 7,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "Miss Fatima, the computing teacher taught the class basic programming terms. Explain to your friend ..."
+    },
+    {
+      "id": "ict_2025_q8",
+      "year": "2025",
+      "questionNumber": 8,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "The computing teacher during computing class advised the students that, studying computer networking..."
+    },
+    {
+      "id": "ict_2025_q9",
+      "year": "2025",
+      "questionNumber": 9,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "In a computing class, a video of a user who gained unauthorized access into an organization's comput..."
+    },
+    {
+      "id": "theory_ict_2011_q1",
+      "year": "2011",
+      "questionNumber": 1,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "a)\n\n \n\nStudy the diagram below carefully and answer the questions that follow:\n\n\n\ni)\n\n \n\nWhat is the..."
+    },
+    {
+      "id": "theory_ict_2011_q2",
+      "year": "2011",
+      "questionNumber": 2,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "a)\n\n \n\nWhat is:\n\ni)\n\n \n\nInput device\n\nii)\n\n \n\nOutput device\n\nb)\n\n \n\nClassify the following into eith..."
+    },
+    {
+      "id": "theory_ict_2011_q3",
+      "year": "2011",
+      "questionNumber": 3,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "a)\n\n \n\nExplain the term desktop as used in the personal computer environment.\n\nb)\n\n \n\nList three are..."
+    },
+    {
+      "id": "theory_ict_2011_q4",
+      "year": "2011",
+      "questionNumber": 4,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "a)\n\n \n\ni)\n\n \n\nWhat is internet?\n\nii)\n\n \n\nList four uses of the internet.\n\nb)\n\n \n\ni)\n\n \n\nWhat is a we..."
+    },
+    {
+      "id": "theory_ict_2011_q5",
+      "year": "2011",
+      "questionNumber": 5,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "Explain the following terminologies:\n\na)\n\n \n\nCell\n\nb)\n\n \n\nColumn\n\nc)\n\n \n\nRow\n\nd)\n\n \n\nGraph..."
+    },
+    {
+      "id": "theory_ict_2012_q1",
+      "year": "2012",
+      "questionNumber": 1,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Use the diagram below to answer questions (a) and (b).\n\n\n\n(a)\n\n \n\nIdentify the diagram.\n\n(b)\n\n \n\nNam..."
+    },
+    {
+      "id": "theory_ict_2012_q2",
+      "year": "2012",
+      "questionNumber": 2,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "(a)\n\n \n\nState the function of each of the following devices.\n\n(i)\n\n \n\nFloppy disk;\n\n(ii)\n\n \n\nPrinter..."
+    },
+    {
+      "id": "theory_ict_2012_q3",
+      "year": "2012",
+      "questionNumber": 3,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "(a)\n\n \n\nExplain the following types of software\n\n(i)\n\n \n\nSystem software;\n\n(ii)\n\n \n\nApplication soft..."
+    },
+    {
+      "id": "theory_ict_2012_q4",
+      "year": "2012",
+      "questionNumber": 4,
+      "classifiedTopics": [
+        "The Internet And World Wide Web",
+        "Integrating ICT Into Learning"
+      ],
+      "preview": "(a)\n\n \n\nExplain internet fraud.\n\n(b)\n\n \n\nState three ways ICT can be used in basic education in Ghan..."
+    },
+    {
+      "id": "theory_ict_2012_q5",
+      "year": "2012",
+      "questionNumber": 5,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "Explain the following terms as used in spreadsheet:\n\n(a)\n\n \n\nWorksheet\n\n(b)\n\n \n\nActive cell\n\n(c)\n\n \n..."
+    },
+    {
+      "id": "theory_ict_2013_q1",
+      "year": "2013",
+      "questionNumber": 1,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "(a)\n\n \n\nABC supermarket has acquired an application to generate cash receipts for goods purchased by..."
+    },
+    {
+      "id": "theory_ict_2013_q2",
+      "year": "2013",
+      "questionNumber": 2,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "The Internet And World Wide Web"
+      ],
+      "preview": "(a)\n\n \n\nState two positive uses and two negative uses of the internet.\n\n(b)\n\n \n\nList four storage me..."
+    },
+    {
+      "id": "theory_ict_2013_q3",
+      "year": "2013",
+      "questionNumber": 3,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "(a)\n\n \n\nExplain communication as used in the computer industry.\n\n(b)\n\n \n\nVideo conferencing refers t..."
+    },
+    {
+      "id": "theory_ict_2013_q4",
+      "year": "2013",
+      "questionNumber": 4,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "(a)\n\n \n\nIn word processing application, when is it appropriate to use:\n\n(i)\n\n \n\ncopy-and-paste;\n\n(ii..."
+    },
+    {
+      "id": "theory_ict_2013_q5",
+      "year": "2013",
+      "questionNumber": 5,
+      "classifiedTopics": [
+        "Ethics Of Using ICTs"
+      ],
+      "preview": "(a)\n\n \n\nWhat is:\n\n(i)\n\n \n\nMotherboard;\n\n(ii)\n\n \n\nErgonomics;\n\n(iii)\n\n \n\nMenu bar.\n\n(b)\n\n \n\nWhat is c..."
+    },
+    {
+      "id": "theory_ict_2014_q1",
+      "year": "2014",
+      "questionNumber": 1,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "(a)\n\n \n\n\n\nUse the above diagram to answer questions (i) to (iv).\n\n(i)\n\n \n\nName the application progr..."
+    },
+    {
+      "id": "theory_ict_2014_q2",
+      "year": "2014",
+      "questionNumber": 2,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Spreadsheet Applications"
+      ],
+      "preview": "(a)\n\n \n\nState the data types for the following characters as used in spreadsheet application.\n\n(i)..."
+    },
+    {
+      "id": "theory_ict_2014_q24",
+      "year": "2014",
+      "questionNumber": 24,
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "Spreadsheet Applications"
+      ],
+      "preview": "04'\n\n(iii)\n\n \n\n=SUM(A5:G5)\n\n(iv)\n\n \n\n=A4+C8-G25\n\n(v)\n\n \n\n+233244971100\n\n(b)\n\n \n\nWhat does formatting..."
+    },
+    {
+      "id": "theory_ict_2014_q3",
+      "year": "2014",
+      "questionNumber": 3,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "List\n\n(a)\n\n \n\ntwo toggle keys on a standard computer keyboard.\n\n(b)\n\n \n\nthree features of a web brow..."
+    },
+    {
+      "id": "theory_ict_2014_q4",
+      "year": "2014",
+      "questionNumber": 4,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "(a)\n\n \n\nGive two examples of a typing software.\n\n(b)\n\n \n\nCertain books are published both in hard co..."
+    },
+    {
+      "id": "theory_ict_2014_q5",
+      "year": "2014",
+      "questionNumber": 5,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "State the purpose of the following commands on an email application such as yahoo or gamil:\n\n(a)\n\n \n..."
+    },
+    {
+      "id": "theory_ict_2015_q1",
+      "year": "2015",
+      "questionNumber": 1,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "File And Folder Management"
+      ],
+      "preview": "(a)\n\n \n\nIn the space provided below, draw a well labelled computer mouse.\n\n(b)\n\n \n\nOutline the steps..."
+    },
+    {
+      "id": "theory_ict_2015_q3",
+      "year": "2015",
+      "questionNumber": 3,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "State two differences between\n\n(a)\n\n \n\nrandom access memory and read only memory;\n\n(b)\n\n \n\nhard disk..."
+    },
+    {
+      "id": "theory_ict_2015_q4",
+      "year": "2015",
+      "questionNumber": 4,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "(a)\n\n \n\nExplain the term clicking as used in the computing environment.\n\n(b)\n\n \n\nIn a typical applic..."
+    },
+    {
+      "id": "theory_ict_2015_q5",
+      "year": "2015",
+      "questionNumber": 5,
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "preview": "State the use of the following email terminologies:\n\n(a)\n\n \n\nCarbon Copy;\n\n(b)\n\n \n\nBlind Carbon Copy..."
+    },
+    {
+      "id": "theory_ict_2016_q1",
+      "year": "2016",
+      "questionNumber": 1,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "(a)\n\n \n\nIdentify the diagram below.\n\n\n\n(b)\n\n \n\nIdentify the parts labelled A, B and C in (a).\n\n(c)\n\n..."
+    },
+    {
+      "id": "theory_ict_2016_q2",
+      "year": "2016",
+      "questionNumber": 2,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "(a)\n\n \n\nExplain the term word processing\n\n(b)\n\n \n\nGive the default extension for the following file ..."
+    },
+    {
+      "id": "theory_ict_2016_q3",
+      "year": "2016",
+      "questionNumber": 3,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "(a)\n\n \n\nList two examples of:\n\n(i)\n\n \n\ninput devices;\n\n(ii)\n\n \n\noutput devices;\n\n(iii)\n\n \n\nstorage m..."
+    },
+    {
+      "id": "theory_ict_2016_q4",
+      "year": "2016",
+      "questionNumber": 4,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "(a)\n\n \n\nExplain the following terms:\n\n(i)\n\n \n\nInternet;\n\n(ii)\n\n \n\nSearch engine.\n\n(b)\n\n \n\nWhat does ..."
+    },
+    {
+      "id": "theory_ict_2016_q5",
+      "year": "2016",
+      "questionNumber": 5,
+      "classifiedTopics": [
+        "Ethics Of Using ICTs"
+      ],
+      "preview": "(a)\n\n \n\nWhat is copyright?\n\n(b)\n\n \n\nState two reasons for copyright protection.\n\n(c)\n\n \n\nGive three ..."
+    },
+    {
+      "id": "theory_ict_2017_q1",
+      "year": "2017",
+      "questionNumber": 1,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "(a)\n\n \n\nStudy the worksheet below carefully and use it to answer (i - vi)\n\n\n\n(i)\n\n \n\nOutline the ste..."
+    },
+    {
+      "id": "theory_ict_2017_q2",
+      "year": "2017",
+      "questionNumber": 2,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "(a)\n\n \n\nState three uses of the shift key on the computer keyboard.\n\n(b)\n\n \n\nWrite down the acronyms..."
+    },
+    {
+      "id": "theory_ict_2017_q3",
+      "year": "2017",
+      "questionNumber": 3,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "(a)\n\n \n\nState two functions:\n\n(i)\n\n \n\nof an input device;\n\n(ii)\n\n \n\nperformed by an output device.\n\n..."
+    },
+    {
+      "id": "theory_ict_2017_q4",
+      "year": "2017",
+      "questionNumber": 4,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "The Internet And World Wide Web"
+      ],
+      "preview": "(a)\n\n \n\nState three ways through which computers may be damaged.\n\n(b)\n\n \n\nList three specific areas ..."
+    },
+    {
+      "id": "theory_ict_2017_q5",
+      "year": "2017",
+      "questionNumber": 5,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Word Processing Applications"
+      ],
+      "preview": "(a)\n\n \n\nThe Operating System makes it easy to store files in places that make a lot of sense. Give t..."
+    },
+    {
+      "id": "theory_ict_2018_q1",
+      "year": "2018",
+      "questionNumber": 1,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "(a)\n\n \n\nStudy the image carefully and use it to answer questions (a)(i-ii) and (b).\n\n\n\n(i)\n\n \n\nWhat ..."
+    },
+    {
+      "id": "theory_ict_2018_q2",
+      "year": "2018",
+      "questionNumber": 2,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "(a)\n\n \n\nGive the functions of the following keyboard keys:\n\n(i)\n\n \n\nBackspace\n\n(ii)\n\n \n\nSpace bar\n\n(..."
+    },
+    {
+      "id": "theory_ict_2018_q3",
+      "year": "2018",
+      "questionNumber": 3,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "(a)\n\n \n\nState the two types of storage media.\n\n(b)\n\n \n\n(i)\n\n \n\nGive three important features of stor..."
+    },
+    {
+      "id": "theory_ict_2018_q4",
+      "year": "2018",
+      "questionNumber": 4,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "File And Folder Management"
+      ],
+      "preview": "(a)\n\n \n\nWhat is:\n\n(i)\n\n \n\napplication software;\n\n(ii)\n\n \n\nsystem software\n\n(iii)\n\n \n\na folder\n\n(b)\n\n..."
+    },
+    {
+      "id": "theory_ict_2018_q5",
+      "year": "2018",
+      "questionNumber": 5,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "(a)\n\n \n\nList three toolbars or bars in a spreadsheet application.\n\n(b)\n\n \n\nDefine the following term..."
+    },
+    {
+      "id": "theory_ict_2019_q1",
+      "year": "2019",
+      "questionNumber": 1,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "Study the text below carefully and use it to answer questions (a) to (g)\n\n\n\na)\n\n \n\nWrite down the ap..."
+    },
+    {
+      "id": "theory_ict_2019_q2",
+      "year": "2019",
+      "questionNumber": 2,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "a)\n\n \n\nUsing the table below, indicate where the following components can be seen on the computer sy..."
+    },
+    {
+      "id": "theory_ict_2019_q3",
+      "year": "2019",
+      "questionNumber": 3,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "Explain the following computer terms:\n\na)\n\n \n\nHardware\n\nb)\n\n \n\nNetwork\n\nc)\n\n \n\nSoftware\n\nd)\n\n \n\nViru..."
+    },
+    {
+      "id": "theory_ict_2019_q4",
+      "year": "2019",
+      "questionNumber": 4,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "a)\n\n \n\nState the function of each of the following devices:\n\ni)\n\n \n\nfloppy disk\n\nii)\n\n \n\nkeyboard\n\ni..."
+    },
+    {
+      "id": "theory_ict_2019_q5",
+      "year": "2019",
+      "questionNumber": 5,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Integrating ICT Into Learning"
+      ],
+      "preview": "State three uses of computers in each of the following areas:\n\na)\n\n \n\nEducation\n\nb)\n\n \n\nEveryday lif..."
+    },
+    {
+      "id": "theory_ict_2020_q1",
+      "year": "2020",
+      "questionNumber": 1,
+      "classifiedTopics": [
+        "File And Folder Management",
+        "Integrating ICT Into Learning"
+      ],
+      "preview": "Study Figure 1 carefully and use it to answer questions (a) to (e).\n\n\n\na)\n\n \n\nWrite the name of the ..."
+    },
+    {
+      "id": "theory_ict_2020_q2",
+      "year": "2020",
+      "questionNumber": 2,
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "preview": "a)\n\n \n\nState two reasons for copyright protection.\n\nb)\n\n \n\nList four products that normally requires..."
+    },
+    {
+      "id": "theory_ict_2020_q3",
+      "year": "2020",
+      "questionNumber": 3,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "a)\n\n \n\nWrite the following acronyms in full:\n\ni)\n\n \n\nCD\n\nii)\n\n \n\nCPU\n\niii)\n\n \n\nDVD\n\nb)\n\n \n\nExplain t..."
+    },
+    {
+      "id": "theory_ict_2020_q4",
+      "year": "2020",
+      "questionNumber": 4,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "State the steps involved in performing the following operations:\n\na)\n\n \n\nSaving a newly created docu..."
+    },
+    {
+      "id": "theory_ict_2020_q5",
+      "year": "2020",
+      "questionNumber": 5,
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "Spreadsheet Applications"
+      ],
+      "preview": "State the function of each of the following e-mails terminologies.\n\na)\n\n \n\nTo: ........................"
+    },
+    {
+      "id": "theory_ict_2021_q1",
+      "year": "2021",
+      "questionNumber": 1,
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "preview": "Study Figure 1 carefully and use it to answer questions (a) and (e)\n\n\n\na)\n\n \n\nWrite the name of the ..."
+    },
+    {
+      "id": "theory_ict_2021_q2",
+      "year": "2021",
+      "questionNumber": 2,
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "preview": "a)\n\n \n\nExplain download as used in computing environment.\n\nb)\n\n \n\nList three types of information th..."
+    },
+    {
+      "id": "theory_ict_2021_q3",
+      "year": "2021",
+      "questionNumber": 3,
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "a)\n\n \n\nGive two examples of a Word processing application.\n\nb)\n\n \n\nComplete the table below.\n\nKeyboa..."
+    },
+    {
+      "id": "theory_ict_2021_q4",
+      "year": "2021",
+      "questionNumber": 4,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "a)\n\n \n\nWhat is an e-mail account?\n\n\n\nb)\n\n \n\nWrite a good e-mail address to be typed at where usernam..."
+    },
+    {
+      "id": "theory_ict_2021_q5",
+      "year": "2021",
+      "questionNumber": 5,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "a)\n\n \n\nExplain the following terminologies as used in a Spreadsheet application:\n\ni)\n\n \n\ncell ........."
+    },
+    {
+      "id": "theory_ict_2022_q1",
+      "year": "2022",
+      "questionNumber": 1,
+      "classifiedTopics": [
+        "Spreadsheet Applications",
+        "Integrating ICT Into Learning"
+      ],
+      "preview": "Study Figure 1 carefully and use it to answer questions (a) to (e)\n\n\n\nFigure 1\n\na)\n\n \n\nWrite down th..."
+    },
+    {
+      "id": "theory_ict_2022_q2",
+      "year": "2022",
+      "questionNumber": 2,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "a)\n\n \n\nWhat is a search engine?\n\nb)\n\n \n\nList three examples of a search engine.\n\nc)\n\n \n\nWhat does th..."
+    },
+    {
+      "id": "theory_ict_2022_q3",
+      "year": "2022",
+      "questionNumber": 3,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "a)\n\n \n\nState three reasons that will compel a user to restart a computer.\n\nb)\n\n \n\nState three ways b..."
+    },
+    {
+      "id": "theory_ict_2022_q4",
+      "year": "2022",
+      "questionNumber": 4,
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Spreadsheet Applications"
+      ],
+      "preview": "Use the image shown in Figure 2 to answer question (a) and (b).\n\n\n\nFigure 2\n\na)\n\n \n\nWrite the name o..."
+    },
+    {
+      "id": "theory_ict_2022_q5",
+      "year": "2022",
+      "questionNumber": 5,
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "Spreadsheet Applications"
+      ],
+      "preview": "a)\n\n \n\nWrite three features that are common to both Microsoft Word and Microsoft Excel.\n\nb)\n\n \n\nList..."
+    },
+    {
+      "id": "theory_ict_2023_q1",
+      "year": "2023",
+      "questionNumber": 1,
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "preview": "Study Figure 1 carefully and use it to answer questions (a) and (f).\n\n\n\n(a)\n\n \n\nWrite the name of th..."
+    },
+    {
+      "id": "theory_ict_2023_q2",
+      "year": "2023",
+      "questionNumber": 2,
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "preview": "(a)\n\n \n\nWhat is text formatting?\n\n(b)\n\n \n\nList three ways by which a character could be formatted.\n\n..."
+    },
+    {
+      "id": "theory_ict_2023_q4",
+      "year": "2023",
+      "questionNumber": 4,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Graphical User Interface (GUI)"
+      ],
+      "preview": "(a)\n\n \n\nWrite three desktop features of a computer.\n\n(b)\n\n \n\nState three rules and regulations for t..."
+    },
+    {
+      "id": "theory_ict_2023_q5",
+      "year": "2023",
+      "questionNumber": 5,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "Table 1 contains items. Complete the table by indicating against each item whether it is formula,fun..."
+    },
+    {
+      "id": "theory_ict_2024_q1",
+      "year": "2024",
+      "questionNumber": 1,
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "preview": "NAME OF STUDENT\n\nTERM 1\n\nTERM 2\n\nTERM 3\n\nTOTAL..."
+    },
+    {
+      "id": "theory_ict_2024_q2",
+      "year": "2024",
+      "questionNumber": 2,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "(a)\n\n \n\nDescribe the processor of a computer to colleagues in your class.\n\nStudy Figure 2 carefully ..."
+    },
+    {
+      "id": "theory_ict_2024_q245",
+      "year": "2024",
+      "questionNumber": 245,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "Write a function in Microsoft Excel to determine the lowest termly score for Kofi Malik...."
+    },
+    {
+      "id": "theory_ict_2024_q3",
+      "year": "2024",
+      "questionNumber": 3,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "(a)\n\n \n\nThe head teacher of ABC JHS bought the following items for school. 10 footballs for GH₵ 2,00..."
+    },
+    {
+      "id": "theory_ict_2024_q4",
+      "year": "2024",
+      "questionNumber": 4,
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "The Internet And World Wide Web"
+      ],
+      "preview": "(a)\n\n \n\nComputer networks come in several topologies.\n\nState two features of the ring topologies.\n\n(..."
+    },
+    {
+      "id": "theory_ict_2024_q5",
+      "year": "2024",
+      "questionNumber": 5,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "(a)\n\n \n\nIn computer operation, expressions are evaluated using operator precedence approach. Follow ..."
+    },
+    {
+      "id": "theory_ict_2025_q1",
+      "year": "2025",
+      "questionNumber": 1,
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "preview": "As a computing student, you are to program a robot to assist your colleagues to buy stationery from ..."
+    },
+    {
+      "id": "theory_ict_2025_q2",
+      "year": "2025",
+      "questionNumber": 2,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "(a)\n\n \n\nExplain the concept of perceptual computing to colleagues in the computing club.\n\n[3 marks]\n..."
+    },
+    {
+      "id": "theory_ict_2025_q3",
+      "year": "2025",
+      "questionNumber": 3,
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "preview": "(a)\n\n \n\nOutline the steps on how to make the word Computing in Word processing document a hyperlink ..."
+    },
+    {
+      "id": "theory_ict_2025_q4",
+      "year": "2025",
+      "questionNumber": 4,
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "preview": "(a)\n\n \n\nState one of the data communication models for networks.\n\n[2 marks]\n\n(b)\n\n \n\nSocial media si..."
+    },
+    {
+      "id": "theory_ict_2025_q5",
+      "year": "2025",
+      "questionNumber": 5,
+      "classifiedTopics": [
+        "Introduction To Computers"
+      ],
+      "preview": "(a)\n\n \n\nConvert 100102 to a decimal number.\n\n[4 marks]\n\n(b)\n\n \n\nIn the real-world environment, outli..."
+    }
+  ]
+}

@@ -14,7 +14,7 @@ class _EnglishTextbooksLibraryPageState extends State<EnglishTextbooksLibraryPag
   
   bool _isLoading = true;
   List<Map<String, dynamic>> _textbooks = [];
-  Map<String, Map<String, dynamic>> _progressMap = {};
+  final Map<String, Map<String, dynamic>> _progressMap = {};
 
   @override
   void initState() {

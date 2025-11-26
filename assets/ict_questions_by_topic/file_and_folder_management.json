@@ -1,0 +1,2336 @@
+{
+  "topic": "File And Folder Management",
+  "totalQuestions": 74,
+  "questions": [
+    {
+      "id": "ict_2011_q11",
+      "questionText": "Windows organize information on computers using a",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 11,
+      "options": [
+        "A. directory",
+        "B. folder",
+        "C. subdirectory",
+        "D. disk"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2011 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2011_q12",
+      "questionText": "Which of the following are valid folder name?\n\nI. Black/Stars\nII. Black:Stars\nIII. Black_Stars\nIV. Black Stars",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 12,
+      "options": [
+        "A. I and II only",
+        "B. II and III only",
+        "C. III and IV only",
+        "D. II and IV only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2011 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2011_q25",
+      "questionText": "To save a previously saved document under a new name, use the ..................",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 25,
+      "options": [
+        "A. Save command.",
+        "B. Rename command.",
+        "C. Resave command.",
+        "D. Save as command."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2011 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q23",
+      "questionText": "Which of the following is a valid folder name?",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 23,
+      "options": [
+        "A. Black/stars",
+        "B. Black stars",
+        "C. Black:stars",
+        "D. Black*"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q25",
+      "questionText": "The command that enables user to save a previously saved document under a new name is ........",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 25,
+      "options": [
+        "A. new",
+        "B. rename",
+        "C. save",
+        "D. save as"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q29",
+      "questionText": "An entity in a file system which contains a group of files is called ..........",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 29,
+      "options": [
+        "A. cabinet",
+        "B. container",
+        "C. document",
+        "D. folder"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q32",
+      "questionText": "Recycle bin or trash bin contains deleted files and folders from the.........",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 32,
+      "options": [
+        "A. floppy disc",
+        "B. flash disk",
+        "C. hard disk",
+        "D. zip"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q40",
+      "questionText": "Computer virus is capable of ........................",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 40,
+      "options": [
+        "A. enhancing the content of a file",
+        "B. maintaining the computer system",
+        "C. making the work of the computer easy",
+        "D. slowing down the computer system performance"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q11",
+      "questionText": "To copy a file means to ..................",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 11,
+      "options": [
+        "A. cut the file from the desktop",
+        "B. delete the file into recycle bin",
+        "C. make a duplicate of the file",
+        "D. remove the file from a folder"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q13",
+      "questionText": "A group of files are stored in a ..............",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 13,
+      "options": [
+        "A. folder",
+        "B. graphic",
+        "C. text",
+        "D. word"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q19",
+      "questionText": "Right - clicking a mouse on an open window..........",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 19,
+      "options": [
+        "A. creates a new document",
+        "B. opens a file menu",
+        "C. opens a new window",
+        "D. opens a context menu if available"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q26",
+      "questionText": "The save command is found under which of the following menu buttons",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 26,
+      "options": [
+        "A. edit",
+        "B. file",
+        "C. insert",
+        "D. tools"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q10",
+      "questionText": "A group of files are stored in a",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 10,
+      "options": [
+        "A. folder",
+        "B. graphic",
+        "C. text",
+        "D. word"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q13",
+      "questionText": "Dragging a folder from one drive to a window on another drive is equivalent to a",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 13,
+      "options": [
+        "A. cut operation",
+        "B. copy operation",
+        "C. delete operation",
+        "D. move operation"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q22",
+      "questionText": "Which of the following commands id used to resave an edited file with the same file named?",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 22,
+      "options": [
+        "A. copy",
+        "B. save",
+        "C. save as",
+        "D. send"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q29",
+      "questionText": "To print a document after previewing, use the",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 29,
+      "options": [
+        "A. edit command button",
+        "B. open command button",
+        "C. print command button",
+        "D. save command button"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q31",
+      "questionText": "Which of the following domain name extensions is used by education institution?",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 31,
+      "options": [
+        "A. .com",
+        "B. .edu",
+        "C. .net",
+        "D. .org"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management",
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q36",
+      "questionText": "The command button that opens a dialog box for users to create an email messages is",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 36,
+      "options": [
+        "A. back button",
+        "B. compose button",
+        "C. create button",
+        "D. refresh button"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q6",
+      "questionText": "By default, the drive letter assigned to the hard disk drive is .....",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 6,
+      "options": [
+        "A. A",
+        "B. B",
+        "C. C",
+        "D. D"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q9",
+      "questionText": "To copy a file means to",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 9,
+      "options": [
+        "A. cut the file",
+        "B. delete",
+        "C. remove the file",
+        "D. make a duplicate of the file"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2015_q10",
+      "questionText": "When files and folders are deleted from the computer, they go into them",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 10,
+      "options": [
+        "A. briefcase",
+        "B. desktop",
+        "C. delete bin",
+        "D. recycle bin"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2015 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2015_q12",
+      "questionText": "Which if the following would happen when a user double clicks on a folder?",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 12,
+      "options": [
+        "A. a sub-folder would created",
+        "B. the folder would be closed",
+        "C. the folder would be deleted",
+        "D. the folder would be opened"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2015 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2015_q13",
+      "questionText": "Dragging a folder from one drive to a window on the same drive is equivalent to a",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 13,
+      "options": [
+        "A. copy operation",
+        "B. cut operation",
+        "C. delete operation",
+        "D. move operation"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2015 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2015_q24",
+      "questionText": "Which of the following options is required to save a document with a different name?",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 24,
+      "options": [
+        "A. file, new",
+        "B. file, close",
+        "C. file, save",
+        "D. file, save as"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2015 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2015_q34",
+      "questionText": "The button that opens a dialogue box for users to create an email message is",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 34,
+      "options": [
+        "A. back",
+        "B. compose",
+        "C. create",
+        "D. refresh"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2015 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2015_q35",
+      "questionText": "Computer virus is capable of",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 35,
+      "options": [
+        "A. enhancing the content of a file.",
+        "B. maintaining the computer system.",
+        "C. making the work of the computer easy.",
+        "D. slowing down the computer system performance."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2015 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2016_q17",
+      "questionText": "The location where a file is stored is called",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 17,
+      "options": [
+        "A. folder",
+        "B. icon",
+        "C. page",
+        "D. website"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2016 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2016_q30",
+      "questionText": "The process that is used to recall a document previously saved is termed",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 30,
+      "options": [
+        "A. copy",
+        "B. enter",
+        "C. open",
+        "D. save as"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2016 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2016_q32",
+      "questionText": "Which of the following steps will opens, check and correct errors, and submit the file for safe keeping under a word processing application?",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 32,
+      "options": [
+        "A. file, open, edit and save",
+        "B. open, file, edit and save",
+        "C. open, file, close and save",
+        "D. start, open, edit and save"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2016 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2016_q35",
+      "questionText": "Which of the following options is used to access a message from an inbox in an electronic mailing?",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 35,
+      "options": [
+        "A. mail",
+        "B. send / receive",
+        "C. import / export",
+        "D. create new account"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2016 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2016_q6",
+      "questionText": "A folder within another folder is called",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 6,
+      "options": [
+        "A. file",
+        "B. subfolder",
+        "C. inside folder",
+        "D. innermost folder"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2016 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q13",
+      "questionText": "Which of the following is not a storage device?",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 13,
+      "options": [
+        "A. Pen drive",
+        "B. Touch pad",
+        "C. Hard disk",
+        "D. Floppy disk"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q21",
+      "questionText": "A word document created with a word processing program will have the extension",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 21,
+      "options": [
+        "A. .doc.",
+        "B. .txt.",
+        "C. .ppt.",
+        "D. .xls"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q25",
+      "questionText": "After work, your mother decided to bring a copy of the data home to work on. Which of the following storage devices would you advice her to use? I. RAM II. Floppy disk III. Pen drive IV. Hard disk",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 25,
+      "options": [
+        "A. I and II only",
+        "B. II, III and IV only",
+        "C. II and III only",
+        "D. I, II, III and IV"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q15",
+      "questionText": "From which of the following storage media will deleted items be sent to the recycle bin?",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 15,
+      "options": [
+        "A. Flash disk",
+        "B. Floppy disk",
+        "C. Hard disk",
+        "D. Zip disk Solution"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q17",
+      "questionText": "Which of the following is used as a shortcut means to open files, folders and programs?",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 17,
+      "options": [
+        "A. Desktop",
+        "B. Icon",
+        "C. Screen",
+        "D. Start menu"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q18",
+      "questionText": "A folder inside another folder is called",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 18,
+      "options": [
+        "A. attached folder",
+        "B. main folder",
+        "C. parent folder",
+        "D. subfolder"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q20",
+      "questionText": "The computer program designed to prevent viruses from damaging the computer and its files is called",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 20,
+      "options": [
+        "A. anti-virus",
+        "B. virus",
+        "C. virus infection",
+        "D. virus protector"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q6",
+      "questionText": "The default storage location for files and folders is",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 6,
+      "options": [
+        "A. My Briefcase",
+        "B. My Computer",
+        "C. My Documents",
+        "D. My Network Places"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q7",
+      "questionText": "Which of the following statements are true about files? I. A file can be renamed whilst it is open II. A file cannot be deleted whilst it is open III. A file deleted from a computer may be found in recycle bin or trash bin",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 7,
+      "options": [
+        "A. I & II only",
+        "B. I & III only",
+        "C. II & III only",
+        "D. I, II & III"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2019_q2",
+      "questionText": "Which of the following media uses laser technology to write and read data?",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 2,
+      "options": [
+        "A. Floppy disk",
+        "B. Hard disk",
+        "C. Optical disc",
+        "D. Pen drive"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2019 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2019_q5",
+      "questionText": "Files are best kept in",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 5,
+      "options": [
+        "A. icons.",
+        "B. folders.",
+        "C. programs.",
+        "D. applications."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2019 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2020_q17",
+      "questionText": "Which of the following tools gives the user a log of all opened applications?",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 17,
+      "options": [
+        "A. Task bar.",
+        "B. Title bar.",
+        "C. Start menu.",
+        "D. wall paper."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2020 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2020_q25",
+      "questionText": "It is appropriate to use a backup when the original file is",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 25,
+      "options": [
+        "A. new",
+        "B. lost",
+        "C. fresh",
+        "D. intact"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2020 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q14",
+      "questionText": "Files that are no more needed by the user are sent to",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 14,
+      "options": [
+        "A. Recycle Bin.",
+        "B. My Briefcase.",
+        "C. My Documents.",
+        "D. Recent Documents."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q15",
+      "questionText": "When a user unintentionally deletes files and folders from the computer hard disk, the user can restore the deleted files and folders from",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 15,
+      "options": [
+        "A. Recycle Bin.",
+        "B. My Pictures.",
+        "C. My Documents.",
+        "D. Recent Documents."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q30",
+      "questionText": "To print a document after previewing, use the",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 30,
+      "options": [
+        "A. edit command.",
+        "B. print command.",
+        "C. open command.",
+        "D. save command."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q35",
+      "questionText": "The command button that opens up a dialogue box for users to compose an e-mail message is the",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 35,
+      "options": [
+        "A. sent button.",
+        "B. junk button.",
+        "C. inbox button.",
+        "D. create button. Solution"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q13",
+      "questionText": "Information should be stored for users to",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 13,
+      "options": [
+        "A. process the data.",
+        "B. delete the file.",
+        "C. use it in the future.",
+        "D. be able to format the data."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q16",
+      "questionText": "The default location for saving a text file is",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 16,
+      "options": [
+        "A. My downloads folder.",
+        "B. My computer folder.",
+        "C. My pictures folder.",
+        "D. My documents folder."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q24",
+      "questionText": "Dragging a file into the recycle bin is the same as",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 24,
+      "options": [
+        "A. copying the file.",
+        "B. deleting the file.",
+        "C. moving the file.",
+        "D. pasting the file."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q37",
+      "questionText": "The arrow cursor is basically used to open",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 37,
+      "options": [
+        "A. a hyperlink.",
+        "B. an application.",
+        "C. a folder.",
+        "D. a browser."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q4",
+      "questionText": "The full meaning of the acronym DVD is",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 4,
+      "options": [
+        "A. digital video drive.",
+        "B. digital versatile drive.",
+        "C. digital video device.",
+        "D. digital versatile disk."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2023_q10",
+      "questionText": "A file that is cut is temporarily sent to the",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 10,
+      "options": [
+        "A. clipboard.",
+        "B. scissors.",
+        "C. folder.",
+        "D. recycle bin."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2023 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2023_q24",
+      "questionText": "When a user clicks on the start button, it displays",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 24,
+      "options": [
+        "A. deleted applications.",
+        "B. opened applications.",
+        "C. installed applications.",
+        "D. running applications."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2023 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2023_q31",
+      "questionText": "To browse through webpages means to",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 31,
+      "options": [
+        "A. move through webpages for information.",
+        "B. locate webpages for information.",
+        "C. select webpages for information.",
+        "D. save webpages for information."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2023 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2023_q38",
+      "questionText": "DVD mostly used in computer is a type of",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 38,
+      "options": [
+        "A. magnetic disc.",
+        "B. optical disc.",
+        "C. optical drive.",
+        "D. magnetic drive."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2023 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q19",
+      "questionText": "The Screenshot feature under the Insert Tab of a Microsoft PowerPoint application allows a user to insert a screenshot of",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 19,
+      "options": [
+        "A. active application.",
+        "B. opened applications.",
+        "C. foreground applications.",
+        "D. downloaded applications."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q2",
+      "questionText": "A quiz master asked participants to complete the statement: whiles the Internet Explorer is used to access information from the internet, Windows File Explorer is used to",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 2,
+      "options": [
+        "A. browse the internet using explorer.",
+        "B. edit files in the explorer window.",
+        "C. Manage and organize files and folders.",
+        "D. Manage and organize music and videos."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q36",
+      "questionText": "In computer programming, debugging is a technique used to",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 36,
+      "options": [
+        "A. test the code.",
+        "B. fix errors in the code.",
+        "C. create bugs intentionally.",
+        "D. write code to play games."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q6",
+      "questionText": "Collaborative robot is a category of robots that",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 6,
+      "options": [
+        "A. works alongside humans.",
+        "B. paints pictures for commercial sake.",
+        "C. makes both fast and slow movements.",
+        "D. dances to audience for entertainment."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q8",
+      "questionText": "A student is watching video from a pen drive using a computer. The process the computer uses to access the video from the pen drive is known as",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 8,
+      "options": [
+        "A. burning.",
+        "B. caching.",
+        "C. reading.",
+        "D. writing."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q1",
+      "questionText": "A programmer has indented the codes in the program being written. The purpose of the indentation is to",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 1,
+      "options": [
+        "A. make the code difficult to read by users.",
+        "B. hide the code from others when writing it.",
+        "C. create bugs in the program to disturb the codes.",
+        "D. show the start and end of a conditional statement."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q12",
+      "questionText": "After replacing his old smartphone with a new one, Muba cannot access most of his saved contacts. His friend advised that, he should have saved the contacts in an e-mail environment. The feature that would have allowed Muba to save and organize the contacts in the e-mail environment is referred to as",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 12,
+      "options": [
+        "A. draft.",
+        "B. folders.",
+        "C. attach files.",
+        "D. address book."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q20",
+      "questionText": "A quiz master asked participants to complete the statement: while download folder is the default location for downloaded files, my recent folder is the default location for documents",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 20,
+      "options": [
+        "A. just printed.",
+        "B. to be saved.",
+        "C. just worked on.",
+        "D. to be worked on."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q28",
+      "questionText": "Surfing the Internet requires the use of search engines which was designed to help users find",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 28,
+      "options": [
+        "A. information on the Internet.",
+        "B. information from e-mail messages.",
+        "C. information from the computer hard disk drive.",
+        "D. information from files and folders on the computer."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q34",
+      "questionText": "In the concept of programming, a comment in a program code is used to",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 34,
+      "options": [
+        "A. explain portions of the code.",
+        "B. make the program run faster.",
+        "C. change the output of the program.",
+        "D. temporarily remove a line of code."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q40",
+      "questionText": "To send pictures via email (which students struggle with), the most appropriate email feature is:",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 40,
+      "options": [
+        "A. compose",
+        "B. categorize",
+        "C. attach files",
+        "D. draft messages"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2011_q1",
+      "questionText": "a)\n\n \n\nStudy the diagram below carefully and answer the questions that follow:\n\n\n\ni)\n\n \n\nWhat is the name of the application program used to create the above file?\n\nii)\n\n \n\nGive the file name of the application program above.\n\niii)\n\n \n\nName the parts labelled A, B, C, D, E and F in the diagram.\n\niv)\n\n \n\nState the functions for B and C in (a) above.\n\nb)\n\n \n\nList the steps (in the right order) involved in switching on a personal computer system.\n\nc)\n\n \n\nIdentify the following ICT tools.\n\n\n\n Show Solution",
+      "type": "essay",
+      "year": "2011",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2011 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2015_q1",
+      "questionText": "(a)\n\n \n\nIn the space provided below, draw a well labelled computer mouse.\n\n(b)\n\n \n\nOutline the steps involved in performing the following tasks:\n\n(i)\n\n \n\nopening a document;\n\n(ii)\n\n \n\nsaving a new created document;\n\n(iii)\n\n \n\nchanging the desktop of a personal computer.",
+      "type": "essay",
+      "year": "2015",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2015 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2015_q3",
+      "questionText": "State two differences between\n\n(a)\n\n \n\nrandom access memory and read only memory;\n\n(b)\n\n \n\nhard disk and pen drive;\n\n(c)\n\n \n\nfile and folder.",
+      "type": "essay",
+      "year": "2015",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2015 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2018_q4",
+      "questionText": "(a)\n\n \n\nWhat is:\n\n(i)\n\n \n\napplication software;\n\n(ii)\n\n \n\nsystem software\n\n(iii)\n\n \n\na folder\n\n(b)\n\n \n\nGive three examples of an operating system.",
+      "type": "essay",
+      "year": "2018",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2018 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2020_q1",
+      "questionText": "Study Figure 1 carefully and use it to answer questions (a) to (e).\n\n\n\na)\n\n \n\nWrite the name of the application displayed in Figure 1\n\nb)\n\n \n\nMention two things that the application identified in Figure 1 can be used to create.\n\nc)\n\n \n\nWrite the name of the parts labelled A, B, C, D, E and F in Figure 1\n\nd)\n\n \n\nList two of items found in the part labelled A\n\ne)\n\n \n\nWhat is the part labelled D used for?",
+      "type": "essay",
+      "year": "2020",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2020 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "File And Folder Management",
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2020_q2",
+      "questionText": "a)\n\n \n\nState two reasons for copyright protection.\n\nb)\n\n \n\nList four products that normally requires copyright protection.\n\nc)\n\n \n\nOutline the steps involved in restoring a deleted file.",
+      "type": "essay",
+      "year": "2020",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2020 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

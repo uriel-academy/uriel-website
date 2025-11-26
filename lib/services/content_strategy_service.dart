@@ -32,7 +32,7 @@ class ContentStrategyService {
   /// Get trending books (most downloads in last 30 days)
   Future<List<Map<String, dynamic>>> getTrendingBooks({int limit = 5}) async {
     try {
-      final thirtyDaysAgo = DateTime.now().subtract(Duration(days: 30));
+      final thirtyDaysAgo = DateTime.now().subtract(const Duration(days: 30));
 
       final snapshot = await _firestore
           .collection('storybooks')

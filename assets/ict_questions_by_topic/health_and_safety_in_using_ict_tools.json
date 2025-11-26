@@ -1,0 +1,420 @@
+{
+  "topic": "Health And Safety In Using ICT Tools",
+  "totalQuestions": 13,
+  "questions": [
+    {
+      "id": "ict_2011_q14",
+      "questionText": "Which of the following is not a safety measure to consider in the ICT environment?",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 14,
+      "options": [
+        "A. Not overloading a socket.",
+        "B. Sitting in the correct posture behind the computer.",
+        "C. Allowing the battery of a laptop to run down before charging.",
+        "D. Avoid plugging computers in damage sockets"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2011 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Health And Safety In Using ICT Tools"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q7",
+      "questionText": "The following are possible health hazards of prolonged use of the computer system except",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 7,
+      "options": [
+        "A. back and neck pains",
+        "B. eye strain",
+        "C. tuberculosis",
+        "D. wrist pains"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Health And Safety In Using ICT Tools"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q14",
+      "questionText": "Which of the following safety precaution(s) is/are advisable to practice? I. do not answer or receive calls when charging mobile phones II. do not overload sockets. III. plugging ICT tools in damaged sockets can be allowed sometimes",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 14,
+      "options": [
+        "A. I and II only",
+        "B. I and III only",
+        "C. II and III only",
+        "D. I, II, and III"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Health And Safety In Using ICT Tools"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2019_q18",
+      "questionText": "The safety measure to prevent back ache when using the computer for a very long time is to",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 18,
+      "options": [
+        "A. answer or receive calls when charging mobile phone.",
+        "B. avoid plugging ICT tools on damaged sockets.",
+        "C. position the body correctly.",
+        "D. use plastic chair always."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2019 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Health And Safety In Using ICT Tools"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2020_q18",
+      "questionText": "Which of the following options is not a safety measure?",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 18,
+      "options": [
+        "A. Danger",
+        "B. Security",
+        "C. Anti-virus",
+        "D. protection"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2020 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Health And Safety In Using ICT Tools"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2020_q19",
+      "questionText": "The following options are possible health hazards of prolonged use of the computer systems except",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 19,
+      "options": [
+        "A. numbness.",
+        "B. eye strain.",
+        "C. good vision.",
+        "D. back pains."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2020 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Health And Safety In Using ICT Tools"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q18",
+      "questionText": "The following options are possible health problems associated with long term exposure to ICT tools except",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 18,
+      "options": [
+        "A. backache.",
+        "B. toothache.",
+        "C. wrist pain.",
+        "D. blur vision."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Health And Safety In Using ICT Tools"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q12",
+      "questionText": "Good health practice suggests that we take intermittent breaks while working. The importance of taking breaks during prolonged computer use is to",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 12,
+      "options": [
+        "A. increase productivity in users.",
+        "B. conserve energy in the computer.",
+        "C. avoid eye strain and muscle fatigue.",
+        "D. increase screen time when working."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Health And Safety In Using ICT Tools"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q17",
+      "questionText": "The introduction of Artificial Intelligence as come with its related ethical concerns such as",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 17,
+      "options": [
+        "A. job creation.",
+        "B. bias algorithm.",
+        "C. improved healthcare.",
+        "D. increased productivity."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Health And Safety In Using ICT Tools"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q39",
+      "questionText": "The practice of the use of computers and related electronic resources in an environmentally responsible manner is termed",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 39,
+      "options": [
+        "A. ergonomics.",
+        "B. green computing.",
+        "C. safety precautions.",
+        "D. environmental friendliness."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Health And Safety In Using ICT Tools"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q15",
+      "questionText": "Which of the following terminologies is associated with computer network?",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 15,
+      "options": [
+        "A. Junk",
+        "B. Trojan",
+        "C. Firewall",
+        "D. Defragmenter"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Health And Safety In Using ICT Tools"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q21",
+      "questionText": "The role of neural networks in Artificial Intelligence in modern technology is to",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 21,
+      "options": [
+        "A. control robots within their environment for work and safety.",
+        "B. enhance Internet speed for fast movements of the robots.",
+        "C. create computer virus for robots to find solutions to them.",
+        "D. simulate human brain function for learning and problem-solving."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Health And Safety In Using ICT Tools",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q23",
+      "questionText": "The Secretary to the Parliament of Ghana sits on an ergonomic chair to work in the office because it",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 23,
+      "options": [
+        "A. ensures proper sitting arrangements.",
+        "B. makes the workplace looks attractive.",
+        "C. aligns the chairs properly with the workstation.",
+        "D. promotes proper body alignment and support."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Health And Safety In Using ICT Tools"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

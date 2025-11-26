@@ -446,4 +446,92 @@ class QuestionService {
     // This is a placeholder - implement based on your exam creation logic
     return 'exam_id_placeholder';
   }
+
+  /// Fetch saved question collections from Firestore (e.g., ICT topic collections)
+  Future<List<Map<String, dynamic>>> getQuestionCollections({
+    String? subject,
+    String? topic,
+    bool activeOnly = true,
+  }) async {
+    try {
+      debugPrint('🔍 Fetching question collections from Firestore...');
+      
+      Query query = _firestore.collection('questionCollections');
+      
+      if (subject != null) {
+        query = query.where('subject', isEqualTo: subject);
+      }
+      
+      if (topic != null) {
+        query = query.where('topic', isEqualTo: topic);
+      }
+      
+      if (activeOnly) {
+        query = query.where('isActive', isEqualTo: true);
+      }
+      
+      final snapshot = await query.get();
+      
+      debugPrint('📦 Found ${snapshot.docs.length} collections');
+      
+      return snapshot.docs.map((doc) {
+        final data = doc.data() as Map<String, dynamic>;
+        return {
+          'id': doc.id,
+          ...data,
+        };
+      }).toList();
+    } catch (e) {
+      debugPrint('❌ Error fetching question collections: $e');
+      return [];
+    }
+  }
+
+  /// Fetch questions for a saved collection by question IDs
+  Future<List<Question>> getQuestionsByIds(List<String> questionIds) async {
+    try {
+      if (questionIds.isEmpty) {
+        debugPrint('⚠️ getQuestionsByIds called with empty list');
+        return [];
+      }
+      
+      debugPrint('🔍 Fetching ${questionIds.length} questions by IDs...');
+      
+      final questions = <Question>[];
+      int batchNum = 0;
+      
+      // Firestore 'in' query limit is 10, so batch the requests
+      for (int i = 0; i < questionIds.length; i += 10) {
+        final batch = questionIds.skip(i).take(10).toList();
+        batchNum++;
+        
+        try {
+          final snapshot = await _questionsCollection
+              .where(FieldPath.documentId, whereIn: batch)
+              .get();
+          
+          debugPrint('  Batch $batchNum: requested ${batch.length}, got ${snapshot.docs.length}');
+          
+          for (final doc in snapshot.docs) {
+            try {
+              final question = Question.fromJson(doc.data() as Map<String, dynamic>);
+              questions.add(question);
+            } catch (e) {
+              debugPrint('❌ Error parsing question ${doc.id}: $e');
+            }
+          }
+        } catch (e) {
+          debugPrint('❌ Error fetching batch $batchNum: $e');
+        }
+      }
+      
+      debugPrint('✅ Successfully fetched ${questions.length} of ${questionIds.length} questions');
+      
+      // Return questions (order doesn't matter for topic collections)
+      return questions;
+    } catch (e) {
+      debugPrint('❌ Error fetching questions by IDs: $e');
+      return [];
+    }
+  }
 }

@@ -1,0 +1,2704 @@
+{
+  "topic": "Graphical User Interface (GUI)",
+  "totalQuestions": 86,
+  "questions": [
+    {
+      "id": "ict_2011_q27",
+      "questionText": "The symbol B, I, U are commonly used buttons found on the ....................",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 27,
+      "options": [
+        "A. Standard toolbox.",
+        "B. Menu bar.",
+        "C. Formatting toolbar.",
+        "D. Drawing toolbar."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2011 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2011_q28",
+      "questionText": "Which of the following is not a tool on the drawing toolbar?",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 28,
+      "options": [
+        "A. Arc.",
+        "B. Oval.",
+        "C. Drop Cap.",
+        "D. Lines."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2011 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2011_q29",
+      "questionText": "Which of the following is not a toolbar?",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 29,
+      "options": [
+        "A. Drawing toolbar.",
+        "B. Picture toolbar.",
+        "C. Word Art toolbar.",
+        "D. Word Wrap toolbar."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2011 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2011_q30",
+      "questionText": "Lines, block arrows and flowcharts are located on the ..................",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 30,
+      "options": [
+        "A. Drawing toolbar.",
+        "B. Standard toolbar.",
+        "C. Formatting toolbar.",
+        "D. Menu bar."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2011 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2011_q9",
+      "questionText": "GUI stand for",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 9,
+      "options": [
+        "A. Grand User Interface.",
+        "B. General User Interface.",
+        "C. Graphical User Interface.",
+        "D. Graphical User Interrupt."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2011 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q18",
+      "questionText": "On the desktop, the part which displays opened applications and other icons is referred to as......",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 18,
+      "options": [
+        "A. scroll bar",
+        "B. taskbar",
+        "C. title bar",
+        "D. toolbar"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q19",
+      "questionText": "The act of pressing a computer mouse button twice quickly without moving the mouse is termed ...",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 19,
+      "options": [
+        "A. double clicking",
+        "B. right clicking",
+        "C. single clicking",
+        "D. normal clicking"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q26",
+      "questionText": "The standard toolbar contains buttons that",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 26,
+      "options": [
+        "A. close and resize windows",
+        "B. control page margins and tabs",
+        "C. performs the most tasks",
+        "D. help users to navigate through the document"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q38",
+      "questionText": "Which program icon on the desktop leads to the disk drives?",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 38,
+      "options": [
+        "A. internet explorer",
+        "B. my computer",
+        "C. my document",
+        "D. my network places"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q5",
+      "questionText": "The total number of command buttons on the title bar of an opened word processing window is ....",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 5,
+      "options": [
+        "A. 2",
+        "B. 3",
+        "C. 5",
+        "D. 6"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q18",
+      "questionText": "The symbols B, I, U are commonly used buttons found on the .............",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 18,
+      "options": [
+        "A. drawing toolbar",
+        "B. formatting toolbar",
+        "C. menu toolbar",
+        "D. standard toolbar"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q19",
+      "questionText": "Right - clicking a mouse on an open window..........",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 19,
+      "options": [
+        "A. creates a new document",
+        "B. opens a file menu",
+        "C. opens a new window",
+        "D. opens a context menu if available"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q23",
+      "questionText": "When a user clicks within a selected text by holding down the left mouse button, and then transfers the cursor to a differed location within the same document, the text will be",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 23,
+      "options": [
+        "A. cut",
+        "B. moved",
+        "C. copied",
+        "D. deleted"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q26",
+      "questionText": "The save command is found under which of the following menu buttons",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 26,
+      "options": [
+        "A. edit",
+        "B. file",
+        "C. insert",
+        "D. tools"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q27",
+      "questionText": "Which of the following command buttons is found on the standard toolbar?",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 27,
+      "options": [
+        "A. bold",
+        "B. bullets",
+        "C. redo",
+        "D. undo"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q29",
+      "questionText": "Which of the following is a tool on the drawing toolbar?",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 29,
+      "options": [
+        "A. arrows",
+        "B. change case",
+        "C. drop cap",
+        "D. text direction"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q39",
+      "questionText": "On which of the following toolbars is the print preview button located?",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 39,
+      "options": [
+        "A. drawing",
+        "B. formatting",
+        "C. header and footer",
+        "D. standard"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q8",
+      "questionText": "On which bar is the system clock located",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 8,
+      "options": [
+        "A. menu bar",
+        "B. scrollbar",
+        "C. taskbar",
+        "D. toolbar"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q9",
+      "questionText": "The command button used to exit windows application is the ...................",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 9,
+      "options": [
+        "A. close button",
+        "B. maximize button",
+        "C. minimize button",
+        "D. restore button"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q11",
+      "questionText": "The area of the taskbar that display small icons of some programs such as the system clock is",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 11,
+      "options": [
+        "A. programs area",
+        "B. scroll bar",
+        "C. start menu",
+        "D. system tray"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q18",
+      "questionText": "The act of clicking on an object and dragging it to a different location is referred to as",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 18,
+      "options": [
+        "A. drop-and-drag",
+        "B. drag-and-drop",
+        "C. drop-and-move",
+        "D. drag-and-paste"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q30",
+      "questionText": "On an email interface, which of the following areas is mandatory to complete and send a message?",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 30,
+      "options": [
+        "A. sender body",
+        "B. sender name",
+        "C. message header/subject",
+        "D. message recipient email address"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q36",
+      "questionText": "The command button that opens a dialog box for users to create an email messages is",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 36,
+      "options": [
+        "A. back button",
+        "B. compose button",
+        "C. create button",
+        "D. refresh button"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2015_q11",
+      "questionText": "Which of the following gives the user a log of all opened programs?",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 11,
+      "options": [
+        "A. start button",
+        "B. start button",
+        "C. taskbar",
+        "D. title bar"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2015 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2015_q20",
+      "questionText": "If a user places the mouse cursor at one end of a text, holds down the left button and drags to the other end of the text, the effect will be",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 20,
+      "options": [
+        "A. copying the text",
+        "B. cutting the text",
+        "C. moving the text",
+        "D. selecting the text"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2015 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2015_q22",
+      "questionText": "A collection of separate windows applications sold as a group is called",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 22,
+      "options": [
+        "A. command",
+        "B. communication",
+        "C. integrated",
+        "D. suit"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2015 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2015_q23",
+      "questionText": "Adding 3-D effect to an object is done through the",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 23,
+      "options": [
+        "A. auto formatting dialogue box",
+        "B. drawing toolbar",
+        "C. formatting toolbar",
+        "D. graphic styles menu"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2015 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2015_q29",
+      "questionText": "The print preview button is located on which of the following toolbars?",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 29,
+      "options": [
+        "A. drawing toolbar",
+        "B. formatting toolbar",
+        "C. header/ footer toolbar",
+        "D. standard toolbar"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2015 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2015_q30",
+      "questionText": "Which of the following is an icon on the drawing toolbar?",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 30,
+      "options": [
+        "A. arrows",
+        "B. change case",
+        "C. drop cap",
+        "D. text direction"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2015 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2016_q12",
+      "questionText": "The following devices can be found in the system unit except",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 12,
+      "options": [
+        "A. ports",
+        "B. memory",
+        "C. motherboard",
+        "D. scroll wheel"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2016 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2016_q16",
+      "questionText": "The number of command buttons on the control menu are",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 16,
+      "options": [
+        "A. 2",
+        "B. 3",
+        "C. 4",
+        "D. 5"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2016 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2016_q21",
+      "questionText": "The following are features of a word processing application window except",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 21,
+      "options": [
+        "A. desktop",
+        "B. font",
+        "C. print",
+        "D. zoom"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2016 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2016_q31",
+      "questionText": "Double-clicking on a program icon on a computer desktop",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 31,
+      "options": [
+        "A. cuts the program's window",
+        "B. copies the program's window",
+        "C. closes the program's window",
+        "D. opens the program's window"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2016 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2016_q33",
+      "questionText": "The process of a user placing the cursor at one end of a text, holds down the left mouse button and drags to the other end of the text is referred to as",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 33,
+      "options": [
+        "A. copying",
+        "B. cutting",
+        "C. moving",
+        "D. selecting"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2016 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2016_q5",
+      "questionText": "The horizontal bar that normally lies at the bottom of a computer desktop screen is called",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 5,
+      "options": [
+        "A. taskbar",
+        "B. start button",
+        "C. horizontal ruler",
+        "D. quick launch toolbar"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2016 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q15",
+      "questionText": "The following are features on the GUI except",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 15,
+      "options": [
+        "A. command line.",
+        "B. icon.",
+        "C. menu driven.",
+        "D. window."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q26",
+      "questionText": "The process of moving different portions of a document on the screen into view is called",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 26,
+      "options": [
+        "A. downward.",
+        "B. upward.",
+        "C. moving.",
+        "D. scrolling."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q29",
+      "questionText": "Which of the following mouse buttons when clicked, provides a menu which a user can choose from?",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 29,
+      "options": [
+        "A. Left button",
+        "B. Right button",
+        "C. Scroll ball",
+        "D. Scroll button"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q33",
+      "questionText": "The Standard Toolbar contains buttons that",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 33,
+      "options": [
+        "A. control page margins and tabs.",
+        "B. perform the most common tasks.",
+        "C. help users navigate through the document.",
+        "D. close and resize windows."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q16",
+      "questionText": "The name given to the background area of a computer when turned on is",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 16,
+      "options": [
+        "A. desktop.",
+        "B. folder.",
+        "C. icon.",
+        "D. window."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q17",
+      "questionText": "Which of the following is used as a shortcut means to open files, folders and programs?",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 17,
+      "options": [
+        "A. Desktop",
+        "B. Icon",
+        "C. Screen",
+        "D. Start menu"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q26",
+      "questionText": "The background image that appears on a computer desktop is known as",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 26,
+      "options": [
+        "A. background theme.",
+        "B. background panel.",
+        "C. screen saver.",
+        "D. wallpaper."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q29",
+      "questionText": "Which part of the computer mouse button is used to select an object on screen?",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 29,
+      "options": [
+        "A. Left button",
+        "B. Right button",
+        "C. Scroll ball",
+        "D. Scroll button"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q33",
+      "questionText": "Which of the following bars displays the heading of an open window?",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 33,
+      "options": [
+        "A. Menu bar",
+        "B. Status bar",
+        "C. Standard toolbar",
+        "D. Title bar"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q34",
+      "questionText": "The print preview button is located on which of the following toolbars?",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 34,
+      "options": [
+        "A. Drawing",
+        "B. Formatting",
+        "C. Header and Footer",
+        "D. Standard"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q5",
+      "questionText": "The system tray is also called",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 5,
+      "options": [
+        "A. clock.",
+        "B. notification area.",
+        "C. quick launch.",
+        "D. taskbar"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2019_q17",
+      "questionText": "To remove unwanted shortcuts from the desktop which of the following options will be appropriate? I. Click on the shortcut icon once and press the delete key on the keyboard II. Drag the shortcut icon into the Recycle Bin. III. Right-click on the shortcut icon and select delete from the pop-up menu.",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 17,
+      "options": [
+        "A. I and II only.",
+        "B. I and III only.",
+        "C. II and III only.",
+        "D. I, II and III."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2019 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2019_q29",
+      "questionText": "Pressing and releasing the left mouse button twice in quick succession is termed",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 29,
+      "options": [
+        "A. dragging.",
+        "B. double-clicking.",
+        "C. left-clicking.",
+        "D. right-clicking."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2019 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2019_q33",
+      "questionText": "The shortcut to some commands on the menu bar of a Word processing application program can be found on the",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 33,
+      "options": [
+        "A. scroll bar.",
+        "B. status bar.",
+        "C. standard toolbar.",
+        "D. title bar."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2019 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2019_q4",
+      "questionText": "The following are items located on the default task bar except",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 4,
+      "options": [
+        "A. date.",
+        "B. clock.",
+        "C. recycle bin.",
+        "D. start menu button."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2019 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2020_q1",
+      "questionText": "A computer model that looks like a brief case is called",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 1,
+      "options": [
+        "A. tower.",
+        "B. laptop.",
+        "C. desktop.",
+        "D. palmtop"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2020 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2020_q16",
+      "questionText": "An operating system has all the following features except",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 16,
+      "options": [
+        "A. icons.",
+        "B. scroll bar.",
+        "C. system tray.",
+        "D. wallpaper."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2020 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2020_q17",
+      "questionText": "Which of the following tools gives the user a log of all opened applications?",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 17,
+      "options": [
+        "A. Task bar.",
+        "B. Title bar.",
+        "C. Start menu.",
+        "D. wall paper."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2020 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2020_q26",
+      "questionText": "A user can arrange icons by I. Date II. Type III. Name IV. Colour The correct option by which the user can arrange the icons are?",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 26,
+      "options": [
+        "A. I and II only",
+        "B. I, II and III only",
+        "C. I, II and IV only",
+        "D. II, III and IV only"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2020 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q10",
+      "questionText": "Which of the following buttons on the Turn Off computer dialogue box will lead a user to a warm booting activity?",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 10,
+      "options": [
+        "A. Restart",
+        "B. Log off",
+        "C. Turn off",
+        "D. Hibernate"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q11",
+      "questionText": "The start button is found on the",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 11,
+      "options": [
+        "A. task bar.",
+        "B. scroll bar.",
+        "C. status bar.",
+        "D. system tray."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q12",
+      "questionText": "Which of the following items is not a feature on the computer desktop?",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 12,
+      "options": [
+        "A. Icon",
+        "B. Cursor",
+        "C. Wallpaper",
+        "D. Screen saver"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q13",
+      "questionText": "The desktop feature which contains the quick launch button is the",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 13,
+      "options": [
+        "A. icon.",
+        "B. task bar.",
+        "C. start button.",
+        "D. control box."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q33",
+      "questionText": "In computing, an element or icon that links one document to another in a different document or within the same document is a",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 33,
+      "options": [
+        "A. pointer.",
+        "B. web page.",
+        "C. hyperlink.",
+        "D. web browser."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q5",
+      "questionText": "Which part of the computer mouse is used for double-clicking?",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 5,
+      "options": [
+        "A. Scroll ball.",
+        "B. Left button.",
+        "C. Right button.",
+        "D. Scroll button."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q12",
+      "questionText": "The horizontal bar on top of a window that contains the window's name is called",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 12,
+      "options": [
+        "A. menu bar.",
+        "B. title bar.",
+        "C. vertical scroll bar.",
+        "D. horizontal scroll bar."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q14",
+      "questionText": "The basic function of the computer mouse is for",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 14,
+      "options": [
+        "A. clicking, typing and moving.",
+        "B. pointing, typing and dragging.",
+        "C. scrolling, clicking and typing.",
+        "D. clicking, dragging and pointing."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q17",
+      "questionText": "An application window that displays a message for a response between a user and a software is called",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 17,
+      "options": [
+        "A. dialog box.",
+        "B. window box.",
+        "C. application box.",
+        "D. message box."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q18",
+      "questionText": "Which of the following bars can have its position changed on the desktop?",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 18,
+      "options": [
+        "A. Menu bar",
+        "B. Scroll bar",
+        "C. Title bar",
+        "D. Status bar"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q28",
+      "questionText": "Double-clicking in a Spreadsheet cell makes the cell",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 28,
+      "options": [
+        "A. expand.",
+        "B. active.",
+        "C. inactive.",
+        "D. increase."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q7",
+      "questionText": "The rectangular-shaped viewing area of an application on the screen of a computer that the user works in is referred to as",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 7,
+      "options": [
+        "A. computer desktop.",
+        "B. desktop icon.",
+        "C. graphical user interface.",
+        "D. application window."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q9",
+      "questionText": "Which of the following menu options will take a user to the symbol dialog box in a Word processing application?",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 9,
+      "options": [
+        "A. Tools",
+        "B. Insert",
+        "C. Table",
+        "D. Format"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2023_q1",
+      "questionText": "The start button is located on the",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 1,
+      "options": [
+        "A. taskbar.",
+        "B. menu bar.",
+        "C. tool bar.",
+        "D. status bar."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2023 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2023_q16",
+      "questionText": "The platform provided by the operating system for user's interaction is called",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 16,
+      "options": [
+        "A. data interface.",
+        "B. computer interface.",
+        "C. image user interface.",
+        "D. graphical user interface."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2023 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2023_q18",
+      "questionText": "The various forms of document view mode in word processing applications is located on the",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 18,
+      "options": [
+        "A. title bar.",
+        "B. taskbar.",
+        "C. status bar.",
+        "D. scroll bar."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2023 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2023_q2",
+      "questionText": "An application window can be exited using an option on the",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 2,
+      "options": [
+        "A. dialogue box.",
+        "B. status bar.",
+        "C. control box.",
+        "D. scroll bar."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2023 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2023_q24",
+      "questionText": "When a user clicks on the start button, it displays",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 24,
+      "options": [
+        "A. deleted applications.",
+        "B. opened applications.",
+        "C. installed applications.",
+        "D. running applications."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2023 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2023_q40",
+      "questionText": "The process of pressing and releasing the default mouse button once is best called",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 40,
+      "options": [
+        "A. selecting.",
+        "B. clicking.",
+        "C. pointing.",
+        "D. dragging."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2023 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q11",
+      "questionText": "Settings and permissions that are specific to a user and determines the activities the user can perform on windows environment on the computer is known as",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 11,
+      "options": [
+        "A. log.",
+        "B. account.",
+        "C. customization.",
+        "D. configuration."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q31",
+      "questionText": "In Desktop Publishing, a user can create a new document through the following ways except for",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 31,
+      "options": [
+        "A. print publication.",
+        "B. built-in template.",
+        "C. blank publication.",
+        "D. featured template."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q32",
+      "questionText": "The Desktop Publishing feature that best helps a user to align objects, texts and elements in a publication is called",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 32,
+      "options": [
+        "A. ruler.",
+        "B. layout.",
+        "C. guides.",
+        "D. margins."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q19",
+      "questionText": "A designer consistently reminds his staff to use template in Desktop publishing because it helps to",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 19,
+      "options": [
+        "A. create documents in unique ways.",
+        "B. provide a starting point for document design.",
+        "C. decorate the document for distribution to others.",
+        "D. provide an opportunity for users to print their work."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q26",
+      "questionText": "A customer gave a new laptop to a technician to set accounts on windows that is required to make changes to all system settings. The best account type that you will advise the technician to consider is",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 26,
+      "options": [
+        "A. Guest.",
+        "B. Remote.",
+        "C. Standard.",
+        "D. Administrator."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2011_q3",
+      "questionText": "a)\n\n \n\nExplain the term desktop as used in the personal computer environment.\n\nb)\n\n \n\nList three areas of learning where information and communication technology can be integrated.\n\nc)\n\n \n\nList two tools on the formatting toolbar of a word processing application.\n\nd)\n\n \n\nState two benefits associated with the use of information and communication tools in teaching and learning.\n\n Show Solution",
+      "type": "essay",
+      "year": "2011",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2011 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2012_q3",
+      "questionText": "(a)\n\n \n\nExplain the following types of software\n\n(i)\n\n \n\nSystem software;\n\n(ii)\n\n \n\nApplication software.\n\n(b)\n\n \n\nState the function of each of the following buttons as used in application software.\n\n(i)\n\n \n\nMinimize\n\n(ii)\n\n \n\nMaximize\n\n(iii)\n\n \n\nClose",
+      "type": "essay",
+      "year": "2012",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2012 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2015_q4",
+      "questionText": "(a)\n\n \n\nExplain the term clicking as used in the computing environment.\n\n(b)\n\n \n\nIn a typical application window, list two command buttons that are found on the control menu.\n\n(c)\n\n \n\nWhat is a screen tip?\n\n(d)\n\n \n\nDescribe a computer mouse pad.",
+      "type": "essay",
+      "year": "2015",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2015 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2016_q1",
+      "questionText": "(a)\n\n \n\nIdentify the diagram below.\n\n\n\n(b)\n\n \n\nIdentify the parts labelled A, B and C in (a).\n\n(c)\n\n \n\nProvide the names and functions of each of the following mouse pointer shapes:\n\n(i)\n\n \n\n\n\n(ii)\n\n \n\n\n\n(iii)\n\n \n\n\n\n(iv)\n\n \n\n\n\n(v)\n\n \n\n\n\n(d)\n\n \n\nOutline the steps used to rename a folder on the desktop of a computer",
+      "type": "essay",
+      "year": "2016",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2016 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2019_q4",
+      "questionText": "a)\n\n \n\nState the function of each of the following devices:\n\ni)\n\n \n\nfloppy disk\n\nii)\n\n \n\nkeyboard\n\niii)\n\n \n\nuninterruptible power supply\n\nb)\n\n \n\nExplain each of the following terms:\n\ni)\n\n \n\nClicking\n\nii)\n\n \n\nDragging",
+      "type": "essay",
+      "year": "2019",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2019 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2022_q3",
+      "questionText": "a)\n\n \n\nState three reasons that will compel a user to restart a computer.\n\nb)\n\n \n\nState three ways by which an application can be launched using its shortcut icon on the desktop.",
+      "type": "essay",
+      "year": "2022",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2022 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2022_q4",
+      "questionText": "Use the image shown in Figure 2 to answer question (a) and (b).\n\n\n\nFigure 2\n\na)\n\n \n\nWrite the name of the image shown in Figure 2.\n\nb)\n\n \n\nState the function of the image shown in Figure 2.\n\nc)\n\n \n\nWhich tool on the drawing toolbar is used to colour a drawn object.\n\nd)\n\n \n\nState three uses of the drawing toolbar.",
+      "type": "essay",
+      "year": "2022",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2022 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2023_q4",
+      "questionText": "(a)\n\n \n\nWrite three desktop features of a computer.\n\n(b)\n\n \n\nState three rules and regulations for the responsible use of the internet in the school's computer laboratory.",
+      "type": "essay",
+      "year": "2023",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2023 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Graphical User Interface (GUI)"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

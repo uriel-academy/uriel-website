@@ -1,0 +1,531 @@
+{
+  "topic": "Ethics Of Using ICTs",
+  "totalQuestions": 17,
+  "questions": [
+    {
+      "id": "ict_2011_q15",
+      "questionText": "The legal right to control the production and selling of a book, play, film and software is known as ...............",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 15,
+      "options": [
+        "A. production right.",
+        "B. copyright.",
+        "C. trade mark.",
+        "D. patent."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2011 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Ethics Of Using ICTs"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q20",
+      "questionText": "The following are good practices in the computer environment except.........",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 20,
+      "options": [
+        "A. copyrighting of software",
+        "B. designing of cards",
+        "C. networking of computer",
+        "D. pirating of software"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Ethics Of Using ICTs"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q16",
+      "questionText": "The legal right that does not allow people to copy intellectual property without the permission of the original owner is called ..............",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 16,
+      "options": [
+        "A. copyright",
+        "B. freeware",
+        "C. piracy",
+        "D. privacy"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Ethics Of Using ICTs"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2015_q17",
+      "questionText": "Which of the following is a reason for copyrighting ICT tools or technologies?",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 17,
+      "options": [
+        "A. To avoid distribution of viruses",
+        "B. To encourage people to make illegal copies",
+        "C. To protect intellectual works of the inventors",
+        "D. To ensure poorer people do not have access to ICT tools"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2015 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Ethics Of Using ICTs"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2016_q8",
+      "questionText": "The copyright laws protect works of an author for a period of his life time and",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 8,
+      "options": [
+        "A. 40 years after his death",
+        "B. 50 years after his death",
+        "C. 60 years after his death",
+        "D. 70 years after his death"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2016 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Ethics Of Using ICTs"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q19",
+      "questionText": "The ethical issue that relates to the responsibility of those who collect data to ensure that the data is correct is",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 19,
+      "options": [
+        "A. accuracy.",
+        "B. privacy.",
+        "C. access.",
+        "D. ethics."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Ethics Of Using ICTs"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q20",
+      "questionText": "The legal right to control the production and selling of a book, play, film or software is called",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 20,
+      "options": [
+        "A. production right.",
+        "B. copyright.",
+        "C. trader right.",
+        "D. patent."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Ethics Of Using ICTs"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2019_q20",
+      "questionText": "Illegal copying of operating system, application software, music and videos is referred to as copyright",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 20,
+      "options": [
+        "A. law.",
+        "B. issues.",
+        "C. protection.",
+        "D. infringement."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2019 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Ethics Of Using ICTs"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2020_q20",
+      "questionText": "The practice of copying and distributing information without the permission of the owner is known as",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 20,
+      "options": [
+        "A. spam.",
+        "B. piracy.",
+        "C. privacy.",
+        "D. copyright."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2020 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Ethics Of Using ICTs"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2020_q8",
+      "questionText": "Which of the following reasons best describes copyright protection?",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 8,
+      "options": [
+        "A. To copy intellectual properties.",
+        "B. To hide intellectual properties.",
+        "C. To keep intellectual properties.",
+        "D. To protect intellectual properties."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2020 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Ethics Of Using ICTs"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q31",
+      "questionText": "The exclusive legal right that prohibits unauthorize use of intellectual property is referred to as",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 31,
+      "options": [
+        "A. civil right.",
+        "B. copyright.",
+        "C. intellectual right.",
+        "D. legal right."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Ethics Of Using ICTs"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q8",
+      "questionText": "Generally main captions of documents are aligned using the",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 8,
+      "options": [
+        "A. justify command.",
+        "B. align right command.",
+        "C. align left command.",
+        "D. center command."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "Ethics Of Using ICTs"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2023_q30",
+      "questionText": "The process of gaining unauthorized access into a computer system is referred to as",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 30,
+      "options": [
+        "A. hacking.",
+        "B. unauthorized entry.",
+        "C. stealing.",
+        "D. unlawful access."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2023 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Ethics Of Using ICTs"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2023_q5",
+      "questionText": "The use of someone's intellectual property and presenting it as yours is called",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 5,
+      "options": [
+        "A. copyright infringement.",
+        "B. copyright law.",
+        "C. copyright ethics.",
+        "D. copyright protection."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2023 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Ethics Of Using ICTs"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q33",
+      "questionText": "One of your classmates continuously sends threat messages through social media platforms to you. This act is known as",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 33,
+      "options": [
+        "A. cyberattack.",
+        "B. cyberstalking.",
+        "C. cybersecurity.",
+        "D. cyberbullying."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Ethics Of Using ICTs",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2013_q5",
+      "questionText": "(a)\n\n \n\nWhat is:\n\n(i)\n\n \n\nMotherboard;\n\n(ii)\n\n \n\nErgonomics;\n\n(iii)\n\n \n\nMenu bar.\n\n(b)\n\n \n\nWhat is copyright used for?",
+      "type": "essay",
+      "year": "2013",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2013 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Ethics Of Using ICTs"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2016_q5",
+      "questionText": "(a)\n\n \n\nWhat is copyright?\n\n(b)\n\n \n\nState two reasons for copyright protection.\n\n(c)\n\n \n\nGive three ICT devices that can produce output on paper.\n\n(d)\n\n \n\nState one difference between softcopy output and hardcopy output.",
+      "type": "essay",
+      "year": "2016",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2016 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Ethics Of Using ICTs"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

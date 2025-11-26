@@ -1,0 +1,2494 @@
+{
+  "topic": "The Internet And World Wide Web",
+  "totalQuestions": 81,
+  "questions": [
+    {
+      "id": "ict_2011_q33",
+      "questionText": "A computer program that enables users to surf the internet is known as ........................",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 33,
+      "options": [
+        "A. internet surfer.",
+        "B. web browser.",
+        "C. web surfer.",
+        "D. web navigator."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2011 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2011_q34",
+      "questionText": "A teacher using the internet decided to send an electronic mail to Junior High School students in Ghana. Which of the following will the teacher use to accomplish his/her mission?",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 34,
+      "options": [
+        "A. Website address.",
+        "B. Data file address.",
+        "C. E-mail address",
+        "D. Modem address"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2011 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2011_q36",
+      "questionText": "The worldwide network that makes electronic information available to users is also known as .....................",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 36,
+      "options": [
+        "A. site",
+        "B. web",
+        "C. browser",
+        "D. map"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2011 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2011_q37",
+      "questionText": "Transferring data from a remote computer to a local computer is referred to as ......................",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 37,
+      "options": [
+        "A. downloading.",
+        "B. downlinking.",
+        "C. uploading.",
+        "D. uplinking."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2011 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2011_q38",
+      "questionText": "A tool for locating information on the internet is the ...............",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 38,
+      "options": [
+        "A. universal engine.",
+        "B. database engine.",
+        "C. search engine.",
+        "D. deep web."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2011 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2011_q40",
+      "questionText": "Which of the following features in a browser enables users to fetch the latest copy of a web page?",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 40,
+      "options": [
+        "A. Refresh.",
+        "B. Forward.",
+        "C. Backward.",
+        "D. Stop."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2011 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q14",
+      "questionText": "The internet is a",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 14,
+      "options": [
+        "A. global network of computer",
+        "B. government agency that links computers",
+        "C. software for designing programs",
+        "D. special network of computers in an office"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q28",
+      "questionText": "A tool for locating information on the internet is the.....",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 28,
+      "options": [
+        "A. database engine",
+        "B. internet engine",
+        "C. search engine",
+        "D. web browser"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q38",
+      "questionText": "Which program icon on the desktop leads to the disk drives?",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 38,
+      "options": [
+        "A. internet explorer",
+        "B. my computer",
+        "C. my document",
+        "D. my network places"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q32",
+      "questionText": "A computer program that enables users to surf the internet is known as .............",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 32,
+      "options": [
+        "A. internet explore",
+        "B. navigator",
+        "C. web browser",
+        "D. internet tool"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q34",
+      "questionText": "Which of the following devices will enable users to get access to the internet connection?",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 34,
+      "options": [
+        "A. keyboard",
+        "B. modern",
+        "C. projector",
+        "D. scanner"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q35",
+      "questionText": "Transferring data from a remote computer to a local computer is referred to as ..........",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 35,
+      "options": [
+        "A. downloading",
+        "B. link down",
+        "C. uploading",
+        "D. link up"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q36",
+      "questionText": "Specialized programs that assists users to locate information on the internet are called",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 36,
+      "options": [
+        "A. agents",
+        "B. internet browsers",
+        "C. search engines",
+        "D. web"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q37",
+      "questionText": "Which of the following refers to unsolicited e-mails in the form of advertising and chain letters?",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 37,
+      "options": [
+        "A. flaming",
+        "B. inbox",
+        "C. spam",
+        "D. web"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q30",
+      "questionText": "On an email interface, which of the following areas is mandatory to complete and send a message?",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 30,
+      "options": [
+        "A. sender body",
+        "B. sender name",
+        "C. message header/subject",
+        "D. message recipient email address"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q32",
+      "questionText": "Which of the following is a web browser?",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 32,
+      "options": [
+        "A. firewall",
+        "B. opera",
+        "C. windows",
+        "D. yahoo"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q33",
+      "questionText": "Which feature in a browser enables users to fetch the latest copy of a web page?",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 33,
+      "options": [
+        "A. backward",
+        "B. forward",
+        "C. refresh",
+        "D. stop"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q34",
+      "questionText": "Transmitting data from a local computer to a remote computer is referred to as",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 34,
+      "options": [
+        "A. downlicking",
+        "B. downloading",
+        "C. uplinking",
+        "D. uploading"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q35",
+      "questionText": "The http:// in a website address refers to",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 35,
+      "options": [
+        "A. domain name",
+        "B. directory name",
+        "C. file name",
+        "D. protocol"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2015_q32",
+      "questionText": "In computing, an element which links from one document to another or within the same document is called",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 32,
+      "options": [
+        "A. hyperlink",
+        "B. pointer",
+        "C. web browser",
+        "D. web page"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2015 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2015_q36",
+      "questionText": "In an email environment, the acronym BCC refers to",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 36,
+      "options": [
+        "A. Blank Carbon Copy.",
+        "B. Bulk Carbon Copy.",
+        "C. Blind Carbon Copy.",
+        "D. Backup Carbon Copy."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2015 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2015_q37",
+      "questionText": "A computer program that enables users to surf the internet is called",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 37,
+      "options": [
+        "A. internet surfer.",
+        "B. web browser.",
+        "C. web navigation.",
+        "D. web surfer"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2015 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2015_q38",
+      "questionText": "Specialized programs that assist a user to locate information on the internet is called",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 38,
+      "options": [
+        "A. electronic mail.",
+        "B. search engine.",
+        "C. web browser.",
+        "D. web portal."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2015 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2016_q17",
+      "questionText": "The location where a file is stored is called",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 17,
+      "options": [
+        "A. folder",
+        "B. icon",
+        "C. page",
+        "D. website"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2016 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2016_q22",
+      "questionText": "Which of the following is not a component of a uniform resource locator (URL)?",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 22,
+      "options": [
+        "A. web protocol",
+        "B. name of browser",
+        "C. name of web server",
+        "D. name of the file with the directory"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2016 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2016_q24",
+      "questionText": "A special software that is used to access the internet is called",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 24,
+      "options": [
+        "A. address bar",
+        "B. search engine",
+        "C. web browser",
+        "D. windows xp"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2016 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2016_q37",
+      "questionText": "Which of the following command buttons in the browser enables a user to fetch the latest copy of the web page?",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 37,
+      "options": [
+        "A. backward",
+        "B. forward",
+        "C. refresh",
+        "D. stop"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2016 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q22",
+      "questionText": "A collection of linked documents or pages stored on millions of computers and distributed across the world is called",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 22,
+      "options": [
+        "A. Internet.",
+        "B. Hyperlink.",
+        "C. World Wide Web.",
+        "D. Browser."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q23",
+      "questionText": "The set of rules that enables different types of computers and networks on the internet to communicate with one another is the",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 23,
+      "options": [
+        "A. internet rules.",
+        "B. protocols.",
+        "C. network rules.",
+        "D. communication rules."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q36",
+      "questionText": "If you want any information on the internet that contains the keywords \"Kofi\", \"Annan\" and \"Ghana\", which of the following would be the most appropriate search text to provide to the search engine? I. Search for Kofi Annan and Ghana on any website II. I want any information on Kofi Annan and Ghana III. Kofi Annan Ghana",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 36,
+      "options": [
+        "A. I only",
+        "B. II only",
+        "C. I and II only",
+        "D. III only"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q37",
+      "questionText": "A student wants to search for information on the internet to have solution to the ICT assignment from school. Which of the following do you recommend for him/her to use?",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 37,
+      "options": [
+        "A. E-mail address",
+        "B. Search Engine",
+        "C. Compose",
+        "D. Inbox"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web",
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q22",
+      "questionText": "In a web browser, where is the website address typed?",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 22,
+      "options": [
+        "A. Address bar",
+        "B. Home page",
+        "C. Menu bar",
+        "D. Status bar"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q24",
+      "questionText": "A system of interconnected computers, telephones, or other communication devices that can communicate with one another and share applications and data is referred to as",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 24,
+      "options": [
+        "A. extranet.",
+        "B. internet.",
+        "C. intranet.",
+        "D. network."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q35",
+      "questionText": "Which of the following is compulsory when composing and sending an email?",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 35,
+      "options": [
+        "A. Message Body",
+        "B. Message Header/Subject",
+        "C. Recipient's E-mail Address",
+        "D. Sender's Name"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q36",
+      "questionText": "Specialized program that assists a user to locate information on the web and on the internet is called",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 36,
+      "options": [
+        "A. agents.",
+        "B. search engine.",
+        "C. web.",
+        "D. web portal."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q37",
+      "questionText": "Which of the following is a complete website address?",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 37,
+      "options": [
+        "A. hhpp://www.waecghana.org",
+        "B. hhtp://wwww/waecghana.org",
+        "C. http://www.waecghana.org",
+        "D. htpp://www.waecghana.org"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q9",
+      "questionText": "Which of the following items is not a source of computer virus?",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 9,
+      "options": [
+        "A. CD-R",
+        "B. CD-ROM",
+        "C. Internet",
+        "D. Pen drive"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2019_q22",
+      "questionText": "A collection of linked documents or pages stored on millions of computers and distributed across the world is called",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 22,
+      "options": [
+        "A. browser.",
+        "B. hyperlink.",
+        "C. internet.",
+        "D. world wide web."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2019 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2019_q24",
+      "questionText": "Google is an example of a",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 24,
+      "options": [
+        "A. browser.",
+        "B. search engine.",
+        "C. spam mail.",
+        "D. website."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2019 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2019_q34",
+      "questionText": "Which of the following document views would show the document as it would look when it is printed?",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 34,
+      "options": [
+        "A. Normal view",
+        "B. Outline view",
+        "C. Print layout view",
+        "D. Web layout view"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2019 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2019_q35",
+      "questionText": "The buttons for reload/refresh, back, top and forward can be found on the following applications except",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 35,
+      "options": [
+        "A. Search engine.",
+        "B. Web browser.",
+        "C. Web site.",
+        "D. WhatsApp."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2019 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2019_q36",
+      "questionText": "The software that enable users access web pages on the internet is called",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 36,
+      "options": [
+        "A. browser.",
+        "B. web site.",
+        "C. access engine.",
+        "D. search engine."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2019 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2020_q23",
+      "questionText": "A tool for locating information on the internet is called",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 23,
+      "options": [
+        "A. website.",
+        "B. web browser.",
+        "C. search engine.",
+        "D. information search."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2020 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2020_q24",
+      "questionText": "In computing, an element which links one document to another or within the same document is referred to as a",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 24,
+      "options": [
+        "A. pointer.",
+        "B. hyperlink.",
+        "C. web page.",
+        "D. web browser."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2020 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2020_q35",
+      "questionText": "The set of rules that enables different types of computers and networks on the internet to communicate with one another is the",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 35,
+      "options": [
+        "A. internet.",
+        "B. network.",
+        "C. protocol.",
+        "D. communication."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2020 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q31",
+      "questionText": "Which of the following options is a valid website address?",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 31,
+      "options": [
+        "A. htpp://waecgh.org",
+        "B. hppt://waecgh.org",
+        "C. hhtp://waecgh.org",
+        "D. http://waecgh.org Solution"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q32",
+      "questionText": "A special software that is used to access the internet is called",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 32,
+      "options": [
+        "A. web page.",
+        "B. address bar.",
+        "C. web browser.",
+        "D. search engine."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q34",
+      "questionText": "Which of the following options is a web browser?",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 34,
+      "options": [
+        "A. DOS.",
+        "B. Windows.",
+        "C. Internet Explorer.",
+        "D. Operating systems."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q36",
+      "questionText": "Which feature of a web browser enables a user to access the latest information from the browser?",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 36,
+      "options": [
+        "A. Home",
+        "B. Refresh",
+        "C. Forward",
+        "D. Backward"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q20",
+      "questionText": "To access information from a website, the user must enter the keywords in the",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 20,
+      "options": [
+        "A. book.",
+        "B. search box.",
+        "C. index page.",
+        "D. browser."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q35",
+      "questionText": "The feature of a webpage that allows a user to access frequently visited webpages or websites is referred to as",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 35,
+      "options": [
+        "A. book.",
+        "B. history.",
+        "C. tools.",
+        "D. view."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2023_q26",
+      "questionText": "The process where a user can save the address of a webpage so that it can be easily visited is called?",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 26,
+      "options": [
+        "A. History",
+        "B. Download",
+        "C. Book",
+        "D. Session"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2023 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2023_q39",
+      "questionText": "Which of the following symbols is not part of a website address?",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 39,
+      "options": [
+        "A. :",
+        "B. ''",
+        "C. =",
+        "D. /"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2023 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q16",
+      "questionText": "The social media platform that allows members to post questions, start a discussion or contribute to various discussions is",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 16,
+      "options": [
+        "A. Forums.",
+        "B. Facebook.",
+        "C. Messenger.",
+        "D. WhatsApp"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q19",
+      "questionText": "The Screenshot feature under the Insert Tab of a Microsoft PowerPoint application allows a user to insert a screenshot of",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 19,
+      "options": [
+        "A. active application.",
+        "B. opened applications.",
+        "C. foreground applications.",
+        "D. downloaded applications."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q22",
+      "questionText": "The central device that communicates with other network devices and manages resources is a",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 22,
+      "options": [
+        "A. hub.",
+        "B. client.",
+        "C. server.",
+        "D. switch."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q26",
+      "questionText": "cybercriminals can obstruct data in transmission to and from a device or a network using a data threat attack technique called",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 26,
+      "options": [
+        "A. fabrication.",
+        "B. interruption.",
+        "C. interception.",
+        "D. modification."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q27",
+      "questionText": "A teacher sends class assignment to his students using an e-mail. The protocol used by the e-mail to send the assignment over the internet is",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 27,
+      "options": [
+        "A. FTP",
+        "B. TCP",
+        "C. HTTP",
+        "D. SMTP"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web",
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q3",
+      "questionText": "The concept of Artificial Intelligence's ability to suggest related information to a user who regularly surfs the internet is referred to as",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 3,
+      "options": [
+        "A. deep learning.",
+        "B. neural network.",
+        "C. computer vision.",
+        "D. logical reasoning."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q30",
+      "questionText": "Cindy was trying to access information from the WAEC website but whenever she enters the URL, it takes her to a different website. Her friend advised that she must ensure the URL entered is correct because it identifies",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 30,
+      "options": [
+        "A. ads in the web resource.",
+        "B. the texts of the web resource.",
+        "C. the address of the web resource.",
+        "D. graphics used in the web resource."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q33",
+      "questionText": "One of your classmates continuously sends threat messages through social media platforms to you. This act is known as",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 33,
+      "options": [
+        "A. cyberattack.",
+        "B. cyberstalking.",
+        "C. cybersecurity.",
+        "D. cyberbullying."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Ethics Of Using ICTs",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q37",
+      "questionText": "Which of the following services best describes an entrepreneurial opportunity in computer networking?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 37,
+      "options": [
+        "A. Teaching desktop publishing in schools",
+        "B. Developing game applications for schools",
+        "C. Designing websites for businesses and schools",
+        "D. Setting up Wi-Fi networks for cafes and schools"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q2",
+      "questionText": "At the Internet cafe, Kofi connected his laptop to the Internet without using cable and Akua also connected her laptop to the Internet using cable. An example of Akua's connection type is",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 2,
+      "options": [
+        "A. Infrared",
+        "B. Bluetooth",
+        "C. Wi-Fi adaptor",
+        "D. Ethernet adapter"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q21",
+      "questionText": "The role of neural networks in Artificial Intelligence in modern technology is to",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 21,
+      "options": [
+        "A. control robots within their environment for work and safety.",
+        "B. enhance Internet speed for fast movements of the robots.",
+        "C. create computer virus for robots to find solutions to them.",
+        "D. simulate human brain function for learning and problem-solving."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Health And Safety In Using ICT Tools",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q28",
+      "questionText": "Surfing the Internet requires the use of search engines which was designed to help users find",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 28,
+      "options": [
+        "A. information on the Internet.",
+        "B. information from e-mail messages.",
+        "C. information from the computer hard disk drive.",
+        "D. information from files and folders on the computer."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q3",
+      "questionText": "In a group presentation, a group was to demonstrate how to insert an online video into a slide they have created. The first step to be considered by the group is to click on the",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 3,
+      "options": [
+        "A. Insert tab.",
+        "B. Design tab.",
+        "C. Online video.",
+        "D. Download video."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q30",
+      "questionText": "Zalia is very good at posting her pictures and location of where ever she goes on her social media platforms for her friends to see. The potential risk associated with Zalia's activities online is",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 30,
+      "options": [
+        "A. identity theft.",
+        "B. learning difficulties.",
+        "C. strengthening friendships.",
+        "D. building a professional network."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q40",
+      "questionText": "To send pictures via email (which students struggle with), the most appropriate email feature is:",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 40,
+      "options": [
+        "A. compose",
+        "B. categorize",
+        "C. attach files",
+        "D. draft messages"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q8",
+      "questionText": "The computing teacher during computing class advised the students that, studying computer networking provides entrepreneurial opportunities. Which of the following statements in your opinion justifies the advise given to the students?",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 8,
+      "options": [
+        "A. Offering consulting services",
+        "B. Developing video games online",
+        "C. Creating social media platforms",
+        "D. Designing smartphone Apps for schools"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2011_q4",
+      "questionText": "a)\n\n \n\ni)\n\n \n\nWhat is internet?\n\nii)\n\n \n\nList four uses of the internet.\n\nb)\n\n \n\ni)\n\n \n\nWhat is a web browser?\n\nii)\n\n \n\nGive two examples of a web browser.\n\n Show Solution",
+      "type": "essay",
+      "year": "2011",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2011 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2012_q4",
+      "questionText": "(a)\n\n \n\nExplain internet fraud.\n\n(b)\n\n \n\nState three ways ICT can be used in basic education in Ghana.\n\n(c)\n\n \n\nList three devices that may be used when connecting to the internet.\n\n.",
+      "type": "essay",
+      "year": "2012",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2012 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "The Internet And World Wide Web",
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2013_q2",
+      "questionText": "(a)\n\n \n\nState two positive uses and two negative uses of the internet.\n\n(b)\n\n \n\nList four storage media.",
+      "type": "essay",
+      "year": "2013",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2013 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2014_q5",
+      "questionText": "State the purpose of the following commands on an email application such as yahoo or gamil:\n\n(a)\n\n \n\nMy Account;\n\n(b)\n\n \n\nCompose;\n\n(c)\n\n \n\nAttach;\n\n(d)\n\n \n\nSign Up.",
+      "type": "essay",
+      "year": "2014",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2014 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2015_q5",
+      "questionText": "State the use of the following email terminologies:\n\n(a)\n\n \n\nCarbon Copy;\n\n(b)\n\n \n\nBlind Carbon Copy;\n\n(c)\n\n \n\nTo;\n\n(d)\n\n \n\nSubject.",
+      "type": "essay",
+      "year": "2015",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2015 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2016_q4",
+      "questionText": "(a)\n\n \n\nExplain the following terms:\n\n(i)\n\n \n\nInternet;\n\n(ii)\n\n \n\nSearch engine.\n\n(b)\n\n \n\nWhat does the following Top Level Domains (TLDs) represent in a website address?\n\n(i)\n\n \n\n.com\n\n(ii)\n\n \n\n.edu\n\n(iii)\n\n \n\n.gov\n\n(iv)\n\n \n\n.net\n\n(v)\n\n \n\n.mil\n\n(vi)\n\n \n\n.org",
+      "type": "essay",
+      "year": "2016",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2016 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2017_q4",
+      "questionText": "(a)\n\n \n\nState three ways through which computers may be damaged.\n\n(b)\n\n \n\nList three specific areas of learning where ICT tools can be integrated.\n\n(c)\n\n \n\nList three devices that may be used for transmission of messages on the internet.",
+      "type": "essay",
+      "year": "2017",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2017 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2021_q2",
+      "questionText": "a)\n\n \n\nExplain download as used in computing environment.\n\nb)\n\n \n\nList three types of information that may be downloaded from a website.\n\nc)\n\n \n\nState one advantage of copying a file from a website into an open Word processing application.",
+      "type": "essay",
+      "year": "2021",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2021 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2022_q2",
+      "questionText": "a)\n\n \n\nWhat is a search engine?\n\nb)\n\n \n\nList three examples of a search engine.\n\nc)\n\n \n\nWhat does the following domain of a website address represent.\n\ni)\n\n \n\n.edu\n\nii)\n\n \n\n.biz\n\niii)\n\n \n\n.int",
+      "type": "essay",
+      "year": "2022",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2022 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2024_q4",
+      "questionText": "(a)\n\n \n\nComputer networks come in several topologies.\n\nState two features of the ring topologies.\n\n(b)\n\n \n\nAbu, the leader of a class does not understand how to use the Forward all feature in an e-mail to send a message to everyone in the class.\n\nExplain to Abu what Forward all means.\n\n(c)\n\n \n\nA computing teacher has given a class an assignment to design a personal blog.\n\n(i)\n\n \n\nWhat two design features should be used to design the blog?\n\n(ii)\n\n \n\nWrite the name of one tool that can be used to design the blog.",
+      "type": "essay",
+      "year": "2024",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2024 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2025_q3",
+      "questionText": "(a)\n\n \n\nOutline the steps on how to make the word Computing in Word processing document a hyperlink to the website address www.waecgh.org.\n\n[6 marks]\n\n(b)\n\n \n\nIn designing a presentation, shapes allow the user to create complex objects on the slide.\n\nList two categories in which objects found under the shape tool are grouped.\n\n(i)\n\n \n\n(ii)\n\n \n\n[2 marks]\n\n(c)\n\n \n\nA Microsoft Publisher assignment requires that texts are written over an image on a flyer.\n\nOutline the steps to accomplish the assignment.\n\n[4 marks]",
+      "type": "essay",
+      "year": "2025",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2025 ICT",
+      "marks": 6,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2025_q4",
+      "questionText": "(a)\n\n \n\nState one of the data communication models for networks.\n\n[2 marks]\n\n(b)\n\n \n\nSocial media sites were created for friendships, learning, entertainment and other purposes.\n\nList two of the sites used for video-sharing.\n\n(i)\n\n \n\n(ii)\n\n \n\n[2 marks]\n\n(c)\n\n \n\nOutline two of the key principles governing information security.\n\n(i)\n\n \n\n(ii)\n\n \n\n[2 marks]\n\n(d)\n\n \n\nDescribe how the following search techniques are used to search for information on the Internet:\n\n(i)\n\n \n\nAND;\n\n[3 marks]\n\n(ii)\n\n \n\nNOT.\n\n[3 marks]",
+      "type": "essay",
+      "year": "2025",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2025 ICT",
+      "marks": 2,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

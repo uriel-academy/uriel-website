@@ -25,9 +25,11 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
   
   // Filter Controllers
   final TextEditingController _searchController = TextEditingController();
+  final TextEditingController _topicController = TextEditingController();
   String _selectedExamType = 'BECE';
   String _selectedSubject = 'All Subjects';
   String _selectedYear = 'All Years';
+  String _selectedQuestionType = 'All Types'; // New: MCQ/Theory filter
   
   // State Management
   List<Question> _questions = [];
@@ -176,6 +178,23 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
     
     if (_selectedYear != 'All Years') {
       filtered = filtered.where((q) => q.year == _selectedYear).toList();
+    }
+    
+    // Apply question type filter (MCQ/Theory)
+    if (_selectedQuestionType != 'All Types') {
+      if (_selectedQuestionType == 'MCQ') {
+        filtered = filtered.where((q) => q.type == QuestionType.multipleChoice).toList();
+      } else if (_selectedQuestionType == 'Theory') {
+        filtered = filtered.where((q) => q.type == QuestionType.essay).toList();
+      }
+    }
+    
+    // Apply topic search
+    if (_topicController.text.isNotEmpty) {
+      String topicSearch = _topicController.text.toLowerCase();
+      filtered = filtered.where((q) => 
+        q.topics.any((topic) => topic.toLowerCase().contains(topicSearch))
+      ).toList();
     }
     
     // Apply search text
@@ -474,6 +493,64 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
               ),
             ],
           ),
+          const SizedBox(height: 16),
+          // Additional Filters Row: Question Type and Topic
+          Row(
+            children: [
+              Expanded(
+                flex: 2,
+                child: _buildFilterChip(
+                  'Question Type',
+                  _selectedQuestionType,
+                  ['All Types', 'MCQ', 'Theory'],
+                  (value) => setState(() => _selectedQuestionType = value!),
+                  Icons.quiz,
+                ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                flex: 3,
+                child: TextField(
+                  controller: _topicController,
+                  decoration: InputDecoration(
+                    labelText: 'Topic (Optional)',
+                    labelStyle: GoogleFonts.montserrat(color: Colors.grey[600]),
+                    hintText: 'e.g., algebra, photosynthesis',
+                    hintStyle: GoogleFonts.montserrat(fontSize: 13),
+                    prefixIcon: Icon(Icons.topic, color: Colors.grey[600]),
+                    suffixIcon: _topicController.text.isNotEmpty
+                        ? IconButton(
+                            icon: const Icon(Icons.clear, size: 18),
+                            onPressed: () {
+                              _topicController.clear();
+                              _applyFilters();
+                            },
+                          )
+                        : null,
+                    filled: true,
+                    fillColor: Colors.white,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide: BorderSide(color: Colors.grey[300]!),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide: BorderSide(color: Colors.grey[300]!),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide: const BorderSide(color: Color(0xFF2ECC71), width: 2),
+                    ),
+                    contentPadding: EdgeInsets.symmetric(
+                      horizontal: 16,
+                      vertical: isSmallScreen ? 12 : 16,
+                    ),
+                  ),
+                  onSubmitted: (_) => _applyFilters(),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
@@ -519,9 +596,55 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
             ),
             const SizedBox(width: 12),
             Expanded(
-              child: _buildSortChip(),
+              child: _buildFilterChip(
+                'Type',
+                _selectedQuestionType,
+                ['All Types', 'MCQ', 'Theory'],
+                (value) => setState(() => _selectedQuestionType = value!),
+                Icons.quiz,
+              ),
             ),
           ],
+        ),
+        const SizedBox(height: 12),
+        // Topic search field
+        TextField(
+          controller: _topicController,
+          decoration: InputDecoration(
+            labelText: 'Search by Topic',
+            labelStyle: GoogleFonts.montserrat(color: Colors.grey[600]),
+            hintText: 'e.g., algebra, photosynthesis',
+            hintStyle: GoogleFonts.montserrat(fontSize: 13),
+            prefixIcon: Icon(Icons.topic, color: Colors.grey[600]),
+            suffixIcon: _topicController.text.isNotEmpty
+                ? IconButton(
+                    icon: const Icon(Icons.clear, size: 18),
+                    onPressed: () {
+                      _topicController.clear();
+                      _applyFilters();
+                    },
+                  )
+                : null,
+            filled: true,
+            fillColor: Colors.white,
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(12),
+              borderSide: BorderSide(color: Colors.grey[300]!),
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(12),
+              borderSide: BorderSide(color: Colors.grey[300]!),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(12),
+              borderSide: const BorderSide(color: Color(0xFF2ECC71), width: 2),
+            ),
+            contentPadding: const EdgeInsets.symmetric(
+              horizontal: 16,
+              vertical: 14,
+            ),
+          ),
+          onSubmitted: (_) => _applyFilters(),
         ),
       ],
     );
@@ -549,6 +672,33 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
             Icons.book,
           ),
         ),
+        const SizedBox(width: 16),
+        Expanded(
+          child: _buildFilterChip(
+            'Year',
+            _selectedYear,
+            ['All Years', '2024', '2023', '2022', '2021', '2020', '2019', '2018', '2017', '2016', '2015', '2014', '2013', '2012', '2011', '2010', '2009', '2008', '2007', '2006', '2005', '2004', '2003', '2002', '2001', '2000', '1999', '1998', '1997', '1996', '1995', '1994', '1993', '1992', '1991', '1990'],
+            (value) => setState(() => _selectedYear = value!),
+            Icons.calendar_today,
+          ),
+        ),
+        const SizedBox(width: 16),
+        Expanded(
+          child: _buildFilterChip(
+            'Type',
+            _selectedQuestionType,
+            ['All Types', 'MCQ', 'Theory'],
+            (value) => setState(() => _selectedQuestionType = value!),
+            Icons.quiz,
+          ),
+        ),
+        const SizedBox(width: 16),
+        Expanded(
+          child: _buildSortChip(),
+        ),
+      ],
+    );
+  }
         const SizedBox(width: 16),
         Expanded(
           child: _buildFilterChip(
@@ -1675,6 +1825,7 @@ class _PastQuestionsSearchPageState extends State<PastQuestionsSearchPage>
   void dispose() {
     _animationController.dispose();
     _searchController.dispose();
+    _topicController.dispose();
     super.dispose();
   }
 }

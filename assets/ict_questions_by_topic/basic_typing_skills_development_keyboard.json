@@ -1,0 +1,1689 @@
+{
+  "topic": "Basic Typing Skills Development & Keyboard",
+  "totalQuestions": 54,
+  "questions": [
+    {
+      "id": "ict_2011_q19",
+      "questionText": "Which of the following keys are frequently used in our daily typing work on a computer system?\n\nI. Enter Key\nII. Space Bar\nIII. Print Screen\nIV. Delete Key",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 19,
+      "options": [
+        "A. I, II, III and IV",
+        "B. I, II and III only",
+        "C. I, II and IV only",
+        "D. II, III and IV only"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2011 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2011_q20",
+      "questionText": "During typing lessons, computer users are supposed to use .................",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 20,
+      "options": [
+        "A. 5 fingers.",
+        "B. 6 fingers.",
+        "C. 8 fingers.",
+        "D. 10 fingers."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2011 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2011_q21",
+      "questionText": "The most appropriate finger required to type the F on a standard QWERTY computer keyboard is the",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 21,
+      "options": [
+        "A. left middle finger.",
+        "B. right middle finger",
+        "C. left index finger",
+        "D. right index finger"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2011 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2011_q24",
+      "questionText": "A key on a keyboard of a computer has two symbols on it, top and down. Which of the following procedures will be appropriate to use to get the top key?",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 24,
+      "options": [
+        "A. Hold down the shift key and press the identified key.",
+        "B. Hold the Alt key and press the identified key.",
+        "C. Hold down the Ctrl key and press the identified key.",
+        "D. Hold down the Del key and press the identified key."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2011 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2011_q26",
+      "questionText": "To bold a text in a word processing document, first select the text, then use the shortcut keys ...............",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 26,
+      "options": [
+        "A. Ctrl + B.",
+        "B. Shift + B.",
+        "C. Alt + B.",
+        "D. Insert + B."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2011 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q13",
+      "questionText": "To press letter J, which finger is appropriate to use on a QWERTY keyboard?",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 13,
+      "options": [
+        "A. left index finger",
+        "B. left middle finger",
+        "C. right index finger",
+        "D. right middle finger"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q22",
+      "questionText": "The total number of keys on a standard QWERTY keyboard is",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 22,
+      "options": [
+        "A. 96",
+        "B. 104",
+        "C. 108",
+        "D. 116"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q33",
+      "questionText": "Keys on a computer keyboard which are used to move the cursor in a specified direction are called ......",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 33,
+      "options": [
+        "A. arrow keys",
+        "B. function keys",
+        "C. shift keys",
+        "D. special purpose keys"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q34",
+      "questionText": "To underline a selected text in a word processing program, the keys used are",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 34,
+      "options": [
+        "A. Ctrl + U",
+        "B. Shift + U",
+        "C. Alt + U",
+        "D. Del + U"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q8",
+      "questionText": "Which key on the keyboard is used to erase characters from the right to the left in word processing application?",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 8,
+      "options": [
+        "A. backspace",
+        "B. delete",
+        "C. insert",
+        "D. pause"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q9",
+      "questionText": "The key on the QWERTY keyboard used to produce alphabetic upper case letters is ...",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 9,
+      "options": [
+        "A. caps lock",
+        "B. home",
+        "C. num lock",
+        "D. tab"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q15",
+      "questionText": "Which of the following emits radiation?",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 15,
+      "options": [
+        "A. Hard disk",
+        "B. Keyboard",
+        "C. Mobile phone",
+        "D. Speaker"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q20",
+      "questionText": "Which of the following computer keyboard keys is used to delete characters from left to right on - screen?",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 20,
+      "options": [
+        "A. alternate",
+        "B. backspace",
+        "C. delete",
+        "D. shift"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q21",
+      "questionText": "Which of the following computer keys allows the user to type upper case letters?",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 21,
+      "options": [
+        "A. Alternate key",
+        "B. Control key",
+        "C. Caps Lock key",
+        "D. Num Lock key"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q22",
+      "questionText": "Which of the following keys is used for multiple selection of the text that are not continuous?",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 22,
+      "options": [
+        "A. Alt",
+        "B. Ctrl",
+        "C. Del",
+        "D. Shift"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q3",
+      "questionText": "The first key on the keyboard is ..........................",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 3,
+      "options": [
+        "A. caps locks",
+        "B. delete",
+        "C. enter",
+        "D. esc"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q19",
+      "questionText": "When pursuing typing lessons, computer users are expected to use",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 19,
+      "options": [
+        "A. 5 fingers",
+        "B. 6 fingers",
+        "C. 8 fingers",
+        "D. 10 fingers"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q20",
+      "questionText": "Which of the following keys is not a function key on the key on the computer keyboard?",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 20,
+      "options": [
+        "A. F1",
+        "B. F2",
+        "C. F9",
+        "D. F13"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q21",
+      "questionText": "The computer keyboard combinations that would move the cursor insertion point to the beginning of the current document is",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 21,
+      "options": [
+        "A. Ctrl + B",
+        "B. Ctrl + H",
+        "C. Ctrl + Home",
+        "D. Ctrl + PsUp"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2015_q1",
+      "questionText": "Which of the following computer keyboard keys is used to type upper case letters when the caps lock light is off?",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 1,
+      "options": [
+        "A. control key",
+        "B. enter key",
+        "C. insert key",
+        "D. shift key"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2015 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2015_q21",
+      "questionText": "To underline selected text(s) under a word processing environment, use the shortcut keys",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 21,
+      "options": [
+        "A. Ctrl + U",
+        "B. Shift + U",
+        "C. Alt + U",
+        "D. Insert + U"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2015 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2015_q27",
+      "questionText": "The shift key on a computer keyboard is used to",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 27,
+      "options": [
+        "A. erase characters",
+        "B. toggle cases of letters",
+        "C. insert a space into a word document",
+        "D. type a word rather than a character"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2015 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2016_q23",
+      "questionText": "The speed of modern is measured in",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 23,
+      "options": [
+        "A. baud",
+        "B. bit",
+        "C. byte",
+        "D. hertz"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2016 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2016_q28",
+      "questionText": "To create a space between characters, words and sentences, use the",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 28,
+      "options": [
+        "A. backspace key",
+        "B. enter key",
+        "C. shift key",
+        "D. spacebar key"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2016 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q28",
+      "questionText": "Which of the following computer keyboard keys are used for issuing commands?",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 28,
+      "options": [
+        "A. Alphanumeric",
+        "B. Numeric",
+        "C. Standard",
+        "D. Function"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q8",
+      "questionText": "Which of the following is a keyboard layout format?",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 8,
+      "options": [
+        "A. QWERTY",
+        "B. QWRETY",
+        "C. QWRTEY",
+        "D. QWREYT"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q10",
+      "questionText": "How many arrow keys are found on the computer keyboard?",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 10,
+      "options": [
+        "A. 2",
+        "B. 3",
+        "C. 4",
+        "D. 5 Solution"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q28",
+      "questionText": "To create a space between characters, word and sentences, use the",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 28,
+      "options": [
+        "A. backspace key.",
+        "B. enter key.",
+        "C. shift key.",
+        "D. space bar key."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q31",
+      "questionText": "Which of the following keyboard keys can be used to delete characters in a Word Processing program?",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 31,
+      "options": [
+        "A. Backspace",
+        "B. Shift",
+        "C. Space bar",
+        "D. Tab"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2019_q19",
+      "questionText": "The best measure that computer users should practice to reduce the changes of wrist and finger pains due to long term usage of the computer is to",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 19,
+      "options": [
+        "A. adjust the lightening of the computer screen.",
+        "B. close the eyes and rest them for one minute.",
+        "C. spread fingers apart.",
+        "D. use adjustable chair always."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2019 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2019_q28",
+      "questionText": "A document which shows its entire text in upper case means that the user has achieved the",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 28,
+      "options": [
+        "A. alt key.",
+        "B. caps lock key.",
+        "C. num lock key.",
+        "D. shift key + F3."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2019 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2019_q30",
+      "questionText": "Which of the following keys is used to create a new line in Word processing?",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 30,
+      "options": [
+        "A. Ctrl key",
+        "B. Enter key",
+        "C. Esc key",
+        "D. Shift key"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2019 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2019_q8",
+      "questionText": "The arrow keys on the computer keyboard are also referred to as",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 8,
+      "options": [
+        "A. cursor keys.",
+        "B. function keys.",
+        "C. shift keys.",
+        "D. special purpose keys."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2019 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2020_q28",
+      "questionText": "To center text in a word processing application, use the keyboard keys combination",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 28,
+      "options": [
+        "A. Ctrl + U.",
+        "B. Ctrl + L.",
+        "C. Ctrl + E.",
+        "D. Ctrl +"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2020 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2020_q29",
+      "questionText": "The keyboard keys combination that will allow a user to move from the current cursor position in a word document to the beginning of the first line of the first page is",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 29,
+      "options": [
+        "A. Ctrl + end.",
+        "B. Ctrl + tab.",
+        "C. Ctrl + home.",
+        "D. Ctrl + page up. Solution"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2020 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2020_q34",
+      "questionText": "The keyboard shortcut keys for printing a document is",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 34,
+      "options": [
+        "A. Alt + P.",
+        "B. Ctrl + P.",
+        "C. Alt + print.",
+        "D. Ctrl + print."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2020 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q18",
+      "questionText": "The following options are possible health problems associated with long term exposure to ICT tools except",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 18,
+      "options": [
+        "A. backache.",
+        "B. toothache.",
+        "C. wrist pain.",
+        "D. blur vision."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Health And Safety In Using ICT Tools"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q22",
+      "questionText": "The navigation keys on the computer keyboard are also called",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 22,
+      "options": [
+        "A. cursor keys.",
+        "B. numeric keys.",
+        "C. function keys.",
+        "D. typewriter keys."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q23",
+      "questionText": "Which of the following computer keyboard keys can be used to delete a character?",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 23,
+      "options": [
+        "A. Alt key.",
+        "B. Shift key.",
+        "C. Enter key.",
+        "D. Backspace key."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q24",
+      "questionText": "During typing lessons, which finger is used to type the letter D?",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 24,
+      "options": [
+        "A. Left index finger",
+        "B. Left middle finger",
+        "C. Right index finger",
+        "D. Right middle finger Solution"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q26",
+      "questionText": "Which of the following keys is used for multiple selection of texts that are not continuous?",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 26,
+      "options": [
+        "A. Alt",
+        "B. Tab",
+        "C. Ctrl",
+        "D. Shift Solution"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q27",
+      "questionText": "To create a space while typing in a Word processing environment, the computer keyboard key used is the",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 27,
+      "options": [
+        "A. shift.",
+        "B. caps lock.",
+        "C. space bar.",
+        "D. back space."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q28",
+      "questionText": "To underline a selected text in a Word document, the computer keyboard shortcut keys used are",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 28,
+      "options": [
+        "A. Alt + U.",
+        "B. Tab + U.",
+        "C. Ctrl + U.",
+        "D. Shift + U. Solution"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q19",
+      "questionText": "Which of the following fingers is used to type the letter A during typing?",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 19,
+      "options": [
+        "A. Left little finger",
+        "B. Right index finger",
+        "C. Right middle finder",
+        "D. Left index finger"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2023_q23",
+      "questionText": "Which finger is usually placed on the spacebar during typing?",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 23,
+      "options": [
+        "A. Index",
+        "B. Thumb",
+        "C. Little",
+        "D. Middle"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2023 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2023_q7",
+      "questionText": "Using two or more keys on the computer keyboard to perform an action is termed",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 7,
+      "options": [
+        "A. keyboard skills.",
+        "B. keyboard technology.",
+        "C. keyboard shortcut.",
+        "D. keyboard selection."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2023 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q17",
+      "questionText": "The introduction of Artificial Intelligence as come with its related ethical concerns such as",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 17,
+      "options": [
+        "A. job creation.",
+        "B. bias algorithm.",
+        "C. improved healthcare.",
+        "D. increased productivity."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Health And Safety In Using ICT Tools"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2014_q3",
+      "questionText": "List\n\n(a)\n\n \n\ntwo toggle keys on a standard computer keyboard.\n\n(b)\n\n \n\nthree features of a web browser.\n\n(c)\n\n \n\ntwo components of the central processing unit.\n\n(d)\n\n \n\ntwo operating system software.\n\n(e)\n\n \n\nthree health hazards associated with prolonged use of computers and ICT tools.",
+      "type": "essay",
+      "year": "2014",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2014 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2014_q4",
+      "questionText": "(a)\n\n \n\nGive two examples of a typing software.\n\n(b)\n\n \n\nCertain books are published both in hard copies and soft copies (e-books).\n\nGive two reasons for using\n\n(i)\n\n \n\nhard copies formats;\n\n(ii)\n\n \n\nsoft copies formats.\n\n(c)\n\n \n\nArrange the storage devices, compact disc, hard disk and pen drive in descending order of\n\n(i)\n\n \n\naccess speed;\n\n(ii)\n\n \n\nstorage capacity.",
+      "type": "essay",
+      "year": "2014",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2014 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2017_q2",
+      "questionText": "(a)\n\n \n\nState three uses of the shift key on the computer keyboard.\n\n(b)\n\n \n\nWrite down the acronyms below in full:\n\n(i)\n\n \n\nHDD;\n\n(ii)\n\n \n\nVDU;\n\n(iii)\n\n \n\nBIOS.",
+      "type": "essay",
+      "year": "2017",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2017 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2017_q5",
+      "questionText": "(a)\n\n \n\nThe Operating System makes it easy to store files in places that make a lot of sense. Give the default folder or storage area for the following files:\n\n(i)\n\n \n\nText files;\n\n(ii)\n\n \n\nImage files;\n\n(ii)\n\n \n\nMusic files.\n\n(b)\n\n \n\nWrite the shortcut keyboard keys combination for the following commands as used in a word processing environment:\n\n(i)\n\n \n\nUndo;\n\n(ii)\n\n \n\nFind;\n\n(iii)\n\n \n\nSelect All.\n\n(c)\n\n \n\nList three toolbars available in a word processing application.",
+      "type": "essay",
+      "year": "2017",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2017 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2018_q2",
+      "questionText": "(a)\n\n \n\nGive the functions of the following keyboard keys:\n\n(i)\n\n \n\nBackspace\n\n(ii)\n\n \n\nSpace bar\n\n(b)\n\n \n\n(i)\n\n \n\nOutline three differences between selecting and highlighting text in a Word Processing application.\n\n(ii)\n\n \n\nName two word processors.",
+      "type": "essay",
+      "year": "2018",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2018 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2021_q3",
+      "questionText": "a)\n\n \n\nGive two examples of a Word processing application.\n\nb)\n\n \n\nComplete the table below.\n\nKeyboard shortcut keys\n\nAction performed\n\nCtrl+A\n\n\n\nCtrl+B\n\n\n\nCtrl+E\n\n\n\n\n\nItalicize selected text\n\n\n\nCopy selected text\n\n Show Solution",
+      "type": "essay",
+      "year": "2021",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2021 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2023_q1",
+      "questionText": "Study Figure 1 carefully and use it to answer questions (a) and (f).\n\n\n\n(a)\n\n \n\nWrite the name of the image shown ...........................\n\n(b)\n\n \n\nState the function of each of the following commands on the part labelled A.\n\n(i)\n\n \n\nAll: ...........................................\n\n(ii)\n\n \n\nCurrent: ...........................................\n\n(iii)\n\n \n\nSelection: ...........................................\n\n(iv)\n\n \n\nPages: ...........................................\n\n(c)\n\n \n\nWrite the keyboard keys combination that could be used to display the image shown.\n\n(d)\n\n \n\nOutline the steps involved to display the image shown using the appropriate menu command.\n\n(e)\n\n \n\nList two applications that can use the image shown.\n\n(i)\n\n \n\n...........................................\n\n(ii)\n\n \n\n...........................................\n\n(f)\n\n \n\nState the function of each of the commands shown on the part labelled B.\n\n(i)\n\n \n\nOk: ...........................................\n\n(ii)\n\n \n\nClose: ...........................................",
+      "type": "essay",
+      "year": "2023",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2023 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

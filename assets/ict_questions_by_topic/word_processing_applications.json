@@ -1,0 +1,4455 @@
+{
+  "topic": "Word Processing Applications",
+  "totalQuestions": 142,
+  "questions": [
+    {
+      "id": "ict_2011_q23",
+      "questionText": "In typing a class assignments given by a Ghanaian language teacher using the computer, which of the following application programs will be appropriate to use by the student?",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 23,
+      "options": [
+        "A. Spread sheet program.",
+        "B. Word processing program.",
+        "C. Database program.",
+        "D. Graphical program."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2011 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2011_q26",
+      "questionText": "To bold a text in a word processing document, first select the text, then use the shortcut keys ...............",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 26,
+      "options": [
+        "A. Ctrl + B.",
+        "B. Shift + B.",
+        "C. Alt + B.",
+        "D. Insert + B."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2011 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2011_q29",
+      "questionText": "Which of the following is not a toolbar?",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 29,
+      "options": [
+        "A. Drawing toolbar.",
+        "B. Picture toolbar.",
+        "C. Word Art toolbar.",
+        "D. Word Wrap toolbar."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2011 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2011_q31",
+      "questionText": "The default orientation for a word processing document is ....................",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 31,
+      "options": [
+        "A. landscape.",
+        "B. portrait.",
+        "C. legal.",
+        "D. A4."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2011 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2011_q32",
+      "questionText": "To preview a document before printing is necessary because ...................",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 32,
+      "options": [
+        "A. It displays the name of the document.",
+        "B. It displays how the document will look like after printing.",
+        "C. it displays copy and paste of the document.",
+        "D. it formats the document."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2011 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2011_q35",
+      "questionText": "In e-mail context, what does bcc stands for?",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 35,
+      "options": [
+        "A. Blank Carbon Copy",
+        "B. Bulk Carbon Copy",
+        "C. Blind Carbon Copy",
+        "D. Backup Carbon Copy"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2011 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2011_q40",
+      "questionText": "Which of the following features in a browser enables users to fetch the latest copy of a web page?",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 40,
+      "options": [
+        "A. Refresh.",
+        "B. Forward.",
+        "C. Backward.",
+        "D. Stop."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2011 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q10",
+      "questionText": "Given sizes and designs of letters, numbers and symbols that are displayed in a word processing document are referred to as ...",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 10,
+      "options": [
+        "A. align",
+        "B. bullet",
+        "C. font",
+        "D. indent"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q11",
+      "questionText": "Which of the following is a tool on the drawing toolbar of a word processing program?",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 11,
+      "options": [
+        "A. align",
+        "B. bold",
+        "C. view",
+        "D. oval"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q12",
+      "questionText": "When an image is copied, it first goes to the",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 12,
+      "options": [
+        "A. clip art",
+        "B. clipboard",
+        "C. my document",
+        "D. recycle bin"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q26",
+      "questionText": "The standard toolbar contains buttons that",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 26,
+      "options": [
+        "A. close and resize windows",
+        "B. control page margins and tabs",
+        "C. performs the most tasks",
+        "D. help users to navigate through the document"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q27",
+      "questionText": "To see exactly how pages of a current document will appear when printed, the command given is the ........",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 27,
+      "options": [
+        "A. page setup command",
+        "B. print command",
+        "C. print preview command",
+        "D. view command"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q34",
+      "questionText": "To underline a selected text in a word processing program, the keys used are",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 34,
+      "options": [
+        "A. Ctrl + U",
+        "B. Shift + U",
+        "C. Alt + U",
+        "D. Del + U"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q35",
+      "questionText": "Double clicking on a word in a word processing program selects the ...........",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 35,
+      "options": [
+        "A. document",
+        "B. paragraph",
+        "C. sentence",
+        "D. word"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q37",
+      "questionText": "In word processing program, lines block arrows and flow charts are found on which of the following toolbars?",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 37,
+      "options": [
+        "A. drawing",
+        "B. formatting",
+        "C. picture",
+        "D. standard"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q10",
+      "questionText": "An example of an operating system is ...............",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 10,
+      "options": [
+        "A. CALC",
+        "B. DISK",
+        "C. DOS",
+        "D. WORD"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q13",
+      "questionText": "A group of files are stored in a ..............",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 13,
+      "options": [
+        "A. folder",
+        "B. graphic",
+        "C. text",
+        "D. word"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q23",
+      "questionText": "When a user clicks within a selected text by holding down the left mouse button, and then transfers the cursor to a differed location within the same document, the text will be",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 23,
+      "options": [
+        "A. cut",
+        "B. moved",
+        "C. copied",
+        "D. deleted"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q24",
+      "questionText": "Which of the following menu titles contains the bullets and numbering command",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 24,
+      "options": [
+        "A. edit menu",
+        "B. file menu",
+        "C. format menu",
+        "D. insert menu"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q25",
+      "questionText": "In order to apply bold formatting to a section of existing text, the user must first...........",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 25,
+      "options": [
+        "A. click on the formatting button",
+        "B. click the shortcut mouse button",
+        "C. save the document",
+        "D. select the section to be formatted"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q28",
+      "questionText": "When a text automatically moves to the next line at the end of a margin in a word processing program, it is referred to as ...............",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 28,
+      "options": [
+        "A. text wrap",
+        "B. word wrap",
+        "C. text movement",
+        "D. word movement"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q30",
+      "questionText": "A rectangle can be drawn in word processing application using the",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 30,
+      "options": [
+        "A. arrow",
+        "B. circle",
+        "C. oval",
+        "D. square"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q33",
+      "questionText": "Word processing is used mainly by",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 33,
+      "options": [
+        "A. accountants",
+        "B. artists",
+        "C. engineers",
+        "D. secretaries"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q10",
+      "questionText": "A group of files are stored in a",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 10,
+      "options": [
+        "A. folder",
+        "B. graphic",
+        "C. text",
+        "D. word"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q15",
+      "questionText": "A computer program that can copy itself and infect the computer without the permission or knowledge of the user is",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 15,
+      "options": [
+        "A. virus",
+        "B. anti-virus",
+        "C. window",
+        "D. word processor"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q17",
+      "questionText": "ICT tools can be used in all the following areas except",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 17,
+      "options": [
+        "A. sharing ideas",
+        "B. starting cabinetry",
+        "C. accessing information",
+        "D. retrieving information"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q23",
+      "questionText": "Computerized text editing is also referred to as",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 23,
+      "options": [
+        "A. database application",
+        "B. desktop application",
+        "C. spreadsheet application",
+        "D. word processing application"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q24",
+      "questionText": "In order to apply bold formatting to a section of existing text, the user must first",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 24,
+      "options": [
+        "A. save the document",
+        "B. clock the start button",
+        "C. click on the formatting button",
+        "D. select the section to be formatted"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q25",
+      "questionText": "Text that is justify is",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 25,
+      "options": [
+        "A. adjusted to meet one margin",
+        "B. adjusted to meet both margins",
+        "C. grammatically correct",
+        "D. only visible in printer preview"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q26",
+      "questionText": "Which of the following keys are used to underline a text in word processing?",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 26,
+      "options": [
+        "A. Ctrl + B",
+        "B. Ctrl + H",
+        "C. Ctrl + I",
+        "D. Ctrl + U"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q27",
+      "questionText": "When a text automatically moves to the next line at the end of a margin in a word processing program, it is referred to as",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 27,
+      "options": [
+        "A. text wrap",
+        "B. word wrap",
+        "C. hard return",
+        "D. text movement"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q28",
+      "questionText": "The default orientation for a word processing document is",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 28,
+      "options": [
+        "A. A4",
+        "B. landscape",
+        "C. letter",
+        "D. portrait"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q29",
+      "questionText": "To print a document after previewing, use the",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 29,
+      "options": [
+        "A. edit command button",
+        "B. open command button",
+        "C. print command button",
+        "D. save command button"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q33",
+      "questionText": "Which feature in a browser enables users to fetch the latest copy of a web page?",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 33,
+      "options": [
+        "A. backward",
+        "B. forward",
+        "C. refresh",
+        "D. stop"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q39",
+      "questionText": "Which of the following does a user need to bypass before accessing an email?",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 39,
+      "options": [
+        "A. username and computer name",
+        "B. username and email name",
+        "C. username and password",
+        "D. username and yahoo"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2015_q20",
+      "questionText": "If a user places the mouse cursor at one end of a text, holds down the left button and drags to the other end of the text, the effect will be",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 20,
+      "options": [
+        "A. copying the text",
+        "B. cutting the text",
+        "C. moving the text",
+        "D. selecting the text"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2015 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2015_q21",
+      "questionText": "To underline selected text(s) under a word processing environment, use the shortcut keys",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 21,
+      "options": [
+        "A. Ctrl + U",
+        "B. Shift + U",
+        "C. Alt + U",
+        "D. Insert + U"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2015 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2015_q25",
+      "questionText": "The process of automatically moving an entire word to start the next line in a word processing program id called",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 25,
+      "options": [
+        "A. text wrap",
+        "B. text movement",
+        "C. word wrap",
+        "D. word movement"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2015 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2015_q28",
+      "questionText": "Which of the following document views will enable a user to view a document as it will appear on a printed page?",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 28,
+      "options": [
+        "A. normal view",
+        "B. outline view",
+        "C. print layout view",
+        "D. web layout view"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2015 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2015_q32",
+      "questionText": "In computing, an element which links from one document to another or within the same document is called",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 32,
+      "options": [
+        "A. hyperlink",
+        "B. pointer",
+        "C. web browser",
+        "D. web page"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2015 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2015_q33",
+      "questionText": "Information printed on paper is referred to as",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 33,
+      "options": [
+        "A. carbon copy",
+        "B. hard copy",
+        "C. print copy",
+        "D. soft copy"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2015 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2015_q36",
+      "questionText": "In an email environment, the acronym BCC refers to",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 36,
+      "options": [
+        "A. Blank Carbon Copy.",
+        "B. Bulk Carbon Copy.",
+        "C. Blind Carbon Copy.",
+        "D. Backup Carbon Copy."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2015 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2016_q13",
+      "questionText": "The method of reproducing copies of a document is termed",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 13,
+      "options": [
+        "A. copying",
+        "B. pasting",
+        "C. photocopying",
+        "D. printing"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2016 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2016_q21",
+      "questionText": "The following are features of a word processing application window except",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 21,
+      "options": [
+        "A. desktop",
+        "B. font",
+        "C. print",
+        "D. zoom"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2016 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2016_q26",
+      "questionText": "Changing the desktop wall paper of a computer is termed",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 26,
+      "options": [
+        "A. background change",
+        "B. editing the desktop",
+        "C. customizing the desktop",
+        "D. formatting the desktop"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2016 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2016_q28",
+      "questionText": "To create a space between characters, words and sentences, use the",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 28,
+      "options": [
+        "A. backspace key",
+        "B. enter key",
+        "C. shift key",
+        "D. spacebar key"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2016 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2016_q33",
+      "questionText": "The process of a user placing the cursor at one end of a text, holds down the left mouse button and drags to the other end of the text is referred to as",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 33,
+      "options": [
+        "A. copying",
+        "B. cutting",
+        "C. moving",
+        "D. selecting"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2016 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2016_q34",
+      "questionText": "Previewing a document before printing is necessary because it",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 34,
+      "options": [
+        "A. formats the document",
+        "B. displays the name of the document",
+        "C. displays copy and paste of documents",
+        "D. displays how the document will look after printing"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2016 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2016_q36",
+      "questionText": "Which of the following options is used to access a message from an inbox in an electronic mailing?",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 36,
+      "options": [
+        "A. Gmail and password",
+        "B. Yahoo and username",
+        "C. Password and username",
+        "D. Computer name and password"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2016 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2016_q37",
+      "questionText": "Which of the following command buttons in the browser enables a user to fetch the latest copy of the web page?",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 37,
+      "options": [
+        "A. backward",
+        "B. forward",
+        "C. refresh",
+        "D. stop"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2016 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q16",
+      "questionText": "When files are cleared from the computer, it is known as",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 16,
+      "options": [
+        "A. restoring.",
+        "B. editing.",
+        "C. deleting.",
+        "D. removing."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q21",
+      "questionText": "A word document created with a word processing program will have the extension",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 21,
+      "options": [
+        "A. .doc.",
+        "B. .txt.",
+        "C. .ppt.",
+        "D. .xls"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q24",
+      "questionText": "The fastest form of sending information is through the",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 24,
+      "options": [
+        "A. Ghana Post.",
+        "B. EMS.",
+        "C. E-mail.",
+        "D. DHL."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q26",
+      "questionText": "The process of moving different portions of a document on the screen into view is called",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 26,
+      "options": [
+        "A. downward.",
+        "B. upward.",
+        "C. moving.",
+        "D. scrolling."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q30",
+      "questionText": "Making changes to an existing document is referred to as",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 30,
+      "options": [
+        "A. creating.",
+        "B. modifying.",
+        "C. adjusting.",
+        "D. editing."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q31",
+      "questionText": "A symbol on the screen that indicates where the next character typed will appear is",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 31,
+      "options": [
+        "A. text .",
+        "B. indicator.",
+        "C. pointing stick.",
+        "D. insertion point."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q32",
+      "questionText": "Which of the following steps can be used to change font type of a document?",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 32,
+      "options": [
+        "A. Format/Select/Font/Font Type",
+        "B. Font/Select/Format/Font Type/Ok",
+        "C. Select/Format/Font Type/Ok",
+        "D. Format/Font/Highlight/Ok/Font Type"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q33",
+      "questionText": "The Standard Toolbar contains buttons that",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 33,
+      "options": [
+        "A. control page margins and tabs.",
+        "B. perform the most common tasks.",
+        "C. help users navigate through the document.",
+        "D. close and resize windows."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q34",
+      "questionText": "In using MS Word, one can decide to see exactly how the pages of the current document will appear when printed. Which of the following best describes this?",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 34,
+      "options": [
+        "A. Printer Print",
+        "B. Print Preview",
+        "C. Printer View",
+        "D. Print View"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q35",
+      "questionText": "The basic information on the internet can be in the form of the following except",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 35,
+      "options": [
+        "A. text.",
+        "B. sound.",
+        "C. graphic.",
+        "D. game."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q36",
+      "questionText": "If you want any information on the internet that contains the keywords \"Kofi\", \"Annan\" and \"Ghana\", which of the following would be the most appropriate search text to provide to the search engine? I. Search for Kofi Annan and Ghana on any website II. I want any information on Kofi Annan and Ghana III. Kofi Annan Ghana",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 36,
+      "options": [
+        "A. I only",
+        "B. II only",
+        "C. I and II only",
+        "D. III only"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q6",
+      "questionText": "The duplication of an original document is referred to as",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 6,
+      "options": [
+        "A. backup.",
+        "B. back down.",
+        "C. production.",
+        "D. copying."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q9",
+      "questionText": "Which of the following programs has features like grid book?",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 9,
+      "options": [
+        "A. Microsoft Paint",
+        "B. Spreadsheet",
+        "C. Open Source Writer",
+        "D. Microsoft Word"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q13",
+      "questionText": "Microsoft Word, Encarta Kids, Mavis Beacon Teaches Typing are examples of",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 13,
+      "options": [
+        "A. application software.",
+        "B. operating system.",
+        "C. open source package.",
+        "D. system software."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q21",
+      "questionText": "The default orientation for a Word document is",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 21,
+      "options": [
+        "A. A4.",
+        "B. landscape.",
+        "C. letter",
+        "D. portrait"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q27",
+      "questionText": "Which of the following programs would support the study of Mathematics?",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 27,
+      "options": [
+        "A. CorelDraw",
+        "B. Encarta",
+        "C. MS-Excel",
+        "D. MS-Word"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q28",
+      "questionText": "To create a space between characters, word and sentences, use the",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 28,
+      "options": [
+        "A. backspace key.",
+        "B. enter key.",
+        "C. shift key.",
+        "D. space bar key."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q30",
+      "questionText": "Making changes and corrections of grammatical errors to an existing document is referred to as",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 30,
+      "options": [
+        "A. correction.",
+        "B. deleting.",
+        "C. editing.",
+        "D. formatting."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q32",
+      "questionText": "Which computer keyboards key should be pressed to start a new paragraph in a Word Processing document?",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 32,
+      "options": [
+        "A. Control + Enter key",
+        "B. Down cursor key",
+        "C. Enter key",
+        "D. Shift + Enter key"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2019_q10",
+      "questionText": "Which of the following applications is an example of a Word processor?",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 10,
+      "options": [
+        "A. Excel",
+        "B. Lotus 1-2-3",
+        "C. Notepad",
+        "D. Print artist"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2019 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2019_q21",
+      "questionText": "To resave an edited document, use",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 21,
+      "options": [
+        "A. Ctrl +",
+        "C.",
+        "B. Ctrl + S.",
+        "C. Ctrl + V."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2019 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2019_q25",
+      "questionText": "Mrs. Famiyeh wants to copy information onto a compact disc, clean the content and later copy the information again. Which of the following media would you advice her to use?",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 25,
+      "options": [
+        "A. CD",
+        "B. CD-R",
+        "C. CD-R/W",
+        "D. CD-ROM"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2019 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2019_q26",
+      "questionText": "To execute more than one program at the same time, the system software being used should be capable of",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 26,
+      "options": [
+        "A. background theme.",
+        "B. background panel.",
+        "C. screen saver.",
+        "D. wallpaper."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2019 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2019_q28",
+      "questionText": "A document which shows its entire text in upper case means that the user has achieved the",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 28,
+      "options": [
+        "A. alt key.",
+        "B. caps lock key.",
+        "C. num lock key.",
+        "D. shift key + F3."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2019 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2019_q31",
+      "questionText": "The feature in Word processors that automatically moves the cursor to the beginning of the next line when the current typing line ends is called",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 31,
+      "options": [
+        "A. auto text.",
+        "B. auto correct.",
+        "C. line flow.",
+        "D. word wrap."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2019 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2019_q32",
+      "questionText": "The red wavy line under a word in a Word processing document refers to word",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 32,
+      "options": [
+        "A. not in the computer dictionary.",
+        "B. not recognized by the computer.",
+        "C. too long for the computer.",
+        "D. too short for the computer."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2019 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2019_q34",
+      "questionText": "Which of the following document views would show the document as it would look when it is printed?",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 34,
+      "options": [
+        "A. Normal view",
+        "B. Outline view",
+        "C. Print layout view",
+        "D. Web layout view"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2019 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2019_q37",
+      "questionText": "In computing, the exchange of information is referred to as",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 37,
+      "options": [
+        "A. communication.",
+        "B. conversation.",
+        "C. education.",
+        "D. entertainment."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2019 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2020_q21",
+      "questionText": "To edit a word document, the user must first",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 21,
+      "options": [
+        "A. bold the word.",
+        "B. format the word.",
+        "C. select the word.",
+        "D. underline the word."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2020 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2020_q22",
+      "questionText": "The acronym ISP stands for",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 22,
+      "options": [
+        "A. Internet system provider.",
+        "B. Internet service provider.",
+        "C. Information system provider.",
+        "D. Information service provider."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2020 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2020_q24",
+      "questionText": "In computing, an element which links one document to another or within the same document is referred to as a",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 24,
+      "options": [
+        "A. pointer.",
+        "B. hyperlink.",
+        "C. web page.",
+        "D. web browser."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2020 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2020_q29",
+      "questionText": "The keyboard keys combination that will allow a user to move from the current cursor position in a word document to the beginning of the first line of the first page is",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 29,
+      "options": [
+        "A. Ctrl + end.",
+        "B. Ctrl + tab.",
+        "C. Ctrl + home.",
+        "D. Ctrl + page up. Solution"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2020 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2020_q30",
+      "questionText": "The justify command will align the selected text to",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 30,
+      "options": [
+        "A. the left of the margin.",
+        "B. the right of the margin.",
+        "C. the center of the margin.",
+        "D. both left and right of the margin."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2020 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2020_q31",
+      "questionText": "The align centre command will place the selected text at the center of the",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 31,
+      "options": [
+        "A. page.",
+        "B. print.",
+        "C. window.",
+        "D. screen."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2020 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2020_q32",
+      "questionText": "Highlighting a text is similar to",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 32,
+      "options": [
+        "A. editing the text.",
+        "B. selecting the text.",
+        "C. formatting the text.",
+        "D. paragraphing the text."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2020 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2020_q33",
+      "questionText": "Which of the following menu options contains the print command in word processing application window?",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 33,
+      "options": [
+        "A. File",
+        "B. Edit",
+        "C. View",
+        "D. Format"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2020 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2020_q6",
+      "questionText": "The duplication of an original document is referred to as",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 6,
+      "options": [
+        "A. backup.",
+        "B. copying.",
+        "C. back down.",
+        "D. production."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2020 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q14",
+      "questionText": "Files that are no more needed by the user are sent to",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 14,
+      "options": [
+        "A. Recycle Bin.",
+        "B. My Briefcase.",
+        "C. My Documents.",
+        "D. Recent Documents."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q2",
+      "questionText": "The utility software is one of the basic types of",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 2,
+      "options": [
+        "A. system software.",
+        "B. application software.",
+        "C. communication software.",
+        "D. word processing software."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q21",
+      "questionText": "The application of science and scientific knowledge in our daily life is termed",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 21,
+      "options": [
+        "A. scientific",
+        "B. technology",
+        "C. information",
+        "D. communication"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q25",
+      "questionText": "The commands used to move selected text from one location to another in the same document is the",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 25,
+      "options": [
+        "A. cut and copy commands.",
+        "B. copy and edit commands.",
+        "C. cut and paste commands.",
+        "D. copy and paste commands. Solution"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q28",
+      "questionText": "To underline a selected text in a Word document, the computer keyboard shortcut keys used are",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 28,
+      "options": [
+        "A. Alt + U.",
+        "B. Tab + U.",
+        "C. Ctrl + U.",
+        "D. Shift + U. Solution"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q29",
+      "questionText": "Which of the following options shows the contents of both the standard toolbar and the formatting toolbar?",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 29,
+      "options": [
+        "A. Design",
+        "B. Home tab",
+        "C. Page layout",
+        "D. Clipboard group"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q30",
+      "questionText": "To print a document after previewing, use the",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 30,
+      "options": [
+        "A. edit command.",
+        "B. print command.",
+        "C. open command.",
+        "D. save command."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q33",
+      "questionText": "In computing, an element or icon that links one document to another in a different document or within the same document is a",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 33,
+      "options": [
+        "A. pointer.",
+        "B. web page.",
+        "C. hyperlink.",
+        "D. web browser."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q11",
+      "questionText": "Which of the following applications will help a user access information from the internet?",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 11,
+      "options": [
+        "A. Word",
+        "B. Explorer",
+        "C. Excel",
+        "D. Access"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q16",
+      "questionText": "The default location for saving a text file is",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 16,
+      "options": [
+        "A. My downloads folder.",
+        "B. My computer folder.",
+        "C. My pictures folder.",
+        "D. My documents folder."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q20",
+      "questionText": "To access information from a website, the user must enter the keywords in the",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 20,
+      "options": [
+        "A. book.",
+        "B. search box.",
+        "C. index page.",
+        "D. browser."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q21",
+      "questionText": "Which of the following formatting styles is usually applied to a heading of a document?",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 21,
+      "options": [
+        "A. Underline",
+        "B. Italics",
+        "C. Strikethrough",
+        "D. Double underline"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q22",
+      "questionText": "In computing, raw or unprocessed text or fact is called",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 22,
+      "options": [
+        "A. information.",
+        "B. data.",
+        "C. record.",
+        "D. file."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q27",
+      "questionText": "The process of clicking the left mouse button twice in quick succession on a particular word will",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 27,
+      "options": [
+        "A. select the word.",
+        "B. bold the word.",
+        "C. underline the word.",
+        "D. italicize the word."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q39",
+      "questionText": "In computing, 8 bits can technically be called a",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 39,
+      "options": [
+        "A. Word.",
+        "B. Byte.",
+        "C. Bit.",
+        "D. Nibble."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q40",
+      "questionText": "In a Word processing application, header and footer facility can be accessed from the",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 40,
+      "options": [
+        "A. view menu.",
+        "B. tools menu.",
+        "C. format menu.",
+        "D. insert menu."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q5",
+      "questionText": "The print command can be issued from the",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 5,
+      "options": [
+        "A. print menu.",
+        "B. format menu.",
+        "C. file menu.",
+        "D. edit menu."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q8",
+      "questionText": "Generally main captions of documents are aligned using the",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 8,
+      "options": [
+        "A. justify command.",
+        "B. align right command.",
+        "C. align left command.",
+        "D. center command."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "Ethics Of Using ICTs"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q9",
+      "questionText": "Which of the following menu options will take a user to the symbol dialog box in a Word processing application?",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 9,
+      "options": [
+        "A. Tools",
+        "B. Insert",
+        "C. Table",
+        "D. Format"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2023_q12",
+      "questionText": "Numbering and bulleting tool in word processing application is located on the",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 12,
+      "options": [
+        "A. View menu.",
+        "B. Edit menu.",
+        "C. Insert menu.",
+        "D. Format menu."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2023 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2023_q15",
+      "questionText": "In word processing environment, text selection can also be referred to as text",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 15,
+      "options": [
+        "A. highlighting.",
+        "B. copying.",
+        "C. formatting.",
+        "D. editing."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2023 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2023_q18",
+      "questionText": "The various forms of document view mode in word processing applications is located on the",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 18,
+      "options": [
+        "A. title bar.",
+        "B. taskbar.",
+        "C. status bar.",
+        "D. scroll bar."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2023 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2023_q20",
+      "questionText": "The importance of password in an e-mail is to",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 20,
+      "options": [
+        "A. be a security measure in accessing the e-mail account.",
+        "B. verify the type of e-mail the user is sending.",
+        "C. provide another way of signing into the e-mail account.",
+        "D. hide the e-mail account from others."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2023 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2023_q21",
+      "questionText": "To print different pages of a document, enter the page numbers and separate them with a",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 21,
+      "options": [
+        "A. comma.",
+        "B. full stop.",
+        "C. question .",
+        "D. dash."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2023 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2023_q31",
+      "questionText": "To browse through webpages means to",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 31,
+      "options": [
+        "A. move through webpages for information.",
+        "B. locate webpages for information.",
+        "C. select webpages for information.",
+        "D. save webpages for information."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2023 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2023_q34",
+      "questionText": "Which of the following options is not part of a spreadsheet data type?",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 34,
+      "options": [
+        "A. Word",
+        "B. Currency",
+        "C. Number",
+        "D. WordText"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2023 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2023_q37",
+      "questionText": "E-mail messages are sent through",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 37,
+      "options": [
+        "A. e-mail account.",
+        "B. e-mail address.",
+        "C. e-mail password.",
+        "D. e-mail username."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2023 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2023_q4",
+      "questionText": "The type of alignment that positions the selected text for both left and right margins to be straight is termed",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 4,
+      "options": [
+        "A. justify.",
+        "B. center.",
+        "C. right align.",
+        "D. left align."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2023 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2023_q8",
+      "questionText": "A wrongly typed text in a word processing document will be prompted by the",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 8,
+      "options": [
+        "A. Find and Replace.",
+        "B. Grammar checker.",
+        "C. AutoCorrect.",
+        "D. Spell checker."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2023 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q1",
+      "questionText": "A student in the computer laboratory wants to change the style, size and colour of a typeface in Microsoft Word application. The appropriate tool to be used is",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 1,
+      "options": [
+        "A. font.",
+        "B. styles.",
+        "C. clipboard.",
+        "D. paragraph."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q23",
+      "questionText": "A user is to apply predefined formatting styles to texts in Microsoft PowerPoint application. The best features to use is",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 23,
+      "options": [
+        "A. WordArt.",
+        "B. Text Effects.",
+        "C. Font Colour.",
+        "D. Quick Styles."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q31",
+      "questionText": "In Desktop Publishing, a user can create a new document through the following ways except for",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 31,
+      "options": [
+        "A. print publication.",
+        "B. built-in template.",
+        "C. blank publication.",
+        "D. featured template."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q32",
+      "questionText": "The Desktop Publishing feature that best helps a user to align objects, texts and elements in a publication is called",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 32,
+      "options": [
+        "A. ruler.",
+        "B. layout.",
+        "C. guides.",
+        "D. margins."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q4",
+      "questionText": "A blog has many sections. The purpose of the comment section is to",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 4,
+      "options": [
+        "A. share personal information with readers.",
+        "B. promote other blogs on the same platform.",
+        "C. engage with readers and encourage discussion.",
+        "D. sell products and services to readers and friends."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q40",
+      "questionText": "Social media users can regulate the type of information they share on their pages. Privacy setting which is one of such activities they can regulate is to",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 40,
+      "options": [
+        "A. make posts visible to everyone.",
+        "B. prevent one from using the platform.",
+        "C. automatically share posts with everyone.",
+        "D. control who can see one's posts and information."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q1",
+      "questionText": "A programmer has indented the codes in the program being written. The purpose of the indentation is to",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 1,
+      "options": [
+        "A. make the code difficult to read by users.",
+        "B. hide the code from others when writing it.",
+        "C. create bugs in the program to disturb the codes.",
+        "D. show the start and end of a conditional statement."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "File And Folder Management"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q13",
+      "questionText": "Text formatting options in Word processing applications include",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 13,
+      "options": [
+        "A. subscript.",
+        "B. underline.",
+        "C. superscript.",
+        "D. strikethrough."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q17",
+      "questionText": "The term multimedia is widely used in several areas in the computing environment. What will you tell the computing teacher about function of a multimedia feature in Word processing application?",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 17,
+      "options": [
+        "A. It converts texts into audio formats.",
+        "B. It translates texts into different languages.",
+        "C. It removes images from word document.",
+        "D. It adds interactive elements like buttons and links."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q18",
+      "questionText": "In a Desktop Publishing project work, a student's work contained more text than it can display. This situation is best described as",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 18,
+      "options": [
+        "A. layout.",
+        "B. template.",
+        "C. overflow.",
+        "D. alignment."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q19",
+      "questionText": "A designer consistently reminds his staff to use template in Desktop publishing because it helps to",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 19,
+      "options": [
+        "A. create documents in unique ways.",
+        "B. provide a starting point for document design.",
+        "C. decorate the document for distribution to others.",
+        "D. provide an opportunity for users to print their work."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q24",
+      "questionText": "An entry on a blog that contains texts, images or multimedia content is called",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 24,
+      "options": [
+        "A. post.",
+        "B. name.",
+        "C. status.",
+        "D. account."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2013_q4",
+      "questionText": "(a)\n\n \n\nIn word processing application, when is it appropriate to use:\n\n(i)\n\n \n\ncopy-and-paste;\n\n(ii)\n\n \n\ncut-and-paste;\n\n(b)\n\n \n\n(i)\n\n \n\nWhat is a font?\n\n(ii)\n\n \n\nList three font styles",
+      "type": "essay",
+      "year": "2013",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2013 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2014_q24",
+      "questionText": "04'\n\n(iii)\n\n \n\n=SUM(A5:G5)\n\n(iv)\n\n \n\n=A4+C8-G25\n\n(v)\n\n \n\n+233244971100\n\n(b)\n\n \n\nWhat does formatting a disk refer to?",
+      "type": "essay",
+      "year": "2014",
+      "questionNumber": 24,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2014 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2015_q5",
+      "questionText": "State the use of the following email terminologies:\n\n(a)\n\n \n\nCarbon Copy;\n\n(b)\n\n \n\nBlind Carbon Copy;\n\n(c)\n\n \n\nTo;\n\n(d)\n\n \n\nSubject.",
+      "type": "essay",
+      "year": "2015",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2015 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2016_q2",
+      "questionText": "(a)\n\n \n\nExplain the term word processing\n\n(b)\n\n \n\nGive the default extension for the following file format: Notepad.\n\n(c)\n\n \n\nWrite the shortcut keyboard keys combination for the following commands as used in a word processing environment:\n\n(i)\n\n \n\nCut\n\n(ii)\n\n \n\nCopy\n\n(iii)\n\n \n\nPaste\n\n(iv)\n\n \n\nPrint",
+      "type": "essay",
+      "year": "2016",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2016 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2017_q5",
+      "questionText": "(a)\n\n \n\nThe Operating System makes it easy to store files in places that make a lot of sense. Give the default folder or storage area for the following files:\n\n(i)\n\n \n\nText files;\n\n(ii)\n\n \n\nImage files;\n\n(ii)\n\n \n\nMusic files.\n\n(b)\n\n \n\nWrite the shortcut keyboard keys combination for the following commands as used in a word processing environment:\n\n(i)\n\n \n\nUndo;\n\n(ii)\n\n \n\nFind;\n\n(iii)\n\n \n\nSelect All.\n\n(c)\n\n \n\nList three toolbars available in a word processing application.",
+      "type": "essay",
+      "year": "2017",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2017 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Basic Typing Skills Development & Keyboard",
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2019_q1",
+      "questionText": "Study the text below carefully and use it to answer questions (a) to (g)\n\n\n\na)\n\n \n\nWrite down the application software that was used to create the above text.\n\nb)\n\n \n\nList two examples of the application software mentioned in (a) above.\n\nc)\n\n \n\nGive the name of the text area labelled A.\n\nd)\n\n \n\nWrite down the name of the font styles applied to the following words in the text:\n\ni)\n\n \n\npotentially deadly\n\nii)\n\n \n\nharmful organisms\n\niii)\n\n \n\nMedical researchers\n\ne)\n\n \n\nWrite down the type of alignment applied to the paragraphs labelled B, C and D in the text\n\nf)\n\n \n\nList the steps used in underlining the words in the text area labelled A which was typed with the caps lock key on.\n\ng)\n\n \n\nWrite down the name given to the process of applying the various styles and paragraphs to the text.",
+      "type": "essay",
+      "year": "2019",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2019 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2020_q4",
+      "questionText": "State the steps involved in performing the following operations:\n\na)\n\n \n\nSaving a newly created document in word processing application using the appropriate menu command.\n\nb)\n\n \n\nCutting and pasting a word document from one folder into another folder all on the desktop.",
+      "type": "essay",
+      "year": "2020",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2020 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2020_q5",
+      "questionText": "State the function of each of the following e-mails terminologies.\n\na)\n\n \n\nTo: .......................\n\nb)\n\n \n\nSubject: ...................\n\nc)\n\n \n\nCarbon Copy (CC): .....................\n\nd)\n\n \n\nBlind Carbon Copy (BCC): ...................",
+      "type": "essay",
+      "year": "2020",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2020 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2021_q2",
+      "questionText": "a)\n\n \n\nExplain download as used in computing environment.\n\nb)\n\n \n\nList three types of information that may be downloaded from a website.\n\nc)\n\n \n\nState one advantage of copying a file from a website into an open Word processing application.",
+      "type": "essay",
+      "year": "2021",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2021 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2021_q3",
+      "questionText": "a)\n\n \n\nGive two examples of a Word processing application.\n\nb)\n\n \n\nComplete the table below.\n\nKeyboard shortcut keys\n\nAction performed\n\nCtrl+A\n\n\n\nCtrl+B\n\n\n\nCtrl+E\n\n\n\n\n\nItalicize selected text\n\n\n\nCopy selected text\n\n Show Solution",
+      "type": "essay",
+      "year": "2021",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2021 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "Basic Typing Skills Development & Keyboard"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2021_q4",
+      "questionText": "a)\n\n \n\nWhat is an e-mail account?\n\n\n\nb)\n\n \n\nWrite a good e-mail address to be typed at where username is shown.\n\nc)\n\n \n\nState why the password typed appeared in dots.\n\nd)\n\n \n\nGive one reason why the system asked for the password to be typed (again) when creating an e-mail account.",
+      "type": "essay",
+      "year": "2021",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2021 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2022_q5",
+      "questionText": "a)\n\n \n\nWrite three features that are common to both Microsoft Word and Microsoft Excel.\n\nb)\n\n \n\nList three data types of a Spreadsheet application.",
+      "type": "essay",
+      "year": "2022",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2022 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2023_q2",
+      "questionText": "(a)\n\n \n\nWhat is text formatting?\n\n(b)\n\n \n\nList three ways by which a character could be formatted.\n\n(c)\n\n \n\nA user typed forem instead of form. Write the steps to be followed to delete tbe letter (e) using the keyboard only.",
+      "type": "essay",
+      "year": "2023",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2023 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Word Processing Applications"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2025_q3",
+      "questionText": "(a)\n\n \n\nOutline the steps on how to make the word Computing in Word processing document a hyperlink to the website address www.waecgh.org.\n\n[6 marks]\n\n(b)\n\n \n\nIn designing a presentation, shapes allow the user to create complex objects on the slide.\n\nList two categories in which objects found under the shape tool are grouped.\n\n(i)\n\n \n\n(ii)\n\n \n\n[2 marks]\n\n(c)\n\n \n\nA Microsoft Publisher assignment requires that texts are written over an image on a flyer.\n\nOutline the steps to accomplish the assignment.\n\n[4 marks]",
+      "type": "essay",
+      "year": "2025",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2025 ICT",
+      "marks": 6,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "The Internet And World Wide Web"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

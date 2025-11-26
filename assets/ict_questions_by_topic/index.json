@@ -1,0 +1,58 @@
+{
+  "generatedAt": "2025-11-26T13:56:09.293Z",
+  "totalQuestions": 679,
+  "categorizedQuestions": 816,
+  "unclassifiedQuestions": 24,
+  "topics": [
+    {
+      "name": "Introduction To Computers",
+      "questionCount": 238,
+      "filename": "introduction_to_computers.json"
+    },
+    {
+      "name": "Basic Typing Skills Development & Keyboard",
+      "questionCount": 54,
+      "filename": "basic_typing_skills_development_keyboard.json"
+    },
+    {
+      "name": "Health And Safety In Using ICT Tools",
+      "questionCount": 13,
+      "filename": "health_and_safety_in_using_ict_tools.json"
+    },
+    {
+      "name": "Graphical User Interface (GUI)",
+      "questionCount": 86,
+      "filename": "graphical_user_interface_gui.json"
+    },
+    {
+      "name": "Word Processing Applications",
+      "questionCount": 142,
+      "filename": "word_processing_applications.json"
+    },
+    {
+      "name": "Ethics Of Using ICTs",
+      "questionCount": 17,
+      "filename": "ethics_of_using_icts.json"
+    },
+    {
+      "name": "The Internet And World Wide Web",
+      "questionCount": 81,
+      "filename": "the_internet_and_world_wide_web.json"
+    },
+    {
+      "name": "Spreadsheet Applications",
+      "questionCount": 79,
+      "filename": "spreadsheet_applications.json"
+    },
+    {
+      "name": "File And Folder Management",
+      "questionCount": 74,
+      "filename": "file_and_folder_management.json"
+    },
+    {
+      "name": "Integrating ICT Into Learning",
+      "questionCount": 32,
+      "filename": "integrating_ict_into_learning.json"
+    }
+  ]
+}

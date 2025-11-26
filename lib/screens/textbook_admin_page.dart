@@ -17,7 +17,7 @@ class _TextbookAdminPageState extends State<TextbookAdminPage> {
   bool _isGenerating = false;
   bool _isAdmin = false;
   String? _generationLog;
-  Map<String, bool> _yearStatus = {
+  final Map<String, bool> _yearStatus = {
     'JHS 1': false,
     'JHS 2': false,
     'JHS 3': false,
@@ -119,7 +119,7 @@ class _TextbookAdminPageState extends State<TextbookAdminPage> {
 
   void _updateLog(String message) {
     setState(() {
-      _generationLog = (_generationLog ?? '') + '$message\n';
+      _generationLog = '${_generationLog ?? ''}$message\n';
     });
   }
 

@@ -1,0 +1,968 @@
+{
+  "topic": "Integrating ICT Into Learning",
+  "totalQuestions": 32,
+  "questions": [
+    {
+      "id": "ict_2011_q16",
+      "questionText": "Which of the following can bring enhanced learning experience to the classroom through the use of pictures, videos and sounds?",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 16,
+      "options": [
+        "A. Software application.",
+        "B. Multimedia software.",
+        "C. Learning software.",
+        "D. Teaching and learning software."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2011 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2011_q18",
+      "questionText": "To which of the following activities is ICT useful?\n\nI. Education\nII. Farming\nIII. Medicine",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 18,
+      "options": [
+        "A. I and II only",
+        "B. I and III only",
+        "C. II and III only",
+        "D. I, II and III"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2011 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q21",
+      "questionText": "Which of the following software can be used to enhance teaching and learning through the use of pictures, video and sound? <\\p>",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 21,
+      "options": [
+        "A. multimedia software",
+        "B. network software",
+        "C. programming software",
+        "D. utility software"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q36",
+      "questionText": "All the following are reasons for using ICT in education except...............",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 36,
+      "options": [
+        "A. forcing students to learn at other's pace",
+        "B. increasing learner motivation and engagement",
+        "C. facilitating the acquisition of basic skills in subject areas",
+        "D. enhancing teaching through the use of presentation software"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q16",
+      "questionText": "The software that assists students in learning and can also be used to take online examinations is",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 16,
+      "options": [
+        "A. classroom software",
+        "B. education software",
+        "C. entertainment software",
+        "D. graphic software"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q31",
+      "questionText": "Which of the following domain name extensions is used by education institution?",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 31,
+      "options": [
+        "A. .com",
+        "B. .edu",
+        "C. .net",
+        "D. .org"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "File And Folder Management",
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2016_q27",
+      "questionText": "The use of ICT in learning and teaching id to make it",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 27,
+      "options": [
+        "A. interesting and boring",
+        "B. uninteresting but not boring",
+        "C. interesting but students do not learn at their pace",
+        "D. easy and interesting, students learn at their pace"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2016 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q11",
+      "questionText": "The memory that stores permanent instructions is referred to as",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 11,
+      "options": [
+        "A. random access memory.",
+        "B. read only memory.",
+        "C. write once read many memories.",
+        "D. virtual memory."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q27",
+      "questionText": "Which of the following is not reason for using ICT in education?",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 27,
+      "options": [
+        "A. ICT tools increase learner motivation and engagement.",
+        "B. ICT tools facilitate the acquisition of basic skills in Maths, English, Science etc.",
+        "C. ICT tools enhance teaching through the use of presentation software.",
+        "D. ICT tools force students to learn at others' pace."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q37",
+      "questionText": "A student wants to search for information on the internet to have solution to the ICT assignment from school. Which of the following do you recommend for him/her to use?",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 37,
+      "options": [
+        "A. E-mail address",
+        "B. Search Engine",
+        "C. Compose",
+        "D. Inbox"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web",
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2020_q27",
+      "questionText": "A teacher who uses a video to teach students is making use of ICT in",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 27,
+      "options": [
+        "A. education.",
+        "B. communication.",
+        "C. entertainment.",
+        "D. advertisement."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2020 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q20",
+      "questionText": "ICT tools can be used to promote positive attitude in all the following ways except",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 20,
+      "options": [
+        "A. transacting business activities",
+        "B. teaching and learning in schools",
+        "C. sharing of pornographic information",
+        "D. accessing and retrieving information."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q33",
+      "questionText": "The electronic application used for financial records is known as",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 33,
+      "options": [
+        "A. grid lines.",
+        "B. presentation.",
+        "C. spreadsheet.",
+        "D. accounts book."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications",
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2023_q35",
+      "questionText": "Which of the following applications makes teaching and learning easy and interesting?",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 35,
+      "options": [
+        "A. Word processor",
+        "B. Facebook",
+        "C. Spreadsheet",
+        "D. Educational Software"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2023 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q10",
+      "questionText": "A teacher tasked students to demonstrate an activity using a flowchart diagram. The appropriate symbol to use at the processing stage of the activity is",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 10,
+      "options": [
+        "A. oval.",
+        "B. rhombus.",
+        "C. rectangle.",
+        "D. parallelogram."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications",
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q27",
+      "questionText": "A teacher sends class assignment to his students using an e-mail. The protocol used by the e-mail to send the assignment over the internet is",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 27,
+      "options": [
+        "A. FTP",
+        "B. TCP",
+        "C. HTTP",
+        "D. SMTP"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "The Internet And World Wide Web",
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q34",
+      "questionText": "A computing project work requires students to design a blog for a school. The best item to be used for customizing the blog is the school's",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 34,
+      "options": [
+        "A. flag.",
+        "B. logo.",
+        "C. crest.",
+        "D. uniform."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q7",
+      "questionText": "A student inserted a picture into a Microsoft PowerPoint presentation and needed to work on the picture to adjust the brightness and contrast to make it more clearer. The best tool to help the student achieve the task is",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 7,
+      "options": [
+        "A. Picture Size.",
+        "B. Format Picture.",
+        "C. Picture Layout.",
+        "D. Picture Effects."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q10",
+      "questionText": "To make teaching and learning of computing more interactive, the teacher intends to demonstrate an activity by showing diagrams, images and videos on a large screen in the classroom. The most appropriate device to achieve this objective by the teacher is a",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 10,
+      "options": [
+        "A. printer.",
+        "B. plotter.",
+        "C. monitor.",
+        "D. projector."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q14",
+      "questionText": "A school prefect approached the computing club to guide him design a presentation using Microsoft PowerPoint. The prefect intends to practice the presentation and record the time spent for each slide to make his presentation run smooth. The best feature the computing club will suggest to the prefect is",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 14,
+      "options": [
+        "A. presenter notes.",
+        "B. presenter feature.",
+        "C. rehearse feature.",
+        "D. rehearse timings."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q18",
+      "questionText": "In a Desktop Publishing project work, a student's work contained more text than it can display. This situation is best described as",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 18,
+      "options": [
+        "A. layout.",
+        "B. template.",
+        "C. overflow.",
+        "D. alignment."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q22",
+      "questionText": "Robots are used in many areas of the society. An example of the application of robots in the society includes",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 22,
+      "options": [
+        "A. virtual reality.",
+        "B. machine learning.",
+        "C. artificial intelligence.",
+        "D. autonomous vehicles."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q25",
+      "questionText": "A student is very good at converting any integer to binary but finds it difficult to convert from hexadecimal to binary. Help the student to convert the hexadecimal number A216 to binary",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 25,
+      "options": [
+        "A. 100001102",
+        "B. 101000102",
+        "C. 100100012",
+        "D. 100010102"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q27",
+      "questionText": "A user intends to create and customize diagrams in Microsoft PowerPoint application for a presentation. The best feature to help the user achieve the task is",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 27,
+      "options": [
+        "A. Charts.",
+        "B. Shapes.",
+        "C. WordArt.",
+        "D. SmartArt."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q35",
+      "questionText": "A weekend assignment requires students to create a blog for the school. The best activity needed for the assignment is to",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 35,
+      "options": [
+        "A. pick the blog name and niche.",
+        "B. display advertisement of the blog.",
+        "C. provide consulting services to the bloggers.",
+        "D. determine the product to sell on the blog."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q38",
+      "questionText": "JHS students were given a project by their computing teacher to create a virtual museum for the storage of electronic artifacts. The possible tool for this assignment is:",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 38,
+      "options": [
+        "A. Cloud computing",
+        "B. Social networking",
+        "C. Augmented reality",
+        "D. Artificial intelligence"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2012_q4",
+      "questionText": "(a)\n\n \n\nExplain internet fraud.\n\n(b)\n\n \n\nState three ways ICT can be used in basic education in Ghana.\n\n(c)\n\n \n\nList three devices that may be used when connecting to the internet.\n\n.",
+      "type": "essay",
+      "year": "2012",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2012 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "The Internet And World Wide Web",
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2019_q5",
+      "questionText": "State three uses of computers in each of the following areas:\n\na)\n\n \n\nEducation\n\nb)\n\n \n\nEveryday life",
+      "type": "essay",
+      "year": "2019",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2019 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2020_q1",
+      "questionText": "Study Figure 1 carefully and use it to answer questions (a) to (e).\n\n\n\na)\n\n \n\nWrite the name of the application displayed in Figure 1\n\nb)\n\n \n\nMention two things that the application identified in Figure 1 can be used to create.\n\nc)\n\n \n\nWrite the name of the parts labelled A, B, C, D, E and F in Figure 1\n\nd)\n\n \n\nList two of items found in the part labelled A\n\ne)\n\n \n\nWhat is the part labelled D used for?",
+      "type": "essay",
+      "year": "2020",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2020 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "File And Folder Management",
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2021_q1",
+      "questionText": "Study Figure 1 carefully and use it to answer questions (a) and (e)\n\n\n\na)\n\n \n\nWrite the name of the image displayed in Figure 1\n\nb)\n\n \n\nList three types of application similar to Figure 1 which can be used to perform the same function as Figure 1 does.\n\nc)\n\n \n\nWrite the name of the parts labelled A, B and C as shown in Figure 1.\n\nd)\n\n \n\nWrite two skills to be used to access information from the internet in order to avoid unwanted materials.\n\ne)\n\n \n\nState three advantages of using the internet in education",
+      "type": "essay",
+      "year": "2021",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2021 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2022_q1",
+      "questionText": "Study Figure 1 carefully and use it to answer questions (a) to (e)\n\n\n\nFigure 1\n\na)\n\n \n\nWrite down the name of the device displayed in Figure 1.\n\nb)\n\n \n\nWrite down the name of the parts of Figure 1 labelled A, B, C and D.\n\nc)\n\n \n\nState three uses of the device identified in Figure 1.\n\nd)\n\n \n\nState three devices that function as the one shown in Figure 1.\n\ne)\n\n \n\nWhat is the name of the flat material on which the device shown in Figure 1 is mostly placed?",
+      "type": "essay",
+      "year": "2022",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2022 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Spreadsheet Applications",
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2024_q1",
+      "questionText": "NAME OF STUDENT\n\nTERM 1\n\nTERM 2\n\nTERM 3\n\nTOTAL",
+      "type": "essay",
+      "year": "2024",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2024 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

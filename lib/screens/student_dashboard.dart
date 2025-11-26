@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'subject_detail.dart';
 import 'past_questions_search_page.dart';
+import 'theory_questions_page.dart';
 import 'textbooks.dart';
 // Removed unused import 'mock_exams.dart'
 import 'ai_tools.dart';
@@ -141,6 +142,11 @@ class _StudentDashboardPageState extends State<StudentDashboardPage> {
         _dashboardAction(context, Icons.quiz, 'Past Questions', () {
           Navigator.push(context, MaterialPageRoute(
             builder: (_) => const PastQuestionsSearchPage(),
+          ));
+        }),
+        _dashboardAction(context, Icons.edit_note, 'Theory Questions', () {
+          Navigator.push(context, MaterialPageRoute(
+            builder: (_) => const TheoryQuestionsPage(),
           ));
         }),
         _dashboardAction(context, Icons.menu_book, 'Textbooks', () {

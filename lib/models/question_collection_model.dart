@@ -76,7 +76,7 @@ class QuestionCollection {
       case QuestionType.shortAnswer:
         return 'Short Answer';
       case QuestionType.essay:
-        return 'Essay';
+        return 'Theory'; // Display as "Theory" instead of "Essay"
       case QuestionType.calculation:
         return 'Calculation';
       case QuestionType.trivia:

@@ -2495,6 +2495,134 @@ export const importICTQuestions = functions.https.onCall(async (data, context) =
   }
 });
 
+export const importTheoryQuestions = functions.https.onCall(async (data, context) => {
+  try {
+    // Verify that the user is authenticated and is an admin
+    if (!context.auth) {
+      throw new functions.https.HttpsError('unauthenticated', 'User must be authenticated');
+    }
+
+    // Check if user has admin role in custom claims
+    const role = context.auth.token.role as string | undefined;
+    const adminEmail = 'studywithuriel@gmail.com';
+    
+    if (!role || !['admin', 'super_admin'].includes(role)) {
+      if (context.auth.token.email !== adminEmail) {
+        throw new functions.https.HttpsError('permission-denied', 'Only admins can import questions. Please contact support to get admin access.');
+      }
+    }
+
+    console.log('Starting Theory questions import...');
+    
+    const fs = require('fs');
+    const path = require('path');
+    
+    let importedCount = 0;
+    const currentTime = Date.now();
+    const currentDate = new Date().toISOString();
+    
+    // Subject files to import
+    const subjectFiles = [
+      'bece_theory_asante_twi.json',
+      'bece_theory_career_technology.json',
+      'bece_theory_creative_arts.json',
+      'bece_theory_english.json',
+      'bece_theory_french.json',
+      'bece_theory_ga.json',
+      'bece_theory_ict.json',
+      'bece_theory_mathematics.json',
+      'bece_theory_rme.json',
+      'bece_theory_integrated_science.json',
+      'bece_theory_social_studies.json'
+    ];
+    
+    for (const filename of subjectFiles) {
+      try {
+        const filePath = path.join(__dirname, '..', '..', filename);
+        
+        // Skip if file doesn't exist
+        if (!fs.existsSync(filePath)) {
+          console.log(`Skipping ${filename} - file not found`);
+          continue;
+        }
+        
+        const questionsData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+        console.log(`Processing ${questionsData.length} theory questions from ${filename}`);
+        
+        // Import each question
+        for (const question of questionsData) {
+          const questionDoc = {
+            id: question.id,
+            questionText: question.questionText,
+            questionNumber: question.questionNumber,
+            marks: question.marks || 5,
+            type: 'theory',
+            subject: question.subject.toLowerCase().replace(/\s+/g, '_'),
+            subjectDisplay: question.subject,
+            examType: 'bece',
+            year: question.year.toString(),
+            difficulty: question.difficulty || 'medium',
+            topics: question.topics || [],
+            createdAt: currentDate,
+            updatedAt: currentDate,
+            createdBy: 'system_import',
+            isActive: true,
+            metadata: {
+              source: `BECE ${question.year}`,
+              importDate: currentDate,
+              verified: true,
+              timestamp: currentTime
+            }
+          };
+          
+          try {
+            await db.collection('theoryQuestions').doc(questionDoc.id).set(questionDoc);
+            importedCount++;
+            
+            if (importedCount % 100 === 0) {
+              console.log(`Progress: Imported ${importedCount} questions...`);
+            }
+          } catch (error) {
+            console.error(`Error importing question ${question.id}:`, error);
+          }
+        }
+        
+        console.log(`Completed ${filename}: imported ${questionsData.length} questions`);
+        
+      } catch (fileError) {
+        console.error(`Error processing ${filename}:`, fileError);
+      }
+    }
+    
+    console.log(`Successfully imported ${importedCount} Theory questions to Firestore!`);
+    
+    // Update metadata
+    try {
+      await db.collection('app_metadata').doc('content').set({
+        theoryQuestionsImported: true,
+        theoryQuestionsCount: importedCount,
+        lastTheoryImportTimestamp: currentTime,
+        lastUpdated: currentDate
+      }, { merge: true });
+      console.log('Updated Theory content metadata');
+    } catch (error) {
+      console.error('Error updating metadata:', error);
+    }
+    
+    return {
+      success: true,
+      message: `Successfully imported ${importedCount} Theory questions!`,
+      questionsImported: importedCount,
+      subjects: subjectFiles.length
+    };
+    
+  } catch (error) {
+    console.error('Error importing Theory questions:', error);
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    throw new functions.https.HttpsError('internal', `Failed to import Theory questions: ${errorMessage}`);
+  }
+});
+
 // Expose the consolidated HTTP handler
 // export { aiChatHttp };
 

@@ -1,0 +1,2362 @@
+{
+  "topic": "Spreadsheet Applications",
+  "totalQuestions": 79,
+  "questions": [
+    {
+      "id": "ict_2011_q30",
+      "questionText": "Lines, block arrows and flowcharts are located on the ..................",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 30,
+      "options": [
+        "A. Drawing toolbar.",
+        "B. Standard toolbar.",
+        "C. Formatting toolbar.",
+        "D. Menu bar."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2011 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2011_q39",
+      "questionText": "A mathematical calculation in a spreadsheet is called ...............",
+      "type": "multipleChoice",
+      "year": "2011",
+      "questionNumber": 39,
+      "options": [
+        "A. label.",
+        "B. formula.",
+        "C. number.",
+        "D. value."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2011 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2011"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q15",
+      "questionText": "The computer equivalence of a sheet of paper divided into rows and columns in the office suits is called ....",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 15,
+      "options": [
+        "A. database",
+        "B. electronic sheet",
+        "C. spreadsheet",
+        "D. word processor"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q24",
+      "questionText": "A program on the computer which enables users to type letters to friends is the .......",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 24,
+      "options": [
+        "A. browser",
+        "B. spreadsheet",
+        "C. utility",
+        "D. word processing"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2012_q37",
+      "questionText": "In word processing program, lines block arrows and flow charts are found on which of the following toolbars?",
+      "type": "multipleChoice",
+      "year": "2012",
+      "questionNumber": 37,
+      "options": [
+        "A. drawing",
+        "B. formatting",
+        "C. picture",
+        "D. standard"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2012 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2012"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q30",
+      "questionText": "A rectangle can be drawn in word processing application using the",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 30,
+      "options": [
+        "A. arrow",
+        "B. circle",
+        "C. oval",
+        "D. square"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2013_q40",
+      "questionText": "The intersection of the 8th row and the 7th column in a spreadsheet application will have the cell reference ....",
+      "type": "multipleChoice",
+      "year": "2013",
+      "questionNumber": 40,
+      "options": [
+        "A. 8G",
+        "B. G8",
+        "C. 7H",
+        "D. H7"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2013 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2013"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q37",
+      "questionText": "A spreadsheet cell name is referenced by a",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 37,
+      "options": [
+        "A. letter",
+        "B. number",
+        "C. letter and a number",
+        "D. number and a letter"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q38",
+      "questionText": "Mathematical calculations in a spreadsheet are called",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 38,
+      "options": [
+        "A. formulas",
+        "B. labels",
+        "C. numbers",
+        "D. values"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2014_q40",
+      "questionText": "To apply a formula or function in a spreadsheet program, the symbol used is",
+      "type": "multipleChoice",
+      "year": "2014",
+      "questionNumber": 40,
+      "options": [
+        "A. = or*",
+        "B. = or +",
+        "C. = or /",
+        "D. = or -"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2014 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2014"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2015_q39",
+      "questionText": "The sign which represents an insertion of a formula in a spreadsheet program is",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 39,
+      "options": [
+        "A. =or+",
+        "B. =or-",
+        "C. =or*",
+        "D. =or/"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2015 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2015_q40",
+      "questionText": "Which of the following terms in a spreadsheet is identified by a letter and a number?",
+      "type": "multipleChoice",
+      "year": "2015",
+      "questionNumber": 40,
+      "options": [
+        "A. Column",
+        "B. Cell",
+        "C. Range",
+        "D. Row"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2015 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2015"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2016_q38",
+      "questionText": "A spreadsheet cell name is referenced by a",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 38,
+      "options": [
+        "A. letter",
+        "B. number",
+        "C. letter and number",
+        "D. number and letter"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2016 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2016_q39",
+      "questionText": "Mathematical calculations in a spreadsheet application are called",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 39,
+      "options": [
+        "A. labels",
+        "B. formulae",
+        "C. numbers",
+        "D. value"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2016 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2016_q40",
+      "questionText": "In a spreadsheet application, which of the following can be identified by a letter?",
+      "type": "multipleChoice",
+      "year": "2016",
+      "questionNumber": 40,
+      "options": [
+        "A. cell",
+        "B. column",
+        "C. range",
+        "D. row"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2016 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2016"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q38",
+      "questionText": "A set of cells in the horizontal direction in a spreadsheet application is called",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 38,
+      "options": [
+        "A. active cell.",
+        "B. column.",
+        "C. row.",
+        "D. sheet. Solution"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q39",
+      "questionText": "In spreadsheets, you can create a relationship between two cells using",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 39,
+      "options": [
+        "A. numbers.",
+        "B. text.",
+        "C. formulae.",
+        "D. rows."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2017_q40",
+      "questionText": "The sign used to prompt a spreadsheet that a user is about to apply a formula/function to a cell is",
+      "type": "multipleChoice",
+      "year": "2017",
+      "questionNumber": 40,
+      "options": [
+        "A. = or +",
+        "B. = or -",
+        "C. = or *",
+        "D. = or /"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2017 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2017"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q11",
+      "questionText": "In a spreadsheet application, which of the following displays the contents of the active cell",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 11,
+      "options": [
+        "A. Formula bar",
+        "B. Menu bar",
+        "C. Name box",
+        "D. Standard toolbar"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q27",
+      "questionText": "Which of the following programs would support the study of Mathematics?",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 27,
+      "options": [
+        "A. CorelDraw",
+        "B. Encarta",
+        "C. MS-Excel",
+        "D. MS-Word"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q38",
+      "questionText": "In Spreadsheet application, which of the following symbols represents multiplication",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 38,
+      "options": [
+        "A. x",
+        "B. *",
+        "C. ÷",
+        "D. #"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q39",
+      "questionText": "Which of the following is used for multiplication operation in Spreadsheet functions?",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 39,
+      "options": [
+        "A. ADD",
+        "B. AVERAGE",
+        "C. MULTIPLICATION",
+        "D. PRODUCT"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2018_q40",
+      "questionText": "Which of the following is used to find the minimum number among a set of numbers in Spreadsheet functions?",
+      "type": "multipleChoice",
+      "year": "2018",
+      "questionNumber": 40,
+      "options": [
+        "A. MAX",
+        "B. MIN",
+        "C. MAXIMUM",
+        "D. MINIMUM"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2018 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2018"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2019_q38",
+      "questionText": "Which of the following functions is used to find the mean number",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 38,
+      "options": [
+        "A. Average",
+        "B. Maximum",
+        "C. Minimum",
+        "D. Summation"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2019 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2019_q39",
+      "questionText": "The content of a selected cell is shown in the",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 39,
+      "options": [
+        "A. formula bar.",
+        "B. name box.",
+        "C. status bar.",
+        "D. title bar."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2019 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2019_q40",
+      "questionText": "An application that helps the user to change any number in a cell and immediately see the result of that change in another cell is a",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 40,
+      "options": [
+        "A. Database.",
+        "B. Presentation.",
+        "C. Spreadsheet.",
+        "D. Word processor."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2019 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2019_q9",
+      "questionText": "The name given to each cell according to its column label and row number is called",
+      "type": "multipleChoice",
+      "year": "2019",
+      "questionNumber": 9,
+      "options": [
+        "A. active cell.",
+        "B. cell formula.",
+        "C. cell reference.",
+        "D. highlighted cell."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2019 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2019"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2020_q10",
+      "questionText": "A set of cells in the vertical directions in a spreadsheet application is called",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 10,
+      "options": [
+        "A. row.",
+        "B. sheet.",
+        "C. column.",
+        "D. active cell."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2020 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2020_q38",
+      "questionText": "The intersection of a row and a column is called",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 38,
+      "options": [
+        "A. cell",
+        "B. data",
+        "C. formula",
+        "D. worksheet"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2020 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2020_q39",
+      "questionText": "The spreadsheet cell that a user works in at any given time is called",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 39,
+      "options": [
+        "A. active cell.",
+        "B. inactive cell.",
+        "C. adjacent cell.",
+        "D. working cell."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2020 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2020_q40",
+      "questionText": "Cell address is normally displayed in the",
+      "type": "multipleChoice",
+      "year": "2020",
+      "questionNumber": 40,
+      "options": [
+        "A. title bar.",
+        "B. status bar.",
+        "C. name box.",
+        "D. formula bar."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2020 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2020"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q37",
+      "questionText": "Mathematical calculations in a Spreadsheet application are called",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 37,
+      "options": [
+        "A. labels.",
+        "B. values.",
+        "C. numbers.",
+        "D. formulae."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q38",
+      "questionText": "Which of the following terms in a Spreadsheet application is identified by a letter and number",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 38,
+      "options": [
+        "A. Row",
+        "B. Cell",
+        "C. Range",
+        "D. Column"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q39",
+      "questionText": "A selected cell in a Spreadsheet application is the",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 39,
+      "options": [
+        "A. name box.",
+        "B. active cell.",
+        "C. cell address.",
+        "D. formula bar."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2021_q40",
+      "questionText": "The sign used to prompt a Spreadsheet application that a user is about to apply a formula to a cell is",
+      "type": "multipleChoice",
+      "year": "2021",
+      "questionNumber": 40,
+      "options": [
+        "A. -",
+        "B. \\",
+        "C. /",
+        "D. ="
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2021 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2021"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q15",
+      "questionText": "Which of the following options can be used for titles or headings of a worksheet?",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 15,
+      "options": [
+        "A. Value",
+        "B. Label",
+        "C. Formula",
+        "D. Number"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q28",
+      "questionText": "Double-clicking in a Spreadsheet cell makes the cell",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 28,
+      "options": [
+        "A. expand.",
+        "B. active.",
+        "C. inactive.",
+        "D. increase."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q33",
+      "questionText": "The electronic application used for financial records is known as",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 33,
+      "options": [
+        "A. grid lines.",
+        "B. presentation.",
+        "C. spreadsheet.",
+        "D. accounts book."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications",
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q34",
+      "questionText": "Which of the following applications is suitable for delivering lessons to students?",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 34,
+      "options": [
+        "A. Spreadsheet",
+        "B. Word processor",
+        "C. Messaging",
+        "D. Multimedia"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q36",
+      "questionText": "The operating system function that enables computer users to do many activities at the same time is known as",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 36,
+      "options": [
+        "A. multiactivity.",
+        "B. multiprocessing.",
+        "C. multitasking.",
+        "D. multiprogramming."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2022_q6",
+      "questionText": "In a spreadsheet application, the ready mode on the status bar means it is ready to",
+      "type": "multipleChoice",
+      "year": "2022",
+      "questionNumber": 6,
+      "options": [
+        "A. print the data on the worksheet.",
+        "B. calculate the values on the worksheet.",
+        "C. accept data onto the worksheet.",
+        "D. display data on the worksheet."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2022 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "Information And Communication Technology",
+        "ICT",
+        "BECE",
+        "2022"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2023_q11",
+      "questionText": "Which of the following devices provides the function as a pointing object on the screen?",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 11,
+      "options": [
+        "A. Digitizer",
+        "B. Bar code reader",
+        "C. Microphone",
+        "D. Touchpad"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2023 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2023_q13",
+      "questionText": "The information that a spreadsheet displays when a user inputs incorrect formula is called",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 13,
+      "options": [
+        "A. user message.",
+        "B. error message.",
+        "C. notification message.",
+        "D. system message."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2023 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2023_q3",
+      "questionText": "In a spreadsheet application, when a user presses the tab key on the keyboard, the cursor moves",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 3,
+      "options": [
+        "A. below the active cell.",
+        "B. above the active cell.",
+        "C. to the left of the active cell.",
+        "D. to the right of the active cell."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2023 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2023_q32",
+      "questionText": "Which of the following features will display the content of the active cell in a spreadsheet?",
+      "type": "multipleChoice",
+      "year": "2023",
+      "questionNumber": 32,
+      "options": [
+        "A. Formula bar",
+        "B. Cell address",
+        "C. Name box",
+        "D. Column header"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2023 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2023"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q10",
+      "questionText": "A teacher tasked students to demonstrate an activity using a flowchart diagram. The appropriate symbol to use at the processing stage of the activity is",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 10,
+      "options": [
+        "A. oval.",
+        "B. rhombus.",
+        "C. rectangle.",
+        "D. parallelogram."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications",
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q13",
+      "questionText": "Four students in a class wrote the following function in Microsoft Excel. Which of the functions written by the students will return an output?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 13,
+      "options": [
+        "A. =SUM(10A:A17)",
+        "B. =SUM(10A:17A)",
+        "C. =SUM(A10:A17)",
+        "D. =SUM(A10:17A)"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q14",
+      "questionText": "To demonstrate to a class, the steps to be taken to create a PivotTable from a set of data in Microsoft Excel worksheet, click on",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 14,
+      "options": [
+        "A. Home Tab, then PivotTable.",
+        "B. Insert Tab, then PivotTable.",
+        "C. Data Tab, then PivotTable.",
+        "D. View Tab, then PivotTable"
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q18",
+      "questionText": "A user who selected 4 x 3 in the insert table grid in a Word document will insert",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 18,
+      "options": [
+        "A. 4 tables.",
+        "B. 12 tables.",
+        "C. a table of 4 rows and 3 columns.",
+        "D. a table of 4 columns and 3 rows."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q20",
+      "questionText": "The examination scores in Computing of a class was entered into a Microsoft Excel worksheet. The appropriate function for finding the largest score in the class is",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 20,
+      "options": [
+        "A. AVG.",
+        "B. MIN.",
+        "C. MAX.",
+        "D. SUM."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q25",
+      "questionText": "A teacher tasked her students to create a date with year, month and day format. The most appropriate Microsoft Excel function to achieve the date format is",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 25,
+      "options": [
+        "A. DATE().",
+        "B. DATEDIF().",
+        "C. CURDATE().",
+        "D. DATEVALUE()."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q28",
+      "questionText": "The Merge & Centre button in a Spreadsheet application is used to",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 28,
+      "options": [
+        "A. select multiple cells and center the content.",
+        "B. create a new worksheet and center the content.",
+        "C. combine and center the content of selected cells.",
+        "D. combine and center the content of the worksheet."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2024_q9",
+      "questionText": "What does the formula = IF(A1>10,\"Pass\",\"Fail\") do in a Spreadsheet application?",
+      "type": "multipleChoice",
+      "year": "2024",
+      "questionNumber": 9,
+      "options": [
+        "A. Checks if the value in cell A1 is equal to 10 and returns Fail",
+        "B. Checks if the value in cell A1 is less than 10 and returns Pass",
+        "C. Checks if the value in cell A1 is greater than 10 and returns Fail",
+        "D. Checks if the value in cell A1 is greater than 10 and returns Pass"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2024 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2024"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q11",
+      "questionText": "The graphic tablet is a kind of device used to capture",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 11,
+      "options": [
+        "A. RFID signals.",
+        "B. QR code scans.",
+        "C. magnetic card data.",
+        "D. handwritings, drawings and inputs."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q16",
+      "questionText": "What value will the Microsoft Excel function = COUNT(A1:A10) return?",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 16,
+      "options": [
+        "A. 1",
+        "B. 9",
+        "C. 10",
+        "D. 11"
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q29",
+      "questionText": "The purpose of the IF function in Microsoft Excel application is to",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 29,
+      "options": [
+        "A. calculate the average of a range of cells.",
+        "B. manipulate text from multiple cells into one cell.",
+        "C. perform a logical test and return a value for a condition.",
+        "D. return the value from a specified row and column intersection."
+      ],
+      "correctAnswer": "C",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q32",
+      "questionText": "Bello formatted Microsoft Excel worksheet cells with different colours based on specific conditions and it was very beautiful. Which of the given features can a student use to achieve the same results as Bello?",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 32,
+      "options": [
+        "A. Conditional sorting",
+        "B. Conditional filtering",
+        "C. Conditional validation",
+        "D. Conditional formatting"
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q33",
+      "questionText": "After the computing class, a colleague approached you to further explain to him how to reference a worksheet cell in Microsoft Excel. In the explanation, you mentioned that, to reference a cell, one need to use the cell",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 33,
+      "options": [
+        "A. value.",
+        "B. address.",
+        "C. content.",
+        "D. function."
+      ],
+      "correctAnswer": "B",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q39",
+      "questionText": "The correct syntax of the IF function in Microsoft Excel is:",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 39,
+      "options": [
+        "A. =IF(logical_test, [value_if_true], [value_if_false])",
+        "B. =IF(logical_test, [value_if_true], [value_if_false])",
+        "C. =IF(logical_test, ([value_if_true]), ([value_if_false]))",
+        "D. =IF(logical_test, TRUE ([value_if_true]), FALSE ([value_if_true]))"
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q4",
+      "questionText": "A man shared his property to his children and wife in a particular ratio. The most appropriate chart type that can be used to represent the sharing of the property is",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 4,
+      "options": [
+        "A. pie chart.",
+        "B. bar chart.",
+        "C. line chart.",
+        "D. scatter chart."
+      ],
+      "correctAnswer": "A",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q5",
+      "questionText": "Robotic systems have components that relates to the functioning of the human organs. The component of the robot that acts like the human brain is the",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 5,
+      "options": [
+        "A. motors.",
+        "B. sensors.",
+        "C. batteries.",
+        "D. controllers."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "ict_2025_q7",
+      "questionText": "Miss Fatima, the computing teacher taught the class basic programming terms. Explain to your friend what Miss Fatima said. Pseudocode is",
+      "type": "multipleChoice",
+      "year": "2025",
+      "questionNumber": 7,
+      "options": [
+        "A. compiled programming codes.",
+        "B. structured programming symbols.",
+        "C. flowchart decisions using symbols.",
+        "D. step-by-step outline of a program using informal language."
+      ],
+      "correctAnswer": "D",
+      "explanation": "Imported from BECE 2025 ICT",
+      "marks": 1,
+      "difficulty": "medium",
+      "originalTopics": [
+        "ICT",
+        "BECE",
+        "2025"
+      ],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "A",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2011_q5",
+      "questionText": "Explain the following terminologies:\n\na)\n\n \n\nCell\n\nb)\n\n \n\nColumn\n\nc)\n\n \n\nRow\n\nd)\n\n \n\nGraph",
+      "type": "essay",
+      "year": "2011",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2011 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2012_q5",
+      "questionText": "Explain the following terms as used in spreadsheet:\n\n(a)\n\n \n\nWorksheet\n\n(b)\n\n \n\nActive cell\n\n(c)\n\n \n\nRange\n\n(d)\n\n \n\nWorkbook",
+      "type": "essay",
+      "year": "2012",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2012 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2013_q1",
+      "questionText": "(a)\n\n \n\nABC supermarket has acquired an application to generate cash receipts for goods purchased by its customers as shown in the diagram below.\n\nThe amount for each item is obtained by multiplying the unit price and quantity of goods purchased.\n\nThe subtotal is a summation of the amounts obtained for all purchased items. The tax payable is computed at a rate of 10% of subtotal.\n\nThe total amount to be paid is the summation of the subtotal and the tax payable on purchased items.\n\nUsing the diagram below, answer the questions that follow.\n\n\n\n(i)\n\n \n\nName the application program used in creating the document above.\n\n(ii)\n\n \n\nIdentify the part labelled I, II and III.\n\n(iii)\n\n \n\nProvide the formula used in calculating the following cells\n\nD2 ............................................\n\nD5 ............................................\n\nD6 ............................................\n\n(b)\n\n \n\nUse the diagram below to answer questions (i), (ii) and (iii).\n\n\n\n(i)\n\n \n\nIdentify the diagram above.\n\n(ii)\n\n \n\nName the parts labelled A, B, C, D and E\n\n(iii)\n\n \n\nState one function each of the parts labelled B and C in the diagram in (b).\n\n(c)\n\n \n\nState one function of the diagram identified in (b)(i).",
+      "type": "essay",
+      "year": "2013",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2013 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2014_q1",
+      "questionText": "(a)\n\n \n\n\n\nUse the above diagram to answer questions (i) to (iv).\n\n(i)\n\n \n\nName the application program used for the above figure.\n\n(ii)\n\n \n\nWrite the formula/function used to calculate the profit for cell D7.\n\n(iii)\n\n \n\nWrite the formula/function used to calculate the total expenses for cell C7.\n\n(iv)\n\n \n\nName the parts labelled A, B and C.\n\n(b)\n\n \n\nComplete the table below.\n\nWindows button\n\nName of windows button\n\nFunction of windows button\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c)\n\n \n\nIn a word processing application, what is the command button print preview used for?",
+      "type": "essay",
+      "year": "2014",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2014 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2014_q2",
+      "questionText": "(a)\n\n \n\nState the data types for the following characters as used in spreadsheet application.\n\n(i)",
+      "type": "essay",
+      "year": "2014",
+      "questionNumber": 2,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2014 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Introduction To Computers",
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2014_q24",
+      "questionText": "04'\n\n(iii)\n\n \n\n=SUM(A5:G5)\n\n(iv)\n\n \n\n=A4+C8-G25\n\n(v)\n\n \n\n+233244971100\n\n(b)\n\n \n\nWhat does formatting a disk refer to?",
+      "type": "essay",
+      "year": "2014",
+      "questionNumber": 24,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2014 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2017_q1",
+      "questionText": "(a)\n\n \n\nStudy the worksheet below carefully and use it to answer (i - vi)\n\n\n\n(i)\n\n \n\nOutline the step s by which the Serial No. (1, 2, ... ,7) were generated without typing them one by one.\n\n(ii)\n\n \n\nWhat is the cell address in which the name \"MATHS\" was entered?\n\n(iii)\n\n \n\nWrite down the cell range in which \"BECE CLASS 3 RESULTS\" was typed.\n\n(iv)\n\n \n\nWrite the spreadsheet formula that was used in computing the total value \"202\" in cell G5.\n\n(v)\n\n \n\nWrite the spreadsheet function used in computing the total \"417\" in cell E9.\n\n(vi)\n\n \n\nHow many cells are in the cell range C3:E6?\n\n(b)\n\n \n\nOutline the proper way of shutting down a computer after using it.\n\n(c)\n\n \n\nIdentify the following web browsers:\n\n(i)\n\n \n\n\n\n(ii)\n\n \n\n\n\n(ii)",
+      "type": "essay",
+      "year": "2017",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2017 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2018_q5",
+      "questionText": "(a)\n\n \n\nList three toolbars or bars in a spreadsheet application.\n\n(b)\n\n \n\nDefine the following terms as used in a spreadsheet application:\n\n(i)\n\n \n\ncell;\n\n(ii)\n\n \n\nactive cell;\n\n(iii)\n\n \n\nname box.",
+      "type": "essay",
+      "year": "2018",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2018 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2020_q5",
+      "questionText": "State the function of each of the following e-mails terminologies.\n\na)\n\n \n\nTo: .......................\n\nb)\n\n \n\nSubject: ...................\n\nc)\n\n \n\nCarbon Copy (CC): .....................\n\nd)\n\n \n\nBlind Carbon Copy (BCC): ...................",
+      "type": "essay",
+      "year": "2020",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2020 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2021_q5",
+      "questionText": "a)\n\n \n\nExplain the following terminologies as used in a Spreadsheet application:\n\ni)\n\n \n\ncell ..........................................................................................\n\nii)\n\n \n\ncell address ..............................................................................\n\nb)\n\n \n\nState two features of an active cell.\n\ni)\n\n \n\n....................................................................................\n\nii)\n\n \n\n....................................................................................\n\nc)\n\n \n\nState the data type of the data below as used in a Spreadsheet application.=SUM(B6:H6)",
+      "type": "essay",
+      "year": "2021",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2021 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2022_q1",
+      "questionText": "Study Figure 1 carefully and use it to answer questions (a) to (e)\n\n\n\nFigure 1\n\na)\n\n \n\nWrite down the name of the device displayed in Figure 1.\n\nb)\n\n \n\nWrite down the name of the parts of Figure 1 labelled A, B, C and D.\n\nc)\n\n \n\nState three uses of the device identified in Figure 1.\n\nd)\n\n \n\nState three devices that function as the one shown in Figure 1.\n\ne)\n\n \n\nWhat is the name of the flat material on which the device shown in Figure 1 is mostly placed?",
+      "type": "essay",
+      "year": "2022",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2022 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Spreadsheet Applications",
+        "Integrating ICT Into Learning"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2022_q4",
+      "questionText": "Use the image shown in Figure 2 to answer question (a) and (b).\n\n\n\nFigure 2\n\na)\n\n \n\nWrite the name of the image shown in Figure 2.\n\nb)\n\n \n\nState the function of the image shown in Figure 2.\n\nc)\n\n \n\nWhich tool on the drawing toolbar is used to colour a drawn object.\n\nd)\n\n \n\nState three uses of the drawing toolbar.",
+      "type": "essay",
+      "year": "2022",
+      "questionNumber": 4,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2022 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Graphical User Interface (GUI)",
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2022_q5",
+      "questionText": "a)\n\n \n\nWrite three features that are common to both Microsoft Word and Microsoft Excel.\n\nb)\n\n \n\nList three data types of a Spreadsheet application.",
+      "type": "essay",
+      "year": "2022",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2022 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Word Processing Applications",
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2023_q5",
+      "questionText": "Table 1 contains items. Complete the table by indicating against each item whether it is formula,function, text or value in the appropriate dala type column.\n\nTable 1\n\nITEM\n\nDATA TYPE\n\nDays of the week\n\n\n\n=Sum(A2:G2)",
+      "type": "essay",
+      "year": "2023",
+      "questionNumber": 5,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2023 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2024_q245",
+      "questionText": "Write a function in Microsoft Excel to determine the lowest termly score for Kofi Malik.",
+      "type": "essay",
+      "year": "2024",
+      "questionNumber": 245,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2024 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2024_q3",
+      "questionText": "(a)\n\n \n\nThe head teacher of ABC JHS bought the following items for school. 10 footballs for GH₵ 2,000.00, 20 notebooks for GH₵ 400.00, 50 pens for GH₵ 250.00, 8 registers for GH₵ 240.00 and 2 laptop computers for GH₵ 7,000.00.\n\n(i)\n\n \n\nHow many columns and rows are needed to create a table for the head teacher’s items bought including ABC JHS as heading for the table without the serial numbers of the items?\n\n(ii)\n\n \n\nOutline the steps to be followed to create the table mentioned in 3(a)(i) using Microsoft Word.\n\n(b)\n\n \n\nThe file size of a presentation created by a student is too large to be sent through e-mail to a friend.\n\nSuggest one possible reason for the large file size.\n\n(c)\n\n \n\nState one feature of Microsoft Publisher.\n\n(d)\n\n \n\nStudy the Microsoft Excel worksheet carefully and use it to answer the question that follows.\n\n\n\nA\n\nB\n\nC\n\nD\n\nE",
+      "type": "essay",
+      "year": "2024",
+      "questionNumber": 3,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2024 ICT",
+      "marks": 5,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    },
+    {
+      "id": "theory_ict_2025_q1",
+      "questionText": "As a computing student, you are to program a robot to assist your colleagues to buy stationery from a shop.\n\nThe sequence of activities undertaken to buy the stationery at the shop is as follows:\n\nGo to the stationery shop;Select the needed stationery;Check the price of the selected stationery;Go to the cash counter;Pay money to the cashier;Take the stationery along;Leave the shop.\n\n(a)\n\n \n\nDraw a flowchart using the sequence of activities.\n\n[10 marks]\n\n(b)\n\n \n\nSuggest three modes of payment the students could use to pay the cashier.\n\n(i)\n\n \n\n \n\n(ii)\n\n \n\n \n\n(iii)\n\n \n\n \n\n[3 marks]\n\n(c)\n\n \n\nDescribe one of the modes of payment suggested in 1(b).\n\n[3 marks]\n\n(d)\n\n \n\nAssume that there are four cashiers at the shop and each of them uses a computer which is networked for their work. Draw a well labelled diagram to illustrate two network topologies that could be used to network the computers.\n\n(i)\n\n[2 marks]\n\n(ii)\n\n[2 marks]\n\n(e)\n\n \n\nKofi, a student in your school visited the stationery shop for two days and his expenditure at the shop is as follows:\n\nOn Monday, he bought 4 exercise books for GH₵ 60.00. On Tuesday, he bought 6 pens for GH₵ 40.00\n\n(i)\n\n \n\nComplete the Microsoft Excel worksheet using Kofi's two days expenditure at the stationery shop as shown in Figure 1.\n\n\n\n[2 marks]\n\n(ii)\n\n \n\nWrite a formula in Microsoft Excel to compute Kofi's total amount spent for the two days at the stationery shop.\n\n[2 marks]\n\n \n\nSECTION B\n\n[36 marks]\n\nAnswer three questions only from this section.",
+      "type": "essay",
+      "year": "2025",
+      "questionNumber": 1,
+      "options": [],
+      "correctAnswer": "",
+      "explanation": "Theory question from BECE 2025 ICT",
+      "marks": 10,
+      "difficulty": "medium",
+      "originalTopics": [],
+      "classifiedTopics": [
+        "Spreadsheet Applications"
+      ],
+      "examType": "bece",
+      "section": "",
+      "imageUrl": null,
+      "imageBeforeQuestion": null,
+      "imageAfterQuestion": null,
+      "optionImages": null
+    }
+  ]
+}

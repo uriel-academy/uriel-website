@@ -1,6 +1,5 @@
 import 'package:cloud_functions/cloud_functions.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 
 /// Service for generating and managing AI-generated textbook content
 /// Uses Claude AI via Cloud Functions for high-quality educational content
